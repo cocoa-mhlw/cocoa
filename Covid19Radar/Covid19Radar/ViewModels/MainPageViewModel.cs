@@ -13,7 +13,7 @@ namespace Covid19Radar.ViewModels
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            Title = "Main Page";
+            Title = "チュートリアル1";
         }
     }
 }
