@@ -5,8 +5,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
     <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1422" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\TutorialPage.xaml.cs">
+      <DependentUpon>TutorialPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\InitSettingPage.xaml.cs">
+      <DependentUpon>InitSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ConsentByUserPage.xaml.cs">
+      <DependentUpon>ConsentByUserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\InputSmsOTPPage.xaml.cs">
+      <DependentUpon>InputSmsOTPPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SmsVerificationPage.xaml.cs">
+      <DependentUpon>SmsVerificationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DescriptionPage.xaml.cs">
+      <DependentUpon>DescriptionPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

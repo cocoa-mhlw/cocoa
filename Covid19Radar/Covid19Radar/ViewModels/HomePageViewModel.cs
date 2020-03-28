@@ -9,20 +9,14 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class MainPageViewModel : ViewModelBase
+    public class HomePageViewModel : ViewModelBase
     {
         private INavigationService _navigationService;
-        public MainPageViewModel(INavigationService navigationService)
+        public HomePageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "スタート";
+            Title = "ホーム";
         }
-
-        public Command OnClickNext => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("DescriptionPage");
-        }));
-
     }
 }

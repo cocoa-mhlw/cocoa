@@ -9,17 +9,22 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class MainPageViewModel : ViewModelBase
+    public class SmsVerificationPageViewModel : ViewModelBase
     {
         private INavigationService _navigationService;
-        public MainPageViewModel(INavigationService navigationService)
+        public SmsVerificationPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "スタート";
+            Title = "電話番号確認";
         }
 
         public Command OnClickNext => (new Command(() =>
+        {
+            _navigationService.NavigateAsync("InputSmsOTPPage");
+        }));
+
+        public Command OnClickPrev => (new Command(() =>
         {
             _navigationService.NavigateAsync("DescriptionPage");
         }));

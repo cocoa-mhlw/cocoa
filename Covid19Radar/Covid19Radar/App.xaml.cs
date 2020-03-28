@@ -4,6 +4,9 @@ using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
@@ -30,6 +33,14 @@ namespace Covid19Radar
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
+            containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
+            containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
+            containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
+            containerRegistry.RegisterForNavigation<InitSettingPage,InitSettingPageViewModel>();
+            containerRegistry.RegisterForNavigation<TutorialPage, TutorialPageViewModel>();
+            containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
+
         }
     }
 }

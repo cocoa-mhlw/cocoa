@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19Radar.Views.MainPage"
+             x:Class="Covid19Radar.Views.ConsentByUserPage"
              Title="{Binding Title}">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="コロナウイルス(COVID19) Bluetoothセンサ" />
-        <Button Text="次へ"  Command="{Binding Path=OnClickNext}"  />
+        <Label Text="あなたは同意しますか？" />
+        <Button Text="同意します" Command="{Binding Path=OnClickNext}" />
     </StackLayout>
 
 </ContentPage>
