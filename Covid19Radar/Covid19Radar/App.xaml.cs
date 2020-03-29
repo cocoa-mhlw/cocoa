@@ -1,4 +1,5 @@
 ﻿using Prism;
+using Prism.DryIoc;
 using Prism.Ioc;
 using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
@@ -11,8 +12,10 @@ using Microsoft.AppCenter.Crashes;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
 {
-    public partial class App
+    public partial class App : Prism.DryIoc.PrismApplication
     {
+        protected override IContainerExtension CreateContainerExtension() => PrismContainerExtension.Current;
+
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor. 
@@ -26,18 +29,36 @@ namespace Covid19Radar
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            var result = await NavigationService.NavigateAsync("NavigationPage/MainPage");
+
+            if (!result.Success)
+            {
+                MainPage = new ExceptionPage
+                {
+                    BindingContext = new ExceptionPageViewModel()
+                    {
+                        Message = result.Exception.Message
+                    }
+                };
+                System.Diagnostics.Debugger.Break();
+            }
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            var container = containerRegistry.GetContainer();
+
+            // Dialog
+            containerRegistry.RegisterDialog<DialogView, DialogViewModel>();
+
+            // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
             containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
             containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
-            containerRegistry.RegisterForNavigation<InitSettingPage,InitSettingPageViewModel>();
+            containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<TutorialPage, TutorialPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
 

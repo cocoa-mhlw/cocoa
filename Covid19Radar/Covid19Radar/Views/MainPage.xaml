@@ -6,6 +6,10 @@
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <Label Text="コロナウイルス(COVID19) Bluetoothセンサ" />
+        <Label Text="{Binding Message}" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="Center"/>
         <Button Text="次へ"  Command="{Binding Path=OnClickNext}"  />
     </StackLayout>
 

@@ -1,6 +1,8 @@
-﻿using Foundation;
+﻿using Covid19Radar.Shiny;
+using Foundation;
 using Prism;
 using Prism.Ioc;
+using Shiny;
 using UIKit;
 
 
@@ -21,6 +23,7 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            iOSShinyHost.Init(new ShinyAppStartup());
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
 
