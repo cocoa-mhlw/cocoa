@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "同意";
+            Title = "利用に関しての同意";
         }
 
         public Command OnClickNext => (new Command(() =>

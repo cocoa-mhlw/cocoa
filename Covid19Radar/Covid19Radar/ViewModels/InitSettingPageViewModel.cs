@@ -16,17 +16,12 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "初期設定";
+            Title = "デバイスへのアクセス許可";
         }
 
         public Command OnClickNext => (new Command(() =>
         {
-            _navigationService.NavigateAsync("TutorialPage");
-        }));
-
-        public Command OnClickPrev => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("MainPage");
+            _navigationService.NavigateAsync("HomePage");
         }));
 
     }

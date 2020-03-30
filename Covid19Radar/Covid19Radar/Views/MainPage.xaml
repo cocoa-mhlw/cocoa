@@ -3,14 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Covid19Radar.Views.MainPage"
              Title="{Binding Title}">
-
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="コロナウイルス(COVID19) Bluetoothセンサ" />
-        <Label Text="{Binding Message}" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand"
-           HorizontalTextAlignment="Center"/>
-        <Button Text="次へ"  Command="{Binding Path=OnClickNext}"  />
-    </StackLayout>
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Image x:Name="TopMainImage" WidthRequest="426" HeightRequest="193" HorizontalOptions="Center" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackLayout>
+                <Label Text="COVID-19 行動トラッカー" 
+                       TextColor="#333333" 
+                       FontSize="35" 
+                       Padding="0,20,0,20" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"/>
+                <Label Text="天平二年の正月の十三日に、師老の宅に萃まりて、宴会を申ぶ。時に、初春の令月にして、気淑く風和ぐ。梅は鏡前の粉を披く、蘭は珮後の香を薫す。しかのみにあらず、曙の嶺に雲移り、松は羅を掛けて蓋を傾く、夕の岫に霧結び、鳥はうすものに封ぢらえて林に迷ふ。庭には舞ふ新蝶あり、空には帰る故雁あり。ここに、天を蓋にし地を坐にし、膝を促け觴を飛ばす。言を一室の裏に忘れ、衿を煙霞の外に開く。淡然自ら放し、快然自ら足る。もし翰苑にあらずは、何をもちてか情を述べむ。詩に落梅の篇を紀す、古今それ何ぞ異ならむ。 よろしく園梅を賦して、いささかに短詠を成すべし"
+                       TextColor="#333333"
+                       Padding="30,0,30,0"
+                       FontSize="16"
+                       LineHeight="1.2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="2" Padding="120,0,120,60">
+            <Button BackgroundColor="#019ae8"
+                    Text="同意して進む" 
+                    TextColor="#FFFFFF"
+                    FontSize="25"
+                    MinimumHeightRequest="60"
+                    MinimumWidthRequest="170"
+                    Command="{Binding Path=OnClickNext}"/>
+        </Grid>
+    </Grid>
 </ContentPage>
+ 

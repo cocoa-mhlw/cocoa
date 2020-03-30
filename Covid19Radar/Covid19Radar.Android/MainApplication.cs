@@ -24,5 +24,6 @@ namespace Covid19Radar.Droid
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
+
     }
 }

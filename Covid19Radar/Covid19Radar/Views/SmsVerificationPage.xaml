@@ -3,10 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Covid19Radar.Views.SmsVerificationPage"
              Title="{Binding Title}">
-
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="電話番号認証" />
-        <Button Text="次へ" Command="{Binding Path=OnClickNext}" />
-    </StackLayout>
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Padding="30,0,30,0" Grid.Row="0">
+            <StackLayout>
+                <Label Text="電話番号を入力してください。" 
+                       TextColor="#333333" 
+                       FontSize="28" 
+                       Padding="0,30,0,10" />
+                <Entry Text=""
+                       MaxLength="11"
+                       Placeholder="09012341234"
+                       TextColor="#333333" 
+                       FontSize="35"
+                       Keyboard="Telephone"
+                       PlaceholderColor="#D1D1D1"
+                       ClearButtonVisibility="WhileEditing"
+                       />
+                <Label FontSize="16"
+                       TextColor="#333333"
+                       LineHeight="1.2"
+                       Padding="0,30,0,0"
+                       LineBreakMode="WordWrap"
+                       Text="電話番号入力後にSMSメールが届きます。" />
+                <Label FontSize="16"
+                       TextColor="#333333"
+                       LineHeight="1.2"
+                       Padding="0,0,0,0"
+                       LineBreakMode="WordWrap"
+                       Text="SMSメールを確認してください。" />
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1" Padding="120,0,120,60">
+            <Button BackgroundColor="#019ae8"
+                    Text="登録する" 
+                    TextColor="#FFFFFF"
+                    FontSize="25"
+                    MinimumHeightRequest="60"
+                    MinimumWidthRequest="170"
+                    Command="{Binding Path=OnClickNext}"/>
+        </Grid>
+    </Grid>
 </ContentPage>

@@ -4,9 +4,47 @@
              x:Class="Covid19Radar.Views.InputSmsOTPPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="届いたOTPを入力してください" />
-        <Button Text="次へ" Command="{Binding Path=OnClickNext}" />
-    </StackLayout>
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Padding="30,0,30,0" Grid.Row="0">
+            <StackLayout>
+                <Label Text="届いた6桁の数字を入力してください。" 
+                       TextColor="#333333" 
+                       FontSize="28" 
+                       Padding="0,30,0,10" />
+                <Entry Text=""
+                       FontSize="35"
+                       Keyboard="Numeric"
+                       PlaceholderColor="#D1D1D1"
+                       TextColor="#333333" 
+                       Placeholder="6桁の番号"
+                       MaxLength="6"
+                       ClearButtonVisibility="WhileEditing" />
+                <Label Text="「090-1234-1234」宛に送信しました。」"
+                    FontSize="16"
+                    TextColor="#333333" 
+                    Padding="0,30,0,10"/>
+                <Label Padding="0,30,0,0"
+                       TextColor="#333333"
+                       FontSize="16"
+                       Text="コードが届きませんか？"  />
+                <Label FontSize="16"
+                       Padding="0,0,0,0"
+                       TextColor="#333333"
+                       Text="コードをもう一度確認する"  />
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1" Padding="120,0,120,60">
+            <Button BackgroundColor="#019ae8"
+                    Text="登録する" 
+                    TextColor="#FFFFFF"
+                    FontSize="25"
+                    MinimumHeightRequest="60"
+                    MinimumWidthRequest="170"
+                    Command="{Binding Path=OnClickNext}"/>
+        </Grid>
+    </Grid>
 </ContentPage>

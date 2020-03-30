@@ -15,6 +15,7 @@ namespace Covid19Radar.Views
         public MainPage()
         {
             InitializeComponent();
+            TopMainImage.Source = ImageSource.FromResource("Covid19Radar.Images.TopMainImg.png");
         }
     }
 }

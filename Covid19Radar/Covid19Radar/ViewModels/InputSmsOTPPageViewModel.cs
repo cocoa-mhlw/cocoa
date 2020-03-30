@@ -16,17 +16,12 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "OTP認証入力";
+            Title = "ワンタイムパスワード入力";
         }
 
         public Command OnClickNext => (new Command(() =>
         {
             _navigationService.NavigateAsync("ConsentByUserPage");
-        }));
-
-        public Command OnClickPrev => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("MainPage");
         }));
 
     }

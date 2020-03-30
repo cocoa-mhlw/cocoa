@@ -3,10 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Covid19Radar.Views.DescriptionPage"
              Title="{Binding Title}">
-
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="コロナウイルス(COVID19) Bluetoothセンサについて2" />
-        <Button Text="次へ" Command="{Binding Path=OnClickNext}" />
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Image x:Name="Beaconnetwork" WidthRequest="352" HeightRequest="321" HorizontalOptions="Center" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackLayout>
+                <Label Text="このアプリについて" 
+                       TextColor="#333333" 
+                       FontSize="35" 
+                       Padding="0,20,0,20" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"/>
+                <Label Text="この部分にアプリの簡単な説明が入ります。この部分にアプリの簡単な説明が入ります。"
+                       TextColor="#333333"
+                       Padding="30,0,30,0"
+                       FontSize="16"
+                       LineHeight="1.2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="2" Padding="120,0,120,60">
+            <Button BackgroundColor="#019ae8"
+                    Text="登録する" 
+                    TextColor="#FFFFFF"
+                    FontSize="25"
+                    MinimumHeightRequest="60"
+                    MinimumWidthRequest="170"
+                    Command="{Binding Path=OnClickNext}"/>
+        </Grid>
+    </Grid>
 
 </ContentPage>

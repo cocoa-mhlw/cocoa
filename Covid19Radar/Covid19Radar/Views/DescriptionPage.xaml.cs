@@ -14,6 +14,7 @@ namespace Covid19Radar.Views
         public DescriptionPage()
         {
             InitializeComponent();
+            Beaconnetwork.Source = ImageSource.FromResource("Covid19Radar.Images.Beaconnetwork.png");
         }
     }
 }

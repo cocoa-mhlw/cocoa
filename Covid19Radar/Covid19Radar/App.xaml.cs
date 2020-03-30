@@ -1,13 +1,15 @@
-﻿using Prism;
+﻿using System;
+using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
+using Shiny;
+using Prism.Mvvm;
+using Covid19Radar.Shiny.Infrastructure;
+using DryIoc;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
@@ -46,10 +48,11 @@ namespace Covid19Radar
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            var container = containerRegistry.GetContainer();
+            // var container = containerRegistry.GetContainer();
+
 
             // Dialog
-            containerRegistry.RegisterDialog<DialogView, DialogViewModel>();
+  //          containerRegistry.RegisterDialog<DialogView, DialogViewModel>();
 
             // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
@@ -59,9 +62,18 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
-            containerRegistry.RegisterForNavigation<TutorialPage, TutorialPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
 
+        }
+
+        protected override void OnStart()
+        {
+            /*
+            AppCenter.Start(Constants.AppCenterTokensAndroid +
+                  Constants.AppCenterTokensIOS +
+                  typeof(Analytics), typeof(Crashes));
+                  */
+            base.OnStart();
         }
     }
 }

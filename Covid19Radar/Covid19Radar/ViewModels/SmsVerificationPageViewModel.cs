@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "電話番号確認";
+            Title = "電話番号入力";
         }
 
         public Command OnClickNext => (new Command(() =>

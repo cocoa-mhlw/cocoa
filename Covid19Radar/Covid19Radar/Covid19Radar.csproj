@@ -1,25 +1,45 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
+    <None Remove="Images\AllowBle.png" />
+    <None Remove="Images\Beaconnetwork.png" />
+    <None Remove="Images\TopMainImg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\AllowBle.png" />
+    <EmbeddedResource Include="Images\Beaconnetwork.png" />
+    <EmbeddedResource Include="Images\TopMainImg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs.Forms" Version="1.0.0.7-beta" />
+    <PackageReference Include="Humanizer" Version="2.7.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Prism.Container.Extensions" Version="7.2.0.898" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="7.2.0.898" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
+    <PackageReference Include="ReactiveUI" Version="11.2.3" />
+    <PackageReference Include="ReactiveUI.Fody" Version="11.2.3" />
+    <PackageReference Include="ReactiveUI.XamForms" Version="11.2.3" />
+    <PackageReference Include="Shiny.Beacons" Version="1.1.0.1473-beta" />
+    <PackageReference Include="Shiny.BluetoothLE" Version="1.1.0.1473-beta" />
+    <PackageReference Include="Shiny.Core" Version="1.1.0.1473" />
+    <PackageReference Include="Shiny.Notifications" Version="1.1.0.1473" />
     <PackageReference Include="Shiny.Prism" Version="7.2.0.898" />
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.494-pre2" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.494-pre2" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\TutorialPage.xaml.cs">
-      <DependentUpon>TutorialPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\InitSettingPage.xaml.cs">
       <DependentUpon>InitSettingPage.xaml</DependentUpon>

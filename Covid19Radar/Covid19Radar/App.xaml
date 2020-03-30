@@ -5,8 +5,10 @@
              x:Class="Covid19Radar.App">
 
     <Application.Resources>
-
-        <!-- Application resource dictionary -->
-
+        <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+            <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+            <On Platform="iOS" Value="Material Design Icons" />
+        </OnPlatform>
     </Application.Resources>
 </prism:PrismApplication>
+
