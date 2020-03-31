@@ -6,9 +6,7 @@ using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Shiny;
 using Prism.Mvvm;
-using Covid19Radar.Shiny.Infrastructure;
 using DryIoc;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,8 +14,6 @@ namespace Covid19Radar
 {
     public partial class App : Prism.DryIoc.PrismApplication
     {
-        protected override IContainerExtension CreateContainerExtension() => PrismContainerExtension.Current;
-
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor. 
@@ -48,12 +44,6 @@ namespace Covid19Radar
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // var container = containerRegistry.GetContainer();
-
-
-            // Dialog
-  //          containerRegistry.RegisterDialog<DialogView, DialogViewModel>();
-
             // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();

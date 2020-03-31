@@ -2,7 +2,6 @@
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services.Dialogs;
-using Shiny.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;

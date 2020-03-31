@@ -4,9 +4,7 @@ using Android.OS;
 using Prism;
 using Prism.Ioc;
 using Android.Runtime;
-using Shiny;
 using Android.Content;
-using Acr.UserDialogs;
 
 namespace Covid19Radar.Droid
 {
@@ -19,9 +17,6 @@ namespace Covid19Radar.Droid
             ToolbarResource = Resource.Layout.Toolbar;
             base.OnCreate(savedInstanceState);
 
-            UserDialogs.Init(this);
-            this.ShinyOnCreate();
-
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
@@ -31,14 +26,12 @@ namespace Covid19Radar.Droid
         protected override void OnNewIntent(Intent intent)
         {
             base.OnNewIntent(intent);
-            this.ShinyOnNewIntent(intent);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-            this.ShinyRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 

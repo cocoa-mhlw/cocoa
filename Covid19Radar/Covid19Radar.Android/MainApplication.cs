@@ -9,8 +9,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Covid19Radar.Shiny;
-using Shiny;
 
 namespace Covid19Radar.Droid
 {
@@ -19,7 +17,7 @@ namespace Covid19Radar.Droid
 #else
         [Application(Debuggable = false)]
 #endif
-    public class MainApplication : ShinyAndroidApplication<ShinyAppStartup>
+    public class MainApplication : Application
     {
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
