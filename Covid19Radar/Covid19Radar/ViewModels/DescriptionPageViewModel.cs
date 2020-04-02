@@ -26,7 +26,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickPrev => (new Command(() =>
         {
-            _navigationService.NavigateAsync("MainPage");
+            _navigationService.NavigateAsync("BeaconPage");
         }));
 
     }

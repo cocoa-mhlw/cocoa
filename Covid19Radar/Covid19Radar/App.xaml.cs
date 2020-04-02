@@ -53,7 +53,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
-
+            containerRegistry.RegisterForNavigation<BeaconPage, BeaconPageViewModel>();
         }
 
         protected override void OnStart()

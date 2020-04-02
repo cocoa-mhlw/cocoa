@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Covid19Radar.ViewCells.EddystoneTLMViewCell"
+          xmlns:local="clr-namespace:Covid19Radar">
+    <StackLayout
+        Orientation="Vertical">
+        <Label
+            FontSize="Medium"
+            Text="{Binding BeaconType}"
+            />
+        <Label
+            FontSize="Small"
+            Text="{Binding BluetoothAddressAsString}"
+            />
+
+        <Label
+            FontSize="Small"
+            Text="{Binding Rssi, StringFormat='Signal: {0}'}"
+            />
+        <!--
+        <ListView
+                Margin="20,0,0,0"
+                ItemsSource="{Binding BeaconFrames}"
+                HasUnevenRows="True">
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Orientation="Vertical"
+                            BackgroundColor="LightGray">
+                            <Label
+                                FontSize="Small"
+                                Text="{Binding TemperatureInC, StringFormat='Temperature: {0}C'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        -->
+    </StackLayout>
+</ViewCell>

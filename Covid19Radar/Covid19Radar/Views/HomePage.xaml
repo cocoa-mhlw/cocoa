@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+                          xmlns:local="clr-namespace:Covid19Radar"
              x:Class="Covid19Radar.ViewModels.HomePage"
             Title="{Binding Title}">
 

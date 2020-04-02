@@ -3,6 +3,8 @@ using Prism;
 using Prism.Ioc;
 using System;
 using UIKit;
+using UniversalBeacon.Library;
+using UniversalBeacon.Library.Core.Interfaces;
 
 namespace Covid19Radar.iOS
 {
@@ -32,7 +34,13 @@ namespace Covid19Radar.iOS
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Register any platform specific implementations
+
+            if (!containerRegistry.IsRegistered<IBluetoothPacketProvider>())
+            {
+                iOSBluetoothPacketProvider provider = new iOSBluetoothPacketProvider();
+                containerRegistry.RegisterInstance<IBluetoothPacketProvider>(provider);
+            }
+
         }
     }
 

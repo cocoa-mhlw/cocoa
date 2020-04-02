@@ -55,6 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Plugin.CurrentActivity">
+      <Version>2.1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.Permissions">
+      <Version>6.0.0-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.DryIoc.Forms">
+      <Version>7.2.0.1422</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.5.2</Version>
     </PackageReference>
@@ -100,6 +109,14 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\UniversalBeacon.Library.Android\UniversalBeacon.Library.Android.csproj">
+      <Project>{6adc54d4-3b9b-495e-a2b8-f9cf5fd623ce}</Project>
+      <Name>UniversalBeacon.Library.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UniversalBeacon.Library.Core\UniversalBeacon.Library.Core.csproj">
+      <Project>{0a735781-e9ad-4f80-8e73-5afae5c2a5d0}</Project>
+      <Name>UniversalBeacon.Library.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
       <Name>Covid19Radar</Name>

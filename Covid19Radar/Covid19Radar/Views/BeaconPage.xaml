@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Covid19Radar.Views.BeaconPage"
+             xmlns:local="clr-namespace:Covid19Radar"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:FrameTemplateSelector x:Key="FrameTemplateSelector" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Image x:Name="TopMainImage" WidthRequest="426" HeightRequest="193" HorizontalOptions="Center" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <BoxView BackgroundColor="#0089ff">
+                <BoxView.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                Android="20"
+                                WinPhone="20"
+                                Default="20"
+                                iOS="40"/>
+                </BoxView.HeightRequest>
+            </BoxView>
+            <Label Text="Universal Beacon Sample" TextColor="White" BackgroundColor="#0089ff" HorizontalTextAlignment="Center"/>
+            <BoxView HeightRequest="20" BackgroundColor="#0089ff"/>
+            <ListView
+                ItemTemplate="{StaticResource FrameTemplateSelector}" 
+                ItemsSource="{Binding Beacons}"
+                SelectedItem="{Binding SelectedBeacon}"
+                HasUnevenRows="True">
+            </ListView>
+        </Grid>
+    </Grid>
+        </ContentPage.Content>
+</ContentPage>
+ 

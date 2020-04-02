@@ -5,20 +5,27 @@ using Prism;
 using Prism.Ioc;
 using Android.Runtime;
 using Android.Content;
+using Plugin.CurrentActivity;
+using Plugin.Permissions;
+using UniversalBeacon.Library.Core.Interfaces;
+using UniversalBeacon.Library;
 
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle bundle)
         {
+            base.OnCreate(bundle);
+
+            CrossCurrentActivity.Current.Init(this, bundle);
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-            base.OnCreate(savedInstanceState);
 
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, bundle);
+            global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App(new AndroidInitializer()));
 
@@ -32,6 +39,7 @@ namespace Covid19Radar.Droid
         {
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 
@@ -40,7 +48,11 @@ namespace Covid19Radar.Droid
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Register any platform specific implementations
+            if (!containerRegistry.IsRegistered<IBluetoothPacketProvider>())
+            {
+                AndroidBluetoothPacketProvider provider = new AndroidBluetoothPacketProvider(Application.Context);
+                containerRegistry.RegisterInstance<IBluetoothPacketProvider>(provider);
+            }
         }
     }
 }

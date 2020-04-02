@@ -18,13 +18,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.0-beta" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.494-pre2" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.494-pre2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\UniversalBeacon.Library.Core\UniversalBeacon.Library.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\BeaconPage.xaml.cs">
+      <DependentUpon>BeaconPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
     </Compile>
@@ -46,7 +53,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\DialogView.xaml">
+    <EmbeddedResource Update="ViewCells\EddystoneTLMViewCell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewCells\GenericViewCell.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\HomePage.xaml">

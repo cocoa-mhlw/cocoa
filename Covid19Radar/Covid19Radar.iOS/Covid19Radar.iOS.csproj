@@ -157,12 +157,19 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="sqlite-net-pcl">
-      <Version>1.6.292</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.494-pre2" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\UniversalBeacon.Library.Core\UniversalBeacon.Library.Core.csproj">
+      <Project>{0a735781-e9ad-4f80-8e73-5afae5c2a5d0}</Project>
+      <Name>UniversalBeacon.Library.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UniversalBeacon.Library.iOS\UniversalBeacon.Library.iOS.csproj">
+      <Project>{430362fe-c759-4d51-890f-1bf8308fc99f}</Project>
+      <Name>UniversalBeacon.Library.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
       <Name>Covid19Radar</Name>
