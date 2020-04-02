@@ -6,20 +6,11 @@
              Title="{Binding Title}">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:FrameTemplateSelector x:Key="FrameTemplateSelector" />
-        </ResourceDictionary>
+        <local:FrameTemplateSelector x:Key="FrameTemplateSelector" />
+    </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Image x:Name="TopMainImage" WidthRequest="426" HeightRequest="193" HorizontalOptions="Center" />
-        </Grid>
-        <Grid Grid.Row="1">
+        <StackLayout Spacing="0">
             <BoxView BackgroundColor="#0089ff">
                 <BoxView.HeightRequest>
                     <OnPlatform x:TypeArguments="x:Double"
@@ -37,8 +28,7 @@
                 SelectedItem="{Binding SelectedBeacon}"
                 HasUnevenRows="True">
             </ListView>
-        </Grid>
-    </Grid>
-        </ContentPage.Content>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
  

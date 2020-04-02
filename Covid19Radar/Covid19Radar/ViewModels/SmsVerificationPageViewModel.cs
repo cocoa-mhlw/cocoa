@@ -24,10 +24,5 @@ namespace Covid19Radar.ViewModels
             _navigationService.NavigateAsync("InputSmsOTPPage");
         }));
 
-        public Command OnClickPrev => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("DescriptionPage");
-        }));
-
     }
 }

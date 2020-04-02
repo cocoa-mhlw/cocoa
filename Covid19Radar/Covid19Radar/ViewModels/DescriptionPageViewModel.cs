@@ -24,10 +24,6 @@ namespace Covid19Radar.ViewModels
             _navigationService.NavigateAsync("SmsVerificationPage");
         }));
 
-        public Command OnClickPrev => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("BeaconPage");
-        }));
 
     }
 }

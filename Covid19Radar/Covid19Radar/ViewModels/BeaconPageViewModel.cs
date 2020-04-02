@@ -85,6 +85,7 @@ namespace Covid19Radar.ViewModels
         {
             _navigationService = navigationService;
             Title = "ビーコンテスト";
+            RequestPermissions();
         }
     }
 }
