@@ -16,17 +16,12 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "電話番号入力";
+            Title = "Input Phone number";
         }
 
         public Command OnClickNext => (new Command(() =>
         {
             _navigationService.NavigateAsync("InputSmsOTPPage");
-        }));
-
-        public Command OnClickPrev => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("DescriptionPage");
         }));
 
     }

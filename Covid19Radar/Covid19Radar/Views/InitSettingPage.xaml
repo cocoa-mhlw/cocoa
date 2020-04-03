@@ -16,13 +16,13 @@
         </Grid>
         <Grid Padding="30,0,30,0" Grid.Row="1">
             <StackLayout>
-                <Label Text="BluetoothとPush通知を許可してください。" 
+                <Label Text="Allow Bluetooth and Push notifications." 
                        TextColor="#333333" 
                        FontSize="28" 
                        Padding="0,20,0,20" 
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"/>
-                <Label Text="このアプリは、デバイスの以下の機能を利用します。使用許可の画面が表示されたらOKをタップして許可してください。"
+                <Label Text="This app uses the following functions of the device.When the use permission screen is displayed, tap OK to allow it."
                        TextColor="#333333"
                        Padding="0,0,0,20"
                        FontSize="16"
@@ -40,7 +40,7 @@
                        FontSize="16"
                        LineHeight="1.2"
                        LineBreakMode="WordWrap"/>
-                <Label Text="これらはアプリの適切な動作の為に必要です。許可しない場合は、アプリを正常に機能させる事ができません。"
+                <Label Text="These are required for proper operation of the app. If you do not allow it, the app will not function properly."
                        TextColor="#333333"
                        Padding="0,0,0,0"
                        FontSize="16"

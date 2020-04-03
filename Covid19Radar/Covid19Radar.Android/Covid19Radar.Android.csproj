@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AndroidAltBeaconLibrary">
+      <Version>2.10.0.31004-pre2</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.CurrentActivity">
       <Version>2.1.0.4</Version>
     </PackageReference>
@@ -83,6 +86,9 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
+    <Compile Include="Service\iBeaconService.cs" />
+    <Compile Include="Service\MonitorNotifier.cs" />
+    <Compile Include="Service\RangeNotifier.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -109,14 +115,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\UniversalBeacon.Library.Android\UniversalBeacon.Library.Android.csproj">
-      <Project>{6adc54d4-3b9b-495e-a2b8-f9cf5fd623ce}</Project>
-      <Name>UniversalBeacon.Library.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\UniversalBeacon.Library.Core\UniversalBeacon.Library.Core.csproj">
-      <Project>{0a735781-e9ad-4f80-8e73-5afae5c2a5d0}</Project>
-      <Name>UniversalBeacon.Library.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
       <Name>Covid19Radar</Name>

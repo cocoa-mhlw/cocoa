@@ -7,13 +7,13 @@ using Android.Runtime;
 using Android.Content;
 using Plugin.CurrentActivity;
 using Plugin.Permissions;
-using UniversalBeacon.Library.Core.Interfaces;
-using UniversalBeacon.Library;
+using Covid19Radar.Model;
+using AltBeaconOrg.BoundBeacon;
 
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -41,6 +41,14 @@ namespace Covid19Radar.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        public void OnBeaconServiceConnect()
+        {
+            var beaconService = Xamarin.Forms.DependencyService.Get<IIBeaconService>();
+
+            //beaconService.StartMonitoring();
+            beaconService.StartRanging();
+        }
     }
 
 
@@ -48,11 +56,6 @@ namespace Covid19Radar.Droid
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            if (!containerRegistry.IsRegistered<IBluetoothPacketProvider>())
-            {
-                AndroidBluetoothPacketProvider provider = new AndroidBluetoothPacketProvider(Application.Context);
-                containerRegistry.RegisterInstance<IBluetoothPacketProvider>(provider);
-            }
         }
     }
 }
