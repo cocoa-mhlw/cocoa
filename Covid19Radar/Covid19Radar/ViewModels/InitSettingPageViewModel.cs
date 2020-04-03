@@ -16,12 +16,12 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "デバイスへのアクセス許可";
+            Title = "Permissions for device (BLE)";
         }
 
         public Command OnClickNext => (new Command(() =>
         {
-            _navigationService.NavigateAsync("HomePage");
+            _navigationService.NavigateAsync("BeaconPage");
         }));
 
     }

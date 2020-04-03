@@ -25,13 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\UniversalBeacon.Library.Core\UniversalBeacon.Library.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Views\BeaconPage.xaml.cs">
-      <DependentUpon>BeaconPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
     </Compile>
@@ -44,6 +37,9 @@
     <Compile Update="Views\InputSmsOTPPage.xaml.cs">
       <DependentUpon>InputSmsOTPPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\BeaconPage.xaml.cs">
+      <DependentUpon>BeaconPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\SmsVerificationPage.xaml.cs">
       <DependentUpon>SmsVerificationPage.xaml</DependentUpon>
     </Compile>
@@ -53,12 +49,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ViewCells\EddystoneTLMViewCell.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="ViewCells\GenericViewCell.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

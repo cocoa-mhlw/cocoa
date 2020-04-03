@@ -9,7 +9,6 @@
             Title="{Binding Title}">
 
     <ContentPage.ToolbarItems>
-        <!--ツールバーアイテム-->
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>

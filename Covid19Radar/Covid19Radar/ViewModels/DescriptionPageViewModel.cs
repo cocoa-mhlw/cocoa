@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "このアプリについての説明";
+            Title = "App Description";
         }
 
         public Command OnClickNext => (new Command(() =>
@@ -24,10 +24,6 @@ namespace Covid19Radar.ViewModels
             _navigationService.NavigateAsync("SmsVerificationPage");
         }));
 
-        public Command OnClickPrev => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("BeaconPage");
-        }));
 
     }
 }
