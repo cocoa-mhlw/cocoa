@@ -15,7 +15,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackLayout>
-                <Label Text="このアプリについて" 
+                <Label Text="About this app" 
                        TextColor="#333333" 
                        FontSize="35" 
                        Padding="0,20,0,20" 
@@ -23,7 +23,7 @@
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"/>
-                <Label Text="この部分にアプリの簡単な説明が入ります。この部分にアプリの簡単な説明が入ります。"
+                <Label Text="This is where you will find a brief description of the app."
                        TextColor="#333333"
                        Padding="30,0,30,0"
                        FontSize="16"

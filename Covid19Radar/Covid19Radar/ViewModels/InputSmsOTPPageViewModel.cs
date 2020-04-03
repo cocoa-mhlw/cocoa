@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "ワンタイムパスワード入力";
+            Title = "Input OTP";
         }
 
         public Command OnClickNext => (new Command(() =>
