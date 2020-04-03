@@ -2,33 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Covid19Radar.Views.BeaconPage"
-             xmlns:local="clr-namespace:Covid19Radar"
+                          xmlns:local="clr-namespace:Covid19Radar"
              Title="{Binding Title}">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-        <local:FrameTemplateSelector x:Key="FrameTemplateSelector" />
-    </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.Content>
-        <StackLayout Spacing="0">
-            <BoxView BackgroundColor="#0089ff">
-                <BoxView.HeightRequest>
-                    <OnPlatform x:TypeArguments="x:Double"
-                                Android="20"
-                                WinPhone="20"
-                                Default="20"
-                                iOS="40"/>
-                </BoxView.HeightRequest>
-            </BoxView>
-            <Label Text="Universal Beacon Sample" TextColor="White" BackgroundColor="#0089ff" HorizontalTextAlignment="Center"/>
-            <BoxView HeightRequest="20" BackgroundColor="#0089ff"/>
-            <ListView
-                ItemTemplate="{StaticResource FrameTemplateSelector}" 
-                ItemsSource="{Binding Beacons}"
-                SelectedItem="{Binding SelectedBeacon}"
-                HasUnevenRows="True">
-            </ListView>
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackLayout>
+                <Label Text="COVID-19 activity tracker" 
+                       TextColor="#333333" 
+                       FontSize="35" 
+                       Padding="0,20,0,20" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                       TextColor="#333333"
+                       Padding="30,0,30,0"
+                       FontSize="16"
+                       LineHeight="1.2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
 </ContentPage>
  

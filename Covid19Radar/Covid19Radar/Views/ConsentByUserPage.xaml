@@ -21,19 +21,19 @@
                        FontFamily="{DynamicResource MaterialFontFamily}" 
                        FontSize="16"
                        LineHeight="1.2"
-                       Text="&#xF05E0;同意文章の説明が入ります。同意文章の説明が入ります。同意文章の説明が入ります。同意文章の説明が入ります。同意文章の説明が入ります。同意文章の説明が入ります。"  />
+                       Text="&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence."  />
 
                 <Label FontSize="16"
                        Padding="0,30,0,0"
                        FontFamily="{DynamicResource MaterialFontFamily}" 
                        TextColor="#333333"
                        LineHeight="1.2"
-                       Text="&#xF05E0;同意文章の説明が入ります。同意文章の説明が入ります。同意文章の説明が入ります。同意文章の説明が入ります。同意文章の説明が入ります。同意文章の説明が入ります。"  />
+                       Text="&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence."  />
             </StackLayout>
         </Grid>
         <Grid Grid.Row="1" Padding="120,0,120,60">
             <Button BackgroundColor="#019ae8"
-                    Text="同意して進む" 
+                    Text="Agree and Proceed" 
                     TextColor="#FFFFFF"
                     FontSize="25"
                     MinimumHeightRequest="60"
