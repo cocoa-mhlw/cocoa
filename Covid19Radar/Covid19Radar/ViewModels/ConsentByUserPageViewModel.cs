@@ -16,17 +16,12 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "利用に関しての同意";
+            Title = "Consent by user page";
         }
 
         public Command OnClickNext => (new Command(() =>
         {
-            _navigationService.NavigateAsync("InitSettingPage");
-        }));
-
-        public Command OnClickPrev => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("MainPage");
+            _navigationService.NavigateAsync("BeaconPage");
         }));
 
     }
