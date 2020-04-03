@@ -36,7 +36,7 @@
         </Grid>
         <Grid Grid.Row="2" Padding="120,0,120,60">
             <Button BackgroundColor="#019ae8"
-                    Text="登録する" 
+                    Text="Register" 
                     TextColor="#FFFFFF"
                     FontSize="25"
                     MinimumHeightRequest="60"

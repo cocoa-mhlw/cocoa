@@ -40,6 +40,9 @@
     <Compile Update="Views\BeaconPage.xaml.cs">
       <DependentUpon>BeaconPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\StartTutorialPage.xaml.cs">
+      <DependentUpon>StartTutorialPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\SmsVerificationPage.xaml.cs">
       <DependentUpon>SmsVerificationPage.xaml</DependentUpon>
     </Compile>
