@@ -10,9 +10,9 @@ namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 
-    public partial class MainPage : ContentPage
+    public partial class StartTutorialPage : ContentPage
     {
-        public MainPage()
+        public StartTutorialPage()
         {
             InitializeComponent();
             TopMainImage.Source = ImageSource.FromResource("Covid19Radar.Images.TopMainImg.png");

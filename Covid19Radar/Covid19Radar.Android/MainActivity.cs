@@ -13,7 +13,7 @@ using AltBeaconOrg.BoundBeacon;
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -42,20 +42,11 @@ namespace Covid19Radar.Droid
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
-        public void OnBeaconServiceConnect()
+        public class AndroidInitializer : IPlatformInitializer
         {
-            var beaconService = Xamarin.Forms.DependencyService.Get<IIBeaconService>();
-
-            //beaconService.StartMonitoring();
-            beaconService.StartRanging();
-        }
-    }
-
-
-    public class AndroidInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
+            public void RegisterTypes(IContainerRegistry containerRegistry)
+            {
+            }
         }
     }
 }

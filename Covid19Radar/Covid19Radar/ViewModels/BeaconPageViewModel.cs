@@ -37,6 +37,8 @@ namespace Covid19Radar.ViewModels
             beaconservice.StartTransmission(beacon);
             Title = "Beacon Test";
 
+//            Application.Current.Properties["IsRegisted"] = true;
+
         }
     }
 }
