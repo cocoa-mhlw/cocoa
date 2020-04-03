@@ -9,6 +9,12 @@ using Xamarin.Forms.Xaml;
 using Prism.Mvvm;
 using DryIoc;
 
+/* 
+ * Our mission...is 
+ * Empower every person and every organization on the planet achieve more.
+ * Put an end to Covid 19
+ */
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
 {
@@ -63,6 +69,7 @@ namespace Covid19Radar
                   Constants.AppCenterTokensIOS +
                   typeof(Analytics), typeof(Crashes));
                   */
+
             base.OnStart();
         }
     }
