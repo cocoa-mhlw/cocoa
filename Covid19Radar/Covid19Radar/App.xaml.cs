@@ -8,6 +8,16 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.Mvvm;
 using DryIoc;
+using ImTools;
+using Covid19Radar.Model;
+using System.Threading.Tasks;
+using Prism.Navigation;
+using Covid19Radar.Services;
+using Prism.Services;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Covid19Radar.Common;
 
 /* 
  * Our mission...is 
@@ -18,8 +28,10 @@ using DryIoc;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
 {
-    public partial class App : Prism.DryIoc.PrismApplication
+    public partial class App : PrismApplication
     {
+
+        UserData userData;
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor. 
@@ -32,8 +44,18 @@ namespace Covid19Radar
         protected override async void OnInitialized()
         {
             InitializeComponent();
+            INavigationResult result;
 
-            var result = await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            // Check user data and skip tutorial
+            UserData userData = Container.Resolve<UserData>();
+            if (userData.IsRegistered)
+            {
+                result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
+            }
+            else
+            {
+                result = await NavigationService.NavigateAsync("NavigationPage/StartTutorialPage");
+            }
 
             if (!result.Success)
             {
@@ -52,7 +74,7 @@ namespace Covid19Radar
         {
             // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<StartTutorialPage, StartTutorialPageViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
             containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
             containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
@@ -60,16 +82,24 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<BeaconPage, BeaconPageViewModel>();
+
+            // Generate or Fetch GUID
+            UserData userData = new UserData();
+
+            if (Application.Current.Properties.ContainsKey("UserData"))
+            {
+                userData = Application.Current.Properties["UserData"] as UserData;
+            }
+            containerRegistry.RegisterInstance<UserData>(userData);
+
         }
 
         protected override void OnStart()
         {
-            /*
-            AppCenter.Start(Constants.AppCenterTokensAndroid +
-                  Constants.AppCenterTokensIOS +
+            AppCenter.Start(AppConstants.AppCenterTokensAndroid +
+                AppConstants.AppCenterTokensIOS +
                   typeof(Analytics), typeof(Crashes));
-                  */
-
+  
             base.OnStart();
         }
     }
