@@ -1,4 +1,5 @@
 # Covid19Radar
+[![Build status](https://build.appcenter.ms/v0.1/apps/efc3977a-0879-4815-b5bf-e2b161801f08/branches/master/badge)](https://appcenter.ms)
 
 本アプリは、Bluetoothを利用して、お互いの接触ログを取得します。  
 アプリのダウンロード後、 画面の指示に従って設定してください。
