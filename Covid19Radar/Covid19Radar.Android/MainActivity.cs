@@ -58,14 +58,14 @@ namespace Covid19Radar.Droid
 
         #region Beacon
 
-        private const int BEACONS_UPDATES_IN_SECONDS = 5;
+        private const int BEACONS_UPDATES_IN_SECONDS = 1;
         private const long BEACONS_UPDATES_IN_MILLISECONDS = BEACONS_UPDATES_IN_SECONDS * 1000;
 
         private Region _fieldRegion;
 
         private RangeNotifier _rangeNotifier;
         private MonitorNotifier _monitorNotifier;
-        private List<BeaconModel> _listOfBeacons;
+        private Dictionary<string, BeaconDataModel> _dictionaryOfBeaconData;
         private BeaconManager _beaconManager;
 
         public void StartBeacon()
@@ -74,9 +74,7 @@ namespace Covid19Radar.Droid
             _beaconManager = BeaconManager.GetInstanceForApplication(this);
             _monitorNotifier = new MonitorNotifier();
             _rangeNotifier = new RangeNotifier();
-            //_listOfBeacons = beacons;
-
-
+            _dictionaryOfBeaconData = new Dictionary<string, BeaconDataModel>();
 
             //iBeacon
             BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.IBEACON_FORMAT);
@@ -88,7 +86,7 @@ namespace Covid19Radar.Droid
 
         public void StopBeacon()
         {
-             _beaconManager.StopMonitoringBeaconsInRegion(_fieldRegion);
+            _beaconManager.StopMonitoringBeaconsInRegion(_fieldRegion);
             _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
             _beaconManager.Unbind(this);
         }
@@ -99,24 +97,45 @@ namespace Covid19Radar.Droid
         #region Event Handlers
         private void DidRangeBeaconsInRegionComplete(object sender, RangeEventArgs rangeEventArgs)
         {
+            System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
+
             ICollection<Beacon> beacons = rangeEventArgs.Beacons;
             if (beacons != null && beacons.Count > 0)
             {
                 var foundBeacons = beacons.ToList();
                 foreach (Beacon beacon in beacons)
                 {
-                    /*
-                    Mvx.Resolve<IMvxMessenger>().Publish<BeaconFoundMessage>(
-                        new BeaconFoundMessage(
-                            this,
-                            beacon.Id1.ToString(),
-                            (ushort)Convert.ToInt32(beacon.Id2.ToString()),
-                            (ushort)Convert.ToInt32(beacon.Id3.ToString()))
-                    );
-                    */
-//                    _listOfBeacons.Add(beacon);
-                    System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
-                    System.Diagnostics.Debug.WriteLine(beacon.ToString());
+                    var key = beacon.Id1.ToString() + beacon.Id2.ToString() + beacon.Id3.ToString();
+                    BeaconDataModel data = new BeaconDataModel();
+                    if (_dictionaryOfBeaconData.ContainsKey(key))
+                    {
+                        data = _dictionaryOfBeaconData.GetValueOrDefault(key);
+                        data.UUID = beacon.Id1.ToString();
+                        data.Major = beacon.Id2.ToString();
+                        data.Minor = beacon.Id3.ToString();
+                        data.Distance = beacon.Distance;
+                        data.Rssi = beacon.Rssi;
+                        data.TXPower = beacon.TxPower;
+                        _dictionaryOfBeaconData.Remove(key);
+                        data.ElaspedTime += DateTime.Now - data.LastDetectTime;
+                        data.LastDetectTime = DateTime.Now;
+                    }
+                    else
+                    {
+                        data.UUID = beacon.Id1.ToString();
+                        data.Major = beacon.Id2.ToString();
+                        data.Minor = beacon.Id3.ToString();
+                        data.Distance = beacon.Distance;
+                        data.Rssi = beacon.Rssi;
+                        data.TXPower = beacon.TxPower;
+                        data.ElaspedTime = new TimeSpan();
+                        data.LastDetectTime = DateTime.Now;
+                    }
+                    _dictionaryOfBeaconData.Add(key, data);
+
+                    System.Diagnostics.Debug.WriteLine(key.ToString());
+                    System.Diagnostics.Debug.WriteLine(data.Distance);
+                    System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
                 }
             }
 
@@ -135,7 +154,7 @@ namespace Covid19Radar.Droid
 
             MainActivity activity = Xamarin.Forms.Forms.Context as MainActivity;
             _beaconManager = BeaconManager.GetInstanceForApplication(activity);
-            _beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
+            //_beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
         }
 
         private void ExitRegionComplete(object sender, MonitorEventArgs e)
@@ -145,7 +164,7 @@ namespace Covid19Radar.Droid
 
             MainActivity activity = Xamarin.Forms.Forms.Context as MainActivity;
             _beaconManager = BeaconManager.GetInstanceForApplication(activity);
-            _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
+            //_beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
         }
 
         #endregion
@@ -173,6 +192,7 @@ namespace Covid19Radar.Droid
 
             _fieldRegion = new Region(AppConstants.AppUUID, null, null, null);
             _beaconManager.StartMonitoringBeaconsInRegion(_fieldRegion);
+            _beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
         }
 
         #region Class Notifier and EventArgs
