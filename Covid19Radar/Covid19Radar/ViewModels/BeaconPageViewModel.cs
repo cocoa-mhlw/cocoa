@@ -18,6 +18,7 @@ using Prism.Ioc;
 using Prism.DryIoc;
 using ImTools;
 using Covid19Radar.Common;
+using Covid19Radar.Services;
 
 namespace Covid19Radar.ViewModels
 {
@@ -32,12 +33,16 @@ namespace Covid19Radar.ViewModels
         {
             _navigationService = navigationService;
             _dependencyService = dependencyService;
-            var beaconservice = dependencyService.Get<IIBeaconService>();
+            var beaconservice = dependencyService.Get<IBeaconService>();
+
+            //beaconservice.
+            /*
             iBeacon beacon = new iBeacon(Guid.NewGuid(), iBeacon.DEFAULT_MAJOR, iBeacon.DEFAULT_MINOR,iBeacon.DEFAULT_TXPOWER);
             beaconservice.StartTransmission(beacon);
             Title = "Beacon Test";
+            */
 
-//            Application.Current.Properties["IsRegisted"] = true;
+            //            Application.Current.Properties["IsRegisted"] = true;
 
         }
     }

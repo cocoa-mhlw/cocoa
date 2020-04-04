@@ -12,6 +12,8 @@ using ImTools;
 using Covid19Radar.Model;
 using System.Threading.Tasks;
 using Prism.Navigation;
+using Covid19Radar.Services;
+using Prism.Services;
 
 /* 
  * Our mission...is 
@@ -85,6 +87,7 @@ namespace Covid19Radar
                 userData = Application.Current.Properties["UserData"] as UserData;
             }
             containerRegistry.RegisterInstance<UserData>(userData);
+
         }
 
         protected override void OnStart()
@@ -94,7 +97,7 @@ namespace Covid19Radar
                   Constants.AppCenterTokensIOS +
                   typeof(Analytics), typeof(Crashes));
                   */
-
+  
             base.OnStart();
         }
     }
