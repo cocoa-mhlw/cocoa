@@ -28,7 +28,7 @@
 
 [プロトタイプ画面（日本語）](https://xd.adobe.com/view/f60f0c48-af7b-48cb-42c3-e74e64d07020-803e/?fullscreen)
 
-パスワード：Covid19Radar
+Password：Covid19Radar
 
 ---
 
@@ -37,7 +37,7 @@
 This app uses Bluetooth to get the contact logs of each other.  
 After downloading the application, please follow the on-screen instructions to set it up.
 
-![App settings](img/design00-en.png)
+![App settings](img/design00-en.jpg)
 
 Permission to use the following functions of the device is required. 
 
@@ -62,4 +62,4 @@ You can check the screen transition by accessing the following URL.
 
 [Prototypes(English)](https://xd.adobe.com/view/37f0cf1d-ed5d-4328-5700-9c3f7c075307-41c1/?fullscreen)
 
-パスワード：Covid19Radar
+Password：Covid19Radar
