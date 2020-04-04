@@ -9,6 +9,13 @@ using Plugin.CurrentActivity;
 using Plugin.Permissions;
 using Covid19Radar.Model;
 using AltBeaconOrg.BoundBeacon;
+using System.Collections.Generic;
+using System.Linq;
+using Android.Util;
+using System;
+using Covid19Radar.Common;
+using System.Threading;
+using Covid19Radar.Droid.Services;
 
 namespace Covid19Radar.Droid
 {
@@ -26,9 +33,8 @@ namespace Covid19Radar.Droid
 
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
-
             LoadApplication(new App(new AndroidInitializer()));
-
+            StartBeacon();
         }
         protected override void OnNewIntent(Intent intent)
         {
@@ -42,21 +48,192 @@ namespace Covid19Radar.Droid
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
+
+        public class AndroidInitializer : IPlatformInitializer
+        {
+            public void RegisterTypes(IContainerRegistry containerRegistry)
+            {
+            }
+        }
+
+        #region Beacon
+
+        private const int BEACONS_UPDATES_IN_SECONDS = 5;
+        private const long BEACONS_UPDATES_IN_MILLISECONDS = BEACONS_UPDATES_IN_SECONDS * 1000;
+
+        private Region _fieldRegion;
+
+        private RangeNotifier _rangeNotifier;
+        private MonitorNotifier _monitorNotifier;
+        private List<BeaconModel> _listOfBeacons;
+        private BeaconManager _beaconManager;
+
+        public void StartBeacon()
+
+        {
+            _beaconManager = BeaconManager.GetInstanceForApplication(this);
+            _monitorNotifier = new MonitorNotifier();
+            _rangeNotifier = new RangeNotifier();
+            //_listOfBeacons = beacons;
+
+
+
+            //iBeacon
+            BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.IBEACON_FORMAT);
+            _beaconManager.BeaconParsers.Add(beaconParser);
+            _beaconManager.Bind(this);
+
+        }
+
+
+        public void StopBeacon()
+        {
+             _beaconManager.StopMonitoringBeaconsInRegion(_fieldRegion);
+            _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
+            _beaconManager.Unbind(this);
+        }
+
+
+        #endregion
+
+        #region Event Handlers
+        private void DidRangeBeaconsInRegionComplete(object sender, RangeEventArgs rangeEventArgs)
+        {
+            ICollection<Beacon> beacons = rangeEventArgs.Beacons;
+            if (beacons != null && beacons.Count > 0)
+            {
+                var foundBeacons = beacons.ToList();
+                foreach (Beacon beacon in beacons)
+                {
+                    /*
+                    Mvx.Resolve<IMvxMessenger>().Publish<BeaconFoundMessage>(
+                        new BeaconFoundMessage(
+                            this,
+                            beacon.Id1.ToString(),
+                            (ushort)Convert.ToInt32(beacon.Id2.ToString()),
+                            (ushort)Convert.ToInt32(beacon.Id3.ToString()))
+                    );
+                    */
+//                    _listOfBeacons.Add(beacon);
+                    System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
+                    System.Diagnostics.Debug.WriteLine(beacon.ToString());
+                }
+            }
+
+        }
+
+        private void DetermineStateForRegionComplete(object sender, MonitorEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("DetermineStateForRegionComplete");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
+        }
+
+        private void EnterRegionComplete(object sender, MonitorEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("EnterRegionComplete ---- StartRanging");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
+
+            MainActivity activity = Xamarin.Forms.Forms.Context as MainActivity;
+            _beaconManager = BeaconManager.GetInstanceForApplication(activity);
+            _beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
+        }
+
+        private void ExitRegionComplete(object sender, MonitorEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("ExitRegionComplete ---- StopRanging");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
+
+            MainActivity activity = Xamarin.Forms.Forms.Context as MainActivity;
+            _beaconManager = BeaconManager.GetInstanceForApplication(activity);
+            _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
+        }
+
+        #endregion
+
         public void OnBeaconServiceConnect()
         {
-            var beaconService = Xamarin.Forms.DependencyService.Get<IIBeaconService>();
+            // BeaconManager Setting
+            _beaconManager.SetForegroundScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
+            _beaconManager.SetForegroundBetweenScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
 
-            //beaconService.StartMonitoring();
-            beaconService.StartRanging();
+            _beaconManager.SetBackgroundScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
+            _beaconManager.SetBackgroundBetweenScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
+
+            _beaconManager.UpdateScanPeriods();
+
+            // MonitorNotifier
+            _monitorNotifier.DetermineStateForRegionComplete += DetermineStateForRegionComplete;
+            _monitorNotifier.EnterRegionComplete += EnterRegionComplete;
+            _monitorNotifier.ExitRegionComplete += ExitRegionComplete;
+            _beaconManager.AddMonitorNotifier(_monitorNotifier);
+
+            // RangeNotifier
+            _rangeNotifier.DidRangeBeaconsInRegionComplete += DidRangeBeaconsInRegionComplete;
+            _beaconManager.AddRangeNotifier(_rangeNotifier);
+
+            _fieldRegion = new Region(AppConstants.AppUUID, null, null, null);
+            _beaconManager.StartMonitoringBeaconsInRegion(_fieldRegion);
         }
-    }
 
-
-    public class AndroidInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IContainerRegistry containerRegistry)
+        #region Class Notifier and EventArgs
+        public class RangeNotifier : Java.Lang.Object, IRangeNotifier
         {
+            public event EventHandler<RangeEventArgs> DidRangeBeaconsInRegionComplete;
+
+            public void DidRangeBeaconsInRegion(ICollection<Beacon> beacons, Region region)
+            {
+                DidRangeBeaconsInRegionComplete?.Invoke(this, new RangeEventArgs { Beacons = beacons, Region = region });
+            }
         }
+        public class RangeEventArgs : EventArgs
+        {
+            public Region Region { get; set; }
+            public ICollection<Beacon> Beacons { get; set; }
+        }
+
+        public class MonitorNotifier : Java.Lang.Object, IMonitorNotifier
+        {
+            public event EventHandler<MonitorEventArgs> DetermineStateForRegionComplete;
+            public event EventHandler<MonitorEventArgs> EnterRegionComplete;
+            public event EventHandler<MonitorEventArgs> ExitRegionComplete;
+
+            public void DidDetermineStateForRegion(int state, Region region)
+            {
+                OnDetermineStateForRegionComplete(state, region);
+            }
+
+            public void DidEnterRegion(Region region)
+            {
+                OnEnterRegionComplete(region);
+            }
+
+            public void DidExitRegion(Region region)
+            {
+                OnExitRegionComplete(region);
+            }
+
+            private void OnDetermineStateForRegionComplete(int state, Region region)
+            {
+                DetermineStateForRegionComplete?.Invoke(this, new MonitorEventArgs { State = state, Region = region });
+            }
+
+            private void OnEnterRegionComplete(Region region)
+            {
+                EnterRegionComplete?.Invoke(this, new MonitorEventArgs { Region = region });
+            }
+
+            private void OnExitRegionComplete(Region region)
+            {
+                ExitRegionComplete?.Invoke(this, new MonitorEventArgs { Region = region });
+            }
+
+        }
+        public class MonitorEventArgs : EventArgs
+        {
+            public Region Region { get; set; }
+            public int State { get; set; }
+        }
+        #endregion
     }
 }
 

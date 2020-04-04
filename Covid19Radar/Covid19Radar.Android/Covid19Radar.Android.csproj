@@ -86,9 +86,7 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
-    <Compile Include="Service\iBeaconService.cs" />
-    <Compile Include="Service\MonitorNotifier.cs" />
-    <Compile Include="Service\RangeNotifier.cs" />
+    <Compile Include="Services\BeaconService.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

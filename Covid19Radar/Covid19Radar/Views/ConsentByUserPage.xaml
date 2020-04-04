@@ -11,7 +11,7 @@
         </Grid.RowDefinitions>
         <Grid Padding="30,0,30,0" Grid.Row="0">
             <StackLayout>
-                <Label Text="利用に関しての同意" 
+                <Label Text="User agreement" 
                        TextColor="#333333" 
                        FontSize="28" 
                        HorizontalTextAlignment="Center"
