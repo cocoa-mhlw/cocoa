@@ -21,7 +21,7 @@ namespace Covid19Radar.Droid.Services
         #region IBeaconService implementation
 
 
-        public void StartBeacon(List<BeaconModel> beacons)
+        public void StartBeacon()
         {
             MainActivity activity = (MainActivity)(Android.App.Application.Context);
             activity.StartBeacon();

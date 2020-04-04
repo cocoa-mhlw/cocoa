@@ -11,8 +11,7 @@ namespace Covid19Radar.Services
         /// Start Ranging Beacon
         /// </summary>
         /// <param name="beacons">Beacon List</param>
-        void StartBeacon(List<BeaconModel> beacons);
-
+        void StartBeacon();
 
         /// <summary>
         /// Stop Ranging Beacon

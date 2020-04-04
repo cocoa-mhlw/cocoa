@@ -115,8 +115,8 @@ namespace Covid19Radar.Droid
                     );
                     */
 //                    _listOfBeacons.Add(beacon);
-                    Log.Debug("Covid19RadarBeacon", "DidRangeBeaconsInRegionComplete");
-                    Log.Debug("Covid19RadarBeacon", beacon.ToString());
+                    System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
+                    System.Diagnostics.Debug.WriteLine(beacon.ToString());
                 }
             }
 
@@ -124,13 +124,14 @@ namespace Covid19Radar.Droid
 
         private void DetermineStateForRegionComplete(object sender, MonitorEventArgs e)
         {
-            Log.Debug("Covid19RadarBeacon", "DetermineStateForRegionComplete");
-            Log.Debug("Covid19RadarBeacon", e.Region.ToString());
+            System.Diagnostics.Debug.WriteLine("DetermineStateForRegionComplete");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
         }
 
         private void EnterRegionComplete(object sender, MonitorEventArgs e)
         {
-            Log.Debug("Covid19RadarBeacon", "EnterRegionComplete ---- StartRanging");
+            System.Diagnostics.Debug.WriteLine("EnterRegionComplete ---- StartRanging");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
 
             MainActivity activity = Xamarin.Forms.Forms.Context as MainActivity;
             _beaconManager = BeaconManager.GetInstanceForApplication(activity);
@@ -139,7 +140,9 @@ namespace Covid19Radar.Droid
 
         private void ExitRegionComplete(object sender, MonitorEventArgs e)
         {
-            Log.Debug("Covid19RadarBeacon", "ExitRegionComplete ---- StopRanging");
+            System.Diagnostics.Debug.WriteLine("ExitRegionComplete ---- StopRanging");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
+
             MainActivity activity = Xamarin.Forms.Forms.Context as MainActivity;
             _beaconManager = BeaconManager.GetInstanceForApplication(activity);
             _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
