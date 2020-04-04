@@ -14,9 +14,6 @@ using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Prism.Services;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
 using Covid19Radar.Common;
 
 /* 
@@ -96,10 +93,11 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
+            /*
             AppCenter.Start(AppConstants.AppCenterTokensAndroid +
                 AppConstants.AppCenterTokensIOS +
                   typeof(Analytics), typeof(Crashes));
-  
+  */
             base.OnStart();
         }
     }
