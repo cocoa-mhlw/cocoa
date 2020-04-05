@@ -19,12 +19,28 @@ namespace Covid19Radar.Droid.Services
     public class BeaconService : IBeaconService
     {
         #region IBeaconService implementation
+        public Dictionary<string,BeaconDataModel> GetBeaconData()
+        {
+            MainActivity activity = (MainActivity)(Android.App.Application.Context);
+            return activity.GetBeaconData();
+        }
 
+        public void StartAdvertising()
+        {
+            MainActivity activity = (MainActivity)(Android.App.Application.Context);
+            activity.StartAdvertising();
+        }
 
         public void StartBeacon()
         {
             MainActivity activity = (MainActivity)(Android.App.Application.Context);
             activity.StartBeacon();
+        }
+
+        public void StopAdvertising()
+        {
+            MainActivity activity = (MainActivity)(Android.App.Application.Context);
+            activity.StopAdvertising();
         }
 
         public void StopBeacon()

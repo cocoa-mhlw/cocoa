@@ -13,12 +13,25 @@ namespace Covid19Radar.iOS.Services
 {
     public class BeaconService : IBeaconService
     {
-    
+        public Dictionary<string, BeaconDataModel> GetBeaconData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void StartAdvertising()
+        {
+            throw new NotImplementedException();
+        }
+
         public void StartBeacon()
         {
             AppDelegate.Instance.StartBeacon();
         }
 
+        public void StopAdvertising()
+        {
+            throw new NotImplementedException();
+        }
 
         public void StopBeacon()
         {

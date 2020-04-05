@@ -61,7 +61,7 @@ namespace Covid19Radar.Droid
 
         #region Beacon
 
-        private const int BEACONS_UPDATES_IN_SECONDS = 1;
+        private const int BEACONS_UPDATES_IN_SECONDS = 5;
         private const long BEACONS_UPDATES_IN_MILLISECONDS = BEACONS_UPDATES_IN_SECONDS * 1000;
 
         private Region _fieldRegion;
@@ -72,6 +72,11 @@ namespace Covid19Radar.Droid
         private BeaconManager _beaconManager;
 
         private BeaconTransmitter _beaconTransmitter;
+
+        public Dictionary<string, BeaconDataModel> GetBeaconData()
+        {
+            return _dictionaryOfBeaconData;
+        }
 
         public void StartBeacon()
 
@@ -119,8 +124,6 @@ namespace Covid19Radar.Droid
             _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
             _beaconManager.Unbind(this);
         }
-
-
         #endregion
 
         #region Event Handlers
@@ -131,32 +134,11 @@ namespace Covid19Radar.Droid
             ICollection<Beacon> beacons = rangeEventArgs.Beacons;
             if (beacons != null && beacons.Count > 0)
             {
-                ProcessBeaconData(beacons);
-            }
-        }
-
-        private void ProcessBeaconData(ICollection<Beacon> beacons)
-        {
-            var foundBeacons = beacons.ToList();
-            foreach (Beacon beacon in beacons)
-            {
-                var key = beacon.Id1.ToString() + beacon.Id2.ToString() + beacon.Id3.ToString();
-                BeaconDataModel data = new BeaconDataModel();
-                if (_dictionaryOfBeaconData.ContainsKey(key))
+                var foundBeacons = beacons.ToList();
+                foreach (Beacon beacon in foundBeacons)
                 {
-                    data = _dictionaryOfBeaconData.GetValueOrDefault(key);
-                    data.UUID = beacon.Id1.ToString();
-                    data.Major = beacon.Id2.ToString();
-                    data.Minor = beacon.Id3.ToString();
-                    data.Distance = beacon.Distance;
-                    data.Rssi = beacon.Rssi;
-                    data.TXPower = beacon.TxPower;
-                    _dictionaryOfBeaconData.Remove(key);
-                    data.ElaspedTime += DateTime.Now - data.LastDetectTime;
-                    data.LastDetectTime = DateTime.Now;
-                }
-                else
-                {
+                    var key = beacon.Id1.ToString() + beacon.Id2.ToString() + beacon.Id3.ToString();
+                    BeaconDataModel data = new BeaconDataModel();
                     data.UUID = beacon.Id1.ToString();
                     data.Major = beacon.Id2.ToString();
                     data.Minor = beacon.Id3.ToString();
@@ -165,17 +147,31 @@ namespace Covid19Radar.Droid
                     data.TXPower = beacon.TxPower;
                     data.ElaspedTime = new TimeSpan();
                     data.LastDetectTime = DateTime.Now;
+                    if (_dictionaryOfBeaconData.ContainsKey(key))
+                    {
+                        data = _dictionaryOfBeaconData.GetValueOrDefault(key);
+                        data.UUID = beacon.Id1.ToString();
+                        data.Major = beacon.Id2.ToString();
+                        data.Minor = beacon.Id3.ToString();
+                        data.Distance = beacon.Distance;
+                        data.Rssi = beacon.Rssi;
+                        data.TXPower = beacon.TxPower;
+                        data.ElaspedTime += DateTime.Now - data.LastDetectTime;
+                        data.LastDetectTime = DateTime.Now;
+                        _dictionaryOfBeaconData.Remove(key);
+                    }
+
+                    _dictionaryOfBeaconData.Add(key, data);
+
+                    System.Diagnostics.Debug.WriteLine(key.ToString());
+                    System.Diagnostics.Debug.WriteLine(data.Distance);
+                    System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
+
                 }
-                _dictionaryOfBeaconData.Add(key, data);
-
-                System.Diagnostics.Debug.WriteLine(key.ToString());
-                System.Diagnostics.Debug.WriteLine(data.Distance);
-                System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
-
             }
         }
 
-            private void DetermineStateForRegionComplete(object sender, MonitorEventArgs e)
+        private void DetermineStateForRegionComplete(object sender, MonitorEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("DetermineStateForRegionComplete");
             System.Diagnostics.Debug.WriteLine(e.ToString());
