@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Covid19Radar.Common;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -17,7 +18,10 @@ namespace Covid19Radar.ViewModels
         {
             _navigationService = navigationService;
             Title = "Permissions for device (BLE)";
+            AppUtils.CheckPermission();
         }
+
+
 
         public Command OnClickNext => (new Command(() =>
         {

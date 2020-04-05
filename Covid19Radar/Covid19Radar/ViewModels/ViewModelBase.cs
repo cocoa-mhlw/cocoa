@@ -1,4 +1,5 @@
 ﻿using Covid19Radar.Model;
+using Covid19Radar.Services;
 using Prism.AppModel;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -17,7 +18,7 @@ namespace Covid19Radar.ViewModels
 
         // ナビゲーション
         protected INavigationService NavigationService { get; private set; }
-        protected IDependencyService DependencyService { get; private set; }
+        protected IBeaconService BeaconService { get; private set; }
 
         // ページタイトル
         private string _title;
@@ -31,13 +32,6 @@ namespace Covid19Radar.ViewModels
         {
             NavigationService = navigationService;
         }
-
-        public ViewModelBase(INavigationService navigationService, IDependencyService dependencyService)
-        {
-            NavigationService = navigationService;
-            DependencyService = dependencyService;
-        }
-
         public virtual void Initialize(INavigationParameters parameters)
         {
 

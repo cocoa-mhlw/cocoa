@@ -7,11 +7,6 @@ namespace Covid19Radar.Model
     class UserData
     {
 
-        public UserData()
-        {
-            // Default Value
-            this.IsRegistered = false;
-        }
         /// <summary>
         /// User UUID
         /// </summary>
@@ -19,9 +14,20 @@ namespace Covid19Radar.Model
         public string Uuid { get; set; }
 
         /// <summary>
-        ///Registered State 
+        /// User Major
         /// </summary>
-        /// <value>r</value>
-        public bool IsRegistered { get; set; }
+        /// <value>User Major</value>
+        public string Major { get; set; }
+
+        /// <summary>
+        /// User Minor
+        /// </summary>
+        /// <value>User Minor</value>
+        public string Minor { get; set; }
+
+        public string GetId()
+        {
+            return String.Format("{0}.{1}.{2}", Uuid, Major.PadLeft(5, '0'), Minor.PadLeft(5, '0'));
+        }
     }
 }

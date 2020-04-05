@@ -45,7 +45,7 @@ namespace Covid19Radar
 
             // Check user data and skip tutorial
             UserData userData = Container.Resolve<UserData>();
-            if (userData.IsRegistered)
+            if (Application.Current.Properties.ContainsKey("UserData"))
             {
                 result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
             }
@@ -80,7 +80,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<BeaconPage, BeaconPageViewModel>();
 
-            // Generate or Fetch GUID
+            // CheckUser
             UserData userData = new UserData();
 
             if (Application.Current.Properties.ContainsKey("UserData"))
