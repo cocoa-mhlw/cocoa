@@ -10,14 +10,13 @@ namespace Covid19Radar.Model
         public UserData()
         {
             // Default Value
-            this.Uuid = Guid.NewGuid();
             this.IsRegistered = false;
         }
         /// <summary>
         /// User UUID
         /// </summary>
         /// <value>User UUID</value>
-        public Guid Uuid { get; set; }
+        public string Uuid { get; set; }
 
         /// <summary>
         ///Registered State 
