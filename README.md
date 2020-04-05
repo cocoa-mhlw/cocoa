@@ -121,7 +121,6 @@ Password：Covid19Radar
 - Noiriko Matsumoto (Designer)
 
 ## Licensing
-=========
 Covid19Radar is licensed under the Apache License, Version 2.0. See
-[LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full
+[LICENSE](./LICENSE) for the full
 license text.
