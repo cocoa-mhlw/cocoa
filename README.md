@@ -3,6 +3,7 @@
 本アプリは、Bluetoot(BLE/iBeacon)を利用して、お互いの接触ログを取得します。
 ![アプリの概念](img/AppDescription.jpg)
 
+
 現時点では、Android同士のビーコン取得と画面遷移のみができており、以下の機能の実装が行われていません。
 コントリビューションとプルリクエストをお待ちしています。
 
@@ -48,7 +49,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 [プロトタイプ画面（日本語）](https://xd.adobe.com/view/f60f0c48-af7b-48cb-42c3-e74e64d07020-803e/?fullscreen)
 
-パスワード：Covid19Radar
+Password：Covid19Radar
 
 ## 謝辞/コントリビューター
 - Noriko Matsumoto (Designer)
@@ -91,7 +92,7 @@ You can develop with Visual Studio for Windows or Visual Studio for Mac.
 
 https://visualstudio.microsoft.com/ja/xamarin/
 
-![App settings](img/design00-en.png)
+![App settings](img/design00-en.jpg)
 
 Permission to use the following functions of the device is required. 
 
@@ -114,13 +115,12 @@ If you want to check your design files, install Adobe XD. (available for free).
 You can check the screen transition by accessing the following URL.
 
 [Prototypes(English)](https://xd.adobe.com/view/37f0cf1d-ed5d-4328-5700-9c3f7c075307-41c1/?fullscreen)
-
-パスワード：Covid19Radar
+Password：Covid19Radar
 
 ## Acknowledgments and Contributor
 - Noiriko Matsumoto (Designer)
 
-Licensing
+## Licensing
 =========
 Covid19Radar is licensed under the Apache License, Version 2.0. See
 [LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full
