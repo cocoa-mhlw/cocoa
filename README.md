@@ -52,7 +52,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 Password：Covid19Radar
 
 ## 謝辞/コントリビューター
-- Noriko Matsumoto (Designer)
+- [Noriko Matsumoto](https://twitter.com/nori790822) (Designer)
 
 ## ライセンス
 =========
@@ -69,7 +69,7 @@ license text.
 This app uses Bluetooth to get the contact logs of each other.  
 We are waiting for your contribution and pull request.
 
-![App Description](img/AppDescription.jpg)
+![App Description](img/AppDescription-en.jpg)
 
 ## Worked
 - Screen transition and each screen design.
@@ -118,7 +118,7 @@ You can check the screen transition by accessing the following URL.
 Password：Covid19Radar
 
 ## Acknowledgments and Contributor
-- Noiriko Matsumoto (Designer)
+- [Noriko Matsumoto](https://twitter.com/nori790822) (Designer)
 
 ## Licensing
 Covid19Radar is licensed under the Apache License, Version 2.0. See
