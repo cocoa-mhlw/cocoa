@@ -15,7 +15,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackLayout>
-                <Label Text="About this app" 
+                <Label Text="How to works" 
                        TextColor="#333333" 
                        FontSize="35" 
                        Padding="0,20,0,20" 
@@ -23,7 +23,7 @@
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"/>
-                <Label Text="This is where you will find a brief description of the app."
+                <Label Text="We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals."
                        TextColor="#333333"
                        Padding="30,0,30,0"
                        FontSize="16"

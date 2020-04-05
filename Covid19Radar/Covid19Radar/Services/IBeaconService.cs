@@ -18,6 +18,20 @@ namespace Covid19Radar.Services
         /// </summary>
         void StopBeacon();
 
-  
+        /// <summary>
+        /// Start Advertising Beacon
+        /// </summary>
+        /// <param name="beacons">Beacon List</param>
+        void StartAdvertising();
+
+        /// <summary>
+        /// Stop Advertising Beacon
+        /// </summary>
+        void StopAdvertising();
+
+        /// <summary>
+        /// Get beacon data model
+        /// </summary>
+        Dictionary<string, BeaconDataModel> GetBeaconData();
     }
 }

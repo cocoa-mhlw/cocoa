@@ -1,49 +1,40 @@
-﻿using Covid19Radar.Model;
+﻿using Covid19Radar.Common;
+using Covid19Radar.Model;
+using Covid19Radar.Services;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
-using Prism.Services;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
-using Plugin.Permissions;
-using Plugin.Permissions.Abstractions;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using Prism.Ioc;
-using Prism.DryIoc;
-using ImTools;
-using Covid19Radar.Common;
-using Covid19Radar.Services;
 
 namespace Covid19Radar.ViewModels
 {
     public class BeaconPageViewModel : ViewModelBase
     {
         private INavigationService _navigationService;
-        private IDependencyService _dependencyService;
-
-        public BeaconPageViewModel(INavigationService navigationService, IDependencyService dependencyService)
-            : base(navigationService,dependencyService)
-
+        public BeaconPageViewModel(INavigationService navigationService)
+            : base(navigationService)
         {
             _navigationService = navigationService;
-            _dependencyService = dependencyService;
-            var beaconservice = dependencyService.Get<IBeaconService>();
+            Title = "Beacon Page";
+            AppUtils.CheckPermission();
 
-            //beaconservice.
-            /*
-            iBeacon beacon = new iBeacon(Guid.NewGuid(), iBeacon.DEFAULT_MAJOR, iBeacon.DEFAULT_MINOR,iBeacon.DEFAULT_TXPOWER);
-            beaconservice.StartTransmission(beacon);
-            Title = "Beacon Test";
-            */
-
-            //            Application.Current.Properties["IsRegisted"] = true;
-
+            // Create User
+            // TODO Check Register User (UUID.Major.Minor) or New
+            // POST New User and Store local properities
+            if (!Application.Current.Properties.ContainsKey("UserData"))
+            {
+                // Access REST API and new id case
+                UserData userData = new UserData();
+                userData.Uuid = AppConstants.AppUUID;
+                userData.Major = "23";
+                userData.Minor = "45";
+                Application.Current.Properties["UserData"] = userData;
+            }
         }
+
     }
 }

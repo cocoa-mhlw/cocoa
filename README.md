@@ -1,9 +1,29 @@
-# Covid19Radar
-[![Build status Android](https://build.appcenter.ms/v0.1/apps/efc3977a-0879-4815-b5bf-e2b161801f08/branches/master/badge)](https://appcenter.ms)
-[![Build status iOS](https://build.appcenter.ms/v0.1/apps/e2007c18-b3ed-4722-9964-402852ef78e5/branches/master/badge)](https://appcenter.ms)
+# Covid19Radar (Japanese , English ver is under below)
+*このアプリケーションは開発中*です。
+本アプリは、Bluetoot(BLE/iBeacon)を利用して、お互いの接触ログを取得します。
+![アプリの概念](img/AppDescription.jpg)
 
-本アプリは、Bluetoothを利用して、お互いの接触ログを取得します。  
-アプリのダウンロード後、 画面の指示に従って設定してください。
+
+現時点では、Android同士のビーコン取得と画面遷移のみができており、以下の機能の実装が行われていません。
+コントリビューションとプルリクエストをお待ちしています。
+
+## 実装済
+- 画面遷移とデザイン
+- Android同士での近接通信の検知と取得
+ 
+## 未実装
+- iOS iBeacon実装と検証 (私がMac持ってない)
+- ユーザ追加(via REST API)
+- Push Nortification
+- サーバサイド API (Azure Function and CosmosDB)
+- 濃厚接触の条件などの整理
+- Graph DB(Cosmos DB)の表示処理など（サーバサイド)
+
+### 開発環境について
+
+クライアント側は、Xamarin Forms(iOS and Android) with C# と Prism(MVVM IoC)を使っています。Visual Studio for Windows もしくは Visual Studio for Macで開発可能です。
+
+https://visualstudio.microsoft.com/ja/xamarin/
 
 ![アプリ設定に関して](img/design00.jpg)
 
@@ -13,7 +33,6 @@
 2. Push通知
 
 設定完了後、本アプリをインストールしている人同士の接触ログを自動で記録します。
-
 
 # デザインについて
 
@@ -32,12 +51,46 @@
 
 Password：Covid19Radar
 
+## 謝辞/コントリビューター
+- Noriko Matsumoto (Designer)
+
+## ライセンス
+=========
+Covid19Radar is licensed under the Apache License, Version 2.0. See
+[LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full
+license text.
+
 ---
 
 # Covid19Radar(English)
 
+*This Application is UNDER DEVELOPEMNT!!*
+
 This app uses Bluetooth to get the contact logs of each other.  
-After downloading the application, please follow the on-screen instructions to set it up.
+We are waiting for your contribution and pull request.
+
+![App Description](img/AppDescription.jpg)
+
+## Worked
+- Screen transition and each screen design.
+- Proximity communication between Android.
+
+## Under develipment
+
+- iOS iBeacon implementation , testing (I don't have a Mac)
+- Add user (via REST API)
+- Push Nortification
+- SErver Side  API (Azure Function and CosmosDB)
+- Arrangement of conditions of dense contact
+- Graph DB(Cosmos DB) side Query , manage site（Server Side)
+
+## Development environment
+
+This application uses Xamarin Forms (iOS and Android) with C # and Prism (MVVM IoC).
+
+You can develop with Visual Studio for Windows or Visual Studio for Mac.
+
+https://visualstudio.microsoft.com/ja/xamarin/
 
 ![App settings](img/design00-en.jpg)
 
@@ -47,7 +100,6 @@ Permission to use the following functions of the device is required.
 2. Push Notification
 
 After the setup is complete, the contact log between the people who have installed this app is automatically recorded.
-
 
 # About the design
 
@@ -63,5 +115,13 @@ If you want to check your design files, install Adobe XD. (available for free).
 You can check the screen transition by accessing the following URL.
 
 [Prototypes(English)](https://xd.adobe.com/view/37f0cf1d-ed5d-4328-5700-9c3f7c075307-41c1/?fullscreen)
-
 Password：Covid19Radar
+
+## Acknowledgments and Contributor
+- Noiriko Matsumoto (Designer)
+
+## Licensing
+=========
+Covid19Radar is licensed under the Apache License, Version 2.0. See
+[LICENSE](https://github.com/moby/moby/blob/master/LICENSE) for the full
+license text.

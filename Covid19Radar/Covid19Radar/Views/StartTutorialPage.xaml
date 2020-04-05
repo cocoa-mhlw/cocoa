@@ -15,7 +15,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackLayout>
-                <Label Text="COVID-19 Activity Tracker" 
+                <Label Text="Help Stop the spread of COVID-19 by turning Bluetooth on" 
                        TextColor="#333333" 
                        FontSize="35" 
                        Padding="0,20,0,20" 
@@ -23,7 +23,16 @@
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"/>
-                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                <Label Text="If you had close contact with a COVID-19 case, We will help agencies contact you to prevent the spread of infection, to provide guidance and care"
+                       TextColor="#333333"
+                       Padding="30,0,30,0"
+                       FontSize="16"
+                       LineHeight="1.2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"/>
+                <Label Text="To protect those around you, Please share your data."
                        TextColor="#333333"
                        Padding="30,0,30,0"
                        FontSize="16"
@@ -35,13 +44,15 @@
             </StackLayout>
         </Grid>
         <Grid Grid.Row="2" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="Next" 
+            <StackLayout>
+                <Button BackgroundColor="#019ae8"
+                    Text="I want to help" 
                     TextColor="#FFFFFF"
                     FontSize="25"
                     MinimumHeightRequest="60"
                     MinimumWidthRequest="170"
                     Command="{Binding Path=OnClickNext}"/>
+            </StackLayout>
         </Grid>
     </Grid>
 </ContentPage>
