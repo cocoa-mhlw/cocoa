@@ -34,7 +34,10 @@ namespace Covid19Radar.Droid
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
+
             StartBeacon();
+            StartAdvertising();
+
         }
         protected override void OnNewIntent(Intent intent)
         {
@@ -68,6 +71,8 @@ namespace Covid19Radar.Droid
         private Dictionary<string, BeaconDataModel> _dictionaryOfBeaconData;
         private BeaconManager _beaconManager;
 
+        private BeaconTransmitter _beaconTransmitter;
+
         public void StartBeacon()
 
         {
@@ -83,6 +88,30 @@ namespace Covid19Radar.Droid
 
         }
 
+        public void StartAdvertising()
+        {
+            Beacon beacon = new Beacon.Builder()
+                                .SetId1(AppConstants.AppUUID)
+                                .SetId2("2111")
+                                .SetId3("3123")
+                                .SetTxPower(-59)
+                                .SetManufacturer(AppConstants.COMPANY_CODE_APPLE)
+                                .Build();
+
+            // iBeaconのバイト列フォーマットをBeaconParser（アドバタイズ時のバイト列定義）にセットする。
+            BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.IBEACON_FORMAT);
+
+            // iBeaconの発信を開始する。
+            _beaconTransmitter = new BeaconTransmitter(Application.Context, beaconParser);
+            _beaconTransmitter.StartAdvertising(beacon);
+
+        }
+
+        public void StopAdvertising()
+        {
+            _beaconTransmitter.StopAdvertising();
+
+        }
 
         public void StopBeacon()
         {
@@ -102,46 +131,51 @@ namespace Covid19Radar.Droid
             ICollection<Beacon> beacons = rangeEventArgs.Beacons;
             if (beacons != null && beacons.Count > 0)
             {
-                var foundBeacons = beacons.ToList();
-                foreach (Beacon beacon in beacons)
-                {
-                    var key = beacon.Id1.ToString() + beacon.Id2.ToString() + beacon.Id3.ToString();
-                    BeaconDataModel data = new BeaconDataModel();
-                    if (_dictionaryOfBeaconData.ContainsKey(key))
-                    {
-                        data = _dictionaryOfBeaconData.GetValueOrDefault(key);
-                        data.UUID = beacon.Id1.ToString();
-                        data.Major = beacon.Id2.ToString();
-                        data.Minor = beacon.Id3.ToString();
-                        data.Distance = beacon.Distance;
-                        data.Rssi = beacon.Rssi;
-                        data.TXPower = beacon.TxPower;
-                        _dictionaryOfBeaconData.Remove(key);
-                        data.ElaspedTime += DateTime.Now - data.LastDetectTime;
-                        data.LastDetectTime = DateTime.Now;
-                    }
-                    else
-                    {
-                        data.UUID = beacon.Id1.ToString();
-                        data.Major = beacon.Id2.ToString();
-                        data.Minor = beacon.Id3.ToString();
-                        data.Distance = beacon.Distance;
-                        data.Rssi = beacon.Rssi;
-                        data.TXPower = beacon.TxPower;
-                        data.ElaspedTime = new TimeSpan();
-                        data.LastDetectTime = DateTime.Now;
-                    }
-                    _dictionaryOfBeaconData.Add(key, data);
-
-                    System.Diagnostics.Debug.WriteLine(key.ToString());
-                    System.Diagnostics.Debug.WriteLine(data.Distance);
-                    System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
-                }
+                ProcessBeaconData(beacons);
             }
-
         }
 
-        private void DetermineStateForRegionComplete(object sender, MonitorEventArgs e)
+        private void ProcessBeaconData(ICollection<Beacon> beacons)
+        {
+            var foundBeacons = beacons.ToList();
+            foreach (Beacon beacon in beacons)
+            {
+                var key = beacon.Id1.ToString() + beacon.Id2.ToString() + beacon.Id3.ToString();
+                BeaconDataModel data = new BeaconDataModel();
+                if (_dictionaryOfBeaconData.ContainsKey(key))
+                {
+                    data = _dictionaryOfBeaconData.GetValueOrDefault(key);
+                    data.UUID = beacon.Id1.ToString();
+                    data.Major = beacon.Id2.ToString();
+                    data.Minor = beacon.Id3.ToString();
+                    data.Distance = beacon.Distance;
+                    data.Rssi = beacon.Rssi;
+                    data.TXPower = beacon.TxPower;
+                    _dictionaryOfBeaconData.Remove(key);
+                    data.ElaspedTime += DateTime.Now - data.LastDetectTime;
+                    data.LastDetectTime = DateTime.Now;
+                }
+                else
+                {
+                    data.UUID = beacon.Id1.ToString();
+                    data.Major = beacon.Id2.ToString();
+                    data.Minor = beacon.Id3.ToString();
+                    data.Distance = beacon.Distance;
+                    data.Rssi = beacon.Rssi;
+                    data.TXPower = beacon.TxPower;
+                    data.ElaspedTime = new TimeSpan();
+                    data.LastDetectTime = DateTime.Now;
+                }
+                _dictionaryOfBeaconData.Add(key, data);
+
+                System.Diagnostics.Debug.WriteLine(key.ToString());
+                System.Diagnostics.Debug.WriteLine(data.Distance);
+                System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
+
+            }
+        }
+
+            private void DetermineStateForRegionComplete(object sender, MonitorEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("DetermineStateForRegionComplete");
             System.Diagnostics.Debug.WriteLine(e.ToString());
@@ -194,6 +228,8 @@ namespace Covid19Radar.Droid
             _beaconManager.StartMonitoringBeaconsInRegion(_fieldRegion);
             _beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
         }
+
+
 
         #region Class Notifier and EventArgs
         public class RangeNotifier : Java.Lang.Object, IRangeNotifier
