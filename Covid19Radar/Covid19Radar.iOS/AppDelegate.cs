@@ -3,7 +3,6 @@ using Covid19Radar.Common;
 using Foundation;
 using Prism;
 using Prism.Ioc;
-using System;
 using UIKit;
 
 namespace Covid19Radar.iOS

@@ -15,6 +15,10 @@ using Prism.Navigation;
 using Covid19Radar.Services;
 using Prism.Services;
 using Covid19Radar.Common;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
 
 /* 
  * Our mission...is 
@@ -93,11 +97,10 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
-            /*
-            AppCenter.Start(AppConstants.AppCenterTokensAndroid +
+            AppCenter.Start(
+                AppConstants.AppCenterTokensAndroid +
                 AppConstants.AppCenterTokensIOS +
-                  typeof(Analytics), typeof(Crashes));
-  */
+                  typeof(Analytics), typeof(Crashes), typeof(Distribute));
             base.OnStart();
         }
     }
