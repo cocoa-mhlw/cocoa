@@ -1,5 +1,8 @@
 # Covid19Radar(English / Japanese under below 日本語版は下にあります。)
 
+Discord Channel
+https://discord.gg/e5hMm4h
+
 *This Application is UNDER DEVELOPEMNT!!*
 
 This app uses Bluetooth to get the contact logs of each other.  
