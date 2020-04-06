@@ -5,11 +5,12 @@ using Xamarin.Forms;
 using CoreBluetooth;
 using CoreLocation;
 using Foundation;
+using System.ComponentModel;
 
-[assembly: Dependency(typeof(iBeaconTransmitService))]
+[assembly: Dependency(typeof(Covid19Radar.iOS.Model.iBeaconService))]
 namespace Covid19Radar.iOS.Model
 {
-    public class iBeaconTransmitService : IIBeaconTransmitService
+    public class iBeaconService : IIBeaconService
     {
         #region Variables
 
@@ -17,6 +18,9 @@ namespace Covid19Radar.iOS.Model
         /// BLEの発信を制御するクラスのインスタンス
         /// </summary>
         private CBPeripheralManager _peripheralManager = new CBPeripheralManager();
+
+        public event EventHandler<ListChangedEventArgs> ListChanged;
+        public event EventHandler DataClearing;
 
         #endregion
 
@@ -64,6 +68,16 @@ namespace Covid19Radar.iOS.Model
         public void StopTransmission()
         {
             _peripheralManager.StopAdvertising();
+        }
+
+        public void InitializeService()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void StartRanging()
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
