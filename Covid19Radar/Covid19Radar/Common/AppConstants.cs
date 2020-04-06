@@ -6,8 +6,8 @@ namespace Covid19Radar.Common
 {
     public class AppConstants
     {
-        public static readonly string AppCenterTokensAndroid = "android=AppIdForAndroidPlaceholder;";
-        public static readonly string AppCenterTokensIOS = "ios=AppIdForiOSPlaceholder;";
+        public static readonly string AppCenterTokensAndroid = "AppIdForAndroidPlaceholder";
+        public static readonly string AppCenterTokensIOS = "AppIdForiOSPlaceholder";
 		/// <summary>
 		/// Start Transmit
 		/// </summary>
