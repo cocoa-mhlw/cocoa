@@ -3,6 +3,7 @@ using Covid19Radar.Common;
 using Foundation;
 using Prism;
 using Prism.Ioc;
+using System;
 using UIKit;
 
 namespace Covid19Radar.iOS
@@ -22,6 +23,7 @@ namespace Covid19Radar.iOS
         public AppDelegate()
         {
             _locationMgr = new CLLocationManager();
+
         }
 
         //
@@ -36,6 +38,8 @@ namespace Covid19Radar.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
 
+            StartBeacon();
+
             return base.FinishedLaunching(app, options);
         }
 
@@ -49,7 +53,7 @@ namespace Covid19Radar.iOS
 
             // Monitoring
             _locationMgr.RegionEntered += DidRegionEntered;
-            _locationMgr.RegionEntered += DidRegionLeft;
+            _locationMgr.RegionLeft += DidRegionLeft;
 
             // Ranging
             _locationMgr.DidRangeBeacons += DidRangeBeacons;
