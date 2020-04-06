@@ -7,7 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Covid19Radar.Model;
+using Covid19Radar.Models;
 
 namespace Covid19Radar.Api
 {
