@@ -1,4 +1,4 @@
-# Covid19Radar(English / Japanese under below 日本語版は下にあります。)
+# Covid19Radar(English / Japanese ver is below 日本語版は下にあります。)
 
 Discord Channel
 https://discord.gg/e5hMm4h
@@ -74,7 +74,7 @@ license text.
 
 ------
 
-# Covid19Radar (Japanese , English ver is under above)
+# Covid19Radar (Japanese , English ver is above)
 *このアプリケーションは開発中*です。
 本アプリは、Bluetooth(BLE/iBeacon)を利用して、お互いの接触ログを取得します。
 ![アプリの概念](img/AppDescription.jpg)
