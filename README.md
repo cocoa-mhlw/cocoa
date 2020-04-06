@@ -75,7 +75,7 @@ license text.
 
 # Covid19Radar (Japanese , English ver is under below)
 *このアプリケーションは開発中*です。
-本アプリは、Bluetoot(BLE/iBeacon)を利用して、お互いの接触ログを取得します。
+本アプリは、Bluetooth(BLE/iBeacon)を利用して、お互いの接触ログを取得します。
 ![アプリの概念](img/AppDescription.jpg)
 
 
