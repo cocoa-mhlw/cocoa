@@ -9,6 +9,7 @@ Kazuki Ota (Create Build pipeline on AppCenter)
 Taiki Yoshida (Power BI / Power Apps)
 Yasuaki Matsuda (Server side / Azure Fucntions)
 Tsuyoshi Ushio  (Server side / Azure Fucntions)
+Takeshi Sakurai (Client iOS)
 
 *This Application is UNDER DEVELOPEMNT!!*
 
