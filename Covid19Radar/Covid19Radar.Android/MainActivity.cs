@@ -11,11 +11,8 @@ using Covid19Radar.Model;
 using AltBeaconOrg.BoundBeacon;
 using System.Collections.Generic;
 using System.Linq;
-using Android.Util;
 using System;
 using Covid19Radar.Common;
-using System.Threading;
-using Covid19Radar.Droid.Services;
 
 namespace Covid19Radar.Droid
 {
