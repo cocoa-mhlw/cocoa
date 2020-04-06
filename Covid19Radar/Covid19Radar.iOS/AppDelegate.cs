@@ -58,7 +58,7 @@ namespace Covid19Radar.iOS
             // Ranging
             _locationMgr.DidRangeBeacons += DidRangeBeacons;
             _locationMgr.DidDetermineState += DidDetermineState;
-            _locationMgr.PausesLocationUpdatesAutomatically = true;
+            _locationMgr.PausesLocationUpdatesAutomatically = false;
 
             _locationMgr.StartUpdatingLocation();
             _locationMgr.RequestAlwaysAuthorization();
