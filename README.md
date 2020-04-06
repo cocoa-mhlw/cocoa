@@ -3,6 +3,13 @@
 Discord Channel
 https://discord.gg/e5hMm4h
 
+Acknowledgments and Contributor
+Noriko Matsumoto (Designer)
+Kazuki Ota (Create Build pipeline on AppCenter)
+Taiki Yoshida (Power BI / Power Apps)
+Yasuaki Matsuda (Server side / Azure Fucntions)
+Tsuyoshi Ushio  (Server side / Azure Fucntions)
+
 *This Application is UNDER DEVELOPEMNT!!*
 
 This app uses Bluetooth to get the contact logs of each other.  
