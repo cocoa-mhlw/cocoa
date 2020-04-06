@@ -97,9 +97,7 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
-            AppCenter.Start(
-                AppConstants.AppCenterTokensAndroid +
-                AppConstants.AppCenterTokensIOS +
+            AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};",
                   typeof(Analytics), typeof(Crashes), typeof(Distribute));
             base.OnStart();
         }
