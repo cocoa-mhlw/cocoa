@@ -94,7 +94,7 @@
     <None Include="appcenter-pre-build.sh" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
-    <Compile Include="Model\iBeaconTransmitService.cs" />
+    <Compile Include="Model\iBeaconService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
