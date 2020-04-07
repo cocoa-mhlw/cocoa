@@ -6,6 +6,7 @@ on:
 
 env:
   AZURE_FUNCTIONAPP_NAME: covid19radar
+  AZURE_FUNCTIONS_PROJECT_DIR: Covid19RadarAPI
 
 jobs:
   build:
@@ -19,6 +20,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+    - name: Change working directory to API
+      run: pushd ${{ env.AZURE_FUNCTIONS_PROJECT_DIR }}
     - name: Install dependencies
       run: dotnet restore
     - name: Build
@@ -30,6 +33,8 @@ jobs:
       with:
         name: drop
         path: ${{ env.ARTIFACT_STAGING_PATH }}
+    - name: Move to current directory
+      run: popd
 
   deploy:
     needs: [build]
@@ -49,4 +54,3 @@ jobs:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
         package: '${{ env.DEPLOY_TARGET_DIR }}'
         publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
-    - 
