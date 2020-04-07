@@ -61,4 +61,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\cell\" />
+  </ItemGroup>
 </Project>
