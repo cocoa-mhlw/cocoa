@@ -1,0 +1,9 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+        "COSMOS_ENDPOINT_URI": "https://localhost:8081",
+        "COSMOS_PRIMARY_KEY": ""
+    }
+}
