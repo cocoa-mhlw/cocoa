@@ -1,0 +1,56 @@
+name: Deploy Covid19 to Azure Functions
+
+on:
+  push:
+    branches: [ master ]
+
+env:
+  AZURE_FUNCTIONAPP_NAME: covid19radar
+  AZURE_FUNCTIONS_PROJECT_DIR: Covid19RadarAPI
+
+jobs:
+  build:
+    env:
+      ARTIFACT_STAGING_PATH: ${{ github.workspace }}/artifact_staging_dir
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Change working directory to API
+      run: pushd ${{ env.AZURE_FUNCTIONS_PROJECT_DIR }}
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore --output ${{ env.ARTIFACT_STAGING_PATH }}
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
+    - name: Upload article
+      uses: actions/upload-artifact@v1
+      with:
+        name: drop
+        path: ${{ env.ARTIFACT_STAGING_PATH }}
+    - name: Move to current directory
+      run: popd
+
+  deploy:
+    needs: [build]
+    env:
+      DEPLOY_TARGET_DIR: ${{ github.workspace }}/deploy_target_dir
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Download drop
+      uses: actions/download-artifact@v1
+      with:
+        name: drop
+        path: ${{ env.DEPLOY_TARGET_DIR }}
+    - name: Deploy to Azure
+      uses: Azure/functions-action@v1
+      with:
+        app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
+        package: '${{ env.DEPLOY_TARGET_DIR }}'
+        publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
