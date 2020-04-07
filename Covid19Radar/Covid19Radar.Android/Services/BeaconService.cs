@@ -9,15 +9,19 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Covid19Radar.Droid.Services;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(IBeaconService))]
+[assembly: Dependency(typeof(BeaconService))]
 namespace Covid19Radar.Droid.Services
 {
     public class BeaconService : IBeaconService
     {
+        public BeaconService()
+        {
+        }
         #region IBeaconService implementation
         public Dictionary<string,BeaconDataModel> GetBeaconData()
         {
