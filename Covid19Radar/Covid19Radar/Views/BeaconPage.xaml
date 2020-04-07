@@ -4,10 +4,21 @@
              x:Class="Covid19Radar.Views.BeaconPage"
                           xmlns:local="clr-namespace:Covid19Radar"
              Title="{Binding Title}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-    </Grid>
+
+    <ListView x:Name="BeaconList" ItemsSource="{Binding beaconList}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding UUID}"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="#503026" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>
