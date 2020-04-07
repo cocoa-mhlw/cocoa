@@ -6,7 +6,7 @@ on:
 
 env:
   AZURE_FUNCTIONAPP_NAME: covid19radar
-  AZURE_FUNCTIONS_PROJECT_DIR: Covid19RadarAPI
+  AZURE_FUNCTIONS_PROJECT: Covid19RadarAPI/Covid19RadarAPI.csproj
 
 jobs:
   build:
@@ -20,21 +20,17 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Change working directory to API
-      run: pushd ${{ env.AZURE_FUNCTIONS_PROJECT_DIR }}
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore --output ${{ env.ARTIFACT_STAGING_PATH }}
+      run: dotnet build ${{ env.AZURE_FUNCTIONS_PROJECT }} --configuration Release --no-restore --output ${{ env.ARTIFACT_STAGING_PATH }}
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test ${{ env.AZURE_FUNCTIONS_PROJECT }} --no-restore --verbosity normal
     - name: Upload article
       uses: actions/upload-artifact@v1
       with:
         name: drop
         path: ${{ env.ARTIFACT_STAGING_PATH }}
-    - name: Move to current directory
-      run: popd
 
   deploy:
     needs: [build]
