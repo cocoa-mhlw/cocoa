@@ -19,6 +19,17 @@ We are waiting for your contribution and pull request.
 
 ![App Description](img/AppDescription-en.jpg)
 
+## How to install the app for tester
+
+Android app
+
+Please install the app for test from below link:(Sorry, currently available only Android)
+
+https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
+
+Device configuration guide for tester:
+https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
+
 ## Worked
 - Screen transition and each screen design.
 - Proximity communication between Android.
@@ -83,6 +94,17 @@ license text.
 
 現時点では、Android同士のビーコン取得と画面遷移のみができており、以下の機能の実装が行われていません。
 コントリビューションとプルリクエストをお待ちしています。
+
+## テスト用にアプリをインストールするには
+
+Android アプリ
+
+以下のリンクからアプリをテスト用にインストールしてください:（現時点では Android のみ対応しています）
+
+https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
+
+テスト用のデバイスの構成は、以下のドキュメントを参照してください:
+https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 
 ## 実装済
 - 画面遷移とデザイン
