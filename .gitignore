@@ -344,3 +344,6 @@ healthchecksdb
 terraform.tfstate
 terraform.tfstate.backup
 storage_account_name.json
+
+# Azure Functions localsettings file
+local.settings.json
