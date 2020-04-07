@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using Covid19Radar.Common;
+using Covid19Radar.Droid.Services;
 
 namespace Covid19Radar.Droid
 {
@@ -79,6 +80,16 @@ namespace Covid19Radar.Droid
 
         {
             _beaconManager = BeaconManager.GetInstanceForApplication(this);
+
+            #region Set up Beacon Simulator for TEST USE
+            // Beacon Simulator
+            var beaconSimulator = new BeaconSimulator();
+            beaconSimulator.CreateBasicSimulatedBeacons();
+            BeaconManager.BeaconSimulator = beaconSimulator;
+            // Beacon Simulator
+            #endregion Set up Beacon Simulator for TEST USE
+
+
             _monitorNotifier = new MonitorNotifier();
             _rangeNotifier = new RangeNotifier();
             _dictionaryOfBeaconData = new Dictionary<string, BeaconDataModel>();
