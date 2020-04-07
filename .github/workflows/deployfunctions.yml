@@ -3,6 +3,8 @@ name: Deploy Covid19 to Azure Functions
 on:
   push:
     branches: [ master ]
+    paths:
+      - CovidRadarAPI/**
 
 env:
   AZURE_FUNCTIONAPP_NAME: covid19radar
