@@ -21,8 +21,6 @@ We are waiting for your contribution and pull request.
 
 ## How to install the app for tester
 
-Android app
-
 Please install the app for test from below link:(Sorry, currently available only Android)
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
@@ -96,8 +94,6 @@ license text.
 コントリビューションとプルリクエストをお待ちしています。
 
 ## テスト用にアプリをインストールするには
-
-Android アプリ
 
 以下のリンクからアプリをテスト用にインストールしてください:（現時点では Android のみ対応しています）
 
