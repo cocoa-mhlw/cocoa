@@ -7,6 +7,9 @@ namespace Covid19Radar.Services
 {
     public interface IBeaconService
     {
+
+        void InitializeService();
+
         /// <summary>
         /// Start Ranging Beacon
         /// </summary>
@@ -22,7 +25,7 @@ namespace Covid19Radar.Services
         /// Start Advertising Beacon
         /// </summary>
         /// <param name="beacons">Beacon List</param>
-        void StartAdvertising();
+        void StartAdvertising(UserData userData);
 
         /// <summary>
         /// Stop Advertising Beacon

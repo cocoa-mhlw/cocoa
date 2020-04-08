@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Covid19Radar.Model
 {
-    class UserData
+    public class UserData
     {
 
         /// <summary>
