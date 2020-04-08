@@ -66,6 +66,8 @@ We use [Adobe XD](https://www.adobe.com/jp/products/xd.html) to create our desig
 
 If you want to check your design files, install Adobe XD. (available for free).
 
+Refer [DataModels and API](doc/domain-model.md) for more details about the spec. (Japanese only)
+
 
 ## App Prototypes
 
@@ -136,6 +138,8 @@ https://visualstudio.microsoft.com/ja/xamarin/
 ![画面全体図](img/design01.jpg)
 
 デザインファイルを確認する場合は、Adobe XDをインストールしてください。（無料で利用可能）
+
+アプリケーションのより詳細な仕様とデータモデル、API仕様、関連業務知識に関しては、[濃厚接触検知のデータモデルと API仕様](doc/domain-model.md)をごらんください。
 
 
 ## アプリのプロトタイプ
