@@ -51,5 +51,8 @@ namespace Covid19Radar.Common
 		/// </summary>
 
 		public static readonly string AppUUID = "7822fa0f-ce38-48ea-a7e8-e72af4e42c1c";
+
+		public static readonly long BEACONS_UPDATES_IN_MILLISECONDS = 5 * 1000;
+
 	}
 }

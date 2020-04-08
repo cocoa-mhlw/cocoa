@@ -14,12 +14,14 @@ using System.Linq;
 using System;
 using Covid19Radar.Common;
 using Covid19Radar.Droid.Services;
+using Covid19Radar.Services;
 
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
     {
+        internal static MainActivity Instance { get; private set; }
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -28,13 +30,10 @@ namespace Covid19Radar.Droid
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            Instance = this;
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
-
-            StartBeacon();
-            StartAdvertising();
 
         }
         protected override void OnNewIntent(Intent intent)
@@ -54,246 +53,22 @@ namespace Covid19Radar.Droid
         {
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
+                BeaconService beaconService = new BeaconService();
+                containerRegistry.RegisterSingleton<IBeaconService,BeaconService>();
             }
         }
 
-        #region Beacon
-
-        private const int BEACONS_UPDATES_IN_SECONDS = 5;
-        private const long BEACONS_UPDATES_IN_MILLISECONDS = BEACONS_UPDATES_IN_SECONDS * 1000;
-
-        private Region _fieldRegion;
-
-        private RangeNotifier _rangeNotifier;
-        private MonitorNotifier _monitorNotifier;
-        private Dictionary<string, BeaconDataModel> _dictionaryOfBeaconData;
-        private BeaconManager _beaconManager;
-
-        private BeaconTransmitter _beaconTransmitter;
-
-        public Dictionary<string, BeaconDataModel> GetBeaconData()
-        {
-            return _dictionaryOfBeaconData;
-        }
-
-        public void StartBeacon()
-
-        {
-            _beaconManager = BeaconManager.GetInstanceForApplication(this);
-
-            #region Set up Beacon Simulator for TEST USE
-            // Beacon Simulator
-            var beaconSimulator = new BeaconSimulator();
-            beaconSimulator.CreateBasicSimulatedBeacons();
-            BeaconManager.BeaconSimulator = beaconSimulator;
-            // Beacon Simulator
-            #endregion Set up Beacon Simulator for TEST USE
-
-
-            _monitorNotifier = new MonitorNotifier();
-            _rangeNotifier = new RangeNotifier();
-            _dictionaryOfBeaconData = new Dictionary<string, BeaconDataModel>();
-
-            //iBeacon
-            BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.IBEACON_FORMAT);
-            _beaconManager.BeaconParsers.Add(beaconParser);
-            _beaconManager.Bind(this);
-
-        }
-
-        public void StartAdvertising()
-        {
-            Beacon beacon = new Beacon.Builder()
-                                .SetId1(AppConstants.AppUUID)
-                                .SetId2("2111")
-                                .SetId3("3123")
-                                .SetTxPower(-59)
-                                .SetManufacturer(AppConstants.COMPANY_CODE_APPLE)
-                                .Build();
-
-            // iBeaconのバイト列フォーマットをBeaconParser（アドバタイズ時のバイト列定義）にセットする。
-            BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.IBEACON_FORMAT);
-
-            // iBeaconの発信を開始する。
-            _beaconTransmitter = new BeaconTransmitter(Application.Context, beaconParser);
-            _beaconTransmitter.StartAdvertising(beacon);
-
-        }
-
-        public void StopAdvertising()
-        {
-            _beaconTransmitter.StopAdvertising();
-
-        }
-
-        public void StopBeacon()
-        {
-            _beaconManager.StopMonitoringBeaconsInRegion(_fieldRegion);
-            _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
-            _beaconManager.Unbind(this);
-        }
-        #endregion
-
-        #region Event Handlers
-        private void DidRangeBeaconsInRegionComplete(object sender, RangeEventArgs rangeEventArgs)
-        {
-            System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
-
-            ICollection<Beacon> beacons = rangeEventArgs.Beacons;
-            if (beacons != null && beacons.Count > 0)
-            {
-                var foundBeacons = beacons.ToList();
-                foreach (Beacon beacon in foundBeacons)
-                {
-                    var key = beacon.Id1.ToString() + beacon.Id2.ToString() + beacon.Id3.ToString();
-                    BeaconDataModel data = new BeaconDataModel();
-                    data.UUID = beacon.Id1.ToString();
-                    data.Major = beacon.Id2.ToString();
-                    data.Minor = beacon.Id3.ToString();
-                    data.Distance = beacon.Distance;
-                    data.Rssi = beacon.Rssi;
-                    data.TXPower = beacon.TxPower;
-                    data.ElaspedTime = new TimeSpan();
-                    data.LastDetectTime = DateTime.Now;
-                    if (_dictionaryOfBeaconData.ContainsKey(key))
-                    {
-                        data = _dictionaryOfBeaconData.GetValueOrDefault(key);
-                        data.UUID = beacon.Id1.ToString();
-                        data.Major = beacon.Id2.ToString();
-                        data.Minor = beacon.Id3.ToString();
-                        data.Distance = beacon.Distance;
-                        data.Rssi = beacon.Rssi;
-                        data.TXPower = beacon.TxPower;
-                        data.ElaspedTime += DateTime.Now - data.LastDetectTime;
-                        data.LastDetectTime = DateTime.Now;
-                        _dictionaryOfBeaconData.Remove(key);
-                    }
-
-                    _dictionaryOfBeaconData.Add(key, data);
-
-                    System.Diagnostics.Debug.WriteLine(key.ToString());
-                    System.Diagnostics.Debug.WriteLine(data.Distance);
-                    System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
-
-                }
-            }
-        }
-
-        private void DetermineStateForRegionComplete(object sender, MonitorEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("DetermineStateForRegionComplete");
-            System.Diagnostics.Debug.WriteLine(e.ToString());
-        }
-
-        private void EnterRegionComplete(object sender, MonitorEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("EnterRegionComplete ---- StartRanging");
-            System.Diagnostics.Debug.WriteLine(e.ToString());
-
-            MainActivity activity = Xamarin.Forms.Forms.Context as MainActivity;
-            _beaconManager = BeaconManager.GetInstanceForApplication(activity);
-            //_beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
-        }
-
-        private void ExitRegionComplete(object sender, MonitorEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("ExitRegionComplete ---- StopRanging");
-            System.Diagnostics.Debug.WriteLine(e.ToString());
-
-            MainActivity activity = Xamarin.Forms.Forms.Context as MainActivity;
-            _beaconManager = BeaconManager.GetInstanceForApplication(activity);
-            //_beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
-        }
-
-        #endregion
 
         public void OnBeaconServiceConnect()
         {
-            // BeaconManager Setting
-            _beaconManager.SetForegroundScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
-            _beaconManager.SetForegroundBetweenScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
+            /*
+            BeaconService beaconService = Xamarin.Forms.DependencyService.Get<BeaconService>();
 
-            _beaconManager.SetBackgroundScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
-            _beaconManager.SetBackgroundBetweenScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
-
-            _beaconManager.UpdateScanPeriods();
-
-            // MonitorNotifier
-            _monitorNotifier.DetermineStateForRegionComplete += DetermineStateForRegionComplete;
-            _monitorNotifier.EnterRegionComplete += EnterRegionComplete;
-            _monitorNotifier.ExitRegionComplete += ExitRegionComplete;
-            _beaconManager.AddMonitorNotifier(_monitorNotifier);
-
-            // RangeNotifier
-            _rangeNotifier.DidRangeBeaconsInRegionComplete += DidRangeBeaconsInRegionComplete;
-            _beaconManager.AddRangeNotifier(_rangeNotifier);
-
-            _fieldRegion = new Region(AppConstants.AppUUID, null, null, null);
-            _beaconManager.StartMonitoringBeaconsInRegion(_fieldRegion);
-            _beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
+            beaconService.StartBeacon();
+            beaconService.StartAdvertising();
+            */
         }
 
-
-
-        #region Class Notifier and EventArgs
-        public class RangeNotifier : Java.Lang.Object, IRangeNotifier
-        {
-            public event EventHandler<RangeEventArgs> DidRangeBeaconsInRegionComplete;
-
-            public void DidRangeBeaconsInRegion(ICollection<Beacon> beacons, Region region)
-            {
-                DidRangeBeaconsInRegionComplete?.Invoke(this, new RangeEventArgs { Beacons = beacons, Region = region });
-            }
-        }
-        public class RangeEventArgs : EventArgs
-        {
-            public Region Region { get; set; }
-            public ICollection<Beacon> Beacons { get; set; }
-        }
-
-        public class MonitorNotifier : Java.Lang.Object, IMonitorNotifier
-        {
-            public event EventHandler<MonitorEventArgs> DetermineStateForRegionComplete;
-            public event EventHandler<MonitorEventArgs> EnterRegionComplete;
-            public event EventHandler<MonitorEventArgs> ExitRegionComplete;
-
-            public void DidDetermineStateForRegion(int state, Region region)
-            {
-                OnDetermineStateForRegionComplete(state, region);
-            }
-
-            public void DidEnterRegion(Region region)
-            {
-                OnEnterRegionComplete(region);
-            }
-
-            public void DidExitRegion(Region region)
-            {
-                OnExitRegionComplete(region);
-            }
-
-            private void OnDetermineStateForRegionComplete(int state, Region region)
-            {
-                DetermineStateForRegionComplete?.Invoke(this, new MonitorEventArgs { State = state, Region = region });
-            }
-
-            private void OnEnterRegionComplete(Region region)
-            {
-                EnterRegionComplete?.Invoke(this, new MonitorEventArgs { Region = region });
-            }
-
-            private void OnExitRegionComplete(Region region)
-            {
-                ExitRegionComplete?.Invoke(this, new MonitorEventArgs { Region = region });
-            }
-
-        }
-        public class MonitorEventArgs : EventArgs
-        {
-            public Region Region { get; set; }
-            public int State { get; set; }
-        }
-        #endregion
     }
 }
 
