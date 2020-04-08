@@ -18,7 +18,6 @@ namespace Covid19Radar.ViewModels
 
         // ナビゲーション
         protected INavigationService NavigationService { get; private set; }
-        protected IBeaconService BeaconService { get; private set; }
 
         // ページタイトル
         private string _title;
