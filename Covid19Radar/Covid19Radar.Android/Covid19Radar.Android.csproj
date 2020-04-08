@@ -99,6 +99,10 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BeaconSimulator.cs" />
+    <Compile Include="Services\MonitorEventArgs.cs" />
+    <Compile Include="Services\MonitorNotifier.cs" />
+    <Compile Include="Services\RangeEventArgs.cs" />
+    <Compile Include="Services\RangeNotifier.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\materialdesignicons-webfont.ttf" />

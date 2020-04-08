@@ -10,7 +10,7 @@ using System.ComponentModel;
 [assembly: Dependency(typeof(Covid19Radar.iOS.Model.iBeaconService))]
 namespace Covid19Radar.iOS.Model
 {
-    public class iBeaconService : IIBeaconService
+    public class iBeaconService : IBeaconService
     {
         #region Variables
 
