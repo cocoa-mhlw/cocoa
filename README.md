@@ -4,13 +4,14 @@ Discord Channel
 https://discord.gg/e5hMm4h
 
 Acknowledgments and Contributor
-Noriko Matsumoto (Designer)
+Noriko Matsumoto (Designer/Device iOS Lending)
 Kazuki Ota (Create Build pipeline on AppCenter)
 Taiki Yoshida (Power BI / Power Apps)
 Yasuaki Matsuda (Server side / Azure Fucntions)
 Tsuyoshi Ushio  (Server side / Azure Fucntions)
 Takeshi Sakurai (Client iOS)
 Fumiya Kume (Client Xamarin)
+Takayuki Hirose (Device Mac Lending)
 
 *This Application is UNDER DEVELOPEMNT!!*
 
