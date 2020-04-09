@@ -1,16 +1,17 @@
-# Covid19Radar(English / Japanese under below 日本語版は下にあります。)
+# Covid19Radar(English / Japanese ver is below 日本語版は下にあります。)
 
 Discord Channel
 https://discord.gg/e5hMm4h
 
 Acknowledgments and Contributor
-Noriko Matsumoto (Designer)
+Noriko Matsumoto (Designer/Device iOS Lending)
 Kazuki Ota (Create Build pipeline on AppCenter)
 Taiki Yoshida (Power BI / Power Apps)
 Yasuaki Matsuda (Server side / Azure Fucntions)
 Tsuyoshi Ushio  (Server side / Azure Fucntions)
 Takeshi Sakurai (Client iOS)
 Fumiya Kume (Client Xamarin)
+Takayuki Hirose (Device Mac Lending)
 
 *This Application is UNDER DEVELOPEMNT!!*
 
@@ -18,6 +19,15 @@ This app uses Bluetooth to get the contact logs of each other.
 We are waiting for your contribution and pull request.
 
 ![App Description](img/AppDescription-en.jpg)
+
+## How to install the app for tester
+
+Please install the app for test from below link:(Sorry, currently available only Android)
+
+https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
+
+Device configuration guide for tester:
+https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 
 ## Worked
 - Screen transition and each screen design.
@@ -57,6 +67,8 @@ We use [Adobe XD](https://www.adobe.com/jp/products/xd.html) to create our desig
 
 If you want to check your design files, install Adobe XD. (available for free).
 
+Refer [DataModels and API](doc/domain-model.md) for more details about the spec. (Japanese only)
+
 
 ## App Prototypes
 
@@ -75,7 +87,7 @@ license text.
 
 ------
 
-# Covid19Radar (Japanese , English ver is under above)
+# Covid19Radar (Japanese , English ver is above)
 *このアプリケーションは開発中*です。
 本アプリは、Bluetooth(BLE/iBeacon)を利用して、お互いの接触ログを取得します。
 ![アプリの概念](img/AppDescription.jpg)
@@ -83,6 +95,15 @@ license text.
 
 現時点では、Android同士のビーコン取得と画面遷移のみができており、以下の機能の実装が行われていません。
 コントリビューションとプルリクエストをお待ちしています。
+
+## テスト用にアプリをインストールするには
+
+以下のリンクからアプリをテスト用にインストールしてください:（現時点では Android のみ対応しています）
+
+https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
+
+テスト用のデバイスの構成は、以下のドキュメントを参照してください:
+https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 
 ## 実装済
 - 画面遷移とデザイン
@@ -118,6 +139,8 @@ https://visualstudio.microsoft.com/ja/xamarin/
 ![画面全体図](img/design01.jpg)
 
 デザインファイルを確認する場合は、Adobe XDをインストールしてください。（無料で利用可能）
+
+アプリケーションのより詳細な仕様とデータモデル、API仕様、関連業務知識に関しては、[濃厚接触検知のデータモデルと API仕様](doc/domain-model.md)をごらんください。
 
 
 ## アプリのプロトタイプ

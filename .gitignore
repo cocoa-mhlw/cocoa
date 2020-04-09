@@ -345,9 +345,6 @@ terraform.tfstate
 terraform.tfstate.backup
 storage_account_name.json
 
- Created by https://www.gitignore.io/api/macos
-# Edit at https://www.gitignore.io/?templates=macos
-
 ### macOS ###
 # General
 .DS_Store
@@ -376,4 +373,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# End of https://www.gitignore.io/api/macos
+# Azure Functions localsettings file
+local.settings.json
