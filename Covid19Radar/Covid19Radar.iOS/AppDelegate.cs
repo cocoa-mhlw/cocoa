@@ -1,5 +1,7 @@
 ﻿using CoreLocation;
 using Covid19Radar.Common;
+using Covid19Radar.iOS.Services;
+using Covid19Radar.Services;
 using Foundation;
 using Prism;
 using Prism.Ioc;
@@ -16,13 +18,13 @@ namespace Covid19Radar.iOS
     {
         #region Fields
         public static AppDelegate Instance;
-        private readonly CLLocationManager _locationMgr;
-        private CLBeaconRegion _fieldRegion;
+        //private readonly CLLocationManager _locationMgr;
+        //private CLBeaconRegion _fieldRegion;
         #endregion
 
         public AppDelegate()
         {
-            _locationMgr = new CLLocationManager();
+            //_locationMgr = new CLLocationManager();
 
         }
 
@@ -38,11 +40,12 @@ namespace Covid19Radar.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
 
-            StartBeacon();
+           // StartBeacon();
 
             return base.FinishedLaunching(app, options);
         }
 
+        /*
         public void StartBeacon()
         {
 
@@ -63,7 +66,7 @@ namespace Covid19Radar.iOS
             _locationMgr.StartUpdatingLocation();
             _locationMgr.RequestAlwaysAuthorization();
 
-            _fieldRegion = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), "Covid19Radar");
+            _fieldRegion = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), "");
             _fieldRegion.NotifyOnEntry = true;
             _fieldRegion.NotifyOnExit = true;
             _fieldRegion.NotifyEntryStateOnDisplay = true;
@@ -74,7 +77,6 @@ namespace Covid19Radar.iOS
         }
         private void DidAuthorizationChanged(object sender, CLAuthorizationChangedEventArgs e)
         {
-            /*
             if (e.Status == CLAuthorizationStatus.AuthorizedAlways)
             {
 
@@ -84,7 +86,6 @@ namespace Covid19Radar.iOS
                 _locationMgr.StopRangingBeacons(_fieldRegion);
                 _locationMgr.StopMonitoring(_fieldRegion);
             }
-            */
             System.Diagnostics.Debug.WriteLine("DidAuthorizationChanged");
         }
 
@@ -129,6 +130,7 @@ namespace Covid19Radar.iOS
                 var minor = (ushort)beacon.Minor;
             }
         }
+        */
 
     }
 
@@ -136,6 +138,8 @@ namespace Covid19Radar.iOS
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+                BeaconService beaconService = new BeaconService();
+                containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
         }
     }
 
