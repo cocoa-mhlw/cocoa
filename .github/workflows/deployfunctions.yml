@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - CovidRadarAPI/**
+      - Covid19RadarAPI/**
 
 env:
   AZURE_FUNCTIONAPP_NAME: covid19radar

@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Views\Dummy.xaml" />
+    <EmbeddedResource Remove="Views\DummyPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Images\AllowBle.png" />
     <EmbeddedResource Include="Images\Beaconnetwork.png" />
     <EmbeddedResource Include="Images\TopMainImg.png" />
@@ -28,6 +32,10 @@
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.494-pre2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\ConsentByUserPage %28コピー%29.xaml.cs" />
+    <Compile Remove="Views\DescriptionPage %28コピー%29.xaml.cs" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\BeaconPage.xaml.cs">
       <DependentUpon>BeaconPage.xaml</DependentUpon>

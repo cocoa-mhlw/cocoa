@@ -8,13 +8,23 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Covid19Radar.Models;
+using Covid19Radar.DataStore;
 
 namespace Covid19Radar.Api
 {
-    public static class UserApi
+    public class UserApi
     {
+
+        private ICosmos _Cosmos;
+
+        public UserApi(ICosmos cosmos)
+        {
+            _Cosmos = cosmos;
+        }
+
+
         [FunctionName("User")]
-        public static async Task<IActionResult> Run(
+        public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
@@ -31,7 +41,7 @@ namespace Covid19Radar.Api
             return  new BadRequestObjectResult("Please pass a name on the query string or in the request body");
         }
 
-        private static async Task<IActionResult> Get(HttpRequest req, ILogger log)
+        private async Task<IActionResult> Get(HttpRequest req, ILogger log)
         {
             // get name from query 
             string name = req.Query["name"];
@@ -43,7 +53,7 @@ namespace Covid19Radar.Api
             return (ActionResult)new OkObjectResult(result);
         }
 
-        private static async Task<IActionResult> Post(HttpRequest req, ILogger log)
+        private async Task<IActionResult> Post(HttpRequest req, ILogger log)
         {
             // convert Postdata to UserDataModel
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
