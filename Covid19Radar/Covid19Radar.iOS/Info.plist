@@ -48,11 +48,11 @@
 		<string>Icon-Small@2x</string>
 		<string>Icon-Small@3x</string>
 	</array>
-  <key>UIAppConts</key>
-  <array>
-    <string>materialdesignicons-webfont.ttf</string>
-  </array>
-  <key>UILaunchStoryboardName</key>
+	<key>UIAppConts</key>
+	<array>
+		<string>materialdesignicons-webfont.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Say something useful here</string>
