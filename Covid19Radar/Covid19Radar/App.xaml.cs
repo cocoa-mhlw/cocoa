@@ -83,6 +83,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<BeaconPage, BeaconPageViewModel>();
+            containerRegistry.RegisterForNavigation<DemoPage, DemoPageViewModel>();
 
             // CheckUser
             UserData userData = new UserData();
