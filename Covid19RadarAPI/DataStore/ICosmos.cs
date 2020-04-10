@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Azure.Cosmos;
 
 namespace Covid19Radar.DataStore
 {
     public interface ICosmos
     {
-        Task CreateDatabaseAsync(string databaseId);
+        Container User { get; }
+        Container Beacon { get; }
+
     }
 }

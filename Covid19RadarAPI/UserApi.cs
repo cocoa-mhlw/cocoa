@@ -15,11 +15,12 @@ namespace Covid19Radar.Api
     public class UserApi
     {
 
-        private ICosmos _Cosmos;
+        private readonly ICosmos Cosmos;
+        
 
         public UserApi(ICosmos cosmos)
         {
-            _Cosmos = cosmos;
+            Cosmos = cosmos;
         }
 
 
@@ -44,7 +45,7 @@ namespace Covid19Radar.Api
         private async Task<IActionResult> Get(HttpRequest req, ILogger log)
         {
             // get name from query 
-            string name = req.Query["name"];
+            string name = req.Query["uuid"];
 
             // get UserData from DB
             await Task.CompletedTask;
@@ -62,6 +63,12 @@ namespace Covid19Radar.Api
             // save to DB
             await Task.CompletedTask;
             var result = new ResultModel();
+            return (ActionResult)new OkObjectResult(ResultModel.Success);
+        }
+
+        private async Task<IActionResult> Register(string uuid)
+        {
+
             return (ActionResult)new OkObjectResult(ResultModel.Success);
         }
     }

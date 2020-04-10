@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Covid19Radar.Common;
+
+namespace Covid19Radar.Models
+{
+    public class UserDataModel
+    {
+
+        /// <summary>
+        /// User UUID / take care misunderstand Becon ID
+        /// </summary>
+        /// <value>User UUID</value>
+        public string UserUuid { get; set; }
+
+        /// <summary>
+        /// User Major 0 to 65536
+        /// </summary>
+        /// <value>User Major</value>
+        public string Major { get; set; }
+
+        /// <summary>
+        /// User Minor 0 to 65536
+        /// </summary>
+        /// <value>User Minor</value>
+        public string Minor { get; set; }
+
+        /// <summary>
+        ///  Status Contactd,OnSet,Suspected,Inspection,Infection
+        /// </summary>
+        /// <value></value>
+        public UserStatus UserStatus { get; set; }
+
+        /// <summary>
+        /// User Unique ID format UserUUID.(Padding Zero Major).(Padding Zero Minor)
+        /// </summary>
+        /// <value>User Minor</value>
+        public string GetId()
+        {
+            return String.Format("{0}.{1}.{2}", UserUuid, Major.PadLeft(5, '0'), Minor.PadLeft(5, '0'));
+        }
+    }
+}
