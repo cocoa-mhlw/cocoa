@@ -6,6 +6,6 @@ namespace Covid19Radar.Views.cell
 {
     public class BeaconViewCell
     {
-        public ReactiveProperty<String> UUID { get; set; } = new ReactiveProperty<String>();
+        public ReactiveProperty<String> UserUuid { get; set; } = new ReactiveProperty<String>();
     }
 }

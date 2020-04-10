@@ -34,8 +34,8 @@ namespace Covid19Radar.ViewModels
             _beaconService.InitializeService();
             _beaconService.StartBeacon();
 
-            UserData userData = new UserData();
-            userData.Uuid = AppConstants.AppUUID;
+            UserDataModel userData = new UserDataModel();
+            userData.UserUuid = Guid.NewGuid().ToString();
             userData.Major = "23";
             userData.Minor = "45";
             _beaconService.StartAdvertising(userData);
@@ -56,7 +56,7 @@ namespace Covid19Radar.ViewModels
             //var list = beaconService.GetBeaconData();
 
             var dummyCell = new BeaconViewCell();
-            dummyCell.UUID.Value = "AAAAAAAAAA";
+            dummyCell.UserUuid.Value = Guid.NewGuid().ToString();
 
             //beaconList.Add(dummyCell);
             //beaconList.Add(dummyCell);

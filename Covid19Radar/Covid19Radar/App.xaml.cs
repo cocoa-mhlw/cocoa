@@ -32,7 +32,7 @@ namespace Covid19Radar
     public partial class App : PrismApplication
     {
 
-        UserData userData;
+        UserDataModel userData;
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor. 
@@ -48,7 +48,7 @@ namespace Covid19Radar
             INavigationResult result;
 
             // Check user data and skip tutorial
-            UserData userData = Container.Resolve<UserData>();
+            UserDataModel userData = Container.Resolve<UserDataModel>();
             if (Application.Current.Properties.ContainsKey("UserData"))
             {
                 result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
@@ -86,13 +86,13 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<DemoPage, DemoPageViewModel>();
 
             // CheckUser
-            UserData userData = new UserData();
+            UserDataModel userData = new UserDataModel();
 
             if (Application.Current.Properties.ContainsKey("UserData"))
             {
-                userData = Application.Current.Properties["UserData"] as UserData;
+                userData = Application.Current.Properties["UserData"] as UserDataModel;
             }
-            containerRegistry.RegisterInstance<UserData>(userData);
+            containerRegistry.RegisterInstance<UserDataModel>(userData);
 
         }
 

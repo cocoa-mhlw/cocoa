@@ -118,7 +118,7 @@ namespace Covid19Radar.iOS.Services
         {
         }
 
-        public void StartAdvertising(UserData userData)
+        public void StartAdvertising(UserDataModel userData)
         {
             //throw new NotImplementedException();
         }

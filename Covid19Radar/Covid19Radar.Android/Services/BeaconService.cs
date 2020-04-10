@@ -155,7 +155,7 @@ namespace Covid19Radar.Droid.Services
             _beaconTransmitter.StopAdvertising();
         }
 
-        public void StartAdvertising(UserData userData)
+        public void StartAdvertising(UserDataModel userData)
         {
 
             // TODO 出力調整どうするか考える。
@@ -191,7 +191,7 @@ namespace Covid19Radar.Droid.Services
                     BeaconDataModel data = new BeaconDataModel();
                     if (!_dictionaryOfBeaconData.ContainsKey(key))
                     {
-                        data.UUID = beacon.Id1.ToString();
+                        data.BeaconUuid = beacon.Id1.ToString();
                         data.Major = beacon.Id2.ToString();
                         data.Minor = beacon.Id3.ToString();
                         data.Distance = beacon.Distance;
@@ -203,7 +203,7 @@ namespace Covid19Radar.Droid.Services
                     else
                     {
                         data = _dictionaryOfBeaconData.GetValueOrDefault(key);
-                        data.UUID = beacon.Id1.ToString();
+                        data.BeaconUuid = beacon.Id1.ToString();
                         data.Major = beacon.Id2.ToString();
                         data.Minor = beacon.Id3.ToString();
                         data.Distance = beacon.Distance;
