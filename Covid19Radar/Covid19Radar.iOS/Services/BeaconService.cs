@@ -53,75 +53,26 @@ namespace Covid19Radar.iOS.Services
             // Enable the BeaconManager 
             _beaconManager = new CLLocationManager();
 
-            #region Set up Beacon Simulator for TEST USE
-            #endregion Set up Beacon Simulator for TEST USE
-
             _dictionaryOfBeaconData = new Dictionary<string, BeaconDataModel>();
 
             // BeaconManager Setting
-            /*
-            _beaconManager.SetForegroundScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
-            _beaconManager.SetForegroundBetweenScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
-            _beaconManager.SetBackgroundScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
-            _beaconManager.SetBackgroundBetweenScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
-            _beaconManager.UpdateScanPeriods();
-            */
+
+            // Monitoring
+            _beaconManager.DidDetermineState += DetermineStateForRegionComplete;
+            _beaconManager.RegionEntered += EnterRegionComplete;
+            _beaconManager.RegionLeft += ExitRegionComplete;
+
 
             _beaconManager.RequestAlwaysAuthorization();
-            _beaconManager.DidRangeBeacons += HandleDidRangeBeacons;
-            _beaconManager.DidFailRangingBeacons += HandleDidFailRangingBeacons;
-            _beaconManager.DidRangeBeaconsSatisfyingConstraint += HandleDidRangeBeaconsSatisfyingConstraint;
-            _beaconManager.DidStartMonitoringForRegion += HandleDidStartMonitoringForRegion;
-            _beaconManager.DidVisit += HandeDidVisit;
-            _beaconManager.DidDetermineState += HandleDidDetermineState;
-            _beaconManager.RangingBeaconsDidFailForRegion += HandleRangingBeaconsDidFailForRegion;
-            _beaconManager.RegionEntered += HandleRegionEntered;
-            _beaconManager.RegionLeft += HadleRegionLeft;
+            _beaconManager.DidRangeBeacons += DidRangeBeconsInRegionComplete;
 
-            _beaconManager.PausesLocationUpdatesAutomatically = false;
-            _beaconManager.StartUpdatingLocation();
-            _beaconManager.RequestAlwaysAuthorization();
-
-            _listOfCLBeaconRegion.Add(_fieldRegion);
-            _beaconManager.StartMonitoring(_fieldRegion);
-            _beaconManager.StartRangingBeacons(_fieldRegion);
-
+            _beaconManager.AuthorizationChanged += HandleAuthorizationChanged;
             return _beaconManager;
         }
 
-        private void HadleRegionLeft(object sender, CLRegionEventArgs e)
+        public Dictionary<string, BeaconDataModel> GetBeaconData()
         {
-            System.Diagnostics.Debug.WriteLine("HadleRegionLeft");
-        }
-
-        private void HandleRegionEntered(object sender, CLRegionEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("HandleRegionEntered");
-        }
-
-        private void HandleRangingBeaconsDidFailForRegion(object sender, CLRegionBeaconsFailedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("HandleRangingBeaconsDidFailForRegion");
-        }
-
-        private void HandeDidVisit(object sender, CLVisitedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("HandeDidVisit");
-        }
-
-        private void HandleDidStartMonitoringForRegion(object sender, CLRegionEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("HandleDidStartMonitoringForRegion");
-        }
-
-        private void HandleDidRangeBeaconsSatisfyingConstraint(object sender, CLRegionBeaconsConstraintRangedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("HandleDidRangeBeaconsSatisfyingConstraint");
-        }
-
-        private void HandleDidFailRangingBeacons(object sender, CLRegionBeaconsConstraintFailedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("HandleDidFailRangingBeacons");
+            return _dictionaryOfBeaconData;
         }
 
         public void StartBeacon()
@@ -129,26 +80,10 @@ namespace Covid19Radar.iOS.Services
             System.Diagnostics.Debug.WriteLine("StartBeacon");
 
             _beaconManager.RequestAlwaysAuthorization();
-            _beaconManager.DidRangeBeacons += HandleDidRangeBeacons;
-            _beaconManager.DidDetermineState += HandleDidDetermineState;
             _beaconManager.PausesLocationUpdatesAutomatically = false;
-            _beaconManager.StartUpdatingLocation();
-            _beaconManager.RequestAlwaysAuthorization();
 
             _listOfCLBeaconRegion.Add(_fieldRegion);
             _beaconManager.StartMonitoring(_fieldRegion);
-            _beaconManager.StartRangingBeacons(_fieldRegion);
-
-            //            #if DEBUG
-            //            var beacon = _listOfCLBeaconRegion.First();
-            //            string uuid = beacon.ProximityUuid.AsString ();
-            //            var major = (ushort)beacon.Major;
-            //            var minor = (ushort)beacon.Minor;
-            //
-            //            Mvx.Resolve<IMvxMessenger>().Publish<BeaconChangeProximityMessage> (
-            //                new BeaconChangeProximityMessage (this, uuid, major, minor)
-            //            );
-            //            #endif
         }
 
         public void StopBeacon()
@@ -157,57 +92,11 @@ namespace Covid19Radar.iOS.Services
 
             _beaconManager.StopRangingBeacons(_fieldRegion);
             _beaconManager.StopMonitoring(_fieldRegion);
-
-            _listOfCLBeaconRegion.Clear();
-            _beaconManager.DidRangeBeacons -= HandleDidRangeBeacons;
-            _beaconManager.StopUpdatingLocation();
-        }
-
-        #region Beacon monitoring
-
-        private void HandleDidDetermineState(object sender, CLRegionStateDeterminedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
-        }
-
-        private void HandleDidRangeBeacons(object sender, CLRegionBeaconsRangedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
-            foreach (var beacon in e.Beacons)
-            {
-                SendBeaconChangeProximity(beacon);
-            }
-        }
-
-        private void SendBeaconChangeProximity(CLBeacon beacon)
-        {
-            System.Diagnostics.Debug.WriteLine("SendBeaconChangeProximity");
-
-            if (beacon.Proximity == CLProximity.Unknown)
-            {
-                System.Diagnostics.Debug.WriteLine(CLProximity.Unknown);
-                return;
-            }
-
-            // TODO ビーコン追加
-            string uuid = beacon.ProximityUuid.AsString();
-            var major = (ushort)beacon.Major;
-            var minor = (ushort)beacon.Minor;
-
-            System.Diagnostics.Debug.WriteLine(beacon.ToString());
-
-        }
-
-        #endregion
-
-
-        public Dictionary<string, BeaconDataModel> GetBeaconData()
-        {
-            return _dictionaryOfBeaconData;
         }
 
         public void StartAdvertising(UserDataModel userData)
         {
+
         }
 
         public void StopAdvertising()
@@ -215,6 +104,85 @@ namespace Covid19Radar.iOS.Services
             //throw new NotImplementedException();
         }
 
+        private void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
 
+            foreach (var beacon in e.Beacons)
+            {
+                if (beacon.Proximity == CLProximity.Unknown)
+                {
+                    return;
+                }
+                var key = beacon.Uuid.ToString() + beacon.Major.ToString() + beacon.Minor.ToString();
+                BeaconDataModel data = new BeaconDataModel();
+                if (!_dictionaryOfBeaconData.ContainsKey(key))
+                {
+                    data.BeaconUuid = beacon.Uuid.ToString();
+                    data.Major = beacon.Major.ToString();
+                    data.Minor = beacon.Minor.ToString();
+                    data.Distance = beacon.Accuracy;
+                    data.Rssi = (short)beacon.Rssi;
+                    //                        data.TXPower = beacon.tr;
+                    data.ElaspedTime = new TimeSpan();
+                    data.LastDetectTime = DateTime.Now;
+                }
+                else
+                {
+                    data = _dictionaryOfBeaconData.GetValueOrDefault(key);
+                    data.BeaconUuid = beacon.Uuid.ToString();
+                    data.Major = beacon.Major.ToString();
+                    data.Minor = beacon.Minor.ToString();
+                    data.Distance = beacon.Accuracy;
+                    data.Rssi = (short)beacon.Rssi;
+                    //                        data.TXPower = beacon.tr;
+                    data.ElaspedTime = new TimeSpan();
+                    data.LastDetectTime = DateTime.Now;
+                    _dictionaryOfBeaconData.Remove(key);
+
+                }
+
+                _dictionaryOfBeaconData.Add(key, data);
+                System.Diagnostics.Debug.WriteLine(key.ToString());
+                System.Diagnostics.Debug.WriteLine(data.Distance);
+                System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
+            }
+
+        }
+
+        #region beacon monitoring
+        private void DetermineStateForRegionComplete(object sender, CLRegionStateDeterminedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("DetermineStateForRegionComplete");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
+            _beaconManager.StartRangingBeacons(_fieldRegion);
+        }
+
+        private void EnterRegionComplete(object sender, CLRegionEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("EnterRegionComplete ---- StartRanging");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
+            _beaconManager.StartRangingBeacons(_fieldRegion);
+
+        }
+
+        private void ExitRegionComplete(object sender, CLRegionEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("ExitRegionComplete ---- StopRanging");
+            System.Diagnostics.Debug.WriteLine(e.ToString());
+            _beaconManager.StopRangingBeacons(_fieldRegion);
+
+        }
+
+        #endregion
+        #region Auth
+
+        private void HandleAuthorizationChanged(object sender, CLAuthorizationChangedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("HandleAuthorizationChanged");
+            // Do That Stop beacons
+        }
+
+        #endregion
     }
 }

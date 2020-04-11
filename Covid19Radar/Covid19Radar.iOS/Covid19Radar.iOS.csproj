@@ -181,7 +181,7 @@
     <PackageReference Include="Microsoft.AppCenter.Distribute">
       <Version>3.1.0</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.529-pre3" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.616-pre4" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">

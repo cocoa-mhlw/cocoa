@@ -43,6 +43,7 @@ namespace Covid19Radar.iOS
 
             // for debug
             BeaconService beacon = new BeaconService();
+            beacon.InitializeService();
             beacon.StartBeacon();
 
             return base.FinishedLaunching(app, options);
