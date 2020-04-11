@@ -33,30 +33,6 @@ namespace Covid19Radar.Droid.Services
         public BeaconService()
         {
             _mainActivity = MainActivity.Instance;
-            _monitorNotifier = new MonitorNotifier();
-            _rangeNotifier = new RangeNotifier();
-            _dictionaryOfBeaconData = new Dictionary<string, BeaconDataModel>();
-            /*
-            _beaconManager.SetForegroundScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
-            _beaconManager.SetForegroundBetweenScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
-
-            _beaconManager.SetBackgroundScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
-            _beaconManager.SetBackgroundBetweenScanPeriod(BEACONS_UPDATES_IN_MILLISECONDS);
-
-            _beaconManager.UpdateScanPeriods();
-
-            // MonitorNotifier
-            _monitorNotifier.DetermineStateForRegionComplete += DetermineStateForRegionComplete;
-            _monitorNotifier.EnterRegionComplete += EnterRegionComplete;
-            _monitorNotifier.ExitRegionComplete += ExitRegionComplete;
-            _beaconManager.AddMonitorNotifier(_monitorNotifier);
-
-            // RangeNotifier
-            _rangeNotifier.DidRangeBeaconsInRegionComplete += DidRangeBeaconsInRegionComplete;
-            _beaconManager.AddRangeNotifier(_rangeNotifier);
-
-            _fieldRegion = new AltBeaconOrg.BoundBeacon.Region(AppConstants.AppUUID, null, null, null);
-            */
         }
 
         public BeaconManager BeaconManagerImpl
@@ -99,13 +75,12 @@ namespace Covid19Radar.Droid.Services
 
 
             // BeaconManager Setting
-            /*
+            // Check Touch 
             _beaconManager.SetForegroundScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
             _beaconManager.SetForegroundBetweenScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
             _beaconManager.SetBackgroundScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
             _beaconManager.SetBackgroundBetweenScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
             _beaconManager.UpdateScanPeriods();
-            */
 
             // MonitorNotifier
             _monitorNotifier.DetermineStateForRegionComplete += DetermineStateForRegionComplete;
@@ -129,8 +104,6 @@ namespace Covid19Radar.Droid.Services
         }
 
 
-
-
         public void StartBeacon()
         {
             BeaconManagerImpl.SetForegroundBetweenScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
@@ -140,8 +113,6 @@ namespace Covid19Radar.Droid.Services
             _beaconManager.StartMonitoringBeaconsInRegion(_fieldRegion);
             _beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
         }
-
-
 
         public void StopBeacon()
         {
@@ -227,22 +198,21 @@ namespace Covid19Radar.Droid.Services
         {
             System.Diagnostics.Debug.WriteLine("DetermineStateForRegionComplete");
             System.Diagnostics.Debug.WriteLine(e.ToString());
+            _beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
         }
 
         private void EnterRegionComplete(object sender, MonitorEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("EnterRegionComplete ---- StartRanging");
             System.Diagnostics.Debug.WriteLine(e.ToString());
-
-            //_beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
+            _beaconManager.StartRangingBeaconsInRegion(_fieldRegion);
         }
 
         private void ExitRegionComplete(object sender, MonitorEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("ExitRegionComplete ---- StopRanging");
             System.Diagnostics.Debug.WriteLine(e.ToString());
-
-            //_beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
+            _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
         }
 
     }
