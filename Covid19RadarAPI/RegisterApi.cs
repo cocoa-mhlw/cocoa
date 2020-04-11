@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Covid19Radar.Models;
 using Covid19Radar.DataStore;
 using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos.Linq;
 
 namespace Covid19Radar.Api
 {
@@ -89,20 +90,36 @@ namespace Covid19Radar.Api
 
         private async Task<IActionResult> Register(string userUuid)
         {
-            var number = await GetNumber();
-            // 503 Error î‘çÜÇÃéÊìæÇ…é∏îs 
-            if (number == null)
+            using (var l = new Common.UuidLock(userUuid))
             {
-                return new StatusCodeResult(503);
-            }
+                // 
+                var sqlQueryText = $"SELECT * FROM User WHERE User.UserUuid = '{userUuid}'";
+                QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
+                var queryResultSetIterator = Cosmos.User.GetItemQueryIterator<UserDataModel>(queryDefinition);
+                while (queryResultSetIterator.HasMoreResults)
+                {
+                    FeedResponse<UserDataModel> current = await queryResultSetIterator.ReadNextAsync();
+                    foreach (UserDataModel u in current)
+                    {
+                        return new CreatedResult($"/api/User?UserUuid={userUuid}", null);
+                    }
+                }
 
-            var newItem = new UserDataModel();
-            newItem.id = Guid.NewGuid().ToString();
-            newItem.UserUuid = userUuid;
-            newItem.Major = number.Major.ToString();
-            newItem.Minor = number.Minor.ToString();
-            var result = await Cosmos.User.CreateItemAsync(newItem);
-            return new StatusCodeResult((int)result.StatusCode);
+                var number = await GetNumber();
+                // 503 Error, Fail get number
+                if (number == null)
+                {
+                    return new StatusCodeResult(503);
+                }
+
+                var newItem = new UserDataModel();
+                newItem.UserUuid = userUuid;
+                newItem.Major = number.Major.ToString();
+                newItem.Minor = number.Minor.ToString();
+                var result = await Cosmos.User.CreateItemAsync(newItem);
+                return new CreatedResult($"/api/User?UserUuid={userUuid}", null);
+                //return new StatusCodeResult((int)result.StatusCode);
+            }
         }
     }
 }

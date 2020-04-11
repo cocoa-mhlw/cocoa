@@ -10,7 +10,7 @@ namespace Covid19Radar.Models
         /// <summary>
         /// for CosmosDB id
         /// </summary>
-        public string id { get; set; }
+        public string id { get => GetId(); }
         /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
