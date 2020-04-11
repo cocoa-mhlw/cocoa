@@ -40,7 +40,10 @@ namespace Covid19Radar.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
 
-           // StartBeacon();
+
+            // for debug
+            BeaconService beacon = new BeaconService();
+            beacon.StartBeacon();
 
             return base.FinishedLaunching(app, options);
         }
