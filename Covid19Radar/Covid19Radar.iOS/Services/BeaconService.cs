@@ -7,6 +7,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Foundation;
+using CoreBluetooth;
 using UIKit;
 using Xamarin.Forms;
 
@@ -15,6 +16,9 @@ namespace Covid19Radar.iOS.Services
 {
     public class BeaconService : IBeaconService
     {
+        private UserDataModel _userData;
+        private bool _transmitterFlg=false;
+        private CBPeripheralManager _beaconTransmitter = new CBPeripheralManager();
         private CLBeaconRegion _fieldRegion;
         private Dictionary<string, BeaconDataModel> _dictionaryOfBeaconData;
         private CLLocationManager _beaconManager;
@@ -22,7 +26,12 @@ namespace Covid19Radar.iOS.Services
 
         public BeaconService()
         {
+            _userData = new UserDataModel();
             _beaconManager = new CLLocationManager();
+            _beaconTransmitter = new CBPeripheralManager();
+            _beaconTransmitter.AdvertisingStarted += DidAdvertisingStarted;
+            _beaconTransmitter.StateUpdated += DidStateUpdated;
+
             _listOfCLBeaconRegion = new List<CLBeaconRegion>();
             _fieldRegion = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), "");
             _fieldRegion.NotifyEntryStateOnDisplay = true;
@@ -96,12 +105,51 @@ namespace Covid19Radar.iOS.Services
 
         public void StartAdvertising(UserDataModel userData)
         {
+            _userData = userData;
+            _transmitterFlg = true;
 
+/*
+            CLBeaconRegion region = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), ushort.Parse(userData.Major), ushort.Parse(userData.Minor), userData.UserUuid);
+            NSNumber txPower = new NSNumber(-59);
+            NSDictionary peripheralData = region.GetPeripheralData(txPower);
+            */
+
+        }
+
+        private void DidAdvertisingStarted(object sender, NSErrorEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("DidAdvertisingStarted");
+
+        }
+
+        private void DidStateUpdated(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("DidStateUpdated");
+            CBPeripheralManager trasmitter = sender as CBPeripheralManager;
+
+            if (trasmitter.State < CBPeripheralManagerState.PoweredOn)
+            {
+                System.Diagnostics.Debug.WriteLine("Bluetooth must be enabled");
+                //                new UIAlertView("Bluetooth must be enabled", "To configure your device as a beacon", null, "OK", null).Show();
+                return;
+            }
+
+            if (_transmitterFlg)
+            {
+                CLBeaconRegion region = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), ushort.Parse(_userData.Major), ushort.Parse(_userData.Minor), _userData.UserUuid);
+                NSNumber txPower = new NSNumber(-59);
+                trasmitter.StartAdvertising(region.GetPeripheralData(txPower));
+            }
+            else
+            {
+                trasmitter.StopAdvertising();
+            }
         }
 
         public void StopAdvertising()
         {
-            //throw new NotImplementedException();
+            _transmitterFlg = false;
+//            _beaconTransmitter.StopAdvertising();
         }
 
         private void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
