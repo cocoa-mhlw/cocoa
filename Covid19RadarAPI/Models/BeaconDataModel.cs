@@ -8,6 +8,10 @@ namespace Covid19Radar.Models
     public sealed class BeaconDataModel
     {
         /// <summary>
+        /// for Cosmos DB 
+        /// </summary>
+        public string id { get; set; }
+        /// <summary>
         /// Same beacon uuid's device can communication.
         /// </summary>
         /// <value>BeaconUuid</value>

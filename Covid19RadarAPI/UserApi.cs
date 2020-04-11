@@ -17,31 +17,31 @@ namespace Covid19Radar.Api
     {
 
         private readonly ICosmos Cosmos;
-        
+        private readonly ILogger<UserApi> Logger;
 
-        public UserApi(ICosmos cosmos)
+        public UserApi(ICosmos cosmos, ILogger<UserApi> logger)
         {
             Cosmos = cosmos;
+            Logger = logger;
         }
 
 
         [FunctionName("User")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            Logger.LogInformation("C# HTTP trigger function processed a request.");
 
             switch (req.Method)
             {
                 case "GET":
-                    return await Get(req, log);
+                    return await Get(req);
             }
 
-            return  new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+            return new BadRequestObjectResult("Not Supported");
         }
 
-        private async Task<IActionResult> Get(HttpRequest req, ILogger log)
+        private async Task<IActionResult> Get(HttpRequest req)
         {
             // get name from query 
             string name = req.Query["UserUuid"];
