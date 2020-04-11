@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 using Covid19Radar.Common;
+using Newtonsoft.Json.Converters;
 
 namespace Covid19Radar.Models
 {
@@ -33,7 +35,18 @@ namespace Covid19Radar.Models
         ///  Status Contactd,OnSet,Suspected,Inspection,Infection
         /// </summary>
         /// <value></value>
-        public UserStatus UserStatus { get; set; }
+        private UserStatus _UserStatus;
+        public string UserStatus
+        {
+            get
+            {
+                return Enum.GetName(typeof(Covid19Radar.Common.UserStatus), _UserStatus);
+            }
+            set
+            {
+                _UserStatus = Enum.Parse<Covid19Radar.Common.UserStatus>(value);
+            }
+        }
 
         /// <summary>
         /// User Unique ID format UserUUID.(Padding Zero Major).(Padding Zero Minor)
@@ -42,6 +55,15 @@ namespace Covid19Radar.Models
         public string GetId()
         {
             return String.Format("{0}.{1}.{2}", UserUuid, Major.PadLeft(5, '0'), Minor.PadLeft(5, '0'));
+        }
+
+        /// <summary>
+        /// set SserStatus
+        /// </summary>
+        /// <param name="s">UserStatus</param>
+        public void SetStatus(UserStatus s)
+        {
+            _UserStatus = s;
         }
 
     }

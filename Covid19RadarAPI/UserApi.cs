@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Covid19Radar.Models;
 using Covid19Radar.DataStore;
+using Microsoft.Azure.Cosmos;
 
 namespace Covid19Radar.Api
 {
@@ -33,8 +34,6 @@ namespace Covid19Radar.Api
 
             switch (req.Method)
             {
-                case "POST":
-                    return await Post(req, log);
                 case "GET":
                     return await Get(req, log);
             }
@@ -45,31 +44,27 @@ namespace Covid19Radar.Api
         private async Task<IActionResult> Get(HttpRequest req, ILogger log)
         {
             // get name from query 
-            string name = req.Query["uuid"];
+            string name = req.Query["UserUuid"];
 
             // get UserData from DB
-            await Task.CompletedTask;
-            var result = new UserDataModel();
-
-            return (ActionResult)new OkObjectResult(result);
+            return await Query(req.Query["UserUuid"]);
         }
 
-        private async Task<IActionResult> Post(HttpRequest req, ILogger log)
-        {
-            // convert Postdata to UserDataModel
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            var data = JsonConvert.DeserializeObject<UserDataModel>(requestBody);
-
-            // save to DB
-            await Task.CompletedTask;
-            var result = new ResultModel();
-            return (ActionResult)new OkObjectResult(ResultModel.Success);
-        }
-
-        private async Task<IActionResult> Register(string uuid)
+        private async Task<IActionResult> Query(string userUuid)
         {
 
-            return (ActionResult)new OkObjectResult(ResultModel.Success);
+            var sqlQueryText = $"SELECT * FROM User WHERE User.UserUuid = '{userUuid}'";
+            QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
+            var queryResultSetIterator = Cosmos.User.GetItemQueryIterator<UserDataModel>(queryDefinition);
+            while (queryResultSetIterator.HasMoreResults)
+            {
+                FeedResponse<UserDataModel> current = await queryResultSetIterator.ReadNextAsync();
+                foreach (UserDataModel u in current)
+                {
+                    return new OkObjectResult(u);
+                }
+            }
+            return new NotFoundResult();
         }
     }
 }
