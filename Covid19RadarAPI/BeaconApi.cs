@@ -15,53 +15,45 @@ namespace Covid19Radar.Api
     public class BeaconApi
     {
 
-        private ICosmos _cosmos;
+        private ICosmos Cosmos;
+        private ILogger<BeaconApi> Logger;
 
-        public BeaconApi(ICosmos cosmos)
+        public BeaconApi(ICosmos cosmos, ILogger<BeaconApi> logger)
         {
-            _cosmos = cosmos;
+            Cosmos = cosmos;
+            Logger = logger;
         }
 
         [FunctionName("Beacon")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            Logger.LogInformation("C# HTTP trigger function processed a request.");
 
             switch (req.Method)
             {
                 case "POST":
-                    return await Post(req, log);
-                case "GET":
-                    return await Get(req, log);
+                    return await Post(req);
             }
 
-            return  new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+            return new BadRequestObjectResult("Not Supported");
         }
 
-        private async Task<IActionResult> Get(HttpRequest req, ILogger log)
-        {
-            // get name from query 
-            string name = req.Query["name"];
-
-            // get BeaconDataModel from DB
-            await Task.CompletedTask;
-            var result = new BeaconDataModel();
-
-            return (ActionResult)new OkObjectResult(result);
-        }
-
-        private async Task<IActionResult> Post(HttpRequest req, ILogger log)
+        private async Task<IActionResult> Post(HttpRequest req)
         {
             // convert Postdata to BeaconDataModel
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var data = JsonConvert.DeserializeObject<BeaconDataModel>(requestBody);
 
             // save to DB
-            await Task.CompletedTask;
-            var result = new ResultModel();
-            return (ActionResult)new OkObjectResult(ResultModel.Success);
+            return await Add(data);
+        }
+
+        private async Task<IActionResult> Add(BeaconDataModel data)
+        {
+            data.id = Guid.NewGuid().ToString();
+            var result = await Cosmos.Beacon.CreateItemAsync(data);
+            return new StatusCodeResult(201);
         }
     }
 }
