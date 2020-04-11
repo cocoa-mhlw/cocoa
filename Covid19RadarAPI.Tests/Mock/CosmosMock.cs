@@ -13,8 +13,8 @@ namespace Covid19Radar.Tests.Mock
     public class CosmosMock : ICosmos
     {
         public Container User { get; set; } = new CosmosContainerMock();
-
         public Container Beacon { get; set; } = new CosmosContainerMock();
+        public Container Sequence { get; set; } = new CosmosContainerMock();
 
     }
 }

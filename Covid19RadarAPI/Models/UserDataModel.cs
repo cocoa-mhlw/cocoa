@@ -7,7 +7,10 @@ namespace Covid19Radar.Models
 {
     public class UserDataModel
     {
-
+        /// <summary>
+        /// for CosmosDB id
+        /// </summary>
+        public string id { get; set; }
         /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
@@ -40,5 +43,6 @@ namespace Covid19Radar.Models
         {
             return String.Format("{0}.{1}.{2}", UserUuid, Major.PadLeft(5, '0'), Minor.PadLeft(5, '0'));
         }
+
     }
 }

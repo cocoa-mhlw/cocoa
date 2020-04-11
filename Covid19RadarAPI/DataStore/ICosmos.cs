@@ -10,6 +10,6 @@ namespace Covid19Radar.DataStore
     {
         Container User { get; }
         Container Beacon { get; }
-
+        Container Sequence { get; }
     }
 }

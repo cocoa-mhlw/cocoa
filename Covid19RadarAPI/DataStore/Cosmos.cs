@@ -33,6 +33,7 @@ namespace Covid19Radar.DataStore
         // The container we will create.
         public Container User { get => Database.GetContainer("User"); }
         public Container Beacon { get => Database.GetContainer("Beacon"); }
+        public Container Sequence { get => Database.GetContainer("Sequence");  }
 
         /// <summary>
         /// DI Constructor
@@ -72,6 +73,23 @@ namespace Covid19Radar.DataStore
                 throw new ApplicationException(dbResult.ToString());
             }
 
+            // Container Sequence
+            Logger.LogInformation("GenerateAsync Create Sequence Container");
+            try
+            {
+                await dbResult.Database.GetContainer("Sequence").DeleteContainerAsync();
+            }
+            catch { }
+            var sequenceProperties = new ContainerProperties("Sequence", "/PartitionKey");
+            sequenceProperties.UniqueKeyPolicy.UniqueKeys.Add(new UniqueKey() { Paths = { "/Major", "/Minor" } });
+            var sequenceResult = await dbResult.Database.CreateContainerIfNotExistsAsync(sequenceProperties);
+            var sequence = dbResult.Database.GetContainer("Sequence");
+            await sequence.CreateItemAsync(new Models.SequenceDataModel()
+            {
+                Major = 0,
+                Minor = 0
+            }, null);
+
             // Container User
             Logger.LogInformation("GenerateAsync Create User Container");
             try
@@ -79,7 +97,7 @@ namespace Covid19Radar.DataStore
                 await dbResult.Database.GetContainer("User").DeleteContainerAsync();
             }
             catch { }
-            var userProperties = new ContainerProperties("User", "/Partition");
+            var userProperties = new ContainerProperties("User", "/PartitionKey");
             userProperties.UniqueKeyPolicy.UniqueKeys.Add(new UniqueKey() { Paths = { "/Major", "/Minor" } });
             var userDataResult = await dbResult.Database.CreateContainerIfNotExistsAsync(userProperties);
 
