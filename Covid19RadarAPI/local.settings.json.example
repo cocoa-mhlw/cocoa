@@ -6,6 +6,7 @@
         "COSMOS_ENDPOINT_URI": "https://localhost:8081",
         "COSMOS_PRIMARY_KEY": "",
         "COSMOS_DATABASE_ID": "Example",
-        "COSMOS_AUTO_GENERATE": true
+        "COSMOS_AUTO_GENERATE": true,
+        "BEACON_UUID": "0C396CBD-A1CB-457C-92B8-0CEB1253F58D"
     }
 }
