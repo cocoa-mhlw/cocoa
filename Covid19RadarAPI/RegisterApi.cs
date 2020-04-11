@@ -116,6 +116,7 @@ namespace Covid19Radar.Api
                 newItem.UserUuid = userUuid;
                 newItem.Major = number.Major.ToString();
                 newItem.Minor = number.Minor.ToString();
+                newItem.SetStatus(Common.UserStatus.None);
                 var result = await Cosmos.User.CreateItemAsync(newItem);
                 return new CreatedResult($"/api/User?UserUuid={userUuid}", null);
                 //return new StatusCodeResult((int)result.StatusCode);
