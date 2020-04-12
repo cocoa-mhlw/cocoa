@@ -6,10 +6,10 @@ namespace Covid19Radar.Common
 {
     public class UuidLock : IDisposable
     {
-        class LockItem
+        public class LockItem
         {
-            public int count = 0;
-            public System.Threading.EventWaitHandle ev = new System.Threading.EventWaitHandle(true, System.Threading.EventResetMode.AutoReset);
+            internal int count = 0;
+            internal System.Threading.EventWaitHandle ev = new System.Threading.EventWaitHandle(true, System.Threading.EventResetMode.AutoReset);
         }
         static Dictionary<string, LockItem> Locks = new Dictionary<string, LockItem>();
         static object globalLock = new object();

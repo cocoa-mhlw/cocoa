@@ -13,7 +13,7 @@ namespace Covid19Radar.Tests
             // preparation
             var cosmos = new Mock.CosmosMock();
             var logger = new Mock.LoggerMock<BeaconApi>();
-            var userApi = new BeaconApi(cosmos, logger);
+            var beaconApi = new BeaconApi(cosmos, logger);
         }
 
         [TestMethod]
@@ -22,10 +22,10 @@ namespace Covid19Radar.Tests
             // preparation
             var cosmos = new Mock.CosmosMock();
             var logger = new Mock.LoggerMock<BeaconApi>();
-            var userApi = new BeaconApi(cosmos, logger);
+            var beaconApi = new BeaconApi(cosmos, logger);
             var context = new Mock.HttpContextMock();
             // action
-            userApi.Run(context.Request);
+            beaconApi.Run(context.Request);
             // assert
         }
     }
