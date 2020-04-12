@@ -17,11 +17,8 @@ namespace Covid19Radar.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-        #region Fields
-        public static AppDelegate Instance;
-        //private readonly CLLocationManager _locationMgr;
-        //private CLBeaconRegion _fieldRegion;
-        #endregion
+        public static AppDelegate Instance { get; private set; }
+        public static SQLiteConnectionProvider sqliteConnectionProvider { get; private set; }
 
         public AppDelegate()
         {
@@ -39,8 +36,10 @@ namespace Covid19Radar.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App(new iOSInitializer()));
 
+            SQLiteConnectionProvider sqliteConnectionProvider = new SQLiteConnectionProvider();
+
+            LoadApplication(new App(new iOSInitializer()));
 
             // for debug
             BeaconService beacon = new BeaconService();
@@ -149,8 +148,8 @@ namespace Covid19Radar.iOS
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-                BeaconService beaconService = new BeaconService();
-                containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
+            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
+            containerRegistry.RegisterInstance(AppDelegate.sqliteConnectionProvider);
         }
     }
 

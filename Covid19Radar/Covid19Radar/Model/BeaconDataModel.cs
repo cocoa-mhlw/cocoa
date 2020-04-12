@@ -1,16 +1,19 @@
 ﻿
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Covid19Radar.Model
 {
-    public sealed class BeaconDataModel
+    [Table("BeaconData")]
+    public class BeaconDataModel
     {
         /// <summary>
         /// Same beacon uuid's device can communication.
         /// </summary>
         /// <value>BeaconUuid</value>
+        [PrimaryKey]
         public string BeaconUuid { get; set; }
         /// <summary>
         /// Major - in this app case mapping user id
