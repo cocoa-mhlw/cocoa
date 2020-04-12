@@ -32,4 +32,10 @@ namespace Covid19Radar.Tests.Mock
 
         }
     }
+
+    public class LoggerMock<T> : LoggerMock, ILogger<T>
+    {
+
+    }
+
 }
