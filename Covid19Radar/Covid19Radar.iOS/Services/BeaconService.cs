@@ -21,7 +21,6 @@ namespace Covid19Radar.iOS.Services
         private bool _transmitterFlg = false;
         private CBPeripheralManager _beaconTransmitter = new CBPeripheralManager();
         private CLBeaconRegion _fieldRegion;
-        private Dictionary<string, BeaconDataModel> _dictionaryOfBeaconData;
         private CLLocationManager _beaconManager;
         private readonly List<CLBeaconRegion> _listOfCLBeaconRegion;
         private readonly SQLiteConnection _connection;
@@ -41,7 +40,6 @@ namespace Covid19Radar.iOS.Services
             _fieldRegion.NotifyEntryStateOnDisplay = true;
             _fieldRegion.NotifyOnEntry = true;
             _fieldRegion.NotifyOnExit = true;
-            _dictionaryOfBeaconData = new Dictionary<string, BeaconDataModel>();
         }
 
         public CLLocationManager BeaconManagerImpl
@@ -66,8 +64,6 @@ namespace Covid19Radar.iOS.Services
             // Enable the BeaconManager 
             _beaconManager = new CLLocationManager();
 
-            _dictionaryOfBeaconData = new Dictionary<string, BeaconDataModel>();
-
             // BeaconManager Setting
 
             // Monitoring
@@ -83,9 +79,9 @@ namespace Covid19Radar.iOS.Services
             return _beaconManager;
         }
 
-        public Dictionary<string, BeaconDataModel> GetBeaconData()
+        public List<BeaconDataModel> GetBeaconData()
         {
-            return _dictionaryOfBeaconData;
+            return _connection.Table<BeaconDataModel>().ToList();
         }
 
         public void StartBeacon()
@@ -166,7 +162,7 @@ namespace Covid19Radar.iOS.Services
                 {
                     return;
                 }
-                var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.BeaconUuid == beacon.Id1.ToString());
+                var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.BeaconUuid == beacon.Uuid.ToString());
                 if (result == null)
                 {
                     BeaconDataModel data = new BeaconDataModel();
