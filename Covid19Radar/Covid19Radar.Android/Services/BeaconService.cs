@@ -26,7 +26,6 @@ namespace Covid19Radar.Droid.Services
 
         private RangeNotifier _rangeNotifier;
         private MonitorNotifier _monitorNotifier;
-        private Dictionary<string, BeaconDataModel> _dictionaryOfBeaconData;
         private BeaconManager _beaconManager;
         private readonly MainActivity _mainActivity;
         private BeaconTransmitter _beaconTransmitter;
@@ -73,7 +72,6 @@ namespace Covid19Radar.Droid.Services
 
             _monitorNotifier = new MonitorNotifier();
             _rangeNotifier = new RangeNotifier();
-            _dictionaryOfBeaconData = new Dictionary<string, BeaconDataModel>();
 
             //iBeacon
             BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.IBEACON_FORMAT);
@@ -106,9 +104,9 @@ namespace Covid19Radar.Droid.Services
             return _beaconManager;
         }
 
-        public Dictionary<string, BeaconDataModel> GetBeaconData()
+        public List<BeaconDataModel> GetBeaconData()
         {
-            return _dictionaryOfBeaconData;
+            return _connection.Table<BeaconDataModel>().ToList();
         }
 
 
