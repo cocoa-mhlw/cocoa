@@ -54,5 +54,6 @@ namespace Covid19Radar.Common
 
 		public static readonly long BEACONS_UPDATES_IN_MILLISECONDS = 5 * 1000;
 
+		public static readonly string SQLITE_FILENAME = "local.db3";
 	}
 }

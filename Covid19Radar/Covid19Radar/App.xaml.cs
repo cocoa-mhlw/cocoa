@@ -48,8 +48,8 @@ namespace Covid19Radar
             INavigationResult result;
 
             // Check user data and skip tutorial
-            UserDataModel userData = Container.Resolve<UserDataModel>();
-            if (Application.Current.Properties.ContainsKey("UserData"))
+            UserDataService userDataService = Container.Resolve<UserDataService>();
+            if (userDataService.IsExistUserData())
             {
                 result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
             }
@@ -83,16 +83,8 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<BeaconPage, BeaconPageViewModel>();
-            containerRegistry.RegisterForNavigation<DemoPage, DemoPageViewModel>();
 
-            // CheckUser
-            UserDataModel userData = new UserDataModel();
-
-            if (Application.Current.Properties.ContainsKey("UserData"))
-            {
-                userData = Application.Current.Properties["UserData"] as UserDataModel;
-            }
-            containerRegistry.RegisterInstance<UserDataModel>(userData);
+            containerRegistry.RegisterSingleton<UserDataService>();
 
         }
 
