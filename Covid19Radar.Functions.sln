@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19RadarAPI", "Covid19RadarAPI\Covid19RadarAPI.csproj", "{E4334DDA-FF06-42D3-BE7F-27F61B4B1C2A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A03DD13-C0FC-4998-AFEB-74D5390C59A1}"
+	ProjectSection(SolutionItems) = preProject
+		Covid19Radar.Functions.runsettings = Covid19Radar.Functions.runsettings
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19RadarAPI.Tests", "Covid19RadarAPI.Tests\Covid19RadarAPI.Tests.csproj", "{8E09FD63-0B4C-4CE5-AD8F-95EE7625655E}"
 EndProject
