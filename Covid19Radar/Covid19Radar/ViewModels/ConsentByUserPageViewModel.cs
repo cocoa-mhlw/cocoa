@@ -41,7 +41,7 @@ namespace Covid19Radar.ViewModels
                 _userDataService.Set(userData);
             }
 
-            _navigationService.NavigateAsync("BeaconPage");
+            _navigationService.NavigateAsync("InitSettingPage");
         }));
 
     }

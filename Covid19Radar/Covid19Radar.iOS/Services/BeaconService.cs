@@ -22,7 +22,7 @@ namespace Covid19Radar.iOS.Services
         private CBPeripheralManager _beaconTransmitter = new CBPeripheralManager();
         private CLBeaconRegion _fieldRegion;
         private CLLocationManager _beaconManager;
-        private readonly List<CLBeaconRegion> _listOfCLBeaconRegion;
+        private List<CLBeaconRegion> _listOfCLBeaconRegion;
         private readonly SQLiteConnection _connection;
         public BeaconService()
         {
@@ -57,6 +57,13 @@ namespace Covid19Radar.iOS.Services
         public void InitializeService()
         {
             _beaconManager = InitializeBeaconManager();
+            StartBeacon();
+
+            UserDataModel userDataModel = new UserDataModel();
+            userDataModel.UserUuid = Guid.NewGuid().ToString();
+            userDataModel.Major = "24";
+            userDataModel.Minor = "51";
+            StartAdvertising(userDataModel);
         }
 
         private CLLocationManager InitializeBeaconManager()

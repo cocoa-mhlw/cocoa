@@ -1,18 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             x:Class="Covid19Radar.Views.HomePage"
                           xmlns:local="clr-namespace:Covid19Radar"
-             x:Class="Covid19Radar.ViewModels.HomePage"
-            Title="{Binding Title}">
-
-    <ContentPage.ToolbarItems>
-    </ContentPage.ToolbarItems>
-
-    <ContentPage.Content>
-        <StackLayout>
-        </StackLayout>
-    </ContentPage.Content>
+             Title="{Binding Title}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <ListView x:Name="BeaconList" ItemsSource="{Binding beaconList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding UUID}"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="#503026" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <Grid Grid.Row="1" Padding="120,0,120,60">
+            <Button BackgroundColor="#019ae8"
+                    Text="UserSetting" 
+                    TextColor="#FFFFFF"
+                    FontSize="25"
+                    MinimumHeightRequest="60"
+                    MinimumWidthRequest="170"
+                    Command="{Binding Path=OnClickUserSetting}"/>
+        </Grid>
+        <Grid Grid.Row="2" Padding="120,0,120,60">
+            <Button BackgroundColor="#019ae8"
+                    Text="Acknowledgments" 
+                    TextColor="#FFFFFF"
+                    FontSize="25"
+                    MinimumHeightRequest="60"
+                    MinimumWidthRequest="170"
+                    Command="{Binding Path=OnClickAcknowledgments}"/>
+        </Grid>
+    </Grid>
 </ContentPage>

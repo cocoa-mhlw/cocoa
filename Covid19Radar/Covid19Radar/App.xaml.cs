@@ -59,7 +59,7 @@ namespace Covid19Radar
                 AppUtils.CheckPermission();
                 _beaconService.InitializeService();
 
-                result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
+                result = await NavigationService.NavigateAsync("NavigationPage/HomePage");
             }
             else
             {
@@ -85,13 +85,13 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<StartTutorialPage, StartTutorialPageViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
-            containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
-            containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
-            containerRegistry.RegisterForNavigation<BeaconPage, BeaconPageViewModel>();
-
+            containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
+            containerRegistry.RegisterForNavigation<UserSettingPage, UserSettingPageViewModel>();
+            containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
+            containerRegistry.RegisterForNavigation<ContributersPage, ContributersPageViewModel>();
             containerRegistry.RegisterSingleton<UserDataService>();
 
         }
