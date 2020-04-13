@@ -3,6 +3,7 @@ using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Views.cell;
 using Prism.Commands;
+using Prism.DryIoc;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
@@ -22,59 +23,20 @@ namespace Covid19Radar.ViewModels
 
         private INavigationService _navigationService;
         private readonly IBeaconService _beaconService;
-
-        public BeaconPageViewModel(INavigationService navigationService,IBeaconService beaconService)
+        private UserDataService _userDataService;
+        private UserDataModel _userData;
+        public BeaconPageViewModel(INavigationService navigationService, UserDataService userdataservice)
             : base(navigationService)
         {
             _navigationService = navigationService;
-            _beaconService = beaconService;
+            _userDataService = userdataservice;
+            _beaconService = Xamarin.Forms.DependencyService.Get<IBeaconService>();
+
+            _userData = _userDataService.Get();
             Title = "Beacon Page";
-            AppUtils.CheckPermission();
 
-            _beaconService.InitializeService();
-            _beaconService.StartBeacon();
-
-            UserDataModel userData = new UserDataModel();
-            userData.UserUuid = Guid.NewGuid().ToString();
-            userData.Major = "23";
-            userData.Minor = "45";
-            _beaconService.StartAdvertising(userData);
-            /*
-            try
-            {
-                beaconService =DependencyService.Get<IBeaconService>();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            */
-
-            //beaconService.StartBeacon();
-            //beaconService.StopAdvertising();
-            var beaconList = _beaconService.GetBeaconData();
-            //var list = beaconService.GetBeaconData();
-
-            var dummyCell = new BeaconViewCell();
-            dummyCell.UserUuid.Value = Guid.NewGuid().ToString();
-
-            //beaconList.Add(dummyCell);
-            //beaconList.Add(dummyCell);
-
-            // Create User
-            // TODO Check Register User (UUID.Major.Minor) or New
-            // POST New User and Store local properities
-            /*
-            if (!Application.Current.Properties.ContainsKey("UserData"))
-            {
-                // Access REST API and new id case
-                UserData userData = new UserData();
-                userData.Uuid = AppConstants.AppUUID;
-                userData.Major = "23";
-                userData.Minor = "45";
-                Application.Current.Properties["UserData"] = userData;
-            }
-            */
+            // Polling Call update List
+            var list = _beaconService.GetBeaconData();
         }
 
     }

@@ -57,19 +57,17 @@ namespace Covid19Radar.Droid
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
                 containerRegistry.RegisterSingleton<IBeaconService,BeaconService>();
+
                 containerRegistry.RegisterInstance<SQLiteConnectionProvider>(MainActivity.sqliteConnectionProvider);
             }
         }
 
-
         public void OnBeaconServiceConnect()
         {
-            /*
             BeaconService beaconService = Xamarin.Forms.DependencyService.Get<BeaconService>();
-
+//            UserDataService userDataService = Xamarin.Forms.DependencyService.Get<UserDataService>();
             beaconService.StartBeacon();
-            beaconService.StartAdvertising();
-            */
+//            beaconService.StartAdvertising();
         }
 
     }

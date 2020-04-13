@@ -31,8 +31,8 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
-
-        UserDataModel userData;
+        private IBeaconService _beaconService;
+        private UserDataModel _userData;
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor. 
@@ -49,8 +49,16 @@ namespace Covid19Radar
 
             // Check user data and skip tutorial
             UserDataService userDataService = App.Current.Container.Resolve<UserDataService>();
+
             if (userDataService.IsExistUserData())
             {
+                _userData = userDataService.Get();
+                _beaconService = App.Current.Container.Resolve<IBeaconService>();
+
+                // Only Call InitializeService! Start automagically in each background service!
+                AppUtils.CheckPermission();
+                _beaconService.InitializeService();
+
                 result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
             }
             else
