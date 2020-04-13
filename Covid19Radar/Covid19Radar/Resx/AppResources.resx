@@ -44,4 +44,24 @@
         <value>Register</value>
         <comment>Register</comment>
     </data>
+    <data name="TitleConsentByUserPage" xml:space="preserve">
+        <value>Consent by user page</value>
+        <comment>Consent by user page</comment>
+    </data>
+    <data name="TextUserAgreement" xml:space="preserve">
+        <value>User agreement</value>
+        <comment>User agreement</comment>
+    </data>
+    <data name="TextContainsDescriptionOfConsent1" xml:space="preserve">
+        <value>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</value>
+        <comment>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+    </data>
+    <data name="TextContainsDescriptionOfConsent2" xml:space="preserve">
+        <value>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</value>
+        <comment>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+    </data>
+    <data name="ButtonAgreeAndProceed" xml:space="preserve">
+        <value>Agree and Proceed</value>
+        <comment>Agree and Proceed</comment>
+    </data>
 </root>
