@@ -44,4 +44,24 @@
         <value>登録</value>
         <comment>Register</comment>
     </data>
+    <data name="TitleConsentByUserPage" xml:space="preserve">
+        <value>同意画面</value>
+        <comment>Consent by user page</comment>
+    </data>
+    <data name="TextUserAgreement" xml:space="preserve">
+        <value>利用規約</value>
+        <comment>User agreement</comment>
+    </data>
+    <data name="TextContainsDescriptionOfConsent1" xml:space="preserve">
+        <value>&#xF05E0;同意文の説明が含まれています。</value>
+        <comment>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+    </data>
+    <data name="TextContainsDescriptionOfConsent2" xml:space="preserve">
+        <value>&#xF05E0;同意文の説明が含まれています。</value>
+        <comment>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+    </data>
+    <data name="ButtonAgreeAndProceed" xml:space="preserve">
+        <value>同意して続行</value>
+        <comment>Agree and Proceed</comment>
+    </data>
 </root>

@@ -94,5 +94,35 @@ namespace Covid19Radar.Resx {
                 return ResourceManager.GetString("ButtonRegister", resourceCulture);
             }
         }
+        
+        internal static string TitleConsentByUserPage {
+            get {
+                return ResourceManager.GetString("TitleConsentByUserPage", resourceCulture);
+            }
+        }
+        
+        internal static string TextUserAgreement {
+            get {
+                return ResourceManager.GetString("TextUserAgreement", resourceCulture);
+            }
+        }
+        
+        internal static string TextContainsDescriptionOfConsent1 {
+            get {
+                return ResourceManager.GetString("TextContainsDescriptionOfConsent1", resourceCulture);
+            }
+        }
+        
+        internal static string TextContainsDescriptionOfConsent2 {
+            get {
+                return ResourceManager.GetString("TextContainsDescriptionOfConsent2", resourceCulture);
+            }
+        }
+        
+        internal static string ButtonAgreeAndProceed {
+            get {
+                return ResourceManager.GetString("ButtonAgreeAndProceed", resourceCulture);
+            }
+        }
     }
 }
