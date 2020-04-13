@@ -22,11 +22,9 @@ namespace Covid19Radar.Services
             {
                 return Utils.DeserializeFromJson<UserDataModel>(Application.Current.Properties["UserData"].ToString());
             }
-            else
-            {
-                return new UserDataModel();
-            }
+            return null;
         }
+
 
         public void Set(UserDataModel userData)
         {

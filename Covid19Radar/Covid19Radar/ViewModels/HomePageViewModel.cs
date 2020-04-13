@@ -1,25 +1,56 @@
-﻿using Prism.Commands;
+﻿using Covid19Radar.Common;
+using Covid19Radar.Model;
+using Covid19Radar.Services;
+using Covid19Radar.Views.cell;
+using Prism.Commands;
+using Prism.DryIoc;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Prism.Services;
+using Reactive.Bindings;
+using Reactive.Bindings.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
-using System.Windows.Input;
 
 namespace Covid19Radar.ViewModels
 {
     public class HomePageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
+        public ReactiveCollection<BeaconViewCell> beaconList = new ReactiveCollection<BeaconViewCell>();
 
-        public HomePageViewModel(INavigationService navigationService)
+        private INavigationService _navigationService;
+        private readonly IBeaconService _beaconService;
+        private UserDataService _userDataService;
+        private UserDataModel _userData;
+        public HomePageViewModel(INavigationService navigationService, UserDataService userdataservice)
             : base(navigationService)
         {
             _navigationService = navigationService;
+            _userDataService = userdataservice;
+            _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
 
-            Title = "Home";
+            _userData = _userDataService.Get();
+            Title = "Home Page";
+
+            // Polling Call update or List using maybe RX
+            var list = _beaconService.GetBeaconData();
+
         }
+        public Command OnClickUserSetting => (new Command(() =>
+        {
+            _navigationService.NavigateAsync("UserSettingPage");
+        }));
+        public Command OnClickAcknowledgments => (new Command(() =>
+        {
+            _navigationService.NavigateAsync("ContributersPage");
+        }));
+
+        public Command OnClickUpateInfo => (new Command(() =>
+        {
+            _navigationService.NavigateAsync("UpdateInfoPage");
+        }));
     }
 }

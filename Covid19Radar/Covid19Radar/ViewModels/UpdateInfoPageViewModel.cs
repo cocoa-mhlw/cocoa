@@ -9,20 +9,21 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class InputSmsOTPPageViewModel : ViewModelBase
+    public class UpdateInfoPageViewModel : ViewModelBase
     {
         private INavigationService _navigationService;
-        public InputSmsOTPPageViewModel(INavigationService navigationService)
+        public UpdateInfoPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "Input OTP";
+            Title = "Update Infomation";
         }
 
-        public Command OnClickNext => (new Command(() =>
+        public Command OnClickPrev => (new Command(() =>
         {
-            _navigationService.NavigateAsync("UserSettingPage");
+            _navigationService.NavigateAsync("HomePage");
         }));
+
 
     }
 }
