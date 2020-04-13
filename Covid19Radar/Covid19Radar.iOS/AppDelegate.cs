@@ -42,6 +42,7 @@ namespace Covid19Radar.iOS
             LoadApplication(new App(new iOSInitializer()));
 
             // for debug
+ /*
             BeaconService beacon = new BeaconService();
             beacon.InitializeService();
             beacon.StartBeacon();
@@ -51,7 +52,7 @@ namespace Covid19Radar.iOS
             userDataModel.Major = "24";
             userDataModel.Minor = "51";
             beacon.StartAdvertising(userDataModel);
-
+*/
             return base.FinishedLaunching(app, options);
         }
 

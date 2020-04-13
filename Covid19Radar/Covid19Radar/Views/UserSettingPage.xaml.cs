@@ -9,10 +9,9 @@ using Xamarin.Forms.Xaml;
 namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-
-    public partial class BeaconPage : ContentPage
+    public partial class UserSettingPage : ContentPage
     {
-        public BeaconPage()
+        public UserSettingPage()
         {
             InitializeComponent();
         }
