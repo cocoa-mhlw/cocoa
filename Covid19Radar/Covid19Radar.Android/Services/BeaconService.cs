@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AltBeaconOrg.BoundBeacon;
+using AltBeaconOrg.BoundBeacon.Startup;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -98,7 +99,8 @@ namespace Covid19Radar.Droid.Services
             _beaconManager.AddRangeNotifier(_rangeNotifier);
 
 
-            _fieldRegion = new AltBeaconOrg.BoundBeacon.Region(AppConstants.AppUUID, null, null, null);
+            _fieldRegion = new AltBeaconOrg.BoundBeacon.Region("AppAppApp", Identifier.Parse(AppConstants.AppUUID), null, null);
+
             _beaconManager.Bind(_mainActivity);
             return _beaconManager;
         }
@@ -170,13 +172,13 @@ namespace Covid19Radar.Droid.Services
                         // New
                         BeaconDataModel data = new BeaconDataModel();
                         data.Id = key;
-                        data.Count=0;
+                        data.Count = 0;
                         data.BeaconUuid = beacon.Id1.ToString();
                         data.Major = beacon.Id2.ToString();
                         data.Minor = beacon.Id3.ToString();
                         data.Distance = beacon.Distance;
                         data.Rssi = beacon.Rssi;
- //                       data.TXPower = beacon.TxPower;
+                        //                       data.TXPower = beacon.TxPower;
                         data.ElaspedTime = new TimeSpan();
                         data.LastDetectTime = DateTime.Now;
                         _connection.Insert(data);
@@ -193,7 +195,7 @@ namespace Covid19Radar.Droid.Services
                         data.Minor = beacon.Id3.ToString();
                         data.Distance += (beacon.Distance - data.Distance) / data.Count;
                         data.Rssi = beacon.Rssi;
-//                        data.TXPower = beacon.TxPower;
+                        //                        data.TXPower = beacon.TxPower;
                         data.ElaspedTime += DateTime.Now - data.LastDetectTime;
                         data.LastDetectTime = DateTime.Now;
                         _connection.Update(data);
