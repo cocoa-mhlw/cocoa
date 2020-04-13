@@ -199,8 +199,7 @@ namespace Covid19Radar.Droid.Services
                         data.ElaspedTime += DateTime.Now - data.LastDetectTime;
                         data.LastDetectTime = DateTime.Now;
                         _connection.Update(data);
-                        System.Diagnostics.Debug.WriteLine(data.Distance);
-                        System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
+                        System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
                     }
                 }
             }

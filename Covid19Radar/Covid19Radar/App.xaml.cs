@@ -40,7 +40,7 @@ namespace Covid19Radar
          */
         public App() : this(null) { }
 
-        public App(IPlatformInitializer initializer) : base(initializer) { }
+        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
 
         protected override async void OnInitialized()
         {
@@ -48,13 +48,12 @@ namespace Covid19Radar
             INavigationResult result;
 
             // Check user data and skip tutorial
-            UserDataService userDataService = App.Current.Container.Resolve<UserDataService>();
+            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
 
             if (userDataService.IsExistUserData())
             {
                 _userData = userDataService.Get();
-                _beaconService = App.Current.Container.Resolve<IBeaconService>();
-
+                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
                 // Only Call InitializeService! Start automagically in each background service!
                 AppUtils.CheckPermission();
                 _beaconService.InitializeService();
@@ -93,14 +92,15 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ContributersPage, ContributersPageViewModel>();
             containerRegistry.RegisterForNavigation<UpdateInfoPage, UpdateInfoPageViewModel>();
-            containerRegistry.RegisterSingleton<UserDataService>();
-
+            containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
         }
 
         protected override void OnStart()
         {
+            /*
             AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};",
                   typeof(Analytics), typeof(Crashes), typeof(Distribute));
+                  */
             base.OnStart();
         }
     }
