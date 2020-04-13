@@ -38,17 +38,6 @@ namespace Covid19Radar.ViewModels
             // Polling Call update or List using maybe RX
             var list = _beaconService.GetBeaconData();
 
-            // Debug Polling update list
-            Device.StartTimer(TimeSpan.FromSeconds(30), () =>
-            {
-                var list = _beaconService.GetBeaconData();
-                foreach (BeaconDataModel beacon in list)
-                {
-                    System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(beacon));
-                }
-                return true;
-            });
-
         }
         public Command OnClickUserSetting => (new Command(() =>
         {
