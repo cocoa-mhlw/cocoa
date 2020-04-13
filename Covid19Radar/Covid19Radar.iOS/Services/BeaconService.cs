@@ -26,7 +26,7 @@ namespace Covid19Radar.iOS.Services
         private readonly SQLiteConnection _connection;
         public BeaconService()
         {
-            _connection = AppDelegate.sqliteConnectionProvider.GetConnection();
+            _connection = DependencyService.Resolve<SQLiteConnectionProvider>().GetConnection();
             _connection.CreateTable<BeaconDataModel>();
 
             _userData = new UserDataModel();
@@ -201,8 +201,7 @@ namespace Covid19Radar.iOS.Services
                     data.ElaspedTime = new TimeSpan();
                     data.LastDetectTime = DateTime.Now;
                     _connection.Update(data);
-                    System.Diagnostics.Debug.WriteLine(data.Distance);
-                    System.Diagnostics.Debug.WriteLine(data.ElaspedTime.TotalSeconds);
+                    System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
                 }
 
             }
