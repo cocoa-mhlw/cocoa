@@ -28,4 +28,20 @@
         <value>I want to help</value>
         <comment>I want to help</comment>
     </data>
+    <data name="TitleAppDescription" xml:space="preserve">
+        <value>App Description</value>
+        <comment>App Description</comment>
+    </data>
+    <data name="TextHowToWorks" xml:space="preserve">
+        <value>How to works</value>
+        <comment>How to works</comment>
+    </data>
+    <data name="TextAppDescription" xml:space="preserve">
+        <value>We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals.</value>
+        <comment>We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals.</comment>
+    </data>
+    <data name="ButtonRegister" xml:space="preserve">
+        <value>Register</value>
+        <comment>Register</comment>
+    </data>
 </root>

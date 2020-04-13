@@ -21,7 +21,8 @@ namespace Covid19Radar.ViewModels
         public string TextToProtectThoseAroundYou { get; set; }
         public string ButtonIWantToHelp { get; set; }
 
-        public StartTutorialPageViewModel(INavigationService navigationService) : base(navigationService)
+        public StartTutorialPageViewModel(INavigationService navigationService)
+            : base(navigationService)
         {
             _navigationService = navigationService;
             TextStopTheSpreadOfCOVID19 = Resx.AppResources.TextStopTheSpreadOfCOVID19;
