@@ -9,6 +9,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <ListView x:Name="BeaconList" ItemsSource="{Binding beaconList}">
@@ -45,6 +46,15 @@
                     MinimumHeightRequest="60"
                     MinimumWidthRequest="170"
                     Command="{Binding Path=OnClickAcknowledgments}"/>
+        </Grid>
+        <Grid Grid.Row="3" Padding="120,0,120,60">
+            <Button BackgroundColor="#019ae8"
+                    Text="UpadteInfomation" 
+                    TextColor="#FFFFFF"
+                    FontSize="25"
+                    MinimumHeightRequest="60"
+                    MinimumWidthRequest="170"
+                    Command="{Binding Path=OnClickUpateInfo}"/>
         </Grid>
     </Grid>
 </ContentPage>

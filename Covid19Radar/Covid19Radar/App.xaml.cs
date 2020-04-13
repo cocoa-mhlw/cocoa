@@ -92,6 +92,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<UserSettingPage, UserSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ContributersPage, ContributersPageViewModel>();
+            containerRegistry.RegisterForNavigation<UpdateInfoPage, UpdateInfoPageViewModel>();
             containerRegistry.RegisterSingleton<UserDataService>();
 
         }
