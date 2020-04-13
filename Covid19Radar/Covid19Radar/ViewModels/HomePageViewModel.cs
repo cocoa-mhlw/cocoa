@@ -46,7 +46,10 @@ namespace Covid19Radar.ViewModels
         {
             _navigationService.NavigateAsync("ContributersPage");
         }));
-        
 
+        public Command OnClickUpateInfo => (new Command(() =>
+        {
+            _navigationService.NavigateAsync("UpdateInfoPage");
+        }));
     }
 }
