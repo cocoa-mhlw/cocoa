@@ -17,27 +17,20 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class BeaconPageViewModel : ViewModelBase
+    public class UserSettingPageViewModel : ViewModelBase
     {
-        public ReactiveCollection<BeaconViewCell> beaconList = new ReactiveCollection<BeaconViewCell>();
-
         private INavigationService _navigationService;
-        private readonly IBeaconService _beaconService;
         private UserDataService _userDataService;
         private UserDataModel _userData;
-        public BeaconPageViewModel(INavigationService navigationService, UserDataService userdataservice)
+        public UserSettingPageViewModel(INavigationService navigationService, UserDataService userdataservice)
             : base(navigationService)
         {
             _navigationService = navigationService;
-            _userDataService = userdataservice;
-            _beaconService = Xamarin.Forms.DependencyService.Get<IBeaconService>();
-
-            _userData = _userDataService.Get();
-            Title = "Beacon Page";
-
-            // Polling Call update or List using maybe RX
-            var list = _beaconService.GetBeaconData();
+            Title = "UserSettingPage";
         }
-
+        public Command OnChangeStatusOverInfection => (new Command(() =>
+        {
+            _navigationService.NavigateAsync("SmsVerificationPage");
+        }));
     }
 }

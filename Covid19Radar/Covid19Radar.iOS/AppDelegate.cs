@@ -8,6 +8,7 @@ using Prism;
 using Prism.Ioc;
 using System;
 using UIKit;
+using Xamarin.Forms;
 
 namespace Covid19Radar.iOS
 {
@@ -18,12 +19,9 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public static AppDelegate Instance { get; private set; }
-        public static SQLiteConnectionProvider sqliteConnectionProvider { get; private set; }
 
         public AppDelegate()
         {
-            //_locationMgr = new CLLocationManager();
-
         }
 
         //
@@ -36,111 +34,22 @@ namespace Covid19Radar.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-
-            SQLiteConnectionProvider sqliteConnectionProvider = new SQLiteConnectionProvider();
-
             LoadApplication(new App(new iOSInitializer()));
 
             // for debug
-            BeaconService beacon = new BeaconService();
-            beacon.InitializeService();
-            beacon.StartBeacon();
+            /*
+                       BeaconService beacon = new BeaconService();
+                       beacon.InitializeService();
+                       beacon.StartBeacon();
 
-            UserDataModel userDataModel = new UserDataModel();
-            userDataModel.UserUuid = Guid.NewGuid().ToString();
-            userDataModel.Major = "24";
-            userDataModel.Minor = "51";
-            beacon.StartAdvertising(userDataModel);
-
+                       UserDataModel userDataModel = new UserDataModel();
+                       userDataModel.UserUuid = Guid.NewGuid().ToString();
+                       userDataModel.Major = "24";
+                       userDataModel.Minor = "51";
+                       beacon.StartAdvertising(userDataModel);
+           */
             return base.FinishedLaunching(app, options);
         }
-
-        /*
-        public void StartBeacon()
-        {
-
-            _locationMgr.RequestAlwaysAuthorization();
-
-            // Authorization
-            _locationMgr.AuthorizationChanged += DidAuthorizationChanged;
-
-            // Monitoring
-            _locationMgr.RegionEntered += DidRegionEntered;
-            _locationMgr.RegionLeft += DidRegionLeft;
-
-            // Ranging
-            _locationMgr.DidRangeBeacons += DidRangeBeacons;
-            _locationMgr.DidDetermineState += DidDetermineState;
-            _locationMgr.PausesLocationUpdatesAutomatically = false;
-
-            _locationMgr.StartUpdatingLocation();
-            _locationMgr.RequestAlwaysAuthorization();
-
-            _fieldRegion = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), "");
-            _fieldRegion.NotifyOnEntry = true;
-            _fieldRegion.NotifyOnExit = true;
-            _fieldRegion.NotifyEntryStateOnDisplay = true;
-            _locationMgr.StartMonitoring(_fieldRegion);
-
-            System.Diagnostics.Debug.WriteLine("Start");
-
-        }
-        private void DidAuthorizationChanged(object sender, CLAuthorizationChangedEventArgs e)
-        {
-            if (e.Status == CLAuthorizationStatus.AuthorizedAlways)
-            {
-
-            }
-            else
-            {
-                _locationMgr.StopRangingBeacons(_fieldRegion);
-                _locationMgr.StopMonitoring(_fieldRegion);
-            }
-            System.Diagnostics.Debug.WriteLine("DidAuthorizationChanged");
-        }
-
-        private void DidRegionLeft(object sender, CLRegionEventArgs e)
-        {
-            _locationMgr.StopRangingBeacons(_fieldRegion);
-        }
-
-        private void DidRegionEntered(object sender, CLRegionEventArgs e)
-        {
-            _locationMgr.StartRangingBeacons(_fieldRegion);
-        }
-
-        public void StopBeacon()
-        {
-            _locationMgr.StopRangingBeacons(_fieldRegion);
-            _locationMgr.StopMonitoring(_fieldRegion);
-            _locationMgr.StopUpdatingLocation();
-        }
-
-        private void DidDetermineState(object sender, CLRegionStateDeterminedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("DidDetermineState");
-            System.Diagnostics.Debug.WriteLine(e.ToString());
-        }
-
-        private void DidRangeBeacons(object sender, CLRegionBeaconsRangedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("DidRangeBeacons");
-            // Beacon Get
-            foreach (var beacon in e.Beacons)
-            {
-                System.Diagnostics.Debug.WriteLine(beacon.ToString());
-
-                if (beacon.Proximity == CLProximity.Unknown)
-                {
-                    return;
-                }
-
-                string uuid = beacon.ProximityUuid.AsString();
-                var major = (ushort)beacon.Major;
-                var minor = (ushort)beacon.Minor;
-            }
-        }
-        */
 
     }
 
@@ -149,7 +58,8 @@ namespace Covid19Radar.iOS
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
-            containerRegistry.RegisterInstance(AppDelegate.sqliteConnectionProvider);
+            containerRegistry.RegisterSingleton<SQLiteConnectionProvider, SQLiteConnectionProvider>();
+            containerRegistry.RegisterSingleton<UserDataService,UserDataService>();
         }
     }
 

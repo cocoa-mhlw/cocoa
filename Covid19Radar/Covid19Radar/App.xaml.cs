@@ -40,7 +40,7 @@ namespace Covid19Radar
          */
         public App() : this(null) { }
 
-        public App(IPlatformInitializer initializer) : base(initializer) { }
+        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
 
         protected override async void OnInitialized()
         {
@@ -48,18 +48,17 @@ namespace Covid19Radar
             INavigationResult result;
 
             // Check user data and skip tutorial
-            UserDataService userDataService = App.Current.Container.Resolve<UserDataService>();
+            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
 
             if (userDataService.IsExistUserData())
             {
                 _userData = userDataService.Get();
-                _beaconService = App.Current.Container.Resolve<IBeaconService>();
-
+                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
                 // Only Call InitializeService! Start automagically in each background service!
                 AppUtils.CheckPermission();
                 _beaconService.InitializeService();
 
-                result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
+                result = await NavigationService.NavigateAsync("NavigationPage/HomePage");
             }
             else
             {
@@ -85,21 +84,23 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<StartTutorialPage, StartTutorialPageViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
-            containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
-            containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
-            containerRegistry.RegisterForNavigation<BeaconPage, BeaconPageViewModel>();
-
-            containerRegistry.RegisterSingleton<UserDataService>();
-
+            containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
+            containerRegistry.RegisterForNavigation<UserSettingPage, UserSettingPageViewModel>();
+            containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
+            containerRegistry.RegisterForNavigation<ContributersPage, ContributersPageViewModel>();
+            containerRegistry.RegisterForNavigation<UpdateInfoPage, UpdateInfoPageViewModel>();
+            containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
         }
 
         protected override void OnStart()
         {
+            /*
             AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};",
                   typeof(Analytics), typeof(Crashes), typeof(Distribute));
+                  */
             base.OnStart();
         }
     }

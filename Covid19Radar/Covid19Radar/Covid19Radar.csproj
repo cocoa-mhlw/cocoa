@@ -39,8 +39,17 @@
     <Compile Remove="Views\DescriptionPage %28コピー%29.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\BeaconPage.xaml.cs">
-      <DependentUpon>BeaconPage.xaml</DependentUpon>
+    <Compile Update="Views\ContributersPage.xaml.cs">
+      <DependentUpon>ContributersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UpdateInfoPage.xaml.cs">
+      <DependentUpon>UpdateInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UserSettingPage.xaml.cs">
+      <DependentUpon>UserSettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
@@ -63,12 +72,6 @@
     <Compile Update="Views\DescriptionPage.xaml.cs">
       <DependentUpon>DescriptionPage.xaml</DependentUpon>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Views\HomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
