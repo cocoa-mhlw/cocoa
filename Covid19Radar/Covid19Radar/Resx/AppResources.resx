@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="TextStopTheSpreadOfCOVID19" xml:space="preserve">
+        <value>Help Stop the spread of COVID-19 by turning Bluetooth on</value>
+        <comment>Help Stop the spread of COVID-19 by turning Bluetooth on</comment>
+    </data>
+    <data name="TextWeWillHelpAgenciesContact" xml:space="preserve">
+        <value>If you had close contact with a COVID-19 case, We will help agencies contact you to prevent the spread of infection, to provide guidance and care</value>
+        <comment>If you had close contact with a COVID-19 case, We will help agencies contact you to prevent the spread of infection, to provide guidance and care</comment>
+    </data>
+    <data name="TextToProtectThoseAroundYou" xml:space="preserve">
+        <value>To protect those around you, Please share your data.</value>
+        <comment>To protect those around you, Please share your data.</comment>
+    </data>
+    <data name="ButtonIWantToHelp" xml:space="preserve">
+        <value>I want to help</value>
+        <comment>I want to help</comment>
+    </data>
+</root>
