@@ -10,10 +10,17 @@ namespace Covid19Radar.Model
     public class BeaconDataModel
     {
         /// <summary>
+        /// auto number key
+        /// </summary>
+        /// <value>Id</value>
+        [PrimaryKey]
+        public string Id { get; set; }
+        public int Count { get; set; }
+
+        /// <summary>
         /// Same beacon uuid's device can communication.
         /// </summary>
         /// <value>BeaconUuid</value>
-        [PrimaryKey]
         public string BeaconUuid { get; set; }
         /// <summary>
         /// Major - in this app case mapping user id
