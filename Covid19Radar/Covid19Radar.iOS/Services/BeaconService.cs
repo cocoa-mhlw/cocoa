@@ -162,10 +162,14 @@ namespace Covid19Radar.iOS.Services
                 {
                     return;
                 }
-                var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.BeaconUuid == beacon.Uuid.ToString());
+
+                var key = beacon.Uuid.ToString() + beacon.Major.ToString() + beacon.Minor.ToString();
+                var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
                 if (result == null)
                 {
                     BeaconDataModel data = new BeaconDataModel();
+                    data.Id = key;
+                    data.Count = 0;
                     data.BeaconUuid = beacon.Uuid.ToString();
                     data.Major = beacon.Major.ToString();
                     data.Minor = beacon.Minor.ToString();
@@ -179,10 +183,12 @@ namespace Covid19Radar.iOS.Services
                 else
                 {
                     BeaconDataModel data = result;
+                    data.Id = key;
+                    data.Count++;
                     data.BeaconUuid = beacon.Uuid.ToString();
                     data.Major = beacon.Major.ToString();
                     data.Minor = beacon.Minor.ToString();
-                    data.Distance = beacon.Accuracy;
+                    data.Distance += (beacon.Accuracy - data.Distance) / data.Count;
                     data.Rssi = (short)beacon.Rssi;
                     //                        data.TXPower = beacon.tr;
                     data.ElaspedTime = new TimeSpan();

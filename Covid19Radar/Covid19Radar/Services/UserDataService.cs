@@ -31,6 +31,7 @@ namespace Covid19Radar.Services
         public void Set(UserDataModel userData)
         {
             Application.Current.Properties["UserData"] = userData;
+            Application.Current.SavePropertiesAsync();
         }
     }
 }

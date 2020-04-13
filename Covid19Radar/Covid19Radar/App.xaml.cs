@@ -48,7 +48,7 @@ namespace Covid19Radar
             INavigationResult result;
 
             // Check user data and skip tutorial
-            UserDataService userDataService = Container.Resolve<UserDataService>();
+            UserDataService userDataService = App.Current.Container.Resolve<UserDataService>();
             if (userDataService.IsExistUserData())
             {
                 result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
