@@ -65,9 +65,14 @@ namespace Covid19Radar.Droid
         public void OnBeaconServiceConnect()
         {
             BeaconService beaconService = Xamarin.Forms.DependencyService.Get<BeaconService>();
-//            UserDataService userDataService = Xamarin.Forms.DependencyService.Get<UserDataService>();
+            UserDataService userDataService = new UserDataService();
             beaconService.StartBeacon();
-//            beaconService.StartAdvertising();
+
+            if (userDataService.IsExistUserData())
+            {
+                UserDataModel userDataModel = userDataService.Get();
+                beaconService.StartAdvertising(userDataModel);
+            }
         }
 
     }

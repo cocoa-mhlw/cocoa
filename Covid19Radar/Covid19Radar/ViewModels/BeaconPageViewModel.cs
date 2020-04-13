@@ -35,7 +35,7 @@ namespace Covid19Radar.ViewModels
             _userData = _userDataService.Get();
             Title = "Beacon Page";
 
-            // Polling Call update List
+            // Polling Call update or List using maybe RX
             var list = _beaconService.GetBeaconData();
         }
 
