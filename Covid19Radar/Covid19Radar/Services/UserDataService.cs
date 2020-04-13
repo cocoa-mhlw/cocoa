@@ -20,7 +20,7 @@ namespace Covid19Radar.Services
         {
             if (Application.Current.Properties.ContainsKey("UserData"))
             {
-                return (UserDataModel)Application.Current.Properties["UserData"];
+                return Utils.DeserializeFromJson<UserDataModel>(Application.Current.Properties["UserData"].ToString());
             }
             else
             {
@@ -30,7 +30,8 @@ namespace Covid19Radar.Services
 
         public void Set(UserDataModel userData)
         {
-            Application.Current.Properties["UserData"] = userData;
+            Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
+            Application.Current.SavePropertiesAsync();
         }
     }
 }
