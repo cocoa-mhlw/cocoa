@@ -12,11 +12,18 @@ namespace Covid19Radar.ViewModels
     public class DescriptionPageViewModel : ViewModelBase
     {
         private INavigationService _navigationService;
+        public string TextHowToWorks { get; set; }
+        public string TextAppDescription { get; set; }
+        public string ButtonRegister { get; set; }
+
         public DescriptionPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "App Description";
+            Title = Resx.AppResources.TitleAppDescription;
+            TextHowToWorks = Resx.AppResources.TextHowToWorks;
+            TextAppDescription = Resx.AppResources.TextAppDescription;
+            ButtonRegister = Resx.AppResources.ButtonRegister;
         }
 
         public Command OnClickNext => (new Command(() =>

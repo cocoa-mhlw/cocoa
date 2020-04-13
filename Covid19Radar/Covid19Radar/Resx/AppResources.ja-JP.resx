@@ -28,4 +28,20 @@
         <value>助けたい</value>
         <comment>I want to help</comment>
     </data>
+    <data name="TitleAppDescription" xml:space="preserve">
+        <value>アプリの説明</value>
+        <comment>App Description</comment>
+    </data>
+    <data name="TextHowToWorks" xml:space="preserve">
+        <value>動作方法</value>
+        <comment>How to works</comment>
+    </data>
+    <data name="TextAppDescription" xml:space="preserve">
+        <value>Bluetooth Low Energy（別名BLE）信号を使用して、別の Covid19Radar ユーザーが近くにいるかどうかを判断します。この近接データは、端末を認識するデータのみです。</value>
+        <comment>We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals.</comment>
+    </data>
+    <data name="ButtonRegister" xml:space="preserve">
+        <value>登録</value>
+        <comment>Register</comment>
+    </data>
 </root>

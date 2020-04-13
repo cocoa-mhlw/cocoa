@@ -70,5 +70,29 @@ namespace Covid19Radar.Resx {
                 return ResourceManager.GetString("ButtonIWantToHelp", resourceCulture);
             }
         }
+        
+        internal static string TitleAppDescription {
+            get {
+                return ResourceManager.GetString("TitleAppDescription", resourceCulture);
+            }
+        }
+        
+        internal static string TextHowToWorks {
+            get {
+                return ResourceManager.GetString("TextHowToWorks", resourceCulture);
+            }
+        }
+        
+        internal static string TextAppDescription {
+            get {
+                return ResourceManager.GetString("TextAppDescription", resourceCulture);
+            }
+        }
+        
+        internal static string ButtonRegister {
+            get {
+                return ResourceManager.GetString("ButtonRegister", resourceCulture);
+            }
+        }
     }
 }
