@@ -13,7 +13,7 @@
     <AssemblyName>Covid19Radar.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <ProvisioningType>manual</ProvisioningType>
+    <ProvisioningType>automatic</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,7 +56,7 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>VS: net.kzmx.Covid19Radar Development</CodesignProvision>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>None</MtouchLink>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <MtouchProfiling>true</MtouchProfiling>
   </PropertyGroup>

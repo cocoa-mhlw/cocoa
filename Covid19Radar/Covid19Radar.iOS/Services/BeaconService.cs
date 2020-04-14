@@ -24,12 +24,13 @@ namespace Covid19Radar.iOS.Services
         private CLLocationManager _beaconManager;
         private List<CLBeaconRegion> _listOfCLBeaconRegion;
         private readonly SQLiteConnection _connection;
+        private readonly UserDataService _userDataService;
         public BeaconService()
         {
             _connection = DependencyService.Resolve<SQLiteConnectionProvider>().GetConnection();
             _connection.CreateTable<BeaconDataModel>();
-
-            _userData = new UserDataModel();
+            _userDataService= DependencyService.Resolve<UserDataService>();
+            _userData = _userDataService.Get();
             _beaconManager = new CLLocationManager();
             _beaconTransmitter = new CBPeripheralManager();
             _beaconTransmitter.AdvertisingStarted += DidAdvertisingStarted;

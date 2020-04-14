@@ -35,19 +35,6 @@ namespace Covid19Radar.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
-
-            // for debug
-            /*
-                       BeaconService beacon = new BeaconService();
-                       beacon.InitializeService();
-                       beacon.StartBeacon();
-
-                       UserDataModel userDataModel = new UserDataModel();
-                       userDataModel.UserUuid = Guid.NewGuid().ToString();
-                       userDataModel.Major = "24";
-                       userDataModel.Minor = "51";
-                       beacon.StartAdvertising(userDataModel);
-           */
             return base.FinishedLaunching(app, options);
         }
 
