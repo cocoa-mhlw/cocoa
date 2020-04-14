@@ -11,6 +11,7 @@ using CoreBluetooth;
 using UIKit;
 using Xamarin.Forms;
 using SQLite;
+using Xamarin.Forms.Internals;
 
 [assembly: Dependency(typeof(Covid19Radar.iOS.Services.BeaconService))]
 namespace Covid19Radar.iOS.Services
@@ -25,13 +26,17 @@ namespace Covid19Radar.iOS.Services
         private List<CLBeaconRegion> _listOfCLBeaconRegion;
         private readonly SQLiteConnection _connection;
         private readonly UserDataService _userDataService;
+        private readonly HttpDataService _httpDataService;
         public BeaconService()
         {
             _connection = DependencyService.Resolve<SQLiteConnectionProvider>().GetConnection();
             _connection.CreateTable<BeaconDataModel>();
-            _userDataService= DependencyService.Resolve<UserDataService>();
+            _userDataService = DependencyService.Resolve<UserDataService>();
             _userData = _userDataService.Get();
+            _httpDataService = DependencyService.Resolve<HttpDataService>();
+
             _beaconManager = new CLLocationManager();
+
             _beaconTransmitter = new CBPeripheralManager();
             _beaconTransmitter.AdvertisingStarted += DidAdvertisingStarted;
             _beaconTransmitter.StateUpdated += DidStateUpdated;
@@ -93,6 +98,8 @@ namespace Covid19Radar.iOS.Services
 
             _beaconManager.RequestAlwaysAuthorization();
             _beaconManager.PausesLocationUpdatesAutomatically = false;
+            _beaconManager.AllowsBackgroundLocationUpdates = true;
+            _beaconManager.ShowsBackgroundLocationIndicator = true;
 
             _listOfCLBeaconRegion.Add(_fieldRegion);
             _beaconManager.StartMonitoring(_fieldRegion);
@@ -126,7 +133,7 @@ namespace Covid19Radar.iOS.Services
             if (trasmitter.State < CBPeripheralManagerState.PoweredOn)
             {
                 System.Diagnostics.Debug.WriteLine("Bluetooth must be enabled");
-// new UIAlertView("Bluetooth must be enabled", "To configure your device as a beacon", null, "OK", null).Show();
+                // new UIAlertView("Bluetooth must be enabled", "To configure your device as a beacon", null, "OK", null).Show();
                 return;
             }
 
@@ -147,7 +154,7 @@ namespace Covid19Radar.iOS.Services
             _transmitterFlg = false;
         }
 
-        private void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
+        private async void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
 
@@ -174,6 +181,10 @@ namespace Covid19Radar.iOS.Services
                     data.ElaspedTime = new TimeSpan();
                     data.LastDetectTime = DateTime.Now;
                     _connection.Insert(data);
+                    if (data.ElaspedTime > TimeSpan.FromMinutes(AppConstants.ELAPSED_TIME_OF_TRANSMISSION_START))
+                    {
+                        await _httpDataService.PostBeaconDataAsync(_userData, data);
+                    }
                 }
                 else
                 {
