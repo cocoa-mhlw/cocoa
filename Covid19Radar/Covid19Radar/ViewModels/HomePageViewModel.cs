@@ -1,30 +1,38 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
-using Covid19Radar.Views.cell;
 using Prism.Commands;
 using Prism.DryIoc;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
-using Reactive.Bindings;
-using Reactive.Bindings.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HomePageViewModel : ViewModelBase
+    public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        public ReactiveCollection<BeaconViewCell> beaconList = new ReactiveCollection<BeaconViewCell>();
-
         private INavigationService _navigationService;
         private readonly IBeaconService _beaconService;
         private UserDataService _userDataService;
         private UserDataModel _userData;
+
+        private ObservableCollection<BeaconDataModel> beacons;
+        public ObservableCollection<BeaconDataModel> Beacons
+        {
+            get { return beacons; }
+            set
+            {
+
+                beacons = value;
+            }
+        }
         public HomePageViewModel(INavigationService navigationService, UserDataService userdataservice)
             : base(navigationService)
         {
@@ -35,9 +43,8 @@ namespace Covid19Radar.ViewModels
             _userData = _userDataService.Get();
             Title = "Home Page";
 
-            // Polling Call update or List using maybe RX
             var list = _beaconService.GetBeaconData();
-
+            Beacons = new ObservableCollection<BeaconDataModel>(list);
         }
         public Command OnClickUserSetting => (new Command(() =>
         {
@@ -52,5 +59,11 @@ namespace Covid19Radar.ViewModels
         {
             _navigationService.NavigateAsync("UpdateInfoPage");
         }));
+
+        public Command OnClickUpdateList => (new Command(() =>
+        {
+        }));
+
+        
     }
 }
