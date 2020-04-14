@@ -1,4 +1,4 @@
-# PUT /api/Beacon
+# POST /api/Beacon
 for Client Application.
 Send a "contact record" from processed beacon information to this api.
 
