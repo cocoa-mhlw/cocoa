@@ -6,38 +6,22 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Covid19Radar.Tests.Models
 {
     [TestClass]
-    public class UserDataModelTest
+    public class UserResultModelTest
     {
         [TestMethod]
         public void CreateMethod()
         {
             // action
-            var model = new UserModel();
+            var model = new UserResultModel();
         }
 
         [TestMethod]
         public void PropertiesTest()
         {
             // preparation
-            var model = new UserModel();
+            var model = new UserResultModel();
             // model property access
             Helper.ModelTestHelper.PropetiesTest(model);
-        }
-
-        [DataTestMethod]
-        [DataRow("UUID", "0", "0", "UUID.00000.00000")]
-        [DataRow("UUID", "11111", "22222", "UUID.11111.22222")]
-        public void IdTest(string uuid, string major, string minor, string expected)
-        {
-            // preparation
-            var model = new UserModel();
-            model.UserUuid = uuid;
-            model.Major = major;
-            model.Minor = minor;
-            // action
-            var actual = model.id;
-            // assert
-            Assert.AreEqual(expected, actual);
         }
 
         [DataTestMethod]
@@ -50,7 +34,7 @@ namespace Covid19Radar.Tests.Models
         public void SetStatusTest(UserStatus s)
         {
             // preparation
-            var model = new UserModel();
+            var model = new UserResultModel();
             // action
             model.SetStatus(s);
             // assert
