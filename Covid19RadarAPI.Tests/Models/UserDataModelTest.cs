@@ -46,7 +46,9 @@ namespace Covid19Radar.Tests.Models
         [DataRow(UserStatus.Inspection)]
         [DataRow(UserStatus.None)]
         [DataRow(UserStatus.OnSet)]
+        [DataRow(UserStatus.Recovery)]
         [DataRow(UserStatus.Suspected)]
+        [DataRow(UserStatus.Treatment)]
         public void SetStatusTest(UserStatus s)
         {
             // preparation
