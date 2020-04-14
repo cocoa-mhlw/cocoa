@@ -19,6 +19,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
+using System.Net.Http;
 
 /* 
  * Our mission...is 
@@ -49,12 +50,13 @@ namespace Covid19Radar
 
             // Check user data and skip tutorial
             UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-
+            //UserDataModel userData =await userDataService.Register();
+ 
             if (userDataService.IsExistUserData())
             {
                 _userData = userDataService.Get();
                 _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
-                // Only Call InitializeService! Start automagically in each background service!
+                // Only Call InitializeService! Start automagically!
                 AppUtils.CheckPermission();
                 _beaconService.InitializeService();
 
@@ -93,6 +95,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ContributersPage, ContributersPageViewModel>();
             containerRegistry.RegisterForNavigation<UpdateInfoPage, UpdateInfoPageViewModel>();
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
+            containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
         }
 
         protected override void OnStart()
