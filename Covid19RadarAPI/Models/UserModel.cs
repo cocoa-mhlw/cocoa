@@ -7,12 +7,12 @@ using Newtonsoft.Json.Converters;
 
 namespace Covid19Radar.Models
 {
-    public class UserDataModel
+    public class UserModel : IUser
     {
         /// <summary>
         /// for CosmosDB id
         /// </summary>
-        public string id { get => GetId(); }
+        public string id { get => this.GetId(); }
         /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
@@ -47,16 +47,6 @@ namespace Covid19Radar.Models
                 _UserStatus = Enum.Parse<Covid19Radar.Common.UserStatus>(value);
             }
         }
-
-        /// <summary>
-        /// User Unique ID format UserUUID.(Padding Zero Major).(Padding Zero Minor)
-        /// </summary>
-        /// <value>User Minor</value>
-        public string GetId()
-        {
-            return String.Format("{0}.{1}.{2}", UserUuid, Major.PadLeft(5, '0'), Minor.PadLeft(5, '0'));
-        }
-
         /// <summary>
         /// set SserStatus
         /// </summary>

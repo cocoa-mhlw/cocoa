@@ -27,14 +27,12 @@ namespace Covid19Radar.Api
 
         [FunctionName("Register")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
             switch (req.Method)
             {
-                case "GET":
-                    return await Get(req);
                 case "POST":
                     return await Post(req);
             }
@@ -42,25 +40,14 @@ namespace Covid19Radar.Api
             return new BadRequestObjectResult("Not Supported");
         }
 
-        private async Task<IActionResult> Get(HttpRequest req)
+        private async Task<IActionResult> Post(HttpRequest req)
         {
-            // get name from query 
-            var userUuid = req.Query["UserUuid"];
-
+            // UserUuid
+            var userUuid = Guid.NewGuid().ToString("N")
+                + DateTime.UtcNow.Ticks.ToString();
 
             // save to DB
             return await Register(userUuid);
-        }
-
-        private async Task<IActionResult> Post(HttpRequest req)
-        {
-            // convert Postdata to UserDataModel
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            var data = JsonConvert.DeserializeObject<UserDataModel>(requestBody);
-            var userUuid = data.UserUuid;
-
-            // save to DB
-            return await Register(data.UserUuid);
         }
 
         private async Task<SequenceDataModel> GetNumber()
@@ -90,37 +77,24 @@ namespace Covid19Radar.Api
 
         private async Task<IActionResult> Register(string userUuid)
         {
-            using (var l = new Common.UuidLock(userUuid))
+            var number = await GetNumber();
+            // 503 Error, Fail get number
+            if (number == null)
             {
-                // 
-                var sqlQueryText = $"SELECT * FROM User WHERE User.UserUuid = '{userUuid}'";
-                QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
-                var queryResultSetIterator = Cosmos.User.GetItemQueryIterator<UserDataModel>(queryDefinition);
-                while (queryResultSetIterator.HasMoreResults)
-                {
-                    FeedResponse<UserDataModel> current = await queryResultSetIterator.ReadNextAsync();
-                    foreach (UserDataModel u in current)
-                    {
-                        return new CreatedResult($"/api/User?UserUuid={userUuid}", null);
-                    }
-                }
-
-                var number = await GetNumber();
-                // 503 Error, Fail get number
-                if (number == null)
-                {
-                    return new StatusCodeResult(503);
-                }
-
-                var newItem = new UserDataModel();
-                newItem.UserUuid = userUuid;
-                newItem.Major = number.Major.ToString();
-                newItem.Minor = number.Minor.ToString();
-                newItem.SetStatus(Common.UserStatus.None);
-                var result = await Cosmos.User.CreateItemAsync(newItem);
-                return new CreatedResult($"/api/User?UserUuid={userUuid}", null);
-                //return new StatusCodeResult((int)result.StatusCode);
+                return new StatusCodeResult(503);
             }
+
+            var newItem = new UserModel();
+            newItem.UserUuid = userUuid;
+            newItem.Major = number.Major.ToString();
+            newItem.Minor = number.Minor.ToString();
+            newItem.SetStatus(Common.UserStatus.None);
+            var newItemResult = await Cosmos.User.CreateItemAsync(newItem);
+            var result = new RegisterResultModel();
+            result.UserUuid = userUuid;
+            result.Major = newItem.Major;
+            result.Minor = newItem.Minor;
+            return new OkObjectResult(result);
         }
     }
 }
