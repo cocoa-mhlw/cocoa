@@ -59,12 +59,7 @@ namespace Covid19Radar.iOS.Services
         {
             _beaconManager = InitializeBeaconManager();
             StartBeacon();
-
-            UserDataModel userDataModel = new UserDataModel();
-            userDataModel.UserUuid = Guid.NewGuid().ToString();
-            userDataModel.Major = "24";
-            userDataModel.Minor = "51";
-            StartAdvertising(userDataModel);
+            StartAdvertising(_userData);
         }
 
         private CLLocationManager InitializeBeaconManager()
@@ -115,13 +110,6 @@ namespace Covid19Radar.iOS.Services
         {
             _userData = userData;
             _transmitterFlg = true;
-
-            /*
-                        CLBeaconRegion region = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), ushort.Parse(userData.Major), ushort.Parse(userData.Minor), userData.UserUuid);
-                        NSNumber txPower = new NSNumber(-59);
-                        NSDictionary peripheralData = region.GetPeripheralData(txPower);
-                        */
-
         }
 
         private void DidAdvertisingStarted(object sender, NSErrorEventArgs e)
@@ -138,7 +126,7 @@ namespace Covid19Radar.iOS.Services
             if (trasmitter.State < CBPeripheralManagerState.PoweredOn)
             {
                 System.Diagnostics.Debug.WriteLine("Bluetooth must be enabled");
-                //                new UIAlertView("Bluetooth must be enabled", "To configure your device as a beacon", null, "OK", null).Show();
+// new UIAlertView("Bluetooth must be enabled", "To configure your device as a beacon", null, "OK", null).Show();
                 return;
             }
 
@@ -157,7 +145,6 @@ namespace Covid19Radar.iOS.Services
         public void StopAdvertising()
         {
             _transmitterFlg = false;
-            //            _beaconTransmitter.StopAdvertising();
         }
 
         private void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
