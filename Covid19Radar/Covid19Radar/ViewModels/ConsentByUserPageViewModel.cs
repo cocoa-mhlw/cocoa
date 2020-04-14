@@ -27,21 +27,15 @@ namespace Covid19Radar.ViewModels
             _userDataService = App.Current.Container.Resolve<UserDataService>();
         }
 
-        public Command OnClickNext => (new Command(() =>
+        public Command OnClickNext => (new Command(async () =>
         {
-            // Regist user 
-            // TODO Call REST API
+            // Regist user
             if (!_userDataService.IsExistUserData())
             {
-                UserDataModel userData = new UserDataModel();
-                userData.UserUuid = Guid.NewGuid().ToString();
-                userData.UserStatus = UserStatus.None;
-                userData.Major = "0";
-                userData.Minor = "41";
-                _userDataService.Set(userData);
+                UserDataModel userData = await _userDataService.RegistUserAsync();
             }
 
-            _navigationService.NavigateAsync("InitSettingPage");
+            await _navigationService.NavigateAsync("InitSettingPage");
         }));
 
     }

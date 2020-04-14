@@ -24,19 +24,25 @@ namespace Covid19Radar.Droid.Services
     {
 
         private AltBeaconOrg.BoundBeacon.Region _fieldRegion;
-
+        private UserDataModel _userData;
         private RangeNotifier _rangeNotifier;
         private MonitorNotifier _monitorNotifier;
         private BeaconManager _beaconManager;
         private readonly MainActivity _mainActivity;
         private BeaconTransmitter _beaconTransmitter;
         private readonly SQLiteConnection _connection;
+        private readonly UserDataService _userDataService;
+        private readonly HttpDataService _httpDataService;
 
         public BeaconService()
         {
             _mainActivity = MainActivity.Instance;
             _connection = MainActivity.sqliteConnectionProvider.GetConnection();
             _connection.CreateTable<BeaconDataModel>();
+            _userDataService = DependencyService.Resolve<UserDataService>();
+            _userData = _userDataService.Get();
+            _httpDataService = DependencyService.Resolve<HttpDataService>();
+
         }
 
         public BeaconManager BeaconManagerImpl
@@ -155,7 +161,7 @@ namespace Covid19Radar.Droid.Services
 
         }
 
-        private void DidRangeBeaconsInRegionComplete(object sender, RangeEventArgs rangeEventArgs)
+        private async void DidRangeBeaconsInRegionComplete(object sender, RangeEventArgs rangeEventArgs)
         {
             System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
 
@@ -182,7 +188,10 @@ namespace Covid19Radar.Droid.Services
                         data.ElaspedTime = new TimeSpan();
                         data.LastDetectTime = DateTime.Now;
                         _connection.Insert(data);
-
+                        if (data.ElaspedTime > TimeSpan.FromMinutes(AppConstants.ELAPSED_TIME_OF_TRANSMISSION_START))
+                        {
+                            await _httpDataService.PostBeaconDataAsync(_userData, data);
+                        }
                     }
                     else
                     {
