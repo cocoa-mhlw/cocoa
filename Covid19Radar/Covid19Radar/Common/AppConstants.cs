@@ -59,5 +59,7 @@ namespace Covid19Radar.Common
 		public static readonly string API_BASEURL = "https://covid19radar.azurewebsites.net/api/";
 
 		public static readonly int ELAPSED_TIME_OF_TRANSMISSION_START = 1;
+
+		public static readonly int NUMBER_OF_GROUP = 60;
 	}
 }
