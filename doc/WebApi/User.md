@@ -39,18 +39,3 @@ not found user.
 
 ## Response 503
 too many request CosmosDB
-
-# PUT /api/User
-for government or other ?
-not implement now
-
-## Request ContentType
-`application/json`
-
-## RequestBody
-```
-{
-  "UserUuid": "[UserUuid]",
-  "UserStatus": "[State]"
-}
-```
