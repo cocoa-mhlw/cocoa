@@ -5,12 +5,27 @@ using System.Linq;
 
 namespace Covid19Radar.Models
 {
-    public sealed class BeaconDataModel
+    public sealed class BeaconModel
     {
         /// <summary>
-        /// for Cosmos DB 
+        /// for Cosmos DB
         /// </summary>
         public string id { get; set; }
+        /// <summary>
+        /// User UUID / take care misunderstand Becon ID
+        /// </summary>
+        /// <value>User UUID</value>
+        public string UserUuid { get; set; }
+        /// <summary>
+        /// Major - in this app case mapping user id
+        /// </summary>
+        /// <value>BLE major number</value>
+        public string UserMajor { get; set; }
+        /// <summary>
+        /// MInor - in this app case mapping user id
+        /// </summary>
+        /// <value>BLE minor number</value>
+        public string UserMinor { get; set; }
         /// <summary>
         /// Same beacon uuid's device can communication.
         /// </summary>
@@ -48,5 +63,9 @@ namespace Covid19Radar.Models
         /// The last time measured.
         /// </summary>
         public DateTime LastDetectTime { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Count { get; set; }
     }
 }

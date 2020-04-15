@@ -12,14 +12,14 @@ namespace Covid19Radar.Tests.Models
         public void CreateMethod()
         {
             // action
-            var model = new UserDataModel();
+            var model = new UserModel();
         }
 
         [TestMethod]
         public void PropertiesTest()
         {
             // preparation
-            var model = new UserDataModel();
+            var model = new UserModel();
             // model property access
             Helper.ModelTestHelper.PropetiesTest(model);
         }
@@ -30,7 +30,7 @@ namespace Covid19Radar.Tests.Models
         public void IdTest(string uuid, string major, string minor, string expected)
         {
             // preparation
-            var model = new UserDataModel();
+            var model = new UserModel();
             model.UserUuid = uuid;
             model.Major = major;
             model.Minor = minor;
@@ -46,11 +46,13 @@ namespace Covid19Radar.Tests.Models
         [DataRow(UserStatus.Inspection)]
         [DataRow(UserStatus.None)]
         [DataRow(UserStatus.OnSet)]
+        [DataRow(UserStatus.Recovery)]
         [DataRow(UserStatus.Suspected)]
+        [DataRow(UserStatus.Treatment)]
         public void SetStatusTest(UserStatus s)
         {
             // preparation
-            var model = new UserDataModel();
+            var model = new UserModel();
             // action
             model.SetStatus(s);
             // assert
