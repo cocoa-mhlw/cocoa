@@ -3,6 +3,10 @@
 *This Application is UNDER DEVELOPEMNT!!*
 This app uses Bluetooth LE to get the contact logs of each other.  
 
+[![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
+
+[![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
+
 ## Thank you for Your Contribute !!!
 Currently, we are doing intensive sprints, mainly by core contributors.
 The repository is synced from Azure DevOps to master on Github.
