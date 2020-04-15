@@ -18,13 +18,14 @@ using Covid19Radar.Services;
 
 namespace Covid19Radar.Droid
 {
-    [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
     {
         public static MainActivity Instance { get; private set; }
         public static SQLiteConnectionProvider sqliteConnectionProvider { get; private set; }
         protected override void OnCreate(Bundle bundle)
         {
+            base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(bundle);
 
             CrossCurrentActivity.Current.Init(this, bundle);
