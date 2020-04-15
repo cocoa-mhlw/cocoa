@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Azure.Cosmos;
+﻿using Microsoft.Azure.Cosmos;
 
 namespace Covid19Radar.DataStore
 {
@@ -11,5 +7,6 @@ namespace Covid19Radar.DataStore
         Container User { get; }
         Container Beacon { get; }
         Container Sequence { get; }
+        Container Otp { get; }
     }
 }
