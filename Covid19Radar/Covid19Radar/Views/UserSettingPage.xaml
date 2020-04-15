@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Covid19Radar.Views.UserSettingPage"
+                          xmlns:local="clr-namespace:Covid19Radar"
+             Title="{Binding Title}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackLayout>
+                <Label Text="How to works" 
+                       TextColor="#333333" 
+                       FontSize="35" 
+                       Padding="0,20,0,20" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"/>
+                <Label Text="We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals."
+                       TextColor="#333333"
+                       Padding="30,0,30,0"
+                       FontSize="16"
+                       LineHeight="1.2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"/>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1" Padding="120,0,120,60">
+            <Button BackgroundColor="#019ae8"
+                    Text="Register" 
+                    TextColor="#FFFFFF"
+                    FontSize="25"
+                    MinimumHeightRequest="60"
+                    MinimumWidthRequest="170"
+                    Command="{Binding Path=OnChangeStatusOverInfection}"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>

@@ -81,7 +81,6 @@ namespace Covid19Radar.DataStore
             }
             catch { }
             var sequenceProperties = new ContainerProperties("Sequence", "/PartitionKey");
-            sequenceProperties.UniqueKeyPolicy.UniqueKeys.Add(new UniqueKey() { Paths = { "/Major", "/Minor" } });
             var sequenceResult = await dbResult.Database.CreateContainerIfNotExistsAsync(sequenceProperties);
             var sequence = dbResult.Database.GetContainer("Sequence");
             await sequence.CreateItemAsync(new Models.SequenceDataModel()
@@ -98,7 +97,6 @@ namespace Covid19Radar.DataStore
             }
             catch { }
             var userProperties = new ContainerProperties("User", "/PartitionKey");
-            userProperties.UniqueKeyPolicy.UniqueKeys.Add(new UniqueKey() { Paths = { "/Major", "/Minor" } });
             var userDataResult = await dbResult.Database.CreateContainerIfNotExistsAsync(userProperties);
 
             // Container Beacon
@@ -108,7 +106,7 @@ namespace Covid19Radar.DataStore
                 await dbResult.Database.GetContainer("Beacon").DeleteContainerAsync();
             }
             catch { }
-            var beaconProperties = new ContainerProperties("Beacon", "/BeaconUuid");
+            var beaconProperties = new ContainerProperties("Beacon", "/PartitionKey");
             var beaconResult = await dbResult.Database.CreateContainerIfNotExistsAsync(beaconProperties);
         }
 

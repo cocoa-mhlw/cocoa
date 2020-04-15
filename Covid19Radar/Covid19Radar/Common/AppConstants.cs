@@ -54,5 +54,10 @@ namespace Covid19Radar.Common
 
 		public static readonly long BEACONS_UPDATES_IN_MILLISECONDS = 5 * 1000;
 
+		public static readonly string SQLITE_FILENAME = "local.db3";
+
+		public static readonly string API_BASEURL = "https://covid19radar.azurewebsites.net/api/";
+
+		public static readonly int ELAPSED_TIME_OF_TRANSMISSION_START = 1;
 	}
 }

@@ -7,7 +7,7 @@
     <Application.Resources>
         <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
             <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
-            <On Platform="iOS" Value="Material Design Icons" />
+            <On Platform="iOS" Value="MaterialDesignIcons" />
         </OnPlatform>
     </Application.Resources>
 </prism:PrismApplication>
