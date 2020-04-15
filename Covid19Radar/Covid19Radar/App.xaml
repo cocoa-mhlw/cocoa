@@ -9,6 +9,18 @@
             <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
             <On Platform="iOS" Value="MaterialDesignIcons" />
         </OnPlatform>
+        <OnPlatform x:Key="RobotoRegularFontFamily" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Roboto-Regular.ttf#Roboto" />
+            <On Platform="iOS" Value="Roboto-Regular" />
+        </OnPlatform>
+        <OnPlatform x:Key="NotoSansRegularFontFamily" x:TypeArguments="x:String">
+            <On Platform="Android" Value="NotoSansCJKjp-Regular.otf#Noto Sans CJK JP" />
+            <On Platform="iOS" Value="NotoSansCJKjp-Regular" />
+        </OnPlatform>
+        <OnPlatform x:Key="NotoSansMediumFontFamily" x:TypeArguments="x:String">
+            <On Platform="Android" Value="NotoSansCJKjp-Medium.otf#Noto Sans CJK JP" />
+            <On Platform="iOS" Value="NotoSansCJKjp-Medium" />
+        </OnPlatform>
     </Application.Resources>
 </prism:PrismApplication>
 
