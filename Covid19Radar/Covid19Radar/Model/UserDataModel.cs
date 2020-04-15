@@ -40,5 +40,10 @@ namespace Covid19Radar.Model
         {
             return String.Format("{0}.{1}.{2}", UserUuid, Major.PadLeft(5, '0'), Minor.PadLeft(5, '0'));
         }
+
+        public int GetJumpHashTimeDifference()
+        {
+            return JumpHash.JumpConsistentHash(Convert.ToUInt64(Major) + Convert.ToUInt64(Minor), AppConstants.NUMBER_OF_GROUP);
+        }
     }
 }

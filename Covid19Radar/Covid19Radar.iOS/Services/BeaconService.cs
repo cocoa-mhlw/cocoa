@@ -16,7 +16,7 @@ using Xamarin.Forms.Internals;
 [assembly: Dependency(typeof(Covid19Radar.iOS.Services.BeaconService))]
 namespace Covid19Radar.iOS.Services
 {
-    public class BeaconService : IBeaconService
+    public class BeaconService : IBeaconService, IDisposable
     {
         private UserDataModel _userData;
         private bool _transmitterFlg = false;
@@ -27,6 +27,7 @@ namespace Covid19Radar.iOS.Services
         private readonly SQLiteConnection _connection;
         private readonly UserDataService _userDataService;
         private readonly HttpDataService _httpDataService;
+        private readonly MinutesTimer _uploadTimer;
         public BeaconService()
         {
             _connection = DependencyService.Resolve<SQLiteConnectionProvider>().GetConnection();
@@ -34,6 +35,9 @@ namespace Covid19Radar.iOS.Services
             _userDataService = DependencyService.Resolve<UserDataService>();
             _userData = _userDataService.Get();
             _httpDataService = DependencyService.Resolve<HttpDataService>();
+            _uploadTimer = new MinutesTimer(_userData.GetJumpHashTimeDifference());
+            _uploadTimer.Start();
+            _uploadTimer.TimeOutEvent += TimerUpload;
 
             _beaconManager = new CLLocationManager();
 
@@ -46,6 +50,16 @@ namespace Covid19Radar.iOS.Services
             _fieldRegion.NotifyEntryStateOnDisplay = true;
             _fieldRegion.NotifyOnEntry = true;
             _fieldRegion.NotifyOnExit = true;
+        }
+
+        private async void TimerUpload(EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+            List<BeaconDataModel> beacons = _connection.Table<BeaconDataModel>().ToList();
+            foreach (var beacon in beacons)
+            {
+                await _httpDataService.PostBeaconDataAsync(_userData, beacon);
+            }
         }
 
         public CLLocationManager BeaconManagerImpl
@@ -238,6 +252,11 @@ namespace Covid19Radar.iOS.Services
         {
             System.Diagnostics.Debug.WriteLine("HandleAuthorizationChanged");
             // Do That Stop beacons
+        }
+
+        public void Dispose()
+        {
+            _uploadTimer.Stop();
         }
 
         #endregion
