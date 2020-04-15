@@ -110,6 +110,9 @@
     <None Include="appcenter-pre-build.sh" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="Assets\NotoSansCJKjp-Medium.otf" />
+    <AndroidAsset Include="Assets\NotoSansCJKjp-Regular.otf" />
+    <AndroidAsset Include="Assets\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
