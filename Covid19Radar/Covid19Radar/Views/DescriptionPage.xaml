@@ -15,7 +15,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackLayout>
-                <Label Text="How to works" 
+                <Label Text="{Binding TextHowToWorks}" 
                        TextColor="#333333" 
                        FontSize="35" 
                        Padding="0,20,0,20" 
@@ -23,7 +23,7 @@
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"/>
-                <Label Text="We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals."
+                <Label Text="{Binding TextAppDescription}"
                        TextColor="#333333"
                        Padding="30,0,30,0"
                        FontSize="16"
@@ -36,7 +36,7 @@
         </Grid>
         <Grid Grid.Row="2" Padding="120,0,120,60">
             <Button BackgroundColor="#019ae8"
-                    Text="Register" 
+                    Text="{Binding ButtonRegister}" 
                     TextColor="#FFFFFF"
                     FontSize="25"
                     MinimumHeightRequest="60"

@@ -16,12 +16,19 @@ namespace Covid19Radar.ViewModels
     public class StartTutorialPageViewModel : ViewModelBase
     {
         private INavigationService _navigationService;
+        public string TextStopTheSpreadOfCOVID19 { get; set; }
+        public string TextWeWillHelpAgenciesContact { get; set; }
+        public string TextToProtectThoseAroundYou { get; set; }
+        public string ButtonIWantToHelp { get; set; }
 
         public StartTutorialPageViewModel(INavigationService navigationService)
-    : base(navigationService)
-
+            : base(navigationService)
         {
             _navigationService = navigationService;
+            TextStopTheSpreadOfCOVID19 = Resx.AppResources.TextStopTheSpreadOfCOVID19;
+            TextWeWillHelpAgenciesContact = Resx.AppResources.TextWeWillHelpAgenciesContact;
+            TextToProtectThoseAroundYou = Resx.AppResources.TextToProtectThoseAroundYou;
+            ButtonIWantToHelp = Resx.AppResources.ButtonIWantToHelp;
         }
 
         public Command OnClickNext => (new Command(() =>
