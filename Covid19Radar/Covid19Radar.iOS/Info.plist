@@ -51,6 +51,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>materialdesignicons-webfont.ttf</string>
+		<string>NotoSansCJKjp-Medium.otf</string>
+		<string>NotoSansCJKjp-Regular.otf</string>
+		<string>Roboto-Regular.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
