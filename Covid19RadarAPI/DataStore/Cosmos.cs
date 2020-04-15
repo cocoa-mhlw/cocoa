@@ -34,6 +34,7 @@ namespace Covid19Radar.DataStore
         public Container User { get => Database.GetContainer("User"); }
         public Container Beacon { get => Database.GetContainer("Beacon"); }
         public Container Sequence { get => Database.GetContainer("Sequence");  }
+        public Container Otp { get => Database.GetContainer("Otp"); }
 
         /// <summary>
         /// DI Constructor
@@ -67,7 +68,8 @@ namespace Covid19Radar.DataStore
 
             Logger.LogInformation("GenerateAsync");
             var dbResult = await CosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
-            if (dbResult.StatusCode != System.Net.HttpStatusCode.OK)
+            if (dbResult.StatusCode != System.Net.HttpStatusCode.OK 
+                && dbResult.StatusCode != System.Net.HttpStatusCode.Created)
             {
                 Logger.LogError(dbResult.ToString());
                 throw new ApplicationException(dbResult.ToString());
@@ -108,6 +110,16 @@ namespace Covid19Radar.DataStore
             catch { }
             var beaconProperties = new ContainerProperties("Beacon", "/PartitionKey");
             var beaconResult = await dbResult.Database.CreateContainerIfNotExistsAsync(beaconProperties);
+
+            // Container Otp
+            Logger.LogInformation("GenerateAsync Create Otp Container");
+            try
+            {
+                await dbResult.Database.GetContainer("Otp").DeleteContainerAsync();
+            }
+            catch { }
+            var otpProperties = new ContainerProperties("Otp", "/UserUuid");
+            var otpResult = await dbResult.Database.CreateContainerIfNotExistsAsync(otpProperties);
         }
 
     }
