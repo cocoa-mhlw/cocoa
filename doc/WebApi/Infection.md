@@ -1,6 +1,6 @@
 # POST /api/Infection
 for Client Application
-At the time of first registration.
+At user Infection
 
 ## Request
 ### Content-Type: `application/json`
