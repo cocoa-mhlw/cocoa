@@ -14,13 +14,14 @@ using Covid19Radar.Common;
 using Covid19Radar.Droid.Services;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
+using Java.Util;
 using SQLite;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(BeaconService))]
 namespace Covid19Radar.Droid.Services
 {
-    public class BeaconService : IBeaconService
+    public class BeaconService : IBeaconService, IDisposable
     {
 
         private AltBeaconOrg.BoundBeacon.Region _fieldRegion;
@@ -33,6 +34,7 @@ namespace Covid19Radar.Droid.Services
         private readonly SQLiteConnection _connection;
         private readonly UserDataService _userDataService;
         private readonly HttpDataService _httpDataService;
+        private readonly MinutesTimer _uploadTimer;
 
         public BeaconService()
         {
@@ -42,7 +44,19 @@ namespace Covid19Radar.Droid.Services
             _userDataService = DependencyService.Resolve<UserDataService>();
             _userData = _userDataService.Get();
             _httpDataService = DependencyService.Resolve<HttpDataService>();
+            _uploadTimer = new MinutesTimer(_userData.GetJumpHashTimeDifference());
+            _uploadTimer.Start();
+            _uploadTimer.TimeOutEvent += TimerUpload;
+        }
 
+        private async void TimerUpload(EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+            List<BeaconDataModel> beacons = _connection.Table<BeaconDataModel>().ToList();
+            foreach (var beacon in beacons)
+            {
+                await _httpDataService.PostBeaconDataAsync(_userData, beacon);
+            }
         }
 
         public BeaconManager BeaconManagerImpl
@@ -188,10 +202,6 @@ namespace Covid19Radar.Droid.Services
                         data.ElaspedTime = new TimeSpan();
                         data.LastDetectTime = DateTime.Now;
                         _connection.Insert(data);
-                        if (data.ElaspedTime > TimeSpan.FromMinutes(AppConstants.ELAPSED_TIME_OF_TRANSMISSION_START))
-                        {
-                            await _httpDataService.PostBeaconDataAsync(_userData, data);
-                        }
                     }
                     else
                     {
@@ -235,6 +245,10 @@ namespace Covid19Radar.Droid.Services
             _beaconManager.StopRangingBeaconsInRegion(_fieldRegion);
         }
 
+        public void Dispose()
+        {
+            _uploadTimer.Stop();
+        }
     }
 }
 
