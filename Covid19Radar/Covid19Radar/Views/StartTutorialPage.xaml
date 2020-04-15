@@ -15,7 +15,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackLayout>
-                <Label Text="Help Stop the spread of COVID-19 by turning Bluetooth on" 
+                <Label Text="{Binding TextStopTheSpreadOfCOVID19}" 
                        TextColor="#333333" 
                        FontSize="35" 
                        Padding="0,20,0,20" 
@@ -23,7 +23,7 @@
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"/>
-                <Label Text="If you had close contact with a COVID-19 case, We will help agencies contact you to prevent the spread of infection, to provide guidance and care"
+                <Label Text="{Binding TextWeWillHelpAgenciesContact}"
                        TextColor="#333333"
                        Padding="30,0,30,0"
                        FontSize="16"
@@ -32,7 +32,7 @@
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
                        LineBreakMode="WordWrap"/>
-                <Label Text="To protect those around you, Please share your data."
+                <Label Text="{Binding TextToProtectThoseAroundYou}"
                        TextColor="#333333"
                        Padding="30,0,30,0"
                        FontSize="16"
@@ -46,7 +46,7 @@
         <Grid Grid.Row="2" Padding="120,0,120,60">
             <StackLayout>
                 <Button BackgroundColor="#019ae8"
-                    Text="I want to help" 
+                    Text="{Binding ButtonIWantToHelp}" 
                     TextColor="#FFFFFF"
                     FontSize="25"
                     MinimumHeightRequest="60"
