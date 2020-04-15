@@ -165,6 +165,9 @@
     <BundleResource Include="Resources\Default@2x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
+    <BundleResource Include="Resources\NotoSansCJKjp-Medium.otf" />
+    <BundleResource Include="Resources\NotoSansCJKjp-Regular.otf" />
+    <BundleResource Include="Resources\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
