@@ -1,4 +1,5 @@
 ﻿using System;
+using Covid19Radar.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +21,9 @@ namespace Covid19Radar
             builder.Services.AddHttpClient();
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
             builder.Services.AddSingleton<Services.INotificationService, Services.NotificationService>();
+            builder.Services.AddSingleton<IOtpGenerator, OtpGenerator>();
+            builder.Services.AddSingleton<IOtpService, OtpService>();
+            builder.Services.AddSingleton<ISmsSender, SmsSender>();
         }
     }
 }
