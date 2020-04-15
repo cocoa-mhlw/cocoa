@@ -1,12 +1,22 @@
 ﻿
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Covid19Radar.Model
 {
-    public sealed class BeaconDataModel
+    [Table("BeaconData")]
+    public class BeaconDataModel
     {
+        /// <summary>
+        /// auto number key
+        /// </summary>
+        /// <value>Id</value>
+        [PrimaryKey]
+        public string Id { get; set; }
+        public int Count { get; set; }
+
         /// <summary>
         /// Same beacon uuid's device can communication.
         /// </summary>

@@ -19,6 +19,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
+using System.Net.Http;
 
 /* 
  * Our mission...is 
@@ -31,8 +32,8 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
-
-        UserDataModel userData;
+        private IBeaconService _beaconService;
+        private UserDataModel _userData;
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor. 
@@ -40,7 +41,7 @@ namespace Covid19Radar
          */
         public App() : this(null) { }
 
-        public App(IPlatformInitializer initializer) : base(initializer) { }
+        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
 
         protected override async void OnInitialized()
         {
@@ -48,10 +49,18 @@ namespace Covid19Radar
             INavigationResult result;
 
             // Check user data and skip tutorial
-            UserDataModel userData = Container.Resolve<UserDataModel>();
-            if (Application.Current.Properties.ContainsKey("UserData"))
+            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
+            //UserDataModel userData =await userDataService.Register();
+ 
+            if (userDataService.IsExistUserData())
             {
-                result = await NavigationService.NavigateAsync("NavigationPage/BeaconPage");
+                _userData = userDataService.Get();
+                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
+                // Only Call InitializeService! Start automagically!
+                AppUtils.CheckPermission();
+                _beaconService.InitializeService();
+
+                result = await NavigationService.NavigateAsync("NavigationPage/HomePage");
             }
             else
             {
@@ -77,29 +86,24 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<StartTutorialPage, StartTutorialPageViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
-            containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
-            containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
-            containerRegistry.RegisterForNavigation<BeaconPage, BeaconPageViewModel>();
-            containerRegistry.RegisterForNavigation<DemoPage, DemoPageViewModel>();
-
-            // CheckUser
-            UserDataModel userData = new UserDataModel();
-
-            if (Application.Current.Properties.ContainsKey("UserData"))
-            {
-                userData = Application.Current.Properties["UserData"] as UserDataModel;
-            }
-            containerRegistry.RegisterInstance<UserDataModel>(userData);
-
+            containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
+            containerRegistry.RegisterForNavigation<UserSettingPage, UserSettingPageViewModel>();
+            containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
+            containerRegistry.RegisterForNavigation<ContributersPage, ContributersPageViewModel>();
+            containerRegistry.RegisterForNavigation<UpdateInfoPage, UpdateInfoPageViewModel>();
+            containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
+            containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
         }
 
         protected override void OnStart()
         {
+            /*
             AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};",
                   typeof(Analytics), typeof(Crashes), typeof(Distribute));
+                  */
             base.OnStart();
         }
     }

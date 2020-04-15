@@ -4,9 +4,8 @@
         "AzureWebJobsStorage": "UseDevelopmentStorage=true",
         "FUNCTIONS_WORKER_RUNTIME": "dotnet",
         "COSMOS_ENDPOINT_URI": "https://localhost:8081",
-        "COSMOS_PRIMARY_KEY": "",
+        "COSMOS_PRIMARY_KEY": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
         "COSMOS_DATABASE_ID": "Example",
-        "COSMOS_AUTO_GENERATE": true,
-        "BEACON_UUID": "0C396CBD-A1CB-457C-92B8-0CEB1253F58D"
+        "COSMOS_AUTO_GENERATE": true
     }
 }

@@ -4,20 +4,20 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Covid19Radar.Tests.Models
 {
     [TestClass]
-    public class BeaconDataModelTest
+    public class BeaconParameterTest
     {
         [TestMethod]
         public void CreateMethod()
         {
             // action
-            var model = new BeaconDataModel();
+            var model = new BeaconParameter();
         }
 
         [TestMethod]
         public void PropertiesTest()
         {
             // preparation
-            var model = new BeaconDataModel();
+            var model = new BeaconParameter();
             // model property access
             Helper.ModelTestHelper.PropetiesTest(model);
         }

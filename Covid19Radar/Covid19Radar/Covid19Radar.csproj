@@ -25,9 +25,10 @@
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.1.0" />
-    <PackageReference Include="Plugin.Permissions" Version="6.0.0-beta" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
-    <PackageReference Include="ReactiveProperty" Version="6.2.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.494-pre2" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.494-pre2" />
   </ItemGroup>
@@ -37,11 +38,17 @@
     <Compile Remove="Views\DescriptionPage %28コピー%29.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\BeaconPage.xaml.cs">
-      <DependentUpon>BeaconPage.xaml</DependentUpon>
+    <Compile Update="Views\ContributersPage.xaml.cs">
+      <DependentUpon>ContributersPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\DemoPage.xaml.cs">
-      <DependentUpon>DemoPage.xaml</DependentUpon>
+    <Compile Update="Views\UpdateInfoPage.xaml.cs">
+      <DependentUpon>UpdateInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UserSettingPage.xaml.cs">
+      <DependentUpon>UserSettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
@@ -67,20 +74,10 @@
     <Compile Update="Resx\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Views\HomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resx\AppResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModels\cell\" />
     <Folder Include="Resx\" />
   </ItemGroup>
 </Project>

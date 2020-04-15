@@ -8,6 +8,7 @@ using Prism.Services;
 using Prism.Services.Dialogs;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +22,7 @@ namespace Covid19Radar.ViewModels
 
         // ページタイトル
         private string _title;
+
         public string Title
         {
             get { return _title; }
