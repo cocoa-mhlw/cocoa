@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -28,43 +28,66 @@ namespace Covid19Radar.Api
 
         [FunctionName("User")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
             switch (req.Method)
             {
-                case "GET":
-                    return await Get(req);
+                case "POST":
+                    return await Post(req);
             }
 
-            return new BadRequestObjectResult("Not Supported");
+            AddBadRequest(req);
+            return new BadRequestObjectResult("");
         }
 
-        private async Task<IActionResult> Get(HttpRequest req)
+        private async Task<IActionResult> Post(HttpRequest req)
         {
-            // get name from query 
-            string name = req.Query["UserUuid"];
+            // convert Postdata to BeaconDataModel
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            var user = JsonConvert.DeserializeObject<UserParameter>(requestBody);
 
-            // get UserData from DB
-            return await Query(req.Query["UserUuid"]);
-        }
-
-        private async Task<IActionResult> Query(string userUuid)
-        {
-
-            var sqlQueryText = $"SELECT * FROM User WHERE User.UserUuid = '{userUuid}'";
-            QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
-            var queryResultSetIterator = Cosmos.User.GetItemQueryIterator<UserDataModel>(queryDefinition);
-            while (queryResultSetIterator.HasMoreResults)
+            // validation
+            if (string.IsNullOrWhiteSpace(user.UserUuid)
+                || string.IsNullOrWhiteSpace(user.Major)
+                || string.IsNullOrWhiteSpace(user.Minor))
             {
-                FeedResponse<UserDataModel> current = await queryResultSetIterator.ReadNextAsync();
-                foreach (UserDataModel u in current)
+                AddBadRequest(req);
+                return new BadRequestObjectResult("");
+            }
+
+            // query
+            return await Query(req, user);
+        }
+
+        private async Task<IActionResult> Query(HttpRequest req, UserParameter user)
+        {
+            try
+            {
+                var itemResult = await Cosmos.User.ReadItemAsync<UserResultModel>(user.GetId(), PartitionKey.None);
+                if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    return new OkObjectResult(u);
+                    return new OkObjectResult(itemResult.Resource);
                 }
             }
+            catch (CosmosException ex)
+            {
+                // 429–TooManyRequests
+                if (ex.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+                {
+                    return new StatusCodeResult(503);
+                }
+                AddBadRequest(req);
+                return new StatusCodeResult((int)ex.StatusCode);
+            }
+            AddBadRequest(req);
             return new NotFoundResult();
+        }
+
+        private void AddBadRequest(HttpRequest req)
+        {
+            // add deny list
         }
     }
 }

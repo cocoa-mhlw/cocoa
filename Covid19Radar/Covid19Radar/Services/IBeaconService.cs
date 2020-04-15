@@ -35,6 +35,6 @@ namespace Covid19Radar.Services
         /// <summary>
         /// Get beacon data model
         /// </summary>
-        Dictionary<string, BeaconDataModel> GetBeaconData();
+        List<BeaconDataModel> GetBeaconData();
     }
 }

@@ -11,6 +11,8 @@ namespace Covid19Radar.Common
         OnSet,
         Suspected,
         Inspection,
-        Infection
+        Infection,
+        Treatment,
+        Recovery
     }
 }
