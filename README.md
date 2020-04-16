@@ -25,7 +25,7 @@ https://discord.gg/e5hMm4h
 - Takeshi Sakurai (Client iOS)
 - Fumiya Kume (Client Xamarin)
 - Takayuki Hirose (Device Mac Lending)
-- Ueno Tomoaki (Medical Information Advisory)
+- Tomoaki Ueno (Medical Information and FieAdvisory)
 - Kristina Yasuda (Public Relations and Activity)
 - Takashi Takebayashi (Transrate)
 - Ben (Client side Xamarin / Xmariners)
@@ -36,7 +36,8 @@ https://discord.gg/e5hMm4h
 - Chaminda (Client side Xamarin / Xmariners)
 - Yuya Yoshida (Public Relations and Activity)
 - Ryota Nakamura (Beta Tester's communication lead)
-
+- Takafumi Ochiai (Privacy policy development / Domestic and foreign law expert lawyer)
+ 
 ![App Description](img/AppDescription-en.jpg)
 
 ## How to install the app for tester

@@ -195,7 +195,7 @@ namespace Covid19Radar.iOS.Services
                     data.ElaspedTime = new TimeSpan();
                     data.LastDetectTime = DateTime.Now;
                     _connection.Insert(data);
-                    if (data.ElaspedTime > TimeSpan.FromMinutes(AppConstants.ELAPSED_TIME_OF_TRANSMISSION_START))
+                    if (data.ElaspedTime > TimeSpan.FromMinutes(AppConstants.ElapsedTimeOfTransmitStart))
                     {
                         await _httpDataService.PostBeaconDataAsync(_userData, data);
                     }
