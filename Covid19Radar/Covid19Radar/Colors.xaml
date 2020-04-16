@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Covid19Radar.Colors"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="PrimaryColor">#FFFFFF</Color>
+    <Color x:Key="AccentColor">#019AE8</Color>
+    <Color x:Key="Accent2Color">#1976D2</Color>
+    <Color x:Key="Accent3Color">#E0E0E0</Color>
+    <Color x:Key="Accent4Color">#DE000000</Color>
+
+</ResourceDictionary>
