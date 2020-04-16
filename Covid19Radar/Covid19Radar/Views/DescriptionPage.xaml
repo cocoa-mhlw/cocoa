@@ -15,12 +15,11 @@
     <ScrollView>
         <StackLayout>
             <StackLayout BindableLayout.ItemTemplate="{StaticResource StepItemTemplate}" BindableLayout.ItemsSource="{Binding Steps}" />
-            <StackLayout Padding="95,0,95,120">
-                <Button
-                    Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultButtonStyle}"
-                    Text="{x:Static resources:AppResources.ButtonNext}" />
-            </StackLayout>
+            <Button
+                Margin="95,0,95,120"
+                Command="{Binding Path=OnClickNext}"
+                Style="{StaticResource DefaultButtonStyle}"
+                Text="{x:Static resources:AppResources.ButtonNext}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
