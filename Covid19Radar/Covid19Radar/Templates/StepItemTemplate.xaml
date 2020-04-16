@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataTemplate
+    x:Class="Covid19Radar.Templates.StepItemTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout>
+        <StackLayout Padding="40,50" Spacing="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Frame
+                    Grid.Column="0"
+                    Margin="0"
+                    BackgroundColor="{StaticResource Accent2Color}"
+                    CornerRadius="15"
+                    HeightRequest="30"
+                    IsVisible="{Binding HasStepNumber}"
+                    VerticalOptions="Center"
+                    WidthRequest="30">
+                    <Label
+                        Margin="0"
+                        Padding="0"
+                        FontAttributes="Bold"
+                        FontFamily="{StaticResource RobotoRegularFontFamily}"
+                        HorizontalOptions="Center"
+                        Text="{Binding StepNumber}"
+                        TextColor="{StaticResource PrimaryColor}"
+                        VerticalOptions="Center" />
+                </Frame>
+                <Label
+                    Grid.Column="1"
+                    Margin="15,0,0,0"
+                    Style="{StaticResource Accent2ColorHeaderLabelStyle}"
+                    Text="{Binding Title}"
+                    VerticalOptions="Center" />
+            </Grid>
+            <Image Aspect="AspectFit" Source="{Binding Image}" />
+            <Label Text="{Binding Description}" />
+        </StackLayout>
+        <BoxView
+            BackgroundColor="{StaticResource Accent3Color}"
+            HeightRequest="1"
+            IsVisible="{Binding HasStepNumber}" />
+    </StackLayout>
+</DataTemplate>
