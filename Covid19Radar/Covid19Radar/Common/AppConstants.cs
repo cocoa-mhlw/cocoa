@@ -37,5 +37,7 @@ namespace Covid19Radar.Common
 
         public static readonly string SqliteFilename = "local.db3";
 
+        public static readonly int ElapsedTimeOfTransmitStart = 5;
+
     }
 }
