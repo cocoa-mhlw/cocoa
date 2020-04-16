@@ -194,15 +194,27 @@
     <value>アプリの使い方</value>
     <comment>How it works page step 4 title</comment>
   </data>
+  <data name="ButtonStart" xml:space="preserve">
+    <value>アプリを利用する</value>
+    <comment>Start</comment>
+  </data>
   <data name="TextBluetoothDescription" xml:space="preserve">
     <value>このアプリは、デバイスの以下の機能を利用します。使用許可の画面表示されたらOKをタップして許可してください。</value>
     <comment>Device access page Bluetooth description</comment>
+  </data>
+  <data name="TextCovid19Radar" xml:space="preserve">
+    <value>COVID-19Radar</value>
+    <comment>COVID-19Radar</comment>
   </data>
   <data name="TextBluetoothTitle" xml:space="preserve">
     <value>Bluetoothの許可</value>
     <comment>Device access page Bluetooth title</comment>
   </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
+  <data name="TextProtectingOurLovedOnes" xml:space="preserve">
+    <value>大切な人をCOVID-19から一緒に守りましょう</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
+    </data>
+    <data name="TitleDeviceAccess" xml:space="preserve">
     <value>デバイスへのアクセス許可</value>
     <comment>Device access page title</comment>
   </data>
