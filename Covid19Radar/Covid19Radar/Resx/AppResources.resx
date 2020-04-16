@@ -193,6 +193,18 @@
     <value>Requirements to use this app</value>
     <comment>How it works page step 4 title</comment>
   </data>
+  <data name="ButtonStart" xml:space="preserve">
+    <value>Start</value>
+    <comment>Start</comment>
+  </data>
+  <data name="TextCovid19Radar" xml:space="preserve">
+    <value>COVID-19Radar</value>
+    <comment>COVID-19Radar</comment>
+  </data>
+  <data name="TextProtectingOurLovedOnes" xml:space="preserve">
+    <value>Protecting our loved ones from COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
+  </data>
   <data name="TextBluetoothDescription" xml:space="preserve">
     <value>This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</value>
@@ -285,5 +297,25 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <data name="TermsOfServiceDescription4" xml:space="preserve">
         <value>The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</value>
         <comment>Terms Of Service Description 4</comment>
+    </data>
+    <data name="HomeTitle" xml:space="preserve">
+        <value>HOME</value>
+        <comment>Home Title</comment>
     </data>    
+    <data name="AppName" xml:space="preserve">
+        <value>COVID-19Radar</value>
+        <comment>App Name</comment>
+    </data>
+    <data name="StatusSettingsMenu" xml:space="preserve">
+        <value>Status Settings</value>
+        <comment>Status Settings Menu</comment>
+    </data>
+    <data name="ListOfContributorsMenu" xml:space="preserve">
+        <value>List of Contributors</value>
+        <comment>List Of Contributors Menu</comment>
+    </data>
+    <data name="UpdateInformationMenu" xml:space="preserve">
+        <value>Update Information</value>
+        <comment>Update Information Menu</comment>
+    </data>
 </root>
