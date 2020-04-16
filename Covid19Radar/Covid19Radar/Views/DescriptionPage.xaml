@@ -16,7 +16,7 @@
         <StackLayout>
             <StackLayout BindableLayout.ItemTemplate="{StaticResource StepItemTemplate}" BindableLayout.ItemsSource="{Binding Steps}" />
             <Button
-                Margin="95,0,95,120"
+                Margin="95,0,95,80"
                 Command="{Binding Path=OnClickNext}"
                 Style="{StaticResource DefaultButtonStyle}"
                 Text="{x:Static resources:AppResources.ButtonNext}" />
