@@ -142,7 +142,7 @@
     <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>同意画面</value>
+    <value>利用規約</value>
     <comment>Consent by user page</comment>
   </data>
   <data name="TextUserAgreement" xml:space="preserve">
@@ -206,4 +206,84 @@
     <value>デバイスへのアクセス許可</value>
     <comment>Device access page title</comment>
   </data>
+    <data name="TextToProtectThoseAroundYou" xml:space="preserve">
+        <value>あなたの周りのひとたちを守るために、あなたのデータを共有してください。</value>
+        <comment>To protect those around you, Please share your data.</comment>
+    </data>
+    <data name="ButtonIWantToHelp" xml:space="preserve">
+        <value>助けたい</value>
+        <comment>I want to help</comment>
+    </data>
+    <data name="TitleAppDescription" xml:space="preserve">
+        <value>アプリの説明</value>
+        <comment>App Description</comment>
+    </data>
+    <data name="TextHowToWorks" xml:space="preserve">
+        <value>動作方法</value>
+        <comment>How to works</comment>
+    </data>
+    <data name="TextAppDescription" xml:space="preserve">
+        <value>Bluetooth Low Energy（別名BLE）信号を使用して、別の Covid19Radar ユーザーが近くにいるかどうかを判断します。この近接データは、端末を認識するデータのみです。</value>
+        <comment>We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals.</comment>
+    </data>
+    <data name="ButtonRegister" xml:space="preserve">
+        <value>登録</value>
+        <comment>Register</comment>
+    </data>
+    <data name="TitleConsentByUserPage" xml:space="preserve">
+        <value>同意画面</value>
+        <comment>Consent by user page</comment>
+    </data>
+    <data name="TextUserAgreement" xml:space="preserve">
+        <value>利用規約</value>
+        <comment>User agreement</comment>
+    </data>
+    <data name="TextContainsDescriptionOfConsent1" xml:space="preserve">
+        <value>&#xF05E0;同意文の説明が含まれています。</value>
+        <comment>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+    </data>
+    <data name="TextContainsDescriptionOfConsent2" xml:space="preserve">
+        <value>&#xF05E0;同意文の説明が含まれています。</value>
+        <comment>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+    </data>
+    <data name="ButtonAgreeAndProceed" xml:space="preserve">
+        <value>同意して続行</value>
+        <comment>Agree and Proceed</comment>
+    </data>
+     <data name="ButtonAgree" xml:space="preserve">
+        <value>同意する</value>
+        <comment>Agree</comment>
+    </data>
+    <data name="TermsOfServiceTitle1" xml:space="preserve">
+        <value>1. 規約について</value>
+        <comment>Terms Of Service Title 1</comment>
+    </data>
+    <data name="TermsOfServiceDescription1" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 1</comment>
+    </data>
+    <data name="TermsOfServiceTitle2" xml:space="preserve">
+        <value>2. 規約について</value>
+        <comment>Terms Of Service Title 2</comment>
+    </data>
+    <data name="TermsOfServiceDescription2" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 2</comment>
+    </data>
+    <data name="TermsOfServiceTitle3" xml:space="preserve">
+        <value>3. 規約について</value>
+        <comment>Terms Of Service Title 3</comment>
+    </data>
+    <data name="TermsOfServiceDescription3" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 3</comment>
+    </data>
+    <data name="TermsOfServiceTitle4" xml:space="preserve">
+        <value>4. 規約について</value>
+        <comment>Terms Of Service Title 4</comment>
+    </data>
+    <data name="TermsOfServiceDescription4" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 4</comment>
+    </data>
 </root>
