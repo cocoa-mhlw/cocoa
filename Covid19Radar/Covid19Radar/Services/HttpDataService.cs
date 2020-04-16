@@ -18,14 +18,14 @@ namespace Covid19Radar.Services
         public HttpDataService()
         {
             this.httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri(AppConstants.API_BASEURL);
+            httpClient.BaseAddress = new Uri(AppConstants.ApiBaseUrl);
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         // POST /api/Register -  Register User 
         public async Task<UserDataModel> PostRegisterUserAsync()
         {
-            string url = AppConstants.API_BASEURL + "/Register";
+            string url = AppConstants.ApiBaseUrl + "/Register";
             var result = await Post(url, null);
             if (result != null)
             {
@@ -37,7 +37,7 @@ namespace Covid19Radar.Services
         // POST /api/User - check user status and user exists
         public async Task<UserDataModel> PostUserAsync(UserDataModel user)
         {
-            string url = AppConstants.API_BASEURL + "/User";
+            string url = AppConstants.ApiBaseUrl + "/User";
             HttpContent content = new StringContent(Utils.SerializeToJson(user), Encoding.UTF8, "application/json");
             var result = await Post(url, content);
             if (result != null)
@@ -50,7 +50,7 @@ namespace Covid19Radar.Services
         // PUT /api/User - update user status
         public async Task<UserDataModel> PutUserAsync(UserDataModel user)
         {
-            string url = AppConstants.API_BASEURL + "/User";
+            string url = AppConstants.ApiBaseUrl + "/User";
             HttpContent content = new StringContent(Utils.SerializeToJson(user), Encoding.UTF8, "application/json");
             var result = await Put(url, content);
             if (result != null)
@@ -63,7 +63,7 @@ namespace Covid19Radar.Services
         // POST /api/Beacon - check user status and user exists
         public async Task<UserDataModel> PostBeaconDataAsync(UserDataModel user, BeaconDataModel beacon)
         {
-            string url = AppConstants.API_BASEURL + "/Beacon";
+            string url = AppConstants.ApiBaseUrl + "/Beacon";
 
             // TODO PostBeaconDataModel implementationa
             PostBeaconDataModel postBeaconDataModel = new PostBeaconDataModel();
