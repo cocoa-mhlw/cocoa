@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Covid19Radar.Views
@@ -15,8 +10,6 @@ namespace Covid19Radar.Views
         public InitSettingPage()
         {
             InitializeComponent();
-            AllowBle.Source = ImageSource.FromResource("Covid19Radar.Images.AllowBle.png");
-
         }
     }
 }
