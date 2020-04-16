@@ -5,10 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
     Title="{Binding Title}"
-    Padding="18,10"
     Style="{StaticResource PageStyle}">
     <ScrollView>
-        <StackLayout>
+        <StackLayout Padding="40,20">
             <StackLayout BindableLayout.ItemsSource="{Binding TermsOfServices}" Spacing="16">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
