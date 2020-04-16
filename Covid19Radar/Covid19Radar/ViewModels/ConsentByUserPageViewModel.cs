@@ -1,51 +1,73 @@
-﻿using Covid19Radar.Common;
+﻿using System.Collections.Generic;
+using System.Windows.Input;
 using Covid19Radar.Model;
+using Covid19Radar.Resx;
 using Covid19Radar.Services;
 using DryIoc;
-using Prism.Commands;
 using Prism.Ioc;
-using Prism.Mvvm;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
     public class ConsentByUserPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
         private UserDataService _userDataService;
-        public string TextUserAgreement { get; set; }
-        public string TextContainsDescriptionOfConsent1 { get; set; }
-        public string TextContainsDescriptionOfConsent2 { get; set; }
-        public string ButtonAgreeAndProceed { get; set; }
+
+        public ICommand OnClickNext { get; }
+
+        private List<TermsOfServiceModel> _termsOfServices;
+        public List<TermsOfServiceModel> TermsOfServices
+        {
+            get => _termsOfServices;
+            set => SetProperty(ref _termsOfServices, value);
+        }
 
         public ConsentByUserPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
-            Title = Resx.AppResources.TitleConsentByUserPage;
+            Title = AppResources.TitleConsentByUserPage;
+            SetData();
 
             _userDataService = App.Current.Container.Resolve<UserDataService>();
-            TextUserAgreement = Resx.AppResources.TextUserAgreement;
-            TextContainsDescriptionOfConsent1 = Resx.AppResources.TextContainsDescriptionOfConsent1;
-            TextContainsDescriptionOfConsent2 = Resx.AppResources.TextContainsDescriptionOfConsent2;
-            ButtonAgreeAndProceed = Resx.AppResources.ButtonAgreeAndProceed;
+            OnClickNext = new Command(async () =>
+             {
+                 // Regist user
+                 if (!_userDataService.IsExistUserData())
+                 {
+                     UserDataModel userData = await _userDataService.RegistUserAsync();
+                 }
+
+                 await NavigationService.NavigateAsync("InitSettingPage");
+             });
+
         }
 
-        public Command OnClickNext => (new Command(async () =>
+        private void SetData()
         {
-            // Regist user
-            if (!_userDataService.IsExistUserData())
+            TermsOfServices = new List<TermsOfServiceModel>
             {
-                UserDataModel userData = await _userDataService.RegistUserAsync();
-            }
-
-            await _navigationService.NavigateAsync("InitSettingPage");
-        }));
-
+                new TermsOfServiceModel
+                {
+                    Title=AppResources.TermsOfServiceTitle1,
+                    Description=AppResources.TermsOfServiceDescription1
+                },
+                new TermsOfServiceModel
+                {
+                    Title=AppResources.TermsOfServiceTitle2,
+                    Description=AppResources.TermsOfServiceDescription2
+                },
+                new TermsOfServiceModel
+                {
+                    Title=AppResources.TermsOfServiceTitle3,
+                    Description=AppResources.TermsOfServiceDescription3
+                },
+                new TermsOfServiceModel
+                {
+                    Title=AppResources.TermsOfServiceTitle4,
+                    Description=AppResources.TermsOfServiceDescription4
+                },
+            };
+        }
     }
 }
