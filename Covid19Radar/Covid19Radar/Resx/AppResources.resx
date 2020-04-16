@@ -178,7 +178,7 @@
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="TextStep3Description" xml:space="preserve">
-    <value>Please manually change your status to "Positive" after verifying your phone number.</value>
+    <value>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</value>
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="TextStep3Title" xml:space="preserve">
