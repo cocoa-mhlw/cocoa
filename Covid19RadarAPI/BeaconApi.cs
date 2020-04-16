@@ -29,7 +29,7 @@ namespace Covid19Radar.Api
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req)
         {
-            Logger.LogInformation("C# HTTP trigger function processed a request.");
+            Logger.LogInformation($"{nameof(BeaconApi)} processed a request.");
 
             switch (req.Method)
             {
@@ -102,6 +102,7 @@ namespace Covid19Radar.Api
             data.Minor = param.Minor;
             data.Rssi = param.Rssi;
             data.TXPower = param.TXPower;
+            data.TimeStamp = DateTime.UtcNow;
             var result = await Cosmos.Beacon.CreateItemAsync(data);
             return new StatusCodeResult(201);
         }
