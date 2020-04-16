@@ -97,6 +97,25 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+        ///Select &apos;Always Allow&apos; to set up Bluetooth..
+        /// </summary>
+        internal static string TextBluetoothDescription {
+            get {
+                return ResourceManager.GetString("TextBluetoothDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow Bluetooth.
+        /// </summary>
+        internal static string TextBluetoothTitle {
+            get {
+                return ResourceManager.GetString("TextBluetoothTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 󰗠Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence..
         /// </summary>
         internal static string TextContainsDescriptionOfConsent1 {
@@ -250,11 +269,74 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Device Access.
+        /// </summary>
+        internal static string TitleDeviceAccess {
+            get {
+                return ResourceManager.GetString("TitleDeviceAccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to How it works.
         /// </summary>
         internal static string TitleHowItWorks {
             get {
                 return ResourceManager.GetString("TitleHowItWorks", resourceCulture);
+            }
+        }
+        
+        internal static string ButtonAgree {
+            get {
+                return ResourceManager.GetString("ButtonAgree", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceTitle1 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceTitle1", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceDescription1 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceDescription1", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceTitle2 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceTitle2", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceDescription2 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceDescription2", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceTitle3 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceTitle3", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceDescription3 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceDescription3", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceTitle4 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceTitle4", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceDescription4 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceDescription4", resourceCulture);
             }
         }
     }
