@@ -6,7 +6,6 @@ using Prism.Ioc;
 using Android.Runtime;
 using Android.Content;
 using Plugin.CurrentActivity;
-using Plugin.Permissions;
 using Covid19Radar.Model;
 using AltBeaconOrg.BoundBeacon;
 using System.Collections.Generic;
@@ -38,8 +37,8 @@ namespace Covid19Radar.Droid
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
-
         }
+
         protected override void OnNewIntent(Intent intent)
         {
             base.OnNewIntent(intent);
@@ -47,9 +46,8 @@ namespace Covid19Radar.Droid
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
 
