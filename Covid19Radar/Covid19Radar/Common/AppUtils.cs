@@ -1,9 +1,4 @@
-﻿using Plugin.Permissions;
-using Plugin.Permissions.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.Common
@@ -12,15 +7,10 @@ namespace Covid19Radar.Common
     {
         public static async void CheckPermission()
         {
-            var status = await CrossPermissions.Current.CheckPermissionStatusAsync<LocationAlwaysPermission>();
+            var status = await Permissions.CheckStatusAsync<Permissions.LocationAlways>();
             if (status != PermissionStatus.Granted)
             {
-                if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.LocationAlways))
-                {
-                    await Application.Current.MainPage.DisplayAlert("Need location", "This Application need BLE location", "OK");
-                }
-
-                status = await CrossPermissions.Current.RequestPermissionAsync<LocationAlwaysPermission>();
+                status = await Permissions.RequestAsync<Permissions.LocationAlways>();
             }
         }
     }
