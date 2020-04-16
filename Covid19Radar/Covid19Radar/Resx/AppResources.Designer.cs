@@ -88,6 +88,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        internal static string ButtonStart {
+            get {
+                return ResourceManager.GetString("ButtonStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
         ///Select &apos;Always Allow&apos; to set up Bluetooth..
         /// </summary>
@@ -121,6 +130,24 @@ namespace Covid19Radar.Resx {
         internal static string TextContainsDescriptionOfConsent2 {
             get {
                 return ResourceManager.GetString("TextContainsDescriptionOfConsent2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to COVID-19Radar.
+        /// </summary>
+        internal static string TextCovid19Radar {
+            get {
+                return ResourceManager.GetString("TextCovid19Radar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Protecting our loved ones from COVID-19.
+        /// </summary>
+        internal static string TextProtectingOurLovedOnes {
+            get {
+                return ResourceManager.GetString("TextProtectingOurLovedOnes", resourceCulture);
             }
         }
         

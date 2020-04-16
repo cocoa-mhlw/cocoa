@@ -13,6 +13,7 @@
     <None Remove="Images\description-step2.png" />
     <None Remove="Images\description-step3.png" />
     <None Remove="Images\description-step4.png" />
+    <None Remove="Images\Logo.png" />
     <None Remove="Images\TopMainImg.png" />
   </ItemGroup>
 
@@ -26,6 +27,7 @@
     <EmbeddedResource Include="Images\description-step1.png" />
     <EmbeddedResource Include="Images\description-step2.png" />
     <EmbeddedResource Include="Images\description-step3.png" />
+    <EmbeddedResource Include="Images\Logo.png" />
     <EmbeddedResource Include="Images\TopMainImg.png" />
   </ItemGroup>
 
