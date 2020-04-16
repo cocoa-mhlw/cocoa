@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 
-if [ -z "$ANDROID_APP_ID" ]
-then
-    echo "You need define the ANDROID_APP_ID variable in App Center"
-    exit
-fi
+echo "Arguments for updating:"
 
-APP_CONSTANT_FILE=$APPCENTER_SOURCE_DIRECTORY/Covid19Radar/Covid19Radar/Common/AppConstants.cs
+# Updating ids
 
-if [ -e "$APP_CONSTANT_FILE" ]
-then
-    echo "Updating app ids to $ANDROID_APP_ID and $IOS_APP_ID in AppConstant.cs"
-    sed -i '' 's#AppCenterTokensAndroid = "[-A-Za-z0-9:_./]*"#AppCenterTokensAndroid = "'$ANDROID_APP_ID'"#' $APP_CONSTANT_FILE
+APP_CONSTANT_FILE=$BUILD_REPOSITORY_LOCALPATH/src/Covid19Radar/Covid19Radar/Common/AppConstants.cs
 
-    echo "File content:"
-    cat $APP_CONSTANT_FILE
-fi
+sed -i '' "s/APPCENTER_ANDROID/$APPCENTER_ANDROID/g" $APP_CONSTANT_FILE
+sed -i '' "s/APPCENTER_IOS/$APPCENTER_IOS/g" $APP_CONSTANT_FILE
+sed -i '' "s/API_SECRET/$API_SECRET/g" $APP_CONSTANT_FILE
+
+# Print out file for reference
+cat $APP_CONSTANT_FILE
+
+echo "Updated id!"

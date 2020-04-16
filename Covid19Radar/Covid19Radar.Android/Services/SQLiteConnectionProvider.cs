@@ -20,7 +20,7 @@ namespace Covid19Radar.Droid.Services
             if (this.Connection != null) { return this.Connection; }
 
             var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            path = Path.Combine(path, AppConstants.SQLITE_FILENAME);
+            path = Path.Combine(path, AppConstants.SqliteFilename);
             return this.Connection = new SQLiteConnection(path);
         }
     }
