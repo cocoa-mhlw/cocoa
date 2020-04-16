@@ -43,7 +43,7 @@ namespace Covid19Radar.Model
 
         public int GetJumpHashTimeDifference()
         {
-            return JumpHash.JumpConsistentHash(Convert.ToUInt64(Major) + Convert.ToUInt64(Minor), AppConstants.NUMBER_OF_GROUP);
+            return JumpHash.JumpConsistentHash(Convert.ToUInt64(Major) + Convert.ToUInt64(Minor), AppConstants.NumberOfGroup);
         }
     }
 }

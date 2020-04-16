@@ -46,7 +46,7 @@ namespace Covid19Radar.iOS.Services
             _beaconTransmitter.StateUpdated += DidStateUpdated;
 
             _listOfCLBeaconRegion = new List<CLBeaconRegion>();
-            _fieldRegion = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), "");
+            _fieldRegion = new CLBeaconRegion(new NSUuid(AppConstants.iBeaconAppUuid), "");
             _fieldRegion.NotifyEntryStateOnDisplay = true;
             _fieldRegion.NotifyOnEntry = true;
             _fieldRegion.NotifyOnExit = true;
@@ -153,7 +153,7 @@ namespace Covid19Radar.iOS.Services
 
             if (_transmitterFlg)
             {
-                CLBeaconRegion region = new CLBeaconRegion(new NSUuid(AppConstants.AppUUID), ushort.Parse(_userData.Major), ushort.Parse(_userData.Minor), _userData.UserUuid);
+                CLBeaconRegion region = new CLBeaconRegion(new NSUuid(AppConstants.iBeaconAppUuid), ushort.Parse(_userData.Major), ushort.Parse(_userData.Minor), _userData.UserUuid);
                 NSNumber txPower = new NSNumber(-59);
                 trasmitter.StartAdvertising(region.GetPeripheralData(txPower));
             }
