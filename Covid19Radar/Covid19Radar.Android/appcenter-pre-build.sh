@@ -4,7 +4,7 @@ echo "Arguments for updating:"
 
 # Updating ids
 
-APP_CONSTANT_FILE=$BUILD_REPOSITORY_LOCALPATH/src/Covid19Radar/Covid19Radar/Common/AppConstants.cs
+APP_CONSTANT_FILE=$BUILD_REPOSITORY_LOCALPATH/Covid19Radar/Covid19Radar/Common/AppConstants.cs
 
 sed -i '' "s/APPCENTER_ANDROID/$APPCENTER_ANDROID/g" $APP_CONSTANT_FILE
 sed -i '' "s/APPCENTER_IOS/$APPCENTER_IOS/g" $APP_CONSTANT_FILE
