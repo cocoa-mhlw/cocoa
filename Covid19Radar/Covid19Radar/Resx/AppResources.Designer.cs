@@ -88,6 +88,25 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+        ///Select &apos;Always Allow&apos; to set up Bluetooth..
+        /// </summary>
+        internal static string TextBluetoothDescription {
+            get {
+                return ResourceManager.GetString("TextBluetoothDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow Bluetooth.
+        /// </summary>
+        internal static string TextBluetoothTitle {
+            get {
+                return ResourceManager.GetString("TextBluetoothTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 󰗠Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence..
         /// </summary>
         internal static string TextContainsDescriptionOfConsent1 {
@@ -219,6 +238,15 @@ namespace Covid19Radar.Resx {
         internal static string TitleConsentByUserPage {
             get {
                 return ResourceManager.GetString("TitleConsentByUserPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Device Access.
+        /// </summary>
+        internal static string TitleDeviceAccess {
+            get {
+                return ResourceManager.GetString("TitleDeviceAccess", resourceCulture);
             }
         }
         

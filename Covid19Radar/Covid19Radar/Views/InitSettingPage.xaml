@@ -1,63 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19Radar.Views.InitSettingPage"
-                          xmlns:local="clr-namespace:Covid19Radar"
-             Title="{Binding Title}">
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Image x:Name="AllowBle" WidthRequest="161" HeightRequest="239" HorizontalOptions="Center" />
-        </Grid>
-        <Grid Padding="30,0,30,0" Grid.Row="1">
-            <StackLayout>
-                <Label Text="Allow Bluetooth and Push notifications." 
-                       TextColor="#333333" 
-                       FontSize="28" 
-                       Padding="0,20,0,20" 
-                       HorizontalTextAlignment="Center"
-                       FontAttributes="Bold"/>
-                <Label Text="This app uses the following functions of the device.When the use permission screen is displayed, tap OK to allow it."
-                       TextColor="#333333"
-                       Padding="0,0,0,20"
-                       FontSize="16"
-                       LineHeight="1.2"
-                       LineBreakMode="WordWrap"/>
-                <Label Text="1.Bluetooth"
-                       TextColor="#333333"
-                       Padding="0,0,0,0"
-                       FontSize="16"
-                       LineHeight="1.2"
-                       LineBreakMode="WordWrap"/>
-                <Label Text="2.Nortifications"
-                       TextColor="#333333"
-                       Padding="0,0,0,20"
-                       FontSize="16"
-                       LineHeight="1.2"
-                       LineBreakMode="WordWrap"/>
-                <Label Text="These are required for proper operation of the app. If you do not allow it, the app will not function properly."
-                       TextColor="#333333"
-                       Padding="0,0,0,0"
-                       FontSize="16"
-                       LineHeight="1.2"
-                       LineBreakMode="WordWrap"/>
-
-            </StackLayout>
-        </Grid>
-        <Grid Grid.Row="2" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="次へ" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickNext}"/>
-        </Grid>
-    </Grid>
-
+<ContentPage
+    x:Class="Covid19Radar.Views.InitSettingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ext="clr-namespace:Covid19Radar.Extensions"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx"
+    Title="{Binding Title}"
+    Style="{StaticResource PageStyle}">
+    <ScrollView>
+        <StackLayout Padding="40,0">
+            <Image HorizontalOptions="Center" Source="{ext:ImageResource Covid19Radar.Images.bluetooth-access.png}">
+                <Image.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="60,30,60,40" />
+                        <On Platform="Android" Value="60,30,60,20" />
+                    </OnPlatform>
+                </Image.Margin>
+            </Image>
+            <Label
+                FontFamily="{StaticResource NotoSansMediumFontFamily}"
+                FontSize="18"
+                Text="{x:Static resources:AppResources.TextBluetoothTitle}" />
+            <Label Text="{x:Static resources:AppResources.TextBluetoothDescription}">
+                <Label.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="0,20,0,50" />
+                        <On Platform="Android" Value="0,0,0,50" />
+                    </OnPlatform>
+                </Label.Margin>
+            </Label>
+            <Button
+                Margin="55,0,55,80"
+                Command="{Binding Path=OnClickNext}"
+                Style="{StaticResource DefaultButtonStyle}"
+                Text="{x:Static resources:AppResources.ButtonNext}" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
