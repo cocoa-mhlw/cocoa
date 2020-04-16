@@ -218,7 +218,7 @@
         <comment>Register</comment>
     </data>
     <data name="TitleConsentByUserPage" xml:space="preserve">
-        <value>Consent by user page</value>
+        <value>Terms of Service</value>
         <comment>Consent by user page</comment>
     </data>
     <data name="TextUserAgreement" xml:space="preserve">
