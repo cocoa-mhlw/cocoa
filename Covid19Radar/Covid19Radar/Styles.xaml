@@ -45,7 +45,11 @@
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
         <Setter Property="CornerRadius" Value="2" />
-        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansMediumFontFamily}" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+        <Setter Property="WidthRequest" Value="170" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalOptions" Value="Center" />
     </Style>
 </ResourceDictionary>
