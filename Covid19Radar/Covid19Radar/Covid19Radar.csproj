@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\01%403x.png" />
     <None Remove="Images\AllowBle.png" />
-    <None Remove="Images\Beaconnetwork.png" />
+    <None Remove="Images\description-step1.png" />
+    <None Remove="Images\description-step2.png" />
+    <None Remove="Images\description-step3.png" />
+    <None Remove="Images\description-step4.png" />
     <None Remove="Images\TopMainImg.png" />
   </ItemGroup>
 
@@ -17,7 +21,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\AllowBle.png" />
-    <EmbeddedResource Include="Images\Beaconnetwork.png" />
+    <EmbeddedResource Include="Images\description-step4.png" />
+    <EmbeddedResource Include="Images\description-step1.png" />
+    <EmbeddedResource Include="Images\description-step2.png" />
+    <EmbeddedResource Include="Images\description-step3.png" />
     <EmbeddedResource Include="Images\TopMainImg.png" />
   </ItemGroup>
 
@@ -73,11 +80,27 @@
     </Compile>
     <Compile Update="Resx\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
+    <EmbeddedResource Update="Colors.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Fonts.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resx\AppResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Folder Include="Resx\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Templates\StepItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
