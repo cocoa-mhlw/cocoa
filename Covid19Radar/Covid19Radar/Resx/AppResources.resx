@@ -205,4 +205,97 @@
     <value>Protecting our loved ones from COVID-19</value>
     <comment>Protecting our loved ones from COVID-19</comment>
   </data>
+  <data name="TextBluetoothDescription" xml:space="preserve">
+    <value>This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+Select 'Always Allow' to set up Bluetooth.</value>
+    <comment>Device access page Bluetooth description</comment>
+  </data>
+  <data name="TextBluetoothTitle" xml:space="preserve">
+    <value>Allow Bluetooth</value>
+    <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="TitleDeviceAccess" xml:space="preserve">
+    <value>Device Access</value>
+    <comment>Device access page title</comment>
+  </data>
+    <data name="TextToProtectThoseAroundYou" xml:space="preserve">
+        <value>To protect those around you, Please share your data.</value>
+        <comment>To protect those around you, Please share your data.</comment>
+    </data>
+    <data name="ButtonIWantToHelp" xml:space="preserve">
+        <value>I want to help</value>
+        <comment>I want to help</comment>
+    </data>
+    <data name="TitleAppDescription" xml:space="preserve">
+        <value>App Description</value>
+        <comment>App Description</comment>
+    </data>
+    <data name="TextHowToWorks" xml:space="preserve">
+        <value>How to works</value>
+        <comment>How to works</comment>
+    </data>
+    <data name="TextAppDescription" xml:space="preserve">
+        <value>We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals.</value>
+        <comment>We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals.</comment>
+    </data>
+    <data name="ButtonRegister" xml:space="preserve">
+        <value>Register</value>
+        <comment>Register</comment>
+    </data>
+    <data name="TitleConsentByUserPage" xml:space="preserve">
+        <value>Terms of Service</value>
+        <comment>Consent by user page</comment>
+    </data>
+    <data name="TextUserAgreement" xml:space="preserve">
+        <value>User agreement</value>
+        <comment>User agreement</comment>
+    </data>
+    <data name="TextContainsDescriptionOfConsent1" xml:space="preserve">
+        <value>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</value>
+        <comment>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+    </data>
+    <data name="TextContainsDescriptionOfConsent2" xml:space="preserve">
+        <value>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</value>
+        <comment>&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+    </data>
+    <data name="ButtonAgreeAndProceed" xml:space="preserve">
+        <value>Agree and Proceed</value>
+        <comment>Agree and Proceed</comment>
+    </data>
+    <data name="ButtonAgree" xml:space="preserve">
+        <value>Agree</value>
+        <comment>Agree</comment>
+    </data>
+    <data name="TermsOfServiceTitle1" xml:space="preserve">
+        <value>1. Waiver</value>
+        <comment>Terms Of Service Title 1</comment>
+    </data>
+    <data name="TermsOfServiceDescription1" xml:space="preserve">
+        <value>Except as provided herein, the failure to exercise a right or to require performance of an obligation under this Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall be the waiver of a breach constitute a waiver of any subsequent breach</value>
+        <comment>Terms Of Service Description 1</comment>
+    </data>
+    <data name="TermsOfServiceTitle2" xml:space="preserve">
+        <value>2. Translation Interpretation</value>
+        <comment>Terms Of Service Title 2</comment>
+    </data>
+    <data name="TermsOfServiceDescription2" xml:space="preserve">
+        <value>These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.</value>
+        <comment>Terms Of Service Description 2</comment>
+    </data>
+    <data name="TermsOfServiceTitle3" xml:space="preserve">
+        <value>3. Termination</value>
+        <comment>Terms Of Service Title 3</comment>
+    </data>
+    <data name="TermsOfServiceDescription3" xml:space="preserve">
+        <value>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions. Upon termination, Your right to use the Service will cease immediately.</value>
+        <comment>Terms Of Service Description 3</comment>
+    </data>
+    <data name="TermsOfServiceTitle4" xml:space="preserve">
+        <value>4. Governing Law</value>
+        <comment>Terms Of Service Title 4</comment>
+    </data>
+    <data name="TermsOfServiceDescription4" xml:space="preserve">
+        <value>The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</value>
+        <comment>Terms Of Service Description 4</comment>
+    </data>    
 </root>

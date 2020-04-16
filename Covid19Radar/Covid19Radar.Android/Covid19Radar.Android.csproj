@@ -41,9 +41,8 @@
     <AndroidSigningStorePass>***REMOVED***</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>Covid19Radar</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>***REMOVED***</AndroidSigningKeyPass>
-    <AndroidPackageFormat>aab</AndroidPackageFormat>
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
