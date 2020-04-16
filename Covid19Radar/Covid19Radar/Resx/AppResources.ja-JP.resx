@@ -1,25 +1,211 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>2.0</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <data name="TextStopTheSpreadOfCOVID19" xml:space="preserve">
-        <value>BluetoothをオンにしてCOVID-19の拡散を阻止する</value>
-        <comment>Help Stop the spread of COVID-19 by turning Bluetooth on</comment>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
-    <data name="TextWeWillHelpAgenciesContact" xml:space="preserve">
-        <value>COVID-19ウィルス陽性者と濃厚接触が場合は、感染の拡大を防ぎ、ガイダンスとケアを提供するために、医療機関が連絡するのをお手伝いします。</value>
-        <comment>If you had close contact with a COVID-19 case, We will help agencies contact you to prevent the spread of infection, to provide guidance and care</comment>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
     </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TextStopTheSpreadOfCOVID19" xml:space="preserve">
+    <value>BluetoothをオンにしてCOVID-19の拡散を阻止する</value>
+    <comment>Help Stop the spread of COVID-19 by turning Bluetooth on</comment>
+  </data>
+  <data name="TextWeWillHelpAgenciesContact" xml:space="preserve">
+    <value>COVID-19ウィルス陽性者と濃厚接触が場合は、感染の拡大を防ぎ、ガイダンスとケアを提供するために、医療機関が連絡するのをお手伝いします。</value>
+    <comment>If you had close contact with a COVID-19 case, We will help agencies contact you to prevent the spread of infection, to provide guidance and care</comment>
+  </data>
+  <data name="TextToProtectThoseAroundYou" xml:space="preserve">
+    <value>あなたの周りのひとたちを守るために、あなたのデータを共有してください。</value>
+    <comment>To protect those around you, Please share your data.</comment>
+  </data>
+  <data name="ButtonIWantToHelp" xml:space="preserve">
+    <value>助けたい</value>
+    <comment>I want to help</comment>
+  </data>
+  <data name="TitleHowItWorks" xml:space="preserve">
+    <value>アプリの概要・使い方</value>
+    <comment>How it works page title</comment>
+  </data>
+  <data name="ButtonNext" xml:space="preserve">
+    <value>登録</value>
+    <comment>Next button</comment>
+  </data>
+  <data name="TitleConsentByUserPage" xml:space="preserve">
+    <value>利用規約</value>
+    <comment>Consent by user page</comment>
+  </data>
+  <data name="TextUserAgreement" xml:space="preserve">
+    <value>利用規約</value>
+    <comment>User agreement</comment>
+  </data>
+  <data name="TextContainsDescriptionOfConsent1" xml:space="preserve">
+    <value>󰗠同意文の説明が含まれています。</value>
+    <comment>󰗠Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+  </data>
+  <data name="TextContainsDescriptionOfConsent2" xml:space="preserve">
+    <value>󰗠同意文の説明が含まれています。</value>
+    <comment>󰗠Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+  </data>
+  <data name="ButtonAgreeAndProceed" xml:space="preserve">
+    <value>同意して続行</value>
+    <comment>Agree and Proceed</comment>
+  </data>
+  <data name="TextStep1Description" xml:space="preserve">
+    <value>アプリダウンロード時にサーバーから付番が各端末に割り振られます。</value>
+    <comment>How it works page step 1 description</comment>
+  </data>
+  <data name="TextStep1Title" xml:space="preserve">
+    <value>アプリ登録時</value>
+    <comment>How it works page step 1 title</comment>
+  </data>
+  <data name="TextStep2Description" xml:space="preserve">
+    <value>アプリ保持者同士が一定時間・一定距離内にいた場合（＝接触）に接触成立とし、接触相手の付番・接触時間・接触距離が自動で記録されます。</value>
+    <comment>How it works page step 2 description</comment>
+  </data>
+  <data name="TextStep2Title" xml:space="preserve">
+    <value>他のアプリユーザーとの接触時</value>
+    <comment>How it works page step 2 title</comment>
+  </data>
+  <data name="TextStep3Description" xml:space="preserve">
+    <value>ご自身でアプリに「陽性」と登録いただきます。「陽性」登録時に電話番号の登録が必要です。</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="TextStep3Title" xml:space="preserve">
+    <value>陽性と診断された場合</value>
+    <comment>How it works page step 3 title</comment>
+  </data>
+  <data name="TextStep4Description" xml:space="preserve">
+    <value>このアプリは、デバイスのBluetoothとPush通知を利用します。
+手順に沿って利用の許可をしてください。</value>
+    <comment>How it works page step 4 description</comment>
+  </data>
+  <data name="TextStep4Title" xml:space="preserve">
+    <value>アプリの使い方</value>
+    <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TextBluetoothDescription" xml:space="preserve">
+    <value>このアプリは、デバイスの以下の機能を利用します。使用許可の画面表示されたらOKをタップして許可してください。</value>
+    <comment>Device access page Bluetooth description</comment>
+  </data>
+  <data name="TextBluetoothTitle" xml:space="preserve">
+    <value>Bluetoothの許可</value>
+    <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="TitleDeviceAccess" xml:space="preserve">
+    <value>デバイスへのアクセス許可</value>
+    <comment>Device access page title</comment>
+  </data>
     <data name="TextToProtectThoseAroundYou" xml:space="preserve">
         <value>あなたの周りのひとたちを守るために、あなたのデータを共有してください。</value>
         <comment>To protect those around you, Please share your data.</comment>
@@ -63,5 +249,41 @@
     <data name="ButtonAgreeAndProceed" xml:space="preserve">
         <value>同意して続行</value>
         <comment>Agree and Proceed</comment>
+    </data>
+     <data name="ButtonAgree" xml:space="preserve">
+        <value>同意する</value>
+        <comment>Agree</comment>
+    </data>
+    <data name="TermsOfServiceTitle1" xml:space="preserve">
+        <value>1. 規約について</value>
+        <comment>Terms Of Service Title 1</comment>
+    </data>
+    <data name="TermsOfServiceDescription1" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 1</comment>
+    </data>
+    <data name="TermsOfServiceTitle2" xml:space="preserve">
+        <value>2. 規約について</value>
+        <comment>Terms Of Service Title 2</comment>
+    </data>
+    <data name="TermsOfServiceDescription2" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 2</comment>
+    </data>
+    <data name="TermsOfServiceTitle3" xml:space="preserve">
+        <value>3. 規約について</value>
+        <comment>Terms Of Service Title 3</comment>
+    </data>
+    <data name="TermsOfServiceDescription3" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 3</comment>
+    </data>
+    <data name="TermsOfServiceTitle4" xml:space="preserve">
+        <value>4. 規約について</value>
+        <comment>Terms Of Service Title 4</comment>
+    </data>
+    <data name="TermsOfServiceDescription4" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 4</comment>
     </data>
 </root>
