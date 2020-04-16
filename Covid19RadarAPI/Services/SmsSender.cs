@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
-using Twilio.Rest.Api.V2010.Account.Call;
 using Twilio.Types;
 
 namespace Covid19Radar.Services
@@ -33,9 +30,11 @@ namespace Covid19Radar.Services
                     Body = body
                 };
                 var message = MessageResource.Create(messageOptions);
-                return message.Status == MessageResource.StatusEnum.Sent;
+                return message.Status == MessageResource.StatusEnum.Queued 
+                       || message.Status == MessageResource.StatusEnum.Sent
+                       || message.Status == MessageResource.StatusEnum.Sending;
             }
-            catch (Exception e)
+            catch
             {
                 //Suppress for now
             }
