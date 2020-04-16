@@ -142,7 +142,7 @@
     <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>同意画面</value>
+    <value>利用規約</value>
     <comment>Consent by user page</comment>
   </data>
   <data name="TextUserAgreement" xml:space="preserve">
