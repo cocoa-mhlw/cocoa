@@ -193,6 +193,19 @@
     <value>Requirements to use this app</value>
     <comment>How it works page step 4 title</comment>
   </data>
+  <data name="TextBluetoothDescription" xml:space="preserve">
+    <value>This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+Select 'Always Allow' to set up Bluetooth.</value>
+    <comment>Device access page Bluetooth description</comment>
+  </data>
+  <data name="TextBluetoothTitle" xml:space="preserve">
+    <value>Allow Bluetooth</value>
+    <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="TitleDeviceAccess" xml:space="preserve">
+    <value>Device Access</value>
+    <comment>Device access page title</comment>
+  </data>
     <data name="TextToProtectThoseAroundYou" xml:space="preserve">
         <value>To protect those around you, Please share your data.</value>
         <comment>To protect those around you, Please share your data.</comment>
