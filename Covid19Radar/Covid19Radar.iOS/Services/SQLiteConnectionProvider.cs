@@ -21,7 +21,7 @@ namespace Covid19Radar.iOS.Services
             if (this.Connection != null) { return this.Connection; }
 
             var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            path = Path.Combine(path, "..", "Library", AppConstants.SQLITE_FILENAME);
+            path = Path.Combine(path, "..", "Library", AppConstants.SqliteFilename);
             return this.Connection = new SQLiteConnection(path);
         }
     }
