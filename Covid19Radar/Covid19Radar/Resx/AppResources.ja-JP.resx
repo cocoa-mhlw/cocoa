@@ -130,7 +130,7 @@
     <comment>To protect those around you, Please share your data.</comment>
   </data>
   <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>助けたい</value>
+    <value>協力したい</value>
     <comment>I want to help</comment>
   </data>
   <data name="TitleHowItWorks" xml:space="preserve">
@@ -138,7 +138,7 @@
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
-    <value>登録</value>
+    <value>次へ</value>
     <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
@@ -178,7 +178,7 @@
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="TextStep3Description" xml:space="preserve">
-    <value>ご自身でアプリに「陽性」と登録いただきます。「陽性」登録時に電話番号の登録が必要です。</value>
+    <value>「陽性」登録時に電話番号の登録が必要です。この際のワークフローについては関係各所と調整中です。</value>
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="TextStep3Title" xml:space="preserve">
@@ -195,7 +195,7 @@
     <comment>How it works page step 4 title</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
-    <value>アプリを利用する</value>
+    <value>スタート</value>
     <comment>Start</comment>
   </data>
   <data name="TextBluetoothDescription" xml:space="preserve">
@@ -275,11 +275,11 @@
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID-19Radar</value>
+    <value>COVID19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="StatusSettingsMenu" xml:space="preserve">
-    <value>ユーザー設定</value>
+    <value>ステータス設定</value>
     <comment>Status Settings Menu</comment>
   </data>
   <data name="ListOfContributorsMenu" xml:space="preserve">

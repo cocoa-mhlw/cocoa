@@ -332,7 +332,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Please manually change your status to &quot;Positive&quot; after verifying your phone number. に類似しているローカライズされた文字列を検索します。
+        ///   Please manually change your status to &quot;Positive&quot; after verifying your phone number.&quot;Positive&quot; Workflow , Now coordination with related parties. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TextStep3Description {
             get {
