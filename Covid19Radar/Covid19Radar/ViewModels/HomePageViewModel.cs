@@ -1,69 +1,59 @@
-﻿using Covid19Radar.Common;
-using Covid19Radar.Model;
-using Covid19Radar.Services;
-using Prism.Commands;
-using Prism.DryIoc;
-using Prism.Mvvm;
-using Prism.Navigation;
-using Prism.Services;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
+using Covid19Radar.Model;
+using Covid19Radar.Resx;
+using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
     public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        private INavigationService _navigationService;
-        private readonly IBeaconService _beaconService;
-        private UserDataService _userDataService;
-        private UserDataModel _userData;
+        public List<HomeMenuModel> HomeMenus { get; private set; }
 
-        private ObservableCollection<BeaconDataModel> beacons;
-        public ObservableCollection<BeaconDataModel> Beacons
-        {
-            get { return beacons; }
-            set
-            {
-
-                beacons = value;
-            }
-        }
-        public HomePageViewModel(INavigationService navigationService, UserDataService userdataservice)
+        public HomePageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
-            _userDataService = userdataservice;
-            _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
-
-            _userData = _userDataService.Get();
-            Title = "Home Page";
-
-            var list = _beaconService.GetBeaconData();
-            Beacons = new ObservableCollection<BeaconDataModel>(list);
+            Title = AppResources.HomeTitle;
+            SetData();
         }
-        public Command OnClickUserSetting => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("UserSettingPage");
-        }));
-        public Command OnClickAcknowledgments => (new Command(() =>
-        {
-            _navigationService.NavigateAsync("ContributersPage");
-        }));
 
-        public Command OnClickUpateInfo => (new Command(() =>
+        private void SetData()
         {
-            _navigationService.NavigateAsync("UpdateInfoPage");
-        }));
+            HomeMenus = new List<HomeMenuModel>
+            {
+                new HomeMenuModel
+                {
+                    Title=AppResources.StatusSettingsMenu,
+                    Command=OnClickUserSetting,
+                },
+                new HomeMenuModel
+                {
+                    Title=AppResources.ListOfContributorsMenu,
+                    Command=OnClickAcknowledgments
+                },
+                new HomeMenuModel
+                {
+                    Title=AppResources.UpdateInformationMenu,
+                    Command=OnClickUpateInfo
+                }
+            };
+        }
 
-        public Command OnClickUpdateList => (new Command(() =>
+        public Command OnClickUserSetting => new Command(() =>
         {
-        }));
+            NavigationService.NavigateAsync("UserSettingPage");
+        });
+        public Command OnClickAcknowledgments => new Command(() =>
+        {
+            NavigationService.NavigateAsync("ContributersPage");
+        });
 
-        
+        public Command OnClickUpateInfo => new Command(() =>
+        {
+            NavigationService.NavigateAsync("UpdateInfoPage");
+        });
+
+
     }
 }
