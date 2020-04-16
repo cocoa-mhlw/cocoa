@@ -12,21 +12,10 @@ namespace Covid19Radar.Extensions
 
         public object ProvideValue(IServiceProvider serviceProvider)
         {
-            if (Source is null) return null;
-        
-            ImageSource imageSource = null;
+            if (Source is null)
+                return null;
 
-            if (Source.StartsWith("http"))
-            {
-                imageSource = ImageSource.FromUri(new Uri(Source));
-            }
-            else
-            {
-                // Do your translation lookup here, using whatever method you require
-                imageSource = ImageSource.FromResource(Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
-            }
-
-            return imageSource;
+            return ImageSource.FromResource(Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
         }
     }
 }
