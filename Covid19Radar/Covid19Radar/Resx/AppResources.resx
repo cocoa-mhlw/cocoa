@@ -285,5 +285,25 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <data name="TermsOfServiceDescription4" xml:space="preserve">
         <value>The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</value>
         <comment>Terms Of Service Description 4</comment>
+    </data>
+    <data name="HomeTitle" xml:space="preserve">
+        <value>HOME</value>
+        <comment>Home Title</comment>
     </data>    
+    <data name="AppName" xml:space="preserve">
+        <value>COVID-19Radar</value>
+        <comment>App Name</comment>
+    </data>
+    <data name="StatusSettingsMenu" xml:space="preserve">
+        <value>Status Settings</value>
+        <comment>Status Settings Menu</comment>
+    </data>
+    <data name="ListOfContributorsMenu" xml:space="preserve">
+        <value>List of Contributors</value>
+        <comment>List Of Contributors Menu</comment>
+    </data>
+    <data name="UpdateInformationMenu" xml:space="preserve">
+        <value>Update Information</value>
+        <comment>Update Information Menu</comment>
+    </data>
 </root>
