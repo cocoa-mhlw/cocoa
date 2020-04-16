@@ -163,6 +163,9 @@
     <BundleResource Include="Resources\NotoSansCJKjp-Medium.otf" />
     <BundleResource Include="Resources\NotoSansCJKjp-Regular.otf" />
     <BundleResource Include="Resources\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\Logo.png" />
+    <BundleResource Include="Resources\Logo%402x.png" />
+    <BundleResource Include="Resources\Logo%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
