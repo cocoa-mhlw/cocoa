@@ -64,4 +64,40 @@
         <value>同意して続行</value>
         <comment>Agree and Proceed</comment>
     </data>
+     <data name="ButtonAgree" xml:space="preserve">
+        <value>同意する</value>
+        <comment>Agree</comment>
+    </data>
+    <data name="TermsOfServiceTitle1" xml:space="preserve">
+        <value>1. 規約について</value>
+        <comment>Terms Of Service Title 1</comment>
+    </data>
+    <data name="TermsOfServiceDescription1" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 1</comment>
+    </data>
+    <data name="TermsOfServiceTitle2" xml:space="preserve">
+        <value>2. 規約について</value>
+        <comment>Terms Of Service Title 2</comment>
+    </data>
+    <data name="TermsOfServiceDescription2" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 2</comment>
+    </data>
+    <data name="TermsOfServiceTitle3" xml:space="preserve">
+        <value>3. 規約について</value>
+        <comment>Terms Of Service Title 3</comment>
+    </data>
+    <data name="TermsOfServiceDescription3" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 3</comment>
+    </data>
+    <data name="TermsOfServiceTitle4" xml:space="preserve">
+        <value>4. 規約について</value>
+        <comment>Terms Of Service Title 4</comment>
+    </data>
+    <data name="TermsOfServiceDescription4" xml:space="preserve">
+        <value>この部分に利用規約の文章が入ります。適宜スクロールが出る想定。</value>
+        <comment>Terms Of Service Description 4</comment>
+    </data>
 </root>

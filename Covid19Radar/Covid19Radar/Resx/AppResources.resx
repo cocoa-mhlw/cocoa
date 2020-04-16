@@ -64,4 +64,40 @@
         <value>Agree and Proceed</value>
         <comment>Agree and Proceed</comment>
     </data>
+    <data name="ButtonAgree" xml:space="preserve">
+        <value>Agree</value>
+        <comment>Agree</comment>
+    </data>
+    <data name="TermsOfServiceTitle1" xml:space="preserve">
+        <value>1. Waiver</value>
+        <comment>Terms Of Service Title 1</comment>
+    </data>
+    <data name="TermsOfServiceDescription1" xml:space="preserve">
+        <value>Except as provided herein, the failure to exercise a right or to require performance of an obligation under this Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall be the waiver of a breach constitute a waiver of any subsequent breach</value>
+        <comment>Terms Of Service Description 1</comment>
+    </data>
+    <data name="TermsOfServiceTitle2" xml:space="preserve">
+        <value>2. Translation Interpretation</value>
+        <comment>Terms Of Service Title 2</comment>
+    </data>
+    <data name="TermsOfServiceDescription2" xml:space="preserve">
+        <value>These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.</value>
+        <comment>Terms Of Service Description 2</comment>
+    </data>
+    <data name="TermsOfServiceTitle3" xml:space="preserve">
+        <value>3. Termination</value>
+        <comment>Terms Of Service Title 3</comment>
+    </data>
+    <data name="TermsOfServiceDescription3" xml:space="preserve">
+        <value>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions. Upon termination, Your right to use the Service will cease immediately.</value>
+        <comment>Terms Of Service Description 3</comment>
+    </data>
+    <data name="TermsOfServiceTitle4" xml:space="preserve">
+        <value>4. Governing Law</value>
+        <comment>Terms Of Service Title 4</comment>
+    </data>
+    <data name="TermsOfServiceDescription4" xml:space="preserve">
+        <value>The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</value>
+        <comment>Terms Of Service Description 4</comment>
+    </data>    
 </root>
