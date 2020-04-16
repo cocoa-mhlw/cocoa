@@ -42,14 +42,21 @@
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
-    <Style x:Key="DefaultButtonStyle" TargetType="Button">
+    <Style x:Key="BaseButtonStyle" TargetType="Button">
         <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
         <Setter Property="CornerRadius" Value="2" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="{StaticResource NotoSansMediumFontFamily}" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
-        <Setter Property="WidthRequest" Value="170" />
         <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style
+        x:Key="DefaultButtonStyle"
+        BasedOn="{StaticResource BaseButtonStyle}"
+        TargetType="Button">
+        <Setter Property="WidthRequest" Value="170" />
         <Setter Property="HorizontalOptions" Value="Center" />
+
     </Style>
 </ResourceDictionary>

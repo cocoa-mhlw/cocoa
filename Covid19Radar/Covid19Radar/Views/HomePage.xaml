@@ -1,72 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19Radar.Views.HomePage"
-                          xmlns:local="clr-namespace:Covid19Radar"
-             Title="{Binding Title}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <StackLayout>
-                <ListView x:Name="BeaconList" ItemsSource="{Binding Beacons}"  CachingStrategy="RecycleElement">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout BackgroundColor="#eee" Orientation="Vertical">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding BeaconUuid}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
-                                        <Label Text="{Binding Count}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
-                                        <Label Text="{Binding Major}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
-                                        <Label Text="{Binding Miner}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
-                                        <Label Text="{Binding Distance}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
-                                        <Label Text="{Binding ElaspedTime}" HorizontalOptions="EndAndExpand" TextColor="#503026" />
-                                    </StackLayout>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <Button BackgroundColor="#019ae8"
-                    Text="Update List" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickUpdateList}"/>
+<ContentPage
+    x:Class="Covid19Radar.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    Padding="80,20"
+    Style="{StaticResource PageStyle}">
 
-            </StackLayout>
-        </Grid>
-        <Grid Grid.Row="1" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="UserSetting" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickUserSetting}"/>
-        </Grid>
-        <Grid Grid.Row="2" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="Acknowledgments" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickAcknowledgments}"/>
-        </Grid>
-        <Grid Grid.Row="3" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="UpadteInfomation" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickUpateInfo}"/>
-        </Grid>
-    </Grid>
+    <StackLayout VerticalOptions="Center">
+        <Image HorizontalOptions="Center" Source="Logo.png" />
+        <Label
+            Margin="0,29,0,60"
+            FontFamily="{StaticResource NotoSansMediumFontFamily}"
+            FontSize="22"
+            HorizontalOptions="Center"
+            Text="{x:Static resources:AppResources.AppName}"
+            TextColor="{StaticResource Accent4Color}" />
+        <StackLayout
+            Grid.Row="1"
+            BindableLayout.ItemsSource="{Binding HomeMenus}"
+            Spacing="28"
+            VerticalOptions="Center">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        Command="{Binding Command}"
+                        Style="{StaticResource BaseButtonStyle}"
+                        Text="{Binding Title}" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>
