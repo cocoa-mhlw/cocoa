@@ -1,48 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19Radar.Views.DescriptionPage"
-                          xmlns:local="clr-namespace:Covid19Radar"
-             Title="{Binding Title}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Image x:Name="Beaconnetwork" WidthRequest="352" HeightRequest="321" HorizontalOptions="Center" />
-        </Grid>
-        <Grid Grid.Row="1">
-            <StackLayout>
-                <Label Text="{Binding TextHowToWorks}" 
-                       TextColor="#333333" 
-                       FontSize="35" 
-                       Padding="0,20,0,20" 
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       FontAttributes="Bold"/>
-                <Label Text="{Binding TextAppDescription}"
-                       TextColor="#333333"
-                       Padding="30,0,30,0"
-                       FontSize="16"
-                       LineHeight="1.2"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       LineBreakMode="WordWrap"/>
+<ContentPage
+    x:Class="Covid19Radar.Views.DescriptionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    xmlns:templates="clr-namespace:Covid19Radar.Templates;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    Style="{StaticResource PageStyle}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <templates:StepItemTemplate x:Key="StepItemTemplate" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <CollectionView
+        ItemTemplate="{StaticResource StepItemTemplate}"
+        ItemsSource="{Binding Steps}"
+        SelectionMode="None">
+        <CollectionView.Footer>
+            <StackLayout Padding="95,0,95,120">
+                <Button
+                    Command="{Binding Path=OnClickNext}"
+                    Style="{StaticResource DefaultButtonStyle}"
+                    Text="{x:Static resources:AppResources.ButtonNext}" />
             </StackLayout>
-        </Grid>
-        <Grid Grid.Row="2" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="{Binding ButtonRegister}" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickNext}"/>
-        </Grid>
-    </Grid>
-
+        </CollectionView.Footer>
+    </CollectionView>
 </ContentPage>
