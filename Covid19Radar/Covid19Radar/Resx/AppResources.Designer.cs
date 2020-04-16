@@ -124,5 +124,59 @@ namespace Covid19Radar.Resx {
                 return ResourceManager.GetString("ButtonAgreeAndProceed", resourceCulture);
             }
         }
+        
+        internal static string ButtonAgree {
+            get {
+                return ResourceManager.GetString("ButtonAgree", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceTitle1 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceTitle1", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceDescription1 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceDescription1", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceTitle2 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceTitle2", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceDescription2 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceDescription2", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceTitle3 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceTitle3", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceDescription3 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceDescription3", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceTitle4 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceTitle4", resourceCulture);
+            }
+        }
+        
+        internal static string TermsOfServiceDescription4 {
+            get {
+                return ResourceManager.GetString("TermsOfServiceDescription4", resourceCulture);
+            }
+        }
     }
 }
