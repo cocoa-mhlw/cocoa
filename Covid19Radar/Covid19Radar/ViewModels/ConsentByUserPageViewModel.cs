@@ -12,7 +12,6 @@ namespace Covid19Radar.ViewModels
 {
     public class ConsentByUserPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
         private UserDataService _userDataService;
 
         public ICommand OnClickNext { get; }
@@ -27,8 +26,7 @@ namespace Covid19Radar.ViewModels
         public ConsentByUserPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
-            Title = Resx.AppResources.TitleConsentByUserPage;
+            Title = AppResources.TitleConsentByUserPage;
             SetData();
 
             _userDataService = App.Current.Container.Resolve<UserDataService>();
@@ -40,7 +38,7 @@ namespace Covid19Radar.ViewModels
                      UserDataModel userData = await _userDataService.RegistUserAsync();
                  }
 
-                 await _navigationService.NavigateAsync("InitSettingPage");
+                 await NavigationService.NavigateAsync("InitSettingPage");
              });
 
         }
