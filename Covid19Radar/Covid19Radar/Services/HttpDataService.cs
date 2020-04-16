@@ -80,7 +80,7 @@ namespace Covid19Radar.Services
             postBeaconDataModel.UserMinor = user.Minor;
             postBeaconDataModel.UserUuid = user.UserUuid;
 
-            HttpContent content = new StringContent(Utils.SerializeToJson(user), Encoding.UTF8, "application/json");
+            HttpContent content = new StringContent(Utils.SerializeToJson(postBeaconDataModel), Encoding.UTF8, "application/json");
             var result = await Post(url, content);
             if (result != null)
             {
