@@ -35,6 +35,7 @@ https://discord.gg/e5hMm4h
 - Lohith (Client side Xamarin / Xmariners)
 - Chaminda (Client side Xamarin / Xmariners)
 - Yuya Yoshida (Public Relations and Activity)
+- Ryota Nakamura (Beta Tester's communication lead)
 
 ![App Description](img/AppDescription-en.jpg)
 

@@ -95,7 +95,7 @@ namespace Covid19Radar.Droid.Services
             _rangeNotifier = new RangeNotifier();
 
             //iBeacon
-            BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.IBEACON_FORMAT);
+            BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.iBeaconFormat);
             _beaconManager.BeaconParsers.Add(beaconParser);
 
             // BeaconManager Setting
@@ -119,7 +119,7 @@ namespace Covid19Radar.Droid.Services
             _beaconManager.AddRangeNotifier(_rangeNotifier);
 
 
-            _fieldRegion = new AltBeaconOrg.BoundBeacon.Region("AppAppApp", Identifier.Parse(AppConstants.AppUUID), null, null);
+            _fieldRegion = new AltBeaconOrg.BoundBeacon.Region("AppAppApp", Identifier.Parse(AppConstants.iBeaconAppUuid), null, null);
 
             _beaconManager.Bind(_mainActivity);
             return _beaconManager;
@@ -133,7 +133,7 @@ namespace Covid19Radar.Droid.Services
 
         public void StartBeacon()
         {
-            BeaconManagerImpl.SetForegroundBetweenScanPeriod(AppConstants.BEACONS_UPDATES_IN_MILLISECONDS);
+            BeaconManagerImpl.SetForegroundBetweenScanPeriod(AppConstants.BeaconsUpdateInMillisec);
             BeaconManagerImpl.AddMonitorNotifier(_monitorNotifier);
             BeaconManagerImpl.AddRangeNotifier(_rangeNotifier);
 
@@ -159,15 +159,15 @@ namespace Covid19Radar.Droid.Services
             // TODO 出力調整どうするか考える。
 
             Beacon beacon = new Beacon.Builder()
-                                .SetId1(AppConstants.AppUUID)
+                                .SetId1(AppConstants.iBeaconAppUuid)
                                 .SetId2(userData.Major)
                                 .SetId3(userData.Minor)
                                 .SetTxPower(-59)
-                                .SetManufacturer(AppConstants.COMPANY_CODE_APPLE)
+                                .SetManufacturer(AppConstants.CompanyCoreApple)
                                 .Build();
 
             // iBeaconのバイト列フォーマットをBeaconParser（アドバタイズ時のバイト列定義）にセットする。
-            BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.IBEACON_FORMAT);
+            BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.iBeaconFormat);
 
             // iBeaconの発信を開始する。
             _beaconTransmitter = new BeaconTransmitter(_mainActivity, beaconParser);
