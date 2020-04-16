@@ -9,7 +9,7 @@ namespace Covid19Radar.Common
         public static readonly string AppCenterTokensAndroid = "APPCENTER_ANDROID";
         public static readonly string AppCenterTokensIOS = "APPCENTER_IOS";
 
-        public static readonly string ApiBaseUrl = "https://covid19radar.azurewebsites.net/api/";
+        public static readonly string ApiBaseUrl = "https://covid19radar.azurewebsites.net/api";
         public static readonly string ApiSecret = "API_SECRET";
         /// <summary>
         /// Apple's company ibeacon code
