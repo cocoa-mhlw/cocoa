@@ -101,7 +101,7 @@ Password：Covid19Radar
 - [Noriko Matsumoto](https://twitter.com/nori790822) (Designer)
 
 ## Licensing
-Covid19Radar is licensed under the Apache License, Version 2.0. See
+Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
 [LICENSE](./LICENSE) for the full
 license text.
 
@@ -181,6 +181,6 @@ Password：Covid19Radar
 - [Noriko Matsumoto](https://twitter.com/nori790822) (Designer)
 
 ## ライセンス
-Covid19Radar is licensed under the Apache License, Version 2.0. See
+Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
 [LICENSE](./LICENSE) for the full
 license text.
