@@ -103,7 +103,8 @@ namespace Covid19Radar
             /*
             AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};",
                   typeof(Analytics), typeof(Crashes), typeof(Distribute));
-                  */
+           */
+
             base.OnStart();
         }
     }
