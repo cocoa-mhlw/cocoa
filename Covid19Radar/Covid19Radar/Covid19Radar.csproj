@@ -8,6 +8,7 @@
   <ItemGroup>
     <None Remove="Images\01%403x.png" />
     <None Remove="Images\AllowBle.png" />
+    <None Remove="Images\bluetooth-access.png" />
     <None Remove="Images\description-step1.png" />
     <None Remove="Images\description-step2.png" />
     <None Remove="Images\description-step3.png" />
@@ -20,7 +21,7 @@
     <EmbeddedResource Remove="Views\DummyPage.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\AllowBle.png" />
+    <EmbeddedResource Include="Images\bluetooth-access.png" />
     <EmbeddedResource Include="Images\description-step4.png" />
     <EmbeddedResource Include="Images\description-step1.png" />
     <EmbeddedResource Include="Images\description-step2.png" />
