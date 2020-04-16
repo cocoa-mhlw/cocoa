@@ -37,16 +37,16 @@ namespace Covid19Radar.Droid.Services
 		{
 			if (!UseSimulatedBeacons) return;
 
-			var beacon1 = new AltBeacon.Builder().SetId1(AppConstants.AppUUID)
+			var beacon1 = new AltBeacon.Builder().SetId1(AppConstants.iBeaconAppUuid)
 				.SetId2("111").SetId3("111").SetRssi(-55).SetTxPower(-55).Build();
 
-			var beacon2 = new AltBeacon.Builder().SetId1(AppConstants.AppUUID)
+			var beacon2 = new AltBeacon.Builder().SetId1(AppConstants.iBeaconAppUuid)
 				.SetId2("2").SetId3("32768").SetRssi(-55).SetTxPower(-55).Build();
 
-			var beacon3 = new AltBeacon.Builder().SetId1(AppConstants.AppUUID)
+			var beacon3 = new AltBeacon.Builder().SetId1(AppConstants.iBeaconAppUuid)
 				.SetId2("32768").SetId3("1").SetRssi(-55).SetTxPower(-55).Build();
 
-			var beacon4 = new AltBeacon.Builder().SetId1(AppConstants.AppUUID)
+			var beacon4 = new AltBeacon.Builder().SetId1(AppConstants.iBeaconAppUuid)
 				.SetId2("65535").SetId3("65535").SetRssi(-55).SetTxPower(-55).Build();
 
 			_beacons.AddRange(new[] { beacon1, beacon2, beacon3, beacon4 });
