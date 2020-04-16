@@ -8,7 +8,6 @@
     "COSMOS_DATABASE_ID": "Example",
     "COSMOS_AUTO_GENERATE": true,
     "TOTP_SECRET": "",
-    "TOTP_SECRET": "",
     "TWILIO_SID": "",
     "TWILIO_TOKEN": "",
     "TWILIO_FROM_PHONE": ""
