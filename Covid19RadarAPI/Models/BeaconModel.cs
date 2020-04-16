@@ -67,5 +67,9 @@ namespace Covid19Radar.Models
         /// 
         /// </summary>
         public int Count { get; set; }
+        /// <summary>
+        /// created timestamp UTC
+        /// </summary>
+        public DateTime TimeStamp { get; set; }
     }
 }
