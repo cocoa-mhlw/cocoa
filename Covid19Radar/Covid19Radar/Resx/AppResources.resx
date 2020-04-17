@@ -302,7 +302,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Set up Completed</value>
     <comment>Set up Completed</comment>
   </data>
-<data name="TextStatusSettingsDescription" xml:space="preserve">
+  <data name="TextStatusSettingsDescription" xml:space="preserve">
     <value>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</value>
     <comment>Status settings page description</comment>
   </data>
@@ -328,7 +328,7 @@ Please check your SMS.</value>
     <comment>Status Settings page title</comment>
   </data>
   <data name="TextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-123-4567</value>
+    <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
   </data>
 </root>
