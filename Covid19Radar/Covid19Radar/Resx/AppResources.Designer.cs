@@ -287,6 +287,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 090-123-4567.
+        /// </summary>
+        internal static string TextPhoneNumberPlaceholder {
+            get {
+                return ResourceManager.GetString("TextPhoneNumberPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Protecting our loved ones from COVID19.
         /// </summary>
         internal static string TextProtectingOurLovedOnes {

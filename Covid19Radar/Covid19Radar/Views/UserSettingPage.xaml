@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Views.UserSettingPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resx"
     Title="{Binding Title}">
@@ -23,7 +24,13 @@
                     Margin="0,20"
                     BorderColor="{StaticResource AccentColor}"
                     Keyboard="Telephone"
-                    Placeholder="090-1234-5678" />
+                    MaxLength="12"
+                    Placeholder="{x:Static resources:AppResources.TextPhoneNumberPlaceholder}"
+                    Text="{Binding PhoneNumber}">
+                    <Entry.Behaviors>
+                        <behaviors:MaskedBehavior Mask="XXX-XXX-XXXX" />
+                    </Entry.Behaviors>
+                </renderers:CustomEntry>
                 <Label Text="{x:Static resources:AppResources.TextStatusSettingsSMSDescription}" />
                 <Label
                     Margin="0,10"
@@ -32,7 +39,8 @@
                     TextColor="{StaticResource Accent6Color}" />
                 <Button
                     Margin="0,40,0,80"
-                    BackgroundColor="{StaticResource Accent5Color}"
+                    Command="{Binding OnClickNext}"
+                    IsEnabled="{Binding IsPhoneNumberValid}"
                     Style="{StaticResource DefaultButtonStyle}"
                     Text="{x:Static resources:AppResources.ButtonNext}" />
             </StackLayout>
