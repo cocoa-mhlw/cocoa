@@ -37,7 +37,6 @@ namespace Covid19Radar
     public partial class App : PrismApplication
     {
         private IBeaconService _beaconService;
-        private UserDataModel _userData;
         const string LogTag = "Covid19Radar";
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -88,7 +87,7 @@ namespace Covid19Radar
             var isUserExists = await userDataService.IsExistUserData();
             if (isUserExists)
             {
-                _userData = userDataService.Get();
+                UserDataModel _userData = userDataService.Get();
                 _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
                 // Only Call InitializeService! Start automagically!
                 AppUtils.CheckPermission();
@@ -140,10 +139,6 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
- /*
-AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};",
-      typeof(Analytics), typeof(Crashes), typeof(Distribute));
-*/
             base.OnStart();
         }
 
