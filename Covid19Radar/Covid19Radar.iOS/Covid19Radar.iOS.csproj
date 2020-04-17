@@ -113,6 +113,7 @@
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
+    <Compile Include="Renderers\CustomEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -167,6 +168,9 @@
     <BundleResource Include="Resources\Logo.png" />
     <BundleResource Include="Resources\Logo%402x.png" />
     <BundleResource Include="Resources\Logo%403x.png" />
+    <BundleResource Include="Resources\help.png" />
+    <BundleResource Include="Resources\help%402x.png" />
+    <BundleResource Include="Resources\help%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
