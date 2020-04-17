@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
+using Covid19Radar.Renderers;
 using Xamarin.Forms;
 
 namespace Covid19Radar.Controls
@@ -34,13 +34,35 @@ namespace Covid19Radar.Controls
             OtpEntry5.TextChanged += TextChanged;
             OtpEntry6.TextChanged += TextChanged;
 
-            var entry = new Entry();
             OtpEntry1.Focused += TextFocused;
             OtpEntry2.Focused += TextFocused;
             OtpEntry3.Focused += TextFocused;
             OtpEntry4.Focused += TextFocused;
             OtpEntry5.Focused += TextFocused;
             OtpEntry6.Focused += TextFocused;
+
+            OtpEntry1.DeleteClicked += DeleteClicked;
+            OtpEntry2.DeleteClicked += DeleteClicked;
+            OtpEntry3.DeleteClicked += DeleteClicked;
+            OtpEntry4.DeleteClicked += DeleteClicked;
+            OtpEntry5.DeleteClicked += DeleteClicked;
+            OtpEntry6.DeleteClicked += DeleteClicked;
+        }
+
+        private void DeleteClicked(object sender, EventArgs e)
+        {
+            if (sender is Entry entry)
+            {
+                var entryFocusedIndex = Array.FindIndex(_entries, (x) => x.AutomationId.Equals(entry.AutomationId, StringComparison.Ordinal));
+                if (entryFocusedIndex == 0)
+                {
+                    return;
+                }
+
+                var previousEntry = _entries[entryFocusedIndex - 1];
+                previousEntry.Focus();
+            }
+
         }
 
         private void TextFocused(object sender, FocusEventArgs e)
@@ -98,6 +120,13 @@ namespace Covid19Radar.Controls
             OtpEntry4.Focused -= TextFocused;
             OtpEntry5.Focused -= TextFocused;
             OtpEntry6.Focused -= TextFocused;
+
+            OtpEntry1.DeleteClicked -= DeleteClicked;
+            OtpEntry2.DeleteClicked -= DeleteClicked;
+            OtpEntry3.DeleteClicked -= DeleteClicked;
+            OtpEntry4.DeleteClicked -= DeleteClicked;
+            OtpEntry5.DeleteClicked -= DeleteClicked;
+            OtpEntry6.DeleteClicked -= DeleteClicked;
         }
 
         public static readonly BindableProperty OtpTextProperty =
