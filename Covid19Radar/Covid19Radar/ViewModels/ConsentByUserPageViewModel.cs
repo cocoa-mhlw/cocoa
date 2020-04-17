@@ -33,7 +33,8 @@ namespace Covid19Radar.ViewModels
             OnClickNext = new Command(async () =>
              {
                  // Regist user
-                 if (!_userDataService.IsExistUserData())
+                 var isUserCreated = await _userDataService.IsExistUserData();
+                 if (!isUserCreated)
                  {
                      UserDataModel userData = await _userDataService.RegistUserAsync();
                  }
