@@ -275,7 +275,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID-19Radar</value>
+    <value>COVID19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="StatusSettingsMenu" xml:space="preserve">
