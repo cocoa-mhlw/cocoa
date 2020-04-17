@@ -290,7 +290,19 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Update Information</value>
     <comment>Update Information Menu</comment>
   </data>
-  <data name="TextStatusSettingsDescription" xml:space="preserve">
+  <data name="ButtonHome" xml:space="preserve">
+    <value>HOME</value>
+    <comment>HOME</comment>
+  </data>
+  <data name="TextYoureReadyToGo" xml:space="preserve">
+    <value>You're ready to go</value>
+    <comment>You're ready to go</comment>
+  </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>Set up Completed</value>
+    <comment>Set up Completed</comment>
+  </data>
+<data name="TextStatusSettingsDescription" xml:space="preserve">
     <value>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</value>
     <comment>Status settings page description</comment>
   </data>
