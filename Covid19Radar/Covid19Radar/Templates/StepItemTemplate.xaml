@@ -39,9 +39,6 @@
             <Image Aspect="AspectFit" Source="{Binding Image}" />
             <Label Text="{Binding Description}" />
         </StackLayout>
-        <BoxView
-            BackgroundColor="{StaticResource Accent3Color}"
-            HeightRequest="1"
-            IsVisible="{Binding HasStepNumber}" />
+        <BoxView IsVisible="{Binding HasStepNumber}" Style="{StaticResource DefaultLineStyle}" />
     </StackLayout>
 </DataTemplate>
