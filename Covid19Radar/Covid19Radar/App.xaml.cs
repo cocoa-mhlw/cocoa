@@ -97,6 +97,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<UpdateInfoPage, UpdateInfoPageViewModel>();
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
+            containerRegistry.RegisterForNavigation<SetupCompletedPage, SetupCompletedPageViewModel>();
         }
 
         protected override void OnStart()
