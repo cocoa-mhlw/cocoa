@@ -316,4 +316,8 @@ SMSメールを確認してください。</value>
     <value>ユーザー設定</value>
     <comment>Status Settings page title</comment>
   </data>
+  <data name="TextPhoneNumberPlaceholder" xml:space="preserve">
+    <value>090-123-4567</value>
+    <comment>Placeholder text for phone number entry</comment>
+  </data>
 </root>
