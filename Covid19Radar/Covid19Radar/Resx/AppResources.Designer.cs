@@ -88,6 +88,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HOME.
+        /// </summary>
+        internal static string ButtonHome {
+            get {
+                return ResourceManager.GetString("ButtonHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to I want to help.
         /// </summary>
         internal static string ButtonIWantToHelp {
@@ -287,66 +296,11 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 090-123-4567.
-        /// </summary>
-        internal static string TextPhoneNumberPlaceholder {
-            get {
-                return ResourceManager.GetString("TextPhoneNumberPlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Protecting our loved ones from COVID19.
         /// </summary>
         internal static string TextProtectingOurLovedOnes {
             get {
                 return ResourceManager.GetString("TextProtectingOurLovedOnes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones..
-        /// </summary>
-        internal static string TextStatusSettingsDescription {
-            get {
-                return ResourceManager.GetString("TextStatusSettingsDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enter the mobile number.
-        /// </summary>
-        internal static string TextStatusSettingsEnterNumber {
-            get {
-                return ResourceManager.GetString("TextStatusSettingsEnterNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to We&apos;ll send you a verification code.
-        ///Please check your SMS..
-        /// </summary>
-        internal static string TextStatusSettingsSMSDescription {
-            get {
-                return ResourceManager.GetString("TextStatusSettingsSMSDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ※ We will not store your phone number. It will be sent directly to the database of the government..
-        /// </summary>
-        internal static string TextStatusSettingsSMSInfo {
-            get {
-                return ResourceManager.GetString("TextStatusSettingsSMSInfo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to If you received a positive diagnosis.
-        /// </summary>
-        internal static string TextStatusSettingsSubtitle {
-            get {
-                return ResourceManager.GetString("TextStatusSettingsSubtitle", resourceCulture);
             }
         }
         
@@ -459,6 +413,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You&apos;re ready to go.
+        /// </summary>
+        internal static string TextYoureReadyToGo {
+            get {
+                return ResourceManager.GetString("TextYoureReadyToGo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to App Description.
         /// </summary>
         internal static string TitleAppDescription {
@@ -495,11 +458,11 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Status Settings.
+        ///   Looks up a localized string similar to Set up Completed.
         /// </summary>
-        internal static string TitleStatusSettings {
+        internal static string TitleSetupCompleted {
             get {
-                return ResourceManager.GetString("TitleStatusSettings", resourceCulture);
+                return ResourceManager.GetString("TitleSetupCompleted", resourceCulture);
             }
         }
         
