@@ -7,8 +7,6 @@ namespace Covid19Radar.ViewModels
     {
         private string _phoneNumber;
 
-        public const int PhoneNumberMaxLength = 10;
-
         public string PhoneNumber
         {
             get => _phoneNumber;
