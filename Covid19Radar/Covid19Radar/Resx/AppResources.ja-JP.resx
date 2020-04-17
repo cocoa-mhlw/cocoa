@@ -290,7 +290,19 @@
     <value>更新情報</value>
     <comment>Update Information Menu</comment>
   </data>
-  <data name="TextStatusSettingsDescription" xml:space="preserve">
+  <data name="ButtonHome" xml:space="preserve">
+    <value>HOMEへ</value>
+    <comment>HOME</comment>
+  </data>
+  <data name="TextYoureReadyToGo" xml:space="preserve">
+    <value>登録完了しました。</value>
+    <comment>You're ready to go</comment>
+  </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>登録完了</value>
+    <comment>Set up Completed</comment>
+  </data>
+<data name="TextStatusSettingsDescription" xml:space="preserve">
     <value>もし新型コロナで陽性と診断された場合、あなたの周りの人を守るために電話番号を入れて陽性登録をお願いします。</value>
     <comment>Status settings page description</comment>
   </data>
