@@ -66,11 +66,13 @@ namespace Covid19Radar.Droid
         {
             BeaconService beaconService = Xamarin.Forms.DependencyService.Get<BeaconService>();
             UserDataService userDataService = new UserDataService();
-            beaconService.StartBeacon();
+
 
             Task.Run(async () =>
             {
-                var userExists = await userDataService.IsExistUserData();
+
+                beaconService.StartBeacon();
+                var userExists = await userDataService.IsExistUserDataAsync();
                 if (userExists)
                 {
                     UserDataModel userDataModel = userDataService.Get();
