@@ -43,12 +43,19 @@
     </Style>
 
     <Style x:Key="BaseButtonStyle" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
         <Setter Property="CornerRadius" Value="2" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="{StaticResource NotoSansMediumFontFamily}" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
         <Setter Property="Padding" Value="0" />
+        <Style.Triggers>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
+            </Trigger>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                <Setter Property="BackgroundColor" Value="{StaticResource Accent5Color}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style
@@ -57,6 +64,7 @@
         TargetType="Button">
         <Setter Property="WidthRequest" Value="170" />
         <Setter Property="HorizontalOptions" Value="Center" />
+
 
     </Style>
 </ResourceDictionary>

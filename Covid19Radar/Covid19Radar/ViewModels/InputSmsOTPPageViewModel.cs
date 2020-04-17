@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using Covid19Radar.Resx;
+using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
 using Xamarin.Forms;
@@ -12,7 +13,11 @@ namespace Covid19Radar.ViewModels
         public string Otp
         {
             get => _otp;
-            set => SetProperty(ref _otp, value);
+            set
+            {
+                SetProperty(ref _otp, value);
+                OnClickNext.RaiseCanExecuteChanged();
+            }
         }
 
         private string _phoneNumber;
@@ -23,7 +28,7 @@ namespace Covid19Radar.ViewModels
         }
 
         public ICommand ResendOtp { get; }
-        public ICommand OnClickNext { get; }
+        public DelegateCommand OnClickNext { get; }
 
         private readonly IPageDialogService _pageDialogService;
 
@@ -37,17 +42,29 @@ namespace Covid19Radar.ViewModels
             {
                 await _pageDialogService.DisplayAlertAsync("Error", "This is not implemented yet", "OK");
             });
-            OnClickNext = new Command(async () =>
+            OnClickNext = new DelegateCommand(async () =>
              {
-                 System.Diagnostics.Debug.WriteLine(Otp);
+                 await _pageDialogService.DisplayAlertAsync("Ok", Otp, "OK");
                  await NavigationService.NavigateAsync("UserSettingPage");
-             });
+             }, CanVerifyOtp);
+        }
+
+        private bool CanVerifyOtp()
+        {
+            if (string.IsNullOrEmpty(Otp))
+            {
+                return false;
+            }
+            return Otp.Length == 6;
         }
 
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
             base.OnNavigatedTo(parameters);
-            PhoneNumber = (string)parameters["phone_number"];
+            if (parameters.TryGetValue<string>("phone_number", out var phoneNumber))
+            {
+                PhoneNumber = phoneNumber;
+            }
         }
 
     }
