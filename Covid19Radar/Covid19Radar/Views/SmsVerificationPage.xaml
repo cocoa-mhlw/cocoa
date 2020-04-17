@@ -1,51 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19Radar.Views.SmsVerificationPage"
-                          xmlns:local="clr-namespace:Covid19Radar"
-             Title="{Binding Title}">
+<ContentPage
+    x:Class="Covid19Radar.Views.SmsVerificationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Padding="30,0,30,0" Grid.Row="0">
+        <Grid Grid.Row="0" Padding="30,0,30,0">
             <StackLayout>
-                <Label Text="Please enter a phone number." 
-                       TextColor="#333333" 
-                       FontSize="28" 
-                       Padding="0,30,0,10" />
-                <Entry Text=""
-                       MaxLength="11"
-                       Placeholder="09012341234"
-                       TextColor="#333333" 
-                       FontSize="35"
-                       Keyboard="Telephone"
-                       PlaceholderColor="#D1D1D1"
-                       ClearButtonVisibility="WhileEditing"
-                       />
-                <Label FontSize="16"
-                       TextColor="#333333"
-                       LineHeight="1.2"
-                       Padding="0,30,0,0"
-                       LineBreakMode="WordWrap"
-                       Text="You will receive an SMS email after entering your phone number." />
-                <Label FontSize="16"
-                       TextColor="#333333"
-                       LineHeight="1.2"
-                       Padding="0,0,0,0"
-                       LineBreakMode="WordWrap"
-                       Text="Check your SMS mail." />
+                <Label
+                    Padding="0,30,0,10"
+                    FontSize="28"
+                    Text="Please enter a phone number."
+                    TextColor="#333333" />
+                <Entry
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="35"
+                    Keyboard="Telephone"
+                    MaxLength="11"
+                    Placeholder="09012341234"
+                    PlaceholderColor="#D1D1D1"
+                    Text=""
+                    TextColor="#333333" />
+                <Label
+                    Padding="0,30,0,0"
+                    FontSize="16"
+                    LineBreakMode="WordWrap"
+                    LineHeight="1.2"
+                    Text="You will receive an SMS email after entering your phone number."
+                    TextColor="#333333" />
+                <Label
+                    Padding="0,0,0,0"
+                    FontSize="16"
+                    LineBreakMode="WordWrap"
+                    LineHeight="1.2"
+                    Text="Check your SMS mail."
+                    TextColor="#333333" />
             </StackLayout>
         </Grid>
         <Grid Grid.Row="1" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="Register" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickNext}"/>
+            <Button
+                BackgroundColor="#019ae8"
+                Command="{Binding Path=OnClickNext}"
+                FontSize="25"
+                MinimumHeightRequest="60"
+                MinimumWidthRequest="170"
+                Text="Register"
+                TextColor="#FFFFFF" />
         </Grid>
     </Grid>
 </ContentPage>
