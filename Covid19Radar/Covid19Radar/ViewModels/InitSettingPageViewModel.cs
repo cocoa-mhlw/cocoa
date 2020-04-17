@@ -12,6 +12,6 @@ namespace Covid19Radar.ViewModels
             AppUtils.CheckPermission();
         }
 
-        public Command OnClickNext => new Command(() => NavigationService.NavigateAsync("/NavigationPage/HomePage"));
+        public Command OnClickNext => new Command(() => NavigationService.NavigateAsync("SetupCompletedPage"));
     }
 }
