@@ -51,8 +51,9 @@ namespace Covid19Radar
             // Check user data and skip tutorial
             UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             //UserDataModel userData =await userDataService.Register();
- 
-            if (userDataService.IsExistUserData())
+
+            var isUserExists = await userDataService.IsExistUserData();
+            if (isUserExists)
             {
                 _userData = userDataService.Get();
                 _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();

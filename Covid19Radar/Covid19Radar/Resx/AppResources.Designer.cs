@@ -474,5 +474,82 @@ namespace Covid19Radar.Resx {
                 return ResourceManager.GetString("UpdateInformationMenu", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
+        /// </summary>
+        internal static string TitleStatusSettings
+        {
+            get
+            {
+                return ResourceManager.GetString("TitleStatusSettings", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
+        /// </summary>
+        internal static string TextStatusSettingsSubtitle
+        {
+            get
+            {
+                return ResourceManager.GetString("TextStatusSettingsSubtitle", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
+        /// </summary>
+        internal static string TextStatusSettingsDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("TextStatusSettingsDescription", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
+        /// </summary>
+        internal static string TextStatusSettingsEnterNumber
+        {
+            get
+            {
+                return ResourceManager.GetString("TextStatusSettingsEnterNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
+        /// </summary>
+        internal static string TextPhoneNumberPlaceholder
+        {
+            get
+            {
+                return ResourceManager.GetString("TextPhoneNumberPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
+        /// </summary>
+        internal static string TextStatusSettingsSMSDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("TextStatusSettingsSMSDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
+        /// </summary>
+        internal static string TextStatusSettingsSMSInfo
+        {
+            get
+            {
+                return ResourceManager.GetString("TextStatusSettingsSMSInfo", resourceCulture);
+            }
+        }
     }
 }
