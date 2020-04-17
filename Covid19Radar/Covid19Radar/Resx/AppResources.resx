@@ -302,4 +302,33 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Set up Completed</value>
     <comment>Set up Completed</comment>
   </data>
+<data name="TextStatusSettingsDescription" xml:space="preserve">
+    <value>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</value>
+    <comment>Status settings page description</comment>
+  </data>
+  <data name="TextStatusSettingsEnterNumber" xml:space="preserve">
+    <value>Enter the mobile number</value>
+    <comment>Status settings page enter number text</comment>
+  </data>
+  <data name="TextStatusSettingsSMSDescription" xml:space="preserve">
+    <value>We'll send you a verification code.
+Please check your SMS.</value>
+    <comment>Status settings page verification sms code description</comment>
+  </data>
+  <data name="TextStatusSettingsSMSInfo" xml:space="preserve">
+    <value>※ We will not store your phone number. It will be sent directly to the database of the government.</value>
+    <comment>Status settings page sms info</comment>
+  </data>
+  <data name="TextStatusSettingsSubtitle" xml:space="preserve">
+    <value>If you received a positive diagnosis</value>
+    <comment>Status settings page sub title</comment>
+  </data>
+  <data name="TitleStatusSettings" xml:space="preserve">
+    <value>Status Settings</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TextPhoneNumberPlaceholder" xml:space="preserve">
+    <value>090-123-4567</value>
+    <comment>Placeholder text for phone number entry</comment>
+  </data>
 </root>
