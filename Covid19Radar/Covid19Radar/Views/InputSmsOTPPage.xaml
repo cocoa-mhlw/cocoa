@@ -6,7 +6,7 @@
     xmlns:controls="clr-namespace:Covid19Radar.Controls"
     xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
     Title="{Binding Title}"
-    Padding="40,20">
+    Padding="40,30,40,80">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -16,8 +16,12 @@
         <Grid Grid.Row="0">
             <StackLayout>
                 <Label FontFamily="{StaticResource NotoSansMediumFontFamily}" Text="{Binding PhoneNumber, StringFormat={x:Static resources:AppResources.OtpEnterText}}" />
-                <controls:OtpFormEntry HorizontalOptions="FillAndExpand" OtpText="{Binding Otp}" />
-                <Grid>
+                <controls:OtpFormEntry
+                    x:Name="OtpForm"
+                    Margin="0,0,0,40"
+                    HorizontalOptions="FillAndExpand"
+                    OtpText="{Binding Otp}" />
+                <Grid ColumnSpacing="6" RowSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />

@@ -7,9 +7,13 @@
     <ContentView.Resources>
         <Style TargetType="renderers:CustomEntry">
             <Setter Property="WidthRequest" Value="35" />
-            <Setter Property="HeightRequest" Value="55" />
             <Setter Property="BorderColor" Value="{StaticResource Accent2Color}" />
             <Setter Property="MaxLength" Value="1" />
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="{StaticResource RobotoRegularFontFamily}" />
+            <Setter Property="FontSize" Value="40" />
             <Setter Property="Keyboard" Value="Numeric" />
         </Style>
     </ContentView.Resources>
