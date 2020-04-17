@@ -44,7 +44,6 @@ namespace Covid19Radar.ViewModels
             });
             OnClickNext = new DelegateCommand(async () =>
              {
-                 await _pageDialogService.DisplayAlertAsync("Ok", Otp, "OK");
                  await NavigationService.NavigateAsync("UserSettingPage");
              }, CanVerifyOtp);
         }
