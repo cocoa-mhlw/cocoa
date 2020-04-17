@@ -30,7 +30,11 @@ namespace Covid19Radar.iOS.Renderers
             var uiColor = _element.BorderColor.ToUIColor();
 
             Control.BorderStyle = UITextBorderStyle.None;
-            _height = Frame.Height / 2;
+            _height = _element.HeightRequest;
+            if (_height <= 0)
+            {
+                _height = Frame.Height / 2;
+            }
 
             _borderLine = new CALayer
             {
