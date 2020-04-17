@@ -1,9 +1,12 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace Covid19Radar.Renderers
 {
     public class CustomEntry : Entry
     {
+        public event EventHandler DeleteClicked;
+
         public static readonly BindableProperty BorderColorProperty =
            BindableProperty.Create(nameof(BorderColor),
                typeof(Color),
@@ -17,6 +20,11 @@ namespace Covid19Radar.Renderers
         {
             get => (Color)GetValue(BorderColorProperty);
             set => SetValue(BorderColorProperty, value);
+        }
+
+        public void TriggerDeleteClicked()
+        {
+            DeleteClicked?.Invoke(this, null);
         }
     }
 }
