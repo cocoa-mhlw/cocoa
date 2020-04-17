@@ -302,7 +302,7 @@
     <value>登録完了</value>
     <comment>Set up Completed</comment>
   </data>
-<data name="TextStatusSettingsDescription" xml:space="preserve">
+  <data name="TextStatusSettingsDescription" xml:space="preserve">
     <value>もし新型コロナで陽性と診断された場合、あなたの周りの人を守るために電話番号を入れて陽性登録をお願いします。</value>
     <comment>Status settings page description</comment>
   </data>
@@ -329,7 +329,7 @@ SMSメールを確認してください。</value>
     <comment>Status Settings page title</comment>
   </data>
   <data name="TextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-123-4567</value>
+    <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
   </data>
 </root>
