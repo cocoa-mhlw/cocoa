@@ -290,4 +290,16 @@
     <value>更新情報</value>
     <comment>Update Information Menu</comment>
   </data>
+  <data name="ButtonHome" xml:space="preserve">
+    <value>HOMEへ</value>
+    <comment>HOME</comment>
+  </data>
+  <data name="TextYoureReadyToGo" xml:space="preserve">
+    <value>登録完了しました。</value>
+    <comment>You're ready to go</comment>
+  </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>登録完了</value>
+    <comment>Set up Completed</comment>
+  </data>
 </root>
