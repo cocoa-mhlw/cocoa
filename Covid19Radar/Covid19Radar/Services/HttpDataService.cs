@@ -26,7 +26,8 @@ namespace Covid19Radar.Services
         public async Task<UserDataModel> PostRegisterUserAsync()
         {
             string url = AppConstants.ApiBaseUrl + "/Register";
-            var result = await Post(url, null);
+            var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+            var result = await Post(url, content);
             if (result != null)
             {
                 return Utils.DeserializeFromJson<UserDataModel>(result);
@@ -88,6 +89,7 @@ namespace Covid19Radar.Services
             }
             return null;
         }
+
         private async Task<string> Get(string url)
         {
             Task<HttpResponseMessage> stringAsync = httpClient.GetAsync(url);
@@ -103,8 +105,7 @@ namespace Covid19Radar.Services
 
         private async Task<string> Post(string url, HttpContent body)
         {
-            Task<HttpResponseMessage> stringAsync = httpClient.PostAsync(url, body);
-            HttpResponseMessage result = await stringAsync;
+            HttpResponseMessage result = await httpClient.PostAsync(url, body);
             await result.Content.ReadAsStringAsync();
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -112,10 +113,10 @@ namespace Covid19Radar.Services
             }
             return null;
         }
+
         private async Task<string> Put(string url, HttpContent body)
         {
-            Task<HttpResponseMessage> stringAsync = httpClient.PutAsync(url, body);
-            HttpResponseMessage result = await stringAsync;
+            var result = await httpClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -125,6 +126,7 @@ namespace Covid19Radar.Services
         }
 
     }
+
     public class PostBeaconDataModel
     {
         /// <summary>
