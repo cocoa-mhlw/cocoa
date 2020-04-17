@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="Covid19Radar.Views.StartTutorialPage"
+    x:Class="Covid19Radar.Views.SetupCompletedPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:extensions="clr-namespace:Covid19Radar.Extensions;assembly=Covid19Radar"
     xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
     Title="{Binding Title}"
-    NavigationPage.HasNavigationBar="False"
     Style="{StaticResource PageStyle}">
 
     <Grid>
@@ -24,7 +23,6 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Image
@@ -46,19 +44,19 @@
         <Label
             Grid.Row="2"
             HorizontalOptions="Center"
-            Text="{x:Static resources:AppResources.TextProtectingOurLovedOnes}">
+            Text="{x:Static resources:AppResources.TextYoureReadyToGo}">
             <Label.Margin>
                 <Thickness Top="{OnPlatform Android=0, iOS=16}" />
             </Label.Margin>
         </Label>
 
-        <Image Grid.Row="3" Source="{extensions:ImageResource Covid19Radar.Images.TopMainImg.png}" />
-
         <Button
-            Grid.Row="4"
+            Grid.Row="3"
             Margin="57,0"
-            Command="{Binding Path=OnClickNext}"
+            Command="{Binding Path=OnClickHome}"
             Style="{StaticResource DefaultButtonStyle}"
-            Text="{x:Static resources:AppResources.ButtonStart}" />
+            Text="{x:Static resources:AppResources.ButtonHome}"
+            VerticalOptions="End" />
     </Grid>
+
 </ContentPage>
