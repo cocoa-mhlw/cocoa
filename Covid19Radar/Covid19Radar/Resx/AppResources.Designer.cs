@@ -296,7 +296,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   090-123-4567 に類似しているローカライズされた文字列を検索します。
+        ///   090-1234-4567 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TextPhoneNumberPlaceholder {
             get {
@@ -536,83 +536,6 @@ namespace Covid19Radar.Resx {
         internal static string UpdateInformationMenu {
             get {
                 return ResourceManager.GetString("UpdateInformationMenu", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Update Information.
-        /// </summary>
-        internal static string TitleStatusSettings
-        {
-            get
-            {
-                return ResourceManager.GetString("TitleStatusSettings", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Update Information.
-        /// </summary>
-        internal static string TextStatusSettingsSubtitle
-        {
-            get
-            {
-                return ResourceManager.GetString("TextStatusSettingsSubtitle", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Update Information.
-        /// </summary>
-        internal static string TextStatusSettingsDescription
-        {
-            get
-            {
-                return ResourceManager.GetString("TextStatusSettingsDescription", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Update Information.
-        /// </summary>
-        internal static string TextStatusSettingsEnterNumber
-        {
-            get
-            {
-                return ResourceManager.GetString("TextStatusSettingsEnterNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update Information.
-        /// </summary>
-        internal static string TextPhoneNumberPlaceholder
-        {
-            get
-            {
-                return ResourceManager.GetString("TextPhoneNumberPlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update Information.
-        /// </summary>
-        internal static string TextStatusSettingsSMSDescription
-        {
-            get
-            {
-                return ResourceManager.GetString("TextStatusSettingsSMSDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update Information.
-        /// </summary>
-        internal static string TextStatusSettingsSMSInfo
-        {
-            get
-            {
-                return ResourceManager.GetString("TextStatusSettingsSMSInfo", resourceCulture);
             }
         }
     }
