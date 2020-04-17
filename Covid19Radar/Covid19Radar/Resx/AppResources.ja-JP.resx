@@ -211,8 +211,8 @@
     <comment>Device access page Bluetooth title</comment>
   </data>
   <data name="TextProtectingOurLovedOnes" xml:space="preserve">
-    <value>大切な人をCOVID-19から一緒に守りましょう</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
+    <value>大切な人をCOVID19から一緒に守りましょう</value>
+    <comment>Protecting our loved ones from COVID19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>デバイスへのアクセス許可</value>
@@ -275,11 +275,11 @@
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID-19Radar</value>
+    <value>COVID19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="StatusSettingsMenu" xml:space="preserve">
-    <value>ユーザー設定</value>
+    <value>ステータス設定</value>
     <comment>Status Settings Menu</comment>
   </data>
   <data name="ListOfContributorsMenu" xml:space="preserve">
