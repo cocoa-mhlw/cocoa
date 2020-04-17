@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Covid19Radar.Controls.OtpEntry"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:renderers="clr-namespace:Covid19Radar.Renderers">
+    <ContentView.Content>
+        <StackLayout Spacing="0">
+            <renderers:BorderlessEntry
+                x:Name="Entry"
+                Keyboard="Numeric"
+                MaxLength="1" />
+            <BoxView HeightRequest="1" Color="{StaticResource Accent2Color}" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
