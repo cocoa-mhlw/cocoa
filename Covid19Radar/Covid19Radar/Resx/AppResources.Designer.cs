@@ -61,7 +61,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   COVID19Radar に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to COVID-19Radar.
         /// </summary>
         internal static string AppName {
             get {
@@ -70,7 +70,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Agree に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Agree.
         /// </summary>
         internal static string ButtonAgree {
             get {
@@ -79,7 +79,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Agree and Proceed に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Agree and Proceed.
         /// </summary>
         internal static string ButtonAgreeAndProceed {
             get {
@@ -106,7 +106,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Register に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Register.
         /// </summary>
         internal static string ButtonRegister {
             get {
@@ -115,7 +115,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Start に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Start.
         /// </summary>
         internal static string ButtonStart {
             get {
@@ -124,7 +124,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   HOME に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to HOME.
         /// </summary>
         internal static string HomeTitle {
             get {
@@ -133,7 +133,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   List of Contributors に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to List of Contributors.
         /// </summary>
         internal static string ListOfContributorsMenu {
             get {
@@ -142,7 +142,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Status Settings に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Status Settings.
         /// </summary>
         internal static string StatusSettingsMenu {
             get {
@@ -151,7 +151,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Except as provided herein, the failure to exercise a right or to require performance of an obligation under this Terms shall not effect a party&apos;s ability to exercise such right or require such performance at any time thereafter nor shall be the waiver of a breach constitute a waiver of any subsequent breach に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Except as provided herein, the failure to exercise a right or to require performance of an obligation under this Terms shall not effect a party&apos;s ability to exercise such right or require such performance at any time thereafter nor shall be the waiver of a breach constitute a waiver of any subsequent breach.
         /// </summary>
         internal static string TermsOfServiceDescription1 {
             get {
@@ -160,7 +160,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute. に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute..
         /// </summary>
         internal static string TermsOfServiceDescription2 {
             get {
@@ -169,7 +169,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions. Upon termination, Your right to use the Service will cease immediately. に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions. Upon termination, Your right to use the Service will cease immediately..
         /// </summary>
         internal static string TermsOfServiceDescription3 {
             get {
@@ -178,7 +178,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws. に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws..
         /// </summary>
         internal static string TermsOfServiceDescription4 {
             get {
@@ -187,7 +187,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   1. Waiver に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to 1. Waiver.
         /// </summary>
         internal static string TermsOfServiceTitle1 {
             get {
@@ -196,7 +196,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   2. Translation Interpretation に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to 2. Translation Interpretation.
         /// </summary>
         internal static string TermsOfServiceTitle2 {
             get {
@@ -205,7 +205,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   3. Termination に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to 3. Termination.
         /// </summary>
         internal static string TermsOfServiceTitle3 {
             get {
@@ -214,7 +214,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   4. Governing Law に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to 4. Governing Law.
         /// </summary>
         internal static string TermsOfServiceTitle4 {
             get {
@@ -223,7 +223,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals. に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals..
         /// </summary>
         internal static string TextAppDescription {
             get {
@@ -232,8 +232,8 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
-        ///Select &apos;Always Allow&apos; to set up Bluetooth. に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+        ///Select &apos;Always Allow&apos; to set up Bluetooth..
         /// </summary>
         internal static string TextBluetoothDescription {
             get {
@@ -278,7 +278,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   How to works に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to How to works.
         /// </summary>
         internal static string TextHowToWorks {
             get {
@@ -287,7 +287,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Protecting our loved ones from COVID19 に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Protecting our loved ones from COVID-19.
         /// </summary>
         internal static string TextProtectingOurLovedOnes {
             get {
@@ -296,7 +296,53 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   No need to input personal information. We are using unique ID, allocated to you when installing an app. に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones..
+        /// </summary>
+        internal static string TextStatusSettingsDescription {
+            get {
+                return ResourceManager.GetString("TextStatusSettingsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the mobile number.
+        /// </summary>
+        internal static string TextStatusSettingsEnterNumber {
+            get {
+                return ResourceManager.GetString("TextStatusSettingsEnterNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We&apos;ll send you a verification code.
+        ///Please check your SMS..
+        /// </summary>
+        internal static string TextStatusSettingsSMSDescription {
+            get {
+                return ResourceManager.GetString("TextStatusSettingsSMSDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ※ We will not store your phone number. It will be sent directly to the database of the government..
+        /// </summary>
+        internal static string TextStatusSettingsSMSInfo {
+            get {
+                return ResourceManager.GetString("TextStatusSettingsSMSInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you received a positive diagnosis.
+        /// </summary>
+        internal static string TextStatusSettingsSubtitle {
+            get {
+                return ResourceManager.GetString("TextStatusSettingsSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No need to input personal information. We are using unique ID, allocated to you when installing an app..
         /// </summary>
         internal static string TextStep1Description {
             get {
@@ -404,7 +450,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   App Description に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to App Description.
         /// </summary>
         internal static string TitleAppDescription {
             get {
@@ -413,7 +459,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Terms of Service に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Terms of Service.
         /// </summary>
         internal static string TitleConsentByUserPage {
             get {
@@ -440,7 +486,16 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Update Information に類似しているローカライズされた文字列を検索します。
+        ///   Looks up a localized string similar to Status Settings.
+        /// </summary>
+        internal static string TitleStatusSettings {
+            get {
+                return ResourceManager.GetString("TitleStatusSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Information.
         /// </summary>
         internal static string UpdateInformationMenu {
             get {

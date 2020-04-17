@@ -1,44 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19Radar.Views.UserSettingPage"
-                          xmlns:local="clr-namespace:Covid19Radar"
-             Title="{Binding Title}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <StackLayout>
-                <Label Text="How to works" 
-                       TextColor="#333333" 
-                       FontSize="35" 
-                       Padding="0,20,0,20" 
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       FontAttributes="Bold"/>
-                <Label Text="We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals."
-                       TextColor="#333333"
-                       Padding="30,0,30,0"
-                       FontSize="16"
-                       LineHeight="1.2"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       LineBreakMode="WordWrap"/>
+<ContentPage
+    x:Class="Covid19Radar.Views.UserSettingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx"
+    Title="{Binding Title}">
+    <ScrollView Padding="0,20">
+        <StackLayout>
+            <StackLayout Margin="40,0">
+                <Label
+                    Margin="0,0,0,5"
+                    Style="{StaticResource Accent2ColorHeaderLabelStyle}"
+                    Text="{x:Static resources:AppResources.TextStatusSettingsSubtitle}" />
+                <Image Margin="0,0,0,20" Source="settings.png" />
+                <Label Text="{x:Static resources:AppResources.TextStatusSettingsDescription}" />
             </StackLayout>
-        </Grid>
-        <Grid Grid.Row="1" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="Register" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnChangeStatusOverInfection}"/>
-        </Grid>
-    </Grid>
-
+            <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />
+            <StackLayout Margin="40,0">
+                <Label FontAttributes="Bold" Text="{x:Static resources:AppResources.TextStatusSettingsEnterNumber}" />
+                <renderers:CustomEntry
+                    Margin="0,20"
+                    BorderColor="{StaticResource AccentColor}"
+                    Keyboard="Telephone"
+                    Placeholder="090-1234-5678" />
+                <Label Text="{x:Static resources:AppResources.TextStatusSettingsSMSDescription}" />
+                <Label
+                    Margin="0,10"
+                    FontSize="12"
+                    Text="{x:Static resources:AppResources.TextStatusSettingsSMSInfo}"
+                    TextColor="{StaticResource Accent6Color}" />
+                <Button
+                    Margin="0,40,0,80"
+                    BackgroundColor="{StaticResource Accent5Color}"
+                    Style="{StaticResource DefaultButtonStyle}"
+                    Text="{x:Static resources:AppResources.ButtonNext}" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
