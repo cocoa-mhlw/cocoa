@@ -1,51 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19Radar.Views.InputSmsOTPPage"
-                          xmlns:local="clr-namespace:Covid19Radar"
-             Title="{Binding Title}">
+<ContentPage
+    x:Class="Covid19Radar.Views.InputSmsOTPPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Padding="30,0,30,0" Grid.Row="0">
+        <Grid Grid.Row="0" Padding="30,0,30,0">
             <StackLayout>
-                <Label Text="Please enter the 6-digit number you received." 
-                       TextColor="#333333" 
-                       FontSize="28" 
-                       Padding="0,30,0,10" />
-                <Entry Text=""
-                       FontSize="35"
-                       Keyboard="Numeric"
-                       PlaceholderColor="#D1D1D1"
-                       TextColor="#333333" 
-                       Placeholder="6-digit"
-                       MaxLength="6"
-                       ClearButtonVisibility="WhileEditing" />
-                <Label Text="Sent to「Phone Number」」"
+                <Label
+                    Padding="0,30,0,10"
+                    FontSize="28"
+                    Text="Please enter the 6-digit number you received."
+                    TextColor="#333333" />
+                <Entry
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="35"
+                    Keyboard="Numeric"
+                    MaxLength="6"
+                    Placeholder="6-digit"
+                    PlaceholderColor="#D1D1D1"
+                    Text=""
+                    TextColor="#333333" />
+                <Label
+                    Padding="0,30,0,10"
                     FontSize="16"
-                    TextColor="#333333" 
-                    Padding="0,30,0,10"/>
-                <Label Padding="0,30,0,0"
-                       TextColor="#333333"
-                       FontSize="16"
-                       Text="Didn't receive the code?"  />
-                <Label FontSize="16"
-                       Padding="0,0,0,0"
-                       TextColor="#333333"
-                       Text="Send your code again"  />
+                    Text="Sent to「Phone Number」」"
+                    TextColor="#333333" />
+                <Label
+                    Padding="0,30,0,0"
+                    FontSize="16"
+                    Text="Didn't receive the code?"
+                    TextColor="#333333" />
+                <Label
+                    Padding="0,0,0,0"
+                    FontSize="16"
+                    Text="Send your code again"
+                    TextColor="#333333" />
             </StackLayout>
         </Grid>
         <Grid Grid.Row="1" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="Register" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickNext}"/>
+            <Button
+                BackgroundColor="#019ae8"
+                Command="{Binding Path=OnClickNext}"
+                FontSize="25"
+                MinimumHeightRequest="60"
+                MinimumWidthRequest="170"
+                Text="Register"
+                TextColor="#FFFFFF" />
         </Grid>
     </Grid>
 </ContentPage>
