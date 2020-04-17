@@ -14,6 +14,7 @@ using System;
 using Covid19Radar.Common;
 using Covid19Radar.Droid.Services;
 using Covid19Radar.Services;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Droid
 {
@@ -67,11 +68,15 @@ namespace Covid19Radar.Droid
             UserDataService userDataService = new UserDataService();
             beaconService.StartBeacon();
 
-            if (userDataService.IsExistUserData())
+            Task.Run(async () =>
             {
-                UserDataModel userDataModel = userDataService.Get();
-                beaconService.StartAdvertising(userDataModel);
-            }
+                var userExists = await userDataService.IsExistUserData();
+                if (userExists)
+                {
+                    UserDataModel userDataModel = userDataService.Get();
+                    beaconService.StartAdvertising(userDataModel);
+                }
+            });
         }
 
     }

@@ -3,9 +3,11 @@
     x:Class="Covid19Radar.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
     Title="{Binding Title}"
     Padding="80,20"
+    ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}">
 
     <StackLayout VerticalOptions="Center">
