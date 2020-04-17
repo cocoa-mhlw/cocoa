@@ -20,18 +20,21 @@ namespace Covid19Radar.Services
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
         }
 
-        public bool IsExistUserData()
+        public async Task<bool> IsExistUserData()
         {
             if (Application.Current.Properties.ContainsKey("UserData"))
             {
-                UserDataModel userData = Utils.DeserializeFromJson<UserDataModel>(Application.Current.Properties["UserData"].ToString());
-                var state = httpDataService.PutUserAsync(userData);
+                var userDataJson = Application.Current.Properties["UserData"].ToString();
+
+                UserDataModel userData = Utils.DeserializeFromJson<UserDataModel>(userDataJson);
+                var state = await httpDataService.PutUserAsync(userData);
 
                 if (state != null)
                 {
                     return true;
                 }
             }
+
             return false;
         }
 
