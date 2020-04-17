@@ -9,5 +9,6 @@
     <Color x:Key="Accent2Color">#1976D2</Color>
     <Color x:Key="Accent3Color">#E0E0E0</Color>
     <Color x:Key="Accent4Color">#DE000000</Color>
-
+    <Color x:Key="Accent5Color">#BDBDBD</Color>
+    <Color x:Key="Accent6Color">#999999</Color>
 </ResourceDictionary>
