@@ -20,7 +20,7 @@ namespace Covid19Radar.Services
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
         }
 
-        public async Task<bool> IsExistUserData()
+        public async Task<bool> IsExistUserDataAsync()
         {
             if (Application.Current.Properties.ContainsKey("UserData"))
             {
@@ -55,10 +55,10 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        public void Set(UserDataModel userData)
+        public async void SetAsync(UserDataModel userData)
         {
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
-            Application.Current.SavePropertiesAsync();
+            await Application.Current.SavePropertiesAsync();
         }
     }
 }
