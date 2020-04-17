@@ -45,9 +45,11 @@ namespace Covid19Radar
          */
         static App()
         {
+            /*
             Crashes.SendingErrorReport += SendingErrorReportHandler;
             Crashes.SentErrorReport += SentErrorReportHandler;
             Crashes.FailedToSendErrorReport += FailedToSendErrorReportHandler;
+            */
         }
 
         public App() : this(null) { }
@@ -60,7 +62,8 @@ namespace Covid19Radar
             INavigationResult result;
 
             // AppCenter
-            AppCenter.LogLevel = LogLevel.Verbose;
+            /*
+            AppCenter.LogLevel = LogLevel.Debug;
             Crashes.ShouldProcessErrorReport = ShouldProcess;
             Crashes.ShouldAwaitUserConfirmation = ConfirmationHandler;
             Crashes.GetErrorAttachments = GetErrorAttachments;
@@ -79,12 +82,14 @@ namespace Covid19Radar
                 AppCenterLog.Info(LogTag, "Crashes.LastSessionCrashReport.Exception=" + report.Result?.StackTrace);
             });
             Container.Resolve<ILogger>().Log("Started App Center");
+            */
+
 
             // Check user data and skip tutorial
             UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             //UserDataModel userData =await userDataService.Register();
 
-            var isUserExists = await userDataService.IsExistUserData();
+            var isUserExists = await userDataService.IsExistUserDataAsync();
             if (isUserExists)
             {
                 UserDataModel _userData = userDataService.Get();
@@ -116,9 +121,11 @@ namespace Covid19Radar
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // logger
+            /*
             var logger = new AppCenterLogger();
             containerRegistry.RegisterInstance<ILogger>(logger);
             containerRegistry.RegisterInstance<ILoggerFacade>(logger);
+            */
 
             // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
@@ -151,6 +158,8 @@ namespace Covid19Radar
                 Container.Resolve<ILogger>().Report(e.Exception);
             };
         }
+
+        /*
 
         static void SendingErrorReportHandler(object sender, SendingErrorReportEventArgs e)
         {
@@ -254,10 +263,8 @@ namespace Covid19Radar
         {
             return new ErrorAttachmentLog[]
             {
-                /*
-                ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
-                ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
-                */
+//                ErrorAttachmentLog.AttachmentWithText("Hello world!", "hello.txt"),
+//                ErrorAttachmentLog.AttachmentWithBinary(Encoding.UTF8.GetBytes("Fake image"), "fake_image.jpeg", "image/jpeg")
             };
         }
 
@@ -293,5 +300,6 @@ namespace Covid19Radar
             }
             return custom;
         }
+*/
     }
 }
