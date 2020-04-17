@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Covid19Radar.Controls.OtpFormEntry"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:renderers="clr-namespace:Covid19Radar.Renderers">
+    <ContentView.Resources>
+        <Style TargetType="renderers:CustomEntry">
+            <Setter Property="WidthRequest" Value="35" />
+            <Setter Property="HeightRequest" Value="55" />
+            <Setter Property="BorderColor" Value="{StaticResource Accent2Color}" />
+            <Setter Property="MaxLength" Value="1" />
+            <Setter Property="Keyboard" Value="Numeric" />
+        </Style>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <renderers:CustomEntry x:Name="OtpEntry1" AutomationId="OtpEntry1" />
+            <renderers:CustomEntry
+                x:Name="OtpEntry2"
+                Grid.Column="1"
+                AutomationId="OtpEntry2" />
+            <renderers:CustomEntry
+                x:Name="OtpEntry3"
+                Grid.Column="2"
+                AutomationId="OtpEntry3" />
+            <renderers:CustomEntry
+                x:Name="OtpEntry4"
+                Grid.Column="3"
+                AutomationId="OtpEntry4" />
+            <renderers:CustomEntry
+                x:Name="OtpEntry5"
+                Grid.Column="4"
+                AutomationId="OtpEntry5" />
+            <renderers:CustomEntry
+                x:Name="OtpEntry6"
+                Grid.Column="5"
+                AutomationId="OtpEntry6" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>
