@@ -38,23 +38,14 @@ namespace Covid19Radar.Services
             var downloadModel = await httpDataService.PostUserAsync(current);
             if (downloadModel.UserStatus != current.UserStatus)
             {
-                current = downloadModel;
                 await SetAsync(downloadModel);
-                UserDataChanged(this, current);
             }
 
         }
 
         public bool IsExistUserData()
         {
-            if (Application.Current.Properties.ContainsKey("UserData"))
-            {
-                var userDataJson = Application.Current.Properties["UserData"].ToString();
-
-                UserDataModel userData = Utils.DeserializeFromJson<UserDataModel>(userDataJson);
-                return (userData != null);
-            }
-            return false;
+            return current != null;
         }
 
 
@@ -77,8 +68,15 @@ namespace Covid19Radar.Services
 
         public async Task SetAsync(UserDataModel userData)
         {
+            if (userData == current)
+            {
+                return;
+            }
+
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             await Application.Current.SavePropertiesAsync();
+            current = userData;
+            UserDataChanged(this, current);
         }
     }
 }
