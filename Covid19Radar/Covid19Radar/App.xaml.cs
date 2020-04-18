@@ -88,8 +88,7 @@ namespace Covid19Radar
             UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             //UserDataModel userData =await userDataService.Register();
 
-            var isUserExists = userDataService.IsExistUserData();
-            if (isUserExists)
+            if (userDataService.IsExistUserData)
             {
                 UserDataModel _userData = userDataService.Get();
                 _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
