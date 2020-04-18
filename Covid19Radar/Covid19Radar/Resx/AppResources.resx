@@ -331,4 +331,12 @@ Please check your SMS.</value>
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
   </data>
+  <data name="DetectedBeaconListMenu" xml:space="preserve">
+    <value>Detected Beacon List</value>
+    <comment>Detected Beacon List Menu</comment>
+  </data>
+  <data name="LicenseAgreementMenu" xml:space="preserve">
+    <value>License Agreement Menu</value>
+    <comment>License Agreement Menu</comment>
+  </data>
 </root>
