@@ -68,11 +68,10 @@ namespace Covid19Radar.Droid
             UserDataService userDataService = new UserDataService();
 
 
-            Task.Run(async () =>
+            Task.Run(() =>
             {
-
                 beaconService.StartBeacon();
-                var userExists = await userDataService.IsExistUserDataAsync();
+                var userExists = userDataService.IsExistUserData();
                 if (userExists)
                 {
                     UserDataModel userDataModel = userDataService.Get();

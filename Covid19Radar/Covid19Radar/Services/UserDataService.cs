@@ -14,29 +14,47 @@ namespace Covid19Radar.Services
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
+        private readonly MinutesTimer _downloadTimer;
+        private UserDataModel current;
 
         public UserDataService()
         {
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
+
+            if (IsExistUserData())
+            {
+                current = Get();
+                _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
+                _downloadTimer.Start();
+                _downloadTimer.TimeOutEvent += TimerDownload;
+            }
         }
 
-        public async Task<bool> IsExistUserDataAsync()
+        private async void TimerDownload(EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+
+            var downloadModel = await httpDataService.PostUserAsync(current);
+            if (downloadModel.UserStatus != current.UserStatus)
+            {
+                current = downloadModel;
+                await SetAsync(downloadModel);
+            }
+
+        }
+
+        public bool IsExistUserData()
         {
             if (Application.Current.Properties.ContainsKey("UserData"))
             {
                 var userDataJson = Application.Current.Properties["UserData"].ToString();
 
                 UserDataModel userData = Utils.DeserializeFromJson<UserDataModel>(userDataJson);
-                var state = await httpDataService.PutUserAsync(userData);
-
-                if (state != null)
-                {
-                    return true;
-                }
+                return (userData != null);
             }
-
             return false;
         }
+
 
         public async Task<UserDataModel> RegistUserAsync()
         {
@@ -55,7 +73,7 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        public async void SetAsync(UserDataModel userData)
+        public async Task SetAsync(UserDataModel userData)
         {
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             await Application.Current.SavePropertiesAsync();
