@@ -26,10 +26,12 @@ namespace Covid19Radar.Services
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
 
             current = Get();
-            _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
-            _downloadTimer.Start();
-            _downloadTimer.TimeOutEvent += TimerDownload;
-
+            if (current != null)
+            {
+                _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
+                _downloadTimer.Start();
+                _downloadTimer.TimeOutEvent += TimerDownload;
+            }
         }
 
 
