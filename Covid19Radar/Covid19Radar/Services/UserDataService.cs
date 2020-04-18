@@ -11,6 +11,9 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
+    /// <summary>
+    /// This service registers, retrieves, stores, and automatically updates user data.
+    /// </summary>
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
