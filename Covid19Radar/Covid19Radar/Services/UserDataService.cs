@@ -17,7 +17,7 @@ namespace Covid19Radar.Services
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
-        private readonly MinutesTimer _downloadTimer;
+        private MinutesTimer _downloadTimer;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
@@ -28,10 +28,15 @@ namespace Covid19Radar.Services
             current = Get();
             if (current != null)
             {
-                _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
-                _downloadTimer.Start();
-                _downloadTimer.TimeOutEvent += TimerDownload;
+                StartTimer();
             }
+        }
+
+        private void StartTimer()
+        {
+            _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
+            _downloadTimer.Start();
+            _downloadTimer.TimeOutEvent += TimerDownload;
         }
 
 
@@ -81,11 +86,18 @@ namespace Covid19Radar.Services
             {
                 return;
             }
-
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             await Application.Current.SavePropertiesAsync();
             current = userData;
-            UserDataChanged(this, current);
+            if (UserDataChanged != null)
+            {
+                UserDataChanged(this, current);
+            }
+            // only first time.
+            if (current == null && userData != null)
+            {
+                StartTimer();
+            }
         }
     }
 }
