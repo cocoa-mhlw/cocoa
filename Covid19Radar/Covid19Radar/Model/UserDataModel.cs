@@ -34,10 +34,10 @@ namespace Covid19Radar.Model
 
         public bool Equals(UserDataModel other)
         {
-            return UserUuid == other.UserUuid
-                && Major == other.Major
-                && Minor == other.Minor
-                && UserStatus == other.UserStatus;
+            return UserUuid == other?.UserUuid
+                && Major == other?.Major
+                && Minor == other?.Minor
+                && UserStatus == other?.UserStatus;
         }
 
         /// <summary>
