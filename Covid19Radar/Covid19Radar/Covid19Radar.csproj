@@ -49,6 +49,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\LicenseAgreementPage.xaml.cs">
+      <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ContributersPage.xaml.cs">
       <DependentUpon>ContributersPage.xaml</DependentUpon>
     </Compile>
