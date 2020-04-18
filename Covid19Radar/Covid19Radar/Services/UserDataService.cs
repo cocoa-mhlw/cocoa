@@ -34,7 +34,7 @@ namespace Covid19Radar.Services
         {
             System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
 
-            if (!IsExistUserData()) { return; }
+            if (!IsExistUserData) { return; }
 
             var downloadModel = await httpDataService.PostUserAsync(current);
             if (downloadModel.UserStatus != current.UserStatus)
@@ -44,10 +44,7 @@ namespace Covid19Radar.Services
 
         }
 
-        public bool IsExistUserData()
-        {
-            return current != null;
-        }
+        public bool IsExistUserData { get => current != null; }
 
 
         public async Task<UserDataModel> RegistUserAsync()

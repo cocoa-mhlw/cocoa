@@ -71,8 +71,7 @@ namespace Covid19Radar.Droid
             Task.Run(() =>
             {
                 beaconService.StartBeacon();
-                var userExists = userDataService.IsExistUserData();
-                if (userExists)
+                if (userDataService.IsExistUserData)
                 {
                     UserDataModel userDataModel = userDataService.Get();
                     beaconService.StartAdvertising(userDataModel);
