@@ -88,13 +88,14 @@ namespace Covid19Radar.Services
             }
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             await Application.Current.SavePropertiesAsync();
+            var isNull = current == null;
             current = userData;
             if (UserDataChanged != null)
             {
                 UserDataChanged(this, current);
             }
             // only first time.
-            if (current == null && userData != null)
+            if (isNull && userData != null)
             {
                 StartTimer();
             }
