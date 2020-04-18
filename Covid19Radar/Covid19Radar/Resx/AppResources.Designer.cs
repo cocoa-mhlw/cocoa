@@ -133,11 +133,29 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Detected Beacon List に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DetectedBeaconListMenu {
+            get {
+                return ResourceManager.GetString("DetectedBeaconListMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   HOME に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomeTitle {
             get {
                 return ResourceManager.GetString("HomeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   License Agreement Menu に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LicenseAgreementMenu {
+            get {
+                return ResourceManager.GetString("LicenseAgreementMenu", resourceCulture);
             }
         }
         
@@ -538,6 +556,5 @@ namespace Covid19Radar.Resx {
                 return ResourceManager.GetString("UpdateInformationMenu", resourceCulture);
             }
         }
-
     }
 }
