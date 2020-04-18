@@ -16,6 +16,7 @@ namespace Covid19Radar.Services
         private readonly HttpDataService httpDataService;
         private readonly MinutesTimer _downloadTimer;
         private UserDataModel current;
+        public event EventHandler<UserDataModel> UserDataChanged;
 
         public UserDataService()
         {
@@ -39,6 +40,7 @@ namespace Covid19Radar.Services
             {
                 current = downloadModel;
                 await SetAsync(downloadModel);
+                UserDataChanged(this, current);
             }
 
         }
