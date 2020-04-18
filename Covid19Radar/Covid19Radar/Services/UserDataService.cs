@@ -37,7 +37,7 @@ namespace Covid19Radar.Services
             if (!IsExistUserData) { return; }
 
             var downloadModel = await httpDataService.PostUserAsync(current);
-            if (downloadModel.UserStatus != current.UserStatus)
+            if (downloadModel != current)
             {
                 await SetAsync(downloadModel);
             }
