@@ -6,7 +6,7 @@
     xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true">
     <ScrollView Padding="0,20">
@@ -16,7 +16,7 @@
                     Margin="0,0,0,5"
                     Style="{StaticResource Accent2ColorHeaderLabelStyle}"
                     Text="{x:Static resources:AppResources.TextStatusSettingsSubtitle}" />
-                <Image Margin="0,0,0,20" Source="settings.png" />
+                <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
                 <Label Text="{x:Static resources:AppResources.TextStatusSettingsDescription}" />
             </StackLayout>
             <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />
