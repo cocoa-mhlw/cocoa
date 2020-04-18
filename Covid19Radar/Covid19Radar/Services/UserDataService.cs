@@ -53,8 +53,7 @@ namespace Covid19Radar.Services
         public async Task<UserDataModel> RegistUserAsync()
         {
             UserDataModel userData = await httpDataService.PostRegisterUserAsync();
-            Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
-            await Application.Current.SavePropertiesAsync();
+            await SetAsync(userData);
             return userData;
         }
 
