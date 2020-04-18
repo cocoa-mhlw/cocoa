@@ -84,20 +84,17 @@ namespace Covid19Radar
             Container.Resolve<ILogger>().Log("Started App Center");
             */
 
-
             // Check user data and skip tutorial
             UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             //UserDataModel userData =await userDataService.Register();
 
-            var isUserExists = await userDataService.IsExistUserDataAsync();
-            if (isUserExists)
+            if (userDataService.IsExistUserData)
             {
                 UserDataModel _userData = userDataService.Get();
                 _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
                 // Only Call InitializeService! Start automagically!
                 AppUtils.CheckPermission();
                 _beaconService.InitializeService();
-
                 result = await NavigationService.NavigateAsync("NavigationPage/HomePage");
             }
             else
