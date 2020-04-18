@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:extensions="clr-namespace:Covid19Radar.Extensions;assembly=Covid19Radar"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     NavigationPage.HasNavigationBar="False"
@@ -29,7 +29,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Image
+        <ffimageloading:CachedImage
             Grid.Row="0"
             HorizontalOptions="Center"
             Source="{extensions:ImageResource Covid19Radar.Images.Logo.png}"
@@ -54,7 +54,7 @@
             </Label.Margin>
         </Label>
 
-        <Image Grid.Row="3" Source="{extensions:ImageResource Covid19Radar.Images.TopMainImg.png}" />
+        <ffimageloading:CachedImage Grid.Row="3" Source="{extensions:ImageResource Covid19Radar.Images.TopMainImg.png}" />
 
         <Button
             Grid.Row="4"

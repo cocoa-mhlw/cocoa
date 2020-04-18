@@ -6,8 +6,12 @@ namespace Covid19Radar.Common
 {
     public class AppConstants
     {
+        /*
         public static readonly string AppCenterTokensAndroid = "APPCENTER_ANDROID";
         public static readonly string AppCenterTokensIOS = "APPCENTER_IOS";
+        */
+        public static readonly string AppCenterTokensAndroid = "8e6ad3ee-4600-4375-9fbc-f7d392039754";
+        public static readonly string AppCenterTokensIOS = "90ea51de-412a-4264-9971-2ad97ff7cd80";
 
         public static readonly string ApiBaseUrl = "https://covid19radar.azurewebsites.net/api";
         public static readonly string ApiSecret = "API_SECRET";
