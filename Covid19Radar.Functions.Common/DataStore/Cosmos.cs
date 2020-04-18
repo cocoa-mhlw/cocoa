@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
-using Microsoft.Azure.WebJobs.Extensions.Http;
 
 namespace Covid19Radar.DataStore
 {
