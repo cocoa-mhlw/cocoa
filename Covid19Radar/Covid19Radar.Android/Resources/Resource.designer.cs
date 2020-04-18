@@ -18688,10 +18688,10 @@ namespace Covid19Radar.Droid
 			public const int fab_transformation_sheet_behavior = 2131558483;
 			
 			// aapt resource value: 0x7F0D0054
-			public const int hide_bottom_view_on_scroll_behavior = 2131558484;
+			public const int fcm_fallback_notification_channel_label = 2131558484;
 			
 			// aapt resource value: 0x7F0D0055
-			public const int mr_button_content_description = 2131558485;
+			public const int hide_bottom_view_on_scroll_behavior = 2131558485;
 			
 			// aapt resource value: 0x7F0D0056
 			public const int library_name = 2131558486;
