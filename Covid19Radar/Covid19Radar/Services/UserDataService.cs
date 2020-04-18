@@ -22,18 +22,19 @@ namespace Covid19Radar.Services
         {
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
 
-            if (IsExistUserData())
-            {
-                current = Get();
-                _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
-                _downloadTimer.Start();
-                _downloadTimer.TimeOutEvent += TimerDownload;
-            }
+            current = Get();
+            _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
+            _downloadTimer.Start();
+            _downloadTimer.TimeOutEvent += TimerDownload;
+
         }
+
 
         private async void TimerDownload(EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+
+            if (!IsExistUserData()) { return; }
 
             var downloadModel = await httpDataService.PostUserAsync(current);
             if (downloadModel.UserStatus != current.UserStatus)
