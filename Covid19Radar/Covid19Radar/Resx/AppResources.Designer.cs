@@ -538,5 +538,6 @@ namespace Covid19Radar.Resx {
                 return ResourceManager.GetString("UpdateInformationMenu", resourceCulture);
             }
         }
+
     }
 }
