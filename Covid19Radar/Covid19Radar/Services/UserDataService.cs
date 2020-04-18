@@ -49,7 +49,7 @@ namespace Covid19Radar.Services
                     Minor = current.Minor,
                     UserStatus = current.UserStatus
                 };
-                await SetAsync(downloadModel);
+                await SetAsync(newModel);
             }
 
         }
