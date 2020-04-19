@@ -56,6 +56,8 @@ namespace Covid19Radar.Droid.Services
             foreach (var beacon in beacons)
             {
                 await _httpDataService.PostBeaconDataAsync(_userData, beacon);
+                beacon.IsSentToServer = true;
+                _connection.Update(beacon);
             }
         }
 
@@ -179,6 +181,7 @@ namespace Covid19Radar.Droid.Services
         {
             System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
             var now = DateTime.UtcNow;
+            var keyTime = now.ToString("yyyyMMddHH");
 
             ICollection<Beacon> beacons = rangeEventArgs.Beacons;
             if (beacons != null && beacons.Count > 0)
@@ -186,7 +189,7 @@ namespace Covid19Radar.Droid.Services
                 var foundBeacons = beacons.ToList();
                 foreach (Beacon beacon in foundBeacons)
                 {
-                    var key = beacon.Id1.ToString() + beacon.Id2.ToString() + beacon.Id3.ToString();
+                    var key = $"{beacon.Id1}{beacon.Id2}{beacon.Id3}.{keyTime}";
                     var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
                     if (result == null)
                     {
@@ -202,6 +205,8 @@ namespace Covid19Radar.Droid.Services
                         //                       data.TXPower = beacon.TxPower;
                         data.ElaspedTime = new TimeSpan();
                         data.LastDetectTime = now;
+                        data.FirstDetectTime = now;
+                        data.KeyTime = keyTime;
                         _connection.Insert(data);
                     }
                     else
@@ -218,6 +223,7 @@ namespace Covid19Radar.Droid.Services
                         //                        data.TXPower = beacon.TxPower;
                         data.ElaspedTime += now - data.LastDetectTime;
                         data.LastDetectTime = now;
+                        data.KeyTime = keyTime;
                         _connection.Update(data);
                         System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
                     }
