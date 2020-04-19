@@ -72,11 +72,14 @@ namespace Covid19Radar.Services
             postBeaconDataModel.Count = beacon.Count;
             postBeaconDataModel.Distance = beacon.Distance;
             postBeaconDataModel.ElaspedTime = beacon.ElaspedTime;
+            postBeaconDataModel.FirstDetectTime = beacon.FirstDetectTime;
             postBeaconDataModel.LastDetectTime = beacon.LastDetectTime;
             postBeaconDataModel.Major = beacon.Major;
             postBeaconDataModel.Minor = beacon.Minor;
             postBeaconDataModel.Rssi = beacon.Rssi;
             postBeaconDataModel.TXPower = beacon.TXPower;
+            postBeaconDataModel.KeyTime = beacon.KeyTime;
+            postBeaconDataModel.Id = beacon.Id;
             postBeaconDataModel.UserMajor = user.Major;
             postBeaconDataModel.UserMinor = user.Minor;
             postBeaconDataModel.UserUuid = user.UserUuid;
@@ -129,6 +132,12 @@ namespace Covid19Radar.Services
 
     public class PostBeaconDataModel
     {
+        /// <summary>
+        /// auto number key
+        /// </summary>
+        /// <value>Id</value>
+        public string Id { get; set; }
+
         /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
@@ -190,6 +199,15 @@ namespace Covid19Radar.Services
         /// The last time measured.
         /// </summary>
         public DateTime LastDetectTime { get; set; }
+        /// <summary>
+        /// The first time measured.
+        /// </summary>
+        public DateTime FirstDetectTime { get; set; }
+        /// <summary>
+        /// The splited timespan.
+        /// </summary>
+        public string KeyTime { get; set; }
+
 
     }
 }
