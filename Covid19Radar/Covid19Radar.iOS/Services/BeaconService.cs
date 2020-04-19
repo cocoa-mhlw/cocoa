@@ -59,6 +59,8 @@ namespace Covid19Radar.iOS.Services
             foreach (var beacon in beacons)
             {
                 await _httpDataService.PostBeaconDataAsync(_userData, beacon);
+                beacon.IsSentToServer = true;
+                _connection.Update(beacon);
             }
         }
 
@@ -172,6 +174,7 @@ namespace Covid19Radar.iOS.Services
         {
             System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
             var now = DateTime.UtcNow;
+            var keyTime = now.ToString("yyyyMMddHH");
 
             foreach (var beacon in e.Beacons)
             {
@@ -180,7 +183,7 @@ namespace Covid19Radar.iOS.Services
                     return;
                 }
 
-                var key = beacon.Uuid.ToString() + beacon.Major.ToString() + beacon.Minor.ToString();
+                var key = $"{beacon.Uuid}{beacon.Major}{beacon.Minor}.{keyTime}";
                 var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
                 if (result == null)
                 {
@@ -195,6 +198,8 @@ namespace Covid19Radar.iOS.Services
                     //                        data.TXPower = beacon.tr;
                     data.ElaspedTime = new TimeSpan();
                     data.LastDetectTime = now;
+                    data.FirstDetectTime = now;
+                    data.KeyTime = keyTime;
                     _connection.Insert(data);
                 }
                 else
@@ -210,6 +215,7 @@ namespace Covid19Radar.iOS.Services
                     //                        data.TXPower = beacon.tr;
                     data.ElaspedTime += now - data.LastDetectTime;
                     data.LastDetectTime = now;
+                    data.KeyTime = keyTime;
                     _connection.Update(data);
                     System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
                 }
