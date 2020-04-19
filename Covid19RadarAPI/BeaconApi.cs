@@ -89,7 +89,7 @@ namespace Covid19Radar.Api
         private async Task<IActionResult> Add(BeaconParameter param)
         {
             var data = new BeaconModel();
-            data.id = Guid.NewGuid().ToString("N") + DateTime.UtcNow.Ticks;
+            data.id = param.Id;
             data.UserUuid = param.UserUuid;
             data.UserMajor = param.UserMajor;
             data.UserMinor = param.UserMinor;
