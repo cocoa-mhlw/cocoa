@@ -102,6 +102,8 @@ namespace Covid19Radar.Api
             data.Minor = param.Minor;
             data.Rssi = param.Rssi;
             data.TXPower = param.TXPower;
+            data.FirstDetectTime = param.FirstDetectTime;
+            data.KeyTime = param.KeyTime;
             data.TimeStamp = DateTime.UtcNow;
             var result = await Cosmos.Beacon.CreateItemAsync(data);
             return new StatusCodeResult(201);
