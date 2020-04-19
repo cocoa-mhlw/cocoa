@@ -54,6 +54,18 @@ namespace Covid19Radar.Model
         /// The last time measured.
         /// </summary>
         public DateTime LastDetectTime { get; set; }
+        /// <summary>
+        /// The first time measured.
+        /// </summary>
+        public DateTime FirstDetectTime { get; set; }
+        /// <summary>
+        /// The splited timespan.
+        /// </summary>
+        public string KeyTime { get; set; }
+        /// <summary>
+        /// Data sent to the server
+        /// </summary>
+        public bool IsSentToServer { get; set; }
     }
 }
 
