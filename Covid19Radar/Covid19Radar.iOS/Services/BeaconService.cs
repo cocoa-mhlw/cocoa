@@ -171,6 +171,7 @@ namespace Covid19Radar.iOS.Services
         private async void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
+            var now = DateTime.UtcNow;
 
             foreach (var beacon in e.Beacons)
             {
@@ -193,12 +194,8 @@ namespace Covid19Radar.iOS.Services
                     data.Rssi = (short)beacon.Rssi;
                     //                        data.TXPower = beacon.tr;
                     data.ElaspedTime = new TimeSpan();
-                    data.LastDetectTime = DateTime.Now;
+                    data.LastDetectTime = now;
                     _connection.Insert(data);
-                    if (data.ElaspedTime > TimeSpan.FromMinutes(AppConstants.ElapsedTimeOfTransmitStart))
-                    {
-                        await _httpDataService.PostBeaconDataAsync(_userData, data);
-                    }
                 }
                 else
                 {
@@ -211,8 +208,8 @@ namespace Covid19Radar.iOS.Services
                     data.Distance += (beacon.Accuracy - data.Distance) / data.Count;
                     data.Rssi = (short)beacon.Rssi;
                     //                        data.TXPower = beacon.tr;
-                    data.ElaspedTime = new TimeSpan();
-                    data.LastDetectTime = DateTime.Now;
+                    data.ElaspedTime += now - data.LastDetectTime;
+                    data.LastDetectTime = now;
                     _connection.Update(data);
                     System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
                 }
