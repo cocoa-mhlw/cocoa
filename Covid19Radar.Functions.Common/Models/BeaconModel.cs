@@ -79,5 +79,9 @@ namespace Covid19Radar.Models
         /// created timestamp UTC
         /// </summary>
         public DateTime TimeStamp { get; set; }
+        /// <summary>
+        /// PartitionKey
+        /// </summary>
+        public string PartitionKey { get; set; }
     }
 }
