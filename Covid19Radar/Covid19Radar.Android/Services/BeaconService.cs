@@ -178,6 +178,7 @@ namespace Covid19Radar.Droid.Services
         private async void DidRangeBeaconsInRegionComplete(object sender, RangeEventArgs rangeEventArgs)
         {
             System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
+            var now = DateTime.UtcNow;
 
             ICollection<Beacon> beacons = rangeEventArgs.Beacons;
             if (beacons != null && beacons.Count > 0)
@@ -200,7 +201,7 @@ namespace Covid19Radar.Droid.Services
                         data.Rssi = beacon.Rssi;
                         //                       data.TXPower = beacon.TxPower;
                         data.ElaspedTime = new TimeSpan();
-                        data.LastDetectTime = DateTime.Now;
+                        data.LastDetectTime = now;
                         _connection.Insert(data);
                     }
                     else
@@ -215,8 +216,8 @@ namespace Covid19Radar.Droid.Services
                         data.Distance += (beacon.Distance - data.Distance) / data.Count;
                         data.Rssi = beacon.Rssi;
                         //                        data.TXPower = beacon.TxPower;
-                        data.ElaspedTime += DateTime.Now - data.LastDetectTime;
-                        data.LastDetectTime = DateTime.Now;
+                        data.ElaspedTime += now - data.LastDetectTime;
+                        data.LastDetectTime = now;
                         _connection.Update(data);
                         System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
                     }
