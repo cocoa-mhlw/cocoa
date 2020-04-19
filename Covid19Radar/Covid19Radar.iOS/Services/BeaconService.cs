@@ -18,6 +18,7 @@ namespace Covid19Radar.iOS.Services
 {
     public class BeaconService : IBeaconService, IDisposable
     {
+        private static object dataLock = new object();
         private UserDataModel _userData;
         private bool _transmitterFlg = false;
         private CBPeripheralManager _beaconTransmitter = new CBPeripheralManager();
@@ -58,9 +59,15 @@ namespace Covid19Radar.iOS.Services
             List<BeaconDataModel> beacons = _connection.Table<BeaconDataModel>().ToList();
             foreach (var beacon in beacons)
             {
+                if (beacon.IsSentToServer) continue;
                 await _httpDataService.PostBeaconDataAsync(_userData, beacon);
-                beacon.IsSentToServer = true;
-                _connection.Update(beacon);
+                var key = beacon.Id;
+                lock (dataLock)
+                {
+                    var b = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
+                    b.IsSentToServer = true;
+                    _connection.Update(b);
+                }
             }
         }
 
@@ -184,40 +191,45 @@ namespace Covid19Radar.iOS.Services
                 }
 
                 var key = $"{beacon.Uuid}{beacon.Major}{beacon.Minor}.{keyTime}";
-                var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
-                if (result == null)
+                lock (dataLock)
                 {
-                    BeaconDataModel data = new BeaconDataModel();
-                    data.Id = key;
-                    data.Count = 0;
-                    data.BeaconUuid = beacon.Uuid.ToString();
-                    data.Major = beacon.Major.ToString();
-                    data.Minor = beacon.Minor.ToString();
-                    data.Distance = beacon.Accuracy;
-                    data.Rssi = (short)beacon.Rssi;
-                    //                        data.TXPower = beacon.tr;
-                    data.ElaspedTime = new TimeSpan();
-                    data.LastDetectTime = now;
-                    data.FirstDetectTime = now;
-                    data.KeyTime = keyTime;
-                    _connection.Insert(data);
-                }
-                else
-                {
-                    BeaconDataModel data = result;
-                    data.Id = key;
-                    data.Count++;
-                    data.BeaconUuid = beacon.Uuid.ToString();
-                    data.Major = beacon.Major.ToString();
-                    data.Minor = beacon.Minor.ToString();
-                    data.Distance += (beacon.Accuracy - data.Distance) / data.Count;
-                    data.Rssi = (short)beacon.Rssi;
-                    //                        data.TXPower = beacon.tr;
-                    data.ElaspedTime += now - data.LastDetectTime;
-                    data.LastDetectTime = now;
-                    data.KeyTime = keyTime;
-                    _connection.Update(data);
-                    System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
+                    var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
+                    if (result == null)
+                    {
+                        BeaconDataModel data = new BeaconDataModel();
+                        data.Id = key;
+                        data.Count = 0;
+                        data.BeaconUuid = beacon.Uuid.ToString();
+                        data.Major = beacon.Major.ToString();
+                        data.Minor = beacon.Minor.ToString();
+                        data.Distance = beacon.Accuracy;
+                        data.Rssi = (short)beacon.Rssi;
+                        //                        data.TXPower = beacon.tr;
+                        data.ElaspedTime = new TimeSpan();
+                        data.LastDetectTime = now;
+                        data.FirstDetectTime = now;
+                        data.KeyTime = keyTime;
+                        data.IsSentToServer = false;
+                        _connection.Insert(data);
+                    }
+                    else
+                    {
+                        BeaconDataModel data = result;
+                        data.Id = key;
+                        data.Count++;
+                        data.BeaconUuid = beacon.Uuid.ToString();
+                        data.Major = beacon.Major.ToString();
+                        data.Minor = beacon.Minor.ToString();
+                        data.Distance += (beacon.Accuracy - data.Distance) / data.Count;
+                        data.Rssi = (short)beacon.Rssi;
+                        //                        data.TXPower = beacon.tr;
+                        data.ElaspedTime += now - data.LastDetectTime;
+                        data.LastDetectTime = now;
+                        data.KeyTime = keyTime;
+                        data.IsSentToServer = false;
+                        _connection.Update(data);
+                        System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
+                    }
                 }
 
             }
