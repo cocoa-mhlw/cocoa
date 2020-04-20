@@ -1,5 +1,4 @@
 ﻿using System;
-using Covid19Radar.Renderers;
 using Xamarin.Forms;
 
 namespace Covid19Radar.Controls
@@ -58,7 +57,7 @@ namespace Covid19Radar.Controls
                 {
                     return;
                 }
-
+                
                 var previousEntry = _entries[entryFocusedIndex - 1];
                 previousEntry.Focus();
             }
@@ -95,11 +94,12 @@ namespace Covid19Radar.Controls
 
         private void SetOtpText()
         {
-            OtpText = "";
+            var otpText = string.Empty;
             foreach (var entry in _entries)
             {
-                OtpText += entry.Text;
+                otpText += entry.Text;
             }
+            OtpText = otpText;
         }
 
         /// <summary>

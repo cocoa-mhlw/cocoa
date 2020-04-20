@@ -15,6 +15,7 @@
             <Setter Property="FontFamily" Value="{StaticResource RobotoRegularFontFamily}" />
             <Setter Property="FontSize" Value="40" />
             <Setter Property="Keyboard" Value="Numeric" />
+            <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
         </Style>
     </ContentView.Resources>
     <ContentView.Content>
