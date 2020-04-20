@@ -1,28 +1,70 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
+﻿using System.Windows.Input;
+using Covid19Radar.Resx;
+using Prism.Commands;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Prism.Services;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
     public class InputSmsOTPPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
-        public InputSmsOTPPageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        private string _otp;
+        public string Otp
         {
-            _navigationService = navigationService;
-            Title = "Input OTP";
+            get => _otp;
+            set
+            {
+                SetProperty(ref _otp, value);
+                OnClickNext.RaiseCanExecuteChanged();
+            }
         }
 
-        public Command OnClickNext => (new Command(() =>
+        private string _phoneNumber;
+        public string PhoneNumber
         {
-            _navigationService.NavigateAsync("UserSettingPage");
-        }));
+            get => _phoneNumber;
+            set => SetProperty(ref _phoneNumber, value);
+        }
+
+        public ICommand ResendOtp { get; }
+        public DelegateCommand OnClickNext { get; }
+
+        private readonly IPageDialogService _pageDialogService;
+
+        public InputSmsOTPPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
+            : base(navigationService)
+        {
+            Title = AppResources.OtpTitle;
+            _pageDialogService = pageDialogService;
+
+            ResendOtp = new Command(async () =>
+            {
+                await _pageDialogService.DisplayAlertAsync("Error", "This is not implemented yet", "OK");
+            });
+            OnClickNext = new DelegateCommand(async () =>
+             {
+                 await NavigationService.NavigateAsync("/NavigationPage/HomePage");
+             }, CanVerifyOtp);
+        }
+
+        private bool CanVerifyOtp()
+        {
+            if (string.IsNullOrEmpty(Otp))
+            {
+                return false;
+            }
+            return Otp.Length == 6;
+        }
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+            if (parameters.TryGetValue<string>("phone_number", out var phoneNumber))
+            {
+                PhoneNumber = phoneNumber;
+            }
+        }
 
     }
 }
