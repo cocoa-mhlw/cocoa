@@ -113,6 +113,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
+    <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
+    <Compile Include="Extensions\FontExtensions.cs" />
+    <Compile Include="Controls\UIBackwardsTextField.cs" />
+    <Compile Include="Extensions\AlignmentExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -167,6 +171,9 @@
     <BundleResource Include="Resources\Logo.png" />
     <BundleResource Include="Resources\Logo%402x.png" />
     <BundleResource Include="Resources\Logo%403x.png" />
+    <BundleResource Include="Resources\help.png" />
+    <BundleResource Include="Resources\help%402x.png" />
+    <BundleResource Include="Resources\help%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -272,6 +279,11 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\descriptionStep4%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
