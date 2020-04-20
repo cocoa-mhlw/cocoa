@@ -117,6 +117,9 @@
     <Compile Include="Extensions\FontExtensions.cs" />
     <Compile Include="Controls\UIBackwardsTextField.cs" />
     <Compile Include="Extensions\AlignmentExtensions.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Extensions\FormattedStringExtensions.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
