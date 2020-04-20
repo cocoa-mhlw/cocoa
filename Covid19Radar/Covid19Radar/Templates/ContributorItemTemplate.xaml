@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataTemplate
+    x:Class="Covid19Radar.Templates.ContributorItemTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout Padding="15,0">
+        <Label FontSize="Body" Text="{Binding Fullname}">
+            <Label.Margin>
+                <Thickness
+                    Bottom="{OnPlatform Android=0,
+                                        iOS=5}"
+                    Left="0"
+                    Right="0"
+                    Top="{OnPlatform Android=5,
+                                     iOS=15}" />
+            </Label.Margin>
+        </Label>
+        <Label
+            Margin="0,0,0,15"
+            FontSize="Caption"
+            Text="{Binding Role}"
+            TextColor="{StaticResource Accent7Color}" />
+        <BoxView Style="{StaticResource DefaultLineStyle}" />
+    </StackLayout>
+</DataTemplate>
