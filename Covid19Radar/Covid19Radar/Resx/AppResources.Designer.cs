@@ -360,6 +360,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Detected Beacon List に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TextDetectedBeaconList {
+            get {
+                return ResourceManager.GetString("TextDetectedBeaconList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   How to works に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TextHowToWorks {
