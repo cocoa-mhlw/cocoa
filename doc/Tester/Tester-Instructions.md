@@ -25,6 +25,14 @@
 ## ビーコン検出テスト
 ビーコンはiOSとAndroidなどOSやプラットフォームの違いを超えて通信できるように作られています。よって、以下のパターンが考えられます。
 
+**注意:現在時点での仕様について**
+
+iOSは、バックグラウンド（アプリが背面に移動、もしくはスクリーンのスリープ）動作になると、Apple提供の開発APIの仕様上ビーコン送出動作を停止します。この為アプリを起動し続ける必要があります。
+5月GW以後にApple社/Google社において、Contact Tracing向けのフレームワークの提供を行うと発表されております。
+これらのフレームワークの情報と対応OSバージョンなどを鑑みながら、検出、送出部分についての改良を加えていく見込みです。
+
+https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ContactTracing-FrameworkDocumentation.pdf
+
 ### iOS と もう一台のiOS
 
 もし、iOSデバイスを二台お持ちの方がいましたら、二台とも登録いただき、アプリ起動後半径2m前後に設置してください。
