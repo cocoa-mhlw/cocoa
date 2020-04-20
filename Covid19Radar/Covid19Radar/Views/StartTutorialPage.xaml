@@ -61,6 +61,7 @@
         <Button
             Grid.Row="4"
             Margin="64,0"
+            AutomationId="StartButton"
             BackgroundColor="{StaticResource AccentColor}"
             Command="{Binding Path=OnClickNext}"
             FontSize="25"
