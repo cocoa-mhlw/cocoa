@@ -44,7 +44,42 @@ namespace Covid19Radar.ViewModels
 
             if (navMode == NavigationMode.New)
             {
-                var beaconList = _beaconService.GetBeaconData();
+                // var beaconList = _beaconService.GetBeaconData();
+
+                var beaconList = new List<BeaconDataModel>()
+                {
+                    new BeaconDataModel()
+                    {
+                        Id = "d7cd5957-53d3-4dbb-a169-a1283f3bce30",
+                        Major = "0",
+                        Minor = "129",
+                        Distance = 0.89,
+                        ElaspedTime = TimeSpan.FromMinutes(10),
+                        LastDetectTime = DateTime.Now,
+                        Count = 1321
+                    },
+                    new BeaconDataModel()
+                    {
+                        Id = "1815da38-97bd-4d8a-9f30-0c18b862f696",
+                        Major = "0",
+                        Minor = "232",
+                        Distance = 10.23,
+                        ElaspedTime = TimeSpan.FromMinutes(2),
+                        LastDetectTime = DateTime.Now.AddDays(-2),
+                        Count = 1321
+                    },
+                    new BeaconDataModel()
+                    {
+                        Id = "c7506b33-d722-4923-9756-d9c391321ed4",
+                        Major = "0",
+                        Minor = "312",
+                        Distance = 10.23,
+                        ElaspedTime = TimeSpan.FromMinutes(2),
+                        LastDetectTime = DateTime.Now.AddDays(-10),
+                        Count = 1321
+                    }
+                };
+
                 BeaconDataList = new ObservableCollection<BeaconDataModel>(beaconList);
             }
         }
