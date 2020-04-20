@@ -18,18 +18,18 @@ namespace Covid19Radar.ViewModels
         {
             Contributors = new List<ContributorModel>
             {
-                new ContributorModel { Fullname = "Kazumi Hirose", Description = "Originator" },
-                new ContributorModel { Fullname = "Kristina Yasuda", Description = "Public Relations and Activity" },
-                new ContributorModel { Fullname = "Tsuyoshi Ushio", Description = "Server side / Azure Functions" },
-                new ContributorModel { Fullname = "Yasuaki Matsuda", Description = "Server side / Azure Functions" },
-                new ContributorModel { Fullname = "Noriko Matsumoto", Description = "Design UI/UX / Main Site Designer" },
-                new ContributorModel { Fullname = "Kazuki Ota", Description = "Create Build pipeline on AppCenter" },
-                new ContributorModel { Fullname = "Takeshi Sakurai ", Description = "Client iOS" },
-                new ContributorModel { Fullname = "Fumiya Kume", Description = "Client Xamarin" },
-                new ContributorModel { Fullname = "Taiki Yoshida", Description = "Power BI / Power Apps" },
-                new ContributorModel { Fullname = "Takayuki Hirose", Description = "Device Mac Lending" },
-                new ContributorModel { Fullname = "Tomoaki Ueno", Description = "Medical Information and FieAdvisory" },
-                new ContributorModel { Fullname = "Takashi Takebayashi", Description = "Translate" }
+                new ContributorModel { Fullname = "Kazumi Hirose", Role = "Originator" },
+                new ContributorModel { Fullname = "Kristina Yasuda", Role = "Public Relations and Activity" },
+                new ContributorModel { Fullname = "Tsuyoshi Ushio", Role = "Server side / Azure Functions" },
+                new ContributorModel { Fullname = "Yasuaki Matsuda", Role = "Server side / Azure Functions" },
+                new ContributorModel { Fullname = "Noriko Matsumoto", Role = "Design UI/UX / Main Site Designer" },
+                new ContributorModel { Fullname = "Kazuki Ota", Role = "Create Build pipeline on AppCenter" },
+                new ContributorModel { Fullname = "Takeshi Sakurai ", Role = "Client iOS" },
+                new ContributorModel { Fullname = "Fumiya Kume", Role = "Client Xamarin" },
+                new ContributorModel { Fullname = "Taiki Yoshida", Role = "Power BI / Power Apps" },
+                new ContributorModel { Fullname = "Takayuki Hirose", Role = "Device Mac Lending" },
+                new ContributorModel { Fullname = "Tomoaki Ueno", Role = "Medical Information and FieAdvisory" },
+                new ContributorModel { Fullname = "Takashi Takebayashi", Role = "Translate" }
             };
         }
     }
