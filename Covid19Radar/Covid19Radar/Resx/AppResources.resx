@@ -339,35 +339,35 @@ Please check your SMS.</value>
     <value>License Agreement Menu</value>
     <comment>License Agreement Menu</comment>
   </data>
-    <data name="OtpEnterText" xml:space="preserve">
-        <value>Enter the Code that was sent to 
+  <data name="OtpEnterText" xml:space="preserve">
+    <value>Enter the Code that was sent to 
 「{0}」</value>
-        <comment>Otp Enter the Code</comment>
-    </data>
+    <comment>Otp Enter the Code</comment>
+  </data>
   <data name="OtpTitle" xml:space="preserve">
-        <value>Enter the Code</value>
-        <comment>Otp Title</comment>
-    </data>
+    <value>Enter the Code</value>
+    <comment>Otp Title</comment>
+  </data>
   <data name="ButtonVerify" xml:space="preserve">
-        <value>Verify</value>
-        <comment>Button Verify</comment>
-    </data>
+    <value>Verify</value>
+    <comment>Button Verify</comment>
+  </data>
   <data name="DidntGetTheCodeText" xml:space="preserve">
-        <value>Didn't get the code?</value>
-        <comment>Didn't get the code Text</comment>
-    </data>
+    <value>Didn't get the code?</value>
+    <comment>Didn't get the code Text</comment>
+  </data>
   <data name="ResendText" xml:space="preserve">
-        <value>Resend</value>
-        <comment>Resend Text</comment>
-    </data>
+    <value>Resend</value>
+    <comment>Resend Text</comment>
+  </data>
   <data name="TextStatusUpdateComplete" xml:space="preserve">
-        <value>Status Update Complete</value>
-        <comment>Status Update Complete page text</comment>
-    </data>
+    <value>Status Update Complete</value>
+    <comment>Status Update Complete page text</comment>
+  </data>
   <data name="TitleStatusUpdateComplete" xml:space="preserve">
-        <value>Status Update Complete</value>
-        <comment>Status Update Complete page title</comment>
-    </data>
+    <value>Status Update Complete</value>
+    <comment>Status Update Complete page title</comment>
+  </data>
   <data name="TextCoreContributors" xml:space="preserve">
     <value>Core Contributors</value>
     <comment>Contributors list page subtitle</comment>
@@ -375,5 +375,13 @@ Please check your SMS.</value>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Contributors List</value>
     <comment>Contributors list page title</comment>
+  </data>
+  <data name="TitleDetectedBeaconPage" xml:space="preserve">
+    <value>Detected Beacons</value>
+    <comment>Detected Beacons</comment>
+  </data>
+  <data name="TextDetectedBeaconList" xml:space="preserve">
+    <value>Detected Beacon List</value>
+    <comment>Detected Beacon List</comment>
   </data>
 </root>
