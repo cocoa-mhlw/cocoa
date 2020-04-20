@@ -112,7 +112,6 @@
     <Compile Include="Services\RangeNotifier.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
-    <Compile Include="Renderers\CustomEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\materialdesignicons-webfont.ttf" />
