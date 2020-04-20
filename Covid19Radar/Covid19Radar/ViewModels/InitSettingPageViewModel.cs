@@ -9,7 +9,6 @@ namespace Covid19Radar.ViewModels
         public InitSettingPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resx.AppResources.TitleDeviceAccess;
-            AppUtils.CheckPermission();
         }
 
         public Command OnClickNext => new Command(() => NavigationService.NavigateAsync("SetupCompletedPage"));
