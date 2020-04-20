@@ -29,8 +29,8 @@ using Prism.Plugin.Popups;
 using FFImageLoading.Helpers;
 using FFImageLoading;
 
-/* 
- * Our mission...is 
+/*
+ * Our mission...is
  * Empower every person and every organization on the planet achieve more.
  * Put an end to Covid 19
  */
@@ -40,11 +40,9 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
-        private IBeaconService _beaconService;
-
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
-         * This imposes a limitation in which the App class must have a default constructor. 
+         * This imposes a limitation in which the App class must have a default constructor.
          * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
          */
         public App() : this(null) { }
@@ -68,10 +66,6 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 UserDataModel _userData = userDataService.Get();
-                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
-                // Only Call InitializeService! Start automagically!
-                AppUtils.CheckPermission();
-                _beaconService.InitializeService();
                 result = await NavigationService.NavigateAsync("NavigationPage/HomePage");
             }
             else
@@ -116,6 +110,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<SetupCompletedPage, SetupCompletedPageViewModel>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage, LicenseAgreementPageViewModel>();
             containerRegistry.RegisterForNavigation<DetectedBeaconPage, DetectedBeaconPageViewmodel>();
+            containerRegistry.RegisterForNavigation<StatusUpdateCompletePage, StatusUpdateCompletePageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
