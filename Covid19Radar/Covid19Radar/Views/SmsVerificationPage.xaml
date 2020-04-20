@@ -3,8 +3,10 @@
     x:Class="Covid19Radar.Views.SmsVerificationPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:local="clr-namespace:Covid19Radar"
-    Title="{Binding Title}">
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -24,7 +26,7 @@
                     MaxLength="11"
                     Placeholder="09012341234"
                     PlaceholderColor="#D1D1D1"
-                    Text="{Binding PhoneNumber}"
+                    Text=""
                     TextColor="#333333" />
                 <Label
                     Padding="0,30,0,0"

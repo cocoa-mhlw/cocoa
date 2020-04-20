@@ -3,13 +3,15 @@
     x:Class="Covid19Radar.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     Title="{Binding Title}"
     Padding="80,20"
+    ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}">
 
     <StackLayout VerticalOptions="Center">
-        <Image HorizontalOptions="Center" Source="Logo.png" />
+        <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
         <Label
             Margin="0,29,0,60"
             FontFamily="{StaticResource NotoSansMediumFontFamily}"

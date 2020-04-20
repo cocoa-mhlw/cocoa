@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Covid19Radar.Model
 {
-    public class UserDataModel
+    public class UserDataModel: IEquatable<UserDataModel>
     {
 
         /// <summary>
@@ -31,6 +31,14 @@ namespace Covid19Radar.Model
         /// </summary>
         /// <value></value>
         public UserStatus UserStatus { get; set; }
+
+        public bool Equals(UserDataModel other)
+        {
+            return UserUuid == other?.UserUuid
+                && Major == other?.Major
+                && Minor == other?.Minor
+                && UserStatus == other?.UserStatus;
+        }
 
         /// <summary>
         /// User Unique ID format UserUUID.(Padding Zero Major).(Padding Zero Minor)

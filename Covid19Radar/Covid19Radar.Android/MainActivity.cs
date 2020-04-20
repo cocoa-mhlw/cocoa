@@ -14,6 +14,7 @@ using System;
 using Covid19Radar.Common;
 using Covid19Radar.Droid.Services;
 using Covid19Radar.Services;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Droid
 {
@@ -35,7 +36,14 @@ namespace Covid19Radar.Droid
             sqliteConnectionProvider = new SQLiteConnectionProvider();
 
             Xamarin.Essentials.Platform.Init(this, bundle);
+            global::Rg.Plugins.Popup.Popup.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
+            global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
+            {
+                Logger = new Covid19Radar.Services.DebugLogger()
+            });
+
             LoadApplication(new App(new AndroidInitializer()));
         }
 
@@ -65,13 +73,17 @@ namespace Covid19Radar.Droid
         {
             BeaconService beaconService = Xamarin.Forms.DependencyService.Get<BeaconService>();
             UserDataService userDataService = new UserDataService();
-            beaconService.StartBeacon();
 
-            if (userDataService.IsExistUserData())
+
+            Task.Run(() =>
             {
-                UserDataModel userDataModel = userDataService.Get();
-                beaconService.StartAdvertising(userDataModel);
-            }
+                beaconService.StartBeacon();
+                if (userDataService.IsExistUserData)
+                {
+                    UserDataModel userDataModel = userDataService.Get();
+                    beaconService.StartAdvertising(userDataModel);
+                }
+            });
         }
 
     }

@@ -1,33 +1,34 @@
-﻿using Covid19Radar.Common;
-using Covid19Radar.Model;
-using Covid19Radar.Services;
-using Prism.Commands;
-using Prism.DryIoc;
-using Prism.Mvvm;
-using Prism.Navigation;
-using Prism.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
     public class UserSettingPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
-        private UserDataService _userDataService;
-        private UserDataModel _userData;
-        public UserSettingPageViewModel(INavigationService navigationService, UserDataService userdataservice)
-            : base(navigationService)
+        private string _phoneNumber;
+
+        public string PhoneNumber
         {
-            _navigationService = navigationService;
-            Title = "UserSettingPage";
+            get => _phoneNumber;
+            set
+            {
+                SetProperty(ref _phoneNumber, value);
+                RaisePropertyChanged(nameof(IsPhoneNumberValid));
+            }
         }
-        public Command OnChangeStatusOverInfection => (new Command(() =>
+
+        public bool IsPhoneNumberValid => !string.IsNullOrWhiteSpace(PhoneNumber);
+
+        public UserSettingPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            _navigationService.NavigateAsync("SmsVerificationPage");
-        }));
+            Title = Resx.AppResources.TitleStatusSettings;
+        }
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            PhoneNumber = string.Empty;
+        }
+
+        public Command OnClickNext => new Command(() => NavigationService.NavigateAsync("SmsVerificationPage"), () => IsPhoneNumberValid);
     }
 }

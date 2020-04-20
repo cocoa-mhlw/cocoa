@@ -47,6 +47,169 @@ namespace Covid19Radar.Droid
 			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_message = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_failed_dialog_message;
 			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_reinstall = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_failed_dialog_reinstall;
 			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_title = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_failed_dialog_title;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.alpha = global::Covid19Radar.Droid.Resource.Attribute.alpha;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.font = global::Covid19Radar.Droid.Resource.Attribute.font;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderAuthority = global::Covid19Radar.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderCerts = global::Covid19Radar.Droid.Resource.Attribute.fontProviderCerts;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderFetchStrategy = global::Covid19Radar.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderFetchTimeout = global::Covid19Radar.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderPackage = global::Covid19Radar.Droid.Resource.Attribute.fontProviderPackage;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderQuery = global::Covid19Radar.Droid.Resource.Attribute.fontProviderQuery;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontStyle = global::Covid19Radar.Droid.Resource.Attribute.fontStyle;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontVariationSettings = global::Covid19Radar.Droid.Resource.Attribute.fontVariationSettings;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontWeight = global::Covid19Radar.Droid.Resource.Attribute.fontWeight;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.ttcIndex = global::Covid19Radar.Droid.Resource.Attribute.ttcIndex;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_action_color_filter = global::Covid19Radar.Droid.Resource.Color.notification_action_color_filter;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_icon_bg_color = global::Covid19Radar.Droid.Resource.Color.notification_icon_bg_color;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_material_background_media_default_color = global::Covid19Radar.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.primary_text_default_material_dark = global::Covid19Radar.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.ripple_material_light = global::Covid19Radar.Droid.Resource.Color.ripple_material_light;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.secondary_text_default_material_dark = global::Covid19Radar.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.secondary_text_default_material_light = global::Covid19Radar.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_inset_vertical_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_padding_vertical_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_control_corner_material = global::Covid19Radar.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_notification_large_icon_max_height = global::Covid19Radar.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_notification_large_icon_max_width = global::Covid19Radar.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_action_icon_size = global::Covid19Radar.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_action_text_size = global::Covid19Radar.Droid.Resource.Dimension.notification_action_text_size;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_big_circle_margin = global::Covid19Radar.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_content_margin_start = global::Covid19Radar.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_large_icon_height = global::Covid19Radar.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_large_icon_width = global::Covid19Radar.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_main_column_padding_top = global::Covid19Radar.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_media_narrow_margin = global::Covid19Radar.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_right_icon_size = global::Covid19Radar.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_right_side_padding_top = global::Covid19Radar.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_small_icon_background_padding = global::Covid19Radar.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_small_icon_size_as_large = global::Covid19Radar.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_subtext_size = global::Covid19Radar.Droid.Resource.Dimension.notification_subtext_size;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_top_pad = global::Covid19Radar.Droid.Resource.Dimension.notification_top_pad;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_top_pad_large_text = global::Covid19Radar.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.subtitle_corner_radius = global::Covid19Radar.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.subtitle_outline_width = global::Covid19Radar.Droid.Resource.Dimension.subtitle_outline_width;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.subtitle_shadow_offset = global::Covid19Radar.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.subtitle_shadow_radius = global::Covid19Radar.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.ic_stat_notify_dot = global::Covid19Radar.Droid.Resource.Drawable.ic_stat_notify_dot;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_action_background = global::Covid19Radar.Droid.Resource.Drawable.notification_action_background;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low_normal = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low_pressed = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_normal = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_normal;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_normal_pressed = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_icon_background = global::Covid19Radar.Droid.Resource.Drawable.notification_icon_background;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_template_icon_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_template_icon_low_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_tile_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_tile_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::Covid19Radar.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action0 = global::Covid19Radar.Droid.Resource.Id.action0;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_container = global::Covid19Radar.Droid.Resource.Id.action_container;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_divider = global::Covid19Radar.Droid.Resource.Id.action_divider;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_image = global::Covid19Radar.Droid.Resource.Id.action_image;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_text = global::Covid19Radar.Droid.Resource.Id.action_text;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.actions = global::Covid19Radar.Droid.Resource.Id.actions;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.async = global::Covid19Radar.Droid.Resource.Id.async;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.blocking = global::Covid19Radar.Droid.Resource.Id.blocking;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.cancel_action = global::Covid19Radar.Droid.Resource.Id.cancel_action;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.chronometer = global::Covid19Radar.Droid.Resource.Id.chronometer;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.end_padder = global::Covid19Radar.Droid.Resource.Id.end_padder;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.forever = global::Covid19Radar.Droid.Resource.Id.forever;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.icon = global::Covid19Radar.Droid.Resource.Id.icon;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.icon_group = global::Covid19Radar.Droid.Resource.Id.icon_group;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.info = global::Covid19Radar.Droid.Resource.Id.info;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.italic = global::Covid19Radar.Droid.Resource.Id.italic;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.line1 = global::Covid19Radar.Droid.Resource.Id.line1;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.line3 = global::Covid19Radar.Droid.Resource.Id.line3;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.media_actions = global::Covid19Radar.Droid.Resource.Id.media_actions;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.normal = global::Covid19Radar.Droid.Resource.Id.normal;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_background = global::Covid19Radar.Droid.Resource.Id.notification_background;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_main_column = global::Covid19Radar.Droid.Resource.Id.notification_main_column;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_main_column_container = global::Covid19Radar.Droid.Resource.Id.notification_main_column_container;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.right_icon = global::Covid19Radar.Droid.Resource.Id.right_icon;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.right_side = global::Covid19Radar.Droid.Resource.Id.right_side;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.status_bar_latest_event_content = global::Covid19Radar.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.tag_transition_group = global::Covid19Radar.Droid.Resource.Id.tag_transition_group;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.tag_unhandled_key_event_manager = global::Covid19Radar.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.tag_unhandled_key_listeners = global::Covid19Radar.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.text = global::Covid19Radar.Droid.Resource.Id.text;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.text2 = global::Covid19Radar.Droid.Resource.Id.text2;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.time = global::Covid19Radar.Droid.Resource.Id.time;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.title = global::Covid19Radar.Droid.Resource.Id.title;
+			global::Microsoft.AppCenter.Push.Android.Resource.Integer.cancel_button_image_alpha = global::Covid19Radar.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Microsoft.AppCenter.Push.Android.Resource.Integer.google_play_services_version = global::Covid19Radar.Droid.Resource.Integer.google_play_services_version;
+			global::Microsoft.AppCenter.Push.Android.Resource.Integer.status_bar_notification_info_maxnum = global::Covid19Radar.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_action = global::Covid19Radar.Droid.Resource.Layout.notification_action;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_action_tombstone = global::Covid19Radar.Droid.Resource.Layout.notification_action_tombstone;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_media_action = global::Covid19Radar.Droid.Resource.Layout.notification_media_action;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_media_cancel_action = global::Covid19Radar.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_narrow = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_narrow_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_custom_big = global::Covid19Radar.Droid.Resource.Layout.notification_template_custom_big;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_icon_group = global::Covid19Radar.Droid.Resource.Layout.notification_template_icon_group;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_lines_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_lines_media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_media_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_media_custom;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_part_chronometer = global::Covid19Radar.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_part_time = global::Covid19Radar.Droid.Resource.Layout.notification_template_part_time;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.common_google_play_services_unknown_issue = global::Covid19Radar.Droid.Resource.String.common_google_play_services_unknown_issue;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.fcm_fallback_notification_channel_label = global::Covid19Radar.Droid.Resource.String.fcm_fallback_notification_channel_label;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.library_name = global::Covid19Radar.Droid.Resource.String.library_name;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.status_bar_notification_info_overflow = global::Covid19Radar.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::Covid19Radar.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.Widget_Compat_NotificationActionText = global::Covid19Radar.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.ColorStateListItem = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.ColorStateListItem_alpha = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.ColorStateListItem_android_alpha = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.ColorStateListItem_android_color = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily = global::Covid19Radar.Droid.Resource.Styleable.FontFamily;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_font = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_font = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_ttcIndex = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_centerColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_centerX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_centerY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_endColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_endX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_endY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_gradientRadius = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_startColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_startX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_startY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_tileMode = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_type = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_color = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_offset = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem_android_offset;
 			global::Prism.Resource.Animation.abc_fade_in = global::Covid19Radar.Droid.Resource.Animation.abc_fade_in;
 			global::Prism.Resource.Animation.abc_fade_out = global::Covid19Radar.Droid.Resource.Animation.abc_fade_out;
 			global::Prism.Resource.Animation.abc_grow_fade_in_from_bottom = global::Covid19Radar.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -2299,6 +2462,2903 @@ namespace Covid19Radar.Droid
 			global::Prism.Resource.Styleable.View_paddingEnd = global::Covid19Radar.Droid.Resource.Styleable.View_paddingEnd;
 			global::Prism.Resource.Styleable.View_paddingStart = global::Covid19Radar.Droid.Resource.Styleable.View_paddingStart;
 			global::Prism.Resource.Styleable.View_theme = global::Covid19Radar.Droid.Resource.Styleable.View_theme;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_fade_in = global::Covid19Radar.Droid.Resource.Animation.abc_fade_in;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_fade_out = global::Covid19Radar.Droid.Resource.Animation.abc_fade_out;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_grow_fade_in_from_bottom = global::Covid19Radar.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_popup_enter = global::Covid19Radar.Droid.Resource.Animation.abc_popup_enter;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_popup_exit = global::Covid19Radar.Droid.Resource.Animation.abc_popup_exit;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_shrink_fade_out_from_bottom = global::Covid19Radar.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_slide_in_bottom = global::Covid19Radar.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_slide_in_top = global::Covid19Radar.Droid.Resource.Animation.abc_slide_in_top;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_slide_out_bottom = global::Covid19Radar.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_slide_out_top = global::Covid19Radar.Droid.Resource.Animation.abc_slide_out_top;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_tooltip_enter = global::Covid19Radar.Droid.Resource.Animation.abc_tooltip_enter;
+			global::Prism.Plugin.Popups.Resource.Animation.abc_tooltip_exit = global::Covid19Radar.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Prism.Plugin.Popups.Resource.Animation.design_bottom_sheet_slide_in = global::Covid19Radar.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Prism.Plugin.Popups.Resource.Animation.design_bottom_sheet_slide_out = global::Covid19Radar.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Prism.Plugin.Popups.Resource.Animation.design_snackbar_in = global::Covid19Radar.Droid.Resource.Animation.design_snackbar_in;
+			global::Prism.Plugin.Popups.Resource.Animation.design_snackbar_out = global::Covid19Radar.Droid.Resource.Animation.design_snackbar_out;
+			global::Prism.Plugin.Popups.Resource.Animation.EnterFromLeft = global::Covid19Radar.Droid.Resource.Animation.EnterFromLeft;
+			global::Prism.Plugin.Popups.Resource.Animation.EnterFromRight = global::Covid19Radar.Droid.Resource.Animation.EnterFromRight;
+			global::Prism.Plugin.Popups.Resource.Animation.ExitToLeft = global::Covid19Radar.Droid.Resource.Animation.ExitToLeft;
+			global::Prism.Plugin.Popups.Resource.Animation.ExitToRight = global::Covid19Radar.Droid.Resource.Animation.ExitToRight;
+			global::Prism.Plugin.Popups.Resource.Animator.design_appbar_state_list_animator = global::Covid19Radar.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Prism.Plugin.Popups.Resource.Animator.design_fab_hide_motion_spec = global::Covid19Radar.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::Prism.Plugin.Popups.Resource.Animator.design_fab_show_motion_spec = global::Covid19Radar.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::Prism.Plugin.Popups.Resource.Animator.mtrl_btn_state_list_anim = global::Covid19Radar.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Prism.Plugin.Popups.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::Covid19Radar.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Prism.Plugin.Popups.Resource.Animator.mtrl_chip_state_list_anim = global::Covid19Radar.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Prism.Plugin.Popups.Resource.Animator.mtrl_fab_hide_motion_spec = global::Covid19Radar.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Prism.Plugin.Popups.Resource.Animator.mtrl_fab_show_motion_spec = global::Covid19Radar.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Prism.Plugin.Popups.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::Covid19Radar.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Prism.Plugin.Popups.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::Covid19Radar.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarDivider = global::Covid19Radar.Droid.Resource.Attribute.actionBarDivider;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarItemBackground = global::Covid19Radar.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarPopupTheme = global::Covid19Radar.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarSize = global::Covid19Radar.Droid.Resource.Attribute.actionBarSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarSplitStyle = global::Covid19Radar.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarStyle = global::Covid19Radar.Droid.Resource.Attribute.actionBarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarTabBarStyle = global::Covid19Radar.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarTabStyle = global::Covid19Radar.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarTabTextStyle = global::Covid19Radar.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarTheme = global::Covid19Radar.Droid.Resource.Attribute.actionBarTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionBarWidgetTheme = global::Covid19Radar.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.actionButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionDropDownStyle = global::Covid19Radar.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionLayout = global::Covid19Radar.Droid.Resource.Attribute.actionLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionMenuTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionMenuTextColor = global::Covid19Radar.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeBackground = global::Covid19Radar.Droid.Resource.Attribute.actionModeBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeCloseButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeCloseDrawable = global::Covid19Radar.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeCopyDrawable = global::Covid19Radar.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeCutDrawable = global::Covid19Radar.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeFindDrawable = global::Covid19Radar.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModePasteDrawable = global::Covid19Radar.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModePopupWindowStyle = global::Covid19Radar.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeSelectAllDrawable = global::Covid19Radar.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeShareDrawable = global::Covid19Radar.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeSplitBackground = global::Covid19Radar.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeStyle = global::Covid19Radar.Droid.Resource.Attribute.actionModeStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionModeWebSearchDrawable = global::Covid19Radar.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionOverflowButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionOverflowMenuStyle = global::Covid19Radar.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionProviderClass = global::Covid19Radar.Droid.Resource.Attribute.actionProviderClass;
+			global::Prism.Plugin.Popups.Resource.Attribute.actionViewClass = global::Covid19Radar.Droid.Resource.Attribute.actionViewClass;
+			global::Prism.Plugin.Popups.Resource.Attribute.activityChooserViewStyle = global::Covid19Radar.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.alertDialogButtonGroupStyle = global::Covid19Radar.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.alertDialogCenterButtons = global::Covid19Radar.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Prism.Plugin.Popups.Resource.Attribute.alertDialogStyle = global::Covid19Radar.Droid.Resource.Attribute.alertDialogStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.alertDialogTheme = global::Covid19Radar.Droid.Resource.Attribute.alertDialogTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.allowStacking = global::Covid19Radar.Droid.Resource.Attribute.allowStacking;
+			global::Prism.Plugin.Popups.Resource.Attribute.alpha = global::Covid19Radar.Droid.Resource.Attribute.alpha;
+			global::Prism.Plugin.Popups.Resource.Attribute.alphabeticModifiers = global::Covid19Radar.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Prism.Plugin.Popups.Resource.Attribute.arrowHeadLength = global::Covid19Radar.Droid.Resource.Attribute.arrowHeadLength;
+			global::Prism.Plugin.Popups.Resource.Attribute.arrowShaftLength = global::Covid19Radar.Droid.Resource.Attribute.arrowShaftLength;
+			global::Prism.Plugin.Popups.Resource.Attribute.autoCompleteTextViewStyle = global::Covid19Radar.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.autoSizeMaxTextSize = global::Covid19Radar.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.autoSizeMinTextSize = global::Covid19Radar.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.autoSizePresetSizes = global::Covid19Radar.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Prism.Plugin.Popups.Resource.Attribute.autoSizeStepGranularity = global::Covid19Radar.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Prism.Plugin.Popups.Resource.Attribute.autoSizeTextType = global::Covid19Radar.Droid.Resource.Attribute.autoSizeTextType;
+			global::Prism.Plugin.Popups.Resource.Attribute.background = global::Covid19Radar.Droid.Resource.Attribute.background;
+			global::Prism.Plugin.Popups.Resource.Attribute.backgroundSplit = global::Covid19Radar.Droid.Resource.Attribute.backgroundSplit;
+			global::Prism.Plugin.Popups.Resource.Attribute.backgroundStacked = global::Covid19Radar.Droid.Resource.Attribute.backgroundStacked;
+			global::Prism.Plugin.Popups.Resource.Attribute.backgroundTint = global::Covid19Radar.Droid.Resource.Attribute.backgroundTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.backgroundTintMode = global::Covid19Radar.Droid.Resource.Attribute.backgroundTintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.barLength = global::Covid19Radar.Droid.Resource.Attribute.barLength;
+			global::Prism.Plugin.Popups.Resource.Attribute.behavior_autoHide = global::Covid19Radar.Droid.Resource.Attribute.behavior_autoHide;
+			global::Prism.Plugin.Popups.Resource.Attribute.behavior_fitToContents = global::Covid19Radar.Droid.Resource.Attribute.behavior_fitToContents;
+			global::Prism.Plugin.Popups.Resource.Attribute.behavior_hideable = global::Covid19Radar.Droid.Resource.Attribute.behavior_hideable;
+			global::Prism.Plugin.Popups.Resource.Attribute.behavior_overlapTop = global::Covid19Radar.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Prism.Plugin.Popups.Resource.Attribute.behavior_peekHeight = global::Covid19Radar.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.behavior_skipCollapsed = global::Covid19Radar.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Prism.Plugin.Popups.Resource.Attribute.borderlessButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.borderWidth = global::Covid19Radar.Droid.Resource.Attribute.borderWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.bottomAppBarStyle = global::Covid19Radar.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.bottomNavigationStyle = global::Covid19Radar.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.bottomSheetDialogTheme = global::Covid19Radar.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.bottomSheetStyle = global::Covid19Radar.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxBackgroundColor = global::Covid19Radar.Droid.Resource.Attribute.boxBackgroundColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxBackgroundMode = global::Covid19Radar.Droid.Resource.Attribute.boxBackgroundMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxCollapsedPaddingTop = global::Covid19Radar.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxCornerRadiusBottomEnd = global::Covid19Radar.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxCornerRadiusBottomStart = global::Covid19Radar.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxCornerRadiusTopEnd = global::Covid19Radar.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxCornerRadiusTopStart = global::Covid19Radar.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxStrokeColor = global::Covid19Radar.Droid.Resource.Attribute.boxStrokeColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.boxStrokeWidth = global::Covid19Radar.Droid.Resource.Attribute.boxStrokeWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonBarButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonBarNegativeButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonBarNeutralButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonBarPositiveButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonBarStyle = global::Covid19Radar.Droid.Resource.Attribute.buttonBarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonGravity = global::Covid19Radar.Droid.Resource.Attribute.buttonGravity;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonIconDimen = global::Covid19Radar.Droid.Resource.Attribute.buttonIconDimen;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonPanelSideLayout = global::Covid19Radar.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonStyle = global::Covid19Radar.Droid.Resource.Attribute.buttonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonStyleSmall = global::Covid19Radar.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonTint = global::Covid19Radar.Droid.Resource.Attribute.buttonTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.buttonTintMode = global::Covid19Radar.Droid.Resource.Attribute.buttonTintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.cardBackgroundColor = global::Covid19Radar.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.cardCornerRadius = global::Covid19Radar.Droid.Resource.Attribute.cardCornerRadius;
+			global::Prism.Plugin.Popups.Resource.Attribute.cardElevation = global::Covid19Radar.Droid.Resource.Attribute.cardElevation;
+			global::Prism.Plugin.Popups.Resource.Attribute.cardMaxElevation = global::Covid19Radar.Droid.Resource.Attribute.cardMaxElevation;
+			global::Prism.Plugin.Popups.Resource.Attribute.cardPreventCornerOverlap = global::Covid19Radar.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Prism.Plugin.Popups.Resource.Attribute.cardUseCompatPadding = global::Covid19Radar.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.cardViewStyle = global::Covid19Radar.Droid.Resource.Attribute.cardViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.checkboxStyle = global::Covid19Radar.Droid.Resource.Attribute.checkboxStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.checkedChip = global::Covid19Radar.Droid.Resource.Attribute.checkedChip;
+			global::Prism.Plugin.Popups.Resource.Attribute.checkedIcon = global::Covid19Radar.Droid.Resource.Attribute.checkedIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.checkedIconEnabled = global::Covid19Radar.Droid.Resource.Attribute.checkedIconEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.checkedIconVisible = global::Covid19Radar.Droid.Resource.Attribute.checkedIconVisible;
+			global::Prism.Plugin.Popups.Resource.Attribute.checkedTextViewStyle = global::Covid19Radar.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipBackgroundColor = global::Covid19Radar.Droid.Resource.Attribute.chipBackgroundColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipCornerRadius = global::Covid19Radar.Droid.Resource.Attribute.chipCornerRadius;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipEndPadding = global::Covid19Radar.Droid.Resource.Attribute.chipEndPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipGroupStyle = global::Covid19Radar.Droid.Resource.Attribute.chipGroupStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipIcon = global::Covid19Radar.Droid.Resource.Attribute.chipIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipIconEnabled = global::Covid19Radar.Droid.Resource.Attribute.chipIconEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipIconSize = global::Covid19Radar.Droid.Resource.Attribute.chipIconSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipIconTint = global::Covid19Radar.Droid.Resource.Attribute.chipIconTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipIconVisible = global::Covid19Radar.Droid.Resource.Attribute.chipIconVisible;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipMinHeight = global::Covid19Radar.Droid.Resource.Attribute.chipMinHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipSpacing = global::Covid19Radar.Droid.Resource.Attribute.chipSpacing;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipSpacingHorizontal = global::Covid19Radar.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipSpacingVertical = global::Covid19Radar.Droid.Resource.Attribute.chipSpacingVertical;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipStandaloneStyle = global::Covid19Radar.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipStartPadding = global::Covid19Radar.Droid.Resource.Attribute.chipStartPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipStrokeColor = global::Covid19Radar.Droid.Resource.Attribute.chipStrokeColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipStrokeWidth = global::Covid19Radar.Droid.Resource.Attribute.chipStrokeWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.chipStyle = global::Covid19Radar.Droid.Resource.Attribute.chipStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.closeIcon = global::Covid19Radar.Droid.Resource.Attribute.closeIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.closeIconEnabled = global::Covid19Radar.Droid.Resource.Attribute.closeIconEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.closeIconEndPadding = global::Covid19Radar.Droid.Resource.Attribute.closeIconEndPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.closeIconSize = global::Covid19Radar.Droid.Resource.Attribute.closeIconSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.closeIconStartPadding = global::Covid19Radar.Droid.Resource.Attribute.closeIconStartPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.closeIconTint = global::Covid19Radar.Droid.Resource.Attribute.closeIconTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.closeIconVisible = global::Covid19Radar.Droid.Resource.Attribute.closeIconVisible;
+			global::Prism.Plugin.Popups.Resource.Attribute.closeItemLayout = global::Covid19Radar.Droid.Resource.Attribute.closeItemLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.collapseContentDescription = global::Covid19Radar.Droid.Resource.Attribute.collapseContentDescription;
+			global::Prism.Plugin.Popups.Resource.Attribute.collapsedTitleGravity = global::Covid19Radar.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Prism.Plugin.Popups.Resource.Attribute.collapsedTitleTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.collapseIcon = global::Covid19Radar.Droid.Resource.Attribute.collapseIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.color = global::Covid19Radar.Droid.Resource.Attribute.color;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorAccent = global::Covid19Radar.Droid.Resource.Attribute.colorAccent;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorBackgroundFloating = global::Covid19Radar.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorButtonNormal = global::Covid19Radar.Droid.Resource.Attribute.colorButtonNormal;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorControlActivated = global::Covid19Radar.Droid.Resource.Attribute.colorControlActivated;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorControlHighlight = global::Covid19Radar.Droid.Resource.Attribute.colorControlHighlight;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorControlNormal = global::Covid19Radar.Droid.Resource.Attribute.colorControlNormal;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorError = global::Covid19Radar.Droid.Resource.Attribute.colorError;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorPrimary = global::Covid19Radar.Droid.Resource.Attribute.colorPrimary;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorPrimaryDark = global::Covid19Radar.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorSecondary = global::Covid19Radar.Droid.Resource.Attribute.colorSecondary;
+			global::Prism.Plugin.Popups.Resource.Attribute.colorSwitchThumbNormal = global::Covid19Radar.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Prism.Plugin.Popups.Resource.Attribute.commitIcon = global::Covid19Radar.Droid.Resource.Attribute.commitIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentDescription = global::Covid19Radar.Droid.Resource.Attribute.contentDescription;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentInsetEnd = global::Covid19Radar.Droid.Resource.Attribute.contentInsetEnd;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentInsetEndWithActions = global::Covid19Radar.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentInsetLeft = global::Covid19Radar.Droid.Resource.Attribute.contentInsetLeft;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentInsetRight = global::Covid19Radar.Droid.Resource.Attribute.contentInsetRight;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentInsetStart = global::Covid19Radar.Droid.Resource.Attribute.contentInsetStart;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentInsetStartWithNavigation = global::Covid19Radar.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentPadding = global::Covid19Radar.Droid.Resource.Attribute.contentPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentPaddingBottom = global::Covid19Radar.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentPaddingLeft = global::Covid19Radar.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentPaddingRight = global::Covid19Radar.Droid.Resource.Attribute.contentPaddingRight;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentPaddingTop = global::Covid19Radar.Droid.Resource.Attribute.contentPaddingTop;
+			global::Prism.Plugin.Popups.Resource.Attribute.contentScrim = global::Covid19Radar.Droid.Resource.Attribute.contentScrim;
+			global::Prism.Plugin.Popups.Resource.Attribute.controlBackground = global::Covid19Radar.Droid.Resource.Attribute.controlBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.coordinatorLayoutStyle = global::Covid19Radar.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.cornerRadius = global::Covid19Radar.Droid.Resource.Attribute.cornerRadius;
+			global::Prism.Plugin.Popups.Resource.Attribute.counterEnabled = global::Covid19Radar.Droid.Resource.Attribute.counterEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.counterMaxLength = global::Covid19Radar.Droid.Resource.Attribute.counterMaxLength;
+			global::Prism.Plugin.Popups.Resource.Attribute.counterOverflowTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.counterTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.counterTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.customNavigationLayout = global::Covid19Radar.Droid.Resource.Attribute.customNavigationLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.defaultQueryHint = global::Covid19Radar.Droid.Resource.Attribute.defaultQueryHint;
+			global::Prism.Plugin.Popups.Resource.Attribute.dialogCornerRadius = global::Covid19Radar.Droid.Resource.Attribute.dialogCornerRadius;
+			global::Prism.Plugin.Popups.Resource.Attribute.dialogPreferredPadding = global::Covid19Radar.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.dialogTheme = global::Covid19Radar.Droid.Resource.Attribute.dialogTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.displayOptions = global::Covid19Radar.Droid.Resource.Attribute.displayOptions;
+			global::Prism.Plugin.Popups.Resource.Attribute.divider = global::Covid19Radar.Droid.Resource.Attribute.divider;
+			global::Prism.Plugin.Popups.Resource.Attribute.dividerHorizontal = global::Covid19Radar.Droid.Resource.Attribute.dividerHorizontal;
+			global::Prism.Plugin.Popups.Resource.Attribute.dividerPadding = global::Covid19Radar.Droid.Resource.Attribute.dividerPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.dividerVertical = global::Covid19Radar.Droid.Resource.Attribute.dividerVertical;
+			global::Prism.Plugin.Popups.Resource.Attribute.drawableSize = global::Covid19Radar.Droid.Resource.Attribute.drawableSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.drawerArrowStyle = global::Covid19Radar.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.dropdownListPreferredItemHeight = global::Covid19Radar.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.dropDownListViewStyle = global::Covid19Radar.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.editTextBackground = global::Covid19Radar.Droid.Resource.Attribute.editTextBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.editTextColor = global::Covid19Radar.Droid.Resource.Attribute.editTextColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.editTextStyle = global::Covid19Radar.Droid.Resource.Attribute.editTextStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.elevation = global::Covid19Radar.Droid.Resource.Attribute.elevation;
+			global::Prism.Plugin.Popups.Resource.Attribute.enforceMaterialTheme = global::Covid19Radar.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.enforceTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.enforceTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.errorEnabled = global::Covid19Radar.Droid.Resource.Attribute.errorEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.errorTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.errorTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Covid19Radar.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.expanded = global::Covid19Radar.Droid.Resource.Attribute.expanded;
+			global::Prism.Plugin.Popups.Resource.Attribute.expandedTitleGravity = global::Covid19Radar.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Prism.Plugin.Popups.Resource.Attribute.expandedTitleMargin = global::Covid19Radar.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Prism.Plugin.Popups.Resource.Attribute.expandedTitleMarginBottom = global::Covid19Radar.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Prism.Plugin.Popups.Resource.Attribute.expandedTitleMarginEnd = global::Covid19Radar.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Prism.Plugin.Popups.Resource.Attribute.expandedTitleMarginStart = global::Covid19Radar.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Prism.Plugin.Popups.Resource.Attribute.expandedTitleMarginTop = global::Covid19Radar.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Prism.Plugin.Popups.Resource.Attribute.expandedTitleTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.externalRouteEnabledDrawable = global::Covid19Radar.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.fabAlignmentMode = global::Covid19Radar.Droid.Resource.Attribute.fabAlignmentMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.fabCradleMargin = global::Covid19Radar.Droid.Resource.Attribute.fabCradleMargin;
+			global::Prism.Plugin.Popups.Resource.Attribute.fabCradleRoundedCornerRadius = global::Covid19Radar.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Prism.Plugin.Popups.Resource.Attribute.fabCradleVerticalOffset = global::Covid19Radar.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::Prism.Plugin.Popups.Resource.Attribute.fabCustomSize = global::Covid19Radar.Droid.Resource.Attribute.fabCustomSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.fabSize = global::Covid19Radar.Droid.Resource.Attribute.fabSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.fastScrollEnabled = global::Covid19Radar.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::Covid19Radar.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::Covid19Radar.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.fastScrollVerticalThumbDrawable = global::Covid19Radar.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.fastScrollVerticalTrackDrawable = global::Covid19Radar.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.firstBaselineToTopHeight = global::Covid19Radar.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.floatingActionButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.font = global::Covid19Radar.Droid.Resource.Attribute.font;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontFamily = global::Covid19Radar.Droid.Resource.Attribute.fontFamily;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontProviderAuthority = global::Covid19Radar.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontProviderCerts = global::Covid19Radar.Droid.Resource.Attribute.fontProviderCerts;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontProviderFetchStrategy = global::Covid19Radar.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontProviderFetchTimeout = global::Covid19Radar.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontProviderPackage = global::Covid19Radar.Droid.Resource.Attribute.fontProviderPackage;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontProviderQuery = global::Covid19Radar.Droid.Resource.Attribute.fontProviderQuery;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontStyle = global::Covid19Radar.Droid.Resource.Attribute.fontStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontVariationSettings = global::Covid19Radar.Droid.Resource.Attribute.fontVariationSettings;
+			global::Prism.Plugin.Popups.Resource.Attribute.fontWeight = global::Covid19Radar.Droid.Resource.Attribute.fontWeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.foregroundInsidePadding = global::Covid19Radar.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.gapBetweenBars = global::Covid19Radar.Droid.Resource.Attribute.gapBetweenBars;
+			global::Prism.Plugin.Popups.Resource.Attribute.goIcon = global::Covid19Radar.Droid.Resource.Attribute.goIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.headerLayout = global::Covid19Radar.Droid.Resource.Attribute.headerLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.height = global::Covid19Radar.Droid.Resource.Attribute.height;
+			global::Prism.Plugin.Popups.Resource.Attribute.helperText = global::Covid19Radar.Droid.Resource.Attribute.helperText;
+			global::Prism.Plugin.Popups.Resource.Attribute.helperTextEnabled = global::Covid19Radar.Droid.Resource.Attribute.helperTextEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.helperTextTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.hideMotionSpec = global::Covid19Radar.Droid.Resource.Attribute.hideMotionSpec;
+			global::Prism.Plugin.Popups.Resource.Attribute.hideOnContentScroll = global::Covid19Radar.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Prism.Plugin.Popups.Resource.Attribute.hideOnScroll = global::Covid19Radar.Droid.Resource.Attribute.hideOnScroll;
+			global::Prism.Plugin.Popups.Resource.Attribute.hintAnimationEnabled = global::Covid19Radar.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.hintEnabled = global::Covid19Radar.Droid.Resource.Attribute.hintEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.hintTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.hintTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.homeAsUpIndicator = global::Covid19Radar.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Prism.Plugin.Popups.Resource.Attribute.homeLayout = global::Covid19Radar.Droid.Resource.Attribute.homeLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.hoveredFocusedTranslationZ = global::Covid19Radar.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::Prism.Plugin.Popups.Resource.Attribute.icon = global::Covid19Radar.Droid.Resource.Attribute.icon;
+			global::Prism.Plugin.Popups.Resource.Attribute.iconEndPadding = global::Covid19Radar.Droid.Resource.Attribute.iconEndPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.iconGravity = global::Covid19Radar.Droid.Resource.Attribute.iconGravity;
+			global::Prism.Plugin.Popups.Resource.Attribute.iconifiedByDefault = global::Covid19Radar.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Prism.Plugin.Popups.Resource.Attribute.iconPadding = global::Covid19Radar.Droid.Resource.Attribute.iconPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.iconSize = global::Covid19Radar.Droid.Resource.Attribute.iconSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.iconStartPadding = global::Covid19Radar.Droid.Resource.Attribute.iconStartPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.iconTint = global::Covid19Radar.Droid.Resource.Attribute.iconTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.iconTintMode = global::Covid19Radar.Droid.Resource.Attribute.iconTintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.imageButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.imageButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.indeterminateProgressStyle = global::Covid19Radar.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.initialActivityCount = global::Covid19Radar.Droid.Resource.Attribute.initialActivityCount;
+			global::Prism.Plugin.Popups.Resource.Attribute.insetForeground = global::Covid19Radar.Droid.Resource.Attribute.insetForeground;
+			global::Prism.Plugin.Popups.Resource.Attribute.isLightTheme = global::Covid19Radar.Droid.Resource.Attribute.isLightTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemBackground = global::Covid19Radar.Droid.Resource.Attribute.itemBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemHorizontalPadding = global::Covid19Radar.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemHorizontalTranslationEnabled = global::Covid19Radar.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemIconPadding = global::Covid19Radar.Droid.Resource.Attribute.itemIconPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemIconSize = global::Covid19Radar.Droid.Resource.Attribute.itemIconSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemIconTint = global::Covid19Radar.Droid.Resource.Attribute.itemIconTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemPadding = global::Covid19Radar.Droid.Resource.Attribute.itemPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemSpacing = global::Covid19Radar.Droid.Resource.Attribute.itemSpacing;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.itemTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemTextAppearanceActive = global::Covid19Radar.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemTextAppearanceInactive = global::Covid19Radar.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::Prism.Plugin.Popups.Resource.Attribute.itemTextColor = global::Covid19Radar.Droid.Resource.Attribute.itemTextColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.keylines = global::Covid19Radar.Droid.Resource.Attribute.keylines;
+			global::Prism.Plugin.Popups.Resource.Attribute.labelVisibilityMode = global::Covid19Radar.Droid.Resource.Attribute.labelVisibilityMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.lastBaselineToBottomHeight = global::Covid19Radar.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout = global::Covid19Radar.Droid.Resource.Attribute.layout;
+			global::Prism.Plugin.Popups.Resource.Attribute.layoutManager = global::Covid19Radar.Droid.Resource.Attribute.layoutManager;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_anchor = global::Covid19Radar.Droid.Resource.Attribute.layout_anchor;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_anchorGravity = global::Covid19Radar.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_behavior = global::Covid19Radar.Droid.Resource.Attribute.layout_behavior;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_collapseMode = global::Covid19Radar.Droid.Resource.Attribute.layout_collapseMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_collapseParallaxMultiplier = global::Covid19Radar.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_dodgeInsetEdges = global::Covid19Radar.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_insetEdge = global::Covid19Radar.Droid.Resource.Attribute.layout_insetEdge;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_keyline = global::Covid19Radar.Droid.Resource.Attribute.layout_keyline;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_scrollFlags = global::Covid19Radar.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Prism.Plugin.Popups.Resource.Attribute.layout_scrollInterpolator = global::Covid19Radar.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Prism.Plugin.Popups.Resource.Attribute.liftOnScroll = global::Covid19Radar.Droid.Resource.Attribute.liftOnScroll;
+			global::Prism.Plugin.Popups.Resource.Attribute.lineHeight = global::Covid19Radar.Droid.Resource.Attribute.lineHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.lineSpacing = global::Covid19Radar.Droid.Resource.Attribute.lineSpacing;
+			global::Prism.Plugin.Popups.Resource.Attribute.listChoiceBackgroundIndicator = global::Covid19Radar.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Prism.Plugin.Popups.Resource.Attribute.listDividerAlertDialog = global::Covid19Radar.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Prism.Plugin.Popups.Resource.Attribute.listItemLayout = global::Covid19Radar.Droid.Resource.Attribute.listItemLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.listLayout = global::Covid19Radar.Droid.Resource.Attribute.listLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.listMenuViewStyle = global::Covid19Radar.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.listPopupWindowStyle = global::Covid19Radar.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.listPreferredItemHeight = global::Covid19Radar.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.listPreferredItemHeightLarge = global::Covid19Radar.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Prism.Plugin.Popups.Resource.Attribute.listPreferredItemHeightSmall = global::Covid19Radar.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Prism.Plugin.Popups.Resource.Attribute.listPreferredItemPaddingLeft = global::Covid19Radar.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Prism.Plugin.Popups.Resource.Attribute.listPreferredItemPaddingRight = global::Covid19Radar.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Prism.Plugin.Popups.Resource.Attribute.logo = global::Covid19Radar.Droid.Resource.Attribute.logo;
+			global::Prism.Plugin.Popups.Resource.Attribute.logoDescription = global::Covid19Radar.Droid.Resource.Attribute.logoDescription;
+			global::Prism.Plugin.Popups.Resource.Attribute.materialButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.materialButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.materialCardViewStyle = global::Covid19Radar.Droid.Resource.Attribute.materialCardViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.maxActionInlineWidth = global::Covid19Radar.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.maxButtonHeight = global::Covid19Radar.Droid.Resource.Attribute.maxButtonHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.maxImageSize = global::Covid19Radar.Droid.Resource.Attribute.maxImageSize;
+			global::Prism.Plugin.Popups.Resource.Attribute.measureWithLargestChild = global::Covid19Radar.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteAudioTrackDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteButtonTint = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteButtonTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteCloseDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteDefaultIconDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRoutePauseDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRoutePlayDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteStopDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteStopDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteTheme = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.mediaRouteTvIconDrawable = global::Covid19Radar.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.menu = global::Covid19Radar.Droid.Resource.Attribute.menu;
+			global::Prism.Plugin.Popups.Resource.Attribute.multiChoiceItemLayout = global::Covid19Radar.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.navigationContentDescription = global::Covid19Radar.Droid.Resource.Attribute.navigationContentDescription;
+			global::Prism.Plugin.Popups.Resource.Attribute.navigationIcon = global::Covid19Radar.Droid.Resource.Attribute.navigationIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.navigationMode = global::Covid19Radar.Droid.Resource.Attribute.navigationMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.navigationViewStyle = global::Covid19Radar.Droid.Resource.Attribute.navigationViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.numericModifiers = global::Covid19Radar.Droid.Resource.Attribute.numericModifiers;
+			global::Prism.Plugin.Popups.Resource.Attribute.overlapAnchor = global::Covid19Radar.Droid.Resource.Attribute.overlapAnchor;
+			global::Prism.Plugin.Popups.Resource.Attribute.paddingBottomNoButtons = global::Covid19Radar.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Prism.Plugin.Popups.Resource.Attribute.paddingEnd = global::Covid19Radar.Droid.Resource.Attribute.paddingEnd;
+			global::Prism.Plugin.Popups.Resource.Attribute.paddingStart = global::Covid19Radar.Droid.Resource.Attribute.paddingStart;
+			global::Prism.Plugin.Popups.Resource.Attribute.paddingTopNoTitle = global::Covid19Radar.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Prism.Plugin.Popups.Resource.Attribute.panelBackground = global::Covid19Radar.Droid.Resource.Attribute.panelBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.panelMenuListTheme = global::Covid19Radar.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.panelMenuListWidth = global::Covid19Radar.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.passwordToggleContentDescription = global::Covid19Radar.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Prism.Plugin.Popups.Resource.Attribute.passwordToggleDrawable = global::Covid19Radar.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Prism.Plugin.Popups.Resource.Attribute.passwordToggleEnabled = global::Covid19Radar.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.passwordToggleTint = global::Covid19Radar.Droid.Resource.Attribute.passwordToggleTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.passwordToggleTintMode = global::Covid19Radar.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.popupMenuStyle = global::Covid19Radar.Droid.Resource.Attribute.popupMenuStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.popupTheme = global::Covid19Radar.Droid.Resource.Attribute.popupTheme;
+			global::Prism.Plugin.Popups.Resource.Attribute.popupWindowStyle = global::Covid19Radar.Droid.Resource.Attribute.popupWindowStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.preserveIconSpacing = global::Covid19Radar.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Prism.Plugin.Popups.Resource.Attribute.pressedTranslationZ = global::Covid19Radar.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Prism.Plugin.Popups.Resource.Attribute.progressBarPadding = global::Covid19Radar.Droid.Resource.Attribute.progressBarPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.progressBarStyle = global::Covid19Radar.Droid.Resource.Attribute.progressBarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.queryBackground = global::Covid19Radar.Droid.Resource.Attribute.queryBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.queryHint = global::Covid19Radar.Droid.Resource.Attribute.queryHint;
+			global::Prism.Plugin.Popups.Resource.Attribute.radioButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.radioButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.ratingBarStyle = global::Covid19Radar.Droid.Resource.Attribute.ratingBarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.ratingBarStyleIndicator = global::Covid19Radar.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Prism.Plugin.Popups.Resource.Attribute.ratingBarStyleSmall = global::Covid19Radar.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Prism.Plugin.Popups.Resource.Attribute.reverseLayout = global::Covid19Radar.Droid.Resource.Attribute.reverseLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.rippleColor = global::Covid19Radar.Droid.Resource.Attribute.rippleColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.scrimAnimationDuration = global::Covid19Radar.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Prism.Plugin.Popups.Resource.Attribute.scrimBackground = global::Covid19Radar.Droid.Resource.Attribute.scrimBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.scrimVisibleHeightTrigger = global::Covid19Radar.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Prism.Plugin.Popups.Resource.Attribute.searchHintIcon = global::Covid19Radar.Droid.Resource.Attribute.searchHintIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.searchIcon = global::Covid19Radar.Droid.Resource.Attribute.searchIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.searchViewStyle = global::Covid19Radar.Droid.Resource.Attribute.searchViewStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.seekBarStyle = global::Covid19Radar.Droid.Resource.Attribute.seekBarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.selectableItemBackground = global::Covid19Radar.Droid.Resource.Attribute.selectableItemBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.selectableItemBackgroundBorderless = global::Covid19Radar.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Prism.Plugin.Popups.Resource.Attribute.showAsAction = global::Covid19Radar.Droid.Resource.Attribute.showAsAction;
+			global::Prism.Plugin.Popups.Resource.Attribute.showDividers = global::Covid19Radar.Droid.Resource.Attribute.showDividers;
+			global::Prism.Plugin.Popups.Resource.Attribute.showMotionSpec = global::Covid19Radar.Droid.Resource.Attribute.showMotionSpec;
+			global::Prism.Plugin.Popups.Resource.Attribute.showText = global::Covid19Radar.Droid.Resource.Attribute.showText;
+			global::Prism.Plugin.Popups.Resource.Attribute.showTitle = global::Covid19Radar.Droid.Resource.Attribute.showTitle;
+			global::Prism.Plugin.Popups.Resource.Attribute.singleChoiceItemLayout = global::Covid19Radar.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.singleLine = global::Covid19Radar.Droid.Resource.Attribute.singleLine;
+			global::Prism.Plugin.Popups.Resource.Attribute.singleSelection = global::Covid19Radar.Droid.Resource.Attribute.singleSelection;
+			global::Prism.Plugin.Popups.Resource.Attribute.snackbarButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.snackbarStyle = global::Covid19Radar.Droid.Resource.Attribute.snackbarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.spanCount = global::Covid19Radar.Droid.Resource.Attribute.spanCount;
+			global::Prism.Plugin.Popups.Resource.Attribute.spinBars = global::Covid19Radar.Droid.Resource.Attribute.spinBars;
+			global::Prism.Plugin.Popups.Resource.Attribute.spinnerDropDownItemStyle = global::Covid19Radar.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.spinnerStyle = global::Covid19Radar.Droid.Resource.Attribute.spinnerStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.splitTrack = global::Covid19Radar.Droid.Resource.Attribute.splitTrack;
+			global::Prism.Plugin.Popups.Resource.Attribute.srcCompat = global::Covid19Radar.Droid.Resource.Attribute.srcCompat;
+			global::Prism.Plugin.Popups.Resource.Attribute.stackFromEnd = global::Covid19Radar.Droid.Resource.Attribute.stackFromEnd;
+			global::Prism.Plugin.Popups.Resource.Attribute.state_above_anchor = global::Covid19Radar.Droid.Resource.Attribute.state_above_anchor;
+			global::Prism.Plugin.Popups.Resource.Attribute.state_collapsed = global::Covid19Radar.Droid.Resource.Attribute.state_collapsed;
+			global::Prism.Plugin.Popups.Resource.Attribute.state_collapsible = global::Covid19Radar.Droid.Resource.Attribute.state_collapsible;
+			global::Prism.Plugin.Popups.Resource.Attribute.state_liftable = global::Covid19Radar.Droid.Resource.Attribute.state_liftable;
+			global::Prism.Plugin.Popups.Resource.Attribute.state_lifted = global::Covid19Radar.Droid.Resource.Attribute.state_lifted;
+			global::Prism.Plugin.Popups.Resource.Attribute.statusBarBackground = global::Covid19Radar.Droid.Resource.Attribute.statusBarBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.statusBarScrim = global::Covid19Radar.Droid.Resource.Attribute.statusBarScrim;
+			global::Prism.Plugin.Popups.Resource.Attribute.strokeColor = global::Covid19Radar.Droid.Resource.Attribute.strokeColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.strokeWidth = global::Covid19Radar.Droid.Resource.Attribute.strokeWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.subMenuArrow = global::Covid19Radar.Droid.Resource.Attribute.subMenuArrow;
+			global::Prism.Plugin.Popups.Resource.Attribute.submitBackground = global::Covid19Radar.Droid.Resource.Attribute.submitBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.subtitle = global::Covid19Radar.Droid.Resource.Attribute.subtitle;
+			global::Prism.Plugin.Popups.Resource.Attribute.subtitleTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.subtitleTextColor = global::Covid19Radar.Droid.Resource.Attribute.subtitleTextColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.subtitleTextStyle = global::Covid19Radar.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.suggestionRowLayout = global::Covid19Radar.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Prism.Plugin.Popups.Resource.Attribute.switchMinWidth = global::Covid19Radar.Droid.Resource.Attribute.switchMinWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.switchPadding = global::Covid19Radar.Droid.Resource.Attribute.switchPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.switchStyle = global::Covid19Radar.Droid.Resource.Attribute.switchStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.switchTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.switchTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabBackground = global::Covid19Radar.Droid.Resource.Attribute.tabBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabContentStart = global::Covid19Radar.Droid.Resource.Attribute.tabContentStart;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabGravity = global::Covid19Radar.Droid.Resource.Attribute.tabGravity;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabIconTint = global::Covid19Radar.Droid.Resource.Attribute.tabIconTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabIconTintMode = global::Covid19Radar.Droid.Resource.Attribute.tabIconTintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabIndicator = global::Covid19Radar.Droid.Resource.Attribute.tabIndicator;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabIndicatorAnimationDuration = global::Covid19Radar.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabIndicatorColor = global::Covid19Radar.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabIndicatorFullWidth = global::Covid19Radar.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabIndicatorGravity = global::Covid19Radar.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabIndicatorHeight = global::Covid19Radar.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabInlineLabel = global::Covid19Radar.Droid.Resource.Attribute.tabInlineLabel;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabMaxWidth = global::Covid19Radar.Droid.Resource.Attribute.tabMaxWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabMinWidth = global::Covid19Radar.Droid.Resource.Attribute.tabMinWidth;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabMode = global::Covid19Radar.Droid.Resource.Attribute.tabMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabPadding = global::Covid19Radar.Droid.Resource.Attribute.tabPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabPaddingBottom = global::Covid19Radar.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabPaddingEnd = global::Covid19Radar.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabPaddingStart = global::Covid19Radar.Droid.Resource.Attribute.tabPaddingStart;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabPaddingTop = global::Covid19Radar.Droid.Resource.Attribute.tabPaddingTop;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabRippleColor = global::Covid19Radar.Droid.Resource.Attribute.tabRippleColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabSelectedTextColor = global::Covid19Radar.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabStyle = global::Covid19Radar.Droid.Resource.Attribute.tabStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.tabTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabTextColor = global::Covid19Radar.Droid.Resource.Attribute.tabTextColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.tabUnboundedRipple = global::Covid19Radar.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAllCaps = global::Covid19Radar.Droid.Resource.Attribute.textAllCaps;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceBody1 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceBody1;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceBody2 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceBody2;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceButton = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceButton;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceCaption = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceCaption;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceHeadline1 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceHeadline2 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceHeadline3 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceHeadline4 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceHeadline5 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceHeadline6 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceLargePopupMenu = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceListItem = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceListItemSecondary = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceListItemSmall = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceOverline = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceOverline;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearancePopupMenuHeader = global::Covid19Radar.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceSearchResultSubtitle = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceSearchResultTitle = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceSmallPopupMenu = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceSubtitle1 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::Prism.Plugin.Popups.Resource.Attribute.textAppearanceSubtitle2 = global::Covid19Radar.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::Prism.Plugin.Popups.Resource.Attribute.textColorAlertDialogListItem = global::Covid19Radar.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Prism.Plugin.Popups.Resource.Attribute.textColorSearchUrl = global::Covid19Radar.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Prism.Plugin.Popups.Resource.Attribute.textEndPadding = global::Covid19Radar.Droid.Resource.Attribute.textEndPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.textInputStyle = global::Covid19Radar.Droid.Resource.Attribute.textInputStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.textStartPadding = global::Covid19Radar.Droid.Resource.Attribute.textStartPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.theme = global::Covid19Radar.Droid.Resource.Attribute.theme;
+			global::Prism.Plugin.Popups.Resource.Attribute.thickness = global::Covid19Radar.Droid.Resource.Attribute.thickness;
+			global::Prism.Plugin.Popups.Resource.Attribute.thumbTextPadding = global::Covid19Radar.Droid.Resource.Attribute.thumbTextPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.thumbTint = global::Covid19Radar.Droid.Resource.Attribute.thumbTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.thumbTintMode = global::Covid19Radar.Droid.Resource.Attribute.thumbTintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.tickMark = global::Covid19Radar.Droid.Resource.Attribute.tickMark;
+			global::Prism.Plugin.Popups.Resource.Attribute.tickMarkTint = global::Covid19Radar.Droid.Resource.Attribute.tickMarkTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.tickMarkTintMode = global::Covid19Radar.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.tint = global::Covid19Radar.Droid.Resource.Attribute.tint;
+			global::Prism.Plugin.Popups.Resource.Attribute.tintMode = global::Covid19Radar.Droid.Resource.Attribute.tintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.title = global::Covid19Radar.Droid.Resource.Attribute.title;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleEnabled = global::Covid19Radar.Droid.Resource.Attribute.titleEnabled;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleMargin = global::Covid19Radar.Droid.Resource.Attribute.titleMargin;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleMarginBottom = global::Covid19Radar.Droid.Resource.Attribute.titleMarginBottom;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleMarginEnd = global::Covid19Radar.Droid.Resource.Attribute.titleMarginEnd;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleMargins = global::Covid19Radar.Droid.Resource.Attribute.titleMargins;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleMarginStart = global::Covid19Radar.Droid.Resource.Attribute.titleMarginStart;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleMarginTop = global::Covid19Radar.Droid.Resource.Attribute.titleMarginTop;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleTextAppearance = global::Covid19Radar.Droid.Resource.Attribute.titleTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleTextColor = global::Covid19Radar.Droid.Resource.Attribute.titleTextColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.titleTextStyle = global::Covid19Radar.Droid.Resource.Attribute.titleTextStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.toolbarId = global::Covid19Radar.Droid.Resource.Attribute.toolbarId;
+			global::Prism.Plugin.Popups.Resource.Attribute.toolbarNavigationButtonStyle = global::Covid19Radar.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.toolbarStyle = global::Covid19Radar.Droid.Resource.Attribute.toolbarStyle;
+			global::Prism.Plugin.Popups.Resource.Attribute.tooltipForegroundColor = global::Covid19Radar.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Prism.Plugin.Popups.Resource.Attribute.tooltipFrameBackground = global::Covid19Radar.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Prism.Plugin.Popups.Resource.Attribute.tooltipText = global::Covid19Radar.Droid.Resource.Attribute.tooltipText;
+			global::Prism.Plugin.Popups.Resource.Attribute.track = global::Covid19Radar.Droid.Resource.Attribute.track;
+			global::Prism.Plugin.Popups.Resource.Attribute.trackTint = global::Covid19Radar.Droid.Resource.Attribute.trackTint;
+			global::Prism.Plugin.Popups.Resource.Attribute.trackTintMode = global::Covid19Radar.Droid.Resource.Attribute.trackTintMode;
+			global::Prism.Plugin.Popups.Resource.Attribute.ttcIndex = global::Covid19Radar.Droid.Resource.Attribute.ttcIndex;
+			global::Prism.Plugin.Popups.Resource.Attribute.useCompatPadding = global::Covid19Radar.Droid.Resource.Attribute.useCompatPadding;
+			global::Prism.Plugin.Popups.Resource.Attribute.viewInflaterClass = global::Covid19Radar.Droid.Resource.Attribute.viewInflaterClass;
+			global::Prism.Plugin.Popups.Resource.Attribute.voiceIcon = global::Covid19Radar.Droid.Resource.Attribute.voiceIcon;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowActionBar = global::Covid19Radar.Droid.Resource.Attribute.windowActionBar;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowActionBarOverlay = global::Covid19Radar.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowActionModeOverlay = global::Covid19Radar.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowFixedHeightMajor = global::Covid19Radar.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowFixedHeightMinor = global::Covid19Radar.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowFixedWidthMajor = global::Covid19Radar.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowFixedWidthMinor = global::Covid19Radar.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowMinWidthMajor = global::Covid19Radar.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowMinWidthMinor = global::Covid19Radar.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Prism.Plugin.Popups.Resource.Attribute.windowNoTitle = global::Covid19Radar.Droid.Resource.Attribute.windowNoTitle;
+			global::Prism.Plugin.Popups.Resource.Boolean.abc_action_bar_embed_tabs = global::Covid19Radar.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Prism.Plugin.Popups.Resource.Boolean.abc_allow_stacked_button_bar = global::Covid19Radar.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Prism.Plugin.Popups.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Covid19Radar.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Prism.Plugin.Popups.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::Covid19Radar.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::Prism.Plugin.Popups.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Covid19Radar.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.abc_background_cache_hint_selector_material_light = global::Covid19Radar.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.abc_btn_colored_borderless_text_material = global::Covid19Radar.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Prism.Plugin.Popups.Resource.Color.abc_btn_colored_text_material = global::Covid19Radar.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Prism.Plugin.Popups.Resource.Color.abc_color_highlight_material = global::Covid19Radar.Droid.Resource.Color.abc_color_highlight_material;
+			global::Prism.Plugin.Popups.Resource.Color.abc_hint_foreground_material_dark = global::Covid19Radar.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.abc_hint_foreground_material_light = global::Covid19Radar.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.abc_input_method_navigation_guard = global::Covid19Radar.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Prism.Plugin.Popups.Resource.Color.abc_primary_text_disable_only_material_dark = global::Covid19Radar.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.abc_primary_text_disable_only_material_light = global::Covid19Radar.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.abc_primary_text_material_dark = global::Covid19Radar.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.abc_primary_text_material_light = global::Covid19Radar.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.abc_search_url_text = global::Covid19Radar.Droid.Resource.Color.abc_search_url_text;
+			global::Prism.Plugin.Popups.Resource.Color.abc_search_url_text_normal = global::Covid19Radar.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Prism.Plugin.Popups.Resource.Color.abc_search_url_text_pressed = global::Covid19Radar.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Prism.Plugin.Popups.Resource.Color.abc_search_url_text_selected = global::Covid19Radar.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Prism.Plugin.Popups.Resource.Color.abc_secondary_text_material_dark = global::Covid19Radar.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.abc_secondary_text_material_light = global::Covid19Radar.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.abc_tint_btn_checkable = global::Covid19Radar.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Prism.Plugin.Popups.Resource.Color.abc_tint_default = global::Covid19Radar.Droid.Resource.Color.abc_tint_default;
+			global::Prism.Plugin.Popups.Resource.Color.abc_tint_edittext = global::Covid19Radar.Droid.Resource.Color.abc_tint_edittext;
+			global::Prism.Plugin.Popups.Resource.Color.abc_tint_seek_thumb = global::Covid19Radar.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Prism.Plugin.Popups.Resource.Color.abc_tint_spinner = global::Covid19Radar.Droid.Resource.Color.abc_tint_spinner;
+			global::Prism.Plugin.Popups.Resource.Color.abc_tint_switch_track = global::Covid19Radar.Droid.Resource.Color.abc_tint_switch_track;
+			global::Prism.Plugin.Popups.Resource.Color.accent_material_dark = global::Covid19Radar.Droid.Resource.Color.accent_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.accent_material_light = global::Covid19Radar.Droid.Resource.Color.accent_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.background_floating_material_dark = global::Covid19Radar.Droid.Resource.Color.background_floating_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.background_floating_material_light = global::Covid19Radar.Droid.Resource.Color.background_floating_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.background_material_dark = global::Covid19Radar.Droid.Resource.Color.background_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.background_material_light = global::Covid19Radar.Droid.Resource.Color.background_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.bright_foreground_disabled_material_dark = global::Covid19Radar.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.bright_foreground_disabled_material_light = global::Covid19Radar.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.bright_foreground_inverse_material_dark = global::Covid19Radar.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.bright_foreground_inverse_material_light = global::Covid19Radar.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.bright_foreground_material_dark = global::Covid19Radar.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.bright_foreground_material_light = global::Covid19Radar.Droid.Resource.Color.bright_foreground_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.browser_actions_bg_grey = global::Covid19Radar.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Prism.Plugin.Popups.Resource.Color.browser_actions_divider_color = global::Covid19Radar.Droid.Resource.Color.browser_actions_divider_color;
+			global::Prism.Plugin.Popups.Resource.Color.browser_actions_text_color = global::Covid19Radar.Droid.Resource.Color.browser_actions_text_color;
+			global::Prism.Plugin.Popups.Resource.Color.browser_actions_title_color = global::Covid19Radar.Droid.Resource.Color.browser_actions_title_color;
+			global::Prism.Plugin.Popups.Resource.Color.button_material_dark = global::Covid19Radar.Droid.Resource.Color.button_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.button_material_light = global::Covid19Radar.Droid.Resource.Color.button_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.cardview_dark_background = global::Covid19Radar.Droid.Resource.Color.cardview_dark_background;
+			global::Prism.Plugin.Popups.Resource.Color.cardview_light_background = global::Covid19Radar.Droid.Resource.Color.cardview_light_background;
+			global::Prism.Plugin.Popups.Resource.Color.cardview_shadow_end_color = global::Covid19Radar.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Prism.Plugin.Popups.Resource.Color.cardview_shadow_start_color = global::Covid19Radar.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_bottom_navigation_shadow_color = global::Covid19Radar.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_default_color_primary = global::Covid19Radar.Droid.Resource.Color.design_default_color_primary;
+			global::Prism.Plugin.Popups.Resource.Color.design_default_color_primary_dark = global::Covid19Radar.Droid.Resource.Color.design_default_color_primary_dark;
+			global::Prism.Plugin.Popups.Resource.Color.design_error = global::Covid19Radar.Droid.Resource.Color.design_error;
+			global::Prism.Plugin.Popups.Resource.Color.design_fab_shadow_end_color = global::Covid19Radar.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_fab_shadow_mid_color = global::Covid19Radar.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_fab_shadow_start_color = global::Covid19Radar.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_fab_stroke_end_inner_color = global::Covid19Radar.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_fab_stroke_end_outer_color = global::Covid19Radar.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_fab_stroke_top_inner_color = global::Covid19Radar.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_fab_stroke_top_outer_color = global::Covid19Radar.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_snackbar_background_color = global::Covid19Radar.Droid.Resource.Color.design_snackbar_background_color;
+			global::Prism.Plugin.Popups.Resource.Color.design_tint_password_toggle = global::Covid19Radar.Droid.Resource.Color.design_tint_password_toggle;
+			global::Prism.Plugin.Popups.Resource.Color.dim_foreground_disabled_material_dark = global::Covid19Radar.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.dim_foreground_disabled_material_light = global::Covid19Radar.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.dim_foreground_material_dark = global::Covid19Radar.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.dim_foreground_material_light = global::Covid19Radar.Droid.Resource.Color.dim_foreground_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.error_color_material_dark = global::Covid19Radar.Droid.Resource.Color.error_color_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.error_color_material_light = global::Covid19Radar.Droid.Resource.Color.error_color_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.foreground_material_dark = global::Covid19Radar.Droid.Resource.Color.foreground_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.foreground_material_light = global::Covid19Radar.Droid.Resource.Color.foreground_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.highlighted_text_material_dark = global::Covid19Radar.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.highlighted_text_material_light = global::Covid19Radar.Droid.Resource.Color.highlighted_text_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.material_blue_grey_800 = global::Covid19Radar.Droid.Resource.Color.material_blue_grey_800;
+			global::Prism.Plugin.Popups.Resource.Color.material_blue_grey_900 = global::Covid19Radar.Droid.Resource.Color.material_blue_grey_900;
+			global::Prism.Plugin.Popups.Resource.Color.material_blue_grey_950 = global::Covid19Radar.Droid.Resource.Color.material_blue_grey_950;
+			global::Prism.Plugin.Popups.Resource.Color.material_deep_teal_200 = global::Covid19Radar.Droid.Resource.Color.material_deep_teal_200;
+			global::Prism.Plugin.Popups.Resource.Color.material_deep_teal_500 = global::Covid19Radar.Droid.Resource.Color.material_deep_teal_500;
+			global::Prism.Plugin.Popups.Resource.Color.material_grey_100 = global::Covid19Radar.Droid.Resource.Color.material_grey_100;
+			global::Prism.Plugin.Popups.Resource.Color.material_grey_300 = global::Covid19Radar.Droid.Resource.Color.material_grey_300;
+			global::Prism.Plugin.Popups.Resource.Color.material_grey_50 = global::Covid19Radar.Droid.Resource.Color.material_grey_50;
+			global::Prism.Plugin.Popups.Resource.Color.material_grey_600 = global::Covid19Radar.Droid.Resource.Color.material_grey_600;
+			global::Prism.Plugin.Popups.Resource.Color.material_grey_800 = global::Covid19Radar.Droid.Resource.Color.material_grey_800;
+			global::Prism.Plugin.Popups.Resource.Color.material_grey_850 = global::Covid19Radar.Droid.Resource.Color.material_grey_850;
+			global::Prism.Plugin.Popups.Resource.Color.material_grey_900 = global::Covid19Radar.Droid.Resource.Color.material_grey_900;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::Covid19Radar.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_bottom_nav_item_tint = global::Covid19Radar.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_btn_bg_color_disabled = global::Covid19Radar.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_btn_bg_color_selector = global::Covid19Radar.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_btn_ripple_color = global::Covid19Radar.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_btn_stroke_color_selector = global::Covid19Radar.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_btn_text_btn_ripple_color = global::Covid19Radar.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_btn_text_color_disabled = global::Covid19Radar.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_btn_text_color_selector = global::Covid19Radar.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_btn_transparent_bg_color = global::Covid19Radar.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_chip_background_color = global::Covid19Radar.Droid.Resource.Color.mtrl_chip_background_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_chip_close_icon_tint = global::Covid19Radar.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_chip_ripple_color = global::Covid19Radar.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_chip_text_color = global::Covid19Radar.Droid.Resource.Color.mtrl_chip_text_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_fab_ripple_color = global::Covid19Radar.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_scrim_color = global::Covid19Radar.Droid.Resource.Color.mtrl_scrim_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_tabs_colored_ripple_color = global::Covid19Radar.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_tabs_icon_color_selector = global::Covid19Radar.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::Covid19Radar.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::Covid19Radar.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_tabs_ripple_color = global::Covid19Radar.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_textinput_default_box_stroke_color = global::Covid19Radar.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_textinput_disabled_color = global::Covid19Radar.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::Covid19Radar.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::Covid19Radar.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Prism.Plugin.Popups.Resource.Color.mtrl_text_btn_text_color_selector = global::Covid19Radar.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::Prism.Plugin.Popups.Resource.Color.notification_action_color_filter = global::Covid19Radar.Droid.Resource.Color.notification_action_color_filter;
+			global::Prism.Plugin.Popups.Resource.Color.notification_icon_bg_color = global::Covid19Radar.Droid.Resource.Color.notification_icon_bg_color;
+			global::Prism.Plugin.Popups.Resource.Color.notification_material_background_media_default_color = global::Covid19Radar.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Prism.Plugin.Popups.Resource.Color.primary_dark_material_dark = global::Covid19Radar.Droid.Resource.Color.primary_dark_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.primary_dark_material_light = global::Covid19Radar.Droid.Resource.Color.primary_dark_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.primary_material_dark = global::Covid19Radar.Droid.Resource.Color.primary_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.primary_material_light = global::Covid19Radar.Droid.Resource.Color.primary_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.primary_text_default_material_dark = global::Covid19Radar.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.primary_text_default_material_light = global::Covid19Radar.Droid.Resource.Color.primary_text_default_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.primary_text_disabled_material_dark = global::Covid19Radar.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.primary_text_disabled_material_light = global::Covid19Radar.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.ripple_material_dark = global::Covid19Radar.Droid.Resource.Color.ripple_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.ripple_material_light = global::Covid19Radar.Droid.Resource.Color.ripple_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.secondary_text_default_material_dark = global::Covid19Radar.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.secondary_text_default_material_light = global::Covid19Radar.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.secondary_text_disabled_material_dark = global::Covid19Radar.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.secondary_text_disabled_material_light = global::Covid19Radar.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.switch_thumb_disabled_material_dark = global::Covid19Radar.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.switch_thumb_disabled_material_light = global::Covid19Radar.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.switch_thumb_material_dark = global::Covid19Radar.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.switch_thumb_material_light = global::Covid19Radar.Droid.Resource.Color.switch_thumb_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.switch_thumb_normal_material_dark = global::Covid19Radar.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Prism.Plugin.Popups.Resource.Color.switch_thumb_normal_material_light = global::Covid19Radar.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Prism.Plugin.Popups.Resource.Color.tooltip_background_dark = global::Covid19Radar.Droid.Resource.Color.tooltip_background_dark;
+			global::Prism.Plugin.Popups.Resource.Color.tooltip_background_light = global::Covid19Radar.Droid.Resource.Color.tooltip_background_light;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_content_inset_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_default_height_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_default_padding_end_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_default_padding_start_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_elevation_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_stacked_max_height = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_button_min_height_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_button_min_width_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_action_button_min_width_overflow_material = global::Covid19Radar.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_alert_dialog_button_bar_height = global::Covid19Radar.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_alert_dialog_button_dimen = global::Covid19Radar.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_button_inset_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_button_inset_vertical_material = global::Covid19Radar.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_button_padding_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_button_padding_vertical_material = global::Covid19Radar.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::Covid19Radar.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_config_prefDialogWidth = global::Covid19Radar.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_control_corner_material = global::Covid19Radar.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_control_inset_material = global::Covid19Radar.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_control_padding_material = global::Covid19Radar.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_corner_radius_material = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_fixed_height_major = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_fixed_height_minor = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_fixed_width_major = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_fixed_width_minor = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_min_width_major = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_min_width_minor = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_padding_material = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_padding_top_material = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dialog_title_divider_material = global::Covid19Radar.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_disabled_alpha_material_dark = global::Covid19Radar.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_disabled_alpha_material_light = global::Covid19Radar.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dropdownitem_icon_width = global::Covid19Radar.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dropdownitem_text_padding_left = global::Covid19Radar.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_dropdownitem_text_padding_right = global::Covid19Radar.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_edit_text_inset_bottom_material = global::Covid19Radar.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_edit_text_inset_top_material = global::Covid19Radar.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_floating_window_z = global::Covid19Radar.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_list_item_padding_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_panel_menu_list_width = global::Covid19Radar.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_progress_bar_height_material = global::Covid19Radar.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_search_view_preferred_height = global::Covid19Radar.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_search_view_preferred_width = global::Covid19Radar.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_seekbar_track_background_height_material = global::Covid19Radar.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_seekbar_track_progress_height_material = global::Covid19Radar.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_select_dialog_padding_start_material = global::Covid19Radar.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_switch_padding = global::Covid19Radar.Droid.Resource.Dimension.abc_switch_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_body_1_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_body_2_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_button_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_caption_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_display_1_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_display_2_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_display_3_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_display_4_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_headline_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_large_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_medium_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_menu_header_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_menu_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_small_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_subhead_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_title_material = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.abc_text_size_title_material_toolbar = global::Covid19Radar.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Prism.Plugin.Popups.Resource.Dimension.browser_actions_context_menu_max_width = global::Covid19Radar.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.browser_actions_context_menu_min_padding = global::Covid19Radar.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.cardview_compat_inset_shadow = global::Covid19Radar.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Prism.Plugin.Popups.Resource.Dimension.cardview_default_elevation = global::Covid19Radar.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.cardview_default_radius = global::Covid19Radar.Droid.Resource.Dimension.cardview_default_radius;
+			global::Prism.Plugin.Popups.Resource.Dimension.compat_button_inset_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.compat_button_inset_vertical_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.compat_button_padding_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.compat_button_padding_vertical_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.compat_control_corner_material = global::Covid19Radar.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Prism.Plugin.Popups.Resource.Dimension.compat_notification_large_icon_max_height = global::Covid19Radar.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.compat_notification_large_icon_max_width = global::Covid19Radar.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_appbar_elevation = global::Covid19Radar.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_active_text_size = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_elevation = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_height = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_icon_size = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_item_max_width = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_item_min_width = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_margin = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_shadow_height = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_navigation_text_size = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_bottom_sheet_peek_height_min = global::Covid19Radar.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_fab_border_width = global::Covid19Radar.Droid.Resource.Dimension.design_fab_border_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_fab_elevation = global::Covid19Radar.Droid.Resource.Dimension.design_fab_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_fab_image_size = global::Covid19Radar.Droid.Resource.Dimension.design_fab_image_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_fab_size_mini = global::Covid19Radar.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_fab_size_normal = global::Covid19Radar.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_fab_translation_z_hovered_focused = global::Covid19Radar.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_fab_translation_z_pressed = global::Covid19Radar.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_navigation_elevation = global::Covid19Radar.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_navigation_icon_padding = global::Covid19Radar.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_navigation_icon_size = global::Covid19Radar.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_navigation_item_horizontal_padding = global::Covid19Radar.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_navigation_item_icon_padding = global::Covid19Radar.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_navigation_max_width = global::Covid19Radar.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_navigation_padding_bottom = global::Covid19Radar.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_navigation_separator_vertical_padding = global::Covid19Radar.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_action_inline_max_width = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_background_corner_radius = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_elevation = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_max_width = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_min_width = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_padding_horizontal = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_padding_vertical = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_snackbar_text_size = global::Covid19Radar.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_tab_max_width = global::Covid19Radar.Droid.Resource.Dimension.design_tab_max_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_tab_scrollable_min_width = global::Covid19Radar.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_tab_text_size = global::Covid19Radar.Droid.Resource.Dimension.design_tab_text_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_tab_text_size_2line = global::Covid19Radar.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Prism.Plugin.Popups.Resource.Dimension.design_textinput_caption_translate_y = global::Covid19Radar.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::Prism.Plugin.Popups.Resource.Dimension.disabled_alpha_material_dark = global::Covid19Radar.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Prism.Plugin.Popups.Resource.Dimension.disabled_alpha_material_light = global::Covid19Radar.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Prism.Plugin.Popups.Resource.Dimension.fastscroll_default_thickness = global::Covid19Radar.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Prism.Plugin.Popups.Resource.Dimension.fastscroll_margin = global::Covid19Radar.Droid.Resource.Dimension.fastscroll_margin;
+			global::Prism.Plugin.Popups.Resource.Dimension.fastscroll_minimum_range = global::Covid19Radar.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Prism.Plugin.Popups.Resource.Dimension.highlight_alpha_material_colored = global::Covid19Radar.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Prism.Plugin.Popups.Resource.Dimension.highlight_alpha_material_dark = global::Covid19Radar.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Prism.Plugin.Popups.Resource.Dimension.highlight_alpha_material_light = global::Covid19Radar.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Prism.Plugin.Popups.Resource.Dimension.hint_alpha_material_dark = global::Covid19Radar.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Prism.Plugin.Popups.Resource.Dimension.hint_alpha_material_light = global::Covid19Radar.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Prism.Plugin.Popups.Resource.Dimension.hint_pressed_alpha_material_dark = global::Covid19Radar.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Prism.Plugin.Popups.Resource.Dimension.hint_pressed_alpha_material_light = global::Covid19Radar.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Prism.Plugin.Popups.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Covid19Radar.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Prism.Plugin.Popups.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Covid19Radar.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Prism.Plugin.Popups.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Covid19Radar.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Prism.Plugin.Popups.Resource.Dimension.mr_controller_volume_group_list_item_height = global::Covid19Radar.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::Covid19Radar.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.mr_controller_volume_group_list_max_height = global::Covid19Radar.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::Covid19Radar.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::Prism.Plugin.Popups.Resource.Dimension.mr_dialog_fixed_width_major = global::Covid19Radar.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::Prism.Plugin.Popups.Resource.Dimension.mr_dialog_fixed_width_minor = global::Covid19Radar.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::Covid19Radar.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::Covid19Radar.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::Covid19Radar.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::Covid19Radar.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_bottomappbar_height = global::Covid19Radar.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_corner_radius = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_disabled_elevation = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_disabled_z = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_elevation = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_focused_z = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_hovered_z = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_icon_padding = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_inset = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_letter_spacing = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_padding_bottom = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_padding_left = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_padding_right = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_padding_top = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_pressed_z = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_stroke_size = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_text_size = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_btn_z = global::Covid19Radar.Droid.Resource.Dimension.mtrl_btn_z;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_card_elevation = global::Covid19Radar.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_card_spacing = global::Covid19Radar.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_chip_pressed_translation_z = global::Covid19Radar.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_chip_text_size = global::Covid19Radar.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_fab_elevation = global::Covid19Radar.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::Covid19Radar.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_fab_translation_z_pressed = global::Covid19Radar.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_navigation_elevation = global::Covid19Radar.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::Covid19Radar.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_navigation_item_icon_padding = global::Covid19Radar.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::Covid19Radar.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_snackbar_margin = global::Covid19Radar.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::Covid19Radar.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::Covid19Radar.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::Covid19Radar.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::Covid19Radar.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_textinput_box_padding_end = global::Covid19Radar.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::Covid19Radar.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::Covid19Radar.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::Covid19Radar.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.mtrl_toolbar_default_height = global::Covid19Radar.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_action_icon_size = global::Covid19Radar.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_action_text_size = global::Covid19Radar.Droid.Resource.Dimension.notification_action_text_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_big_circle_margin = global::Covid19Radar.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_content_margin_start = global::Covid19Radar.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_large_icon_height = global::Covid19Radar.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_large_icon_width = global::Covid19Radar.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_main_column_padding_top = global::Covid19Radar.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_media_narrow_margin = global::Covid19Radar.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_right_icon_size = global::Covid19Radar.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_right_side_padding_top = global::Covid19Radar.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_small_icon_background_padding = global::Covid19Radar.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_small_icon_size_as_large = global::Covid19Radar.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_subtext_size = global::Covid19Radar.Droid.Resource.Dimension.notification_subtext_size;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_top_pad = global::Covid19Radar.Droid.Resource.Dimension.notification_top_pad;
+			global::Prism.Plugin.Popups.Resource.Dimension.notification_top_pad_large_text = global::Covid19Radar.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Prism.Plugin.Popups.Resource.Dimension.subtitle_corner_radius = global::Covid19Radar.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::Prism.Plugin.Popups.Resource.Dimension.subtitle_outline_width = global::Covid19Radar.Droid.Resource.Dimension.subtitle_outline_width;
+			global::Prism.Plugin.Popups.Resource.Dimension.subtitle_shadow_offset = global::Covid19Radar.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::Prism.Plugin.Popups.Resource.Dimension.subtitle_shadow_radius = global::Covid19Radar.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::Prism.Plugin.Popups.Resource.Dimension.tooltip_corner_radius = global::Covid19Radar.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Prism.Plugin.Popups.Resource.Dimension.tooltip_horizontal_padding = global::Covid19Radar.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.tooltip_margin = global::Covid19Radar.Droid.Resource.Dimension.tooltip_margin;
+			global::Prism.Plugin.Popups.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::Covid19Radar.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Prism.Plugin.Popups.Resource.Dimension.tooltip_precise_anchor_threshold = global::Covid19Radar.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Prism.Plugin.Popups.Resource.Dimension.tooltip_vertical_padding = global::Covid19Radar.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Prism.Plugin.Popups.Resource.Dimension.tooltip_y_offset_non_touch = global::Covid19Radar.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Prism.Plugin.Popups.Resource.Dimension.tooltip_y_offset_touch = global::Covid19Radar.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_action_bar_item_background_material = global::Covid19Radar.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_borderless_material = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_check_material = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_colored_material = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_default_mtrl_shape = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_radio_material = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::Covid19Radar.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_cab_background_internal_bg = global::Covid19Radar.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_cab_background_top_material = global::Covid19Radar.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_control_background_material = global::Covid19Radar.Droid.Resource.Drawable.abc_control_background_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_dialog_material_background = global::Covid19Radar.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_edit_text_material = global::Covid19Radar.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_ab_back_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_clear_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_go_search_api_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_menu_overflow_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_search_api_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_star_black_16dp = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_star_black_36dp = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_star_black_48dp = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_star_half_black_16dp = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_star_half_black_36dp = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_star_half_black_48dp = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ic_voice_search_api_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_item_background_holo_dark = global::Covid19Radar.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_item_background_holo_light = global::Covid19Radar.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_divider_material = global::Covid19Radar.Droid.Resource.Drawable.abc_list_divider_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_focused_holo = global::Covid19Radar.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_longpressed_holo = global::Covid19Radar.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_pressed_holo_dark = global::Covid19Radar.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_pressed_holo_light = global::Covid19Radar.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::Covid19Radar.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::Covid19Radar.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::Covid19Radar.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_selector_disabled_holo_light = global::Covid19Radar.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_selector_holo_dark = global::Covid19Radar.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_list_selector_holo_light = global::Covid19Radar.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::Covid19Radar.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_popup_background_mtrl_mult = global::Covid19Radar.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ratingbar_indicator_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ratingbar_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_ratingbar_small_material = global::Covid19Radar.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::Covid19Radar.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::Covid19Radar.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_seekbar_thumb_material = global::Covid19Radar.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_seekbar_tick_mark_material = global::Covid19Radar.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_seekbar_track_material = global::Covid19Radar.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_spinner_textfield_background_material = global::Covid19Radar.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_switch_thumb_material = global::Covid19Radar.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_switch_track_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_tab_indicator_material = global::Covid19Radar.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::Covid19Radar.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_textfield_search_material = global::Covid19Radar.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_text_cursor_material = global::Covid19Radar.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::Covid19Radar.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::Covid19Radar.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::Covid19Radar.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::Covid19Radar.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::Covid19Radar.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::Covid19Radar.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.abc_vector_test = global::Covid19Radar.Droid.Resource.Drawable.abc_vector_test;
+			global::Prism.Plugin.Popups.Resource.Drawable.avd_hide_password = global::Covid19Radar.Droid.Resource.Drawable.avd_hide_password;
+			global::Prism.Plugin.Popups.Resource.Drawable.avd_show_password = global::Covid19Radar.Droid.Resource.Drawable.avd_show_password;
+			global::Prism.Plugin.Popups.Resource.Drawable.design_bottom_navigation_item_background = global::Covid19Radar.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Prism.Plugin.Popups.Resource.Drawable.design_fab_background = global::Covid19Radar.Droid.Resource.Drawable.design_fab_background;
+			global::Prism.Plugin.Popups.Resource.Drawable.design_ic_visibility = global::Covid19Radar.Droid.Resource.Drawable.design_ic_visibility;
+			global::Prism.Plugin.Popups.Resource.Drawable.design_ic_visibility_off = global::Covid19Radar.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Prism.Plugin.Popups.Resource.Drawable.design_password_eye = global::Covid19Radar.Droid.Resource.Drawable.design_password_eye;
+			global::Prism.Plugin.Popups.Resource.Drawable.design_snackbar_background = global::Covid19Radar.Droid.Resource.Drawable.design_snackbar_background;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_audiotrack_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_audiotrack_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_audiotrack_light = global::Covid19Radar.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_dialog_close_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_dialog_close_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_dialog_close_light = global::Covid19Radar.Droid.Resource.Drawable.ic_dialog_close_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_00 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_00;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_01 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_01;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_02 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_02;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_03 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_03;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_04 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_04;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_05 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_05;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_06 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_06;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_07 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_07;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_08 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_08;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_09 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_09;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_10 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_10;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_11 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_11;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_12 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_12;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_13 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_13;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_14 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_14;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_collapse_15 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_collapse_15;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_00 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_00;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_01 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_01;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_02 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_02;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_03 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_03;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_04 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_04;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_05 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_05;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_06 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_06;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_07 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_07;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_08 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_08;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_09 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_09;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_10 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_10;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_11 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_11;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_12 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_12;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_13 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_13;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_14 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_14;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_group_expand_15 = global::Covid19Radar.Droid.Resource.Drawable.ic_group_expand_15;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_media_pause_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_media_pause_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_media_pause_light = global::Covid19Radar.Droid.Resource.Drawable.ic_media_pause_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_media_play_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_media_play_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_media_play_light = global::Covid19Radar.Droid.Resource.Drawable.ic_media_play_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_media_stop_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_media_stop_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_media_stop_light = global::Covid19Radar.Droid.Resource.Drawable.ic_media_stop_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_00_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_00_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_01_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_01_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_02_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_02_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_03_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_03_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_04_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_04_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_05_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_05_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_06_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_06_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_07_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_07_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_08_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_08_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_09_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_09_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_10_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_10_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_11_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_11_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_12_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_12_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_13_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_13_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_14_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_14_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_15_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_15_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_16_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_16_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_17_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_17_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_18_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_18_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_19_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_19_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_20_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_20_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_21_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_21_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_22_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_22_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_23_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_23_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_23_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_23_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_24_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_24_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_24_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_24_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_25_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_25_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_25_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_25_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_26_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_26_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_26_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_26_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_27_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_27_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_27_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_27_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_28_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_28_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_28_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_28_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_29_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_29_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_29_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_29_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_30_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_30_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connected_30_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connected_30_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_00_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_00_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_01_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_01_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_02_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_02_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_03_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_03_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_04_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_04_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_05_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_05_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_06_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_06_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_07_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_07_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_08_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_08_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_09_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_09_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_10_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_10_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_11_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_11_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_12_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_12_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_13_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_13_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_14_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_14_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_15_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_15_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_16_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_16_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_17_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_17_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_18_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_18_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_19_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_19_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_20_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_20_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_21_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_21_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_22_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_22_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_23_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_23_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_23_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_24_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_24_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_24_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_25_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_25_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_25_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_26_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_26_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_26_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_27_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_27_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_27_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_28_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_28_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_28_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_29_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_29_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_29_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_30_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_connecting_30_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_connecting_30_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_disabled_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_disabled_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_disabled_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_disconnected_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_disconnected_light = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mr_button_grey = global::Covid19Radar.Droid.Resource.Drawable.ic_mr_button_grey;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mtrl_chip_checked_black = global::Covid19Radar.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mtrl_chip_checked_circle = global::Covid19Radar.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_mtrl_chip_close_circle = global::Covid19Radar.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_vol_type_speaker_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_vol_type_speaker_group_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_vol_type_speaker_group_light = global::Covid19Radar.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_vol_type_speaker_light = global::Covid19Radar.Droid.Resource.Drawable.ic_vol_type_speaker_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_vol_type_tv_dark = global::Covid19Radar.Droid.Resource.Drawable.ic_vol_type_tv_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.ic_vol_type_tv_light = global::Covid19Radar.Droid.Resource.Drawable.ic_vol_type_tv_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_button_connected_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_button_connected_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_button_connected_light = global::Covid19Radar.Droid.Resource.Drawable.mr_button_connected_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_button_connecting_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_button_connecting_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_button_connecting_light = global::Covid19Radar.Droid.Resource.Drawable.mr_button_connecting_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_button_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_button_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_button_light = global::Covid19Radar.Droid.Resource.Drawable.mr_button_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_dialog_close_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_dialog_close_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_dialog_close_light = global::Covid19Radar.Droid.Resource.Drawable.mr_dialog_close_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_dialog_material_background_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_dialog_material_background_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_dialog_material_background_light = global::Covid19Radar.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_group_collapse = global::Covid19Radar.Droid.Resource.Drawable.mr_group_collapse;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_group_expand = global::Covid19Radar.Droid.Resource.Drawable.mr_group_expand;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_media_pause_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_media_pause_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_media_pause_light = global::Covid19Radar.Droid.Resource.Drawable.mr_media_pause_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_media_play_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_media_play_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_media_play_light = global::Covid19Radar.Droid.Resource.Drawable.mr_media_play_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_media_stop_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_media_stop_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_media_stop_light = global::Covid19Radar.Droid.Resource.Drawable.mr_media_stop_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_vol_type_audiotrack_dark = global::Covid19Radar.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.mr_vol_type_audiotrack_light = global::Covid19Radar.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
+			global::Prism.Plugin.Popups.Resource.Drawable.mtrl_snackbar_background = global::Covid19Radar.Droid.Resource.Drawable.mtrl_snackbar_background;
+			global::Prism.Plugin.Popups.Resource.Drawable.mtrl_tabs_default_indicator = global::Covid19Radar.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Prism.Plugin.Popups.Resource.Drawable.navigation_empty_icon = global::Covid19Radar.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_action_background = global::Covid19Radar.Droid.Resource.Drawable.notification_action_background;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_bg;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_bg_low = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_bg_low_normal = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_bg_low_pressed = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_bg_normal = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_normal;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_bg_normal_pressed = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_icon_background = global::Covid19Radar.Droid.Resource.Drawable.notification_icon_background;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_template_icon_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_template_icon_low_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Prism.Plugin.Popups.Resource.Drawable.notification_tile_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_tile_bg;
+			global::Prism.Plugin.Popups.Resource.Drawable.notify_panel_notification_icon_bg = global::Covid19Radar.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Prism.Plugin.Popups.Resource.Drawable.tooltip_frame_dark = global::Covid19Radar.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Prism.Plugin.Popups.Resource.Drawable.tooltip_frame_light = global::Covid19Radar.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Prism.Plugin.Popups.Resource.Id.action0 = global::Covid19Radar.Droid.Resource.Id.action0;
+			global::Prism.Plugin.Popups.Resource.Id.actions = global::Covid19Radar.Droid.Resource.Id.actions;
+			global::Prism.Plugin.Popups.Resource.Id.action_bar = global::Covid19Radar.Droid.Resource.Id.action_bar;
+			global::Prism.Plugin.Popups.Resource.Id.action_bar_activity_content = global::Covid19Radar.Droid.Resource.Id.action_bar_activity_content;
+			global::Prism.Plugin.Popups.Resource.Id.action_bar_container = global::Covid19Radar.Droid.Resource.Id.action_bar_container;
+			global::Prism.Plugin.Popups.Resource.Id.action_bar_root = global::Covid19Radar.Droid.Resource.Id.action_bar_root;
+			global::Prism.Plugin.Popups.Resource.Id.action_bar_spinner = global::Covid19Radar.Droid.Resource.Id.action_bar_spinner;
+			global::Prism.Plugin.Popups.Resource.Id.action_bar_subtitle = global::Covid19Radar.Droid.Resource.Id.action_bar_subtitle;
+			global::Prism.Plugin.Popups.Resource.Id.action_bar_title = global::Covid19Radar.Droid.Resource.Id.action_bar_title;
+			global::Prism.Plugin.Popups.Resource.Id.action_container = global::Covid19Radar.Droid.Resource.Id.action_container;
+			global::Prism.Plugin.Popups.Resource.Id.action_context_bar = global::Covid19Radar.Droid.Resource.Id.action_context_bar;
+			global::Prism.Plugin.Popups.Resource.Id.action_divider = global::Covid19Radar.Droid.Resource.Id.action_divider;
+			global::Prism.Plugin.Popups.Resource.Id.action_image = global::Covid19Radar.Droid.Resource.Id.action_image;
+			global::Prism.Plugin.Popups.Resource.Id.action_menu_divider = global::Covid19Radar.Droid.Resource.Id.action_menu_divider;
+			global::Prism.Plugin.Popups.Resource.Id.action_menu_presenter = global::Covid19Radar.Droid.Resource.Id.action_menu_presenter;
+			global::Prism.Plugin.Popups.Resource.Id.action_mode_bar = global::Covid19Radar.Droid.Resource.Id.action_mode_bar;
+			global::Prism.Plugin.Popups.Resource.Id.action_mode_bar_stub = global::Covid19Radar.Droid.Resource.Id.action_mode_bar_stub;
+			global::Prism.Plugin.Popups.Resource.Id.action_mode_close_button = global::Covid19Radar.Droid.Resource.Id.action_mode_close_button;
+			global::Prism.Plugin.Popups.Resource.Id.action_text = global::Covid19Radar.Droid.Resource.Id.action_text;
+			global::Prism.Plugin.Popups.Resource.Id.activity_chooser_view_content = global::Covid19Radar.Droid.Resource.Id.activity_chooser_view_content;
+			global::Prism.Plugin.Popups.Resource.Id.add = global::Covid19Radar.Droid.Resource.Id.add;
+			global::Prism.Plugin.Popups.Resource.Id.alertTitle = global::Covid19Radar.Droid.Resource.Id.alertTitle;
+			global::Prism.Plugin.Popups.Resource.Id.all = global::Covid19Radar.Droid.Resource.Id.all;
+			global::Prism.Plugin.Popups.Resource.Id.ALT = global::Covid19Radar.Droid.Resource.Id.ALT;
+			global::Prism.Plugin.Popups.Resource.Id.always = global::Covid19Radar.Droid.Resource.Id.always;
+			global::Prism.Plugin.Popups.Resource.Id.async = global::Covid19Radar.Droid.Resource.Id.async;
+			global::Prism.Plugin.Popups.Resource.Id.auto = global::Covid19Radar.Droid.Resource.Id.auto;
+			global::Prism.Plugin.Popups.Resource.Id.beginning = global::Covid19Radar.Droid.Resource.Id.beginning;
+			global::Prism.Plugin.Popups.Resource.Id.blocking = global::Covid19Radar.Droid.Resource.Id.blocking;
+			global::Prism.Plugin.Popups.Resource.Id.bottom = global::Covid19Radar.Droid.Resource.Id.bottom;
+			global::Prism.Plugin.Popups.Resource.Id.bottomtab_navarea = global::Covid19Radar.Droid.Resource.Id.bottomtab_navarea;
+			global::Prism.Plugin.Popups.Resource.Id.bottomtab_tabbar = global::Covid19Radar.Droid.Resource.Id.bottomtab_tabbar;
+			global::Prism.Plugin.Popups.Resource.Id.browser_actions_header_text = global::Covid19Radar.Droid.Resource.Id.browser_actions_header_text;
+			global::Prism.Plugin.Popups.Resource.Id.browser_actions_menu_items = global::Covid19Radar.Droid.Resource.Id.browser_actions_menu_items;
+			global::Prism.Plugin.Popups.Resource.Id.browser_actions_menu_item_icon = global::Covid19Radar.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Prism.Plugin.Popups.Resource.Id.browser_actions_menu_item_text = global::Covid19Radar.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Prism.Plugin.Popups.Resource.Id.browser_actions_menu_view = global::Covid19Radar.Droid.Resource.Id.browser_actions_menu_view;
+			global::Prism.Plugin.Popups.Resource.Id.buttonPanel = global::Covid19Radar.Droid.Resource.Id.buttonPanel;
+			global::Prism.Plugin.Popups.Resource.Id.cancel_action = global::Covid19Radar.Droid.Resource.Id.cancel_action;
+			global::Prism.Plugin.Popups.Resource.Id.center = global::Covid19Radar.Droid.Resource.Id.center;
+			global::Prism.Plugin.Popups.Resource.Id.center_horizontal = global::Covid19Radar.Droid.Resource.Id.center_horizontal;
+			global::Prism.Plugin.Popups.Resource.Id.center_vertical = global::Covid19Radar.Droid.Resource.Id.center_vertical;
+			global::Prism.Plugin.Popups.Resource.Id.checkbox = global::Covid19Radar.Droid.Resource.Id.checkbox;
+			global::Prism.Plugin.Popups.Resource.Id.chronometer = global::Covid19Radar.Droid.Resource.Id.chronometer;
+			global::Prism.Plugin.Popups.Resource.Id.clip_horizontal = global::Covid19Radar.Droid.Resource.Id.clip_horizontal;
+			global::Prism.Plugin.Popups.Resource.Id.clip_vertical = global::Covid19Radar.Droid.Resource.Id.clip_vertical;
+			global::Prism.Plugin.Popups.Resource.Id.collapseActionView = global::Covid19Radar.Droid.Resource.Id.collapseActionView;
+			global::Prism.Plugin.Popups.Resource.Id.container = global::Covid19Radar.Droid.Resource.Id.container;
+			global::Prism.Plugin.Popups.Resource.Id.content = global::Covid19Radar.Droid.Resource.Id.content;
+			global::Prism.Plugin.Popups.Resource.Id.contentPanel = global::Covid19Radar.Droid.Resource.Id.contentPanel;
+			global::Prism.Plugin.Popups.Resource.Id.coordinator = global::Covid19Radar.Droid.Resource.Id.coordinator;
+			global::Prism.Plugin.Popups.Resource.Id.CTRL = global::Covid19Radar.Droid.Resource.Id.CTRL;
+			global::Prism.Plugin.Popups.Resource.Id.custom = global::Covid19Radar.Droid.Resource.Id.custom;
+			global::Prism.Plugin.Popups.Resource.Id.customPanel = global::Covid19Radar.Droid.Resource.Id.customPanel;
+			global::Prism.Plugin.Popups.Resource.Id.decor_content_parent = global::Covid19Radar.Droid.Resource.Id.decor_content_parent;
+			global::Prism.Plugin.Popups.Resource.Id.default_activity_button = global::Covid19Radar.Droid.Resource.Id.default_activity_button;
+			global::Prism.Plugin.Popups.Resource.Id.design_bottom_sheet = global::Covid19Radar.Droid.Resource.Id.design_bottom_sheet;
+			global::Prism.Plugin.Popups.Resource.Id.design_menu_item_action_area = global::Covid19Radar.Droid.Resource.Id.design_menu_item_action_area;
+			global::Prism.Plugin.Popups.Resource.Id.design_menu_item_action_area_stub = global::Covid19Radar.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Prism.Plugin.Popups.Resource.Id.design_menu_item_text = global::Covid19Radar.Droid.Resource.Id.design_menu_item_text;
+			global::Prism.Plugin.Popups.Resource.Id.design_navigation_view = global::Covid19Radar.Droid.Resource.Id.design_navigation_view;
+			global::Prism.Plugin.Popups.Resource.Id.disableHome = global::Covid19Radar.Droid.Resource.Id.disableHome;
+			global::Prism.Plugin.Popups.Resource.Id.edit_query = global::Covid19Radar.Droid.Resource.Id.edit_query;
+			global::Prism.Plugin.Popups.Resource.Id.end = global::Covid19Radar.Droid.Resource.Id.end;
+			global::Prism.Plugin.Popups.Resource.Id.end_padder = global::Covid19Radar.Droid.Resource.Id.end_padder;
+			global::Prism.Plugin.Popups.Resource.Id.enterAlways = global::Covid19Radar.Droid.Resource.Id.enterAlways;
+			global::Prism.Plugin.Popups.Resource.Id.enterAlwaysCollapsed = global::Covid19Radar.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Prism.Plugin.Popups.Resource.Id.exitUntilCollapsed = global::Covid19Radar.Droid.Resource.Id.exitUntilCollapsed;
+			global::Prism.Plugin.Popups.Resource.Id.expanded_menu = global::Covid19Radar.Droid.Resource.Id.expanded_menu;
+			global::Prism.Plugin.Popups.Resource.Id.expand_activities_button = global::Covid19Radar.Droid.Resource.Id.expand_activities_button;
+			global::Prism.Plugin.Popups.Resource.Id.fill = global::Covid19Radar.Droid.Resource.Id.fill;
+			global::Prism.Plugin.Popups.Resource.Id.filled = global::Covid19Radar.Droid.Resource.Id.filled;
+			global::Prism.Plugin.Popups.Resource.Id.fill_horizontal = global::Covid19Radar.Droid.Resource.Id.fill_horizontal;
+			global::Prism.Plugin.Popups.Resource.Id.fill_vertical = global::Covid19Radar.Droid.Resource.Id.fill_vertical;
+			global::Prism.Plugin.Popups.Resource.Id.@fixed = global::Covid19Radar.Droid.Resource.Id.@fixed;
+			global::Prism.Plugin.Popups.Resource.Id.flyoutcontent_appbar = global::Covid19Radar.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Prism.Plugin.Popups.Resource.Id.flyoutcontent_recycler = global::Covid19Radar.Droid.Resource.Id.flyoutcontent_recycler;
+			global::Prism.Plugin.Popups.Resource.Id.forever = global::Covid19Radar.Droid.Resource.Id.forever;
+			global::Prism.Plugin.Popups.Resource.Id.FUNCTION = global::Covid19Radar.Droid.Resource.Id.FUNCTION;
+			global::Prism.Plugin.Popups.Resource.Id.ghost_view = global::Covid19Radar.Droid.Resource.Id.ghost_view;
+			global::Prism.Plugin.Popups.Resource.Id.group_divider = global::Covid19Radar.Droid.Resource.Id.group_divider;
+			global::Prism.Plugin.Popups.Resource.Id.home = global::Covid19Radar.Droid.Resource.Id.home;
+			global::Prism.Plugin.Popups.Resource.Id.homeAsUp = global::Covid19Radar.Droid.Resource.Id.homeAsUp;
+			global::Prism.Plugin.Popups.Resource.Id.icon = global::Covid19Radar.Droid.Resource.Id.icon;
+			global::Prism.Plugin.Popups.Resource.Id.icon_group = global::Covid19Radar.Droid.Resource.Id.icon_group;
+			global::Prism.Plugin.Popups.Resource.Id.ifRoom = global::Covid19Radar.Droid.Resource.Id.ifRoom;
+			global::Prism.Plugin.Popups.Resource.Id.image = global::Covid19Radar.Droid.Resource.Id.image;
+			global::Prism.Plugin.Popups.Resource.Id.info = global::Covid19Radar.Droid.Resource.Id.info;
+			global::Prism.Plugin.Popups.Resource.Id.italic = global::Covid19Radar.Droid.Resource.Id.italic;
+			global::Prism.Plugin.Popups.Resource.Id.item_touch_helper_previous_elevation = global::Covid19Radar.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Prism.Plugin.Popups.Resource.Id.labeled = global::Covid19Radar.Droid.Resource.Id.labeled;
+			global::Prism.Plugin.Popups.Resource.Id.largeLabel = global::Covid19Radar.Droid.Resource.Id.largeLabel;
+			global::Prism.Plugin.Popups.Resource.Id.left = global::Covid19Radar.Droid.Resource.Id.left;
+			global::Prism.Plugin.Popups.Resource.Id.line1 = global::Covid19Radar.Droid.Resource.Id.line1;
+			global::Prism.Plugin.Popups.Resource.Id.line3 = global::Covid19Radar.Droid.Resource.Id.line3;
+			global::Prism.Plugin.Popups.Resource.Id.listMode = global::Covid19Radar.Droid.Resource.Id.listMode;
+			global::Prism.Plugin.Popups.Resource.Id.list_item = global::Covid19Radar.Droid.Resource.Id.list_item;
+			global::Prism.Plugin.Popups.Resource.Id.main_appbar = global::Covid19Radar.Droid.Resource.Id.main_appbar;
+			global::Prism.Plugin.Popups.Resource.Id.main_tablayout = global::Covid19Radar.Droid.Resource.Id.main_tablayout;
+			global::Prism.Plugin.Popups.Resource.Id.main_toolbar = global::Covid19Radar.Droid.Resource.Id.main_toolbar;
+			global::Prism.Plugin.Popups.Resource.Id.masked = global::Covid19Radar.Droid.Resource.Id.masked;
+			global::Prism.Plugin.Popups.Resource.Id.media_actions = global::Covid19Radar.Droid.Resource.Id.media_actions;
+			global::Prism.Plugin.Popups.Resource.Id.message = global::Covid19Radar.Droid.Resource.Id.message;
+			global::Prism.Plugin.Popups.Resource.Id.META = global::Covid19Radar.Droid.Resource.Id.META;
+			global::Prism.Plugin.Popups.Resource.Id.middle = global::Covid19Radar.Droid.Resource.Id.middle;
+			global::Prism.Plugin.Popups.Resource.Id.mini = global::Covid19Radar.Droid.Resource.Id.mini;
+			global::Prism.Plugin.Popups.Resource.Id.mr_art = global::Covid19Radar.Droid.Resource.Id.mr_art;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_checkbox = global::Covid19Radar.Droid.Resource.Id.mr_cast_checkbox;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_close_button = global::Covid19Radar.Droid.Resource.Id.mr_cast_close_button;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_group_icon = global::Covid19Radar.Droid.Resource.Id.mr_cast_group_icon;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_group_name = global::Covid19Radar.Droid.Resource.Id.mr_cast_group_name;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_list = global::Covid19Radar.Droid.Resource.Id.mr_cast_list;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_meta = global::Covid19Radar.Droid.Resource.Id.mr_cast_meta;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_meta_art = global::Covid19Radar.Droid.Resource.Id.mr_cast_meta_art;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_meta_subtitle = global::Covid19Radar.Droid.Resource.Id.mr_cast_meta_subtitle;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_meta_title = global::Covid19Radar.Droid.Resource.Id.mr_cast_meta_title;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_route_icon = global::Covid19Radar.Droid.Resource.Id.mr_cast_route_icon;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_route_name = global::Covid19Radar.Droid.Resource.Id.mr_cast_route_name;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_stop_button = global::Covid19Radar.Droid.Resource.Id.mr_cast_stop_button;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_volume_layout = global::Covid19Radar.Droid.Resource.Id.mr_cast_volume_layout;
+			global::Prism.Plugin.Popups.Resource.Id.mr_cast_volume_slider = global::Covid19Radar.Droid.Resource.Id.mr_cast_volume_slider;
+			global::Prism.Plugin.Popups.Resource.Id.mr_chooser_list = global::Covid19Radar.Droid.Resource.Id.mr_chooser_list;
+			global::Prism.Plugin.Popups.Resource.Id.mr_chooser_route_desc = global::Covid19Radar.Droid.Resource.Id.mr_chooser_route_desc;
+			global::Prism.Plugin.Popups.Resource.Id.mr_chooser_route_icon = global::Covid19Radar.Droid.Resource.Id.mr_chooser_route_icon;
+			global::Prism.Plugin.Popups.Resource.Id.mr_chooser_route_name = global::Covid19Radar.Droid.Resource.Id.mr_chooser_route_name;
+			global::Prism.Plugin.Popups.Resource.Id.mr_chooser_title = global::Covid19Radar.Droid.Resource.Id.mr_chooser_title;
+			global::Prism.Plugin.Popups.Resource.Id.mr_close = global::Covid19Radar.Droid.Resource.Id.mr_close;
+			global::Prism.Plugin.Popups.Resource.Id.mr_control_divider = global::Covid19Radar.Droid.Resource.Id.mr_control_divider;
+			global::Prism.Plugin.Popups.Resource.Id.mr_control_playback_ctrl = global::Covid19Radar.Droid.Resource.Id.mr_control_playback_ctrl;
+			global::Prism.Plugin.Popups.Resource.Id.mr_control_subtitle = global::Covid19Radar.Droid.Resource.Id.mr_control_subtitle;
+			global::Prism.Plugin.Popups.Resource.Id.mr_control_title = global::Covid19Radar.Droid.Resource.Id.mr_control_title;
+			global::Prism.Plugin.Popups.Resource.Id.mr_control_title_container = global::Covid19Radar.Droid.Resource.Id.mr_control_title_container;
+			global::Prism.Plugin.Popups.Resource.Id.mr_custom_control = global::Covid19Radar.Droid.Resource.Id.mr_custom_control;
+			global::Prism.Plugin.Popups.Resource.Id.mr_default_control = global::Covid19Radar.Droid.Resource.Id.mr_default_control;
+			global::Prism.Plugin.Popups.Resource.Id.mr_dialog_area = global::Covid19Radar.Droid.Resource.Id.mr_dialog_area;
+			global::Prism.Plugin.Popups.Resource.Id.mr_dialog_header_name = global::Covid19Radar.Droid.Resource.Id.mr_dialog_header_name;
+			global::Prism.Plugin.Popups.Resource.Id.mr_expandable_area = global::Covid19Radar.Droid.Resource.Id.mr_expandable_area;
+			global::Prism.Plugin.Popups.Resource.Id.mr_group_expand_collapse = global::Covid19Radar.Droid.Resource.Id.mr_group_expand_collapse;
+			global::Prism.Plugin.Popups.Resource.Id.mr_group_volume_route_name = global::Covid19Radar.Droid.Resource.Id.mr_group_volume_route_name;
+			global::Prism.Plugin.Popups.Resource.Id.mr_group_volume_slider = global::Covid19Radar.Droid.Resource.Id.mr_group_volume_slider;
+			global::Prism.Plugin.Popups.Resource.Id.mr_media_main_control = global::Covid19Radar.Droid.Resource.Id.mr_media_main_control;
+			global::Prism.Plugin.Popups.Resource.Id.mr_name = global::Covid19Radar.Droid.Resource.Id.mr_name;
+			global::Prism.Plugin.Popups.Resource.Id.mr_picker_close_button = global::Covid19Radar.Droid.Resource.Id.mr_picker_close_button;
+			global::Prism.Plugin.Popups.Resource.Id.mr_picker_list = global::Covid19Radar.Droid.Resource.Id.mr_picker_list;
+			global::Prism.Plugin.Popups.Resource.Id.mr_picker_route_icon = global::Covid19Radar.Droid.Resource.Id.mr_picker_route_icon;
+			global::Prism.Plugin.Popups.Resource.Id.mr_picker_route_name = global::Covid19Radar.Droid.Resource.Id.mr_picker_route_name;
+			global::Prism.Plugin.Popups.Resource.Id.mr_playback_control = global::Covid19Radar.Droid.Resource.Id.mr_playback_control;
+			global::Prism.Plugin.Popups.Resource.Id.mr_title_bar = global::Covid19Radar.Droid.Resource.Id.mr_title_bar;
+			global::Prism.Plugin.Popups.Resource.Id.mr_volume_control = global::Covid19Radar.Droid.Resource.Id.mr_volume_control;
+			global::Prism.Plugin.Popups.Resource.Id.mr_volume_group_list = global::Covid19Radar.Droid.Resource.Id.mr_volume_group_list;
+			global::Prism.Plugin.Popups.Resource.Id.mr_volume_item_icon = global::Covid19Radar.Droid.Resource.Id.mr_volume_item_icon;
+			global::Prism.Plugin.Popups.Resource.Id.mr_volume_slider = global::Covid19Radar.Droid.Resource.Id.mr_volume_slider;
+			global::Prism.Plugin.Popups.Resource.Id.mtrl_child_content_container = global::Covid19Radar.Droid.Resource.Id.mtrl_child_content_container;
+			global::Prism.Plugin.Popups.Resource.Id.mtrl_internal_children_alpha_tag = global::Covid19Radar.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Prism.Plugin.Popups.Resource.Id.multiply = global::Covid19Radar.Droid.Resource.Id.multiply;
+			global::Prism.Plugin.Popups.Resource.Id.navigation_header_container = global::Covid19Radar.Droid.Resource.Id.navigation_header_container;
+			global::Prism.Plugin.Popups.Resource.Id.never = global::Covid19Radar.Droid.Resource.Id.never;
+			global::Prism.Plugin.Popups.Resource.Id.none = global::Covid19Radar.Droid.Resource.Id.none;
+			global::Prism.Plugin.Popups.Resource.Id.normal = global::Covid19Radar.Droid.Resource.Id.normal;
+			global::Prism.Plugin.Popups.Resource.Id.notification_background = global::Covid19Radar.Droid.Resource.Id.notification_background;
+			global::Prism.Plugin.Popups.Resource.Id.notification_main_column = global::Covid19Radar.Droid.Resource.Id.notification_main_column;
+			global::Prism.Plugin.Popups.Resource.Id.notification_main_column_container = global::Covid19Radar.Droid.Resource.Id.notification_main_column_container;
+			global::Prism.Plugin.Popups.Resource.Id.outline = global::Covid19Radar.Droid.Resource.Id.outline;
+			global::Prism.Plugin.Popups.Resource.Id.parallax = global::Covid19Radar.Droid.Resource.Id.parallax;
+			global::Prism.Plugin.Popups.Resource.Id.parentPanel = global::Covid19Radar.Droid.Resource.Id.parentPanel;
+			global::Prism.Plugin.Popups.Resource.Id.parent_matrix = global::Covid19Radar.Droid.Resource.Id.parent_matrix;
+			global::Prism.Plugin.Popups.Resource.Id.pin = global::Covid19Radar.Droid.Resource.Id.pin;
+			global::Prism.Plugin.Popups.Resource.Id.progress_circular = global::Covid19Radar.Droid.Resource.Id.progress_circular;
+			global::Prism.Plugin.Popups.Resource.Id.progress_horizontal = global::Covid19Radar.Droid.Resource.Id.progress_horizontal;
+			global::Prism.Plugin.Popups.Resource.Id.radio = global::Covid19Radar.Droid.Resource.Id.radio;
+			global::Prism.Plugin.Popups.Resource.Id.right = global::Covid19Radar.Droid.Resource.Id.right;
+			global::Prism.Plugin.Popups.Resource.Id.right_icon = global::Covid19Radar.Droid.Resource.Id.right_icon;
+			global::Prism.Plugin.Popups.Resource.Id.right_side = global::Covid19Radar.Droid.Resource.Id.right_side;
+			global::Prism.Plugin.Popups.Resource.Id.save_image_matrix = global::Covid19Radar.Droid.Resource.Id.save_image_matrix;
+			global::Prism.Plugin.Popups.Resource.Id.save_non_transition_alpha = global::Covid19Radar.Droid.Resource.Id.save_non_transition_alpha;
+			global::Prism.Plugin.Popups.Resource.Id.save_scale_type = global::Covid19Radar.Droid.Resource.Id.save_scale_type;
+			global::Prism.Plugin.Popups.Resource.Id.screen = global::Covid19Radar.Droid.Resource.Id.screen;
+			global::Prism.Plugin.Popups.Resource.Id.scroll = global::Covid19Radar.Droid.Resource.Id.scroll;
+			global::Prism.Plugin.Popups.Resource.Id.scrollable = global::Covid19Radar.Droid.Resource.Id.scrollable;
+			global::Prism.Plugin.Popups.Resource.Id.scrollIndicatorDown = global::Covid19Radar.Droid.Resource.Id.scrollIndicatorDown;
+			global::Prism.Plugin.Popups.Resource.Id.scrollIndicatorUp = global::Covid19Radar.Droid.Resource.Id.scrollIndicatorUp;
+			global::Prism.Plugin.Popups.Resource.Id.scrollView = global::Covid19Radar.Droid.Resource.Id.scrollView;
+			global::Prism.Plugin.Popups.Resource.Id.search_badge = global::Covid19Radar.Droid.Resource.Id.search_badge;
+			global::Prism.Plugin.Popups.Resource.Id.search_bar = global::Covid19Radar.Droid.Resource.Id.search_bar;
+			global::Prism.Plugin.Popups.Resource.Id.search_button = global::Covid19Radar.Droid.Resource.Id.search_button;
+			global::Prism.Plugin.Popups.Resource.Id.search_close_btn = global::Covid19Radar.Droid.Resource.Id.search_close_btn;
+			global::Prism.Plugin.Popups.Resource.Id.search_edit_frame = global::Covid19Radar.Droid.Resource.Id.search_edit_frame;
+			global::Prism.Plugin.Popups.Resource.Id.search_go_btn = global::Covid19Radar.Droid.Resource.Id.search_go_btn;
+			global::Prism.Plugin.Popups.Resource.Id.search_mag_icon = global::Covid19Radar.Droid.Resource.Id.search_mag_icon;
+			global::Prism.Plugin.Popups.Resource.Id.search_plate = global::Covid19Radar.Droid.Resource.Id.search_plate;
+			global::Prism.Plugin.Popups.Resource.Id.search_src_text = global::Covid19Radar.Droid.Resource.Id.search_src_text;
+			global::Prism.Plugin.Popups.Resource.Id.search_voice_btn = global::Covid19Radar.Droid.Resource.Id.search_voice_btn;
+			global::Prism.Plugin.Popups.Resource.Id.selected = global::Covid19Radar.Droid.Resource.Id.selected;
+			global::Prism.Plugin.Popups.Resource.Id.select_dialog_listview = global::Covid19Radar.Droid.Resource.Id.select_dialog_listview;
+			global::Prism.Plugin.Popups.Resource.Id.shellcontent_appbar = global::Covid19Radar.Droid.Resource.Id.shellcontent_appbar;
+			global::Prism.Plugin.Popups.Resource.Id.shellcontent_toolbar = global::Covid19Radar.Droid.Resource.Id.shellcontent_toolbar;
+			global::Prism.Plugin.Popups.Resource.Id.SHIFT = global::Covid19Radar.Droid.Resource.Id.SHIFT;
+			global::Prism.Plugin.Popups.Resource.Id.shortcut = global::Covid19Radar.Droid.Resource.Id.shortcut;
+			global::Prism.Plugin.Popups.Resource.Id.showCustom = global::Covid19Radar.Droid.Resource.Id.showCustom;
+			global::Prism.Plugin.Popups.Resource.Id.showHome = global::Covid19Radar.Droid.Resource.Id.showHome;
+			global::Prism.Plugin.Popups.Resource.Id.showTitle = global::Covid19Radar.Droid.Resource.Id.showTitle;
+			global::Prism.Plugin.Popups.Resource.Id.smallLabel = global::Covid19Radar.Droid.Resource.Id.smallLabel;
+			global::Prism.Plugin.Popups.Resource.Id.snackbar_action = global::Covid19Radar.Droid.Resource.Id.snackbar_action;
+			global::Prism.Plugin.Popups.Resource.Id.snackbar_text = global::Covid19Radar.Droid.Resource.Id.snackbar_text;
+			global::Prism.Plugin.Popups.Resource.Id.snap = global::Covid19Radar.Droid.Resource.Id.snap;
+			global::Prism.Plugin.Popups.Resource.Id.snapMargins = global::Covid19Radar.Droid.Resource.Id.snapMargins;
+			global::Prism.Plugin.Popups.Resource.Id.spacer = global::Covid19Radar.Droid.Resource.Id.spacer;
+			global::Prism.Plugin.Popups.Resource.Id.split_action_bar = global::Covid19Radar.Droid.Resource.Id.split_action_bar;
+			global::Prism.Plugin.Popups.Resource.Id.src_atop = global::Covid19Radar.Droid.Resource.Id.src_atop;
+			global::Prism.Plugin.Popups.Resource.Id.src_in = global::Covid19Radar.Droid.Resource.Id.src_in;
+			global::Prism.Plugin.Popups.Resource.Id.src_over = global::Covid19Radar.Droid.Resource.Id.src_over;
+			global::Prism.Plugin.Popups.Resource.Id.start = global::Covid19Radar.Droid.Resource.Id.start;
+			global::Prism.Plugin.Popups.Resource.Id.status_bar_latest_event_content = global::Covid19Radar.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Prism.Plugin.Popups.Resource.Id.stretch = global::Covid19Radar.Droid.Resource.Id.stretch;
+			global::Prism.Plugin.Popups.Resource.Id.submenuarrow = global::Covid19Radar.Droid.Resource.Id.submenuarrow;
+			global::Prism.Plugin.Popups.Resource.Id.submit_area = global::Covid19Radar.Droid.Resource.Id.submit_area;
+			global::Prism.Plugin.Popups.Resource.Id.SYM = global::Covid19Radar.Droid.Resource.Id.SYM;
+			global::Prism.Plugin.Popups.Resource.Id.tabMode = global::Covid19Radar.Droid.Resource.Id.tabMode;
+			global::Prism.Plugin.Popups.Resource.Id.tag_transition_group = global::Covid19Radar.Droid.Resource.Id.tag_transition_group;
+			global::Prism.Plugin.Popups.Resource.Id.tag_unhandled_key_event_manager = global::Covid19Radar.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Prism.Plugin.Popups.Resource.Id.tag_unhandled_key_listeners = global::Covid19Radar.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Prism.Plugin.Popups.Resource.Id.text = global::Covid19Radar.Droid.Resource.Id.text;
+			global::Prism.Plugin.Popups.Resource.Id.text2 = global::Covid19Radar.Droid.Resource.Id.text2;
+			global::Prism.Plugin.Popups.Resource.Id.textinput_counter = global::Covid19Radar.Droid.Resource.Id.textinput_counter;
+			global::Prism.Plugin.Popups.Resource.Id.textinput_error = global::Covid19Radar.Droid.Resource.Id.textinput_error;
+			global::Prism.Plugin.Popups.Resource.Id.textinput_helper_text = global::Covid19Radar.Droid.Resource.Id.textinput_helper_text;
+			global::Prism.Plugin.Popups.Resource.Id.textSpacerNoButtons = global::Covid19Radar.Droid.Resource.Id.textSpacerNoButtons;
+			global::Prism.Plugin.Popups.Resource.Id.textSpacerNoTitle = global::Covid19Radar.Droid.Resource.Id.textSpacerNoTitle;
+			global::Prism.Plugin.Popups.Resource.Id.textStart = global::Covid19Radar.Droid.Resource.Id.textStart;
+			global::Prism.Plugin.Popups.Resource.Id.text_input_password_toggle = global::Covid19Radar.Droid.Resource.Id.text_input_password_toggle;
+			global::Prism.Plugin.Popups.Resource.Id.time = global::Covid19Radar.Droid.Resource.Id.time;
+			global::Prism.Plugin.Popups.Resource.Id.title = global::Covid19Radar.Droid.Resource.Id.title;
+			global::Prism.Plugin.Popups.Resource.Id.titleDividerNoCustom = global::Covid19Radar.Droid.Resource.Id.titleDividerNoCustom;
+			global::Prism.Plugin.Popups.Resource.Id.title_template = global::Covid19Radar.Droid.Resource.Id.title_template;
+			global::Prism.Plugin.Popups.Resource.Id.top = global::Covid19Radar.Droid.Resource.Id.top;
+			global::Prism.Plugin.Popups.Resource.Id.topPanel = global::Covid19Radar.Droid.Resource.Id.topPanel;
+			global::Prism.Plugin.Popups.Resource.Id.touch_outside = global::Covid19Radar.Droid.Resource.Id.touch_outside;
+			global::Prism.Plugin.Popups.Resource.Id.transition_current_scene = global::Covid19Radar.Droid.Resource.Id.transition_current_scene;
+			global::Prism.Plugin.Popups.Resource.Id.transition_layout_save = global::Covid19Radar.Droid.Resource.Id.transition_layout_save;
+			global::Prism.Plugin.Popups.Resource.Id.transition_position = global::Covid19Radar.Droid.Resource.Id.transition_position;
+			global::Prism.Plugin.Popups.Resource.Id.transition_scene_layoutid_cache = global::Covid19Radar.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Prism.Plugin.Popups.Resource.Id.transition_transform = global::Covid19Radar.Droid.Resource.Id.transition_transform;
+			global::Prism.Plugin.Popups.Resource.Id.uniform = global::Covid19Radar.Droid.Resource.Id.uniform;
+			global::Prism.Plugin.Popups.Resource.Id.unlabeled = global::Covid19Radar.Droid.Resource.Id.unlabeled;
+			global::Prism.Plugin.Popups.Resource.Id.up = global::Covid19Radar.Droid.Resource.Id.up;
+			global::Prism.Plugin.Popups.Resource.Id.useLogo = global::Covid19Radar.Droid.Resource.Id.useLogo;
+			global::Prism.Plugin.Popups.Resource.Id.view_offset_helper = global::Covid19Radar.Droid.Resource.Id.view_offset_helper;
+			global::Prism.Plugin.Popups.Resource.Id.visible = global::Covid19Radar.Droid.Resource.Id.visible;
+			global::Prism.Plugin.Popups.Resource.Id.volume_item_container = global::Covid19Radar.Droid.Resource.Id.volume_item_container;
+			global::Prism.Plugin.Popups.Resource.Id.withText = global::Covid19Radar.Droid.Resource.Id.withText;
+			global::Prism.Plugin.Popups.Resource.Id.wrap_content = global::Covid19Radar.Droid.Resource.Id.wrap_content;
+			global::Prism.Plugin.Popups.Resource.Integer.abc_config_activityDefaultDur = global::Covid19Radar.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Prism.Plugin.Popups.Resource.Integer.abc_config_activityShortDur = global::Covid19Radar.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Prism.Plugin.Popups.Resource.Integer.app_bar_elevation_anim_duration = global::Covid19Radar.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Prism.Plugin.Popups.Resource.Integer.bottom_sheet_slide_duration = global::Covid19Radar.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Prism.Plugin.Popups.Resource.Integer.cancel_button_image_alpha = global::Covid19Radar.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Prism.Plugin.Popups.Resource.Integer.config_tooltipAnimTime = global::Covid19Radar.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Prism.Plugin.Popups.Resource.Integer.design_snackbar_text_max_lines = global::Covid19Radar.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Prism.Plugin.Popups.Resource.Integer.design_tab_indicator_anim_duration_ms = global::Covid19Radar.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Prism.Plugin.Popups.Resource.Integer.hide_password_duration = global::Covid19Radar.Droid.Resource.Integer.hide_password_duration;
+			global::Prism.Plugin.Popups.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::Covid19Radar.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::Prism.Plugin.Popups.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::Covid19Radar.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::Prism.Plugin.Popups.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::Covid19Radar.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::Prism.Plugin.Popups.Resource.Integer.mr_update_routes_delay_ms = global::Covid19Radar.Droid.Resource.Integer.mr_update_routes_delay_ms;
+			global::Prism.Plugin.Popups.Resource.Integer.mtrl_btn_anim_delay_ms = global::Covid19Radar.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Prism.Plugin.Popups.Resource.Integer.mtrl_btn_anim_duration_ms = global::Covid19Radar.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Prism.Plugin.Popups.Resource.Integer.mtrl_chip_anim_duration = global::Covid19Radar.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::Prism.Plugin.Popups.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::Covid19Radar.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Prism.Plugin.Popups.Resource.Integer.show_password_duration = global::Covid19Radar.Droid.Resource.Integer.show_password_duration;
+			global::Prism.Plugin.Popups.Resource.Integer.status_bar_notification_info_maxnum = global::Covid19Radar.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Prism.Plugin.Popups.Resource.Interpolator.mr_fast_out_slow_in = global::Covid19Radar.Droid.Resource.Interpolator.mr_fast_out_slow_in;
+			global::Prism.Plugin.Popups.Resource.Interpolator.mr_linear_out_slow_in = global::Covid19Radar.Droid.Resource.Interpolator.mr_linear_out_slow_in;
+			global::Prism.Plugin.Popups.Resource.Interpolator.mtrl_fast_out_linear_in = global::Covid19Radar.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Prism.Plugin.Popups.Resource.Interpolator.mtrl_fast_out_slow_in = global::Covid19Radar.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Prism.Plugin.Popups.Resource.Interpolator.mtrl_linear = global::Covid19Radar.Droid.Resource.Interpolator.mtrl_linear;
+			global::Prism.Plugin.Popups.Resource.Interpolator.mtrl_linear_out_slow_in = global::Covid19Radar.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_action_bar_title_item = global::Covid19Radar.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_action_bar_up_container = global::Covid19Radar.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_action_menu_item_layout = global::Covid19Radar.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_action_menu_layout = global::Covid19Radar.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_action_mode_bar = global::Covid19Radar.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_action_mode_close_item_material = global::Covid19Radar.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_activity_chooser_view = global::Covid19Radar.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_activity_chooser_view_list_item = global::Covid19Radar.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_alert_dialog_button_bar_material = global::Covid19Radar.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_alert_dialog_material = global::Covid19Radar.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_alert_dialog_title_material = global::Covid19Radar.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_cascading_menu_item_layout = global::Covid19Radar.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_dialog_title_material = global::Covid19Radar.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_expanded_menu_layout = global::Covid19Radar.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_list_menu_item_checkbox = global::Covid19Radar.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_list_menu_item_icon = global::Covid19Radar.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_list_menu_item_layout = global::Covid19Radar.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_list_menu_item_radio = global::Covid19Radar.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_popup_menu_header_item_layout = global::Covid19Radar.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_popup_menu_item_layout = global::Covid19Radar.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_screen_content_include = global::Covid19Radar.Droid.Resource.Layout.abc_screen_content_include;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_screen_simple = global::Covid19Radar.Droid.Resource.Layout.abc_screen_simple;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_screen_simple_overlay_action_mode = global::Covid19Radar.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_screen_toolbar = global::Covid19Radar.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_search_dropdown_item_icons_2line = global::Covid19Radar.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_search_view = global::Covid19Radar.Droid.Resource.Layout.abc_search_view;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_select_dialog_material = global::Covid19Radar.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Prism.Plugin.Popups.Resource.Layout.abc_tooltip = global::Covid19Radar.Droid.Resource.Layout.abc_tooltip;
+			global::Prism.Plugin.Popups.Resource.Layout.BottomTabLayout = global::Covid19Radar.Droid.Resource.Layout.BottomTabLayout;
+			global::Prism.Plugin.Popups.Resource.Layout.browser_actions_context_menu_page = global::Covid19Radar.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Prism.Plugin.Popups.Resource.Layout.browser_actions_context_menu_row = global::Covid19Radar.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Prism.Plugin.Popups.Resource.Layout.design_bottom_navigation_item = global::Covid19Radar.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Prism.Plugin.Popups.Resource.Layout.design_bottom_sheet_dialog = global::Covid19Radar.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Prism.Plugin.Popups.Resource.Layout.design_layout_snackbar = global::Covid19Radar.Droid.Resource.Layout.design_layout_snackbar;
+			global::Prism.Plugin.Popups.Resource.Layout.design_layout_snackbar_include = global::Covid19Radar.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Prism.Plugin.Popups.Resource.Layout.design_layout_tab_icon = global::Covid19Radar.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Prism.Plugin.Popups.Resource.Layout.design_layout_tab_text = global::Covid19Radar.Droid.Resource.Layout.design_layout_tab_text;
+			global::Prism.Plugin.Popups.Resource.Layout.design_menu_item_action_area = global::Covid19Radar.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Prism.Plugin.Popups.Resource.Layout.design_navigation_item = global::Covid19Radar.Droid.Resource.Layout.design_navigation_item;
+			global::Prism.Plugin.Popups.Resource.Layout.design_navigation_item_header = global::Covid19Radar.Droid.Resource.Layout.design_navigation_item_header;
+			global::Prism.Plugin.Popups.Resource.Layout.design_navigation_item_separator = global::Covid19Radar.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Prism.Plugin.Popups.Resource.Layout.design_navigation_item_subheader = global::Covid19Radar.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Prism.Plugin.Popups.Resource.Layout.design_navigation_menu = global::Covid19Radar.Droid.Resource.Layout.design_navigation_menu;
+			global::Prism.Plugin.Popups.Resource.Layout.design_navigation_menu_item = global::Covid19Radar.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Prism.Plugin.Popups.Resource.Layout.design_text_input_password_icon = global::Covid19Radar.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Prism.Plugin.Popups.Resource.Layout.FlyoutContent = global::Covid19Radar.Droid.Resource.Layout.FlyoutContent;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_cast_dialog = global::Covid19Radar.Droid.Resource.Layout.mr_cast_dialog;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_cast_group_item = global::Covid19Radar.Droid.Resource.Layout.mr_cast_group_item;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_cast_group_volume_item = global::Covid19Radar.Droid.Resource.Layout.mr_cast_group_volume_item;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_cast_media_metadata = global::Covid19Radar.Droid.Resource.Layout.mr_cast_media_metadata;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_cast_route_item = global::Covid19Radar.Droid.Resource.Layout.mr_cast_route_item;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_chooser_dialog = global::Covid19Radar.Droid.Resource.Layout.mr_chooser_dialog;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_chooser_list_item = global::Covid19Radar.Droid.Resource.Layout.mr_chooser_list_item;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_controller_material_dialog_b = global::Covid19Radar.Droid.Resource.Layout.mr_controller_material_dialog_b;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_controller_volume_item = global::Covid19Radar.Droid.Resource.Layout.mr_controller_volume_item;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_dialog_header_item = global::Covid19Radar.Droid.Resource.Layout.mr_dialog_header_item;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_picker_dialog = global::Covid19Radar.Droid.Resource.Layout.mr_picker_dialog;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_picker_route_item = global::Covid19Radar.Droid.Resource.Layout.mr_picker_route_item;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_playback_control = global::Covid19Radar.Droid.Resource.Layout.mr_playback_control;
+			global::Prism.Plugin.Popups.Resource.Layout.mr_volume_control = global::Covid19Radar.Droid.Resource.Layout.mr_volume_control;
+			global::Prism.Plugin.Popups.Resource.Layout.mtrl_layout_snackbar = global::Covid19Radar.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::Prism.Plugin.Popups.Resource.Layout.mtrl_layout_snackbar_include = global::Covid19Radar.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_action = global::Covid19Radar.Droid.Resource.Layout.notification_action;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_action_tombstone = global::Covid19Radar.Droid.Resource.Layout.notification_action_tombstone;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_media_action = global::Covid19Radar.Droid.Resource.Layout.notification_media_action;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_media_cancel_action = global::Covid19Radar.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_big_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_big_media_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_big_media_narrow = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_big_media_narrow_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_custom_big = global::Covid19Radar.Droid.Resource.Layout.notification_template_custom_big;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_icon_group = global::Covid19Radar.Droid.Resource.Layout.notification_template_icon_group;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_lines_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_lines_media;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_media;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_media_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_media_custom;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_part_chronometer = global::Covid19Radar.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Prism.Plugin.Popups.Resource.Layout.notification_template_part_time = global::Covid19Radar.Droid.Resource.Layout.notification_template_part_time;
+			global::Prism.Plugin.Popups.Resource.Layout.RootLayout = global::Covid19Radar.Droid.Resource.Layout.RootLayout;
+			global::Prism.Plugin.Popups.Resource.Layout.select_dialog_item_material = global::Covid19Radar.Droid.Resource.Layout.select_dialog_item_material;
+			global::Prism.Plugin.Popups.Resource.Layout.select_dialog_multichoice_material = global::Covid19Radar.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Prism.Plugin.Popups.Resource.Layout.select_dialog_singlechoice_material = global::Covid19Radar.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Prism.Plugin.Popups.Resource.Layout.ShellContent = global::Covid19Radar.Droid.Resource.Layout.ShellContent;
+			global::Prism.Plugin.Popups.Resource.Layout.support_simple_spinner_dropdown_item = global::Covid19Radar.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Prism.Plugin.Popups.Resource.String.abc_action_bar_home_description = global::Covid19Radar.Droid.Resource.String.abc_action_bar_home_description;
+			global::Prism.Plugin.Popups.Resource.String.abc_action_bar_up_description = global::Covid19Radar.Droid.Resource.String.abc_action_bar_up_description;
+			global::Prism.Plugin.Popups.Resource.String.abc_action_menu_overflow_description = global::Covid19Radar.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Prism.Plugin.Popups.Resource.String.abc_action_mode_done = global::Covid19Radar.Droid.Resource.String.abc_action_mode_done;
+			global::Prism.Plugin.Popups.Resource.String.abc_activitychooserview_choose_application = global::Covid19Radar.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Prism.Plugin.Popups.Resource.String.abc_activity_chooser_view_see_all = global::Covid19Radar.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Prism.Plugin.Popups.Resource.String.abc_capital_off = global::Covid19Radar.Droid.Resource.String.abc_capital_off;
+			global::Prism.Plugin.Popups.Resource.String.abc_capital_on = global::Covid19Radar.Droid.Resource.String.abc_capital_on;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_body_1_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_body_2_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_button_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_button_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_caption_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_caption_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_display_1_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_display_2_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_display_3_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_display_4_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_headline_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_headline_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_menu_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_menu_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_subhead_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_font_family_title_material = global::Covid19Radar.Droid.Resource.String.abc_font_family_title_material;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_alt_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_ctrl_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_delete_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_enter_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_function_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_meta_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_shift_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_space_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_menu_sym_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_prepend_shortcut_label = global::Covid19Radar.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::Prism.Plugin.Popups.Resource.String.abc_searchview_description_clear = global::Covid19Radar.Droid.Resource.String.abc_searchview_description_clear;
+			global::Prism.Plugin.Popups.Resource.String.abc_searchview_description_query = global::Covid19Radar.Droid.Resource.String.abc_searchview_description_query;
+			global::Prism.Plugin.Popups.Resource.String.abc_searchview_description_search = global::Covid19Radar.Droid.Resource.String.abc_searchview_description_search;
+			global::Prism.Plugin.Popups.Resource.String.abc_searchview_description_submit = global::Covid19Radar.Droid.Resource.String.abc_searchview_description_submit;
+			global::Prism.Plugin.Popups.Resource.String.abc_searchview_description_voice = global::Covid19Radar.Droid.Resource.String.abc_searchview_description_voice;
+			global::Prism.Plugin.Popups.Resource.String.abc_search_hint = global::Covid19Radar.Droid.Resource.String.abc_search_hint;
+			global::Prism.Plugin.Popups.Resource.String.abc_shareactionprovider_share_with = global::Covid19Radar.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Prism.Plugin.Popups.Resource.String.abc_shareactionprovider_share_with_application = global::Covid19Radar.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Prism.Plugin.Popups.Resource.String.abc_toolbar_collapse_description = global::Covid19Radar.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Prism.Plugin.Popups.Resource.String.appbar_scrolling_view_behavior = global::Covid19Radar.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Prism.Plugin.Popups.Resource.String.bottom_sheet_behavior = global::Covid19Radar.Droid.Resource.String.bottom_sheet_behavior;
+			global::Prism.Plugin.Popups.Resource.String.character_counter_content_description = global::Covid19Radar.Droid.Resource.String.character_counter_content_description;
+			global::Prism.Plugin.Popups.Resource.String.character_counter_pattern = global::Covid19Radar.Droid.Resource.String.character_counter_pattern;
+			global::Prism.Plugin.Popups.Resource.String.fab_transformation_scrim_behavior = global::Covid19Radar.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::Prism.Plugin.Popups.Resource.String.fab_transformation_sheet_behavior = global::Covid19Radar.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::Prism.Plugin.Popups.Resource.String.hide_bottom_view_on_scroll_behavior = global::Covid19Radar.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Prism.Plugin.Popups.Resource.String.mr_button_content_description = global::Covid19Radar.Droid.Resource.String.mr_button_content_description;
+			global::Prism.Plugin.Popups.Resource.String.mr_cast_button_connected = global::Covid19Radar.Droid.Resource.String.mr_cast_button_connected;
+			global::Prism.Plugin.Popups.Resource.String.mr_cast_button_connecting = global::Covid19Radar.Droid.Resource.String.mr_cast_button_connecting;
+			global::Prism.Plugin.Popups.Resource.String.mr_cast_button_disconnected = global::Covid19Radar.Droid.Resource.String.mr_cast_button_disconnected;
+			global::Prism.Plugin.Popups.Resource.String.mr_cast_dialog_title_view_placeholder = global::Covid19Radar.Droid.Resource.String.mr_cast_dialog_title_view_placeholder;
+			global::Prism.Plugin.Popups.Resource.String.mr_chooser_searching = global::Covid19Radar.Droid.Resource.String.mr_chooser_searching;
+			global::Prism.Plugin.Popups.Resource.String.mr_chooser_title = global::Covid19Radar.Droid.Resource.String.mr_chooser_title;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_album_art = global::Covid19Radar.Droid.Resource.String.mr_controller_album_art;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_casting_screen = global::Covid19Radar.Droid.Resource.String.mr_controller_casting_screen;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_close_description = global::Covid19Radar.Droid.Resource.String.mr_controller_close_description;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_collapse_group = global::Covid19Radar.Droid.Resource.String.mr_controller_collapse_group;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_disconnect = global::Covid19Radar.Droid.Resource.String.mr_controller_disconnect;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_expand_group = global::Covid19Radar.Droid.Resource.String.mr_controller_expand_group;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_no_info_available = global::Covid19Radar.Droid.Resource.String.mr_controller_no_info_available;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_no_media_selected = global::Covid19Radar.Droid.Resource.String.mr_controller_no_media_selected;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_pause = global::Covid19Radar.Droid.Resource.String.mr_controller_pause;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_play = global::Covid19Radar.Droid.Resource.String.mr_controller_play;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_stop = global::Covid19Radar.Droid.Resource.String.mr_controller_stop;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_stop_casting = global::Covid19Radar.Droid.Resource.String.mr_controller_stop_casting;
+			global::Prism.Plugin.Popups.Resource.String.mr_controller_volume_slider = global::Covid19Radar.Droid.Resource.String.mr_controller_volume_slider;
+			global::Prism.Plugin.Popups.Resource.String.mr_dialog_device_header = global::Covid19Radar.Droid.Resource.String.mr_dialog_device_header;
+			global::Prism.Plugin.Popups.Resource.String.mr_dialog_route_header = global::Covid19Radar.Droid.Resource.String.mr_dialog_route_header;
+			global::Prism.Plugin.Popups.Resource.String.mr_system_route_name = global::Covid19Radar.Droid.Resource.String.mr_system_route_name;
+			global::Prism.Plugin.Popups.Resource.String.mr_user_route_category_name = global::Covid19Radar.Droid.Resource.String.mr_user_route_category_name;
+			global::Prism.Plugin.Popups.Resource.String.mtrl_chip_close_icon_content_description = global::Covid19Radar.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Prism.Plugin.Popups.Resource.String.password_toggle_content_description = global::Covid19Radar.Droid.Resource.String.password_toggle_content_description;
+			global::Prism.Plugin.Popups.Resource.String.path_password_eye = global::Covid19Radar.Droid.Resource.String.path_password_eye;
+			global::Prism.Plugin.Popups.Resource.String.path_password_eye_mask_strike_through = global::Covid19Radar.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Prism.Plugin.Popups.Resource.String.path_password_eye_mask_visible = global::Covid19Radar.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Prism.Plugin.Popups.Resource.String.path_password_strike_through = global::Covid19Radar.Droid.Resource.String.path_password_strike_through;
+			global::Prism.Plugin.Popups.Resource.String.search_menu_title = global::Covid19Radar.Droid.Resource.String.search_menu_title;
+			global::Prism.Plugin.Popups.Resource.String.status_bar_notification_info_overflow = global::Covid19Radar.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Prism.Plugin.Popups.Resource.Style.AlertDialog_AppCompat = global::Covid19Radar.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.AlertDialog_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Animation_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Animation_AppCompat_DropDownUp = global::Covid19Radar.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Prism.Plugin.Popups.Resource.Style.Animation_AppCompat_Tooltip = global::Covid19Radar.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Prism.Plugin.Popups.Resource.Style.Animation_Design_BottomSheetDialog = global::Covid19Radar.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_AlertDialog_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Animation_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Covid19Radar.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Animation_AppCompat_Tooltip = global::Covid19Radar.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Prism.Plugin.Popups.Resource.Style.Base_CardView = global::Covid19Radar.Droid.Resource.Style.Base_CardView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Button = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Large = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Small = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Title = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::Covid19Radar.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_Theme_MaterialComponents = global::Covid19Radar.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::Covid19Radar.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::Covid19Radar.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::Covid19Radar.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Covid19Radar.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V21_Theme_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V22_Theme_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V23_Theme_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V26_Theme_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V26_Theme_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::Covid19Radar.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V28_Theme_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V28_Theme_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V7_Theme_AppCompat = global::Covid19Radar.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::Covid19Radar.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::Covid19Radar.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::Covid19Radar.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Prism.Plugin.Popups.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::Covid19Radar.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionButton = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActionMode = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Button = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Button_Small = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_EditText = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ImageButton = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ListView = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_RatingBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_SearchView = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_SeekBar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Spinner = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Covid19Radar.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_Design_TabLayout = global::Covid19Radar.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_MaterialComponents_Chip = global::Covid19Radar.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::Covid19Radar.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Prism.Plugin.Popups.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::Covid19Radar.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Prism.Plugin.Popups.Resource.Style.CardView = global::Covid19Radar.Droid.Resource.Style.CardView;
+			global::Prism.Plugin.Popups.Resource.Style.CardView_Dark = global::Covid19Radar.Droid.Resource.Style.CardView_Dark;
+			global::Prism.Plugin.Popups.Resource.Style.CardView_Light = global::Covid19Radar.Droid.Resource.Style.CardView_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_AppCompat = global::Covid19Radar.Droid.Resource.Style.Platform_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_MaterialComponents = global::Covid19Radar.Droid.Resource.Style.Platform_MaterialComponents;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_MaterialComponents_Dialog = global::Covid19Radar.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_MaterialComponents_Light = global::Covid19Radar.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::Covid19Radar.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_ThemeOverlay_AppCompat = global::Covid19Radar.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Covid19Radar.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_V21_AppCompat = global::Covid19Radar.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_V21_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_V25_AppCompat = global::Covid19Radar.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_V25_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Platform_Widget_AppCompat_Spinner = global::Covid19Radar.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Prism.Plugin.Popups.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::Covid19Radar.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Prism.Plugin.Popups.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::Covid19Radar.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Prism.Plugin.Popups.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::Covid19Radar.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Body1 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Body2 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Button = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Caption = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Display1 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Display2 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Display3 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Display4 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Headline = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Large = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Medium = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Menu = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Small = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Subhead = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Tooltip = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Covid19Radar.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Info = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Time = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Design_Counter = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Design_Error = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Design_HelperText = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Design_Hint = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Design_Snackbar_Message = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Design_Tab = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Button = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Caption = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Chip = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Overline = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MaterialComponents_Tab = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_MediaRouter_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Prism.Plugin.Popups.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_AppCompat = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_AppCompat_Dark = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::Prism.Plugin.Popups.Resource.Style.ThemeOverlay_MediaRouter_Light = global::Covid19Radar.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_CompactMenu = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_DayNight = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Dialog = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Light = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Light_Dialog = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_AppCompat_NoActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_Design = global::Covid19Radar.Droid.Resource.Style.Theme_Design;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_Design_BottomSheetDialog = global::Covid19Radar.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_Design_Light = global::Covid19Radar.Droid.Resource.Style.Theme_Design_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::Covid19Radar.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_Design_Light_NoActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_Design_NoActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Bridge = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_CompactMenu = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Dialog = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_NoActionBar = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::Covid19Radar.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MediaRouter = global::Covid19Radar.Droid.Resource.Style.Theme_MediaRouter;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MediaRouter_Light = global::Covid19Radar.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MediaRouter_LightControlPanel = global::Covid19Radar.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::Prism.Plugin.Popups.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::Covid19Radar.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionButton = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActionMode = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ActivityChooserView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Button = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ButtonBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Button_Borderless = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Button_Colored = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Button_Small = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_EditText = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ImageButton = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionButton = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_SearchView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ListMenuView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ListPopupWindow = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ListView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ListView_DropDown = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ListView_Menu = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_PopupMenu = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_PopupWindow = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ProgressBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_RatingBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_RatingBar_Small = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_SearchView = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_SeekBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Spinner = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Toolbar = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Covid19Radar.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Compat_NotificationActionContainer = global::Covid19Radar.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Compat_NotificationActionText = global::Covid19Radar.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_AppBarLayout = global::Covid19Radar.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_BottomNavigationView = global::Covid19Radar.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_BottomSheet_Modal = global::Covid19Radar.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_CollapsingToolbar = global::Covid19Radar.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_FloatingActionButton = global::Covid19Radar.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_NavigationView = global::Covid19Radar.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::Covid19Radar.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_Snackbar = global::Covid19Radar.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_TabLayout = global::Covid19Radar.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Design_TextInputLayout = global::Covid19Radar.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_Icon = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_CardView = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_ChipGroup = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Chip_Action = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_NavigationView = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Snackbar = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TabLayout = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MaterialComponents_Toolbar = global::Covid19Radar.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::Covid19Radar.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::Covid19Radar.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::Prism.Plugin.Popups.Resource.Style.Widget_Support_CoordinatorLayout = global::Covid19Radar.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar = global::Covid19Radar.Droid.Resource.Styleable.ActionBar;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBarLayout = global::Covid19Radar.Droid.Resource.Styleable.ActionBarLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::Covid19Radar.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_background = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_background;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_backgroundSplit = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_backgroundStacked = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_contentInsetEnd = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_contentInsetLeft = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_contentInsetRight = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_contentInsetStart = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_customNavigationLayout = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_displayOptions = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_divider = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_divider;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_elevation = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_height = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_height;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_hideOnContentScroll = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_homeAsUpIndicator = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_homeLayout = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_icon = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_icon;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_itemPadding = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_logo = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_logo;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_navigationMode = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_popupTheme = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_progressBarPadding = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_progressBarStyle = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_subtitle = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_subtitleTextStyle = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_title = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_title;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionBar_titleTextStyle = global::Covid19Radar.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMenuItemView = global::Covid19Radar.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMenuItemView_android_minWidth = global::Covid19Radar.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMenuView = global::Covid19Radar.Droid.Resource.Styleable.ActionMenuView;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMode = global::Covid19Radar.Droid.Resource.Styleable.ActionMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMode_background = global::Covid19Radar.Droid.Resource.Styleable.ActionMode_background;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMode_backgroundSplit = global::Covid19Radar.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMode_closeItemLayout = global::Covid19Radar.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMode_height = global::Covid19Radar.Droid.Resource.Styleable.ActionMode_height;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMode_subtitleTextStyle = global::Covid19Radar.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActionMode_titleTextStyle = global::Covid19Radar.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActivityChooserView = global::Covid19Radar.Droid.Resource.Styleable.ActivityChooserView;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::Covid19Radar.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.ActivityChooserView_initialActivityCount = global::Covid19Radar.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog_android_layout = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog_buttonIconDimen = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog_listItemLayout = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog_listLayout = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog_showTitle = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Covid19Radar.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableCompat = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableItem = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableTransition = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::Prism.Plugin.Popups.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::Covid19Radar.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayoutStates = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayoutStates_state_liftable = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayoutStates_state_lifted = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_android_background = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_elevation = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_expanded = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_Layout = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppBarLayout_liftOnScroll = global::Covid19Radar.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatImageView = global::Covid19Radar.Droid.Resource.Styleable.AppCompatImageView;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatImageView_android_src = global::Covid19Radar.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatImageView_srcCompat = global::Covid19Radar.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatImageView_tint = global::Covid19Radar.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatImageView_tintMode = global::Covid19Radar.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatSeekBar = global::Covid19Radar.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatSeekBar_android_thumb = global::Covid19Radar.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatSeekBar_tickMark = global::Covid19Radar.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::Covid19Radar.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::Covid19Radar.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextHelper = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_android_textAppearance = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_fontFamily = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_lineHeight = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTextView_textAllCaps = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarSize = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarTheme = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeBackground = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_buttonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_checkboxStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorAccent = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorControlActivated = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorControlNormal = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorError = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorPrimary = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_controlBackground = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_dialogTheme = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_dividerVertical = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_editTextBackground = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_editTextColor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_editTextStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_panelBackground = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_searchViewStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_seekBarStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_spinnerStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_switchStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowActionBar = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Prism.Plugin.Popups.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Covid19Radar.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomAppBar = global::Covid19Radar.Droid.Resource.Styleable.BottomAppBar;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomAppBar_backgroundTint = global::Covid19Radar.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::Covid19Radar.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomAppBar_fabCradleMargin = global::Covid19Radar.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::Covid19Radar.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::Covid19Radar.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomAppBar_hideOnScroll = global::Covid19Radar.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_elevation = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_itemBackground = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_itemIconSize = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_itemIconTint = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_itemTextColor = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomNavigationView_menu = global::Covid19Radar.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomSheetBehavior_Layout = global::Covid19Radar.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::Covid19Radar.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::Covid19Radar.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::Covid19Radar.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::Covid19Radar.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Prism.Plugin.Popups.Resource.Styleable.ButtonBarLayout = global::Covid19Radar.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ButtonBarLayout_allowStacking = global::Covid19Radar.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView = global::Covid19Radar.Droid.Resource.Styleable.CardView;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_android_minHeight = global::Covid19Radar.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_android_minWidth = global::Covid19Radar.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_cardBackgroundColor = global::Covid19Radar.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_cardCornerRadius = global::Covid19Radar.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_cardElevation = global::Covid19Radar.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_cardMaxElevation = global::Covid19Radar.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_cardPreventCornerOverlap = global::Covid19Radar.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_cardUseCompatPadding = global::Covid19Radar.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_contentPadding = global::Covid19Radar.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_contentPaddingBottom = global::Covid19Radar.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_contentPaddingLeft = global::Covid19Radar.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_contentPaddingRight = global::Covid19Radar.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Prism.Plugin.Popups.Resource.Styleable.CardView_contentPaddingTop = global::Covid19Radar.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip = global::Covid19Radar.Droid.Resource.Styleable.Chip;
+			global::Prism.Plugin.Popups.Resource.Styleable.ChipGroup = global::Covid19Radar.Droid.Resource.Styleable.ChipGroup;
+			global::Prism.Plugin.Popups.Resource.Styleable.ChipGroup_checkedChip = global::Covid19Radar.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::Prism.Plugin.Popups.Resource.Styleable.ChipGroup_chipSpacing = global::Covid19Radar.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Prism.Plugin.Popups.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::Covid19Radar.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Prism.Plugin.Popups.Resource.Styleable.ChipGroup_chipSpacingVertical = global::Covid19Radar.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Prism.Plugin.Popups.Resource.Styleable.ChipGroup_singleLine = global::Covid19Radar.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::Prism.Plugin.Popups.Resource.Styleable.ChipGroup_singleSelection = global::Covid19Radar.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_android_checkable = global::Covid19Radar.Droid.Resource.Styleable.Chip_android_checkable;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_android_ellipsize = global::Covid19Radar.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_android_maxWidth = global::Covid19Radar.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_android_text = global::Covid19Radar.Droid.Resource.Styleable.Chip_android_text;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_android_textAppearance = global::Covid19Radar.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_checkedIcon = global::Covid19Radar.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_checkedIconEnabled = global::Covid19Radar.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_checkedIconVisible = global::Covid19Radar.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipBackgroundColor = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipCornerRadius = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipEndPadding = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipIcon = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipIconEnabled = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipIconSize = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipIconTint = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipIconVisible = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipMinHeight = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipStartPadding = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipStrokeColor = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_chipStrokeWidth = global::Covid19Radar.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_closeIcon = global::Covid19Radar.Droid.Resource.Styleable.Chip_closeIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_closeIconEnabled = global::Covid19Radar.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_closeIconEndPadding = global::Covid19Radar.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_closeIconSize = global::Covid19Radar.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_closeIconStartPadding = global::Covid19Radar.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_closeIconTint = global::Covid19Radar.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_closeIconVisible = global::Covid19Radar.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_hideMotionSpec = global::Covid19Radar.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_iconEndPadding = global::Covid19Radar.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_iconStartPadding = global::Covid19Radar.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_rippleColor = global::Covid19Radar.Droid.Resource.Styleable.Chip_rippleColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_showMotionSpec = global::Covid19Radar.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_textEndPadding = global::Covid19Radar.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.Chip_textStartPadding = global::Covid19Radar.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_Layout = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_title = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::Covid19Radar.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Prism.Plugin.Popups.Resource.Styleable.ColorStateListItem = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem;
+			global::Prism.Plugin.Popups.Resource.Styleable.ColorStateListItem_alpha = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Prism.Plugin.Popups.Resource.Styleable.ColorStateListItem_android_alpha = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Prism.Plugin.Popups.Resource.Styleable.ColorStateListItem_android_color = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Prism.Plugin.Popups.Resource.Styleable.CompoundButton = global::Covid19Radar.Droid.Resource.Styleable.CompoundButton;
+			global::Prism.Plugin.Popups.Resource.Styleable.CompoundButton_android_button = global::Covid19Radar.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Prism.Plugin.Popups.Resource.Styleable.CompoundButton_buttonTint = global::Covid19Radar.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.CompoundButton_buttonTintMode = global::Covid19Radar.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_keylines = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_Layout = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Prism.Plugin.Popups.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Covid19Radar.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.DesignTheme = global::Covid19Radar.Droid.Resource.Styleable.DesignTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::Covid19Radar.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.DesignTheme_bottomSheetStyle = global::Covid19Radar.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle_barLength = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle_color = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle_drawableSize = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle_spinBars = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Prism.Plugin.Popups.Resource.Styleable.DrawerArrowToggle_thickness = global::Covid19Radar.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_backgroundTint = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_borderWidth = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_elevation = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_fabCustomSize = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_fabSize = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_maxImageSize = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_rippleColor = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_showMotionSpec = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Prism.Plugin.Popups.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Covid19Radar.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.FlowLayout = global::Covid19Radar.Droid.Resource.Styleable.FlowLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.FlowLayout_itemSpacing = global::Covid19Radar.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Prism.Plugin.Popups.Resource.Styleable.FlowLayout_lineSpacing = global::Covid19Radar.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamily = global::Covid19Radar.Droid.Resource.Styleable.FontFamily;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_android_font = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_font = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_fontStyle = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_fontWeight = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamilyFont_ttcIndex = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamily_fontProviderAuthority = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamily_fontProviderCerts = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamily_fontProviderPackage = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Prism.Plugin.Popups.Resource.Styleable.FontFamily_fontProviderQuery = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Prism.Plugin.Popups.Resource.Styleable.ForegroundLinearLayout = global::Covid19Radar.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Covid19Radar.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Prism.Plugin.Popups.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Covid19Radar.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::Covid19Radar.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColorItem = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColorItem_android_color = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColorItem_android_offset = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_centerColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_centerX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_centerY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_endColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_endX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_endY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_gradientRadius = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_startColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_startX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_startY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_tileMode = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.GradientColor_android_type = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_android_gravity = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_android_orientation = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_divider = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_Layout = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Prism.Plugin.Popups.Resource.Styleable.LinearLayoutCompat_showDividers = global::Covid19Radar.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Prism.Plugin.Popups.Resource.Styleable.ListPopupWindow = global::Covid19Radar.Droid.Resource.Styleable.ListPopupWindow;
+			global::Prism.Plugin.Popups.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::Covid19Radar.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Prism.Plugin.Popups.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::Covid19Radar.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_android_insetBottom = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_android_insetLeft = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_android_insetRight = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_android_insetTop = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_backgroundTint = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_backgroundTintMode = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_cornerRadius = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_icon = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_icon;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_iconGravity = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_iconPadding = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_iconSize = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_iconTint = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_iconTintMode = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_rippleColor = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_strokeColor = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialButton_strokeWidth = global::Covid19Radar.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialCardView = global::Covid19Radar.Droid.Resource.Styleable.MaterialCardView;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialCardView_strokeColor = global::Covid19Radar.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialCardView_strokeWidth = global::Covid19Radar.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::Prism.Plugin.Popups.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::Covid19Radar.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MediaRouteButton = global::Covid19Radar.Droid.Resource.Styleable.MediaRouteButton;
+			global::Prism.Plugin.Popups.Resource.Styleable.MediaRouteButton_android_minHeight = global::Covid19Radar.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.MediaRouteButton_android_minWidth = global::Covid19Radar.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::Covid19Radar.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::Covid19Radar.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuGroup = global::Covid19Radar.Droid.Resource.Styleable.MenuGroup;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Covid19Radar.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuGroup_android_enabled = global::Covid19Radar.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuGroup_android_id = global::Covid19Radar.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuGroup_android_menuCategory = global::Covid19Radar.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuGroup_android_orderInCategory = global::Covid19Radar.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuGroup_android_visible = global::Covid19Radar.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem = global::Covid19Radar.Droid.Resource.Styleable.MenuItem;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_actionLayout = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_actionProviderClass = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_actionViewClass = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_alphabeticModifiers = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_checkable = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_checked = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_enabled = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_icon = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_id = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_menuCategory = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_numericShortcut = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_onClick = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_orderInCategory = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_title = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_titleCondensed = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_android_visible = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_contentDescription = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_iconTint = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_iconTintMode = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_numericModifiers = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_showAsAction = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuItem_tooltipText = global::Covid19Radar.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView = global::Covid19Radar.Droid.Resource.Styleable.MenuView;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_android_headerBackground = global::Covid19Radar.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_android_horizontalDivider = global::Covid19Radar.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_android_itemBackground = global::Covid19Radar.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::Covid19Radar.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_android_itemTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_android_verticalDivider = global::Covid19Radar.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_android_windowAnimationStyle = global::Covid19Radar.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_preserveIconSpacing = global::Covid19Radar.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Prism.Plugin.Popups.Resource.Styleable.MenuView_subMenuArrow = global::Covid19Radar.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView = global::Covid19Radar.Droid.Resource.Styleable.NavigationView;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_android_background = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_android_maxWidth = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_elevation = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_headerLayout = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_itemBackground = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_itemHorizontalPadding = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_itemIconPadding = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_itemIconTint = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_itemTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_itemTextColor = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.NavigationView_menu = global::Covid19Radar.Droid.Resource.Styleable.NavigationView_menu;
+			global::Prism.Plugin.Popups.Resource.Styleable.PopupWindow = global::Covid19Radar.Droid.Resource.Styleable.PopupWindow;
+			global::Prism.Plugin.Popups.Resource.Styleable.PopupWindowBackgroundState = global::Covid19Radar.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Prism.Plugin.Popups.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::Covid19Radar.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Prism.Plugin.Popups.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::Covid19Radar.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.PopupWindow_android_popupBackground = global::Covid19Radar.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.PopupWindow_overlapAnchor = global::Covid19Radar.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecycleListView = global::Covid19Radar.Droid.Resource.Styleable.RecycleListView;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::Covid19Radar.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::Covid19Radar.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_android_orientation = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_fastScrollEnabled = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_layoutManager = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_reverseLayout = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_spanCount = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Prism.Plugin.Popups.Resource.Styleable.RecyclerView_stackFromEnd = global::Covid19Radar.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.ScrimInsetsFrameLayout = global::Covid19Radar.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Covid19Radar.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Prism.Plugin.Popups.Resource.Styleable.ScrollingViewBehavior_Layout = global::Covid19Radar.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::Covid19Radar.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView = global::Covid19Radar.Droid.Resource.Styleable.SearchView;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_android_focusable = global::Covid19Radar.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_android_imeOptions = global::Covid19Radar.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_android_inputType = global::Covid19Radar.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_android_maxWidth = global::Covid19Radar.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_closeIcon = global::Covid19Radar.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_commitIcon = global::Covid19Radar.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_defaultQueryHint = global::Covid19Radar.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_goIcon = global::Covid19Radar.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_iconifiedByDefault = global::Covid19Radar.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_layout = global::Covid19Radar.Droid.Resource.Styleable.SearchView_layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_queryBackground = global::Covid19Radar.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_queryHint = global::Covid19Radar.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_searchHintIcon = global::Covid19Radar.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_searchIcon = global::Covid19Radar.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_submitBackground = global::Covid19Radar.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_suggestionRowLayout = global::Covid19Radar.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.SearchView_voiceIcon = global::Covid19Radar.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.Snackbar = global::Covid19Radar.Droid.Resource.Styleable.Snackbar;
+			global::Prism.Plugin.Popups.Resource.Styleable.SnackbarLayout = global::Covid19Radar.Droid.Resource.Styleable.SnackbarLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.SnackbarLayout_android_maxWidth = global::Covid19Radar.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.SnackbarLayout_elevation = global::Covid19Radar.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Prism.Plugin.Popups.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::Covid19Radar.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.Snackbar_snackbarButtonStyle = global::Covid19Radar.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.Snackbar_snackbarStyle = global::Covid19Radar.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.Spinner = global::Covid19Radar.Droid.Resource.Styleable.Spinner;
+			global::Prism.Plugin.Popups.Resource.Styleable.Spinner_android_dropDownWidth = global::Covid19Radar.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.Spinner_android_entries = global::Covid19Radar.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Prism.Plugin.Popups.Resource.Styleable.Spinner_android_popupBackground = global::Covid19Radar.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.Spinner_android_prompt = global::Covid19Radar.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Prism.Plugin.Popups.Resource.Styleable.Spinner_popupTheme = global::Covid19Radar.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawable = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawableItem = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawableItem;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawableItem_android_drawable = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawable_android_constantSize = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawable_android_dither = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawable_android_variablePadding = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.StateListDrawable_android_visible = global::Covid19Radar.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_android_textOff = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_android_textOn = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_android_thumb = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_showText = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_splitTrack = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_switchMinWidth = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_switchPadding = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_switchTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_thumbTextPadding = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_thumbTint = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_thumbTintMode = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_track = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_trackTint = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.SwitchCompat_trackTintMode = global::Covid19Radar.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabItem = global::Covid19Radar.Droid.Resource.Styleable.TabItem;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabItem_android_icon = global::Covid19Radar.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabItem_android_layout = global::Covid19Radar.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabItem_android_text = global::Covid19Radar.Droid.Resource.Styleable.TabItem_android_text;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout = global::Covid19Radar.Droid.Resource.Styleable.TabLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabBackground = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabContentStart = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabGravity = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabIconTint = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabIconTintMode = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabIndicator = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabIndicatorColor = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabIndicatorGravity = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabIndicatorHeight = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabInlineLabel = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabMaxWidth = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabMinWidth = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabMode = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabPadding = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabPaddingBottom = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabPaddingEnd = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabPaddingStart = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabPaddingTop = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabRippleColor = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabSelectedTextColor = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabTextColor = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.TabLayout_tabUnboundedRipple = global::Covid19Radar.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_fontFamily = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_shadowColor = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_shadowDx = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_shadowDy = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_shadowRadius = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_textColor = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_textColorHint = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_textColorLink = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_textSize = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_textStyle = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_android_typeface = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_fontFamily = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextAppearance_textAllCaps = global::Covid19Radar.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_android_hint = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_android_textColorHint = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxStrokeColor = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_counterEnabled = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_counterMaxLength = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_counterTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_errorEnabled = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_errorTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_helperText = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_helperTextEnabled = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_hintEnabled = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_hintTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_passwordToggleTint = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::Covid19Radar.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.ThemeEnforcement = global::Covid19Radar.Droid.Resource.Styleable.ThemeEnforcement;
+			global::Prism.Plugin.Popups.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::Covid19Radar.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::Covid19Radar.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar = global::Covid19Radar.Droid.Resource.Styleable.Toolbar;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_android_gravity = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_android_minHeight = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_buttonGravity = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_collapseContentDescription = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_collapseIcon = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_contentInsetEnd = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_contentInsetLeft = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_contentInsetRight = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_contentInsetStart = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_logo = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_logo;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_logoDescription = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_maxButtonHeight = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_navigationContentDescription = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_navigationIcon = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_popupTheme = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_subtitle = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_subtitleTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_subtitleTextColor = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_title = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_title;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_titleMargin = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_titleMarginBottom = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_titleMarginEnd = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_titleMargins = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_titleMarginStart = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_titleMarginTop = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_titleTextAppearance = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Prism.Plugin.Popups.Resource.Styleable.Toolbar_titleTextColor = global::Covid19Radar.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Prism.Plugin.Popups.Resource.Styleable.View = global::Covid19Radar.Droid.Resource.Styleable.View;
+			global::Prism.Plugin.Popups.Resource.Styleable.ViewBackgroundHelper = global::Covid19Radar.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Prism.Plugin.Popups.Resource.Styleable.ViewBackgroundHelper_android_background = global::Covid19Radar.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Prism.Plugin.Popups.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::Covid19Radar.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Prism.Plugin.Popups.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::Covid19Radar.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Prism.Plugin.Popups.Resource.Styleable.ViewStubCompat = global::Covid19Radar.Droid.Resource.Styleable.ViewStubCompat;
+			global::Prism.Plugin.Popups.Resource.Styleable.ViewStubCompat_android_id = global::Covid19Radar.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Prism.Plugin.Popups.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Covid19Radar.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Prism.Plugin.Popups.Resource.Styleable.ViewStubCompat_android_layout = global::Covid19Radar.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Prism.Plugin.Popups.Resource.Styleable.View_android_focusable = global::Covid19Radar.Droid.Resource.Styleable.View_android_focusable;
+			global::Prism.Plugin.Popups.Resource.Styleable.View_android_theme = global::Covid19Radar.Droid.Resource.Styleable.View_android_theme;
+			global::Prism.Plugin.Popups.Resource.Styleable.View_paddingEnd = global::Covid19Radar.Droid.Resource.Styleable.View_paddingEnd;
+			global::Prism.Plugin.Popups.Resource.Styleable.View_paddingStart = global::Covid19Radar.Droid.Resource.Styleable.View_paddingStart;
+			global::Prism.Plugin.Popups.Resource.Styleable.View_theme = global::Covid19Radar.Droid.Resource.Styleable.View_theme;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::Covid19Radar.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::Covid19Radar.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::Covid19Radar.Droid.Resource.Attribute.font;
@@ -12155,298 +15215,307 @@ namespace Covid19Radar.Droid
 			public const int cardview_shadow_start_color = 2131034157;
 			
 			// aapt resource value: 0x7F05002E
-			public const int common_google_signin_btn_text_dark = 2131034158;
+			public const int colorAccent = 2131034158;
 			
 			// aapt resource value: 0x7F05002F
-			public const int common_google_signin_btn_text_dark_default = 2131034159;
+			public const int colorPrimary = 2131034159;
 			
 			// aapt resource value: 0x7F050030
-			public const int common_google_signin_btn_text_dark_disabled = 2131034160;
+			public const int colorPrimaryDark = 2131034160;
 			
 			// aapt resource value: 0x7F050031
-			public const int common_google_signin_btn_text_dark_focused = 2131034161;
+			public const int common_google_signin_btn_text_dark = 2131034161;
 			
 			// aapt resource value: 0x7F050032
-			public const int common_google_signin_btn_text_dark_pressed = 2131034162;
+			public const int common_google_signin_btn_text_dark_default = 2131034162;
 			
 			// aapt resource value: 0x7F050033
-			public const int common_google_signin_btn_text_light = 2131034163;
+			public const int common_google_signin_btn_text_dark_disabled = 2131034163;
 			
 			// aapt resource value: 0x7F050034
-			public const int common_google_signin_btn_text_light_default = 2131034164;
+			public const int common_google_signin_btn_text_dark_focused = 2131034164;
 			
 			// aapt resource value: 0x7F050035
-			public const int common_google_signin_btn_text_light_disabled = 2131034165;
+			public const int common_google_signin_btn_text_dark_pressed = 2131034165;
 			
 			// aapt resource value: 0x7F050036
-			public const int common_google_signin_btn_text_light_focused = 2131034166;
+			public const int common_google_signin_btn_text_light = 2131034166;
 			
 			// aapt resource value: 0x7F050037
-			public const int common_google_signin_btn_text_light_pressed = 2131034167;
+			public const int common_google_signin_btn_text_light_default = 2131034167;
 			
 			// aapt resource value: 0x7F050038
-			public const int common_google_signin_btn_tint = 2131034168;
+			public const int common_google_signin_btn_text_light_disabled = 2131034168;
 			
 			// aapt resource value: 0x7F050039
-			public const int design_bottom_navigation_shadow_color = 2131034169;
+			public const int common_google_signin_btn_text_light_focused = 2131034169;
 			
 			// aapt resource value: 0x7F05003A
-			public const int design_default_color_primary = 2131034170;
+			public const int common_google_signin_btn_text_light_pressed = 2131034170;
 			
 			// aapt resource value: 0x7F05003B
-			public const int design_default_color_primary_dark = 2131034171;
+			public const int common_google_signin_btn_tint = 2131034171;
 			
 			// aapt resource value: 0x7F05003C
-			public const int design_error = 2131034172;
+			public const int design_bottom_navigation_shadow_color = 2131034172;
 			
 			// aapt resource value: 0x7F05003D
-			public const int design_fab_shadow_end_color = 2131034173;
+			public const int design_default_color_primary = 2131034173;
 			
 			// aapt resource value: 0x7F05003E
-			public const int design_fab_shadow_mid_color = 2131034174;
+			public const int design_default_color_primary_dark = 2131034174;
 			
 			// aapt resource value: 0x7F05003F
-			public const int design_fab_shadow_start_color = 2131034175;
+			public const int design_error = 2131034175;
 			
 			// aapt resource value: 0x7F050040
-			public const int design_fab_stroke_end_inner_color = 2131034176;
+			public const int design_fab_shadow_end_color = 2131034176;
 			
 			// aapt resource value: 0x7F050041
-			public const int design_fab_stroke_end_outer_color = 2131034177;
+			public const int design_fab_shadow_mid_color = 2131034177;
 			
 			// aapt resource value: 0x7F050042
-			public const int design_fab_stroke_top_inner_color = 2131034178;
+			public const int design_fab_shadow_start_color = 2131034178;
 			
 			// aapt resource value: 0x7F050043
-			public const int design_fab_stroke_top_outer_color = 2131034179;
+			public const int design_fab_stroke_end_inner_color = 2131034179;
 			
 			// aapt resource value: 0x7F050044
-			public const int design_snackbar_background_color = 2131034180;
+			public const int design_fab_stroke_end_outer_color = 2131034180;
 			
 			// aapt resource value: 0x7F050045
-			public const int design_tint_password_toggle = 2131034181;
+			public const int design_fab_stroke_top_inner_color = 2131034181;
 			
 			// aapt resource value: 0x7F050046
-			public const int dim_foreground_disabled_material_dark = 2131034182;
+			public const int design_fab_stroke_top_outer_color = 2131034182;
 			
 			// aapt resource value: 0x7F050047
-			public const int dim_foreground_disabled_material_light = 2131034183;
+			public const int design_snackbar_background_color = 2131034183;
 			
 			// aapt resource value: 0x7F050048
-			public const int dim_foreground_material_dark = 2131034184;
+			public const int design_tint_password_toggle = 2131034184;
 			
 			// aapt resource value: 0x7F050049
-			public const int dim_foreground_material_light = 2131034185;
+			public const int dim_foreground_disabled_material_dark = 2131034185;
 			
 			// aapt resource value: 0x7F05004A
-			public const int error_color_material_dark = 2131034186;
+			public const int dim_foreground_disabled_material_light = 2131034186;
 			
 			// aapt resource value: 0x7F05004B
-			public const int error_color_material_light = 2131034187;
+			public const int dim_foreground_material_dark = 2131034187;
 			
 			// aapt resource value: 0x7F05004C
-			public const int foreground_material_dark = 2131034188;
+			public const int dim_foreground_material_light = 2131034188;
 			
 			// aapt resource value: 0x7F05004D
-			public const int foreground_material_light = 2131034189;
+			public const int error_color_material_dark = 2131034189;
 			
 			// aapt resource value: 0x7F05004E
-			public const int highlighted_text_material_dark = 2131034190;
+			public const int error_color_material_light = 2131034190;
 			
 			// aapt resource value: 0x7F05004F
-			public const int highlighted_text_material_light = 2131034191;
+			public const int foreground_material_dark = 2131034191;
 			
 			// aapt resource value: 0x7F050050
-			public const int material_blue_grey_800 = 2131034192;
+			public const int foreground_material_light = 2131034192;
 			
 			// aapt resource value: 0x7F050051
-			public const int material_blue_grey_900 = 2131034193;
+			public const int highlighted_text_material_dark = 2131034193;
 			
 			// aapt resource value: 0x7F050052
-			public const int material_blue_grey_950 = 2131034194;
+			public const int highlighted_text_material_light = 2131034194;
 			
 			// aapt resource value: 0x7F050053
-			public const int material_deep_teal_200 = 2131034195;
+			public const int material_blue_grey_800 = 2131034195;
 			
 			// aapt resource value: 0x7F050054
-			public const int material_deep_teal_500 = 2131034196;
+			public const int material_blue_grey_900 = 2131034196;
 			
 			// aapt resource value: 0x7F050055
-			public const int material_grey_100 = 2131034197;
+			public const int material_blue_grey_950 = 2131034197;
 			
 			// aapt resource value: 0x7F050056
-			public const int material_grey_300 = 2131034198;
+			public const int material_deep_teal_200 = 2131034198;
 			
 			// aapt resource value: 0x7F050057
-			public const int material_grey_50 = 2131034199;
+			public const int material_deep_teal_500 = 2131034199;
 			
 			// aapt resource value: 0x7F050058
-			public const int material_grey_600 = 2131034200;
+			public const int material_grey_100 = 2131034200;
 			
 			// aapt resource value: 0x7F050059
-			public const int material_grey_800 = 2131034201;
+			public const int material_grey_300 = 2131034201;
 			
 			// aapt resource value: 0x7F05005A
-			public const int material_grey_850 = 2131034202;
+			public const int material_grey_50 = 2131034202;
 			
 			// aapt resource value: 0x7F05005B
-			public const int material_grey_900 = 2131034203;
+			public const int material_grey_600 = 2131034203;
 			
 			// aapt resource value: 0x7F05005C
-			public const int mtrl_bottom_nav_colored_item_tint = 2131034204;
+			public const int material_grey_800 = 2131034204;
 			
 			// aapt resource value: 0x7F05005D
-			public const int mtrl_bottom_nav_item_tint = 2131034205;
+			public const int material_grey_850 = 2131034205;
 			
 			// aapt resource value: 0x7F05005E
-			public const int mtrl_btn_bg_color_disabled = 2131034206;
+			public const int material_grey_900 = 2131034206;
 			
 			// aapt resource value: 0x7F05005F
-			public const int mtrl_btn_bg_color_selector = 2131034207;
+			public const int mtrl_bottom_nav_colored_item_tint = 2131034207;
 			
 			// aapt resource value: 0x7F050060
-			public const int mtrl_btn_ripple_color = 2131034208;
+			public const int mtrl_bottom_nav_item_tint = 2131034208;
 			
 			// aapt resource value: 0x7F050061
-			public const int mtrl_btn_stroke_color_selector = 2131034209;
+			public const int mtrl_btn_bg_color_disabled = 2131034209;
 			
 			// aapt resource value: 0x7F050062
-			public const int mtrl_btn_text_btn_ripple_color = 2131034210;
+			public const int mtrl_btn_bg_color_selector = 2131034210;
 			
 			// aapt resource value: 0x7F050063
-			public const int mtrl_btn_text_color_disabled = 2131034211;
+			public const int mtrl_btn_ripple_color = 2131034211;
 			
 			// aapt resource value: 0x7F050064
-			public const int mtrl_btn_text_color_selector = 2131034212;
+			public const int mtrl_btn_stroke_color_selector = 2131034212;
 			
 			// aapt resource value: 0x7F050065
-			public const int mtrl_btn_transparent_bg_color = 2131034213;
+			public const int mtrl_btn_text_btn_ripple_color = 2131034213;
 			
 			// aapt resource value: 0x7F050066
-			public const int mtrl_chip_background_color = 2131034214;
+			public const int mtrl_btn_text_color_disabled = 2131034214;
 			
 			// aapt resource value: 0x7F050067
-			public const int mtrl_chip_close_icon_tint = 2131034215;
+			public const int mtrl_btn_text_color_selector = 2131034215;
 			
 			// aapt resource value: 0x7F050068
-			public const int mtrl_chip_ripple_color = 2131034216;
+			public const int mtrl_btn_transparent_bg_color = 2131034216;
 			
 			// aapt resource value: 0x7F050069
-			public const int mtrl_chip_text_color = 2131034217;
+			public const int mtrl_chip_background_color = 2131034217;
 			
 			// aapt resource value: 0x7F05006A
-			public const int mtrl_fab_ripple_color = 2131034218;
+			public const int mtrl_chip_close_icon_tint = 2131034218;
 			
 			// aapt resource value: 0x7F05006B
-			public const int mtrl_scrim_color = 2131034219;
+			public const int mtrl_chip_ripple_color = 2131034219;
 			
 			// aapt resource value: 0x7F05006C
-			public const int mtrl_tabs_colored_ripple_color = 2131034220;
+			public const int mtrl_chip_text_color = 2131034220;
 			
 			// aapt resource value: 0x7F05006D
-			public const int mtrl_tabs_icon_color_selector = 2131034221;
+			public const int mtrl_fab_ripple_color = 2131034221;
 			
 			// aapt resource value: 0x7F05006E
-			public const int mtrl_tabs_icon_color_selector_colored = 2131034222;
+			public const int mtrl_scrim_color = 2131034222;
 			
 			// aapt resource value: 0x7F05006F
-			public const int mtrl_tabs_legacy_text_color_selector = 2131034223;
+			public const int mtrl_tabs_colored_ripple_color = 2131034223;
 			
 			// aapt resource value: 0x7F050070
-			public const int mtrl_tabs_ripple_color = 2131034224;
-			
-			// aapt resource value: 0x7F050072
-			public const int mtrl_textinput_default_box_stroke_color = 2131034226;
-			
-			// aapt resource value: 0x7F050073
-			public const int mtrl_textinput_disabled_color = 2131034227;
-			
-			// aapt resource value: 0x7F050074
-			public const int mtrl_textinput_filled_box_default_background_color = 2131034228;
-			
-			// aapt resource value: 0x7F050075
-			public const int mtrl_textinput_hovered_box_stroke_color = 2131034229;
+			public const int mtrl_tabs_icon_color_selector = 2131034224;
 			
 			// aapt resource value: 0x7F050071
-			public const int mtrl_text_btn_text_color_selector = 2131034225;
+			public const int mtrl_tabs_icon_color_selector_colored = 2131034225;
+			
+			// aapt resource value: 0x7F050072
+			public const int mtrl_tabs_legacy_text_color_selector = 2131034226;
+			
+			// aapt resource value: 0x7F050073
+			public const int mtrl_tabs_ripple_color = 2131034227;
+			
+			// aapt resource value: 0x7F050075
+			public const int mtrl_textinput_default_box_stroke_color = 2131034229;
 			
 			// aapt resource value: 0x7F050076
-			public const int notification_action_color_filter = 2131034230;
+			public const int mtrl_textinput_disabled_color = 2131034230;
 			
 			// aapt resource value: 0x7F050077
-			public const int notification_icon_bg_color = 2131034231;
+			public const int mtrl_textinput_filled_box_default_background_color = 2131034231;
 			
 			// aapt resource value: 0x7F050078
-			public const int notification_material_background_media_default_color = 2131034232;
+			public const int mtrl_textinput_hovered_box_stroke_color = 2131034232;
+			
+			// aapt resource value: 0x7F050074
+			public const int mtrl_text_btn_text_color_selector = 2131034228;
 			
 			// aapt resource value: 0x7F050079
-			public const int primary_dark_material_dark = 2131034233;
+			public const int notification_action_color_filter = 2131034233;
 			
 			// aapt resource value: 0x7F05007A
-			public const int primary_dark_material_light = 2131034234;
+			public const int notification_icon_bg_color = 2131034234;
 			
 			// aapt resource value: 0x7F05007B
-			public const int primary_material_dark = 2131034235;
+			public const int notification_material_background_media_default_color = 2131034235;
 			
 			// aapt resource value: 0x7F05007C
-			public const int primary_material_light = 2131034236;
+			public const int primary_dark_material_dark = 2131034236;
 			
 			// aapt resource value: 0x7F05007D
-			public const int primary_text_default_material_dark = 2131034237;
+			public const int primary_dark_material_light = 2131034237;
 			
 			// aapt resource value: 0x7F05007E
-			public const int primary_text_default_material_light = 2131034238;
+			public const int primary_material_dark = 2131034238;
 			
 			// aapt resource value: 0x7F05007F
-			public const int primary_text_disabled_material_dark = 2131034239;
+			public const int primary_material_light = 2131034239;
 			
 			// aapt resource value: 0x7F050080
-			public const int primary_text_disabled_material_light = 2131034240;
+			public const int primary_text_default_material_dark = 2131034240;
 			
 			// aapt resource value: 0x7F050081
-			public const int ripple_material_dark = 2131034241;
+			public const int primary_text_default_material_light = 2131034241;
 			
 			// aapt resource value: 0x7F050082
-			public const int ripple_material_light = 2131034242;
+			public const int primary_text_disabled_material_dark = 2131034242;
 			
 			// aapt resource value: 0x7F050083
-			public const int secondary_text_default_material_dark = 2131034243;
+			public const int primary_text_disabled_material_light = 2131034243;
 			
 			// aapt resource value: 0x7F050084
-			public const int secondary_text_default_material_light = 2131034244;
+			public const int ripple_material_dark = 2131034244;
 			
 			// aapt resource value: 0x7F050085
-			public const int secondary_text_disabled_material_dark = 2131034245;
+			public const int ripple_material_light = 2131034245;
 			
 			// aapt resource value: 0x7F050086
-			public const int secondary_text_disabled_material_light = 2131034246;
+			public const int secondary_text_default_material_dark = 2131034246;
 			
 			// aapt resource value: 0x7F050087
-			public const int splash_background = 2131034247;
+			public const int secondary_text_default_material_light = 2131034247;
 			
 			// aapt resource value: 0x7F050088
-			public const int switch_thumb_disabled_material_dark = 2131034248;
+			public const int secondary_text_disabled_material_dark = 2131034248;
 			
 			// aapt resource value: 0x7F050089
-			public const int switch_thumb_disabled_material_light = 2131034249;
+			public const int secondary_text_disabled_material_light = 2131034249;
 			
 			// aapt resource value: 0x7F05008A
-			public const int switch_thumb_material_dark = 2131034250;
+			public const int splash_background = 2131034250;
 			
 			// aapt resource value: 0x7F05008B
-			public const int switch_thumb_material_light = 2131034251;
+			public const int switch_thumb_disabled_material_dark = 2131034251;
 			
 			// aapt resource value: 0x7F05008C
-			public const int switch_thumb_normal_material_dark = 2131034252;
+			public const int switch_thumb_disabled_material_light = 2131034252;
 			
 			// aapt resource value: 0x7F05008D
-			public const int switch_thumb_normal_material_light = 2131034253;
+			public const int switch_thumb_material_dark = 2131034253;
 			
 			// aapt resource value: 0x7F05008E
-			public const int tooltip_background_dark = 2131034254;
+			public const int switch_thumb_material_light = 2131034254;
 			
 			// aapt resource value: 0x7F05008F
-			public const int tooltip_background_light = 2131034255;
+			public const int switch_thumb_normal_material_dark = 2131034255;
+			
+			// aapt resource value: 0x7F050090
+			public const int switch_thumb_normal_material_light = 2131034256;
+			
+			// aapt resource value: 0x7F050091
+			public const int tooltip_background_dark = 2131034257;
+			
+			// aapt resource value: 0x7F050092
+			public const int tooltip_background_light = 2131034258;
 			
 			static Color()
 			{
@@ -14017,142 +17086,148 @@ namespace Covid19Radar.Droid
 			public const int ic_mtrl_chip_close_circle = 2131165476;
 			
 			// aapt resource value: 0x7F070125
-			public const int ic_vol_type_speaker_dark = 2131165477;
+			public const int ic_stat_notify_dot = 2131165477;
 			
 			// aapt resource value: 0x7F070126
-			public const int ic_vol_type_speaker_group_dark = 2131165478;
+			public const int ic_vol_type_speaker_dark = 2131165478;
 			
 			// aapt resource value: 0x7F070127
-			public const int ic_vol_type_speaker_group_light = 2131165479;
+			public const int ic_vol_type_speaker_group_dark = 2131165479;
 			
 			// aapt resource value: 0x7F070128
-			public const int ic_vol_type_speaker_light = 2131165480;
+			public const int ic_vol_type_speaker_group_light = 2131165480;
 			
 			// aapt resource value: 0x7F070129
-			public const int ic_vol_type_tv_dark = 2131165481;
+			public const int ic_vol_type_speaker_light = 2131165481;
 			
 			// aapt resource value: 0x7F07012A
-			public const int ic_vol_type_tv_light = 2131165482;
+			public const int ic_vol_type_tv_dark = 2131165482;
 			
 			// aapt resource value: 0x7F07012B
-			public const int Logo = 2131165483;
+			public const int ic_vol_type_tv_light = 2131165483;
 			
 			// aapt resource value: 0x7F07012C
-			public const int mr_button_connected_dark = 2131165484;
+			public const int Logo = 2131165484;
 			
 			// aapt resource value: 0x7F07012D
-			public const int mr_button_connected_light = 2131165485;
+			public const int mr_button_connected_dark = 2131165485;
 			
 			// aapt resource value: 0x7F07012E
-			public const int mr_button_connecting_dark = 2131165486;
+			public const int mr_button_connected_light = 2131165486;
 			
 			// aapt resource value: 0x7F07012F
-			public const int mr_button_connecting_light = 2131165487;
+			public const int mr_button_connecting_dark = 2131165487;
 			
 			// aapt resource value: 0x7F070130
-			public const int mr_button_dark = 2131165488;
+			public const int mr_button_connecting_light = 2131165488;
 			
 			// aapt resource value: 0x7F070131
-			public const int mr_button_light = 2131165489;
+			public const int mr_button_dark = 2131165489;
 			
 			// aapt resource value: 0x7F070132
-			public const int mr_dialog_close_dark = 2131165490;
+			public const int mr_button_light = 2131165490;
 			
 			// aapt resource value: 0x7F070133
-			public const int mr_dialog_close_light = 2131165491;
+			public const int mr_dialog_close_dark = 2131165491;
 			
 			// aapt resource value: 0x7F070134
-			public const int mr_dialog_material_background_dark = 2131165492;
+			public const int mr_dialog_close_light = 2131165492;
 			
 			// aapt resource value: 0x7F070135
-			public const int mr_dialog_material_background_light = 2131165493;
+			public const int mr_dialog_material_background_dark = 2131165493;
 			
 			// aapt resource value: 0x7F070136
-			public const int mr_group_collapse = 2131165494;
+			public const int mr_dialog_material_background_light = 2131165494;
 			
 			// aapt resource value: 0x7F070137
-			public const int mr_group_expand = 2131165495;
+			public const int mr_group_collapse = 2131165495;
 			
 			// aapt resource value: 0x7F070138
-			public const int mr_media_pause_dark = 2131165496;
+			public const int mr_group_expand = 2131165496;
 			
 			// aapt resource value: 0x7F070139
-			public const int mr_media_pause_light = 2131165497;
+			public const int mr_media_pause_dark = 2131165497;
 			
 			// aapt resource value: 0x7F07013A
-			public const int mr_media_play_dark = 2131165498;
+			public const int mr_media_pause_light = 2131165498;
 			
 			// aapt resource value: 0x7F07013B
-			public const int mr_media_play_light = 2131165499;
+			public const int mr_media_play_dark = 2131165499;
 			
 			// aapt resource value: 0x7F07013C
-			public const int mr_media_stop_dark = 2131165500;
+			public const int mr_media_play_light = 2131165500;
 			
 			// aapt resource value: 0x7F07013D
-			public const int mr_media_stop_light = 2131165501;
+			public const int mr_media_stop_dark = 2131165501;
 			
 			// aapt resource value: 0x7F07013E
-			public const int mr_vol_type_audiotrack_dark = 2131165502;
+			public const int mr_media_stop_light = 2131165502;
 			
 			// aapt resource value: 0x7F07013F
-			public const int mr_vol_type_audiotrack_light = 2131165503;
+			public const int mr_vol_type_audiotrack_dark = 2131165503;
 			
 			// aapt resource value: 0x7F070140
-			public const int mtrl_snackbar_background = 2131165504;
+			public const int mr_vol_type_audiotrack_light = 2131165504;
 			
 			// aapt resource value: 0x7F070141
-			public const int mtrl_tabs_default_indicator = 2131165505;
+			public const int mtrl_snackbar_background = 2131165505;
 			
 			// aapt resource value: 0x7F070142
-			public const int navigation_empty_icon = 2131165506;
+			public const int mtrl_tabs_default_indicator = 2131165506;
 			
 			// aapt resource value: 0x7F070143
-			public const int notification_action_background = 2131165507;
+			public const int navigation_empty_icon = 2131165507;
 			
 			// aapt resource value: 0x7F070144
-			public const int notification_bg = 2131165508;
+			public const int notification_action_background = 2131165508;
 			
 			// aapt resource value: 0x7F070145
-			public const int notification_bg_low = 2131165509;
+			public const int notification_bg = 2131165509;
 			
 			// aapt resource value: 0x7F070146
-			public const int notification_bg_low_normal = 2131165510;
+			public const int notification_bg_low = 2131165510;
 			
 			// aapt resource value: 0x7F070147
-			public const int notification_bg_low_pressed = 2131165511;
+			public const int notification_bg_low_normal = 2131165511;
 			
 			// aapt resource value: 0x7F070148
-			public const int notification_bg_normal = 2131165512;
+			public const int notification_bg_low_pressed = 2131165512;
 			
 			// aapt resource value: 0x7F070149
-			public const int notification_bg_normal_pressed = 2131165513;
+			public const int notification_bg_normal = 2131165513;
 			
 			// aapt resource value: 0x7F07014A
-			public const int notification_icon_background = 2131165514;
+			public const int notification_bg_normal_pressed = 2131165514;
 			
 			// aapt resource value: 0x7F07014B
-			public const int notification_template_icon_bg = 2131165515;
+			public const int notification_icon_background = 2131165515;
 			
 			// aapt resource value: 0x7F07014C
-			public const int notification_template_icon_low_bg = 2131165516;
+			public const int notification_template_icon_bg = 2131165516;
 			
 			// aapt resource value: 0x7F07014D
-			public const int notification_tile_bg = 2131165517;
+			public const int notification_template_icon_low_bg = 2131165517;
 			
 			// aapt resource value: 0x7F07014E
-			public const int notify_panel_notification_icon_bg = 2131165518;
-			
-			// aapt resource value: 0x7F070150
-			public const int splashimg = 2131165520;
+			public const int notification_tile_bg = 2131165518;
 			
 			// aapt resource value: 0x7F07014F
-			public const int splash_screen = 2131165519;
+			public const int notify_panel_notification_icon_bg = 2131165519;
 			
-			// aapt resource value: 0x7F070151
-			public const int tooltip_frame_dark = 2131165521;
+			// aapt resource value: 0x7F070150
+			public const int settings = 2131165520;
 			
 			// aapt resource value: 0x7F070152
-			public const int tooltip_frame_light = 2131165522;
+			public const int splashimg = 2131165522;
+			
+			// aapt resource value: 0x7F070151
+			public const int splash_screen = 2131165521;
+			
+			// aapt resource value: 0x7F070153
+			public const int tooltip_frame_dark = 2131165523;
+			
+			// aapt resource value: 0x7F070154
+			public const int tooltip_frame_light = 2131165524;
 			
 			static Drawable()
 			{
@@ -15619,100 +18694,103 @@ namespace Covid19Radar.Droid
 			public const int hide_bottom_view_on_scroll_behavior = 2131558485;
 			
 			// aapt resource value: 0x7F0D0056
-			public const int mr_button_content_description = 2131558486;
+			public const int library_name = 2131558486;
 			
 			// aapt resource value: 0x7F0D0057
-			public const int mr_cast_button_connected = 2131558487;
+			public const int mr_button_content_description = 2131558487;
 			
 			// aapt resource value: 0x7F0D0058
-			public const int mr_cast_button_connecting = 2131558488;
+			public const int mr_cast_button_connected = 2131558488;
 			
 			// aapt resource value: 0x7F0D0059
-			public const int mr_cast_button_disconnected = 2131558489;
+			public const int mr_cast_button_connecting = 2131558489;
 			
 			// aapt resource value: 0x7F0D005A
-			public const int mr_cast_dialog_title_view_placeholder = 2131558490;
+			public const int mr_cast_button_disconnected = 2131558490;
 			
 			// aapt resource value: 0x7F0D005B
-			public const int mr_chooser_searching = 2131558491;
+			public const int mr_cast_dialog_title_view_placeholder = 2131558491;
 			
 			// aapt resource value: 0x7F0D005C
-			public const int mr_chooser_title = 2131558492;
+			public const int mr_chooser_searching = 2131558492;
 			
 			// aapt resource value: 0x7F0D005D
-			public const int mr_controller_album_art = 2131558493;
+			public const int mr_chooser_title = 2131558493;
 			
 			// aapt resource value: 0x7F0D005E
-			public const int mr_controller_casting_screen = 2131558494;
+			public const int mr_controller_album_art = 2131558494;
 			
 			// aapt resource value: 0x7F0D005F
-			public const int mr_controller_close_description = 2131558495;
+			public const int mr_controller_casting_screen = 2131558495;
 			
 			// aapt resource value: 0x7F0D0060
-			public const int mr_controller_collapse_group = 2131558496;
+			public const int mr_controller_close_description = 2131558496;
 			
 			// aapt resource value: 0x7F0D0061
-			public const int mr_controller_disconnect = 2131558497;
+			public const int mr_controller_collapse_group = 2131558497;
 			
 			// aapt resource value: 0x7F0D0062
-			public const int mr_controller_expand_group = 2131558498;
+			public const int mr_controller_disconnect = 2131558498;
 			
 			// aapt resource value: 0x7F0D0063
-			public const int mr_controller_no_info_available = 2131558499;
+			public const int mr_controller_expand_group = 2131558499;
 			
 			// aapt resource value: 0x7F0D0064
-			public const int mr_controller_no_media_selected = 2131558500;
+			public const int mr_controller_no_info_available = 2131558500;
 			
 			// aapt resource value: 0x7F0D0065
-			public const int mr_controller_pause = 2131558501;
+			public const int mr_controller_no_media_selected = 2131558501;
 			
 			// aapt resource value: 0x7F0D0066
-			public const int mr_controller_play = 2131558502;
+			public const int mr_controller_pause = 2131558502;
 			
 			// aapt resource value: 0x7F0D0067
-			public const int mr_controller_stop = 2131558503;
+			public const int mr_controller_play = 2131558503;
 			
 			// aapt resource value: 0x7F0D0068
-			public const int mr_controller_stop_casting = 2131558504;
+			public const int mr_controller_stop = 2131558504;
 			
 			// aapt resource value: 0x7F0D0069
-			public const int mr_controller_volume_slider = 2131558505;
+			public const int mr_controller_stop_casting = 2131558505;
 			
 			// aapt resource value: 0x7F0D006A
-			public const int mr_dialog_device_header = 2131558506;
+			public const int mr_controller_volume_slider = 2131558506;
 			
 			// aapt resource value: 0x7F0D006B
-			public const int mr_dialog_route_header = 2131558507;
+			public const int mr_dialog_device_header = 2131558507;
 			
 			// aapt resource value: 0x7F0D006C
-			public const int mr_system_route_name = 2131558508;
+			public const int mr_dialog_route_header = 2131558508;
 			
 			// aapt resource value: 0x7F0D006D
-			public const int mr_user_route_category_name = 2131558509;
+			public const int mr_system_route_name = 2131558509;
 			
 			// aapt resource value: 0x7F0D006E
-			public const int mtrl_chip_close_icon_content_description = 2131558510;
+			public const int mr_user_route_category_name = 2131558510;
 			
 			// aapt resource value: 0x7F0D006F
-			public const int password_toggle_content_description = 2131558511;
+			public const int mtrl_chip_close_icon_content_description = 2131558511;
 			
 			// aapt resource value: 0x7F0D0070
-			public const int path_password_eye = 2131558512;
+			public const int password_toggle_content_description = 2131558512;
 			
 			// aapt resource value: 0x7F0D0071
-			public const int path_password_eye_mask_strike_through = 2131558513;
+			public const int path_password_eye = 2131558513;
 			
 			// aapt resource value: 0x7F0D0072
-			public const int path_password_eye_mask_visible = 2131558514;
+			public const int path_password_eye_mask_strike_through = 2131558514;
 			
 			// aapt resource value: 0x7F0D0073
-			public const int path_password_strike_through = 2131558515;
+			public const int path_password_eye_mask_visible = 2131558515;
 			
 			// aapt resource value: 0x7F0D0074
-			public const int search_menu_title = 2131558516;
+			public const int path_password_strike_through = 2131558516;
 			
 			// aapt resource value: 0x7F0D0075
-			public const int status_bar_notification_info_overflow = 2131558517;
+			public const int search_menu_title = 2131558517;
+			
+			// aapt resource value: 0x7F0D0076
+			public const int status_bar_notification_info_overflow = 2131558518;
 			
 			static String()
 			{
