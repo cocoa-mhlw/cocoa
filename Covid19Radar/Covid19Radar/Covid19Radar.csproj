@@ -6,6 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Converters\**" />
+    <EmbeddedResource Remove="Converters\**" />
+    <None Remove="Converters\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Remove="Views\Dummy.xaml" />
     <EmbeddedResource Remove="Views\DummyPage.xaml" />
   </ItemGroup>
@@ -28,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
+      <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
