@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar", "Covid19Rada
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.Android", "Covid19Radar\Covid19Radar.Android\Covid19Radar.Android.csproj", "{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.iOS", "Covid19Radar\Covid19Radar.iOS\Covid19Radar.iOS.csproj", "{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A03DD13-C0FC-4998-AFEB-74D5390C59A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.iOS", "Covid19Radar\Covid19Radar.iOS\Covid19Radar.iOS.csproj", "{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

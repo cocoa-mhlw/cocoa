@@ -27,6 +27,15 @@ namespace Covid19Radar.ViewModels
             Title = "Input Phone number";
         }
 
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+            if (parameters.TryGetValue<string>("phone_number", out var phoneNumber))
+            {
+                PhoneNumber = phoneNumber;
+            }
+        }
+
         public Command OnClickNext => (new Command(() =>
         {
             _navigationService.NavigateAsync($"InputSmsOTPPage?phone_number={PhoneNumber}");
