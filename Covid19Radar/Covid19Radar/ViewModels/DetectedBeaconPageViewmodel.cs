@@ -14,7 +14,7 @@ namespace Covid19Radar.ViewModels
 {
     public class DetectedBeaconPageViewmodel : ViewModelBase
     { 
-        private INavigationService _navigationService;
+        public List<BeaconDataModel> Beacons { get; set; }
         private IBeaconService _beaconService;
         private ObservableCollection<BeaconDataModel> _beaconDataList;
 
@@ -29,17 +29,22 @@ namespace Covid19Radar.ViewModels
         public DetectedBeaconPageViewmodel(INavigationService navigationService, IBeaconService beaconService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
+            Title = Resx.AppResources.TitleDetectedBeaconPage;
             _beaconService = beaconService;
+            SetData();
 
-            Title = "Detected Beacon List";
             BeaconDataList = new ObservableCollection<BeaconDataModel>();
+        }
+        
+        
+        private void SetData()
+        {
+            Beacons = Xamarin.Forms.DependencyService.Resolve<IBeaconService>().GetBeaconData();
         }
 
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
             base.OnNavigatedTo(parameters);
-
             var navMode = parameters.GetNavigationMode();
 
             if (navMode == NavigationMode.New)
@@ -89,7 +94,6 @@ namespace Covid19Radar.ViewModels
                         Count = 5623
                     }
                 };
-
                 BeaconDataList = new ObservableCollection<BeaconDataModel>(beaconList);
             }
         }

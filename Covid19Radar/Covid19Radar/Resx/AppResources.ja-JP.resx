@@ -343,32 +343,32 @@ SMSメールを確認してください。</value>
   <data name="OtpEnterText" xml:space="preserve">
     <value>「{0}」宛に送信しました。
 SMSに届いた6桁の数字を入力してください。</value>
-        <comment>Otp Enter the Code</comment>
-    </data>
+    <comment>Otp Enter the Code</comment>
+  </data>
   <data name="OtpTitle" xml:space="preserve">
-        <value>コード入力</value>
-        <comment>Otp Title</comment>
-    </data>
+    <value>コード入力</value>
+    <comment>Otp Title</comment>
+  </data>
   <data name="ButtonVerify" xml:space="preserve">
-        <value>次へ</value>
-        <comment>Button Verify</comment>
-    </data>
+    <value>次へ</value>
+    <comment>Button Verify</comment>
+  </data>
   <data name="DidntGetTheCodeText" xml:space="preserve">
-        <value>コードが届きませんか？</value>
-        <comment>Didn't get the code Text</comment>
-    </data>
+    <value>コードが届きませんか？</value>
+    <comment>Didn't get the code Text</comment>
+  </data>
   <data name="ResendText" xml:space="preserve">
-        <value>コードをもう一度送信する</value>
-        <comment>Resend Text</comment>
-    </data>
+    <value>コードをもう一度送信する</value>
+    <comment>Resend Text</comment>
+  </data>
   <data name="TextStatusUpdateComplete" xml:space="preserve">
-        <value>登録完了しました。</value>
-        <comment>Status Update Complete page text</comment>
-     </data>
+    <value>登録完了しました。</value>
+    <comment>Status Update Complete page text</comment>
+  </data>
   <data name="TitleStatusUpdateComplete" xml:space="preserve">
-        <value>登録完了</value>
-        <comment>Status Update Complete page title</comment>
-      </data>
+    <value>登録完了</value>
+    <comment>Status Update Complete page title</comment>
+  </data>
   <data name="TextCoreContributors" xml:space="preserve">
     <value>コアコントリビューター</value>
     <comment>Contributors list page subtitle</comment>
@@ -377,32 +377,12 @@ SMSに届いた6桁の数字を入力してください。</value>
     <value>コントリビューター紹介</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TextId" xml:space="preserve">
-    <value>ID</value>
-    <comment>Detected Beacon page item</comment>
+  <data name="TitleDetectedBeaconPage" xml:space="preserve">
+    <value>検出ビーコン</value>
+    <comment>Detected Beacons</comment>
   </data>
-  <data name="TextMajorNo" xml:space="preserve">
-    <value>Major No</value>
-    <comment>Detected Beacon page item</comment>
-  </data>
-  <data name="TextMinorNo" xml:space="preserve">
-    <value>Minor No</value>
-    <comment>Detected Beacon page item</comment>
-  </data>
-  <data name="TextAvgDistance" xml:space="preserve">
-    <value>Avg Distance</value>
-    <comment>Detected Beacon page item</comment>
-  </data>
-  <data name="TextElapsedTime" xml:space="preserve">
-    <value>Elapsed Time</value>
-    <comment>Detected Beacon page item</comment>
-  </data>
-  <data name="TextLastTime" xml:space="preserve">
-    <value>Last Timee</value>
-    <comment>Detected Beacon page item</comment>
-  </data>
-  <data name="TextCount" xml:space="preserve">
-    <value>Count</value>
-    <comment>Detected Beacon page item</comment>
+  <data name="TextDetectedBeaconList" xml:space="preserve">
+    <value>検出ビーコン一覧</value>
+    <comment>Detected Beacon List</comment>
   </data>
 </root>
