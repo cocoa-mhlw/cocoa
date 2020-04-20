@@ -114,6 +114,9 @@
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
+    <Compile Include="Extensions\FontExtensions.cs" />
+    <Compile Include="Controls\UIBackwardsTextField.cs" />
+    <Compile Include="Extensions\AlignmentExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -210,6 +213,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
