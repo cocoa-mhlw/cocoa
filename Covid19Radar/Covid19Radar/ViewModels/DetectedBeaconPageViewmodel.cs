@@ -16,9 +16,14 @@ namespace Covid19Radar.ViewModels
     { 
         private INavigationService _navigationService;
         private IBeaconService _beaconService;
+        private ObservableCollection<BeaconDataModel> _beaconDataList;
 
 
-        public ObservableCollection<BeaconDataModel> BeaconDataList { get; set; }
+        public ObservableCollection<BeaconDataModel> BeaconDataList
+        {
+            get => _beaconDataList;
+            set => SetProperty(ref _beaconDataList, value);
+        }
 
 
         public DetectedBeaconPageViewmodel(INavigationService navigationService, IBeaconService beaconService)
@@ -31,11 +36,13 @@ namespace Covid19Radar.ViewModels
             BeaconDataList = new ObservableCollection<BeaconDataModel>();
         }
 
-        public override async void OnNavigatedFrom(INavigationParameters parameters)
+        public override void OnNavigatedTo(INavigationParameters parameters)
         {
-            base.OnNavigatedFrom(parameters);
+            base.OnNavigatedTo(parameters);
 
-            if (parameters.GetNavigationMode() == NavigationMode.Forward)
+            var navMode = parameters.GetNavigationMode();
+
+            if (navMode == NavigationMode.New)
             {
                 var beaconList = _beaconService.GetBeaconData();
                 BeaconDataList = new ObservableCollection<BeaconDataModel>(beaconList);
