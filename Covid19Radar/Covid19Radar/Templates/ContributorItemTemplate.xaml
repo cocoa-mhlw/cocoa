@@ -18,7 +18,7 @@
         <Label
             Margin="0,0,0,15"
             FontSize="Caption"
-            Text="{Binding Description}"
+            Text="{Binding Role}"
             TextColor="{StaticResource Accent7Color}" />
         <BoxView Style="{StaticResource DefaultLineStyle}" />
     </StackLayout>
