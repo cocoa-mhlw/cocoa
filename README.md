@@ -32,7 +32,7 @@ https://discord.gg/e5hMm4h
 - Udara Alwis (Xamarin / [Xamariners](https://xamariners.com/))
 - Pedro Costa (Xamarin / [Xamariners](https://xamariners.com/))
 - Colin Bacon (Xamarin / [Xamariners](https://xamariners.com/))
-- Lohith GN (Azure Functions / Xamariners)
+- Lohith GN (Azure Functions / [Xamariners](https://xamariners.com/))
 - Chew Min Cheong (PM / [Xamariners](https://xamariners.com/))
 - Albilaga Pradana (Xamarin / [Xamariners](https://xamariners.com/))
 - Chaminda Chandrasekara (DevOps / [Xamariners](https://xamariners.com/))
