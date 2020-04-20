@@ -29,7 +29,8 @@
                     Keyboard="Telephone"
                     MaxLength="12"
                     Placeholder="{x:Static resources:AppResources.TextPhoneNumberPlaceholder}"
-                    Text="{Binding PhoneNumber}">
+                    Text="{Binding PhoneNumber}"
+                    TextColor="{StaticResource Accent4Color}">
                     <Entry.Behaviors>
                         <behaviors:MaskedBehavior Mask="XXX-XXX-XXXX" />
                     </Entry.Behaviors>
