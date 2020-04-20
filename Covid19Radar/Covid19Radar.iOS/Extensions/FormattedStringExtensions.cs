@@ -74,7 +74,7 @@ namespace Covid19Radar.iOS.Extensions
 			if (fgcolor.IsDefault)
 				fgcolor = defaultForegroundColor;
 			if (fgcolor.IsDefault)
-				fgcolor = ColorExtensions.LabelColor.ToColor();
+				fgcolor = UIColor.Black.ToColor();
 
 			UIColor spanFgColor;
 			UIColor spanBgColor;
