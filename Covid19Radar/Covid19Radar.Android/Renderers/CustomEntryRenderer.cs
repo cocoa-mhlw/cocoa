@@ -13,22 +13,42 @@ namespace Covid19Radar.Droid.Renderers
 {
     public class CustomEntryRenderer : EntryRenderer
     {
+        private CustomEntry _element;
+
         public CustomEntryRenderer(Context context) : base(context) { }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
 
+            if (e.OldElement != null)
+            {
+                Control.KeyPress -= Control_KeyPress;
+            }
             if (Control is null || e.NewElement is null) return;
 
-            var element = (CustomEntry)e.NewElement;
+            _element = (CustomEntry)e.NewElement;
 
-            if (element.BorderColor == Color.Default) return;
+            if (_element.BorderColor == Color.Default) return;
 
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
-                Control.BackgroundTintList = ColorStateList.ValueOf(element.BorderColor.ToAndroid());
+                Control.BackgroundTintList = ColorStateList.ValueOf(_element.BorderColor.ToAndroid());
             else
-                Control.Background.SetColorFilter(element.BorderColor.ToAndroid(), PorterDuff.Mode.SrcAtop);
+                Control.Background.SetColorFilter(_element.BorderColor.ToAndroid(), PorterDuff.Mode.SrcAtop);
+
+            Control.KeyPress += Control_KeyPress;
+        }
+
+        private void Control_KeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Android.Views.Keycode.Del)
+            {
+                _element.TriggerDeleteClicked();
+            }
+            else
+            {
+                e.Handled = false;
+            }
         }
     }
 }

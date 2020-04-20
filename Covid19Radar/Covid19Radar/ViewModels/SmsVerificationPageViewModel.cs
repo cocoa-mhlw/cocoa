@@ -12,6 +12,14 @@ namespace Covid19Radar.ViewModels
     public class SmsVerificationPageViewModel : ViewModelBase
     {
         private INavigationService _navigationService;
+
+        private string _phoneNumber;
+        public string PhoneNumber
+        {
+            get => _phoneNumber;
+            set => SetProperty(ref _phoneNumber, value);
+        }
+
         public SmsVerificationPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
@@ -19,9 +27,18 @@ namespace Covid19Radar.ViewModels
             Title = "Input Phone number";
         }
 
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+            if (parameters.TryGetValue<string>("phone_number", out var phoneNumber))
+            {
+                PhoneNumber = phoneNumber;
+            }
+        }
+
         public Command OnClickNext => (new Command(() =>
         {
-            _navigationService.NavigateAsync("InputSmsOTPPage");
+            _navigationService.NavigateAsync($"InputSmsOTPPage?phone_number={PhoneNumber}");
         }));
 
     }
