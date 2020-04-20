@@ -6,6 +6,7 @@ using AltBeaconOrg.BoundBeacon;
 using AltBeaconOrg.BoundBeacon.Startup;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -67,6 +68,21 @@ namespace Covid19Radar.Droid.Services
             }
         }
 
+        public void RequestPermission()
+        {
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+            {
+                string[] permissions = new string[] {
+                    Android.Manifest.Permission.Bluetooth,
+                    Android.Manifest.Permission.BluetoothAdmin,
+                    Android.Manifest.Permission.AccessCoarseLocation,
+                    Android.Manifest.Permission.AccessFineLocation
+                };
+
+                _mainActivity.RequestPermissions(permissions, 0);
+            }
+        }
+
         public BeaconManager BeaconManagerImpl
         {
             get
@@ -86,6 +102,7 @@ namespace Covid19Radar.Droid.Services
 
         private BeaconManager InitializeBeaconManager()
         {
+            RequestPermission();
             // Enable the BeaconManager 
             _beaconManager = BeaconManager.GetInstanceForApplication(_mainActivity);
 
@@ -164,8 +181,6 @@ namespace Covid19Radar.Droid.Services
         public void StartAdvertising(UserDataModel userData)
         {
 
-            // TODO 出力調整どうするか考える。
-
             Beacon beacon = new Beacon.Builder()
                                 .SetId1(AppConstants.iBeaconAppUuid)
                                 .SetId2(userData.Major)
@@ -174,10 +189,8 @@ namespace Covid19Radar.Droid.Services
                                 .SetManufacturer(AppConstants.CompanyCoreApple)
                                 .Build();
 
-            // iBeaconのバイト列フォーマットをBeaconParser（アドバタイズ時のバイト列定義）にセットする。
             BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.iBeaconFormat);
 
-            // iBeaconの発信を開始する。
             _beaconTransmitter = new BeaconTransmitter(_mainActivity, beaconParser);
             _beaconTransmitter.StartAdvertising(beacon);
 
