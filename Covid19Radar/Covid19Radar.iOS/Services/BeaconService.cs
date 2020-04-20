@@ -29,6 +29,7 @@ namespace Covid19Radar.iOS.Services
         private readonly UserDataService _userDataService;
         private readonly HttpDataService _httpDataService;
         private readonly MinutesTimer _uploadTimer;
+
         public BeaconService()
         {
             _connection = DependencyService.Resolve<SQLiteConnectionProvider>().GetConnection();
@@ -41,7 +42,6 @@ namespace Covid19Radar.iOS.Services
             _uploadTimer.TimeOutEvent += TimerUpload;
 
             _beaconManager = new CLLocationManager();
-
             _beaconTransmitter = new CBPeripheralManager();
             _beaconTransmitter.AdvertisingStarted += DidAdvertisingStarted;
             _beaconTransmitter.StateUpdated += DidStateUpdated;
@@ -51,6 +51,19 @@ namespace Covid19Radar.iOS.Services
             _fieldRegion.NotifyEntryStateOnDisplay = true;
             _fieldRegion.NotifyOnEntry = true;
             _fieldRegion.NotifyOnExit = true;
+
+            // Monitoring
+            _beaconManager.DidDetermineState += DetermineStateForRegionComplete;
+            _beaconManager.RegionEntered += EnterRegionComplete;
+            _beaconManager.RegionLeft += ExitRegionComplete;
+            _beaconManager.PausesLocationUpdatesAutomatically = false;
+            _beaconManager.AllowsBackgroundLocationUpdates = true;
+            _beaconManager.ShowsBackgroundLocationIndicator = true;
+
+
+            _beaconManager.DidRangeBeacons += DidRangeBeconsInRegionComplete;
+            _beaconManager.AuthorizationChanged += HandleAuthorizationChanged;
+
         }
 
         private async void TimerUpload(EventArgs e)
@@ -97,16 +110,6 @@ namespace Covid19Radar.iOS.Services
 
             // BeaconManager Setting
 
-            // Monitoring
-            _beaconManager.DidDetermineState += DetermineStateForRegionComplete;
-            _beaconManager.RegionEntered += EnterRegionComplete;
-            _beaconManager.RegionLeft += ExitRegionComplete;
-
-
-            _beaconManager.RequestAlwaysAuthorization();
-            _beaconManager.DidRangeBeacons += DidRangeBeconsInRegionComplete;
-
-            _beaconManager.AuthorizationChanged += HandleAuthorizationChanged;
             return _beaconManager;
         }
 
@@ -119,10 +122,7 @@ namespace Covid19Radar.iOS.Services
         {
             System.Diagnostics.Debug.WriteLine("StartBeacon");
 
-            _beaconManager.RequestAlwaysAuthorization();
-            _beaconManager.PausesLocationUpdatesAutomatically = false;
-            _beaconManager.AllowsBackgroundLocationUpdates = true;
-            _beaconManager.ShowsBackgroundLocationIndicator = true;
+
 
             _listOfCLBeaconRegion.Add(_fieldRegion);
             _beaconManager.StartMonitoring(_fieldRegion);
@@ -267,6 +267,25 @@ namespace Covid19Radar.iOS.Services
         {
             System.Diagnostics.Debug.WriteLine("HandleAuthorizationChanged");
             // Do That Stop beacons
+            if (e.Status == CLAuthorizationStatus.NotDetermined)
+            {
+                if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+                {
+                    if (UIDevice.CurrentDevice.CheckSystemVersion(13, 4))
+                    {
+                        _beaconManager.RequestWhenInUseAuthorization();
+                    }
+                    else
+                    {
+                        _beaconManager.RequestAlwaysAuthorization();
+                    }
+                }
+
+            }
+            else if (e.Status == CLAuthorizationStatus.AuthorizedWhenInUse)
+            {
+                _beaconManager.RequestAlwaysAuthorization();
+            }
         }
 
         public void Dispose()
