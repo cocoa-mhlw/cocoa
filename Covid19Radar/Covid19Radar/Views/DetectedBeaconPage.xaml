@@ -19,24 +19,24 @@
                         <Grid
                             Grid.Row="0"
                             Grid.Column="0"
-                            Padding="30,5,20,10"
+                            Padding="30,10,20,10"
                             ColumnSpacing="20">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="30" />
-                                <RowDefinition Height="30" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="35" />
                             </Grid.RowDefinitions>
 
                             <!--  ID  -->
-                            <Grid
+                            <Grid VerticalOptions="CenterAndExpand"
                                 Grid.Row="0"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="2">
