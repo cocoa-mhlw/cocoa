@@ -80,9 +80,8 @@ namespace Covid19Radar.iOS.Renderers
             {
                 var targetColor = Element.PlaceholderColor;
                 var color = targetColor.IsDefault ? _defaultPlaceholderColor : targetColor;
-                var attributedString = formatted.ToAttributed(Element, color);
-                Control.AttributedPlaceholder = attributedString;
-                //UpdateAttributedPlaceholder(Control.AttributedPlaceholder.AddCharacterSpacing(Element.Placeholder, Element.CharacterSpacing));
+                UpdateAttributedPlaceholder(formatted.ToAttributed(Element, color));
+                UpdateAttributedPlaceholder(Control.AttributedPlaceholder.AddCharacterSpacing(Element.Placeholder, Element.CharacterSpacing));
             }
 
         }
