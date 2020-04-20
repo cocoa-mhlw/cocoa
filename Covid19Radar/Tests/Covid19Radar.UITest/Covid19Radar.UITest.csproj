@@ -38,18 +38,21 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
     <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="Shouldly">
+      <Version>3.0.2</Version>
+    </PackageReference>
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
       <Version>3.1.97</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.UITest" Version="3.0.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Xamariners\Xamariners.EndToEnd.Xamarin\src\Xamariners.EndToEnd.Xamarin\Xamariners.EndToEnd.Xamarin.csproj">
-      <Project>{a14a970a-9485-40f5-8f28-c56c0e4f88cc}</Project>
-      <Name>Xamariners.EndToEnd.Xamarin</Name>
-    </ProjectReference>
+    <PackageReference Include="Xamariners.EndToEnd.Xamarin">
+      <Version>0.0.4</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppInitializer.cs" />
