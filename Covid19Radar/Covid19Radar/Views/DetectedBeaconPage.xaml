@@ -7,60 +7,94 @@
     xmlns:local="clr-namespace:Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-
-        <CarouselView Grid.Row="0" ItemsSource="{Binding BeaconDataList}">
-            <CarouselView.ItemTemplate>
+        <CollectionView Grid.Row="0" ItemsSource="{Binding BeaconDataList}" >
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame
-                            Margin="20"
-                            BorderColor="DarkGray"
-                            CornerRadius="5"
-                            HasShadow="True"
-                            HeightRequest="300"
-                            HorizontalOptions="Center"
-                            VerticalOptions="CenterAndExpand">
-                            <StackLayout>
-                                <Label
+                        <Grid>
+                             <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="1" />
+                             </Grid.RowDefinitions>
+
+                            <Grid Padding="30,10,20,10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  ColumnSpacing="20" RowSpacing="7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <StackLayout Grid.ColumnSpan="2" Spacing="20" Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+                                    <Label 
                                     FontAttributes="Bold"
-                                    FontSize="Large"
-                                    HorizontalOptions="Center"
-                                    Text="{Binding Id}"
-                                    VerticalOptions="Center" />
-                                <Image
-                                    Aspect="AspectFill"
-                                    HeightRequest="150"
-                                    HorizontalOptions="Center"
-                                    Source="{Binding ImageUrl}"
-                                    WidthRequest="150" />
-                                <Label HorizontalOptions="Center" Text="{Binding Location}" />
-                                <Label
-                                    FontAttributes="Italic"
-                                    HorizontalOptions="Center"
-                                    LineBreakMode="TailTruncation"
-                                    MaxLines="5"
-                                    Text="{Binding Details}" />
-                            </StackLayout>
-                        </Frame>
+                                    Text="ID"  />
+                                    <Label 
+                                       TextColor="{x:StaticResource Accent6Color}"
+                                    FontAttributes="Bold"
+                                    Text="01d0781d-a482-4438-9e7e-1cd0932eebfa"  />
+                                </StackLayout>
+
+
+                                <Label Grid.Column="0" Grid.Row="1"
+                                    FontAttributes="Bold"
+                                    Text="Major No"  />
+                                <Label Grid.Column="0" Grid.Row="2"
+                                    FontAttributes="Bold"
+                                    Text="Minor No"  />
+                                <Label Grid.Column="0" Grid.Row="3"
+                                    FontAttributes="Bold"
+                                    Text="Avg Distance"  />
+                                <Label Grid.Column="0" Grid.Row="4"
+                                    FontAttributes="Bold"
+                                    Text="Elapsed Time"  />
+                                <Label Grid.Column="0" Grid.Row="5"
+                                    FontAttributes="Bold"
+                                    Text="Last Time"  />
+                                <Label Grid.Column="0" Grid.Row="6"
+                                    FontAttributes="Bold"
+                                    Text="Count"  />
+
+                                
+                                
+                                <Label Grid.Column="1" Grid.Row="1"
+                                       TextColor="{x:StaticResource Accent6Color}"
+                                    FontAttributes="Bold"
+                                    Text="Major No"  />
+                                <Label Grid.Column="1" Grid.Row="2"
+                                       TextColor="{x:StaticResource Accent6Color}"
+                                    FontAttributes="Bold"
+                                    Text="Minor No"  />
+                                <Label Grid.Column="1" Grid.Row="3"
+                                       TextColor="{x:StaticResource Accent6Color}"
+                                    FontAttributes="Bold"
+                                    Text="Avg Distance"  />
+                                <Label Grid.Column="1" Grid.Row="4"
+                                       TextColor="{x:StaticResource Accent6Color}"
+                                    FontAttributes="Bold"
+                                    Text="Elapsed Time"  />
+                                <Label Grid.Column="1" Grid.Row="5"
+                                       TextColor="{x:StaticResource Accent6Color}"
+                                    FontAttributes="Bold"
+                                    Text="Last Time"  />
+                                <Label Grid.Column="1" Grid.Row="6"
+                                       TextColor="{x:StaticResource Accent6Color}"
+                                    FontAttributes="Bold"
+                                    Text="Count"  />
+
+                            </Grid>
+
+                            <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Color="{x:StaticResource Accent6Color}" HeightRequest="1" />
+                        </Grid>
                     </StackLayout>
                 </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>
-
-        <Grid Grid.Row="1" Padding="120,0,120,60">
-            <Button
-                BackgroundColor="#019ae8"
-                Command="{Binding OnClickPrev}"
-                FontSize="25"
-                MinimumHeightRequest="60"
-                MinimumWidthRequest="170"
-                Text="Previous"
-                TextColor="#FFFFFF" />
-        </Grid>
-    </Grid>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 </ContentPage>
