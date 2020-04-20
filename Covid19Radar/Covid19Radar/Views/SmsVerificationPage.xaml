@@ -26,7 +26,7 @@
                     MaxLength="11"
                     Placeholder="09012341234"
                     PlaceholderColor="#D1D1D1"
-                    Text=""
+                    Text="{Binding PhoneNumber}"
                     TextColor="#333333" />
                 <Label
                     Padding="0,30,0,0"
