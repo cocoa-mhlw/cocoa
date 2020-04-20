@@ -41,7 +41,7 @@ namespace Covid19Radar.ViewModels
         {
             var user = _userDataService.Get();
             await _otpService.SendOTPAsync(user, PhoneNumber);
-            await NavigationService.NavigateAsync("SmsVerificationPage");
+            await NavigationService.NavigateAsync($"InputSmsOTPPage?phone_number={PhoneNumber}");
         }, () => IsPhoneNumberValid);
     }
 }
