@@ -1,0 +1,15 @@
+{
+  "Repl": false,
+  "AndroidConfiguration": {
+    "ApkName": null,
+    "AppPath": "C:\\apps\\net.kzmx.Covid19Radar.apk"
+  },
+  "IosConfiguration": {
+    "Simulator": true,
+    "SimulatorIdentifier": "E55135B7-92A6-4CCF-83A3-7BFDFD4CBC81",
+    "DeviceIdentifier": "fdc14880626e29abdaa4ebd953ee299d179ba924",
+    "BundleName": "com.companyname.DemoApp",
+    "AppName": "DemoApp.iOS",
+    "AppPath": "/Users/pedro/work/apps/DemoApp.iOS.app"
+  }
+}

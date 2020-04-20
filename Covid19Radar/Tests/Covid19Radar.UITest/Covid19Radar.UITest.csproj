@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4223EE63-A661-4465-BBB0-08DD80DB2256}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Covid19Radar.UITest</RootNamespace>
+    <AssemblyName>Covid19Radar.UITest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local\</OutputPath>
+    <DefineConstants>DEBUG;__LOCAL__</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
+      <Version>3.1.97</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.UITest" Version="3.0.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Xamariners\Xamariners.EndToEnd.Xamarin\src\Xamariners.EndToEnd.Xamarin\Xamariners.EndToEnd.Xamarin.csproj">
+      <Project>{a14a970a-9485-40f5-8f28-c56c0e4f88cc}</Project>
+      <Name>Xamariners.EndToEnd.Xamarin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppInitializer.cs" />
+    <Compile Include="Features\BaseLocalFeature.cs" />
+    <Compile Include="Features\StartTutorialPageFeature.cs" />
+    <Compile Include="Infrastructure\BaseAppInitializer.cs" />
+    <Compile Include="NUnitAssemblyHooks.cs" />
+    <Compile Include="StartTutorialPage.feature.cs" />
+    <Compile Include="Steps\CommonSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="specflow.json" />
+    <EmbeddedResource Include="testsConfiguration.json" />
+    <None Include="StartTutorialPage.feature" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cd $(TargetDir)
+del System.Net.Http.dll</PostBuildEvent>
+  </PropertyGroup>
+</Project>
