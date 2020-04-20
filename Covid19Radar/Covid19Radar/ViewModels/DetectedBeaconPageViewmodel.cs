@@ -1,4 +1,6 @@
-﻿using Prism.Commands;
+﻿using Covid19Radar.Model;
+using Covid19Radar.Services;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -11,19 +13,17 @@ namespace Covid19Radar.ViewModels
 {
     public class DetectedBeaconPageViewmodel : ViewModelBase
     {
-        private INavigationService _navigationService;
+        public List<BeaconDataModel> Beacons { get; set; }
         public DetectedBeaconPageViewmodel(INavigationService navigationService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
-            Title = "Detected Beacon List";
+            Title = Resx.AppResources.TitleDetectedBeaconPage;
+            SetData();
         }
 
-        public Command OnClickPrev => (new Command(() =>
+        private void SetData()
         {
-            _navigationService.NavigateAsync("HomePage");
-        }));
-
-
+            Beacons = Xamarin.Forms.DependencyService.Resolve<IBeaconService>().GetBeaconData();
+        }
     }
 }
