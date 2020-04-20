@@ -25,6 +25,8 @@ namespace Covid19Radar.iOS.Renderers
         private bool _selectionLengthChangePending;
         private IDisposable _selectedTextRangeObserver;
         private bool _nativeSelectionIsUpdating;
+        private readonly Color _defaultPlaceholderColor = new UIColor(0.7f, 0.7f, 0.7f, 1).ToColor();
+
 
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
@@ -35,6 +37,9 @@ namespace Covid19Radar.iOS.Renderers
                 _textfield.EditingChanged -= EditingChanged;
                 _textfield.OnDeleteBackward -= OnDeleteBackward;
                 _textfield.EditingDidEnd -= EditingDidEnd;
+                _textfield.EditingDidBegin -= EditingDidBegin;
+                _textfield.ShouldChangeCharacters -= ShouldChangeCharacters;
+
                 _textfield.Dispose();
                 _selectedTextRangeObserver?.Dispose();
                 _textfield = null;
@@ -52,7 +57,6 @@ namespace Covid19Radar.iOS.Renderers
             _textfield.EditingDidBegin += EditingDidBegin;
             _textfield.ShouldReturn = OnShouldReturn;
             _textfield.ShouldChangeCharacters += ShouldChangeCharacters;
-            _selectedTextRangeObserver = _textfield.AddObserver("selectedTextRange", NSKeyValueObservingOptions.New, UpdateCursorFromControl);
 
             // When we set the control text, it triggers the UpdateCursorFromControl event, which updates CursorPosition and SelectionLength;
             // These one-time-use variables will let us initialize a CursorPosition and SelectionLength via ctor/xaml/etc.
@@ -70,7 +74,17 @@ namespace Covid19Radar.iOS.Renderers
             Control.TextColor = _element.TextColor.ToUIColor();
 
             SetupBorder();
-            
+
+            var formatted = (FormattedString)Element.Placeholder;
+            if (formatted != null)
+            {
+                var targetColor = Element.PlaceholderColor;
+                var color = targetColor.IsDefault ? _defaultPlaceholderColor : targetColor;
+                var attributedString = formatted.ToAttributed(Element, color);
+                Control.AttributedPlaceholder = attributedString;
+                //UpdateAttributedPlaceholder(Control.AttributedPlaceholder.AddCharacterSpacing(Element.Placeholder, Element.CharacterSpacing));
+            }
+
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
