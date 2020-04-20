@@ -6,7 +6,7 @@ namespace Covid19Radar.Model
     {
         public string Description { get; set; }
         public bool HasStepNumber => StepNumber != null;
-        public ImageSource Image { get; set; }
+        public string Image { get; set; }
         public int? StepNumber { get; set; }
         public string Title { get; set; }
     }

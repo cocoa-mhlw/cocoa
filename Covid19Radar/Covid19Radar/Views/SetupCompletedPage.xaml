@@ -3,9 +3,9 @@
     x:Class="Covid19Radar.Views.SetupCompletedPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:extensions="clr-namespace:Covid19Radar.Extensions;assembly=Covid19Radar"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}">
@@ -30,7 +30,7 @@
         <ffimageloading:CachedImage
             Grid.Row="0"
             HorizontalOptions="Center"
-            Source="{extensions:ImageResource Covid19Radar.Images.Logo.png}"
+            Source="Logo.png"
             VerticalOptions="Center" />
 
         <Label
