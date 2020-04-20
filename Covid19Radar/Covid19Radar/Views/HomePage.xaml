@@ -3,8 +3,9 @@
     x:Class="Covid19Radar.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
     Title="{Binding Title}"
     Padding="80,20"
     ios:Page.UseSafeArea="true"
@@ -22,6 +23,7 @@
         <StackLayout
             Grid.Row="1"
             BindableLayout.ItemsSource="{Binding HomeMenus}"
+            HorizontalOptions="CenterAndExpand"
             Spacing="28"
             VerticalOptions="Center">
             <BindableLayout.ItemTemplate>
@@ -29,7 +31,8 @@
                     <Button
                         Command="{Binding Command}"
                         Style="{StaticResource BaseButtonStyle}"
-                        Text="{Binding Title}" />
+                        Text="{Binding Title}"
+                        WidthRequest="240" />
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </StackLayout>

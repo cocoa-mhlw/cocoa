@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Covid19Radar.Views
@@ -15,6 +10,18 @@ namespace Covid19Radar.Views
         public InputSmsOTPPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            OtpForm.SubscribeEvents();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            OtpForm.UnsubscribeEvents();
         }
     }
 }
