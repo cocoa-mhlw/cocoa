@@ -377,4 +377,32 @@ SMSに届いた6桁の数字を入力してください。</value>
     <value>コントリビューター紹介</value>
     <comment>Contributors list page title</comment>
   </data>
+  <data name="TextId" xml:space="preserve">
+    <value>ID</value>
+    <comment>Detected Beacon page item</comment>
+  </data>
+  <data name="TextMajorNo" xml:space="preserve">
+    <value>Major No</value>
+    <comment>Detected Beacon page item</comment>
+  </data>
+  <data name="TextMinorNo" xml:space="preserve">
+    <value>Minor No</value>
+    <comment>Detected Beacon page item</comment>
+  </data>
+  <data name="TextAvgDistance" xml:space="preserve">
+    <value>Avg Distance</value>
+    <comment>Detected Beacon page item</comment>
+  </data>
+  <data name="TextElapsedTime" xml:space="preserve">
+    <value>Elapsed Time</value>
+    <comment>Detected Beacon page item</comment>
+  </data>
+  <data name="TextLastTime" xml:space="preserve">
+    <value>Last Timee</value>
+    <comment>Detected Beacon page item</comment>
+  </data>
+  <data name="TextCount" xml:space="preserve">
+    <value>Count</value>
+    <comment>Detected Beacon page item</comment>
+  </data>
 </root>
