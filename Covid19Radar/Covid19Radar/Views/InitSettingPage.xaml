@@ -3,15 +3,15 @@
     x:Class="Covid19Radar.Views.InitSettingPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ext="clr-namespace:Covid19Radar.Extensions"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}">
     <ScrollView>
         <StackLayout Padding="40,0">
-            <ffimageloading:CachedImage HorizontalOptions="Center" Source="{ext:ImageResource Covid19Radar.Images.bluetooth-access.png}">
+            <ffimageloading:CachedImage HorizontalOptions="Center" Source="bluetoothAccess.png">
                 <ffimageloading:CachedImage.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="iOS" Value="60,30,60,40" />
