@@ -28,6 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
+      <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
