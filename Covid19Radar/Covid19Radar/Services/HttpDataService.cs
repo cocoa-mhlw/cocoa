@@ -1,7 +1,6 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -22,7 +21,7 @@ namespace Covid19Radar.Services
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        // POST /api/Register -  Register User 
+        // POST /api/Register -  Register User
         public async Task<UserDataModel> PostRegisterUserAsync()
         {
             string url = AppConstants.ApiBaseUrl + "/Register";
@@ -91,6 +90,14 @@ namespace Covid19Radar.Services
                 return Utils.DeserializeFromJson<UserDataModel>(result);
             }
             return null;
+        }
+
+        // POST /otp/send - send OTP to the specified phone number
+        public Task PostOTPAsync(UserDataModel user, string phoneNumber)
+        {
+            string url = AppConstants.ApiBaseUrl + "/otp/send";
+            HttpContent content = new StringContent(Utils.SerializeToJson(new { user, phone = phoneNumber }), Encoding.UTF8, "application/json");
+            return Post(url, content);
         }
 
         private async Task<string> Get(string url)
