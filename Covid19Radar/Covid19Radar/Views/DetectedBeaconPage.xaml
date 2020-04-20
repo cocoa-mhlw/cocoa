@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="Covid19Radar.Views.DetectedBeaconPage"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -47,7 +48,8 @@
                                 <Label
                                     Grid.Column="0"
                                     Margin="0,0,10,0"
-                                    Text="ID" />
+                                    Text="{x:Static resources:AppResources.TextId}" 
+                                    />
                                 <Label
                                     Grid.Column="1"
                                     LineBreakMode="TailTruncation"
@@ -60,7 +62,8 @@
                             <Label
                                 Grid.Row="1"
                                 Grid.Column="0"
-                                Text="Major No" />
+                                    Text="{x:Static resources:AppResources.TextMajorNo}" 
+                                 />
                             <Label
                                 Grid.Row="1"
                                 Grid.Column="1"
@@ -71,7 +74,8 @@
                             <Label
                                 Grid.Row="2"
                                 Grid.Column="0"
-                                Text="Minor No" />
+                                    Text="{x:Static resources:AppResources.TextMinorNo}" 
+                                />
                             <Label
                                 Grid.Row="2"
                                 Grid.Column="1"
@@ -82,7 +86,8 @@
                             <Label
                                 Grid.Row="3"
                                 Grid.Column="0"
-                                Text="Avg Distance" />
+                                    Text="{x:Static resources:AppResources.TextAvgDistance}" 
+                                 />
                             <Label
                                 Grid.Row="3"
                                 Grid.Column="1"
@@ -93,7 +98,8 @@
                             <Label
                                 Grid.Row="4"
                                 Grid.Column="0"
-                                Text="Elapsed Time" />
+                                    Text="{x:Static resources:AppResources.TextElapsedTime}" 
+                                 />
                             <Label
                                 Grid.Row="4"
                                 Grid.Column="1"
@@ -104,7 +110,8 @@
                             <Label
                                 Grid.Row="5"
                                 Grid.Column="0"
-                                Text="Last Time" />
+                                    Text="{x:Static resources:AppResources.TextLastTime}" 
+                                 />
                             <Label
                                 Grid.Row="5"
                                 Grid.Column="1"
@@ -115,7 +122,8 @@
                             <Label
                                 Grid.Row="6"
                                 Grid.Column="0"
-                                Text="Count" />
+                                    Text="{x:Static resources:AppResources.TextCount}" 
+                                 />
                             <Label
                                 Grid.Row="6"
                                 Grid.Column="1"
