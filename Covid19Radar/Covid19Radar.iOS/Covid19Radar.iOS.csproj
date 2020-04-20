@@ -114,7 +114,6 @@
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
-    <Compile Include="Renderers\CustomEntryRenderer.cs" />
     <Compile Include="Extensions\FontExtensions.cs" />
     <Compile Include="Controls\UIBackwardsTextField.cs" />
     <Compile Include="Extensions\AlignmentExtensions.cs" />
