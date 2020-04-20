@@ -17,8 +17,7 @@ namespace Covid19Radar.ViewModels
             get => _phoneNumber;
             set
             {
-                var withoutMask = new string(value.Where(char.IsDigit).ToArray());
-                SetProperty(ref _phoneNumber, withoutMask);
+                SetProperty(ref _phoneNumber, value);
                 RaisePropertyChanged(nameof(IsPhoneNumberValid));
             }
         }
@@ -40,8 +39,13 @@ namespace Covid19Radar.ViewModels
         public Command OnClickNext => new Command(async () =>
         {
             var user = _userDataService.Get();
-            await _otpService.SendOTPAsync(user, PhoneNumber);
+            await _otpService.SendOTPAsync(user, PhoneNumberWithoutMask());
             await NavigationService.NavigateAsync($"InputSmsOTPPage?phone_number={PhoneNumber}");
         }, () => IsPhoneNumberValid);
+
+        private string PhoneNumberWithoutMask()
+        {
+            return new string(PhoneNumber.Where(char.IsDigit).ToArray());
+        }
     }
 }
