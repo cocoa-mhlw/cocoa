@@ -17,31 +17,34 @@
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame HasShadow="True"
-                               BorderColor="DarkGray"
-                               CornerRadius="5"
-                               Margin="20"
-                               HeightRequest="300"
-                               HorizontalOptions="Center"
-                               VerticalOptions="CenterAndExpand">
+                        <Frame
+                            Margin="20"
+                            BorderColor="DarkGray"
+                            CornerRadius="5"
+                            HasShadow="True"
+                            HeightRequest="300"
+                            HorizontalOptions="Center"
+                            VerticalOptions="CenterAndExpand">
                             <StackLayout>
-                                <Label Text="{Binding Id}"
-                                       FontAttributes="Bold"
-                                       FontSize="Large"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center" />
-                                <Image Source="{Binding ImageUrl}"
-                                       Aspect="AspectFill"
-                                       HeightRequest="150"
-                                       WidthRequest="150"
-                                       HorizontalOptions="Center" />
-                                <Label Text="{Binding Location}"
-                                       HorizontalOptions="Center" />
-                                <Label Text="{Binding Details}"
-                                       FontAttributes="Italic"
-                                       HorizontalOptions="Center"
-                                       MaxLines="5"
-                                       LineBreakMode="TailTruncation" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="Large"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Id}"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    Aspect="AspectFill"
+                                    HeightRequest="150"
+                                    HorizontalOptions="Center"
+                                    Source="{Binding ImageUrl}"
+                                    WidthRequest="150" />
+                                <Label HorizontalOptions="Center" Text="{Binding Location}" />
+                                <Label
+                                    FontAttributes="Italic"
+                                    HorizontalOptions="Center"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="5"
+                                    Text="{Binding Details}" />
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -52,7 +55,7 @@
         <Grid Grid.Row="1" Padding="120,0,120,60">
             <Button
                 BackgroundColor="#019ae8"
-                Command="{Binding Path=OnClickPrev}"
+                Command="{Binding OnClickPrev}"
                 FontSize="25"
                 MinimumHeightRequest="60"
                 MinimumWidthRequest="170"
