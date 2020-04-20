@@ -77,16 +77,21 @@ namespace Covid19Radar.ViewModels
                         ElaspedTime = TimeSpan.FromMinutes(2),
                         LastDetectTime = DateTime.Now.AddDays(-10),
                         Count = 1321
+                    },
+                    new BeaconDataModel()
+                    {
+                        Id = "427acfb3-d756-4d83-8d9d-533ccf7a12e8",
+                        Major = "0",
+                        Minor = "232",
+                        Distance = 20.23,
+                        ElaspedTime = TimeSpan.FromMinutes(2),
+                        LastDetectTime = DateTime.Now.AddDays(-40),
+                        Count = 5623
                     }
                 };
 
                 BeaconDataList = new ObservableCollection<BeaconDataModel>(beaconList);
             }
         }
-
-        public Command OnClickPrev => (new Command(async () =>
-        {
-            await _navigationService.GoBackAsync();
-        }));
     }
 }
