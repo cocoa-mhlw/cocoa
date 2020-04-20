@@ -80,6 +80,8 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Folder Include="Resx\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Templates\StepItemTemplate.xaml">
