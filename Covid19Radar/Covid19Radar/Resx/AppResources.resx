@@ -380,4 +380,8 @@ Please check your SMS.</value>
     <value>Detected Beacons</value>
     <comment>Detected Beacons</comment>
   </data>
+  <data name="TextDetectedBeaconList" xml:space="preserve">
+    <value>Detected Beacon List</value>
+    <comment>Detected Beacon List</comment>
+  </data>
 </root>

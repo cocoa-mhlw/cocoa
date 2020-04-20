@@ -3,64 +3,70 @@
     x:Class="Covid19Radar.Templates.BeaconItemTemplate"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <StackLayout Padding="15,0">
-        <Label FontSize="Body" Text="{Binding BeaconUuid}">
-            <Label.Margin>
-                <Thickness
-                    Bottom="{OnPlatform Android=0,
-                                        iOS=5}"
-                    Left="0"
-                    Right="0"
-                    Top="{OnPlatform Android=5,
-                                     iOS=15}" />
-            </Label.Margin>
-        </Label>
-        <Label FontSize="Body" Text="{Binding Major}">
-            <Label.Margin>
-                <Thickness
-                    Bottom="{OnPlatform Android=0,
-                                        iOS=5}"
-                    Left="0"
-                    Right="0"
-                    Top="{OnPlatform Android=5,
-                                     iOS=15}" />
-            </Label.Margin>
-        </Label>
-        <Label FontSize="Body" Text="{Binding Minor}">
-            <Label.Margin>
-                <Thickness
-                    Bottom="{OnPlatform Android=0,
-                                        iOS=5}"
-                    Left="0"
-                    Right="0"
-                    Top="{OnPlatform Android=5,
-                                     iOS=15}" />
-            </Label.Margin>
-        </Label>
-        <Label FontSize="Body" Text="{Binding Count}">
-            <Label.Margin>
-                <Thickness
-                    Bottom="{OnPlatform Android=0,
-                                        iOS=5}"
-                    Left="0"
-                    Right="0"
-                    Top="{OnPlatform Android=5,
-                                     iOS=15}" />
-            </Label.Margin>
-        </Label>
 
-        <Label FontSize="Body" Text="{Binding Distance}">
-            <Label.Margin>
-                <Thickness
+    <StackLayout Padding="15,0">
+        <StackLayout Orientation="Horizontal">
+            <Label FontSize="Body" Text="{Binding BeaconUuid,StringFormat='UserUUID : {0:X}'}">
+                <Label.Margin>
+                    <Thickness
                     Bottom="{OnPlatform Android=0,
                                         iOS=5}"
                     Left="0"
                     Right="0"
                     Top="{OnPlatform Android=5,
                                      iOS=15}" />
-            </Label.Margin>
-        </Label>
-        <Label FontSize="Body" Text="{Binding ElaspedTime}">
+                </Label.Margin>
+            </Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label FontSize="Body" Text="{Binding Major,StringFormat='Major : {0:X}'}">
+
+                <Label.Margin>
+                    <Thickness
+                    Bottom="{OnPlatform Android=0,
+                                        iOS=5}"
+                    Left="0"
+                    Right="0"
+                    Top="{OnPlatform Android=5,
+                                     iOS=15}" />
+                </Label.Margin>
+            </Label>
+            <Label FontSize="Body" Text="{Binding Minor,StringFormat='Minor : {0:X}'}">
+                <Label.Margin>
+                    <Thickness
+                    Bottom="{OnPlatform Android=0,
+                                        iOS=5}"
+                    Left="15"
+                    Right="0"
+                    Top="{OnPlatform Android=5,
+                                     iOS=15}" />
+                </Label.Margin>
+            </Label>
+            <Label FontSize="Body" Text="{Binding Count,StringFormat='Count : {0}'}">
+                <Label.Margin>
+                    <Thickness
+                    Bottom="{OnPlatform Android=0,
+                                        iOS=5}"
+                    Left="15"
+                    Right="0"
+                    Top="{OnPlatform Android=5,
+                                     iOS=15}" />
+                </Label.Margin>
+            </Label>
+
+            <Label FontSize="Body" Text="{Binding Distance,StringFormat='Distance : {0:0.0}m'}">
+                <Label.Margin>
+                    <Thickness
+                    Bottom="{OnPlatform Android=0,
+                                        iOS=5}"
+                    Left="15"
+                    Right="0"
+                    Top="{OnPlatform Android=5,
+                                     iOS=15}" />
+                </Label.Margin>
+            </Label>
+        </StackLayout>
+            <Label FontSize="Body" Text="{Binding ElaspedTime,StringFormat='ElaspedTime : {0:%h} hours {0:%m} minutes'}">
             <Label.Margin>
                 <Thickness
                     Bottom="{OnPlatform Android=0,
@@ -77,5 +83,6 @@
             Text="{Binding Role}"
             TextColor="{StaticResource Accent7Color}" />
         <BoxView Style="{StaticResource DefaultLineStyle}" />
-    </StackLayout>
+
+</StackLayout>
 </DataTemplate>

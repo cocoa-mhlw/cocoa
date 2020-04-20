@@ -15,7 +15,7 @@
     </ContentPage.Resources>
     <StackLayout Margin="0,30">
         <CollectionView ItemTemplate="{StaticResource BeaconItemTemplate}" ItemsSource="{Binding Beacons}">
-<!--
+            <!--
             <CollectionView.Header>
                 <StackLayout>
                     <Label
@@ -28,5 +28,6 @@
             </CollectionView.Header>
 -->
         </CollectionView>
+
     </StackLayout>
 </ContentPage>
