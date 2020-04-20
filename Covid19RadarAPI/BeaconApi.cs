@@ -105,7 +105,7 @@ namespace Covid19Radar.Api
             data.TXPower = param.TXPower;
             data.KeyTime = param.KeyTime;
             data.TimeStamp = DateTime.UtcNow;
-            data.PartitionKey = param.KeyTime;
+            data.PartitionKey = $"{param.UserMajor}.{param.UserMinor}";
             var result = await Cosmos.Beacon.UpsertItemAsync<BeaconModel>(data, new PartitionKey(param.KeyTime));
             return new StatusCodeResult(201);
         }
