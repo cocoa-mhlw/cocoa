@@ -29,6 +29,6 @@ namespace Covid19Radar.ViewModels
             PhoneNumber = string.Empty;
         }
 
-        public Command OnClickNext => new Command(() => NavigationService.NavigateAsync($"SmsVerificationPage?phone_number={PhoneNumber}"), () => IsPhoneNumberValid);
+        public Command OnClickNext => new Command(() => NavigationService.NavigateAsync($"InputSmsOTPPage?phone_number={PhoneNumber}"), () => IsPhoneNumberValid);
     }
 }
