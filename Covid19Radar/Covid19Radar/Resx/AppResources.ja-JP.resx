@@ -381,4 +381,8 @@ SMSに届いた6桁の数字を入力してください。</value>
     <value>検出ビーコン</value>
     <comment>Detected Beacons</comment>
   </data>
+  <data name="TextDetectedBeaconList" xml:space="preserve">
+    <value>検出ビーコン一覧</value>
+    <comment>Detected Beacon List</comment>
+  </data>
 </root>
