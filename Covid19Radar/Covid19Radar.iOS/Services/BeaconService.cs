@@ -41,7 +41,6 @@ namespace Covid19Radar.iOS.Services
             _uploadTimer.Start();
             _uploadTimer.TimeOutEvent += TimerUpload;
 
-            _beaconManager = new CLLocationManager();
             _beaconTransmitter = new CBPeripheralManager();
             _beaconTransmitter.AdvertisingStarted += DidAdvertisingStarted;
             _beaconTransmitter.StateUpdated += DidStateUpdated;
@@ -53,6 +52,7 @@ namespace Covid19Radar.iOS.Services
             _fieldRegion.NotifyOnExit = true;
 
             // Monitoring
+            _beaconManager = new CLLocationManager();
             _beaconManager.DidDetermineState += DetermineStateForRegionComplete;
             _beaconManager.RegionEntered += EnterRegionComplete;
             _beaconManager.RegionLeft += ExitRegionComplete;
@@ -88,29 +88,14 @@ namespace Covid19Radar.iOS.Services
         {
             get
             {
-                if (_beaconManager == null)
-                {
-                    _beaconManager = InitializeBeaconManager();
-                }
                 return _beaconManager;
             }
         }
 
         public void InitializeService()
         {
-            _beaconManager = InitializeBeaconManager();
             StartBeacon();
             StartAdvertising(_userData);
-        }
-
-        private CLLocationManager InitializeBeaconManager()
-        {
-            // Enable the BeaconManager 
-            _beaconManager = new CLLocationManager();
-
-            // BeaconManager Setting
-
-            return _beaconManager;
         }
 
         public List<BeaconDataModel> GetBeaconData()
