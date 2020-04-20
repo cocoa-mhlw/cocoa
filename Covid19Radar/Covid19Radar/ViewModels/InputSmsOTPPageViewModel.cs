@@ -44,7 +44,7 @@ namespace Covid19Radar.ViewModels
             });
             OnClickNext = new DelegateCommand(async () =>
              {
-                 await NavigationService.NavigateAsync("/NavigationPage/HomePage");
+                 await NavigationService.NavigateAsync("StatusUpdateCompletePage");
              }, CanVerifyOtp);
         }
 
