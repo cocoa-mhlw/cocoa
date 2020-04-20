@@ -12,40 +12,44 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Padding="30,0,30,0">
-            <StackLayout>
-                <Label
-                    Padding="0,30,0,10"
-                    FontSize="28"
-                    HorizontalTextAlignment="Center"
-                    Text="Detected Beacons"
-                    TextColor="#333333" />
-                <Label
-                    Padding="0,30,0,0"
-                    FontFamily="{DynamicResource MaterialFontFamily}"
-                    FontSize="16"
-                    LineHeight="1.2"
-                    Text="&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence."
-                    TextColor="#333333" />
 
-                <Label
-                    Padding="0,30,0,0"
-                    FontFamily="{DynamicResource MaterialFontFamily}"
-                    FontSize="16"
-                    LineHeight="1.2"
-                    Text="&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence."
-                    TextColor="#333333" />
-            </StackLayout>
-        </Grid>
+        <CarouselView Grid.Row="0" ItemsSource="{Binding BeaconDataList}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                               BorderColor="DarkGray"
+                               CornerRadius="5"
+                               Margin="20"
+                               HeightRequest="300"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Id}"
+                                       FontAttributes="Bold"
+                                       FontSize="Large"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                <Image Source="{Binding ImageUrl}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="150"
+                                       WidthRequest="150"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Location}"
+                                       HorizontalOptions="Center" />
+                                <Label Text="{Binding Details}"
+                                       FontAttributes="Italic"
+                                       HorizontalOptions="Center"
+                                       MaxLines="5"
+                                       LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
         <Grid Grid.Row="1" Padding="120,0,120,60">
-            <Button
-                BackgroundColor="#019ae8"
-                Command="{Binding Path=OnClickPrev}"
-                FontSize="25"
-                MinimumHeightRequest="60"
-                MinimumWidthRequest="170"
-                Text="Previous"
-                TextColor="#FFFFFF" />
             <Button
                 BackgroundColor="#019ae8"
                 Command="{Binding Path=OnClickPrev}"
