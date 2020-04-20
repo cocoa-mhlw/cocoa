@@ -36,9 +36,21 @@ namespace Covid19Radar.ViewModels
                 {
                     Title=AppResources.UpdateInformationMenu,
                     Command=OnClickUpateInfo
+                },
+                new HomeMenuModel
+                {
+                    Title=AppResources.DetectedBeaconListMenu,
+                    Command=OnClickDetectedBeacon
+                },
+                new HomeMenuModel
+                {
+                    Title=AppResources.LicenseAgreementMenu,
+                    Command=OnClickLicenseAgreement
                 }
             };
         }
+
+        
 
         public Command OnClickUserSetting => new Command(() =>
         {
@@ -53,7 +65,13 @@ namespace Covid19Radar.ViewModels
         {
             NavigationService.NavigateAsync("UpdateInfoPage");
         });
-
-
+        public Command OnClickDetectedBeacon => new Command(() =>
+        {
+            NavigationService.NavigateAsync("DetectedBeaconPage");
+        });
+        public Command OnClickLicenseAgreement => new Command(() =>
+        {
+            NavigationService.NavigateAsync("LicenseAgreementPage");
+        });
     }
 }
