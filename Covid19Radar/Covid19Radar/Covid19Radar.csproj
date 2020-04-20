@@ -31,8 +31,8 @@
     <Compile Update="Views\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ContributersPage.xaml.cs">
-      <DependentUpon>ContributersPage.xaml</DependentUpon>
+    <Compile Update="Views\ContributorsPage.xaml.cs">
+      <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\UpdateInfoPage.xaml.cs">
       <DependentUpon>UpdateInfoPage.xaml</DependentUpon>
@@ -84,6 +84,9 @@
     <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Templates\ContributorItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Templates\StepItemTemplate.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

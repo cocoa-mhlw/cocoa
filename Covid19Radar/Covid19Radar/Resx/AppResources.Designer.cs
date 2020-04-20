@@ -187,7 +187,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter the Code that was sent to 
+        ///   Looks up a localized string similar to Enter the Code that was sent to
         ///「{0}」.
         /// </summary>
         internal static string OtpEnterText {
@@ -305,7 +305,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+        ///   Looks up a localized string similar to This app uses Bluetooth signals to determine if you are near another contact tracing app user.
         ///Select &apos;Always Allow&apos; to set up Bluetooth..
         /// </summary>
         internal static string TextBluetoothDescription {
@@ -338,6 +338,15 @@ namespace Covid19Radar.Resx {
         internal static string TextContainsDescriptionOfConsent2 {
             get {
                 return ResourceManager.GetString("TextContainsDescriptionOfConsent2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Core Contributors.
+        /// </summary>
+        internal static string TextCoreContributors {
+            get {
+                return ResourceManager.GetString("TextCoreContributors", resourceCulture);
             }
         }
         
@@ -564,6 +573,15 @@ namespace Covid19Radar.Resx {
         internal static string TitleConsentByUserPage {
             get {
                 return ResourceManager.GetString("TitleConsentByUserPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contributors List.
+        /// </summary>
+        internal static string TitleContributorsPage {
+            get {
+                return ResourceManager.GetString("TitleContributorsPage", resourceCulture);
             }
         }
         
