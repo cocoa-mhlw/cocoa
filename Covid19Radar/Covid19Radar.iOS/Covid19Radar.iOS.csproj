@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\CustomEntryRenderer.cs" />
     <Compile Include="Services\BeaconService.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
     <None Include="appcenter-pre-build.sh" />
@@ -194,6 +195,12 @@
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.5.2</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.616-pre4" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +217,69 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\splashimg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\settings%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\settings%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TopMainImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TopMainImg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TopMainImg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bluetoothAccess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bluetoothAccess%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bluetoothAccess%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep1%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep1%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep2%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep2%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep3%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep3%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep4%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\descriptionStep4%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

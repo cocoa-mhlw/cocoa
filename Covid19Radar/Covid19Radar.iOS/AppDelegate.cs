@@ -4,6 +4,9 @@ using Covid19Radar.iOS.Services;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Foundation;
+using Microsoft.AppCenter.Distribute;
+using Microsoft.AppCenter.Push;
+using ObjCRuntime;
 using Prism;
 using Prism.Ioc;
 using System;
@@ -34,10 +37,39 @@ namespace Covid19Radar.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            global::Rg.Plugins.Popup.Popup.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
+            {
+                Logger = new Covid19Radar.Services.DebugLogger()
+            });
+            Distribute.DontCheckForUpdatesInDebug();
+
             LoadApplication(new App(new iOSInitializer()));
             return base.FinishedLaunching(app, options);
         }
+        public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
+        {
+            var result = Push.DidReceiveRemoteNotification(userInfo);
+            if (result)
+            {
+                completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
+            }
+            else
+            {
+                completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
+            }
+        }
 
+        public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
+        {
+            Push.FailedToRegisterForRemoteNotifications(error);
+        }
+
+        public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+        {
+            Push.RegisteredForRemoteNotifications(deviceToken);
+        }
     }
 
     public class iOSInitializer : IPlatformInitializer
@@ -46,7 +78,7 @@ namespace Covid19Radar.iOS
         {
             containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
             containerRegistry.RegisterSingleton<SQLiteConnectionProvider, SQLiteConnectionProvider>();
-            containerRegistry.RegisterSingleton<UserDataService,UserDataService>();
+            containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
         }
     }
 
