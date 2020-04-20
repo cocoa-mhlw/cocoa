@@ -361,4 +361,12 @@ SMSに届いた6桁の数字を入力してください。</value>
         <value>コードをもう一度送信する</value>
         <comment>Resend Text</comment>
     </data> 
+    <data name="TextStatusUpdateComplete" xml:space="preserve">
+        <value>登録完了しました。</value>
+        <comment>Status Update Complete page text</comment>
+     </data>
+     <data name="TitleStatusUpdateComplete" xml:space="preserve">
+        <value>登録完了</value>
+        <comment>Status Update Complete page title</comment>
+      </data>
 </root>

@@ -360,4 +360,12 @@ Please check your SMS.</value>
         <value>Resend</value>
         <comment>Resend Text</comment>
     </data> 
+    <data name="TextStatusUpdateComplete" xml:space="preserve">
+        <value>Status Update Complete</value>
+        <comment>Status Update Complete page text</comment>
+    </data>
+    <data name="TitleStatusUpdateComplete" xml:space="preserve">
+        <value>Status Update Complete</value>
+        <comment>Status Update Complete page title</comment>
+    </data>
 </root>
