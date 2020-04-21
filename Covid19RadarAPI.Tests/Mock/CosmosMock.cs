@@ -16,7 +16,6 @@ namespace Covid19Radar.Tests.Mock
         public Container Beacon { get; set; } = new CosmosContainerMock();
         public Container Sequence { get; set; } = new CosmosContainerMock();
         public Container Otp { get; set; } = new CosmosContainerMock();
-        public Container Contact { get; set; } = new CosmosContainerMock();
 
         public string ContainerNameBeacon => "Beacons";
     }
