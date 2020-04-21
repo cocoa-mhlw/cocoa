@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4223EE63-A661-4465-BBB0-08DD80DB2256}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Covid19Radar.UITest</RootNamespace>
+    <AssemblyName>Covid19Radar.UITest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local\</OutputPath>
+    <DefineConstants>DEBUG;__LOCAL__</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="Shouldly">
+      <Version>3.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
+      <Version>3.1.97</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Xamariners.EndToEnd.Xamarin">
+      <Version>0.0.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppInitializer.cs" />
+    <Compile Include="Features\BaseLocalFeature.cs" />
+    <Compile Include="Features\StartTutorialPageFeature.cs" />
+    <Compile Include="Infrastructure\BaseAppInitializer.cs" />
+    <Compile Include="NUnitAssemblyHooks.cs" />
+    <Compile Include="StartTutorialPage.feature.cs" />
+    <Compile Include="Steps\CommonSteps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="specflow.json" />
+    <EmbeddedResource Include="testsConfiguration.json" />
+    <None Include="StartTutorialPage.feature" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+
+  </PropertyGroup>
+</Project>
