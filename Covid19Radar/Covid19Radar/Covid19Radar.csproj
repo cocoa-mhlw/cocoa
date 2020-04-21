@@ -6,50 +6,42 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\01%403x.png" />
-    <None Remove="Images\AllowBle.png" />
-    <None Remove="Images\bluetooth-access.png" />
-    <None Remove="Images\description-step1.png" />
-    <None Remove="Images\description-step2.png" />
-    <None Remove="Images\description-step3.png" />
-    <None Remove="Images\description-step4.png" />
-    <None Remove="Images\Logo.png" />
-    <None Remove="Images\TopMainImg.png" />
+    <Compile Remove="Converters\**" />
+    <EmbeddedResource Remove="Converters\**" />
+    <None Remove="Converters\**" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="Views\Dummy.xaml" />
     <EmbeddedResource Remove="Views\DummyPage.xaml" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\bluetooth-access.png" />
-    <EmbeddedResource Include="Images\description-step4.png" />
-    <EmbeddedResource Include="Images\description-step1.png" />
-    <EmbeddedResource Include="Images\description-step2.png" />
-    <EmbeddedResource Include="Images\description-step3.png" />
-    <EmbeddedResource Include="Images\Logo.png" />
-    <EmbeddedResource Include="Images\TopMainImg.png" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="3.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
+    <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1053" />
+    <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.494-pre2" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.494-pre2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\ConsentByUserPage %28コピー%29.xaml.cs" />
-    <Compile Remove="Views\DescriptionPage %28コピー%29.xaml.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Views\ContributersPage.xaml.cs">
-      <DependentUpon>ContributersPage.xaml</DependentUpon>
+    <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
+      <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\LicenseAgreementPage.xaml.cs">
+      <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ContributorsPage.xaml.cs">
+      <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\UpdateInfoPage.xaml.cs">
       <DependentUpon>UpdateInfoPage.xaml</DependentUpon>
@@ -97,12 +89,23 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Folder Include="Resx\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Templates\ContributorItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Templates\StepItemTemplate.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Styles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SetupCompletedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\StatusUpdateCompletePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19RadarAPI.Tests", "Covid19RadarAPI.Tests\Covid19RadarAPI.Tests.csproj", "{8E09FD63-0B4C-4CE5-AD8F-95EE7625655E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19RadarBackground", "Covid19RadarBackground\Covid19RadarBackground.csproj", "{5A6E98C9-C66A-4C63-9715-7C6C9F1DA739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.Functions.Common", "Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj", "{A5295862-2CEA-4863-96DF-860C3A58146D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{8E09FD63-0B4C-4CE5-AD8F-95EE7625655E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E09FD63-0B4C-4CE5-AD8F-95EE7625655E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E09FD63-0B4C-4CE5-AD8F-95EE7625655E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A6E98C9-C66A-4C63-9715-7C6C9F1DA739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6E98C9-C66A-4C63-9715-7C6C9F1DA739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6E98C9-C66A-4C63-9715-7C6C9F1DA739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6E98C9-C66A-4C63-9715-7C6C9F1DA739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5295862-2CEA-4863-96DF-860C3A58146D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5295862-2CEA-4863-96DF-860C3A58146D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5295862-2CEA-4863-96DF-860C3A58146D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5295862-2CEA-4863-96DF-860C3A58146D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
