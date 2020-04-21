@@ -37,7 +37,6 @@ namespace Covid19Radar.DataStore
         public Container Beacon { get => Database.GetContainer(BeaconStoreName); }
         public Container Sequence { get => Database.GetContainer("Sequence");  }
         public Container Otp { get => Database.GetContainer("Otp"); }
-        public Container Contact { get => Database.GetContainer("Contact"); }
 
         public string ContainerNameBeacon { get => BeaconStoreName; }
 
@@ -126,16 +125,6 @@ namespace Covid19Radar.DataStore
             catch { }
             var otpProperties = new ContainerProperties("Otp", "/UserUuid");
             var otpResult = await dbResult.Database.CreateContainerIfNotExistsAsync(otpProperties);
-
-            // Container Beacon
-            Logger.LogInformation($"GenerateAsync Create Contact Container");
-            try
-            {
-                await dbResult.Database.GetContainer("Contact").DeleteContainerAsync();
-            }
-            catch { }
-            var contactProperties = new ContainerProperties("Contact", "/PartitionKey");
-            var contactResult = await dbResult.Database.CreateContainerIfNotExistsAsync(contactProperties);
 
         }
 
