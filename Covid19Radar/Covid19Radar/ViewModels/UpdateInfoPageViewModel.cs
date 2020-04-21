@@ -12,11 +12,19 @@ namespace Covid19Radar.ViewModels
     public class UpdateInfoPageViewModel : ViewModelBase
     {
         private INavigationService _navigationService;
+        private string _url;
+
+        public string Url
+        {
+            get { return _url; }
+            set { SetProperty(ref _url, value); }
+        }
         public UpdateInfoPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = "Update Infomation";
+            Title = Resx.AppResources.TitleUpdateInformation;
+            Url = Resx.AppResources.UrlLicense;
         }
 
         public Command OnClickPrev => (new Command(() =>

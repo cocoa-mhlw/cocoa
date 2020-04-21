@@ -17,10 +17,10 @@ namespace Covid19Radar.ViewModels
     public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
     {
 
-        // ナビゲーション
+        // Navigation
         protected INavigationService NavigationService { get; private set; }
 
-        // ページタイトル
+        // PageTite
         private string _title;
 
         public string Title
