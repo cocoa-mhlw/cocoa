@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Covid19Radar.Models
 {
-    public sealed class BeaconModel : IUser
+    public sealed class BeaconModel : IUser, IUserMajorMinor
     {
         /// <summary>
         /// for Cosmos DB
