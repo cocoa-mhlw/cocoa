@@ -1,7 +1,6 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -22,11 +21,12 @@ namespace Covid19Radar.Services
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        // POST /api/Register -  Register User 
+        // POST /api/Register -  Register User
         public async Task<UserDataModel> PostRegisterUserAsync()
         {
             string url = AppConstants.ApiBaseUrl + "/Register";
-            var result = await Post(url, null);
+            var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+            var result = await Post(url, content);
             if (result != null)
             {
                 return Utils.DeserializeFromJson<UserDataModel>(result);
@@ -71,11 +71,14 @@ namespace Covid19Radar.Services
             postBeaconDataModel.Count = beacon.Count;
             postBeaconDataModel.Distance = beacon.Distance;
             postBeaconDataModel.ElaspedTime = beacon.ElaspedTime;
+            postBeaconDataModel.FirstDetectTime = beacon.FirstDetectTime;
             postBeaconDataModel.LastDetectTime = beacon.LastDetectTime;
             postBeaconDataModel.Major = beacon.Major;
             postBeaconDataModel.Minor = beacon.Minor;
             postBeaconDataModel.Rssi = beacon.Rssi;
             postBeaconDataModel.TXPower = beacon.TXPower;
+            postBeaconDataModel.KeyTime = beacon.KeyTime;
+            postBeaconDataModel.Id = beacon.Id;
             postBeaconDataModel.UserMajor = user.Major;
             postBeaconDataModel.UserMinor = user.Minor;
             postBeaconDataModel.UserUuid = user.UserUuid;
@@ -88,6 +91,15 @@ namespace Covid19Radar.Services
             }
             return null;
         }
+
+        // POST /otp/send - send OTP to the specified phone number
+        public Task PostOTPAsync(UserDataModel user, string phoneNumber)
+        {
+            string url = AppConstants.ApiBaseUrl + "/otp/send";
+            HttpContent content = new StringContent(Utils.SerializeToJson(new { user, phone = phoneNumber }), Encoding.UTF8, "application/json");
+            return Post(url, content);
+        }
+
         private async Task<string> Get(string url)
         {
             Task<HttpResponseMessage> stringAsync = httpClient.GetAsync(url);
@@ -103,8 +115,7 @@ namespace Covid19Radar.Services
 
         private async Task<string> Post(string url, HttpContent body)
         {
-            Task<HttpResponseMessage> stringAsync = httpClient.PostAsync(url, body);
-            HttpResponseMessage result = await stringAsync;
+            HttpResponseMessage result = await httpClient.PostAsync(url, body);
             await result.Content.ReadAsStringAsync();
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -112,10 +123,10 @@ namespace Covid19Radar.Services
             }
             return null;
         }
+
         private async Task<string> Put(string url, HttpContent body)
         {
-            Task<HttpResponseMessage> stringAsync = httpClient.PutAsync(url, body);
-            HttpResponseMessage result = await stringAsync;
+            var result = await httpClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -125,8 +136,15 @@ namespace Covid19Radar.Services
         }
 
     }
+
     public class PostBeaconDataModel
     {
+        /// <summary>
+        /// auto number key
+        /// </summary>
+        /// <value>Id</value>
+        public string Id { get; set; }
+
         /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
@@ -188,6 +206,15 @@ namespace Covid19Radar.Services
         /// The last time measured.
         /// </summary>
         public DateTime LastDetectTime { get; set; }
+        /// <summary>
+        /// The first time measured.
+        /// </summary>
+        public DateTime FirstDetectTime { get; set; }
+        /// <summary>
+        /// The splited timespan.
+        /// </summary>
+        public string KeyTime { get; set; }
+
 
     }
 }

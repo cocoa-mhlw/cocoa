@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.DetectedBeaconPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    xmlns:templates="clr-namespace:Covid19Radar.Templates;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <templates:BeaconItemTemplate x:Key="BeaconItemTemplate" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Margin="0,30">
+        <CollectionView ItemTemplate="{StaticResource BeaconItemTemplate}" ItemsSource="{Binding Beacons}">
+            <!--
+            <CollectionView.Header>
+                <StackLayout>
+                    <Label
+                        Margin="15,0"
+                        FontSize="Caption"
+                        Text="{x:Static resources:AppResources.TextCoreContributors}"
+                        TextColor="{StaticResource Accent7Color}" />
+                    <BoxView Margin="15,5,15,0" Style="{StaticResource DefaultLineStyle}" />
+                </StackLayout>
+            </CollectionView.Header>
+-->
+        </CollectionView>
+
+    </StackLayout>
+</ContentPage>

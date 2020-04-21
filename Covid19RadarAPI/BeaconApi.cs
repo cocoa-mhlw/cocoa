@@ -88,8 +88,9 @@ namespace Covid19Radar.Api
 
         private async Task<IActionResult> Add(BeaconParameter param)
         {
+            var pk = $"{param.UserMajor}.{param.UserMinor}";
             var data = new BeaconModel();
-            data.id = Guid.NewGuid().ToString("N") + DateTime.UtcNow.Ticks;
+            data.id = $"{param.UserUuid}.{param.Id}";
             data.UserUuid = param.UserUuid;
             data.UserMajor = param.UserMajor;
             data.UserMinor = param.UserMinor;
@@ -97,13 +98,16 @@ namespace Covid19Radar.Api
             data.Count = param.Count;
             data.Distance = param.Distance;
             data.ElaspedTime = param.ElaspedTime;
+            data.FirstDetectTime = param.FirstDetectTime;
             data.LastDetectTime = param.LastDetectTime;
             data.Major = param.Major;
             data.Minor = param.Minor;
             data.Rssi = param.Rssi;
             data.TXPower = param.TXPower;
+            data.KeyTime = param.KeyTime;
             data.TimeStamp = DateTime.UtcNow;
-            var result = await Cosmos.Beacon.CreateItemAsync(data);
+            data.PartitionKey = pk;
+            var result = await Cosmos.Beacon.UpsertItemAsync<BeaconModel>(data, new PartitionKey(pk));
             return new StatusCodeResult(201);
         }
 

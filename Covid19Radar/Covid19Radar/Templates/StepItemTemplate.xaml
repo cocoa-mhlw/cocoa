@@ -2,7 +2,8 @@
 <DataTemplate
     x:Class="Covid19Radar.Templates.StepItemTemplate"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
     <StackLayout>
         <StackLayout Padding="40,50" Spacing="20">
             <Grid>
@@ -36,12 +37,9 @@
                     Text="{Binding Title}"
                     VerticalOptions="Center" />
             </Grid>
-            <Image Aspect="AspectFit" Source="{Binding Image}" />
+            <ffimageloading:CachedImage Aspect="AspectFit" Source="{Binding Image}" />
             <Label Text="{Binding Description}" />
         </StackLayout>
-        <BoxView
-            BackgroundColor="{StaticResource Accent3Color}"
-            HeightRequest="1"
-            IsVisible="{Binding HasStepNumber}" />
+        <BoxView IsVisible="{Binding HasStepNumber}" Style="{StaticResource DefaultLineStyle}" />
     </StackLayout>
 </DataTemplate>

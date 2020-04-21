@@ -18,6 +18,7 @@ namespace Covid19Radar.iOS.Services
 {
     public class BeaconService : IBeaconService, IDisposable
     {
+        private static object dataLock = new object();
         private UserDataModel _userData;
         private bool _transmitterFlg = false;
         private CBPeripheralManager _beaconTransmitter = new CBPeripheralManager();
@@ -28,6 +29,7 @@ namespace Covid19Radar.iOS.Services
         private readonly UserDataService _userDataService;
         private readonly HttpDataService _httpDataService;
         private readonly MinutesTimer _uploadTimer;
+
         public BeaconService()
         {
             _connection = DependencyService.Resolve<SQLiteConnectionProvider>().GetConnection();
@@ -39,8 +41,6 @@ namespace Covid19Radar.iOS.Services
             _uploadTimer.Start();
             _uploadTimer.TimeOutEvent += TimerUpload;
 
-            _beaconManager = new CLLocationManager();
-
             _beaconTransmitter = new CBPeripheralManager();
             _beaconTransmitter.AdvertisingStarted += DidAdvertisingStarted;
             _beaconTransmitter.StateUpdated += DidStateUpdated;
@@ -50,6 +50,20 @@ namespace Covid19Radar.iOS.Services
             _fieldRegion.NotifyEntryStateOnDisplay = true;
             _fieldRegion.NotifyOnEntry = true;
             _fieldRegion.NotifyOnExit = true;
+
+            // Monitoring
+            _beaconManager = new CLLocationManager();
+            _beaconManager.DidDetermineState += DetermineStateForRegionComplete;
+            _beaconManager.RegionEntered += EnterRegionComplete;
+            _beaconManager.RegionLeft += ExitRegionComplete;
+            _beaconManager.PausesLocationUpdatesAutomatically = false;
+            _beaconManager.AllowsBackgroundLocationUpdates = true;
+            _beaconManager.ShowsBackgroundLocationIndicator = true;
+
+
+            _beaconManager.DidRangeBeacons += DidRangeBeconsInRegionComplete;
+            _beaconManager.AuthorizationChanged += HandleAuthorizationChanged;
+
         }
 
         private async void TimerUpload(EventArgs e)
@@ -58,7 +72,15 @@ namespace Covid19Radar.iOS.Services
             List<BeaconDataModel> beacons = _connection.Table<BeaconDataModel>().ToList();
             foreach (var beacon in beacons)
             {
+                if (beacon.IsSentToServer) continue;
                 await _httpDataService.PostBeaconDataAsync(_userData, beacon);
+                var key = beacon.Id;
+                lock (dataLock)
+                {
+                    var b = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
+                    b.IsSentToServer = true;
+                    _connection.Update(b);
+                }
             }
         }
 
@@ -66,39 +88,14 @@ namespace Covid19Radar.iOS.Services
         {
             get
             {
-                if (_beaconManager == null)
-                {
-                    _beaconManager = InitializeBeaconManager();
-                }
                 return _beaconManager;
             }
         }
 
         public void InitializeService()
         {
-            _beaconManager = InitializeBeaconManager();
             StartBeacon();
             StartAdvertising(_userData);
-        }
-
-        private CLLocationManager InitializeBeaconManager()
-        {
-            // Enable the BeaconManager 
-            _beaconManager = new CLLocationManager();
-
-            // BeaconManager Setting
-
-            // Monitoring
-            _beaconManager.DidDetermineState += DetermineStateForRegionComplete;
-            _beaconManager.RegionEntered += EnterRegionComplete;
-            _beaconManager.RegionLeft += ExitRegionComplete;
-
-
-            _beaconManager.RequestAlwaysAuthorization();
-            _beaconManager.DidRangeBeacons += DidRangeBeconsInRegionComplete;
-
-            _beaconManager.AuthorizationChanged += HandleAuthorizationChanged;
-            return _beaconManager;
         }
 
         public List<BeaconDataModel> GetBeaconData()
@@ -110,10 +107,7 @@ namespace Covid19Radar.iOS.Services
         {
             System.Diagnostics.Debug.WriteLine("StartBeacon");
 
-            _beaconManager.RequestAlwaysAuthorization();
-            _beaconManager.PausesLocationUpdatesAutomatically = false;
-            _beaconManager.AllowsBackgroundLocationUpdates = true;
-            _beaconManager.ShowsBackgroundLocationIndicator = true;
+
 
             _listOfCLBeaconRegion.Add(_fieldRegion);
             _beaconManager.StartMonitoring(_fieldRegion);
@@ -171,6 +165,8 @@ namespace Covid19Radar.iOS.Services
         private async void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
+            var now = DateTime.UtcNow;
+            var keyTime = now.ToString("yyyyMMddHH");
 
             foreach (var beacon in e.Beacons)
             {
@@ -179,42 +175,46 @@ namespace Covid19Radar.iOS.Services
                     return;
                 }
 
-                var key = beacon.Uuid.ToString() + beacon.Major.ToString() + beacon.Minor.ToString();
-                var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
-                if (result == null)
+                var key = $"{beacon.Uuid}{beacon.Major}{beacon.Minor}.{keyTime}";
+                lock (dataLock)
                 {
-                    BeaconDataModel data = new BeaconDataModel();
-                    data.Id = key;
-                    data.Count = 0;
-                    data.BeaconUuid = beacon.Uuid.ToString();
-                    data.Major = beacon.Major.ToString();
-                    data.Minor = beacon.Minor.ToString();
-                    data.Distance = beacon.Accuracy;
-                    data.Rssi = (short)beacon.Rssi;
-                    //                        data.TXPower = beacon.tr;
-                    data.ElaspedTime = new TimeSpan();
-                    data.LastDetectTime = DateTime.Now;
-                    _connection.Insert(data);
-                    if (data.ElaspedTime > TimeSpan.FromMinutes(AppConstants.ElapsedTimeOfTransmitStart))
+                    var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
+                    if (result == null)
                     {
-                        await _httpDataService.PostBeaconDataAsync(_userData, data);
+                        BeaconDataModel data = new BeaconDataModel();
+                        data.Id = key;
+                        data.Count = 0;
+                        data.BeaconUuid = beacon.Uuid.ToString();
+                        data.Major = beacon.Major.ToString();
+                        data.Minor = beacon.Minor.ToString();
+                        data.Distance = beacon.Accuracy;
+                        data.Rssi = (short)beacon.Rssi;
+                        //                        data.TXPower = beacon.tr;
+                        data.ElaspedTime = new TimeSpan();
+                        data.LastDetectTime = now;
+                        data.FirstDetectTime = now;
+                        data.KeyTime = keyTime;
+                        data.IsSentToServer = false;
+                        _connection.Insert(data);
                     }
-                }
-                else
-                {
-                    BeaconDataModel data = result;
-                    data.Id = key;
-                    data.Count++;
-                    data.BeaconUuid = beacon.Uuid.ToString();
-                    data.Major = beacon.Major.ToString();
-                    data.Minor = beacon.Minor.ToString();
-                    data.Distance += (beacon.Accuracy - data.Distance) / data.Count;
-                    data.Rssi = (short)beacon.Rssi;
-                    //                        data.TXPower = beacon.tr;
-                    data.ElaspedTime = new TimeSpan();
-                    data.LastDetectTime = DateTime.Now;
-                    _connection.Update(data);
-                    System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
+                    else
+                    {
+                        BeaconDataModel data = result;
+                        data.Id = key;
+                        data.Count++;
+                        data.BeaconUuid = beacon.Uuid.ToString();
+                        data.Major = beacon.Major.ToString();
+                        data.Minor = beacon.Minor.ToString();
+                        data.Distance += (beacon.Accuracy - data.Distance) / data.Count;
+                        data.Rssi = (short)beacon.Rssi;
+                        //                        data.TXPower = beacon.tr;
+                        data.ElaspedTime += now - data.LastDetectTime;
+                        data.LastDetectTime = now;
+                        data.KeyTime = keyTime;
+                        data.IsSentToServer = false;
+                        _connection.Update(data);
+                        System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
+                    }
                 }
 
             }
@@ -252,6 +252,25 @@ namespace Covid19Radar.iOS.Services
         {
             System.Diagnostics.Debug.WriteLine("HandleAuthorizationChanged");
             // Do That Stop beacons
+            if (e.Status == CLAuthorizationStatus.NotDetermined)
+            {
+                if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+                {
+                    if (UIDevice.CurrentDevice.CheckSystemVersion(13, 4))
+                    {
+                        _beaconManager.RequestWhenInUseAuthorization();
+                    }
+                    else
+                    {
+                        _beaconManager.RequestAlwaysAuthorization();
+                    }
+                }
+
+            }
+            else if (e.Status == CLAuthorizationStatus.AuthorizedWhenInUse)
+            {
+                _beaconManager.RequestAlwaysAuthorization();
+            }
         }
 
         public void Dispose()
