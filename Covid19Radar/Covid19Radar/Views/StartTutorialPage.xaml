@@ -59,6 +59,7 @@
         <Button
             Grid.Row="4"
             Margin="57,0"
+            AutomationId="StartButton"
             Command="{Binding Path=OnClickNext}"
             Style="{StaticResource DefaultButtonStyle}"
             Text="{x:Static resources:AppResources.ButtonStart}" />

@@ -46,6 +46,11 @@ namespace Covid19Radar.iOS
             Distribute.DontCheckForUpdatesInDebug();
 
             LoadApplication(new App(new iOSInitializer()));
+
+#if ENABLE_TEST_CLOUD
+            // requires Xamarin Test Cloud Agent
+            Xamarin.Calabash.Start();
+#endif
             return base.FinishedLaunching(app, options);
         }
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
