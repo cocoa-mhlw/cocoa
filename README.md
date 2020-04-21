@@ -20,20 +20,24 @@ https://discord.gg/e5hMm4h
 - Noriko Matsumoto (Designer/Device iOS Lending)
 - Kazuki Ota (Create Build pipeline on AppCenter)
 - Taiki Yoshida (Power BI / Power Apps)
-- Yasuaki Matsuda (Server side / Azure Fucntions)
-- Tsuyoshi Ushio  (Server side / Azure Fucntions)
+- Yasuaki Matsuda (Server side / Azure Functions)
+- Tsuyoshi Ushio  (Server side / Azure Functions)
 - Takeshi Sakurai (Client iOS)
 - Fumiya Kume (Client Xamarin)
 - Takayuki Hirose (Device Mac Lending)
 - Tomoaki Ueno (Medical Information and FieAdvisory)
 - Kristina Yasuda (Public Relations and Activity)
 - Takashi Takebayashi (Transrate)
-- Ben (Client side Xamarin / Xmariners)
-- Udara Alwis (Client side Xamarin / Xmariners)
-- Pedro Costa (Client side Xamarin / Xmariners)
-- Colin (Client side Xamarin / Xmariners)
-- Lohith (Client side Xamarin / Xmariners)
-- Chaminda (Client side Xamarin / Xmariners)
+- Ben Ishiyama-Levy (Xamarin / [Xamariners](https://xamariners.com/))
+- Udara Alwis (Xamarin / [Xamariners](https://xamariners.com/))
+- Pedro Costa (Xamarin / [Xamariners](https://xamariners.com/))
+- Colin Bacon (Xamarin / [Xamariners](https://xamariners.com/))
+- Lohith GN (Azure Functions / [Xamariners](https://xamariners.com/))
+- Chew Min Cheong (PM / [Xamariners](https://xamariners.com/))
+- Albilaga Pradana (Xamarin / [Xamariners](https://xamariners.com/))
+- Chaminda Chandrasekara (DevOps / [Xamariners](https://xamariners.com/))
+- Pushpa Nilmini Herath (DevOps / [Xamariners](https://xamariners.com/))
+- Nirasha Chathurangi (QA / [Xamariners](https://xamariners.com/))
 - Yuya Yoshida (Public Relations and Activity)
 - Ryota Nakamura (Beta Tester's communication lead)
 - Takafumi Ochiai (Privacy policy development / Domestic and foreign law expert lawyer)
@@ -53,11 +57,11 @@ https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 - Screen transition and each screen design.
 - Proximity communication between Android.
 
-## Under develipment
+## Under development
 
 - iOS iBeacon implementation , testing (I don't have a Mac)
 - Add user (via REST API)
-- Push Nortification
+- Push Notification
 - SErver Side  API (Azure Function and CosmosDB)
 - Arrangement of conditions of dense contact
 - Graph DB(Cosmos DB) side Query , manage site（Server Side)
