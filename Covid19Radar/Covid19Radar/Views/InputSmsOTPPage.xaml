@@ -1,51 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19Radar.Views.InputSmsOTPPage"
-                          xmlns:local="clr-namespace:Covid19Radar"
-             Title="{Binding Title}">
+<ContentPage
+    x:Class="Covid19Radar.Views.InputSmsOTPPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Covid19Radar.Controls"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    Padding="40,30,40,80">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Padding="30,0,30,0" Grid.Row="0">
+        <Grid Grid.Row="0">
             <StackLayout>
-                <Label Text="Please enter the 6-digit number you received." 
-                       TextColor="#333333" 
-                       FontSize="28" 
-                       Padding="0,30,0,10" />
-                <Entry Text=""
-                       FontSize="35"
-                       Keyboard="Numeric"
-                       PlaceholderColor="#D1D1D1"
-                       TextColor="#333333" 
-                       Placeholder="6-digit"
-                       MaxLength="6"
-                       ClearButtonVisibility="WhileEditing" />
-                <Label Text="Sent to「Phone Number」」"
-                    FontSize="16"
-                    TextColor="#333333" 
-                    Padding="0,30,0,10"/>
-                <Label Padding="0,30,0,0"
-                       TextColor="#333333"
-                       FontSize="16"
-                       Text="Didn't receive the code?"  />
-                <Label FontSize="16"
-                       Padding="0,0,0,0"
-                       TextColor="#333333"
-                       Text="Send your code again"  />
+                <Label FontFamily="{StaticResource NotoSansMediumFontFamily}" Text="{Binding PhoneNumber, StringFormat={x:Static resources:AppResources.OtpEnterText}}" />
+                <controls:OtpFormEntry
+                    x:Name="OtpForm"
+                    Margin="0,0,0,40"
+                    HorizontalOptions="FillAndExpand"
+                    OtpText="{Binding Otp}" />
+                <Grid ColumnSpacing="6" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Source="help.png" />
+                    <Label
+                        Grid.Column="1"
+                        FontFamily="{StaticResource NotoSansMediumFontFamily}"
+                        FontSize="12"
+                        Text="{x:Static resources:AppResources.DidntGetTheCodeText}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontSize="12"
+                        Text="{x:Static resources:AppResources.ResendText}"
+                        TextColor="{StaticResource AccentColor}"
+                        TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ResendOtp}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
             </StackLayout>
         </Grid>
-        <Grid Grid.Row="1" Padding="120,0,120,60">
-            <Button BackgroundColor="#019ae8"
-                    Text="Register" 
-                    TextColor="#FFFFFF"
-                    FontSize="25"
-                    MinimumHeightRequest="60"
-                    MinimumWidthRequest="170"
-                    Command="{Binding Path=OnClickNext}"/>
-        </Grid>
+        <Button
+            Grid.Row="1"
+            Command="{Binding OnClickNext}"
+            Style="{StaticResource DefaultButtonStyle}"
+            Text="{x:Static resources:AppResources.ButtonVerify}" />
     </Grid>
 </ContentPage>

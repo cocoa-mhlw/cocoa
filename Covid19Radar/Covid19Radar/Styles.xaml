@@ -18,7 +18,7 @@
     <Style TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
         <Setter Property="FontFamily" Value="{StaticResource NotoSansRegularFontFamily}" />
-        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontSize" Value="{OnPlatform iOS=16, Android=14}" />
     </Style>
 
     <Style TargetType="Frame">
@@ -38,17 +38,24 @@
     <Style x:Key="Accent2ColorHeaderLabelStyle" TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource Accent2Color}" />
         <Setter Property="FontFamily" Value="{StaticResource NotoSansRegularFontFamily}" />
-        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontSize" Value="Body" />
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
     <Style x:Key="BaseButtonStyle" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
         <Setter Property="CornerRadius" Value="2" />
-        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontSize" Value="Default" />
         <Setter Property="FontFamily" Value="{StaticResource NotoSansMediumFontFamily}" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
         <Setter Property="Padding" Value="0" />
+        <Style.Triggers>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
+            </Trigger>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                <Setter Property="BackgroundColor" Value="{StaticResource Accent5Color}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style
@@ -57,6 +64,17 @@
         TargetType="Button">
         <Setter Property="WidthRequest" Value="170" />
         <Setter Property="HorizontalOptions" Value="Center" />
-
     </Style>
+
+    <Style x:Key="DefaultLineStyle" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="1" />
+        <Setter Property="Color" Value="{StaticResource Accent3Color}" />
+    </Style>
+
+    <Style x:Key="SubtitleLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansMediumFontFamily}" />
+        <Setter Property="FontSize" Value="Title" />
+    </Style>
+
 </ResourceDictionary>

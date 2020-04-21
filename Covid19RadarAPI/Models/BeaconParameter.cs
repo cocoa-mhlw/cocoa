@@ -8,6 +8,12 @@ namespace Covid19Radar.Models
     public sealed class BeaconParameter : IUser
     {
         /// <summary>
+        /// Id
+        /// </summary>
+        /// <value>Id</value>
+        public string Id { get; set; }
+
+        /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
         /// <value>User UUID</value>
@@ -22,7 +28,10 @@ namespace Covid19Radar.Models
         /// </summary>
         /// <value>BLE minor number</value>
         public string UserMinor { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Count { get; set; }
         /// <summary>
         /// Same beacon uuid's device can communication.
         /// </summary>
@@ -61,10 +70,13 @@ namespace Covid19Radar.Models
         /// </summary>
         public DateTime LastDetectTime { get; set; }
         /// <summary>
-        /// 
+        /// The first time measured.
         /// </summary>
-        public int Count { get; set; }
-
+        public DateTime FirstDetectTime { get; set; }
+        /// <summary>
+        /// The splited timespan.
+        /// </summary>
+        public string KeyTime { get; set; }
         string IUser.Major { get => UserMajor; }
         string IUser.Minor { get => UserMinor; }
     }
