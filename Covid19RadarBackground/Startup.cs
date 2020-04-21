@@ -17,6 +17,7 @@ namespace Covid19Radar
         {
             builder.Services.AddLogging();
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
+            builder.Services.AddSingleton<DataStore.IStoringCosmos, DataStore.StoringCosmos>();
             builder.Services.AddSingleton<Services.INotificationService, Services.NotificationService>();
 
         }
