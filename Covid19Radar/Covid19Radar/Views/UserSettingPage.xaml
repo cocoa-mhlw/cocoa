@@ -27,12 +27,12 @@
                     Margin="0,20"
                     BorderColor="{StaticResource AccentColor}"
                     Keyboard="Telephone"
-                    MaxLength="12"
+                    MaxLength="13"
                     Placeholder="{x:Static resources:AppResources.TextPhoneNumberPlaceholder}"
                     Text="{Binding PhoneNumber}"
                     TextColor="{StaticResource Accent4Color}">
                     <Entry.Behaviors>
-                        <behaviors:MaskedBehavior Mask="XXX-XXX-XXXX" />
+                        <behaviors:MaskedBehavior Mask="XXX-XXXX-XXXX" />
                     </Entry.Behaviors>
                 </renderers:CustomEntry>
                 <Label Text="{x:Static resources:AppResources.TextStatusSettingsSMSDescription}" />
