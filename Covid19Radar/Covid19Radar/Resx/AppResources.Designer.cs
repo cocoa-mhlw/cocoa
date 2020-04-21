@@ -622,6 +622,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   License Agreement に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TitleLicenseAgreement {
+            get {
+                return ResourceManager.GetString("TitleLicenseAgreement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Set up Completed に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleSetupCompleted {
@@ -651,9 +660,27 @@ namespace Covid19Radar.Resx {
         /// <summary>
         ///   Update Information に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string UpdateInformationMenu {
+        internal static string TitleUpdateInformation {
             get {
-                return ResourceManager.GetString("UpdateInformationMenu", resourceCulture);
+                return ResourceManager.GetString("TitleUpdateInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radar.z11.web.core.windows.net/agpl-en.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlLicense {
+            get {
+                return ResourceManager.GetString("UrlLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radar.z11.web.core.windows.net/privacypolicy.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlPrivacyPolicy {
+            get {
+                return ResourceManager.GetString("UrlPrivacyPolicy", resourceCulture);
             }
         }
     }
