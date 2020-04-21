@@ -26,7 +26,8 @@
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1053" />
     <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+    <PackageReference Include="Xam.Plugin.WebView" Version="2.1.3" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.494-pre2" />
@@ -88,9 +89,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Folder Include="Resx\" />
-    <Folder Include="Controls\" />
-    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Templates\ContributorItemTemplate.xaml">
