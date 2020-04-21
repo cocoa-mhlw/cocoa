@@ -27,7 +27,7 @@ namespace Covid19Radar
         }
 
         [FunctionName("ContactFunction")]
-        public async void Run([CosmosDBTrigger(
+        public async Task Run([CosmosDBTrigger(
             databaseName: "EXAMPLE",
             collectionName: "Beacons",
             ConnectionStringSetting = "COSMOS_CONNECTION",
@@ -55,8 +55,12 @@ namespace Covid19Radar
         {
             // pair
             var queryPair = new QueryDefinition
-                ($"SELECT * FROM {Cosmos.ContainerNameBeacon} b WHERE b.UserMajor = @UserMajor and b.UserMinor = @UserMinor and b.KeyTime = @KeyTime"
-                + "b.Major = @Major and b.Minor = @Minor")
+                ($"SELECT * FROM {Cosmos.ContainerNameBeacon} b" 
+                + " WHERE b.UserMajor = @UserMajor" 
+                + " AND b.UserMinor = @UserMinor"
+                + " AND b.KeyTime = @KeyTime"
+                + " AND b.Major = @Major"
+                + " AND b.Minor = @Minor")
                 .WithParameter("@UserMajor", input.Major)
                 .WithParameter("@UserMinor", input.Minor)
                 .WithParameter("@KeyTime", input.KeyTime)
