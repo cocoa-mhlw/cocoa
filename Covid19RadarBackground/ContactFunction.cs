@@ -48,10 +48,13 @@ namespace Covid19Radar
         {
             // pair
             var queryPair = new QueryDefinition
-                ($"SELECT * FROM {Cosmos.ContainerNameBeacon} b WHERE b.UserMajor = @UserMajor and b.UserMinor = @UserMinor and b.KeyTime = @KeyTime")
+                ($"SELECT * FROM {Cosmos.ContainerNameBeacon} b WHERE b.UserMajor = @UserMajor and b.UserMinor = @UserMinor and b.KeyTime = @KeyTime"
+                + "b.Major = @Major and b.Minor = @Minor")
                 .WithParameter("@UserMajor", input.Major)
                 .WithParameter("@UserMinor", input.Minor)
-                .WithParameter("@KeyTime", input.KeyTime);
+                .WithParameter("@KeyTime", input.KeyTime)
+                .WithParameter("@Major", input.UserMajor)
+                .WithParameter("@Minor", input.UserMinor);
             var option = new QueryRequestOptions();
             option.PartitionKey = new PartitionKey($"{input.Major}.{input.Minor}");
             try
