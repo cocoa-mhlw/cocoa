@@ -5,9 +5,12 @@
         "FUNCTIONS_WORKER_RUNTIME": "dotnet",
         "COSMOS_ENDPOINT_URI": "https://localhost:8081",
         "COSMOS_PRIMARY_KEY": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
-        "COSMOS_DATABASE_ID": "Example",
+        "COSMOS_DATABASE_ID": "EXAMPLE",
         "COSMOS_AUTO_GENERATE": true,
         "COSMOS_BEACON_STORE": "Beacons",
-        "COSMOS_CONNECTION": "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw=="
+        "COSMOS_CONNECTION": "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
+        "COSMOS_STORING_ENDPOINT_URI": "https://localhost:8081",
+        "COSMOS_STORING_PRIMARY_KEY": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
+        "COSMOS_STORING_DATABASE_ID": "EXAMPLE"
     }
 }
