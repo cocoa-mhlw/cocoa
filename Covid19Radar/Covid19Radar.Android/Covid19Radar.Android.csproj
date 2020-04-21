@@ -72,6 +72,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -96,8 +97,11 @@
     <PackageReference Include="Prism.DryIoc.Forms">
       <Version>7.2.0.1422</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.WebView">
+      <Version>2.1.3</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>1.5.2</Version>
+      <Version>1.5.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
@@ -174,6 +178,10 @@
       </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-hdpi\help.png">
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-mdpi\help.png">
       <SubType>
@@ -342,8 +350,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\descriptionStep4.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Renderers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

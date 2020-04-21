@@ -286,7 +286,7 @@
     <value>コントリビューター紹介</value>
     <comment>List Of Contributors Menu</comment>
   </data>
-  <data name="UpdateInformationMenu" xml:space="preserve">
+  <data name="TitleUpdateInformation" xml:space="preserve">
     <value>更新情報</value>
     <comment>Update Information Menu</comment>
   </data>
@@ -384,5 +384,17 @@ SMSに届いた6桁の数字を入力してください。</value>
   <data name="TextDetectedBeaconList" xml:space="preserve">
     <value>検出ビーコン一覧</value>
     <comment>Detected Beacon List</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>ライセンス</value>
+    <comment>License Agreement</comment>
+  </data>
+  <data name="UrlLicense" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/agpl-en.html</value>
+    <comment>AGPL3.0</comment>
+  </data>
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/privacypolicy.html</value>
+    <comment>PrivacyPolicy</comment>
   </data>
 </root>
