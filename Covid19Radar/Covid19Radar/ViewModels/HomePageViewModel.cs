@@ -40,7 +40,7 @@ namespace Covid19Radar.ViewModels
                 },
                 new HomeMenuModel
                 {
-                    Title=AppResources.UpdateInformationMenu,
+                    Title=AppResources.TitleUpdateInformation,
                     Command=OnClickUpateInfo
                 },
                 new HomeMenuModel
@@ -50,7 +50,7 @@ namespace Covid19Radar.ViewModels
                 },
                 new HomeMenuModel
                 {
-                    Title=AppResources.LicenseAgreementMenu,
+                    Title=AppResources.TitleLicenseAgreement,
                     Command=OnClickLicenseAgreement
                 }
             };

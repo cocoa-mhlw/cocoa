@@ -8,9 +8,11 @@
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}">
-    <ScrollView>
-        <StackLayout Padding="40,20">
+        <StackLayout Padding="0,0">
+            <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
+        <!--
             <StackLayout BindableLayout.ItemsSource="{Binding TermsOfServices}" Spacing="16">
+
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Spacing="8">
@@ -19,12 +21,13 @@
                         </StackLayout>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
+
             </StackLayout>
+            -->
             <Button
-                Margin="0,48"
+                Margin="0,20"
                 Command="{Binding OnClickNext}"
                 Style="{StaticResource DefaultButtonStyle}"
                 Text="{x:Static resources:AppResources.ButtonAgree}" />
         </StackLayout>
-    </ScrollView>
 </ContentPage>
