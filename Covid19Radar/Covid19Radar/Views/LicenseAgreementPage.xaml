@@ -3,57 +3,14 @@
     x:Class="Covid19Radar.Views.LicenseAgreementPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:local="clr-namespace:Covid19Radar"
+    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
     Title="{Binding Title}"
-    ios:Page.UseSafeArea="true">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Padding="30,0,30,0">
-            <StackLayout>
-                <Label
-                    Padding="0,30,0,10"
-                    FontSize="28"
-                    HorizontalTextAlignment="Center"
-                    Text="License"
-                    TextColor="#333333" />
-                <Label
-                    Padding="0,30,0,0"
-                    FontFamily="{DynamicResource MaterialFontFamily}"
-                    FontSize="16"
-                    LineHeight="1.2"
-                    Text="&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence."
-                    TextColor="#333333" />
+    ios:Page.UseSafeArea="true"
+    Style="{StaticResource PageStyle}">
 
-                <Label
-                    Padding="0,30,0,0"
-                    FontFamily="{DynamicResource MaterialFontFamily}"
-                    FontSize="16"
-                    LineHeight="1.2"
-                    Text="&#xF05E0;Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence."
-                    TextColor="#333333" />
-            </StackLayout>
-        </Grid>
-        <Grid Grid.Row="1" Padding="120,0,120,60">
-            <Button
-                BackgroundColor="#019ae8"
-                Command="{Binding Path=OnClickPrev}"
-                FontSize="25"
-                MinimumHeightRequest="60"
-                MinimumWidthRequest="170"
-                Text="Previous"
-                TextColor="#FFFFFF" />
-            <Button
-                BackgroundColor="#019ae8"
-                Command="{Binding Path=OnClickPrev}"
-                FontSize="25"
-                MinimumHeightRequest="60"
-                MinimumWidthRequest="170"
-                Text="Previous"
-                TextColor="#FFFFFF" />
-        </Grid>
-    </Grid>
+    <StackLayout>
+        <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
+    </StackLayout>
 </ContentPage>
