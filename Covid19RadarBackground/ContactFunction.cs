@@ -74,8 +74,8 @@ namespace Covid19Radar
         private async Task Upsert(BeaconModel b1, BeaconModel b2)
         {
             var item = new ContactModel();
-            var pk = $"{b1.Major}.{b1.Minor}-{b2.Major}.{b2.Minor}";
-            item.id = $"{b1.Major}.{b1.Minor}-{b1.KeyTime}-{b2.Major}.{b2.Minor}";
+            var pk = $"{b1.UserMajor}.{b1.UserMinor}-{b2.UserMajor}.{b2.UserMinor}";
+            item.id = $"{b1.UserMajor}.{b1.UserMinor}-{b1.KeyTime}-{b2.UserMajor}.{b2.UserMinor}";
             item.KeyTime = b1.KeyTime;
             item.PartitionKey = pk;
             item.Beacon1 = b1;
