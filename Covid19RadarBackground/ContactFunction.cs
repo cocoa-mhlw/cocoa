@@ -35,6 +35,7 @@ namespace Covid19Radar
             foreach (var i in input)
             {
                 var d = JsonConvert.DeserializeObject<BeaconModel>(i.ToString());
+                Logger.LogInformation($"{nameof(ContactFunction)}  Change feed Major:{d.UserMajor} Minor:{d.UserMinor}");
                 var p = await QueryPair(d);
                 if (p == null) continue;
                 BeaconModel b1, b2;
@@ -57,13 +58,15 @@ namespace Covid19Radar
             {
                 var pair = await Cosmos.Beacon.GetItemQueryIterator<BeaconModel>(queryPair, null, option).ReadNextAsync();
                 return pair.FirstOrDefault();
-            } catch (CosmosException ex)
+            }
+            catch (CosmosException ex)
             {
                 if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
+                    Logger.LogInformation($"{nameof(ContactFunction)} Not Found Major:{input.Major} Minor:{input.Major}");
                     return null;
                 }
-                Logger.LogError(ex, $"{nameof(ContactFunction)} Throw from QueryPair Major:{input.Major} Minor:{input.Minor}");
+                Logger.LogError(ex, $"{nameof(ContactFunction)} Throw from QueryPair Major:{input.Major} Minor:{input.Major}");
             }
             return null;
         }
@@ -80,6 +83,7 @@ namespace Covid19Radar
             try
             {
                 var result = await Cosmos.Contact.UpsertItemAsync(item, new PartitionKey(pk));
+                Logger.LogInformation($"{nameof(ContactFunction)} Complete Upsert id:{item.id}");
             }
             catch (CosmosException ex)
             {
