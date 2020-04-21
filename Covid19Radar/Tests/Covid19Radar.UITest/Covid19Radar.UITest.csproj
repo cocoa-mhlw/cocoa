@@ -48,8 +48,10 @@
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
       <Version>3.1.97</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.UITest" Version="3.0.3" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+    <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
     <PackageReference Include="Xamariners.EndToEnd.Xamarin">
       <Version>0.0.4</Version>
     </PackageReference>
@@ -73,7 +75,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>cd $(TargetDir)
-del System.Net.Http.dll</PostBuildEvent>
+
   </PropertyGroup>
 </Project>
