@@ -45,8 +45,11 @@ namespace Covid19Radar.Models
                 r1 = b2;
                 r2 = b1;
             }
-            r1 = b1;
-            r2 = b2;
+            else
+            {
+                r1 = b1;
+                r2 = b2;
+            }
         }
     }
 
