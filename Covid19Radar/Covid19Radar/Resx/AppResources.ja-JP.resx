@@ -290,4 +290,99 @@
     <value>更新情報</value>
     <comment>Update Information Menu</comment>
   </data>
+  <data name="ButtonHome" xml:space="preserve">
+    <value>HOMEへ</value>
+    <comment>HOME</comment>
+  </data>
+  <data name="TextYoureReadyToGo" xml:space="preserve">
+    <value>登録完了しました。</value>
+    <comment>You're ready to go</comment>
+  </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>登録完了</value>
+    <comment>Set up Completed</comment>
+  </data>
+  <data name="TextStatusSettingsDescription" xml:space="preserve">
+    <value>もし新型コロナで陽性と診断された場合、あなたの周りの人を守るために電話番号を入れて陽性登録をお願いします。</value>
+    <comment>Status settings page description</comment>
+  </data>
+  <data name="TextStatusSettingsEnterNumber" xml:space="preserve">
+    <value>電話番号を入力してください。</value>
+    <comment>Status settings enter number text</comment>
+  </data>
+  <data name="TextStatusSettingsSMSDescription" xml:space="preserve">
+    <value>電話番号入力後にSMSメールが届きます。
+SMSメールを確認してください。</value>
+    <comment>Status settings page verification sms code description</comment>
+  </data>
+  <data name="TextStatusSettingsSMSInfo" xml:space="preserve">
+    <value>※電話番号は本アプリには登録されません。
+直接、厚生労働省のデータベースに送信されます。</value>
+    <comment>Status settings page sms info</comment>
+  </data>
+  <data name="TextStatusSettingsSubtitle" xml:space="preserve">
+    <value>あなたが陽性と診断された場合</value>
+    <comment>Status settings page sub title</comment>
+  </data>
+  <data name="TitleStatusSettings" xml:space="preserve">
+    <value>ユーザー設定</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TextPhoneNumberPlaceholder" xml:space="preserve">
+    <value>090-1234-4567</value>
+    <comment>Placeholder text for phone number entry</comment>
+  </data>
+  <data name="DetectedBeaconListMenu" xml:space="preserve">
+    <value>検出ビーコン一覧</value>
+    <comment>Detected Beacon List Menu</comment>
+  </data>
+  <data name="LicenseAgreementMenu" xml:space="preserve">
+    <value>ライセンス</value>
+    <comment>License Agreement Menu</comment>
+  </data>
+  <data name="OtpEnterText" xml:space="preserve">
+    <value>「{0}」宛に送信しました。
+SMSに届いた6桁の数字を入力してください。</value>
+    <comment>Otp Enter the Code</comment>
+  </data>
+  <data name="OtpTitle" xml:space="preserve">
+    <value>コード入力</value>
+    <comment>Otp Title</comment>
+  </data>
+  <data name="ButtonVerify" xml:space="preserve">
+    <value>次へ</value>
+    <comment>Button Verify</comment>
+  </data>
+  <data name="DidntGetTheCodeText" xml:space="preserve">
+    <value>コードが届きませんか？</value>
+    <comment>Didn't get the code Text</comment>
+  </data>
+  <data name="ResendText" xml:space="preserve">
+    <value>コードをもう一度送信する</value>
+    <comment>Resend Text</comment>
+  </data>
+  <data name="TextStatusUpdateComplete" xml:space="preserve">
+    <value>登録完了しました。</value>
+    <comment>Status Update Complete page text</comment>
+  </data>
+  <data name="TitleStatusUpdateComplete" xml:space="preserve">
+    <value>登録完了</value>
+    <comment>Status Update Complete page title</comment>
+  </data>
+  <data name="TextCoreContributors" xml:space="preserve">
+    <value>コアコントリビューター</value>
+    <comment>Contributors list page subtitle</comment>
+  </data>
+  <data name="TitleContributorsPage" xml:space="preserve">
+    <value>コントリビューター紹介</value>
+    <comment>Contributors list page title</comment>
+  </data>
+  <data name="TitleDetectedBeaconPage" xml:space="preserve">
+    <value>検出ビーコン</value>
+    <comment>Detected Beacons</comment>
+  </data>
+  <data name="TextDetectedBeaconList" xml:space="preserve">
+    <value>検出ビーコン一覧</value>
+    <comment>Detected Beacon List</comment>
+  </data>
 </root>
