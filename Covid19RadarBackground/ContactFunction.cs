@@ -16,11 +16,13 @@ namespace Covid19Radar
     public class ContactFunction
     {
         private readonly ICosmos Cosmos;
+        private readonly IStoringCosmos Store;
         private readonly ILogger<ContactFunction> Logger;
 
-        public ContactFunction(ICosmos cosmos, ILogger<ContactFunction> logger)
+        public ContactFunction(ICosmos cosmos, IStoringCosmos store, ILogger<ContactFunction> logger)
         {
             Cosmos = cosmos;
+            Store = store;
             Logger = logger;
         }
 
@@ -29,7 +31,8 @@ namespace Covid19Radar
             databaseName: "EXAMPLE",
             collectionName: "Beacons",
             ConnectionStringSetting = "COSMOS_CONNECTION",
-            LeaseCollectionName = "Lease", CreateLeaseCollectionIfNotExists = true)]IReadOnlyList<Microsoft.Azure.Documents.Document> input)
+            LeaseCollectionName = "Lease",
+            CreateLeaseCollectionIfNotExists = true)]IReadOnlyList<Microsoft.Azure.Documents.Document> input)
         {
             Logger.LogInformation($"{nameof(ContactFunction)} processed a request.");
             foreach (var i in input)
@@ -37,7 +40,11 @@ namespace Covid19Radar
                 var d = JsonConvert.DeserializeObject<BeaconModel>(i.ToString());
                 Logger.LogInformation($"{nameof(ContactFunction)}  Change feed Major:{d.UserMajor} Minor:{d.UserMinor}");
                 var p = await QueryPair(d);
-                if (p == null) continue;
+                if (p == null)
+                {
+                    Logger.LogInformation($"{nameof(ContactFunction)} miss match Major:{d.Major} Minor:{d.Minor}");
+                    continue;
+                }
                 BeaconModel b1, b2;
                 IUserMajorMinorExtension.SetDecideLeftRight(d, p, out b1, out b2);
                 await Upsert(b1, b2);
@@ -83,9 +90,10 @@ namespace Covid19Radar
             item.PartitionKey = pk;
             item.Beacon1 = b1;
             item.Beacon2 = b2;
+            Logger.LogInformation($"{nameof(ContactFunction)} Upsert id:{item.id}");
             try
             {
-                var result = await Cosmos.Contact.UpsertItemAsync(item, new PartitionKey(pk));
+                var result = await Store.Contact.UpsertItemAsync(item, new PartitionKey(pk));
                 Logger.LogInformation($"{nameof(ContactFunction)} Complete Upsert id:{item.id}");
             }
             catch (CosmosException ex)
