@@ -6,10 +6,10 @@
   },
   "IosConfiguration": {
     "Simulator": true,
-    "SimulatorIdentifier": "E55135B7-92A6-4CCF-83A3-7BFDFD4CBC81",
+    "SimulatorIdentifier": "7EFBB4DD-B95F-4C1F-8AF7-56D20F8D6B63",
     "DeviceIdentifier": "fdc14880626e29abdaa4ebd953ee299d179ba924",
-    "BundleName": "com.companyname.DemoApp",
-    "AppName": "DemoApp.iOS",
-    "AppPath": "/Users/pedro/work/apps/DemoApp.iOS.app"
+    "BundleName": "net.kzmx.Covid19Radar",
+    "AppName": "Covid19Radar",
+    "AppPath": "/Users/pedro/work/apps/Covid19Radar.iOS.app"
   }
 }
