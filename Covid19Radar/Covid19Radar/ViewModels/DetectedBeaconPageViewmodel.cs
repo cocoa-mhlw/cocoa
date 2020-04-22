@@ -49,8 +49,8 @@ namespace Covid19Radar.ViewModels
 
             if (navMode == NavigationMode.New)
             {
-                // var beaconList = _beaconService.GetBeaconData();
-
+                var beaconList = _beaconService.GetBeaconData();
+                /*
                 var beaconList = new List<BeaconDataModel>()
                 {
                     new BeaconDataModel()
@@ -94,6 +94,7 @@ namespace Covid19Radar.ViewModels
                         Count = 5623
                     }
                 };
+                */
                 BeaconDataList = new ObservableCollection<BeaconDataModel>(beaconList);
             }
         }
