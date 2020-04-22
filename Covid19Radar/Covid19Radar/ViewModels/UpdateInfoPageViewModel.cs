@@ -24,7 +24,7 @@ namespace Covid19Radar.ViewModels
         {
             _navigationService = navigationService;
             Title = Resx.AppResources.TitleUpdateInformation;
-            Url = Resx.AppResources.UrlLicense;
+            Url = Resx.AppResources.UrlUpdate;
         }
 
         public Command OnClickPrev => (new Command(() =>
