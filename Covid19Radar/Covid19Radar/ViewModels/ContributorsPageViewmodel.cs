@@ -6,14 +6,21 @@ namespace Covid19Radar.ViewModels
 {
     public class ContributorsPageViewModel : ViewModelBase
     {
-        public List<ContributorModel> Contributors { get; set; }
+//        public List<ContributorModel> Contributors { get; set; }
+        private string _url;
 
+        public string Url
+        {
+            get { return _url; }
+            set { SetProperty(ref _url, value); }
+        }
         public ContributorsPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resx.AppResources.TitleContributorsPage;
-            SetData();
+            Url = Resx.AppResources.UrlContributor;
+            //            SetData();
         }
-
+/*
         private void SetData()
         {
             Contributors = new List<ContributorModel>
@@ -32,5 +39,6 @@ namespace Covid19Radar.ViewModels
                 new ContributorModel { Fullname = "Takashi Takebayashi", Role = "Translate" }
             };
         }
+*/
     }
 }
