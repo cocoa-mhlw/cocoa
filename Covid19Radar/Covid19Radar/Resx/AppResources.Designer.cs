@@ -730,7 +730,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/ja/contributor.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radar.z11.web.core.windows.net/en/contributor.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlContributor {
             get {
@@ -739,7 +739,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/agpl-en.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radar.z11.web.core.windows.net/en/agpl.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlLicense {
             get {
@@ -753,6 +753,15 @@ namespace Covid19Radar.Resx {
         internal static string UrlPrivacyPolicy {
             get {
                 return ResourceManager.GetString("UrlPrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radar.z11.web.core.windows.net/en/update.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlUpdate {
+            get {
+                return ResourceManager.GetString("UrlUpdate", resourceCulture);
             }
         }
     }
