@@ -1,0 +1,189 @@
+# Covid19Radar Contributers
+- Noriko Matsumoto (Designer/Device iOS Lending)
+- Yasuaki Matsuda (Server side / Azure Functions)
+- Takashi Takebayashi (Translate Japanese)
+- Ben Ishiyama-Levy (Xamarin / [Xamariners](https://xamariners.com/))
+- Udara Alwis (Xamarin / [Xamariners](https://xamariners.com/))
+- Pedro Costa (Xamarin / [Xamariners](https://xamariners.com/))
+- Colin Bacon (Xamarin / [Xamariners](https://xamariners.com/))
+- Lohith GN (Azure Functions / [Xamariners](https://xamariners.com/))
+- Chew Min Cheong (PM / [Xamariners](https://xamariners.com/))
+- Albilaga Pradana (Xamarin / [Xamariners](https://xamariners.com/))
+- Chaminda Chandrasekara (DevOps / [Xamariners](https://xamariners.com/))
+- Pushpa Nilmini Herath (DevOps / [Xamariners](https://xamariners.com/))
+- Nirasha Chathurangi (QA / [Xamariners](https://xamariners.com/))
+- Tomoaki Ueno (Medical Information and Advisory)
+- Tsuyoshi Ushio  (Server side / Azure Functions)
+- Takeshi Sakurai (Client iOS)
+- Kazuki Ota (Create Build pipeline on AppCenter)
+- Taiki Yoshida (Power BI / Power Apps)
+- Fumiya Kume (Client Xamarin)
+- Takayuki Hirose (Device Mac Lending)
+- Kristina Yasuda (Public Relations and Activity)
+- Yuya Yoshida (Public Relations and Activity)
+- Nori Suzuki (Public Relations and Activity)
+- Rie Moriguchi (Public Relations and Activity)
+- Michiyo Hano (Public Relations and Activity)
+- Ryota Nakamura (Beta Testers communication lead)
+- Takafumi Ochiai (Privacy policy development / Domestic and foreign law expert lawyer)
+- Jurika Morita (Privacy policy development / Domestic and foreign law expert lawyer)
+- Gai Matsushita (Privacy policy development / Domestic and foreign law expert lawyer)
+
+# Beta Testers
+- Nagahata Kenji
+- Takahiro Soda
+- もくだいさん
+- Sayaka Ito
+- こばちき
+- 松原 徹( Toru Matsubara )
+- Takuya Fujiwara
+- ヤン
+- Seiji Suzuki
+- sogaoh
+- Takeshi Yamamoto
+- Ryosuke Sakuma
+- Tomohiro Shimoie
+- F丸
+- ./wasabi
+- Toru Igarashi
+- SEIJI ARAKI
+- Midori N
+- Yamada Teruchika
+- みやっち
+- Akira Utsuki
+- hadano
+- 山田高稔
+- rupic
+- Kazuki Komatsu
+- Sho Maekawa
+- Chirett
+- kenakamu
+- yukinobu
+- たわむれ膝小僧
+- Takumasa Hirabayashi
+- Makoto Tochiki
+- Iosif Takakura
+- hamu502
+- tomo
+- Kazumi OHIRA
+- 内藤 稔
+- Yoshioms
+- Tatsuya Kobayashi
+- Kazu Shimoie
+- Yutaka Yoshinaga
+- Kazu　Shimoie_iOS
+- infonext
+- Lucia Yuko Takeuchi
+- Yoichi Nakamura 
+- t_ymzk
+- きー坊ASP.NETなう
+- 松崎 明
+- にしばたりつこ
+- たがみつ
+- tfuse
+- mfunaki
+- kaz29
+- Youichi Enoki
+- ぬまた
+- nanax
+- orcadays
+- やまたく
+- Aram Mine
+- shibatea
+- t104
+- 関哲
+- 不破 崇行
+- あつこ
+- SKEEME
+- Yamada3
+- tsunomur
+- 山本沙代子
+- Yui Ashikaga
+- Yamada3
+- Tsukasa Kato
+- Mitsuhiro Takemoto
+- MASASHIOKAMOTO
+- Yotan
+- its
+- 渡部壮彦
+- samuraisam
+- ryo0301
+- hiro110
+- 廣瀬　隆之
+- naotama
+- Masisi
+- kabayan
+- Kazunori Hirano
+- 石井大河
+- kch
+- Ayumu Inaba
+- Daisuke Ashizawa
+- tsubasaxZZZ
+- Nori Suzuki
+- てすてっど
+- setoazusa
+- tacck
+- まつだえり
+- gakumura
+- しげおか
+- 安部　勇輝
+- kazuakix
+- Yotan
+- aYamAmaYa
+- Akira Tsumura
+- Akira Utsuki
+- Mitsuhiro Takemoto
+- koshi548
+- shinok
+- mickey390
+- 帰国者
+- keihino
+- Kazuki Komatsu
+- あいぴょん
+- kazumeat
+- シズク
+- Ayumu Inaba
+- Yuko Chinen
+- iwaohig
+- まっちー
+- Kunihiro Morita
+- k-anz
+- linyixian
+- Tetsuya Ohira
+- かんばやし
+- Yoichi Kawasaki
+- dsone
+- こじょーあきね
+- こしなが
+- kavvaka2u
+- kinoshitahiroyuki
+- kamedot
+- Koij
+- aibax
+- おのだい
+- naonosuke
+- てっしー
+- 門田 朋己
+- 森貴美子
+- otomore
+- Yuka Kuwaori
+- Rie Moriguchi
+- Takayuki Fujiwara
+- Koike Hideki
+- Takahashi Hiromi
+- uezo
+- Daisuke AIBA
+- こや
+- ふー
+- てっしー
+- ゴリッちゃん
+- Toshiaki Yamagishi
+- まるる
+- wakamotojp
+- mickey390
+- SKasahara
+- RioYossy
+- bamboo80286
+- 寒椿
+- mick
+- MORIMOTO Norihiro
