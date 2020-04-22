@@ -14,6 +14,8 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout Margin="0,30">
+        <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
+<!--
         <CollectionView ItemTemplate="{StaticResource ContributorItemTemplate}" ItemsSource="{Binding Contributors}">
             <CollectionView.Header>
                 <StackLayout>
@@ -26,5 +28,6 @@
                 </StackLayout>
             </CollectionView.Header>
         </CollectionView>
+-->
     </StackLayout>
 </ContentPage>
