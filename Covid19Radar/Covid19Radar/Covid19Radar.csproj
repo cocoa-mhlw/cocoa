@@ -107,4 +107,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resx\html\en\" />
+    <Folder Include="Resx\html\ja\" />
+  </ItemGroup>
 </Project>
