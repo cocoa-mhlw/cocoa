@@ -10,10 +10,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: 'Covid19Radar/Covid19Radar/Resx/html/*'
+    azureSubscription: 'MSDN Covid19rader RG'
+    Destination: 'AzureBlob'
+    storage: 'covid19radar'
+    ContainerName: '$web'
+  displayName: 'Copy to Azure Storage Blob'
