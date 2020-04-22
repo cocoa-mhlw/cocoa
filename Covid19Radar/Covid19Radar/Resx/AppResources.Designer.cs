@@ -305,6 +305,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   TextAvgDistance に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TextAvgDistance {
+            get {
+                return ResourceManager.GetString("TextAvgDistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
         ///Select &apos;Always Allow&apos; to set up Bluetooth. に類似しているローカライズされた文字列を検索します。
         /// </summary>
@@ -351,6 +360,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   TextCount に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TextCount {
+            get {
+                return ResourceManager.GetString("TextCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   COVID19Radar に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TextCovid19Radar {
@@ -369,11 +387,56 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   TextElapsedTime に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TextElapsedTime {
+            get {
+                return ResourceManager.GetString("TextElapsedTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   How to works に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TextHowToWorks {
             get {
                 return ResourceManager.GetString("TextHowToWorks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ID に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TextId {
+            get {
+                return ResourceManager.GetString("TextId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   TextLastTime に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TextLastTime {
+            get {
+                return ResourceManager.GetString("TextLastTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MajorNo に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TextMajorNo {
+            get {
+                return ResourceManager.GetString("TextMajorNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MinorNo に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TextMinorNo {
+            get {
+                return ResourceManager.GetString("TextMinorNo", resourceCulture);
             }
         }
         
@@ -667,7 +730,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/agpl-en.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radar.z11.web.core.windows.net/en/agpl-en.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlLicense {
             get {
@@ -676,7 +739,7 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/privacypolicy.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
             get {
