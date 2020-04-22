@@ -390,7 +390,7 @@ SMSに届いた6桁の数字を入力してください。</value>
     <comment>License Agreement</comment>
   </data>
   <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/ja/agpl-en.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/ja/agpl.html</value>
     <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
@@ -428,5 +428,9 @@ SMSに届いた6桁の数字を入力してください。</value>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/ja/contributor.html</value>
     <comment>Contributer</comment>
+  </data>
+  <data name="UrlUpdate" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/ja/update.html</value>
+    <comment>Update</comment>
   </data>
 </root>
