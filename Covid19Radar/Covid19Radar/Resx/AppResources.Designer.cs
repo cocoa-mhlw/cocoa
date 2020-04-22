@@ -730,6 +730,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   https://covid19radar.z11.web.core.windows.net/ja/contributor.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlContributor {
+            get {
+                return ResourceManager.GetString("UrlContributor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   https://covid19radar.z11.web.core.windows.net/en/agpl-en.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlLicense {
