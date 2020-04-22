@@ -425,4 +425,8 @@ SMSに届いた6桁の数字を入力してください。</value>
     <value>MinorNo</value>
     <comment>MinorNo</comment>
   </data>
+  <data name="UrlContributor" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/ja/contributor.html</value>
+    <comment>Contributer</comment>
+  </data>
 </root>
