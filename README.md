@@ -1,4 +1,4 @@
-# Covid19Radar (English / Japanese ver is below)
+# Covid19Radar (English)
 
 *This Application is UNDER DEVELOPEMNT!!*
 This app uses Bluetooth LE to get the contact logs of each other.  
@@ -16,32 +16,6 @@ If you want to be a core contributor, talk to me on Discord.
 Discord Channel
 https://discord.gg/e5hMm4h
 
-## Acknowledgments and Contributor
-- Noriko Matsumoto (Designer/Device iOS Lending)
-- Kazuki Ota (Create Build pipeline on AppCenter)
-- Taiki Yoshida (Power BI / Power Apps)
-- Yasuaki Matsuda (Server side / Azure Functions)
-- Tsuyoshi Ushio  (Server side / Azure Functions)
-- Takeshi Sakurai (Client iOS)
-- Fumiya Kume (Client Xamarin)
-- Takayuki Hirose (Device Mac Lending)
-- Tomoaki Ueno (Medical Information and FieAdvisory)
-- Kristina Yasuda (Public Relations and Activity)
-- Takashi Takebayashi (Transrate)
-- Ben Ishiyama-Levy (Xamarin / [Xamariners](https://xamariners.com/))
-- Udara Alwis (Xamarin / [Xamariners](https://xamariners.com/))
-- Pedro Costa (Xamarin / [Xamariners](https://xamariners.com/))
-- Colin Bacon (Xamarin / [Xamariners](https://xamariners.com/))
-- Lohith GN (Azure Functions / [Xamariners](https://xamariners.com/))
-- Chew Min Cheong (PM / [Xamariners](https://xamariners.com/))
-- Albilaga Pradana (Xamarin / [Xamariners](https://xamariners.com/))
-- Chaminda Chandrasekara (DevOps / [Xamariners](https://xamariners.com/))
-- Pushpa Nilmini Herath (DevOps / [Xamariners](https://xamariners.com/))
-- Nirasha Chathurangi (QA / [Xamariners](https://xamariners.com/))
-- Yuya Yoshida (Public Relations and Activity)
-- Ryota Nakamura (Beta Tester's communication lead)
-- Takafumi Ochiai (Privacy policy development / Domestic and foreign law expert lawyer)
- 
 ![App Description](img/AppDescription-en.jpg)
 
 ## How to install the app for tester
@@ -101,90 +75,6 @@ You can check the screen transition by accessing the following URL.
 [Prototypes(English)](https://xd.adobe.com/view/37f0cf1d-ed5d-4328-5700-9c3f7c075307-41c1/?fullscreen)
 Password：Covid19Radar
 
-## Acknowledgments and Contributor
-- [Noriko Matsumoto](https://twitter.com/nori790822) (Designer)
-
 ## Licensing
 Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
-[LICENSE](./LICENSE) for the full
-license text.
-
-------
-
-# Covid19Radar (Japanese , English ver is above)
-*このアプリケーションは開発中*です。
-本アプリは、Bluetooth(BLE/iBeacon)を利用して、お互いの接触ログを取得します。
-![アプリの概念](img/AppDescription.jpg)
-
-
-現時点では、Android同士のビーコン取得と画面遷移のみができており、以下の機能の実装が行われていません。
-コントリビューションとプルリクエストをお待ちしています。
-
-## コントリビューションについて
-コントリビューションをお考えいただき、誠にありがとうございます。
-現在、私たちはコアコントリビューターと共に、2週間程度の間、チケット管理も含め、集中スプリント体制を展開しています。
-リポジトリは現在Azure DevOpsからGithubのMasterにPush同期さて、Azure DevOpsで集中管理しています。
-もし、あなたがコアコントリビューターとして活動をされたい場合は、Discordで私に話しかけてください。
-
-## テスト用にアプリをインストールするには
-
-以下のリンクからアプリをテスト用にインストールしてください:（現時点では Android のみ対応しています）
-
-https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
-
-テスト用のデバイスの構成は、以下のドキュメントを参照してください:
-https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
-
-## 実装済
-- 画面遷移とデザイン
-- Android同士での近接通信の検知と取得
- 
-## 未実装
-- iOS iBeacon実装と検証 (私がMac持ってない)
-- ユーザ追加(via REST API)
-- Push Nortification
-- サーバサイド API (Azure Function and CosmosDB)
-- 濃厚接触の条件などの整理
-- Graph DB(Cosmos DB)の表示処理など（サーバサイド)
-
-### 開発環境について
-
-クライアント側は、Xamarin Forms(iOS and Android) with C# と Prism(MVVM IoC)を使っています。Visual Studio for Windows もしくは Visual Studio for Macで開発可能です。
-
-https://visualstudio.microsoft.com/ja/xamarin/
-
-![アプリ設定に関して](img/design00.jpg)
-
-デバイスの以下の機能の利用許可が必須となります。 
-
-1. Bluetooth
-2. Push通知
-
-設定完了後、本アプリをインストールしている人同士の接触ログを自動で記録します。
-
-# デザインについて
-
-[Adobe XD](https://www.adobe.com/jp/products/xd.html)を利用してデザイン制作を行っています。
-
-![画面全体図](img/design01.jpg)
-
-デザインファイルを確認する場合は、Adobe XDをインストールしてください。（無料で利用可能）
-
-アプリケーションのより詳細な仕様とデータモデル、API仕様、関連業務知識に関しては、[濃厚接触検知のデータモデルと API仕様](doc/domain-model.md)をごらんください。
-
-
-## アプリのプロトタイプ
-
-以下のURLにアクセスすると、画面遷移を確認いただけます。
-
-[プロトタイプ画面（日本語）](https://xd.adobe.com/view/f60f0c48-af7b-48cb-42c3-e74e64d07020-803e/?fullscreen)
-
-Password：Covid19Radar
-
-## 謝辞/コントリビューター
-- [Noriko Matsumoto](https://twitter.com/nori790822) (Designer)
-
-## ライセンス
-Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
-[LICENSE](./LICENSE) for the full
-license text.
+[LICENSE](./LICENSE) for the full license text.
