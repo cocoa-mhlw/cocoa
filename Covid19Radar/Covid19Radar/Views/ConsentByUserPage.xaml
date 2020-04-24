@@ -8,6 +8,7 @@
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}">
+    <Grid>
         <StackLayout Padding="0,0">
             <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
         <!--
@@ -30,4 +31,10 @@
                 Style="{StaticResource DefaultButtonStyle}"
                 Text="{x:Static resources:AppResources.ButtonAgree}" />
         </StackLayout>
+        <Frame
+            IsVisible="{Binding IsBusy}"
+            Style="{StaticResource ActivityIndicatorFrame}">
+            <ActivityIndicator IsRunning="{Binding IsBusy}" />
+        </Frame>
+    </Grid>
 </ContentPage>
