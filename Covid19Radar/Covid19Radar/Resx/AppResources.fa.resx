@@ -12,6 +12,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextStopTheSpreadOfCOVID19" xml:space="preserve">
+    <value>کمک به متوقف کردن گسترش COVID19 با چرخاندن بلوتوث بر روی</value>
+    <comment>Help Stop the spread of COVID19 by turning Bluetooth on</comment>
+  </data>
+  <data name="TextWeWillHelpAgenciesContact" xml:space="preserve">
+    <value>اگر شما تماس نزدیک با یک مورد COVID19 ، ما کمک خواهد کرد که سازمان های تماس با شما برای جلوگیری از گسترش عفونت ، به ارائه راهنمایی و مراقبت</value>
+    <comment>If you had close contact with a COVID19 case, We will help agencies contact you to prevent the spread of infection, to provide guidance and care</comment>
+  </data>
+  <data name="TextToProtectThoseAroundYou" xml:space="preserve">
+    <value>برای محافظت از کسانی که در اطراف شما هستند ، لطفا اطلاعات خود را به اشتراک بگذارید.</value>
+    <comment>To protect those around you, Please share your data.</comment>
+  </data>
+  <data name="ButtonIWantToHelp" xml:space="preserve">
+    <value>من می خواهم برای کمک</value>
+    <comment>I want to help</comment>
+  </data>
+  <data name="TitleHowItWorks" xml:space="preserve">
+    <value>چگونه کار می کند</value>
+    <comment>How it works page title</comment>
+  </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>‏‏بعد</value>
     <comment>Next button</comment>
@@ -20,9 +40,90 @@
     <value>شرایط خدمات</value>
     <comment>Consent by user page</comment>
   </data>
+  <data name="TextUserAgreement" xml:space="preserve">
+    <value>توافقنامه کاربر</value>
+    <comment>User agreement</comment>
+  </data>
+  <data name="TextContainsDescriptionOfConsent1" xml:space="preserve">
+    <value>󰗠Contains از جمله رضایت نامه را شرح دهید. حاوی شرح جمله رضایت است. حاوی شرح جمله رضایت است. حاوی شرح جمله رضایت است.</value>
+    <comment>󰗠Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+  </data>
+  <data name="TextContainsDescriptionOfConsent2" xml:space="preserve">
+    <value>󰗠Contains از جمله رضایت نامه را شرح دهید. حاوی شرح جمله رضایت است. حاوی شرح جمله رضایت است. حاوی شرح جمله رضایت است.</value>
+    <comment>󰗠Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+  </data>
+  <data name="ButtonAgreeAndProceed" xml:space="preserve">
+    <value>موافقت و ادامه</value>
+    <comment>Agree and Proceed</comment>
+  </data>
+  <data name="TextStep1Description" xml:space="preserve">
+    <value>بدون نیاز به ورودی اطلاعات شخصی. ما از شناسه منحصربه فرد استفاده می کنیم که هنگام نصب یک برنامه به شما اختصاص داده شده است.</value>
+    <comment>How it works page step 1 description</comment>
+  </data>
+  <data name="TextStep1Title" xml:space="preserve">
+    <value>نصب یک برنامه</value>
+    <comment>How it works page step 1 title</comment>
+  </data>
+  <data name="TextStep2Description" xml:space="preserve">
+    <value>یک تماس با یک کاربر برنامه دیگر برای بیش از 30 دقیقه در مجموع ، در شعاع نزدیک تر از 2m به طور متوسط به عنوان "تماس نزدیک" ثبت می شود.</value>
+    <comment>How it works page step 2 description</comment>
+  </data>
+  <data name="TextStep2Title" xml:space="preserve">
+    <value>ضبط تماس نزدیک</value>
+    <comment>How it works page step 2 title</comment>
+  </data>
+  <data name="TextStep3Description" xml:space="preserve">
+    <value>لطفا پس از تایید شماره تلفن خود ، وضعیت خود را به "مثبت" تغییر دهید. مثبت "گردش کار ، در حال حاضر هماهنگی با احزاب مرتبط است.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="TextStep3Title" xml:space="preserve">
+    <value>اگر شما تشخیص داده COVID19 مثبت</value>
+    <comment>How it works page step 3 title</comment>
+  </data>
+  <data name="TextStep4Description" xml:space="preserve">
+    <value>بلوتوث باید برای ضبط تماس نزدیک روشن شود. لطفا به صفحه بعدی بروید تا آن را روشن کنید.</value>
+    <comment>How it works page step 4 description</comment>
+  </data>
+  <data name="TextStep4Title" xml:space="preserve">
+    <value>مورد نیاز برای استفاده از این برنامه</value>
+    <comment>How it works page step 4 title</comment>
+  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>شروع</value>
     <comment>Start</comment>
+  </data>
+  <data name="TextCovid19Radar" xml:space="preserve">
+    <value>COVID19Radar</value>
+    <comment>COVID19Radar</comment>
+  </data>
+  <data name="TextProtectingOurLovedOnes" xml:space="preserve">
+    <value>حفاظت از عزیزان ما از COVID19</value>
+    <comment>Protecting our loved ones from COVID19</comment>
+  </data>
+  <data name="TextBluetoothDescription" xml:space="preserve">
+    <value>این برنامه با استفاده از سیگنال های بلوتوث برای تعیین اگر شما در نزدیکی یک کاربر دیگر ردیابی تماس با نرم افزار. 
+برای راه اندازی بلوتوث "همیشه اجازه" را انتخاب کنید.</value>
+    <comment>Device access page Bluetooth description</comment>
+  </data>
+  <data name="TextBluetoothTitle" xml:space="preserve">
+    <value>اجازه دادن به بلوتوث</value>
+    <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="TitleDeviceAccess" xml:space="preserve">
+    <value>دسترسی به دستگاه</value>
+    <comment>Device access page title</comment>
+  </data>
+  <data name="TitleAppDescription" xml:space="preserve">
+    <value>توضیحات برنامه</value>
+    <comment>App Description</comment>
+  </data>
+  <data name="TextHowToWorks" xml:space="preserve">
+    <value>چگونه کار می کند</value>
+    <comment>How to works</comment>
+  </data>
+  <data name="TextAppDescription" xml:space="preserve">
+    <value>ما با استفاده از بلوتوث کم انرژی (نام دیگر BLE) سیگنال برای تعیین اگر شما در نزدیکی یک کاربر Covid19Radar دیگر. این داده های مجاورت فقط داده هایی هستند که پایانه ها را به رسمیت می شناسد.</value>
+    <comment>We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals.</comment>
   </data>
   <data name="ButtonRegister" xml:space="preserve">
     <value>ثبت نام</value>
@@ -32,9 +133,57 @@
     <value>موافق</value>
     <comment>Agree</comment>
   </data>
+  <data name="TermsOfServiceTitle1" xml:space="preserve">
+    <value>1. چشم پوشی</value>
+    <comment>Terms Of Service Title 1</comment>
+  </data>
+  <data name="TermsOfServiceDescription1" xml:space="preserve">
+    <value>به جز همانطور که در اینجا ارائه شده ، عدم اعمال حق و یا نیاز به عملکرد یک تعهد تحت این شرایط باید توانایی یک حزب به ورزش چنین حق و یا نیاز به چنین عملکردی در هر زمان و پس از آن نه باید چشم پوشی از نقض را تشکیل می دهند چشم پوشی از هر گونه نقض بعدی</value>
+    <comment>Terms Of Service Description 1</comment>
+  </data>
+  <data name="TermsOfServiceTitle2" xml:space="preserve">
+    <value>2. ترجمه شفاهی</value>
+    <comment>Terms Of Service Title 2</comment>
+  </data>
+  <data name="TermsOfServiceDescription2" xml:space="preserve">
+    <value>این شرایط و ضوابط ممکن است ترجمه شده باشد اگر ما آنها را در دسترس شما در خدمات ما را ساخته اند. شما توافق می کنید که متن اصلی انگلیسی باید در مورد اختلاف پیروز شود.</value>
+    <comment>Terms Of Service Description 2</comment>
+  </data>
+  <data name="TermsOfServiceTitle3" xml:space="preserve">
+    <value>3. ختم</value>
+    <comment>Terms Of Service Title 3</comment>
+  </data>
+  <data name="TermsOfServiceDescription3" xml:space="preserve">
+    <value>ما ممکن است دسترسی شما را بدون اطلاع قبلی یا مسئولیت به هر دلیلی از جمله بدون محدودیت در صورتی که این شرایط و ضوابط را نقض کند ، لغو یا تعلیق کنیم. پس از خاتمه ، حق استفاده از این سرویس بلافاصله متوقف خواهد شد.</value>
+    <comment>Terms Of Service Description 3</comment>
+  </data>
+  <data name="TermsOfServiceTitle4" xml:space="preserve">
+    <value>4. حاکم قانون</value>
+    <comment>Terms Of Service Title 4</comment>
+  </data>
+  <data name="TermsOfServiceDescription4" xml:space="preserve">
+    <value>قوانین کشور ، به استثنای تضاد قوانین قانون ، باید این شرایط و استفاده شما از این سرویس را تحت حکومت قرار دهد. استفاده شما از این برنامه همچنین ممکن است به قوانین محلی ، ایالتی ، ملی یا بین المللی نیز منوط باشد.</value>
+    <comment>Terms Of Service Description 4</comment>
+  </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>صفحه اصلی</value>
     <comment>Home Title</comment>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>COVID19Radar</value>
+    <comment>App Name</comment>
+  </data>
+  <data name="StatusSettingsMenu" xml:space="preserve">
+    <value>تنظیمات وضعیت</value>
+    <comment>Status Settings Menu</comment>
+  </data>
+  <data name="ListOfContributorsMenu" xml:space="preserve">
+    <value>فهرست همکاران</value>
+    <comment>List Of Contributors Menu</comment>
+  </data>
+  <data name="TitleUpdateInformation" xml:space="preserve">
+    <value>بهنگام درآوری اطلاعات</value>
+    <comment>Update Information Menu</comment>
   </data>
   <data name="ButtonHome" xml:space="preserve">
     <value>صفحه اصلی</value>
@@ -44,16 +193,145 @@
     <value>آماده هستید که شروع کنید.</value>
     <comment>You're ready to go</comment>
   </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>راه اندازی کامل شد</value>
+    <comment>Set up Completed</comment>
+  </data>
+  <data name="TextStatusSettingsDescription" xml:space="preserve">
+    <value>اگر تشخیص مثبت دریافت کردید ، لطفا شماره تلفن همراه خود را وارد کرده و وضعیت خود را برای محافظت از عزیزان خود به روز کنید.</value>
+    <comment>Status settings page description</comment>
+  </data>
+  <data name="TextStatusSettingsEnterNumber" xml:space="preserve">
+    <value>شماره تلفن همراه را وارد کنید</value>
+    <comment>Status settings page enter number text</comment>
+  </data>
+  <data name="TextStatusSettingsSMSDescription" xml:space="preserve">
+    <value>ما یک کد تأیید برای شما ارسال خواهیم کرد.
+لطفاً پیامک خود را بررسی کنید.</value>
+    <comment>Status settings page verification sms code description</comment>
+  </data>
+  <data name="TextStatusSettingsSMSInfo" xml:space="preserve">
+    <value>※ ما شماره تلفن خود را ذخیره کنید. از آن خواهد شد به طور مستقیم به پایگاه داده از دولت فرستاده می شود.</value>
+    <comment>Status settings page sms info</comment>
+  </data>
+  <data name="TextStatusSettingsSubtitle" xml:space="preserve">
+    <value>اگر شما تشخیص مثبت دریافت</value>
+    <comment>Status settings page sub title</comment>
+  </data>
+  <data name="TitleStatusSettings" xml:space="preserve">
+    <value>تنظیمات وضعیت</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TextPhoneNumberPlaceholder" xml:space="preserve">
+    <value>090-1234-4567</value>
+    <comment>Placeholder text for phone number entry</comment>
+  </data>
+  <data name="DetectedBeaconListMenu" xml:space="preserve">
+    <value>ردیابی لیست چراغ</value>
+    <comment>Detected Beacon List Menu</comment>
+  </data>
+  <data name="LicenseAgreementMenu" xml:space="preserve">
+    <value>منوی توافقنامه مجوز</value>
+    <comment>License Agreement Menu</comment>
+  </data>
+  <data name="OtpEnterText" xml:space="preserve">
+    <value>کدی را که به آن ارسال شده وارد کنید 
+「 {0} 」</value>
+    <comment>Otp Enter the Code</comment>
+  </data>
+  <data name="OtpTitle" xml:space="preserve">
+    <value>کد را وارد کنید</value>
+    <comment>Otp Title</comment>
+  </data>
   <data name="ButtonVerify" xml:space="preserve">
     <value>تأیید</value>
     <comment>Button Verify</comment>
+  </data>
+  <data name="DidntGetTheCodeText" xml:space="preserve">
+    <value>کد را دریافت نکردید ؟</value>
+    <comment>Didn't get the code Text</comment>
   </data>
   <data name="ResendText" xml:space="preserve">
     <value>ارسال مجدد</value>
     <comment>Resend Text</comment>
   </data>
+  <data name="TextStatusUpdateComplete" xml:space="preserve">
+    <value>بهنگام درآوری وضعیت کامل شد</value>
+    <comment>Status Update Complete page text</comment>
+  </data>
+  <data name="TitleStatusUpdateComplete" xml:space="preserve">
+    <value>بهنگام درآوری وضعیت کامل شد</value>
+    <comment>Status Update Complete page title</comment>
+  </data>
+  <data name="TextCoreContributors" xml:space="preserve">
+    <value>همکاران اصلی</value>
+    <comment>Contributors list page subtitle</comment>
+  </data>
+  <data name="TitleContributorsPage" xml:space="preserve">
+    <value>فهرست شرکت کنندگان</value>
+    <comment>Contributors list page title</comment>
+  </data>
+  <data name="TitleDetectedBeaconPage" xml:space="preserve">
+    <value>چراغ های شناسایی شده</value>
+    <comment>Detected Beacons</comment>
+  </data>
+  <data name="TextDetectedBeaconList" xml:space="preserve">
+    <value>ردیابی لیست چراغ</value>
+    <comment>Detected Beacon List</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>توافقنامه مجوز</value>
+    <comment>License Agreement</comment>
+  </data>
+  <data name="UrlLicense" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
+    <comment>AGPL3.0</comment>
+  </data>
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <comment>PrivacyPolicy</comment>
+  </data>
   <data name="TextId" xml:space="preserve">
     <value>شناسه</value>
     <comment>ID</comment>
+  </data>
+  <data name="TextAvgDistance" xml:space="preserve">
+    <value>فاصله</value>
+    <comment>TextAvgDistance</comment>
+  </data>
+  <data name="TextCount" xml:space="preserve">
+    <value>TextCount</value>
+    <comment>TextCount</comment>
+  </data>
+  <data name="TextElapsedTime" xml:space="preserve">
+    <value>زمان های TextElapsedTime</value>
+    <comment>TextElapsedTime</comment>
+  </data>
+  <data name="TextLastTime" xml:space="preserve">
+    <value>زمان textlast</value>
+    <comment>TextLastTime</comment>
+  </data>
+  <data name="TextMajorNo" xml:space="preserve">
+    <value>MajorNo</value>
+    <comment>MajorNo</comment>
+  </data>
+  <data name="TextMinorNo" xml:space="preserve">
+    <value>MinorNo</value>
+    <comment>MinorNo</comment>
+  </data>
+  <data name="UrlContributor" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
+    <comment>Url Contributer</comment>
+  </data>
+  <data name="UrlUpdate" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
+    <comment>Update</comment>
+  </data>
+  <data name="TitleHeadsup" xml:space="preserve">
+    <value>‏‏هشیارانه</value>
+    <comment>Heads up</comment>
+  </data>
+  <data name="UrlHeadsup" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
   </data>
 </root>
