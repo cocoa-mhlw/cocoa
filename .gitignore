@@ -375,3 +375,6 @@ Temporary Items
 
 # Azure Functions localsettings file
 local.settings.json
+
+# Tools config file
+/Tools/UpdateUserStatusTool/UpdateUserStatusTool/App.config
