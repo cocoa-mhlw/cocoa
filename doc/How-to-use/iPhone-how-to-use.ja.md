@@ -1,49 +1,58 @@
-# iPhone のテスターの方へ
+# COVID-19 Radar for iOS　使用方法
 
-「COVID-19 Radar」アプリのテスターにご参加いただきありがとうございます。  
-以下、手順を記載しますので参考にされてください。
+「COVID-19 Radar」アプリをご利用いただき、ありがとうございます。  
+本ドキュメントでは、「COVID-19 Radar」iOS版の使用方法をご説明します。
 
-※iPhone のブラウザは「Safari」を利用してください。
+### 注意事項
+- 本ドキュメントは、Version 1.0 (184)をベースに作成されております。
+- ご使用の機種・iOSバージョン等により、表示等が一部異なる場合があります。
 
-## 1. App Center にサインイン
+## 1. アプリの起動
+アプリのインストールが完了しましたら、ホーム画面にアイコンが表示されていますので、タップしアプリを起動します。  
+![iPhone Home](.attachments/iPhone-App-Installed-SS.png)
 
-[App Center](http://apppcenter.ms/sign-in/) に、iPhone の Safari でアクセスします。
+アプリが初回起動しましたら、以下のように初回チュートリアルが開始されます。  
+「スタート」をタップし、次に進みます。  
+![App Opening](.attachments/iPhone-Opening-SS.png)
 
-![App Centerにサインイン](../.attachments/001-b599dd92-5ae8-4cfe-afcd-39dab6961620.jpg)
+## 2. アプリの概要・使い方
+「COVID-19 Radar」の概要についての解説です。  
+下にスクロールしますと、最下部に「次へ」ボタンが表示されますので、タップして次に進みます。  
+![iPhone About App](.attachments/iPhone-AboutApp-SS.png)
 
-テスター登録時にFormに入力したメールアドレスでサインインしてください。
+## 3. プライバシーポリシーへの同意
+「COVID-19 Radar」のプライバシーポリシー（個人情報の取り扱いに関する規定）の同意画面です。  
+同意いただけましたら、「同意する」ボタンをタップして次に進みます。  
+![iPhone Privacy-Policy](.attachments/iPhone-Privacy-Policy-SS.png)
 
-## 2. 「プロファイル」をダウンロード
+## 4. Bluetoothの使用について
+「COVID-19 Radar」は、iOSデバイスのBluetoothを使用します。  
+「次へ」ボタンをタップして次に進みます。    
+![Bluetooth Information](.attachments/iPhone-Bluetooth-Information-SS.png)
 
-My Appsの画面にAndroid版とiOS版のアプリが表示されています。
+## 5. 登録完了
+以上で、デバイスのサーバーへの登録が完了しました。
+「HOMEへ」ボタンをタップして次に進みます。  
+![Registory done](.attachments/iPhone-Registory-done-SS.png.png)
 
-![iOSアプリをクリック](../.attachments/002-c0bd6cac-6123-45bc-9889-ce088d42d301.jpg)
+## 6. デバイスへのアクセス許可
+アプリが接触情報を取得する為に、BluetoohおよびGPSへのアクセス許可をする必要があります。 
+「OK」「Appの使用中は許可」をタップし、有効化します。  
+![Enable Bluetooth](.attachments/iPhone-Enalbe-Bluetooth-SS.png)
+![Enable GPS](.attachments/iPhone-Enable-GPS-SS.png)
 
-「COVID-19 Radar」のiOSアプリをクリックし、次のページの「Latest release」をクリック。
+以上で、サーバーへの初期チュートリアルは完了です。  
 
-![My dexicesの登録](../.attachments/003-77b8ea07-d4db-46b6-8b04-e95a4c4afe46.jpg)
+## 7. ホーム画面
+以降、以下のホーム画面にて起動します。
+![App Menu Page](.attachments/iPhone-Menu-SS.png)
 
-iPhoneの場合「INSTALL」をクリックしてもアプリをダウンロードできません。事前に「プロファイル」を設定する必要があります。  
-上部のアイコンをクリックし「My devices」のページを表示、「＋Add new device」をクリックします。
+## 陽性反応が出た場合
+医療機関を受診し、PCR検査において陽性反応が確認された際には、以下の手順にて登録をお願いします。  
+SMSにより電話番号を確認した後、アプリ内ではなく厚生労働省のデータベースに保管されます。  
+併せて、「COVID-19 Radar」を使用しているユーザーのうち、接触した履歴のある方へ、匿名での通知がなされます。  
 
-## 3. iPhoneに「プロファイル」を設定
 
-![プロファイルの設定](../.attachments/004-420d3962-cbbf-49c3-9292-12f7bd9e5416.jpg)
-
-画面にダイアログが表示されるので「許可」をクリックすると、プロファイルがダウンロードされます。
-
-![iPhoneの「設定」](../.attachments/005-a7e4d71b-da91-452b-9280-65393677e755.jpg)
-
-iPhoneの「設定」を開き、「インストール」を行います。  
-インストール時は、機種で設定したパスワードを入れてください。
-
-![App Centerにデバイスの登録が完了](../.attachments/006-1acdcd85-ddc3-42c5-b45e-0d3b36ed573a.jpg)
-
-App Centerにデバイスが登録されたのを確認してください。  
-
-![iOSアプリをインストール](../.attachments/007-a2a39a61-b25b-4a95-843e-2319df02b5e3.jpg)
-
-以上の手順で、「Covid19Radar」のiOSアプリをインストールすることができます。
 
 -----
 
