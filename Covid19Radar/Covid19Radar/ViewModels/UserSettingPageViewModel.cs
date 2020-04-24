@@ -45,7 +45,7 @@ namespace Covid19Radar.ViewModels
 
         private string PhoneNumberWithoutMask()
         {
-            return new string(PhoneNumber.Where(char.IsDigit).ToArray());
+            return new string(("+81").Concat(PhoneNumber.Where(char.IsDigit).Skip(1)).ToArray());
         }
     }
 }
