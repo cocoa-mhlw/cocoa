@@ -1,4 +1,6 @@
-# Covid19Radar (English)
+# Covid19Radar (English)/([![Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md)](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
+
+https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md
 
 *This Application is UNDER DEVELOPEMNT!!*
 This app uses Bluetooth LE to get the contact logs of each other.  
@@ -7,14 +9,9 @@ iOS Builstatus [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c26833
 
 Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
 
-## Thank you for Your Contribute !!!
-Currently, we are doing intensive sprints, mainly by core contributors.
-The repository is synced from Azure DevOps to master on Github.
-For this reason, tasks are centrally managed with AzureDevOps.
-If you want to be a core contributor, talk to me on Discord.
+## Thank you for Your Contribute !!! ([![Contributers List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md)](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md))
 
-Discord Channel
-https://discord.gg/e5hMm4h
+https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md
 
 ![App Description](img/AppDescription-en.jpg)
 
