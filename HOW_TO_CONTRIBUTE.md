@@ -9,7 +9,7 @@
 ## Suggestions for adding new features, changes, and improving operation
 
 Please add new Todo Task in the following board.
-[Project Feature] (https://github.com/Covid-19Radar/Covid19Radar/projects/1)
+[Project Feature](https://github.com/Covid-19Radar/Covid19Radar/projects/1)
 
 # How to Contribute Japanese
 
@@ -22,5 +22,4 @@ Please add new Todo Task in the following board.
 ## 新しい機能追加、変更、動作改善などの提案
 
 以下のボードに記載をお願いします。
-[Project Feature] (https://github.com/Covid-19Radar/Covid19Radar/projects/1)
-
+[Project Feature](https://github.com/Covid-19Radar/Covid19Radar/projects/1)
