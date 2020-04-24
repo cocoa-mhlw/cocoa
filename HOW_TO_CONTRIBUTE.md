@@ -1,9 +1,9 @@
 # How to Contribute English
 
 ## Bugfix, fix about current behavior
-- Create Issue
+- Create Issue, if do not exists your Issue.
 - Create Branch (ex Bugfix/IssueNo , Feature/IssuNo)
-- Please make a Pull Request
+- Please make a Pull Request for master
 - Please record your name in [CONTRIBUTERS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md)
 
 ## Suggestions for adding new features, changes, and improving operation
@@ -14,9 +14,9 @@ Please add new Todo Task in the following board.
 # How to Contribute Japanese
 
 ## Bugfix、現行の動作についての修正
-- Issueを起こしてください
-- Branchを切ってください(ex Bugfix/IssueNo , Feature/IssuNo)
-- Pull Requestをお願いします
+- Issue が存在していない場合は作成してください。
+- Branch を作成してください。(例 Bugfix/IssueNo , Feature/IssuNo)
+- master への Pull Request をお願いします。
 - その際に [CONTRIBUTERS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md) に記載をお願いします。
 
 ## 新しい機能追加、変更、動作改善などの提案
