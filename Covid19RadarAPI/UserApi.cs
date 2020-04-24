@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Covid19Radar.Models;
 using Covid19Radar.DataStore;
 using Microsoft.Azure.Cosmos;
+using Covid19Radar.Services;
 
 namespace Covid19Radar.Api
 {
@@ -17,18 +18,20 @@ namespace Covid19Radar.Api
     {
 
         private readonly ICosmos Cosmos;
+        private readonly INotificationService Notification;
         private readonly ILogger<UserApi> Logger;
 
-        public UserApi(ICosmos cosmos, ILogger<UserApi> logger)
+        public UserApi(ICosmos cosmos, INotificationService notification, ILogger<UserApi> logger)
         {
             Cosmos = cosmos;
+            Notification = notification;
             Logger = logger;
         }
 
 
-        [FunctionName("User")]
+        [FunctionName(nameof(UserApi))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "User")] HttpRequest req)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -68,6 +71,7 @@ namespace Covid19Radar.Api
                 var itemResult = await Cosmos.User.ReadItemAsync<UserResultModel>(user.GetId(), PartitionKey.None);
                 if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
                 {
+                    itemResult.Resource.LastNotificationTime = Notification.LastNotificationTime;
                     return new OkObjectResult(itemResult.Resource);
                 }
             }
