@@ -32,6 +32,11 @@ namespace Covid19Radar.Models
         public string Minor { get; set; }
 
         /// <summary>
+        /// ETAG
+        /// </summary>
+        public string _etag { get; set; }
+
+        /// <summary>
         ///  Status Contactd,OnSet,Suspected,Inspection,Infection
         /// </summary>
         /// <value></value>
@@ -55,6 +60,5 @@ namespace Covid19Radar.Models
         {
             _UserStatus = s;
         }
-
     }
 }
