@@ -6,5 +6,6 @@ namespace Covid19Radar.Services
 {
     public interface INotificationService
     {
+        DateTime LastNotificationTime { get; }
     }
 }
