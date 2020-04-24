@@ -402,6 +402,15 @@ Please check your SMS.</target>
           <target state="new">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
         </trans-unit>
+        <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
+          <source>Heads up</source>
+          <target state="new">Heads up</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Heads up</note>
+        </trans-unit>
+        <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
+          <source>https://covid19radar.z11.web.core.windows.net/en/qna.html</source>
+          <target state="new">https://covid19radar.z11.web.core.windows.net/en/qna.html</target>
+        </trans-unit>
       </group>
     </body>
   </file>
