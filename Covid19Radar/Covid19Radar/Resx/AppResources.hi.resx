@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ButtonNext" xml:space="preserve">
+    <value>अगला</value>
+    <comment>Next button</comment>
+  </data>
+  <data name="TitleConsentByUserPage" xml:space="preserve">
+    <value>सेवा की शर्तें</value>
+    <comment>Consent by user page</comment>
+  </data>
+  <data name="ButtonStart" xml:space="preserve">
+    <value>प्रारंभ करें</value>
+    <comment>Start</comment>
+  </data>
+  <data name="ButtonRegister" xml:space="preserve">
+    <value>_पंजीकृत करें</value>
+    <comment>Register</comment>
+  </data>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>सहमत हूँ</value>
+    <comment>Agree</comment>
+  </data>
+  <data name="HomeTitle" xml:space="preserve">
+    <value>होम</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="TitleUpdateInformation" xml:space="preserve">
+    <value>जानकारी अद्यतन करें</value>
+    <comment>Update Information Menu</comment>
+  </data>
+  <data name="ButtonHome" xml:space="preserve">
+    <value>होम</value>
+    <comment>HOME</comment>
+  </data>
+  <data name="TextYoureReadyToGo" xml:space="preserve">
+    <value>आप जाने के लिए तैयार हैं.</value>
+    <comment>You're ready to go</comment>
+  </data>
+  <data name="ButtonVerify" xml:space="preserve">
+    <value>सत्यापित करें</value>
+    <comment>Button Verify</comment>
+  </data>
+  <data name="ResendText" xml:space="preserve">
+    <value>फिर से भेजें</value>
+    <comment>Resend Text</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>लायसेंस अनुबंध</value>
+    <comment>License Agreement</comment>
+  </data>
+  <data name="TextId" xml:space="preserve">
+    <value>आईडी</value>
+    <comment>ID</comment>
+  </data>
+</root>
