@@ -1,17 +1,11 @@
-# Covid19Radar (English)/([![Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md)](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
-
-https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md
-
-*This Application is UNDER DEVELOPEMNT!!*
+# Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md)
 This app uses Bluetooth LE to get the contact logs of each other.  
 
 iOS Builstatus [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
 Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
 
-## Thank you for Your Contribute !!! ([![Contributers List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md)](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md))
-
-https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md
+## Thank you for Your Contribute !!! [Contributers List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md)
 
 ![App Description](img/AppDescription-en.jpg)
 
