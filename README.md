@@ -36,7 +36,7 @@ https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 - iOS iBeacon implementation , testing (I don't have a Mac)
 - Add user (via REST API)
 - Push Notification
-- SErver Side  API (Azure Function and CosmosDB)
+- Server Side API (Azure Function and CosmosDB)
 - Arrangement of conditions of dense contact
 - Graph DB(Cosmos DB) side Query , manage site（Server Side)
 
