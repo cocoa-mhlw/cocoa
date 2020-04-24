@@ -22,12 +22,12 @@
 
 ## 3. プライバシーポリシーへの同意
 「COVID-19 Radar」のプライバシーポリシー（個人情報の取り扱いに関する規定）の同意画面です。  
-同意いただけましたら、「同意する」ボタンをタップして次に進みます。  
+同意いただけるようでしたら、「同意する」ボタンをタップして次に進みます。  
 ![iPhone Privacy-Policy](.attachments/iPhone-Privacy-Policy-SS.png)
 
 ## 4. Bluetoothの使用について
 「COVID-19 Radar」は、iOSデバイスのBluetoothを使用します。  
-「次へ」ボタンをタップして次に進みます。    
+「次へ」ボタンをタップして次に進みます。   
 ![Bluetooth Information](.attachments/iPhone-Bluetooth-Information-SS.png)
 
 ## 5. 登録完了
@@ -52,7 +52,27 @@
 SMSにより電話番号を確認した後、アプリ内ではなく厚生労働省のデータベースに保管されます。  
 併せて、「COVID-19 Radar」を使用しているユーザーのうち、接触した履歴のある方へ、匿名での通知がなされます。  
 
+### 1. 「ステータス設定」を開く
+アプリのホーム画面より、「ステータス設定」をタップします。  
+陽性反応であった旨の登録を行います。  
+![Registory 001](.attachments/iPhone-Reg-001-SS.png)  
+![Registory 002](.attachments/iPhone-Reg-002-SS.png)  
 
+### 2. 携帯電話の電話番号を登録する
+お手持ちのスマートフォンの電話番号を登録します。  
+SMSが受信可能であれば、通話が出来なくとも問題ありません。  
+![Registory 003](.attachments/iPhone-Reg-003-SS.png)
+
+### 3. ショートメッセージのコードを入力する
+登録された携帯電話へ、SMSにて確認コードが送信されますので、入力を行います。  
+![Registory 004](.attachments/iPhone-Reg-004-SS.png)
+
+### 4. 登録完了
+以上で、陽性反応が出た旨の登録は完了です。  
+![Registory 005](.attachments/iPhone-Reg-005-SS.png)
+
+### 5. 回復へ専念
+どうか回復への期待を捨てず、安静・養生へ専念をなされて下さい。
 
 -----
 
