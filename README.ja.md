@@ -1,22 +1,20 @@
 # Covid19Radar (Japanese)
 
-*このアプリケーションは開発中*です。
+Now, We move to Git Hub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
 iOS Builstatus [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
-
 Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
 
 本アプリは、Bluetooth(BLE/iBeacon)を利用して、お互いの接触ログを取得します。
 ![アプリの概念](img/AppDescription.jpg)
 
-現時点では、Android同士のビーコン取得と画面遷移のみができており、以下の機能の実装が行われていません。
-コントリビューションとプルリクエストをお待ちしています。
 
-## コントリビューションについて
-コントリビューションをお考えいただき、誠にありがとうございます。
-現在、私たちはコアコントリビューターと共に、2週間程度の間、チケット管理も含め、集中スプリント体制を展開しています。
-リポジトリは現在Azure DevOpsからGithubのMasterにPush同期さて、Azure DevOpsで集中管理しています。
-もし、あなたがコアコントリビューターとして活動をされたい場合は、Discordで私に話しかけてください。
+## Thank you for Your Contribute !!! [Contributers List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md)
+コントリビューションとプルリクエストをお待ちしています。
+コントリビューションルールについて、ご確認ください。
+[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
+
+![App Description](img/AppDescription-en.jpg)
 
 ## テスト用にアプリをインストールするには
 
@@ -26,18 +24,6 @@ https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
 
 テスト用のデバイスの構成は、以下のドキュメントを参照してください:
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
-
-## 実装済
-- 画面遷移とデザイン
-- Android同士での近接通信の検知と取得
- 
-## 未実装
-- iOS iBeacon実装と検証 (私がMac持ってない)
-- ユーザ追加(via REST API)
-- Push Nortification
-- サーバサイド API (Azure Function and CosmosDB)
-- 濃厚接触の条件などの整理
-- Graph DB(Cosmos DB)の表示処理など（サーバサイド)
 
 ### 開発環境について
 
@@ -50,7 +36,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 デバイスの以下の機能の利用許可が必須となります。 
 
 1. Bluetooth
-2. Push通知
+2. 通知
 
 設定完了後、本アプリをインストールしている人同士の接触ログを自動で記録します。
 

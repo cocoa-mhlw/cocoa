@@ -1,11 +1,16 @@
 # Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md)
-This app uses Bluetooth LE to get the contact logs of each other.  
 
+Now, We move to Git Hub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
+
+This app uses Bluetooth LE to get the contact logs of each other.  
 iOS Builstatus [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
 Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
 
 ## Thank you for Your Contribute !!! [Contributers List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md)
+We welcome contributions and pull requests.
+Please check the contribution rules.
+[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
 
 ![App Description](img/AppDescription-en.jpg)
 
@@ -18,23 +23,9 @@ https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
 Device configuration guide for tester:
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 
-## Worked
-- Screen transition and each screen design.
-- Proximity communication between Android.
-
-## Under development
-
-- iOS iBeacon implementation , testing (I don't have a Mac)
-- Add user (via REST API)
-- Push Notification
-- Server Side API (Azure Function and CosmosDB)
-- Arrangement of conditions of dense contact
-- Graph DB(Cosmos DB) side Query , manage site（Server Side)
-
 ## Development environment
 
 This application uses Xamarin Forms (iOS and Android) with C # and Prism (MVVM IoC).
-
 You can develop with Visual Studio for Windows or Visual Studio for Mac.
 
 https://visualstudio.microsoft.com/ja/xamarin/
@@ -44,7 +35,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 Permission to use the following functions of the device is required. 
 
 1. Bluetooth
-2. Push Notification
+2. Notification
 
 After the setup is complete, the contact log between the people who have installed this app is automatically recorded.
 
