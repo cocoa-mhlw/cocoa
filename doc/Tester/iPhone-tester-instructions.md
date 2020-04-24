@@ -3,11 +3,14 @@
 「COVID-19 Radar」アプリのテスターにご参加いただきありがとうございます。  
 以下、手順を記載しますので参考にされてください。
 
-※iPhone のブラウザは「Safari」を利用してください。
+- iPhone のブラウザは「Safari」を利用してください。  
+- Safariは「プライベートモード」を解除してご利用ください。
 
 ## 1. App Center にサインイン
 
-[App Center](http://apppcenter.ms/sign-in/) に、iPhone の Safari でアクセスします。
+[App Center](https://appcenter.ms/sign-in) に、iPhone の Safari でアクセスします。   
+標準カメラアプリより、以下のQRコードをスキャンしてもアクセス可能です。  
+![App Center QRCode](../.attachments/appcenter-qrcode.png)
 
 ![App Centerにサインイン](../.attachments/001-b599dd92-5ae8-4cfe-afcd-39dab6961620.jpg)
 
@@ -34,12 +37,14 @@ iPhoneの場合「INSTALL」をクリックしてもアプリをダウンロー�
 
 ![iPhoneの「設定」](../.attachments/005-a7e4d71b-da91-452b-9280-65393677e755.jpg)
 
-iPhoneの「設定」を開き、「インストール」を行います。  
-インストール時は、機種で設定したパスワードを入れてください。
+iPhoneの「設定」を開き、「プロファイルのインストール」を行います。  
+インストール際、iPhoneに設定したパスコードを要求される場合があります。
 
 ![App Centerにデバイスの登録が完了](../.attachments/006-1acdcd85-ddc3-42c5-b45e-0d3b36ed573a.jpg)
 
 App Centerにデバイスが登録されたのを確認してください。  
+
+## 4. iPhoneに「COVID-19 Radar」アプリをインストール
 
 ![iOSアプリをインストール](../.attachments/007-a2a39a61-b25b-4a95-843e-2319df02b5e3.jpg)
 
