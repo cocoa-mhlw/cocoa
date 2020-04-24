@@ -12,6 +12,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextStopTheSpreadOfCOVID19" xml:space="preserve">
+    <value>通過打開藍牙説明阻止 COVID19 的傳播</value>
+    <comment>Help Stop the spread of COVID19 by turning Bluetooth on</comment>
+  </data>
+  <data name="TextWeWillHelpAgenciesContact" xml:space="preserve">
+    <value>如果您與 COVID19 病例有密切接觸,我們將幫助機構與您聯繫,防止感染傳播,提供指導和護理</value>
+    <comment>If you had close contact with a COVID19 case, We will help agencies contact you to prevent the spread of infection, to provide guidance and care</comment>
+  </data>
+  <data name="TextToProtectThoseAroundYou" xml:space="preserve">
+    <value>為了保護您周圍的人,請共用您的數據。</value>
+    <comment>To protect those around you, Please share your data.</comment>
+  </data>
+  <data name="ButtonIWantToHelp" xml:space="preserve">
+    <value>我想幫忙</value>
+    <comment>I want to help</comment>
+  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>運作方式</value>
     <comment>How it works page title</comment>
@@ -28,13 +44,86 @@
     <value>使用者合約</value>
     <comment>User agreement</comment>
   </data>
+  <data name="TextContainsDescriptionOfConsent1" xml:space="preserve">
+    <value>• 包含同意判決的說明。包含同意判決的說明。包含同意判決的說明。包含同意判決的說明。</value>
+    <comment>󰗠Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+  </data>
+  <data name="TextContainsDescriptionOfConsent2" xml:space="preserve">
+    <value>• 包含同意判決的說明。包含同意判決的說明。包含同意判決的說明。包含同意判決的說明。</value>
+    <comment>󰗠Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.Contains a description of the consent sentence.</comment>
+  </data>
+  <data name="ButtonAgreeAndProceed" xml:space="preserve">
+    <value>同意並繼續</value>
+    <comment>Agree and Proceed</comment>
+  </data>
+  <data name="TextStep1Description" xml:space="preserve">
+    <value>無需輸入個人資訊。我們使用唯一 ID,在安裝應用時分配給您。</value>
+    <comment>How it works page step 1 description</comment>
+  </data>
+  <data name="TextStep1Title" xml:space="preserve">
+    <value>安裝應用</value>
+    <comment>How it works page step 1 title</comment>
+  </data>
+  <data name="TextStep2Description" xml:space="preserve">
+    <value>與其他應用用戶的接觸總計超過 30 分鐘,平均半徑接近 2 米,記錄為"緊密聯繫人」。</value>
+    <comment>How it works page step 2 description</comment>
+  </data>
+  <data name="TextStep2Title" xml:space="preserve">
+    <value>錄製密切接觸者</value>
+    <comment>How it works page step 2 title</comment>
+  </data>
+  <data name="TextStep3Description" xml:space="preserve">
+    <value>驗證電話號碼后,請手動將狀態更改為"正"。積極"工作流,現在與相關方協調。</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="TextStep3Title" xml:space="preserve">
+    <value>如果您被診斷為 COVID19 陽性</value>
+    <comment>How it works page step 3 title</comment>
+  </data>
+  <data name="TextStep4Description" xml:space="preserve">
+    <value>藍牙需要打開才能記錄密切接觸。請轉到下一頁將其打開。</value>
+    <comment>How it works page step 4 description</comment>
+  </data>
+  <data name="TextStep4Title" xml:space="preserve">
+    <value>使用此應用程式的要求</value>
+    <comment>How it works page step 4 title</comment>
+  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>開始</value>
     <comment>Start</comment>
   </data>
+  <data name="TextCovid19Radar" xml:space="preserve">
+    <value>COVID19雷達</value>
+    <comment>COVID19Radar</comment>
+  </data>
+  <data name="TextProtectingOurLovedOnes" xml:space="preserve">
+    <value>保護我們的親人免受 COVID19 的保護</value>
+    <comment>Protecting our loved ones from COVID19</comment>
+  </data>
+  <data name="TextBluetoothDescription" xml:space="preserve">
+    <value>此應用程式使用藍牙信號來確定您是否靠近其他聯繫人跟蹤應用使用者。
+選擇「始終允許」以設置藍牙。</value>
+    <comment>Device access page Bluetooth description</comment>
+  </data>
   <data name="TextBluetoothTitle" xml:space="preserve">
     <value>允許藍牙</value>
     <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="TitleDeviceAccess" xml:space="preserve">
+    <value>裝置存取</value>
+    <comment>Device access page title</comment>
+  </data>
+  <data name="TitleAppDescription" xml:space="preserve">
+    <value>應用說明</value>
+    <comment>App Description</comment>
+  </data>
+  <data name="TextHowToWorks" xml:space="preserve">
+    <value>如何工作</value>
+    <comment>How to works</comment>
+  </data>
+  <data name="TextAppDescription" xml:space="preserve">
+    <value>我們使用藍牙低功耗(也稱為 BLE)信號來確定您是否靠近另一個 Covid19Radar 使用者。此鄰近數據僅是識別終端的數據。</value>
+    <comment>We use Bluetooth Low Energy (aka BLE) signals to determine if you are near another Covid19Radar user.This Proximity data is only data that recognizes terminals.</comment>
   </data>
   <data name="ButtonRegister" xml:space="preserve">
     <value>註冊</value>
@@ -44,13 +133,53 @@
     <value>同意</value>
     <comment>Agree</comment>
   </data>
+  <data name="TermsOfServiceTitle1" xml:space="preserve">
+    <value>1. 棄權</value>
+    <comment>Terms Of Service Title 1</comment>
+  </data>
+  <data name="TermsOfServiceDescription1" xml:space="preserve">
+    <value>除本文另有規定外,不行使權利或要求履行本條款規定的義務,不得影響一方當事人在此之後的任何時間行使此種權利或要求履行該權利的能力,也不應放棄違約行為,即放棄任何後續違約行為。</value>
+    <comment>Terms Of Service Description 1</comment>
+  </data>
+  <data name="TermsOfServiceTitle2" xml:space="preserve">
+    <value>2. 翻譯口譯</value>
+    <comment>Terms Of Service Title 2</comment>
+  </data>
+  <data name="TermsOfServiceDescription2" xml:space="preserve">
+    <value>如果我們已在我們的服務中提供給您,則這些條款和條件可能已被翻譯。您同意,在發生爭議時,原文應占上風。</value>
+    <comment>Terms Of Service Description 2</comment>
+  </data>
+  <data name="TermsOfServiceTitle3" xml:space="preserve">
+    <value>3. 終止</value>
+    <comment>Terms Of Service Title 3</comment>
+  </data>
+  <data name="TermsOfServiceDescription3" xml:space="preserve">
+    <value>我們可能會立即終止或暫停您的訪問,恕不另行通知或承擔任何責任,包括但不限於您違反本條款和條件。終止後,您使用服務的權利將立即終止。</value>
+    <comment>Terms Of Service Description 3</comment>
+  </data>
+  <data name="TermsOfServiceTitle4" xml:space="preserve">
+    <value>4. 管轄法律</value>
+    <comment>Terms Of Service Title 4</comment>
+  </data>
+  <data name="TermsOfServiceDescription4" xml:space="preserve">
+    <value>除法律規則衝突外,國家/地區的法律應管轄本條款和您對服務的使用。您對申請的使用可能還受其他當地、州、國家或國際法的約束。</value>
+    <comment>Terms Of Service Description 4</comment>
+  </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>首頁</value>
     <comment>Home Title</comment>
   </data>
+  <data name="AppName" xml:space="preserve">
+    <value>COVID19雷達</value>
+    <comment>App Name</comment>
+  </data>
   <data name="StatusSettingsMenu" xml:space="preserve">
     <value>狀態設定</value>
     <comment>Status Settings Menu</comment>
+  </data>
+  <data name="ListOfContributorsMenu" xml:space="preserve">
+    <value>貢獻者清單</value>
+    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>更新資訊</value>
@@ -64,24 +193,145 @@
     <value>您可以開始了</value>
     <comment>You're ready to go</comment>
   </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>設定已完成</value>
+    <comment>Set up Completed</comment>
+  </data>
+  <data name="TextStatusSettingsDescription" xml:space="preserve">
+    <value>如果您收到陽性診斷,請輸入您的手機號碼並更新您的狀態,以保護您的親人。</value>
+    <comment>Status settings page description</comment>
+  </data>
+  <data name="TextStatusSettingsEnterNumber" xml:space="preserve">
+    <value>輸入手機號碼</value>
+    <comment>Status settings page enter number text</comment>
+  </data>
+  <data name="TextStatusSettingsSMSDescription" xml:space="preserve">
+    <value>我們將向您發送驗證碼。
+請檢查您的簡訊。</value>
+    <comment>Status settings page verification sms code description</comment>
+  </data>
+  <data name="TextStatusSettingsSMSInfo" xml:space="preserve">
+    <value>* 我們不會儲存您的電話號碼。它將直接發送到政府的資料庫。</value>
+    <comment>Status settings page sms info</comment>
+  </data>
+  <data name="TextStatusSettingsSubtitle" xml:space="preserve">
+    <value>如果您收到陽性診斷</value>
+    <comment>Status settings page sub title</comment>
+  </data>
   <data name="TitleStatusSettings" xml:space="preserve">
     <value>狀態設定</value>
     <comment>Status Settings page title</comment>
+  </data>
+  <data name="TextPhoneNumberPlaceholder" xml:space="preserve">
+    <value>090-1234-4567</value>
+    <comment>Placeholder text for phone number entry</comment>
+  </data>
+  <data name="DetectedBeaconListMenu" xml:space="preserve">
+    <value>偵測到信標清單</value>
+    <comment>Detected Beacon List Menu</comment>
+  </data>
+  <data name="LicenseAgreementMenu" xml:space="preserve">
+    <value>授權協定選單</value>
+    <comment>License Agreement Menu</comment>
+  </data>
+  <data name="OtpEnterText" xml:space="preserve">
+    <value>輸入傳送到的代碼
+「{0}」</value>
+    <comment>Otp Enter the Code</comment>
+  </data>
+  <data name="OtpTitle" xml:space="preserve">
+    <value>輸入代碼</value>
+    <comment>Otp Title</comment>
   </data>
   <data name="ButtonVerify" xml:space="preserve">
     <value>驗證</value>
     <comment>Button Verify</comment>
   </data>
+  <data name="DidntGetTheCodeText" xml:space="preserve">
+    <value>未獲取代碼?</value>
+    <comment>Didn't get the code Text</comment>
+  </data>
   <data name="ResendText" xml:space="preserve">
     <value>重新傳送</value>
     <comment>Resend Text</comment>
+  </data>
+  <data name="TextStatusUpdateComplete" xml:space="preserve">
+    <value>狀態更新完成</value>
+    <comment>Status Update Complete page text</comment>
+  </data>
+  <data name="TitleStatusUpdateComplete" xml:space="preserve">
+    <value>狀態更新完成</value>
+    <comment>Status Update Complete page title</comment>
+  </data>
+  <data name="TextCoreContributors" xml:space="preserve">
+    <value>核心貢獻者</value>
+    <comment>Contributors list page subtitle</comment>
+  </data>
+  <data name="TitleContributorsPage" xml:space="preserve">
+    <value>參與者清單</value>
+    <comment>Contributors list page title</comment>
+  </data>
+  <data name="TitleDetectedBeaconPage" xml:space="preserve">
+    <value>偵測到信標</value>
+    <comment>Detected Beacons</comment>
+  </data>
+  <data name="TextDetectedBeaconList" xml:space="preserve">
+    <value>偵測到信標清單</value>
+    <comment>Detected Beacon List</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>授權合約</value>
     <comment>License Agreement</comment>
   </data>
+  <data name="UrlLicense" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
+    <comment>AGPL3.0</comment>
+  </data>
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <comment>PrivacyPolicy</comment>
+  </data>
   <data name="TextId" xml:space="preserve">
     <value>識別碼</value>
     <comment>ID</comment>
+  </data>
+  <data name="TextAvgDistance" xml:space="preserve">
+    <value>文字平均距離</value>
+    <comment>TextAvgDistance</comment>
+  </data>
+  <data name="TextCount" xml:space="preserve">
+    <value>文字計數</value>
+    <comment>TextCount</comment>
+  </data>
+  <data name="TextElapsedTime" xml:space="preserve">
+    <value>文字執行時間</value>
+    <comment>TextElapsedTime</comment>
+  </data>
+  <data name="TextLastTime" xml:space="preserve">
+    <value>文字上次時間</value>
+    <comment>TextLastTime</comment>
+  </data>
+  <data name="TextMajorNo" xml:space="preserve">
+    <value>少校否</value>
+    <comment>MajorNo</comment>
+  </data>
+  <data name="TextMinorNo" xml:space="preserve">
+    <value>次要否</value>
+    <comment>MinorNo</comment>
+  </data>
+  <data name="UrlContributor" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
+    <comment>Url Contributer</comment>
+  </data>
+  <data name="UrlUpdate" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
+    <comment>Update</comment>
+  </data>
+  <data name="TitleHeadsup" xml:space="preserve">
+    <value>抬頭</value>
+    <comment>Heads up</comment>
+  </data>
+  <data name="UrlHeadsup" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
   </data>
 </root>
