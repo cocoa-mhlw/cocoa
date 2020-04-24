@@ -16,12 +16,21 @@ Please check the contribution rules.
 
 ## How to install the app for tester
 
-Please install the app for test from below link:(Sorry, currently available only Android)
+Please install the app for test from below link:
+
+### Android
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
 
-Device configuration guide for tester:
+Device configuration guide for tester:  
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
+
+### iOS
+
+https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS/releases
+
+Device configuration guide for tester:  
+https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
 
 ## Development environment
 
