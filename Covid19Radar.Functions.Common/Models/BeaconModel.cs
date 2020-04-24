@@ -31,6 +31,11 @@ namespace Covid19Radar.Models
         /// </summary>
         public int Count { get; set; }
         /// <summary>
+        /// User's beacon uuid.
+        /// </summary>
+        /// <value>BeaconUuid</value>
+        public string UserBeaconUuid { get; set; }
+        /// <summary>
         /// Same beacon uuid's device can communication.
         /// </summary>
         /// <value>BeaconUuid</value>
@@ -50,6 +55,16 @@ namespace Covid19Radar.Models
         /// </summary>
         /// <value>BLE minor number</value>
         public double Distance { get; set; }
+        /// <summary>
+        /// Bluetooth LE's calcated distance between beacons.
+        /// </summary>
+        /// <value>BLE min distance</value>
+        public double MinDistance { get; set; }
+        /// <summary>
+        /// Bluetooth LE's calcated distance between beacons.
+        /// </summary>
+        /// <value>BLE max distance</value>
+        public double MaxDistance { get; set; }
         /// <summary>
         ///  Received Signal Strength Indicator, after use. Used for precise distance measurement
         /// </summary>
