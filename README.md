@@ -1,4 +1,4 @@
-# Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md)
+# Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
 
 Now, We move to Git Hub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
