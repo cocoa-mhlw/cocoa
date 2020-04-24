@@ -130,6 +130,7 @@
     <Compile Include="Services\BeaconSimulator.cs" />
     <Compile Include="Services\MonitorEventArgs.cs" />
     <Compile Include="Services\MonitorNotifier.cs" />
+    <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\RangeEventArgs.cs" />
     <Compile Include="Services\RangeNotifier.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />

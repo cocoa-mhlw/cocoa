@@ -86,6 +86,13 @@ namespace Covid19Radar
             }
         }
 
+        protected void OnLocalNotificationTaped(object sender, EventArgs eventArgs)
+        {
+            var e = (NotificationEventArgs)eventArgs;
+            System.Diagnostics.Debug.WriteLine(e.Title);
+            System.Diagnostics.Debug.WriteLine(e.Message);
+        }
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // logger
@@ -111,6 +118,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<LicenseAgreementPage, LicenseAgreementPageViewModel>();
             containerRegistry.RegisterForNavigation<DetectedBeaconPage, DetectedBeaconPageViewmodel>();
             containerRegistry.RegisterForNavigation<StatusUpdateCompletePage, StatusUpdateCompletePageViewModel>();
+            containerRegistry.RegisterForNavigation<HeadsupPage, HeadsupPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
