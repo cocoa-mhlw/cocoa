@@ -84,6 +84,7 @@ namespace Covid19Radar.iOS
             containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
             containerRegistry.RegisterSingleton<SQLiteConnectionProvider, SQLiteConnectionProvider>();
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
+            containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
         }
     }
 

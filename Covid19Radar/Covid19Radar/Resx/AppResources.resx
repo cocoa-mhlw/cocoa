@@ -432,4 +432,11 @@ Please check your SMS.</value>
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
   </data>
+  <data name="TitleHeadsup" xml:space="preserve">
+    <value>Heads up</value>
+    <comment>Heads up</comment>
+  </data>
+  <data name="UrlHeadsup" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
+  </data>
 </root>

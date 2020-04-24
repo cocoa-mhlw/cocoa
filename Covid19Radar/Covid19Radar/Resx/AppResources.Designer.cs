@@ -676,6 +676,15 @@ namespace Covid19Radar.Resx {
         }
         
         /// <summary>
+        ///   Heads up に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TitleHeadsup {
+            get {
+                return ResourceManager.GetString("TitleHeadsup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   How it works に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleHowItWorks {
@@ -735,6 +744,15 @@ namespace Covid19Radar.Resx {
         internal static string UrlContributor {
             get {
                 return ResourceManager.GetString("UrlContributor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radar.z11.web.core.windows.net/en/qna.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlHeadsup {
+            get {
+                return ResourceManager.GetString("UrlHeadsup", resourceCulture);
             }
         }
         
