@@ -28,6 +28,7 @@
 - Takafumi Ochiai (Privacy policy development / Domestic and foreign law expert lawyer)
 - Jurika Morita (Privacy policy development / Domestic and foreign law expert lawyer)
 - Gai Matsushita (Privacy policy development / Domestic and foreign law expert lawyer)
+- Akira Tsumura (Documentation)
 
 # Beta Testers
 - Nagahata Kenji

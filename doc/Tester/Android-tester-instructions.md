@@ -5,7 +5,9 @@
 
 ## 1. App Center にサインイン
 
-[App Center](http://apppcenter.ms/sign-in/) に、Android端末 でアクセスします。
+[App Center](https://appcenter.ms/sign-in) に、Android端末 でアクセスします。  
+QRコードスキャナアプリより、以下のQRコードをスキャンしてもアクセス可能です。  
+![App Center QRCode](../.attachments/appcenter-qrcode.png)
 
 ![App Centerにサインイン](../.attachments/001-ef93a6ea-2412-419f-b39e-d1988a8238f2.jpg)
 
