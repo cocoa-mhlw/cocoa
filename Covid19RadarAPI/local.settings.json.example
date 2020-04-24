@@ -11,6 +11,7 @@
         "TOTP_SECRET": "",
         "TWILIO_SID": "",
         "TWILIO_TOKEN": "",
-        "TWILIO_FROM_PHONE": ""
+        "TWILIO_FROM_PHONE": "",
+        "LAST_NOTIFICATION_CHECK_INTERVAL": "60"
     }
 }
