@@ -218,10 +218,13 @@ namespace Covid19Radar.Droid.Services
                             BeaconDataModel data = new BeaconDataModel();
                             data.Id = key;
                             data.Count = 0;
+                            data.UserBeaconUuid = AppConstants.iBeaconAppUuid;
                             data.BeaconUuid = beacon.Id1.ToString();
                             data.Major = beacon.Id2.ToString();
                             data.Minor = beacon.Id3.ToString();
                             data.Distance = beacon.Distance;
+                            data.MinDistance = beacon.Distance;
+                            data.MaxDistance = beacon.Distance;
                             data.Rssi = beacon.Rssi;
                             //                       data.TXPower = beacon.TxPower;
                             data.ElaspedTime = new TimeSpan();
@@ -237,10 +240,13 @@ namespace Covid19Radar.Droid.Services
                             BeaconDataModel data = result;
                             data.Id = key;
                             data.Count++;
+                            data.UserBeaconUuid = AppConstants.iBeaconAppUuid;
                             data.BeaconUuid = beacon.Id1.ToString();
                             data.Major = beacon.Id2.ToString();
                             data.Minor = beacon.Id3.ToString();
                             data.Distance += (beacon.Distance - data.Distance) / data.Count;
+                            data.MinDistance = (beacon.Distance < data.MinDistance ? beacon.Distance : data.MinDistance);
+                            data.MaxDistance = (beacon.Distance > data.MaxDistance ? beacon.Distance : data.MaxDistance);
                             data.Rssi = beacon.Rssi;
                             //                        data.TXPower = beacon.TxPower;
                             data.ElaspedTime += now - data.LastDetectTime;
