@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Text;
 using System.Threading.Tasks;
+using Covid19Radar.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
 
@@ -37,6 +38,7 @@ namespace Covid19Radar.DataStore
         public Container Beacon { get => Database.GetContainer(BeaconStoreName); }
         public Container Sequence { get => Database.GetContainer("Sequence");  }
         public Container Otp { get => Database.GetContainer("Otp"); }
+        public Container Notification { get => Database.GetContainer("Notification"); }
 
         public string ContainerNameBeacon { get => BeaconStoreName; }
 
@@ -105,6 +107,8 @@ namespace Covid19Radar.DataStore
             catch { }
             var userProperties = new ContainerProperties("User", "/PartitionKey");
             var userDataResult = await dbResult.Database.CreateContainerIfNotExistsAsync(userProperties);
+            var user = dbResult.Database.GetContainer("User");
+            await user.CreateItemAsync<UserModel>(new UserModel() { Major = "0", Minor = "1", UserUuid = "TEST" });
 
             // Container Beacon
             Logger.LogInformation($"GenerateAsync Create Beacon Container name:{BeaconStoreName}");
@@ -125,6 +129,17 @@ namespace Covid19Radar.DataStore
             catch { }
             var otpProperties = new ContainerProperties("Otp", "/UserUuid");
             var otpResult = await dbResult.Database.CreateContainerIfNotExistsAsync(otpProperties);
+
+            // Container Notification
+            Logger.LogInformation("GenerateAsync Create Notification Container");
+            try
+            {
+                await dbResult.Database.GetContainer("Notification").DeleteContainerAsync();
+            }
+            catch { }
+            var notificationProperties = new ContainerProperties("Notification", "/PartitionKey");
+            var notificationResult = await dbResult.Database.CreateContainerIfNotExistsAsync(notificationProperties);
+
 
         }
 
