@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
 {
-
-
     public class HttpDataService
     {
         private readonly HttpClient httpClient;
