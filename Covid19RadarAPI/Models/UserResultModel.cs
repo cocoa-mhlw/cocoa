@@ -33,6 +33,9 @@ namespace Covid19Radar.Models
         {
             _UserStatus = s;
         }
-
+        /// <summary>
+        /// Last notification date and time
+        /// </summary>
+        public DateTime LastNotificationTime { get; set; }
     }
 }
