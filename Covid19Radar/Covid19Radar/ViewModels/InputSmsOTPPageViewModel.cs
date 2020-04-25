@@ -35,7 +35,7 @@ namespace Covid19Radar.ViewModels
         public InputSmsOTPPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
             : base(navigationService)
         {
-            Title = AppResources.OtpTitle;
+            Title = AppResources.TitleOtp;
             _pageDialogService = pageDialogService;
 
             ResendOtp = new Command(async () =>
