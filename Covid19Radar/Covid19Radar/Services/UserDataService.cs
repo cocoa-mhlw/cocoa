@@ -56,23 +56,47 @@ namespace Covid19Radar.Services
             System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
             if (!IsExistUserData) { return; }
             var downloadModel = await httpDataService.PostUserAsync(current);
-            if (downloadModel.UserStatus != current.UserStatus)
+            var hasNotification = downloadModel.LastNotificationTime != current.LastNotificationTime;
+            var hasStatusChange = downloadModel.UserStatus != current.UserStatus;
+            if (hasStatusChange)
             {
                 // Notification Contacted
-                if (current.UserStatus == UserStatus.Contactd)
+                if (downloadModel.UserStatus == UserStatus.Contactd)
                 {
                     // TOOD Change to Resouce String
                     notificationService.ScheduleNotification("TEST", "MESSAGE");
                 }
-
                 var newModel = new UserDataModel()
                 {
                     UserUuid = current.UserUuid,
                     Major = current.Major,
                     Minor = current.Minor,
-                    UserStatus = current.UserStatus
+                    UserStatus = downloadModel.UserStatus,
+                    LastNotificationTime = current.LastNotificationTime
                 };
                 await SetAsync(newModel);
+            }
+            if (hasNotification)
+            {
+                // Pull Notification.
+                try
+                {
+                    var result = await httpDataService.PostNotificationPullAsync(current);
+                    foreach (var notify in result.Messages)
+                    {
+                        notificationService.ReceiveNotification(notify.Title, notify.Message);
+                    }
+                    var newModel = new UserDataModel()
+                    {
+                        UserUuid = current.UserUuid,
+                        Major = current.Major,
+                        Minor = current.Minor,
+                        UserStatus = current.UserStatus,
+                        LastNotificationTime = downloadModel.LastNotificationTime
+                    };
+                    await SetAsync(newModel);
+                }
+                catch (Exception) { }
             }
 
         }
