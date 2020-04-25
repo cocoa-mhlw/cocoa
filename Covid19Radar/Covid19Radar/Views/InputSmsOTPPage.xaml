@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:Covid19Radar.Controls"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     Padding="40,30,40,80">
 
@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackLayout>
-                <Label FontFamily="{StaticResource NotoSansMediumFontFamily}" Text="{Binding PhoneNumber, StringFormat={x:Static resources:AppResources.OtpEnterText}}" />
+                <Label FontFamily="{StaticResource NotoSansMediumFontFamily}" Text="{Binding PhoneNumber, StringFormat={x:Static resources:AppResources.InputSmsOTPPageOtpEnterText}}" />
                 <controls:OtpFormEntry
                     x:Name="OtpForm"
                     Margin="0,0,0,40"
@@ -35,12 +35,12 @@
                         Grid.Column="1"
                         FontFamily="{StaticResource NotoSansMediumFontFamily}"
                         FontSize="12"
-                        Text="{x:Static resources:AppResources.DidntGetTheCodeText}" />
+                        Text="{x:Static resources:AppResources.InputSmsOTPPageDidntGetTheCodeText}" />
                     <Label
                         Grid.Row="1"
                         Grid.Column="1"
                         FontSize="12"
-                        Text="{x:Static resources:AppResources.ResendText}"
+                        Text="{x:Static resources:AppResources.InputSmsOTPPageResendText}"
                         TextColor="{StaticResource AccentColor}"
                         TextDecorations="Underline">
                         <Label.GestureRecognizers>

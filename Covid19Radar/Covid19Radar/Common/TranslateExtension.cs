@@ -12,7 +12,7 @@ namespace Covid19Radar.Common
     [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        const string ResourceId = "LocalizationSample.Resources.AppResources";
+        const string ResourceId = "Covid19Radar.Resources.AppResources";
 
         static readonly Lazy<ResourceManager> resmgr = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly));
 
