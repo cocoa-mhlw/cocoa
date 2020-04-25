@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Input;
 using Covid19Radar.Model;
-using Covid19Radar.Resx;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using DryIoc;
 using Prism.Ioc;
@@ -16,14 +16,6 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnClickNext { get; }
 
-        /*
-        private List<TermsOfServiceModel> _termsOfServices;
-        public List<TermsOfServiceModel> TermsOfServices
-        {
-            get => _termsOfServices;
-            set => SetProperty(ref _termsOfServices, value);
-        }
-        */
         private string _url;
 
         public string Url
@@ -43,7 +35,7 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             Title = AppResources.TitleConsentByUserPage;
-            Url = Resx.AppResources.UrlPrivacyPolicy;
+            Url = Resources.AppResources.UrlPrivacyPolicy;
 
             _userDataService = App.Current.Container.Resolve<UserDataService>();
             OnClickNext = new Command(async () =>
@@ -60,33 +52,5 @@ namespace Covid19Radar.ViewModels
              });
 
         }
-/*
-        private void SetData()
-        {
-            TermsOfServices = new List<TermsOfServiceModel>
-            {
-                new TermsOfServiceModel
-                {
-                    Title=AppResources.TermsOfServiceTitle1,
-                    Description=AppResources.TermsOfServiceDescription1
-                },
-                new TermsOfServiceModel
-                {
-                    Title=AppResources.TermsOfServiceTitle2,
-                    Description=AppResources.TermsOfServiceDescription2
-                },
-                new TermsOfServiceModel
-                {
-                    Title=AppResources.TermsOfServiceTitle3,
-                    Description=AppResources.TermsOfServiceDescription3
-                },
-                new TermsOfServiceModel
-                {
-                    Title=AppResources.TermsOfServiceTitle4,
-                    Description=AppResources.TermsOfServiceDescription4
-                },
-            };
-        }
-*/
     }
 }

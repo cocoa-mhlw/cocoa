@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using Covid19Radar.Model;
-using Covid19Radar.Resx;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
         public HomePageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            Title = AppResources.HomeTitle;
+            Title = AppResources.HomePageTitle;
             _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
             // Only Call InitializeService! Start automagically!
             _beaconService.InitializeService();
@@ -30,12 +30,12 @@ namespace Covid19Radar.ViewModels
             {
                 new HomeMenuModel
                 {
-                    Title=AppResources.StatusSettingsMenu,
+                    Title=AppResources.HomePageViewStatusSettingsMenu,
                     Command=OnClickUserSetting,
                 },
                 new HomeMenuModel
                 {
-                    Title=AppResources.ListOfContributorsMenu,
+                    Title=AppResources.HomePageViewListOfContributorsMenu,
                     Command=OnClickAcknowledgments
                 },
                 new HomeMenuModel
