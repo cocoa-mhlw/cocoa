@@ -82,7 +82,7 @@
     <Compile Update="Views\DescriptionPage.xaml.cs">
       <DependentUpon>DescriptionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Resx\AppResources.Designer.cs">
+    <Compile Update="Resources\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -93,7 +93,7 @@
     <EmbeddedResource Update="Fonts.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resx\AppResources.resx">
+    <EmbeddedResource Update="Resources\AppResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>

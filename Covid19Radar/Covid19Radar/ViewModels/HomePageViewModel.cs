@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using Covid19Radar.Model;
-using Covid19Radar.Resx;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Prism.Navigation;
 using Xamarin.Forms;
