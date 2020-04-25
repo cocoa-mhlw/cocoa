@@ -92,7 +92,7 @@ namespace Covid19Radar.Services
                         Major = current.Major,
                         Minor = current.Minor,
                         UserStatus = current.UserStatus,
-                        LastNotificationTime = current.LastNotificationTime
+                        LastNotificationTime = downloadModel.LastNotificationTime
                     };
                     await SetAsync(newModel);
                 }
