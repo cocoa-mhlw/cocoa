@@ -55,7 +55,13 @@ namespace Covid19Radar.Services
         {
             System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
             if (!IsExistUserData) { return; }
-            var downloadModel = await httpDataService.PostUserAsync(current);
+            UserDataModel downloadModel;
+            try
+            {
+                downloadModel = await httpDataService.PostUserAsync(current);
+                if (downloadModel == null) return;
+            }
+            catch { return; }
             var hasNotification = downloadModel.LastNotificationTime != current.LastNotificationTime;
             var hasStatusChange = downloadModel.UserStatus != current.UserStatus;
             if (hasStatusChange)
