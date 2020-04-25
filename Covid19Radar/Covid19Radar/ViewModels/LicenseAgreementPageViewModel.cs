@@ -26,8 +26,8 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             _navigationService = navigationService;
-            Title = Resx.AppResources.TitleLicenseAgreement;
-            Url = Resx.AppResources.UrlLicense;
+            Title = Resources.AppResources.TitleLicenseAgreement;
+            Url = Resources.AppResources.UrlLicense;
         }
     }
 }

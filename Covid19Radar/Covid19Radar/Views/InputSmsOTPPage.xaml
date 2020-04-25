@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:Covid19Radar.Controls"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     Padding="40,30,40,80">
 

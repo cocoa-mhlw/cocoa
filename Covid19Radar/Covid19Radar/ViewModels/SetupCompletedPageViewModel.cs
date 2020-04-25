@@ -1,5 +1,5 @@
 ﻿using System.Windows.Input;
-using Covid19Radar.Resx;
+using Covid19Radar.Resources;
 using Prism.Navigation;
 using Xamarin.Forms;
 
