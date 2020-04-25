@@ -23,30 +23,30 @@ namespace Covid19Radar.ViewModels
             {
                 new StepModel
                 {
-                    Title = Resx.AppResources.TextStep1Title,
+                    Title = Resx.AppResources.DescriptionPageTitleTextStep1,
                     Image = "descriptionStep1.png",
-                    Description = Resx.AppResources.TextStep1Description,
+                    Description = Resx.AppResources.DescriptionPageTextStep1Description,
                     StepNumber = 1
                 },
                 new StepModel
                 {
-                    Title = Resx.AppResources.TextStep2Title,
+                    Title = Resx.AppResources.DescriptionPageTitleTextStep2,
                     Image = "descriptionStep2.png",
-                    Description = Resx.AppResources.TextStep2Description,
+                    Description = Resx.AppResources.DescriptionPageTextStep2Description,
                     StepNumber = 2
                 },
                 new StepModel
                 {
-                    Title = Resx.AppResources.TextStep3Title,
+                    Title = Resx.AppResources.DescriptionPageTitleTextStep3,
                     Image = "descriptionStep3.png",
-                    Description = Resx.AppResources.TextStep3Description,
+                    Description = Resx.AppResources.DescriptionPageTextStep3Description,
                     StepNumber = 3
                 },
                 new StepModel
                 {
-                    Title = Resx.AppResources.TextStep4Title,
+                    Title = Resx.AppResources.DescriptionPageTitleTextStep4,
                     Image = "descriptionStep4.png",
-                    Description = Resx.AppResources.TextStep4Description
+                    Description = Resx.AppResources.DescriptionPageTextStep4Description
                 }
             };
 

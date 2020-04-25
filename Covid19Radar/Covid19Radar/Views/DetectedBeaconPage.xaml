@@ -48,7 +48,7 @@
                                 <Label
                                     Grid.Column="0"
                                     Margin="0,0,10,0"
-                                    Text="{x:Static resources:AppResources.TextId}" 
+                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextId}" 
                                     />
                                 <Label
                                     Grid.Column="1"
@@ -62,7 +62,7 @@
                             <Label
                                 Grid.Row="1"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.TextMajorNo}" 
+                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextMajorNo}" 
                                  />
                             <Label
                                 Grid.Row="1"
@@ -74,7 +74,7 @@
                             <Label
                                 Grid.Row="2"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.TextMinorNo}" 
+                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextMinorNo}" 
                                 />
                             <Label
                                 Grid.Row="2"
@@ -86,7 +86,7 @@
                             <Label
                                 Grid.Row="3"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.TextAvgDistance}" 
+                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextAvgDistance}" 
                                  />
                             <Label
                                 Grid.Row="3"
@@ -98,7 +98,7 @@
                             <Label
                                 Grid.Row="4"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.TextElapsedTime}" 
+                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextElapsedTime}" 
                                  />
                             <Label
                                 Grid.Row="4"
@@ -110,7 +110,7 @@
                             <Label
                                 Grid.Row="5"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.TextLastTime}" 
+                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextLastTime}" 
                                  />
                             <Label
                                 Grid.Row="5"
@@ -122,7 +122,7 @@
                             <Label
                                 Grid.Row="6"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.TextCount}" 
+                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextCount}" 
                                  />
                             <Label
                                 Grid.Row="6"
