@@ -24,7 +24,7 @@ namespace Covid19Radar.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
     {
         public static MainActivity Instance { get; private set; }
-        public static SQLiteConnectionProvider sqliteConnectionProvider { get; private set; }
+        //public static SQLiteConnectionProvider sqliteConnectionProvider { get; private set; }
         protected override void OnCreate(Bundle bundle)
         {
             base.SetTheme(Resource.Style.MainTheme);
@@ -35,7 +35,7 @@ namespace Covid19Radar.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             Instance = this;
-            sqliteConnectionProvider = new SQLiteConnectionProvider();
+            //sqliteConnectionProvider = new SQLiteConnectionProvider();
 
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Rg.Plugins.Popup.Popup.Init(this, bundle);
@@ -78,8 +78,9 @@ namespace Covid19Radar.Droid
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
                 containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
-                containerRegistry.RegisterSingleton<IBeaconService,BeaconService>();
-                containerRegistry.RegisterInstance(sqliteConnectionProvider);
+                containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
+                containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
+                //containerRegistry.RegisterInstance(sqliteConnectionProvider);
             }
         }
 

@@ -45,19 +45,6 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        // PUT /api/User - update user status
-        public async Task<UserDataModel> PutUserAsync(UserDataModel user)
-        {
-            string url = AppConstants.ApiBaseUrl + "/User";
-            HttpContent content = new StringContent(Utils.SerializeToJson(user), Encoding.UTF8, "application/json");
-            var result = await Put(url, content);
-            if (result != null)
-            {
-                return Utils.DeserializeFromJson<UserDataModel>(result);
-            }
-            return null;
-        }
-
         // POST /api/Beacon - check user status and user exists
         public async Task<UserDataModel> PostBeaconDataAsync(UserDataModel user, BeaconDataModel beacon)
         {
@@ -96,6 +83,26 @@ namespace Covid19Radar.Services
             string url = AppConstants.ApiBaseUrl + "/otp/send";
             HttpContent content = new StringContent(Utils.SerializeToJson(new { user, phone = phoneNumber }), Encoding.UTF8, "application/json");
             return Post(url, content);
+        }
+
+        // POST /api/Notification/Pull - pull Notifications 
+        public async Task<NotificationPullResult> PostNotificationPullAsync(UserDataModel user)
+        {
+            string url = AppConstants.ApiBaseUrl + "/Notification/Pull";
+            var param = new
+            {
+                user.UserUuid,
+                UserMajor = user.Major,
+                UserMinor = user.Minor,
+                user.LastNotificationTime
+            };
+            HttpContent content = new StringContent(Utils.SerializeToJson(param), Encoding.UTF8, "application/json");
+            var result = await Post(url, content);
+            if (result != null)
+            {
+                return Utils.DeserializeFromJson<NotificationPullResult>(result);
+            }
+            return null;
         }
 
         private async Task<string> Get(string url)
@@ -214,5 +221,17 @@ namespace Covid19Radar.Services
         public string KeyTime { get; set; }
 
 
+    }
+
+    public class NotificationPullResult
+    {
+        /// <summary>
+        /// Last notification date and time
+        /// </summary>
+        public DateTime LastNotificationTime { get; set; }
+        /// <summary>
+        /// Notification Messages
+        /// </summary>
+        public NotificationMessageModel[] Messages { get; set; }
     }
 }
