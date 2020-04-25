@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Input;
 using Covid19Radar.Model;
-using Covid19Radar.Resx;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using DryIoc;
 using Prism.Ioc;
@@ -35,7 +35,7 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             Title = AppResources.TitleConsentByUserPage;
-            Url = Resx.AppResources.UrlPrivacyPolicy;
+            Url = Resources.AppResources.UrlPrivacyPolicy;
 
             _userDataService = App.Current.Container.Resolve<UserDataService>();
             OnClickNext = new Command(async () =>

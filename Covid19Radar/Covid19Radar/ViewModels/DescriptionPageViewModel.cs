@@ -11,7 +11,7 @@ namespace Covid19Radar.ViewModels
 
         public DescriptionPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = Resx.AppResources.TitleHowItWorks;
+            Title = Resources.AppResources.TitleHowItWorks;
             SetData();
         }
 
@@ -23,30 +23,30 @@ namespace Covid19Radar.ViewModels
             {
                 new StepModel
                 {
-                    Title = Resx.AppResources.DescriptionPageTitleTextStep1,
+                    Title = Resources.AppResources.DescriptionPageTitleTextStep1,
                     Image = "descriptionStep1.png",
-                    Description = Resx.AppResources.DescriptionPageTextStep1Description,
+                    Description = Resources.AppResources.DescriptionPageTextStep1Description,
                     StepNumber = 1
                 },
                 new StepModel
                 {
-                    Title = Resx.AppResources.DescriptionPageTitleTextStep2,
+                    Title = Resources.AppResources.DescriptionPageTitleTextStep2,
                     Image = "descriptionStep2.png",
-                    Description = Resx.AppResources.DescriptionPageTextStep2Description,
+                    Description = Resources.AppResources.DescriptionPageTextStep2Description,
                     StepNumber = 2
                 },
                 new StepModel
                 {
-                    Title = Resx.AppResources.DescriptionPageTitleTextStep3,
+                    Title = Resources.AppResources.DescriptionPageTitleTextStep3,
                     Image = "descriptionStep3.png",
-                    Description = Resx.AppResources.DescriptionPageTextStep3Description,
+                    Description = Resources.AppResources.DescriptionPageTextStep3Description,
                     StepNumber = 3
                 },
                 new StepModel
                 {
-                    Title = Resx.AppResources.DescriptionPageTitleTextStep4,
+                    Title = Resources.AppResources.DescriptionPageTitleTextStep4,
                     Image = "descriptionStep4.png",
-                    Description = Resx.AppResources.DescriptionPageTextStep4Description
+                    Description = Resources.AppResources.DescriptionPageTextStep4Description
                 }
             };
 
