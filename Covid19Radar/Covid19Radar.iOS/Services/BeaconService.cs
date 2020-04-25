@@ -174,8 +174,12 @@ namespace Covid19Radar.iOS.Services
                 {
                     return;
                 }
-
-                var key = $"{beacon.Uuid}{beacon.Major}{beacon.Minor}.{keyTime}";
+                string key;
+                try
+                {
+                    key = $"{beacon.Uuid}{beacon.Major}{beacon.Minor}.{keyTime}";
+                }
+                catch { continue; }
                 lock (dataLock)
                 {
                     var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
