@@ -16,8 +16,8 @@ namespace Covid19Radar.ViewModels
         }
         public ContributorsPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = Resx.AppResources.TitleContributorsPage;
-            Url = Resx.AppResources.UrlContributor;
+            Title = Resources.AppResources.TitleContributorsPage;
+            Url = Resources.AppResources.UrlContributor;
         }
     }
 }

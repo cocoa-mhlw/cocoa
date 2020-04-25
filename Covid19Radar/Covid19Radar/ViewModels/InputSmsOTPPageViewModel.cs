@@ -1,5 +1,5 @@
 ﻿using System.Windows.Input;
-using Covid19Radar.Resx;
+using Covid19Radar.Resources;
 using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
