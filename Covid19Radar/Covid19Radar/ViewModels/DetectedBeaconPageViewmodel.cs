@@ -29,7 +29,7 @@ namespace Covid19Radar.ViewModels
         public DetectedBeaconPageViewmodel(INavigationService navigationService, IBeaconService beaconService)
             : base(navigationService)
         {
-            Title = Resx.AppResources.TitleDetectedBeaconPage;
+            Title = Resources.AppResources.TitleDetectedBeaconPage;
             _beaconService = beaconService;
             SetData();
 

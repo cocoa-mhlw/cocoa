@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ButtonIWantToHelp" xml:space="preserve">
+    <value>Jag vill hjälpa till</value>
+    <comment>I want to help</comment>
+  </data>
+  <data name="TitleHowItWorks" xml:space="preserve">
+    <value>Så här fungerar det</value>
+    <comment>How it works page title</comment>
+  </data>
+  <data name="ButtonNext" xml:space="preserve">
+    <value>Nästa post</value>
+    <comment>Next button</comment>
+  </data>
+  <data name="TitleConsentByUserPage" xml:space="preserve">
+    <value>Användningsvillkor</value>
+    <comment>Consent by user page</comment>
+  </data>
+  <data name="ButtonAgreeAndProceed" xml:space="preserve">
+    <value>Kom överens och fortsätt</value>
+    <comment>Agree and Proceed</comment>
+  </data>
+  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+    <value>Du behöver inte ange personlig information. Vi använder unikt ID som allokeras till dig när du installerar en app.</value>
+    <comment>How it works page step 1 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+    <value>En kontakt med en annan appanvändare under längre tid än 30 minuter totalt, inom en radie som ligger närmare än 2 m i genomsnitt registreras som "Stäng kontakt".</value>
+    <comment>How it works page step 2 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
+    <value>Ändra din status manuellt till "Positiv" när du har verifierat ditt telefonnummer." Positivt" Arbetsflöde , Nu samordning med närstående.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
+    <value>Bluetooth måste vara aktiverat för att spela in nära kontakt. Gå till nästa sida för att slå på den.</value>
+    <comment>How it works page step 4 description</comment>
+  </data>
+  <data name="ButtonStart" xml:space="preserve">
+    <value>Starta</value>
+    <comment>Start</comment>
+  </data>
+  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
+    <value>Skydda våra nära och kära från COVID19</value>
+    <comment>Protecting our loved ones from COVID19</comment>
+  </data>
+  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
+    <value>Den här appen använder Bluetooth-signaler för att avgöra om du är nära en annan kontaktspårningsappanvändare. 
+Välj "Tillåt alltid" för att ställa in Bluetooth.</value>
+    <comment>Device access page Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
+    <value>Tillåt Bluetooth</value>
+    <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="TitleDeviceAccess" xml:space="preserve">
+    <value>Åtkomst till enheten</value>
+    <comment>Device access page title</comment>
+  </data>
+  <data name="TitleAppDescription" xml:space="preserve">
+    <value>App Beskrivning</value>
+    <comment>App Description</comment>
+  </data>
+  <data name="ButtonRegister" xml:space="preserve">
+    <value>Registrera</value>
+    <comment>Register</comment>
+  </data>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>Acceptera</value>
+    <comment>Agree</comment>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>HEM</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>COVID19Radar</value>
+    <comment>App Name</comment>
+  </data>
+  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
+    <value>Statusinställningar</value>
+    <comment>Status Settings Menu</comment>
+  </data>
+  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
+    <value>Lista över bidragsgivare</value>
+    <comment>List Of Contributors Menu</comment>
+  </data>
+  <data name="TitleUpdateInformation" xml:space="preserve">
+    <value>Information om uppdatering</value>
+    <comment>Update Information Menu</comment>
+  </data>
+  <data name="ButtonHome" xml:space="preserve">
+    <value>HEM</value>
+    <comment>HOME</comment>
+  </data>
+  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
+    <value>Allt är klart</value>
+    <comment>You're ready to go</comment>
+  </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>Konfigurera slutförd</value>
+    <comment>Set up Completed</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Om du fått en positiv diagnos, ange ditt mobilnummer och uppdatera din status för att skydda dina nära och kära.</value>
+    <comment>Status settings page description</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
+    <value>Ange mobilnumret</value>
+    <comment>Status settings page enter number text</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
+    <value>Vi skickar en verifieringskod.
+Kontrollera ditt SMS.</value>
+    <comment>Status settings page verification sms code description</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
+    <value>Vi kommer inte att lagra ditt telefonnummer. Det kommer att skickas direkt till databasen av regeringen.</value>
+    <comment>Status settings page sms info</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Om du fick en positiv diagnos</value>
+    <comment>Status settings page sub title</comment>
+  </data>
+  <data name="TitleStatusSettings" xml:space="preserve">
+    <value>Statusinställningar</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
+    <value>090-1234-4567</value>
+    <comment>Placeholder text for phone number entry</comment>
+  </data>
+  <data name="DetectedBeaconListMenu" xml:space="preserve">
+    <value>Lista över identifierade beacon</value>
+    <comment>Detected Beacon List Menu</comment>
+  </data>
+  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
+    <value>Ange koden som skickades till 
+「{0}」</value>
+    <comment>Otp Enter the Code</comment>
+  </data>
+  <data name="TitleOtp" xml:space="preserve">
+    <value>Ange koden</value>
+    <comment>Otp Title</comment>
+  </data>
+  <data name="ButtonVerify" xml:space="preserve">
+    <value>Verifiera</value>
+    <comment>Button Verify</comment>
+  </data>
+  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
+    <value>Fick du inte koden?</value>
+    <comment>Didn't get the code Text</comment>
+  </data>
+  <data name="InputSmsOTPPageResendText" xml:space="preserve">
+    <value>Skicka igen</value>
+    <comment>Resend Text</comment>
+  </data>
+  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
+    <value>Statusuppdateringen har slutförts</value>
+    <comment>Status Update Complete page text</comment>
+  </data>
+  <data name="TitleStatusUpdateComplete" xml:space="preserve">
+    <value>Statusuppdateringen har slutförts</value>
+    <comment>Status Update Complete page title</comment>
+  </data>
+  <data name="TitleContributorsPage" xml:space="preserve">
+    <value>Lista över bidragsgivare</value>
+    <comment>Contributors list page title</comment>
+  </data>
+  <data name="TitleDetectedBeaconPage" xml:space="preserve">
+    <value>Identifierade beacons</value>
+    <comment>Detected Beacons</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>Licensavtal</value>
+    <comment>License Agreement</comment>
+  </data>
+  <data name="UrlLicense" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
+    <comment>AGPL3.0</comment>
+  </data>
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <comment>PrivacyPolicy</comment>
+  </data>
+  <data name="DetectedBeaconPageTextId" xml:space="preserve">
+    <value>id</value>
+    <comment>ID</comment>
+  </data>
+  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
+    <value>Avarage Avstånd</value>
+    <comment>TextAvgDistance</comment>
+  </data>
+  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
+    <value>Antal</value>
+    <comment>TextCount</comment>
+  </data>
+  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
+    <value>Förfluten tid</value>
+    <comment>TextElapsedTime</comment>
+  </data>
+  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
+    <value>Senaste tid</value>
+    <comment>TextLastTime</comment>
+  </data>
+  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
+    <value>MajorNo (Svenska)</value>
+    <comment>MajorNo</comment>
+  </data>
+  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
+    <value>MinorNo (på något sätt)</value>
+    <comment>MinorNo</comment>
+  </data>
+  <data name="UrlContributor" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
+    <comment>Url Contributer</comment>
+  </data>
+  <data name="UrlUpdate" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
+    <comment>Update</comment>
+  </data>
+  <data name="TitleHeadsup" xml:space="preserve">
+    <value>På gång</value>
+    <comment>Heads up</comment>
+  </data>
+  <data name="UrlHeadsup" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
+    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
+    <value>Installera en app</value>
+    <comment>How it works page step 1 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
+    <value>Spela in nära kontakt</value>
+    <comment>How it works page step 2 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
+    <value>Om du får diagnosen COVID19-positiv</value>
+    <comment>How it works page step 3 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
+    <value>Krav för att använda den här appen</value>
+    <comment>How it works page step 4 title</comment>
+  </data>
+</root>

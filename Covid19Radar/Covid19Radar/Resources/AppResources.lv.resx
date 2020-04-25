@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ButtonIWantToHelp" xml:space="preserve">
+    <value>Es gribu palīdzēt</value>
+    <comment>I want to help</comment>
+  </data>
+  <data name="TitleHowItWorks" xml:space="preserve">
+    <value>Kā tā darbojas</value>
+    <comment>How it works page title</comment>
+  </data>
+  <data name="ButtonNext" xml:space="preserve">
+    <value>Tālāk</value>
+    <comment>Next button</comment>
+  </data>
+  <data name="TitleConsentByUserPage" xml:space="preserve">
+    <value>Pakalpojuma noteikumi</value>
+    <comment>Consent by user page</comment>
+  </data>
+  <data name="ButtonAgreeAndProceed" xml:space="preserve">
+    <value>Vienoties un rīkoties</value>
+    <comment>Agree and Proceed</comment>
+  </data>
+  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+    <value>Nav nepieciešams ievadīt personisku informāciju. Mēs izmantojam unikālo ID, kas jums tiek piešķirts, instalējot lietotni.</value>
+    <comment>How it works page step 1 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+    <value>Kontaktu ar citu lietotnes lietotāju ilgāk nekā 30 minūtes kopā rādiusu, kas ir tuvāk par 2m, reģistrē kā "ciešu kontaktu".</value>
+    <comment>How it works page step 2 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
+    <value>Lūdzu, manuāli nomainiet savu statusu uz "pozitīvs" pēc verificējot savu tālruņa numuru. " Pozitīva "darbplūsma, kas tagad ir koordinācija ar saistītajām pusēm.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
+    <value>Lai ierakstītu ciešu kontaktu, ir jābūt ieslēgtai Bluetooth. Lūdzu, pārejiet uz nākamo lapu, lai to ieslēgtu.</value>
+    <comment>How it works page step 4 description</comment>
+  </data>
+  <data name="ButtonStart" xml:space="preserve">
+    <value>Sākums</value>
+    <comment>Start</comment>
+  </data>
+  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
+    <value>Aizsargājot mūsu tuviniekus no COVID19</value>
+    <comment>Protecting our loved ones from COVID19</comment>
+  </data>
+  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
+    <value>Šī lietotne izmanto Bluetooth signālus, lai noteiktu, vai esat tuvu citam kontaktpersonu izsekošanas programmas lietotājam. 
+Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
+    <comment>Device access page Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
+    <value>Atļaut Bluetooth</value>
+    <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="TitleDeviceAccess" xml:space="preserve">
+    <value>Piekļuve ierīcei</value>
+    <comment>Device access page title</comment>
+  </data>
+  <data name="TitleAppDescription" xml:space="preserve">
+    <value>Lietojumprogrammas apraksts</value>
+    <comment>App Description</comment>
+  </data>
+  <data name="ButtonRegister" xml:space="preserve">
+    <value>Reģistrēt</value>
+    <comment>Register</comment>
+  </data>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>Piekrītu</value>
+    <comment>Agree</comment>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>SĀKUMS</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>COVID19Radar</value>
+    <comment>App Name</comment>
+  </data>
+  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
+    <value>Statusa iestatījumi</value>
+    <comment>Status Settings Menu</comment>
+  </data>
+  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
+    <value>Ieguldītāju saraksts</value>
+    <comment>List Of Contributors Menu</comment>
+  </data>
+  <data name="TitleUpdateInformation" xml:space="preserve">
+    <value>Atjaunināt informāciju</value>
+    <comment>Update Information Menu</comment>
+  </data>
+  <data name="ButtonHome" xml:space="preserve">
+    <value>SĀKUMS</value>
+    <comment>HOME</comment>
+  </data>
+  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
+    <value>Jūs esat gatavs doties</value>
+    <comment>You're ready to go</comment>
+  </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>Iestatītu pabeigtos</value>
+    <comment>Set up Completed</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Ja esat saņēmis pozitīvu diagnozi, lūdzu, ievadiet savu mobilā tālruņa numuru un atjauniniet savu statusu, lai aizsargātu savus tuviniekus.</value>
+    <comment>Status settings page description</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
+    <value>Ievadiet mobilā tālruņa numuru</value>
+    <comment>Status settings page enter number text</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
+    <value>Mēs jums nosūtīsim verifikācijas kodu.
+Lūdzu, pārbaudiet savu SMS.</value>
+    <comment>Status settings page verification sms code description</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
+    <value>Mēs neglabāsim jūsu tālruņa numuru. Tas tiks nosūtīts tieši uz datubāzes valdība.</value>
+    <comment>Status settings page sms info</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Ja esat saņēmis pozitīvu diagnozi</value>
+    <comment>Status settings page sub title</comment>
+  </data>
+  <data name="TitleStatusSettings" xml:space="preserve">
+    <value>Statusa iestatījumi</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
+    <value>090-1234-4567</value>
+    <comment>Placeholder text for phone number entry</comment>
+  </data>
+  <data name="DetectedBeaconListMenu" xml:space="preserve">
+    <value>Atklāto bāksignālu saraksts</value>
+    <comment>Detected Beacon List Menu</comment>
+  </data>
+  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
+    <value>Ievadiet kodu, kas tika nosūtīts 
+「 {0} 」</value>
+    <comment>Otp Enter the Code</comment>
+  </data>
+  <data name="TitleOtp" xml:space="preserve">
+    <value>Ievadiet kodu</value>
+    <comment>Otp Title</comment>
+  </data>
+  <data name="ButtonVerify" xml:space="preserve">
+    <value>Verificēt</value>
+    <comment>Button Verify</comment>
+  </data>
+  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
+    <value>Didn ' t get kodu?</value>
+    <comment>Didn't get the code Text</comment>
+  </data>
+  <data name="InputSmsOTPPageResendText" xml:space="preserve">
+    <value>Atkārtoti nosūtīt</value>
+    <comment>Resend Text</comment>
+  </data>
+  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
+    <value>Statusa atjaunināšana pabeigta</value>
+    <comment>Status Update Complete page text</comment>
+  </data>
+  <data name="TitleStatusUpdateComplete" xml:space="preserve">
+    <value>Statusa atjaunināšana pabeigta</value>
+    <comment>Status Update Complete page title</comment>
+  </data>
+  <data name="TitleContributorsPage" xml:space="preserve">
+    <value>Atbalstītāju saraksts</value>
+    <comment>Contributors list page title</comment>
+  </data>
+  <data name="TitleDetectedBeaconPage" xml:space="preserve">
+    <value>Atklātās bākas</value>
+    <comment>Detected Beacons</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>Licences līgums</value>
+    <comment>License Agreement</comment>
+  </data>
+  <data name="UrlLicense" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
+    <comment>AGPL3.0</comment>
+  </data>
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <comment>PrivacyPolicy</comment>
+  </data>
+  <data name="DetectedBeaconPageTextId" xml:space="preserve">
+    <value>Kods</value>
+    <comment>ID</comment>
+  </data>
+  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
+    <value>Avarage attālums</value>
+    <comment>TextAvgDistance</comment>
+  </data>
+  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
+    <value>Skaits</value>
+    <comment>TextCount</comment>
+  </data>
+  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
+    <value>ElapsedTime</value>
+    <comment>TextElapsedTime</comment>
+  </data>
+  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
+    <value>LastTime</value>
+    <comment>TextLastTime</comment>
+  </data>
+  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
+    <value>MajorNo</value>
+    <comment>MajorNo</comment>
+  </data>
+  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
+    <value>MinorNo</value>
+    <comment>MinorNo</comment>
+  </data>
+  <data name="UrlContributor" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
+    <comment>Url Contributer</comment>
+  </data>
+  <data name="UrlUpdate" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
+    <comment>Update</comment>
+  </data>
+  <data name="TitleHeadsup" xml:space="preserve">
+    <value>Brīdinājumi</value>
+    <comment>Heads up</comment>
+  </data>
+  <data name="UrlHeadsup" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
+    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
+    <value>Lietotnes instalēšana</value>
+    <comment>How it works page step 1 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
+    <value>Cieša kontakta ierakstīšana</value>
+    <comment>How it works page step 2 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
+    <value>Ja jums ir diagnosticēta COVID19 pozitīva</value>
+    <comment>How it works page step 3 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
+    <value>Prasības, lai izmantotu šo lietotni</value>
+    <comment>How it works page step 4 title</comment>
+  </data>
+</root>

@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx;assembly=Covid19Radar"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}">
@@ -37,7 +37,7 @@
             Grid.Row="1"
             HorizontalOptions="Center"
             Style="{StaticResource SubtitleLabelStyle}"
-            Text="{x:Static resources:AppResources.TextCovid19Radar}">
+            Text="{x:Static resources:AppResources.AppName}">
             <Label.Margin>
                 <Thickness Top="{OnPlatform Android=0, iOS=32}" />
             </Label.Margin>
@@ -46,7 +46,7 @@
         <Label
             Grid.Row="2"
             HorizontalOptions="Center"
-            Text="{x:Static resources:AppResources.TextStatusUpdateComplete}">
+            Text="{x:Static resources:AppResources.StatusUpdateCompletePageTextStatusUpdateComplete}">
             <Label.Margin>
                 <Thickness Top="{OnPlatform Android=0, iOS=16}" />
             </Label.Margin>

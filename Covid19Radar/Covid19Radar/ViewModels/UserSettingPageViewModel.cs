@@ -26,7 +26,7 @@ namespace Covid19Radar.ViewModels
 
         public UserSettingPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = Resx.AppResources.TitleStatusSettings;
+            Title = Resources.AppResources.TitleStatusSettings;
             _otpService = App.Current.Container.Resolve<OTPService>();
             _userDataService = App.Current.Container.Resolve<UserDataService>();
         }
