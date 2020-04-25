@@ -39,7 +39,7 @@
             Grid.Row="1"
             HorizontalOptions="Center"
             Style="{StaticResource SubtitleLabelStyle}"
-            Text="{x:Static resources:AppResources.TextCovid19Radar}">
+            Text="{x:Static resources:AppResources.AppName}">
             <Label.Margin>
                 <Thickness Top="{OnPlatform Android=0, iOS=32}" />
             </Label.Margin>
@@ -48,7 +48,7 @@
         <Label
             Grid.Row="2"
             HorizontalOptions="Center"
-            Text="{x:Static resources:AppResources.TextProtectingOurLovedOnes}">
+            Text="{x:Static resources:AppResources.StartTutorialPageTextProtectingOurLovedOnes}">
             <Label.Margin>
                 <Thickness Top="{OnPlatform Android=0, iOS=16}" />
             </Label.Margin>
