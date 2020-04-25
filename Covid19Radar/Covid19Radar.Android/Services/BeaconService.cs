@@ -40,7 +40,7 @@ namespace Covid19Radar.Droid.Services
         public BeaconService()
         {
             _mainActivity = MainActivity.Instance;
-            _connection = MainActivity.sqliteConnectionProvider.GetConnection();
+            _connection = DependencyService.Resolve<ISQLiteConnectionProvider>().GetConnection();
             _connection.CreateTable<BeaconDataModel>();
             _userDataService = DependencyService.Resolve<UserDataService>();
             _userData = _userDataService.Get();
