@@ -15,19 +15,5 @@
     </ContentPage.Resources>
     <StackLayout Margin="0,30">
         <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
-<!--
-        <CollectionView ItemTemplate="{StaticResource ContributorItemTemplate}" ItemsSource="{Binding Contributors}">
-            <CollectionView.Header>
-                <StackLayout>
-                    <Label
-                        Margin="15,0"
-                        FontSize="Caption"
-                        Text="{x:Static resources:AppResources.TextCoreContributors}"
-                        TextColor="{StaticResource Accent7Color}" />
-                    <BoxView Margin="15,5,15,0" Style="{StaticResource DefaultLineStyle}" />
-                </StackLayout>
-            </CollectionView.Header>
-        </CollectionView>
--->
     </StackLayout>
 </ContentPage>

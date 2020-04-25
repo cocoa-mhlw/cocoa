@@ -16,14 +16,6 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnClickNext { get; }
 
-        /*
-        private List<TermsOfServiceModel> _termsOfServices;
-        public List<TermsOfServiceModel> TermsOfServices
-        {
-            get => _termsOfServices;
-            set => SetProperty(ref _termsOfServices, value);
-        }
-        */
         private string _url;
 
         public string Url
@@ -60,33 +52,5 @@ namespace Covid19Radar.ViewModels
              });
 
         }
-/*
-        private void SetData()
-        {
-            TermsOfServices = new List<TermsOfServiceModel>
-            {
-                new TermsOfServiceModel
-                {
-                    Title=AppResources.TermsOfServiceTitle1,
-                    Description=AppResources.TermsOfServiceDescription1
-                },
-                new TermsOfServiceModel
-                {
-                    Title=AppResources.TermsOfServiceTitle2,
-                    Description=AppResources.TermsOfServiceDescription2
-                },
-                new TermsOfServiceModel
-                {
-                    Title=AppResources.TermsOfServiceTitle3,
-                    Description=AppResources.TermsOfServiceDescription3
-                },
-                new TermsOfServiceModel
-                {
-                    Title=AppResources.TermsOfServiceTitle4,
-                    Description=AppResources.TermsOfServiceDescription4
-                },
-            };
-        }
-*/
     }
 }

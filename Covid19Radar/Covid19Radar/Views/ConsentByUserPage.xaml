@@ -11,21 +11,7 @@
     <Grid>
         <StackLayout Padding="0,0">
             <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
-        <!--
-            <StackLayout BindableLayout.ItemsSource="{Binding TermsOfServices}" Spacing="16">
-
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Spacing="8">
-                            <Label Text="{Binding Title}" />
-                            <Label Text="{Binding Description}" />
-                        </StackLayout>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-
-            </StackLayout>
-            -->
-            <Button
+             <Button
                 Margin="0,20"
                 Command="{Binding OnClickNext}"
                 Style="{StaticResource DefaultButtonStyle}"
