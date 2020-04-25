@@ -19,6 +19,10 @@ namespace Covid19Radar.Models
         public string PartitionKey { get; set; }
 
         /// <summary>
+        /// Title
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
         /// Message
         /// </summary>
         public string Message { get; set; }
