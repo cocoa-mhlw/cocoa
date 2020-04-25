@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace Covid19Radar.Models
@@ -30,5 +31,6 @@ namespace Covid19Radar.Models
         /// Created DateTime
         /// </summary>
         public DateTime Created { get; set; }
+
     }
 }
