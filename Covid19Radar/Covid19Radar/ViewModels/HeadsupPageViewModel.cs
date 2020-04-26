@@ -11,7 +11,6 @@ namespace Covid19Radar.ViewModels
 {
     public class HeadsupPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
         private string _url;
 
         public string Url
@@ -22,14 +21,13 @@ namespace Covid19Radar.ViewModels
         public HeadsupPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
             Title = Resources.AppResources.TitleHeadsup;
             Url = Resources.AppResources.UrlHeadsup;
         }
 
         public Command OnClickPrev => (new Command(() =>
         {
-            _navigationService.NavigateAsync("HomePage");
+            NavigationService.NavigateAsync("HomePage");
         }));
 
 

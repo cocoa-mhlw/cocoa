@@ -16,27 +16,23 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
-    <Compile Remove="Converters\**" />
-    <EmbeddedResource Remove="Converters\**" />
-    <None Remove="Converters\**" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Remove="Views\Dummy.xaml" />
     <EmbeddedResource Remove="Views\DummyPage.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AppCenter.Push" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="3.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
-    <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1053" />
+    <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
     <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
+    <PackageReference Include="ReactiveProperty" Version="6.2.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.302-beta" />
     <PackageReference Include="Xam.Plugin.WebView" Version="2.1.3" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.616-pre4" />
@@ -57,6 +53,9 @@
     </Compile>
     <Compile Update="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UserStatusPage.xaml.cs">
+      <DependentUpon>UserStatusPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\UserSettingPage.xaml.cs">
       <DependentUpon>UserSettingPage.xaml</DependentUpon>
