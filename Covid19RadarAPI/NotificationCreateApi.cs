@@ -18,6 +18,7 @@ namespace Covid19Radar
         private readonly ICosmos Cosmos;
         private readonly INotificationService Notification;
         private readonly ILogger<NotificationCreateApi> Logger;
+
         public NotificationCreateApi(
             ICosmos cosmos,
             INotificationService notification,
@@ -27,7 +28,6 @@ namespace Covid19Radar
             Notification = notification;
             Logger = logger;
         }
-
 
         [FunctionName(nameof(NotificationCreateApi))]
         public async Task<IActionResult> Run(
@@ -53,7 +53,7 @@ namespace Covid19Radar
             var now = DateTime.UtcNow;
             var newNotification = new NotificationMessageModel();
             newNotification.Title = param.Title;
-            newNotification.Message = param.Title;
+            newNotification.Message = param.Message;
             newNotification.Created = now;
             newNotification.id = now.ToString("yyyyMMddHHmmss");
             var createResult = await Cosmos.Notification.CreateItemAsync(newNotification);
@@ -65,6 +65,5 @@ namespace Covid19Radar
         {
             // add deny list
         }
-
     }
 }
