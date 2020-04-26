@@ -60,7 +60,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickUserSetting => new Command(() =>
         {
-            NavigationService.NavigateAsync("UserSettingPage");
+            NavigationService.NavigateAsync("UserStatusPage");
         });
         public Command OnClickAcknowledgments => new Command(() =>
         {
