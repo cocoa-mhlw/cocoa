@@ -8,14 +8,8 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
-    xmlns:c="clr-namespace:Covid19Radar.Converters"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <c:IntEnumConverter x:Key="IntEnum" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ScrollView Padding="0,20">
         <StackLayout>
             <StackLayout Margin="40,0">
@@ -25,9 +19,7 @@
                     Text="{x:Static resources:AppResources.UserSettingPageTextStatusSettingsSubtitle}" />
                 <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
                 <Label Text="{x:Static resources:AppResources.UserSettingPageTextStatusSettingsDescription}" />
-                <Picker x:Name="PickerItems" ItemsSource="{Binding UserStatuses}" SelectedIndex="{Binding SelectedUserStatus.Value, Converter={StaticResource IntEnum}, Mode=TwoWay}" />
             </StackLayout>
-
             <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />
             <StackLayout Margin="40,0">
                 <Label FontAttributes="Bold" Text="{x:Static resources:AppResources.UserSettingPageTextStatusSettingsEnterNumber}" />

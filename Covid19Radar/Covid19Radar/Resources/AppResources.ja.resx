@@ -196,7 +196,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>PrivacyPolicy</comment>
   </data>
   <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>[VZ7Hf][ID !!]</value>
+    <value>ID</value>
     <comment>ID</comment>
   </data>
   <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">

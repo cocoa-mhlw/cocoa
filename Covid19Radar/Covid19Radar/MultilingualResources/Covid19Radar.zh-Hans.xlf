@@ -6,7 +6,7 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-<trans-unit id="ButtonIWantToHelp" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonIWantToHelp" translate="yes" xml:space="preserve">
           <source>I want to help</source>
           <target state="translated">我想帮忙</target>
           <note from="MultilingualBuild" annotates="source" priority="2">I want to help</note>
@@ -100,7 +100,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
           <source>COVID19Radar</source>
-          <target state="new">COVID19Radar</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID19雷达</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
         <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
@@ -160,14 +160,9 @@ Please check your SMS.</source>
           <target state="translated">如果你被诊断为阳性</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sub title</note>
         </trans-unit>
-        <trans-unit id="TitleStatusSettings" translate="yes" xml:space="preserve">
-          <source>Status Settings</source>
-          <target state="translated">状态设定</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings page title</note>
-        </trans-unit>
         <trans-unit id="UserSettingPageTextPhoneNumberPlaceholder" translate="yes" xml:space="preserve">
           <source>090-1234-4567</source>
-          <target state="new">090-1234-4567</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">090-1234-4567</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Placeholder text for phone number entry</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconListMenu" translate="yes" xml:space="preserve">
@@ -229,17 +224,17 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="UrlLicense" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/agpl.html</source>
-          <target state="new">https://covid19radar.z11.web.core.windows.net/en/agpl.html</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/agpl.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">AGPL3.0</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
-          <target state="new">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
           <source>ID</source>
-          <target state="new">ID</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">编号</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
@@ -274,12 +269,12 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
-          <target state="new">https://covid19radar.z11.web.core.windows.net/en/contributor.html</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/contributor.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Url Contributer</note>
         </trans-unit>
         <trans-unit id="UrlUpdate" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
-          <target state="new">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
         </trans-unit>
         <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
@@ -289,7 +284,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/qna.html</source>
-          <target state="new">https://covid19radar.z11.web.core.windows.net/en/qna.html</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/qna.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">If contacted , headsup and Correct coping method and contact information Try to be calm.</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
@@ -311,6 +306,41 @@ Please check your SMS.</source>
           <source>Requirements to use this app</source>
           <target state="translated">应用程式需求</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
+        </trans-unit>
+        <trans-unit id="TitleUserSettings" translate="yes" xml:space="preserve">
+          <source>Status Settings</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">状态设置</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings page title</note>
+        </trans-unit>
+        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+          <source>Status Settings</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">状态设置</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
+        </trans-unit>
+        <trans-unit id="ButtonSave" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">保存</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button Save</note>
+        </trans-unit>
+        <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">如果您收到阳性诊断，请输入您的手机号码并更新您的状态，以保护您的亲人。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
+        </trans-unit>
+        <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">如果您收到阳性诊断</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
+        </trans-unit>
+        <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
+          <source>Tap to change state</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">点击以更改状态</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
+        </trans-unit>
+        <trans-unit id="UserStatusPageCodePlaceholder" translate="yes" xml:space="preserve">
+          <source>Please enter the code</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">请输入代码</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
         </trans-unit>
       </group>
     </body>

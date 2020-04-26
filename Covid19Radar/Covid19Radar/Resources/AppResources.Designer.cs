@@ -124,6 +124,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Save に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonSave {
+            get {
+                return ResourceManager.GetString("ButtonSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Start に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonStart {
@@ -387,6 +396,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Status Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TitileUserStatusSettings {
+            get {
+                return ResourceManager.GetString("TitileUserStatusSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   App Description に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleAppDescription {
@@ -477,15 +495,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Status Settings に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleStatusSettings {
-            get {
-                return ResourceManager.GetString("TitleStatusSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Status Update Complete に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleStatusUpdateComplete {
@@ -500,6 +509,15 @@ namespace Covid19Radar.Resources {
         internal static string TitleUpdateInformation {
             get {
                 return ResourceManager.GetString("TitleUpdateInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Status Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TitleUserSettings {
+            get {
+                return ResourceManager.GetString("TitleUserSettings", resourceCulture);
             }
         }
         
@@ -600,6 +618,42 @@ namespace Covid19Radar.Resources {
         internal static string UserSettingPageTextStatusSettingsSubtitle {
             get {
                 return ResourceManager.GetString("UserSettingPageTextStatusSettingsSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please enter the code に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UserStatusPageCodePlaceholder {
+            get {
+                return ResourceManager.GetString("UserStatusPageCodePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UserStatusPageTextStatusSettingsDescription {
+            get {
+                return ResourceManager.GetString("UserStatusPageTextStatusSettingsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Tap to change state に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UserStatusPageTextStatusSettingsPickerTitle {
+            get {
+                return ResourceManager.GetString("UserStatusPageTextStatusSettingsPickerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you received a positive diagnosis に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UserStatusPageTextStatusSettingsSubtitle {
+            get {
+                return ResourceManager.GetString("UserStatusPageTextStatusSettingsSubtitle", resourceCulture);
             }
         }
     }

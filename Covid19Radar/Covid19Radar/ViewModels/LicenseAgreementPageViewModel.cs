@@ -13,7 +13,6 @@ namespace Covid19Radar.ViewModels
 {
     public class LicenseAgreementPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
         private string _url;
 
         public string Url
@@ -25,7 +24,6 @@ namespace Covid19Radar.ViewModels
         public LicenseAgreementPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
             Title = Resources.AppResources.TitleLicenseAgreement;
             Url = Resources.AppResources.UrlLicense;
         }

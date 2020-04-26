@@ -54,6 +54,9 @@
     <Compile Update="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\UserStatusPage.xaml.cs">
+      <DependentUpon>UserStatusPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\UserSettingPage.xaml.cs">
       <DependentUpon>UserSettingPage.xaml</DependentUpon>
     </Compile>
