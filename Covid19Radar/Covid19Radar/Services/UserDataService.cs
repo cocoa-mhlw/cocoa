@@ -67,11 +67,13 @@ namespace Covid19Radar.Services
             if (hasStatusChange)
             {
                 // Notification Contacted
+                /*
                 if (downloadModel.UserStatus == UserStatus.Contactd)
                 {
                     // TOOD Change to Resouce String
                     notificationService.ScheduleNotification("TEST", "MESSAGE");
                 }
+                */
                 var newModel = new UserDataModel()
                 {
                     UserUuid = current.UserUuid,
