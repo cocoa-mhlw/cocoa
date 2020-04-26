@@ -49,6 +49,10 @@ namespace Covid19Radar
             // convert Postdata to BeaconDataModel
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var param = JsonConvert.DeserializeObject<NotificationCreateParameter>(requestBody);
+            if (string.IsNullOrWhiteSpace(param.Title) || string.IsNullOrWhiteSpace(param.Message))
+            {
+                return new BadRequestObjectResult("Title or Message is missing");
+            }
 
             var now = DateTime.UtcNow;
             var newNotification = new NotificationMessageModel();
