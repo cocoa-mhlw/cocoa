@@ -73,7 +73,7 @@ namespace Covid19Radar.iOS.Services
             foreach (var beacon in beacons)
             {
                 if (beacon.IsSentToServer) continue;
-                await _httpDataService.PostBeaconDataAsync(_userData, beacon);
+                if (!await _httpDataService.PostBeaconDataAsync(_userData, beacon)) continue;
                 var key = beacon.Id;
                 lock (dataLock)
                 {
