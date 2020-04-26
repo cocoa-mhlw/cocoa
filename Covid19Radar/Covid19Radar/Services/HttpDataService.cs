@@ -1,6 +1,7 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -46,7 +47,7 @@ namespace Covid19Radar.Services
         }
 
         // POST /api/Beacon - check user status and user exists
-        public async Task<UserDataModel> PostBeaconDataAsync(UserDataModel user, BeaconDataModel beacon)
+        public async Task<bool> PostBeaconDataAsync(UserDataModel user, BeaconDataModel beacon)
         {
             string url = AppConstants.ApiBaseUrl + "/Beacon";
 
@@ -69,12 +70,17 @@ namespace Covid19Radar.Services
             postBeaconDataModel.UserUuid = user.UserUuid;
 
             HttpContent content = new StringContent(Utils.SerializeToJson(postBeaconDataModel), Encoding.UTF8, "application/json");
-            var result = await Post(url, content);
-            if (result != null)
+            try
             {
-                return Utils.DeserializeFromJson<UserDataModel>(result);
+                HttpResponseMessage result = await httpClient.PostAsync(url, content);
+                await result.Content.ReadAsStringAsync();
+                if (result.IsSuccessStatusCode)
+                {
+                    return true;
+                }
             }
-            return null;
+            catch { }
+            return false;
         }
 
         // POST /otp/send - send OTP to the specified phone number
