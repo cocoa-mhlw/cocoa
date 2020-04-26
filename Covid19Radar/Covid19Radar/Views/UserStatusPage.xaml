@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.UserStatusPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    xmlns:c="clr-namespace:Covid19Radar.Converters"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <c:IntEnumConverter x:Key="IntEnum" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView Padding="0,20">
+        <StackLayout>
+            <StackLayout Margin="40,0">
+                <Label
+                    Margin="0,0,0,5"
+                    Style="{StaticResource Accent2ColorHeaderLabelStyle}"
+                    Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsSubtitle}" />
+                <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
+                <Label Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsDescription}" />
+                <Picker Title="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsPickerTitle}" Style="{StaticResource Accent2ColorStatusPickerStyle}" ItemsSource="{Binding UserStatuses}"  SelectedIndex="{Binding SelectedUserStatus.Value, Converter={StaticResource IntEnum}, Mode=TwoWay}" />
+                <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}" Style="{StaticResource Accent2ColorHeaderLabelStyle}" />
+            </StackLayout>
+
+            <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />
+            <Button
+                    Margin="0,40,0,80"
+                    Command="{Binding OnClickSave}"
+                    Style="{StaticResource DefaultButtonStyle}"
+                    Text="{x:Static resources:AppResources.ButtonSave}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
