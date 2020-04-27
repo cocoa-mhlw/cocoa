@@ -295,6 +295,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   OK に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DialogButtonOk {
+            get {
+                return ResourceManager.GetString("DialogButtonOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please check your network connection. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DialogNetworkConnectionError {
+            get {
+                return ResourceManager.GetString("DialogNetworkConnectionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   HOME に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageTitle {
