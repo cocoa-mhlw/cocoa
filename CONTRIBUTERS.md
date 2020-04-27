@@ -30,6 +30,7 @@
 - Gai Matsushita (Privacy policy development / Domestic and foreign law expert lawyer)
 - Akira Tsumura (Documentation)
 - Hisashi SOGA (Documentation)
+- Takuya Fujiwara (Xamarin)
 
 # Beta Testers
 - Nagahata Kenji
