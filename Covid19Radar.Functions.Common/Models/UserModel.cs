@@ -32,6 +32,12 @@ namespace Covid19Radar.Models
         public string Minor { get; set; }
 
         /// <summary>
+        /// Protected Secret key
+        /// </summary>
+        /// <value>Protected Secret Key</value>
+        public string ProtectSecret { get; set; }
+
+        /// <summary>
         /// ETAG
         /// </summary>
         public string _etag { get; set; }
