@@ -19,6 +19,7 @@ namespace Covid19Radar
         {
             builder.Services.AddLogging();
             builder.Services.AddHttpClient();
+            builder.Services.AddSingleton<ICryptionService, CryptionService>();
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
             builder.Services.AddSingleton<INotificationService, NotificationService>();
             builder.Services.AddSingleton<IOtpGenerator, OtpGenerator>();
