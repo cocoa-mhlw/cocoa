@@ -6,6 +6,7 @@ using Covid19Radar.Services;
 using DryIoc;
 using Prism.Ioc;
 using Prism.Navigation;
+using Prism.Services;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -31,12 +32,15 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref _isBusy, value);
         }
 
-        public ConsentByUserPageViewModel(INavigationService navigationService)
+        private readonly IPageDialogService _pageDialogService;
+
+        public ConsentByUserPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
             : base(navigationService)
         {
             Title = AppResources.TitleConsentByUserPage;
             Url = Resources.AppResources.UrlPrivacyPolicy;
 
+            _pageDialogService = pageDialogService;
             _userDataService = App.Current.Container.Resolve<UserDataService>();
             OnClickNext = new Command(async () =>
              {
@@ -46,6 +50,12 @@ namespace Covid19Radar.ViewModels
                      IsBusy = true;
                      UserDataModel userData = await _userDataService.RegistUserAsync();
                      IsBusy = false;
+
+                     if (userData == null)
+                     {
+                         await _pageDialogService.DisplayAlertAsync("", Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogButtonOk);
+                         return;
+                     }
                  }
 
                  await NavigationService.NavigateAsync("InitSettingPage");

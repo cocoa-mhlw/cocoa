@@ -23,13 +23,17 @@ namespace Covid19Radar.Services
         // POST /api/Register -  Register User
         public async Task<UserDataModel> PostRegisterUserAsync()
         {
-            string url = AppConstants.ApiBaseUrl + "/Register";
-            var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
-            var result = await Post(url, content);
-            if (result != null)
+            try
             {
-                return Utils.DeserializeFromJson<UserDataModel>(result);
-            }
+                string url = AppConstants.ApiBaseUrl + "/Register";
+                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+                var result = await Post(url, content);
+                if (result != null)
+                {
+                    return Utils.DeserializeFromJson<UserDataModel>(result);
+                }
+            } catch(HttpRequestException) { }
+
             return null;
         }
 
