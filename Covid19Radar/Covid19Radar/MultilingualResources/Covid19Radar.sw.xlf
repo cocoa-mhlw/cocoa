@@ -342,6 +342,16 @@ Tafadhali kagua SMS yako.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tafadhali ingiza msimbo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
         </trans-unit>
+        <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
+          <source>Please check your network connection.</source>
+          <target state="new">Please check your network connection.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
+        </trans-unit>
+        <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="new">OK</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
+        </trans-unit>
       </group>
     </body>
   </file>
