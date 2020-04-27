@@ -7,7 +7,7 @@ namespace Covid19Radar.Common
     public enum UserStatus
     {
         None,
-        Contactd,
+        Contacted,
         OnSet,
         Suspected,
         Inspection,
