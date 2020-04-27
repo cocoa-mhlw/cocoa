@@ -59,7 +59,7 @@ namespace Covid19Radar
             newNotification.Title = param.Title;
             newNotification.Message = param.Message;
             newNotification.Created = now;
-            newNotification.id = now.ToString("yyyyMMddHHmmss");
+            newNotification.id = Guid.NewGuid().ToString("N");
             var createResult = await Cosmos.Notification.CreateItemAsync(newNotification);
             var result = new NotificationCreateResult() { Message = createResult.Resource };
             return new OkObjectResult(result);
