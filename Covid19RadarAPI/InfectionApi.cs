@@ -112,7 +112,7 @@ namespace Covid19Radar
                         {
                             // target UserUuid
                             var id = o.GetId();
-                            await updateUserStatus(id, Common.UserStatus.Contactd);
+                            await updateUserStatus(id, Common.UserStatus.Contacted);
                         }
                     }
                 }

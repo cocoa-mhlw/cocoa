@@ -25,7 +25,7 @@ namespace Covid19Radar.Tests.Models
         }
 
         [DataTestMethod]
-        [DataRow(UserStatus.Contactd)]
+        [DataRow(UserStatus.Contacted)]
         [DataRow(UserStatus.Infection)]
         [DataRow(UserStatus.Inspection)]
         [DataRow(UserStatus.None)]
