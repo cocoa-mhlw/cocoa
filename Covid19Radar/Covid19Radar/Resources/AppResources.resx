@@ -384,4 +384,12 @@ Please check your SMS.</value>
     <value>Please enter the code</value>
     <comment>User Status Page Code Input</comment>
   </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Please check your network connection.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
 </root>

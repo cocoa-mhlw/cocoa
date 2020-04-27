@@ -115,6 +115,11 @@ namespace Covid19Radar.Services
         public async Task<UserDataModel> RegistUserAsync()
         {
             UserDataModel userData = await httpDataService.PostRegisterUserAsync();
+            if (userData == null)
+            {
+                return null;
+            }
+
             await SetAsync(userData);
             return userData;
         }
