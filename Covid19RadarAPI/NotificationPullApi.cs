@@ -19,14 +19,17 @@ namespace Covid19Radar
     {
         private readonly ICosmos Cosmos;
         private readonly INotificationService Notification;
+        private readonly IValidationUserService Validation;
         private readonly ILogger<NotificationPullApi> Logger;
         public NotificationPullApi(
             ICosmos cosmos,
             INotificationService notification,
+            IValidationUserService validation,
             ILogger<NotificationPullApi> logger)
         {
             Cosmos = cosmos;
             Notification = notification;
+            Validation = validation;
             Logger = logger;
         }
 
@@ -52,13 +55,13 @@ namespace Covid19Radar
             var param = JsonConvert.DeserializeObject<NotificationPullParameter>(requestBody);
 
             // validation
-            if (string.IsNullOrWhiteSpace(param.UserUuid)
-                || string.IsNullOrWhiteSpace(param.UserMajor)
-                || string.IsNullOrWhiteSpace(param.UserMinor))
+            var validationResult = await Validation.ValidateAsync(req, param);
+            if (!validationResult.IsValid)
             {
                 AddBadRequest(req);
-                return new BadRequestObjectResult("");
+                return validationResult.ErrorActionResult;
             }
+
             var queryResult = await Query(req, param);
             if (queryResult != null)
             {
