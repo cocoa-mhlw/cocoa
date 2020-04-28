@@ -19,12 +19,17 @@ namespace Covid19Radar.Api
 
         private readonly ICosmos Cosmos;
         private readonly INotificationService Notification;
+        private readonly IValidationUserService Validation;
         private readonly ILogger<UserApi> Logger;
 
-        public UserApi(ICosmos cosmos, INotificationService notification, ILogger<UserApi> logger)
+        public UserApi(ICosmos cosmos,
+            INotificationService notification,
+            IValidationUserService validation,
+            ILogger<UserApi> logger)
         {
             Cosmos = cosmos;
             Notification = notification;
+            Validation = validation;
             Logger = logger;
         }
 
@@ -52,12 +57,11 @@ namespace Covid19Radar.Api
             var user = JsonConvert.DeserializeObject<UserParameter>(requestBody);
 
             // validation
-            if (string.IsNullOrWhiteSpace(user.UserUuid)
-                || string.IsNullOrWhiteSpace(user.Major)
-                || string.IsNullOrWhiteSpace(user.Minor))
+            var validationResult = await Validation.ValidateAsync(req, user);
+            if (!validationResult.IsValid)
             {
                 AddBadRequest(req);
-                return new BadRequestObjectResult("");
+                return validationResult.ErrorActionResult;
             }
 
             // query

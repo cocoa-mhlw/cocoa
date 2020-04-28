@@ -11,16 +11,22 @@ using Covid19Radar.Models;
 using Covid19Radar.DataStore;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
+using Covid19Radar.Services;
 
 namespace Covid19Radar.Api
 {
     public class RegisterApi
     {
         private readonly ICosmos Cosmos;
+        private readonly ICryptionService Cryption;
         private readonly ILogger<RegisterApi> Logger;
-        public RegisterApi(ICosmos cosmos, ILogger<RegisterApi> logger)
+        public RegisterApi(
+            ICosmos cosmos,
+            ICryptionService cryption,
+            ILogger<RegisterApi> logger)
         {
             Cosmos = cosmos;
+            Cryption = cryption;
             Logger = logger;
         }
 
@@ -85,15 +91,18 @@ namespace Covid19Radar.Api
             }
 
             var newItem = new UserModel();
+            var secret = Cryption.CreateSecret();
             newItem.UserUuid = userUuid;
             newItem.Major = number.Major.ToString();
             newItem.Minor = number.Minor.ToString();
             newItem.SetStatus(Common.UserStatus.None);
+            newItem.ProtectSecret = Cryption.Protect(secret);
             var newItemResult = await Cosmos.User.CreateItemAsync(newItem);
             var result = new RegisterResultModel();
             result.UserUuid = userUuid;
             result.Major = newItem.Major;
             result.Minor = newItem.Minor;
+            result.Secret = secret;
             return new OkObjectResult(result);
         }
     }
