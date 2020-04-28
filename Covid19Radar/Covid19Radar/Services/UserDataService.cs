@@ -34,6 +34,14 @@ namespace Covid19Radar.Services
             current = Get();
             if (current != null)
             {
+                // HACK: Provisional START
+                if (string.IsNullOrWhiteSpace(current.Secret))
+                {
+                    current = null;
+                    return;
+                }
+                // Provisional END
+                httpDataService.SetSecret(current.Secret);
                 StartTimer();
             }
         }
@@ -89,11 +97,6 @@ namespace Covid19Radar.Services
                 // Pull Notification.
                 try
                 {
-                    var result = await httpDataService.PostNotificationPullAsync(current);
-                    foreach (var notify in result.Messages)
-                    {
-                        notificationService.ReceiveNotification(notify.Title, notify.Message);
-                    }
                     var newModel = new UserDataModel()
                     {
                         UserUuid = current.UserUuid,
@@ -102,6 +105,11 @@ namespace Covid19Radar.Services
                         UserStatus = current.UserStatus,
                         LastNotificationTime = downloadModel.LastNotificationTime
                     };
+                    var result = await httpDataService.PostNotificationPullAsync(newModel);
+                    foreach (var notify in result.Messages)
+                    {
+                        notificationService.ReceiveNotification(notify.Title, notify.Message);
+                    }
                     await SetAsync(newModel);
                 }
                 catch (Exception) { }
@@ -119,7 +127,7 @@ namespace Covid19Radar.Services
             {
                 return null;
             }
-
+            httpDataService.SetSecret(userData.Secret);
             await SetAsync(userData);
             return userData;
         }
@@ -139,9 +147,13 @@ namespace Covid19Radar.Services
             {
                 return;
             }
+            var isNull = current == null;
+            if (!isNull && string.IsNullOrWhiteSpace(userData.Secret))
+            {
+                userData.Secret = current.Secret;
+            }
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             await Application.Current.SavePropertiesAsync();
-            var isNull = current == null;
             current = userData;
             if (UserDataChanged != null)
             {

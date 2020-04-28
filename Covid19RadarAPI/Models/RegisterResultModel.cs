@@ -22,5 +22,12 @@ namespace Covid19Radar.Models
         /// </summary>
         /// <value>User Minor</value>
         public string Minor { get; set; }
+
+        /// <summary>
+        /// Secret key
+        /// </summary>
+        /// <value>Secret Key</value>
+        public string Secret { get; set; }
+
     }
 }
