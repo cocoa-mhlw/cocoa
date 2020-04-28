@@ -26,7 +26,7 @@
                 <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
                 <Label Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsDescription}" />
                 <Picker Title="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsPickerTitle}" Style="{StaticResource Accent2ColorStatusPickerStyle}" ItemsSource="{Binding UserStatuses}"  SelectedIndex="{Binding SelectedUserStatus.Value, Converter={StaticResource IntEnum}, Mode=TwoWay}" />
-                <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}" Style="{StaticResource Accent2ColorHeaderLabelStyle}" />
+                <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}" Style="{StaticResource Accent2ColorHeaderLabelStyle}" TextColor="{StaticResource Accent4Color}" />
             </StackLayout>
 
             <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />
