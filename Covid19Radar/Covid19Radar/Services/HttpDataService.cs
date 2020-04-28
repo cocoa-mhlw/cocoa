@@ -20,6 +20,11 @@ namespace Covid19Radar.Services
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
+        public void SetSecret(string secret)
+        {
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("COVID-19-RADAR", secret);
+        }
+
         // POST /api/Register -  Register User
         public async Task<UserDataModel> PostRegisterUserAsync()
         {

@@ -44,6 +44,7 @@ namespace Covid19Radar.Services
             if (value.Count != 1) return IValidationUserService.ValidateResult.Error;
             var authorization = value.First();
             if (!authorization.StartsWith(AuthorizationType)) return IValidationUserService.ValidateResult.Error;
+            if (authorization.Length <= AuthorizationType.Length + 1) return IValidationUserService.ValidateResult.Error;
             var authorizationCode = authorization.Remove(0, AuthorizationType.Length + 1);
             return await Query(req, user, authorizationCode);
         }
