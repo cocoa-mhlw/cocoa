@@ -16,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar.Background", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar.Functions.Common", "src\Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj", "{A5295862-2CEA-4863-96DF-860C3A58146D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.Api.External", ""src\Covid19Radar.Api.External\Covid19Radar.Api.External.csproj", "{52DB14F9-441C-444F-89F2-FDCFF95A9097}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.Api.External", "src\Covid19Radar.Api.External\Covid19Radar.Api.External.csproj", "{52DB14F9-441C-444F-89F2-FDCFF95A9097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
