@@ -70,7 +70,7 @@ namespace Covid19Radar
         {
             try
             {
-                var itemResult = await Cosmos.User.ReadItemAsync<UserResultModel>(user.GetId(), PartitionKey.None);
+                var itemResult = await Cosmos.User.ReadItemAsync<UserModel>(user.GetId(), PartitionKey.None);
                 if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     return null;
