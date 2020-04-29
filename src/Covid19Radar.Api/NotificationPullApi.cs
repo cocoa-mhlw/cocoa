@@ -35,6 +35,52 @@ namespace Covid19Radar
 
         [FunctionName(nameof(NotificationPullApi))]
         public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get",
+                         Route = "Notification/Pull/{UserUuid}/{UserMajor}/{UserMinor}/{LastNotificationTime:datetime}")]
+            HttpRequest req,
+            string userUuid,
+            string userMajor,
+            string userMinor,
+            DateTime lastNotificationTime)
+        {
+            Logger.LogInformation($"{nameof(NotificationPullApi)} processed a request.");
+
+            switch (req.Method)
+            {
+                case "GET":
+                    return await Get(req, new NotificationPullParameter()
+                    {
+                        UserUuid = userUuid,
+                        UserMajor = userMajor,
+                        UserMinor = userMinor,
+                        LastNotificationTime = lastNotificationTime
+                    });
+            }
+            AddBadRequest(req);
+            return new BadRequestObjectResult("Not Supported");
+        }
+        private async Task<IActionResult> Get(HttpRequest req, NotificationPullParameter param)
+        {
+            // validation
+            var validationResult = await Validation.ValidateAsync(req, param);
+            if (!validationResult.IsValid)
+            {
+                AddBadRequest(req);
+                return validationResult.ErrorActionResult;
+            }
+
+            var queryResult = await Query(req, param);
+            if (queryResult != null)
+            {
+                return queryResult;
+            }
+
+            // Query to Notification Service.
+            return GetMessages(param);
+        }
+
+        [FunctionName(nameof(NotificationPullApi) + "Post")]
+        public async Task<IActionResult> RunPost(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "Notification/Pull")] HttpRequest req)
         {
             Logger.LogInformation($"{nameof(NotificationPullApi)} processed a request.");
@@ -102,7 +148,6 @@ namespace Covid19Radar
             result.LastNotificationTime = lastNotificationTime;
             return new OkObjectResult(result);
         }
-
 
         private void AddBadRequest(HttpRequest req)
         {
