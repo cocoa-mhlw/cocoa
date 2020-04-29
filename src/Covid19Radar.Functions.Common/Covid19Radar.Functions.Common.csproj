@@ -12,4 +12,8 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
 </Project>
