@@ -1,6 +1,8 @@
 using Covid19Radar.Api;
+using Covid19Radar.DataAccess;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace Covid19Radar.Tests
 {
@@ -11,20 +13,20 @@ namespace Covid19Radar.Tests
         public void CreateMethod()
         {
             // preparation
-            var cosmos = new Mock.CosmosMock();
+            var userRepo = new Mock<IUserRepository>();
             var cryption = new Mock.CryptionServiceMock();
             var logger = new Mock.LoggerMock<RegisterApi>();
-            var registerApi = new RegisterApi(cosmos, cryption, logger);
+            var registerApi = new RegisterApi(userRepo.Object, cryption, logger);
         }
 
         [TestMethod]
         public void RunMethod()
         {
             // preparation
-            var cosmos = new Mock.CosmosMock();
+            var userRepo = new Mock<IUserRepository>();
             var cryption = new Mock.CryptionServiceMock();
             var logger = new Mock.LoggerMock<RegisterApi>();
-            var registerApi = new RegisterApi(cosmos, cryption, logger);
+            var registerApi = new RegisterApi(userRepo.Object, cryption, logger);
             var context = new Mock.HttpContextMock();
             // action
             registerApi.Run(context.Request);
