@@ -1,5 +1,6 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Models;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -25,7 +26,25 @@ namespace Covid19Radar.Services
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("COVID-19-RADAR", secret);
         }
 
-        // POST /api/Register -  Register User
+        // GET /api/BeaconUuid - Beacon Uuid
+        public async Task<BeaconUuidModel> GetBeaconUuidAsync()
+        {
+            try
+            {
+                string url = AppConstants.ApiBaseUrl + "/BeaconUuid";
+                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+                var result = await Get(url);
+                if (result != null)
+                {
+                    return Utils.DeserializeFromJson<BeaconUuidModel>(result);
+                }
+            }
+            catch (HttpRequestException) { }
+
+            return null;
+        }
+
+        // POST /api/Register - Register User
         public async Task<UserDataModel> PostRegisterUserAsync()
         {
             try
