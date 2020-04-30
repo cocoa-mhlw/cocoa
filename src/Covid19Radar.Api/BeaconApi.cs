@@ -11,6 +11,7 @@ using Covid19Radar.Models;
 using Covid19Radar.DataStore;
 using Microsoft.Azure.Cosmos;
 using Covid19Radar.DataAccess;
+using Covid19Radar.Services;
 
 #nullable enable
 
@@ -20,12 +21,18 @@ namespace Covid19Radar.Api
     {
         private readonly IBeaconRepository BeaconRepository;
         private readonly IUserRepository UserRepository;
+        private readonly IValidationUserService Validation;
         private ILogger<BeaconApi> Logger;
 
-        public BeaconApi(IBeaconRepository beaconRepository, IUserRepository userRepository, ILogger<BeaconApi> logger)
+        public BeaconApi(
+            IBeaconRepository beaconRepository,
+            IUserRepository userRepository,
+            IValidationUserService validation,
+            ILogger<BeaconApi> logger)
         {
             BeaconRepository = beaconRepository;
             UserRepository = userRepository;
+            Validation = validation;
             Logger = logger;
         }
 
@@ -35,33 +42,15 @@ namespace Covid19Radar.Api
         {
             Logger.LogInformation($"{nameof(BeaconApi)} processed a request.");
 
-            switch (req.Method)
-            {
-                case "POST":
-                    return await Post(req);
-            }
-            AddBadRequest(req);
-            return new BadRequestObjectResult("Not Supported");
-        }
-
-        private async Task<IActionResult> Post(HttpRequest req)
-        {
             // convert Postdata to BeaconDataModel
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var param = JsonConvert.DeserializeObject<BeaconParameter>(requestBody);
 
             // validation
-            if (string.IsNullOrWhiteSpace(param.UserUuid)
-                || string.IsNullOrWhiteSpace(param.Major)
-                || string.IsNullOrWhiteSpace(param.Minor))
+            var validationResult = await Validation.ValidateAsync(req, param);
+            if (!validationResult.IsValid)
             {
-                AddBadRequest(req);
-                return new BadRequestObjectResult("");
-            }
-            var queryResult = await Query(req, param);
-            if (queryResult != null)
-            {
-                return queryResult;
+                return validationResult.ErrorActionResult;
             }
 
             // save to DB

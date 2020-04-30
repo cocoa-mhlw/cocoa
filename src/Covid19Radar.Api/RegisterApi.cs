@@ -40,17 +40,6 @@ namespace Covid19Radar.Api
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
-            switch (req.Method)
-            {
-                case "POST":
-                    return await Post(req);
-            }
-
-            return new BadRequestObjectResult("Not Supported");
-        }
-
-        private async Task<IActionResult> Post(HttpRequest req)
-        {
             // UserUuid
             var userUuid = Guid.NewGuid().ToString("N")
                 + DateTime.UtcNow.Ticks.ToString();

@@ -45,18 +45,8 @@ namespace Covid19Radar.Api
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
-            switch (req.Method)
-            {
-                case "GET":
-                    return await Get(req, new UserParameter() { UserUuid = userUuid, Major = major, Minor = minor });
-            }
+            var user = new UserParameter() { UserUuid = userUuid, Major = major, Minor = minor };
 
-            AddBadRequest(req);
-            return new BadRequestObjectResult("");
-        }
-
-        private async Task<IActionResult> Get(HttpRequest req, UserParameter user)
-        {
             // validation
             var validationResult = await Validation.ValidateAsync(req, user);
             if (!validationResult.IsValid)
@@ -75,18 +65,6 @@ namespace Covid19Radar.Api
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
-            switch (req.Method)
-            {
-                case "POST":
-                    return await Post(req);
-            }
-
-            AddBadRequest(req);
-            return new BadRequestObjectResult("");
-        }
-
-        private async Task<IActionResult> Post(HttpRequest req)
-        {
             // convert Postdata to BeaconDataModel
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var user = JsonConvert.DeserializeObject<UserParameter>(requestBody);
@@ -102,6 +80,7 @@ namespace Covid19Radar.Api
             // query
             return await Query(req, user);
         }
+
 
         private async Task<IActionResult> Query(HttpRequest req, UserParameter user)
         {
