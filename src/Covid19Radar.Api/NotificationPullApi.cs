@@ -35,7 +35,7 @@ namespace Covid19Radar
 
         [FunctionName(nameof(NotificationPullApi))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get",
+            [HttpTrigger(AuthorizationLevel.Function, "get",
                          Route = "Notification/Pull/{UserUuid}/{UserMajor}/{UserMinor}/{LastNotificationTime:datetime}")]
             HttpRequest req,
             string userUuid,
@@ -81,7 +81,7 @@ namespace Covid19Radar
 
         [FunctionName(nameof(NotificationPullApi) + "Post")]
         public async Task<IActionResult> RunPost(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "Notification/Pull")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "Notification/Pull")] HttpRequest req)
         {
             Logger.LogInformation($"{nameof(NotificationPullApi)} processed a request.");
 

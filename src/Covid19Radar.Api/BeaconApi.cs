@@ -27,7 +27,7 @@ namespace Covid19Radar.Api
 
         [FunctionName(nameof(BeaconApi))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "Beacon")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "Beacon")] HttpRequest req)
         {
             Logger.LogInformation($"{nameof(BeaconApi)} processed a request.");
 

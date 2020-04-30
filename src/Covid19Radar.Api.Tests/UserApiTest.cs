@@ -18,8 +18,9 @@ namespace Covid19Radar.Tests
             var userApi = new UserApi(cosmos, notification, validation, logger);
         }
 
-        [TestMethod]
-        public void RunMethod()
+        [DataTestMethod]
+        [DataRow("", "", "")]
+        public void RunMethod(string userUuid, string userMajor, string userMinor)
         {
             // preparation
             var cosmos = new Mock.CosmosMock();
@@ -29,7 +30,7 @@ namespace Covid19Radar.Tests
             var userApi = new UserApi(cosmos, notification, validation, logger);
             var context = new Mock.HttpContextMock();
             // action
-            userApi.Run(context.Request);
+            userApi.Run(context.Request, userUuid, userMajor, userMinor);
             // assert
         }
     }

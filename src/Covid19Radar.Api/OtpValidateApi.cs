@@ -28,7 +28,7 @@ namespace Covid19Radar
 
         [FunctionName(nameof(OtpValidateApi))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "otp/validate")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "otp/validate")] HttpRequest req)
         {
             _logger.LogInformation($"{nameof(OtpSendApi)} processed a request.");
             

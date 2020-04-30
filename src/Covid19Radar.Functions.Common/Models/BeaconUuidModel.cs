@@ -9,12 +9,12 @@ namespace Covid19Radar.Models
 {
     public sealed class BeaconUuidModel
     {
-        public BeaconUuidModel()
+        public BeaconUuidModel(DateTime now)
         {
-            id = new DateTimeOffset(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, DateTime.UtcNow.Hour, 0, 0, TimeSpan.Zero).ToString("yyyyMMddHHmm");
+            id = new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, 0, 0, TimeSpan.Zero).ToString("yyyyMMddHHmm");
             BeaconUuid = Guid.NewGuid().ToString(); 
-            CreateTime = DateTime.UtcNow;
-            EndTime = DateTime.UtcNow.AddHours(2);
+            CreateTime = now;
+            EndTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, 0, 0).AddHours(2);
         }
 
         /// <summary>
