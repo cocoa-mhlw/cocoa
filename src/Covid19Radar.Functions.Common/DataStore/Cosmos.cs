@@ -36,10 +36,11 @@ namespace Covid19Radar.DataStore
         // The container we will create.
         public Container User { get => Database.GetContainer("User"); }
         public Container Beacon { get => Database.GetContainer(BeaconStoreName); }
-        public Container Sequence { get => Database.GetContainer("Sequence");  }
+        public Container Sequence { get => Database.GetContainer("Sequence"); }
         public Container Otp { get => Database.GetContainer("Otp"); }
         public Container Notification { get => Database.GetContainer("Notification"); }
         public Container BeaconUuid { get => Database.GetContainer("BeaconUuid"); }
+        public Container Infection { get => Database.GetContainer("Infection"); }
 
         public string ContainerNameBeacon { get => BeaconStoreName; }
 
@@ -76,7 +77,7 @@ namespace Covid19Radar.DataStore
 
             Logger.LogInformation("GenerateAsync");
             var dbResult = await CosmosClient.CreateDatabaseIfNotExistsAsync(DatabaseId);
-            if (dbResult.StatusCode != System.Net.HttpStatusCode.OK 
+            if (dbResult.StatusCode != System.Net.HttpStatusCode.OK
                 && dbResult.StatusCode != System.Net.HttpStatusCode.Created)
             {
                 Logger.LogError(dbResult.ToString());
@@ -151,6 +152,15 @@ namespace Covid19Radar.DataStore
             var beaconUuidProperties = new ContainerProperties("BeaconUuid", "/PartitionKey");
             var beaconUuidResult = await dbResult.Database.CreateContainerIfNotExistsAsync(beaconUuidProperties);
 
+            // Container Infection
+            Logger.LogInformation("GenerateAsync Create Infection Container");
+            try
+            {
+                await dbResult.Database.GetContainer("Infection").DeleteContainerAsync();
+            }
+            catch { }
+            var infectionProperties = new ContainerProperties("Infection", "/PartitionKey");
+            var infectionResult = await dbResult.Database.CreateContainerIfNotExistsAsync(infectionProperties);
         }
 
     }

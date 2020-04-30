@@ -43,7 +43,7 @@ namespace Covid19Radar.Models
         public string _etag { get; set; }
 
         /// <summary>
-        ///  Status Contactd,OnSet,Suspected,Inspection,Infection
+        ///  Status Contacted,OnSet,Suspected,Inspection,Infection
         /// </summary>
         /// <value></value>
         private UserStatus _UserStatus;

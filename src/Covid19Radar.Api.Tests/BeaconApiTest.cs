@@ -15,8 +15,9 @@ namespace Covid19Radar.Tests
             // preparation
             var userRepo = new Mock<IUserRepository>();
             var beaconRepo = new Mock<IBeaconRepository>();
+            var validation = new Mock.ValidationUserServiceMock();
             var logger = new Mock.LoggerMock<BeaconApi>();
-            var beaconApi = new BeaconApi(beaconRepo.Object, userRepo.Object, logger);
+            var beaconApi = new BeaconApi(beaconRepo.Object, userRepo.Object, validation, logger);
         }
 
         [TestMethod]
@@ -25,8 +26,9 @@ namespace Covid19Radar.Tests
             // preparation
             var userRepo = new Mock<IUserRepository>();
             var beaconRepo = new Mock<IBeaconRepository>();
+            var validation = new Mock.ValidationUserServiceMock();
             var logger = new Mock.LoggerMock<BeaconApi>();
-            var beaconApi = new BeaconApi(beaconRepo.Object, userRepo.Object, logger);
+            var beaconApi = new BeaconApi(beaconRepo.Object, userRepo.Object, validation, logger);
             var context = new Mock.HttpContextMock();
             // action
             beaconApi.Run(context.Request);

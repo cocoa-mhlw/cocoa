@@ -49,23 +49,13 @@ namespace Covid19Radar
         {
             Logger.LogInformation($"{nameof(NotificationPullApi)} processed a request.");
 
-            switch (req.Method)
+            var param = new NotificationPullParameter()
             {
-                case "GET":
-                    return await Get(req, new NotificationPullParameter()
-                    {
-                        UserUuid = userUuid,
-                        UserMajor = userMajor,
-                        UserMinor = userMinor,
-                        LastNotificationTime = lastNotificationTime
-                    });
-            }
-            AddBadRequest(req);
-            return new BadRequestObjectResult("Not Supported");
-        }
-
-        private async Task<IActionResult> Get(HttpRequest req, NotificationPullParameter param)
-        {
+                UserUuid = userUuid,
+                UserMajor = userMajor,
+                UserMinor = userMinor,
+                LastNotificationTime = lastNotificationTime
+            };
             // validation
             var validationResult = await Validation.ValidateAsync(req, param);
             if (!validationResult.IsValid)
@@ -90,17 +80,6 @@ namespace Covid19Radar
         {
             Logger.LogInformation($"{nameof(NotificationPullApi)} processed a request.");
 
-            switch (req.Method)
-            {
-                case "POST":
-                    return await Post(req);
-            }
-            AddBadRequest(req);
-            return new BadRequestObjectResult("Not Supported");
-        }
-
-        private async Task<IActionResult> Post(HttpRequest req)
-        {
             // convert Postdata to BeaconDataModel
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var param = JsonConvert.DeserializeObject<NotificationPullParameter>(requestBody);

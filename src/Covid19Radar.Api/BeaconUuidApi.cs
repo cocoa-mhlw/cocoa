@@ -34,21 +34,6 @@ namespace Covid19Radar.Api
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
-            switch (req.Method)
-            {
-                case "POST":
-                    return await Post(req);
-                case "GET":
-                    return await Post(req);
-            }
-
-            AddBadRequest(req);
-            return new BadRequestObjectResult("");
-
-        }
-
-        private async Task<IActionResult> Post(HttpRequest req)
-        {
             return await Query(req);
         }
 
@@ -59,46 +44,43 @@ namespace Covid19Radar.Api
 
             CacheItem cachedContent = memoryCache.GetCacheItem(key);
 
-            if (cachedContent == null)
-            {
-                try
-                {
-                    var itemResult = await Cosmos.BeaconUuid.ReadItemAsync<BeaconUuidModel>(key, PartitionKey.None);
-                    if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
-                    {
-                        CacheItemPolicy cachePolicy = new CacheItemPolicy();
-                        cachePolicy.Priority = CacheItemPriority.Default;
-                        cachePolicy.AbsoluteExpiration = new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, 0, 0, TimeSpan.Zero).AddHours(2);
-                        cachedContent = new CacheItem(key, itemResult.Resource);
-                        memoryCache.Set(cachedContent, cachePolicy);
-
-                        return new OkObjectResult(itemResult.Resource);
-                    }
-                }
-                catch (CosmosException ex)
-                {
-                    // 429–TooManyRequests
-                    if (ex.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-                    {
-                        return new StatusCodeResult(503);
-                    }
-                    else if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-                    {
-                        // Create New
-                        var beaconUuid = new BeaconUuidModel(now);
-                        var result = await Cosmos.BeaconUuid.CreateItemAsync<BeaconUuidModel>(beaconUuid);
-                        return new OkObjectResult(beaconUuid);
-                    }
-                    AddBadRequest(req);
-                    return new StatusCodeResult((int)ex.StatusCode);
-                }
-                AddBadRequest(req);
-                return new NotFoundResult();
-            }
-            else
+            if (cachedContent != null)
             {
                 return new OkObjectResult(cachedContent.Value);
             }
+            try
+            {
+                var itemResult = await Cosmos.BeaconUuid.ReadItemAsync<BeaconUuidModel>(key, PartitionKey.None);
+                if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    CacheItemPolicy cachePolicy = new CacheItemPolicy();
+                    cachePolicy.Priority = CacheItemPriority.Default;
+                    cachePolicy.AbsoluteExpiration = new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, 0, 0, TimeSpan.Zero).AddHours(2);
+                    cachedContent = new CacheItem(key, itemResult.Resource);
+                    memoryCache.Set(cachedContent, cachePolicy);
+
+                    return new OkObjectResult(itemResult.Resource);
+                }
+            }
+            catch (CosmosException ex)
+            {
+                // 429–TooManyRequests
+                if (ex.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+                {
+                    return new StatusCodeResult(503);
+                }
+                else if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+                {
+                    // Create New
+                    var beaconUuid = new BeaconUuidModel(now);
+                    var result = await Cosmos.BeaconUuid.CreateItemAsync<BeaconUuidModel>(beaconUuid);
+                    return new OkObjectResult(beaconUuid);
+                }
+                AddBadRequest(req);
+                return new StatusCodeResult((int)ex.StatusCode);
+            }
+            AddBadRequest(req);
+            return new NotFoundResult();
         }
         private void AddBadRequest(HttpRequest req)
         {
