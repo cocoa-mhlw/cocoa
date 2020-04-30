@@ -10,18 +10,22 @@ using Newtonsoft.Json;
 using Covid19Radar.Models;
 using Covid19Radar.DataStore;
 using Microsoft.Azure.Cosmos;
+using Covid19Radar.DataAccess;
+
+#nullable enable
 
 namespace Covid19Radar.Api
 {
     public class BeaconApi
     {
-
-        private ICosmos Cosmos;
+        private readonly IBeaconRepository BeaconRepository;
+        private readonly IUserRepository UserRepository;
         private ILogger<BeaconApi> Logger;
 
-        public BeaconApi(ICosmos cosmos, ILogger<BeaconApi> logger)
+        public BeaconApi(IBeaconRepository beaconRepository, IUserRepository userRepository, ILogger<BeaconApi> logger)
         {
-            Cosmos = cosmos;
+            BeaconRepository = beaconRepository;
+            UserRepository = userRepository;
             Logger = logger;
         }
 
@@ -64,12 +68,11 @@ namespace Covid19Radar.Api
             return await Add(param);
         }
 
-        private async Task<IActionResult> Query(HttpRequest req, IUser user)
+        private async Task<IActionResult?> Query(HttpRequest req, IUser user)
         {
             try
             {
-                var itemResult = await Cosmos.User.ReadItemAsync<UserResultModel>(user.GetId(), PartitionKey.None);
-                if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
+                if (await UserRepository.Exists(user.GetId()))
                 {
                     return null;
                 }
@@ -107,7 +110,7 @@ namespace Covid19Radar.Api
             data.KeyTime = param.KeyTime;
             data.TimeStamp = DateTime.UtcNow;
             data.PartitionKey = pk;
-            var result = await Cosmos.Beacon.UpsertItemAsync<BeaconModel>(data, new PartitionKey(pk));
+            await BeaconRepository.Upsert(data);
             return new StatusCodeResult(201);
         }
 

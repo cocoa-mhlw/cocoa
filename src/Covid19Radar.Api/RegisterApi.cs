@@ -12,24 +12,27 @@ using Covid19Radar.DataStore;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
 using Covid19Radar.Services;
+using Covid19Radar.DataAccess;
+
+#nullable enable
 
 namespace Covid19Radar.Api
 {
     public class RegisterApi
     {
-        private readonly ICosmos Cosmos;
         private readonly ICryptionService Cryption;
         private readonly ILogger<RegisterApi> Logger;
+        private readonly IUserRepository UserRepository;
+
         public RegisterApi(
-            ICosmos cosmos,
+            IUserRepository userRepository,
             ICryptionService cryption,
             ILogger<RegisterApi> logger)
         {
-            Cosmos = cosmos;
             Cryption = cryption;
             Logger = logger;
+            UserRepository = userRepository;
         }
-
 
         [FunctionName(nameof(RegisterApi))]
         public async Task<IActionResult> Run(
@@ -56,34 +59,9 @@ namespace Covid19Radar.Api
             return await Register(userUuid);
         }
 
-        private async Task<SequenceDataModel> GetNumber()
-        {
-            var id = SequenceDataModel._id.ToString();
-            for (var i = 0; i < 100; i++)
-            {
-                var result = await Cosmos.Sequence.ReadItemAsync<SequenceDataModel>(id, PartitionKey.None);
-                var model = result.Resource;
-                model.Increment();
-                var option = new ItemRequestOptions();
-                option.IfMatchEtag = model._etag;
-                try
-                {
-                    var resultReplace = await Cosmos.Sequence.ReplaceItemAsync(model, id, null, option);
-                    return resultReplace.Resource;
-                }
-                catch (CosmosException ex)
-                {
-                    Logger.LogInformation(ex, $"GetNumber Retry {i}");
-                    continue;
-                }
-            }
-            Logger.LogWarning("GetNumber is over retry count.");
-            return null;
-        }
-
         private async Task<IActionResult> Register(string userUuid)
         {
-            var number = await GetNumber();
+            var number = await UserRepository.NextSequenceNumber();
             // 503 Error, Fail get number
             if (number == null)
             {
@@ -97,7 +75,7 @@ namespace Covid19Radar.Api
             newItem.Minor = number.Minor.ToString();
             newItem.SetStatus(Common.UserStatus.None);
             newItem.ProtectSecret = Cryption.Protect(secret);
-            var newItemResult = await Cosmos.User.CreateItemAsync(newItem);
+            await UserRepository.Create(newItem);
             var result = new RegisterResultModel();
             result.UserUuid = userUuid;
             result.Major = newItem.Major;
