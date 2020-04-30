@@ -34,14 +34,11 @@ namespace Covid19Radar.Services
             current = Get();
             if (current != null)
             {
-                // HACK: Provisional START
-                if (string.IsNullOrWhiteSpace(current.Secret))
+                // User does't have secret
+                if (!httpDataService.HasSecret())
                 {
-                    current = null;
                     return;
                 }
-                // Provisional END
-                httpDataService.SetSecret(current.Secret);
                 StartTimer();
             }
         }
@@ -127,7 +124,6 @@ namespace Covid19Radar.Services
             {
                 return null;
             }
-            httpDataService.SetSecret(userData.Secret);
             await SetAsync(userData);
             return userData;
         }
