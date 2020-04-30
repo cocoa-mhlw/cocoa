@@ -36,9 +36,9 @@ namespace Covid19Radar.Services
         {
             if (secret == null)
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
 
         // GET /api/BeaconUuid - Beacon Uuid
