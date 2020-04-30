@@ -3,29 +3,35 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
+using Covid19Radar.DataAccess;
 using Covid19Radar.DataStore;
 using Covid19Radar.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
 
+#nullable enable
+
 namespace Covid19Radar.Services
 {
     public class OtpService : IOtpService
     {
-        private readonly ICosmos _db;
+        private readonly IUserRepository _userRepository;
         private readonly IOtpGenerator _otpGenerator;
         private readonly ISmsSender _smsSender;
+        private readonly IOtpRepository _otpRepository;
 
-        public OtpService(ICosmos db, IOtpGenerator otpGenerator, ISmsSender smsSender)
+        public OtpService(IUserRepository userRepository, IOtpRepository otpRepository, IOtpGenerator otpGenerator, ISmsSender smsSender)
         {
-            _db = db;
+            _userRepository = userRepository;
             _otpGenerator = otpGenerator;
             _smsSender = smsSender;
+            _otpRepository = otpRepository;
         }
+
         public async Task SendAsync(OtpSendRequest request)
         {
             //validate user existence
-            var userExists = await UserExists(request.User);
+            var userExists = await _userRepository.Exists(request.User.GetId());
             if (!userExists)
             {
                 throw new UnauthorizedAccessException(ErrorStrings.UserNotFound);
@@ -50,14 +56,14 @@ namespace Covid19Radar.Services
         public async Task<bool> ValidateAsync(OtpValidateRequest request)
         {
             //Validate user existence
-            var userExists = await UserExists(request.User);
+            var userExists = await _userRepository.Exists(request.User.GetId());
             if (!userExists)
             {
                 throw new UnauthorizedAccessException(ErrorStrings.UserNotFound);
             }
 
             //Validate otp request existence
-            var otpRequest = await GetOtpRequest(request.User);
+            var otpRequest = await _otpRepository.GetOtpRequestOfUser(request.User.UserUuid);
             if (otpRequest == null)
             {
                 throw new UnauthorizedAccessException(ErrorStrings.OtpInvalidValidateRequest);
@@ -72,7 +78,7 @@ namespace Covid19Radar.Services
             }
 
             //Delete otp request for the user
-            await DeleteOtpDocument(otpRequest.id, request.User.UserUuid);
+            await _otpRepository.Delete(otpRequest);
 
             return true;
         }
@@ -86,68 +92,7 @@ namespace Covid19Radar.Services
                 UserId = user.GetId(),
                 OtpCreatedTime = otpGeneratedTime
             };
-            await _db.Otp.CreateItemAsync(otpDocument, new PartitionKey(user.UserUuid));
-        }
-
-        private async Task<bool> UserExists(UserModel user)
-        {
-            bool userFound = false;
-            try
-            {
-                var userResult = await _db.User.ReadItemAsync<UserResultModel>(user.GetId(), PartitionKey.None);
-                if (userResult.StatusCode == System.Net.HttpStatusCode.OK)
-                {
-                    userFound = true;
-                }
-            }
-            catch (CosmosException cosmosException)
-            {
-                if (cosmosException.StatusCode == HttpStatusCode.NotFound)
-                {
-                    userFound = false;
-                }
-            }
-
-            return userFound;
-        }
-
-        private async Task<OtpDocument> GetOtpRequest(UserModel user)
-        {
-            OtpDocument otpDocument = null;
-            try
-            {
-                var iterator = _db.Otp.GetItemLinqQueryable<OtpDocument>()
-                        .Where(o => o.UserUuid == user.UserUuid)
-                        .ToFeedIterator();
-
-                if (iterator.HasMoreResults)
-                {
-                    var response = await iterator.ReadNextAsync();
-                    otpDocument = response.FirstOrDefault();
-                }
-            }
-            catch (CosmosException cosmosException)
-            {
-                if (cosmosException.StatusCode == HttpStatusCode.NotFound)
-                {
-                    otpDocument = null;
-                }
-            }
-
-            return otpDocument;
-        }
-
-        private async Task DeleteOtpDocument(string id, string userUuid)
-        {
-            try
-            {
-                await _db.Otp.DeleteItemAsync<OtpDocument>(id, new PartitionKey(userUuid));
-            }
-            catch (CosmosException e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            await _otpRepository.Create(otpDocument);
         }
     }
 }
