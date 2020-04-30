@@ -12,6 +12,7 @@ namespace Covid19Radar.Tests
     {
         private Mock<ILogger<OtpSendApi>> _logger;
         private Mock<IOtpService> _mockOtpService;
+        private Mock.ValidationUserServiceMock _mockValidationUserService;
 
         [TestInitialize]
         public void TestInit()
@@ -21,6 +22,8 @@ namespace Covid19Radar.Tests
             _mockOtpService
                 .Setup(m => m.SendAsync(It.IsAny<OtpSendRequest>()))
                 .Returns(Task.FromResult(Task.CompletedTask));
+            _mockValidationUserService = new Mock.ValidationUserServiceMock();
+
         }
 
         [TestCleanup]
@@ -33,13 +36,13 @@ namespace Covid19Radar.Tests
         [TestMethod]
         public void CreateMethod()
         {
-            var otpApi = new OtpSendApi(_mockOtpService.Object,_logger.Object);
+            var otpApi = new OtpSendApi(_mockOtpService.Object, _mockValidationUserService, _logger.Object);
         }
 
         [TestMethod]
         public void RunMethod()
         {
-            var otpApi = new OtpSendApi(_mockOtpService.Object, _logger.Object);
+            var otpApi = new OtpSendApi(_mockOtpService.Object, _mockValidationUserService, _logger.Object);
             var context = new Mock.HttpContextMock();
             // action
             otpApi.Run(context.Request);

@@ -17,11 +17,16 @@ namespace Covid19Radar
     public class OtpSendApi
     {
         private readonly IOtpService _otpService;
+        private readonly IValidationUserService _validation;
         private readonly ILogger<OtpSendApi> _logger;
 
-        public OtpSendApi(IOtpService otpService, ILogger<OtpSendApi> logger)
+        public OtpSendApi(
+            IOtpService otpService,
+            IValidationUserService validation,
+            ILogger<OtpSendApi> logger)
         {
             _otpService = otpService;
+            _validation = validation;
             _logger = logger;
         }
 
@@ -33,6 +38,14 @@ namespace Covid19Radar
             try
             {
                 var request = await req.ParseAndThrow<OtpSendRequest>();
+
+                // validation
+                var validationResult = await _validation.ValidateAsync(req, request.User);
+                if (!validationResult.IsValid)
+                {
+                    return validationResult.ErrorActionResult;
+                }
+
                 await _otpService.SendAsync(request);
                 return new OkResult();
             }
