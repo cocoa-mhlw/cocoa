@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Logging.Debug;
 using Microsoft.AspNetCore.Http;
+using Covid19Radar.DataAccess;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Startup))]
 
@@ -26,7 +27,9 @@ namespace Covid19Radar
             builder.Services.AddSingleton<IOtpGenerator, OtpGenerator>();
             builder.Services.AddSingleton<IOtpService, OtpService>();
             builder.Services.AddSingleton<ISmsSender, SmsSender>();
+            builder.Services.AddSingleton<IUserRepository, CosmosUserRepository>();
+            builder.Services.AddSingleton<IBeaconRepository, CosmosBeaconRepository>();
+            builder.Services.AddSingleton<IOtpRepository, CosmosOtpRepository>();
         }
     }
 }
-

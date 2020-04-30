@@ -11,28 +11,30 @@ using Newtonsoft.Json;
 using Covid19Radar.Models;
 using Covid19Radar.DataStore;
 using Covid19Radar.Services;
+using Covid19Radar.DataAccess;
+
+#nullable enable
 
 namespace Covid19Radar.Api
 {
     public class UserApi
     {
-
-        private readonly ICosmos Cosmos;
+        private readonly IUserRepository UserRepository;
         private readonly INotificationService Notification;
         private readonly IValidationUserService Validation;
         private readonly ILogger<UserApi> Logger;
 
-        public UserApi(ICosmos cosmos,
+        public UserApi(
+            IUserRepository userRepository,
             INotificationService notification,
             IValidationUserService validation,
             ILogger<UserApi> logger)
         {
-            Cosmos = cosmos;
+            UserRepository = userRepository;
             Notification = notification;
             Validation = validation;
             Logger = logger;
         }
-
 
         [FunctionName(nameof(UserApi))]
         public async Task<IActionResult> Run(
@@ -105,11 +107,11 @@ namespace Covid19Radar.Api
         {
             try
             {
-                var itemResult = await Cosmos.User.ReadItemAsync<UserResultModel>(user.GetId(), PartitionKey.None);
-                if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
+                var userResult = await UserRepository.GetById(user.GetId());
+                if (userResult != null)
                 {
-                    itemResult.Resource.LastNotificationTime = Notification.LastNotificationTime;
-                    return new OkObjectResult(itemResult.Resource);
+                    userResult.LastNotificationTime = Notification.LastNotificationTime;
+                    return new OkObjectResult(userResult);
                 }
             }
             catch (CosmosException ex)
