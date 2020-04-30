@@ -54,7 +54,8 @@ namespace Covid19Radar.Api
 
         private async Task<IActionResult> Query(HttpRequest req)
         {
-            var key = new DateTimeOffset(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, DateTime.UtcNow.Hour, 0, 0, TimeSpan.Zero).ToString("yyyyMMddHHmm");
+            var now = DateTime.UtcNow;
+            var key = new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, 0, 0, TimeSpan.Zero).ToString("yyyyMMddHHmm");
 
             CacheItem cachedContent = memoryCache.GetCacheItem(key);
 
@@ -67,7 +68,7 @@ namespace Covid19Radar.Api
                     {
                         CacheItemPolicy cachePolicy = new CacheItemPolicy();
                         cachePolicy.Priority = CacheItemPriority.Default;
-                        cachePolicy.AbsoluteExpiration = new DateTimeOffset(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, DateTime.UtcNow.Hour, 0, 0, TimeSpan.Zero).AddHours(2);
+                        cachePolicy.AbsoluteExpiration = new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, 0, 0, TimeSpan.Zero).AddHours(2);
                         cachedContent = new CacheItem(key, itemResult.Resource);
                         memoryCache.Set(cachedContent, cachePolicy);
 
@@ -84,7 +85,7 @@ namespace Covid19Radar.Api
                     else if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
                     {
                         // Create New
-                        var beaconUuid = new BeaconUuidModel();
+                        var beaconUuid = new BeaconUuidModel(now);
                         var result = await Cosmos.BeaconUuid.CreateItemAsync<BeaconUuidModel>(beaconUuid);
                         return new OkObjectResult(beaconUuid);
                     }

@@ -27,7 +27,7 @@ namespace Covid19Radar
 
         [FunctionName(nameof(OtpSendApi))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "otp/send")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "otp/send")] HttpRequest req)
         {
             _logger.LogInformation($"{nameof(OtpSendApi)} processed a request.");
             try
