@@ -12,22 +12,26 @@ using Covid19Radar.DataStore;
 using Covid19Radar.Models;
 using Microsoft.Azure.Cosmos;
 using Covid19Radar.Services;
+using Covid19Radar.DataAccess;
+
+#nullable enable
 
 namespace Covid19Radar
 {
     public class NotificationPullApi
     {
-        private readonly ICosmos Cosmos;
+        private readonly IUserRepository UserRepository;
         private readonly INotificationService Notification;
         private readonly IValidationUserService Validation;
         private readonly ILogger<NotificationPullApi> Logger;
+
         public NotificationPullApi(
-            ICosmos cosmos,
+            IUserRepository userRepository,
             INotificationService notification,
             IValidationUserService validation,
             ILogger<NotificationPullApi> logger)
         {
-            Cosmos = cosmos;
+            UserRepository = userRepository;
             Notification = notification;
             Validation = validation;
             Logger = logger;
@@ -59,6 +63,7 @@ namespace Covid19Radar
             AddBadRequest(req);
             return new BadRequestObjectResult("Not Supported");
         }
+
         private async Task<IActionResult> Get(HttpRequest req, NotificationPullParameter param)
         {
             // validation
@@ -118,12 +123,11 @@ namespace Covid19Radar
             return GetMessages(param);
         }
 
-        private async Task<IActionResult> Query(HttpRequest req, IUser user)
+        private async Task<IActionResult?> Query(HttpRequest req, IUser user)
         {
             try
             {
-                var itemResult = await Cosmos.User.ReadItemAsync<UserResultModel>(user.GetId(), PartitionKey.None);
-                if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
+                if (await UserRepository.Exists(user.GetId()))
                 {
                     return null;
                 }
