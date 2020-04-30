@@ -18,6 +18,7 @@ namespace Covid19Radar.Services
             this.httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri(AppConstants.ApiBaseUrl);
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            httpClient.DefaultRequestHeaders.Add("x-functions-key", AppConstants.ApiSecret);
         }
 
         public void SetSecret(string secret)
