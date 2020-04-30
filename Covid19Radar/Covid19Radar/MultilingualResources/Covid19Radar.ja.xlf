@@ -239,7 +239,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
           <source>Avarage Distance</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">アヴァラージュ距離</target>
+          <target state="translated" state-qualifier="mt-suggestion">平均距離</target>
           <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
@@ -324,12 +324,12 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">肯定的な診断を受けた場合は、携帯電話番号を入力し、あなたの愛する人を保護するためにあなたのステータスを更新してください。</target>
+          <target state="translated" state-qualifier="mt-suggestion">陽性の診断結果を受けた場合は、携帯電話番号を入力し、あなたの愛する人を保護するためにあなたのステータスを更新してください。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
         </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">肯定的な診断を受けた場合</target>
+          <target state="translated" state-qualifier="mt-suggestion">陽性の診断結果を受けた場合</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
@@ -344,7 +344,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
-          <target state="new">Please check your network connection.</target>
+          <target state="translated">ネットワーク接続を確認してください。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
         </trans-unit>
         <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
