@@ -1,13 +1,13 @@
 # How to Transrate application ?
 
-1. Check out Git Hub or Download File
+1. Check out GitHub or Download File
 
 2. You can use [Multilingual Toolkit](https://developer.microsoft.com/en-us/windows/downloads/multilingual-app-toolkit/) / [Pootle](https://pootle.translatehouse.org/) / [tinyTransrator](https://github.com/martinroob/tiny-translator)
 3. see and translate [/Covid19Radar/MultilingualResources](https://github.com/Covid-19Radar/Covid19Radar/tree/master/Covid19Radar/Covid19Radar/MultilingualResources)
 
 4. Translate and Commit (If you can use Git, Create branch and push)
 
-5. (2nd options) If you can't use Git , Could you add [issue on Git Hub](https://github.com/Covid-19Radar/Covid19Radar/issues) and attach file.
+5. (2nd options) If you can't use Git , Could you add [issue on GitHub](https://github.com/Covid-19Radar/Covid19Radar/issues) and attach file.
 
 ## Notes on translation
 
