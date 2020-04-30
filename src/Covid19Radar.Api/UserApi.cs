@@ -36,7 +36,7 @@ namespace Covid19Radar.Api
 
         [FunctionName(nameof(UserApi))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "User/{UserUuid}/{Major}/{Minor}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "User/{UserUuid}/{Major}/{Minor}")] HttpRequest req,
             string userUuid,
             string major,
             string minor)
@@ -69,7 +69,7 @@ namespace Covid19Radar.Api
 
         [FunctionName(nameof(UserApi) + "Post")]
         public async Task<IActionResult> RunPost(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "User")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "User")] HttpRequest req)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
