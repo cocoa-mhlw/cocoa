@@ -39,6 +39,31 @@ namespace Covid19Radar.Api
 
         [FunctionName(nameof(InfectionListApi))]
         public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "Infection/List/{LastTime:datetime}")] HttpRequest req,
+            DateTime lastTime)
+        {
+            Logger.LogInformation("C# HTTP trigger function processed a request.");
+
+            // Infection
+            var result = new InfectionListResult();
+            DateTime lastUpdate;
+            result.List = Infection.GetList(lastTime, out lastUpdate)
+                .Select(_ => new InfectionListResult.Item()
+                {
+                    Major = _.Major,
+                    Minor = _.Minor,
+                    ImpactStart = _.ImpactStart,
+                    ImpactEnd = _.ImpactEnd
+                })
+                .ToArray();
+            result.LastUpdateTime = lastUpdate;
+
+            // query
+            return new OkObjectResult(result);
+        }
+
+        [FunctionName(nameof(InfectionListApi) + "Deprecated")]
+        public async Task<IActionResult> RunDeprecated(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "Infection/List/{UserUuid}/{Major}/{Minor}/{LastTime:datetime}")] HttpRequest req,
             string userUuid,
             string major,
