@@ -18,18 +18,18 @@ using System.Linq;
 
 namespace Covid19Radar.Api
 {
-    public class InfectionApi
+    public class InfectionListApi
     {
         private readonly IUserRepository UserRepository;
         private readonly IInfectionService Infection;
         private readonly IValidationUserService Validation;
-        private readonly ILogger<InfectionApi> Logger;
+        private readonly ILogger<InfectionListApi> Logger;
 
-        public InfectionApi(
+        public InfectionListApi(
             IUserRepository userRepository,
             IInfectionService infection,
             IValidationUserService validation,
-            ILogger<InfectionApi> logger)
+            ILogger<InfectionListApi> logger)
         {
             UserRepository = userRepository;
             Infection = infection;
@@ -37,7 +37,7 @@ namespace Covid19Radar.Api
             Logger = logger;
         }
 
-        [FunctionName(nameof(InfectionApi))]
+        [FunctionName(nameof(InfectionListApi))]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "Infection/List/{UserUuid}/{Major}/{Minor}/{LastTime:datetime}")] HttpRequest req,
             string userUuid,
@@ -58,10 +58,10 @@ namespace Covid19Radar.Api
             }
 
             // Infection
-            var result = new InfectionResult();
+            var result = new InfectionListResult();
             DateTime lastUpdate;
             result.List = Infection.GetList(lastTime, out lastUpdate)
-                .Select(_ => new InfectionResult.Item()
+                .Select(_ => new InfectionListResult.Item()
                 {
                     Major = _.Major,
                     Minor = _.Minor,
