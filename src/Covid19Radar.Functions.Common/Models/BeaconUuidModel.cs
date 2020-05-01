@@ -20,18 +20,18 @@ namespace Covid19Radar.Models
         /// <summary>
         /// for Cosmos DB id
         /// </summary>
-        public readonly string id;
+        public string id { get; set; }
         /// <summary>
         /// Beacon Uuid
         /// </summary>
-        public readonly string BeaconUuid;
+        public string BeaconUuid { get; set; }
         /// <summary>
         /// created timestamp UTC
         /// </summary>
-        public readonly DateTime CreateTime;
+        public DateTime CreateTime { get; set; }
         /// <summary>
         /// Reloading Time UTC
         /// </summary>
-        public readonly DateTime EndTime;
+        public DateTime EndTime { get; set; }
     }
 }
