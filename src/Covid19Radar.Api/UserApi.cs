@@ -21,17 +21,20 @@ namespace Covid19Radar.Api
     {
         private readonly IUserRepository UserRepository;
         private readonly INotificationService Notification;
+        private readonly IInfectionService Infection;
         private readonly IValidationUserService Validation;
         private readonly ILogger<UserApi> Logger;
 
         public UserApi(
             IUserRepository userRepository,
             INotificationService notification,
+            IInfectionService infection,
             IValidationUserService validation,
             ILogger<UserApi> logger)
         {
             UserRepository = userRepository;
             Notification = notification;
+            Infection = infection;
             Validation = validation;
             Logger = logger;
         }
@@ -90,6 +93,7 @@ namespace Covid19Radar.Api
                 if (userResult != null)
                 {
                     userResult.LastNotificationTime = Notification.LastNotificationTime;
+                    userResult.LastInfectionUpdateTime = Infection.LastUpdateTime;
                     return new OkObjectResult(userResult);
                 }
             }

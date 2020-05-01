@@ -37,5 +37,9 @@ namespace Covid19Radar.Models
         /// Last notification date and time
         /// </summary>
         public DateTime LastNotificationTime { get; set; }
+        /// <summary>
+        /// Last Infection update date and time
+        /// </summary>
+        public DateTime LastInfectionUpdateTime { get; set; }
     }
 }
