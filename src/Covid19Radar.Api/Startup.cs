@@ -29,6 +29,7 @@ namespace Covid19Radar
             builder.Services.AddSingleton<ISmsSender, SmsSender>();
             builder.Services.AddSingleton<IUserRepository, CosmosUserRepository>();
             builder.Services.AddSingleton<IBeaconRepository, CosmosBeaconRepository>();
+            builder.Services.AddSingleton<IInfectionProcessRepository, CosmosInfectionProcessRepository>();
             builder.Services.AddSingleton<IOtpRepository, CosmosOtpRepository>();
             builder.Services.AddSingleton<IInfectionService, InfectionService>();
         }
