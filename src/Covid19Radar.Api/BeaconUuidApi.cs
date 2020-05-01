@@ -27,9 +27,9 @@ namespace Covid19Radar.Api
             Logger = logger;
         }
 
-        [FunctionName("BeaconUuid")]
+        [FunctionName(nameof(BeaconUuidApi))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "BeaconUuid")] HttpRequest req,
             ILogger log)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
@@ -64,17 +64,16 @@ namespace Covid19Radar.Api
             }
             catch (CosmosException ex)
             {
-                // 429–TooManyRequests
-                if (ex.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-                {
-                    return new StatusCodeResult(503);
-                }
-                else if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+                if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
                 {
                     // Create New
                     var beaconUuid = new BeaconUuidModel(now);
                     var result = await Cosmos.BeaconUuid.CreateItemAsync<BeaconUuidModel>(beaconUuid);
                     return new OkObjectResult(beaconUuid);
+                }else if (ex.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+                {
+                    // 429–TooManyRequests
+                    return new StatusCodeResult(503);
                 }
                 AddBadRequest(req);
                 return new StatusCodeResult((int)ex.StatusCode);
