@@ -1,30 +1,44 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
-using Covid19Radar.Models;
 using System;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
     public class HttpDataService
     {
         private readonly HttpClient httpClient;
-
+        private string secret;
         public HttpDataService()
         {
             this.httpClient = new HttpClient();
             httpClient.BaseAddress = new Uri(AppConstants.ApiBaseUrl);
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.Add("x-functions-key", AppConstants.ApiSecret);
+            SetSecret();
         }
 
-        public void SetSecret(string secret)
+        private void SetSecret()
         {
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("COVID-19-RADAR", secret);
+            if (Application.Current.Properties.ContainsKey("Secret"))
+            {
+                secret = Application.Current.Properties["Secret"] as string;
+            }
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(AppConstants.ApiUserSecretKeyPrefix, secret);
+        }
+
+        public bool HasSecret()
+        {
+            if (secret == null)
+            {
+                return false;
+            }
+            return true;
         }
 
         // GET /api/BeaconUuid - Beacon Uuid
@@ -35,6 +49,7 @@ namespace Covid19Radar.Services
                 string url = AppConstants.ApiBaseUrl + "/BeaconUuid";
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
                 var result = await Get(url);
+
                 if (result != null)
                 {
                     return Utils.DeserializeFromJson<BeaconUuidModel>(result);
@@ -55,9 +70,15 @@ namespace Covid19Radar.Services
                 var result = await Post(url, content);
                 if (result != null)
                 {
-                    return Utils.DeserializeFromJson<UserDataModel>(result);
+                    UserDataModel userData = Utils.DeserializeFromJson<UserDataModel>(result);
+                    secret = userData.Secret;
+                    Application.Current.Properties["Secret"] = secret;
+                    await Application.Current.SavePropertiesAsync();
+                    SetSecret();
+                    return userData;
                 }
-            } catch(HttpRequestException) { }
+            }
+            catch (HttpRequestException) { }
 
             return null;
         }
@@ -269,4 +290,25 @@ namespace Covid19Radar.Services
         /// </summary>
         public NotificationMessageModel[] Messages { get; set; }
     }
+
+    public class BeaconUuidModel
+    {
+        /// <summary>
+        /// for Cosmos DB id
+        /// </summary>
+        public string id;
+        /// <summary>
+        /// Beacon Uuid
+        /// </summary>
+        public string BeaconUuid;
+        /// <summary>
+        /// created timestamp UTC
+        /// </summary>
+        public DateTime CreateTime;
+        /// <summary>
+        /// Reloading Time UTC
+        /// </summary>
+        public DateTime EndTime;
+    }
+
 }
