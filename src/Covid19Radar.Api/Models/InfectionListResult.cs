@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Covid19Radar.Models
 {
-    public class InfectionResult
+    public class InfectionListResult
     {
         /// <summary>
         /// Last date and time
