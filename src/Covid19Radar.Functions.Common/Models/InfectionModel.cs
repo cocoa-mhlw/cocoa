@@ -58,7 +58,10 @@ namespace Covid19Radar.Models
         /// </summary>
         public DateTime ImpactEnd { get; set; }
         
-        public DateTime Created { get; set; }
+        /// <summary>
+        /// Updated DateTime
+        /// </summary>
+        public DateTime Updated { get; set; }
         
         public string _etag { get; set; }
     }
