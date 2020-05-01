@@ -10,6 +10,7 @@ namespace Covid19Radar.DataStore
         Container Otp { get; }
         Container Notification { get; }
         Container BeaconUuid { get; }
+        Container Infection { get; }
         string ContainerNameBeacon { get; }
     }
 }
