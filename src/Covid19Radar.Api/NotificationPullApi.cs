@@ -38,7 +38,20 @@ namespace Covid19Radar
         }
 
         [FunctionName(nameof(NotificationPullApi))]
-        public async Task<IActionResult> Run(
+        public IActionResult Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get",
+                         Route = "Notification/Pull/{lastClientTime:datetime}")]
+            HttpRequest req,
+            DateTime lastClientTime)
+        {
+            Logger.LogInformation($"{nameof(NotificationPullApi)} processed a request.");
+
+            // Query to Notification Service.
+            return GetMessages(lastClientTime);
+        }
+
+        [FunctionName(nameof(NotificationPullApi) + "Deprecated")]
+        public async Task<IActionResult> RunDeprecated(
             [HttpTrigger(AuthorizationLevel.Function, "get",
                          Route = "Notification/Pull/{UserUuid}/{UserMajor}/{UserMinor}/{LastNotificationTime:datetime}")]
             HttpRequest req,
@@ -71,7 +84,7 @@ namespace Covid19Radar
             }
 
             // Query to Notification Service.
-            return GetMessages(param);
+            return GetMessages(param.LastNotificationTime);
         }
 
         [FunctionName(nameof(NotificationPullApi) + "Post")]
@@ -99,7 +112,7 @@ namespace Covid19Radar
             }
 
             // Query to Notification Service.
-            return GetMessages(param);
+            return GetMessages(param.LastNotificationTime);
         }
 
         private async Task<IActionResult?> Query(HttpRequest req, IUser user)
@@ -123,11 +136,11 @@ namespace Covid19Radar
             return new BadRequestObjectResult("");
         }
 
-        private IActionResult GetMessages(NotificationPullParameter param)
+        private IActionResult GetMessages(DateTime lastClientTime)
         {
             var result = new NotificationPullResult();
             DateTime lastNotificationTime;
-            result.Messages = Notification.GetNotificationMessages(param.LastNotificationTime, out lastNotificationTime).ToArray();
+            result.Messages = Notification.GetNotificationMessages(lastClientTime, out lastNotificationTime).ToArray();
             result.LastNotificationTime = lastNotificationTime;
             return new OkObjectResult(result);
         }
