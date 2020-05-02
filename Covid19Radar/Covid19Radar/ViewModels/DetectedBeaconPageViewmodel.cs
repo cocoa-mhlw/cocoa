@@ -97,7 +97,7 @@ namespace Covid19Radar.ViewModels
                 */
                 foreach (var beacon in beaconList)
                 {
-                    if (beacon.LastDetectTime.Kind == DateTimeKind.Utc)
+                    if (beacon.LastDetectTime.Kind != DateTimeKind.Local)
                     {
                         beacon.LastDetectTime = TimeZoneInfo.ConvertTimeFromUtc(beacon.LastDetectTime, TimeZoneInfo.Local);
                     }
