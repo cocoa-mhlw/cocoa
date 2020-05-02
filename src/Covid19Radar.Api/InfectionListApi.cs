@@ -38,16 +38,16 @@ namespace Covid19Radar.Api
         }
 
         [FunctionName(nameof(InfectionListApi))]
-        public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "Infection/List/{LastTime:datetime}")] HttpRequest req,
-            DateTime lastTime)
+        public IActionResult Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "infection/list/{lastClientUpdateTime:datetime}")] HttpRequest req,
+            DateTime lastClientUpdateTime)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 
             // Infection
             var result = new InfectionListResult();
             DateTime lastUpdate;
-            result.List = Infection.GetList(lastTime, out lastUpdate)
+            result.List = Infection.GetList(lastClientUpdateTime, out lastUpdate)
                 .Select(_ => new InfectionListResult.Item()
                 {
                     Major = _.Major,
