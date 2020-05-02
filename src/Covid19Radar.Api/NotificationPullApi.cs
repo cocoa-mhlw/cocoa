@@ -40,14 +40,14 @@ namespace Covid19Radar
         [FunctionName(nameof(NotificationPullApi))]
         public IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get",
-                         Route = "Notification/Pull/{lastClientTime:datetime}")]
+                         Route = "notification/pull/{lastClientUpdateTime:datetime}")]
             HttpRequest req,
-            DateTime lastClientTime)
+            DateTime lastClientUpdateTime)
         {
             Logger.LogInformation($"{nameof(NotificationPullApi)} processed a request.");
 
             // Query to Notification Service.
-            return GetMessages(lastClientTime);
+            return GetMessages(lastClientUpdateTime);
         }
 
         [FunctionName(nameof(NotificationPullApi) + "Deprecated")]
@@ -136,11 +136,11 @@ namespace Covid19Radar
             return new BadRequestObjectResult("");
         }
 
-        private IActionResult GetMessages(DateTime lastClientTime)
+        private IActionResult GetMessages(DateTime lastClientUpdateTime)
         {
             var result = new NotificationPullResult();
             DateTime lastNotificationTime;
-            result.Messages = Notification.GetNotificationMessages(lastClientTime, out lastNotificationTime).ToArray();
+            result.Messages = Notification.GetNotificationMessages(lastClientUpdateTime, out lastNotificationTime).ToArray();
             result.LastNotificationTime = lastNotificationTime;
             return new OkObjectResult(result);
         }
