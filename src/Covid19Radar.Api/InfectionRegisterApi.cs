@@ -40,7 +40,7 @@ namespace Covid19Radar.Api
 
         [FunctionName(nameof(InfectionRegister))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "Infection/Register")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "infection/register")] HttpRequest req)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
 

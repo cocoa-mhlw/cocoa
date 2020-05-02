@@ -1,8 +1,13 @@
-﻿namespace Covid19Radar.Models
+﻿using Newtonsoft.Json;
+
+namespace Covid19Radar.Models
 {
+    [JsonObject("otpSendRequest")]
     public class OtpSendRequest : IPayload
     {
+        [JsonProperty("user")]
         public UserModel User { get; set; }
+        [JsonProperty("phone")]
         public string Phone { get; set; }
 
         public bool IsValid()
