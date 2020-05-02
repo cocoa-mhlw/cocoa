@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
@@ -32,21 +33,15 @@ namespace Covid19Radar.Services
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(AppConstants.ApiUserSecretKeyPrefix, secret);
         }
 
-        public bool HasSecret()
-        {
-            if (secret == null)
-            {
-                return false;
-            }
-            return true;
-        }
+        public bool HasSecret() => secret != null;
+
 
         // GET /api/BeaconUuid - Beacon Uuid
         public async Task<BeaconUuidModel> GetBeaconUuidAsync()
         {
             try
             {
-                string url = AppConstants.ApiBaseUrl + "/BeaconUuid";
+                string url = AppConstants.ApiBaseUrl + "/beaconUuid";
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
                 var result = await Get(url);
 
@@ -65,7 +60,7 @@ namespace Covid19Radar.Services
         {
             try
             {
-                string url = AppConstants.ApiBaseUrl + "/Register";
+                string url = AppConstants.ApiBaseUrl + "/register";
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
                 var result = await Post(url, content);
                 if (result != null)
@@ -83,12 +78,11 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        // POST /api/User - check user status and user exists
-        public async Task<UserDataModel> PostUserAsync(UserDataModel user)
+        // GET /api/User/{userUuid}/{major}/{minor} - check user status and user exists
+        public async Task<UserDataModel> GetUserAsync(UserDataModel user)
         {
-            string url = AppConstants.ApiBaseUrl + "/User";
-            HttpContent content = new StringContent(Utils.SerializeToJson(user), Encoding.UTF8, "application/json");
-            var result = await Post(url, content);
+            string url = AppConstants.ApiBaseUrl + $"/user/{user.UserUuid}/{user.Major}/{user.Minor}";
+            var result = await Get(url);
             if (result != null)
             {
                 return Utils.DeserializeFromJson<UserDataModel>(result);
@@ -141,25 +135,19 @@ namespace Covid19Radar.Services
             return Post(url, content);
         }
 
-        // POST /api/Notification/Pull - pull Notifications 
-        public async Task<NotificationPullResult> PostNotificationPullAsync(UserDataModel user)
+        // GET /api/notification/pull/{lastClientUpdateTime:datetime} - pull Notifications 
+        public async Task<NotificationPullResult> GetNotificationPullAsync(UserDataModel user)
         {
-            string url = AppConstants.ApiBaseUrl + "/Notification/Pull";
-            var param = new
-            {
-                user.UserUuid,
-                UserMajor = user.Major,
-                UserMinor = user.Minor,
-                user.LastNotificationTime
-            };
-            HttpContent content = new StringContent(Utils.SerializeToJson(param), Encoding.UTF8, "application/json");
-            var result = await Post(url, content);
+            string url = AppConstants.ApiBaseUrl 
+                + $"/notification/pull/{user.LastNotificationTime.ToString("yyyy-MM-ddTHH:mm:ss")}";
+            var result = await Get(url);
             if (result != null)
             {
                 return Utils.DeserializeFromJson<NotificationPullResult>(result);
             }
             return null;
         }
+
 
         private async Task<string> Get(string url)
         {
@@ -204,79 +192,92 @@ namespace Covid19Radar.Services
         /// auto number key
         /// </summary>
         /// <value>Id</value>
+        [JsonProperty("id")]
         public string Id { get; set; }
 
         /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
         /// <value>User UUID</value>
+        [JsonProperty("userUuid")]
         public string UserUuid { get; set; }
 
         /// <summary>
         /// User Major 0 to 65536
         /// </summary>
         /// <value>User Major</value>
+        [JsonProperty("userMajor")]
         public string UserMajor { get; set; }
 
         /// <summary>
         /// User Minor 0 to 65536
         /// </summary>
         /// <value>User Minor</value>
+        [JsonProperty("userMinor")]
         public string UserMinor { get; set; }
 
         /// <summary>
         /// Same beacon uuid's device can communication count.
         /// </summary>
         /// <value>BeaconUuid</value>
+        [JsonProperty("count")]
         public int Count { get; set; }
 
         /// <summary>
         /// Same beacon uuid's device can communication.
         /// </summary>
         /// <value>BeaconUuid</value>
+        [JsonProperty("beaconUuid")]
         public string BeaconUuid { get; set; }
         /// <summary>
         /// Major - in this app case mapping user id
         /// </summary>
         /// <value>BLE major number</value>
+        [JsonProperty("major")]
         public string Major { get; set; }
         /// <summary>
         /// MInor - in this app case mapping user id
         /// </summary>
         /// <value>BLE minor number</value>
+        [JsonProperty("minor")]
         public string Minor { get; set; }
         /// <summary>
         /// Bluetooth LE's calcated distance between beacons.
         /// </summary>
         /// <value>BLE minor number</value>
+        [JsonProperty("distance")]
         public double Distance { get; set; }
         /// <summary>
         ///  Received Signal Strength Indicator, after use. Used for precise distance measurement
         /// </summary>
         /// <value>Received Signal Strength Indicator</value>
+        [JsonProperty("rssi")]
         public int Rssi { get; set; }
         /// <summary>
         /// Power of beacon transmitter, after use. Used for precise distance measurement
         /// </summary>
+        [JsonProperty("txPower")]
         public int TXPower { get; set; }
         /// <summary>
         /// Total contact time of the beacon, which makes a cumulative record.Consider the case where you go to the bathroom halfway and come back.
         /// </summary>
+        [JsonProperty("elaspedTime")]
         public TimeSpan ElaspedTime { get; set; }
         /// <summary>
         /// The last time measured.
         /// </summary>
+        [JsonProperty("lastDetectTime")]
         public DateTime LastDetectTime { get; set; }
         /// <summary>
         /// The first time measured.
         /// </summary>
+        [JsonProperty("firstDetectTime")]
         public DateTime FirstDetectTime { get; set; }
         /// <summary>
         /// The splited timespan.
         /// </summary>
+        [JsonProperty("keyTime")]
         public string KeyTime { get; set; }
-
-
     }
 
     public class NotificationPullResult
@@ -284,10 +285,12 @@ namespace Covid19Radar.Services
         /// <summary>
         /// Last notification date and time
         /// </summary>
+        [JsonProperty("lastNotificationTime")]
         public DateTime LastNotificationTime { get; set; }
         /// <summary>
         /// Notification Messages
         /// </summary>
+        [JsonProperty("messages")]
         public NotificationMessageModel[] Messages { get; set; }
     }
 
@@ -300,14 +303,17 @@ namespace Covid19Radar.Services
         /// <summary>
         /// Beacon Uuid
         /// </summary>
+        [JsonProperty("beaconUuid")]
         public string BeaconUuid;
         /// <summary>
         /// created timestamp UTC
         /// </summary>
+        [JsonProperty("createTime")]
         public DateTime CreateTime;
         /// <summary>
         /// Reloading Time UTC
         /// </summary>
+        [JsonProperty("endTime")]
         public DateTime EndTime;
     }
 
