@@ -75,7 +75,7 @@ APKファイルのダウンロードが完了しましたら、インストー�
 
 ---
 ## バグを発見した場合
-バグの報告、および新機能の追加の提案をされたい場合、GitHub上リポジトリにて、Issueの作成をお願いします。
+バグの報告、および新機能の追加の提案をされたい場合、GitHub上リポジトリにて、Issueの作成をお願いします。  
 詳細は、リポジトリ内の「HOW_TO_CONTRIBUTE」をご覧ください。  
 [Covid19Radar(GitHub) - HOW_TO_CONTRIBUTE.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
 
