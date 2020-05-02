@@ -73,16 +73,16 @@ APKファイルのダウンロードが完了しましたら、インストー�
 
 以上で、「Covid19Radar」のAndroidアプリをインストールすることができます。
 
+---
 ## バグを発見した場合
 バグの報告、および新機能の追加の提案をされたい場合、GitHub上リポジトリにて、Issueの作成をお願いします。
-詳細は、リポジトリ内の「HOW_TO_CONTRIBUTE」をご覧ください。
+詳細は、リポジトリ内の「HOW_TO_CONTRIBUTE」をご覧ください。  
 [Covid19Radar(GitHub) - HOW_TO_CONTRIBUTE.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
 
 ## 相談をしたい場合
-無償のチャットアプリケーション(Discord)にて、コミュニケーションを行っております。  
-下記招待リンクより参加をお願いします。
+チャットアプリケーション(Discord)にて、コントリビューター同士のコミュニケーションを行っております。  
+下記招待リンクより参加をお願いします。  
 [Covid19Radar(Discord)](https://discord.gg/EzaYhD)
-
 
 -----
 
