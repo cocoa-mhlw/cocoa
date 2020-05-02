@@ -1,5 +1,6 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Microsoft.AppCenter.Crashes;
 using Prism.Navigation;
 using SQLite;
 using System;
@@ -63,10 +64,14 @@ namespace Covid19Radar.Services
             UserDataModel downloadModel;
             try
             {
-                downloadModel = await httpDataService.PostUserAsync(current);
+                downloadModel = await httpDataService.GetUserAsync(current);
                 if (downloadModel == null) return;
             }
-            catch { return; }
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex);
+                return;
+            }
             var hasNotification = downloadModel.LastNotificationTime != current.LastNotificationTime;
             var hasStatusChange = downloadModel.UserStatus != current.UserStatus;
             if (hasStatusChange)
@@ -102,14 +107,17 @@ namespace Covid19Radar.Services
                         UserStatus = current.UserStatus,
                         LastNotificationTime = downloadModel.LastNotificationTime
                     };
-                    var result = await httpDataService.PostNotificationPullAsync(newModel);
+                    var result = await httpDataService.GetNotificationPullAsync(newModel);
                     foreach (var notify in result.Messages)
                     {
                         notificationService.ReceiveNotification(notify.Title, notify.Message);
                     }
                     await SetAsync(newModel);
                 }
-                catch (Exception) { }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                }
             }
 
         }
