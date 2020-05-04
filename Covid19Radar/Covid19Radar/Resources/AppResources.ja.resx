@@ -138,11 +138,11 @@
     <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
-    <value>個人情報を入力する必要はありません。アプリをインストールするときに割り当てられた一意の ID を使用しています。</value>
+    <value>個人情報を入力する必要はありません。アプリをインストールするときに割り当てた一意の ID を使用しています。</value>
     <comment>How it works page step 1 description</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
-    <value>平均2m以上の半径内で、合計で30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</value>
+    <value>平均2m未満の半径内で、合計で30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</value>
     <comment>How it works page step 2 description</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
@@ -162,7 +162,7 @@
     <comment>Protecting our loved ones from COVID19</comment>
   </data>
   <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>このアプリは、別の連絡先トレースアプリのユーザーの近くにいるかどうかを判断するために、Bluetooth信号を使用しています。
+    <value>このアプリは、別のトレースアプリのユーザーの近くにいるかどうかを判断するために、Bluetooth信号を使用しています。
 Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>Device access page Bluetooth description</comment>
   </data>
