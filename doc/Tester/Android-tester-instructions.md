@@ -1,6 +1,6 @@
 # Android版アプリのテスターの方へ
 
-「COVID-19 Radar」アプリのテスターにご参加いただきありがとうございます。  
+「COVID-19 Radar」アプリのテストにご参加いただきありがとうございます。  
 本ドキュメントでは、テスターに向けてテストリリースのインストール方法をご紹介します。
 
 ## 前提条件
@@ -16,14 +16,17 @@ Microsoftアカウント、もしくはGitHubアカウントの作成
 - KYOCERA URBANO V02 KYV34
 - Android 5.1
 
-## 1. 「提供元不明のアプリ」のインストールの許可
+---
+## アプリのインストール方法
+
+### 1. 「提供元不明のアプリ」のインストールの許可
 Androidデバイスにおいて、Google Playストア以外からのアプリ（提供元不明のアプリ）のインストールを許可します。  
 「設定」アプリより、「セキュリティ」内に、「提供元不明のアプリ」の設定がありますので、「許可」に変更します。
 
 ![Change Device Security](../.attachments/Android_003_DeviceSecurity.png)
 
 
-## 2. App Center にサインイン
+### 2. App Center にサインイン
 
 [App Center](https://appcenter.ms/sign-in) に、Android端末 でアクセスします。  
 QRコードスキャナアプリより、以下のQRコードをスキャンしてもアクセス可能です。  
@@ -34,7 +37,7 @@ AppCenterのサインインページより、テスター登録時にFormに入�
 ![App Centerにサインイン](../.attachments/Android_005_appcenter_signin.png)
 
 
-## 3. アプリのダウンロード
+### 3. アプリのダウンロード
 
 My Appsの画面にAndroid版とiOS版のアプリが表示されています。
 「COVID-19 Radar」のAndroidアプリをクリックします。
@@ -55,7 +58,7 @@ My Appsの画面にAndroid版とiOS版のアプリが表示されています。
 
 ポップアップの指示に従って「許可」してください。
 
-## 4. アプリのインストール
+### 4. アプリのインストール
 
 APKファイルのダウンロードが完了しましたら、インストールを行います。  
 ストレージにAPKファイルが保存されているので、パッケージインストーラにて開きます。
@@ -72,7 +75,33 @@ APKファイルのダウンロードが完了しましたら、インストー�
 ![ランチャー](../.attachments/Android_015_installed_apk.png)
 
 
-以上で、「Covid19Radar」のAndroidアプリをインストールすることができます。
+以上で、「Covid19Radar」のAndroidアプリをインストールすることができました。
+
+---
+## アプリのアップデート方法
+アプリのテストビルドが終わる都度、最新版の通知が登録されたメールアドレスに届きますので、以下の手順で最新のアプリのダウンロード・インストールを行います。
+
+### 1. メールの確認
+テスト版のリリースについてはメールにて通知されておりますので、最新のアプリを手動でインストールします。
+![メールでの通知](../.attachments/Android_015_Update-Notify-Mail.png)
+
+最新のリリースについて、以下のようなメールが届きますので、「Install」をタップしてAppCenterのダウンロードページを開きます。
+
+![メールでの通知](../.attachments/Android_016_Update-Notify-Mail.png)
+
+## 2. アプリのダウンロード
+該当リリースのダウンロードページが開きますので、「DOWNLOAD」をタップして、アプリをダウンロードします。
+![AppCenter テストビルドのダウンロード](../.attachments/Android_017_Update-Install.png)
+
+ダウンロードが始まりますと、以下のような画面になります。
+以降、インストール時と同様にアプリのインストールをお願いいたします。
+![AppCenter テストビルドのダウンロード](../.attachments/Android_018_Update-Install.png)
+
+
+---
+## アプリの利用方法
+以下のドキュメントを参照してください。
+[Covid19Radar(GitHub) - HOW_TO_USE for Android](https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/How-to-use/Android-how-to-use.ja.md)
 
 ---
 ## バグを発見した場合
@@ -84,8 +113,3 @@ APKファイルのダウンロードが完了しましたら、インストー�
 チャットアプリケーション(Discord)にて、コントリビューター同士のコミュニケーションを行っております。  
 下記招待リンクより参加をお願いします。  
 [Covid19Radar(Discord)](https://discord.gg/EzaYhD)
-
------
-
-「COVID-19 Radar」は現在開発中のアプリです。  
-コミットする都度、最新版の通知がメールアドレスに来ますので、最新版を都度ダウンロードいただきますよう、よろしくお願いいたします。
