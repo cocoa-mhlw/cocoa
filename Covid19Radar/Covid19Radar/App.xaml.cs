@@ -40,6 +40,8 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
+
+        private IBeaconService _beaconService;
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor.
@@ -62,7 +64,6 @@ namespace Covid19Radar
             INavigationResult result;
             // Check user data and skip tutorial
             UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-
             if (userDataService.IsExistUserData)
             {
                 UserDataModel _userData = userDataService.Get();
@@ -129,6 +130,39 @@ namespace Covid19Radar
         protected override void OnStart()
         {
             ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
+
+            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
+            if (userDataService.IsExistUserData)
+            {
+                UserDataModel _userData = userDataService.Get();
+                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
+                _beaconService.StartRagingBeacons(_userData);
+                _beaconService.StartAdvertisingBeacons(_userData);
+            }
+        }
+
+        protected override void OnResume()
+        {
+            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
+            if (userDataService.IsExistUserData)
+            {
+                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
+                _beaconService.OnResume();
+            }
+            base.OnResume();
+
+        }
+
+        protected override void OnSleep()
+        {
+            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
+            if (userDataService.IsExistUserData)
+            {
+                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
+                _beaconService.OnSleep();
+            }
+
+            base.OnSleep();
         }
 
 
@@ -203,5 +237,6 @@ namespace Covid19Radar
             // Return true if you are using your own dialog, false otherwise
             return true;
         }
+
     }
 }
