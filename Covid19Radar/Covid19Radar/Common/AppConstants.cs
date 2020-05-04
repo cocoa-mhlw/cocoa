@@ -13,6 +13,7 @@ namespace Covid19Radar.Common
         public static readonly string AppName = "COVID-19-RADAR";
 
         public static readonly string ApiBaseUrl = "https://covid19radar.azurewebsites.net/api";
+        public static readonly string ApiSecret = "API_SECRET";
 
         /// <summary>
         /// Apple's company ibeacon code

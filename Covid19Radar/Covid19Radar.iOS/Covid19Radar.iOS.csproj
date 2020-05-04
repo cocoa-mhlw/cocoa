@@ -108,7 +108,6 @@
     <Compile Include="Model\BeaconType.cs" />
     <Compile Include="Model\EddystoneFrameType.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
-    <Compile Include="Services\BeaconReceiveService.cs" />
     <Compile Include="Services\BeaconService.cs" />
     <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
