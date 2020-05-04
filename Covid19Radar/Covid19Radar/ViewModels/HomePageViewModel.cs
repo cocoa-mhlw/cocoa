@@ -11,7 +11,6 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
     {
         public List<HomeMenuModel> HomeMenus { get; private set; }
-        private IBeaconService _beaconService;
 
         public HomePageViewModel(INavigationService navigationService)
             : base(navigationService)

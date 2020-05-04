@@ -23,7 +23,8 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public static AppDelegate Instance { get; private set; }
-        IBeaconService _BeaconService = null;
+        IBeaconService _beaconService;
+        UserDataService _userDataService;
 
         public AppDelegate()
         {
@@ -54,9 +55,25 @@ namespace Covid19Radar.iOS
             Xamarin.Calabash.Start();
 #endif
 
-
+            UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
         }
+
+        public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
+        {
+            // Check for new data, and display it
+
+            _beaconService = DependencyService.Resolve<IBeaconService>();
+            _userDataService = DependencyService.Resolve<UserDataService>();
+            if (_userDataService.IsExistUserData)
+            {
+                _beaconService.StartAdvertisingBeacons(_userDataService.Get());
+            }
+
+            // Inform system of fetch results
+            completionHandler(UIBackgroundFetchResult.NewData);
+        }
+
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
         {
             var result = Push.DidReceiveRemoteNotification(userInfo);
