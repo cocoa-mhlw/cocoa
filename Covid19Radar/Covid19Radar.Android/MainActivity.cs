@@ -16,14 +16,15 @@ using Covid19Radar.Droid.Services;
 using Covid19Radar.Services;
 using System.Threading.Tasks;
 using Xam.Plugin.WebView.Droid;
+using Xamarin.Forms;
 
 namespace Covid19Radar.Droid
 {
-    [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
     {
         public static MainActivity Instance { get; private set; }
-        public static SQLiteConnectionProvider sqliteConnectionProvider { get; private set; }
+        //public static SQLiteConnectionProvider sqliteConnectionProvider { get; private set; }
         protected override void OnCreate(Bundle bundle)
         {
             base.SetTheme(Resource.Style.MainTheme);
@@ -34,7 +35,7 @@ namespace Covid19Radar.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             Instance = this;
-            sqliteConnectionProvider = new SQLiteConnectionProvider();
+            //sqliteConnectionProvider = new SQLiteConnectionProvider();
 
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Rg.Plugins.Popup.Popup.Init(this, bundle);
@@ -43,15 +44,26 @@ namespace Covid19Radar.Droid
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
             {
-                Logger = new Covid19Radar.Services.DebugLogger()
+                Logger = new DebugLogger()
             });
 
             LoadApplication(new App(new AndroidInitializer()));
+            CreateNotificationFromIntent(Intent);
         }
 
         protected override void OnNewIntent(Intent intent)
         {
-            base.OnNewIntent(intent);
+            CreateNotificationFromIntent(intent);
+        }
+
+        void CreateNotificationFromIntent(Intent intent)
+        {
+            if (intent?.Extras != null)
+            {
+                string title = intent.Extras.GetString(Services.NotificationService.TitleKey);
+                string message = intent.Extras.GetString(Services.NotificationService.MessageKey);
+                DependencyService.Get<NotificationService>().ReceiveNotification(title, message);
+            }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
@@ -65,15 +77,16 @@ namespace Covid19Radar.Droid
         {
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
-                containerRegistry.RegisterSingleton<IBeaconService,BeaconService>();
-
-                containerRegistry.RegisterInstance<SQLiteConnectionProvider>(MainActivity.sqliteConnectionProvider);
+                containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
+                containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
+                containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
+                //containerRegistry.RegisterInstance(sqliteConnectionProvider);
             }
         }
 
         public void OnBeaconServiceConnect()
         {
-            BeaconService beaconService = Xamarin.Forms.DependencyService.Get<BeaconService>();
+            BeaconService beaconService = DependencyService.Get<BeaconService>();
             UserDataService userDataService = new UserDataService();
 
 

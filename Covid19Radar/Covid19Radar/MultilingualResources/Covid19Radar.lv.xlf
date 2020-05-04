@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="lv" original="COVID19RADAR/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
+        <trans-unit id="ButtonIWantToHelp" translate="yes" xml:space="preserve">
+          <source>I want to help</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Es gribu palīdzēt</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">I want to help</note>
+        </trans-unit>
+        <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
+          <source>How it works</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kā tā darbojas</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
+        </trans-unit>
+        <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tālāk</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Next button</note>
+        </trans-unit>
+        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
+          <source>Terms of Service</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pakalpojuma noteikumi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
+        </trans-unit>
+        <trans-unit id="ButtonAgreeAndProceed" translate="yes" xml:space="preserve">
+          <source>Agree and Proceed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vienoties un rīkoties</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Agree and Proceed</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nav nepieciešams ievadīt personisku informāciju. Mēs izmantojam unikālo ID, kas jums tiek piešķirts, instalējot lietotni.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontaktu ar citu lietotnes lietotāju ilgāk nekā 30 minūtes kopā rādiusu, kas ir tuvāk par 2m, reģistrē kā "ciešu kontaktu".</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
+          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lūdzu, manuāli nomainiet savu statusu uz "pozitīvs" pēc verificējot savu tālruņa numuru. " Pozitīva "darbplūsma, kas tagad ir koordinācija ar saistītajām pusēm.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
+          <source>Bluetooth needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lai ierakstītu ciešu kontaktu, ir jābūt ieslēgtai Bluetooth. Lūdzu, pārejiet uz nākamo lapu, lai to ieslēgtu.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
+        </trans-unit>
+        <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
+          <source>Start</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sākums</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
+        </trans-unit>
+        <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
+          <source>Protecting our loved ones from COVID19</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aizsargājot mūsu tuviniekus no COVID19</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
+        </trans-unit>
+        <trans-unit id="InitSettingPageTextBluetoothDescription" translate="yes" xml:space="preserve">
+          <source>This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+Select 'Always Allow' to set up Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Šī lietotne izmanto Bluetooth signālus, lai noteiktu, vai esat tuvu citam kontaktpersonu izsekošanas programmas lietotājam. 
+Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Bluetooth description</note>
+        </trans-unit>
+        <trans-unit id="InitSettingPageTextAllowBluetooth" translate="yes" xml:space="preserve">
+          <source>Allow Bluetooth</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atļaut Bluetooth</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Bluetooth title</note>
+        </trans-unit>
+        <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
+          <source>Device Access</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Piekļuve ierīcei</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
+        </trans-unit>
+        <trans-unit id="TitleAppDescription" translate="yes" xml:space="preserve">
+          <source>App Description</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lietojumprogrammas apraksts</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">App Description</note>
+        </trans-unit>
+        <trans-unit id="ButtonRegister" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Reģistrēt</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Register</note>
+        </trans-unit>
+        <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
+          <source>Agree</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Piekrītu</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Agree</note>
+        </trans-unit>
+        <trans-unit id="HomePageTitle" translate="yes" xml:space="preserve">
+          <source>HOME</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">SĀKUMS</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
+        </trans-unit>
+        <trans-unit id="AppName" translate="yes" xml:space="preserve">
+          <source>COVID19Radar</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID19Radar</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
+        </trans-unit>
+        <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
+          <source>Status Settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Statusa iestatījumi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings Menu</note>
+        </trans-unit>
+        <trans-unit id="HomePageViewListOfContributorsMenu" translate="yes" xml:space="preserve">
+          <source>List of Contributors</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ieguldītāju saraksts</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">List Of Contributors Menu</note>
+        </trans-unit>
+        <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
+          <source>Update Information</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Atjaunināt informāciju</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
+        </trans-unit>
+        <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
+          <source>HOME</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">SĀKUMS</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
+        </trans-unit>
+        <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
+          <source>You're ready to go</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jūs esat gatavs doties</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">You're ready to go</note>
+        </trans-unit>
+        <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
+          <source>Set up Completed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Iestatītu pabeigtos</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
+        </trans-unit>
+        <trans-unit id="UserSettingPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ja esat saņēmis pozitīvu diagnozi, lūdzu, ievadiet savu mobilā tālruņa numuru un atjauniniet savu statusu, lai aizsargātu savus tuviniekus.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page description</note>
+        </trans-unit>
+        <trans-unit id="UserSettingPageTextStatusSettingsEnterNumber" translate="yes" xml:space="preserve">
+          <source>Enter the mobile number</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ievadiet mobilā tālruņa numuru</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page enter number text</note>
+        </trans-unit>
+        <trans-unit id="UserSettingPageTextStatusSettingsSMSDescription" translate="yes" xml:space="preserve">
+          <source>We'll send you a verification code.
+Please check your SMS.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mēs jums nosūtīsim verifikācijas kodu.
+Lūdzu, pārbaudiet savu SMS.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
+        </trans-unit>
+        <trans-unit id="UserSettingPageTextStatusSettingsSMSInfo" translate="yes" xml:space="preserve">
+          <source>We will not store your phone number. It will be sent directly to the database of the government.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mēs neglabāsim jūsu tālruņa numuru. Tas tiks nosūtīts tieši uz datubāzes valdība.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sms info</note>
+        </trans-unit>
+        <trans-unit id="UserSettingPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ja esat saņēmis pozitīvu diagnozi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sub title</note>
+        </trans-unit>
+        <trans-unit id="UserSettingPageTextPhoneNumberPlaceholder" translate="yes" xml:space="preserve">
+          <source>090-1234-4567</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">090-1234-4567</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Placeholder text for phone number entry</note>
+        </trans-unit>
+        <trans-unit id="DetectedBeaconListMenu" translate="yes" xml:space="preserve">
+          <source>Detected Beacon List</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atklāto bāksignālu saraksts</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacon List Menu</note>
+        </trans-unit>
+        <trans-unit id="InputSmsOTPPageOtpEnterText" translate="yes" xml:space="preserve">
+          <source>Enter the Code that was sent to 
+「{0}」</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ievadiet kodu, kas tika nosūtīts 
+「 {0} 」</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Otp Enter the Code</note>
+        </trans-unit>
+        <trans-unit id="TitleOtp" translate="yes" xml:space="preserve">
+          <source>Enter the Code</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ievadiet kodu</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Otp Title</note>
+        </trans-unit>
+        <trans-unit id="ButtonVerify" translate="yes" xml:space="preserve">
+          <source>Verify</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Verificēt</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button Verify</note>
+        </trans-unit>
+        <trans-unit id="InputSmsOTPPageDidntGetTheCodeText" translate="yes" xml:space="preserve">
+          <source>Didn't get the code?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Didn ' t get kodu?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Didn't get the code Text</note>
+        </trans-unit>
+        <trans-unit id="InputSmsOTPPageResendText" translate="yes" xml:space="preserve">
+          <source>Resend</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Atkārtoti nosūtīt</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Resend Text</note>
+        </trans-unit>
+        <trans-unit id="StatusUpdateCompletePageTextStatusUpdateComplete" translate="yes" xml:space="preserve">
+          <source>Status Update Complete</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Statusa atjaunināšana pabeigta</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status Update Complete page text</note>
+        </trans-unit>
+        <trans-unit id="TitleStatusUpdateComplete" translate="yes" xml:space="preserve">
+          <source>Status Update Complete</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Statusa atjaunināšana pabeigta</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status Update Complete page title</note>
+        </trans-unit>
+        <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
+          <source>Contributors List</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atbalstītāju saraksts</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
+        </trans-unit>
+        <trans-unit id="TitleDetectedBeaconPage" translate="yes" xml:space="preserve">
+          <source>Detected Beacons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atklātās bākas</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacons</note>
+        </trans-unit>
+        <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
+          <source>License Agreement</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Licences līgums</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">License Agreement</note>
+        </trans-unit>
+        <trans-unit id="UrlLicense" translate="yes" xml:space="preserve">
+          <source>https://covid19radar.z11.web.core.windows.net/en/agpl.html</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/agpl.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">AGPL3.0</note>
+        </trans-unit>
+        <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
+          <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
+        </trans-unit>
+        <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
+          <source>ID</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Kods</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
+        </trans-unit>
+        <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
+          <source>Avarage Distance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avarage attālums</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
+        </trans-unit>
+        <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
+          <source>Count</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Skaits</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
+        </trans-unit>
+        <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
+          <source>ElapsedTime</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ElapsedTime</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">TextElapsedTime</note>
+        </trans-unit>
+        <trans-unit id="DetectedBeaconPageTextLastTime" translate="yes" xml:space="preserve">
+          <source>LastTime</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">LastTime</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
+        </trans-unit>
+        <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
+          <source>MajorNo</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">MajorNo</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
+        </trans-unit>
+        <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
+          <source>MinorNo</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">MinorNo</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">MinorNo</note>
+        </trans-unit>
+        <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
+          <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/contributor.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Url Contributer</note>
+        </trans-unit>
+        <trans-unit id="UrlUpdate" translate="yes" xml:space="preserve">
+          <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
+        </trans-unit>
+        <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
+          <source>Heads up</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Brīdinājumi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Heads up</note>
+        </trans-unit>
+        <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
+          <source>https://covid19radar.z11.web.core.windows.net/en/qna.html</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/qna.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">If contacted , headsup and Correct coping method and contact information Try to be calm.</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
+          <source>Installing an App</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lietotnes instalēšana</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 title</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
+          <source>Recording Close Contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cieša kontakta ierakstīšana</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
+          <source>If you are diagnosed COVID19 positive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ja jums ir diagnosticēta COVID19 pozitīva</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
+          <source>Requirements to use this app</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prasības, lai izmantotu šo lietotni</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
+        </trans-unit>
+        <trans-unit id="TitleUserSettings" translate="yes" xml:space="preserve">
+          <source>Status Settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Statusa iestatījumi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings page title</note>
+        </trans-unit>
+        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+          <source>Status Settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Statusa iestatījumi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
+        </trans-unit>
+        <trans-unit id="ButtonSave" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Saglabāt</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button Save</note>
+        </trans-unit>
+        <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ja esat saņēmis pozitīvu diagnozi, lūdzu, ievadiet savu mobilā tālruņa numuru un atjauniniet savu statusu, lai aizsargātu savus tuviniekus.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
+        </trans-unit>
+        <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ja esat saņēmis pozitīvu diagnozi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
+        </trans-unit>
+        <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
+          <source>Tap to change state</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pieskarieties, lai mainītu stāvokli</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
+        </trans-unit>
+        <trans-unit id="UserStatusPageCodePlaceholder" translate="yes" xml:space="preserve">
+          <source>Please enter the code</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lūdzu, ievadiet kodu</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
+          <source>Please check your network connection.</source>
+          <target state="new">Please check your network connection.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
+        </trans-unit>
+        <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="new">OK</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

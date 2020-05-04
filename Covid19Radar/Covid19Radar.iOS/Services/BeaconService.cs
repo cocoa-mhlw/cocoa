@@ -73,7 +73,7 @@ namespace Covid19Radar.iOS.Services
             foreach (var beacon in beacons)
             {
                 if (beacon.IsSentToServer) continue;
-                await _httpDataService.PostBeaconDataAsync(_userData, beacon);
+                if (!await _httpDataService.PostBeaconDataAsync(_userData, beacon)) continue;
                 var key = beacon.Id;
                 lock (dataLock)
                 {
@@ -174,8 +174,12 @@ namespace Covid19Radar.iOS.Services
                 {
                     return;
                 }
-
-                var key = $"{beacon.Uuid}{beacon.Major}{beacon.Minor}.{keyTime}";
+                string key;
+                try
+                {
+                    key = $"{beacon.Uuid}{beacon.Major}{beacon.Minor}.{keyTime}";
+                }
+                catch { continue; }
                 lock (dataLock)
                 {
                     var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
@@ -184,10 +188,13 @@ namespace Covid19Radar.iOS.Services
                         BeaconDataModel data = new BeaconDataModel();
                         data.Id = key;
                         data.Count = 0;
+                        data.UserBeaconUuid = AppConstants.iBeaconAppUuid;
                         data.BeaconUuid = beacon.Uuid.ToString();
                         data.Major = beacon.Major.ToString();
                         data.Minor = beacon.Minor.ToString();
                         data.Distance = beacon.Accuracy;
+                        data.MinDistance = beacon.Accuracy;
+                        data.MaxDistance = beacon.Accuracy;
                         data.Rssi = (short)beacon.Rssi;
                         //                        data.TXPower = beacon.tr;
                         data.ElaspedTime = new TimeSpan();
@@ -202,10 +209,13 @@ namespace Covid19Radar.iOS.Services
                         BeaconDataModel data = result;
                         data.Id = key;
                         data.Count++;
+                        data.UserBeaconUuid = AppConstants.iBeaconAppUuid;
                         data.BeaconUuid = beacon.Uuid.ToString();
                         data.Major = beacon.Major.ToString();
                         data.Minor = beacon.Minor.ToString();
                         data.Distance += (beacon.Accuracy - data.Distance) / data.Count;
+                        data.MinDistance = (beacon.Accuracy < data.MinDistance ? beacon.Accuracy : data.MinDistance);
+                        data.MaxDistance = (beacon.Accuracy > data.MaxDistance ? beacon.Accuracy : data.MaxDistance);
                         data.Rssi = (short)beacon.Rssi;
                         //                        data.TXPower = beacon.tr;
                         data.ElaspedTime += now - data.LastDetectTime;
