@@ -11,7 +11,6 @@ namespace Covid19Radar.ViewModels
 {
     public class UpdateInfoPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
         private string _url;
 
         public string Url
@@ -22,14 +21,13 @@ namespace Covid19Radar.ViewModels
         public UpdateInfoPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
-            Title = Resx.AppResources.TitleUpdateInformation;
-            Url = Resx.AppResources.UrlUpdate;
+            Title = Resources.AppResources.TitleUpdateInformation;
+            Url = Resources.AppResources.UrlUpdate;
         }
 
         public Command OnClickPrev => (new Command(() =>
         {
-            _navigationService.NavigateAsync("HomePage");
+            NavigationService.NavigateAsync("HomePage");
         }));
 
 

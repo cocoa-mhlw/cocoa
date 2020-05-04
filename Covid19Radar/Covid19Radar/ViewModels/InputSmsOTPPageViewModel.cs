@@ -1,5 +1,5 @@
 ﻿using System.Windows.Input;
-using Covid19Radar.Resx;
+using Covid19Radar.Resources;
 using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
@@ -35,7 +35,7 @@ namespace Covid19Radar.ViewModels
         public InputSmsOTPPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
             : base(navigationService)
         {
-            Title = AppResources.OtpTitle;
+            Title = AppResources.TitleOtp;
             _pageDialogService = pageDialogService;
 
             ResendOtp = new Command(async () =>

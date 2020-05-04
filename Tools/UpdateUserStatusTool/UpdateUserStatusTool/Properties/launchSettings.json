@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UpdateUserStatusTool": {
+      "commandName": "Project",
+      "commandLineArgs": "None 0 1"
+    }
+  }
+}

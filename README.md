@@ -1,6 +1,8 @@
-# Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md)
+# Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
 
 Now, We move to Git Hub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
+
+We are looking for translator reviewers, Please see [How to Transrate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSRATE_CONTRIBUTE.md) page.
 
 This app uses Bluetooth LE to get the contact logs of each other.  
 iOS Builstatus [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
@@ -16,12 +18,21 @@ Please check the contribution rules.
 
 ## How to install the app for tester
 
-Please install the app for test from below link:(Sorry, currently available only Android)
+Please install the app for test from below link:
+
+### Android
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
 
-Device configuration guide for tester:
+Device configuration guide for tester:  
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
+
+### iOS
+
+https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS/releases
+
+Device configuration guide for tester:  
+https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
 
 ## Development environment
 

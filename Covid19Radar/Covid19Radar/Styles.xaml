@@ -35,7 +35,19 @@
         <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
     </Style>
 
+    <Style TargetType="ActivityIndicator">
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
     <Style x:Key="Accent2ColorHeaderLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansRegularFontFamily}" />
+        <Setter Property="FontSize" Value="Body" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+    <Style x:Key="Accent2ColorStatusPickerStyle" TargetType="Picker">
         <Setter Property="TextColor" Value="{StaticResource Accent2Color}" />
         <Setter Property="FontFamily" Value="{StaticResource NotoSansRegularFontFamily}" />
         <Setter Property="FontSize" Value="Body" />
@@ -75,6 +87,10 @@
         <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
         <Setter Property="FontFamily" Value="{StaticResource NotoSansMediumFontFamily}" />
         <Setter Property="FontSize" Value="Title" />
+    </Style>
+
+    <Style x:Key="ActivityIndicatorFrame" TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="{StaticResource Accent8Color}" />
     </Style>
 
 </ResourceDictionary>

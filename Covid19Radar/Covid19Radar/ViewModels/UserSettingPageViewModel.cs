@@ -26,7 +26,7 @@ namespace Covid19Radar.ViewModels
 
         public UserSettingPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = Resx.AppResources.TitleStatusSettings;
+            Title = Resources.AppResources.TitleUserSettings;
             _otpService = App.Current.Container.Resolve<OTPService>();
             _userDataService = App.Current.Container.Resolve<UserDataService>();
         }
@@ -45,7 +45,7 @@ namespace Covid19Radar.ViewModels
 
         private string PhoneNumberWithoutMask()
         {
-            return new string(PhoneNumber.Where(char.IsDigit).ToArray());
+            return new string(("+81").Concat(PhoneNumber.Where(char.IsDigit).Skip(1)).ToArray());
         }
     }
 }

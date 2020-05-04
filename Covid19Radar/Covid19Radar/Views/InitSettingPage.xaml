@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resx"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}">
@@ -22,8 +22,8 @@
             <Label
                 FontFamily="{StaticResource NotoSansMediumFontFamily}"
                 FontSize="18"
-                Text="{x:Static resources:AppResources.TextBluetoothTitle}" />
-            <Label Text="{x:Static resources:AppResources.TextBluetoothDescription}">
+                Text="{x:Static resources:AppResources.InitSettingPageTextAllowBluetooth}" />
+            <Label Text="{x:Static resources:AppResources.InitSettingPageTextBluetoothDescription}">
                 <Label.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="iOS" Value="0,20,0,50" />

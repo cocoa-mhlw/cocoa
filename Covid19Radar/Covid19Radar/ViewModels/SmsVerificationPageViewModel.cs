@@ -11,8 +11,6 @@ namespace Covid19Radar.ViewModels
 {
     public class SmsVerificationPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
-
         private string _phoneNumber;
         public string PhoneNumber
         {
@@ -23,7 +21,6 @@ namespace Covid19Radar.ViewModels
         public SmsVerificationPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            _navigationService = navigationService;
             Title = "Input Phone number";
         }
 
@@ -38,7 +35,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickNext => (new Command(() =>
         {
-            _navigationService.NavigateAsync($"InputSmsOTPPage?phone_number={PhoneNumber}");
+            NavigationService.NavigateAsync($"InputSmsOTPPage?phone_number={PhoneNumber}");
         }));
 
     }
