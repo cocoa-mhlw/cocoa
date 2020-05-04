@@ -17,14 +17,24 @@ using Covid19Radar.Services;
 using System.Threading.Tasks;
 using Xam.Plugin.WebView.Droid;
 using Xamarin.Forms;
+using SQLite;
+using AltBeaconOrg.BoundBeacon.Startup;
+using Region = AltBeaconOrg.BoundBeacon.Region;
 
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IBeaconConsumer, Android.App.Application.IActivityLifecycleCallbacks
     {
-        public static MainActivity Instance { get; private set; }
-        //public static SQLiteConnectionProvider sqliteConnectionProvider { get; private set; }
+        //public static MainActivity Instance { get; private set; }
+        public static object dataLock = new object();
+
+        private Region _rangingRegion;
+        private RangeNotifier _rangeNotifier;
+        private BeaconManager _beaconManager;
+        private SQLiteConnection _connection;
+        private BeaconTransmitter _beaconTransmitter;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.SetTheme(Resource.Style.MainTheme);
@@ -34,8 +44,7 @@ namespace Covid19Radar.Droid
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-            Instance = this;
-            //sqliteConnectionProvider = new SQLiteConnectionProvider();
+            //Instance = this;
 
             Xamarin.Essentials.Platform.Init(this, bundle);
             global::Rg.Plugins.Popup.Popup.Init(this, bundle);
@@ -77,30 +86,239 @@ namespace Covid19Radar.Droid
         {
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
+                containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
                 containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
                 containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
-                containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
-                //containerRegistry.RegisterInstance(sqliteConnectionProvider);
             }
         }
 
-        public void OnBeaconServiceConnect()
+        #region AltBeacon
+        private async void DidRangeBeaconsInRegionComplete(object sender, ICollection<Beacon> beacons)
         {
-            BeaconService beaconService = DependencyService.Get<BeaconService>();
-            UserDataService userDataService = new UserDataService();
-
-
-            Task.Run(() =>
+            await Task.Run(() =>
             {
-                beaconService.StartBeacon();
-                if (userDataService.IsExistUserData)
+                System.Diagnostics.Debug.WriteLine("DidRangeBeaconsInRegionComplete");
+                var now = DateTime.UtcNow;
+                var keyTime = now.ToString("yyyyMMddHH");
+                System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(beacons));
+                var foundBeacons = beacons.ToList();
+
+                if (foundBeacons != null && foundBeacons.Count > 0)
                 {
-                    UserDataModel userDataModel = userDataService.Get();
-                    beaconService.StartAdvertising(userDataModel);
+                    foreach (Beacon beacon in foundBeacons)
+                    {
+                        var key = $"{beacon.Id1}{beacon.Id2}{beacon.Id3}.{keyTime}";
+                        lock (dataLock)
+                        {
+                            var result = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
+                            if (result == null)
+                            {
+                                // New
+                                BeaconDataModel data = new BeaconDataModel();
+                                data.Id = key;
+                                data.Count = 0;
+                                data.UserBeaconUuid = AppConstants.iBeaconAppUuid;
+                                data.BeaconUuid = beacon.Id1.ToString();
+                                data.Major = beacon.Id2.ToString();
+                                data.Minor = beacon.Id3.ToString();
+                                data.Distance = beacon.Distance;
+                                data.MinDistance = beacon.Distance;
+                                data.MaxDistance = beacon.Distance;
+                                data.Rssi = beacon.Rssi;
+                                //                       data.TXPower = beacon.TxPower;
+                                data.ElaspedTime = new TimeSpan();
+                                data.LastDetectTime = now;
+                                data.FirstDetectTime = now;
+                                data.KeyTime = keyTime;
+                                data.IsSentToServer = false;
+                                _connection.Insert(data);
+
+                            }
+                            else
+                            {
+                                // Update
+                                BeaconDataModel data = result;
+                                data.Id = key;
+                                data.Count++;
+                                data.UserBeaconUuid = AppConstants.iBeaconAppUuid;
+                                data.BeaconUuid = beacon.Id1.ToString();
+                                data.Major = beacon.Id2.ToString();
+                                data.Minor = beacon.Id3.ToString();
+                                data.Distance += (beacon.Distance - data.Distance) / data.Count;
+                                data.MinDistance = (beacon.Distance < data.MinDistance ? beacon.Distance : data.MinDistance);
+                                data.MaxDistance = (beacon.Distance > data.MaxDistance ? beacon.Distance : data.MaxDistance);
+                                data.Rssi = beacon.Rssi;
+                                //                        data.TXPower = beacon.TxPower;
+                                data.ElaspedTime += now - data.LastDetectTime;
+                                data.LastDetectTime = now;
+                                data.KeyTime = keyTime;
+                                data.IsSentToServer = false;
+                                _connection.Update(data);
+
+                                System.Diagnostics.Debug.WriteLine(Utils.SerializeToJson(data));
+                            }
+                        }
+                    }
                 }
             });
         }
 
+        public async void StartRagingBeacons(BeaconUuidModel beaconUuid)
+        {
+            await Task.Run(() =>
+            {
+                _beaconManager = BeaconManager.GetInstanceForApplication(this);
+                _rangeNotifier = new RangeNotifier();
+
+                _connection = DependencyService.Get<ISQLiteConnectionProvider>().GetConnection();
+                _connection.CreateTable<BeaconDataModel>();
+
+                //iBeacon
+                _beaconManager.BeaconParsers.Add(new BeaconParser().SetBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24"));
+                _beaconManager.Bind(this);
+
+                _rangeNotifier.DidRangeBeaconsInRegionComplete += DidRangeBeaconsInRegionComplete;
+                _beaconManager.AddRangeNotifier(_rangeNotifier);
+
+                _rangingRegion = new Region(AppConstants.AppName, Identifier.Parse(beaconUuid.BeaconUuid), null, null);
+
+                try
+                {
+                    _beaconManager.StartRangingBeaconsInRegion(_rangingRegion);
+                }
+                catch (Exception ex)
+                {
+
+                    System.Diagnostics.Debug.WriteLine("StartRangingException: " + ex.Message);
+                }
+            });
+        }
+
+        public async void StopRagingBeacons()
+        {
+            await Task.Run(() =>
+            {
+                try
+                {
+                    // 複数OK
+                    _beaconManager.StopRangingBeaconsInRegion(_rangingRegion);
+                    _beaconManager.RemoveRangeNotifier(_rangeNotifier);
+                }
+                catch (Exception ex)
+                {
+
+                    System.Diagnostics.Debug.WriteLine("StopRangingException: " + ex.Message);
+                }
+                _beaconManager.Unbind(this);
+            });
+        }
+
+        public async void StartAdvertisingBeacons(UserDataModel userData, BeaconUuidModel beaconUuid)
+        {
+            await Task.Run(() =>
+            {
+                Beacon beacon = new Beacon.Builder()
+                            .SetId1(beaconUuid.BeaconUuid)
+                            .SetId2(userData.Major)
+                            .SetId3(userData.Minor)
+                            .SetTxPower(-59)
+                            .SetManufacturer(AppConstants.CompanyCodeApple)
+                            .Build();
+
+                BeaconParser beaconParser = new BeaconParser().SetBeaconLayout(AppConstants.iBeaconFormat);
+
+                _beaconTransmitter = new BeaconTransmitter(this, beaconParser);
+                _beaconTransmitter.StartAdvertising(beacon);
+            });
+        }
+
+        public async void StopAdvertisingBeacons()
+        {
+            await Task.Run(() =>
+            {
+                _beaconTransmitter.StopAdvertising();
+            });
+        }
+
+        public List<BeaconDataModel> GetBeaconData()
+        {
+            return _connection.Table<BeaconDataModel>().ToList();
+        }
+
+
+        #endregion
+
+        #region IBeaconConsumer implementation
+
+        public void OnBeaconServiceConnect()
+        {
+            RequestPermission();
+
+            _beaconManager.SetForegroundScanPeriod(200);
+            _beaconManager.SetForegroundBetweenScanPeriod(100);
+            _beaconManager.SetBackgroundScanPeriod(500);
+            _beaconManager.SetBackgroundBetweenScanPeriod(30000);
+
+            _beaconManager.UpdateScanPeriods();
+
+        }
+
+        #endregion
+
+        private void RequestPermission()
+        {
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+            {
+                string[] permissions = new string[] {
+                    Android.Manifest.Permission.Bluetooth,
+                    Android.Manifest.Permission.BluetoothAdmin,
+                    Android.Manifest.Permission.AccessCoarseLocation,
+                    Android.Manifest.Permission.AccessFineLocation
+                };
+
+                RequestPermissions(permissions, 0);
+            }
+        }
+
+        #region IActivityLifecycleCallbacks
+
+        public void OnActivityCreated(Activity activity, Bundle savedInstanceState)
+        {
+        }
+
+        public void OnActivityDestroyed(Activity activity)
+        {
+        }
+
+        public void OnActivityPaused(Activity activity)
+        {
+            if (_beaconManager.IsBound(this))
+                _beaconManager.SetBackgroundMode(true);
+        }
+
+        public void OnActivityResumed(Activity activity)
+        {
+            if (_beaconManager.IsBound(this))
+                _beaconManager.SetBackgroundMode(false);
+        }
+
+        public void OnActivitySaveInstanceState(Activity activity, Bundle outState)
+        {
+        }
+
+        public void OnActivityStarted(Activity activity)
+        {
+        }
+
+        public void OnActivityStopped(Activity activity)
+        {
+        }
+        #endregion
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
     }
 }
 
