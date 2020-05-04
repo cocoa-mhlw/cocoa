@@ -163,7 +163,7 @@ namespace Covid19Radar.Droid
             });
         }
 
-        public async void StartRagingBeacons(BeaconUuidModel beaconUuid)
+        public async void StartRagingBeacons()
         {
             await Task.Run(() =>
             {
@@ -180,7 +180,7 @@ namespace Covid19Radar.Droid
                 _rangeNotifier.DidRangeBeaconsInRegionComplete += DidRangeBeaconsInRegionComplete;
                 _beaconManager.AddRangeNotifier(_rangeNotifier);
 
-                _rangingRegion = new Region(AppConstants.AppName, Identifier.Parse(beaconUuid.BeaconUuid), null, null);
+                _rangingRegion = new Region(AppConstants.AppName, Identifier.Parse(AppConstants.iBeaconAppUuid), null, null);
 
                 try
                 {
@@ -213,12 +213,12 @@ namespace Covid19Radar.Droid
             });
         }
 
-        public async void StartAdvertisingBeacons(UserDataModel userData, BeaconUuidModel beaconUuid)
+        public async void StartAdvertisingBeacons(UserDataModel userData)
         {
             await Task.Run(() =>
             {
                 Beacon beacon = new Beacon.Builder()
-                            .SetId1(beaconUuid.BeaconUuid)
+                            .SetId1(AppConstants.iBeaconAppUuid)
                             .SetId2(userData.Major)
                             .SetId3(userData.Minor)
                             .SetTxPower(-59)
@@ -254,7 +254,7 @@ namespace Covid19Radar.Droid
         {
             RequestPermission();
 
-            _beaconManager.SetForegroundScanPeriod(200);
+            _beaconManager.SetForegroundScanPeriod(5000);
             _beaconManager.SetForegroundBetweenScanPeriod(100);
             _beaconManager.SetBackgroundScanPeriod(500);
             _beaconManager.SetBackgroundBetweenScanPeriod(30000);
