@@ -48,7 +48,8 @@ namespace Covid19Radar.Model
             return UserUuid == other?.UserUuid
                 && Major == other?.Major
                 && Minor == other?.Minor
-                && UserStatus == other?.UserStatus;
+                && UserStatus == other?.UserStatus
+                && LastNotificationTime == other?.LastNotificationTime;
         }
 
         /// <summary>
