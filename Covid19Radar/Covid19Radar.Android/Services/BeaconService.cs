@@ -48,17 +48,13 @@ namespace Covid19Radar.Droid.Services
             return MainActivity.GetBeaconData();
         }
 
-        public async void StartRagingBeacons(UserDataModel userData)
+        public void StartRagingBeacons(UserDataModel userData)
         {
             _userData = userData;
-            BeaconUuidModel _beaconUuid = await _httpDataService.GetBeaconUuidAsync();
-
-            MainActivity.StartRagingBeacons(_beaconUuid);
-            /*
+            MainActivity.StartRagingBeacons();
             _uploadTimer = new MinutesTimer(_userData.GetJumpHashTimeDifference());
             _uploadTimer.Start();
             _uploadTimer.TimeOutEvent += TimerUploadAsync;
-            */
         }
 
         public void StopRagingBeacons()
@@ -66,10 +62,9 @@ namespace Covid19Radar.Droid.Services
             MainActivity.StopRagingBeacons();
         }
 
-        public async void StartAdvertisingBeacons(UserDataModel userData)
+        public void StartAdvertisingBeacons(UserDataModel userData)
         {
-            BeaconUuidModel _beaconUuid = await _httpDataService.GetBeaconUuidAsync();
-            MainActivity.StartAdvertisingBeacons(userData, _beaconUuid);
+            MainActivity.StartAdvertisingBeacons(userData);
         }
 
         public void StopAdvertisingBeacons()
