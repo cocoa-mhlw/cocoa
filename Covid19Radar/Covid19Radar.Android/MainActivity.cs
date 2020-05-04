@@ -87,8 +87,10 @@ namespace Covid19Radar.Droid
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
                 containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
+                containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
                 containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
                 containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
+
             }
         }
 

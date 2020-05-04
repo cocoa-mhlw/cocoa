@@ -23,6 +23,7 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public static AppDelegate Instance { get; private set; }
+        IBeaconService _BeaconService = null;
 
         public AppDelegate()
         {
@@ -52,6 +53,8 @@ namespace Covid19Radar.iOS
             // requires Xamarin Test Cloud Agent
             Xamarin.Calabash.Start();
 #endif
+
+
             return base.FinishedLaunching(app, options);
         }
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
@@ -82,10 +85,10 @@ namespace Covid19Radar.iOS
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-//            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
             containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
+            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
         }
     }
 
