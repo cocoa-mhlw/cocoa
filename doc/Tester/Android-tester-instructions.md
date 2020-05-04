@@ -86,15 +86,14 @@ APKファイルのダウンロードが完了しましたら、インストー�
 ![メールでの通知](../.attachments/Android_015_Update-Notify-Mail.png)
 
 最新のリリースについて、以下のようなメールが届きますので、「Install」をタップしてAppCenterのダウンロードページを開きます。
-
 ![メールでの通知](../.attachments/Android_016_Update-Notify-Mail.png)
 
 ## 2. アプリのダウンロード
 該当リリースのダウンロードページが開きますので、「DOWNLOAD」をタップして、アプリをダウンロードします。
 ![AppCenter テストビルドのダウンロード](../.attachments/Android_017_Update-Install.png)
 
-ダウンロードが始まりますと、以下のような画面になります。
-以降、インストール時と同様にアプリのインストールをお願いいたします。
+ダウンロードが始まりますと、以下のような画面になります。  
+以降、インストール時と同様にアプリのインストールをお願いいたします。  
 ![AppCenter テストビルドのダウンロード](../.attachments/Android_018_Update-Install.png)
 
 
