@@ -8,7 +8,7 @@ namespace Covid19Radar.ViewModels
     {
         public InitSettingPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = Resx.AppResources.TitleDeviceAccess;
+            Title = Resources.AppResources.TitleDeviceAccess;
         }
 
         public Command OnClickNext => new Command(() => NavigationService.NavigateAsync("SetupCompletedPage"));

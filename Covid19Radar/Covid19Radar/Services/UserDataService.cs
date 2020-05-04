@@ -1,5 +1,7 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Microsoft.AppCenter.Crashes;
+using Prism.Navigation;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -17,19 +19,34 @@ namespace Covid19Radar.Services
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
+        private readonly INotificationService notificationService;
+        private readonly INavigationService navigationService;
         private MinutesTimer _downloadTimer;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
         public UserDataService()
         {
-            this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
-
+            httpDataService = DependencyService.Resolve<HttpDataService>();
+            navigationService = DependencyService.Resolve<INavigationService>();
+            notificationService = DependencyService.Resolve<INotificationService>();
+            notificationService.Initialize();
+            notificationService.NotificationReceived += OnLocalNotificationTaped;
             current = Get();
             if (current != null)
             {
+                // User does't have secret
+                if (!httpDataService.HasSecret())
+                {
+                    return;
+                }
                 StartTimer();
             }
+        }
+
+        private async void OnLocalNotificationTaped(object sender, EventArgs e)
+        {
+            await navigationService.NavigateAsync("NavigationPage/HeadsupPage");
         }
 
         private void StartTimer()
@@ -43,20 +60,64 @@ namespace Covid19Radar.Services
         private async void TimerDownload(EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-
             if (!IsExistUserData) { return; }
-
-            var downloadModel = await httpDataService.PostUserAsync(current);
-            if (downloadModel.UserStatus != current.UserStatus)
+            UserDataModel downloadModel;
+            try
             {
+                downloadModel = await httpDataService.GetUserAsync(current);
+                if (downloadModel == null) return;
+            }
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex);
+                return;
+            }
+            var hasNotification = downloadModel.LastNotificationTime != current.LastNotificationTime;
+            var hasStatusChange = downloadModel.UserStatus != current.UserStatus;
+            if (hasStatusChange)
+            {
+                // Notification Contacted
+                /*
+                if (downloadModel.UserStatus == UserStatus.Contactd)
+                {
+                    // TOOD Change to Resouce String
+                    notificationService.ScheduleNotification("TEST", "MESSAGE");
+                }
+                */
                 var newModel = new UserDataModel()
                 {
                     UserUuid = current.UserUuid,
                     Major = current.Major,
                     Minor = current.Minor,
-                    UserStatus = current.UserStatus
+                    UserStatus = downloadModel.UserStatus,
+                    LastNotificationTime = current.LastNotificationTime
                 };
                 await SetAsync(newModel);
+            }
+            if (hasNotification)
+            {
+                // Pull Notification.
+                try
+                {
+                    var newModel = new UserDataModel()
+                    {
+                        UserUuid = current.UserUuid,
+                        Major = current.Major,
+                        Minor = current.Minor,
+                        UserStatus = current.UserStatus,
+                        LastNotificationTime = downloadModel.LastNotificationTime
+                    };
+                    var result = await httpDataService.GetNotificationPullAsync(newModel);
+                    foreach (var notify in result.Messages)
+                    {
+                        notificationService.ReceiveNotification(notify.Title, notify.Message);
+                    }
+                    await SetAsync(newModel);
+                }
+                catch (Exception ex)
+                {
+                    Crashes.TrackError(ex);
+                }
             }
 
         }
@@ -67,6 +128,10 @@ namespace Covid19Radar.Services
         public async Task<UserDataModel> RegistUserAsync()
         {
             UserDataModel userData = await httpDataService.PostRegisterUserAsync();
+            if (userData == null)
+            {
+                return null;
+            }
             await SetAsync(userData);
             return userData;
         }
@@ -86,9 +151,13 @@ namespace Covid19Radar.Services
             {
                 return;
             }
+            var isNull = current == null;
+            if (!isNull && string.IsNullOrWhiteSpace(userData.Secret))
+            {
+                userData.Secret = current.Secret;
+            }
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             await Application.Current.SavePropertiesAsync();
-            var isNull = current == null;
             current = userData;
             if (UserDataChanged != null)
             {

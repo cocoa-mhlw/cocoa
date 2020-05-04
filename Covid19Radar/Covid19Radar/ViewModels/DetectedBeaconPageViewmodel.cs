@@ -29,7 +29,7 @@ namespace Covid19Radar.ViewModels
         public DetectedBeaconPageViewmodel(INavigationService navigationService, IBeaconService beaconService)
             : base(navigationService)
         {
-            Title = Resx.AppResources.TitleDetectedBeaconPage;
+            Title = Resources.AppResources.TitleDetectedBeaconPage;
             _beaconService = beaconService;
             SetData();
 
@@ -60,7 +60,7 @@ namespace Covid19Radar.ViewModels
                         Minor = "129",
                         Distance = 0.89,
                         ElaspedTime = TimeSpan.FromMinutes(10),
-                        LastDetectTime = DateTime.Now,
+                        LastDetectTime = DateTime.UtcNow,
                         Count = 1321
                     },
                     new BeaconDataModel()
@@ -70,7 +70,7 @@ namespace Covid19Radar.ViewModels
                         Minor = "232",
                         Distance = 10.23,
                         ElaspedTime = TimeSpan.FromMinutes(2),
-                        LastDetectTime = DateTime.Now.AddDays(-2),
+                        LastDetectTime = DateTime.UtcNow.AddDays(-2),
                         Count = 1321
                     },
                     new BeaconDataModel()
@@ -80,7 +80,7 @@ namespace Covid19Radar.ViewModels
                         Minor = "312",
                         Distance = 10.23,
                         ElaspedTime = TimeSpan.FromMinutes(2),
-                        LastDetectTime = DateTime.Now.AddDays(-10),
+                        LastDetectTime = DateTime.UtcNow.AddDays(-10),
                         Count = 1321
                     },
                     new BeaconDataModel()
@@ -90,11 +90,19 @@ namespace Covid19Radar.ViewModels
                         Minor = "232",
                         Distance = 20.23,
                         ElaspedTime = TimeSpan.FromMinutes(2),
-                        LastDetectTime = DateTime.Now.AddDays(-40),
+                        LastDetectTime = DateTime.UtcNow.AddDays(-40),
                         Count = 5623
                     }
                 };
                 */
+                foreach (var beacon in beaconList)
+                {
+                    if (beacon.LastDetectTime.Kind != DateTimeKind.Local)
+                    {
+                        beacon.LastDetectTime = TimeZoneInfo.ConvertTimeFromUtc(beacon.LastDetectTime, TimeZoneInfo.Local);
+                    }
+                }
+
                 BeaconDataList = new ObservableCollection<BeaconDataModel>(beaconList);
             }
         }

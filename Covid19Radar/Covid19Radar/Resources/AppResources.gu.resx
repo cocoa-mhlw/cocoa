@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ButtonIWantToHelp" xml:space="preserve">
+    <value>હું મદદ કરવા માગું છું</value>
+    <comment>I want to help</comment>
+  </data>
+  <data name="TitleHowItWorks" xml:space="preserve">
+    <value>તે કેવી રીતે કામ કરે છે</value>
+    <comment>How it works page title</comment>
+  </data>
+  <data name="ButtonNext" xml:space="preserve">
+    <value>આગામી</value>
+    <comment>Next button</comment>
+  </data>
+  <data name="TitleConsentByUserPage" xml:space="preserve">
+    <value>સેવાની શરતો</value>
+    <comment>Consent by user page</comment>
+  </data>
+  <data name="ButtonAgreeAndProceed" xml:space="preserve">
+    <value>સંમત થાવ અને આગળ વધો</value>
+    <comment>Agree and Proceed</comment>
+  </data>
+  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+    <value>અંગત માહિતી ને ઇનપુટ કરવાની જરૂર નથી. અમે યુનિક આઈડીનો ઉપયોગ કરી રહ્યા છીએ, જે એપ્લિકેશન ઇન્સ્ટોલ કરતી વખતે તમને ફાળવવામાં આવેલ છે.</value>
+    <comment>How it works page step 1 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+    <value>અન્ય એપ્લિકેશન વપરાશકર્તા સાથે નો સંપર્ક કુલ 30 મિનિટથી વધુ સમય માટે, સરેરાશ 2m થી વધુ ત્રિજ્યાની અંદર "ક્લોઝ કોન્ટેક્ટ" તરીકે નોંધવામાં આવે છે.</value>
+    <comment>How it works page step 2 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
+    <value>કૃપા કરીને તમારો ફોન નંબર ચકાસ્યા પછી જાતે જ તમારી સ્થિતિને "પોઝિટિવ" માં બદલો." પોઝિટિવ" વર્કફ્લો , હવે સંબંધિત પક્ષો સાથે સંકલન.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
+    <value>નજીકનો સંપર્ક રેકોર્ડ કરવા માટે બ્લુટુથ ને ચાલુ કરવાની જરૂર છે. કૃપા કરીને તેને ચાલુ કરવા માટે આગળના પાના પર જાવ.</value>
+    <comment>How it works page step 4 description</comment>
+  </data>
+  <data name="ButtonStart" xml:space="preserve">
+    <value>પ્રારંભ</value>
+    <comment>Start</comment>
+  </data>
+  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
+    <value>સીઓવીઆઈડી19થી આપણા પ્રિયજનોને સુરક્ષિત કરી રહ્યા છીએ</value>
+    <comment>Protecting our loved ones from COVID19</comment>
+  </data>
+  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
+    <value>આ એપ્લિકેશન અન્ય કોન્ટેક્ટ ટ્રેસિંગ એપ્લિકેશન વપરાશકર્તાની નજીક છે કે નહીં તે નક્કી કરવા માટે બ્લુટુથ સિગ્નલનો ઉપયોગ કરે છે. 
+બ્લુટુથ ને સુયોજિત કરવા માટે 'હંમેશા પરવાનગી' પસંદ કરો.</value>
+    <comment>Device access page Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
+    <value>બ્લુટુથને પરવાનગી આપો</value>
+    <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="TitleDeviceAccess" xml:space="preserve">
+    <value>ઉપકરણ પ્રવેશ</value>
+    <comment>Device access page title</comment>
+  </data>
+  <data name="TitleAppDescription" xml:space="preserve">
+    <value>એપ્લિકેશન વર્ણન</value>
+    <comment>App Description</comment>
+  </data>
+  <data name="ButtonRegister" xml:space="preserve">
+    <value>રજિસ્ટર કરો</value>
+    <comment>Register</comment>
+  </data>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>સંમત</value>
+    <comment>Agree</comment>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>હોમ</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>COVID19Radar</value>
+    <comment>App Name</comment>
+  </data>
+  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
+    <value>સ્થિતિ સુયોજનો</value>
+    <comment>Status Settings Menu</comment>
+  </data>
+  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
+    <value>યોગદાન આપનારાઓની યાદી</value>
+    <comment>List Of Contributors Menu</comment>
+  </data>
+  <data name="TitleUpdateInformation" xml:space="preserve">
+    <value>માહિતી સુધારો</value>
+    <comment>Update Information Menu</comment>
+  </data>
+  <data name="ButtonHome" xml:space="preserve">
+    <value>હોમ</value>
+    <comment>HOME</comment>
+  </data>
+  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
+    <value>તમે જવા માટે તૈયાર છો</value>
+    <comment>You're ready to go</comment>
+  </data>
+  <data name="TitleSetupCompleted" xml:space="preserve">
+    <value>સમાપ્ત થયેલ છે</value>
+    <comment>Set up Completed</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>જો તમને હકારાત્મક નિદાન થયું હોય, તો કૃપા કરીને તમારો મોબાઇલ નંબર દાખલ કરો અને તમારા સ્વજનોની સુરક્ષા માટે તમારી સ્થિતિ અપડેટ કરો.</value>
+    <comment>Status settings page description</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
+    <value>મોબાઇલ નંબર દાખલ કરો</value>
+    <comment>Status settings page enter number text</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
+    <value>અમે તમને એક વેરિફિકેશન કોડ મોકલીશું.
+કૃપા કરીને તમારા એસએમએસને ચકાસો.</value>
+    <comment>Status settings page verification sms code description</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
+    <value>અમે તમારો ફોન નંબર સ્ટોર નહીં કરીએ. તેને સીધા જ સરકારના ડેટાબેઝમાં મોકલવામાં આવશે.</value>
+    <comment>Status settings page sms info</comment>
+  </data>
+  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>જો તમને હકારાત્મક નિદાન થયું હોય</value>
+    <comment>Status settings page sub title</comment>
+  </data>
+  <data name="TitleStatusSettings" xml:space="preserve">
+    <value>સ્થિતિ સુયોજનો</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
+    <value>090-1234-4567</value>
+    <comment>Placeholder text for phone number entry</comment>
+  </data>
+  <data name="DetectedBeaconListMenu" xml:space="preserve">
+    <value>શોધાયેલ બીકોન યાદી</value>
+    <comment>Detected Beacon List Menu</comment>
+  </data>
+  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
+    <value>કોડ દાખલ કરો કે જેને મોકલવામાં આવેલ છે 
+「{0}」</value>
+    <comment>Otp Enter the Code</comment>
+  </data>
+  <data name="TitleOtp" xml:space="preserve">
+    <value>કોડ દાખલ કરો</value>
+    <comment>Otp Title</comment>
+  </data>
+  <data name="ButtonVerify" xml:space="preserve">
+    <value>ચકાસો</value>
+    <comment>Button Verify</comment>
+  </data>
+  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
+    <value>કોડ મળ્યો નહીં?</value>
+    <comment>Didn't get the code Text</comment>
+  </data>
+  <data name="InputSmsOTPPageResendText" xml:space="preserve">
+    <value>પુનઃમોકલવું</value>
+    <comment>Resend Text</comment>
+  </data>
+  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
+    <value>સ્થિતિ સુધારો પૂર્ણ</value>
+    <comment>Status Update Complete page text</comment>
+  </data>
+  <data name="TitleStatusUpdateComplete" xml:space="preserve">
+    <value>સ્થિતિ સુધારો પૂર્ણ</value>
+    <comment>Status Update Complete page title</comment>
+  </data>
+  <data name="TitleContributorsPage" xml:space="preserve">
+    <value>ફાળો આપનાર યાદી</value>
+    <comment>Contributors list page title</comment>
+  </data>
+  <data name="TitleDetectedBeaconPage" xml:space="preserve">
+    <value>શોધાયેલ બીકોન્સ</value>
+    <comment>Detected Beacons</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>લાઇસન્સ કરાર</value>
+    <comment>License Agreement</comment>
+  </data>
+  <data name="UrlLicense" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
+    <comment>AGPL3.0</comment>
+  </data>
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <comment>PrivacyPolicy</comment>
+  </data>
+  <data name="DetectedBeaconPageTextId" xml:space="preserve">
+    <value>આઇ.ડી</value>
+    <comment>ID</comment>
+  </data>
+  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
+    <value>અવરેજ અંતર</value>
+    <comment>TextAvgDistance</comment>
+  </data>
+  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
+    <value>સંખ્યા</value>
+    <comment>TextCount</comment>
+  </data>
+  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
+    <value>પસાર થયેલ સમય</value>
+    <comment>TextElapsedTime</comment>
+  </data>
+  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
+    <value>છેલ્લો સમય</value>
+    <comment>TextLastTime</comment>
+  </data>
+  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
+    <value>મેજરનો</value>
+    <comment>MajorNo</comment>
+  </data>
+  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
+    <value>માઇનોર નં.</value>
+    <comment>MinorNo</comment>
+  </data>
+  <data name="UrlContributor" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
+    <comment>Url Contributer</comment>
+  </data>
+  <data name="UrlUpdate" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
+    <comment>Update</comment>
+  </data>
+  <data name="TitleHeadsup" xml:space="preserve">
+    <value>આગોતરી જાણકારી</value>
+    <comment>Heads up</comment>
+  </data>
+  <data name="UrlHeadsup" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
+    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
+    <value>એપ્લિકેશન ને સ્થાપિત કરી રહ્યા છીએ</value>
+    <comment>How it works page step 1 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
+    <value>બંધ સંપર્કનું રેકોર્ડિંગ કરી રહ્યા છીએ</value>
+    <comment>How it works page step 2 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
+    <value>જો તમને COVID19 પોઝિટિવ નું નિદાન થયું હોય</value>
+    <comment>How it works page step 3 title</comment>
+  </data>
+  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
+    <value>આ એપ્લિકેશનને વાપરવા ની જરૂરિયાતો</value>
+    <comment>How it works page step 4 title</comment>
+  </data>
+</root>
