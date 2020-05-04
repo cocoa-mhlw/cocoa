@@ -99,7 +99,7 @@ APKファイルのダウンロードが完了しましたら、インストー�
 
 ---
 ## アプリの利用方法
-以下のドキュメントを参照してください。
+以下のドキュメントを参照してください。  
 [Covid19Radar(GitHub) - HOW_TO_USE for Android](https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/How-to-use/Android-how-to-use.ja.md)
 
 ---
@@ -109,6 +109,6 @@ APKファイルのダウンロードが完了しましたら、インストー�
 [Covid19Radar(GitHub) - HOW_TO_CONTRIBUTE.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
 
 ## 相談をしたい場合
-チャットアプリケーション(Discord)にて、コントリビューター同士のコミュニケーションを行っております。  
+チャットアプリケーション([Discord](https://discordapp.com/))にて、コントリビューター同士のコミュニケーションを行っております。  
 下記招待リンクより参加をお願いします。  
 [Covid19Radar(Discord)](https://discord.gg/EzaYhD)
