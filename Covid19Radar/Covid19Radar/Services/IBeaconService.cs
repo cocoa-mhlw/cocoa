@@ -31,6 +31,17 @@ namespace Covid19Radar.Services
         void StopAdvertisingBeacons();
 
         /// <summary>
+        /// On Resume
+        /// </summary>
+        void OnResume();
+
+        /// <summary>
+        /// On Sleep
+        /// </summary>
+        void OnSleep();
+
+
+        /// <summary>
         /// Get beacon data model
         /// </summary>
         List<BeaconDataModel> GetBeaconData();

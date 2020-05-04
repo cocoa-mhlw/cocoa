@@ -92,6 +92,14 @@ namespace Covid19Radar.Droid.Services
             }
         }
 
+        public void OnSleep()
+        {
+        }
+
+        public void OnResume()
+        {
+        }
+
         public void Dispose()
         {
             _uploadTimer.Stop();
