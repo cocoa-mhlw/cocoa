@@ -103,10 +103,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Model\BeaconID.cs" />
-    <Compile Include="Model\BeaconInfo.cs" />
-    <Compile Include="Model\BeaconType.cs" />
-    <Compile Include="Model\EddystoneFrameType.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
     <Compile Include="Services\BeaconService.cs" />
     <Compile Include="Services\NotificationService.cs" />
