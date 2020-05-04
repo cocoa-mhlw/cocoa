@@ -55,7 +55,7 @@ namespace Covid19Radar.Api
                 {
                     CacheItemPolicy cachePolicy = new CacheItemPolicy();
                     cachePolicy.Priority = CacheItemPriority.Default;
-                    cachePolicy.AbsoluteExpiration = new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, 0, 0, TimeSpan.Zero).AddHours(2);
+                    cachePolicy.AbsoluteExpiration = new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, 0, 0, TimeSpan.Zero).AddHours(4);
                     cachedContent = new CacheItem(key, itemResult.Resource);
                     memoryCache.Set(cachedContent, cachePolicy);
 
@@ -69,6 +69,13 @@ namespace Covid19Radar.Api
                     // Create New
                     var beaconUuid = new BeaconUuidModel(now);
                     var result = await Cosmos.BeaconUuid.CreateItemAsync<BeaconUuidModel>(beaconUuid);
+
+                    CacheItemPolicy cachePolicy = new CacheItemPolicy();
+                    cachePolicy.Priority = CacheItemPriority.Default;
+                    cachePolicy.AbsoluteExpiration = new DateTimeOffset(now.Year, now.Month, now.Day, now.Hour, 0, 0, TimeSpan.Zero).AddHours(4);
+                    cachedContent = new CacheItem(key, result);
+                    memoryCache.Set(cachedContent, cachePolicy);
+
                     return new OkObjectResult(beaconUuid);
                 }else if (ex.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
                 {
