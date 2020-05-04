@@ -17,11 +17,6 @@ namespace Covid19Radar.ViewModels
             : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
-            UserDataModel userData = Xamarin.Forms.DependencyService.Resolve<UserDataService>().Get();
-
-            _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
-            _beaconService.StartRagingBeacons(userData);
-            _beaconService.StartAdvertisingBeacons(userData);
 
             SetData();
         }

@@ -16,13 +16,14 @@ using Xamarin.Forms.Internals;
 [assembly: Dependency(typeof(Covid19Radar.iOS.Services.BeaconService))]
 namespace Covid19Radar.iOS.Services
 {
-    public class BeaconService : IBeaconService     {
+    public class BeaconService : CLLocationManagerDelegate, IBeaconService
+    {
         private static object dataLock = new object();
         private UserDataModel _userData;
         private bool _transmitterFlg = false;
         private CBPeripheralManager _beaconTransmitter = new CBPeripheralManager();
         private CLBeaconRegion _fieldRegion;
-        private readonly CLLocationManager _beaconManager;
+        private readonly CLLocationManager _locationManager;
         private List<CLBeaconRegion> _listOfCLBeaconRegion;
         private readonly SQLiteConnection _connection;
 
@@ -41,27 +42,34 @@ namespace Covid19Radar.iOS.Services
             _fieldRegion.NotifyOnExit = true;
 
             // Monitoring
-            _beaconManager = new CLLocationManager();
-            _beaconManager.PausesLocationUpdatesAutomatically = false;
-            _beaconManager.AllowsBackgroundLocationUpdates = true;
-            _beaconManager.ShowsBackgroundLocationIndicator = true;
-
-            _beaconManager.DidRangeBeacons += DidRangeBeconsInRegionComplete;
-            _beaconManager.AuthorizationChanged += HandleAuthorizationChanged;
-
-        }
-
-        public CLLocationManager BeaconManagerImpl
-        {
-            get
+            _locationManager = new CLLocationManager();
+            if (CLLocationManager.LocationServicesEnabled)
             {
-                return _beaconManager;
+                _locationManager.Delegate = this;
+                _locationManager.PausesLocationUpdatesAutomatically = false;
+                _locationManager.ShowsBackgroundLocationIndicator = true;
+                _locationManager.DistanceFilter = 1.0;
+                _locationManager.AllowsBackgroundLocationUpdates = true;
+                _locationManager.DidRangeBeacons += DidRangeBeconsInRegionComplete;
+                _locationManager.AuthorizationChanged += HandleAuthorizationChanged;
+                _locationManager.RequestAlwaysAuthorization();
             }
+
         }
 
         public List<BeaconDataModel> GetBeaconData()
         {
             return _connection.Table<BeaconDataModel>().ToList();
+        }
+
+        public void OnSleep()
+        {
+            _locationManager.StartMonitoringSignificantLocationChanges();
+        }
+
+        public void OnResume()
+        {
+            _locationManager.StopMonitoringSignificantLocationChanges();
         }
 
         private void DidStateUpdated(object sender, EventArgs e)
@@ -169,18 +177,18 @@ namespace Covid19Radar.iOS.Services
                 {
                     if (UIDevice.CurrentDevice.CheckSystemVersion(13, 4))
                     {
-                        _beaconManager.RequestWhenInUseAuthorization();
+                        _locationManager.RequestWhenInUseAuthorization();
                     }
                     else
                     {
-                        _beaconManager.RequestAlwaysAuthorization();
+                        _locationManager.RequestAlwaysAuthorization();
                     }
                 }
 
             }
             else if (e.Status == CLAuthorizationStatus.AuthorizedWhenInUse)
             {
-                _beaconManager.RequestAlwaysAuthorization();
+                _locationManager.RequestAlwaysAuthorization();
             }
         }
 
@@ -189,13 +197,13 @@ namespace Covid19Radar.iOS.Services
             System.Diagnostics.Debug.WriteLine("StartBeacon");
 
             _listOfCLBeaconRegion.Add(_fieldRegion);
-            _beaconManager.StartRangingBeacons(_fieldRegion);
+            _locationManager.StartRangingBeacons(_fieldRegion);
         }
 
         public void StopRagingBeacons()
         {
             System.Diagnostics.Debug.WriteLine("StopBeacon");
-            _beaconManager.StopRangingBeacons(_fieldRegion);
+            _locationManager.StopRangingBeacons(_fieldRegion);
 
         }
 
