@@ -75,25 +75,7 @@ namespace Covid19Radar.iOS.Services
         private void DidStateUpdated(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("DidStateUpdated");
-            CBPeripheralManager trasmitter = sender as CBPeripheralManager;
-
-            if (trasmitter.State < CBPeripheralManagerState.PoweredOn)
-            {
-                System.Diagnostics.Debug.WriteLine("Bluetooth must be enabled");
-                // new UIAlertView("Bluetooth must be enabled", "To configure your device as a beacon", null, "OK", null).Show();
-                return;
-            }
-
-            if (_transmitterFlg)
-            {
-                CLBeaconRegion region = new CLBeaconRegion(new NSUuid(AppConstants.iBeaconAppUuid), ushort.Parse(_userData.Major), ushort.Parse(_userData.Minor), _userData.UserUuid);
-                NSNumber txPower = new NSNumber(-59);
-                trasmitter.StartAdvertising(region.GetPeripheralData(txPower));
-            }
-            else
-            {
-                trasmitter.StopAdvertising();
-            }
+            //CBPeripheralManager trasmitter = sender as CBPeripheralManager;
         }
 
         private async void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
@@ -210,12 +192,23 @@ namespace Covid19Radar.iOS.Services
         public void StartAdvertisingBeacons(UserDataModel userData)
         {
             _userData = userData;
-            _transmitterFlg = true;
+
+            if (_beaconTransmitter.State < CBPeripheralManagerState.PoweredOn)
+            {
+                System.Diagnostics.Debug.WriteLine("Bluetooth must be enabled");
+                // new UIAlertView("Bluetooth must be enabled", "To configure your device as a beacon", null, "OK", null).Show();
+                return;
+            }
+
+            CLBeaconRegion region = new CLBeaconRegion(new NSUuid(AppConstants.iBeaconAppUuid), ushort.Parse(_userData.Major), ushort.Parse(_userData.Minor), _userData.UserUuid);
+            NSNumber txPower = new NSNumber(-59);
+            _beaconTransmitter.StartAdvertising(region.GetPeripheralData(txPower));
+
         }
 
         public void StopAdvertisingBeacons()
         {
-            _transmitterFlg = false;
+            _beaconTransmitter.StopAdvertising();
         }
 
         #endregion
