@@ -3,18 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19RadarAPI", "Covid19RadarAPI\Covid19RadarAPI.csproj", "{E4334DDA-FF06-42D3-BE7F-27F61B4B1C2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar.Api", "src\Covid19Radar.Api\Covid19Radar.Api.csproj", "{E4334DDA-FF06-42D3-BE7F-27F61B4B1C2A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A03DD13-C0FC-4998-AFEB-74D5390C59A1}"
 	ProjectSection(SolutionItems) = preProject
 		Covid19Radar.Functions.runsettings = Covid19Radar.Functions.runsettings
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19RadarAPI.Tests", "Covid19RadarAPI.Tests\Covid19RadarAPI.Tests.csproj", "{8E09FD63-0B4C-4CE5-AD8F-95EE7625655E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar.Api.Tests", "src\Covid19Radar.Api.Tests\Covid19Radar.Api.Tests.csproj", "{8E09FD63-0B4C-4CE5-AD8F-95EE7625655E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19RadarBackground", "Covid19RadarBackground\Covid19RadarBackground.csproj", "{5A6E98C9-C66A-4C63-9715-7C6C9F1DA739}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar.Background", "src\Covid19Radar.Background\Covid19Radar.Background.csproj", "{5A6E98C9-C66A-4C63-9715-7C6C9F1DA739}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar.Functions.Common", "Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj", "{A5295862-2CEA-4863-96DF-860C3A58146D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar.Functions.Common", "src\Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj", "{A5295862-2CEA-4863-96DF-860C3A58146D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.Api.External", "src\Covid19Radar.Api.External\Covid19Radar.Api.External.csproj", "{52DB14F9-441C-444F-89F2-FDCFF95A9097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{A5295862-2CEA-4863-96DF-860C3A58146D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5295862-2CEA-4863-96DF-860C3A58146D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5295862-2CEA-4863-96DF-860C3A58146D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52DB14F9-441C-444F-89F2-FDCFF95A9097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DB14F9-441C-444F-89F2-FDCFF95A9097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DB14F9-441C-444F-89F2-FDCFF95A9097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DB14F9-441C-444F-89F2-FDCFF95A9097}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

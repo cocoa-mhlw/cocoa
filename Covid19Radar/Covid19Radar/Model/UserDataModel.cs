@@ -32,12 +32,24 @@ namespace Covid19Radar.Model
         /// <value></value>
         public UserStatus UserStatus { get; set; }
 
+        /// <summary>
+        /// Secret key
+        /// </summary>
+        /// <value>Secret Key</value>
+        public string Secret { get; set; }
+
+        /// <summary>
+        /// Last notification date and time
+        /// </summary>
+        public DateTime LastNotificationTime { get; set; }
+
         public bool Equals(UserDataModel other)
         {
             return UserUuid == other?.UserUuid
                 && Major == other?.Major
                 && Minor == other?.Minor
-                && UserStatus == other?.UserStatus;
+                && UserStatus == other?.UserStatus
+                && LastNotificationTime == other?.LastNotificationTime;
         }
 
         /// <summary>

@@ -18,12 +18,22 @@ Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/ap
 
 ## テスト用にアプリをインストールするには
 
-以下のリンクからアプリをテスト用にインストールしてください:（現時点では Android のみ対応しています）
+以下のリンクからアプリをテスト用にインストールしてください:
+
+### Android端末
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
 
 テスト用のデバイスの構成は、以下のドキュメントを参照してください:
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
+
+### iOS端末
+
+https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS/releases
+
+テスト用のデバイスの構成は、以下のドキュメントを参照してください:
+https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
+
 
 ### 開発環境について
 
