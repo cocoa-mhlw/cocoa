@@ -8,33 +8,32 @@ namespace Covid19Radar.Services
     public interface IBeaconService
     {
 
-        void InitializeService();
-
         /// <summary>
         /// Start Ranging Beacon
         /// </summary>
         /// <param name="beacons">Beacon List</param>
-        void StartBeacon();
+        void StartRagingBeacons(UserDataModel userData);
 
         /// <summary>
         /// Stop Ranging Beacon
         /// </summary>
-        void StopBeacon();
+        void StopRagingBeacons();
 
         /// <summary>
         /// Start Advertising Beacon
         /// </summary>
         /// <param name="beacons">Beacon List</param>
-        void StartAdvertising(UserDataModel userData);
+        void StartAdvertisingBeacons(UserDataModel userData);
 
         /// <summary>
         /// Stop Advertising Beacon
         /// </summary>
-        void StopAdvertising();
+        void StopAdvertisingBeacons();
 
         /// <summary>
         /// Get beacon data model
         /// </summary>
         List<BeaconDataModel> GetBeaconData();
+
     }
 }
