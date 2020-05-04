@@ -1,4 +1,5 @@
-﻿using CoreLocation;
+﻿using CoreBluetooth;
+using CoreLocation;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.Model;
@@ -81,11 +82,13 @@ namespace Covid19Radar.iOS
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
+//            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
             containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
         }
     }
+
+
 
 }
