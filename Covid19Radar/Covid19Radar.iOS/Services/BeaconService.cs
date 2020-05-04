@@ -16,33 +16,22 @@ using Xamarin.Forms.Internals;
 [assembly: Dependency(typeof(Covid19Radar.iOS.Services.BeaconService))]
 namespace Covid19Radar.iOS.Services
 {
-    public class BeaconService : IBeaconService, IDisposable
-    {
+    public class BeaconService : IBeaconService     {
         private static object dataLock = new object();
         private UserDataModel _userData;
         private bool _transmitterFlg = false;
         private CBPeripheralManager _beaconTransmitter = new CBPeripheralManager();
         private CLBeaconRegion _fieldRegion;
-        private CLLocationManager _beaconManager;
+        private readonly CLLocationManager _beaconManager;
         private List<CLBeaconRegion> _listOfCLBeaconRegion;
         private readonly SQLiteConnection _connection;
-        private readonly UserDataService _userDataService;
-        private readonly HttpDataService _httpDataService;
-        private readonly MinutesTimer _uploadTimer;
 
         public BeaconService()
         {
             _connection = DependencyService.Resolve<SQLiteConnectionProvider>().GetConnection();
             _connection.CreateTable<BeaconDataModel>();
-            _userDataService = DependencyService.Resolve<UserDataService>();
-            _userData = _userDataService.Get();
-            _httpDataService = DependencyService.Resolve<HttpDataService>();
-            _uploadTimer = new MinutesTimer(_userData.GetJumpHashTimeDifference());
-            _uploadTimer.Start();
-            _uploadTimer.TimeOutEvent += TimerUpload;
 
             _beaconTransmitter = new CBPeripheralManager();
-            _beaconTransmitter.AdvertisingStarted += DidAdvertisingStarted;
             _beaconTransmitter.StateUpdated += DidStateUpdated;
 
             _listOfCLBeaconRegion = new List<CLBeaconRegion>();
@@ -53,35 +42,13 @@ namespace Covid19Radar.iOS.Services
 
             // Monitoring
             _beaconManager = new CLLocationManager();
-            _beaconManager.DidDetermineState += DetermineStateForRegionComplete;
-            _beaconManager.RegionEntered += EnterRegionComplete;
-            _beaconManager.RegionLeft += ExitRegionComplete;
             _beaconManager.PausesLocationUpdatesAutomatically = false;
             _beaconManager.AllowsBackgroundLocationUpdates = true;
             _beaconManager.ShowsBackgroundLocationIndicator = true;
 
-
             _beaconManager.DidRangeBeacons += DidRangeBeconsInRegionComplete;
             _beaconManager.AuthorizationChanged += HandleAuthorizationChanged;
 
-        }
-
-        private async void TimerUpload(EventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-            List<BeaconDataModel> beacons = _connection.Table<BeaconDataModel>().ToList();
-            foreach (var beacon in beacons)
-            {
-                if (beacon.IsSentToServer) continue;
-                if (!await _httpDataService.PostBeaconDataAsync(_userData, beacon)) continue;
-                var key = beacon.Id;
-                lock (dataLock)
-                {
-                    var b = _connection.Table<BeaconDataModel>().SingleOrDefault(x => x.Id == key);
-                    b.IsSentToServer = true;
-                    _connection.Update(b);
-                }
-            }
         }
 
         public CLLocationManager BeaconManagerImpl
@@ -92,45 +59,9 @@ namespace Covid19Radar.iOS.Services
             }
         }
 
-        public void InitializeService()
-        {
-            StartBeacon();
-            StartAdvertising(_userData);
-        }
-
         public List<BeaconDataModel> GetBeaconData()
         {
             return _connection.Table<BeaconDataModel>().ToList();
-        }
-
-        public void StartBeacon()
-        {
-            System.Diagnostics.Debug.WriteLine("StartBeacon");
-
-
-
-            _listOfCLBeaconRegion.Add(_fieldRegion);
-            _beaconManager.StartMonitoring(_fieldRegion);
-        }
-
-        public void StopBeacon()
-        {
-            System.Diagnostics.Debug.WriteLine("StopBeacon");
-
-            _beaconManager.StopRangingBeacons(_fieldRegion);
-            _beaconManager.StopMonitoring(_fieldRegion);
-        }
-
-        public void StartAdvertising(UserDataModel userData)
-        {
-            _userData = userData;
-            _transmitterFlg = true;
-        }
-
-        private void DidAdvertisingStarted(object sender, NSErrorEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("DidAdvertisingStarted");
-
         }
 
         private void DidStateUpdated(object sender, EventArgs e)
@@ -155,11 +86,6 @@ namespace Covid19Radar.iOS.Services
             {
                 trasmitter.StopAdvertising();
             }
-        }
-
-        public void StopAdvertising()
-        {
-            _transmitterFlg = false;
         }
 
         private async void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
@@ -231,31 +157,6 @@ namespace Covid19Radar.iOS.Services
 
         }
 
-        #region beacon monitoring
-        private void DetermineStateForRegionComplete(object sender, CLRegionStateDeterminedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("DetermineStateForRegionComplete");
-            System.Diagnostics.Debug.WriteLine(e.ToString());
-            _beaconManager.StartRangingBeacons(_fieldRegion);
-        }
-
-        private void EnterRegionComplete(object sender, CLRegionEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("EnterRegionComplete ---- StartRanging");
-            System.Diagnostics.Debug.WriteLine(e.ToString());
-            _beaconManager.StartRangingBeacons(_fieldRegion);
-
-        }
-
-        private void ExitRegionComplete(object sender, CLRegionEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("ExitRegionComplete ---- StopRanging");
-            System.Diagnostics.Debug.WriteLine(e.ToString());
-            _beaconManager.StopRangingBeacons(_fieldRegion);
-
-        }
-
-        #endregion
         #region Auth
 
         private void HandleAuthorizationChanged(object sender, CLAuthorizationChangedEventArgs e)
@@ -283,9 +184,30 @@ namespace Covid19Radar.iOS.Services
             }
         }
 
-        public void Dispose()
+        public void StartRagingBeacons(UserDataModel userData)
         {
-            _uploadTimer.Stop();
+            System.Diagnostics.Debug.WriteLine("StartBeacon");
+
+            _listOfCLBeaconRegion.Add(_fieldRegion);
+            _beaconManager.StartRangingBeacons(_fieldRegion);
+        }
+
+        public void StopRagingBeacons()
+        {
+            System.Diagnostics.Debug.WriteLine("StopBeacon");
+            _beaconManager.StopRangingBeacons(_fieldRegion);
+
+        }
+
+        public void StartAdvertisingBeacons(UserDataModel userData)
+        {
+            _userData = userData;
+            _transmitterFlg = true;
+        }
+
+        public void StopAdvertisingBeacons()
+        {
+            _transmitterFlg = false;
         }
 
         #endregion
