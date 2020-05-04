@@ -11,6 +11,7 @@ using ObjCRuntime;
 using Prism;
 using Prism.Ioc;
 using System;
+using System.Threading.Tasks;
 using UIKit;
 using Xamarin.Forms;
 
@@ -23,9 +24,9 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public static AppDelegate Instance { get; private set; }
-        IBeaconService _beaconService;
-        UserDataService _userDataService;
-
+        private IBeaconService _beaconService;
+        private UserDataService _userDataService;
+        private NotificationService _notificationService;
         public AppDelegate()
         {
         }
@@ -62,16 +63,37 @@ namespace Covid19Radar.iOS
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
         {
             // Check for new data, and display it
-
-            _beaconService = DependencyService.Resolve<IBeaconService>();
-            _userDataService = DependencyService.Resolve<UserDataService>();
-            if (_userDataService.IsExistUserData)
-            {
-                _beaconService.StartAdvertisingBeacons(_userDataService.Get());
-            }
+            BackgroundService();
 
             // Inform system of fetch results
             completionHandler(UIBackgroundFetchResult.NewData);
+        }
+
+        private async void BackgroundService()
+        {
+            await Task.Run(() =>
+            {
+                try
+                {
+                    while (true)
+                    {
+                        InvokeOnMainThread(delegate
+                        {
+                            _beaconService = DependencyService.Resolve<IBeaconService>();
+                            _userDataService = DependencyService.Resolve<UserDataService>();
+                            if (_userDataService.IsExistUserData)
+                            {
+                                _beaconService.StartAdvertisingBeacons(_userDataService.Get());
+                            }
+                        });
+                        System.Threading.Thread.Sleep(60000);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.Message + System.Environment.NewLine + ex.StackTrace);
+                }
+            }).ConfigureAwait(false);
         }
 
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
