@@ -238,7 +238,7 @@ Please check your SMS.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
-          <source>Avarage Distance</source>
+          <source>Average Distance</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">লোভ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
         </trans-unit>
