@@ -73,8 +73,6 @@
 	<string>Required for pedometer</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>location</string>
-		<string>bluetooth-central</string>
 		<string>fetch</string>
 		<string>processing</string>
 	</array>
@@ -82,13 +80,6 @@
 	<string></string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-	<key>BGTaskSchedulerPermittedIdentifiers</key>
-	<array>
-		<string>com.shiny.job</string>
-		<string>com.shiny.jobpower</string>
-		<string>com.shiny.jobnet</string>
-		<string>com.shiny.jobpowernet</string>
-	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>XSAppIconAssets</key>
