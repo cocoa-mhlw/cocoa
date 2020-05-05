@@ -200,7 +200,7 @@ S’il vous plaît vérifier votre SMS.</value>
     <comment>ID</comment>
   </data>
   <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Avarage Distance</value>
+    <value>Average Distance</value>
     <comment>TextAvgDistance</comment>
   </data>
   <data name="DetectedBeaconPageTextCount" xml:space="preserve">
