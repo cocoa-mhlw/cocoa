@@ -232,7 +232,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Avarage Distance に類似しているローカライズされた文字列を検索します。
+        ///   Average Distance に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DetectedBeaconPageTextAvgDistance {
             get {
