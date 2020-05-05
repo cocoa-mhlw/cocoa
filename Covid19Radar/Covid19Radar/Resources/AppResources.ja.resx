@@ -293,11 +293,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>License Agreement</comment>
   </data>
   <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/ja/agpl.html</value>
     <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/ja/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
   <data name="DetectedBeaconPageTextId" xml:space="preserve">
@@ -329,11 +329,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/ja/contributor.html</value>
     <comment>Url Contributer</comment>
   </data>
   <data name="UrlUpdate" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/ja/update.html</value>
     <comment>Update</comment>
   </data>
   <data name="TitleHeadsup" xml:space="preserve">
@@ -341,7 +341,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>Heads up</comment>
   </data>
   <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/ja/qna.html</value>
     <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
