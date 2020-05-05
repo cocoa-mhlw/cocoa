@@ -32,6 +32,7 @@ namespace Covid19Radar
             builder.Services.AddSingleton<IInfectionProcessRepository, CosmosInfectionProcessRepository>();
             builder.Services.AddSingleton<IOtpRepository, CosmosOtpRepository>();
             builder.Services.AddSingleton<IInfectionService, InfectionService>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyRepository, TemporaryExposureKeyRepository>();
         }
     }
 }
