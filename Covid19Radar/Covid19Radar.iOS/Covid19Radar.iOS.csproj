@@ -209,7 +209,10 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.616-pre4" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.iOS.ExposureNotification">
+      <Version>1.0.0-beta1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.21.9</Version>
     </PackageReference>
