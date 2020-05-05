@@ -1,0 +1,3 @@
+[submodule "xamarin.exposurenotification"]
+	path = xamarin.exposurenotification
+	url = https://github.com/xamarin/xamarin.exposurenotification.git
