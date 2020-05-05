@@ -42,6 +42,7 @@ namespace Covid19Radar.DataStore
         public Container BeaconUuid { get => Database.GetContainer("BeaconUuid"); }
         public Container Infection { get => Database.GetContainer("Infection"); }
         public Container InfectionProcess { get => Database.GetContainer("InfectionProcess"); }
+        public Container TemporaryExposureKey { get => Database.GetContainer("TemporaryExposureKey"); }
         public string ContainerNameBeacon { get => BeaconStoreName; }
 
         /// <summary>
@@ -171,6 +172,17 @@ namespace Covid19Radar.DataStore
             catch { }
             var infectionProcessProperties = new ContainerProperties("InfectionProcess", "/PartitionKey");
             var infectionProcessResult = await dbResult.Database.CreateContainerIfNotExistsAsync(infectionProcessProperties);
+
+            // Container TemporaryExposureKey
+            Logger.LogInformation("GenerateAsync Create TemporaryExposureKey Container");
+            try
+            {
+                await dbResult.Database.GetContainer("TemporaryExposureKey").DeleteContainerAsync();
+            }
+            catch { }
+            var temporaryExposureKeyProperties = new ContainerProperties("TemporaryExposureKey", "/PartitionKey");
+            var temporaryExposureKeyResult = await dbResult.Database.CreateContainerIfNotExistsAsync(temporaryExposureKeyProperties);
+
         }
 
     }
