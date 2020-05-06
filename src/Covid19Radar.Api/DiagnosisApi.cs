@@ -31,7 +31,7 @@ namespace Covid19Radar
 
         [FunctionName(nameof(DiagnosisApi))]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "diagnosis")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "diagnosis")] HttpRequest req)
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var diagnosis = JsonConvert.DeserializeObject<DiagnosisSubmissionParameter>(requestBody);

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Covid19Radar.DataAccess
 {
+    [Obsolete]
     public class CosmosInfectionProcessRepository : IInfectionProcessRepository
     {
         private readonly ICosmos _db;
