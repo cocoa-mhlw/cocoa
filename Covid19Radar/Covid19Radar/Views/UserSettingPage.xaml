@@ -9,7 +9,8 @@
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     Title="{Binding Title}"
-    ios:Page.UseSafeArea="true">
+    ios:Page.UseSafeArea="true"
+    Visual="Material">
     <ScrollView Padding="0,20">
         <StackLayout>
             <StackLayout Margin="40,0">

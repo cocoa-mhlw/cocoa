@@ -6,7 +6,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     Title="{Binding Title}"
-    ios:Page.UseSafeArea="true">
+    ios:Page.UseSafeArea="true"
+    Visual="Material">
     <CollectionView Grid.Row="0" ItemsSource="{Binding BeaconDataList}">
         <CollectionView.ItemTemplate>
             <DataTemplate>

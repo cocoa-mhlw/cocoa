@@ -8,7 +8,8 @@
     xmlns:templates="clr-namespace:Covid19Radar.Templates;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
-    Style="{StaticResource PageStyle}">
+    Style="{StaticResource PageStyle}"
+    Visual="Material">
     <ContentPage.Resources>
         <ResourceDictionary>
             <templates:StepItemTemplate x:Key="StepItemTemplate" />

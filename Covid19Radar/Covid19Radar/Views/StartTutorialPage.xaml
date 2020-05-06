@@ -9,7 +9,8 @@
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     NavigationPage.HasNavigationBar="False"
-    Style="{StaticResource PageStyle}">
+    Style="{StaticResource PageStyle}"
+    Visual="Material">
 
     <Grid>
         <Grid.Margin>
