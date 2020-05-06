@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace Covid19Radar.DataAccess
 {
-    public class TemporaryExposureKeyRepository : ITemporaryExposureKeyRepository
+    public class CosmosTemporaryExposureKeyRepository : ITemporaryExposureKeyRepository
     {
         private readonly ICosmos _db;
-        private readonly ILogger<TemporaryExposureKeyRepository> _logger;
+        private readonly ILogger<CosmosTemporaryExposureKeyRepository> _logger;
 
-        public TemporaryExposureKeyRepository(ICosmos db, ILogger<TemporaryExposureKeyRepository> logger)
+        public CosmosTemporaryExposureKeyRepository(ICosmos db, ILogger<CosmosTemporaryExposureKeyRepository> logger)
         {
             _db = db;
             _logger = logger;

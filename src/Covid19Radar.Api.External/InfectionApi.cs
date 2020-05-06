@@ -17,6 +17,7 @@ using Microsoft.Azure.Cosmos.Linq;
 
 namespace Covid19Radar
 {
+    [Obsolete]
     public class InfectionApi
     {
         private readonly ICosmos Cosmos;
