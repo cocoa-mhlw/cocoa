@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Covid19Radar.DataAccess
 {
+    [Obsolete]
     public interface IInfectionProcessRepository
     {
         Task Upsert(InfectionProcessModel infectionProcess);
