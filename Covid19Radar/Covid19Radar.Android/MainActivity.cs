@@ -20,6 +20,7 @@ using Xamarin.Forms;
 using SQLite;
 using AltBeaconOrg.BoundBeacon.Startup;
 using Region = AltBeaconOrg.BoundBeacon.Region;
+using Acr.UserDialogs;
 
 namespace Covid19Radar.Droid
 {
@@ -55,6 +56,8 @@ namespace Covid19Radar.Droid
             {
                 Logger = new DebugLogger()
             });
+
+            UserDialogs.Init(this);
 
             LoadApplication(new App(new AndroidInitializer()));
             CreateNotificationFromIntent(Intent);
