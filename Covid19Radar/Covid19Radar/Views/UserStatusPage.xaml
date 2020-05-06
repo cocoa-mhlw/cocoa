@@ -10,7 +10,8 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:c="clr-namespace:Covid19Radar.Converters"
     Title="{Binding Title}"
-    ios:Page.UseSafeArea="true">
+    ios:Page.UseSafeArea="true"
+    Visual="Material">
     <ContentPage.Resources>
         <ResourceDictionary>
             <c:IntEnumConverter x:Key="IntEnum" />
@@ -24,8 +25,6 @@
                     Style="{StaticResource Accent2ColorHeaderLabelStyle}"
                     Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsSubtitle}" />
                 <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
-                <Label Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsDescription}" />
-                <Picker Title="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsPickerTitle}" Style="{StaticResource Accent2ColorStatusPickerStyle}" ItemsSource="{Binding UserStatuses}"  SelectedIndex="{Binding SelectedUserStatus.Value, Converter={StaticResource IntEnum}, Mode=TwoWay}" />
                 <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}" Style="{StaticResource Accent2ColorHeaderLabelStyle}" TextColor="{StaticResource Accent4Color}" />
             </StackLayout>
 

@@ -6,7 +6,8 @@
     xmlns:controls="clr-namespace:Covid19Radar.Controls"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
-    Padding="40,30,40,80">
+    Padding="40,30,40,80"
+    Visual="Material">
 
     <Grid>
         <Grid.RowDefinitions>
