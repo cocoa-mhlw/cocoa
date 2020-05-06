@@ -12,11 +12,9 @@ namespace Covid19Radar.ViewModels
     {
         public List<HomeMenuModel> HomeMenus { get; private set; }
 
-        public HomePageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public HomePageViewModel() : base()
         {
             Title = AppResources.HomePageTitle;
-
             SetData();
         }
 

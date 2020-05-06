@@ -18,8 +18,7 @@ namespace Covid19Radar.ViewModels
             get { return _url; }
             set { SetProperty(ref _url, value); }
         }
-        public HeadsupPageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public HeadsupPageViewModel() : base()
         {
             Title = Resources.AppResources.TitleHeadsup;
             Url = Resources.AppResources.UrlHeadsup;
