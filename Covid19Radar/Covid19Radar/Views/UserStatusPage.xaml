@@ -8,6 +8,8 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
     xmlns:c="clr-namespace:Covid19Radar.Converters"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
@@ -25,7 +27,9 @@
                     Style="{StaticResource Accent2ColorHeaderLabelStyle}"
                     Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsSubtitle}" />
                 <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
-                <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}" Style="{StaticResource Accent2ColorHeaderLabelStyle}" TextColor="{StaticResource Accent4Color}" />
+                <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}"
+                       Style="{StaticResource Accent2ColorHeaderLabelStyle}"
+                       TextColor="{StaticResource Accent4Color}" />
             </StackLayout>
 
             <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />
