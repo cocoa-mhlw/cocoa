@@ -196,7 +196,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Bluetooth needs to be turned on to record close contact. Please go to the next page to turn it on. に類似しているローカライズされた文字列を検索します。
+        ///   Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTextStep4Description {
             get {
@@ -358,21 +358,21 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Allow Bluetooth に類似しているローカライズされた文字列を検索します。
+        ///   Allow Exposure Notification / Bluetooth に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string InitSettingPageTextAllowBluetooth {
+        internal static string InitSettingPageTextExposureNotification {
             get {
-                return ResourceManager.GetString("InitSettingPageTextAllowBluetooth", resourceCulture);
+                return ResourceManager.GetString("InitSettingPageTextExposureNotification", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+        ///   This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
         ///Select &apos;Always Allow&apos; to set up Bluetooth. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string InitSettingPageTextBluetoothDescription {
+        internal static string InitSettingPageTextExposureNotificationDescription {
             get {
-                return ResourceManager.GetString("InitSettingPageTextBluetoothDescription", resourceCulture);
+                return ResourceManager.GetString("InitSettingPageTextExposureNotificationDescription", resourceCulture);
             }
         }
         
@@ -401,6 +401,60 @@ namespace Covid19Radar.Resources {
         internal static string InputSmsOTPPageResendText {
             get {
                 return ResourceManager.GetString("InputSmsOTPPageResendText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Contributers に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MainContributers {
+            get {
+                return ResourceManager.GetString("MainContributers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Exposures に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MainExposures {
+            get {
+                return ResourceManager.GetString("MainExposures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Home に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MainHome {
+            get {
+                return ResourceManager.GetString("MainHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   License に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MainLicense {
+            get {
+                return ResourceManager.GetString("MainLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Notify に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MainNotifyOther {
+            get {
+                return ResourceManager.GetString("MainNotifyOther", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Update に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MainUpdateInfo {
+            get {
+                return ResourceManager.GetString("MainUpdateInfo", resourceCulture);
             }
         }
         
