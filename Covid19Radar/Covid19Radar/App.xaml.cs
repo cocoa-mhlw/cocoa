@@ -41,7 +41,6 @@ namespace Covid19Radar
     public partial class App : PrismApplication
     {
 
-        private IBeaconService _beaconService;
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor.
@@ -67,7 +66,7 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 UserDataModel _userData = userDataService.Get();
-                result = await NavigationService.NavigateAsync("NavigationPage/HomePage");
+                result = await NavigationService.NavigateAsync("MainPage");
             }
             else
             {
@@ -121,6 +120,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<StatusUpdateCompletePage, StatusUpdateCompletePageViewModel>();
             containerRegistry.RegisterForNavigation<HeadsupPage, HeadsupPageViewModel>();
             containerRegistry.RegisterForNavigation<UserStatusPage, UserStatusPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
@@ -130,38 +130,19 @@ namespace Covid19Radar
         protected override void OnStart()
         {
             ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
-
-            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-            if (userDataService.IsExistUserData)
-            {
-                UserDataModel _userData = userDataService.Get();
-                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
-                _beaconService.StartRagingBeacons(_userData);
-                _beaconService.StartAdvertisingBeacons(_userData);
-            }
+            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
         }
 
         protected override void OnResume()
         {
-            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-            if (userDataService.IsExistUserData)
-            {
-                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
-                _beaconService.OnResume();
-            }
+            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             base.OnResume();
 
         }
 
         protected override void OnSleep()
         {
-            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-            if (userDataService.IsExistUserData)
-            {
-                _beaconService = Xamarin.Forms.DependencyService.Resolve<IBeaconService>();
-                _beaconService.OnSleep();
-            }
-
+            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             base.OnSleep();
         }
 

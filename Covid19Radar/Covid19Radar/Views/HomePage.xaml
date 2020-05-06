@@ -6,9 +6,13 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+           xmlns:prism="http://prismlibrary.com"
+       prism:ViewModelLocator.AutowireViewModel="True"
+
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
-    Style="{StaticResource PageStyle}">
+    Style="{StaticResource PageStyle}"
+    Visual="Material">
     <ScrollView>
         <ScrollView.Padding>
             <Thickness
@@ -21,7 +25,7 @@
         <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
         <Label
             Margin="0,29,0,60"
-            FontFamily="{StaticResource NotoSansMediumFontFamily}"
+            FontFamily="NotoSansMediumFontFamily"
             FontSize="22"
             HorizontalOptions="Center"
             Text="{x:Static resources:AppResources.AppName}"

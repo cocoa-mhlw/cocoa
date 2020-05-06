@@ -16,12 +16,14 @@ namespace Covid19Radar.Models
         /// User Major 0 to 65536
         /// </summary>
         /// <value>User Major</value>
+        [Obsolete]
         string Major { get; }
 
         /// <summary>
         /// User Minor 0 to 65536
         /// </summary>
         /// <value>User Minor</value>
+        [Obsolete]
         string Minor { get; }
 
     }

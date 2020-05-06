@@ -5,7 +5,7 @@
 - Apply Label! (bug/nre features/doc/enhancement/question/ImprovingOperation/todo).
 - Create Branch (ex Bugfix/IssueNo , Feature/IssuNo)
 - Please make a Pull Request for master
-- Please record your name in [CONTRIBUTERS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md)
+- Please record your name in [CONTRIBUTORS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
 
 # How to Contribute Japanese
 
@@ -14,7 +14,7 @@
 - ラベルをつけてください。(bug/nre features/doc/enhancement/question/ImprovingOperation/todo)
 - Branch を作成してください。(例 Bugfix/IssueNo , Feature/IssuNo)
 - master への Pull Request をお願いします。
-- その際に [CONTRIBUTERS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md) に記載をお願いします。
+- その際に [CONTRIBUTORS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md) に記載をお願いします。
 
 ## 新しい機能追加、変更、動作改善などの提案
 
