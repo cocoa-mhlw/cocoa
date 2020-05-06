@@ -203,6 +203,9 @@
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.5.3.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.ExposureNotification">
+      <Version>0.1.0-beta1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
     </PackageReference>
@@ -210,9 +213,6 @@
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.iOS.ExposureNotification">
-      <Version>1.0.0-beta1</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.21.9</Version>
     </PackageReference>
