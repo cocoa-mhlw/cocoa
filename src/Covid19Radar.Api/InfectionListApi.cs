@@ -18,6 +18,7 @@ using System.Linq;
 
 namespace Covid19Radar.Api
 {
+    [Obsolete]
     public class InfectionListApi
     {
         private readonly IUserRepository UserRepository;

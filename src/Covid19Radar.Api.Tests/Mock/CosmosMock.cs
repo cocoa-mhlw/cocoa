@@ -21,6 +21,7 @@ namespace Covid19Radar.Tests.Mock
         public Container Infection { get; set; } = new CosmosContainerMock();
         public Container InfectionProcess { get; set; } = new CosmosContainerMock();
         public Container TemporaryExposureKey { get; set; } = new CosmosContainerMock();
+        public Container Diagnosis { get; set; } = new CosmosContainerMock();
         public string ContainerNameBeacon => "Beacons";
 
     }
