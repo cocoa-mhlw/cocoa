@@ -8,7 +8,8 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
-    Style="{StaticResource PageStyle}">
+    Style="{StaticResource PageStyle}"
+    Visual="Material">
 
     <Grid>
         <Grid.Margin>

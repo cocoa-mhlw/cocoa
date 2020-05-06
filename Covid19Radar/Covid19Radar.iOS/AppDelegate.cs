@@ -41,6 +41,8 @@ namespace Covid19Radar.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            global::Xamarin.Forms.FormsMaterial.Init();
+
             global::Rg.Plugins.Popup.Popup.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
