@@ -9,7 +9,7 @@ Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/ap
 ![アプリの概念](img/AppDescription.jpg)
 
 
-## Thank you for Your Contribute !!! [Contributers List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTERS.md)
+## Thank you for Your Contribute !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
 コントリビューションとプルリクエストをお待ちしています。
 コントリビューションルールについて、ご確認ください。
 [Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
