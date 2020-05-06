@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.DescriptionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    xmlns:templates="clr-namespace:Covid19Radar.Templates;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    Style="{StaticResource PageStyle}"
+    Visual="Material">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <templates:StepItemTemplate x:Key="StepItemTemplate" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout BindableLayout.ItemTemplate="{StaticResource StepItemTemplate}" BindableLayout.ItemsSource="{Binding Steps}" />
+            <Button
+                Margin="95,0,95,80"
+                Command="{Binding Path=OnClickNext}"
+                Style="{StaticResource DefaultButtonStyle}"
+                Text="{x:Static resources:AppResources.ButtonNext}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

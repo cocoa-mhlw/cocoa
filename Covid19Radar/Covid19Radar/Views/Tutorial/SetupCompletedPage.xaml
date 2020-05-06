@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.SetupCompletedPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    Style="{StaticResource PageStyle}"
+    Visual="Material">
+
+    <Grid>
+        <Grid.Margin>
+            <Thickness
+                Bottom="{OnPlatform Android=48,
+                                    iOS=64}"
+                Left="32"
+                Right="32"
+                Top="{OnPlatform Android=48,
+                                 iOS=64}" />
+        </Grid.Margin>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{OnPlatform Android=96, iOS=120}" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ffimageloading:CachedImage
+            Grid.Row="0"
+            HorizontalOptions="Center"
+            Source="Logo.png"
+            VerticalOptions="Center" />
+
+        <Label
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            Style="{StaticResource SubtitleLabelStyle}"
+            Text="{x:Static resources:AppResources.AppName}">
+            <Label.Margin>
+                <Thickness Top="{OnPlatform Android=0, iOS=32}" />
+            </Label.Margin>
+        </Label>
+
+        <Label
+            Grid.Row="2"
+            HorizontalOptions="Center"
+            Text="{x:Static resources:AppResources.SetupCompletedPageTextYoureReadyToGo}">
+            <Label.Margin>
+                <Thickness Top="{OnPlatform Android=0, iOS=16}" />
+            </Label.Margin>
+        </Label>
+
+        <Button
+            Grid.Row="3"
+            Margin="57,0"
+            Command="{Binding Path=OnClickHome}"
+            Style="{StaticResource DefaultButtonStyle}"
+            Text="{x:Static resources:AppResources.ButtonHome}"
+            VerticalOptions="End" />
+    </Grid>
+
+</ContentPage>

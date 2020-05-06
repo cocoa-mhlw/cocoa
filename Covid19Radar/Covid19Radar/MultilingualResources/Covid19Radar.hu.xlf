@@ -352,6 +352,16 @@ Kérjük, ellenőrizze az SMS-t.</target>
           <target state="new">OK</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
         </trans-unit>
+        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
+          <source>Enable</source>
+          <target state="new">Enable</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
+        </trans-unit>
+        <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
+          <source>NotNow</source>
+          <target state="new">NotNow</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
+        </trans-unit>
       </group>
     </body>
   </file>
