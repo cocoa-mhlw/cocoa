@@ -22,7 +22,7 @@
         <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
         <Label
             Margin="0,29,0,60"
-            FontFamily="{StaticResource NotoSansMediumFontFamily}"
+            FontFamily="NotoSansMediumFontFamily"
             FontSize="22"
             HorizontalOptions="Center"
             Text="{x:Static resources:AppResources.AppName}"

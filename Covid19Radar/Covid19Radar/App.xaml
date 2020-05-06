@@ -11,6 +11,7 @@
                 <local:Colors />
                 <local:Styles />
                 <local:Fonts />
+                <local:Icons />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

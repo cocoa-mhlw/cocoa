@@ -25,7 +25,9 @@
                     Style="{StaticResource Accent2ColorHeaderLabelStyle}"
                     Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsSubtitle}" />
                 <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
-                <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}" Style="{StaticResource Accent2ColorHeaderLabelStyle}" TextColor="{StaticResource Accent4Color}" />
+                <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}"
+                       Style="{StaticResource Accent2ColorHeaderLabelStyle}"
+                       TextColor="{StaticResource Accent4Color}" />
             </StackLayout>
 
             <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />
