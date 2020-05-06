@@ -150,7 +150,7 @@
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth needs to be turned on to record close contact. Please go to the next page to turn it on.</value>
+    <value>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
@@ -161,14 +161,14 @@
     <value>Protecting our loved ones from COVID19</value>
     <comment>Protecting our loved ones from COVID19</comment>
   </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</value>
-    <comment>Device access page Bluetooth description</comment>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
   </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Allow Bluetooth</value>
-    <comment>Device access page Bluetooth title</comment>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Allow Exposure Notification / Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Device Access</value>
@@ -399,5 +399,29 @@ Please check your SMS.</value>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
     <comment>NotNow Button</comment>
+  </data>
+  <data name="MainContributers" xml:space="preserve">
+    <value>Contributers</value>
+    <comment>Tab Contributers</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Exposures</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Home</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>License</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Notify</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Update</value>
+    <comment>Tab Button</comment>
   </data>
 </root>

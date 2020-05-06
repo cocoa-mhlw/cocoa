@@ -25,8 +25,8 @@
             <Label
                 FontFamily="NotoSansMediumFontFamily"
                 FontSize="18"
-                Text="{x:Static resources:AppResources.InitSettingPageTextAllowBluetooth}" />
-            <Label Text="{x:Static resources:AppResources.InitSettingPageTextBluetoothDescription}">
+                Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotification}" />
+            <Label Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotificationDescription}">
                 <Label.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="iOS" Value="0,20,0,50" />

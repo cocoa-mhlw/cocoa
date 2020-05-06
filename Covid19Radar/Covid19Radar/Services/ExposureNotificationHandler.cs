@@ -1,123 +1,163 @@
-﻿using Newtonsoft.Json;
+﻿
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Reflection;
-using System.Resources;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.Services
 {
-	public class ExposureNotificationHandler : IExposureNotificationHandler
-	{
-		const string apiUrlBase = "http://localhost:7071/api/";
-		static readonly HttpClient http = new HttpClient();
+    [Preserve]
+    public class ExposureNotificationHandler : IExposureNotificationHandler
+    {
+        const string apiUrlBase = "http://localhost:7071/api/";
 
-		public Configuration Configuration
-			=> new Configuration();
+        static readonly HttpClient http = new HttpClient();
 
-		public async Task ExposureDetected(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getDetailsFunc)
-		{
-			// TODO: Save this info and alert the user
-			// Pop up a local notification
-		}
+        public Configuration Configuration => throw new NotImplementedException();
+        public Task<Configuration> GetConfigurationAsync() => Task.FromResult(new Configuration());
 
-		public async Task<IEnumerable<TemporaryExposureKey>> FetchExposureKeysFromServer()
-		{
-			const string prefsSinceKey = "keys_since";
+        public async Task ExposureDetected(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getDetailsFunc)
+        {
+            LocalStateManager.Instance.ExposureSummary = summary;
 
-			// Get the newest date we have keys from and request since then
-			// or if no date stored, only return as much as the past 14 days of keys
-			var sinceEpochSeconds = Preferences.Get(prefsSinceKey, DateTimeOffset.MinValue.ToUnixTimeSeconds());
-			var url = $"{apiUrlBase.TrimEnd('/')}/keys?since={sinceEpochSeconds}";
+            var details = await getDetailsFunc();
 
-			var response = await http.GetAsync(url);
+            LocalStateManager.Instance.ExposureInformation.AddRange(details);
 
-			response.EnsureSuccessStatusCode();
+            LocalStateManager.Save();
 
-			var responseData = await response.Content.ReadAsStringAsync();
+            MessagingCenter.Instance.Send(this, "exposure_info_changed");
 
-			// Response contains the timestamp in seconds since epoch, and the list of keys
-			var keys = JsonConvert.DeserializeObject<KeysResponse>(responseData);
+            // TODO: Save this info and alert the user
+            // Pop up a local notification
+        }
 
-			// Save newest timestamp for next request
-			Preferences.Set(prefsSinceKey, keys.Timestamp);
+        public async Task FetchExposureKeysFromServer(Func<IEnumerable<TemporaryExposureKey>, Task> addKeys)
+        {
+            var newestKeyTimestamp = LocalStateManager.Instance.NewestKeysResponseTimestamp;
 
-			return keys.Keys;
-		}
+            var take = 1024;
+            var skip = 0;
 
-		const string prefsDiagnosisSubmissionDate = "prefs_diagnosis_submit_date";
-		const string prefsDiagnosisSubmissionUid = "prefs_diagnosis_submit_uid";
+            while (true)
+            {
+                // Get the newest date we have keys from and request since then
+                // or if no date stored, only return as much as the past 14 days of keys
+                var sinceEpochSeconds = LocalStateManager.Instance.NewestKeysResponseTimestamp.ToUnixTimeSeconds();
+                var url = $"{apiUrlBase.TrimEnd('/')}/keys?since={sinceEpochSeconds}&skip={skip}&take={take}";
 
-		public static bool HasSubmittedDiagnosis
-			=> Preferences.Get(prefsDiagnosisSubmissionDate, DateTime.MinValue)
-				>= DateTime.UtcNow.AddDays(-14);
+                var response = await http.GetAsync(url);
 
-		public static string DiagnosisUid
-		{
-			get => Preferences.Get(prefsDiagnosisSubmissionUid, (string)null);
-			set => Preferences.Set(prefsDiagnosisSubmissionUid, value);
-		}
+                response.EnsureSuccessStatusCode();
 
-		public async Task UploadSelfExposureKeysToServer(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
-		{
-			var diagnosisUid = DiagnosisUid;
+                var responseData = await response.Content.ReadAsStringAsync();
 
-			if (string.IsNullOrEmpty(diagnosisUid))
-				throw new InvalidOperationException();
+                if (string.IsNullOrEmpty(responseData))
+                    break;
 
-			try
-			{
-				var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+                // Response contains the timestamp in seconds since epoch, and the list of keys
+                var keys = JsonConvert.DeserializeObject<KeysResponse>(responseData);
 
-				var json = JsonConvert.SerializeObject(new SelfDiagnosisSubmissionRequest
-				{
-					DiagnosisUid = diagnosisUid,
-					Keys = temporaryExposureKeys
-				});
+                // If no keys were returned we ran out of new results
+                if (keys.Keys == null || !keys.Keys.Any())
+                    break;
 
-				var http = new HttpClient();
-				var response = await http.PostAsync(url, new StringContent(json));
+                // Call the callback with the batch of keys to add
+                await addKeys(keys.Keys);
 
-				response.EnsureSuccessStatusCode();
+                var keysTimestamp = DateTimeOffset.FromUnixTimeSeconds(keys.Timestamp);
 
-				// Store the date we were diagnosed
-				Preferences.Set(prefsDiagnosisSubmissionDate, DateTime.UtcNow);
-			}
-			catch
-			{
-				// Reset diagnosis status since we don't have one that was successfully submitted
-				// and then re-throw
-				Preferences.Set(prefsDiagnosisSubmissionDate, DateTime.UtcNow.AddDays(-100));
-				throw;
-			}
-		}
+                if (keysTimestamp > newestKeyTimestamp)
+                    newestKeyTimestamp = keysTimestamp;
 
-		class SelfDiagnosisSubmissionRequest
-		{
-			[JsonProperty("diagnosisUid")]
-			public string DiagnosisUid { get; set; }
+                // Increment our skip starting point for the next batch
+                skip += take;
+            }
 
-			[JsonProperty("keys")]
-			public IEnumerable<TemporaryExposureKey> Keys { get; set; }
-		}
+            // Save newest timestamp for next request
+            LocalStateManager.Instance.NewestKeysResponseTimestamp = newestKeyTimestamp;
+            LocalStateManager.Save();
+        }
 
-		class KeysResponse
-		{
-			[JsonProperty("timestamp")]
-			public long Timestamp { get; set; }
+        public async Task UploadSelfExposureKeysToServer(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
+        {
+            var diagnosisUid = LocalStateManager.Instance.LatestDiagnosis.DiagnosisUid;
 
-			[JsonProperty("keys")]
-			public IEnumerable<TemporaryExposureKey> Keys { get; set; }
-		}
-	}
+            if (string.IsNullOrEmpty(diagnosisUid))
+                throw new InvalidOperationException();
 
+            try
+            {
+                var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+
+                var json = JsonConvert.SerializeObject(new SelfDiagnosisSubmissionRequest
+                {
+                    DiagnosisUid = diagnosisUid,
+                    Keys = temporaryExposureKeys
+                });
+
+                var http = new HttpClient();
+                var response = await http.PutAsync(url, new StringContent(json));
+
+                response.EnsureSuccessStatusCode();
+
+                LocalStateManager.Instance.LatestDiagnosis.Shared = true;
+                LocalStateManager.Save();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        internal static async Task<bool> VerifyDiagnosisUid(string diagnosisUid)
+        {
+            var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+
+            var http = new HttpClient();
+
+            try
+            {
+                var response = await http.PostAsync(url, new StringContent(diagnosisUid));
+
+                response.EnsureSuccessStatusCode();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public Task<IEnumerable<TemporaryExposureKey>> FetchExposureKeysFromServer()
+        {
+            throw new NotImplementedException();
+        }
+
+        class SelfDiagnosisSubmissionRequest
+        {
+            [JsonProperty("diagnosisUid")]
+            public string DiagnosisUid { get; set; }
+
+            [JsonProperty("keys")]
+            public IEnumerable<TemporaryExposureKey> Keys { get; set; }
+        }
+
+        class KeysResponse
+        {
+            [JsonProperty("timestamp")]
+            public long Timestamp { get; set; }
+
+            [JsonProperty("keys")]
+            public IEnumerable<TemporaryExposureKey> Keys { get; set; }
+        }
+    }
 }
