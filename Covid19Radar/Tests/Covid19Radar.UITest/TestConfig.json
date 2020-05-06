@@ -2,7 +2,8 @@
   "Repl": false,
   "AndroidConfiguration": {
     "ApkName": null,
-    "AppPath": "C:\\apps\\net.kzmx.Covid19Radar.apk"
+    "AppPath": "C:\\Work\\Xamarin\\Android\\net.kzmx.Covid19Radar.apk",
+    "EnableScreenshots": true
   },
   "IosConfiguration": {
     "Simulator": true,

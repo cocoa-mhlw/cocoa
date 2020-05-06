@@ -41,40 +41,39 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
-    <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="Shouldly">
       <Version>3.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="SpecFlow.NUnit">
+      <Version>3.1.97</Version>
     </PackageReference>
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
       <Version>3.1.97</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-<PrivateAssets>all</PrivateAssets>
-</PackageReference>
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Xamariners.EndToEnd.Xamarin">
-      <Version>0.0.4</Version>
+      <Version>0.0.5</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppInitializer.cs" />
-    <Compile Include="Features\BaseLocalFeature.cs" />
-    <Compile Include="Features\StartTutorialPageFeature.cs" />
-    <Compile Include="Infrastructure\BaseAppInitializer.cs" />
+    <Compile Include="Features\StartTutorialPage\StartTutorialPageFeature.cs" />
     <Compile Include="NUnitAssemblyHooks.cs" />
-    <Compile Include="StartTutorialPage.feature.cs" />
-    <Compile Include="Steps\CommonSteps.cs" />
+    <Compile Include="Features\StartTutorialPage\StartTutorialPage.feature.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="specflow.json" />
-    <EmbeddedResource Include="testsConfiguration.json" />
-    <None Include="StartTutorialPage.feature" />
+    <EmbeddedResource Include="TestConfig.json" />
+    <None Include="App.config" />
+    <None Include="Features\StartTutorialPage\StartTutorialPage.feature" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Features\HomePage\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-
   </PropertyGroup>
 </Project>
