@@ -5,49 +5,51 @@
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
        xmlns:prism="http://prismlibrary.com"
        prism:ViewModelLocator.AutowireViewModel="True"
+       xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+       xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
        mc:Ignorable="d"
+       Title="{Binding Title}"
+       ios:Page.UseSafeArea="true"
        Visual="Material"
        xmlns:view="clr-namespace:Covid19Radar.Views"
        x:Class="Covid19Radar.Views.MainPage">
     <TabBar x:Name="TabBar">
-        
-
-        <Tab Title="Info" Route="info">
+        <Tab Title="{x:Static resources:AppResources.MainUpdateInfo}" Route="info">
             <Tab.Icon>
                 <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconInfo}"/>
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate view:UpdateInfoPage}"/>
         </Tab>
 
-        <Tab Title="Exposures" Route="exposures">
+        <Tab Title="{x:Static resources:AppResources.MainExposures}" Route="exposures">
             <Tab.Icon>
                 <FontImageSource Glyph="{StaticResource IconPeopleArrows}" FontFamily="FA-S" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate view:DetectedBeaconPage}"/>
         </Tab>
 
-        <Tab Title="Home" Route="home">
+        <Tab Title="{x:Static resources:AppResources.MainHome}" Route="home">
             <Tab.Icon>
                 <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconHome}"/>
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate view:HomePage}"/>
         </Tab>
 
-        <Tab Title="Notify Others" Route="notify">
+        <Tab Title="{x:Static resources:AppResources.MainNotifyOther}" Route="notify">
             <Tab.Icon>
                 <FontImageSource Glyph="{StaticResource IconHouseUser}" FontFamily="FA-S" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate view:UserStatusPage}"/>
         </Tab>
 
-        <Tab Title="License" Route="license">
+        <Tab Title="{x:Static resources:AppResources.MainLicense}" Route="license">
             <Tab.Icon>
                 <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconContract}"/>
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate view:LicenseAgreementPage}"/>
         </Tab>
 
-        <Tab Title="Contributers" Route="notify">
+        <Tab Title="{x:Static resources:AppResources.MainContributers}" Route="contributers">
             <Tab.Icon>
                 <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconFriends}"/>
             </Tab.Icon>

@@ -15,8 +15,6 @@ namespace Covid19Radar.ViewModels
             SetData();
         }
 
-        public Command OnClickNext => new Command(() => NavigationService.NavigateAsync("ConsentByUserPage"));
-
         private void SetData()
         {
             Steps = new List<StepModel>
