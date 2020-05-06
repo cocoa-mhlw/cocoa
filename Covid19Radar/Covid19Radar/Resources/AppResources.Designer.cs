@@ -88,6 +88,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Enable に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonEnable {
+            get {
+                return ResourceManager.GetString("ButtonEnable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   HOME に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonHome {
@@ -111,6 +120,15 @@ namespace Covid19Radar.Resources {
         internal static string ButtonNext {
             get {
                 return ResourceManager.GetString("ButtonNext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   NotNow に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonNotNow {
+            get {
+                return ResourceManager.GetString("ButtonNotNow", resourceCulture);
             }
         }
         

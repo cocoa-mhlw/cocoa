@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+       Visual="Material"
+       xmlns:view="clr-namespace:Covid19Radar.Views"
+       x:Class="Covid19Radar.Views.MainPage">
+    <TabBar x:Name="TabBar">
+        
+
+        <Tab Title="Info" Route="info">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconInfo}"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:UpdateInfoPage}"/>
+        </Tab>
+
+        <Tab Title="Exposures" Route="exposures">
+            <Tab.Icon>
+                <FontImageSource Glyph="{StaticResource IconPeopleArrows}" FontFamily="FA-S" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:DetectedBeaconPage}"/>
+        </Tab>
+
+        <Tab Title="Home" Route="home">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconHome}"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:HomePage}"/>
+        </Tab>
+
+        <Tab Title="Notify Others" Route="notify">
+            <Tab.Icon>
+                <FontImageSource Glyph="{StaticResource IconHouseUser}" FontFamily="FA-S" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:UserStatusPage}"/>
+        </Tab>
+
+        <Tab Title="License" Route="license">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconContract}"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:LicenseAgreementPage}"/>
+        </Tab>
+
+        <Tab Title="Contributers" Route="notify">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconFriends}"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:ContributorsPage}"/>
+        </Tab>
+
+    </TabBar>
+</Shell>

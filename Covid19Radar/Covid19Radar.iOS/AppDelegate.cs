@@ -24,7 +24,7 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public static AppDelegate Instance { get; private set; }
-        private IBeaconService _beaconService;
+        //private IBeaconService _beaconService;
         private UserDataService _userDataService;
         private NotificationService _notificationService;
         public AppDelegate()
@@ -81,12 +81,14 @@ namespace Covid19Radar.iOS
                     {
                         InvokeOnMainThread(delegate
                         {
+                            /*
                             _beaconService = DependencyService.Resolve<IBeaconService>();
                             _userDataService = DependencyService.Resolve<UserDataService>();
                             if (_userDataService.IsExistUserData)
                             {
                                 _beaconService.StartAdvertisingBeacons(_userDataService.Get());
                             }
+                            */
                         });
                         System.Threading.Thread.Sleep(60000);
                     }
@@ -129,7 +131,7 @@ namespace Covid19Radar.iOS
             containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
-            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
+            //            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
         }
     }
 
