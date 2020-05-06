@@ -1,4 +1,4 @@
-# Covid19Radar Contributers
+# Covid19Radar Contributors
 - Noriko Matsumoto (Designer/Device iOS Lending)
 - Yasuaki Matsuda (Server side / Azure Functions)
 - Takashi Takebayashi (Translate Japanese)
