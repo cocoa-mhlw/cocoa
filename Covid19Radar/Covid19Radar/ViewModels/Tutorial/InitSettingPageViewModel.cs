@@ -6,7 +6,7 @@ namespace Covid19Radar.ViewModels
 {
     public class InitSettingPageViewModel : ViewModelBase
     {
-        public InitSettingPageViewModel(INavigationService navigationService) : base(navigationService)
+        public InitSettingPageViewModel() : base()
         {
             Title = Resources.AppResources.TitleDeviceAccess;
         }

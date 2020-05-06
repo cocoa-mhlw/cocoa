@@ -18,8 +18,7 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref _phoneNumber, value);
         }
 
-        public SmsVerificationPageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public SmsVerificationPageViewModel() : base()
         {
             Title = "Input Phone number";
         }

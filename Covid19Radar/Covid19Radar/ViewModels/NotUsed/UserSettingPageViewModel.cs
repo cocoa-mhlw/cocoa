@@ -24,7 +24,7 @@ namespace Covid19Radar.ViewModels
 
         public bool IsPhoneNumberValid => !string.IsNullOrWhiteSpace(PhoneNumber);
 
-        public UserSettingPageViewModel(INavigationService navigationService) : base(navigationService)
+        public UserSettingPageViewModel() : base()
         {
             Title = Resources.AppResources.TitleUserSettings;
             _otpService = App.Current.Container.Resolve<OTPService>();

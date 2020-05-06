@@ -424,4 +424,8 @@ Please check your SMS.</value>
     <value>Update</value>
     <comment>Tab Button</comment>
   </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Exposures</value>
+    <comment>Exposures Page</comment>
+  </data>
 </root>
