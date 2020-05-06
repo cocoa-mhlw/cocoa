@@ -110,7 +110,6 @@
     <None Include="appcenter-pre-build.sh" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
-    <Compile Include="Model\iBeaconService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
@@ -167,9 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
-    <BundleResource Include="Resources\NotoSansCJKjp-Medium.otf" />
-    <BundleResource Include="Resources\NotoSansCJKjp-Regular.otf" />
     <BundleResource Include="Resources\Roboto-Regular.ttf" />
     <BundleResource Include="Resources\Logo.png" />
     <BundleResource Include="Resources\Logo%402x.png" />
@@ -204,7 +200,7 @@
       <Version>1.5.3.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.ExposureNotification">
-      <Version>0.1.0-beta1</Version>
+      <Version>0.1.0-preview01</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
@@ -215,6 +211,9 @@
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.6.0.726</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.iOS.ExposureNotification">
+      <Version>1.0.0-beta1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.21.9</Version>
@@ -298,6 +297,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\descriptionStep4%403x.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
