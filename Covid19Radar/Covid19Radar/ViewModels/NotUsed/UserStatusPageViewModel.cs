@@ -21,7 +21,7 @@ namespace Covid19Radar.ViewModels
         private readonly UserDataService _userDataService;
         private UserDataModel _userData;
 
-        public UserStatusPageViewModel(INavigationService navigationService) : base(navigationService)
+        public UserStatusPageViewModel() : base()
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
             _userDataService = App.Current.Container.Resolve<UserDataService>();

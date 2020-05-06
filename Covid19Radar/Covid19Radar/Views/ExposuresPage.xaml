@@ -8,17 +8,77 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
-           xmlns:prism="http://prismlibrary.com"
-       prism:ViewModelLocator.AutowireViewModel="True"
-
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
+    prism:ViewModelLocator.AutowireViewModel="True"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Visual="Material">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ContentPage.BindingContext>
+        <viewmodel:ExposuresPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <StackLayout Style="{DynamicResource Container}">
+            <Frame Style="{DynamicResource CardFrame}" IsVisible="{Binding IsWelcomed, Converter={StaticResource InvertedBoolConverter}}">
+                <StackLayout>
+
+                    <Image HorizontalOptions="Center" Margin="0,30,0,30">
+                        <Image.Source>
+                            <FontImageSource FontFamily="FA-R" Glyph="{DynamicResource IconStar}" Size="72" Color="{DynamicResource TextPrimaryColor}" />
+                        </Image.Source>
+                    </Image>
+
+                    <Label Margin="0,0,0,10" Text="Welcome to the Sample Public Health Authority COVID-19 App" FontAttributes="Bold" FontSize="Title" HorizontalTextAlignment="Center" />
+                    <Label Margin="0,10,0,0" Text="[Actual copy to be provided by Public Health Authority]" />
+
+                    <Button
+						Margin="0,10,0,0"
+						Command="{Binding GetStartedCommand}"
+						HorizontalOptions="End"
+						Style="{DynamicResource ButtonRounded}"
+						Text="Get Started" />
+
+                </StackLayout>
+            </Frame>
+
+            <Frame Style="{DynamicResource CardFrame}" IsVisible="{Binding IsWelcomed}">
+                <StackLayout>
+                    <Label Text="If you enable exposure notifications, this app may notify you after you've been exposed to a person who later reports themselves as positive for COVID-19.  You can choose to disable exposure notifications at any time." />
+                    <Label Margin="0,10,0,0" Text="Exposure notifications rely on the sharing and collecting of random IDs over Bluetooth.  These IDs are a random string of numbers that change many times a day to help protect your privacy.  Random IDs do not include information about your identity or locations." />
+                    <Label Margin="0,10,0,0" Text="Your device will exchange random IDs with nearby devices that also have exposure notifications turned on.  If the owner of another device shares a positive COVID-19 diagnosis your device will notify you if you've been near any of the random IDs of their device." />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Button
+							Grid.Column="1"
+							VerticalOptions="Center"
+							Margin="0,10,0,0"
+							Command="{Binding NotNowCommand}"
+							HorizontalOptions="End"
+							Style="{DynamicResource ButtonRounded}"
+							BackgroundColor="{DynamicResource BackgroundColor}"
+							BorderColor="Transparent"
+							TextColor="{DynamicResource TextPrimaryColor}"
+							Text="Not Now" />
+
+                        <Button
+							Grid.Column="2"
+							VerticalOptions="Center"
+							Margin="0,10,0,0"
+							Command="{Binding EnableDisableCommand}"
+							HorizontalOptions="End"
+							Style="{DynamicResource ButtonRounded}"
+							Text="Turn On" />
+                    </Grid>
+
+
+                </StackLayout>
+            </Frame>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

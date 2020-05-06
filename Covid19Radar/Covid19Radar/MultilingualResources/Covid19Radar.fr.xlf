@@ -393,6 +393,11 @@ Select 'Always Allow' to set up Bluetooth.</target>
           <target state="new">Update</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
+        <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
+          <source>Exposures</source>
+          <target state="new">Exposures</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
+        </trans-unit>
       </group>
     </body>
   </file>

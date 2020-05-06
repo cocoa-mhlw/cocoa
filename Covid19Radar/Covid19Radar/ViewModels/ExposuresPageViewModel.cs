@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Covid19Radar.Services;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -11,15 +12,54 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase
     {
-        public ExposuresPageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public ExposuresPageViewModel()
         {
-            Title = Resources.AppResources.TitleHeadsup;
+            Title = Resources.AppResources.MainExposures;
+            //Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync()
+            //	.ContinueWith(t =>
+            //	{
+            //		IsEnabled = t.Result;
+            //	});
+
         }
 
-        public Command OnClickPrev => (new Command(() =>
+        public bool IsEnabled
         {
-            NavigationService.NavigateAsync("HomePage");
-        }));
+            get => LocalStateManager.Instance.LastIsEnabled;
+            set
+            {
+                LocalStateManager.Instance.LastIsEnabled = value;
+                LocalStateManager.Save();
+                NotifyPropertyChanged(nameof(IsEnabled));
+            }
+        }
+
+        public bool IsWelcomed
+        {
+            get => LocalStateManager.Instance.IsWelcomed;
+            set
+            {
+                LocalStateManager.Instance.IsWelcomed = value;
+                LocalStateManager.Save();
+                NotifyPropertyChanged(nameof(IsWelcomed));
+            }
+        }
+
+        public Command EnableDisableCommand
+            => new Command(async () =>
+            {
+                var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+
+                if (enabled)
+                    await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
+                else
+                    await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
+            });
+
+        public Command GetStartedCommand
+            => new Command(() => IsWelcomed = true);
+
+        public Command NotNowCommand
+            => new Command(() => IsWelcomed = false);
     }
 }

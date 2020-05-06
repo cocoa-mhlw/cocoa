@@ -104,6 +104,7 @@ namespace Covid19Radar
 
             // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<StartTutorialPage, StartTutorialPageViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
@@ -120,7 +121,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<StatusUpdateCompletePage, StatusUpdateCompletePageViewModel>();
             containerRegistry.RegisterForNavigation<HeadsupPage, HeadsupPageViewModel>();
             containerRegistry.RegisterForNavigation<UserStatusPage, UserStatusPageViewModel>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
