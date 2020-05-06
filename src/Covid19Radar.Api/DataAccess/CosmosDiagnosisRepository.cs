@@ -24,8 +24,8 @@ namespace Covid19Radar.DataAccess
         {
             var item = new DiagnosisModel()
             {
-                id = Parameter.SubmissionNumber,
-                PartitionKey = Parameter.UserUuid,
+                id = Parameter.UserUuid,
+                PartitionKey = Parameter.SubmissionNumber,
                 UserUuid = Parameter.UserUuid,
                 Keys = Parameter.Keys
             };
