@@ -19,6 +19,7 @@ using Covid19Radar.Extensions;
 
 namespace Covid19Radar.Api
 {
+    [Obsolete]
     public class InfectionRegister
     {
         private readonly IInfectionProcessRepository InfectionProcessRepository;

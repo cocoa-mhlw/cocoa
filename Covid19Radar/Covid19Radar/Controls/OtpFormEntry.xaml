@@ -12,7 +12,7 @@
             <Setter Property="HeightRequest" Value="60" />
             <Setter Property="HorizontalTextAlignment" Value="Center" />
             <Setter Property="VerticalTextAlignment" Value="Center" />
-            <Setter Property="FontFamily" Value="{StaticResource RobotoRegularFontFamily}" />
+            <Setter Property="FontFamily" Value="RobotoRegularFontFamily" />
             <Setter Property="FontSize" Value="40" />
             <Setter Property="Keyboard" Value="Numeric" />
             <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />

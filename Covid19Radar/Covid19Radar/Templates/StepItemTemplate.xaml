@@ -24,7 +24,7 @@
                         Margin="0"
                         Padding="0"
                         FontAttributes="Bold"
-                        FontFamily="{StaticResource RobotoRegularFontFamily}"
+                        FontFamily="RobotoRegularFontFamily"
                         HorizontalOptions="Center"
                         Text="{Binding StepNumber}"
                         TextColor="{StaticResource PrimaryColor}"
