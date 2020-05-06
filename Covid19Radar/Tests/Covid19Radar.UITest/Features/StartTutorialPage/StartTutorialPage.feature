@@ -1,5 +1,7 @@
 ﻿Feature: StartTutorialPage
 
+# TODO: hook into app resources to test in multilangual
+
 Scenario: I can click on next button
 	Given I can see "StartButton"
 	And I tap on "StartButton" button
