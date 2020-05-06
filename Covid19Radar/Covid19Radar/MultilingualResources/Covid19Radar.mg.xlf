@@ -47,8 +47,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
+          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ny Bluetooth dia mila mifantoka amin' ny rakitsoratra akaiky. Mandehana azafady any amin' ny pejy manaraka mba hamadika izany.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
         </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
@@ -60,18 +61,6 @@
           <source>Protecting our loved ones from COVID19</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Miaro ireo olon-tiantsika amin' ny COVID19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextBluetoothDescription" translate="yes" xml:space="preserve">
-          <source>This app uses Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ity rafi-baovao ity dia mampiasa Bluetooth mampilaza mba hamaritana raha toa ianao ka eo akaikin' ny mpampiasa ny rafi-kafa. 
-Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Bluetooth description</note>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextAllowBluetooth" translate="yes" xml:space="preserve">
-          <source>Allow Bluetooth</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avelao Bluetooth</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Bluetooth title</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -351,6 +340,58 @@ Jereo azafady ny SMS.</target>
           <source>OK</source>
           <target state="new">OK</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
+        </trans-unit>
+        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
+          <source>Enable</source>
+          <target state="new">Enable</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
+        </trans-unit>
+        <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
+          <source>NotNow</source>
+          <target state="new">NotNow</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
+        </trans-unit>
+        <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
+          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
+Select 'Always Allow' to set up Bluetooth.</source>
+          <target state="new">This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
+Select 'Always Allow' to set up Bluetooth.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
+        </trans-unit>
+        <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
+          <source>Allow Exposure Notification / Bluetooth</source>
+          <target state="new">Allow Exposure Notification / Bluetooth</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
+        </trans-unit>
+        <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
+          <source>Contributers</source>
+          <target state="new">Contributers</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributers</note>
+        </trans-unit>
+        <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
+          <source>Exposures</source>
+          <target state="new">Exposures</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
+        </trans-unit>
+        <trans-unit id="MainHome" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <target state="new">Home</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
+        </trans-unit>
+        <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <target state="new">License</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
+        </trans-unit>
+        <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
+          <source>Notify</source>
+          <target state="new">Notify</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
+        </trans-unit>
+        <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
+          <source>Update</source>
+          <target state="new">Update</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
       </group>
     </body>
