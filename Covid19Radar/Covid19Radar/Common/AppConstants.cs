@@ -13,7 +13,8 @@ namespace Covid19Radar.Common
         public static readonly string AppName = "COVID-19-RADAR";
 
         public static readonly string ApiBaseUrl = "***REMOVED***/api";
-        public static readonly string ApiSecret = "API_SECRET";
+//        public static readonly string ApiSecret = "API_SECRET";
+        public static readonly string ApiSecret = "***REMOVED***";
 
         /// <summary>
         /// Apple's company ibeacon code
