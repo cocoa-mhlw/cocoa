@@ -20,6 +20,24 @@
     <EmbeddedResource Remove="Views\DummyPage.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Resources\Fonts\fa-brands-400.otf" />
+    <None Remove="Resources\Fonts\fa-regular-400.otf" />
+    <None Remove="Resources\Fonts\fa-solid-900.otf" />
+    <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
+    <None Remove="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
+    <None Remove="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
+    <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
+    <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
+    <EmbeddedResource Include="Resources\Fonts\fa-solid-900.otf" />
+    <EmbeddedResource Include="Resources\Fonts\materialdesignicons-webfont.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
+    <EmbeddedResource Include="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.2.1" />
@@ -29,26 +47,29 @@
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
     <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
-    <PackageReference Include="ReactiveProperty" Version="6.2.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
-    <PackageReference Include="Xam.Plugin.WebView" Version="2.1.3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
+    <PackageReference Include="Xamarin.ExposureNotification" Version="0.1.0-preview01" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.726" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Icons.xaml.cs">
+      <DependentUpon>Icons.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
       <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\LicenseAgreementPage.xaml.cs">
+    <Compile Update="Views\MainPageTab\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ContributorsPage.xaml.cs">
+    <Compile Update="Views\MainPageTab\ContributorsPage.xaml.cs">
       <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\UpdateInfoPage.xaml.cs">
+    <Compile Update="Views\MainPageTab\UpdateInfoPage.xaml.cs">
       <DependentUpon>UpdateInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage.xaml.cs">
@@ -57,28 +78,28 @@
     <Compile Update="Views\UserStatusPage.xaml.cs">
       <DependentUpon>UserStatusPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\UserSettingPage.xaml.cs">
+    <Compile Update="Views\NotUsed\UserSettingPage.xaml.cs">
       <DependentUpon>UserSettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\InitSettingPage.xaml.cs">
+    <Compile Update="Views\Tutorial\InitSettingPage.xaml.cs">
       <DependentUpon>InitSettingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ConsentByUserPage.xaml.cs">
+    <Compile Update="Views\Tutorial\ConsentByUserPage.xaml.cs">
       <DependentUpon>ConsentByUserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\InputSmsOTPPage.xaml.cs">
+    <Compile Update="Views\NotUsed\InputSmsOTPPage.xaml.cs">
       <DependentUpon>InputSmsOTPPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\StartTutorialPage.xaml.cs">
+    <Compile Update="Views\Tutorial\StartTutorialPage.xaml.cs">
       <DependentUpon>StartTutorialPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\SmsVerificationPage.xaml.cs">
+    <Compile Update="Views\NotUsed\SmsVerificationPage.xaml.cs">
       <DependentUpon>SmsVerificationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\DescriptionPage.xaml.cs">
+    <Compile Update="Views\Tutorial\DescriptionPage.xaml.cs">
       <DependentUpon>DescriptionPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Resources\AppResources.Designer.cs">
@@ -107,10 +128,16 @@
     <EmbeddedResource Update="Styles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\ExposuresPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\HeadsupPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SetupCompletedPage.xaml">
+    <EmbeddedResource Update="Views\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Tutorial\SetupCompletedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\StatusUpdateCompletePage.xaml">

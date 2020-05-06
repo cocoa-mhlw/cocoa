@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Covid19Radar.Icons"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--Icons-->
+    <x:String x:Key="IconProfile">&#xf2bd;</x:String>
+    <x:String x:Key="IconTracking">&#xf1fe;</x:String>
+
+    <x:String x:Key="IconFavorite">&#xf005;</x:String>
+    <x:String x:Key="IconTrash">&#xf2ed;</x:String>
+    <x:String x:Key="IconSend">&#xf1d8;</x:String>
+    <x:String x:Key="IconInbox">&#xf01c;</x:String>
+    <x:String x:Key="IconBlog">&#xf0ac;</x:String>
+    <x:String x:Key="IconGitHub">&#xf09b;</x:String>
+    <x:String x:Key="IconTwitter">&#xf099;</x:String>
+    <x:String x:Key="IconSave">&#xf0c7;</x:String>
+    <x:String x:Key="IconRefresh">&#xf021;</x:String>
+    <x:String x:Key="IconThumbsUp">&#xf164;</x:String>
+    <x:String x:Key="IconWarning">&#xf071;</x:String>
+    <x:String x:Key="IconFriendAdd">&#xf234;</x:String>
+    <x:String x:Key="IconApprove">&#xf4fc;</x:String>
+    <x:String x:Key="IconDeny">&#xf00d;</x:String>
+
+    <x:String x:Key="IconGraph">&#xf1fe;</x:String>
+
+    <x:String x:Key="IconBell">&#xf0f3;</x:String>
+
+    <x:String x:Key="IconFlag">&#xf024;</x:String>
+    <x:String x:Key="IconCancel">&#xf00d;</x:String>
+    <x:String x:Key="IconRightArrow">&#xf35a;</x:String>
+    <x:String x:Key="IconStar">&#xf005;</x:String>
+
+    <!-- FA-S -->
+    <x:String x:Key="IconInfo">&#xf129;</x:String>
+    <x:String x:Key="IconHome">&#xf015;</x:String>
+    <x:String x:Key="IconHouseUser">&#xf965;</x:String>
+    <x:String x:Key="IconPeopleArrows">&#xf968;</x:String>
+    <x:String x:Key="IconAbout">&#xf129;</x:String>
+    <x:String x:Key="IconFriends">&#xf0c0;</x:String>
+    <x:String x:Key="IconContract">&#xf56c;</x:String>
+    
+</ResourceDictionary>

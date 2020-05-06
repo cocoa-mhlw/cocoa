@@ -17,7 +17,7 @@
 
     <Style TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
-        <Setter Property="FontFamily" Value="{StaticResource NotoSansRegularFontFamily}" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
         <Setter Property="FontSize" Value="{OnPlatform iOS=16, Android=14}" />
     </Style>
 
@@ -42,14 +42,14 @@
 
     <Style x:Key="Accent2ColorHeaderLabelStyle" TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
-        <Setter Property="FontFamily" Value="{StaticResource NotoSansRegularFontFamily}" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
         <Setter Property="FontSize" Value="Body" />
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
     <Style x:Key="Accent2ColorStatusPickerStyle" TargetType="Picker">
         <Setter Property="TextColor" Value="{StaticResource Accent2Color}" />
-        <Setter Property="FontFamily" Value="{StaticResource NotoSansRegularFontFamily}" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
         <Setter Property="FontSize" Value="Body" />
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
@@ -57,7 +57,7 @@
     <Style x:Key="BaseButtonStyle" TargetType="Button">
         <Setter Property="CornerRadius" Value="2" />
         <Setter Property="FontSize" Value="Default" />
-        <Setter Property="FontFamily" Value="{StaticResource NotoSansMediumFontFamily}" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
         <Setter Property="Padding" Value="0" />
         <Style.Triggers>
@@ -85,7 +85,7 @@
 
     <Style x:Key="SubtitleLabelStyle" TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
-        <Setter Property="FontFamily" Value="{StaticResource NotoSansMediumFontFamily}" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
         <Setter Property="FontSize" Value="Title" />
     </Style>
 
