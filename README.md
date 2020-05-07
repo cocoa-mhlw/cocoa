@@ -1,6 +1,6 @@
 # Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
 
-Now, We move to Git Hub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
+Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
 We are looking for translator reviewers, Please see [How to Transrate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSRATE_CONTRIBUTE.md) page.
 
