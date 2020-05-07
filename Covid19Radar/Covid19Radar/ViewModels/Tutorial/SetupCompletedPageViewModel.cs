@@ -7,13 +7,11 @@ namespace Covid19Radar.ViewModels
 {
     public class SetupCompletedPageViewModel : ViewModelBase
     {
-
-        public SetupCompletedPageViewModel() : base()
+        public SetupCompletedPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = AppResources.TitleSetupCompleted;
         }
 
-        public Command OnClickHome => new Command(() => NavigationService.NavigateAsync("MainPage"));
-
+        public Command OnClickHome => new Command(() => NavigationService.NavigateAsync("HomePage"));
     }
 }

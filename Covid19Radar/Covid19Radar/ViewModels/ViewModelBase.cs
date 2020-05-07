@@ -35,9 +35,9 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public ViewModelBase()
+        public ViewModelBase(INavigationService navigationService)
         {
-            NavigationService = Xamarin.Forms.DependencyService.Resolve<INavigationService>();
+            NavigationService = navigationService;
         }
         public virtual void Initialize(INavigationParameters parameters)
         {

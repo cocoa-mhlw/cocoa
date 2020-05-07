@@ -25,7 +25,7 @@ namespace Covid19Radar.ViewModels
         }
 
 
-        public DetectedBeaconPageViewmodel() : base()
+        public DetectedBeaconPageViewmodel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleDetectedBeaconPage;
             //_beaconService = beaconService;

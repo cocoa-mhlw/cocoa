@@ -58,7 +58,7 @@
         <Button
             Grid.Row="3"
             Margin="57,0"
-            Command="{Binding Path=OnClickHome}"
+            Command="{prism:NavigateTo HomePage}"
             Style="{StaticResource DefaultButtonStyle}"
             Text="{x:Static resources:AppResources.ButtonHome}"
             VerticalOptions="End" />
