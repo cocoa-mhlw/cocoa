@@ -18,7 +18,7 @@ namespace Covid19Radar.ViewModels
             get { return _url; }
             set { SetProperty(ref _url, value); }
         }
-        public UpdateInfoPageViewModel() : base()
+        public UpdateInfoPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleUpdateInformation;
             Url = Resources.AppResources.UrlUpdate;
