@@ -540,6 +540,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Exposures に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TitleExposures {
+            get {
+                return ResourceManager.GetString("TitleExposures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Heads up に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleHeadsup {

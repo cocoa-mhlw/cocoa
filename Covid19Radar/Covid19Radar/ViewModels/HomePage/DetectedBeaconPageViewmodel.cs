@@ -13,7 +13,7 @@ using Xamarin.Forms;
 namespace Covid19Radar.ViewModels
 {
     public class DetectedBeaconPageViewmodel : ViewModelBase
-    { 
+    {
         public List<BeaconDataModel> Beacons { get; set; }
         private ObservableCollection<BeaconDataModel> _beaconDataList;
 
@@ -25,8 +25,7 @@ namespace Covid19Radar.ViewModels
         }
 
 
-        public DetectedBeaconPageViewmodel(INavigationService navigationService)
-            : base(navigationService)
+        public DetectedBeaconPageViewmodel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleDetectedBeaconPage;
             //_beaconService = beaconService;
@@ -34,8 +33,8 @@ namespace Covid19Radar.ViewModels
 
             BeaconDataList = new ObservableCollection<BeaconDataModel>();
         }
-        
-        
+
+
         private void SetData()
         {
             //Beacons = Xamarin.Forms.DependencyService.Resolve<IBeaconService>().GetBeaconData();

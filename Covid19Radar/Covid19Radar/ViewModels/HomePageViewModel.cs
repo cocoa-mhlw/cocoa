@@ -12,11 +12,9 @@ namespace Covid19Radar.ViewModels
     {
         public List<HomeMenuModel> HomeMenus { get; private set; }
 
-        public HomePageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public HomePageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
-
             SetData();
         }
 
@@ -51,8 +49,6 @@ namespace Covid19Radar.ViewModels
                 }
             };
         }
-
-
 
         public Command OnClickUserSetting => new Command(() =>
         {
