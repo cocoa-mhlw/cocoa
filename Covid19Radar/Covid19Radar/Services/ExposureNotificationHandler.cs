@@ -26,7 +26,6 @@ namespace Covid19Radar.Services
         public async Task ExposureDetected(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getDetailsFunc)
         {
             LocalStateManager.Instance.ExposureSummary = summary;
-
             var details = await getDetailsFunc();
 
             LocalStateManager.Instance.ExposureInformation.AddRange(details);

@@ -6,7 +6,7 @@ namespace Covid19Radar.ViewModels
 {
     public class StatusUpdateCompletePageViewModel : ViewModelBase
     {
-        public StatusUpdateCompletePageViewModel() : base()
+        public StatusUpdateCompletePageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = AppResources.TitleStatusUpdateComplete;
         }

@@ -14,71 +14,65 @@
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Visual="Material">
-    <ContentPage.BindingContext>
-        <viewmodel:ExposuresPageViewModel />
-    </ContentPage.BindingContext>
-    
-    <ScrollView>
+    <ContentPage.Content ItemsSource="{Binding ExposureInformation}">
         <StackLayout Style="{DynamicResource Container}">
-            <Frame Style="{DynamicResource CardFrame}" IsVisible="{Binding IsWelcomed, Converter={StaticResource InvertedBoolConverter}}">
-                <StackLayout>
-
-                    <Image HorizontalOptions="Center" Margin="0,30,0,30">
-                        <Image.Source>
-                            <FontImageSource FontFamily="FA-R" Glyph="{DynamicResource IconStar}" Size="72" Color="{DynamicResource TextPrimaryColor}" />
-                        </Image.Source>
-                    </Image>
-
-                    <Label Margin="0,0,0,10" Text="Welcome to the Sample Public Health Authority COVID-19 App" FontAttributes="Bold" FontSize="Title" HorizontalTextAlignment="Center" />
-                    <Label Margin="0,10,0,0" Text="[Actual copy to be provided by Public Health Authority]" />
-
-                    <Button
-						Margin="0,10,0,0"
-						Command="{Binding GetStartedCommand}"
-						HorizontalOptions="End"
-						Style="{DynamicResource ButtonRounded}"
-						Text="Get Started" />
-
-                </StackLayout>
-            </Frame>
-
-            <Frame Style="{DynamicResource CardFrame}" IsVisible="{Binding IsWelcomed}">
-                <StackLayout>
-                    <Label Text="If you enable exposure notifications, this app may notify you after you've been exposed to a person who later reports themselves as positive for COVID-19.  You can choose to disable exposure notifications at any time." />
-                    <Label Margin="0,10,0,0" Text="Exposure notifications rely on the sharing and collecting of random IDs over Bluetooth.  These IDs are a random string of numbers that change many times a day to help protect your privacy.  Random IDs do not include information about your identity or locations." />
-                    <Label Margin="0,10,0,0" Text="Your device will exchange random IDs with nearby devices that also have exposure notifications turned on.  If the owner of another device shares a positive COVID-19 diagnosis your device will notify you if you've been near any of the random IDs of their device." />
-
-                    <Grid>
+            <Frame Style="{DynamicResource CardFrame}">
+                    <Grid RowSpacing="0" Padding="0" Margin="0,5,0,5" VerticalOptions="FillAndExpand">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <Button
-							Grid.Column="1"
-							VerticalOptions="Center"
-							Margin="0,10,0,0"
-							Command="{Binding NotNowCommand}"
-							HorizontalOptions="End"
-							Style="{DynamicResource ButtonRounded}"
-							BackgroundColor="{DynamicResource BackgroundColor}"
-							BorderColor="Transparent"
-							TextColor="{DynamicResource TextPrimaryColor}"
-							Text="Not Now" />
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
 
-                        <Button
-							Grid.Column="2"
-							VerticalOptions="Center"
-							Margin="0,10,0,0"
-							Command="{Binding EnableDisableCommand}"
-							HorizontalOptions="End"
-							Style="{DynamicResource ButtonRounded}"
-							Text="Turn On" />
+                        <Label Text="Exposure Notifications" Grid.Column="0" VerticalOptions="Center" />
+                        <Switch IsToggled="{Binding EnableNotifications, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="End" />
+
                     </Grid>
+                </Frame>
 
+                <Frame Style="{DynamicResource CardFrame}">
+                    <StackLayout>
+                        <Label Text="Exposures in Past 14 Days" FontAttributes="Bold" FontSize="Subtitle" />
+                    <CollectionView ItemsSource="{Binding ExposureInformation}" SelectionMode="Single">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Padding="0,5,0,5">
+                                        <Frame Padding="10" BorderColor="#EAEAEA" CornerRadius="10">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
 
-                </StackLayout>
-            </Frame>
-        </StackLayout>
-    </ScrollView>
+                                                <Label Text="Possible exposure" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" />
+                                                <Label Text="{Binding Timestamp}" Grid.Column="0" Grid.Row="1" />
+
+                                                <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+                                                    <Image.Source>
+                                                        <FontImageSource FontFamily="FA-R" Glyph="{StaticResource IconRightArrow}" Color="{DynamicResource TextPrimaryColor}" Size="18" />
+                                                    </Image.Source>
+                                                </Image>
+                                            </Grid>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                            <CollectionView.EmptyView>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Margin="0,10,0,0" Text="No known exposures." />
+                                    <Label Margin="0,10,0,0" Text="You will be notified if you have been exposed to someone who reported a positive COVID-19 result." />
+                                </StackLayout>
+                            </CollectionView.EmptyView>
+                        </CollectionView>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ContentPage.Content>
 </ContentPage>
