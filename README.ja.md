@@ -1,6 +1,6 @@
 # Covid19Radar (Japanese)
 
-Now, We move to Git Hub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
+Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
 iOS Builstatus [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
