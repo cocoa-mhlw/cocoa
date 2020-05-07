@@ -49,7 +49,7 @@
     <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
-    <PackageReference Include="Xamarin.ExposureNotification" Version="0.1.0-preview01" />
+    <PackageReference Include="Xamarin.ExposureNotification" Version="0.1.0-preview02" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
@@ -63,19 +63,19 @@
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
       <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\MainPageTab\LicenseAgreementPage.xaml.cs">
+    <Compile Update="Views\HomePage\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\MainPageTab\ContributorsPage.xaml.cs">
+    <Compile Update="Views\HomePage\ContributorsPage.xaml.cs">
       <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\MainPageTab\UpdateInfoPage.xaml.cs">
+    <Compile Update="Views\HomePage\UpdateInfoPage.xaml.cs">
       <DependentUpon>UpdateInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\UserStatusPage.xaml.cs">
+    <Compile Update="Views\HomePage\UserStatusPage.xaml.cs">
       <DependentUpon>UserStatusPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\NotUsed\UserSettingPage.xaml.cs">
@@ -131,16 +131,13 @@
     <EmbeddedResource Update="Views\ExposuresPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HeadsupPage.xaml">
+    <EmbeddedResource Update="Views\NotUsed\HeadsupPage.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Tutorial\SetupCompletedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\StatusUpdateCompletePage.xaml">
+    <EmbeddedResource Update="Views\NotUsed\StatusUpdateCompletePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

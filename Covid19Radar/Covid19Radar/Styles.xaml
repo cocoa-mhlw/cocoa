@@ -92,5 +92,16 @@
     <Style x:Key="ActivityIndicatorFrame" TargetType="Frame">
         <Setter Property="BackgroundColor" Value="{StaticResource Accent8Color}" />
     </Style>
+    
+    <Style x:Key="CardFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Padding" Value="14" />
+    </Style>
+
+    <Style x:Key="Container" TargetType="StackLayout">
+        <Setter Property="Padding" Value="14" />
+        <Setter Property="Spacing" Value="12" />
+    </Style>
+
 
 </ResourceDictionary>

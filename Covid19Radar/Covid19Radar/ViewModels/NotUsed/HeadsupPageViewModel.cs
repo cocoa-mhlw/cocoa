@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class UpdateInfoPageViewModel : ViewModelBase
+    public class HeadsupPageViewModel : ViewModelBase
     {
         private string _url;
 
@@ -18,11 +18,10 @@ namespace Covid19Radar.ViewModels
             get { return _url; }
             set { SetProperty(ref _url, value); }
         }
-        public UpdateInfoPageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public HeadsupPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = Resources.AppResources.TitleUpdateInformation;
-            Url = Resources.AppResources.UrlUpdate;
+            Title = Resources.AppResources.TitleHeadsup;
+            Url = Resources.AppResources.UrlHeadsup;
         }
 
         public Command OnClickPrev => (new Command(() =>
