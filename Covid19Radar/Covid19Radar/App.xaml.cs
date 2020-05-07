@@ -66,11 +66,11 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 UserDataModel _userData = userDataService.Get();
-                result = await NavigationService.NavigateAsync("MainPage");
+                result = await NavigationService.NavigateAsync("HomePage");
             }
             else
             {
-                result = await NavigationService.NavigateAsync("NavigationPage/StartTutorialPage");
+                result = await NavigationService.NavigateAsync("StartTutorialPage");
             }
 
             if (!result.Success)
@@ -120,7 +120,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<StatusUpdateCompletePage, StatusUpdateCompletePageViewModel>();
             containerRegistry.RegisterForNavigation<HeadsupPage, HeadsupPageViewModel>();
             containerRegistry.RegisterForNavigation<UserStatusPage, UserStatusPageViewModel>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<ExposuresPage, ExposuresPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();

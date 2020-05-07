@@ -20,6 +20,8 @@ namespace Covid19Radar.ViewModels
     {
         private readonly UserDataService _userDataService;
         private UserDataModel _userData;
+        public int statusCode;
+        public HttpDataService httpDataService;
 
         public UserStatusPageViewModel(INavigationService navigationService) : base(navigationService)
         {
@@ -31,7 +33,7 @@ namespace Covid19Radar.ViewModels
         public Command OnClickSave => (new Command(async () =>
         {
             await _userDataService.SetAsync(_userData);
-            await NavigationService.NavigateAsync("HomePage");
+            await NavigationService.NavigateAsync("MainPage");
         }));
     }
 }
