@@ -32,7 +32,7 @@ namespace Covid19Radar.ViewModels
 
         private readonly IPageDialogService _pageDialogService;
 
-        public InputSmsOTPPageViewModel(IPageDialogService pageDialogService) : base()
+        public InputSmsOTPPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService)
         {
             Title = AppResources.TitleOtp;
             _pageDialogService = pageDialogService;

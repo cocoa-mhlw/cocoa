@@ -9,7 +9,7 @@ namespace Covid19Radar.ViewModels
     {
         public List<StepModel> Steps { get; set; }
 
-        public DescriptionPageViewModel() : base()
+        public DescriptionPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleHowItWorks;
             SetData();
