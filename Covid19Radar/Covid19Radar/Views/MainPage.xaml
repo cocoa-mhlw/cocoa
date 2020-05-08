@@ -14,7 +14,6 @@
        xmlns:view="clr-namespace:Covid19Radar.Views"
        x:Class="Covid19Radar.Views.MainPage">
     <TabBar x:Name="TabBar">
-        
         <Tab Title="{x:Static resources:AppResources.MainTutorial}" Route="tutorial">
             <Tab.Icon>
                 <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconHowToUse}"/>
