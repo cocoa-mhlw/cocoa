@@ -13,150 +13,153 @@ using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.Services
 {
-    [Preserve]
-    public class ExposureNotificationHandler : IExposureNotificationHandler
-    {
-        const string apiUrlBase = "http://localhost:7071/api/";
+	[Preserve]
+	public class ExposureNotificationHandler : IExposureNotificationHandler
+	{
+		const string apiUrlBase = "http://localhost:7071/api/";
 
-        static readonly HttpClient http = new HttpClient();
+		static readonly HttpClient http = new HttpClient();
 
-        public Configuration Configuration => throw new NotImplementedException();
-        public Task<Configuration> GetConfigurationAsync() => Task.FromResult(new Configuration());
+		public Task<Configuration> GetConfigurationAsync()
+			=> Task.FromResult(new Configuration());
 
-        public async Task ExposureDetected(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getDetailsFunc)
-        {
-            LocalStateManager.Instance.ExposureSummary = summary;
-            var details = await getDetailsFunc();
+		public async Task ExposureDetected(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getDetailsFunc)
+		{
+			LocalStateManager.Instance.ExposureSummary = summary;
 
-            LocalStateManager.Instance.ExposureInformation.AddRange(details);
+			var details = await getDetailsFunc();
 
-            LocalStateManager.Save();
+			LocalStateManager.Instance.ExposureInformation.AddRange(details);
 
-            MessagingCenter.Instance.Send(this, "exposure_info_changed");
+			LocalStateManager.Save();
 
-            // TODO: Save this info and alert the user
-            // Pop up a local notification
-        }
+			MessagingCenter.Instance.Send(this, "exposure_info_changed");
 
-        public async Task FetchExposureKeysFromServer(Func<IEnumerable<TemporaryExposureKey>, Task> addKeys)
-        {
-            var newestKeyTimestamp = LocalStateManager.Instance.NewestKeysResponseTimestamp;
+			// TODO: Save this info and alert the user
+			// Pop up a local notification
+		}
 
-            var take = 1024;
-            var skip = 0;
+		public async Task FetchExposureKeysFromServer(Func<IEnumerable<TemporaryExposureKey>, Task> addKeys)
+		{
+			var latestKeysResponseIndex = LocalStateManager.Instance.LatestKeysResponseIndex;
 
-            while (true)
-            {
-                // Get the newest date we have keys from and request since then
-                // or if no date stored, only return as much as the past 14 days of keys
-                var sinceEpochSeconds = LocalStateManager.Instance.NewestKeysResponseTimestamp.ToUnixTimeSeconds();
-                var url = $"{apiUrlBase.TrimEnd('/')}/keys?since={sinceEpochSeconds}&skip={skip}&take={take}";
+			var take = 1024;
+			var skip = 0;
 
-                var response = await http.GetAsync(url);
+			var checkForMore = false;
 
-                response.EnsureSuccessStatusCode();
+			do
+			{
+				// Get the newest date we have keys from and request since then
+				// or if no date stored, only return as much as the past 14 days of keys
+				var url = $"{apiUrlBase.TrimEnd('/')}/keys?since={latestKeysResponseIndex}&skip={skip}&take={take}";
 
-                var responseData = await response.Content.ReadAsStringAsync();
+				var response = await http.GetAsync(url);
 
-                if (string.IsNullOrEmpty(responseData))
-                    break;
+				response.EnsureSuccessStatusCode();
 
-                // Response contains the timestamp in seconds since epoch, and the list of keys
-                var keys = JsonConvert.DeserializeObject<KeysResponse>(responseData);
+				var responseData = await response.Content.ReadAsStringAsync();
 
-                // If no keys were returned we ran out of new results
-                if (keys.Keys == null || !keys.Keys.Any())
-                    break;
+				if (string.IsNullOrEmpty(responseData))
+					break;
 
-                // Call the callback with the batch of keys to add
-                await addKeys(keys.Keys);
+				// Response contains the timestamp in seconds since epoch, and the list of keys
+				var keys = JsonConvert.DeserializeObject<KeysResponse>(responseData);
 
-                var keysTimestamp = DateTimeOffset.FromUnixTimeSeconds(keys.Timestamp);
+				var numKeys = keys?.Keys?.Count() ?? 0;
 
-                if (keysTimestamp > newestKeyTimestamp)
-                    newestKeyTimestamp = keysTimestamp;
+				// See if keys were returned on this call
+				if (numKeys > 0)
+				{
+					// Call the callback with the batch of keys to add
+					await addKeys(keys.Keys);
 
-                // Increment our skip starting point for the next batch
-                skip += take;
-            }
+					var newLatestKeysResponseIndex = keys.Latest;
 
-            // Save newest timestamp for next request
-            LocalStateManager.Instance.NewestKeysResponseTimestamp = newestKeyTimestamp;
-            LocalStateManager.Save();
-        }
+					if (newLatestKeysResponseIndex > LocalStateManager.Instance.LatestKeysResponseIndex)
+					{
+						LocalStateManager.Instance.LatestKeysResponseIndex = newLatestKeysResponseIndex;
+						LocalStateManager.Save();
+					}
 
-        public async Task UploadSelfExposureKeysToServer(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
-        {
-            var diagnosisUid = LocalStateManager.Instance.LatestDiagnosis.DiagnosisUid;
+					// Increment our skip starting point for the next batch
+					skip += take;
+				}
 
-            if (string.IsNullOrEmpty(diagnosisUid))
-                throw new InvalidOperationException();
+				// If we got back more or the same amount of our requested take, there may be
+				// more left on the server to request again
+				checkForMore = numKeys >= take;
 
-            try
-            {
-                var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+			} while (checkForMore);
+		}
 
-                var json = JsonConvert.SerializeObject(new SelfDiagnosisSubmissionRequest
-                {
-                    DiagnosisUid = diagnosisUid,
-                    Keys = temporaryExposureKeys
-                });
+		public async Task UploadSelfExposureKeysToServer(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
+		{
+			var diagnosisUid = LocalStateManager.Instance.LatestDiagnosis.DiagnosisUid;
 
-                var http = new HttpClient();
-                var response = await http.PutAsync(url, new StringContent(json));
+			if (string.IsNullOrEmpty(diagnosisUid))
+				throw new InvalidOperationException();
 
-                response.EnsureSuccessStatusCode();
+			try
+			{
+				var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
 
-                LocalStateManager.Instance.LatestDiagnosis.Shared = true;
-                LocalStateManager.Save();
-            }
-            catch
-            {
-                throw;
-            }
-        }
+				var json = JsonConvert.SerializeObject(new SelfDiagnosisSubmissionRequest
+				{
+					DiagnosisUid = diagnosisUid,
+					Keys = temporaryExposureKeys
+				});
 
-        internal static async Task<bool> VerifyDiagnosisUid(string diagnosisUid)
-        {
-            var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+				var http = new HttpClient();
+				var response = await http.PutAsync(url, new StringContent(json));
 
-            var http = new HttpClient();
+				response.EnsureSuccessStatusCode();
 
-            try
-            {
-                var response = await http.PostAsync(url, new StringContent(diagnosisUid));
+				LocalStateManager.Instance.LatestDiagnosis.Shared = true;
+				LocalStateManager.Save();
+			}
+			catch
+			{
+				throw;
+			}
+		}
 
-                response.EnsureSuccessStatusCode();
+		internal static async Task<bool> VerifyDiagnosisUid(string diagnosisUid)
+		{
+			var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
 
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+			var http = new HttpClient();
 
-        public Task<IEnumerable<TemporaryExposureKey>> FetchExposureKeysFromServer()
-        {
-            throw new NotImplementedException();
-        }
+			try
+			{
+				var response = await http.PostAsync(url, new StringContent(diagnosisUid));
 
-        class SelfDiagnosisSubmissionRequest
-        {
-            [JsonProperty("diagnosisUid")]
-            public string DiagnosisUid { get; set; }
+				response.EnsureSuccessStatusCode();
 
-            [JsonProperty("keys")]
-            public IEnumerable<TemporaryExposureKey> Keys { get; set; }
-        }
+				return true;
+			}
+			catch
+			{
+				return false;
+			}
+		}
 
-        class KeysResponse
-        {
-            [JsonProperty("timestamp")]
-            public long Timestamp { get; set; }
+		class SelfDiagnosisSubmissionRequest
+		{
+			[JsonProperty("diagnosisUid")]
+			public string DiagnosisUid { get; set; }
 
-            [JsonProperty("keys")]
-            public IEnumerable<TemporaryExposureKey> Keys { get; set; }
-        }
-    }
+			[JsonProperty("keys")]
+			public IEnumerable<TemporaryExposureKey> Keys { get; set; }
+		}
+
+		class KeysResponse
+		{
+			[JsonProperty("latest")]
+			public ulong Latest { get; set; }
+
+			[JsonProperty("keys")]
+			public IEnumerable<TemporaryExposureKey> Keys { get; set; }
+		}
+	}
 }

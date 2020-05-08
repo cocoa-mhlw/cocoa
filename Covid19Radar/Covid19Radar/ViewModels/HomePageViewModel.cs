@@ -11,12 +11,20 @@ namespace Covid19Radar.ViewModels
 {
     public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        public List<HomeMenuModel> HomeMenus { get; private set; }
+//        public List<HomeMenuModel> HomeMenus { get; private set; }
+        private string _url;
+
+        public string Url
+        {
+            get { return _url; }
+            set { SetProperty(ref _url, value); }
+        }
 
         public HomePageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
-            SetData();
+            Url = Resources.AppResources.UrlUpdate;
+            //SetData();
         }
 
         public bool EnableNotifications
@@ -29,6 +37,7 @@ namespace Covid19Radar.ViewModels
             }
         }
 
+        /*
         private void SetData()
         {
             HomeMenus = new List<HomeMenuModel>
@@ -82,5 +91,6 @@ namespace Covid19Radar.ViewModels
         {
             NavigationService.NavigateAsync("LicenseAgreementPage");
         });
+        */
     }
 }
