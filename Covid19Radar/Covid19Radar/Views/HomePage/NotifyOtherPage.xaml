@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="Covid19Radar.Views.UserStatusPage"
+    x:Class="Covid19Radar.Views.NotifyOtherPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
@@ -27,9 +27,31 @@
                     Style="{StaticResource Accent2ColorHeaderLabelStyle}"
                     Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsSubtitle}" />
                 <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
+                
+                <Label Text="Share A Positive Diagnosis" FontAttributes="Bold" FontSize="Subtitle" />
+                <Label Margin="0,12,0,0" Text="If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus." />
+                
+                <Label Text="Learn more" FontAttributes="Bold" TextColor="{DynamicResource PrimaryColor}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+                <Button
+						Margin="0,20,0,0"
+						Command="{Binding SharePositiveDiagnosisCommand}"
+						HorizontalOptions="End"
+						IsEnabled="{Binding IsEnabled}"
+						Style="{DynamicResource ButtonRounded}"
+						Text="Share A Positive Diagnosis" />
+
+                
+                
                 <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}"
                        Style="{StaticResource Accent2ColorHeaderLabelStyle}"
                        TextColor="{StaticResource Accent4Color}" />
+                
             </StackLayout>
 
             <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />

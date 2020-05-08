@@ -33,6 +33,7 @@
     <x:String x:Key="IconStar">&#xf005;</x:String>
 
     <!-- FA-S -->
+    <x:String x:Key="IconHowToUse">&#xf51c;</x:String>
     <x:String x:Key="IconInfo">&#xf129;</x:String>
     <x:String x:Key="IconHome">&#xf015;</x:String>
     <x:String x:Key="IconHouseUser">&#xf965;</x:String>
