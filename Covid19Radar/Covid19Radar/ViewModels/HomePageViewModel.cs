@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Windows.Input;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -18,6 +19,16 @@ namespace Covid19Radar.ViewModels
             SetData();
         }
 
+        public bool EnableNotifications
+        {
+            get => LocalStateManager.Instance.EnableNotifications;
+            set
+            {
+                LocalStateManager.Instance.EnableNotifications = value;
+                LocalStateManager.Save();
+            }
+        }
+
         private void SetData()
         {
             HomeMenus = new List<HomeMenuModel>
@@ -25,7 +36,7 @@ namespace Covid19Radar.ViewModels
                 new HomeMenuModel
                 {
                     Title=AppResources.HomePageViewStatusSettingsMenu,
-                    Command=OnClickUserSetting,
+                    Command=OnClickUserSetting
                 },
                 new HomeMenuModel
                 {
@@ -52,7 +63,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickUserSetting => new Command(() =>
         {
-            NavigationService.NavigateAsync("UserStatusPage");
+            NavigationService.NavigateAsync("NotifyOthersPage");
         });
         public Command OnClickAcknowledgments => new Command(() =>
         {

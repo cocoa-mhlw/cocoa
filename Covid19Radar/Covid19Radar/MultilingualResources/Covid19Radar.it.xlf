@@ -398,6 +398,16 @@ Select 'Always Allow' to set up Bluetooth.</target>
           <target state="new">Exposures</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
         </trans-unit>
+        <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
+          <source>https://microsoft.com/</source>
+          <target state="new">https://microsoft.com/</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
+        </trans-unit>
+        <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
+          <source>Manual</source>
+          <target state="new">Manual</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
+        </trans-unit>
       </group>
     </body>
   </file>
