@@ -7,6 +7,8 @@ using Prism.Ioc;
 using Prism.Navigation;
 using Xamarin.Forms;
 using System;
+using System.Windows.Input;
+using Prism.Navigation.Xaml;
 
 namespace Covid19Radar.ViewModels
 {
@@ -16,14 +18,14 @@ namespace Covid19Radar.ViewModels
         public string UserStatusName { get; set; }
     }
 
-    public class UserStatusPageViewModel : ViewModelBase
+    public class NotifyOtherPageViewModel : ViewModelBase
     {
         private readonly UserDataService _userDataService;
         private UserDataModel _userData;
         public int statusCode;
         public HttpDataService httpDataService;
 
-        public UserStatusPageViewModel(INavigationService navigationService) : base(navigationService)
+        public NotifyOtherPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
             _userDataService = App.Current.Container.Resolve<UserDataService>();
@@ -34,6 +36,11 @@ namespace Covid19Radar.ViewModels
         {
             await _userDataService.SetAsync(_userData);
             await NavigationService.NavigateAsync("MainPage");
+        }));
+
+        public Command LearnMoreCommande => (new Command(async () =>
+        {
+            await Xamarin.Essentials.Browser.OpenAsync(Resources.AppResources.NotifyOthersLearnMoreUrl);
         }));
     }
 }

@@ -8,5 +8,11 @@ namespace Covid19Radar.ViewModels
         public StartTutorialPageViewModel(INavigationService navigationService) : base(navigationService)
         {
         }
+
+        public Command OnClickStart => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync("DescriptionPage");
+        });
+
     }
 }

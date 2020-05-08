@@ -20,7 +20,7 @@ namespace Covid19Radar.ViewModels
             if (!enabled)
             {
                 await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
-                await NavigationService.NavigateAsync("SetupCompletedPage");
+                await NavigationService.NavigateAsync("SetupCompletedPage",useModalNavigation: true);
             }
         });
     }
