@@ -25,15 +25,6 @@ namespace Covid19Radar.ViewModels
                 }));
 
         }
-        public bool EnableNotifications
-        {
-            get => LocalStateManager.Instance.EnableNotifications;
-            set
-            {
-                LocalStateManager.Instance.EnableNotifications = value;
-                LocalStateManager.Save();
-            }
-        }
 
         public ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo> ExposureInformation
             => new ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo>
