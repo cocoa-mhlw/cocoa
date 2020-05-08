@@ -114,7 +114,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<UserSettingPage, UserSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ContributorsPage, ContributorsPageViewModel>();
-            containerRegistry.RegisterForNavigation<UpdateInfoPage, UpdateInfoPageViewModel>();
             containerRegistry.RegisterForNavigation<SetupCompletedPage, SetupCompletedPageViewModel>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage, LicenseAgreementPageViewModel>();
             containerRegistry.RegisterForNavigation<DetectedBeaconPage, DetectedBeaconPageViewmodel>();
