@@ -34,7 +34,7 @@ namespace Covid19Radar.ViewModels
 
         private readonly IPageDialogService _pageDialogService;
 
-        public ConsentByUserPageViewModel(INavigationService navigationService,IPageDialogService pageDialogService)
+        public ConsentByUserPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
             : base(navigationService)
         {
             Title = AppResources.TitleConsentByUserPage;

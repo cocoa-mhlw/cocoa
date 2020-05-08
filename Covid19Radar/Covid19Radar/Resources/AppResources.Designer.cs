@@ -450,11 +450,29 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Manual に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MainTutorial {
+            get {
+                return ResourceManager.GetString("MainTutorial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Update に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MainUpdateInfo {
             get {
                 return ResourceManager.GetString("MainUpdateInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://microsoft.com/ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOthersLearnMoreUrl {
+            get {
+                return ResourceManager.GetString("NotifyOthersLearnMoreUrl", resourceCulture);
             }
         }
         
