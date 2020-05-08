@@ -14,54 +14,35 @@
     ios:Page.UseSafeArea="true"
     Style="{StaticResource PageStyle}"
     Visual="Material">
-    <ScrollView>
-        <ScrollView.Padding>
-            <Thickness
-                Left="32"
-                Top="{OnPlatform Android=48, iOS=64}"
-                Right="32"
-                Bottom="{OnPlatform Android=48, iOS=64}" />
-        </ScrollView.Padding>
-        <StackLayout VerticalOptions="Center">
-            <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
-            <Label
-            Margin="0,29,0,60"
+    <StackLayout>
+        <ffimageloading:CachedImage Margin="0,30,0,0" HorizontalOptions="Center" Source="Logo.png" />
+        <Label
+            Margin="0,29,0,0"
             FontFamily="NotoSansMediumFontFamily"
             FontSize="22"
             HorizontalOptions="Center"
             Text="{x:Static resources:AppResources.AppName}"
             TextColor="{StaticResource Accent4Color}" />
+        <Grid Margin="20,20,20,20" HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Exposure Notifications" Grid.Column="0" VerticalOptions="Center" />
+            <Switch Grid.Column="1" IsToggled="{Binding EnableNotifications, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="End" />
+        </Grid>
+        <Label
+            Margin="0,29,0,0"
+            FontFamily="NotoSansMediumFontFamily"
+            FontSize="22"
+            HorizontalOptions="Center"
+            Text="{x:Static resources:AppResources.HomePageUpdateInfomation}"
+            TextColor="{StaticResource Accent4Color}" />
+        <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
 
-            <Grid Margin="20,35,20,20">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="0.5*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Label Text="Exposure Notifications" Grid.Column="0" VerticalOptions="Center" />
-                <Switch Grid.Column="1" IsToggled="{Binding EnableNotifications, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="End" />
-            </Grid>
-
-            <StackLayout
-            Grid.Row="1"
-            BindableLayout.ItemsSource="{Binding HomeMenus}"
-            HorizontalOptions="CenterAndExpand"
-            Spacing="28"
-            VerticalOptions="Center">
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <Button
-                        Command="{Binding Command}"
-                        Style="{StaticResource BaseButtonStyle}"
-                        Text="{Binding Title}"
-                        WidthRequest="240">
-                        </Button>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-            </StackLayout>
-        </StackLayout>
-    </ScrollView>
+    </StackLayout>
 </ContentPage>
