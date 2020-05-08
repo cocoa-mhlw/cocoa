@@ -35,11 +35,13 @@
                 </Label.Margin>
             </Label>
             <Button
+                AutomationId="EnableButton"
 				Margin="55,50,55,50"
 				Command="{Binding Path=OnClickEnable}"
 				Style="{StaticResource DefaultButtonStyle}"
 				Text="{x:Static resources:AppResources.ButtonEnable}" />
             <Button
+                AutomationId="NotNowButton"
 			    Margin="55,0,55,80"
 			    Command="{Binding Path=OnClickNotNow}"
 			    IsEnabled="{Binding IsEnabled}"
