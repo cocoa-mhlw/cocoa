@@ -408,6 +408,11 @@ Select 'Always Allow' to set up Bluetooth.</target>
           <target state="new">Manual</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
+        <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
+          <source>Update Infomation</source>
+          <target state="new">Update Infomation</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
+        </trans-unit>
       </group>
     </body>
   </file>

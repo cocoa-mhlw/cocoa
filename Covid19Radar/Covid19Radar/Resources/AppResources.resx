@@ -436,4 +436,8 @@ Please check your SMS.</value>
     <value>Manual</value>
     <comment>Tab How to use</comment>
   </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Update Infomation</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
 </root>
