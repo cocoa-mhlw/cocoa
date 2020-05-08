@@ -104,10 +104,10 @@
       <Version>1.1.6-beta</Version>
     </PackageReference>
     <PackageReference Include="Prism.DryIoc.Forms">
-      <Version>8.0.0.1740-pre</Version>
+      <Version>7.2.0.1422</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
-      <Version>1.7.302-beta</Version>
+      <Version>1.6.292</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.MediaRouter">
       <Version>1.1.0</Version>
