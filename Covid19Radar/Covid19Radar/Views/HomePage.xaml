@@ -6,8 +6,9 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-           xmlns:prism="http://prismlibrary.com"
-       prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    prism:ViewModelLocator.AutowireViewModel="True"
 
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
@@ -21,31 +22,46 @@
                 Right="32"
                 Bottom="{OnPlatform Android=48, iOS=64}" />
         </ScrollView.Padding>
-    <StackLayout VerticalOptions="Center">
-        <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
-        <Label
+        <StackLayout VerticalOptions="Center">
+            <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
+            <Label
             Margin="0,29,0,60"
             FontFamily="NotoSansMediumFontFamily"
             FontSize="22"
             HorizontalOptions="Center"
             Text="{x:Static resources:AppResources.AppName}"
             TextColor="{StaticResource Accent4Color}" />
-        <StackLayout
+
+            <Grid Margin="20,35,20,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Text="Exposure Notifications" Grid.Column="0" VerticalOptions="Center" />
+                <Switch Grid.Column="1" IsToggled="{Binding EnableNotifications, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="End" />
+            </Grid>
+
+            <StackLayout
             Grid.Row="1"
             BindableLayout.ItemsSource="{Binding HomeMenus}"
             HorizontalOptions="CenterAndExpand"
             Spacing="28"
             VerticalOptions="Center">
-            <BindableLayout.ItemTemplate>
-                <DataTemplate>
-                    <Button
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button
                         Command="{Binding Command}"
                         Style="{StaticResource BaseButtonStyle}"
                         Text="{Binding Title}"
-                        WidthRequest="240" />
-                </DataTemplate>
-            </BindableLayout.ItemTemplate>
+                        WidthRequest="240">
+                        </Button>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
         </StackLayout>
-    </StackLayout>
     </ScrollView>
 </ContentPage>
