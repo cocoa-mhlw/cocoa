@@ -63,7 +63,7 @@
             Grid.Row="4"
             Margin="57,0"
             AutomationId="StartButton"
-            Command="{prism:NavigateTo DescriptionPage}"
+            Command="{Binding Path=OnClickStart}"
             Style="{StaticResource DefaultButtonStyle}"
             Text="{x:Static resources:AppResources.ButtonStart}" />
     </Grid>
