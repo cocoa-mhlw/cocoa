@@ -15,6 +15,7 @@
         <StackLayout Padding="0,0">
             <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
              <Button
+                AutomationId="NextButton"
                 Margin="0,20"
                 Command="{Binding OnClickNext}"
                 Style="{StaticResource DefaultButtonStyle}"

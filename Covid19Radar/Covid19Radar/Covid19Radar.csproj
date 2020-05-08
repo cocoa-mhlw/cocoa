@@ -69,9 +69,6 @@
     <Compile Update="Views\HomePage\ContributorsPage.xaml.cs">
       <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\UpdateInfoPage.xaml.cs">
-      <DependentUpon>UpdateInfoPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -128,7 +125,7 @@
     <EmbeddedResource Update="Styles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ExposuresPage.xaml">
+    <EmbeddedResource Update="Views\HomePage\ExposuresPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MainPage.xaml">

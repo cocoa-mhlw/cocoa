@@ -340,6 +340,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Update Infomation に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageUpdateInfomation {
+            get {
+                return ResourceManager.GetString("HomePageUpdateInfomation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   List of Contributors に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageViewListOfContributorsMenu {
