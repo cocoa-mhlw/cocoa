@@ -22,7 +22,7 @@
             <StackLayout BindableLayout.ItemTemplate="{StaticResource StepItemTemplate}" BindableLayout.ItemsSource="{Binding Steps}" />
             <Button
                 Margin="95,0,95,80"
-                Command="{prism:NavigateTo ConsentByUserPage}"
+                Command="{Binding Path=OnClickNext}"
                 Style="{StaticResource DefaultButtonStyle}"
                 Text="{x:Static resources:AppResources.ButtonNext}" />
         </StackLayout>
