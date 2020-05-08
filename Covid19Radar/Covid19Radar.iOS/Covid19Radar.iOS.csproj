@@ -191,10 +191,10 @@
       <Version>3.2.1</Version>
     </PackageReference>
     <PackageReference Include="Plugin.Multilingual">
-      <Version>1.0.2</Version>
+      <Version>1.1.6-beta</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
-      <Version>1.6.292</Version>
+      <Version>1.7.302-beta</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.5.3.1</Version>
@@ -213,7 +213,7 @@
       <Version>4.6.0.726</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
-      <Version>1.0.0-beta1</Version>
+      <Version>1.0.0-beta2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.21.9</Version>
