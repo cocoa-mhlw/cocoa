@@ -12,6 +12,10 @@ namespace Covid19Radar.ViewModels
             Title = AppResources.TitleSetupCompleted;
         }
 
-        public Command OnClickHome => new Command(() => NavigationService.NavigateAsync("HomePage"));
+        public Command OnClickToMain => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync("/MainPage");
+        });
+
     }
 }

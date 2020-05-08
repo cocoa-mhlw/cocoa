@@ -75,8 +75,8 @@
     <Compile Update="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\UserStatusPage.xaml.cs">
-      <DependentUpon>UserStatusPage.xaml</DependentUpon>
+    <Compile Update="Views\HomePage\NotifyOtherPage.xaml.cs">
+      <DependentUpon>NotifyOtherPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\NotUsed\UserSettingPage.xaml.cs">
       <DependentUpon>UserSettingPage.xaml</DependentUpon>
@@ -129,6 +129,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ExposuresPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\NotUsed\HeadsupPage.xaml">

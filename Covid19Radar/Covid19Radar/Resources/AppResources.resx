@@ -428,4 +428,12 @@ Please check your SMS.</value>
     <value>Exposures</value>
     <comment>Exposures Page</comment>
   </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>Manual</value>
+    <comment>Tab How to use</comment>
+  </data>
 </root>
