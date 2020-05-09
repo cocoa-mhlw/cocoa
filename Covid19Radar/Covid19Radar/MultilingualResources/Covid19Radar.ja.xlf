@@ -316,20 +316,10 @@ Please check your SMS.</source>
           <target state="translated" state-qualifier="mt-suggestion">陽性の診断結果を受けた場合は、携帯電話番号を入力し、あなたの愛する人を保護するためにあなたのステータスを更新してください。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="translated" state-qualifier="mt-suggestion">陽性の診断結果を受けた場合</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
-        </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
           <source>Tap to change state</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">タップして状態を変更する</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">コードを入力してください</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
@@ -338,85 +328,201 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">オーケー</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
         </trans-unit>
         <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
           <source>Enable</source>
-          <target state="new">Enable</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">有効にする</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
-          <target state="new">NotNow</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">今はない</target>
           <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="new">This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">このアプリは、あなたが別の連絡先トレースアプリのユーザーの近くにいるかどうかを判断するために露出通知/ブルートゥース信号を使用しています。
+Bluetooth を設定するには、[常に許可] を選択します。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
           <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="new">Allow Exposure Notification / Bluetooth</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">露出通知を許可する / ブルートゥース</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
           <source>Contributers</source>
-          <target state="new">Contributers</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">貢献</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributers</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="new">Exposures</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">エクスポー ジャー</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="MainHome" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="new">Home</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ホーム</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
         </trans-unit>
         <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="new">License</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ライセンス</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
         </trans-unit>
         <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
           <source>Notify</source>
-          <target state="new">Notify</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">通知</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
         </trans-unit>
         <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
           <source>Update</source>
-          <target state="new">Update</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">更新プログラム</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="new">Exposures</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">エクスポー ジャー</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://microsoft.com/</source>
-          <target state="new">https://microsoft.com/</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://microsoft.com/</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>Manual</source>
-          <target state="new">Manual</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">手動</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
           <source>Update Infomation</source>
-          <target state="new">Update Infomation</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">情報の更新</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
         </trans-unit>
         <trans-unit id="HomeEnableNotification" translate="yes" xml:space="preserve">
           <source>Enable Notification</source>
-          <target state="new">Enable Notification</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">通知を有効にする</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Setting Enable Notification</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
+          <source>No known exposures</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">既知の露出はありません</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
+          <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19の肯定的な結果を報告した人に公開された場合は、通知されます。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
+        </trans-unit>
+        <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
+          <source>Share A Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">肯定的な診断を共有する</target>
+        </trans-unit>
+        <trans-unit id="NofityPageShareDiag" translate="yes" xml:space="preserve">
+          <source>Share A Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">肯定的な診断を共有する</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Share Diag</note>
+        </trans-unit>
+        <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
+          <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19の原因となるウイルスの陽性をテストした場合は、診断を共有することを選択できます。 これは、あなたのコミュニティの他の人がウイルスの拡散を含むのに役立ちます.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
+        </trans-unit>
+        <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
+          <source>Learn more</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">詳細</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">肯定的な診断を受けた場合</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
+          <source>Please enter the Diagnosis Identifier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">診断識別子を入力してください</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
+        </trans-unit>
+        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
+          <source>Share a Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">肯定的な診断を共有する</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
+          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">テスト日は、あなたが伝染した可能性があるときにアプリを知り、潜在的な暴露を適切な人々に通知するのに役立ちます。</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
+          <source>Only those who have been exposed will receive a notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">公開されたユーザーのみが通知を受け取ります。</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
+          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 テストに付属の一意のテスト ID を使用して、陽性のテスト結果を検証する必要があります。</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
+          <source>Verify and Share</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">確認と共有</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+          <source>Please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">後でもう一度試してください。</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+          <source>Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">失敗</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+          <source>Diagnosis Submitted</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">診断提出</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+          <source>Complete</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">完了しました</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
+          <source>Please provide a Diagnosis Identifier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">診断識別子を指定してください</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
+          <source>Diagnosis Identifier Required</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">診断識別子が必要です</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">オーケー</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">診断を送信する前に露出通知を有効にしてください。</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notifications Disabled</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">露出通知が無効</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+          <source>Submitting Diagnosis...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">診断を提出します。</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
+          <source>Verifying Diagnosis...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">診断を確認しています。</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
+          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">現時点では、診断を確認できません。</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
+          <source>Verification Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">検証に失敗しました</target>
+        </trans-unit>
+        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
+          <source>Submit</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">提出</target>
         </trans-unit>
       </group>
     </body>

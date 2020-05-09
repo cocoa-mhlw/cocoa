@@ -316,107 +316,213 @@ Please check your SMS.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ఒకవేళ మీరు పాజిటివ్ డయాగ్నసిస్ అందుకున్నట్లయితే, దయచేసి మీ మొబైల్ నెంబరును నమోదు చేయండి మరియు మీ ప్రియమైన వారిని సంరక్షించడం కొరకు మీ స్టేటస్ ని అప్ డేట్ చేయండి.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ఒకవేళ మీరు పాజిటివ్ డయాగ్నసిస్ అందుకుంటే</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
-        </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
           <source>Tap to change state</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">స్థితిని మార్చడం కొరకు తట్టండి</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">దయచేసి కోడ్ నమోదు చేయండి</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
-        </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
-          <target state="new">Please check your network connection.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">దయచేసి మీ నెట్ వర్క్ కనెక్షన్ తనిఖీ చేయండి.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
         </trans-unit>
         <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">సరే</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
         </trans-unit>
         <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
           <source>Enable</source>
-          <target state="new">Enable</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ప్రారంభించు</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
-          <target state="new">NotNow</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">నోట్నౌ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="new">This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">మీరు మరో కాంటాక్ట్ ట్రేసింగ్ యాప్ యూజర్ కు దగ్గరల్లో ఉన్నారా లేదా అని తెలుసుకోవడం కొరకు ఈ యాప్ ఎక్స్ పోజర్ నోటిఫికేషన్/బ్లూటూత్ సిగ్నల్స్ ని ఉపయోగిస్తుంది. 
+బ్లూటూత్ సెటప్ చేయడం కొరకు ' ఎల్లప్పుడూ అనుమతించండి ' ఎంచుకోండి.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
           <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="new">Allow Exposure Notification / Bluetooth</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ప్రత్యక్షీకరణ ప్రకటన/Bluetooth అనుమతించు</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
           <source>Contributers</source>
-          <target state="new">Contributers</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">దోహదకారులు</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributers</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="new">Exposures</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ప్రత్యక్షీకరణల</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="MainHome" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="new">Home</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">హోమ్</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
         </trans-unit>
         <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="new">License</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">లైసెన్స్</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
         </trans-unit>
         <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
           <source>Notify</source>
-          <target state="new">Notify</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">తెలియజేయండి</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
         </trans-unit>
         <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
           <source>Update</source>
-          <target state="new">Update</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">అప్‌డేట్ చేయి</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="new">Exposures</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ప్రత్యక్షీకరణల</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://microsoft.com/</source>
-          <target state="new">https://microsoft.com/</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://microsoft.com/</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>Manual</source>
-          <target state="new">Manual</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">మాన్యువల్</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
           <source>Update Infomation</source>
-          <target state="new">Update Infomation</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">నవీకరణ ఇన్ఫోలేషన్</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
         </trans-unit>
         <trans-unit id="HomeEnableNotification" translate="yes" xml:space="preserve">
           <source>Enable Notification</source>
-          <target state="new">Enable Notification</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ప్రకటనను ప్రారంభించు</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Setting Enable Notification</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
+          <source>No known exposures</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">తెలిసిన ప్రత్యక్షీకరణలు లేవు</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
+          <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">పాజిటివ్ కోవిడ్-19 రిజల్ట్ ను రిపోర్ట్ చేసిన ఎవరికైనా మీరు బహిర్గతం చేస్తే మీకు తెలియజేయబడుతుంది.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
+        </trans-unit>
+        <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
+          <source>Share A Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">పాజిటివ్ డయాగ్నసిస్ ని పంచుకోండి</target>
+        </trans-unit>
+        <trans-unit id="NofityPageShareDiag" translate="yes" xml:space="preserve">
+          <source>Share A Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">పాజిటివ్ డయాగ్నసిస్ ని పంచుకోండి</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Share Diag</note>
+        </trans-unit>
+        <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
+          <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">మీరు కోవిడ్-19 కు కారణమైన వైరస్ కు పాజిటివ్ గా పరీక్షించి, మీ రోగ నిర్ధారణ పంచుకోవడానికి ఎంచుకోవచ్చు.  మీ కమ్యూనిటీలో వైరస్ వ్యాప్తి చెందే ఇతరులకు ఇది సాయపడుతుంది.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
+        </trans-unit>
+        <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
+          <source>Learn more</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">మరింత తెలుసుకోండి</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ఒకవేళ మీరు పాజిటివ్ డయాగ్నసిస్ అందుకుంటే</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
+          <source>Please enter the Diagnosis Identifier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">దయచేసి డయగ్నాస్టిక్ ఐడెంటిఫైయర్ నమోదు చేయండి</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
+        </trans-unit>
+        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
+          <source>Share a Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">పాజిటివ్ డయాగ్నసిస్ ని పంచుకోండి</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
+          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">మీరు అంటువ్యాధి కలిగి ఉండి, సంభావ్య ప్రభావానికి గురయ్యే సరైన వ్యక్తులకు తెలియజేయడంతో పరీక్షా తేదీ అనువర్తనానికి సాయపడుతుంది.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
+          <source>Only those who have been exposed will receive a notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">బయటపడ్డ వారికి మాత్రమే నోటిఫికేషన్ అందుతుంది.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
+          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">మీ కోవిడ్-19 టెస్ట్ తో వచ్చిన ప్రత్యేక టెస్ట్ ఐడెంటిఫైయర్ మీ పాజిటివ్ టెస్ట్ ఫలితాన్ని వెరిఫై చేయడానికి విధిగా ఉపయోగించాలి.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
+          <source>Verify and Share</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">వెరిఫై చేయండి మరియు పంచుకోండి</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+          <source>Please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+          <source>Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">విఫలమైంది</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+          <source>Diagnosis Submitted</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">నిర్ధారణ సమర్పించిన</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+          <source>Complete</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">పూర్తయింది</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
+          <source>Please provide a Diagnosis Identifier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">దయచేసి డయగ్నాస్టిక్ ఐడెంటిఫైయర్ ఇవ్వండి</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
+          <source>Diagnosis Identifier Required</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">రోగ నిర్ధారణ నిర్ధారిణి అవసరం</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">సరే</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">రోగనిర్ధారణ సబ్మిట్ చేయడానికి ముందు దయచేసి ఎక్స్ పోజర్ నోటిఫికేషన్ లను ప్రారంభించండి.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notifications Disabled</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ప్రత్యక్షీకరణ ప్రకటనలు నిలిపివేయబడ్డాయి</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+          <source>Submitting Diagnosis...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">రోగ నిర్ధారణ సమర్పించడం...</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
+          <source>Verifying Diagnosis...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">నిర్ధారణ నిర్ధారించడం...</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
+          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">సబ్మిట్ చేయాల్సిన ఈ సమయంలో మీ డయగ్నాస్టిక్ వెరిఫై చేయలేం.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
+          <source>Verification Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">నిర్ధారణ విఫలమైంది</target>
+        </trans-unit>
+        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
+          <source>Submit</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">సమర్పించు</target>
         </trans-unit>
       </group>
     </body>
