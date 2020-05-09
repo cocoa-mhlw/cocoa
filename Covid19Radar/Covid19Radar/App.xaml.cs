@@ -28,6 +28,7 @@ using Microsoft.AppCenter.Push;
 using Prism.Plugin.Popups;
 using FFImageLoading.Helpers;
 using FFImageLoading;
+using Xamarin.ExposureNotifications;
 
 /*
  * Our mission...is
@@ -65,6 +66,14 @@ namespace Covid19Radar
             UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             if (userDataService.IsExistUserData)
             {
+                // TODO Wire Start Exposure Notification
+/*
+                var isStart = await ExposureNotification.IsEnabledAsync();
+                if (!isStart)
+                {
+                    await ExposureNotification.StartAsync();
+                }
+*/
                 UserDataModel _userData = userDataService.Get();
                 result = await NavigationService.NavigateAsync("/MainPage");
             }

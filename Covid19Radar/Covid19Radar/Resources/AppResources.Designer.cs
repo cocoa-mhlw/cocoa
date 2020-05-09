@@ -331,6 +331,33 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   No known exposures に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposuresPageNoExposures {
+            get {
+                return ResourceManager.GetString("ExposuresPageNoExposures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You will be notified if you have been exposed to someone who reported a positive COVID-19 result. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposuresPageNoExposuresInfo {
+            get {
+                return ResourceManager.GetString("ExposuresPageNoExposuresInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enable Notification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomeEnableNotification {
+            get {
+                return ResourceManager.GetString("HomeEnableNotification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   HOME に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageTitle {
