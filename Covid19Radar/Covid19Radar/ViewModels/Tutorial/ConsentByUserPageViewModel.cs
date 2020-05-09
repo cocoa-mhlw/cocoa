@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Input;
+using Acr.UserDialogs;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -15,52 +16,38 @@ namespace Covid19Radar.ViewModels
     {
         private UserDataService _userDataService;
 
-        public ICommand OnClickNext { get; }
-
         private string _url;
-
         public string Url
         {
             get { return _url; }
             set { SetProperty(ref _url, value); }
         }
 
-        private bool _isBusy = false;
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set => SetProperty(ref _isBusy, value);
-        }
-
-        private readonly IPageDialogService _pageDialogService;
-
-        public ConsentByUserPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
+        public ConsentByUserPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             Title = AppResources.TitleConsentByUserPage;
             Url = Resources.AppResources.UrlPrivacyPolicy;
 
-            _pageDialogService = pageDialogService;
             _userDataService = App.Current.Container.Resolve<UserDataService>();
-            OnClickNext = new Command(async () =>
-             {
-                 // Regist user
-                 if (!_userDataService.IsExistUserData)
-                 {
-                     IsBusy = true;
-                     UserDataModel userData = await _userDataService.RegistUserAsync();
-                     IsBusy = false;
-
-                     if (userData == null)
-                     {
-                         await _pageDialogService.DisplayAlertAsync("", Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogButtonOk);
-                         return;
-                     }
-                 }
-
-                 await NavigationService.NavigateAsync("InitSettingPage");
-             });
-
         }
+
+        public Command OnClickNext => new Command(async () =>
+        {
+            UserDialogs.Instance.ShowLoading("Waiting for register");
+            if (!_userDataService.IsExistUserData)
+            {
+                UserDataModel userData = await _userDataService.RegistUserAsync();
+                if (userData == null)
+                {
+                    UserDialogs.Instance.HideLoading();
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, "Connection error", Resources.AppResources.DialogButtonOk);
+                    return;
+                }
+            }
+            UserDialogs.Instance.HideLoading();
+            await NavigationService.NavigateAsync("InitSettingPage");
+        });
+
     }
 }
