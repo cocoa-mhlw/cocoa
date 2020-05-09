@@ -439,90 +439,90 @@ Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</target>
         </trans-unit>
         <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
-          <target state="new">If you received a positive diagnosis</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eğer pozitif tanı aldıysanız</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
           <source>Please enter the Diagnosis Identifier</source>
-          <target state="new">Please enter the Diagnosis Identifier</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lütfen Tanı Tanımlayıcısını girin</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
         </trans-unit>
         <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
           <source>Share a Positive Diagnosis</source>
-          <target state="new">Share a Positive Diagnosis</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Olumlu Tanıyı Paylaşın</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
           <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="new">The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Test tarihi, uygulamanın ne zaman bulaşıcı olabileceğinibilmenize ve doğru kişileri potansiyel maruz kalma hakkında bilgilendirmesine yardımcı olur.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
           <source>Only those who have been exposed will receive a notification.</source>
-          <target state="new">Only those who have been exposed will receive a notification.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Yalnızca maruz kalanlara bir bildirim gönderilir.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="new">The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 testinizle birlikte gelen benzersiz test tanımlayıcısı pozitif test sonucunuzu doğrulamak için kullanılmalıdır.</target>
         </trans-unit>
         <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
           <source>Verify and Share</source>
-          <target state="new">Verify and Share</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Doğrula ve Paylaş</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
-          <target state="new">Please try again later.</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Lütfen daha sonra yeniden deneyin.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
           <source>Failed</source>
-          <target state="new">Failed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Başarısız</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
-          <target state="new">Diagnosis Submitted</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tanı Gönderildi</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
           <source>Complete</source>
-          <target state="new">Complete</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tamamlandı</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
           <source>Please provide a Diagnosis Identifier</source>
-          <target state="new">Please provide a Diagnosis Identifier</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lütfen bir Tanı Tanımlayıcısı sağlayın</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>
-          <target state="new">Diagnosis Identifier Required</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tanı Tanımlayıcı Gerekli</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tamam</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="new">Please enable Exposure Notifications before submitting a diagnosis.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lütfen bir tanı göndermeden önce Pozlama Bildirimleri'ni etkinleştirin.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
-          <target state="new">Exposure Notifications Disabled</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozlama Bildirimleri Devre Dışı</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
-          <target state="new">Submitting Diagnosis...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tanı Gönderme...</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
           <source>Verifying Diagnosis...</source>
-          <target state="new">Verifying Diagnosis...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tanı doğrulama...</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
           <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="new">Your diagnosis cannot be verified at this time to be submitted.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tanınız şu anda doğrulanamıyor.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
           <source>Verification Failed</source>
-          <target state="new">Verification Failed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Doğrulama Başarısız Oldu</target>
         </trans-unit>
         <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
           <source>Submit</source>
-          <target state="new">Submit</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Gönder</target>
         </trans-unit>
       </group>
     </body>

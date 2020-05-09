@@ -439,90 +439,90 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
         </trans-unit>
         <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
-          <target state="new">If you received a positive diagnosis</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
           <source>Please enter the Diagnosis Identifier</source>
-          <target state="new">Please enter the Diagnosis Identifier</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுசெய்து நோய் கண்டறிதல் அடையாளங்காட்டி உள்ளிடவும்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
         </trans-unit>
         <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
           <source>Share a Positive Diagnosis</source>
-          <target state="new">Share a Positive Diagnosis</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
           <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="new">The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">இந்தத் தேர்வு தேதி, நீங்கள் தொற்று நோய் உள்ளவரை மற்றும் சாத்தியமான வெளிப்பாடு சரியான மக்களுக்கு தெரியப்படுத்தும்போது, பயன்பாட்டை அறிய உதவுகிறது.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
           <source>Only those who have been exposed will receive a notification.</source>
-          <target state="new">Only those who have been exposed will receive a notification.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">அம்பலத்திற்கு வந்தவர்கள் மட்டுமே அறிவிப்பைப் பெறுவார்கள்.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="new">The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">உங்கள் கோவிட்-19 பரிசோதனையுடன் வந்த தனித்துவமான சோதனை அடையாளங்காட்டி உங்கள் நேர்மறை சோதனை முடிவை சரிபார்க்க பயன்படுத்தப்பட வேண்டும்.</target>
         </trans-unit>
         <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
           <source>Verify and Share</source>
-          <target state="new">Verify and Share</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">சரிபார்த்து பகிரவும்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
-          <target state="new">Please try again later.</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">பின்னர் மீண்டும் முயற்சிக்கவும்.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
           <source>Failed</source>
-          <target state="new">Failed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">தோல்வியடைந்தது</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
-          <target state="new">Diagnosis Submitted</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ஆய்வு அறிக்கை சமர்ப்பிக்கப்பட்டது</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
           <source>Complete</source>
-          <target state="new">Complete</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">முழுமை</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
           <source>Please provide a Diagnosis Identifier</source>
-          <target state="new">Please provide a Diagnosis Identifier</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுசெய்து ஒரு நோய் கண்டறியும் அடையாளங்காட்டியை வழங்கவும்</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>
-          <target state="new">Diagnosis Identifier Required</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">நோய் கண்டறிதல் அடையாளங்காட்டி தேவை</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">சரி</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="new">Please enable Exposure Notifications before submitting a diagnosis.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுசெய்து ஒரு பகுப்பாய்வு சமர்ப்பிக்கும் முன், வெளிப்பாடு அறிவிப்புகளை இயக்கவும்.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
-          <target state="new">Exposure Notifications Disabled</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்புகள் முடக்கப்பட்டன</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
-          <target state="new">Submitting Diagnosis...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">நோய் கண்டறிதல்...</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
           <source>Verifying Diagnosis...</source>
-          <target state="new">Verifying Diagnosis...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">நோயை சரிபார்த்தல்...</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
           <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="new">Your diagnosis cannot be verified at this time to be submitted.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">சமர்ப்பிக்க வேண்டிய நேரத்தில் உங்கள் நோயை உறுதிப்படுத்த முடியாது.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
           <source>Verification Failed</source>
-          <target state="new">Verification Failed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">சரிபார்ப்பு தோல்வி</target>
         </trans-unit>
         <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
           <source>Submit</source>
-          <target state="new">Submit</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">சமர்ப்பி</target>
         </trans-unit>
       </group>
     </body>
