@@ -452,4 +452,19 @@ Please check your SMS.</value>
     <value>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</value>
     <comment>exposures comment</comment>
   </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Share A Positive Diagnosis</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Share A Positive Diagnosis</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Learn more</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
 </root>
