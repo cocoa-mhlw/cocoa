@@ -504,11 +504,47 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Share A Positive Diagnosis に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NofityPageButtonSharePositive {
+            get {
+                return ResourceManager.GetString("NofityPageButtonSharePositive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Share A Positive Diagnosis に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NofityPageShareDiag {
+            get {
+                return ResourceManager.GetString("NofityPageShareDiag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NofityPageShareYourCase {
+            get {
+                return ResourceManager.GetString("NofityPageShareYourCase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   https://microsoft.com/ に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOthersLearnMoreUrl {
             get {
                 return ResourceManager.GetString("NotifyOthersLearnMoreUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Learn more に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyPageLearnMore {
+            get {
+                return ResourceManager.GetString("NotifyPageLearnMore", resourceCulture);
             }
         }
         

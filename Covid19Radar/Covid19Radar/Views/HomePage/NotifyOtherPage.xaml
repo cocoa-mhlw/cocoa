@@ -27,11 +27,11 @@
                     Style="{StaticResource Accent2ColorHeaderLabelStyle}"
                     Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsSubtitle}" />
                 <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
-                
-                <Label Text="Share A Positive Diagnosis" FontAttributes="Bold" FontSize="Subtitle" />
-                <Label Margin="0,12,0,0" Text="If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus." />
-                
-                <Label Text="Learn more" FontAttributes="Bold" TextColor="{DynamicResource PrimaryColor}">
+
+                <Label Text="{x:Static resources:AppResources.NofityPageShareDiag}" FontAttributes="Bold" FontSize="Subtitle" />
+                <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.NofityPageShareYourCase}" />
+
+                <Label Text="{x:Static resources:AppResources.NotifyPageLearnMore}" FontAttributes="Bold" TextColor="{DynamicResource PrimaryColor}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
                     </Label.GestureRecognizers>
@@ -44,9 +44,7 @@
 						HorizontalOptions="End"
 						IsEnabled="{Binding IsEnabled}"
 						Style="{DynamicResource ButtonRounded}"
-						Text="Share A Positive Diagnosis" />
-
-                
+						Text="{x:Static resources:AppResources.NofityPageButtonSharePositive}" />
                 
                 <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}"
                        Style="{StaticResource Accent2ColorHeaderLabelStyle}"
