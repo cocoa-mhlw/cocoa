@@ -32,8 +32,16 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label Text="{x:Static resources:AppResources.HomeEnableNotification}" Grid.Column="0" VerticalOptions="Center" />
-            <Switch Grid.Column="1" IsToggled="{Binding EnableNotifications, Mode=TwoWay}" VerticalOptions="Center" HorizontalOptions="End" />
+            <Label Text="{x:Static resources:AppResources.HomeEnableNotification}" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" />
+            <Switch Grid.Column="1" IsToggled="{Binding EnableNotifications, Mode=TwoWay}" VerticalOptions="Center" Grid.Row="0" HorizontalOptions="End" />
+            <Label Text="Reset All Data" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                    Margin="0,40,0,80"
+                    Command="{Binding OnResetClick}"
+                    Style="{StaticResource DefaultButtonStyle}"
+                    Text="Reset" />
         </Grid>
         <Label
             Margin="0,29,0,0"
@@ -42,7 +50,8 @@
             HorizontalOptions="Center"
             Text="{x:Static resources:AppResources.HomePageUpdateInfomation}"
             TextColor="{StaticResource Accent4Color}" />
+        <StackLayout>
         <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
-
+        </StackLayout>
     </StackLayout>
 </ContentPage>
