@@ -67,13 +67,14 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 // TODO Wire Start Exposure Notification
-/*
+                /*
                 var isStart = await ExposureNotification.IsEnabledAsync();
                 if (!isStart)
                 {
                     await ExposureNotification.StartAsync();
                 }
-*/
+                */
+
                 UserDataModel _userData = userDataService.Get();
                 result = await NavigationService.NavigateAsync("/MainPage");
             }
@@ -130,6 +131,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<HeadsupPage, HeadsupPageViewModel>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage, NotifyOtherPageViewModel>();
             containerRegistry.RegisterForNavigation<ExposuresPage, ExposuresPageViewModel>();
+            containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
