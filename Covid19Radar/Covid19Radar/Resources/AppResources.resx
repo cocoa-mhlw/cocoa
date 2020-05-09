@@ -440,4 +440,16 @@ Please check your SMS.</value>
     <value>Update Infomation</value>
     <comment>Home Page Update Infomation text</comment>
   </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Enable Notification</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>No known exposures</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</value>
+    <comment>exposures comment</comment>
+  </data>
 </root>
