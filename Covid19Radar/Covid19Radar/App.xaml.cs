@@ -67,13 +67,12 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 // TODO Wire Start Exposure Notification
-/*
                 var isStart = await ExposureNotification.IsEnabledAsync();
                 if (!isStart)
                 {
                     await ExposureNotification.StartAsync();
                 }
-*/
+
                 UserDataModel _userData = userDataService.Get();
                 result = await NavigationService.NavigateAsync("/MainPage");
             }
