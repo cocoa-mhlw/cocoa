@@ -27,53 +27,59 @@ namespace Covid19Radar.ViewModels
         public Command SubmitAndVerifyCommand => (new Command(async () =>
         {
             UserDialogs.Instance.Loading(Resources.AppResources.SharePositiveDiagnosisPageVerifyDialog);
+            UserDialogs.Instance.HideLoading();
 
+            // TODO Waiting Enable EN
             // Check the diagnosis is valid on the server before asking the native api's for the keys
-
-            if (!await ExposureNotificationHandler.VerifyDiagnosisUid(DiagnosisUid))
-            {
-                UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageVerifyFailedDialogText, Resources.AppResources.SharePositiveDiagnosisPageVerifyFailedDialogTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-                return;
-            }
-
+            /*
+                        if (!await ExposureNotificationHandler.VerifyDiagnosisUid(DiagnosisUid))
+                        {
+                            UserDialogs.Instance.HideLoading();
+                            await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageVerifyFailedDialogText, Resources.AppResources.SharePositiveDiagnosisPageVerifyFailedDialogTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
+                            return;
+                        }
+            */
             UserDialogs.Instance.Loading(Resources.AppResources.SharePositiveDiagnosisPageSubmittingDialog);
+            /*
+                        try
+                        {
+                            var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
 
-            try
-            {
-                var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+                            if (!enabled)
+                            {
+                                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageNotEnabledENDialogText, Resources.AppResources.SharePositiveDiagnosisPageNotEnabledENDialogTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
+                                return;
+                            }
 
-                if (!enabled)
-                {
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageNotEnabledENDialogText, Resources.AppResources.SharePositiveDiagnosisPageNotEnabledENDialogTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-                    return;
-                }
+                            if (string.IsNullOrEmpty(DiagnosisUid))
+                            {
+                                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageDiagUidIsEmptyText, Resources.AppResources.SharePositiveDiagnosisPageDiagUidIsEmptyTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
+                                return;
+                            }
 
-                if (string.IsNullOrEmpty(DiagnosisUid))
-                {
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageDiagUidIsEmptyText, Resources.AppResources.SharePositiveDiagnosisPageDiagUidIsEmptyTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-                    return;
-                }
+                            // Set the submitted UID
+                            LocalStateManager.Instance.LatestDiagnosis.DiagnosisUid = DiagnosisUid;
+                            LocalStateManager.Instance.LatestDiagnosis.DiagnosisDate = DiagnosisDate ?? DateTime.UtcNow;
+                            LocalStateManager.Save();
 
-                // Set the submitted UID
-                LocalStateManager.Instance.LatestDiagnosis.DiagnosisUid = DiagnosisUid;
-                LocalStateManager.Instance.LatestDiagnosis.DiagnosisDate = DiagnosisDate ?? DateTime.UtcNow;
-                LocalStateManager.Save();
+                            // Submit our diagnosis
+                            await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
 
-                // Submit our diagnosis
-                await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
+                            UserDialogs.Instance.HideLoading();
+                            await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageDiagSubmittedText, Resources.AppResources.SharePositiveDiagnosisPageDiagSubmittedTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
 
-                UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageDiagSubmittedText, Resources.AppResources.SharePositiveDiagnosisPageDiagSubmittedTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-
-                await NavigationService.GoBackAsync();
-            }
-            catch
-            {
-                UserDialogs.Instance.HideLoading();
-                UserDialogs.Instance.Alert(Resources.AppResources.SharePositiveDiagnosisPageDiagExceptionText, Resources.AppResources.SharePositiveDiagnosisPageDiagExceptionTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-            }
+                            await NavigationService.GoBackAsync();
+                        }
+                        catch
+                        {
+                            UserDialogs.Instance.HideLoading();
+                            UserDialogs.Instance.Alert(Resources.AppResources.SharePositiveDiagnosisPageDiagExceptionText, Resources.AppResources.SharePositiveDiagnosisPageDiagExceptionTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
+                        }
+                        */
+            UserDialogs.Instance.HideLoading();
+            await NavigationService.GoBackAsync();
         }));
+
 
     }
 }
