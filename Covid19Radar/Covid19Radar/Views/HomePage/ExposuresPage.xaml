@@ -49,8 +49,8 @@
                         </CollectionView.ItemTemplate>
                         <CollectionView.EmptyView>
                             <StackLayout Orientation="Vertical">
-                                <Label Margin="0,10,0,0" Text="No known exposures." />
-                                <Label Margin="0,10,0,0" Text="You will be notified if you have been exposed to someone who reported a positive COVID-19 result." />
+                                <Label Margin="0,10,0,0" Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
+                                <Label Margin="0,10,0,0" Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
                             </StackLayout>
                         </CollectionView.EmptyView>
                     </CollectionView>

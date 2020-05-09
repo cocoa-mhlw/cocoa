@@ -69,7 +69,7 @@
     <Compile Update="Views\HomePage\ContributorsPage.xaml.cs">
       <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage.xaml.cs">
+    <Compile Update="Views\HomePage\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\NotifyOtherPage.xaml.cs">
