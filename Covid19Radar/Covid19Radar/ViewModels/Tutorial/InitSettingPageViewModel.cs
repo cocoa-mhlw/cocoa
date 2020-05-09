@@ -14,14 +14,16 @@ namespace Covid19Radar.ViewModels
         public Command OnClickNotNow => new Command(() => NavigationService.NavigateAsync("SetupCompletedPage"));
         public Command OnClickEnable => new Command(async () =>
         {
-            // TODO Allow popup?
-
+            // TODO Enable Exposure Notification
+            /*
             var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
             if (!enabled)
             {
                 await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
-                await NavigationService.NavigateAsync("SetupCompletedPage",useModalNavigation: true);
             }
+            */
+            await NavigationService.NavigateAsync("SetupCompletedPage", useModalNavigation: true);
+
         });
     }
 }
