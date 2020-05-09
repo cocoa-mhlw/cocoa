@@ -316,20 +316,10 @@ Please check your SMS.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Εάν λάβατε θετική διάγνωση, πληκτρολογήστε τον αριθμό του κινητού σας και ενημερώστε την κατάστασή σας για να προστατεύσετε τους αγαπημένους σας.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Εάν λάβατε θετική διάγνωση</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
-        </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
           <source>Tap to change state</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Πατήστε για αλλαγή κατάστασης</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Παρακαλώ εισάγετε τον κωδικό</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
@@ -446,6 +436,93 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Learn more</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Μάθετε περισσότερα</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="new">If you received a positive diagnosis</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
+          <source>Please enter the Diagnosis Identifier</source>
+          <target state="new">Please enter the Diagnosis Identifier</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
+        </trans-unit>
+        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
+          <source>Share a Positive Diagnosis</source>
+          <target state="new">Share a Positive Diagnosis</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
+          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
+          <target state="new">The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
+          <source>Only those who have been exposed will receive a notification.</source>
+          <target state="new">Only those who have been exposed will receive a notification.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
+          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
+          <target state="new">The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
+          <source>Verify and Share</source>
+          <target state="new">Verify and Share</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+          <source>Please try again later.</source>
+          <target state="new">Please try again later.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+          <source>Failed</source>
+          <target state="new">Failed</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+          <source>Diagnosis Submitted</source>
+          <target state="new">Diagnosis Submitted</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+          <source>Complete</source>
+          <target state="new">Complete</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
+          <source>Please provide a Diagnosis Identifier</source>
+          <target state="new">Please provide a Diagnosis Identifier</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
+          <source>Diagnosis Identifier Required</source>
+          <target state="new">Diagnosis Identifier Required</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="new">OK</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
+          <target state="new">Please enable Exposure Notifications before submitting a diagnosis.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notifications Disabled</source>
+          <target state="new">Exposure Notifications Disabled</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+          <source>Submitting Diagnosis...</source>
+          <target state="new">Submitting Diagnosis...</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
+          <source>Verifying Diagnosis...</source>
+          <target state="new">Verifying Diagnosis...</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
+          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
+          <target state="new">Your diagnosis cannot be verified at this time to be submitted.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
+          <source>Verification Failed</source>
+          <target state="new">Verification Failed</target>
+        </trans-unit>
+        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
+          <source>Submit</source>
+          <target state="new">Submit</target>
         </trans-unit>
       </group>
     </body>
