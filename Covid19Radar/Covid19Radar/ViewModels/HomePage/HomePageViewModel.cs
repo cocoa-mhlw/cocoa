@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Input;
+using Acr.UserDialogs;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Prism.Navigation;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -36,6 +38,23 @@ namespace Covid19Radar.ViewModels
                 LocalStateManager.Save();
             }
         }
+
+        public Command OnResetClick => new Command(async () =>
+        {
+            var check = await UserDialogs.Instance.ConfirmAsync("Could you reset all data?", "Reset All Data", "OK","Cancel");
+            if (check)
+            {
+                UserDialogs.Instance.ShowLoading("Deleting data");
+
+                // TODO Exposure notification reset all data
+
+                UserDialogs.Instance.HideLoading();
+
+                await UserDialogs.Instance.ConfirmAsync("The data has been reset.", "Reset", "OK");
+            }
+
+        });
+
 
         /*
         private void SetData()
