@@ -439,90 +439,90 @@ Select 'Always Allow' to set up Bluetooth.</source>
         </trans-unit>
         <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
-          <target state="new">If you received a positive diagnosis</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">긍정적인 진단을 받은 경우</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
           <source>Please enter the Diagnosis Identifier</source>
-          <target state="new">Please enter the Diagnosis Identifier</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">진단 식별자를 입력하십시오.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
         </trans-unit>
         <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
           <source>Share a Positive Diagnosis</source>
-          <target state="new">Share a Positive Diagnosis</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">긍정적인 진단 공유</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
           <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="new">The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">테스트 날짜는 앱이 언제 전염성이 있었는지 파악하고 적절한 사람들에게 잠재적 노출을 알리는 데 도움이 됩니다.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
           <source>Only those who have been exposed will receive a notification.</source>
-          <target state="new">Only those who have been exposed will receive a notification.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">노출된 사람만 알림을 받게 됩니다.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="new">The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 테스트와 함께 사용된 고유 테스트 식별자를 사용하여 양성 검사 결과를 확인해야 합니다.</target>
         </trans-unit>
         <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
           <source>Verify and Share</source>
-          <target state="new">Verify and Share</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">확인 및 공유</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
-          <target state="new">Please try again later.</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">나중에 다시 시도하세요.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
           <source>Failed</source>
-          <target state="new">Failed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">실패</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
-          <target state="new">Diagnosis Submitted</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">제출된 진단</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
           <source>Complete</source>
-          <target state="new">Complete</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">완료</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
           <source>Please provide a Diagnosis Identifier</source>
-          <target state="new">Please provide a Diagnosis Identifier</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">진단 식별자를 제공하십시오.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>
-          <target state="new">Diagnosis Identifier Required</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">진단 식별자 필요</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">확인</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="new">Please enable Exposure Notifications before submitting a diagnosis.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">진단을 제출하기 전에 노출 알림을 활성화하십시오.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
-          <target state="new">Exposure Notifications Disabled</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">노출 알림 사용 안 함</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
-          <target state="new">Submitting Diagnosis...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">진단 제출 중...</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
           <source>Verifying Diagnosis...</source>
-          <target state="new">Verifying Diagnosis...</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">진단 확인 중...</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
           <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="new">Your diagnosis cannot be verified at this time to be submitted.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">현재 제출할 진단은 확인할 수 없습니다.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
           <source>Verification Failed</source>
-          <target state="new">Verification Failed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">인증 실패</target>
         </trans-unit>
         <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
           <source>Submit</source>
-          <target state="new">Submit</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">전송</target>
         </trans-unit>
       </group>
     </body>
