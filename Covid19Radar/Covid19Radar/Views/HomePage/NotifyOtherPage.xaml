@@ -14,50 +14,27 @@
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     Visual="Material">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <c:IntEnumConverter x:Key="IntEnum" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
     <ScrollView Padding="0,20">
-        <StackLayout>
-            <StackLayout Margin="40,0">
-                <Label
+        <StackLayout Margin="40,0">
+            <Label
                     Margin="0,0,0,5"
                     Style="{StaticResource Accent2ColorHeaderLabelStyle}"
-                    Text="{x:Static resources:AppResources.UserStatusPageTextStatusSettingsSubtitle}" />
-                <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
+                    Text="{x:Static resources:AppResources.NotifyOtherPageTextStatusSettingsSubtitle}" />
+            <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
 
-                <Label Text="{x:Static resources:AppResources.NofityPageShareDiag}" FontAttributes="Bold" FontSize="Subtitle" />
-                <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.NofityPageShareYourCase}" />
+            <Label Text="{x:Static resources:AppResources.NofityPageShareDiag}" FontAttributes="Bold" FontSize="Subtitle" />
+            <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.NofityPageShareYourCase}" />
 
-                <Label Text="{x:Static resources:AppResources.NotifyPageLearnMore}" FontAttributes="Bold" TextColor="{DynamicResource PrimaryColor}">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
-                    </Label.GestureRecognizers>
-                </Label>
-
-
-                <Button
-						Margin="0,20,0,0"
-						Command="{Binding SharePositiveDiagnosisCommand}"
-						HorizontalOptions="End"
-						IsEnabled="{Binding IsEnabled}"
-						Style="{DynamicResource ButtonRounded}"
-						Text="{x:Static resources:AppResources.NofityPageButtonSharePositive}" />
-                
-                <Entry Placeholder="{x:Static resources:AppResources.UserStatusPageCodePlaceholder}"
-                       Style="{StaticResource Accent2ColorHeaderLabelStyle}"
-                       TextColor="{StaticResource Accent4Color}" />
-                
-            </StackLayout>
-
-            <BoxView Margin="0,40" Style="{StaticResource DefaultLineStyle}" />
+            <Label Text="{x:Static resources:AppResources.NotifyPageLearnMore}" FontAttributes="Bold" TextColor="{DynamicResource PrimaryColor}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
             <Button
                     Margin="0,40,0,80"
-                    Command="{Binding OnClickSave}"
+                    Command="{Binding SharePositiveDiagnosisCommand}"
                     Style="{StaticResource DefaultButtonStyle}"
-                    Text="{x:Static resources:AppResources.ButtonSave}" />
+                    Text="{x:Static resources:AppResources.NofityPageButtonSharePositive}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
