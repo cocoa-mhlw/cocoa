@@ -25,7 +25,6 @@ using Prism.Logging;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AppCenter.Push;
-using Prism.Plugin.Popups;
 using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
@@ -106,7 +105,6 @@ namespace Covid19Radar
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // logger
-            containerRegistry.RegisterPopupNavigationService();
             var logger = new AppCenterLogger();
             containerRegistry.RegisterInstance<ILogger>(logger);
             containerRegistry.RegisterInstance<ILoggerFacade>(logger);

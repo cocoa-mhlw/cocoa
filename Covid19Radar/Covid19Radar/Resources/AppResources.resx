@@ -292,10 +292,6 @@ Please check your SMS.</value>
     <value>License Agreement</value>
     <comment>License Agreement</comment>
   </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
-  </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
