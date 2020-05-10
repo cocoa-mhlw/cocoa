@@ -211,11 +211,6 @@ Please check your SMS.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">परवाना करार</target>
           <note from="MultilingualBuild" annotates="source" priority="2">License Agreement</note>
         </trans-unit>
-        <trans-unit id="UrlLicense" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/agpl.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/agpl.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">AGPL3.0</note>
-        </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
@@ -316,107 +311,213 @@ Please check your SMS.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">तुम्हाला सकारात्मक निदान झाले तर कृपया आपला मोबाईल नंबर प्रविष्ट करा आणि आपल्या प्रिय जनांच्या संरक्षणासाठी आपली स्थिती अद्ययावत करा.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">जर तुम्हाला सकारात्मक निदान झाले तर</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
-        </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
           <source>Tap to change state</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">स्थिती बदलण्यासाठी टॅप करा</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">कृपया कोड प्रविष्ट करा</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
-        </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
-          <target state="new">Please check your network connection.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">कृपया आपले नेटवर्क कनेक्शन तपासा.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
         </trans-unit>
         <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ठीक</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
         </trans-unit>
         <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
           <source>Enable</source>
-          <target state="new">Enable</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">सक्षम करा</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
-          <target state="new">NotNow</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">आता नाही</target>
           <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="new">This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">हे अॅप एक्स्पोजर नोटिफिकेशन / ब्लूटूथ संकेत ांचा वापर करते की तुम्ही दुस-या संपर्क शोधअॅप वापरकर्त्याजवळ आहात का हे निश्चित करण्यासाठी. 
+ब्लूटूथ सेट अप करण्यासाठी 'नेहमी परवानगी द्या' निवडा.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
           <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="new">Allow Exposure Notification / Bluetooth</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">एक्स्पोजर सूचना / ब्लूटूथ परवानगी द्या</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
           <source>Contributers</source>
-          <target state="new">Contributers</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">योगदान</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributers</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="new">Exposures</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">एक्स्पोजर</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="MainHome" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="new">Home</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">होम</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
         </trans-unit>
         <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="new">License</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">अनुज्ञापत्र</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
         </trans-unit>
         <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
           <source>Notify</source>
-          <target state="new">Notify</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">सूचित करा</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
         </trans-unit>
         <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
           <source>Update</source>
-          <target state="new">Update</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">अपडेट करा</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="new">Exposures</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">एक्स्पोजर</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://microsoft.com/</source>
-          <target state="new">https://microsoft.com/</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://microsoft.com/</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>Manual</source>
-          <target state="new">Manual</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">मॅन्युअल</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
           <source>Update Infomation</source>
-          <target state="new">Update Infomation</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">माहिती अद्ययावत करा</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
         </trans-unit>
         <trans-unit id="HomeEnableNotification" translate="yes" xml:space="preserve">
           <source>Enable Notification</source>
-          <target state="new">Enable Notification</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">सूचना कार्यान्वीत करा</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Setting Enable Notification</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
+          <source>No known exposures</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ज्ञात एक्स्पोजर नाही</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
+          <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">जर तुम्हाला एखाद्या सकारात्मक सीओव्हीआयडी-19 परिणामाची माहिती दिली असेल तर तुम्हाला सूचित केले जाईल.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
+        </trans-unit>
+        <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
+          <source>Share A Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">सकारात्मक निदान सामायिक करा</target>
+        </trans-unit>
+        <trans-unit id="NofityPageShareDiag" translate="yes" xml:space="preserve">
+          <source>Share A Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">सकारात्मक निदान सामायिक करा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Share Diag</note>
+        </trans-unit>
+        <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
+          <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">जर आपण सीओव्हीआयडी-19 मुळे निर्माण होणाऱ्या व्हायरसची चाचणी पॉझिटिव्ह घेतली तर आपण आपले निदान सामायिक करू शकता.  यामुळे तुमच्या समाजातील इतरांना विषाणूचा प्रसार आटोक्यात आणण्यासाठी मदत होईल.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
+        </trans-unit>
+        <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
+          <source>Learn more</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">अधिक जाणून घ्या</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">जर तुम्हाला सकारात्मक निदान झाले तर</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
+          <source>Please enter the Diagnosis Identifier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">कृपया निदान ओळखकर्ता प्रविष्ट करा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
+        </trans-unit>
+        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
+          <source>Share a Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">सकारात्मक निदान शेअर करा</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
+          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">चाचणी दिनांक तुम्ही संसर्गजन्य केव्हा झाला असाल आणि संभाव्य संपर्कासंदर्भात योग्य लोकांना सूचित करण्यास मदत करतो.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
+          <source>Only those who have been exposed will receive a notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ज्यांना उघडकीस आले आहे, त्यांनाच सूचना मिळेल.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
+          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">तुमच्या सीओव्हीआयडी-१९ चाचणीसह आलेल्या युनिक टेस्ट आयडेंटिफायरचा उपयोग आपल्या सकारात्मक चाचणीचा निकाल तपासण्यासाठी केला पाहिजे.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
+          <source>Verify and Share</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">सत्यापित करा आणि सामायिक करा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+          <source>Please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">कृपया नंतर पुन्हा प्रयत्न करा.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+          <source>Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">अयशस्वी</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+          <source>Diagnosis Submitted</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">सादर केलेले निदान</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+          <source>Complete</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">पूर्ण</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
+          <source>Please provide a Diagnosis Identifier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">कृपया निदान ओळखकर्ता प्रदान करा</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
+          <source>Diagnosis Identifier Required</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">निदान ओळखकर्ता आवश्यक</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ठीक</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">कृपया निदान सादर करण्यापूर्वी एक्स्पोजर सूचना कार्यान्वीत करा.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notifications Disabled</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">एक्सपोजर सूचना अकार्यान्वीत</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+          <source>Submitting Diagnosis...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">निदान सबमिट करत आहे...</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
+          <source>Verifying Diagnosis...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">निदान तपासणे...</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
+          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">आपले निदान या वेळी सादर करण्यासाठी प्रमाणित करता येत नाही.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
+          <source>Verification Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">पुष्टीकरण अयशस्वी</target>
+        </trans-unit>
+        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
+          <source>Submit</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">सबमिट करा</target>
         </trans-unit>
       </group>
     </body>

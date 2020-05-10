@@ -211,11 +211,6 @@ Please check your SMS.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Ліцензійна угода</target>
           <note from="MultilingualBuild" annotates="source" priority="2">License Agreement</note>
         </trans-unit>
-        <trans-unit id="UrlLicense" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/agpl.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/agpl.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">AGPL3.0</note>
-        </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
@@ -316,107 +311,213 @@ Please check your SMS.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Якщо ви отримали позитивний діагноз, введіть свій номер мобільного телефону та оновіть свій статус, щоб захистити своїх близьких.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Якщо ви отримали позитивний діагноз</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
-        </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
           <source>Tap to change state</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Торкніться, щоб змінити стан</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Будь ласка, введіть код</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
-        </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
-          <target state="new">Please check your network connection.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Перевірте мережне підключення.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
         </trans-unit>
         <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ОК</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
         </trans-unit>
         <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
           <source>Enable</source>
-          <target state="new">Enable</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Увімкнути</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
-          <target state="new">NotNow</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">NotNow</target>
           <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="new">This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ця програма використовує експозиції оповіщення/Bluetooth сигнали, щоб визначити, якщо ви перебуваєте поруч з іншим користувачем програми відстеження контактів. 
+Виберіть "завжди дозволяти", щоб настроїти Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
           <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="new">Allow Exposure Notification / Bluetooth</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Дозволити сповіщення про експозицію/Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
           <source>Contributers</source>
-          <target state="new">Contributers</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Війська</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributers</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="new">Exposures</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Впливів</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="MainHome" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="new">Home</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Основне</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
         </trans-unit>
         <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="new">License</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ліцензія</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
         </trans-unit>
         <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
           <source>Notify</source>
-          <target state="new">Notify</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Запитувати</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
         </trans-unit>
         <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
           <source>Update</source>
-          <target state="new">Update</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Оновити</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="new">Exposures</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Впливів</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://microsoft.com/</source>
-          <target state="new">https://microsoft.com/</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://microsoft.com/</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>Manual</source>
-          <target state="new">Manual</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Вручну</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
           <source>Update Infomation</source>
-          <target state="new">Update Infomation</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Оновлення інформація</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
         </trans-unit>
         <trans-unit id="HomeEnableNotification" translate="yes" xml:space="preserve">
           <source>Enable Notification</source>
-          <target state="new">Enable Notification</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Увімкнути сповіщення</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Setting Enable Notification</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
+          <source>No known exposures</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Жодних відомих експозицій</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
+          <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ви будете повідомлені, якщо ви були схильні до тих, хто повідомив позитивний COVID-19 результат.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
+        </trans-unit>
+        <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
+          <source>Share A Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Поділіться позитивним діагнозом</target>
+        </trans-unit>
+        <trans-unit id="NofityPageShareDiag" translate="yes" xml:space="preserve">
+          <source>Share A Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Поділіться позитивним діагнозом</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Share Diag</note>
+        </trans-unit>
+        <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
+          <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Якщо ви тестували позитивні для вірусу, який викликає COVID-19, ви можете вибрати, щоб поділитися своїм діагнозом.  Це допоможе іншим у вашій громаді утримувати поширення вірусу.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
+        </trans-unit>
+        <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
+          <source>Learn more</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Додаткові відомості</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Якщо ви отримали позитивний діагноз</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
+          <source>Please enter the Diagnosis Identifier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Будь ласка, введіть ідентифікатор діагностики</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
+        </trans-unit>
+        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
+          <source>Share a Positive Diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Поділіться позитивним діагнозом</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
+          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Дата тесту допомагає програмі знати, коли ви, можливо, були заразні і повідомляти права людей потенційного впливу.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
+          <source>Only those who have been exposed will receive a notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Тільки ті, хто був виставлений, отримають повідомлення.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
+          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Унікальний тестовий ідентифікатор, який постачався з вашим тестом COVID-19, повинен використовуватися для підтвердження позитивного результату тесту.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
+          <source>Verify and Share</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Перевіряти та ділитися</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+          <source>Please try again later.</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Спробуйте ще раз пізніше.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+          <source>Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Помилка</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+          <source>Diagnosis Submitted</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Діагноз подано</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+          <source>Complete</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Завершено</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
+          <source>Please provide a Diagnosis Identifier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Будь ласка, надайте ідентифікатор діагностики</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
+          <source>Diagnosis Identifier Required</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Потрібний ідентифікатор діагностики</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ОК</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Перш ніж надсилати діагноз, увімкніть сповіщення про експозицію.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notifications Disabled</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Сповіщення про експозицію вимкнено</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+          <source>Submitting Diagnosis...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Подача діагнозу...</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
+          <source>Verifying Diagnosis...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Перевірка діагнозу...</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
+          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ваш діагноз не можна перевірити в цей час, щоб його було надіслано.</target>
+        </trans-unit>
+        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
+          <source>Verification Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Не вдалося виконати перевірку</target>
+        </trans-unit>
+        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
+          <source>Submit</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Надіслати</target>
         </trans-unit>
       </group>
     </body>
