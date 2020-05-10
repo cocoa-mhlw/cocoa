@@ -918,7 +918,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/agpl.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radar.z11.web.core.windows.net/license.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlLicense {
             get {
