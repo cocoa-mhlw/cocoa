@@ -24,7 +24,7 @@ namespace Covid19Radar.ViewModels
         public LicenseAgreementPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleLicenseAgreement;
-            Url = Resources.AppResources.UrlLicense;
+            Url = "https://covid19radar.z11.web.core.windows.net/license.html";
         }
     }
 }

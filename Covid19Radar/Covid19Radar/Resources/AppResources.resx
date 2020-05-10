@@ -293,8 +293,8 @@ Please check your SMS.</value>
     <comment>License Agreement</comment>
   </data>
   <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
+    <value>https://covid19radar.z11.web.core.windows.net/license.html</value>
+    <comment>license.html</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
