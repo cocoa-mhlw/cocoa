@@ -17,14 +17,16 @@
              <Button
                 AutomationId="NextButton"
                 Margin="0,20"
-                Command="{Binding OnClickNext}"
+                Command="{Binding Path=OnClickNext}"
                 Style="{StaticResource DefaultButtonStyle}"
                 Text="{x:Static resources:AppResources.ButtonAgree}" />
         </StackLayout>
+        <!--
         <Frame
             IsVisible="{Binding IsBusy}"
             Style="{StaticResource ActivityIndicatorFrame}">
             <ActivityIndicator IsRunning="{Binding IsBusy}" />
         </Frame>
+        -->
     </Grid>
 </ContentPage>
