@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Covid19Radar.Common;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -24,7 +25,7 @@ namespace Covid19Radar.ViewModels
         public LicenseAgreementPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleLicenseAgreement;
-            Url = "https://covid19radar.z11.web.core.windows.net/license.html";
+            Url = AppConstants.LicenseUrl;
         }
     }
 }
