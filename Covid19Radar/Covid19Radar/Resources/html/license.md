@@ -1,24 +1,8 @@
 # LICENSE Copyright / THIRD PARTY SOFTWARE NOTICES
 Do not translate or Localize
-
-- [LICENSE Copyright / THIRD PARTY SOFTWARE NOTICES](#license-copyright--third-party-software-notices)
-  - [## Covid19Radar](#h2-id%22covid19radar-48%22covid19radarh2)
-- [THIRD PARTY SOFTWARE NOTICES](#third-party-software-notices)
-  - [## Visual Studio App Center SDK for .NET](#h2-id%22visual-studio-app-center-sdk-for-net-50%22visual-studio-app-center-sdk-for-neth2)
-  - [## Acr.UserDialogs](#h2-id%22acruserdialogs-50%22acruserdialogsh2)
-  - [## .NET Standard](#h2-id%22net-standard-50%22net-standardh2)
-  - [## Json.NET](#h2-id%22jsonnet-50%22jsonneth2)
-  - [## Prism](#h2-id%22prism-50%22prismh2)
-  - [## SQLite-net](#h2-id%22sqlite-net-50%22sqlite-neth2)
-  - [## Xamarin SDK](#h2-id%22xamarin-sdk-50%22xamarin-sdkh2)
-  - [## Xamarin.Essentials](#h2-id%22xamarinessentials-50%22xamarinessentialsh2)
-  - [## Xamarin Exposure Notification](#h2-id%22xamarin-exposure-notification-50%22xamarin-exposure-notificationh2)
-  - [## FFImageLoading](#h2-id%22ffimageloading-50%22ffimageloadingh2)
-  - [## Current Activity Plugin for Xamarin.Android](#h2-id%22current-activity-plugin-for-xamarinandroid-50%22current-activity-plugin-for-xamarinandroidh2)
-  - [## AndroidX for Xamarin.Android](#h2-id%22androidx-for-xamarinandroid-50%22androidx-for-xamarinandroidh2)
-  - [## AndroidAltBeaconLibrary](#h2-id%22androidaltbeaconlibrary-50%22androidaltbeaconlibraryh2)
-  - [## (Sample Code) Exposure Notifications API: Android Reference Design](#h2-id%22sample-code-exposure-notifications-api-android-reference-design-50%22sample-code-exposure-notifications-api-android-reference-designh2)
-  - [## (Sample Code) Building an App to Notify Users of COVID-19 Exposure](#h2-id%22sample-code-building-an-app-to-notify-users-of-covid-19-exposure-50%22sample-code-building-an-app-to-notify-users-of-covid-19-exposureh2)
+This file incorporates components from the projects listed below.
+Covid19radar community licenses these components to you under Covid19radar community's software licensing terms, except that components licensed under open source licenses requiring that such components remain under their original license are being made available to you by Covid19radar community under their original licensing terms.
+The original copyright notices and the licenses under which Covid19radar community received such components are set forth below for informational purposes. 
 
 ---
 ## Covid19Radar
@@ -37,13 +21,6 @@ GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-# THIRD PARTY SOFTWARE NOTICES
-
-Do not translate or Localize
-This file incorporates components from the projects listed below.
-Covid19radar community licenses these components to you under Covid19radar community's software licensing terms, except that components licensed under open source licenses requiring that such components remain under their original license are being made available to you by Covid19radar community under their original licensing terms.
-The original copyright notices and the licenses under which Covid19radar community received such components are set forth below for informational purposes. 
 
 ---
 ## Visual Studio App Center SDK for .NET
