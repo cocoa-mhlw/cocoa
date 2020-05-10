@@ -25,7 +25,6 @@ using Prism.Logging;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AppCenter.Push;
-using Prism.Plugin.Popups;
 using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
@@ -67,13 +66,14 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 // TODO Wire Start Exposure Notification
-/*
+                /*
                 var isStart = await ExposureNotification.IsEnabledAsync();
                 if (!isStart)
                 {
                     await ExposureNotification.StartAsync();
                 }
-*/
+                */
+
                 UserDataModel _userData = userDataService.Get();
                 result = await NavigationService.NavigateAsync("/MainPage");
             }
@@ -105,7 +105,6 @@ namespace Covid19Radar
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // logger
-            containerRegistry.RegisterPopupNavigationService();
             var logger = new AppCenterLogger();
             containerRegistry.RegisterInstance<ILogger>(logger);
             containerRegistry.RegisterInstance<ILoggerFacade>(logger);
@@ -130,6 +129,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<HeadsupPage, HeadsupPageViewModel>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage, NotifyOtherPageViewModel>();
             containerRegistry.RegisterForNavigation<ExposuresPage, ExposuresPageViewModel>();
+            containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
