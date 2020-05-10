@@ -918,15 +918,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/license.html に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string UrlLicense {
-            get {
-                return ResourceManager.GetString("UrlLicense", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
