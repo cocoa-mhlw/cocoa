@@ -47,7 +47,7 @@ namespace Covid19Radar.Droid
             //Instance = this;
 
             Xamarin.Essentials.Platform.Init(this, bundle);
-            global::Rg.Plugins.Popup.Popup.Init(this, bundle);
+//            global::Rg.Plugins.Popup.Popup.Init(this, bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.Forms.FormsMaterial.Init(this, bundle);
