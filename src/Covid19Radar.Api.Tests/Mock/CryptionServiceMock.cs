@@ -7,7 +7,7 @@ namespace Covid19Radar.Tests.Mock
 {
     public class CryptionServiceMock : ICryptionService
     {
-        public string CreateSecret()
+        public string CreateSecret(string userUuid)
         {
             return "SECRET";
         }
