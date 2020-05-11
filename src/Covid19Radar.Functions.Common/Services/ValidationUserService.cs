@@ -32,9 +32,7 @@ namespace Covid19Radar.Services
 
         public async Task<IValidationUserService.ValidateResult> ValidateAsync(HttpRequest req, IUser user)
         {
-            if (string.IsNullOrWhiteSpace(user.UserUuid)
-             || string.IsNullOrWhiteSpace(user.Major)
-             || string.IsNullOrWhiteSpace(user.Minor))
+            if (string.IsNullOrWhiteSpace(user.UserUuid))
             {
                 return IValidationUserService.ValidateResult.Error;
             }
