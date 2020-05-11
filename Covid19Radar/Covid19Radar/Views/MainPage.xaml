@@ -42,18 +42,23 @@
             <ShellContent ContentTemplate="{DataTemplate view:NotifyOtherPage}"/>
         </Tab>
         
-        <Tab Title="{x:Static resources:AppResources.MainLicense}" Route="license">
+        <Tab Title="{x:Static resources:AppResources.MainUpdateInfo}" Route="update">
             <Tab.Icon>
-                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconContract}"/>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconAbout}"/>
             </Tab.Icon>
-            <ShellContent ContentTemplate="{DataTemplate view:LicenseAgreementPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate view:UpdateInfomationPage}"/>
         </Tab>
-
         <Tab Title="{x:Static resources:AppResources.MainContributers}" Route="contributers">
             <Tab.Icon>
                 <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconFriends}"/>
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate view:ContributorsPage}"/>
+        </Tab>
+        <Tab Title="{x:Static resources:AppResources.MainLicense}" Route="license">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconContract}"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:LicenseAgreementPage}"/>
         </Tab>
 
     </TabBar>

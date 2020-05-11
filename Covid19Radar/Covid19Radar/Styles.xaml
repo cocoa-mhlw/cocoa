@@ -10,7 +10,6 @@
             <local:Fonts />
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
-
     <Style TargetType="StackLayout">
         <Setter Property="Spacing" Value="0" />
     </Style>
