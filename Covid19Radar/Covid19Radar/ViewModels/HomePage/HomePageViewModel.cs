@@ -13,20 +13,9 @@ namespace Covid19Radar.ViewModels
 {
     public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
     {
-//        public List<HomeMenuModel> HomeMenus { get; private set; }
-        private string _url;
-
-        public string Url
-        {
-            get { return _url; }
-            set { SetProperty(ref _url, value); }
-        }
-
         public HomePageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
-            Url = Resources.AppResources.UrlUpdate;
-            //SetData();
         }
 
         public bool EnableNotifications
@@ -41,7 +30,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnResetClick => new Command(async () =>
         {
-            var check = await UserDialogs.Instance.ConfirmAsync("Could you reset all data?", "Reset All Data", "OK","Cancel");
+            var check = await UserDialogs.Instance.ConfirmAsync("Could you reset all data?", "Reset All Data", "OK", "Cancel");
             if (check)
             {
                 UserDialogs.Instance.ShowLoading("Deleting data");
@@ -54,62 +43,5 @@ namespace Covid19Radar.ViewModels
             }
 
         });
-
-
-        /*
-        private void SetData()
-        {
-            HomeMenus = new List<HomeMenuModel>
-            {
-                new HomeMenuModel
-                {
-                    Title=AppResources.HomePageViewStatusSettingsMenu,
-                    Command=OnClickUserSetting
-                },
-                new HomeMenuModel
-                {
-                    Title=AppResources.HomePageViewListOfContributorsMenu,
-                    Command=OnClickAcknowledgments
-                },
-                new HomeMenuModel
-                {
-                    Title=AppResources.TitleUpdateInformation,
-                    Command=OnClickUpateInfo
-                },
-                new HomeMenuModel
-                {
-                    Title=AppResources.DetectedBeaconListMenu,
-                    Command=OnClickDetectedBeacon
-                },
-                new HomeMenuModel
-                {
-                    Title=AppResources.TitleLicenseAgreement,
-                    Command=OnClickLicenseAgreement
-                }
-            };
-        }
-
-        public Command OnClickUserSetting => new Command(() =>
-        {
-            NavigationService.NavigateAsync("NotifyOthersPage");
-        });
-        public Command OnClickAcknowledgments => new Command(() =>
-        {
-            NavigationService.NavigateAsync("ContributorsPage");
-        });
-
-        public Command OnClickUpateInfo => new Command(() =>
-        {
-            NavigationService.NavigateAsync("UpdateInfoPage");
-        });
-        public Command OnClickDetectedBeacon => new Command(() =>
-        {
-            NavigationService.NavigateAsync("DetectedBeaconPage");
-        });
-        public Command OnClickLicenseAgreement => new Command(() =>
-        {
-            NavigationService.NavigateAsync("LicenseAgreementPage");
-        });
-        */
     }
 }
