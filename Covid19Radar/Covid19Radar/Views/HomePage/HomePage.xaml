@@ -43,15 +43,5 @@
                     Style="{StaticResource DefaultButtonStyle}"
                     Text="Reset" />
         </Grid>
-        <Label
-            Margin="0,29,0,0"
-            FontFamily="NotoSansMediumFontFamily"
-            FontSize="22"
-            HorizontalOptions="Center"
-            Text="{x:Static resources:AppResources.HomePageUpdateInfomation}"
-            TextColor="{StaticResource Accent4Color}" />
-        <StackLayout>
-        <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
-        </StackLayout>
     </StackLayout>
 </ContentPage>
