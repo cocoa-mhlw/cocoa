@@ -51,7 +51,7 @@ namespace Covid19Radar.Api
         private async Task<IActionResult> Register(string userUuid)
         {
             var newItem = new UserModel();
-            var secret = Cryption.CreateSecret();
+            var secret = Cryption.CreateSecret(userUuid);
             newItem.UserUuid = userUuid;
             newItem.SetStatus(Common.UserStatus.None);
             newItem.ProtectSecret = Cryption.Protect(secret);
