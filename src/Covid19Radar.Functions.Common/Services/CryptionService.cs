@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using System.Linq;
 
 namespace Covid19Radar.Services
 {
@@ -10,6 +11,8 @@ namespace Covid19Radar.Services
     {
         private readonly ILogger<CryptionService> Logger;
         private readonly SymmetricAlgorithm symmetric;
+        private readonly SymmetricAlgorithm symmetric2;
+        private readonly HashAlgorithm hash;
         private const int Length = 256;
 
         public CryptionService(
@@ -23,19 +26,32 @@ namespace Covid19Radar.Services
             symmetric.KeySize = 256;
             symmetric.Key = Convert.FromBase64String(config.GetSection("CRYPTION_KEY").Value);
             symmetric.IV = Convert.FromBase64String(config.GetSection("CRYPTION_IV").Value);
+            hash = new HMACSHA512(Convert.FromBase64String(config.GetSection("CRYPTION_HASH").Value));
+            symmetric2 = Aes.Create();
+            symmetric2.Mode = CipherMode.CBC;
+            symmetric2.Padding = PaddingMode.ISO10126;
+            symmetric2.KeySize = 256;
+            symmetric2.Key = Convert.FromBase64String(config.GetSection("CRYPTION_KEY2").Value);
+            symmetric2.IV = Convert.FromBase64String(config.GetSection("CRYPTION_IV2").Value);
         }
 
 
         private byte[] Random()
         {
             byte[] r = new byte[Length];
-            RNGCryptoServiceProvider.Create().GetBytes(r);
+            RNGCryptoServiceProvider.Fill(r);
             return r;
         }
 
-        public string CreateSecret()
+        public string CreateSecret(string userUuid)
         {
-            return Convert.ToBase64String(Random());
+            var val = Random().Concat(Encoding.ASCII.GetBytes(userUuid));
+            byte[] hashValue = hash.ComputeHash(val.ToArray());
+            var secret = val.Concat(hashValue).ToArray();
+            using (var c = symmetric2.CreateEncryptor())
+            {
+                return Convert.ToBase64String(c.TransformFinalBlock(secret, 0, secret.Length));
+            }
         }
 
         public string Protect(string secret)
