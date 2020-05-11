@@ -62,6 +62,9 @@
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
       <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\HomePage\UpdateInfomationPage.xaml.cs">
+      <DependentUpon>UpdateInfomationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\HomePage\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
