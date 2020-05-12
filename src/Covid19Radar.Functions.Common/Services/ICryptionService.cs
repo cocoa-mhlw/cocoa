@@ -6,7 +6,7 @@ namespace Covid19Radar.Services
 {
     public interface ICryptionService
     {
-        string CreateSecret();
+        string CreateSecret(string userUuid);
         string Protect(string secret);
         string Unprotect(string protectSecret);
     }

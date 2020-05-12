@@ -50,25 +50,14 @@ namespace Covid19Radar.Api
 
         private async Task<IActionResult> Register(string userUuid)
         {
-            var number = await UserRepository.NextSequenceNumber();
-            // 503 Error, Fail get number
-            if (number == null)
-            {
-                return new StatusCodeResult(503);
-            }
-
             var newItem = new UserModel();
-            var secret = Cryption.CreateSecret();
+            var secret = Cryption.CreateSecret(userUuid);
             newItem.UserUuid = userUuid;
-            newItem.Major = number.Major.ToString();
-            newItem.Minor = number.Minor.ToString();
             newItem.SetStatus(Common.UserStatus.None);
             newItem.ProtectSecret = Cryption.Protect(secret);
             await UserRepository.Create(newItem);
             var result = new RegisterResultModel();
             result.UserUuid = userUuid;
-            result.Major = newItem.Major;
-            result.Minor = newItem.Minor;
             result.Secret = secret;
             return new OkObjectResult(result);
         }
