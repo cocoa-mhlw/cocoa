@@ -33,7 +33,7 @@
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="translated">您无需输入个人信息。在安装应用时, 我们将会为您分配唯一ID.</target>
+          <target state="translated">您无需输入个人信息。在安装应用时，我们将会为您分配唯一ID.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
@@ -59,7 +59,7 @@
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
           <source>Protecting our loved ones from COVID19</source>
-          <target state="translated">从COVID19手中保护我们的至爱</target>
+          <target state="translated">从 COVID19 手中保护我们的至爱</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
@@ -89,7 +89,7 @@
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
           <source>COVID19Radar</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID19雷达</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID19 雷达</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
         <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
