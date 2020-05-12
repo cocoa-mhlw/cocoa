@@ -54,6 +54,22 @@ namespace Covid19Radar.Services
             }
         }
 
+        public bool ValidateSecret(string userUuid, string secret)
+        {
+            var buf = Convert.FromBase64String(secret);
+            using (var c = symmetric2.CreateDecryptor())
+            {
+                var result = c.TransformFinalBlock(buf, 0, buf.Length);
+                if (userUuid != Encoding.ASCII.GetString(result, 256, result.Length - 256 - 64))
+                {
+                    return false;
+                }
+                byte[] hashValue = hash.ComputeHash(result, 0, result.Length - 64);
+                return hashValue.SequenceEqual(result.TakeLast(64));
+            }
+
+        }
+
         public string Protect(string secret)
         {
             var buf = Convert.FromBase64String(secret);
