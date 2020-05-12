@@ -41,6 +41,28 @@ namespace Covid19Radar.Api
 
         [FunctionName(nameof(UserApi))]
         public async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "user/{userUuid}")] HttpRequest req,
+            string userUuid)
+        {
+            Logger.LogInformation("C# HTTP trigger function processed a request.");
+
+            var user = new UserParameter() { UserUuid = userUuid };
+
+            // validation
+            var validationResult = await Validation.ValidateAsync(req, user);
+            if (!validationResult.IsValid)
+            {
+                AddBadRequest(req);
+                return validationResult.ErrorActionResult;
+            }
+
+            // query
+            return await Query(req, user);
+        }
+
+        [Obsolete]
+        [FunctionName(nameof(UserApi) + "_Obsolete")]
+        public async Task<IActionResult> RunObsolete(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "user/{userUuid}/{major}/{minor}")] HttpRequest req,
             string userUuid,
             string major,
