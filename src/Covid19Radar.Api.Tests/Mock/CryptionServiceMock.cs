@@ -12,6 +12,11 @@ namespace Covid19Radar.Tests.Mock
             return "SECRET";
         }
 
+        public bool ValidateSecret(string userUuid, string secret)
+        {
+            return true;
+        }
+
         public string Protect(string secret)
         {
             return "PROTECT_SECRET";
@@ -21,5 +26,6 @@ namespace Covid19Radar.Tests.Mock
         {
             return "SECRET";
         }
+
     }
 }
