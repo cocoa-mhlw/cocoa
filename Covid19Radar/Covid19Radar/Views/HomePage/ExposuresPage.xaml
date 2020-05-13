@@ -6,24 +6,31 @@
     xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
-    xmlns:prism="http://prismlibrary.com"
     xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
-    prism:ViewModelLocator.AutowireViewModel="True"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ContentPage.Content ItemsSource="{Binding ExposureInformation}">
         <StackLayout Style="{DynamicResource Container}">
             <Frame Style="{DynamicResource CardFrame}">
                 <StackLayout>
-                    <Label Text="Exposures in Past 14 Days" FontAttributes="Bold" FontSize="Subtitle" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Subtitle"
+                        Text="Exposures in Past 14 Days" />
                     <CollectionView ItemsSource="{Binding ExposureInformation}" SelectionMode="Single">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <StackLayout Padding="0,5,0,5">
-                                    <Frame Padding="10" BorderColor="#EAEAEA" CornerRadius="10">
+                                    <Frame
+                                        Padding="10"
+                                        BorderColor="#EAEAEA"
+                                        CornerRadius="10">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*" />
@@ -34,12 +41,26 @@
                                                 <RowDefinition Height="*" />
                                             </Grid.RowDefinitions>
 
-                                            <Label Text="Possible exposure" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" />
-                                            <Label Text="{Binding Timestamp}" Grid.Column="0" Grid.Row="1" />
+                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                FontAttributes="Bold"
+                                                Text="Possible exposure" />
+                                            <Label
+                                                Grid.Row="1"
+                                                Grid.Column="0"
+                                                Text="{Binding Timestamp}" />
 
-                                            <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+                                            <Image
+                                                Grid.Row="0"
+                                                Grid.RowSpan="2"
+                                                Grid.Column="1">
                                                 <Image.Source>
-                                                    <FontImageSource FontFamily="FA-R" Glyph="{StaticResource IconRightArrow}" Color="{DynamicResource TextPrimaryColor}" Size="18" />
+                                                    <FontImageSource
+                                                        FontFamily="FA-R"
+                                                        Glyph="{StaticResource IconRightArrow}"
+                                                        Size="18"
+                                                        Color="{DynamicResource TextPrimaryColor}" />
                                                 </Image.Source>
                                             </Image>
                                         </Grid>

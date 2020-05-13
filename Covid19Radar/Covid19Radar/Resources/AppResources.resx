@@ -521,4 +521,10 @@ Please check your SMS.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Submit</value>
   </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>SampleText</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>SampleText</value>
+  </data>
 </root>
