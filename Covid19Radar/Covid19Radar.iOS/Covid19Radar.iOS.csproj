@@ -196,6 +196,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.1.0.442</Version>
+    </PackageReference>
     <PackageReference Include="Google.Protobuf">
       <Version>3.11.4</Version>
     </PackageReference>
