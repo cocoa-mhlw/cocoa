@@ -348,7 +348,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிக்கை/புளூடூத் அனுமதி</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
+        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
           <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">பங்களிப்பாளர்கள்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
