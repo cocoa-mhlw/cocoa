@@ -349,7 +349,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
-          <source>Contributers</source>
+          <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Contribuitorii</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
         </trans-unit>
