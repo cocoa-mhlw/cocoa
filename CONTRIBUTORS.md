@@ -32,6 +32,7 @@
 - Hisashi SOGA (Documentation)
 - Takuya Fujiwara (Xamarin)
 - Daryal Murat Akay (Turkish Translation)
+- Su Wei (Simplified Chinese Translation)
 
 # Beta Testers
 - Nagahata Kenji
