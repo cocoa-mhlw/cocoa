@@ -5,64 +5,29 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns:prism="http://prismlibrary.com"
-    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
-    Style="{StaticResource PageStyle}"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
 
-    <Grid>
-        <Grid.Margin>
-            <Thickness
-                Bottom="{OnPlatform Android=48,
-                                    iOS=64}"
-                Left="32"
-                Right="32"
-                Top="{OnPlatform Android=48,
-                                 iOS=64}" />
-        </Grid.Margin>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="{OnPlatform Android=96, iOS=120}" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
+    <StackLayout Style="{StaticResource DefaultStackLayout}">
         <ffimageloading:CachedImage
-            Grid.Row="0"
             HorizontalOptions="Center"
             Source="Logo.png"
             VerticalOptions="Center" />
 
-        <Label
-            Grid.Row="1"
-            HorizontalOptions="Center"
-            Style="{StaticResource SubtitleLabelStyle}"
-            Text="{x:Static resources:AppResources.AppName}">
-            <Label.Margin>
-                <Thickness Top="{OnPlatform Android=0, iOS=32}" />
-            </Label.Margin>
-        </Label>
+        <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
 
-        <Label
-            Grid.Row="2"
-            HorizontalOptions="Center"
-            Text="{x:Static resources:AppResources.SetupCompletedPageTextYoureReadyToGo}">
-            <Label.Margin>
-                <Thickness Top="{OnPlatform Android=0, iOS=16}" />
-            </Label.Margin>
-        </Label>
+        <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.SetupCompletedPageTextYoureReadyToGo}" />
 
         <Button
             AutomationId="ToMainButton"
-            Grid.Row="3"
-            Margin="57,0"
             Command="{Binding Path=OnClickToMain}"
-            Style="{StaticResource DefaultButtonStyle}"
-            Text="{x:Static resources:AppResources.ButtonHome}"
-            VerticalOptions="End" />
-    </Grid>
+            Style="{StaticResource DefaultButton}"
+            Text="{x:Static resources:AppResources.ButtonHome}" />
+    </StackLayout>
 
 </ContentPage>
