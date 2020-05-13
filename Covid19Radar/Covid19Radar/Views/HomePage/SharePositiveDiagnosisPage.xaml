@@ -3,27 +3,30 @@
     x:Class="Covid19Radar.Views.SharePositiveDiagnosisPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    xmlns:templates="clr-namespace:Covid19Radar.Templates;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
-    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ScrollView Padding="0,20">
-        <StackLayout Margin="40,0">
-            <Label Text="[Insert text from local Health authority]" />
-            <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText}" />
+    <ScrollView>
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <ffimageloading:CachedImage Source="Notify01.png" />
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="[Insert text from local Health authority]" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText}" />
             <Entry
                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageCodePlaceholder}"
+                Style="{StaticResource DefaultEntry}"
                 Text="{Binding DiagnosisUid, Mode=TwoWay}"
                 TextColor="{StaticResource Accent4Color}" />
-            <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText2}" />
-            <DatePicker Margin="0,30,0,0" Date="{Binding DiagnosisDate}" />
-            <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.SharePositiveDiagDateText}" />
-            <Grid Margin="20,40,20,20" HorizontalOptions="Center">
+
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText2}" />
+            <DatePicker Date="{Binding DiagnosisDate}" Style="{StaticResource DefaultDatePicker}" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SharePositiveDiagDateText}" />
+
+            <Grid HorizontalOptions="Center" Style="{StaticResource DefaultGridLayout}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="0.5*" />
@@ -35,13 +38,13 @@
                 <Button
                     Grid.Column="0"
                     Command="{Binding CancelCommand}"
-                    Style="{StaticResource DefaultButtonStyle}"
+                    Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ButtonNotNow}" />
 
                 <Button
                     Grid.Column="1"
                     Command="{Binding SubmitAndVerifyCommand}"
-                    Style="{StaticResource DefaultButtonStyle}"
+                    Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ButtonPositiveSubmit}" />
             </Grid>
         </StackLayout>

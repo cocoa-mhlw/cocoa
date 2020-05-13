@@ -16,13 +16,9 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Padding="30,0,30,0">
+        <Grid Grid.Row="0">
             <StackLayout>
-                <Label
-                    Padding="0,30,0,10"
-                    FontSize="28"
-                    Text="Please enter a phone number."
-                    TextColor="#333333" />
+                <Label Style="{StaticResource DefaultLabel}" Text="Please enter a phone number." />
                 <Entry
                     ClearButtonVisibility="WhileEditing"
                     FontSize="35"
@@ -30,33 +26,25 @@
                     MaxLength="11"
                     Placeholder="09012341234"
                     PlaceholderColor="#D1D1D1"
-                    Text="{Binding PhoneNumber}"
-                    TextColor="#333333" />
+                    Style="{StaticResource DefaultEntry}"
+                    Text="{Binding PhoneNumber}" />
                 <Label
-                    Padding="0,30,0,0"
-                    FontSize="16"
                     LineBreakMode="WordWrap"
                     LineHeight="1.2"
-                    Text="You will receive an SMS email after entering your phone number."
-                    TextColor="#333333" />
+                    Style="{StaticResource DefaultLabel}"
+                    Text="You will receive an SMS email after entering your phone number." />
                 <Label
-                    Padding="0,0,0,0"
-                    FontSize="16"
                     LineBreakMode="WordWrap"
                     LineHeight="1.2"
-                    Text="Check your SMS mail."
-                    TextColor="#333333" />
+                    Style="{StaticResource DefaultLabel}"
+                    Text="Check your SMS mail." />
             </StackLayout>
         </Grid>
         <Grid Grid.Row="1" Padding="120,0,120,60">
             <Button
-                BackgroundColor="#019ae8"
                 Command="{Binding Path=OnClickNext}"
-                FontSize="25"
-                MinimumHeightRequest="60"
-                MinimumWidthRequest="170"
-                Text="Register"
-                TextColor="#FFFFFF" />
+                Style="{StaticResource DefaultButton}"
+                Text="Register" />
         </Grid>
     </Grid>
 </ContentPage>
