@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="tr" original="COVID19RADAR/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
@@ -133,9 +133,11 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page enter number text</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsSMSDescription" translate="yes" xml:space="preserve">
-          <source>We'll send you a verification code.Please check your SMS.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Size bir doğrulama kodu göndereceğiz.Lütfen cep telefonu mesajlarınızı(SMS) kontrol edin.</target>
+          <source>We'll send you a verification code.
+Please check your SMS.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Size bir doğrulama kodu göndereceğiz.Lütfen cep telefonu mesajlarınızı(SMS) kontrol edin.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsSMSInfo" translate="yes" xml:space="preserve">
           <source>We will not store your phone number. It will be sent directly to the database of the government.</source>
@@ -158,9 +160,11 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacon List Menu</note>
         </trans-unit>
         <trans-unit id="InputSmsOTPPageOtpEnterText" translate="yes" xml:space="preserve">
-          <source>Enter the Code that was sent to「{0}」</source>
-          <target state="translated" state-qualifier="mt-suggestion">Gönderilen Kodu girin「{0}」</target>
+          <source>Enter the Code that was sent to 
+「{0}」</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gönderilen Kodu girin「{0}」</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Otp Enter the Code</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="TitleOtp" translate="yes" xml:space="preserve">
           <source>Enter the Code</source>
@@ -307,20 +311,10 @@
           <target state="translated" state-qualifier="mt-suggestion">Testiniz pozitif ise, lütfen cep telefonu numaranızı girin ve sevdiklerimizi korumak için durumunuzu güncelleyin.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
         </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="translated" state-qualifier="mt-suggestion">Eğer testiniz pozitif ise</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
-        </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
           <source>Tap to change state</source>
           <target state="translated" state-qualifier="mt-suggestion">Durumunuzu değiştirmek için dokunun</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the code</source>
-          <target state="translated" state-qualifier="mt-suggestion">Lütfen kodu girin</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Code Input</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
@@ -343,9 +337,11 @@
           <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
-          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user.Select 'Always Allow' to set up Bluetooth.</source>
+          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
+Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bu uygulama, başka bir kişi izleme uygulaması kullanıcısının yakınında olup olmadığınızı belirlemek için Pozlama Bildirimi / Bluetooth sinyallerini kullanır. Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
           <source>Allow Exposure Notification / Bluetooth</source>
