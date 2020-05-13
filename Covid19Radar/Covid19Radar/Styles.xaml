@@ -109,7 +109,7 @@
 
     <Style x:Key="DefaultSubTitleLabel" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center" />
-        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
         <Setter Property="FontSize" Value="Subtitle" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
@@ -155,10 +155,17 @@
         <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
     </Style>
 
-
     <Style x:Key="DefaultActivityIndicator" TargetType="ActivityIndicator">
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="DefaultNumberLabelText" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
     </Style>
 
     <Style x:Key="DefaultNumberLabel" TargetType="Label">
@@ -169,6 +176,7 @@
         <Setter Property="HorizontalOptions" Value="Center" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
     </Style>
 
     <Style x:Key="DefaultNumberFrame" TargetType="Frame">
