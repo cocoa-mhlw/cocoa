@@ -12,12 +12,10 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <Grid Style="{StaticResource DefaultGridLayout}">
+        <StackLayout>
+            <WebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
+        </StackLayout>
+    </Grid>
 
-    <StackLayout>
-        <WebView
-            BackgroundColor="Transparent"
-            HorizontalOptions="FillAndExpand"
-            Source="{Binding Url}"
-            VerticalOptions="FillAndExpand" />
-    </StackLayout>
 </ContentPage>

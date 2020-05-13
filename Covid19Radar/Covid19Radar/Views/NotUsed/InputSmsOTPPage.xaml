@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackLayout>
-                <Label FontFamily="NotoSansMediumFontFamily" Text="{Binding PhoneNumber, StringFormat={x:Static resources:AppResources.InputSmsOTPPageOtpEnterText}}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{Binding PhoneNumber, StringFormat={x:Static resources:AppResources.InputSmsOTPPageOtpEnterText}}" />
                 <controls:OtpFormEntry
                     x:Name="OtpForm"
                     Margin="0,0,0,40"
@@ -36,15 +36,13 @@
                     <Image Source="help.png" />
                     <Label
                         Grid.Column="1"
-                        FontFamily=" NotoSansMediumFontFamily"
-                        FontSize="12"
+                        Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.InputSmsOTPPageDidntGetTheCodeText}" />
                     <Label
                         Grid.Row="1"
                         Grid.Column="1"
-                        FontSize="12"
+                        Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.InputSmsOTPPageResendText}"
-                        TextColor="{StaticResource AccentColor}"
                         TextDecorations="Underline">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ResendOtp}" />
@@ -56,7 +54,7 @@
         <Button
             Grid.Row="1"
             Command="{Binding OnClickNext}"
-            Style="{StaticResource DefaultButtonStyle}"
+            Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.ButtonVerify}" />
     </Grid>
 </ContentPage>

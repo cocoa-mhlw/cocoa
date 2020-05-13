@@ -13,34 +13,25 @@
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
-    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ScrollView Padding="0,20">
-        <StackLayout Margin="40,0">
-            <Label
-                Margin="0,0,0,5"
-                Style="{StaticResource Accent2ColorHeaderLabelStyle}"
-                Text="{x:Static resources:AppResources.NotifyOtherPageTextStatusSettingsSubtitle}" />
-            <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
+    <ScrollView>
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageTextStatusSettingsSubtitle}" />
 
-            <Label
-                FontAttributes="Bold"
-                FontSize="Subtitle"
-                Text="{x:Static resources:AppResources.NofityPageShareDiag}" />
-            <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.NofityPageShareYourCase}" />
+            <ffimageloading:CachedImage Source="Notify01.png" />
 
-            <Label
-                FontAttributes="Bold"
-                Text="{x:Static resources:AppResources.NotifyPageLearnMore}"
-                TextColor="{DynamicResource Accent2Color}">
+            <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.NofityPageShareDiag}" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NofityPageShareYourCase}" />
+
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyPageLearnMore}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
                 </Label.GestureRecognizers>
             </Label>
+
             <Button
-                Margin="0,40,0,80"
                 Command="{Binding SharePositiveDiagnosisCommand}"
-                Style="{StaticResource DefaultButtonStyle}"
+                Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.NofityPageButtonSharePositive}" />
         </StackLayout>
     </ScrollView>

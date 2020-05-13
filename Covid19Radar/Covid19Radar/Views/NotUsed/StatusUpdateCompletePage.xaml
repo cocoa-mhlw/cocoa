@@ -13,18 +13,9 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
 
-    <Grid>
-        <Grid.Margin>
-            <Thickness
-                Bottom="{OnPlatform Android=48,
-                                    iOS=64}"
-                Left="32"
-                Right="32"
-                Top="{OnPlatform Android=48,
-                                 iOS=64}" />
-        </Grid.Margin>
+    <Grid Style="{StaticResource DefaultGridLayout}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="{OnPlatform Android=96, iOS=120}" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -38,28 +29,18 @@
 
         <Label
             Grid.Row="1"
-            HorizontalOptions="Center"
-            Style="{StaticResource SubtitleLabelStyle}"
-            Text="{x:Static resources:AppResources.AppName}">
-            <Label.Margin>
-                <Thickness Top="{OnPlatform Android=0, iOS=32}" />
-            </Label.Margin>
-        </Label>
+            Style="{StaticResource DefaultTitleLabel}"
+            Text="{x:Static resources:AppResources.AppName}" />
 
         <Label
             Grid.Row="2"
-            HorizontalOptions="Center"
-            Text="{x:Static resources:AppResources.StatusUpdateCompletePageTextStatusUpdateComplete}">
-            <Label.Margin>
-                <Thickness Top="{OnPlatform Android=0, iOS=16}" />
-            </Label.Margin>
-        </Label>
+            Style="{StaticResource DefaultLabel}"
+            Text="{x:Static resources:AppResources.StatusUpdateCompletePageTextStatusUpdateComplete}" />
 
         <Button
             Grid.Row="3"
-            Margin="57,0"
             Command="{Binding Path=OnClickHome}"
-            Style="{StaticResource DefaultButtonStyle}"
+            Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.ButtonHome}"
             VerticalOptions="End" />
     </Grid>
