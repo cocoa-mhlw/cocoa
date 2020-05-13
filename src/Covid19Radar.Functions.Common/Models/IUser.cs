@@ -36,6 +36,10 @@ namespace Covid19Radar.Models
         /// <value>User Minor</value>
         public static string GetId(this IUser user)
         {
+            if (string.IsNullOrEmpty(user.Major) && string.IsNullOrEmpty(user.Minor))
+            {
+                return user.UserUuid;
+            }
             return string.Format("{0}.{1}.{2}", user.UserUuid, user.Major.PadLeft(5, '0'), user.Minor.PadLeft(5, '0'));
         }
     }

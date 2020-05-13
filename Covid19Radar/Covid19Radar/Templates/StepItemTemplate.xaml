@@ -13,32 +13,26 @@
                 </Grid.ColumnDefinitions>
                 <Frame
                     Grid.Column="0"
-                    Margin="0"
-                    BackgroundColor="{StaticResource Accent2Color}"
-                    CornerRadius="15"
-                    HeightRequest="30"
                     IsVisible="{Binding HasStepNumber}"
-                    VerticalOptions="Center"
-                    WidthRequest="30">
-                    <Label
-                        Margin="0"
-                        Padding="0"
-                        FontAttributes="Bold"
-                        FontFamily="RobotoRegularFontFamily"
-                        HorizontalOptions="Center"
-                        Text="{Binding StepNumber}"
-                        TextColor="{StaticResource PrimaryColor}"
-                        VerticalOptions="Center" />
+                    Style="{StaticResource DefaultNumberFrame}">
+                    <Label Style="{StaticResource DefaultNumberLabel}" Text="{Binding StepNumber}" />
                 </Frame>
                 <Label
                     Grid.Column="1"
-                    Margin="15,0,0,0"
-                    Style="{StaticResource Accent2ColorHeaderLabelStyle}"
-                    Text="{Binding Title}"
-                    VerticalOptions="Center" />
+                    Style="{StaticResource DefaultNumberLabelText}"
+                    Text="{Binding Title}" />
             </Grid>
+
             <ffimageloading:CachedImage Aspect="AspectFit" Source="{Binding Image}" />
-            <Label Text="{Binding Description}" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{Binding Description}" />
+            <ffimageloading:CachedImage
+                Aspect="AspectFit"
+                IsVisible="{Binding HasImage2}"
+                Source="{Binding Image2}" />
+            <Label
+                IsVisible="{Binding HasDescription2}"
+                Style="{StaticResource DefaultLabel}"
+                Text="{Binding Description2}" />
         </StackLayout>
         <BoxView IsVisible="{Binding HasStepNumber}" Style="{StaticResource DefaultLineStyle}" />
     </StackLayout>
