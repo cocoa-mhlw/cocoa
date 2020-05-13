@@ -5,16 +5,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-           xmlns:prism="http://prismlibrary.com"
-       prism:ViewModelLocator.AutowireViewModel="True"
-
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
-    Style="{StaticResource PageStyle}"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
 
     <StackLayout>
-        <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
+        <WebView
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            Source="{Binding Url}"
+            VerticalOptions="FillAndExpand" />
     </StackLayout>
 </ContentPage>
