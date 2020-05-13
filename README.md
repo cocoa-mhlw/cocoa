@@ -9,7 +9,7 @@ iOS Builstatus [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c26833
 Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
 
 This app uses Exposure Notification / Bluetooth LE to get the contact logs of each other.  
-![App Description](img/explanation.png)
+![App Description](img/explanation_en.png)
 
 ## Thank you for Your Contribute !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
 We welcome contributions and pull requests.
