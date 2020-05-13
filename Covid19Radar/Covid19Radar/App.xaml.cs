@@ -25,9 +25,9 @@ using Prism.Logging;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AppCenter.Push;
-using Prism.Plugin.Popups;
 using FFImageLoading.Helpers;
 using FFImageLoading;
+using Xamarin.ExposureNotifications;
 
 /*
  * Our mission...is
@@ -65,12 +65,21 @@ namespace Covid19Radar
             UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             if (userDataService.IsExistUserData)
             {
+                // TODO Wire Start Exposure Notification
+                /*
+                var isStart = await ExposureNotification.IsEnabledAsync();
+                if (!isStart)
+                {
+                    await ExposureNotification.StartAsync();
+                }
+                */
+
                 UserDataModel _userData = userDataService.Get();
-                result = await NavigationService.NavigateAsync("MainPage");
+                result = await NavigationService.NavigateAsync("/MainPage");
             }
             else
             {
-                result = await NavigationService.NavigateAsync("NavigationPage/StartTutorialPage");
+                result = await NavigationService.NavigateAsync("/MainPage");
             }
 
             if (!result.Success)
@@ -96,7 +105,6 @@ namespace Covid19Radar
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // logger
-            containerRegistry.RegisterPopupNavigationService();
             var logger = new AppCenterLogger();
             containerRegistry.RegisterInstance<ILogger>(logger);
             containerRegistry.RegisterInstance<ILoggerFacade>(logger);
@@ -104,6 +112,7 @@ namespace Covid19Radar
 
             // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<StartTutorialPage, StartTutorialPageViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
@@ -113,14 +122,15 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<UserSettingPage, UserSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ContributorsPage, ContributorsPageViewModel>();
-            containerRegistry.RegisterForNavigation<UpdateInfoPage, UpdateInfoPageViewModel>();
             containerRegistry.RegisterForNavigation<SetupCompletedPage, SetupCompletedPageViewModel>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage, LicenseAgreementPageViewModel>();
             containerRegistry.RegisterForNavigation<DetectedBeaconPage, DetectedBeaconPageViewmodel>();
             containerRegistry.RegisterForNavigation<StatusUpdateCompletePage, StatusUpdateCompletePageViewModel>();
             containerRegistry.RegisterForNavigation<HeadsupPage, HeadsupPageViewModel>();
-            containerRegistry.RegisterForNavigation<UserStatusPage, UserStatusPageViewModel>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<NotifyOtherPage, NotifyOtherPageViewModel>();
+            containerRegistry.RegisterForNavigation<ExposuresPage, ExposuresPageViewModel>();
+            containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
+            containerRegistry.RegisterForNavigation<UpdateInfomationPage, UpdateInfomationPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
