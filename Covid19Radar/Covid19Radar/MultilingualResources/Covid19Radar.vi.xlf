@@ -348,7 +348,7 @@ Chọn ' luôn cho phép ' để thiết lập Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Cho phép thông báo phơi sáng/Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
+        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
           <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Người đóng góp</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
