@@ -3,15 +3,19 @@
     x:Class="Covid19Radar.Views.HeadsupPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:local="clr-namespace:Covid19Radar"
-           xmlns:prism="http://prismlibrary.com"
-       prism:ViewModelLocator.AutowireViewModel="True"
-
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <StackLayout>
-        <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
-    </StackLayout>
+    <Grid Style="{StaticResource DefaultGridLayout}">
+        <StackLayout>
+            <WebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
+        </StackLayout>
+    </Grid>
+
 </ContentPage>
