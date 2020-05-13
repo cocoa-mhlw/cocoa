@@ -1,147 +1,145 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="Covid19Radar.Views.DetectedBeaconPage"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <CollectionView Grid.Row="0" ItemsSource="{Binding BeaconDataList}">
+    <CollectionView ItemsSource="{Binding BeaconDataList}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout>
-                    <Grid>
+                <Grid Style="{StaticResource DefaultGridLayout}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+
+                    <Grid
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="30,10,20,10"
+                        ColumnSpacing="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="1" />
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="35" />
                         </Grid.RowDefinitions>
 
+                        <!--  ID  -->
                         <Grid
                             Grid.Row="0"
                             Grid.Column="0"
-                            Padding="30,10,20,10"
-                            ColumnSpacing="20">
+                            Grid.ColumnSpan="2"
+                            VerticalOptions="CenterAndExpand">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="35" />
-                                <RowDefinition Height="35" />
-                                <RowDefinition Height="35" />
-                                <RowDefinition Height="35" />
-                                <RowDefinition Height="35" />
-                                <RowDefinition Height="35" />
-                                <RowDefinition Height="35" />
-                            </Grid.RowDefinitions>
-
-                            <!--  ID  -->
-                            <Grid VerticalOptions="CenterAndExpand"
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Grid.ColumnSpan="2">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <Label
-                                    Grid.Column="0"
-                                    Margin="0,0,10,0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextId}" 
-                                    />
-                                <Label
-                                    Grid.Column="1"
-                                    LineBreakMode="TailTruncation"
-                                    MaxLines="1"
-                                    Text="{Binding Id}"
-                                    TextColor="{x:StaticResource Accent6Color}" />
-                            </Grid>
-
-                            <!--  Major No  -->
                             <Label
-                                Grid.Row="1"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextMajorNo}" 
-                                 />
+                                Margin="0,0,10,0"
+                                Text="{x:Static resources:AppResources.DetectedBeaconPageTextId}" />
                             <Label
-                                Grid.Row="1"
                                 Grid.Column="1"
-                                Text="{Binding Major}"
-                                TextColor="{x:StaticResource Accent6Color}" />
-
-                            <!--  Minor No  -->
-                            <Label
-                                Grid.Row="2"
-                                Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextMinorNo}" 
-                                />
-                            <Label
-                                Grid.Row="2"
-                                Grid.Column="1"
-                                Text="{Binding Minor}"
-                                TextColor="{x:StaticResource Accent6Color}" />
-
-                            <!--  Avg Distance  -->
-                            <Label
-                                Grid.Row="3"
-                                Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextAvgDistance}" 
-                                 />
-                            <Label
-                                Grid.Row="3"
-                                Grid.Column="1"
-                                Text="{Binding Distance}"
-                                TextColor="{x:StaticResource Accent6Color}" />
-
-                            <!--  Elapsed Time  -->
-                            <Label
-                                Grid.Row="4"
-                                Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextElapsedTime}" 
-                                 />
-                            <Label
-                                Grid.Row="4"
-                                Grid.Column="1"
-                                Text="{Binding ElaspedTime}"
-                                TextColor="{x:StaticResource Accent6Color}" />
-
-                            <!--  Last Time  -->
-                            <Label
-                                Grid.Row="5"
-                                Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextLastTime}" 
-                                 />
-                            <Label
-                                Grid.Row="5"
-                                Grid.Column="1"
-                                Text="{Binding LastDetectTime}"
-                                TextColor="{x:StaticResource Accent6Color}" />
-
-                            <!--  Count  -->
-                            <Label
-                                Grid.Row="6"
-                                Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextCount}" 
-                                 />
-                            <Label
-                                Grid.Row="6"
-                                Grid.Column="1"
-                                Text="{Binding Count}"
-                                TextColor="{x:StaticResource Accent6Color}" />
-
+                                LineBreakMode="TailTruncation"
+                                MaxLines="1"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{Binding Id}" />
                         </Grid>
 
-                        <BoxView
+                        <!--  Major No  -->
+                        <Label
                             Grid.Row="1"
                             Grid.Column="0"
-                            HeightRequest="1"
-                            Color="{x:StaticResource Accent6Color}" />
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.DetectedBeaconPageTextMajorNo}" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{Binding Major}" />
+
+                        <!--  Minor No  -->
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.DetectedBeaconPageTextMinorNo}" />
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{Binding Minor}" />
+
+                        <!--  Avg Distance  -->
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.DetectedBeaconPageTextAvgDistance}" />
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{Binding Distance}" />
+
+                        <!--  Elapsed Time  -->
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.DetectedBeaconPageTextElapsedTime}" />
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{Binding ElaspedTime}" />
+
+                        <!--  Last Time  -->
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Text="{x:Static resources:AppResources.DetectedBeaconPageTextLastTime}" />
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Text="{Binding LastDetectTime}"
+                            TextColor="{x:StaticResource PrimaryText}" />
+
+                        <!--  Count  -->
+                        <Label
+                            Grid.Row="6"
+                            Grid.Column="0"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.DetectedBeaconPageTextCount}" />
+                        <Label
+                            Grid.Row="6"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{Binding Count}" />
+
                     </Grid>
-                </StackLayout>
+
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HeightRequest="1"
+                        Color="{x:StaticResource PrimaryText}" />
+                </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

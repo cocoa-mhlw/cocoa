@@ -519,6 +519,14 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Submit</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Invia</target>
         </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
+          <source>SampleText</source>
+          <target state="new">SampleText</target>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>SampleText</source>
+          <target state="new">SampleText</target>
+        </trans-unit>
       </group>
     </body>
   </file>
