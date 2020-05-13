@@ -13,45 +13,49 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <StackLayout>
-        <ffimageloading:CachedImage
-            Margin="0,30,0,0"
-            HorizontalOptions="Center"
-            Source="Logo.png" />
-        <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
+    <ScrollView>
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <ffimageloading:CachedImage
+                Margin="0,30,0,0"
+                HorizontalOptions="Center"
+                Source="Logo.png" />
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
 
-        <Grid HorizontalOptions="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*" />
-                <ColumnDefinition Width="0.5*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Label
-                Grid.Row="0"
-                Grid.Column="0"
-                Style="{StaticResource DefaultLabelLarge}"
-                Text="{x:Static resources:AppResources.HomeEnableNotification}" />
-            <!-- Depricate Replace button toggle
+            <Grid HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="{x:Static resources:AppResources.HomeEnableNotification}" />
+                <!-- Depricate Replace button toggle
             <Switch
                 Grid.Row="0"
                 Grid.Column="1"
                 IsToggled="{Binding EnableNotifications, Mode=TwoWay}"
                 Style="{StaticResource DefaultLabel}" />
-            -->
-            <Label
-                Grid.Row="1"
-                Grid.Column="0"
-                Style="{StaticResource DefaultLabel}"
-                Text="Reset All Data" />
-            <Button
-                Grid.Row="1"
-                Grid.Column="1"
-                Command="{Binding OnResetClick}"
-                Style="{StaticResource DefaultButton}"
-                Text="Reset" />
-        </Grid>
-    </StackLayout>
+                -->
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="Reset All Data" />
+                <!--
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Command="{Binding OnResetClick}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="Reset" />
+                -->
+            </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
