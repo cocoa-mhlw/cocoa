@@ -396,9 +396,9 @@ Please check your SMS.</value>
     <value>NotNow</value>
     <comment>NotNow Button</comment>
   </data>
-  <data name="MainContributers" xml:space="preserve">
-    <value>Contributers</value>
-    <comment>Tab Contributers</comment>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Contributors</value>
+    <comment>Tab Contributors</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
