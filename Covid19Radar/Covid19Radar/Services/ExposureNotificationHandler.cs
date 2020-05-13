@@ -20,6 +20,8 @@ namespace Covid19Radar.Services
 
 		static readonly HttpClient http = new HttpClient();
 
+		public string UserExplanation => throw new NotImplementedException();
+
 		public Task<Configuration> GetConfigurationAsync()
 			=> Task.FromResult(new Configuration());
 
@@ -142,6 +144,21 @@ namespace Covid19Radar.Services
 			{
 				return false;
 			}
+		}
+
+		public Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task ExposureDetectedAsync(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> ExposureInfo)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
+		{
+			throw new NotImplementedException();
 		}
 
 		class SelfDiagnosisSubmissionRequest
