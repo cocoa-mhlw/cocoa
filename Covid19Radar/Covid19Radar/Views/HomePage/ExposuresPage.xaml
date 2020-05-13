@@ -17,7 +17,7 @@
     Visual="Material">
     <ContentPage.Content ItemsSource="{Binding ExposureInformation}">
         <StackLayout Style="{DynamicResource DefaultStackLayout}">
-            <Label Style="{DynamicResource DefaultSubTitleLabel}" Text="Exposures in Past 14 Days" />
+            <Label Style="{DynamicResource DefaultTitleLabel}" Text="Exposures in Past 14 Days" />
             <Frame Style="{DynamicResource DefaultParentCardFrame}">
                 <StackLayout>
                     <CollectionView ItemsSource="{Binding ExposureInformation}" SelectionMode="Single">
