@@ -348,7 +348,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tillat eksponeringsvarsling / Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
+        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
           <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bidragsytere</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>

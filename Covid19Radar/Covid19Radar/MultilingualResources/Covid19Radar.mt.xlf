@@ -348,7 +348,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ippermetti n-notifika ta ' espożizzjoni/Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
+        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
           <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontributuri</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
