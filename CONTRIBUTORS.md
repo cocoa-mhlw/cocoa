@@ -31,6 +31,8 @@
 - Akira Tsumura (Documentation)
 - Hisashi SOGA (Documentation)
 - Takuya Fujiwara (Xamarin)
+- Daryal Murat Akay (Turkish Translation)
+- Su Wei (Simplified Chinese Translation)
 
 # Beta Testers
 - Nagahata Kenji
@@ -77,7 +79,7 @@
 - Kazu　Shimoie_iOS
 - infonext
 - Lucia Yuko Takeuchi
-- Yoichi Nakamura 
+- Yoichi Nakamura
 - t_ymzk
 - きー坊ASP.NETなう
 - 松崎 明

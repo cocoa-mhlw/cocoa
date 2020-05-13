@@ -5,46 +5,29 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:prism="http://prismlibrary.com"
-    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
-    Style="{StaticResource PageStyle}"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Padding="40,0">
-            <ffimageloading:CachedImage HorizontalOptions="Center" Source="bluetoothAccess.png">
-                <ffimageloading:CachedImage.Margin>
-                    <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="iOS" Value="60,30,60,40" />
-                        <On Platform="Android" Value="60,30,60,20" />
-                    </OnPlatform>
-                </ffimageloading:CachedImage.Margin>
-            </ffimageloading:CachedImage>
-            <Label
-                FontFamily="NotoSansMediumFontFamily"
-                FontSize="18"
-                Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotification}" />
-            <Label Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotificationDescription}">
-                <Label.Margin>
-                    <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="iOS" Value="0,20,0,50" />
-                        <On Platform="Android" Value="0,0,0,50" />
-                    </OnPlatform>
-                </Label.Margin>
-            </Label>
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <ffimageloading:CachedImage HorizontalOptions="Center" Source="bluetoothAccess.png" />
+            <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotification}" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotificationDescription}" />
             <Button
-				Margin="55,50,55,50"
-				Command="{Binding Path=OnClickEnable}"
-				Style="{StaticResource DefaultButtonStyle}"
-				Text="{x:Static resources:AppResources.ButtonEnable}" />
+                AutomationId="EnableButton"
+                Command="{Binding Path=OnClickEnable}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.ButtonEnable}" />
             <Button
-			    Margin="55,0,55,80"
-			    Command="{Binding Path=OnClickNotNow}"
-			    IsEnabled="{Binding IsEnabled}"
-			    Style="{StaticResource DefaultButtonStyle}"
-			    Text="{x:Static resources:AppResources.ButtonNotNow}" />
+                AutomationId="NotNowButton"
+                Command="{Binding Path=OnClickNotNow}"
+                IsEnabled="{Binding IsEnabled}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.ButtonNotNow}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

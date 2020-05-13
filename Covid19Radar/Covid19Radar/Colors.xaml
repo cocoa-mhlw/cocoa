@@ -13,4 +13,15 @@
     <Color x:Key="Accent6Color">#999999</Color>
     <Color x:Key="Accent7Color">#8A000000</Color>
     <Color x:Key="Accent8Color">#99FFFFFF</Color>
+
+    <Color x:Key="Primary">#2196F3</Color>
+    <Color x:Key="PrimaryDark">#1976D2</Color>
+    <Color x:Key="PrimaryLight">#BBDEFB</Color>
+    <Color x:Key="Accent">#03A9F4</Color>
+    <Color x:Key="PrimaryText">#212121</Color>
+    <Color x:Key="SecondaryText">#757575</Color>
+    <Color x:Key="TextIcons">#FFFFFF</Color>
+    <Color x:Key="Background">#FFFFFF</Color>
+    <Color x:Key="Divider">#BDBDBD</Color>
+    <Color x:Key="Disabled">#BDBDBD</Color>
 </ResourceDictionary>
