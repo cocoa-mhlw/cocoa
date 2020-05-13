@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <!--Icons-->
+    <!--  Icons  -->
     <x:String x:Key="IconProfile">&#xf2bd;</x:String>
     <x:String x:Key="IconTracking">&#xf1fe;</x:String>
 
@@ -32,7 +32,8 @@
     <x:String x:Key="IconRightArrow">&#xf35a;</x:String>
     <x:String x:Key="IconStar">&#xf005;</x:String>
 
-    <!-- FA-S -->
+    <!--  FA-S  -->
+    <x:String x:Key="IconHowToUse">&#xf51c;</x:String>
     <x:String x:Key="IconInfo">&#xf129;</x:String>
     <x:String x:Key="IconHome">&#xf015;</x:String>
     <x:String x:Key="IconHouseUser">&#xf965;</x:String>
@@ -40,5 +41,5 @@
     <x:String x:Key="IconAbout">&#xf129;</x:String>
     <x:String x:Key="IconFriends">&#xf0c0;</x:String>
     <x:String x:Key="IconContract">&#xf56c;</x:String>
-    
+
 </ResourceDictionary>

@@ -14,6 +14,9 @@
         "TWILIO_FROM_PHONE": "",
         "LAST_NOTIFICATION_CHECK_INTERVAL": "60",
         "CRYPTION_KEY": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
-        "CRYPTION_IV": "o4Pm6LJ+/q3UxwZArVLdkQ=="
+        "CRYPTION_IV": "o4Pm6LJ+/q3UxwZArVLdkQ==",
+        "CRYPTION_HASH": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
+        "CRYPTION_KEY2": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
+        "CRYPTION_IV2": "o4Pm6LJ+/q3UxwZArVLdkQ=="
     }
 }

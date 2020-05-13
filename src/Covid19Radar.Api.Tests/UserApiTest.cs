@@ -23,8 +23,8 @@ namespace Covid19Radar.Tests
         }
 
         [DataTestMethod]
-        [DataRow("", "", "")]
-        public void RunMethod(string userUuid, string userMajor, string userMinor)
+        [DataRow("")]
+        public void RunMethod(string userUuid)
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
@@ -35,7 +35,7 @@ namespace Covid19Radar.Tests
             var userApi = new UserApi(userRepo.Object, notification, infection, validation, logger);
             var context = new Mock.HttpContextMock();
             // action
-            userApi.Run(context.Request, userUuid, userMajor, userMinor);
+            userApi.Run(context.Request, userUuid);
             // assert
         }
     }
