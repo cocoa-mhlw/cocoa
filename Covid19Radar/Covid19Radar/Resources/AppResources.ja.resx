@@ -330,7 +330,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/ja/contributor.html</value>
-    <comment>Url Contributer</comment>
+    <comment>Url Contributor</comment>
   </data>
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/ja/update.html</value>
