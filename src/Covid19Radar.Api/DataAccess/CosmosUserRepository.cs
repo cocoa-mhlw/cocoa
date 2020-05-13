@@ -61,6 +61,26 @@ namespace Covid19Radar.DataAccess
             return userFound;
         }
 
+        public async Task<bool> Delete(IUser user)
+        {
+            bool userFound = false;
+            try
+            {
+                var result = await _db.User.DeleteItemAsync<UserModel>(user.GetId(), PartitionKey.None);
+                if (result.StatusCode == HttpStatusCode.OK)
+                {
+                    userFound = true;
+                }
+            }
+            catch (CosmosException cosmosException)
+            {
+                if (cosmosException.StatusCode == HttpStatusCode.NotFound)
+                {
+                    userFound = false;
+                }
+            }
+            return userFound;
+        }
         public async Task<SequenceDataModel?> NextSequenceNumber()
         {
             var id = SequenceDataModel._id.ToString();
@@ -85,5 +105,6 @@ namespace Covid19Radar.DataAccess
             _logger.LogWarning("GetNumber is over retry count.");
             return null;
         }
+
     }
 }

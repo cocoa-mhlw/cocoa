@@ -20,6 +20,11 @@ namespace Covid19Radar.DataAccess
             _logger = logger;
         }
 
+        public async Task Delete(IUser user)
+        {
+            await _db.Diagnosis.DeleteItemAsync<DiagnosisModel>(user.GetId(), PartitionKey.Null);
+        }
+
         public Task SubmitDiagnosisAsync(DiagnosisSubmissionParameter Parameter)
         {
             var item = new DiagnosisModel()

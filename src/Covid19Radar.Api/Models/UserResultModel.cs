@@ -12,6 +12,7 @@ namespace Covid19Radar.Models
         /// </summary>
         /// <value></value>
         private UserStatus _UserStatus;
+        [Obsolete]
         [JsonProperty("userStatus")]
         public string UserStatus
         {
