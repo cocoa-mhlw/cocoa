@@ -349,7 +349,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
-          <source>Contributers</source>
+          <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Collaboratori</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
         </trans-unit>
