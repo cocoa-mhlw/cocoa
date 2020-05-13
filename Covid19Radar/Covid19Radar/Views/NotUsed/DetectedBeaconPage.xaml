@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     x:Class="Covid19Radar.Views.DetectedBeaconPage"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <CollectionView Grid.Row="0" ItemsSource="{Binding BeaconDataList}">
         <CollectionView.ItemTemplate>
@@ -40,10 +41,11 @@
                             </Grid.RowDefinitions>
 
                             <!--  ID  -->
-                            <Grid VerticalOptions="CenterAndExpand"
+                            <Grid
                                 Grid.Row="0"
                                 Grid.Column="0"
-                                Grid.ColumnSpan="2">
+                                Grid.ColumnSpan="2"
+                                VerticalOptions="CenterAndExpand">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="Auto" />
@@ -51,8 +53,7 @@
                                 <Label
                                     Grid.Column="0"
                                     Margin="0,0,10,0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextId}" 
-                                    />
+                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextId}" />
                                 <Label
                                     Grid.Column="1"
                                     LineBreakMode="TailTruncation"
@@ -65,8 +66,7 @@
                             <Label
                                 Grid.Row="1"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextMajorNo}" 
-                                 />
+                                Text="{x:Static resources:AppResources.DetectedBeaconPageTextMajorNo}" />
                             <Label
                                 Grid.Row="1"
                                 Grid.Column="1"
@@ -77,8 +77,7 @@
                             <Label
                                 Grid.Row="2"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextMinorNo}" 
-                                />
+                                Text="{x:Static resources:AppResources.DetectedBeaconPageTextMinorNo}" />
                             <Label
                                 Grid.Row="2"
                                 Grid.Column="1"
@@ -89,8 +88,7 @@
                             <Label
                                 Grid.Row="3"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextAvgDistance}" 
-                                 />
+                                Text="{x:Static resources:AppResources.DetectedBeaconPageTextAvgDistance}" />
                             <Label
                                 Grid.Row="3"
                                 Grid.Column="1"
@@ -101,8 +99,7 @@
                             <Label
                                 Grid.Row="4"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextElapsedTime}" 
-                                 />
+                                Text="{x:Static resources:AppResources.DetectedBeaconPageTextElapsedTime}" />
                             <Label
                                 Grid.Row="4"
                                 Grid.Column="1"
@@ -113,8 +110,7 @@
                             <Label
                                 Grid.Row="5"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextLastTime}" 
-                                 />
+                                Text="{x:Static resources:AppResources.DetectedBeaconPageTextLastTime}" />
                             <Label
                                 Grid.Row="5"
                                 Grid.Column="1"
@@ -125,8 +121,7 @@
                             <Label
                                 Grid.Row="6"
                                 Grid.Column="0"
-                                    Text="{x:Static resources:AppResources.DetectedBeaconPageTextCount}" 
-                                 />
+                                Text="{x:Static resources:AppResources.DetectedBeaconPageTextCount}" />
                             <Label
                                 Grid.Row="6"
                                 Grid.Column="1"
