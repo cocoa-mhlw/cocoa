@@ -15,6 +15,12 @@ namespace Covid19Radar.ViewModels
             SetData();
         }
 
+        public Command OnClickNext => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync("ConsentByUserPage");
+        });
+
+
         private void SetData()
         {
             Steps = new List<StepModel>
@@ -22,15 +28,19 @@ namespace Covid19Radar.ViewModels
                 new StepModel
                 {
                     Title = Resources.AppResources.DescriptionPageTitleTextStep1,
-                    Image = "descriptionStep1.png",
+                    Image = "descriptionStep11.png",
+                    Image2 = "descriptionStep12.png",
                     Description = Resources.AppResources.DescriptionPageTextStep1Description,
+                    Description2 = Resources.AppResources.DescriptionPageTextStep1Description2,
                     StepNumber = 1
                 },
                 new StepModel
                 {
                     Title = Resources.AppResources.DescriptionPageTitleTextStep2,
-                    Image = "descriptionStep2.png",
+                    Image = "descriptionStep21.png",
+                    Image2 = "descriptionStep22.png",
                     Description = Resources.AppResources.DescriptionPageTextStep2Description,
+                    Description2 = Resources.AppResources.DescriptionPageTextStep2Description2,
                     StepNumber = 2
                 },
                 new StepModel

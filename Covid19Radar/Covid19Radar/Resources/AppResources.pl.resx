@@ -225,7 +225,7 @@ Sprawdź swój SMS.</value>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
-    <comment>Url Contributer</comment>
+    <comment>Url Contributor</comment>
   </data>
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>

@@ -38,18 +38,17 @@
     <EmbeddedResource Include="Resources\Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.442" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="3.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
-    <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
-    <PackageReference Include="Xamarin.ExposureNotification" Version="0.1.0-preview01" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.ExposureNotification" Version="0.2.0-preview01" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
@@ -63,20 +62,20 @@
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
       <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\MainPageTab\LicenseAgreementPage.xaml.cs">
+    <Compile Update="Views\HomePage\UpdateInfomationPage.xaml.cs">
+      <DependentUpon>UpdateInfomationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomePage\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\MainPageTab\ContributorsPage.xaml.cs">
+    <Compile Update="Views\HomePage\ContributorsPage.xaml.cs">
       <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\MainPageTab\UpdateInfoPage.xaml.cs">
-      <DependentUpon>UpdateInfoPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\HomePage.xaml.cs">
+    <Compile Update="Views\HomePage\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\UserStatusPage.xaml.cs">
-      <DependentUpon>UserStatusPage.xaml</DependentUpon>
+    <Compile Update="Views\HomePage\NotifyOtherPage.xaml.cs">
+      <DependentUpon>NotifyOtherPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\NotUsed\UserSettingPage.xaml.cs">
       <DependentUpon>UserSettingPage.xaml</DependentUpon>
@@ -128,19 +127,22 @@
     <EmbeddedResource Update="Styles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ExposuresPage.xaml">
+    <EmbeddedResource Update="Views\HomePage\ExposuresPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HeadsupPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <EmbeddedResource Update="Views\HomePage\SharePositiveDiagnosisPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\NotUsed\HeadsupPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Tutorial\SetupCompletedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\StatusUpdateCompletePage.xaml">
+    <EmbeddedResource Update="Views\NotUsed\StatusUpdateCompletePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
