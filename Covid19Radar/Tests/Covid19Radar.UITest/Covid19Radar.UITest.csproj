@@ -56,21 +56,20 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xamariners.EndToEnd.Xamarin">
-      <Version>0.0.5</Version>
+      <Version>0.0.6</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\StartTutorialPage\StartTutorialPageFeature.cs" />
+    <Compile Include="Features\Tutorial\TutorialFeature.cs" />
     <Compile Include="NUnitAssemblyHooks.cs" />
-    <Compile Include="Features\StartTutorialPage\StartTutorialPage.feature.cs" />
+    <Compile Include="Features\Tutorial\Tutorial.feature.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TestConfig.json" />
     <None Include="App.config" />
-    <None Include="Features\StartTutorialPage\StartTutorialPage.feature" />
+    <None Include="Features\Tutorial\Tutorial.feature" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\HomePage\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

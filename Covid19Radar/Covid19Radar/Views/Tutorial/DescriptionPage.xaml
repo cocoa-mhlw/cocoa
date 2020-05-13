@@ -21,6 +21,7 @@
         <StackLayout>
             <StackLayout BindableLayout.ItemTemplate="{StaticResource StepItemTemplate}" BindableLayout.ItemsSource="{Binding Steps}" />
             <Button
+                AutomationId="NextButton"
                 Margin="95,0,95,80"
                 Command="{prism:NavigateTo ConsentByUserPage}"
                 Style="{StaticResource DefaultButtonStyle}"
