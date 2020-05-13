@@ -14,111 +14,203 @@
         <Setter Property="Spacing" Value="0" />
     </Style>
 
-    <Style TargetType="Label">
-        <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
-        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
-        <Setter Property="FontSize" Value="{OnPlatform iOS=16, Android=14}" />
+
+    <!--  New Style Global  -->
+
+    <Style x:Key="DefaultPageStyle" TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
     </Style>
 
-    <Style TargetType="Entry">
-        <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
-        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
-        <Setter Property="FontSize" Value="{OnPlatform iOS=16, Android=14}" />
+    <Style x:Key="DefaultFlexLayout" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Column" />
+        <Setter Property="JustifyContent" Value="SpaceAround" />
+        <Setter Property="AlignContent" Value="Center" />
+        <Setter Property="Margin" Value="20" />
     </Style>
 
-
-    <Style TargetType="Frame">
-        <Setter Property="HasShadow" Value="False" />
-        <Setter Property="Padding" Value="0" />
-    </Style>
-
-    <Style TargetType="Grid">
+    <Style x:Key="DefaultGridLayout" TargetType="Grid">
         <Setter Property="ColumnSpacing" Value="0" />
         <Setter Property="RowSpacing" Value="0" />
+        <Setter Property="Margin" Value="30,30,30,30" />
     </Style>
 
-    <Style x:Key="PageStyle" TargetType="ContentPage">
-        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
-    </Style>
-
-    <Style TargetType="ActivityIndicator">
-        <Setter Property="HorizontalOptions" Value="Center" />
-        <Setter Property="VerticalOptions" Value="Center" />
-    </Style>
-
-    <Style x:Key="Accent2ColorHeaderLabelStyle" TargetType="Label">
-        <Setter Property="TextColor" Value="{StaticResource Accent2Color}" />
-        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
-        <Setter Property="FontSize" Value="Body" />
-        <Setter Property="FontAttributes" Value="Bold" />
-    </Style>
-
-    <Style x:Key="Accent2ColorStatusPickerStyle" TargetType="Picker">
-        <Setter Property="TextColor" Value="{StaticResource Accent2Color}" />
-        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
-        <Setter Property="FontSize" Value="Body" />
-        <Setter Property="FontAttributes" Value="Bold" />
-    </Style>
-
-    <Style x:Key="BaseButtonStyle" TargetType="Button">
-        <Setter Property="CornerRadius" Value="2" />
-        <Setter Property="FontSize" Value="Default" />
-        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
-        <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
-        <Setter Property="Padding" Value="0" />
-        <Style.Triggers>
-            <Trigger TargetType="Button" Property="IsEnabled" Value="True">
-                <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
-            </Trigger>
-            <Trigger TargetType="Button" Property="IsEnabled" Value="False">
-                <Setter Property="BackgroundColor" Value="{StaticResource Accent5Color}" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
-    <Style
-        x:Key="DefaultButtonStyle"
-        BasedOn="{StaticResource BaseButtonStyle}"
-        TargetType="Button">
-        <Setter Property="WidthRequest" Value="170" />
-        <Setter Property="HorizontalOptions" Value="Center" />
+    <Style x:Key="DefaultStackLayout" TargetType="StackLayout">
+        <Setter Property="Margin" Value="30,30,30,30" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
     </Style>
 
     <Style x:Key="DefaultLineStyle" TargetType="BoxView">
         <Setter Property="HeightRequest" Value="1" />
-        <Setter Property="Color" Value="{StaticResource Accent3Color}" />
+        <Setter Property="Color" Value="{StaticResource Divider}" />
     </Style>
 
-    <Style x:Key="SubtitleLabelStyle" TargetType="Label">
-        <Setter Property="TextColor" Value="{StaticResource Accent4Color}" />
+    <!--
+    <Style x:Key="ShellBaseStyle" TargetType="Element">
+        <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource Primary}" />
+        <Setter Property="Shell.ShellForegroundColor" Value="{StaticResource TextIcons}" />
+        <Setter Property="Shell.ShellTitleColor" Value="{StaticResource TextIcons}" />
+        <Setter Property="Shell.ShellDisabledColor" Value="{StaticResource Disabled}" />
+        <Setter Property="Shell.ShellUnselectedColor" Value="{StaticResource SecondaryText}" />
+        <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource Primary}" />
+        <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
+        <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
+        <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
+    </Style>
+    <Style TargetType="ShellItem" BasedOn="{StaticResource ShellBaseStyle}" />-->
+
+    <Style x:Key="DefaultEntry" TargetType="Entry">
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryText}" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Opacity" Value="0.6" />
+        <Style.Triggers>
+            <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                <Setter Property="Opacity" Value="1" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DefaultDatePicker" TargetType="DatePicker">
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="Opacity" Value="0.6" />
+        <Setter Property="FontSize" Value="Medium" />
+    </Style>
+
+
+    <Style x:Key="DefaultButton" TargetType="Button">
+        <Setter Property="FontSize" Value="Medium" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Style.Triggers>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDark}" />
+            </Trigger>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DefaultTitleLabel" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+        <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="FontSize" Value="Title" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
     </Style>
 
-    <Style x:Key="ActivityIndicatorFrame" TargetType="Frame">
-        <Setter Property="BackgroundColor" Value="{StaticResource Accent8Color}" />
+    <Style x:Key="DefaultSubTitleLabel" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+        <Setter Property="FontSize" Value="Subtitle" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
+    <Style x:Key="DefaultHeaderLabel" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="FontSize" Value="Header" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
+    <Style x:Key="DefaultLabelLarge" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="FontSize" Value="Large" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
+    <Style x:Key="DefaultLabel" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
+    <Style x:Key="DefaultLabelSmall" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
+    <Style x:Key="DefaultLabelMicro" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
     </Style>
 
 
+    <Style x:Key="DefaultActivityIndicator" TargetType="ActivityIndicator">
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
 
-    <Style x:Key="CardFrame" TargetType="Frame">
+    <Style x:Key="DefaultNumberLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontFamily" Value="RobotoRegularFontFamily" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="DefaultNumberFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="15" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDark}" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="WidthRequest" Value="30" />
+    </Style>
+
+    <Style x:Key="DefaultNumberHeadlineLabel" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+        <Setter Property="FontSize" Value="Header" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
+    <Style x:Key="DefaultWebView" TargetType="WebView">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+    </Style>
+
+    <Style x:Key="DefaultCardFrame" TargetType="Frame">
+        <Setter Property="BorderColor" Value="{StaticResource Background}" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+
+    <Style x:Key="DefaultParentCardFrame" TargetType="Frame">
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="Padding" Value="14" />
     </Style>
 
-    <Style x:Key="Container" TargetType="StackLayout">
-        <Setter Property="Padding" Value="14" />
-        <Setter Property="Spacing" Value="12" />
-    </Style>
-
-    <Style x:Key="ButtonRounded" TargetType="Button">
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="HeightRequest" Value="44"/>
-        <Setter Property="BorderRadius" Value="10" />
-        <Setter Property="BorderWidth" Value="4"/>
-        <Setter Property="BorderColor" Value="{StaticResource PrimaryColor}"/>
-        <Setter Property="TextColor" Value="White" />
-        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+    <Style x:Key="DefaultActivityIndicatorFrame" TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="{StaticResource SecondaryText}" />
     </Style>
 
 </ResourceDictionary>
