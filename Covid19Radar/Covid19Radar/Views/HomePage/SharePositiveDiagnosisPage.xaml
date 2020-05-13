@@ -17,7 +17,6 @@
             <Label Text="[Insert text from local Health authority]" />
             <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText}" />
             <Entry Placeholder="{x:Static resources:AppResources.NotifyOtherPageCodePlaceholder}"
-                       Style="{StaticResource Accent2ColorHeaderLabelStyle}"
                        TextColor="{StaticResource Accent4Color}"
                    Text="{Binding DiagnosisUid, Mode=TwoWay}" />
             <Label Margin="0,12,0,0" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText2}" />
