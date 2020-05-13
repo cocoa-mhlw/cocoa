@@ -349,8 +349,8 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
-          <source>Contributers</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contributers</target>
+          <source>Contributors</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contributors</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
