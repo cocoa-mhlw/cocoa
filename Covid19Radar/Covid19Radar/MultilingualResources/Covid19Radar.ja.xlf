@@ -351,7 +351,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
           <source>Contributers</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">貢献</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributers</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
