@@ -3,7 +3,7 @@ using Xamarin.UITest;
 using Xamariners.EndToEnd.Xamarin.Features;
 using Xamariners.EndToEnd.Xamarin.Infrastructure;
 
-namespace Covid19Radar.UITest.Features.StartTutorialPage
+namespace Covid19Radar.UITest.Features.Tutorial
 {
 
     [TestFixture(Platform.Android)]
@@ -11,9 +11,9 @@ namespace Covid19Radar.UITest.Features.StartTutorialPage
     [TestFixture(Platform.iOS)]
 #endif
 
-    public partial class StartTutorialPageFeature : FeatureBase
+    public partial class TutorialFeature : FeatureBase
     {
-        public StartTutorialPageFeature(Platform platform) : base(platform)
+        public TutorialFeature(Platform platform) : base(platform)
         {
             var bob = RunnerConfiguration.Current;
         }
