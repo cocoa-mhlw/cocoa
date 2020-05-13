@@ -19,7 +19,9 @@ namespace Covid19Radar.Services
 			try
 			{
 				var stateFile = Path.Combine(Xamarin.Essentials.FileSystem.CacheDirectory, "localstate.json");
+
 				var data = File.ReadAllText(stateFile);
+
 				return Newtonsoft.Json.JsonConvert.DeserializeObject<LocalState>(data);
 			}
 			catch
@@ -31,7 +33,9 @@ namespace Covid19Radar.Services
 		public static void Save()
 		{
 			var stateFile = Path.Combine(Xamarin.Essentials.FileSystem.CacheDirectory, "localstate.json");
+
 			var data = Newtonsoft.Json.JsonConvert.SerializeObject(Instance);
+
 			File.WriteAllText(stateFile, data);
 		}
 	}
@@ -39,12 +43,19 @@ namespace Covid19Radar.Services
 	public class LocalState
 	{
 		public bool IsWelcomed { get; set; }
+
 		public bool LastIsEnabled { get; set; } = false;
+
 		public bool EnableNotifications { get; set; } = true;
-		public DateTimeOffset NewestKeysResponseTimestamp { get; set; } = DateTimeOffset.MinValue;
+
+		public ulong LatestKeysResponseIndex { get; set; } = 0;
+
 		public List<ExposureInfo> ExposureInformation { get; set; } = new List<ExposureInfo>();
+
 		public ExposureDetectionSummary ExposureSummary { get; set; }
+
 		public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
+
 		PositiveDiagnosisState GetLatest()
 		{
 			var latest = PositiveDiagnoses?.OrderByDescending(p => p.DiagnosisDate)?.FirstOrDefault();

@@ -44,5 +44,7 @@ namespace Covid19Radar.Common
 
         public static readonly int ElapsedTimeOfTransmitStart = 5;
 
+        public static readonly string LicenseUrl = "https://covid19radar.z11.web.core.windows.net/license.html";
+
     }
 }

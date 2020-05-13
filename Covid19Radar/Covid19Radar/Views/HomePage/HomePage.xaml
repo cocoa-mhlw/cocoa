@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <ffimageloading:CachedImage
+                Margin="0,30,0,0"
+                HorizontalOptions="Center"
+                Source="Logo.png" />
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
+
+            <Grid HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="{x:Static resources:AppResources.HomeEnableNotification}" />
+                <!-- Depricate Replace button toggle
+            <Switch
+                Grid.Row="0"
+                Grid.Column="1"
+                IsToggled="{Binding EnableNotifications, Mode=TwoWay}"
+                Style="{StaticResource DefaultLabel}" />
+                -->
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="Reset All Data" />
+                <!--
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Command="{Binding OnResetClick}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="Reset" />
+                -->
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

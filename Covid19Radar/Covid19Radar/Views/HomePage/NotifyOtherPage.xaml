@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.NotifyOtherPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:c="clr-namespace:Covid19Radar.Converters"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageTextStatusSettingsSubtitle}" />
+
+            <ffimageloading:CachedImage Source="Notify01.png" />
+
+            <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.NofityPageShareDiag}" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NofityPageShareYourCase}" />
+
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyPageLearnMore}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Button
+                Command="{Binding SharePositiveDiagnosisCommand}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.NofityPageButtonSharePositive}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
