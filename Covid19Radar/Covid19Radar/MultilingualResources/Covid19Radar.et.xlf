@@ -348,7 +348,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Luba kokkupuute teatamine/Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
+        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
           <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pankurid</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>

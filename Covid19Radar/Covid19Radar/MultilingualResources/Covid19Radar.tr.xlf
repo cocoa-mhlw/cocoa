@@ -352,7 +352,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozlama Bildirimine İzin Ver / Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
+        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
           <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Katkıda bulunanlar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
