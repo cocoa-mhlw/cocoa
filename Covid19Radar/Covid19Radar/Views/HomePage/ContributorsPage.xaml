@@ -4,20 +4,17 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns:templates="clr-namespace:Covid19Radar.Templates;assembly=Covid19Radar"
-           xmlns:prism="http://prismlibrary.com"
-       prism:ViewModelLocator.AutowireViewModel="True"
-
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <templates:ContributorItemTemplate x:Key="ContributorItemTemplate" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <StackLayout Margin="0,30">
-        <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
-    </StackLayout>
+    <Grid Style="{StaticResource DefaultGridLayout}">
+        <StackLayout>
+            <WebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
+        </StackLayout>
+    </Grid>
 </ContentPage>
