@@ -234,7 +234,7 @@
     <Style x:Key="DefaultWebView" TargetType="WebView">
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="VerticalOptions" Value="FillAndExpand" />
-        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}" />
     </Style>
 
     <Style x:Key="DefaultCardFrame" TargetType="Frame">

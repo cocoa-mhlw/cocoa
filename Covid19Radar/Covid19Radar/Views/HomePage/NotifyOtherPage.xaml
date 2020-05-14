@@ -5,14 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:c="clr-namespace:Covid19Radar.Converters"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources" xmlns:ce="clr-namespace:Covid19Radar.Controls"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
