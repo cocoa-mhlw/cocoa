@@ -18,7 +18,7 @@
             <ce:GradientButton
                 AutomationId="NextButton"
                 Command="{Binding Path=OnClickNext}"
-                Style="{StaticResource DefaultButton}"
+                Style="{StaticResource DefaultGradientButton}"
                 Text="{x:Static resources:AppResources.ButtonAgree}" />
         </StackLayout>
     </Grid>
