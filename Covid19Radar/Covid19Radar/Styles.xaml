@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Styles"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Covid19Radar.Controls"
     xmlns:local="clr-namespace:Covid19Radar">
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
@@ -101,6 +102,31 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
             </Trigger>
         </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DefaultGradientButton" TargetType="controls:GradientButton">
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="Scale" Value="0.8" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="BorderColor" Value="{StaticResource Primary}" />
+        <Style.Triggers>
+            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="True">
+                <Setter Property="StartColor" Value="{StaticResource Primary}" />
+                <Setter Property="EndColor" Value="{StaticResource Accent}" />
+                <Setter Property="GradientOrientation" Value="Horizontal" />
+            </Trigger>
+            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="False">
+                <Setter Property="StartColor" Value="{StaticResource Disabled}" />
+                <Setter Property="EndColor" Value="{StaticResource Disabled}" />
+                <Setter Property="GradientOrientation" Value="Horizontal" />
+            </Trigger>
+        </Style.Triggers>
+
     </Style>
 
     <Style x:Key="DefaultTitleLabel" TargetType="Label">
