@@ -12,10 +12,7 @@ namespace Covid19Radar.Models
 		[JsonProperty("userUuid")]
 		public string UserUuid { get; set; }
         [JsonProperty("keys")]
-		public TemporaryExposureKey[] Keys { get; set; }
+		public TemporaryExposureKeyModel[] Keys { get; set; }
 
-		public string Major => null;
-
-		public string Minor => null;
 	}
 }

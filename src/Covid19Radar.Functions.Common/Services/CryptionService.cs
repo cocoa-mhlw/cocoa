@@ -47,6 +47,7 @@ namespace Covid19Radar.Services
         {
             var val = Random().Concat(Encoding.ASCII.GetBytes(userUuid));
             byte[] hashValue = hash.ComputeHash(val.ToArray());
+            // TODO: Partial hash
             var secret = val.Concat(hashValue).ToArray();
             using (var c = symmetric2.CreateEncryptor())
             {
@@ -65,6 +66,7 @@ namespace Covid19Radar.Services
                     return false;
                 }
                 byte[] hashValue = hash.ComputeHash(result, 0, result.Length - 64);
+                // TODO: Partial hash
                 return hashValue.SequenceEqual(result.TakeLast(64));
             }
 
