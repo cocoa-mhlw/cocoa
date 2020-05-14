@@ -8,5 +8,6 @@ namespace Covid19Radar.DataStore
         Container Notification { get; }
         Container TemporaryExposureKey { get; }
         Container Diagnosis { get; }
+        Container TemporaryExposureKeyExport { get;  }
     }
 }

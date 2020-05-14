@@ -30,6 +30,6 @@ namespace Covid19Radar.Models
         /// <summary>
         /// Temporary Exposure Keys
         /// </summary>
-        public TemporaryExposureKey[] Keys { get; set; }
+        public TemporaryExposureKeyModel[] Keys { get; set; }
     }
 }

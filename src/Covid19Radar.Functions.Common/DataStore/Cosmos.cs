@@ -38,6 +38,7 @@ namespace Covid19Radar.DataStore
         public Container Notification { get => Database.GetContainer("Notification"); }
         public Container TemporaryExposureKey { get => Database.GetContainer("TemporaryExposureKey"); }
         public Container Diagnosis { get => Database.GetContainer("Diagnosis"); }
+        public Container TemporaryExposureKeyExport { get => Database.GetContainer("TemporaryExposureKeyExport"); }
 
         /// <summary>
         /// DI Constructor
@@ -88,7 +89,7 @@ namespace Covid19Radar.DataStore
             var userProperties = new ContainerProperties("User", "/PartitionKey");
             var userDataResult = await dbResult.Database.CreateContainerIfNotExistsAsync(userProperties);
             var user = dbResult.Database.GetContainer("User");
-            await user.CreateItemAsync<UserModel>(new UserModel() {UserUuid = "TEST" });
+            await user.CreateItemAsync<UserModel>(new UserModel() { UserUuid = "TEST" });
 
             // Container Notification
             Logger.LogInformation("GenerateAsync Create Notification Container");
@@ -100,6 +101,16 @@ namespace Covid19Radar.DataStore
             var notificationProperties = new ContainerProperties("Notification", "/PartitionKey");
             var notificationResult = await dbResult.Database.CreateContainerIfNotExistsAsync(notificationProperties);
 
+            // Container Diagnosis
+            Logger.LogInformation("GenerateAsync Create Diagnosis Container");
+            try
+            {
+                await dbResult.Database.GetContainer("Diagnosis").DeleteContainerAsync();
+            }
+            catch { }
+            var diagnosisExposureKeyProperties = new ContainerProperties("Diagnosis", "/PartitionKey");
+            var diagnosisExposureKeyResult = await dbResult.Database.CreateContainerIfNotExistsAsync(diagnosisExposureKeyProperties);
+
             // Container TemporaryExposureKey
             Logger.LogInformation("GenerateAsync Create TemporaryExposureKey Container");
             try
@@ -110,15 +121,16 @@ namespace Covid19Radar.DataStore
             var temporaryExposureKeyProperties = new ContainerProperties("TemporaryExposureKey", "/PartitionKey");
             var temporaryExposureKeyResult = await dbResult.Database.CreateContainerIfNotExistsAsync(temporaryExposureKeyProperties);
 
-            // Container Diagnosis
-            Logger.LogInformation("GenerateAsync Create Diagnosis Container");
+            // Container TemporaryExposureKeyExport
+            Logger.LogInformation("GenerateAsync Create TemporaryExposureKeyExport Container");
             try
             {
-                await dbResult.Database.GetContainer("Diagnosis").DeleteContainerAsync();
+                await dbResult.Database.GetContainer("TemporaryExposureKeyExport").DeleteContainerAsync();
             }
             catch { }
-            var diagnosisExposureKeyProperties = new ContainerProperties("Diagnosis", "/PartitionKey");
-            var diagnosisExposureKeyResult = await dbResult.Database.CreateContainerIfNotExistsAsync(diagnosisExposureKeyProperties);
+            var temporaryExposureKeyExportProperties = new ContainerProperties("TemporaryExposureKeyExport", "/PartitionKey");
+            var temporaryExposureKeyExportResult = await dbResult.Database.CreateContainerIfNotExistsAsync(temporaryExposureKeyExportProperties);
+
         }
 
     }
