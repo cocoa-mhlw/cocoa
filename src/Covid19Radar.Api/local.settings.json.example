@@ -12,6 +12,13 @@
         "CRYPTION_IV": "o4Pm6LJ+/q3UxwZArVLdkQ==",
         "CRYPTION_HASH": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
         "CRYPTION_KEY2": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
-        "CRYPTION_IV2": "o4Pm6LJ+/q3UxwZArVLdkQ=="
+        "CRYPTION_IV2": "o4Pm6LJ+/q3UxwZArVLdkQ==",
+        "AppBundleId": "AppBundleId",
+        "AndroidPackage": "AndroidPackage",
+        "SignatureAlgorithm": "SignatureAlgorithm",
+        "VerificationKeyIds": "VerificationKeyIdv1 VerificationKeyIdv2",
+        "VerificationKeyVersions": "VerificationKeyVersion1 VerificationKeyVersions2",
+        "Signature": "o4Pm6LJ+/q3UxwZArVLdkQ==",
+        "Region": "Country"
     }
 }
