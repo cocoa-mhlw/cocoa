@@ -16,8 +16,6 @@ namespace Covid19Radar.DataAccess
 
         Task<bool> Exists(string id);
 
-        Task<SequenceDataModel?> NextSequenceNumber();
-
         Task<bool> Delete(IUser user);
     }
 }
