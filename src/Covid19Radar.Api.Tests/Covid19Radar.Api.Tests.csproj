@@ -28,4 +28,8 @@
     <ProjectReference Include="..\Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
