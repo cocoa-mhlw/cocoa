@@ -35,16 +35,9 @@ namespace Covid19Radar.DataStore
 
         // The container we will create.
         public Container User { get => Database.GetContainer("User"); }
-        public Container Beacon { get => Database.GetContainer(BeaconStoreName); }
-        public Container Sequence { get => Database.GetContainer("Sequence"); }
-        public Container Otp { get => Database.GetContainer("Otp"); }
         public Container Notification { get => Database.GetContainer("Notification"); }
-        public Container BeaconUuid { get => Database.GetContainer("BeaconUuid"); }
-        public Container Infection { get => Database.GetContainer("Infection"); }
-        public Container InfectionProcess { get => Database.GetContainer("InfectionProcess"); }
         public Container TemporaryExposureKey { get => Database.GetContainer("TemporaryExposureKey"); }
         public Container Diagnosis { get => Database.GetContainer("Diagnosis"); }
-        public string ContainerNameBeacon { get => BeaconStoreName; }
 
         /// <summary>
         /// DI Constructor
@@ -57,7 +50,6 @@ namespace Covid19Radar.DataStore
             PrimaryKey = config.GetSection("COSMOS_PRIMARY_KEY").Value;
             DatabaseId = config.GetSection("COSMOS_DATABASE_ID").Value;
             AutoGenerate = bool.Parse(config.GetSection("COSMOS_AUTO_GENERATE").Value);
-            BeaconStoreName = config.GetSection("COSMOS_BEACON_STORE").Value;
 
             // Create a new instance of the Cosmos Client
             CosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
@@ -86,22 +78,6 @@ namespace Covid19Radar.DataStore
                 throw new ApplicationException(dbResult.ToString());
             }
 
-            // Container Sequence
-            Logger.LogInformation("GenerateAsync Create Sequence Container");
-            try
-            {
-                await dbResult.Database.GetContainer("Sequence").DeleteContainerAsync();
-            }
-            catch { }
-            var sequenceProperties = new ContainerProperties("Sequence", "/PartitionKey");
-            var sequenceResult = await dbResult.Database.CreateContainerIfNotExistsAsync(sequenceProperties);
-            var sequence = dbResult.Database.GetContainer("Sequence");
-            await sequence.CreateItemAsync(new Models.SequenceDataModel()
-            {
-                Major = 0,
-                Minor = 0
-            }, null);
-
             // Container User
             Logger.LogInformation("GenerateAsync Create User Container");
             try
@@ -112,27 +88,7 @@ namespace Covid19Radar.DataStore
             var userProperties = new ContainerProperties("User", "/PartitionKey");
             var userDataResult = await dbResult.Database.CreateContainerIfNotExistsAsync(userProperties);
             var user = dbResult.Database.GetContainer("User");
-            await user.CreateItemAsync<UserModel>(new UserModel() { Major = "0", Minor = "1", UserUuid = "TEST" });
-
-            // Container Beacon
-            Logger.LogInformation($"GenerateAsync Create Beacon Container name:{BeaconStoreName}");
-            try
-            {
-                await dbResult.Database.GetContainer(BeaconStoreName).DeleteContainerAsync();
-            }
-            catch { }
-            var beaconProperties = new ContainerProperties(BeaconStoreName, "/PartitionKey");
-            var beaconResult = await dbResult.Database.CreateContainerIfNotExistsAsync(beaconProperties);
-
-            // Container Otp
-            Logger.LogInformation("GenerateAsync Create Otp Container");
-            try
-            {
-                await dbResult.Database.GetContainer("Otp").DeleteContainerAsync();
-            }
-            catch { }
-            var otpProperties = new ContainerProperties("Otp", "/UserUuid");
-            var otpResult = await dbResult.Database.CreateContainerIfNotExistsAsync(otpProperties);
+            await user.CreateItemAsync<UserModel>(new UserModel() {UserUuid = "TEST" });
 
             // Container Notification
             Logger.LogInformation("GenerateAsync Create Notification Container");
@@ -143,36 +99,6 @@ namespace Covid19Radar.DataStore
             catch { }
             var notificationProperties = new ContainerProperties("Notification", "/PartitionKey");
             var notificationResult = await dbResult.Database.CreateContainerIfNotExistsAsync(notificationProperties);
-
-            // Container BeaconUuid
-            Logger.LogInformation("GenerateAsync Create BeaconUuid Container");
-            try
-            {
-                await dbResult.Database.GetContainer("BeaconUuid").DeleteContainerAsync();
-            }
-            catch { }
-            var beaconUuidProperties = new ContainerProperties("BeaconUuid", "/PartitionKey");
-            var beaconUuidResult = await dbResult.Database.CreateContainerIfNotExistsAsync(beaconUuidProperties);
-
-            // Container Infection
-            Logger.LogInformation("GenerateAsync Create Infection Container");
-            try
-            {
-                await dbResult.Database.GetContainer("Infection").DeleteContainerAsync();
-            }
-            catch { }
-            var infectionProperties = new ContainerProperties("Infection", "/PartitionKey");
-            var infectionResult = await dbResult.Database.CreateContainerIfNotExistsAsync(infectionProperties);
-
-            // Container InfectionProcess
-            Logger.LogInformation("GenerateAsync Create InfectionProcess Container");
-            try
-            {
-                await dbResult.Database.GetContainer("InfectionProcess").DeleteContainerAsync();
-            }
-            catch { }
-            var infectionProcessProperties = new ContainerProperties("InfectionProcess", "/PartitionKey");
-            var infectionProcessResult = await dbResult.Database.CreateContainerIfNotExistsAsync(infectionProcessProperties);
 
             // Container TemporaryExposureKey
             Logger.LogInformation("GenerateAsync Create TemporaryExposureKey Container");
