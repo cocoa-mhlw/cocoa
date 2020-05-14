@@ -17,17 +17,31 @@
             <ffimageloading:CachedImage HorizontalOptions="Center" Source="bluetoothAccess.png" />
             <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotification}" />
             <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotificationDescription}" />
-            <Button
-                AutomationId="EnableButton"
-                Command="{Binding Path=OnClickEnable}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.ButtonEnable}" />
-            <Button
-                AutomationId="NotNowButton"
-                Command="{Binding Path=OnClickNotNow}"
-                IsEnabled="{Binding IsEnabled}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.ButtonNotNow}" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    AutomationId="EnableButton"
+                    Command="{Binding Path=OnClickEnable}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.ButtonEnable}" />
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    AutomationId="NotNowButton"
+                    Command="{Binding Path=OnClickNotNow}"
+                    IsEnabled="{Binding IsEnabled}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.ButtonNotNow}" />
+            </Grid>
         </StackLayout>
     </ScrollView>
 </ContentPage>

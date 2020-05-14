@@ -5393,6 +5393,10 @@ namespace Covid19Radar.Droid
 			global::Xamarin.ExposureNotification.Resource.Attribute.scopeUris = global::Covid19Radar.Droid.Resource.Attribute.scopeUris;
 			global::Xamarin.ExposureNotification.Resource.Attribute.statusBarBackground = global::Covid19Radar.Droid.Resource.Attribute.statusBarBackground;
 			global::Xamarin.ExposureNotification.Resource.Attribute.ttcIndex = global::Covid19Radar.Droid.Resource.Attribute.ttcIndex;
+			global::Xamarin.ExposureNotification.Resource.Boolean.enable_system_alarm_service_default = global::Covid19Radar.Droid.Resource.Boolean.enable_system_alarm_service_default;
+			global::Xamarin.ExposureNotification.Resource.Boolean.enable_system_foreground_service_default = global::Covid19Radar.Droid.Resource.Boolean.enable_system_foreground_service_default;
+			global::Xamarin.ExposureNotification.Resource.Boolean.enable_system_job_service_default = global::Covid19Radar.Droid.Resource.Boolean.enable_system_job_service_default;
+			global::Xamarin.ExposureNotification.Resource.Boolean.workmanager_test_configuration = global::Covid19Radar.Droid.Resource.Boolean.workmanager_test_configuration;
 			global::Xamarin.ExposureNotification.Resource.Color.browser_actions_bg_grey = global::Covid19Radar.Droid.Resource.Color.browser_actions_bg_grey;
 			global::Xamarin.ExposureNotification.Resource.Color.browser_actions_divider_color = global::Covid19Radar.Droid.Resource.Color.browser_actions_divider_color;
 			global::Xamarin.ExposureNotification.Resource.Color.browser_actions_text_color = global::Covid19Radar.Droid.Resource.Color.browser_actions_text_color;
@@ -18352,10 +18356,22 @@ namespace Covid19Radar.Droid
 			public const int abc_config_actionMenuItemAllCaps = 2130968578;
 			
 			// aapt resource value: 0x7F040003
-			public const int is_tablet = 2130968579;
+			public const int enable_system_alarm_service_default = 2130968579;
 			
 			// aapt resource value: 0x7F040004
-			public const int mtrl_btn_textappearance_all_caps = 2130968580;
+			public const int enable_system_foreground_service_default = 2130968580;
+			
+			// aapt resource value: 0x7F040005
+			public const int enable_system_job_service_default = 2130968581;
+			
+			// aapt resource value: 0x7F040006
+			public const int is_tablet = 2130968582;
+			
+			// aapt resource value: 0x7F040007
+			public const int mtrl_btn_textappearance_all_caps = 2130968583;
+			
+			// aapt resource value: 0x7F040008
+			public const int workmanager_test_configuration = 2130968584;
 			
 			static Boolean()
 			{
