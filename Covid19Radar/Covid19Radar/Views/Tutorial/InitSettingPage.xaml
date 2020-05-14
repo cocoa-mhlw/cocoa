@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Views.InitSettingPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -26,20 +27,20 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
-                <Button
+                <ce:GradientButton
                     Grid.Row="0"
                     Grid.Column="0"
                     AutomationId="EnableButton"
                     Command="{Binding Path=OnClickEnable}"
-                    Style="{StaticResource DefaultButton}"
+                    Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonEnable}" />
-                <Button
+                <ce:GradientButton
                     Grid.Row="0"
                     Grid.Column="1"
                     AutomationId="NotNowButton"
                     Command="{Binding Path=OnClickNotNow}"
                     IsEnabled="{Binding IsEnabled}"
-                    Style="{StaticResource DefaultButton}"
+                    Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonNotNow}" />
             </Grid>
         </StackLayout>
