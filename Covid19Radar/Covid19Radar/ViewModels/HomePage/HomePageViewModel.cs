@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Input;
 using Acr.UserDialogs;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -13,9 +14,18 @@ namespace Covid19Radar.ViewModels
 {
     public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
     {
+        private string _AppVersion;
+
+        public string AppVer
+        {
+            get { return _AppVersion; }
+            set { SetProperty(ref _AppVersion, value); }
+        }
+
         public HomePageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
+            AppVer = AppConstants.AppVersion;
         }
 
         public bool EnableNotifications

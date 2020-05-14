@@ -15,12 +15,9 @@
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <ffimageloading:CachedImage
-                Margin="0,30,0,0"
-                HorizontalOptions="Center"
-                Source="Logo.png" />
+            <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
             <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
-
+            <Label Style="{StaticResource DefaultLabelSmall}" Text="{Binding AppVer}" />
             <Grid HorizontalOptions="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*" />
@@ -29,33 +26,52 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label
                     Grid.Row="0"
                     Grid.Column="0"
                     Style="{StaticResource DefaultLabelSmall}"
-                    Text="{x:Static resources:AppResources.HomeEnableNotification}" />
-                <!-- Depricate Replace button toggle
-            <Switch
-                Grid.Row="0"
-                Grid.Column="1"
-                IsToggled="{Binding EnableNotifications, Mode=TwoWay}"
-                Style="{StaticResource DefaultLabel}" />
-                -->
+                    Text="Version" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="{Binding AppVer}" />
+
                 <Label
                     Grid.Row="1"
                     Grid.Column="0"
                     Style="{StaticResource DefaultLabelSmall}"
-                    Text="Reset All Data" />
-                <!--
-                <Button
+                    Text="{x:Static resources:AppResources.HomeEnableNotification}" />
+                <Switch
                     Grid.Row="1"
                     Grid.Column="1"
-                    Command="{Binding OnResetClick}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="Reset" />
-                -->
+                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="Enable Notification" />
+                <Switch
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
+
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="Reset All Data" />
+                <Switch
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
+
             </Grid>
+            <Label Style="{StaticResource DefaultLabelSmall}" Text="If you want to stop using it, turn it off. Data for the last 14 days will be deleted." />
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

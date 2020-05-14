@@ -3,7 +3,7 @@
     x:Class="Covid19Radar.Colors"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-
+    <!--
     <Color x:Key="PrimaryColor">#FFFFFF</Color>
     <Color x:Key="AccentColor">#019AE8</Color>
     <Color x:Key="Accent2Color">#1976D2</Color>
@@ -12,8 +12,7 @@
     <Color x:Key="Accent5Color">#BDBDBD</Color>
     <Color x:Key="Accent6Color">#999999</Color>
     <Color x:Key="Accent7Color">#8A000000</Color>
-    <Color x:Key="Accent8Color">#99FFFFFF</Color>
-
+    <Color x:Key="Accent8Color">#99FFFFFF</Color>-->
     <Color x:Key="Primary">#2196F3</Color>
     <Color x:Key="PrimaryDark">#1976D2</Color>
     <Color x:Key="PrimaryLight">#BBDEFB</Color>
