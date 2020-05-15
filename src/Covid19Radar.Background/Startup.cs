@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.AspNetCore.Http;
+using Covid19Radar.DataAccess;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Startup))]
 
@@ -18,7 +19,10 @@ namespace Covid19Radar
             builder.Services.AddLogging();
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
             builder.Services.AddSingleton<DataStore.IStoringCosmos, DataStore.StoringCosmos>();
-            builder.Services.AddSingleton<Services.INotificationService, Services.NotificationService>();
+            builder.Services.AddSingleton<INotificationService, NotificationService>();
+            builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyService, TemporaryExposureKeyService>();
 
         }
     }
