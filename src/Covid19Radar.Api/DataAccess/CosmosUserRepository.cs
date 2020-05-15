@@ -81,30 +81,6 @@ namespace Covid19Radar.DataAccess
             }
             return userFound;
         }
-        public async Task<SequenceDataModel?> NextSequenceNumber()
-        {
-            var id = SequenceDataModel._id.ToString();
-            for (var i = 0; i < 100; i++)
-            {
-                var result = await _db.Sequence.ReadItemAsync<SequenceDataModel>(id, PartitionKey.None);
-                var model = result.Resource;
-                model.Increment();
-                var option = new ItemRequestOptions();
-                option.IfMatchEtag = model._etag;
-                try
-                {
-                    var resultReplace = await _db.Sequence.ReplaceItemAsync(model, id, null, option);
-                    return resultReplace.Resource;
-                }
-                catch (CosmosException ex)
-                {
-                    _logger.LogInformation(ex, $"GetNumber Retry {i}");
-                    continue;
-                }
-            }
-            _logger.LogWarning("GetNumber is over retry count.");
-            return null;
-        }
 
     }
 }

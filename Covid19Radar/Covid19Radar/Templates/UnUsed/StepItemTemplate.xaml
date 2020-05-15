@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataTemplate
+    x:Class="Covid19Radar.Templates.StepItemTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <StackLayout>
+        <StackLayout Padding="40,50" Spacing="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Frame
+                    Grid.Column="0"
+                    IsVisible="{Binding HasStepNumber}"
+                    Style="{StaticResource DefaultNumberFrame}">
+                    <Label Style="{StaticResource DefaultNumberLabel}" Text="{Binding StepNumber}" />
+                </Frame>
+                <Label
+                    Grid.Column="1"
+                    Style="{StaticResource DefaultNumberLabelText}"
+                    Text="{Binding Title}" />
+            </Grid>
+
+            <ffimageloading:CachedImage Aspect="AspectFit" Source="{Binding Image}" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{Binding Description}" />
+            <ffimageloading:CachedImage
+                Aspect="AspectFit"
+                IsVisible="{Binding HasImage2}"
+                Source="{Binding Image2}" />
+            <Label
+                IsVisible="{Binding HasDescription2}"
+                Style="{StaticResource DefaultLabel}"
+                Text="{Binding Description2}" />
+        </StackLayout>
+        <BoxView IsVisible="{Binding HasStepNumber}" Style="{StaticResource DefaultLineStyle}" />
+    </StackLayout>
+</DataTemplate>
