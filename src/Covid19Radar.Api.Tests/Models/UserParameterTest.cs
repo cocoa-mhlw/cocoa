@@ -25,15 +25,13 @@ namespace Covid19Radar.Tests.Models
         }
 
         [DataTestMethod]
-        [DataRow("UUID", "0", "0", "UUID.00000.00000")]
-        [DataRow("UUID", "11111", "22222", "UUID.11111.22222")]
-        public void IdTest(string uuid, string major, string minor, string expected)
+        [DataRow("UUID1", "UUID1")]
+        [DataRow("UUID2", "UUID2")]
+        public void IdTest(string uuid, string expected)
         {
             // preparation
             var model = new UserParameter();
             model.UserUuid = uuid;
-            model.Major = major;
-            model.Minor = minor;
             // action
             var actual = model.GetId();
             // assert

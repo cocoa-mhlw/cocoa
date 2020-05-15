@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.StatusUpdateCompletePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+
+    <Grid Style="{StaticResource DefaultGridLayout}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <forms:CachedImage
+            Grid.Row="0"
+            HorizontalOptions="Center"
+            Source="Logo.png"
+            VerticalOptions="Center" />
+
+        <Label
+            Grid.Row="1"
+            Style="{StaticResource DefaultTitleLabel}"
+            Text="{x:Static resources:AppResources.AppName}" />
+
+        <Label
+            Grid.Row="2"
+            Style="{StaticResource DefaultLabel}"
+            Text="{x:Static resources:AppResources.StatusUpdateCompletePageTextStatusUpdateComplete}" />
+
+        <Button
+            Grid.Row="3"
+            Command="{Binding Path=OnClickHome}"
+            Style="{StaticResource DefaultButton}"
+            Text="{x:Static resources:AppResources.ButtonHome}"
+            VerticalOptions="End" />
+    </Grid>
+</ContentPage>

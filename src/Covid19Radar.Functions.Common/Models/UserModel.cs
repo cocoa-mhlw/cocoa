@@ -20,20 +20,6 @@ namespace Covid19Radar.Models
         public string UserUuid { get; set; }
 
         /// <summary>
-        /// User Major 0 to 65536
-        /// </summary>
-        /// <value>User Major</value>
-        [Obsolete]
-        public string Major { get; set; }
-
-        /// <summary>
-        /// User Minor 0 to 65536
-        /// </summary>
-        /// <value>User Minor</value>
-        [Obsolete]
-        public string Minor { get; set; }
-
-        /// <summary>
         /// Protected Secret key
         /// </summary>
         /// <value>Protected Secret Key</value>
