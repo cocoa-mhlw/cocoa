@@ -9,5 +9,7 @@ namespace Covid19Radar.DataAccess
     public interface IDiagnosisRepository
     {
         Task SubmitDiagnosisAsync(DiagnosisSubmissionParameter Parameter);
+
+        Task Delete(IUser user);
     }
 }

@@ -450,11 +450,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contributers に類似しているローカライズされた文字列を検索します。
+        ///   Contributors に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string MainContributers {
+        internal static string MainContributors {
             get {
-                return ResourceManager.GetString("MainContributers", resourceCulture);
+                return ResourceManager.GetString("MainContributors", resourceCulture);
             }
         }
         
