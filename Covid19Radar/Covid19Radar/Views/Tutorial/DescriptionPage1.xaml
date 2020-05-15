@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.DescriptionPage1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Column="0" Style="{StaticResource DefaultNumberFrame}">
+                    <Label Style="{StaticResource DefaultNumberLabel}" Text="1" />
+                </Frame>
+                <Label
+                    Grid.Column="1"
+                    Style="{StaticResource DefaultNumberLabelText}"
+                    Text="{x:Static resources:AppResources.DescriptionPageTitleTextStep1}" />
+            </Grid>
+
+            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep11.png" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep1Description}" />
+            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep12.png" />
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep1Description2}" />
+
+            <Button
+                AutomationId="NextButton"
+                Command="{Binding Path=OnClickNext}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.ButtonNext}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

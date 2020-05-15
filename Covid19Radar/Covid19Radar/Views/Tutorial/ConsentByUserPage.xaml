@@ -4,29 +4,21 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns:prism="http://prismlibrary.com"
-    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
-    Style="{StaticResource PageStyle}"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <Grid>
-        <StackLayout Padding="0,0">
-            <WebView BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
-             <Button
+    <Grid Style="{StaticResource DefaultGridLayout}">
+        <StackLayout>
+            <WebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
+            <Button
                 AutomationId="NextButton"
-                Margin="0,20"
                 Command="{Binding Path=OnClickNext}"
-                Style="{StaticResource DefaultButtonStyle}"
+                Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.ButtonAgree}" />
         </StackLayout>
-        <!--
-        <Frame
-            IsVisible="{Binding IsBusy}"
-            Style="{StaticResource ActivityIndicatorFrame}">
-            <ActivityIndicator IsRunning="{Binding IsBusy}" />
-        </Frame>
-        -->
     </Grid>
 </ContentPage>

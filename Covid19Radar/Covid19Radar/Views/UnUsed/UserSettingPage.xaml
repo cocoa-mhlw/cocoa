@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.UserSettingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.UserSettingPageTextStatusSettingsSubtitle}" />
+                <ffimageloading:CachedImage Margin="0,0,0,20" Source="settings.png" />
+                <Label Text="{x:Static resources:AppResources.UserSettingPageTextStatusSettingsDescription}" />
+            </StackLayout>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <StackLayout>
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.UserSettingPageTextStatusSettingsEnterNumber}" />
+                <renderers:CustomEntry
+                    Margin="0,20"
+                    BorderColor="{StaticResource Primary}"
+                    Keyboard="Telephone"
+                    MaxLength="13"
+                    Placeholder="{x:Static resources:AppResources.UserSettingPageTextPhoneNumberPlaceholder}"
+                    Text="{Binding PhoneNumber}"
+                    TextColor="{StaticResource Primary}">
+                    <Entry.Behaviors>
+                        <behaviors:MaskedBehavior Mask="XXX-XXXX-XXXX" />
+                    </Entry.Behaviors>
+                </renderers:CustomEntry>
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.UserSettingPageTextStatusSettingsSMSDescription}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.UserSettingPageTextStatusSettingsSMSInfo}" />
+                <Button
+                    Command="{Binding OnClickNext}"
+                    IsEnabled="{Binding IsPhoneNumberValid}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.ButtonNext}" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
