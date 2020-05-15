@@ -28,13 +28,18 @@ namespace Covid19Radar.DataAccess
             if (sinceEpochSeconds < oldest)
                 sinceEpochSeconds = oldest;
 
-            var results = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKey>(true)
+            var results = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKeyExportModel>(true)
                 .Where(tek => tek.TimestampSecondsSinceEpoch >= sinceEpochSeconds).ToArray();
 
             var newestTimestamp = results
                 .OrderByDescending(tek => tek.TimestampSecondsSinceEpoch)
                 .FirstOrDefault()?.TimestampSecondsSinceEpoch;
-            var keys = results.Select(tek => TemporaryExposureKeysResult.Key.FromDatastore(tek));
+
+            // TODO: implement Cache
+            var keys = results.Select(tek => new TemporaryExposureKeysResult.Key()
+            {
+                Url = tek.Url
+            });
 
             return new TemporaryExposureKeysResult
             {

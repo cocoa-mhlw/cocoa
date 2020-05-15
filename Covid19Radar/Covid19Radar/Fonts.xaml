@@ -3,7 +3,7 @@
     x:Class="Covid19Radar.Fonts"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-<!--
+    <!--
     <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
         <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
         <On Platform="iOS" Value="MaterialDesignIcons" />
@@ -19,6 +19,5 @@
     <OnPlatform x:Key="NotoSansMediumFontFamily" x:TypeArguments="x:String">
         <On Platform="Android" Value="NotoSansCJKjp-Medium.otf#Noto Sans CJK JP" />
         <On Platform="iOS" Value="NotoSansCJKjp-Medium" />
-    </OnPlatform>
--->
+    </OnPlatform>-->
 </ResourceDictionary>
