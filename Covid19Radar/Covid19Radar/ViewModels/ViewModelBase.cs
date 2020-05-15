@@ -1,4 +1,5 @@
 ﻿using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Prism.AppModel;
 using Prism.Commands;
@@ -39,6 +40,8 @@ namespace Covid19Radar.ViewModels
         public ViewModelBase(INavigationService navigationService)
         {
             NavigationService = navigationService;
+            var statusbar = Xamarin.Forms.DependencyService.Get<IStatusBarPlatformSpecific>();
+            statusbar.SetStatusBarColor(Color.FromHex("03A9F4"));
         }
         public virtual void Initialize(INavigationParameters parameters)
         {
