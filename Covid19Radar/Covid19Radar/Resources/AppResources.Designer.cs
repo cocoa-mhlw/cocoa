@@ -61,7 +61,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   COVID19Radar に類似しているローカライズされた文字列を検索します。
+        ///   Covid19Radar に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string AppName {
             get {
