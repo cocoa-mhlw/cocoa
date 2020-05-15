@@ -72,6 +72,10 @@ Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
 [LICENSE](./LICENSE) for the full
 license text.
 
+以下は、原作者の意図に応じた、このライセンスの追加項目です。
+AGPLに加えて、このプロジェクトでは共著者の著作者人格権の行使を許可しません。
+各著者による論争または訴訟は一切許可されていません。
+
 ## サードパーティーソフトウェアについて
 
 This file incorporates components from the projects listed [document](./COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
