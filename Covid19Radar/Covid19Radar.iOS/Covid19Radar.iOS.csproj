@@ -56,7 +56,7 @@
     <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>VS: net.kzmx.Covid19Radar Development</CodesignProvision>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
     <MtouchLink>None</MtouchLink>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <MtouchProfiling>true</MtouchProfiling>
@@ -105,6 +105,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
+    <Compile Include="Renderers\GradientButtonRenderer.cs" />
+    <Compile Include="Renderers\Statusbar.cs" />
     <Compile Include="Services\BeaconService.cs" />
     <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
