@@ -86,7 +86,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID19Radar</value>
+    <value>Covid19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
