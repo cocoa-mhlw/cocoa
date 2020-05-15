@@ -70,6 +70,10 @@ You can check the screen transition by accessing the following URL.
 Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
 [LICENSE](./LICENSE) for the full license text.
 
+The following are additional items in this license depending on the intention of the original author.
+In Addition to AGPL, this project not permit exercise of moral rights of co-authors.
+Dispute or litigation by each author is not allowed.
+
 ## About 3rd Party Software
 
 This file incorporates components from the projects listed [document](./COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
