@@ -254,7 +254,7 @@ Controlla il tuo SMS.</target>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/contributor.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Url Contributer</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Url Contributor</note>
         </trans-unit>
         <trans-unit id="UrlUpdate" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
@@ -348,10 +348,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Consenti notifica di esposizione / Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributers" translate="yes" xml:space="preserve">
-          <source>Contributers</source>
+        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
+          <source>Contributors</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Collaboratori</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributers</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>

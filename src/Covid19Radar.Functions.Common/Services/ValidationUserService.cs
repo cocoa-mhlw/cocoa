@@ -44,6 +44,16 @@ namespace Covid19Radar.Services
             var splited = authorization.Split(' ');
             if (splited.Length != 2) return IValidationUserService.ValidateResult.Error;
             var authorizationCode = splited[1];
+
+            if (Cryption.ValidateSecret(user.UserUuid, authorizationCode))
+            {
+                return new IValidationUserService.ValidateResult()
+                {
+                    IsValid = true,
+                    User = null,
+                    ErrorActionResult = null
+                };
+            }
             return await Query(req, user, authorizationCode);
         }
 
@@ -55,7 +65,8 @@ namespace Covid19Radar.Services
                 if (itemResult.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     var isValid = authorizationCode == Cryption.Unprotect(itemResult.Resource.ProtectSecret);
-                    return new IValidationUserService.ValidateResult() {
+                    return new IValidationUserService.ValidateResult()
+                    {
                         IsValid = isValid,
                         User = itemResult.Resource,
                         ErrorActionResult = (!isValid ? new BadRequestResult() : null)

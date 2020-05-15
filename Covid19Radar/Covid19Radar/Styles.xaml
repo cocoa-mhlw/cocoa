@@ -47,7 +47,7 @@
     </Style>
 
     <Style x:Key="Accent2ColorHeaderLabelStyle" TargetType="Label">
-        <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+        <Setter Property="TextColor" Value="{StaticResource Accent2Color}" />
         <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
         <Setter Property="FontSize" Value="Body" />
         <Setter Property="FontAttributes" Value="Bold" />
