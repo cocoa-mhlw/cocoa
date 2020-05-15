@@ -19,6 +19,9 @@
         "VerificationKeyIds": "VerificationKeyIdv1 VerificationKeyIdv2",
         "VerificationKeyVersions": "VerificationKeyVersion1 VerificationKeyVersions2",
         "Signature": "o4Pm6LJ+/q3UxwZArVLdkQ==",
-        "Region": "Country"
+        "Region": "Country",
+        "TekExportBlobStorage": "UseDevelopmentStorage=true",
+        "TekExportBlobStorageContainerPrefix": "C19R",
+        "ExportKeyUrl": "http://127.0.0.1:10000/"
     }
 }
