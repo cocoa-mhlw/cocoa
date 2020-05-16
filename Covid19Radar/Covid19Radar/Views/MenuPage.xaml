@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage
+    x:Class="Covid19Radar.Views.MenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Visual="Material">
+    <MasterDetailPage.Master>
+
+        <NavigationPage Title="Menu">
+
+            <x:Arguments>
+                <ContentPage Title="My App">
+
+                    <ListView
+                        BackgroundColor="#e8e8e8"
+                        ItemsSource="{Binding MenuItems}"
+                        RowHeight="60"
+                        SelectedItem="{Binding SelectedMenuItem}"
+                        SeparatorColor="LightGray"
+                        SeparatorVisibility="Default">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <!--  Main design for our menu items  -->
+                                    <StackLayout
+                                        Padding="20,10,0,10"
+                                        Orientation="Horizontal"
+                                        Spacing="20"
+                                        VerticalOptions="FillAndExpand">
+                                        <Image>
+                                            <Image.Source>
+                                                <FontImageSource
+                                                    FontFamily="FA-S"
+                                                    Glyph="{Binding Icon}"
+                                                    Size="35"
+                                                    Color="#2196F3" />
+                                            </Image.Source>
+                                        </Image>
+                                        <Label
+                                            FontSize="Medium"
+                                            Text="{Binding Title}"
+                                            TextColor="Black"
+                                            VerticalOptions="Center" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                        <ListView.Behaviors>
+                            <b:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
+                        </ListView.Behaviors>
+
+                    </ListView>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
