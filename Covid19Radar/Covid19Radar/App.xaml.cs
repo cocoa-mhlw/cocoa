@@ -113,10 +113,8 @@ namespace Covid19Radar
 
             // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<MenuPage, MenuPageViewModel>();
             containerRegistry.RegisterForNavigation<StartTutorialPage, StartTutorialPageViewModel>();
-
-            //containerRegistry.RegisterForNavigation<DescriptionPage, DescriptionPageViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage1, DescriptionPage1ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage2, DescriptionPage2ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage3, DescriptionPage3ViewModel>();
@@ -124,26 +122,16 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
-            //containerRegistry.RegisterForNavigation<SmsVerificationPage, SmsVerificationPageViewModel>();
-            //containerRegistry.RegisterForNavigation<UserSettingPage, UserSettingPageViewModel>();
-            //containerRegistry.RegisterForNavigation<InputSmsOTPPage, InputSmsOTPPageViewModel>();
             containerRegistry.RegisterForNavigation<ContributorsPage, ContributorsPageViewModel>();
             containerRegistry.RegisterForNavigation<SetupCompletedPage, SetupCompletedPageViewModel>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage, LicenseAgreementPageViewModel>();
-            containerRegistry.RegisterForNavigation<DetectedBeaconPage, DetectedBeaconPageViewmodel>();
-            containerRegistry.RegisterForNavigation<StatusUpdateCompletePage, StatusUpdateCompletePageViewModel>();
-            //containerRegistry.RegisterForNavigation<HeadsupPage, HeadsupPageViewModel>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage, NotifyOtherPageViewModel>();
             containerRegistry.RegisterForNavigation<ExposuresPage, ExposuresPageViewModel>();
             containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
             containerRegistry.RegisterForNavigation<UpdateInfomationPage, UpdateInfomationPageViewModel>();
 
-            // MenuPage
-            containerRegistry.RegisterForNavigation<MenuPage, MenuPageViewModel>();
-
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
-            containerRegistry.RegisterSingleton<OTPService>();
         }
 
         protected override void OnStart()

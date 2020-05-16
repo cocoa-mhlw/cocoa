@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
-        public NotifyOtherPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public NotifyOtherPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
         }
