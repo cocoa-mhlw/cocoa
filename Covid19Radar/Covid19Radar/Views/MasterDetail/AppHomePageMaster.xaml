@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.AppHomePageMaster"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Master"
+    mc:Ignorable="d">
+    <StackLayout>
+        <ListView
+            x:Name="MenuItemsListView"
+            HasUnevenRows="true"
+            ItemsSource="{Binding MenuItems}"
+            SeparatorVisibility="None">
+            <d:ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Page 1</x:String>
+                    <x:String>Page 2</x:String>
+                    <x:String>Page 3</x:String>
+                    <x:String>Page 4</x:String>
+                    <x:String>Page 5</x:String>
+                </x:Array>
+            </d:ListView.ItemsSource>
+            <ListView.Header>
+                <Grid BackgroundColor="#1976D2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="10" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Style="{DynamicResource SubtitleStyle}"
+                        Text="AppName" />
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+                            <Label
+                                d:Text="{Binding .}"
+                                FontSize="24"
+                                Text="{Binding Title}"
+                                VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
