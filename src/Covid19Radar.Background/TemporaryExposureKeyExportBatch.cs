@@ -17,7 +17,7 @@ namespace Covid19Radar
         }
 
         [FunctionName("TemporaryExposureKeyExportBatch")]
-        public async Task Run([TimerTrigger("0 */6 * * * *")]TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 * * * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
