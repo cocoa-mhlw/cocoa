@@ -23,11 +23,6 @@ namespace Covid19Radar.ViewModels
         // Navigation
         protected INavigationService NavigationService { get; private set; }
 
-        protected void NotifyPropertyChanged(string propertyName)
-            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         // PageTite
         private string _title;
 
@@ -37,12 +32,12 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public ViewModelBase(INavigationService navigationService)
+        public ViewModelBase(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific)
         {
             NavigationService = navigationService;
-            var statusbar = Xamarin.Forms.DependencyService.Get<IStatusBarPlatformSpecific>();
-            statusbar.SetStatusBarColor(Color.FromHex("03A9F4"));
+            statusBarPlatformSpecific.SetStatusBarColor(Color.FromHex("03A9F4"));
         }
+
         public virtual void Initialize(INavigationParameters parameters)
         {
 
