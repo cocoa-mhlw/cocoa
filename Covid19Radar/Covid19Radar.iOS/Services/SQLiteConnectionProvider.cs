@@ -10,7 +10,6 @@ using SQLite;
 using UIKit;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(Covid19Radar.iOS.Services.SQLiteConnectionProvider))]
 namespace Covid19Radar.iOS.Services
 {
     public class SQLiteConnectionProvider : ISQLiteConnectionProvider

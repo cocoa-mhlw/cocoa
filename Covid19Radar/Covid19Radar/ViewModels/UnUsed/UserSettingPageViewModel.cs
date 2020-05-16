@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Prism.Ioc;
 using Prism.Navigation;
@@ -24,7 +25,7 @@ namespace Covid19Radar.ViewModels
 
         public bool IsPhoneNumberValid => !string.IsNullOrWhiteSpace(PhoneNumber);
 
-        public UserSettingPageViewModel(INavigationService navigationService) : base(navigationService)
+        public UserSettingPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = Resources.AppResources.TitleUserSettings;
             _otpService = App.Current.Container.Resolve<OTPService>();
