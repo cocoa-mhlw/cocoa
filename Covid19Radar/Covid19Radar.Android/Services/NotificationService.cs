@@ -15,7 +15,6 @@ using Covid19Radar.Services;
 using Xamarin.Forms;
 using AndroidApp = Android.App.Application;
 
-[assembly: Dependency(typeof(Covid19Radar.Droid.Services.NotificationService))]
 namespace Covid19Radar.Droid.Services
 {
     public class NotificationService : INotificationService

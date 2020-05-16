@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Services;
+﻿using Covid19Radar.Renderers;
+using Covid19Radar.Services;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -13,7 +14,7 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase, IDisposable
     {
-        public ExposuresPageViewModel(INavigationService navigationService) : base(navigationService)
+        public ExposuresPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = Resources.AppResources.MainExposures;
             MessagingCenter.Instance.Subscribe<ExposureNotificationHandler>(this, "exposure_info_changed", h =>
