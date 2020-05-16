@@ -1,4 +1,5 @@
-﻿using Prism.Navigation;
+﻿using Covid19Radar.Renderers;
+using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels

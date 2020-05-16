@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Prism.Navigation;

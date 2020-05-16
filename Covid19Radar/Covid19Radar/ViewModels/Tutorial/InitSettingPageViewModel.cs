@@ -1,4 +1,5 @@
 ﻿using Covid19Radar.Common;
+using Covid19Radar.Renderers;
 using Prism.Navigation;
 using Xamarin.Forms;
 

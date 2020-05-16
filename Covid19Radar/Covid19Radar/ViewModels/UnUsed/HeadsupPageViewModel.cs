@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Covid19Radar.Renderers;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -18,7 +19,7 @@ namespace Covid19Radar.ViewModels
             get { return _url; }
             set { SetProperty(ref _url, value); }
         }
-        public HeadsupPageViewModel(INavigationService navigationService) : base(navigationService)
+        public HeadsupPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = Resources.AppResources.TitleHeadsup;
             Url = Resources.AppResources.UrlHeadsup;
