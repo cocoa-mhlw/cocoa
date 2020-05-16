@@ -25,13 +25,13 @@ namespace Covid19Radar.Services
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
-        public UserDataService()
+        public UserDataService(HttpDataService httpDataService, INavigationService navigationService, INotificationService notificationService)
         {
-            httpDataService = DependencyService.Resolve<HttpDataService>();
-            navigationService = DependencyService.Resolve<INavigationService>();
-            notificationService = DependencyService.Resolve<INotificationService>();
-            notificationService.Initialize();
-            notificationService.NotificationReceived += OnLocalNotificationTaped;
+            this.httpDataService = httpDataService;
+            this.navigationService = navigationService;
+            this.notificationService = notificationService;
+            this.notificationService.Initialize();
+            this.notificationService.NotificationReceived += OnLocalNotificationTaped;
             current = Get();
             if (current != null)
             {

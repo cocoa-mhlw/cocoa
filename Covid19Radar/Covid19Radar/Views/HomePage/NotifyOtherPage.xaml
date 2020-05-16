@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:c="clr-namespace:Covid19Radar.Converters"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -13,6 +14,7 @@
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
@@ -29,9 +31,9 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Button
+            <ce:GradientButton
                 Command="{Binding SharePositiveDiagnosisCommand}"
-                Style="{StaticResource DefaultButton}"
+                Style="{StaticResource DefaultGradientButton}"
                 Text="{x:Static resources:AppResources.NofityPageButtonSharePositive}" />
         </StackLayout>
     </ScrollView>

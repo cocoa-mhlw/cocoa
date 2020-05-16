@@ -39,6 +39,7 @@ namespace Covid19Radar.DataStore
         public Container TemporaryExposureKey { get => Database.GetContainer("TemporaryExposureKey"); }
         public Container Diagnosis { get => Database.GetContainer("Diagnosis"); }
         public Container TemporaryExposureKeyExport { get => Database.GetContainer("TemporaryExposureKeyExport"); }
+        public Container Sequence { get => Database.GetContainer("Sequence"); }
 
         /// <summary>
         /// DI Constructor
@@ -130,6 +131,16 @@ namespace Covid19Radar.DataStore
             catch { }
             var temporaryExposureKeyExportProperties = new ContainerProperties("TemporaryExposureKeyExport", "/PartitionKey");
             var temporaryExposureKeyExportResult = await dbResult.Database.CreateContainerIfNotExistsAsync(temporaryExposureKeyExportProperties);
+
+            // Container Sequence
+            Logger.LogInformation("GenerateAsync Create Sequence Container");
+            try
+            {
+                await dbResult.Database.GetContainer("Sequence").DeleteContainerAsync();
+            }
+            catch { }
+            var sequenceProperties = new ContainerProperties("Sequence", "/PartitionKey");
+            var sequenceResult = await dbResult.Database.CreateContainerIfNotExistsAsync(sequenceProperties);
 
         }
 
