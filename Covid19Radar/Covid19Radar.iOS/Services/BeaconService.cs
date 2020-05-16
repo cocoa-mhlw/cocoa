@@ -77,7 +77,7 @@ namespace Covid19Radar.iOS.Services
             //CBPeripheralManager trasmitter = sender as CBPeripheralManager;
         }
 
-        private async void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
+        private void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
             var now = DateTime.UtcNow;
