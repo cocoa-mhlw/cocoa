@@ -23,7 +23,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public UpdateInfomationPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public UpdateInfomationPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleUpdateInformation;
             Url = Resources.AppResources.UrlUpdate;

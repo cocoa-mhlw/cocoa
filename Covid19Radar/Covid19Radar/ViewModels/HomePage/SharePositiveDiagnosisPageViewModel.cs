@@ -14,7 +14,7 @@ namespace Covid19Radar.ViewModels
         public string DiagnosisUid { get; set; }
         public DateTime? DiagnosisDate { get; set; }
 
-        public SharePositiveDiagnosisPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public SharePositiveDiagnosisPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitileSharePositiveDiagnosis;
         }

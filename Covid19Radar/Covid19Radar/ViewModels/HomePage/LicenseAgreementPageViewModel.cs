@@ -23,7 +23,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public LicenseAgreementPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public LicenseAgreementPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleLicenseAgreement;
             Url = AppConstants.LicenseUrl;
