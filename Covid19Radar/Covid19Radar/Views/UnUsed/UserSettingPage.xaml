@@ -41,7 +41,7 @@
                 <Button
                     Command="{Binding OnClickNext}"
                     IsEnabled="{Binding IsPhoneNumberValid}"
-                    Style="{StaticResource DefaultButton}"
+                    Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonNext}" />
             </StackLayout>
         </StackLayout>
