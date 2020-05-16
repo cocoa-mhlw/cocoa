@@ -14,7 +14,7 @@ namespace Covid19Radar.ViewModels
             get { return _url; }
             set { SetProperty(ref _url, value); }
         }
-        public ContributorsPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public ContributorsPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleContributorsPage;
             Url = Resources.AppResources.UrlContributor;
