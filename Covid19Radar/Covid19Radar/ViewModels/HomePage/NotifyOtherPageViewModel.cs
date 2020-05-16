@@ -10,6 +10,7 @@ using System;
 using System.Windows.Input;
 using Prism.Navigation.Xaml;
 using Acr.UserDialogs;
+using Covid19Radar.Renderers;
 
 namespace Covid19Radar.ViewModels
 {

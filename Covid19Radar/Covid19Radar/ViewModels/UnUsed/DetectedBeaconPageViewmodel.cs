@@ -1,4 +1,5 @@
 ﻿using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -25,7 +26,7 @@ namespace Covid19Radar.ViewModels
         }
 
 
-        public DetectedBeaconPageViewmodel(INavigationService navigationService) : base(navigationService)
+        public DetectedBeaconPageViewmodel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = Resources.AppResources.TitleDetectedBeaconPage;
             //_beaconService = beaconService;
