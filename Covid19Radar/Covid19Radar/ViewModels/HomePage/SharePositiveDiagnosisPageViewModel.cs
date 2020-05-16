@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Prism.Navigation;
 using System;
@@ -13,7 +14,7 @@ namespace Covid19Radar.ViewModels
         public string DiagnosisUid { get; set; }
         public DateTime? DiagnosisDate { get; set; }
 
-        public SharePositiveDiagnosisPageViewModel(INavigationService navigationService) : base(navigationService)
+        public SharePositiveDiagnosisPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = Resources.AppResources.TitileSharePositiveDiagnosis;
         }

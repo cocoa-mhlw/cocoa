@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using DryIoc;
@@ -23,8 +24,8 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public ConsentByUserPageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public ConsentByUserPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific)
+            : base(navigationService, statusBarPlatformSpecific)
         {
             Title = AppResources.TitleConsentByUserPage;
             Url = Resources.AppResources.UrlPrivacyPolicy;
