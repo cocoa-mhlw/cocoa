@@ -23,7 +23,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _AppVersion, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public HomePageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
             AppVer = AppConstants.AppVersion;

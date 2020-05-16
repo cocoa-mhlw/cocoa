@@ -8,7 +8,7 @@ namespace Covid19Radar.ViewModels
 {
     public class DescriptionPage1ViewModel : ViewModelBase
     {
-        public DescriptionPage1ViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public DescriptionPage1ViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleHowItWorks;
         }

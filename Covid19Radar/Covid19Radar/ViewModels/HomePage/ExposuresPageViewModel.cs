@@ -14,7 +14,7 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase, IDisposable
     {
-        public ExposuresPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public ExposuresPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.MainExposures;
             MessagingCenter.Instance.Subscribe<ExposureNotificationHandler>(this, "exposure_info_changed", h =>
