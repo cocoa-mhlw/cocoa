@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -72,6 +73,7 @@
             </Grid>
             <Label Style="{StaticResource DefaultLabelSmall}" Text="If you want to stop using it, turn it off. Data for the last 14 days will be deleted." />
 
+            <ce:GradientButton Style="{StaticResource DefaultGradientButton}" Text="TlBr" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
