@@ -521,11 +521,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
           <source>SampleText</source>
-          <target state="new">SampleText</target>
+          <target state="translated">示例文本</target>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
           <source>SampleText</source>
-          <target state="new">SampleText</target>
+          <target state="translated">示例文本</target>
         </trans-unit>
       </group>
     </body>

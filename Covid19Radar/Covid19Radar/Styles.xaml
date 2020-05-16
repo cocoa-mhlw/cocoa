@@ -11,6 +11,7 @@
             <local:Fonts />
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
+
     <Style TargetType="StackLayout">
         <Setter Property="Spacing" Value="0" />
     </Style>
@@ -48,6 +49,12 @@
         <Setter Property="HeightRequest" Value="1" />
         <Setter Property="Color" Value="{StaticResource Divider}" />
     </Style>
+
+    <Style x:Key="DefaultBlueLineStyle" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="1" />
+        <Setter Property="Color" Value="{StaticResource Primary}" />
+    </Style>
+
 
     <!--
     <Style x:Key="ShellBaseStyle" TargetType="Element">

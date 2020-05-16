@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Services;
+﻿using Covid19Radar.Renderers;
+using Covid19Radar.Services;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;

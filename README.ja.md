@@ -64,7 +64,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 以下のURLにアクセスすると、画面遷移を確認いただけます。
 
-[プロトタイプ画面（日本語）](https://xd.adobe.com/view/9ccfd774-5667-4373-530f-591148c84aab-eafe/)
+[プロトタイプ画面（日本語）](https://xd.adobe.com/view/725e056c-d18a-4e29-61d2-d4dabd4b7eea-046f/)
 
 ## ライセンス
 
