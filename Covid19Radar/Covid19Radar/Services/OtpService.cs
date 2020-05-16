@@ -7,9 +7,9 @@ namespace Covid19Radar.Services
     {
         private readonly HttpDataService _httpDataService;
 
-        public OTPService()
+        public OTPService(HttpDataService httpDataService)
         {
-            _httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
+            _httpDataService = httpDataService;
         }
 
         public Task SendOTPAsync(UserDataModel user, string phoneNumber)

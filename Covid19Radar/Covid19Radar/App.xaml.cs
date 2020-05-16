@@ -62,7 +62,7 @@ namespace Covid19Radar
 
             INavigationResult result;
             // Check user data and skip tutorial
-            UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
+            UserDataService userDataService = Container.Resolve<UserDataService>();
             if (userDataService.IsExistUserData)
             {
                 // TODO Wire Start Exposure Notification
@@ -136,9 +136,9 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
             containerRegistry.RegisterForNavigation<UpdateInfomationPage, UpdateInfomationPageViewModel>();
 
-            containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
-            containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
-
+            containerRegistry.RegisterSingleton<UserDataService>();
+            containerRegistry.RegisterSingleton<HttpDataService>();
+            containerRegistry.RegisterSingleton<OTPService>();
         }
 
         protected override void OnStart()
