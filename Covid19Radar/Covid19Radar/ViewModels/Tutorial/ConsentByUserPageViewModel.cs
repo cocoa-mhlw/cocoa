@@ -24,8 +24,8 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public ConsentByUserPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific)
-            : base(navigationService, statusBarPlatformSpecific)
+        public ConsentByUserPageViewModel(INavigationService navigationService)
+            : base(navigationService)
         {
             Title = AppResources.TitleConsentByUserPage;
             Url = Resources.AppResources.UrlPrivacyPolicy;
