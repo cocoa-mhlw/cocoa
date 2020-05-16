@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Prism.Navigation;
@@ -22,7 +23,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _AppVersion, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService) : base(navigationService)
+        public HomePageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = AppResources.HomePageTitle;
             AppVer = AppConstants.AppVersion;
