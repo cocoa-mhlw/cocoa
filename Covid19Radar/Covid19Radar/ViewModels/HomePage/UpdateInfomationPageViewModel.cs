@@ -1,4 +1,5 @@
 ﻿using Covid19Radar.Common;
+using Covid19Radar.Renderers;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -22,7 +23,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public UpdateInfomationPageViewModel(INavigationService navigationService) : base(navigationService)
+        public UpdateInfomationPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = Resources.AppResources.TitleUpdateInformation;
             Url = Resources.AppResources.UrlUpdate;
