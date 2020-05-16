@@ -8,7 +8,6 @@ using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(Covid19Radar.iOS.Services.NotificationService))]
 namespace Covid19Radar.iOS.Services
 {
     public class NotificationService : INotificationService

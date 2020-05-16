@@ -10,12 +10,13 @@ using System;
 using System.Windows.Input;
 using Prism.Navigation.Xaml;
 using Acr.UserDialogs;
+using Covid19Radar.Renderers;
 
 namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
-        public NotifyOtherPageViewModel(INavigationService navigationService) : base(navigationService)
+        public NotifyOtherPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
         }
