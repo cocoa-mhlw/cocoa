@@ -23,11 +23,6 @@ namespace Covid19Radar.ViewModels
         // Navigation
         protected INavigationService NavigationService { get; private set; }
 
-        protected void NotifyPropertyChanged(string propertyName)
-            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         // PageTite
         private string _title;
 
