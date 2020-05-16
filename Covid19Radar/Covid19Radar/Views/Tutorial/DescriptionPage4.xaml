@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -32,10 +33,10 @@
 
             <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep4.png" />
             <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep4Description}" />
-            <Button
+            <ce:GradientButton
                 AutomationId="NextButton"
                 Command="{Binding Path=OnClickNext}"
-                Style="{StaticResource DefaultButton}"
+                Style="{StaticResource DefaultGradientButton}"
                 Text="{x:Static resources:AppResources.ButtonNext}" />
         </StackLayout>
     </ScrollView>

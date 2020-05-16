@@ -33,6 +33,7 @@
 - Takuya Fujiwara (Xamarin)
 - Daryal Murat Akay (Turkish Translation)
 - Su Wei (Simplified Chinese Translation)
+- Glenn Colpaert (Dutch Translation)
 
 # Beta Testers
 - Nagahata Kenji
