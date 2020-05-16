@@ -33,22 +33,23 @@
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Du behöver inte ange personlig information. Vi använder unikt ID som allokeras till dig när du installerar en app.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Du behöver inte ange personlig information. Vi använder ett unikt ID som tilldelas dig när du installerar app'en.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">En kontakt med en annan appanvändare under längre tid än 30 minuter totalt, inom en radie som ligger närmare än 2 m i genomsnitt registreras som "Stäng kontakt".</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">En kontakt med en annan användare under längre tid än 30 minuter och inom en radie närmare än 2 m, registreras som "Stäng kontakt".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
         </trans-unit>
+        <!-- Konstig -->
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ändra din status manuellt till "Positiv" när du har verifierat ditt telefonnummer." Positivt" Arbetsflöde , Nu samordning med närstående.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ändra din status till "Positiv" när du har verifierat ditt telefonnummer." Positivt" Arbetsflöde , Nu samordning med närstående.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth måste vara aktiverat för att spela in nära kontakt. Gå till nästa sida för att slå på den.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth måste vara aktiverat för att uppfatta en kontakt. Gå till nästa sida för att slå på den.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
         </trans-unit>
@@ -69,7 +70,7 @@
         </trans-unit>
         <trans-unit id="TitleAppDescription" translate="yes" xml:space="preserve">
           <source>App Description</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">App Beskrivning</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">App beskrivning</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Description</note>
         </trans-unit>
         <trans-unit id="ButtonRegister" translate="yes" xml:space="preserve">
@@ -114,12 +115,12 @@
         </trans-unit>
         <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
           <source>You're ready to go</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Allt är klart</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Du är redo att börja</target>
           <note from="MultilingualBuild" annotates="source" priority="2">You're ready to go</note>
         </trans-unit>
         <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
           <source>Set up Completed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Konfigurera slutförd</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Konfiguration slutförd</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
@@ -139,6 +140,7 @@ Please check your SMS.</source>
 Kontrollera ditt SMS.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
         </trans-unit>
+        <!--Really??-->
         <trans-unit id="UserSettingPageTextStatusSettingsSMSInfo" translate="yes" xml:space="preserve">
           <source>We will not store your phone number. It will be sent directly to the database of the government.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Vi kommer inte att lagra ditt telefonnummer. Det kommer att skickas direkt till databasen av regeringen.</target>
@@ -154,6 +156,7 @@ Kontrollera ditt SMS.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">090-1234-4567</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Placeholder text for phone number entry</note>
         </trans-unit>
+        <!-- Too technical? -->
         <trans-unit id="DetectedBeaconListMenu" translate="yes" xml:space="preserve">
           <source>Detected Beacon List</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Lista över identifierade beacon</target>
@@ -201,6 +204,7 @@ Kontrollera ditt SMS.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Lista över bidragsgivare</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
+        <!-- Too technical? -->
         <trans-unit id="TitleDetectedBeaconPage" translate="yes" xml:space="preserve">
           <source>Detected Beacons</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Identifierade beacons</target>
@@ -218,12 +222,12 @@ Kontrollera ditt SMS.</target>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
           <source>ID</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">id</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Id</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
           <source>Average Distance</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avarage Avstånd</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Genomsnittligt avstånd</target>
           <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
@@ -241,11 +245,13 @@ Kontrollera ditt SMS.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Senaste tid</target>
           <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
         </trans-unit>
+        <!-- What is MajorNo? -->
         <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
           <source>MajorNo</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">MajorNo (Svenska)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
         </trans-unit>
+         <!-- What is MinorNo? -->
         <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
           <source>MinorNo</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">MinorNo (på något sätt)</target>
@@ -278,7 +284,7 @@ Kontrollera ditt SMS.</target>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
           <source>Recording Close Contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spela in nära kontakt</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nära kontakt identifierad</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
@@ -288,7 +294,7 @@ Kontrollera ditt SMS.</target>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
           <source>Requirements to use this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krav för att använda den här appen</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Villkor för att använda den här appen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
         </trans-unit>
         <trans-unit id="TitleUserSettings" translate="yes" xml:space="preserve">
@@ -323,7 +329,7 @@ Kontrollera ditt SMS.</target>
         </trans-unit>
         <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Okej</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ok</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
         </trans-unit>
         <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
@@ -331,6 +337,7 @@ Kontrollera ditt SMS.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Aktivera</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
         </trans-unit>
+        <!--Context?-->
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">NotNow (NotNow)</target>
@@ -339,13 +346,13 @@ Kontrollera ditt SMS.</target>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Denna app använder Exponering Anmälan / Bluetooth-signaler för att avgöra om du är nära en annan kontakt spårning app användare. 
-Välj "Tillåt alltid" för att ställa in Bluetooth.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Denna app använder Bluetooth för att avgöra om du är nära en annan kontakt. 
+Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
           <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tillåt exponeringsmeddelande / Bluetooth</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tillåt  Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
@@ -424,7 +431,7 @@ Välj "Tillåt alltid" för att ställa in Bluetooth.</target>
         </trans-unit>
         <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
           <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Om du testats positivt för viruset som orsakar COVID-19 kan du välja att dela din diagnos.  Detta kommer att hjälpa andra i ditt samhälle innehåller spridningen av viruset.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Om du testats positivt för viruset som orsakar COVID-19 kan du välja att dela din diagnos.  Detta kommer att hjälpa andra i ditt samhälle för att minska spridningen av viruset.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
         </trans-unit>
         <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
@@ -489,7 +496,7 @@ Välj "Tillåt alltid" för att ställa in Bluetooth.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Okej</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ok</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
