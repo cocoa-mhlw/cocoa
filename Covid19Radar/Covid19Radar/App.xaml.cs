@@ -75,7 +75,7 @@ namespace Covid19Radar
                 */
 
                 UserDataModel _userData = userDataService.Get();
-                result = await NavigationService.NavigateAsync("/MainPage");
+                result = await NavigationService.NavigateAsync("/AppHomePage");
             }
             else
             {
@@ -135,6 +135,10 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ExposuresPage, ExposuresPageViewModel>();
             containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
             containerRegistry.RegisterForNavigation<UpdateInfomationPage, UpdateInfomationPageViewModel>();
+
+            containerRegistry.RegisterForNavigation<AppHomePage, AppHomePageViewModel>();
+            containerRegistry.RegisterForNavigation<AppHomePageMaster, AppHomePageMasterViewModel>();
+
 
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService, HttpDataService>();
