@@ -8,7 +8,7 @@ namespace Covid19Radar.ViewModels
 {
     public class SetupCompletedPageViewModel : ViewModelBase
     {
-        public SetupCompletedPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
+        public SetupCompletedPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = AppResources.TitleSetupCompleted;
         }

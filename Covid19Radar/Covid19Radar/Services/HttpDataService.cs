@@ -37,6 +37,7 @@ namespace Covid19Radar.Services
 
 
         // GET /api/BeaconUuid - Beacon Uuid
+        /*
         public async Task<BeaconUuidModel> GetBeaconUuidAsync()
         {
             try
@@ -54,6 +55,7 @@ namespace Covid19Radar.Services
 
             return null;
         }
+        */
 
         // POST /api/Register - Register User
         public async Task<UserDataModel> PostRegisterUserAsync()
@@ -91,6 +93,7 @@ namespace Covid19Radar.Services
         }
 
         // POST /api/Beacon - check user status and user exists
+        /*
         public async Task<bool> PostBeaconDataAsync(UserDataModel user, BeaconDataModel beacon)
         {
             string url = AppConstants.ApiBaseUrl + "/Beacon";
@@ -126,14 +129,17 @@ namespace Covid19Radar.Services
             catch { }
             return false;
         }
+        */
 
         // POST /otp/send - send OTP to the specified phone number
+        /*
         public Task PostOTPAsync(UserDataModel user, string phoneNumber)
         {
             string url = AppConstants.ApiBaseUrl + "/otp/send";
             HttpContent content = new StringContent(Utils.SerializeToJson(new { user, phone = phoneNumber }), Encoding.UTF8, "application/json");
             return Post(url, content);
         }
+        */
 
         // GET /api/notification/pull/{lastClientUpdateTime:datetime} - pull Notifications 
         public async Task<NotificationPullResult> GetNotificationPullAsync(UserDataModel user)
@@ -185,7 +191,7 @@ namespace Covid19Radar.Services
         }
 
     }
-
+    /*
     public class PostBeaconDataModel
     {
         /// <summary>
@@ -279,6 +285,7 @@ namespace Covid19Radar.Services
         [JsonProperty("keyTime")]
         public string KeyTime { get; set; }
     }
+    */
 
     public class NotificationPullResult
     {
@@ -293,7 +300,7 @@ namespace Covid19Radar.Services
         [JsonProperty("messages")]
         public NotificationMessageModel[] Messages { get; set; }
     }
-
+    /*
     public class BeaconUuidModel
     {
         /// <summary>
@@ -316,5 +323,5 @@ namespace Covid19Radar.Services
         [JsonProperty("endTime")]
         public DateTime EndTime;
     }
-
+    */
 }

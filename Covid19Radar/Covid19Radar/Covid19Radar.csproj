@@ -16,17 +16,27 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
-    <EmbeddedResource Remove="Views\Dummy.xaml" />
-    <EmbeddedResource Remove="Views\DummyPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Resources\Fonts\fa-brands-400.otf" />
-    <None Remove="Resources\Fonts\fa-regular-400.otf" />
-    <None Remove="Resources\Fonts\fa-solid-900.otf" />
-    <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
-    <None Remove="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
-    <None Remove="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
-    <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+    <Compile Remove="Behaviors\UnUsed\**" />
+    <Compile Remove="Converters\UnUsed\**" />
+    <Compile Remove="Model\UnUsed\**" />
+    <Compile Remove="Services\UnUsed\**" />
+    <Compile Remove="Templates\UnUsed\**" />
+    <Compile Remove="ViewModels\UnUsed\**" />
+    <Compile Remove="Views\UnUsed\**" />
+    <EmbeddedResource Remove="Behaviors\UnUsed\**" />
+    <EmbeddedResource Remove="Converters\UnUsed\**" />
+    <EmbeddedResource Remove="Model\UnUsed\**" />
+    <EmbeddedResource Remove="Services\UnUsed\**" />
+    <EmbeddedResource Remove="Templates\UnUsed\**" />
+    <EmbeddedResource Remove="ViewModels\UnUsed\**" />
+    <EmbeddedResource Remove="Views\UnUsed\**" />
+    <None Remove="Behaviors\UnUsed\**" />
+    <None Remove="Converters\UnUsed\**" />
+    <None Remove="Model\UnUsed\**" />
+    <None Remove="Services\UnUsed\**" />
+    <None Remove="Templates\UnUsed\**" />
+    <None Remove="ViewModels\UnUsed\**" />
+    <None Remove="Views\UnUsed\**" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
@@ -46,21 +56,18 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.ExposureNotification" Version="0.2.1-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.772" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.772" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.772" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Icons.xaml.cs">
       <DependentUpon>Icons.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Templates\UnUsed\BeaconItemTemplate .xaml.cs">
-      <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\UpdateInfomationPage.xaml.cs">
       <DependentUpon>UpdateInfomationPage.xaml</DependentUpon>
@@ -76,9 +83,6 @@
     </Compile>
     <Compile Update="Views\HomePage\NotifyOtherPage.xaml.cs">
       <DependentUpon>NotifyOtherPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\UnUsed\UserSettingPage.xaml.cs">
-      <DependentUpon>UserSettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
@@ -101,17 +105,8 @@
     <Compile Update="Views\Tutorial\ConsentByUserPage.xaml.cs">
       <DependentUpon>ConsentByUserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\UnUsed\InputSmsOTPPage.xaml.cs">
-      <DependentUpon>InputSmsOTPPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\Tutorial\StartTutorialPage.xaml.cs">
       <DependentUpon>StartTutorialPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\UnUsed\SmsVerificationPage.xaml.cs">
-      <DependentUpon>SmsVerificationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\UnUsed\DescriptionPage.xaml.cs">
-      <DependentUpon>DescriptionPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Resources\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
@@ -130,12 +125,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Templates\UnUsed\ContributorItemTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Templates\UnUsed\StepItemTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Styles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -145,20 +134,14 @@
     <EmbeddedResource Update="Views\HomePage\SharePositiveDiagnosisPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\UnUsed\HeadsupPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\Tutorial\SetupCompletedPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\UnUsed\StatusUpdateCompletePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Behaviors\" />
+    <Folder Include="Converters\" />
     <Folder Include="MultilingualResources\" />
+    <Folder Include="Templates\" />
   </ItemGroup>
 </Project>

@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AltBeaconOrg.BoundBeacon;
-using AltBeaconOrg.BoundBeacon.Startup;
-using AltBeaconOrg.BoundBeacon.Powersave;
 using Android.App;
 using Android.Content;
 using Android.OS;
