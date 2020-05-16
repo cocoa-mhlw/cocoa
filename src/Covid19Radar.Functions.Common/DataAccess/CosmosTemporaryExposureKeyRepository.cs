@@ -38,7 +38,7 @@ namespace Covid19Radar.DataAccess
             ins.Timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             ins.TransmissionRiskLevel = 0;
 
-            return Enumerable.Repeat(ins, 100).ToArray();
+            return Enumerable.Repeat(ins, 20000).ToArray();
 
         }
     }

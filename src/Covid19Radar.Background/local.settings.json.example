@@ -14,13 +14,10 @@
         "COSMOS_STORING_DATABASE_ID": "EXAMPLE",
         "AppBundleId": "AppBundleId",
         "AndroidPackage": "AndroidPackage",
-        "SignatureAlgorithm": "SignatureAlgorithm",
-        "VerificationKeyIds": "VerificationKeyIdv1 VerificationKeyIdv2",
-        "VerificationKeyVersions": "VerificationKeyVersion1 VerificationKeyVersions2",
-        "Signature": "o4Pm6LJ+/q3UxwZArVLdkQ==",
         "Region": "Country",
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
-        "TekExportBlobStorageContainerPrefix": "C19R",
-        "ExportKeyUrl": "http://127.0.0.1:10000/"
+        "TekExportBlobStorageContainerPrefix": "c19r",
+        "ExportKeyUrl": "http://127.0.0.1:10000/",
+        "TekExportKeyVaultKeyUrl": "https://xxxxxx.vault.azure.net/keys/xxxxSignaturexxx/XXXXXXXXXXXXXXXXXXXXXXXXX"
     }
 }

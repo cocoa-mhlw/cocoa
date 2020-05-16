@@ -3,6 +3,8 @@ using Covid19Radar.Models;
 using Covid19Radar.Protobuf;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
+using Microsoft.Azure.KeyVault;
+using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
@@ -13,6 +15,7 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
@@ -28,10 +31,6 @@ namespace Covid19Radar.Services
 
         public readonly string AppBundleId;
         public readonly string AndroidPackage;
-        public readonly string SignatureAlgorithm;
-        public readonly string[] VerificationKeyIds;
-        public readonly string[] VerificationKeyVersions;
-        public readonly byte[] Signature;
         public readonly string Region;
         public readonly SignatureInfo SigInfo;
         public readonly string TekExportBlobStorageConnectionString;
@@ -42,45 +41,51 @@ namespace Covid19Radar.Services
         public readonly ITemporaryExposureKeyRepository TekRepository;
         public readonly ITemporaryExposureKeyExportRepository TekExportRepository;
         public readonly ILogger<TemporaryExposureKeyService> Logger;
+        public readonly KeyVaultClient KeyVault;
+        public readonly string TekExportKeyVaultKeyUrl;
 
         public TemporaryExposureKeyService(IConfiguration config,
             ITemporaryExposureKeyRepository tek,
             ITemporaryExposureKeyExportRepository tekExport,
-            ILogger<TemporaryExposureKeyService> logger) 
+            ILogger<TemporaryExposureKeyService> logger)
         {
             AppBundleId = config["AppBundleId"];
             AndroidPackage = config["AndroidPackage"];
-            SignatureAlgorithm = config["SignatureAlgorithm"];
-            VerificationKeyIds = config["VerificationKeyIds"].Split(' ');
-            VerificationKeyVersions = config["VerificationKeyVersions"].Split(' ');
-            Signature = Convert.FromBase64String(config["Signature"]);
             TekExportBlobStorageConnectionString = config["TekExportBlobStorage"];
             TekExportBlobStorageContainerPrefix = config["TekExportBlobStorageContainerPrefix"];
             Region = config["Region"];
+            TekExportKeyVaultKeyUrl = config["TekExportKeyVaultKeyUrl"];
             TekRepository = tek;
             TekExportRepository = tekExport;
             Logger = logger;
             var sig = new SignatureInfo();
             sig.AppBundleId = AppBundleId;
             sig.AndroidPackage = AndroidPackage;
-            sig.SignatureAlgorithm = SignatureAlgorithm;
-            sig.VerificationKeyId = VerificationKeyIds.LastOrDefault();
-            sig.VerificationKeyVersion = VerificationKeyVersions.LastOrDefault();
+            sig.SignatureAlgorithm = "ecdsa-with-SHA256";
             SigInfo = sig;
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
             BlobClient = StorageAccount.CreateCloudBlobClient();
             BlobContainerName = $"{TekExportBlobStorageContainerPrefix}{Region}".ToLower();
+            AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
+            KeyVault = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
 
         }
 
-        public TEKSignature CreateSignature(Stream source, int batchNum, int batchSize)
+        public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
         {
             var s = new TEKSignature();
             s.SignatureInfo = SigInfo;
             s.BatchNum = batchNum;
             s.BatchSize = batchSize;
-            // TODO: Signature
-            s.Signature = ByteString.CopyFrom(Signature);
+            // Signature
+            var ecdsap256 = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256);
+            var hash = ecdsap256.SignData(source, HashAlgorithmName.SHA256);
+#if DEBUG 
+            s.Signature = ByteString.CopyFrom(ecdsap256.SignHash(hash));
+#else
+            var result = await KeyVault.SignAsync(TekExportKeyVaultKeyUrl, Microsoft.Azure.KeyVault.Cryptography.Algorithms.Es256.AlgorithmName, hash);
+            s.Signature = ByteString.CopyFrom(result.Result);
+#endif
             return s;
         }
 
@@ -88,6 +93,13 @@ namespace Covid19Radar.Services
         {
             try
             {
+#if DEBUG
+#else
+                var keyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
+                SigInfo.VerificationKeyId = keyVaultKey.Key.Kid;
+                SigInfo.VerificationKeyVersion = keyVaultKey.KeyIdentifier.Version;
+#endif
+
                 var items = await TekRepository.GetNextAsync();
                 await CreateAsync(items);
             }
@@ -128,9 +140,8 @@ namespace Covid19Radar.Services
                 bin.WriteTo(binStream);
                 await binStream.FlushAsync();
                 binStream.Seek(0, SeekOrigin.Begin);
-                var signature = CreateSignature(binStream, bin.BatchNum, bin.BatchSize);
+                var signature = await CreateSignatureAsync(binStream, bin.BatchNum, bin.BatchSize);
                 sig.Signatures.Add(signature);
-                binStream.Seek(0, SeekOrigin.Begin);
 
                 using (var s = new MemoryStream())
                 using (var z = new System.IO.Compression.ZipArchive(s, System.IO.Compression.ZipArchiveMode.Create, true))
@@ -138,6 +149,7 @@ namespace Covid19Radar.Services
                     var binEntry = z.CreateEntry(ExportBinFileName);
                     using (var binFile = binEntry.Open())
                     {
+                        binStream.Seek(0, SeekOrigin.Begin);
                         await binStream.CopyToAsync(binFile);
                         await binFile.FlushAsync();
                     }
