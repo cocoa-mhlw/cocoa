@@ -21,7 +21,6 @@ using Plugin.CurrentActivity;
 using SQLite;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(BeaconService))]
 namespace Covid19Radar.Droid.Services
 {
     public class BeaconService : IBeaconService, IDisposable
@@ -31,10 +30,10 @@ namespace Covid19Radar.Droid.Services
         private UserDataModel _userData;
         private SQLiteConnection _connection;
 
-        public BeaconService()
+        public BeaconService(HttpDataService httpDataService, ISQLiteConnectionProvider sqliteConnectionProvider)
         {
-            _httpDataService = DependencyService.Resolve<HttpDataService>();
-            _connection = DependencyService.Get<ISQLiteConnectionProvider>().GetConnection();
+            _httpDataService = httpDataService;
+            _connection = sqliteConnectionProvider.GetConnection();
             _connection.CreateTable<BeaconDataModel>();
         }
 

@@ -1,8 +1,10 @@
 ﻿using CoreBluetooth;
 using CoreLocation;
 using Covid19Radar.Common;
+using Covid19Radar.iOS.Renderers;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Foundation;
 using Microsoft.AppCenter.Distribute;
@@ -130,6 +132,7 @@ namespace Covid19Radar.iOS
             containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
             containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
+            containerRegistry.RegisterSingleton<IStatusBarPlatformSpecific, Statusbar>();
             //            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
         }
     }
