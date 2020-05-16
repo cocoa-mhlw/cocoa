@@ -32,10 +32,9 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public ViewModelBase(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific)
+        public ViewModelBase(INavigationService navigationService)
         {
             NavigationService = navigationService;
-            statusBarPlatformSpecific.SetStatusBarColor(Color.FromHex("03A9F4"));
         }
 
         public virtual void Initialize(INavigationParameters parameters)

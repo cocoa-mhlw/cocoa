@@ -72,8 +72,6 @@
 
             </Grid>
             <Label Style="{StaticResource DefaultLabelSmall}" Text="If you want to stop using it, turn it off. Data for the last 14 days will be deleted." />
-
-            <ce:GradientButton Style="{StaticResource DefaultGradientButton}" Text="TlBr" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
