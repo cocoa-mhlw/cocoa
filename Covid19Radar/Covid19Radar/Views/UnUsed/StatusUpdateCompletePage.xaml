@@ -40,7 +40,7 @@
         <Button
             Grid.Row="3"
             Command="{Binding Path=OnClickHome}"
-            Style="{StaticResource DefaultButton}"
+            Style="{StaticResource DefaultGradientButton}"
             Text="{x:Static resources:AppResources.ButtonHome}"
             VerticalOptions="End" />
     </Grid>

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -7,7 +8,7 @@ namespace Covid19Radar.ViewModels
 {
     public class DescriptionPage3ViewModel : ViewModelBase
     {
-        public DescriptionPage3ViewModel(INavigationService navigationService) : base(navigationService)
+        public DescriptionPage3ViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = Resources.AppResources.TitleHowItWorks;
         }

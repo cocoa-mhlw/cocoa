@@ -20,6 +20,8 @@ using SQLite;
 using AltBeaconOrg.BoundBeacon.Startup;
 using Region = AltBeaconOrg.BoundBeacon.Region;
 using Acr.UserDialogs;
+using Covid19Radar.Renderers;
+using Covid19Radar.Droid.Renderers;
 
 namespace Covid19Radar.Droid
 {
@@ -75,7 +77,8 @@ namespace Covid19Radar.Droid
             {
                 string title = intent.Extras.GetString(Services.NotificationService.TitleKey);
                 string message = intent.Extras.GetString(Services.NotificationService.MessageKey);
-                DependencyService.Get<NotificationService>().ReceiveNotification(title, message);
+                // DependencyService.Get<NotificationService>().ReceiveNotification(title, message);
+                App.Current.Container.Resolve<INotificationService>().ReceiveNotification(title, message);
             }
         }
 
@@ -94,6 +97,7 @@ namespace Covid19Radar.Droid
                 containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
                 containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
                 containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
+                containerRegistry.RegisterSingleton<IStatusBarPlatformSpecific, Statusbar>();
                 //containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
 
             }
@@ -177,7 +181,7 @@ namespace Covid19Radar.Droid
                 _beaconManager = BeaconManager.GetInstanceForApplication(this);
                 _rangeNotifier = new RangeNotifier();
 
-                _connection = DependencyService.Get<ISQLiteConnectionProvider>().GetConnection();
+                _connection = App.Current.Container.Resolve<ISQLiteConnectionProvider>().GetConnection();
                 _connection.CreateTable<BeaconDataModel>();
 
                 //iBeacon

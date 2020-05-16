@@ -8,6 +8,8 @@ namespace Covid19Radar.DataAccess
 {
     public interface ITemporaryExposureKeyRepository
     {
-        Task<TemporaryExposureKeysResult> GetKeysAsync(long sinceEpochSeconds);
+
+        Task<TemporaryExposureKeyModel> GetAsync(string id);
+        Task<TemporaryExposureKeyModel[]> GetNextAsync();
     }
 }

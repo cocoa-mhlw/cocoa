@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Views.SetupCompletedPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -23,10 +24,10 @@
 
         <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.SetupCompletedPageTextYoureReadyToGo}" />
 
-        <Button
+        <ce:GradientButton
             AutomationId="ToMainButton"
             Command="{Binding Path=OnClickToMain}"
-            Style="{StaticResource DefaultButton}"
+            Style="{StaticResource DefaultGradientButton}"
             Text="{x:Static resources:AppResources.ButtonHome}" />
     </StackLayout>
 

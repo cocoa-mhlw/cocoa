@@ -1,4 +1,5 @@
 ﻿using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Prism.AppModel;
 using Prism.Commands;
@@ -22,11 +23,6 @@ namespace Covid19Radar.ViewModels
         // Navigation
         protected INavigationService NavigationService { get; private set; }
 
-        protected void NotifyPropertyChanged(string propertyName)
-            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         // PageTite
         private string _title;
 
@@ -36,10 +32,12 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public ViewModelBase(INavigationService navigationService)
+        public ViewModelBase(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific)
         {
             NavigationService = navigationService;
+            statusBarPlatformSpecific.SetStatusBarColor(Color.FromHex("03A9F4"));
         }
+
         public virtual void Initialize(INavigationParameters parameters)
         {
 
