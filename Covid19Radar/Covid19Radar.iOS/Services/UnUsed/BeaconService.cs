@@ -13,7 +13,6 @@ using Xamarin.Forms;
 using SQLite;
 using Xamarin.Forms.Internals;
 
-[assembly: Dependency(typeof(Covid19Radar.iOS.Services.BeaconService))]
 namespace Covid19Radar.iOS.Services
 {
     public class BeaconService : CLLocationManagerDelegate, IBeaconService
@@ -27,9 +26,9 @@ namespace Covid19Radar.iOS.Services
         private List<CLBeaconRegion> _listOfCLBeaconRegion;
         private readonly SQLiteConnection _connection;
 
-        public BeaconService()
+        public BeaconService(ISQLiteConnectionProvider sqliteConnectionProvider)
         {
-            _connection = DependencyService.Resolve<SQLiteConnectionProvider>().GetConnection();
+            _connection = sqliteConnectionProvider.GetConnection();
             _connection.CreateTable<BeaconDataModel>();
 
             _beaconTransmitter = new CBPeripheralManager();
@@ -78,7 +77,7 @@ namespace Covid19Radar.iOS.Services
             //CBPeripheralManager trasmitter = sender as CBPeripheralManager;
         }
 
-        private async void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
+        private void DidRangeBeconsInRegionComplete(object sender, CLRegionBeaconsRangedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("HandleDidDetermineState");
             var now = DateTime.UtcNow;
