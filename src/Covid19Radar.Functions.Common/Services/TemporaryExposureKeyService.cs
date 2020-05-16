@@ -6,6 +6,7 @@ using Google.Protobuf.Collections;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -40,13 +41,13 @@ namespace Covid19Radar.Services
         public readonly string BlobContainerName;
         public readonly ITemporaryExposureKeyRepository TekRepository;
         public readonly ITemporaryExposureKeyExportRepository TekExportRepository;
+        public readonly ILogger<TemporaryExposureKeyService> Logger;
 
         public TemporaryExposureKeyService(IConfiguration config,
             ITemporaryExposureKeyRepository tek,
-            ITemporaryExposureKeyExportRepository tekExport)
+            ITemporaryExposureKeyExportRepository tekExport,
+            ILogger<TemporaryExposureKeyService> logger) 
         {
-            TekRepository = tek;
-            TekExportRepository = tekExport;
             AppBundleId = config["AppBundleId"];
             AndroidPackage = config["AndroidPackage"];
             SignatureAlgorithm = config["SignatureAlgorithm"];
@@ -56,16 +57,19 @@ namespace Covid19Radar.Services
             TekExportBlobStorageConnectionString = config["TekExportBlobStorage"];
             TekExportBlobStorageContainerPrefix = config["TekExportBlobStorageContainerPrefix"];
             Region = config["Region"];
+            TekRepository = tek;
+            TekExportRepository = tekExport;
+            Logger = logger;
             var sig = new SignatureInfo();
             sig.AppBundleId = AppBundleId;
             sig.AndroidPackage = AndroidPackage;
             sig.SignatureAlgorithm = SignatureAlgorithm;
-            sig.VerificationKeyId = VerificationKeyIds.Last();
-            sig.VerificationKeyVersion = VerificationKeyVersions.Last();
+            sig.VerificationKeyId = VerificationKeyIds.LastOrDefault();
+            sig.VerificationKeyVersion = VerificationKeyVersions.LastOrDefault();
             SigInfo = sig;
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
             BlobClient = StorageAccount.CreateCloudBlobClient();
-            BlobContainerName = $"{TekExportBlobStorageContainerPrefix}{Region}";
+            BlobContainerName = $"{TekExportBlobStorageContainerPrefix}{Region}".ToLower();
 
         }
 
@@ -82,8 +86,16 @@ namespace Covid19Radar.Services
 
         public async Task RunAsync()
         {
-            var items = await TekRepository.GetNextAsync();
-            await CreateAsync(items);
+            try
+            {
+                var items = await TekRepository.GetNextAsync();
+                await CreateAsync(items);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, $"Error on {nameof(TemporaryExposureKeyService)}");
+                throw;
+            }
         }
 
         public async Task CreateAsync(IEnumerable<TemporaryExposureKeyModel> keys)
@@ -120,8 +132,8 @@ namespace Covid19Radar.Services
                 sig.Signatures.Add(signature);
                 binStream.Seek(0, SeekOrigin.Begin);
 
-                using var s = new MemoryStream();
-                using (var z = new System.IO.Compression.ZipArchive(s))
+                using (var s = new MemoryStream())
+                using (var z = new System.IO.Compression.ZipArchive(s, System.IO.Compression.ZipArchiveMode.Create, true))
                 {
                     var binEntry = z.CreateEntry(ExportBinFileName);
                     using (var binFile = binEntry.Open())
@@ -136,10 +148,9 @@ namespace Covid19Radar.Services
                         sig.WriteTo(sigFile);
                         await sigFile.FlushAsync();
                     }
+                    s.Seek(0, SeekOrigin.Begin);
+                    await WriteToBlobAsync(s, exportModel, bin, sig);
                 }
-                s.Seek(0, SeekOrigin.Begin);
-
-                await WriteToBlobAsync(s, exportModel, bin, sig);
                 await TekExportRepository.UpdateAsync(exportModel);
             }
         }
