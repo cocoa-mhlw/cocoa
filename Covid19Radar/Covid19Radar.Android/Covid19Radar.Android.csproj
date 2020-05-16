@@ -704,4 +704,40 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-ja-xhdpi\TopMainImg.png" />
   </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep11.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep11.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep12.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep11.png"/>
+  </ItemGroup>
+
+
+
+
 </Project>
