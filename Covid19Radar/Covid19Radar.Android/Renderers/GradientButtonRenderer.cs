@@ -47,7 +47,7 @@ namespace Covid19Radar.Droid.Renderers
                     Control.StateListAnimator = new Android.Animation.StateListAnimator();
                     Control.SetBackground(DrawGradient(e));
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     // handle exception
                 }
