@@ -3,7 +3,6 @@
     x:Class="Covid19Radar.Views.DescriptionPage2"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -20,12 +19,13 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Frame Grid.Column="0" Style="{StaticResource DefaultNumberFrame}">
+                <Frame Grid.Column="1" Style="{StaticResource DefaultNumberFrame}">
                     <Label Style="{StaticResource DefaultNumberLabel}" Text="2" />
                 </Frame>
                 <Label
-                    Grid.Column="1"
+                    Grid.Column="2"
                     Style="{StaticResource DefaultNumberLabelText}"
                     Text="{x:Static resources:AppResources.DescriptionPageTitleTextStep2}" />
             </Grid>

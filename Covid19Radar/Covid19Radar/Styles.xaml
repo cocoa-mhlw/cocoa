@@ -28,7 +28,7 @@
         <Setter Property="Direction" Value="Column" />
         <Setter Property="JustifyContent" Value="SpaceAround" />
         <Setter Property="AlignContent" Value="Center" />
-        <Setter Property="Margin" Value="20" />
+        <Setter Property="Margin" Value="30" />
     </Style>
 
     <Style x:Key="DefaultGridLayout" TargetType="Grid">
@@ -118,7 +118,7 @@
         <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="CornerRadius" Value="50" />
-        <Setter Property="Scale" Value="0.8" />
+        <Setter Property="Scale" Value="0.9" />
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="BorderColor" Value="{StaticResource Primary}" />
         <Style.Triggers>
@@ -142,15 +142,25 @@
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="FontSize" Value="Title" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
     </Style>
+
+    <Style x:Key="DefaultTitleLabelTextColor" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="Title" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+    </Style>
+
 
     <Style x:Key="DefaultSubTitleLabel" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
         <Setter Property="FontSize" Value="Subtitle" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
     </Style>
 
     <Style x:Key="DefaultHeaderLabel" TargetType="Label">
