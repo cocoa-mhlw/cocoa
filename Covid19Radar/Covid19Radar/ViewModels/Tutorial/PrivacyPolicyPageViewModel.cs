@@ -52,7 +52,7 @@ namespace Covid19Radar.ViewModels
         });
         public Command OnClickNotAgree => new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(StartTutorialPage));
+            await NavigationService.GoBackAsync();
         });
 
     }

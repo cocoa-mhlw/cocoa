@@ -21,7 +21,6 @@
             VerticalOptions="Center" />
 
         <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
-
         <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.SetupCompletedPageTextYoureReadyToGo}" />
 
         <ce:GradientButton
