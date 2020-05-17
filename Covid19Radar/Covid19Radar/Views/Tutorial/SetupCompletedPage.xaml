@@ -34,7 +34,7 @@
             <StackLayout Grid.Row="1">
                 <Label
                     HorizontalOptions="Center"
-                    Style="{StaticResource DefaultTitleLabelTextColor}"
+                    Style="{StaticResource DefaultTitleLabelColor}"
                     Text="ご登録いただきありがとうございました。" />
 
             </StackLayout>

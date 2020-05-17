@@ -25,7 +25,7 @@
                     Margin="30,0,30,0"
                     Aspect="AspectFit"
                     Source="descriptionStep30.png" />
-                <Label Style="{StaticResource DefaultTitleLabelTextColor}" Text="COVID-19と診断されたら?" />
+                <Label Style="{StaticResource DefaultTitleLabelColor}" Text="COVID-19と診断されたら?" />
             </StackLayout>
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep31.png" />
