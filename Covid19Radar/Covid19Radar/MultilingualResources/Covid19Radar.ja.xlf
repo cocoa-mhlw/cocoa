@@ -91,7 +91,6 @@
           <source>Covid19Radar</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
