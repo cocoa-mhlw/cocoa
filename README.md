@@ -18,7 +18,7 @@ Please check the contribution rules.
 
 ## How to install the app for tester
 
-Please install the app for test from below link.Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
+Please install the app for test from below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
 
 ### Android
 
@@ -63,7 +63,7 @@ If you want to check your design files, install Adobe XD. (available for free).
 
 You can check the screen transition by accessing the following URL.
 
-[Proto type mock（Sorry Japanese Only）](https://xd.adobe.com/view/3388de85-871b-46a1-5c3f-7ecacfa1a5cf-45b9/)
+[Prototype mock（Sorry Japanese Only）](https://xd.adobe.com/view/3388de85-871b-46a1-5c3f-7ecacfa1a5cf-45b9/)
 
 ## Licensing
 
