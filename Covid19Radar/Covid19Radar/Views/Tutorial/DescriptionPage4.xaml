@@ -17,18 +17,22 @@
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Frame Grid.Column="0" Style="{StaticResource DefaultNumberFrame}">
-                    <Label Style="{StaticResource DefaultNumberLabel}" Text="4" />
-                </Frame>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ffimageloading:CachedImage
+                    Grid.Row="0"
+                    Margin="30,0,30,0"
+                    Aspect="AspectFit"
+                    Source="descriptionStep40.png" />
                 <Label
-                    Grid.Column="1"
-                    Style="{StaticResource DefaultNumberLabelText}"
-                    Text="{x:Static resources:AppResources.DescriptionPageTitleTextStep4}" />
+                    Grid.Row="1"
+                    Style="{StaticResource DefaultTitleLabelTextColor}"
+                    Text="このアプリに必要な事" />
             </Grid>
 
             <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep4.png" />

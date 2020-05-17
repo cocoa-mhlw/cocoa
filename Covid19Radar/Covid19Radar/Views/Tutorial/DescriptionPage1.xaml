@@ -24,6 +24,7 @@
                 </Grid.RowDefinitions>
                 <ffimageloading:CachedImage
                     Grid.Row="0"
+                    Margin="30,0,30,0"
                     Aspect="AspectFit"
                     Source="descriptionStep10.png" />
                 <Label
