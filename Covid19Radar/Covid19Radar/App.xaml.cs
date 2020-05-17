@@ -65,7 +65,7 @@ namespace Covid19Radar
             UserDataService userDataService = Container.Resolve<UserDataService>();
             if (userDataService.IsExistUserData)
             {
-                // TODO Wire Start Exposure Notification
+ // TODO Wire Start Exposure Notification
 /*
                 var isStart = await ExposureNotification.IsEnabledAsync();
                 if (!isStart)
@@ -75,12 +75,11 @@ namespace Covid19Radar
 */
                 UserDataModel _userData = userDataService.Get();
                 result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
-
             }
             else
             {
-                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-
+                result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
+//                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
 
             if (!result.Success)
@@ -119,7 +118,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<DescriptionPage2, DescriptionPage2ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage3, DescriptionPage3ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage4, DescriptionPage4ViewModel>();
-            containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
+            containerRegistry.RegisterForNavigation<PrivacyPolicyPage, PrivacyPolicyPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<ContributorsPage, ContributorsPageViewModel>();
