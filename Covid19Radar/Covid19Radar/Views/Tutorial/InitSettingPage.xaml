@@ -16,7 +16,7 @@
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
             <ffimageloading:CachedImage HorizontalOptions="Center" Source="bluetoothAccess.png" />
-            <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotification}" />
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotification}" />
             <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.InitSettingPageTextExposureNotificationDescription}" />
             <Grid>
                 <Grid.ColumnDefinitions>

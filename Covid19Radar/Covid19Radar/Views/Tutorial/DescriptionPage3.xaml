@@ -3,7 +3,6 @@
     x:Class="Covid19Radar.Views.DescriptionPage3"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -16,23 +15,30 @@
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Frame Grid.Column="0" Style="{StaticResource DefaultNumberFrame}">
-                    <Label Style="{StaticResource DefaultNumberLabel}" Text="3" />
-                </Frame>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ffimageloading:CachedImage
+                    Grid.Row="0"
+                    Margin="30,0,30,0"
+                    Aspect="AspectFit"
+                    Source="descriptionStep30.png" />
                 <Label
-                    Grid.Column="1"
-                    Style="{StaticResource DefaultNumberLabelText}"
-                    Text="{x:Static resources:AppResources.DescriptionPageTitleTextStep3}" />
+                    Grid.Row="1"
+                    Style="{StaticResource DefaultTitleLabelTextColor}"
+                    Text="COVID-19と診断されたら?" />
             </Grid>
 
-            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep3.png" />
-            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep3Description}" />
-
+            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep31.png" />
+            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep32.png" />
+            <!--
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep3Description}" />-->
+            <Label Style="{StaticResource DefaultLabel}" Text="他の利用者は定期的に陽性となった方の匿名ID一覧を取得しています。取得した後、スマートフォンに記録された接触記録と突合を行います。突合の結果、濃厚接触に該当する場合は、あなたのスマートフォンにお知らせします、協力いただきたい必要な行動についてご案内します。" />
             <ce:GradientButton
                 AutomationId="NextButton"
                 Command="{Binding Path=OnClickNext}"
