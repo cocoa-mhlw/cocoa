@@ -20,10 +20,7 @@
                 Style="{StaticResource DefaultWebView}" />
         </StackLayout>
 
-        <Grid
-            Margin="0,10,0,10"
-            ColumnSpacing="10"
-            RowSpacing="0">
+        <Grid ColumnSpacing="10" RowSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*" />
                 <ColumnDefinition Width="0.5*" />
@@ -35,17 +32,17 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 AutomationId="NextButton"
-                Command="{Binding Path=OnClickAgree}"
-                Style="{StaticResource DefaultGradientButton}"
-                Text="{x:Static resources:AppResources.ButtonAgree}" />
+                Command="{Binding Path=OnClickNotAgree}"
+                Style="{StaticResource DefaultGradientButtonGrayout}"
+                Text="同意しない" />
 
             <ce:GradientButton
                 Grid.Row="0"
                 Grid.Column="1"
                 AutomationId="NextButton"
-                Command="{Binding Path=OnClickNotAgree}"
+                Command="{Binding Path=OnClickAgree}"
                 Style="{StaticResource DefaultGradientButton}"
-                Text="同意しない" />
+                Text="{x:Static resources:AppResources.ButtonAgree}" />
         </Grid>
     </StackLayout>
 </ContentPage>
