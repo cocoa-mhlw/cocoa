@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep20.png" />
-                <Label Style="{StaticResource DefaultTitleLabelTextColor}" Text="接触記録の保存について" />
+                <Label Style="{StaticResource DefaultTitleLabelColor}" Text="接触記録の保存について" />
             </StackLayout>
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep21.png" />

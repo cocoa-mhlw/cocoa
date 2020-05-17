@@ -26,7 +26,7 @@
                     Margin="30,0,30,0"
                     Aspect="AspectFit"
                     Source="descriptionStep40.png" />
-                <Label Style="{StaticResource DefaultTitleLabelTextColor}" Text="このアプリに必要な事" />
+                <Label Style="{StaticResource DefaultTitleLabelColor}" Text="このアプリに必要な事" />
             </StackLayout>
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep4.png" />

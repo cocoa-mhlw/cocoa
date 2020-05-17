@@ -39,13 +39,16 @@ namespace Covid19Radar.ViewModels
             UserDialogs.Instance.ShowLoading("Waiting for register");
             if (!_userDataService.IsExistUserData)
             {
-                UserDataModel userData = await _userDataService.RegistUserAsync();
+                // TODO Create and Get Secure API access token key per AES256 user from Azure Func Side
+                /*
+                 UserDataModel userData = await _userDataService.RegistUserAsync();
                 if (userData == null)
                 {
                     UserDialogs.Instance.HideLoading();
                     await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, "Connection error", Resources.AppResources.DialogButtonOk);
                     return;
                 }
+                */
             }
             UserDialogs.Instance.HideLoading();
             await NavigationService.NavigateAsync(nameof(DescriptionPage1));
