@@ -43,6 +43,8 @@ namespace Covid19Radar.Services
         public readonly ILogger<TemporaryExposureKeyService> Logger;
         public readonly KeyVaultClient KeyVault;
         public readonly string TekExportKeyVaultKeyUrl;
+        private Microsoft.Azure.KeyVault.Models.KeyBundle KeyVaultKey;
+        private ECDsa ECDsa;
 
         public TemporaryExposureKeyService(IConfiguration config,
             ITemporaryExposureKeyRepository tek,
@@ -78,14 +80,8 @@ namespace Covid19Radar.Services
             s.BatchNum = batchNum;
             s.BatchSize = batchSize;
             // Signature
-            var ecdsap256 = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256);
-            var hash = ecdsap256.SignData(source, HashAlgorithmName.SHA256);
-#if DEBUG 
-            s.Signature = ByteString.CopyFrom(ecdsap256.SignHash(hash));
-#else
-            var result = await KeyVault.SignAsync(TekExportKeyVaultKeyUrl, Microsoft.Azure.KeyVault.Cryptography.Algorithms.Es256.AlgorithmName, hash);
-            s.Signature = ByteString.CopyFrom(result.Result);
-#endif
+            var hash = ECDsa.SignData(source, HashAlgorithmName.SHA256);
+            s.Signature = ByteString.CopyFrom(ECDsa.SignHash(hash));
             return s;
         }
 
@@ -94,10 +90,15 @@ namespace Covid19Radar.Services
             try
             {
 #if DEBUG
+                ECDsa = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256);
 #else
-                var keyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
-                SigInfo.VerificationKeyId = keyVaultKey.Key.Kid;
-                SigInfo.VerificationKeyVersion = keyVaultKey.KeyIdentifier.Version;
+                if (KeyVaultKey == null)
+                {
+                    KeyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
+                    SigInfo.VerificationKeyId = KeyVaultKey.Key.Kid;
+                    SigInfo.VerificationKeyVersion = KeyVaultKey.KeyIdentifier.Version;
+                    ECDsa = KeyVaultKey.Key.ToECDsa(true);
+                }
 #endif
 
                 var items = await TekRepository.GetNextAsync();
