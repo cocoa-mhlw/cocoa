@@ -14,7 +14,7 @@ namespace Covid19Radar.Services
 {
     public class ValidationUserService : IValidationUserService
     {
-        const string AuthorizationType = "COVID-19-RADAR";
+        const string AuthorizationType = "Bearer";
         private readonly ICosmos Cosmos;
         private readonly ICryptionService Cryption;
         private readonly ILogger<ValidationUserService> Logger;
@@ -40,10 +40,13 @@ namespace Covid19Radar.Services
             Microsoft.Extensions.Primitives.StringValues value;
             if (!req.Headers.TryGetValue("Authorization", out value)) return IValidationUserService.ValidateResult.Error;
             if (value.Count != 1) return IValidationUserService.ValidateResult.Error;
-            var authorization = value.First();
+            var authorization = value.FirstOrDefault();
+            if (string.IsNullOrEmpty(authorization)) return IValidationUserService.ValidateResult.Error;
             var splited = authorization.Split(' ');
             if (splited.Length != 2) return IValidationUserService.ValidateResult.Error;
+            var authorizationType = splited[0];
             var authorizationCode = splited[1];
+            if (authorizationType != AuthorizationType) return IValidationUserService.ValidateResult.Error;
 
             if (Cryption.ValidateSecret(user.UserUuid, authorizationCode))
             {
