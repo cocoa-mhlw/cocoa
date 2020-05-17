@@ -119,7 +119,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<DescriptionPage2, DescriptionPage2ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage3, DescriptionPage3ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage4, DescriptionPage4ViewModel>();
-            containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
+            containerRegistry.RegisterForNavigation<PrivacyPolicyPage, PrivacyPolicyPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<ContributorsPage, ContributorsPageViewModel>();

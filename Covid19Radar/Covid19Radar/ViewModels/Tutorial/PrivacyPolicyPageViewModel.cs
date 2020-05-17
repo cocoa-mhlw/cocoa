@@ -5,6 +5,7 @@ using Covid19Radar.Model;
 using Covid19Radar.Renderers;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
+using Covid19Radar.Views;
 using DryIoc;
 using Prism.Ioc;
 using Prism.Navigation;
@@ -13,7 +14,7 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ConsentByUserPageViewModel : ViewModelBase
+    public class PrivacyPolicyPageViewModel : ViewModelBase
     {
         private UserDataService _userDataService;
 
@@ -24,7 +25,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public ConsentByUserPageViewModel(INavigationService navigationService)
+        public PrivacyPolicyPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             Title = AppResources.TitleConsentByUserPage;
@@ -33,7 +34,7 @@ namespace Covid19Radar.ViewModels
             _userDataService = App.Current.Container.Resolve<UserDataService>();
         }
 
-        public Command OnClickNext => new Command(async () =>
+        public Command OnClickAgree => new Command(async () =>
         {
             UserDialogs.Instance.ShowLoading("Waiting for register");
             if (!_userDataService.IsExistUserData)
@@ -47,7 +48,11 @@ namespace Covid19Radar.ViewModels
                 }
             }
             UserDialogs.Instance.HideLoading();
-            await NavigationService.NavigateAsync("InitSettingPage");
+            await NavigationService.NavigateAsync(nameof(DescriptionPage1));
+        });
+        public Command OnClickNotAgree => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync(nameof(StartTutorialPage));
         });
 
     }

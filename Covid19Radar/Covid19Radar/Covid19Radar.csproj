@@ -105,8 +105,8 @@
     <Compile Update="Views\Tutorial\InitSettingPage.xaml.cs">
       <DependentUpon>InitSettingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\ConsentByUserPage.xaml.cs">
-      <DependentUpon>ConsentByUserPage.xaml</DependentUpon>
+    <Compile Update="Views\Tutorial\PrivacyPolicyPage.xaml.cs">
+      <DependentUpon>PrivacyPolicyPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Tutorial\StartTutorialPage.xaml.cs">
       <DependentUpon>StartTutorialPage.xaml</DependentUpon>
