@@ -34,6 +34,7 @@
 - Daryal Murat Akay (Turkish Translation)
 - Su Wei (Simplified Chinese Translation)
 - Glenn Colpaert (Dutch Translation)
+- oyasan_ba2 (Client Android)
 
 # Beta Testers
 - Nagahata Kenji
