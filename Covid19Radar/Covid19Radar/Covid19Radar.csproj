@@ -51,9 +51,9 @@
     <PackageReference Include="Xamarin.ExposureNotification" Version="0.2.1-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.772" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.772" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.772" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.726" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Icons.xaml.cs">
