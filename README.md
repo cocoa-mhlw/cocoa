@@ -1,4 +1,4 @@
-# Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
+# COVID-19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
 
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
@@ -67,7 +67,7 @@ You can check the screen transition by accessing the following URL.
 
 ## Licensing
 
-Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
+COVID-19Radar is licensed under the GNU Affero General Public License v3.0. See
 [LICENSE](./LICENSE) for the full license text.
 
 The following are additional items in this license depending on the intention of the original author.
