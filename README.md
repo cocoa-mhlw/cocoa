@@ -63,7 +63,7 @@ If you want to check your design files, install Adobe XD. (available for free).
 
 You can check the screen transition by accessing the following URL.
 
-[Proto type mock（Sorry Japanese Only）](https://xd.adobe.com/view/725e056c-d18a-4e29-61d2-d4dabd4b7eea-046f/)
+[Proto type mock（Sorry Japanese Only）](https://xd.adobe.com/view/3388de85-871b-46a1-5c3f-7ecacfa1a5cf-45b9/)
 
 ## Licensing
 
