@@ -2,9 +2,17 @@ name: Deploy Covid19 to Azure Functions
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
     paths:
       - Covid19RadarAPI/**
+      - .github/workflows/**
+  pull_request:
+    branches-ignore:
+      - master
+    paths:
+      - Covid19RadarAPI/**
+      - .github/workflows/**
 
 env:
   AZURE_FUNCTIONAPP_NAME: covid19radar
@@ -29,12 +37,14 @@ jobs:
     - name: Test
       run: dotnet test ${{ env.AZURE_FUNCTIONS_PROJECT }} --no-restore --verbosity normal
     - name: Upload article
+      if: github.event_name == 'push'
       uses: actions/upload-artifact@v1
       with:
         name: drop
         path: ${{ env.ARTIFACT_STAGING_PATH }}
 
   deploy:
+    if: github.event_name == 'push'
     needs: [build]
     env:
       DEPLOY_TARGET_DIR: ${{ github.workspace }}/deploy_target_dir
