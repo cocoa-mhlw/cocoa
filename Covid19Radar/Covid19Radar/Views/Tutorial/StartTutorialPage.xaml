@@ -18,38 +18,36 @@
     <Grid Style="{StaticResource DefaultGridLayout}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <Grid Grid.Row="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ffimageloading:CachedImage
+                Grid.Row="0"
+                HorizontalOptions="Center"
+                Source="Logo.png"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="1"
+                HorizontalOptions="Center"
+                Style="{StaticResource DefaultTitleLabel}"
+                Text="{x:Static resources:AppResources.AppName}" />
+            <Label
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                Style="{StaticResource DefaultSubTitleLabel}"
+                Text="{x:Static resources:AppResources.StartTutorialPageTextProtectingOurLovedOnes}" />
+        </Grid>
 
-        <ffimageloading:CachedImage
-            Grid.Row="0"
-            HorizontalOptions="Center"
-            Source="Logo.png"
-            VerticalOptions="Center" />
-
-        <Label
-            Grid.Row="1"
-            HorizontalOptions="Center"
-            Style="{StaticResource DefaultTitleLabel}"
-            Text="{x:Static resources:AppResources.AppName}">
-            <Label.Margin>
-                <Thickness Top="{OnPlatform Android=0, iOS=32}" />
-            </Label.Margin>
-        </Label>
-
-        <Label
-            Grid.Row="2"
-            HorizontalOptions="Center"
-            Style="{StaticResource DefaultSubTitleLabel}"
-            Text="{x:Static resources:AppResources.StartTutorialPageTextProtectingOurLovedOnes}" />
-
-        <ffimageloading:CachedImage Grid.Row="3" Source="TopMainImg.png" />
+        <ffimageloading:CachedImage Grid.Row="1" Source="TopMainImg.png" />
 
         <ce:GradientButton
-            Grid.Row="4"
+            Grid.Row="2"
             AutomationId="StartButton"
             Command="{Binding Path=OnClickStart}"
             Style="{StaticResource DefaultGradientButton}"

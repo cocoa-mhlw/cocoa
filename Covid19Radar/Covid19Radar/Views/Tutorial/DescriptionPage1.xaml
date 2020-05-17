@@ -3,7 +3,6 @@
     x:Class="Covid19Radar.Views.DescriptionPage1"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -16,25 +15,29 @@
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Frame Grid.Column="0" Style="{StaticResource DefaultNumberFrame}">
-                    <Label Style="{StaticResource DefaultNumberLabel}" Text="1" />
-                </Frame>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ffimageloading:CachedImage
+                    Grid.Row="0"
+                    Aspect="AspectFit"
+                    Source="descriptionStep10.png" />
                 <Label
-                    Grid.Column="1"
-                    Style="{StaticResource DefaultNumberLabelText}"
-                    Text="{x:Static resources:AppResources.DescriptionPageTitleTextStep1}" />
+                    Grid.Row="1"
+                    Style="{StaticResource DefaultTitleLabelTextColor}"
+                    Text="このアプリについて" />
             </Grid>
 
             <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep11.png" />
             <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep1Description}" />
             <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep12.png" />
-            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep1Description2}" />
-
+            <!--
+            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep1Description2}" />-->
+            <Label Style="{StaticResource DefaultLabel}" Text="アプリを実行した際、各スマートフォンに匿名IDを生成して保持します。このアプリは、電話番号・位置情報など、プライバシーに関わる情報は一切取得をしません。" />
             <ce:GradientButton
                 AutomationId="NextButton"
                 Command="{Binding Path=OnClickNext}"
