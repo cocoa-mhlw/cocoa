@@ -12,15 +12,25 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <StackLayout Style="{StaticResource DefaultGridLayout}">
-        <StackLayout>
-            <WebView
-                HeightRequest="9999"
-                Source="{Binding Url}"
-                Style="{StaticResource DefaultWebView}" />
-        </StackLayout>
+    <Grid Style="{StaticResource DefaultGridLayout}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
 
-        <Grid ColumnSpacing="10" RowSpacing="0">
+            <StackLayout>
+                <WebView
+                    HeightRequest="9999"
+                    Source="{Binding Url}"
+                    Style="{StaticResource DefaultWebView}" />
+            </StackLayout>
+        </ScrollView>
+
+        <Grid
+            Grid.Row="1"
+            ColumnSpacing="10"
+            RowSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*" />
                 <ColumnDefinition Width="0.5*" />
@@ -44,5 +54,5 @@
                 Style="{StaticResource DefaultGradientButton}"
                 Text="{x:Static resources:AppResources.ButtonAgree}" />
         </Grid>
-    </StackLayout>
+    </Grid>
 </ContentPage>

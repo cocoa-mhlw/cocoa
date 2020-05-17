@@ -14,37 +14,30 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Grid RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <ffimageloading:CachedImage
-                    Grid.Row="0"
-                    Margin="30,0,30,0"
-                    Aspect="AspectFit"
-                    Source="descriptionStep20.png" />
-                <Label
-                    Grid.Row="1"
-                    Style="{StaticResource DefaultTitleLabelTextColor}"
-                    Text="接触記録の保存について" />
-            </Grid>
+        <Grid Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep20.png" />
+                <Label Style="{StaticResource DefaultTitleLabelTextColor}" Text="接触記録の保存について" />
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep21.png" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep2Description}" />
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep22.png" />
+                <Label Style="{StaticResource DefaultLabel}" Text="アプリの実行中、お互いのスマートフォンでは、過去2週間の互いの匿名IDの記録が行われます。2週間を超えた記録は削除され、お互いの匿名IDはプライバシー保護の為に周期的に変わります。" />
+            </StackLayout>
+            <Grid Grid.Row="2">
+                <ce:GradientButton
+                    AutomationId="NextButton"
+                    Command="{Binding Path=OnClickNext}"
+                    Style="{StaticResource DefaultGradientButton}"
+                    Text="{x:Static resources:AppResources.ButtonNext}" />
 
-            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep21.png" />
-            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep2Description}" />
-            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep22.png" />
-            <!--
-            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep2Description2}" />
-            -->
-            <Label Style="{StaticResource DefaultLabel}" Text="アプリの実行中、お互いのスマートフォンでは、過去2週間の互いの匿名IDの記録が行われます。2週間を超えた記録は削除され、お互いの匿名IDはプライバシー保護の為に周期的に変わります。" />
-            <ce:GradientButton
-                AutomationId="NextButton"
-                Command="{Binding Path=OnClickNext}"
-                Style="{StaticResource DefaultGradientButton}"
-                Text="{x:Static resources:AppResources.ButtonNext}" />
-        </StackLayout>
+            </Grid>
+        </Grid>
     </ScrollView>
 </ContentPage>

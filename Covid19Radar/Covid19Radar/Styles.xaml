@@ -25,6 +25,7 @@
     </Style>
 
     <Style x:Key="DefaultFlexLayout" TargetType="FlexLayout">
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
         <Setter Property="Direction" Value="Column" />
         <Setter Property="JustifyContent" Value="SpaceAround" />
         <Setter Property="AlignContent" Value="Center" />
@@ -32,6 +33,7 @@
     </Style>
 
     <Style x:Key="DefaultGridLayout" TargetType="Grid">
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
         <Setter Property="ColumnSpacing" Value="30" />
         <Setter Property="RowSpacing" Value="30" />
         <Setter Property="Margin" Value="30,30,30,30" />
@@ -41,7 +43,7 @@
     <Style x:Key="DefaultStackLayout" TargetType="StackLayout">
         <Setter Property="Margin" Value="30,30,30,30" />
         <Setter Property="Spacing" Value="30" />
-        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
         <Setter Property="Padding" Value="0,0,0,30" />
     </Style>
 
