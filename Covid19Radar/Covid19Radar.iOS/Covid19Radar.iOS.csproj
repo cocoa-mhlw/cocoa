@@ -971,13 +971,18 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-      <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\ic_launcher%403x.png"/>
-      <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\ic_launcher%402x.png"/>
-      <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\ic_launcher.png"/>
-      <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\Contents.json">
-          <Visible>False</Visible>
-      </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\ic_launcher%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\ic_launcher%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\ic_launcher.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
   </ItemGroup>
-
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
