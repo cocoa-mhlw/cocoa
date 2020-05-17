@@ -65,7 +65,7 @@ namespace Covid19Radar
             UserDataService userDataService = Container.Resolve<UserDataService>();
             if (userDataService.IsExistUserData)
             {
-                // TODO Wire Start Exposure Notification
+ // TODO Wire Start Exposure Notification
 /*
                 var isStart = await ExposureNotification.IsEnabledAsync();
                 if (!isStart)
@@ -75,12 +75,11 @@ namespace Covid19Radar
 */
                 UserDataModel _userData = userDataService.Get();
                 result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
-
             }
             else
             {
-                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-
+                result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
+//                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
 
             if (!result.Success)
