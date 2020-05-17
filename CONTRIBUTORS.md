@@ -1,4 +1,4 @@
-# Covid19Radar Contributors
+# COVID-19Radar Contributors
 - Kazumi Hirose (organizer)
 - Noriko Matsumoto (Designer/Device iOS Lending)
 - Yasuaki Matsuda (Server side / Azure Functions)
