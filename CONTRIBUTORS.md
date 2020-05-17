@@ -42,6 +42,7 @@
 - Alberto Diaz Martin (Spanish Translation)
 - Ali Khaled Heikal (Arabic Translation)
 - Kaminaka Rikuya (Documentation)
+- Akira Kakkar (github actions)
 
 # Beta Testers
 - Nagahata Kenji
