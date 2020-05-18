@@ -65,21 +65,21 @@ namespace Covid19Radar
             UserDataService userDataService = Container.Resolve<UserDataService>();
             if (userDataService.IsExistUserData)
             {
- // TODO Wire Start Exposure Notification
-/*
-                var isStart = await ExposureNotification.IsEnabledAsync();
-                if (!isStart)
-                {
-                    await ExposureNotification.StartAsync();
-                }
-*/
+                // TODO Wire Start Exposure Notification
+                /*
+                                var isStart = await ExposureNotification.IsEnabledAsync();
+                                if (!isStart)
+                                {
+                                    await ExposureNotification.StartAsync();
+                                }
+                */
                 UserDataModel _userData = userDataService.Get();
-                result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
+//                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
+                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
             else
             {
-                result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
-//                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
 
             if (!result.Success)
