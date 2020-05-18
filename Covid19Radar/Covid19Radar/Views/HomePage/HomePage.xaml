@@ -15,30 +15,70 @@
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <StackLayout>
+            <StackLayout Margin="0,0,0,0" Spacing="0">
                 <Label Style="{StaticResource DefaultLabelColor}" Text="過去14日間の陽性判定者との接触" />
                 <!--  TODO Maybe change touch gesture GestureRecognizers based label  -->
-                <Button
-                    Padding="15,15,15,15"
-                    BackgroundColor="Transparent"
-                    BorderColor="Gray"
-                    BorderWidth="2"
-                    Command="{Binding Path=OnClickExposures}"
-                    CornerRadius="10"
-                    FontSize="Large"
-                    HorizontalOptions="FillAndExpand"
-                    Text="SX件の接触がありました"
-                    TextColor="Black">
-                    <Button.ImageSource>
-                        <FontImageSource
-                            FontFamily="FA-S"
-                            Glyph="&#xf071;"
-                            Size="30"
-                            Color="#2196F3" />
-                    </Button.ImageSource>
-                </Button>
+                <Grid HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition>
+                            <RowDefinition.Height>
+                                <OnPlatform x:TypeArguments="GridLength">
+                                    <On Platform="Android" Value="50" />
+                                    <On Platform="iOS" Value="40" />
+                                </OnPlatform>
+                            </RowDefinition.Height>
+                        </RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Style="{StaticResource CustomButtonInternalHeadImageStyle}">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FA-S"
+                                Glyph="&#xf071;"
+                                Size="30"
+                                Color="#2196F3" />
+                        </Image.Source>
+                    </Image>
+                    <!--  Button Control  -->
+
+                    <Button
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        Style="{StaticResource CustomButtonStyle}" />
+
+                    <Label
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource CustomButtonInternalLabelStyle}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    FontAttributes="Bold"
+                                    FontSize="Large"
+                                    Text="X件"
+                                    TextColor="Black" />
+                                <Span FontSize="Small" Text="の接触がありました" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <!--  Icon Image  -->
+                    <Image Grid.Column="2" Style="{StaticResource CustomButtonInternalFootImageStyle}">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FA-S"
+                                Glyph="&#xf105;"
+                                Size="40"
+                                Color="#2196F3" />
+                        </Image.Source>
+                    </Image>
+                </Grid>
             </StackLayout>
-            <StackLayout>
+            <StackLayout Margin="0,0,0,0" Spacing="0">
                 <Label Style="{StaticResource DefaultLabelColor}" Text="陽性と診断された場合" />
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
@@ -67,7 +107,7 @@
                     Text="陽性情報の共有と他者への匿名通知へ" />
             </StackLayout>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <StackLayout>
+            <StackLayout Margin="0,0,0,0" Spacing="0">
                 <Label Style="{StaticResource DefaultLabelColor}" Text="アプリの共有" />
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
