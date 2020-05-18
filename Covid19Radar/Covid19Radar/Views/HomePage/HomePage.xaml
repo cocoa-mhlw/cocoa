@@ -49,6 +49,7 @@
                     <Button
                         Grid.Column="0"
                         Grid.ColumnSpan="3"
+                        Command="{Binding Path=OnClickExposures}"
                         Style="{StaticResource CustomButtonStyle}" />
 
                     <Label
