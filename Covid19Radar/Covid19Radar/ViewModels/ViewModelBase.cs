@@ -56,6 +56,5 @@ namespace Covid19Radar.ViewModels
         {
 
         }
-
     }
 }
