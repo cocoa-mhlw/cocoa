@@ -33,9 +33,16 @@ namespace Covid19Radar.ViewModels
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0f3",
+                PageName = nameof(StartTutorialPage),
+                Title = "アプリの使い方"
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0f3",
                 PageName = nameof(SettingsPage),
                 Title = "追跡情報の設定"
             });
+
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf2f1",
