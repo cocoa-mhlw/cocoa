@@ -16,7 +16,7 @@
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
             <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
-            <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
+            <Label Style="{StaticResource DefaultTitleLabelColorColor}" Text="{x:Static resources:AppResources.AppName}" />
             <Label Style="{StaticResource DefaultLabelSmall}" Text="{Binding AppVer}" />
             <Grid HorizontalOptions="Center">
                 <Grid.ColumnDefinitions>
