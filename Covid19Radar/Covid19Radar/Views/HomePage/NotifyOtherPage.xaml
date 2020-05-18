@@ -38,10 +38,7 @@
                         Grid.Column="0"
                         Aspect="AspectFit"
                         Source="Settings.png" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{StaticResource DefaultLabel}">
+                    <Label Grid.Row="0" Grid.Column="1">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span FontSize="Small" Text="陽性登録へご協力いただいた場合、あなたと接触した履歴のある人に通知が行きます。" />
