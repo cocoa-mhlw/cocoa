@@ -61,28 +61,27 @@ namespace Covid19Radar
             Container.Resolve<ILogger>().Log("Started App Center");
 
             INavigationResult result;
-           result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             // Check user data and skip tutorial
-            /*
-                        UserDataService userDataService = Container.Resolve<UserDataService>();
-                        if (userDataService.IsExistUserData)
-                        {
-                            // TODO Wire Start Exposure Notification
-                            /*
-                            var isStart = await ExposureNotification.IsEnabledAsync();
-                            if (!isStart)
-                            {
-                                await ExposureNotification.StartAsync();
-                            }
+            UserDataService userDataService = Container.Resolve<UserDataService>();
+            if (userDataService.IsExistUserData)
+            {
+ // TODO Wire Start Exposure Notification
+/*
+                var isStart = await ExposureNotification.IsEnabledAsync();
+                if (!isStart)
+                {
+                    await ExposureNotification.StartAsync();
+                }
+*/
+                UserDataModel _userData = userDataService.Get();
+                result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
+            }
+            else
+            {
+                result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
+//                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+            }
 
-                            UserDataModel _userData = userDataService.Get();
-                            result = await NavigationService.NavigateAsync("/MenuPage");
-                        }
-                        else
-                        {
-                            result = await NavigationService.NavigateAsync("/MainPage");
-                        }
-            */
             if (!result.Success)
             {
                 MainPage = new ExceptionPage
@@ -119,7 +118,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<DescriptionPage2, DescriptionPage2ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage3, DescriptionPage3ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage4, DescriptionPage4ViewModel>();
-            containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
+            containerRegistry.RegisterForNavigation<PrivacyPolicyPage, PrivacyPolicyPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<ContributorsPage, ContributorsPageViewModel>();
@@ -129,6 +128,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ExposuresPage, ExposuresPageViewModel>();
             containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
             containerRegistry.RegisterForNavigation<UpdateInfomationPage, UpdateInfomationPageViewModel>();
+            containerRegistry.RegisterForNavigation<SettingsPage, SettingsPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();

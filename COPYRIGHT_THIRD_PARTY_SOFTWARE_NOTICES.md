@@ -1,13 +1,13 @@
 # LICENSE Copyright / THIRD PARTY SOFTWARE NOTICES
 Do not translate or Localize
 This file incorporates components from the projects listed below.
-Covid19radar community licenses these components to you under Covid19radar community's software licensing terms, except that components licensed under open source licenses requiring that such components remain under their original license are being made available to you by Covid19radar community under their original licensing terms.
-The original copyright notices and the licenses under which Covid19radar community received such components are set forth below for informational purposes. 
+COVID-19Radar community licenses these components to you under COVID-19Radar community's software licensing terms, except that components licensed under open source licenses requiring that such components remain under their original license are being made available to you by COVID-19Radar community under their original licensing terms.
+The original copyright notices and the licenses under which COVID-19Radar community received such components are set forth below for informational purposes.
 
 ---
-## Covid19Radar
+## COVID-19Radar
 ---
-Copyright (C) 2020 Covid19radar Contributors
+Copyright (C) 2020 COVID-19Radar Contributors
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
