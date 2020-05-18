@@ -14,32 +14,30 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Frame Grid.Column="1" Style="{StaticResource DefaultNumberFrame}">
-                    <Label Style="{StaticResource DefaultNumberLabel}" Text="2" />
-                </Frame>
-                <Label
-                    Grid.Column="2"
-                    Style="{StaticResource DefaultNumberLabelText}"
-                    Text="{x:Static resources:AppResources.DescriptionPageTitleTextStep2}" />
+        <Grid Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep20.png" />
+                <Label Style="{StaticResource DefaultTitleLabelColor}" Text="接触記録の保存について" />
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep21.png" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep2Description}" />
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep22.png" />
+                <Label Style="{StaticResource DefaultLabel}" Text="アプリの実行中、お互いのスマートフォンでは、過去2週間の互いの匿名IDの記録が行われます。2週間を超えた記録は削除され、お互いの匿名IDはプライバシー保護の為に周期的に変わります。" />
+            </StackLayout>
+            <Grid Grid.Row="2">
+                <ce:GradientButton
+                    AutomationId="NextButton"
+                    Command="{Binding Path=OnClickNext}"
+                    Style="{StaticResource DefaultGradientButton}"
+                    Text="{x:Static resources:AppResources.ButtonNext}" />
+
             </Grid>
-
-            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep21.png" />
-            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep2Description}" />
-            <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep22.png" />
-            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep2Description2}" />
-
-            <ce:GradientButton
-                AutomationId="NextButton"
-                Command="{Binding Path=OnClickNext}"
-                Style="{StaticResource DefaultGradientButton}"
-                Text="{x:Static resources:AppResources.ButtonNext}" />
-        </StackLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>
