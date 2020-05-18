@@ -136,6 +136,32 @@
         </Style.Triggers>
     </Style>
 
+
+    <Style x:Key="DefaultGradientButtonGrayout" TargetType="controls:GradientButton">
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="Scale" Value="0.9" />
+        <Setter Property="BorderWidth" Value="3" />
+        <Setter Property="BorderColor" Value="{StaticResource SecondaryText}" />
+        <Style.Triggers>
+            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="True">
+                <Setter Property="StartColor" Value="{StaticResource Disabled}" />
+                <Setter Property="EndColor" Value="{StaticResource Disabled}" />
+                <Setter Property="GradientOrientation" Value="Horizontal" />
+            </Trigger>
+            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="False">
+                <Setter Property="StartColor" Value="{StaticResource Disabled}" />
+                <Setter Property="EndColor" Value="{StaticResource Disabled}" />
+                <Setter Property="GradientOrientation" Value="Horizontal" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--
     <Style x:Key="DefaultGradientButtonGrayout" TargetType="controls:GradientButton">
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
@@ -158,7 +184,7 @@
                 <Setter Property="GradientOrientation" Value="Horizontal" />
             </Trigger>
         </Style.Triggers>
-    </Style>
+    </Style>-->
 
     <Style x:Key="DefaultTitleLabelColor" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center" />
