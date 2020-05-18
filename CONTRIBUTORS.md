@@ -41,6 +41,7 @@
 - Mikael Håkansson(Swedish Translation)
 - Alberto Diaz Martin (Spanish Translation)
 - Ali Khaled Heikal (Arabic Translation)
+- Kaminaka Rikuya (Documentation)
 
 # Beta Testers
 - Nagahata Kenji
