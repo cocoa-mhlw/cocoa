@@ -85,7 +85,10 @@ namespace Covid19Radar.Services
                 hash = sha.ComputeHash(source);
             }
 #if DEBUG
-            s.Signature = ByteString.CopyFrom(ECDsa.SignHash(hash));
+            using (var ecDsa = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256))
+            {
+                s.Signature = ByteString.CopyFrom(ecDsa.SignHash(hash));
+            }
 #else
             var result = await KeyVault.SignAsync(TekExportKeyVaultKeyUrl, Microsoft.Azure.KeyVault.Cryptography.Algorithms.Es256.AlgorithmName, hash);
             s.Signature = ByteString.CopyFrom(result.Result);
