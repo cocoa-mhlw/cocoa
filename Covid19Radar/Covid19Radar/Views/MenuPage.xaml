@@ -44,7 +44,7 @@
                                             </Image.Source>
                                         </Image>
                                         <Label
-                                            FontSize="Medium"
+                                            FontSize="Default"
                                             Text="{Binding Title}"
                                             TextColor="Black"
                                             VerticalOptions="Center" />
