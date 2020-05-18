@@ -99,7 +99,7 @@
         <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="CornerRadius" Value="20" />
         <Setter Property="Scale" Value="0.8" />
         <Style.Triggers>
             <Trigger TargetType="Button" Property="IsEnabled" Value="True">
@@ -117,7 +117,7 @@
         <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="CornerRadius" Value="20" />
         <Setter Property="Scale" Value="0.9" />
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="BorderColor" Value="{StaticResource Primary}" />
@@ -141,7 +141,7 @@
         <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="CornerRadius" Value="20" />
         <Setter Property="Scale" Value="0.9" />
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="BorderColor" Value="{StaticResource Primary}" />
