@@ -88,8 +88,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
-          <source>Covid19Radar</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Radar</target>
+          <source>COVID-19Radar</source>
+          <target state="translated" state-qualifier="mt-suggestion">COVID-19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
         <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">

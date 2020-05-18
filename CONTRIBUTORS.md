@@ -1,4 +1,4 @@
-# Covid19Radar Contributors
+# COVID-19Radar Contributors
 - Kazumi Hirose (organizer)
 - Noriko Matsumoto (Designer/Device iOS Lending)
 - Yasuaki Matsuda (Server side / Azure Functions)
@@ -40,6 +40,7 @@
 - Michael Tsai (Simplified Chinese Translation)
 - Mikael Håkansson(Swedish Translation)
 - Alberto Diaz Martin (Spanish Translation)
+- Ali Khaled Heikal (Arabic Translation)
 
 # Beta Testers
 - Nagahata Kenji

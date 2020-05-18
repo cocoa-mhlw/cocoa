@@ -11,9 +11,9 @@ using Covid19Radar.Views;
 
 namespace Covid19Radar.ViewModels
 {
-    public class MenuPageViewModel : BindableBase
+    public class MenuPageViewModel : ViewModelBase
     {
-        private INavigationService _navigationService;
+        //private INavigationService _navigationService;
 
         public ObservableCollection<MainMenuModel> MenuItems { get; set; }
 
@@ -26,33 +26,50 @@ namespace Covid19Radar.ViewModels
 
         public DelegateCommand NavigateCommand { get; private set; }
 
-        public MenuPageViewModel(INavigationService navigationService)
+        public MenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            _navigationService = navigationService;
-
             MenuItems = new ObservableCollection<MainMenuModel>();
 
             MenuItems.Add(new MainMenuModel()
             {
-                // \uf2fe
-                Icon = "\uf015",
-                PageName = nameof(HomePage),
-                Title = "HomePage"
+                Icon = "\uf0f3",
+                PageName = nameof(StartTutorialPage),
+                Title = "アプリの使い方"
             });
-/*
             MenuItems.Add(new MainMenuModel()
             {
-                Icon = "ic_viewb",
-                PageName = nameof(ViewB),
-                Title = "View B"
+                Icon = "\uf0f3",
+                PageName = nameof(SettingsPage),
+                Title = "追跡情報の設定"
             });
-*/
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf2f1",
+                PageName = nameof(UpdateInfomationPage),
+                Title = "更新情報"
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf56c",
+                PageName = nameof(LicenseAgreementPage),
+                Title = "ライセンス"
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(ContributorsPage),
+                Title = "貢献者一覧"
+            });
+
             NavigateCommand = new DelegateCommand(Navigate);
         }
 
         async void Navigate()
         {
-            await _navigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
+            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
         }
 
     }

@@ -3,7 +3,6 @@
     x:Class="Covid19Radar.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -16,62 +15,91 @@
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
-            <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
-            <Label Style="{StaticResource DefaultLabelSmall}" Text="{Binding AppVer}" />
-            <Grid HorizontalOptions="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="0.5*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="Version" />
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="{Binding AppVer}" />
+            <StackLayout>
+                <Label Style="{StaticResource DefaultLabelColor}" Text="過去14日間の陽性判定者との接触" />
+                <!--  TODO Maybe change touch gesture GestureRecognizers based label  -->
+                <Button
+                    Padding="15,15,15,15"
+                    BackgroundColor="Transparent"
+                    BorderColor="Gray"
+                    BorderWidth="2"
+                    Command="{Binding Path=OnClickExposures}"
+                    CornerRadius="10"
+                    FontSize="Large"
+                    HorizontalOptions="FillAndExpand"
+                    Text="SX件の接触がありました"
+                    TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource
+                            FontFamily="FA-S"
+                            Glyph="&#xf071;"
+                            Size="30"
+                            Color="#2196F3" />
+                    </Button.ImageSource>
+                </Button>
+            </StackLayout>
+            <StackLayout>
+                <Label Style="{StaticResource DefaultLabelColor}" Text="陽性と診断された場合" />
+                <Grid ColumnSpacing="10" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="0.8*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ffimageloading:CachedImage
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        Source="settings.png" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="もし、新型コロナで陽性と診断された場合、あなたの周りの人を守るためにも、陽性登録へのご協力をお願いします。" />
+                </Grid>
+                <ce:GradientButton
+                    AutomationId="NextButton"
+                    Command="{Binding Path=OnClickNotifyOther}"
+                    Style="{StaticResource DefaultGradientButton}"
+                    Text="陽性情報の共有と他者への匿名通知へ" />
+            </StackLayout>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <StackLayout>
+                <Label Style="{StaticResource DefaultLabelColor}" Text="アプリの共有" />
+                <Grid ColumnSpacing="10" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="0.8*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Grid.Column="0">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FA-S"
+                                Glyph="&#xf1e1;"
+                                Size="30"
+                                Color="#2196F3" />
+                        </Image.Source>
+                    </Image>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="本アプリは多くの方がインストールするほどに効果を発揮するため、身の回りの方にアプリを共有してください" />
+                </Grid>
+                <ce:GradientButton
+                    AutomationId="ShareButton"
+                    Command="{Binding Path=OnClickShareApp}"
+                    Style="{StaticResource DefaultGradientButton}"
+                    Text="アプリを共有する" />
 
-                <Label
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="{x:Static resources:AppResources.HomeEnableNotification}" />
-                <Switch
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
-                <Label
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="Enable Notification" />
-                <Switch
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
-
-                <Label
-                    Grid.Row="3"
-                    Grid.Column="0"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="Reset All Data" />
-                <Switch
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
-
-            </Grid>
-            <Label Style="{StaticResource DefaultLabelSmall}" Text="If you want to stop using it, turn it off. Data for the last 14 days will be deleted." />
+            </StackLayout>
         </StackLayout>
     </ScrollView>
 </ContentPage>
