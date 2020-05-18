@@ -16,7 +16,7 @@
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Label Style="{StaticResource DefaultTitleLabelColorColor}" Text="{x:Static resources:AppResources.NotifyOtherPageTextStatusSettingsSubtitle}" />
+            <Label Style="{StaticResource DefaultTitleLabelColor}" Text="{x:Static resources:AppResources.NotifyOtherPageTextStatusSettingsSubtitle}" />
 
             <ffimageloading:CachedImage Source="Notify01.png" />
 
