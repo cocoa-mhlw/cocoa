@@ -47,6 +47,7 @@
 
     <Style x:Key="DefaultLineStyle" TargetType="BoxView">
         <Setter Property="HeightRequest" Value="1" />
+        <Setter Property="Margin" Value="0,0,0,0" />
         <Setter Property="Color" Value="{StaticResource Divider}" />
     </Style>
 
@@ -307,7 +308,31 @@
         <Setter Property="BackgroundColor" Value="{StaticResource SecondaryText}" />
     </Style>
 
+    <Style x:Key="CustomButtonInternalHeadImageStyle" TargetType="Image">
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="InputTransparent" Value="True" />
+    </Style>
+    <Style x:Key="CustomButtonInternalFootImageStyle" TargetType="Image">
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="Margin" Value="0,0,10,0" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="InputTransparent" Value="True" />
+    </Style>
 
-
-
+    <Style x:Key="CustomButtonStyle" TargetType="Button">
+        <Setter Property="BorderColor" Value="#2196F3" />
+        <Setter Property="BorderWidth" Value="3" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+    </Style>
+    <Style x:Key="CustomButtonInternalLabelStyle" TargetType="Label">
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+    </Style>
 </ResourceDictionary>
