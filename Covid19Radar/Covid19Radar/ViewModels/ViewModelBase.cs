@@ -1,6 +1,7 @@
 ﻿using Covid19Radar.Model;
 using Covid19Radar.Renderers;
 using Covid19Radar.Services;
+using Covid19Radar.Views;
 using Prism.AppModel;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -19,6 +20,12 @@ namespace Covid19Radar.ViewModels
 {
     public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
     {
+
+        public Command OnClickHelp => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(StartTutorialPage));
+        });
+
 
         // Navigation
         protected INavigationService NavigationService { get; private set; }
