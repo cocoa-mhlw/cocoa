@@ -13,7 +13,7 @@
         </trans-unit>
         <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
           <source>How it works</source>
-          <target state="translated" state-qualifier="tm-suggestion">Hoe het werkt</target>
+          <target state="translated" state-qualifier="tm-suggestion">Hoe werkt het</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
         </trans-unit>
         <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
@@ -33,22 +33,22 @@
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Het is niet nodig om persoonlijke informatie in te voeren. We gebruiken een unieke ID, toegewezen aan u bij het installeren van een app.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Het is niet nodig om persoonlijke informatie in te voeren. We gebruiken een unieke ID, welke wordt toegekend tijdens het installeren van een app.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="translated" state-qualifier="mt-suggestion">Een contact met een andere app-gebruiker langer dan 30 min in totaal, binnen een straal dichter dan 2 m gemiddeld wordt geregistreerd als "Close Contact".</target>
+          <target state="translated" state-qualifier="mt-suggestion">Een contact met een andere app-gebruiker langer dan 30 minuten totaal en binnen een straal van gemiddeld 2 meter, wordt geregistreerd als "Nabij Contact".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Wijzig uw status handmatig in 'Positief' nadat u uw telefoonnummer hebt geverifieerd." Positieve" Workflow , Nu coördinatie met verwante partijen.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Wijzig uw status handmatig in 'Positief' nadat u uw telefoonnummer geverifieerd hebt. "Positieve" Workflow , Nu coördinatie met verwante partijen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Bluetooth moet ingeschakeld zijn om nauw contact op te nemen. Ga naar de volgende pagina om deze in te schakelen.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Bluetooth/blootstellingnotificaties moeten ingeschakeld zijn om nabij contact te registreren. Ga naar de volgende pagina om dit in te schakelen.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
         </trans-unit>
@@ -58,13 +58,13 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID19</source>
-          <target state="translated" state-qualifier="mt-suggestion">Onze dierbaren beschermen tegen COVID19</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
+          <source>Protecting our loved ones from COVID-19</source>
+          <target state="translated" state-qualifier="mt-suggestion">Onze dierbaren beschermen tegen COVID-19</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
-          <target state="translated" state-qualifier="mt-suggestion">Apparaat toegang</target>
+          <target state="translated" state-qualifier="mt-suggestion">Apparaattoegang</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
         </trans-unit>
         <trans-unit id="TitleAppDescription" translate="yes" xml:space="preserve">
@@ -88,23 +88,23 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
-          <source>Covid19Radar</source>
-          <target state="translated" state-qualifier="mt-suggestion">Covid19Radar</target>
+          <source>COVID-19Radar</source>
+          <target state="translated" state-qualifier="mt-suggestion">COVID-19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
         <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Status instellingen</target>
+          <target state="translated" state-qualifier="tm-suggestion">Statusinstellingen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status Settings Menu</note>
         </trans-unit>
         <trans-unit id="HomePageViewListOfContributorsMenu" translate="yes" xml:space="preserve">
           <source>List of Contributors</source>
-          <target state="translated" state-qualifier="mt-suggestion">Lijst van bijdragers</target>
+          <target state="translated" state-qualifier="mt-suggestion">Lijst van contribuanten</target>
           <note from="MultilingualBuild" annotates="source" priority="2">List Of Contributors Menu</note>
         </trans-unit>
         <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
           <source>Update Information</source>
-          <target state="translated" state-qualifier="tm-suggestion">Update-informatie</target>
+          <target state="translated" state-qualifier="tm-suggestion">Informatie bijwerken</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
         </trans-unit>
         <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
@@ -114,17 +114,17 @@
         </trans-unit>
         <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
           <source>You're ready to go</source>
-          <target state="translated" state-qualifier="tm-suggestion">Klaar om te beginnen</target>
+          <target state="translated" state-qualifier="tm-suggestion">U bent klaar om te starten</target>
           <note from="MultilingualBuild" annotates="source" priority="2">You're ready to go</note>
         </trans-unit>
         <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
           <source>Set up Completed</source>
-          <target state="translated" state-qualifier="mt-suggestion">Instellingen voltooid</target>
+          <target state="translated" state-qualifier="mt-suggestion">Configuratie voltooid</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Als u een positieve diagnose hebt ontvangen, voert u uw mobiele nummer in en werkt u uw status bij om uw dierbaren te beschermen.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Als u een positieve diagnose ontvangen hebt, voer dan uw mobiele nummer in en werk uw status bij om uw dierbaren te beschermen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page description</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsEnterNumber" translate="yes" xml:space="preserve">
@@ -136,34 +136,34 @@
           <source>We'll send you a verification code.
 Please check your SMS.</source>
           <target state="translated" state-qualifier="mt-suggestion">We sturen je een verificatiecode.
-Controleer uw SMS.</target>
+Controleer uw SMS berichten.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsSMSInfo" translate="yes" xml:space="preserve">
           <source>We will not store your phone number. It will be sent directly to the database of the government.</source>
-          <target state="translated" state-qualifier="mt-suggestion">We slaan uw telefoonnummer niet op. Het zal rechtstreeks naar de database van de overheid worden gestuurd.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Wij slaan uw telefoonnummer niet op. Deze zal rechtstreeks naar de database van de overheid worden verstuurd.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sms info</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
-          <target state="translated" state-qualifier="mt-suggestion">Als u een positieve diagnose kreeg</target>
+          <target state="translated" state-qualifier="mt-suggestion">Als u een positieve diagnose ontving</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sub title</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextPhoneNumberPlaceholder" translate="yes" xml:space="preserve">
           <source>090-1234-4567</source>
-          <target state="translated" state-qualifier="mt-suggestion">090-1234-4567</target>
+          <target state="translated" state-qualifier="mt-suggestion">031-012-3456789</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Placeholder text for phone number entry</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconListMenu" translate="yes" xml:space="preserve">
           <source>Detected Beacon List</source>
-          <target state="translated" state-qualifier="mt-suggestion">Gedetecteerde beacon lijst</target>
+          <target state="translated" state-qualifier="mt-suggestion">Lijst gedetecteerde bakens</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacon List Menu</note>
         </trans-unit>
         <trans-unit id="InputSmsOTPPageOtpEnterText" translate="yes" xml:space="preserve">
           <source>Enter the Code that was sent to 
 「{0}」</source>
-          <target state="translated" state-qualifier="mt-suggestion">Voer de code in die is verzonden 
-「{0}」</target>
+          <target state="translated" state-qualifier="mt-suggestion">Voer de code die is verzonden naar 
+「{0}」in</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Otp Enter the Code</note>
         </trans-unit>
         <trans-unit id="TitleOtp" translate="yes" xml:space="preserve">
@@ -178,7 +178,7 @@ Controleer uw SMS.</target>
         </trans-unit>
         <trans-unit id="InputSmsOTPPageDidntGetTheCodeText" translate="yes" xml:space="preserve">
           <source>Didn't get the code?</source>
-          <target state="translated" state-qualifier="mt-suggestion">Heb je de code niet gekregen?</target>
+          <target state="translated" state-qualifier="mt-suggestion">Code niet ontvangen?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Didn't get the code Text</note>
         </trans-unit>
         <trans-unit id="InputSmsOTPPageResendText" translate="yes" xml:space="preserve">
@@ -198,22 +198,22 @@ Controleer uw SMS.</target>
         </trans-unit>
         <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
           <source>Contributors List</source>
-          <target state="translated" state-qualifier="mt-suggestion">Lijst met bijdragers</target>
+          <target state="translated" state-qualifier="mt-suggestion">Lijst met contribuanten</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
         <trans-unit id="TitleDetectedBeaconPage" translate="yes" xml:space="preserve">
           <source>Detected Beacons</source>
-          <target state="translated" state-qualifier="mt-suggestion">Gedetecteerde beacons</target>
+          <target state="translated" state-qualifier="mt-suggestion">Gedetecteerde baken</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacons</note>
         </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License Agreement</source>
-          <target state="translated" state-qualifier="tm-suggestion">Gebruikersvoorwaarden</target>
+          <target state="translated" state-qualifier="tm-suggestion">Gebruiksvoorwaarden</target>
           <note from="MultilingualBuild" annotates="source" priority="2">License Agreement</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
-          <target state="translated" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
+          <target state="translated" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/nl/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
@@ -223,7 +223,7 @@ Controleer uw SMS.</target>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
           <source>Average Distance</source>
-          <target state="translated" state-qualifier="mt-suggestion">Gemiddelde Afstand</target>
+          <target state="translated" state-qualifier="mt-suggestion">Gemiddelde afstand</target>
           <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
@@ -253,22 +253,22 @@ Controleer uw SMS.</target>
         </trans-unit>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
-          <target state="translated" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/contributor.html</target>
+          <target state="translated" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/nl/contributor.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Url Contributor</note>
         </trans-unit>
         <trans-unit id="UrlUpdate" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
-          <target state="translated" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
+          <target state="translated" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/nl/update.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
         </trans-unit>
         <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
           <source>Heads up</source>
-          <target state="translated" state-qualifier="tm-suggestion">Waarschuwing</target>
+          <target state="translated" state-qualifier="tm-suggestion">Opgelet/target>
           <note from="MultilingualBuild" annotates="source" priority="2">Heads up</note>
         </trans-unit>
         <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/qna.html</source>
-          <target state="translated" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/qna.html</target>
+          <target state="translated" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/nl/qna.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">If contacted , headsup and Correct coping method and contact information Try to be calm.</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
@@ -278,12 +278,12 @@ Controleer uw SMS.</target>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
           <source>Recording Close Contact</source>
-          <target state="translated" state-qualifier="mt-suggestion">Dicht contact opnemen</target>
+          <target state="translated" state-qualifier="mt-suggestion">Nabij contact opnemen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID19 positive</source>
-          <target state="translated" state-qualifier="mt-suggestion">Als u COVID19 positief gediagnosticeerd</target>
+          <source>If you are diagnosed COVID-19 positive</source>
+          <target state="translated" state-qualifier="mt-suggestion">Als uw COVID-19 diagnose positief is</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
@@ -293,12 +293,12 @@ Controleer uw SMS.</target>
         </trans-unit>
         <trans-unit id="TitleUserSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Status instellingen</target>
+          <target state="translated" state-qualifier="tm-suggestion">Statusinstellingen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status Settings page title</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Status instellingen</target>
+          <target state="translated" state-qualifier="tm-suggestion">Statusinstellingen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
         </trans-unit>
         <trans-unit id="ButtonSave" translate="yes" xml:space="preserve">
@@ -308,7 +308,7 @@ Controleer uw SMS.</target>
         </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Als u een positieve diagnose hebt ontvangen, voert u uw mobiele nummer in en werkt u uw status bij om uw dierbaren te beschermen.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Als u een positieve diagnose hebt ontvangen, voer dan uw mobiele nummer in en werk uw status bij om uw dierbaren te beschermen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
         </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
@@ -339,7 +339,7 @@ Controleer uw SMS.</target>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Deze app maakt gebruik van Exposure Notification / Bluetooth signalen om te bepalen of u in de buurt van een andere contact tracing app gebruiker. 
+          <target state="translated" state-qualifier="mt-suggestion">Deze app maakt gebruik van blootstellingsmeldingen / Bluetoothsignalen om te bepalen of u in de nabijheid van een andere contact tracing app gebruiker bent. 
 Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
         </trans-unit>
@@ -350,7 +350,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
           <source>Contributors</source>
-          <target state="translated" state-qualifier="mt-suggestion">Contributors</target>
+          <target state="translated" state-qualifier="mt-suggestion">Contribuanten</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
@@ -370,7 +370,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
           <source>Notify</source>
-          <target state="translated" state-qualifier="tm-suggestion">Waarschuwen</target>
+          <target state="translated" state-qualifier="tm-suggestion">Melding</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
         </trans-unit>
         <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
@@ -405,12 +405,12 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
           <source>No known exposures</source>
-          <target state="translated" state-qualifier="mt-suggestion">Geen bekende blootstellingen</target>
+          <target state="translated" state-qualifier="mt-suggestion">Geen blootstellingen bekend</target>
           <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
-          <target state="translated" state-qualifier="mt-suggestion">U wordt op de hoogte gesteld als u bent blootgesteld aan iemand die een positief COVID-19-resultaat heeft gerapporteerd.</target>
+          <target state="translated" state-qualifier="mt-suggestion">U wordt op de hoogte gesteld als u blootgesteld bent aan iemand die een positief COVID-19-resultaat heeft gemeld.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
         <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
@@ -424,22 +424,22 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
           <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Als u positief hebt getest op het virus dat COVID-19 veroorzaakt, u ervoor kiezen om uw diagnose te delen.  Dit zal anderen in uw gemeenschap helpen de verspreiding van het virus bevatten.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Als u positief getest bent op het virus dat COVID-19 veroorzaakt, kunt u ervoor kiezen om uw diagnose te delen.  Dit zal anderen in uw gemeenschap helpen de verspreiding van het virus te beperken.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
         </trans-unit>
         <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
           <source>Learn more</source>
-          <target state="translated" state-qualifier="tm-suggestion">Meer informatie</target>
+          <target state="translated" state-qualifier="tm-suggestion">Meer weten</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
-          <target state="translated" state-qualifier="mt-suggestion">Als u een positieve diagnose kreeg</target>
+          <target state="translated" state-qualifier="mt-suggestion">Als u een positieve diagnose ontving</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
           <source>Please enter the Diagnosis Identifier</source>
-          <target state="translated" state-qualifier="mt-suggestion">Voer de diagnose-id in</target>
+          <target state="translated" state-qualifier="mt-suggestion">Voer de diagnose-ID in</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
         </trans-unit>
         <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
@@ -448,7 +448,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
           <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="translated" state-qualifier="mt-suggestion">De testdatum helpt de app te weten wanneer u mogelijk besmettelijk bent geweest en stelt de juiste mensen op de hoogte van mogelijke blootstelling.</target>
+          <target state="translated" state-qualifier="mt-suggestion">De testdatum helpt de app te bepalen wanneer u mogelijk besmettelijk bent geweest en stelt de juiste mensen op de hoogte van potentiële blootstelling.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
           <source>Only those who have been exposed will receive a notification.</source>
@@ -456,7 +456,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="translated" state-qualifier="mt-suggestion">De unieke test-id die bij uw COVID-19-test is gebruikt, moet worden gebruikt om uw positieve testresultaat te verifiëren.</target>
+          <target state="translated" state-qualifier="mt-suggestion">De unieke test-ID die bij uw COVID-19-test meegeleverd is, moet worden gebruikt om uw positieve testresultaat te verifiëren.</target>
         </trans-unit>
         <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
           <source>Verify and Share</source>
@@ -465,7 +465,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
-          <target state="translated" state-qualifier="tm-suggestion">Probeer het later opnieuw.</target>
+          <target state="translated" state-qualifier="tm-suggestion">Probeer het later nog eens.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
           <source>Failed</source>
@@ -481,11 +481,11 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
           <source>Please provide a Diagnosis Identifier</source>
-          <target state="translated" state-qualifier="mt-suggestion">Geef een diagnose-id</target>
+          <target state="translated" state-qualifier="mt-suggestion">Geef een diagnose-ID</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>
-          <target state="translated" state-qualifier="mt-suggestion">Diagnose-id vereist</target>
+          <target state="translated" state-qualifier="mt-suggestion">Diagnose-ID vereist</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
           <source>OK</source>
@@ -493,7 +493,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Schakel belichtingsmeldingen in voordat u een diagnose stelt.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Schakel blootstellingsmeldingen in voordat u een diagnose indient.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>

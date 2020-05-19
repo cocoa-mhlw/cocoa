@@ -10,7 +10,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <local:Colors />
                 <local:Styles />
-                <local:Fonts />
+                <!--                <local:Fonts /> -->
                 <local:Icons />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

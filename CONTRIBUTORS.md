@@ -1,7 +1,9 @@
-# Covid19Radar Contributors
+# COVID-19Radar Contributors
+- Kazumi Hirose (Organizer)
 - Noriko Matsumoto (Designer/Device iOS Lending)
 - Yasuaki Matsuda (Server side / Azure Functions)
-- Takashi Takebayashi (Translate Japanese)
+- Takashi Takebayashi (Multilingual localization)
+- Akihiko Kodama (UI/UX Design Adviser)
 - Ben Ishiyama-Levy (Xamarin / [Xamariners](https://xamariners.com/))
 - Udara Alwis (Xamarin / [Xamariners](https://xamariners.com/))
 - Pedro Costa (Xamarin / [Xamariners](https://xamariners.com/))
@@ -32,13 +34,16 @@
 - Hisashi SOGA (Documentation)
 - Takuya Fujiwara (Xamarin)
 - Daryal Murat Akay (Turkish Translation)
-- Su Wei (Simplified Chinese Translation)
 - Glenn Colpaert (Dutch Translation)
 - Su Wei (Simplified Chinese Translation)
 - Justin Liu (Simplified Chinese Translation)
 - Michael Tsai (Simplified Chinese Translation)
 - Mikael Håkansson(Swedish Translation)
 - oyasan_ba2 (Client Android / Translate Japanese)
+- Alberto Diaz Martin (Spanish Translation)
+- Ali Khaled Heikal (Arabic Translation)
+- Rachid Zarouali (French Translation)
+- Rikuya Kaminaka (Documentation)
 
 # Beta Testers
 - Nagahata Kenji

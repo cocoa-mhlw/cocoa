@@ -14,10 +14,15 @@ namespace Covid19Radar.Models
         /// </summary>
         public string id { get => this.GetId(); }
         /// <summary>
+        /// for CosmosDB PartitionKey
+        /// </summary>
+        public string PartitionKey { get => this.GetId(); }
+        /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
         /// <value>User UUID</value>
         public string UserUuid { get; set; }
+
 
         /// <summary>
         /// Protected Secret key
