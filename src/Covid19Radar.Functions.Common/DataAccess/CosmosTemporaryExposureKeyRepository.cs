@@ -35,6 +35,7 @@ namespace Covid19Radar.DataAccess
         public async Task<TemporaryExposureKeyModel[]> GetNextAsync()
         {
             _logger.LogInformation($"start {nameof(GetNextAsync)}");
+            // TODO: implement query
             var ins = new TemporaryExposureKeyModel();
             ins.KeyData = new byte[64];
             ins.RollingPeriod = 24 * 60 / 10;
@@ -72,5 +73,10 @@ namespace Covid19Radar.DataAccess
             await _db.TemporaryExposureKey.DeleteItemAsync<TemporaryExposureKeyModel>(model.id, pk);
         }
 
+        public async Task UpsertAsync(TemporaryExposureKeyModel model)
+        {
+            _logger.LogInformation($"start {nameof(UpsertAsync)}");
+            await _db.TemporaryExposureKey.UpsertItemAsync(model);
+        }
     }
 }
