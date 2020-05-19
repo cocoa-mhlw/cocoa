@@ -47,8 +47,10 @@ namespace Covid19Radar
             var keysResponse = await TekExport.GetKeysAsync((ulong)sinceEpochSeconds);
             var result = new TemporaryExposureKeysResult();
             // TODO: Url util
-            result.Keys = keysResponse.Select(_ => new TemporaryExposureKeysResult.Key() { Url = $"{ExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{_.BatchNum}.tekexport" });
-            result.Timestamp = keysResponse.Max(_ => _.TimestampSecondsSinceEpoch);
+            result.Keys = keysResponse.Select(_ => new TemporaryExposureKeysResult.Key() { Url = $"{ExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{_.BatchNum}.zip" });
+            result.Timestamp = keysResponse
+                .OrderByDescending(_ => _.TimestampSecondsSinceEpoch)
+                .FirstOrDefault()?.TimestampSecondsSinceEpoch ?? sinceEpochSeconds;
             return new OkObjectResult(result);
 		}
 	}
