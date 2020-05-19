@@ -333,7 +333,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">今はない</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">今はしない</target>
           <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">

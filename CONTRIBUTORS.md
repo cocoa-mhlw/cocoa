@@ -2,7 +2,7 @@
 - Kazumi Hirose (organizer)
 - Noriko Matsumoto (Designer/Device iOS Lending)
 - Yasuaki Matsuda (Server side / Azure Functions)
-- Takashi Takebayashi (Translate Japanese)
+- Takashi Takebayashi (Multilingual localization)
 - Akihiko Kodama (UI/UX Design Adviser)
 - Ben Ishiyama-Levy (Xamarin / [Xamariners](https://xamariners.com/))
 - Udara Alwis (Xamarin / [Xamariners](https://xamariners.com/))
