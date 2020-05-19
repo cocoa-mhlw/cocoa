@@ -44,7 +44,7 @@
                 AutomationId="NextButton"
                 Command="{Binding Path=OnClickNotAgree}"
                 Style="{StaticResource DefaultGradientButtonGrayout}"
-                Text="同意しない" />
+                Text="{x:Static resources:AppResources.ButtonNotAgree}" />
 
             <ce:GradientButton
                 Grid.Row="0"

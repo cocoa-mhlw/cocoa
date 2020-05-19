@@ -3,75 +3,88 @@
     x:Class="Covid19Radar.Views.ExposuresPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    xmlns:system="clr-namespace:System;assembly=netstandard"
     xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="1"
+            Text="使い方" />
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="2">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="FA-R"
+                    Glyph="&#xf059;"
+                    Size="35"
+                    Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content ItemsSource="{Binding ExposureInformation}">
-        <StackLayout Style="{DynamicResource DefaultStackLayout}">
-            <Label Style="{DynamicResource DefaultTitleLabelColorColor}" Text="Exposures in Past 14 Days" />
-            <Frame Style="{DynamicResource DefaultParentCardFrame}">
-                <StackLayout>
-                    <CollectionView ItemsSource="{Binding ExposureInformation}" SelectionMode="Single">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <StackLayout>
-                                    <Frame Style="{DynamicResource DefaultCardFrame}">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*" />
-                                                <RowDefinition Height="*" />
-                                            </Grid.RowDefinitions>
-
-                                            <Label
-                                                Grid.Row="0"
-                                                Grid.Column="0"
-                                                Style="{DynamicResource DefaultSubSubTitleLabel}"
-                                                Text="Possible exposure" />
-                                            <Label
-                                                Grid.Row="1"
-                                                Grid.Column="0"
-                                                Style="{DynamicResource DefaultLabelLittle}"
-                                                Text="{Binding Timestamp}" />
-
-                                            <Image
-                                                Grid.Row="0"
-                                                Grid.RowSpan="2"
-                                                Grid.Column="1">
-                                                <Image.Source>
-                                                    <FontImageSource
-                                                        FontFamily="FA-R"
-                                                        Glyph="{StaticResource IconBell}"
-                                                        Size="18"
-                                                        Color="{DynamicResource Primary}" />
-                                                </Image.Source>
-                                            </Image>
-                                        </Grid>
-                                    </Frame>
-                                </StackLayout>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                        <CollectionView.EmptyView>
-                            <StackLayout Orientation="Vertical">
-                                <Label Style="{DynamicResource DefaultSubSubTitleLabel}" Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
-                                <Label Style="{DynamicResource DefaultLabelLittle}" Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="過去14日間の接触記録" />
+            <StackLayout>
+                <CollectionView ItemsSource="{Binding ExposureInformation}" SelectionMode="Single">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Grid RowSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span FontSize="Small" Text="Possible exposure" />
+                                                <Span Text="{x:Static system:Environment.NewLine}" />
+                                                <Span
+                                                    FontAttributes="Bold"
+                                                    FontSize="Small"
+                                                    Text="{Binding Timestamp}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Image Grid.Row="0" Grid.Column="1">
+                                        <Image.Source>
+                                            <FontImageSource
+                                                FontFamily="FA-R"
+                                                Glyph="{StaticResource IconBell}"
+                                                Size="18"
+                                                Color="{DynamicResource Primary}" />
+                                        </Image.Source>
+                                    </Image>
+                                </Grid>
                             </StackLayout>
-                        </CollectionView.EmptyView>
-                    </CollectionView>
-                </StackLayout>
-            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.EmptyView>
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{DynamicResource DefaultSubSubTitleLabel}" Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
+                            <Label Style="{DynamicResource DefaultLabelLittle}" Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
+                        </StackLayout>
+                    </CollectionView.EmptyView>
+                </CollectionView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
