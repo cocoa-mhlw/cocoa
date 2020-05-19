@@ -44,7 +44,7 @@ namespace Covid19Radar
 			if (!long.TryParse(req.Query?["since"], out var sinceEpochSeconds))
 				sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
 
-            var keysResponse = await TekExport.GetKeysAsync(sinceEpochSeconds);
+            var keysResponse = await TekExport.GetKeysAsync((ulong)sinceEpochSeconds);
             var result = new TemporaryExposureKeysResult();
             // TODO: Url util
             result.Keys = keysResponse.Select(_ => new TemporaryExposureKeysResult.Key() { Url = $"{ExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{_.BatchNum}.tekexport" });
