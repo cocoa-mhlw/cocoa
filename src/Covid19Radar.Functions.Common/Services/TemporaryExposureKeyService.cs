@@ -22,7 +22,7 @@ namespace Covid19Radar.Services
 {
     public class TemporaryExposureKeyService : ITemporaryExposureKeyService
     {
-        public const int MaxKeysPerFile = 17_000;
+        public const int MaxKeysPerFile = 25_000;
         const int fixedHeaderWidth = 16;
         const string ExportBinFileName = "export.bin";
         const string ExportSigFileName = "export.sig";
@@ -87,18 +87,19 @@ namespace Covid19Radar.Services
             var current = keys;
             while (current.Any())
             {
-                var exportKeyModels = current.Take(MaxKeysPerFile).ToImmutableArray();
-                var exportKeys = exportKeyModels.Select(_ => _.ToKey());
+                var exportKeyModels = current.Take(MaxKeysPerFile).ToArray();
+                var exportKeys = exportKeyModels.Select(_ => _.ToKey()).ToArray();
                 current = current.Skip(MaxKeysPerFile);
+
+                var signatureInfo = SignatureService.Create();
+                await SignService.SetSignatureAsync(signatureInfo);
 
                 var exportModel = await TekExportRepository.CreateAsync();
                 exportModel.BatchSize = exportKeyModels.Length;
                 exportModel.StartTimestamp = startTimestamp;
                 exportModel.EndTimestamp = endTimestamp;
                 exportModel.Region = region;
-
-                var signatureKey = await SignService.GetX509PublicKeyAsync();
-                var signatureInfo = SignatureService.Create(signatureKey);
+                exportModel.SignatureInfos = new SignatureInfo[] { signatureInfo };
 
                 var bin = new TemporaryExposureKeyExport();
                 bin.Keys.AddRange(exportKeys);
