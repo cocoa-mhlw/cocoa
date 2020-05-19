@@ -69,14 +69,15 @@ namespace Covid19Radar.DataAccess
         public async Task DeleteAsync(TemporaryExposureKeyModel model)
         {
             _logger.LogInformation($"start {nameof(DeleteAsync)}");
-            var pk = PartitionKey.Null;
+            var pk = new PartitionKey(model.PartitionKey);
             await _db.TemporaryExposureKey.DeleteItemAsync<TemporaryExposureKeyModel>(model.id, pk);
         }
 
         public async Task UpsertAsync(TemporaryExposureKeyModel model)
         {
             _logger.LogInformation($"start {nameof(UpsertAsync)}");
-            await _db.TemporaryExposureKey.UpsertItemAsync(model);
+            var pk = new PartitionKey(model.PartitionKey);
+            await _db.TemporaryExposureKey.UpsertItemAsync(model, pk);
         }
     }
 }
