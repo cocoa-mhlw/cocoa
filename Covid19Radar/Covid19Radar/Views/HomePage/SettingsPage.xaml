@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Views.SettingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:System="clr-namespace:System;assembly=netstandard"
     xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -15,10 +16,8 @@
     Visual="Material">
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <ffimageloading:CachedImage HorizontalOptions="Center" Source="Logo.png" />
-            <Label Style="{StaticResource DefaultTitleLabelColor}" Text="{x:Static resources:AppResources.AppName}" />
-            <Label Style="{StaticResource DefaultLabelSmall}" Text="{Binding AppVer}" />
-            <Grid HorizontalOptions="Center">
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="アプリの設定" />
+            <Grid HorizontalOptions="Center" RowSpacing="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="0.5*" />
@@ -28,49 +27,115 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="Version" />
+                <Label Grid.Row="0" Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Small"
+                                Text="Version"
+                                TextColor="{StaticResource PrimaryText}" />
+                            <Span Text="{x:Static System:Environment.NewLine}" />
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Caption"
+                                Text="このアプリのバージョン番号"
+                                TextColor="{StaticResource SecondaryText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Label
                     Grid.Row="0"
                     Grid.Column="1"
+                    HorizontalOptions="End"
                     Style="{StaticResource DefaultLabelSmall}"
                     Text="{Binding AppVer}" />
-
-                <Label
+                <BoxView
                     Grid.Row="1"
-                    Grid.Column="0"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="{x:Static resources:AppResources.HomeEnableNotification}" />
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource DefaultLineStyle}" />
+                <Label Grid.Row="2" Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Small"
+                                Text="近距離無線通信"
+                                TextColor="{StaticResource PrimaryText}" />
+                            <Span Text="{x:Static System:Environment.NewLine}" />
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Caption"
+                                Text="発信と受信を停止する"
+                                TextColor="{StaticResource SecondaryText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Switch
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
-                <Label
                     Grid.Row="2"
-                    Grid.Column="0"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="Enable Notification" />
-                <Switch
-                    Grid.Row="2"
                     Grid.Column="1"
                     IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
-
-                <Label
+                <BoxView
                     Grid.Row="3"
-                    Grid.Column="0"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="Reset All Data" />
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource DefaultLineStyle}" />
+                <Label Grid.Row="4" Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Small"
+                                Text="濃厚接触の通知"
+                                TextColor="{StaticResource PrimaryText}" />
+                            <Span Text="{x:Static System:Environment.NewLine}" />
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Caption"
+                                Text="濃厚接触時のアプリ通知"
+                                TextColor="{StaticResource SecondaryText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Switch
-                    Grid.Row="3"
+                    Grid.Row="4"
                     Grid.Column="1"
                     IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
+                <BoxView
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource DefaultLineStyle}" />
 
+                <Label Grid.Row="6" Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Small"
+                                Text="記録の削除"
+                                TextColor="{StaticResource PrimaryText}" />
+                            <Span Text="{x:Static System:Environment.NewLine}" />
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Caption"
+                                Text="接触記録の全削除"
+                                TextColor="{StaticResource SecondaryText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Switch
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
+                <BoxView
+                    Grid.Row="7"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource DefaultLineStyle}" />
             </Grid>
-            <Label Style="{StaticResource DefaultLabelSmall}" Text="If you want to stop using it, turn it off. Data for the last 14 days will be deleted." />
         </StackLayout>
     </ScrollView>
 </ContentPage>

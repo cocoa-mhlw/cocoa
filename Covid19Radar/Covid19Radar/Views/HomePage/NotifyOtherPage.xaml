@@ -7,32 +7,81 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    xmlns:system="clr-namespace:System;assembly=netstandard"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Label Style="{StaticResource DefaultTitleLabelColor}" Text="{x:Static resources:AppResources.NotifyOtherPageTextStatusSettingsSubtitle}" />
+        <Grid Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="陽性情報の共有" />
 
-            <ffimageloading:CachedImage Source="Notify01.png" />
-
-            <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.NofityPageShareDiag}" />
-            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NofityPageShareYourCase}" />
-
-            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyPageLearnMore}">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
-
-            <ce:GradientButton
-                Command="{Binding SharePositiveDiagnosisCommand}"
-                Style="{StaticResource DefaultGradientButton}"
-                Text="{x:Static resources:AppResources.NofityPageButtonSharePositive}" />
-        </StackLayout>
+                <Label Style="{StaticResource DefaultLabelColor}" Text="陽性と診断された場合" />
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="0.8*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ffimageloading:CachedImage
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        Source="Settings.png" />
+                    <Label Grid.Row="0" Grid.Column="1">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontSize="Small" Text="陽性登録へご協力いただいた場合、あなたと接触した履歴のある人に通知が行きます。" />
+                                <Span Text="{x:Static system:Environment.NewLine}" />
+                                <Span
+                                    FontAttributes="Bold"
+                                    FontSize="Small"
+                                    Text="※陽性登録者は匿名です。ご安心ください。" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Label Style="{StaticResource DefaultLabelColor}" Text="陽性登録" />
+                <BoxView Style="{StaticResource DefaultLineStyle}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="公的機関から発行された「処理番号」を入力してください" />
+                <Entry
+                    CharacterSpacing="10"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    Placeholder="10桁の処理番号"
+                    Style="{StaticResource DefaultEntry}"
+                    Text="{Binding NotifyCode, Mode=TwoWay}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="検査日は、アプリがいつあなたが伝染した可能性があるかを知るのに役立ち、接触した履歴のある人への通知を行います。" />
+                <DatePicker
+                    Date="{Binding SelectedDate, Mode=TwoWay}"
+                    FontSize="Large"
+                    MaximumDate="{Binding MaxDate}"
+                    MinimumDate="{Binding MinDate}" />
+            </StackLayout>
+            <StackLayout Grid.Row="2" Spacing="10">
+                <ce:GradientButton
+                    AutomationId="NextButton"
+                    Command="{Binding Path=OnClickRegister}"
+                    Style="{StaticResource DefaultGradientButton}"
+                    Text="登録する" />
+                <ce:GradientButton
+                    AutomationId="RegisterButton"
+                    Command="{Binding Path=OnClickAfter}"
+                    Style="{StaticResource DefaultGradientButtonGrayout}"
+                    Text="あとで設定する" />
+            </StackLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>
