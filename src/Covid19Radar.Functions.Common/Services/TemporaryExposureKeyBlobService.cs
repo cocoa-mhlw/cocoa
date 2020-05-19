@@ -52,7 +52,9 @@ namespace Covid19Radar.Services
             blockBlob.Metadata[batchRegionMetadataKey] = model.Region;
 
             await blockBlob.UploadFromStreamAsync(s);
+            Logger.LogInformation($" {nameof(WriteToBlobAsync)} upload {exportFileName}");
             await blockBlob.SetMetadataAsync();
+            Logger.LogInformation($" {nameof(WriteToBlobAsync)} set metadata {exportFileName}");
         }
     }
 }

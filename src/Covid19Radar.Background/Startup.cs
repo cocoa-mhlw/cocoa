@@ -26,7 +26,7 @@ namespace Covid19Radar
             builder.Services.AddSingleton<ITemporaryExposureKeyService, TemporaryExposureKeyService>();
             builder.Services.AddSingleton<ITemporaryExposureKeySignatureInfoService, TemporaryExposureKeySignatureInfoService>();
             builder.Services.AddSingleton<ITemporaryExposureKeyBlobService, TemporaryExposureKeyBlobService>();
-#if Debug
+#if DEBUG
             builder.Services.AddSingleton<ITemporaryExposureKeySignService, TemporaryExposureKeySignServiceDebug>();
 #else
             builder.Services.AddSingleton<ITemporaryExposureKeySignService, TemporaryExposureKeySignService>();
