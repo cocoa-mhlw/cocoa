@@ -287,6 +287,9 @@
     <PackageReference Include="Microsoft.AppCenter.Distribute">
       <Version>3.2.1</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.LocalNotification">
+      <Version>5.0.4</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.Multilingual">
       <Version>1.1.6-beta</Version>
     </PackageReference>
@@ -981,6 +984,62 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ic_launcher.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\Exposurenotifications.imageset\Exposurenotifications%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Exposurenotifications.imageset\Exposurenotifications%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Exposurenotifications.imageset\Exposurenotifications.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Exposurenotifications.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\ExposureNotifications.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ExposureNotifications.imageset\Contents.json">
       <Visible>False</Visible>
     </ImageAsset>
   </ItemGroup>

@@ -3,14 +3,35 @@
     x:Class="Covid19Radar.Views.SharePositiveDiagnosisPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar" xmlns:ce="clr-namespace:Covid19Radar.Controls"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="1"
+            Text="使い方" />
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="2">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="FA-R"
+                    Glyph="&#xf059;"
+                    Size="35"
+                    Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
             <ffimageloading:CachedImage Source="Notify01.png" />
@@ -19,8 +40,7 @@
             <Entry
                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageCodePlaceholder}"
                 Style="{StaticResource DefaultEntry}"
-                Text="{Binding DiagnosisUid, Mode=TwoWay}"
-                TextColor="{StaticResource Accent4Color}" />
+                Text="{Binding DiagnosisUid, Mode=TwoWay}" />
 
             <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText2}" />
             <DatePicker Date="{Binding DiagnosisDate}" Style="{StaticResource DefaultDatePicker}" />
