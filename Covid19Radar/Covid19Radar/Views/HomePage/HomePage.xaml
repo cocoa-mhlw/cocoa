@@ -13,6 +13,27 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="1"
+            Text="使い方" />
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="2">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="FA-R"
+                    Glyph="&#xf059;"
+                    Size="35"
+                    Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
             <StackLayout Margin="0,0,0,0" Spacing="0">
