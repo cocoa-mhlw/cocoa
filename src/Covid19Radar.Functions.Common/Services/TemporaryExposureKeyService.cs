@@ -23,77 +23,47 @@ namespace Covid19Radar.Services
     public class TemporaryExposureKeyService : ITemporaryExposureKeyService
     {
         public const int MaxKeysPerFile = 17_000;
-
+        const int fixedHeaderWidth = 16;
         const string ExportBinFileName = "export.bin";
         const string ExportSigFileName = "export.sig";
         const string batchNumberMetadataKey = "batch_number";
         const string batchRegionMetadataKey = "batch_region";
 
-        public readonly string AppBundleId;
-        public readonly string AndroidPackage;
-        public readonly string Region;
-        public readonly SignatureInfo SigInfo;
         public readonly string TekExportBlobStorageConnectionString;
         public readonly string TekExportBlobStorageContainerPrefix;
         public readonly CloudStorageAccount StorageAccount;
         public readonly CloudBlobClient BlobClient;
-        public readonly string BlobContainerName;
         public readonly ITemporaryExposureKeyRepository TekRepository;
         public readonly ITemporaryExposureKeyExportRepository TekExportRepository;
         public readonly ILogger<TemporaryExposureKeyService> Logger;
-        public readonly KeyVaultClient KeyVault;
-        public readonly string TekExportKeyVaultKeyUrl;
-        private Microsoft.Azure.KeyVault.Models.KeyBundle KeyVaultKey;
+        public readonly ITemporaryExposureKeySignService SignService;
+        public readonly ITemporaryExposureKeySignatureInfoService SignatureService;
 
         public TemporaryExposureKeyService(IConfiguration config,
             ITemporaryExposureKeyRepository tek,
             ITemporaryExposureKeyExportRepository tekExport,
+            ITemporaryExposureKeySignService signService,
+            ITemporaryExposureKeySignatureInfoService signatureService,
             ILogger<TemporaryExposureKeyService> logger)
         {
-            AppBundleId = config["AppBundleId"];
-            AndroidPackage = config["AndroidPackage"];
             TekExportBlobStorageConnectionString = config["TekExportBlobStorage"];
             TekExportBlobStorageContainerPrefix = config["TekExportBlobStorageContainerPrefix"];
-            Region = config["Region"];
-            TekExportKeyVaultKeyUrl = config["TekExportKeyVaultKeyUrl"];
             TekRepository = tek;
             TekExportRepository = tekExport;
+            SignService = signService;
+            SignatureService = signatureService;
             Logger = logger;
-            var sig = new SignatureInfo();
-            sig.AppBundleId = AppBundleId;
-            sig.AndroidPackage = AndroidPackage;
-            sig.SignatureAlgorithm = "ECDSA";
-            SigInfo = sig;
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
             BlobClient = StorageAccount.CreateCloudBlobClient();
-            BlobContainerName = $"{TekExportBlobStorageContainerPrefix}{Region}".ToLower();
-            AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
-            var credentialCallback = new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback);
-            KeyVault = new KeyVaultClient(credentialCallback);
         }
 
         public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
         {
             var s = new TEKSignature();
-            s.SignatureInfo = SigInfo;
             s.BatchNum = batchNum;
             s.BatchSize = batchSize;
             // Signature
-            byte[] hash;
-            using (var sha = System.Security.Cryptography.SHA256.Create())
-            {
-                hash = sha.ComputeHash(source);
-            }
-#if DEBUG
-            using (var ecDsa = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256))
-            {
-                s.Signature = ByteString.CopyFrom(ecDsa.SignHash(hash));
-            }
-#else
-            var result = await KeyVault.SignAsync(TekExportKeyVaultKeyUrl, Microsoft.Azure.KeyVault.Cryptography.Algorithms.Es256.AlgorithmName, hash);
-            s.Signature = ByteString.CopyFrom(result.Result);
-#endif
-
+            s.Signature = ByteString.CopyFrom(await SignService.SignAsync(source));
             return s;
         }
 
@@ -101,17 +71,12 @@ namespace Covid19Radar.Services
         {
             try
             {
-#if !DEBUG
-                KeyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
-                SigInfo.VerificationKeyId = KeyVaultKey.Key.Kid;
-                SigInfo.VerificationKeyVersion = KeyVaultKey.KeyIdentifier.Version;
-#endif
-
                 var items = await TekRepository.GetNextAsync();
-                foreach (var kv in items.GroupBy(_ => new { _.RollingStartUnixTimeSeconds, _.RollingPeriodSeconds }))
+                foreach (var kv in items.GroupBy(_ => new { _.RollingStartUnixTimeSeconds, _.RollingPeriodSeconds, _.Region }))
                 {
                     await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
                         (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
+                        kv.Key.Region,
                         kv.ToArray());
                 }
             }
@@ -122,7 +87,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task CreateAsync(ulong startTimestamp, ulong endTimestamp, IEnumerable<TemporaryExposureKeyModel> keys)
+        public async Task CreateAsync(ulong startTimestamp, ulong endTimestamp, string region, IEnumerable<TemporaryExposureKeyModel> keys)
         {
             var current = keys;
             while (current.Any())
@@ -135,7 +100,10 @@ namespace Covid19Radar.Services
                 exportModel.BatchSize = exportKeyModels.Length;
                 exportModel.StartTimestamp = startTimestamp;
                 exportModel.EndTimestamp = endTimestamp;
-                exportModel.Region = Region;
+                exportModel.Region = region;
+
+                var signatureKey = await SignService.GetX509PublicKeyAsync();
+                var signatureInfo = SignatureService.Create(signatureKey);
 
                 var bin = new TemporaryExposureKeyExport();
                 bin.Keys.AddRange(exportKeys);
@@ -144,7 +112,7 @@ namespace Covid19Radar.Services
                 bin.Region = exportModel.Region;
                 bin.StartTimestamp = exportModel.StartTimestamp;
                 bin.EndTimestamp = exportModel.EndTimestamp;
-                bin.SignatureInfos.Add(SigInfo);
+                bin.SignatureInfos.Add(signatureInfo);
 
                 var sig = new TEKSignatureList();
 
@@ -153,6 +121,7 @@ namespace Covid19Radar.Services
                 await binStream.FlushAsync();
                 binStream.Seek(0, SeekOrigin.Begin);
                 var signature = await CreateSignatureAsync(binStream, bin.BatchNum, bin.BatchSize);
+                signature.SignatureInfo = signatureInfo;
                 sig.Signatures.Add(signature);
 
                 using (var s = new MemoryStream())
@@ -184,7 +153,8 @@ namespace Covid19Radar.Services
         public async Task WriteToBlobAsync(Stream s, TemporaryExposureKeyExportModel model, TemporaryExposureKeyExport bin, TEKSignatureList sig)
         {
             //  write to blob storage
-            var cloudBlobContainer = BlobClient.GetContainerReference(BlobContainerName);
+            var blobContainerName = $"{TekExportBlobStorageContainerPrefix}{model.Region}".ToLower();
+            var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
 
             // Filename is inferable as batch number
