@@ -11,7 +11,7 @@ namespace Covid19Radar.DataAccess
         Task<TemporaryExposureKeyExportModel> CreateAsync();
         Task<TemporaryExposureKeyExportModel> GetAsync(string id);
         Task UpdateAsync(TemporaryExposureKeyExportModel model);
-        Task<TemporaryExposureKeyExportModel[]> GetKeysAsync(long sinceEpochSeconds);
-
+        Task<TemporaryExposureKeyExportModel[]> GetKeysAsync(ulong sinceEpochSeconds);
+        Task<TemporaryExposureKeyExportModel[]> GetOutOfTimeKeysAsync();
     }
 }
