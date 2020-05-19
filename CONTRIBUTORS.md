@@ -39,7 +39,9 @@
 - Justin Liu (Simplified Chinese Translation)
 - Michael Tsai (Simplified Chinese Translation)
 - Mikael Håkansson(Swedish Translation)
+- Alberto Diaz Martin (Spanish Translation)
 - Ali Khaled Heikal (Arabic Translation)
+- Rikuya Kaminaka (Documentation)
 
 # Beta Testers
 - Nagahata Kenji
