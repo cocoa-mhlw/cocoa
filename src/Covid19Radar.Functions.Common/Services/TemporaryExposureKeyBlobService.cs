@@ -3,6 +3,7 @@ using Covid19Radar.Protobuf;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,17 +22,22 @@ namespace Covid19Radar.Services
         public readonly string TekExportBlobStorageContainerPrefix;
         public readonly CloudStorageAccount StorageAccount;
         public readonly CloudBlobClient BlobClient;
+        public readonly ILogger<TemporaryExposureKeyBlobService> Logger;
 
-        public TemporaryExposureKeyBlobService(IConfiguration config)
+        public TemporaryExposureKeyBlobService(
+            IConfiguration config,
+            ILogger<TemporaryExposureKeyBlobService> logger)
         {
             TekExportBlobStorageConnectionString = config["TekExportBlobStorage"];
             TekExportBlobStorageContainerPrefix = config["TekExportBlobStorageContainerPrefix"];
+            Logger = logger;
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
             BlobClient = StorageAccount.CreateCloudBlobClient();
         }
 
         public async Task WriteToBlobAsync(Stream s, TemporaryExposureKeyExportModel model, TemporaryExposureKeyExport bin, TEKSignatureList sig)
         {
+            Logger.LogInformation($"start {nameof(WriteToBlobAsync)}");
             //  write to blob storage
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}{model.Region}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
