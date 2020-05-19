@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Covid19Radar.Renderers;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
@@ -18,7 +19,7 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref _phoneNumber, value);
         }
 
-        public SmsVerificationPageViewModel(INavigationService navigationService) : base(navigationService)
+        public SmsVerificationPageViewModel(INavigationService navigationService, IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = "Input Phone number";
         }

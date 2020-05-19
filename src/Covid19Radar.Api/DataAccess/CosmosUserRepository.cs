@@ -25,7 +25,7 @@ namespace Covid19Radar.DataAccess
 
         public async Task<UserResultModel?> GetById(string id)
         {
-            var itemResult = await _db.User.ReadItemAsync<UserResultModel>(id, PartitionKey.None);
+            var itemResult = await _db.User.ReadItemAsync<UserResultModel>(id, new PartitionKey(id));
             if (itemResult.StatusCode == HttpStatusCode.OK)
             {
                 return itemResult.Resource;
@@ -36,7 +36,7 @@ namespace Covid19Radar.DataAccess
 
         public Task Create(UserModel user)
         {
-            return _db.User.CreateItemAsync(user);
+            return _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
         }
 
         public async Task<bool> Exists(string id)
@@ -44,7 +44,7 @@ namespace Covid19Radar.DataAccess
             bool userFound = false;
             try
             {
-                var userResult = await _db.User.ReadItemAsync<UserResultModel>(id, PartitionKey.None);
+                var userResult = await _db.User.ReadItemAsync<UserResultModel>(id, new PartitionKey(id));
                 if (userResult.StatusCode == HttpStatusCode.OK)
                 {
                     userFound = true;
@@ -66,7 +66,7 @@ namespace Covid19Radar.DataAccess
             bool userFound = false;
             try
             {
-                var result = await _db.User.DeleteItemAsync<UserModel>(user.GetId(), PartitionKey.None);
+                var result = await _db.User.DeleteItemAsync<UserModel>(user.GetId(), new PartitionKey(user.GetId()));
                 if (result.StatusCode == HttpStatusCode.OK)
                 {
                     userFound = true;
