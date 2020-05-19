@@ -28,6 +28,11 @@ namespace Covid19Radar.Models
         public string SubmissionNumber { get; set; }
 
         /// <summary>
+        /// Public approval
+        /// </summary>
+        public bool Approved { get; set; }
+
+        /// <summary>
         /// Temporary Exposure Keys
         /// </summary>
         public TemporaryExposureKeyModel[] Keys { get; set; }

@@ -43,7 +43,10 @@ namespace Covid19Radar
                 return validationResult.ErrorActionResult;
             }
 
-            await DiagnosisRepository.SubmitDiagnosisAsync(diagnosis);
+            await DiagnosisRepository.SubmitDiagnosisAsync(
+                diagnosis.SubmissionNumber,
+                diagnosis.UserUuid,
+                diagnosis.Keys);
 
             return new OkResult();
         }
