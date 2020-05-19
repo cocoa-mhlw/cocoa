@@ -1,5 +1,6 @@
 ﻿using Covid19Radar.Protobuf;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
@@ -14,9 +15,13 @@ namespace Covid19Radar.Services
         public readonly string Region;
         public readonly string Algorithm = "1.2.840.10045.4.3.2";
         public readonly SignatureInfo Info;
+        public readonly ILogger<TemporaryExposureKeySignatureInfoService> Logger;
 
-        public TemporaryExposureKeySignatureInfoService(IConfiguration config)
+        public TemporaryExposureKeySignatureInfoService(
+            IConfiguration config,
+            ILogger<TemporaryExposureKeySignatureInfoService> logger)
         {
+            Logger = logger;
             AppBundleId = config["AppBundleId"];
             AndroidPackage = config["AndroidPackage"];
             Region = config["Region"];
@@ -28,6 +33,7 @@ namespace Covid19Radar.Services
 
         public SignatureInfo Create(X509Certificate2 key)
         {
+            Logger.LogInformation($"start {nameof(Create)}");
             var si = new SignatureInfo(Info);
             // TODO: Value to set
             si.VerificationKeyId = key.Subject;

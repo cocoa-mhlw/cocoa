@@ -29,10 +29,10 @@ namespace Covid19Radar.Services
 
         public readonly ITemporaryExposureKeyRepository TekRepository;
         public readonly ITemporaryExposureKeyExportRepository TekExportRepository;
-        public readonly ILogger<TemporaryExposureKeyService> Logger;
         public readonly ITemporaryExposureKeySignService SignService;
         public readonly ITemporaryExposureKeySignatureInfoService SignatureService;
         public readonly ITemporaryExposureKeyBlobService BlobService;
+        public readonly ILogger<TemporaryExposureKeyService> Logger;
 
         public TemporaryExposureKeyService(IConfiguration config,
             ITemporaryExposureKeyRepository tek,
@@ -64,6 +64,7 @@ namespace Covid19Radar.Services
         {
             try
             {
+                Logger.LogInformation($"start {nameof(RunAsync)}");
                 var items = await TekRepository.GetNextAsync();
                 foreach (var kv in items.GroupBy(_ => new { _.RollingStartUnixTimeSeconds, _.RollingPeriodSeconds, _.Region }))
                 {
@@ -82,6 +83,7 @@ namespace Covid19Radar.Services
 
         public async Task CreateAsync(ulong startTimestamp, ulong endTimestamp, string region, IEnumerable<TemporaryExposureKeyModel> keys)
         {
+            Logger.LogInformation($"start {nameof(CreateAsync)}");
             var current = keys;
             while (current.Any())
             {

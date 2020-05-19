@@ -1,6 +1,7 @@
 ﻿using Microsoft.Azure.KeyVault;
 using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,11 +14,15 @@ namespace Covid19Radar.Services
     {
         public readonly KeyVaultClient KeyVault;
         public readonly string TekExportKeyVaultKeyUrl;
+        public readonly ILogger<TemporaryExposureKeySignService> Logger;
         private Microsoft.Azure.KeyVault.Models.KeyBundle KeyVaultKey;
         private byte[] PublicKey;
 
-        public TemporaryExposureKeySignService(IConfiguration config)
+        public TemporaryExposureKeySignService(
+            IConfiguration config,
+            ILogger<TemporaryExposureKeySignService> logger)
         {
+            Logger = logger;
             TekExportKeyVaultKeyUrl = config["TekExportKeyVaultKeyUrl"];
             AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
             var credentialCallback = new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback);
@@ -26,6 +31,7 @@ namespace Covid19Radar.Services
 
         private async Task InitializeAsync()
         {
+            Logger.LogInformation($"start {nameof(InitializeAsync)}");
             if (KeyVaultKey == null)
             {
                 KeyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
@@ -35,6 +41,7 @@ namespace Covid19Radar.Services
 
         public async Task<byte[]> SignAsync(Stream source)
         {
+            Logger.LogInformation($"start {nameof(SignAsync)}");
             await InitializeAsync();
             byte[] hash;
             using (var sha = System.Security.Cryptography.SHA256.Create())
@@ -47,6 +54,7 @@ namespace Covid19Radar.Services
 
         public async Task<byte[]> GetPublicKeyAsync()
         {
+            Logger.LogInformation($"start {nameof(GetPublicKeyAsync)}");
             await InitializeAsync();
             return PublicKey;
         }
