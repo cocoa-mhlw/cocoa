@@ -16,7 +16,7 @@
         <NavigationPage Title="Menu">
 
             <x:Arguments>
-                <ContentPage Title="Covid19Radar">
+                <ContentPage Title="COVID-19Radar">
                     <ListView
                         BackgroundColor="#e8e8e8"
                         ItemsSource="{Binding MenuItems}"
