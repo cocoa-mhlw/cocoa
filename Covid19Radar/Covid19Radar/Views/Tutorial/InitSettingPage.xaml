@@ -49,7 +49,7 @@
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNotNow}"
                     Style="{StaticResource DefaultGradientButtonGrayout}"
-                    Text="後から有効" />
+                    Text="{x:Static resources:AppResources.ButtonNotNow}" />
 
                 <ce:GradientButton
                     Grid.Row="0"
