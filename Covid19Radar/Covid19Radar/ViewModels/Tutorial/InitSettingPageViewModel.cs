@@ -1,4 +1,6 @@
 ﻿using Covid19Radar.Common;
+using Covid19Radar.Renderers;
+using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -22,7 +24,7 @@ namespace Covid19Radar.ViewModels
                 await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
             }
             */
-            await NavigationService.NavigateAsync("SetupCompletedPage");
+            await NavigationService.NavigateAsync(nameof(SetupCompletedPage));
 
         });
     }

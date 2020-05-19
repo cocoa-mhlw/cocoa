@@ -7,20 +7,16 @@
         "COSMOS_PRIMARY_KEY": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
         "COSMOS_DATABASE_ID": "EXAMPLE",
         "COSMOS_AUTO_GENERATE": true,
-        "COSMOS_BEACON_STORE": "Beacons",
         "COSMOS_CONNECTION": "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
         "COSMOS_STORING_ENDPOINT_URI": "https://localhost:8081",
         "COSMOS_STORING_PRIMARY_KEY": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
         "COSMOS_STORING_DATABASE_ID": "EXAMPLE",
         "AppBundleId": "AppBundleId",
         "AndroidPackage": "AndroidPackage",
-        "SignatureAlgorithm": "SignatureAlgorithm",
-        "VerificationKeyIds": "VerificationKeyIdv1 VerificationKeyIdv2",
-        "VerificationKeyVersions": "VerificationKeyVersion1 VerificationKeyVersions2",
-        "Signature": "o4Pm6LJ+/q3UxwZArVLdkQ==",
         "Region": "Country",
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
-        "TekExportBlobStorageContainerPrefix": "C19R",
-        "ExportKeyUrl": "http://127.0.0.1:10000/"
+        "TekExportBlobStorageContainerPrefix": "c19r",
+        "ExportKeyUrl": "http://127.0.0.1:10000/",
+        "TekExportKeyVaultKeyUrl": "https://xxxxxx.vault.azure.net/keys/xxxxSignaturexxx/XXXXXXXXXXXXXXXXXXXXXXXXX"
     }
 }

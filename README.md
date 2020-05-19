@@ -1,8 +1,8 @@
-# Covid19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
+# COVID-19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
 
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
-We are looking for translator reviewers, Please see [How to Transrate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSRATE_CONTRIBUTE.md) page.
+We are looking for translator reviewers, Please see [How to Translate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSRATE_CONTRIBUTE.md) page.
 
 iOS Build status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
@@ -18,7 +18,7 @@ Please check the contribution rules.
 
 ## How to install the app for tester
 
-Please install the app for test from below link.Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
+Please install the app for test from below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
 
 ### Android
 
@@ -63,11 +63,11 @@ If you want to check your design files, install Adobe XD. (available for free).
 
 You can check the screen transition by accessing the following URL.
 
-[Proto type mock（Sorry Japanese Only）](https://xd.adobe.com/view/9ccfd774-5667-4373-530f-591148c84aab-eafe/)
+[Prototype mock（Sorry Japanese Only）](https://xd.adobe.com/view/3388de85-871b-46a1-5c3f-7ecacfa1a5cf-45b9/)
 
 ## Licensing
 
-Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
+COVID-19Radar is licensed under the GNU Affero General Public License v3.0. See
 [LICENSE](./LICENSE) for the full license text.
 
 The following are additional items in this license depending on the intention of the original author.

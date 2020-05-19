@@ -29,11 +29,13 @@ namespace Covid19Radar.DataAccess
         }
         public async Task<TemporaryExposureKeyExportModel> CreateAsync()
         {
-            var partitionKey = PartitionKey.None;
+            var pk = PartitionKey.None;
             var newItem = new TemporaryExposureKeyExportModel();
-            newItem.BatchNum = await _sequence.GetNextAsync(SequenceName, 1);
-            var pk = PartitionKey.Null;
-            return (await _db.TemporaryExposureKeyExport.CreateItemAsync(newItem, pk)).Resource;
+            var batchNum = await _sequence.GetNextAsync(SequenceName, 1);
+            newItem.id = batchNum.ToString();
+            newItem.BatchNum = batchNum;
+            await _db.TemporaryExposureKeyExport.CreateItemAsync(newItem, pk);
+            return newItem;
         }
 
         public async Task<TemporaryExposureKeyExportModel> GetAsync(string id)

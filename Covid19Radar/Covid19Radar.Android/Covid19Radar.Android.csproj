@@ -82,9 +82,6 @@
     <PackageReference Include="Acr.UserDialogs">
       <Version>7.1.0.442</Version>
     </PackageReference>
-    <PackageReference Include="AndroidAltBeaconLibrary">
-      <Version>2.10.0.31004-pre2</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>3.2.1</Version>
     </PackageReference>
@@ -107,7 +104,7 @@
       <Version>7.2.0.1422</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
-      <Version>1.6.292</Version>
+      <Version>1.7.335</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.MediaRouter">
       <Version>1.1.0</Version>
@@ -121,7 +118,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.772" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
@@ -129,7 +126,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.726</Version>
+      <Version>4.6.0.772</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Basement">
       <Version>117.1.0-preview02</Version>
@@ -146,16 +143,9 @@
     <Compile Include="MainApplication.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
     <Compile Include="Renderers\GradientButtonRenderer.cs" />
-    <Compile Include="Renderers\Statusbar.cs" />
-    <Compile Include="Services\BeaconService.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\BeaconSimulator.cs" />
-    <Compile Include="Services\MonitorEventArgs.cs" />
-    <Compile Include="Services\MonitorNotifier.cs" />
     <Compile Include="Services\NotificationService.cs" />
-    <Compile Include="Services\RangeEventArgs.cs" />
-    <Compile Include="Services\RangeNotifier.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
   </ItemGroup>
@@ -704,4 +694,252 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-ja-xhdpi\TopMainImg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\descriptionStep11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\descriptionStep11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep12.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep12.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep12.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\descriptionStep12.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\descriptionStep12.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\descriptionStep12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\descriptionStep11.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\descriptionStep11.png" />
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\bluetoothAccess.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\bluetoothAccess.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\bluetoothAccess.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\bluetoothAccess.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\bluetoothAccess.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\bluetoothAccess.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep11.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep11.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep12.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep12.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep12.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep21.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep21.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep21.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep21.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep21.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep21.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep22.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep22.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep22.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep3.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep3.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep3.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep3.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep3.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep3.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep4.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep31.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep32.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep31.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep31.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep32.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep32.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep4.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep4.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\TopMainImg.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\TopMainImg.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\TopMainImg.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\TopMainImg.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\TopMainImg.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\TopMainImg.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep10.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep10.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep10.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep10.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep10.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep10.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep20.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep20.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep20.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep20.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep20.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep20.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep30.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep30.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep30.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep30.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep30.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep30.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\descriptionStep40.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\descriptionStep40.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\descriptionStep40.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\descriptionStep40.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\descriptionStep40.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\descriptionStep40.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\ic_launcher.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\ExposureNotifications.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\ExposureNotifications.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\Exposurenotifications.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\ExposureNotifications.png"/>
+  </ItemGroup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </Project>
