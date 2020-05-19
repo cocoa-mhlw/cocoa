@@ -21,11 +21,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <ffimageloading:CachedImage
-                    Margin="30,0,30,0"
-                    Aspect="AspectFit"
-                    Source="descriptionStep10.png" />
-                <Label Style="{StaticResource DefaultTitleLabelColor}" Text="このアプリについて" />
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="このアプリについて" />
             </StackLayout>
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep11.png" />
