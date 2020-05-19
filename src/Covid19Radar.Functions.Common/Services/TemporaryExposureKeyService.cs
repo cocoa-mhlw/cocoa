@@ -26,35 +26,28 @@ namespace Covid19Radar.Services
         const int fixedHeaderWidth = 16;
         const string ExportBinFileName = "export.bin";
         const string ExportSigFileName = "export.sig";
-        const string batchNumberMetadataKey = "batch_number";
-        const string batchRegionMetadataKey = "batch_region";
 
-        public readonly string TekExportBlobStorageConnectionString;
-        public readonly string TekExportBlobStorageContainerPrefix;
-        public readonly CloudStorageAccount StorageAccount;
-        public readonly CloudBlobClient BlobClient;
         public readonly ITemporaryExposureKeyRepository TekRepository;
         public readonly ITemporaryExposureKeyExportRepository TekExportRepository;
         public readonly ILogger<TemporaryExposureKeyService> Logger;
         public readonly ITemporaryExposureKeySignService SignService;
         public readonly ITemporaryExposureKeySignatureInfoService SignatureService;
+        public readonly ITemporaryExposureKeyBlobService BlobService;
 
         public TemporaryExposureKeyService(IConfiguration config,
             ITemporaryExposureKeyRepository tek,
             ITemporaryExposureKeyExportRepository tekExport,
             ITemporaryExposureKeySignService signService,
             ITemporaryExposureKeySignatureInfoService signatureService,
+            ITemporaryExposureKeyBlobService blobService,
             ILogger<TemporaryExposureKeyService> logger)
         {
-            TekExportBlobStorageConnectionString = config["TekExportBlobStorage"];
-            TekExportBlobStorageContainerPrefix = config["TekExportBlobStorageContainerPrefix"];
             TekRepository = tek;
             TekExportRepository = tekExport;
             SignService = signService;
             SignatureService = signatureService;
+            BlobService = blobService;
             Logger = logger;
-            StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
-            BlobClient = StorageAccount.CreateCloudBlobClient();
         }
 
         public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
@@ -144,30 +137,10 @@ namespace Covid19Radar.Services
                         }
                     }
                     s.Seek(0, SeekOrigin.Begin);
-                    await WriteToBlobAsync(s, exportModel, bin, sig);
+                    await BlobService.WriteToBlobAsync(s, exportModel, bin, sig);
                 }
                 await TekExportRepository.UpdateAsync(exportModel);
             }
         }
-
-        public async Task WriteToBlobAsync(Stream s, TemporaryExposureKeyExportModel model, TemporaryExposureKeyExport bin, TEKSignatureList sig)
-        {
-            //  write to blob storage
-            var blobContainerName = $"{TekExportBlobStorageContainerPrefix}{model.Region}".ToLower();
-            var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
-            await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
-
-            // Filename is inferable as batch number
-            var exportFileName = $"{model.BatchNum}.tekexport";
-            var blockBlob = cloudBlobContainer.GetBlockBlobReference(exportFileName);
-
-            // Set the batch number and region as metadata
-            blockBlob.Metadata[batchNumberMetadataKey] = model.BatchNum.ToString();
-            blockBlob.Metadata[batchRegionMetadataKey] = model.Region;
-
-            await blockBlob.UploadFromStreamAsync(s);
-            await blockBlob.SetMetadataAsync();
-        }
-
     }
 }
