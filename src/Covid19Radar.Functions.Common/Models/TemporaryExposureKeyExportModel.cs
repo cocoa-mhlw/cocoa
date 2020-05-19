@@ -13,6 +13,7 @@ namespace Covid19Radar.Models
         public int BatchNum { get; set; }
         public int BatchSize { get; set; }
         public string Region { get; set; }
+        public bool Deleted { get; set; }
         public SignatureInfo[] SignatureInfos { get; set; }
         public long TimestampSecondsSinceEpoch { get; set; }
     }

@@ -2,25 +2,17 @@
 using Covid19Radar.Models;
 using Covid19Radar.Protobuf;
 using Google.Protobuf;
-using Google.Protobuf.Collections;
-using Microsoft.Azure.KeyVault;
-using Microsoft.Azure.Services.AppAuthentication;
-using Microsoft.Azure.Storage;
-using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
 {
-    public class TemporaryExposureKeyService : ITemporaryExposureKeyService
+    public class TemporaryExposureKeyExportBatchService : ITemporaryExposureKeyExportBatchService
     {
         public const int MaxKeysPerFile = 25_000;
         const int fixedHeaderWidth = 16;
@@ -32,15 +24,16 @@ namespace Covid19Radar.Services
         public readonly ITemporaryExposureKeySignService SignService;
         public readonly ITemporaryExposureKeySignatureInfoService SignatureService;
         public readonly ITemporaryExposureKeyBlobService BlobService;
-        public readonly ILogger<TemporaryExposureKeyService> Logger;
+        public readonly ILogger<TemporaryExposureKeyExportBatchService> Logger;
 
-        public TemporaryExposureKeyService(IConfiguration config,
+        public TemporaryExposureKeyExportBatchService(
+            IConfiguration config,
             ITemporaryExposureKeyRepository tek,
             ITemporaryExposureKeyExportRepository tekExport,
             ITemporaryExposureKeySignService signService,
             ITemporaryExposureKeySignatureInfoService signatureService,
             ITemporaryExposureKeyBlobService blobService,
-            ILogger<TemporaryExposureKeyService> logger)
+            ILogger<TemporaryExposureKeyExportBatchService> logger)
         {
             TekRepository = tek;
             TekExportRepository = tekExport;
@@ -48,16 +41,6 @@ namespace Covid19Radar.Services
             SignatureService = signatureService;
             BlobService = blobService;
             Logger = logger;
-        }
-
-        public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
-        {
-            var s = new TEKSignature();
-            s.BatchNum = batchNum;
-            s.BatchSize = batchSize;
-            // Signature
-            s.Signature = ByteString.CopyFrom(await SignService.SignAsync(source));
-            return s;
         }
 
         public async Task RunAsync()
@@ -76,9 +59,19 @@ namespace Covid19Radar.Services
             }
             catch (Exception ex)
             {
-                Logger.LogError(ex, $"Error on {nameof(TemporaryExposureKeyService)}");
+                Logger.LogError(ex, $"Error on {nameof(TemporaryExposureKeyExportBatchService)}");
                 throw;
             }
+        }
+
+        public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
+        {
+            var s = new TEKSignature();
+            s.BatchNum = batchNum;
+            s.BatchSize = batchSize;
+            // Signature
+            s.Signature = ByteString.CopyFrom(await SignService.SignAsync(source));
+            return s;
         }
 
         public async Task CreateAsync(ulong startTimestamp, ulong endTimestamp, string region, IEnumerable<TemporaryExposureKeyModel> keys)
