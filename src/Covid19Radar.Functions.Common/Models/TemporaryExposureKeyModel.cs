@@ -11,7 +11,7 @@ namespace Covid19Radar.Models
     public class TemporaryExposureKeyModel
     {
         public string id { get; set; } = Guid.NewGuid().ToString();
-
+        public string PartitionKey { get; set; }
         public byte[] KeyData { get; set; }
         public int RollingPeriod { get; set; }
         public int RollingStartIntervalNumber { get; set; }
