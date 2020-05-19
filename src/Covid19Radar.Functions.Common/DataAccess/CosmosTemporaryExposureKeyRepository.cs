@@ -37,8 +37,9 @@ namespace Covid19Radar.DataAccess
             ins.RollingStartIntervalNumber = (int)(DateTimeOffset.UtcNow.AddDays(-1).ToUnixTimeSeconds() / 60 / 10);
             ins.Timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             ins.TransmissionRiskLevel = 0;
+            ins.Region = "Country";
 
-            return Enumerable.Repeat(ins, 20000).ToArray();
+            return Enumerable.Repeat(ins, 40000).ToArray();
 
         }
     }

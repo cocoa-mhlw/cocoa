@@ -1,10 +1,13 @@
-﻿using Microsoft.Azure.KeyVault;
+﻿using Covid19Radar.Protobuf;
+using Microsoft.Azure.KeyVault;
+using Microsoft.Azure.KeyVault.WebKey;
 using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +19,6 @@ namespace Covid19Radar.Services
         public readonly string TekExportKeyVaultKeyUrl;
         public readonly ILogger<TemporaryExposureKeySignService> Logger;
         private Microsoft.Azure.KeyVault.Models.KeyBundle KeyVaultKey;
-        private byte[] PublicKey;
 
         public TemporaryExposureKeySignService(
             IConfiguration config,
@@ -35,7 +37,6 @@ namespace Covid19Radar.Services
             if (KeyVaultKey == null)
             {
                 KeyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
-                PublicKey = KeyVaultKey.Key.ToECDsa().ExportSubjectPublicKeyInfo();
             }
         }
 
@@ -52,11 +53,13 @@ namespace Covid19Radar.Services
             return result.Result;
         }
 
-        public async Task<byte[]> GetPublicKeyAsync()
+        public async Task SetSignatureAsync(SignatureInfo info)
         {
-            Logger.LogInformation($"start {nameof(GetPublicKeyAsync)}");
+            Logger.LogInformation($"start {nameof(SetSignatureAsync)}");
             await InitializeAsync();
-            return PublicKey;
+            info.VerificationKeyId = KeyVaultKey.Key.Kid;
+            info.VerificationKeyVersion = KeyVaultKey.KeyIdentifier.Version;
         }
+
     }
 }
