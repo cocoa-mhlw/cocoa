@@ -287,6 +287,9 @@
     <PackageReference Include="Microsoft.AppCenter.Distribute">
       <Version>3.2.1</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.LocalNotification">
+      <Version>5.0.4</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.Multilingual">
       <Version>1.1.6-beta</Version>
     </PackageReference>
