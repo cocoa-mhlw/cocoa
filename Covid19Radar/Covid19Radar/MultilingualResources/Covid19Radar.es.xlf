@@ -8,7 +8,7 @@
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
         <trans-unit id="ButtonIWantToHelp" translate="yes" xml:space="preserve">
           <source>I want to help</source>
-          <target state="translated" state-qualifier="mt-suggestion">Quiero ayudar</target>
+          <target state="translated">Quiero ayudar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">I want to help</note>
         </trans-unit>
         <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
@@ -28,12 +28,12 @@
         </trans-unit>
         <trans-unit id="ButtonAgreeAndProceed" translate="yes" xml:space="preserve">
           <source>Agree and Proceed</source>
-          <target state="translated" state-qualifier="mt-suggestion">Acordar y proceder</target>
+          <target state="translated">Acordar y proceder</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Agree and Proceed</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="translated" state-qualifier="mt-suggestion">No es necesario introducir información personal. Estamos usando un identificador único, asignado a usted al instalar una aplicación.</target>
+          <target state="translated">No es necesario introducir información personal. Estamos usando un identificador único, asignado a usted al instalar una aplicación.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
@@ -43,7 +43,7 @@
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Por favor, cambie manualmente su estado a "Positivo" después de verificar su número de teléfono." Positive" Flujo de trabajo , Ahora coordinación con partes relacionadas.</target>
+          <target state="translated">Por favor, cambie manualmente su estado a "Positivo" después de verificar su número de teléfono." Positive" Flujo de trabajo , Ahora coordinación con partes relacionadas.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
@@ -88,7 +88,7 @@
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
           <source>COVID-19Radar</source>
-          <target state="translated" state-qualifier="mt-suggestion">COVID-19Radar</target>
+          <target state="translated">COVID-19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
         <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
