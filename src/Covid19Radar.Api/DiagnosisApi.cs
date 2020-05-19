@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Covid19Radar.DataAccess;
 using Covid19Radar.Services;
 using Covid19Radar.Models;
+using System.Linq;
 
 namespace Covid19Radar
 {
@@ -43,10 +44,14 @@ namespace Covid19Radar
                 return validationResult.ErrorActionResult;
             }
 
+            var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
+            // TODO: Device verify
+
             await DiagnosisRepository.SubmitDiagnosisAsync(
                 diagnosis.SubmissionNumber,
                 diagnosis.UserUuid,
-                diagnosis.Keys);
+                diagnosis.Keys.Select(_ => _.ToModel(diagnosis, timestamp)).ToArray());
 
             return new OkResult();
         }
