@@ -70,6 +70,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Not Agree に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonNotAgree {
+            get {
+                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Agree に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonAgree {
