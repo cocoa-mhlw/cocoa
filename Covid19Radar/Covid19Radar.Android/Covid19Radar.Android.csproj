@@ -886,6 +886,42 @@
       <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png"/>
       <AndroidResource Include="Resources\drawable-ldpi\ic_launcher.png"/>
   </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\ExposureNotifications.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\ExposureNotifications.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\Exposurenotifications.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\Exposurenotifications.png"/>
+  </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\ExposureNotifications.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\ExposureNotifications.png"/>
+  </ItemGroup>
+
+
+
+
 
 
 

@@ -10,9 +10,9 @@ namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 
-    public partial class ConsentByUserPage : ContentPage
+    public partial class PrivacyPolicyPage : ContentPage
     {
-        public ConsentByUserPage()
+        public PrivacyPolicyPage()
         {
             InitializeComponent();
         }
