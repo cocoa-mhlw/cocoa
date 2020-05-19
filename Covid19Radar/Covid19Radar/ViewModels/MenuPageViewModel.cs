@@ -29,18 +29,18 @@ namespace Covid19Radar.ViewModels
         public MenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             MenuItems = new ObservableCollection<MainMenuModel>();
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf965",
+                PageName = nameof(HomePage),
+                Title = "ホーム"
+            });
 
             MenuItems.Add(new MainMenuModel()
             {
-                Icon = "\uf0f3",
-                PageName = nameof(StartTutorialPage),
-                Title = "アプリの使い方"
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0f3",
+                Icon = "\uf4fe",
                 PageName = nameof(SettingsPage),
-                Title = "追跡情報の設定"
+                Title = "アプリの設定"
             });
 
             MenuItems.Add(new MainMenuModel()
@@ -69,7 +69,12 @@ namespace Covid19Radar.ViewModels
 
         async void Navigate()
         {
-            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
+            if (SelectedMenuItem.PageName == nameof(StartTutorialPage))
+            {
+                await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + SelectedMenuItem.PageName);
+                return;
+            }
+            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
         }
 
     }

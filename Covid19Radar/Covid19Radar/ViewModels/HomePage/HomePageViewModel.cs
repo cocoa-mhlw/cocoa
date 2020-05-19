@@ -44,12 +44,12 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickNotifyOther => new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(NotifyOtherPage));
+            await NavigationService.NavigateAsync(nameof(MenuPage) + "/"+ nameof(NotifyOtherPage));
         });
 
-        public Command OnClickOnClickExposures => new Command(async () =>
+        public Command OnClickExposures => new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(ExposuresPage));
+            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(ExposuresPage));
         });
 
         public Command OnClickShareApp => new Command(async () =>
