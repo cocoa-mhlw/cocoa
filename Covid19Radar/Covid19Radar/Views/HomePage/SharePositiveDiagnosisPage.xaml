@@ -12,6 +12,26 @@
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="1"
+            Text="使い方" />
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="2">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="FA-R"
+                    Glyph="&#xf059;"
+                    Size="35"
+                    Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
             <ffimageloading:CachedImage Source="Notify01.png" />
