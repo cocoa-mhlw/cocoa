@@ -21,6 +21,7 @@ namespace Covid19Radar.Models
         public long RollingPeriodSeconds { get => RollingPeriod * 10 * 60; }
 
         public ulong Timestamp { get; set; }
+        public string ExportId { get; set; }
 
         public TemporaryExposureKey ToKey()
         {

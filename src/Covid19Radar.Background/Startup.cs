@@ -21,6 +21,7 @@ namespace Covid19Radar
             builder.Services.AddSingleton<DataStore.IStoringCosmos, DataStore.StoringCosmos>();
             builder.Services.AddSingleton<INotificationService, NotificationService>();
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyRepository, CosmosTemporaryExposureKeyRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyService, TemporaryExposureKeyService>();
 

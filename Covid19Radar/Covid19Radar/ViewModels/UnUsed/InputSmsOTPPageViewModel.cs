@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using Covid19Radar.Renderers;
 using Covid19Radar.Resources;
 using Prism.Commands;
 using Prism.Navigation;
@@ -32,7 +33,9 @@ namespace Covid19Radar.ViewModels
 
         private readonly IPageDialogService _pageDialogService;
 
-        public InputSmsOTPPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService)
+        public InputSmsOTPPageViewModel(INavigationService navigationService, 
+            IPageDialogService pageDialogService,
+            IStatusBarPlatformSpecific statusBarPlatformSpecific) : base(navigationService, statusBarPlatformSpecific)
         {
             Title = AppResources.TitleOtp;
             _pageDialogService = pageDialogService;
