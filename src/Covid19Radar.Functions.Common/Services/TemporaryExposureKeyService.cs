@@ -44,7 +44,6 @@ namespace Covid19Radar.Services
         public readonly KeyVaultClient KeyVault;
         public readonly string TekExportKeyVaultKeyUrl;
         private Microsoft.Azure.KeyVault.Models.KeyBundle KeyVaultKey;
-        private ECDsa ECDsa;
 
         public TemporaryExposureKeyService(IConfiguration config,
             ITemporaryExposureKeyRepository tek,
@@ -63,14 +62,14 @@ namespace Covid19Radar.Services
             var sig = new SignatureInfo();
             sig.AppBundleId = AppBundleId;
             sig.AndroidPackage = AndroidPackage;
-            sig.SignatureAlgorithm = "ecdsa-with-SHA256";
+            sig.SignatureAlgorithm = "ECDSA";
             SigInfo = sig;
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
             BlobClient = StorageAccount.CreateCloudBlobClient();
             BlobContainerName = $"{TekExportBlobStorageContainerPrefix}{Region}".ToLower();
             AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
-            KeyVault = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
-
+            var credentialCallback = new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback);
+            KeyVault = new KeyVaultClient(credentialCallback);
         }
 
         public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
@@ -80,8 +79,21 @@ namespace Covid19Radar.Services
             s.BatchNum = batchNum;
             s.BatchSize = batchSize;
             // Signature
-            var hash = ECDsa.SignData(source, HashAlgorithmName.SHA256);
-            s.Signature = ByteString.CopyFrom(ECDsa.SignHash(hash));
+            byte[] hash;
+            using (var sha = System.Security.Cryptography.SHA256.Create())
+            {
+                hash = sha.ComputeHash(source);
+            }
+#if DEBUG
+            using (var ecDsa = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256))
+            {
+                s.Signature = ByteString.CopyFrom(ecDsa.SignHash(hash));
+            }
+#else
+            var result = await KeyVault.SignAsync(TekExportKeyVaultKeyUrl, Microsoft.Azure.KeyVault.Cryptography.Algorithms.Es256.AlgorithmName, hash);
+            s.Signature = ByteString.CopyFrom(result.Result);
+#endif
+
             return s;
         }
 
@@ -89,20 +101,19 @@ namespace Covid19Radar.Services
         {
             try
             {
-#if DEBUG
-                ECDsa = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256);
-#else
-                if (KeyVaultKey == null)
-                {
-                    KeyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
-                    SigInfo.VerificationKeyId = KeyVaultKey.Key.Kid;
-                    SigInfo.VerificationKeyVersion = KeyVaultKey.KeyIdentifier.Version;
-                    ECDsa = KeyVaultKey.Key.ToECDsa(true);
-                }
+#if !DEBUG
+                KeyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
+                SigInfo.VerificationKeyId = KeyVaultKey.Key.Kid;
+                SigInfo.VerificationKeyVersion = KeyVaultKey.KeyIdentifier.Version;
 #endif
 
                 var items = await TekRepository.GetNextAsync();
-                await CreateAsync(items);
+                foreach (var kv in items.GroupBy(_ => new { _.RollingStartUnixTimeSeconds, _.RollingPeriodSeconds }))
+                {
+                    await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
+                        (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
+                        kv.ToArray());
+                }
             }
             catch (Exception ex)
             {
@@ -111,7 +122,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task CreateAsync(IEnumerable<TemporaryExposureKeyModel> keys)
+        public async Task CreateAsync(ulong startTimestamp, ulong endTimestamp, IEnumerable<TemporaryExposureKeyModel> keys)
         {
             var current = keys;
             while (current.Any())
@@ -122,8 +133,8 @@ namespace Covid19Radar.Services
 
                 var exportModel = await TekExportRepository.CreateAsync();
                 exportModel.BatchSize = exportKeyModels.Length;
-                exportModel.StartTimestamp = exportKeyModels.Min(_ => _.Timestamp);
-                exportModel.EndTimestamp = exportKeyModels.Max(_ => _.Timestamp);
+                exportModel.StartTimestamp = startTimestamp;
+                exportModel.EndTimestamp = endTimestamp;
                 exportModel.Region = Region;
 
                 var bin = new TemporaryExposureKeyExport();
@@ -145,21 +156,23 @@ namespace Covid19Radar.Services
                 sig.Signatures.Add(signature);
 
                 using (var s = new MemoryStream())
-                using (var z = new System.IO.Compression.ZipArchive(s, System.IO.Compression.ZipArchiveMode.Create, true))
                 {
-                    var binEntry = z.CreateEntry(ExportBinFileName);
-                    using (var binFile = binEntry.Open())
+                    using (var z = new System.IO.Compression.ZipArchive(s, System.IO.Compression.ZipArchiveMode.Create, true))
                     {
-                        binStream.Seek(0, SeekOrigin.Begin);
-                        await binStream.CopyToAsync(binFile);
-                        await binFile.FlushAsync();
-                    }
+                        var binEntry = z.CreateEntry(ExportBinFileName);
+                        using (var binFile = binEntry.Open())
+                        {
+                            binStream.Seek(0, SeekOrigin.Begin);
+                            await binStream.CopyToAsync(binFile);
+                            await binFile.FlushAsync();
+                        }
 
-                    var sigEntry = z.CreateEntry(ExportSigFileName);
-                    using (var sigFile = sigEntry.Open())
-                    {
-                        sig.WriteTo(sigFile);
-                        await sigFile.FlushAsync();
+                        var sigEntry = z.CreateEntry(ExportSigFileName);
+                        using (var sigFile = sigEntry.Open())
+                        {
+                            sig.WriteTo(sigFile);
+                            await sigFile.FlushAsync();
+                        }
                     }
                     s.Seek(0, SeekOrigin.Begin);
                     await WriteToBlobAsync(s, exportModel, bin, sig);

@@ -58,10 +58,10 @@ APKファイルのダウンロードが完了しましたら、インストー�
 無事にインストールが完了すると、以下の表示になります。  
 ![APKのインストール](../.attachments/Android_014_installed_apk.png)
 
-ランチャー内に「Covid19Radar」アプリが表示されていますので、こちらをご利用ください。  
+ランチャー内に「COVID-19Radar」アプリが表示されていますので、こちらをご利用ください。  
 ![ランチャー](../.attachments/Android_015_installed_apk.png)
 
-以上で、「Covid19Radar」のAndroidアプリをインストールすることができました。
+以上で、「COVID-19Radar」のAndroidアプリをインストールすることができました。
 
 ---
 ## アプリのアップデート方法
