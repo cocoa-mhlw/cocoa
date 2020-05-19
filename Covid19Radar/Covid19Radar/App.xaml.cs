@@ -66,21 +66,19 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 // TODO Wire Start Exposure Notification
-/*
-                var isStart = await ExposureNotification.IsEnabledAsync();
-                if (!isStart)
-                {
-                    await ExposureNotification.StartAsync();
-                }
-*/
+                /*
+                                var isStart = await ExposureNotification.IsEnabledAsync();
+                                if (!isStart)
+                                {
+                                    await ExposureNotification.StartAsync();
+                                }
+                */
                 UserDataModel _userData = userDataService.Get();
-                result = await NavigationService.NavigateAsync(nameof(StartTutorialPage));
-
+                result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
             }
             else
             {
                 result = await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-
             }
 
             if (!result.Success)
@@ -119,7 +117,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<DescriptionPage2, DescriptionPage2ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage3, DescriptionPage3ViewModel>();
             containerRegistry.RegisterForNavigation<DescriptionPage4, DescriptionPage4ViewModel>();
-            containerRegistry.RegisterForNavigation<ConsentByUserPage, ConsentByUserPageViewModel>();
+            containerRegistry.RegisterForNavigation<PrivacyPolicyPage, PrivacyPolicyPageViewModel>();
             containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
             containerRegistry.RegisterForNavigation<ContributorsPage, ContributorsPageViewModel>();
