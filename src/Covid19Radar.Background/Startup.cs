@@ -23,7 +23,8 @@ namespace Covid19Radar
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyRepository, CosmosTemporaryExposureKeyRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
-            builder.Services.AddSingleton<ITemporaryExposureKeyService, TemporaryExposureKeyService>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyExportBatchService, TemporaryExposureKeyExportBatchService>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyDeleteBatchService, TemporaryExposureKeyDeleteBatchService>();
             builder.Services.AddSingleton<ITemporaryExposureKeySignatureInfoService, TemporaryExposureKeySignatureInfoService>();
             builder.Services.AddSingleton<ITemporaryExposureKeyBlobService, TemporaryExposureKeyBlobService>();
 #if DEBUG

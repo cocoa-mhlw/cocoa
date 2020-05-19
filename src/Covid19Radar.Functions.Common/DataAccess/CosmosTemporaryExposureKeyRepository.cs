@@ -13,6 +13,7 @@ namespace Covid19Radar.DataAccess
 {
     public class CosmosTemporaryExposureKeyRepository : ITemporaryExposureKeyRepository
     {
+        const int OutOfDate = -14;
         private readonly ICosmos _db;
         private readonly ILogger<CosmosTemporaryExposureKeyExportRepository> _logger;
 
@@ -24,13 +25,16 @@ namespace Covid19Radar.DataAccess
             _logger = logger;
         }
 
+
         public async Task<TemporaryExposureKeyModel> GetAsync(string id)
         {
+            _logger.LogInformation($"start {nameof(GetAsync)}");
             return new TemporaryExposureKeyModel();
         }
 
         public async Task<TemporaryExposureKeyModel[]> GetNextAsync()
         {
+            _logger.LogInformation($"start {nameof(GetNextAsync)}");
             var ins = new TemporaryExposureKeyModel();
             ins.KeyData = new byte[64];
             ins.RollingPeriod = 24 * 60 / 10;
@@ -42,5 +46,31 @@ namespace Covid19Radar.DataAccess
             return Enumerable.Repeat(ins, 40000).ToArray();
 
         }
+        public async Task<TemporaryExposureKeyModel[]> GetOutOfTimeKeysAsync()
+        {
+            _logger.LogInformation($"start {nameof(GetOutOfTimeKeysAsync)}");
+            var oldest = DateTimeOffset.UtcNow.AddDays(OutOfDate).ToUnixTimeSeconds();
+            var query = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKeyModel>(true)
+                .Where(tek => tek.RollingStartUnixTimeSeconds < oldest)
+                .ToFeedIterator();
+
+            var e = Enumerable.Empty<TemporaryExposureKeyModel>();
+            while (query.HasMoreResults)
+            {
+                var r = await query.ReadNextAsync();
+                e = e.Concat(r.Resource);
+            }
+
+            return e.ToArray();
+
+        }
+
+        public async Task DeleteAsync(TemporaryExposureKeyModel model)
+        {
+            _logger.LogInformation($"start {nameof(DeleteAsync)}");
+            var pk = PartitionKey.Null;
+            await _db.TemporaryExposureKey.DeleteItemAsync<TemporaryExposureKeyModel>(model.id, pk);
+        }
+
     }
 }
