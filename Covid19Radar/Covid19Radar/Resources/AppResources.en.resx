@@ -77,6 +77,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Register</value>
     <comment>Register</comment>
   </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Not Agree</value>
+    <comment>Not Agree</comment>
+  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Agree</value>
     <comment>Agree</comment>
