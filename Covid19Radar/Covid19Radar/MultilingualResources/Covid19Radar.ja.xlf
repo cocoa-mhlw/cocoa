@@ -18,7 +18,7 @@
         </trans-unit>
         <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
           <source>Next</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">次</target>
+          <target state="translated" state-qualifier="tm-suggestion">次へ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Next button</note>
         </trans-unit>
         <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
@@ -48,7 +48,7 @@
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">密接な接触を記録するには、Bluetooth をオンにする必要があります。次のページに移動してオンにしてください。</target>
+          <target state="translated" state-qualifier="mt-suggestion">濃厚接触を記録するには、Bluetooth を有効にする必要があります。次のページに移動して有効にしてください。</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
         </trans-unit>
@@ -58,9 +58,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID-19</source>
-          <target state="translated" state-qualifier="mt-suggestion">COVID-19から大切な人を守る</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
+          <source>Protecting our loved ones from COVID19</source>
+          <target state="translated" state-qualifier="mt-suggestion">大切な人をCOVID-19から一緒に守りましょう</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -109,7 +109,7 @@
         </trans-unit>
         <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="translated" state-qualifier="tm-suggestion">ホーム</target>
+          <target state="translated" state-qualifier="tm-suggestion">ホームへ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
         </trans-unit>
         <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
@@ -282,8 +282,8 @@ Please check your SMS.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
-          <target state="translated" state-qualifier="mt-suggestion">COVID-19陽性と診断された場合</target>
+          <source>If you are diagnosed COVID19 positive</source>
+          <target state="translated" state-qualifier="mt-suggestion">COVID-19陽性と診断されたら？</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
@@ -333,19 +333,19 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
-          <target state="translated" state-qualifier="mt-suggestion">今はしない</target>
+          <target state="translated" state-qualifier="mt-suggestion">あとで設定する</target>
           <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="translated" state-qualifier="mt-suggestion">このアプリは、あなたが別のトレースアプリのユーザーの近くにいるかどうかを判断するために Exposure Notification / Bluetooth を使用しています。
+          <target state="translated" state-qualifier="mt-suggestion">このアプリは、Exposure Notification と Bluetooth を使用して、他のアプリのユーザーの近くにいるかどうか判断します。
 Bluetooth を設定するには、[常に許可] を選択します。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
           <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification / Bluetooth を許可する</target>
+          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification と Bluetooth の許可</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
@@ -365,7 +365,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="translated" state-qualifier="tm-suggestion">ライセンス</target>
+          <target state="translated" state-qualifier="tm-suggestion">ライセンスについて</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
         </trans-unit>
         <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
