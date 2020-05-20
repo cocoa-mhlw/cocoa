@@ -248,7 +248,7 @@ Lütfen SMS'inizi kontrol edin.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>EĞER COVID19 pozitif tanısı konursa</value>
+    <value>EĞER COVID-19 pozitif tanısı konursa</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

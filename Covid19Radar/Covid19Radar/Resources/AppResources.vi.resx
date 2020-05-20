@@ -248,7 +248,7 @@ Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Nếu bạn được chẩn đoán COVID19 tích cực</value>
+    <value>Nếu bạn được chẩn đoán COVID-19 tích cực</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

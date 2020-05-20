@@ -248,7 +248,7 @@
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>หากคุณได้รับการวินิจฉัยว่า COVID19 เป็นบวก</value>
+    <value>หากคุณได้รับการวินิจฉัยว่า COVID-19 เป็นบวก</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
