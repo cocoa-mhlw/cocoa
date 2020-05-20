@@ -12,7 +12,7 @@ using Covid19Radar.Services;
 using Covid19Radar.DataAccess;
 using Covid19Radar.Models;
 
-namespace Covid19Radar
+namespace Covid19Radar.Api.External
 {
     public class DiagnosisApi
     {
