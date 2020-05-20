@@ -161,6 +161,11 @@
     <value>COVID-19から大事な人を守る</value>
     <comment>Protecting our loved ones from COVID-19</comment>
   </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>このアプリは、Exposure Notification と Bluetooth を使用して、他のアプリのユーザーの近くにいるかどうか判断します。
+Bluetooth を設定するには、[常に許可] を選択します。</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
   <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
     <value>このアプリは、別のトレースアプリのユーザーの近くにいるかどうかを判断するために、Bluetooth信号を使用しています。
 Bluetooth を設定するには、[常に許可] を選択します。</value>
@@ -169,6 +174,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
     <value>Bluetoothを許可する</value>
     <comment>Device access page Bluetooth title</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Exposure Notification と Bluetooth を許可</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>デバイスアクセス</value>
@@ -371,5 +380,13 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>ネットワーク接続を確認してください。</value>
     <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>有効にする</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>あとで設定する</value>
+    <comment>NotNow Button</comment>
   </data>
 </root>
