@@ -19,19 +19,15 @@ namespace Covid19Radar.Services
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
-        private readonly INotificationService notificationService;
         private readonly INavigationService navigationService;
         private MinutesTimer _downloadTimer;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
-        public UserDataService(HttpDataService httpDataService, INavigationService navigationService, INotificationService notificationService)
+        public UserDataService(HttpDataService httpDataService, INavigationService navigationService)
         {
             this.httpDataService = httpDataService;
             this.navigationService = navigationService;
-            this.notificationService = notificationService;
-            this.notificationService.Initialize();
-            this.notificationService.NotificationReceived += OnLocalNotificationTaped;
             current = Get();
             if (current != null)
             {
@@ -110,7 +106,9 @@ namespace Covid19Radar.Services
                     var result = await httpDataService.GetNotificationPullAsync(newModel);
                     foreach (var notify in result.Messages)
                     {
-                        notificationService.ReceiveNotification(notify.Title, notify.Message);
+
+                        // TODO Positive Notify 
+                        // notificationService.ReceiveNotification(notify.Title, notify.Message);
                     }
                     await SetAsync(newModel);
                 }

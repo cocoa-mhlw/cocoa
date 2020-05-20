@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.DebugPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    xmlns:system="clr-namespace:System;assembly=netstandard"
+    xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="1"
+            Text="使い方" />
+        <ToolbarItem
+            Command="{Binding OnClickHelp}}"
+            Order="Primary"
+            Priority="2">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="FA-R"
+                    Glyph="&#xf059;"
+                    Size="35"
+                    Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Style="{StaticResource DefaultStackLayout}">
+                <StackLayout>
+                    <StackLayout>
+                        <Label Style="{StaticResource DefaultLabelSmallColor}" Text="Native Implementation Mode: " />
+                        <Label
+                            FontAttributes="Bold"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{Binding NativeImplementationName}" />
+                    </StackLayout>
+
+                    <Button
+                        Command="{Binding ResetWelcome}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Reset Welcome State" />
+
+                    <Button
+                        Command="{Binding ResetEnabled}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Reset Last Enabled State" />
+
+                </StackLayout>
+
+                <StackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Subtitle"
+                        Style="{StaticResource DefaultLabelSmallColor}"
+                        Text="Notify Others" />
+
+                    <Button
+                        Command="{Binding ResetSelfDiagnosis}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Reset Self Diagnosis" />
+                </StackLayout>
+                <StackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Subtitle"
+                        Style="{StaticResource DefaultLabelSmallColor}"
+                        Text="Exposures" />
+                    <Button
+                        Command="{Binding ResetExposures}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Reset Exposures" />
+                    <Button
+                        Command="{Binding AddExposures}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Add Exposures" />
+                </StackLayout>
+                <StackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Subtitle"
+                        Style="{StaticResource DefaultLabelSmallColor}"
+                        Text="Batch File Index" />
+
+                    <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                        <Label Style="{StaticResource DefaultLabelSmall}" Text="Latest Batch File Processed: " />
+                        <Label
+                            FontAttributes="Bold"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{Binding CurrentBatchFileIndex}" />
+                    </StackLayout>
+
+                    <Button
+                        Command="{Binding ResetBatchFileIndex}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Reset Batch File Index" />
+
+
+                    <Button
+                        Command="{Binding ManualTriggerKeyFetch}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Trigger Key Fetch" />
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
