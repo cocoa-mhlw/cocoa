@@ -1,18 +1,18 @@
-using System;
-using System.IO;
-using System.Threading.Tasks;
+using Covid19Radar.DataAccess;
+using Covid19Radar.Models;
+using Covid19Radar.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Covid19Radar.DataAccess;
-using Covid19Radar.Services;
-using Covid19Radar.Models;
+using System;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
-namespace Covid19Radar
+namespace Covid19Radar.Api
 {
     public class DiagnosisApi
     {
@@ -31,7 +31,7 @@ namespace Covid19Radar
         }
 
         [FunctionName(nameof(DiagnosisApi))]
-        public async Task<IActionResult> Run(
+        public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "put", Route = "diagnosis")] HttpRequest req)
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
@@ -47,7 +47,6 @@ namespace Covid19Radar
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
             // TODO: Device verify
-
             await DiagnosisRepository.SubmitDiagnosisAsync(
                 diagnosis.SubmissionNumber,
                 diagnosis.UserUuid,
