@@ -70,15 +70,6 @@ namespace Covid19Radar.ViewModels
         }
 
 
-        Task Disabled()
-        {
-            LocalStateManager.Instance.LastIsEnabled = false;
-            LocalStateManager.Instance.IsWelcomed = false;
-            LocalStateManager.Save();
-            return NavigationService.NavigateAsync(nameof(HomePage));
-        }
-
-
         // Switch Behevior
         public ICommand OnChangeEnableExposureNotification => new Command(async () =>
         {
