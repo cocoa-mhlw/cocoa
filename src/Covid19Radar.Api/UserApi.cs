@@ -19,18 +19,15 @@ namespace Covid19Radar.Api
 {
     public class UserApi
     {
-        private readonly IUserRepository UserRepository;
         private readonly INotificationService Notification;
         private readonly IValidationUserService Validation;
         private readonly ILogger<UserApi> Logger;
 
         public UserApi(
-            IUserRepository userRepository,
             INotificationService notification,
             IValidationUserService validation,
             ILogger<UserApi> logger)
         {
-            UserRepository = userRepository;
             Notification = notification;
             Validation = validation;
             Logger = logger;
@@ -53,35 +50,9 @@ namespace Covid19Radar.Api
                 return validationResult.ErrorActionResult;
             }
 
-            // query
-            return await Query(req, user);
-        }
-
-
-        private async Task<IActionResult> Query(HttpRequest req, UserParameter user)
-        {
-            try
-            {
-                var userResult = await UserRepository.GetById(user.GetId());
-                if (userResult != null)
-                {
-                    userResult.LastNotificationTime = Notification.LastNotificationTime;
-                    //userResult.LastInfectionUpdateTime = Infection.LastUpdateTime;
-                    return new OkObjectResult(userResult);
-                }
-            }
-            catch (CosmosException ex)
-            {
-                // 429–TooManyRequests
-                if (ex.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-                {
-                    return new StatusCodeResult(503);
-                }
-                AddBadRequest(req);
-                return new StatusCodeResult((int)ex.StatusCode);
-            }
-            AddBadRequest(req);
-            return new NotFoundResult();
+            var userResult = new UserResultModel();
+            userResult.LastNotificationTime = Notification.LastNotificationTime;
+            return new OkObjectResult(userResult);
         }
 
         private void AddBadRequest(HttpRequest req)

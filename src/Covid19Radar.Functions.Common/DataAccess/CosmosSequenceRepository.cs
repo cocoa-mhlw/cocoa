@@ -22,6 +22,7 @@ namespace Covid19Radar.DataAccess
 
         public async Task<int> GetNextAsync(string key, int startNo)
         {
+            _logger.LogInformation($"start {nameof(GetNextAsync)}");
             var pk = new PartitionKey(key);
             for (var i = 0; i < 100; i++)
             {
