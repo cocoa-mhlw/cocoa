@@ -61,11 +61,20 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Covid19Radar に類似しているローカライズされた文字列を検索します。
+        ///   COVID-19Radar に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string AppName {
             get {
                 return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Not Agree に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonNotAgree {
+            get {
+                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
             }
         }
         
