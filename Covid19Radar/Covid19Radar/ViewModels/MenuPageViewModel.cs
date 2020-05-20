@@ -64,6 +64,16 @@ namespace Covid19Radar.ViewModels
                 Title = "貢献者一覧"
             });
 
+#if DEBUG
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(DebugPage),
+                Title = "デバッグ"
+            });
+
+#endif
+
             NavigateCommand = new DelegateCommand(Navigate);
         }
 

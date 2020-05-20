@@ -1,105 +1,126 @@
-﻿
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+using Covid19Radar.Services;
+using Newtonsoft.Json;
+using Plugin.LocalNotification;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.Services
 {
-	[Preserve]
+	[Preserve] // Ensure this isn't linked out
 	public class ExposureNotificationHandler : IExposureNotificationHandler
 	{
-		const string apiUrlBase = "http://localhost:7071/api/";
+		public const string DefaultRegion = "default";
+
+		const string apiUrlBase = "https://exposurenotificationfunctions.azurewebsites.net/api/";
+		const string apiUrlBlobStorageBase = "https://exposurenotifications.blob.core.windows.net/";
+		const string blobStorageContainerNamePrefix = "";
 
 		static readonly HttpClient http = new HttpClient();
 
-		public string UserExplanation => throw new NotImplementedException();
+		// this string should be localized
+		public string UserExplanation
+			=> "We need to make use of the keys to keep you healthy.";
 
+		// this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
 		public Task<Configuration> GetConfigurationAsync()
 			=> Task.FromResult(new Configuration());
 
-		public async Task ExposureDetected(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getDetailsFunc)
+		// this will be called when a potential exposure has been detected
+		public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> exposureInfo)
 		{
 			LocalStateManager.Instance.ExposureSummary = summary;
 
-			var details = await getDetailsFunc();
-
-			LocalStateManager.Instance.ExposureInformation.AddRange(details);
+			// Add these on main thread in case the UI is visible so it can update
+			await Device.InvokeOnMainThreadAsync(() =>
+			{
+				foreach (var i in exposureInfo)
+					LocalStateManager.Instance.ExposureInformation.Add(i);
+			});
 
 			LocalStateManager.Save();
 
-			MessagingCenter.Instance.Send(this, "exposure_info_changed");
+			var notification = new NotificationRequest
+			{
+				NotificationId = 100,
+				Title = "Possible COVID-19 Exposure",
+				Description = "It is possible you have been exposed to someone who was a confirmed diagnosis of COVID-19.  Tap for more details."
+			};
 
-			// TODO: Save this info and alert the user
-			// Pop up a local notification
+			NotificationCenter.Current.Show(notification);
 		}
 
-		public async Task FetchExposureKeysFromServer(Func<IEnumerable<TemporaryExposureKey>, Task> addKeys)
+		// this will be called when they keys need to be collected from the server
+		public async Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
 		{
-			var latestKeysResponseIndex = LocalStateManager.Instance.LatestKeysResponseIndex;
+			// This is "default" by default
+			var region = LocalStateManager.Instance.Region ?? DefaultRegion;
 
-			var take = 1024;
-			var skip = 0;
-
-			var checkForMore = false;
-
+			var checkForMore = true;
 			do
 			{
-				// Get the newest date we have keys from and request since then
-				// or if no date stored, only return as much as the past 14 days of keys
-				var url = $"{apiUrlBase.TrimEnd('/')}/keys?since={latestKeysResponseIndex}&skip={skip}&take={take}";
-
-				var response = await http.GetAsync(url);
-
-				response.EnsureSuccessStatusCode();
-
-				var responseData = await response.Content.ReadAsStringAsync();
-
-				if (string.IsNullOrEmpty(responseData))
-					break;
-
-				// Response contains the timestamp in seconds since epoch, and the list of keys
-				var keys = JsonConvert.DeserializeObject<KeysResponse>(responseData);
-
-				var numKeys = keys?.Keys?.Count() ?? 0;
-
-				// See if keys were returned on this call
-				if (numKeys > 0)
+				try
 				{
-					// Call the callback with the batch of keys to add
-					await addKeys(keys.Keys);
+					// Find next batch number
+					var batchNumber = LocalStateManager.Instance.ServerBatchNumber + 1;
 
-					var newLatestKeysResponseIndex = keys.Latest;
+					// Build the blob storage url for the given batch file we are on next
+					var url = $"{apiUrlBlobStorageBase}/{blobStorageContainerNamePrefix}{region}/{batchNumber}.dat";
 
-					if (newLatestKeysResponseIndex > LocalStateManager.Instance.LatestKeysResponseIndex)
+					var response = await http.GetAsync(url);
+
+					// If we get a 404, there are no newer batch files available to download
+					if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
 					{
-						LocalStateManager.Instance.LatestKeysResponseIndex = newLatestKeysResponseIndex;
-						LocalStateManager.Save();
+						checkForMore = false;
+						break;
 					}
 
-					// Increment our skip starting point for the next batch
-					skip += take;
+					response.EnsureSuccessStatusCode();
+
+					// Skip batch files which are older than 14 days
+					if (response.Content.Headers.LastModified.HasValue)
+					{
+						if (response.Content.Headers.LastModified < DateTimeOffset.UtcNow.AddDays(-14))
+						{
+							LocalStateManager.Instance.ServerBatchNumber = batchNumber;
+							LocalStateManager.Save();
+							checkForMore = true;
+							continue;
+						}
+					}
+
+					// Read the batch file stream
+					using var responseStream = await response.Content.ReadAsStreamAsync();
+
+					// Parse into a Proto.File
+					var batchFile = TemporaryExposureKeyBatch.Parser.ParseFrom(responseStream);
+
+					// Submit to the batch processor
+					await batches.AddBatchAsync(batchFile);
+
+					// Update the number we are on
+					LocalStateManager.Instance.ServerBatchNumber = batchNumber;
+					LocalStateManager.Save();
 				}
-
-				// If we got back more or the same amount of our requested take, there may be
-				// more left on the server to request again
-				checkForMore = numKeys >= take;
-
+				catch (Exception ex)
+				{
+					Console.WriteLine(ex);
+					checkForMore = false;
+				}
 			} while (checkForMore);
 		}
 
-		public async Task UploadSelfExposureKeysToServer(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
+		// this will be called when the user is submitting a diagnosis and the local keys need to go to the server
+		public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
 		{
-			var diagnosisUid = LocalStateManager.Instance.LatestDiagnosis.DiagnosisUid;
+			var pendingDiagnosis = LocalStateManager.Instance.PendingDiagnosis;
 
-			if (string.IsNullOrEmpty(diagnosisUid))
+			if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
 				throw new InvalidOperationException();
 
 			try
@@ -108,7 +129,8 @@ namespace Covid19Radar.Services
 
 				var json = JsonConvert.SerializeObject(new SelfDiagnosisSubmissionRequest
 				{
-					DiagnosisUid = diagnosisUid,
+					DiagnosisUid = pendingDiagnosis.DiagnosisUid,
+					TestDate = pendingDiagnosis.DiagnosisDate.ToUnixTimeMilliseconds(),
 					Keys = temporaryExposureKeys
 				});
 
@@ -117,7 +139,8 @@ namespace Covid19Radar.Services
 
 				response.EnsureSuccessStatusCode();
 
-				LocalStateManager.Instance.LatestDiagnosis.Shared = true;
+				// Update pending status
+				pendingDiagnosis.Shared = true;
 				LocalStateManager.Save();
 			}
 			catch
@@ -134,7 +157,8 @@ namespace Covid19Radar.Services
 
 			try
 			{
-				var response = await http.PostAsync(url, new StringContent(diagnosisUid));
+				var json = "{\"diagnosisUid\":\"" + diagnosisUid + "\"}";
+				var response = await http.PostAsync(url, new StringContent(json));
 
 				response.EnsureSuccessStatusCode();
 
@@ -146,34 +170,13 @@ namespace Covid19Radar.Services
 			}
 		}
 
-		public Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
-		{
-			throw new NotImplementedException();
-		}
-
-		public Task ExposureDetectedAsync(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> ExposureInfo)
-		{
-			throw new NotImplementedException();
-		}
-
-		public Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
-		{
-			throw new NotImplementedException();
-		}
-
 		class SelfDiagnosisSubmissionRequest
 		{
 			[JsonProperty("diagnosisUid")]
 			public string DiagnosisUid { get; set; }
 
-			[JsonProperty("keys")]
-			public IEnumerable<TemporaryExposureKey> Keys { get; set; }
-		}
-
-		class KeysResponse
-		{
-			[JsonProperty("latest")]
-			public ulong Latest { get; set; }
+			[JsonProperty("testDate")]
+			public long TestDate { get; set; }
 
 			[JsonProperty("keys")]
 			public IEnumerable<TemporaryExposureKey> Keys { get; set; }
