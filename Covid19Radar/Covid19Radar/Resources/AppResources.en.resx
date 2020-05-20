@@ -252,7 +252,7 @@ Please check your SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>If you are diagnosed COVID19 positive</value>
+    <value>If you are diagnosed COVID-19 positive</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

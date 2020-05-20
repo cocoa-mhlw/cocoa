@@ -248,7 +248,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>உங்களுக்கு COVID19 நேர்மறையாக கண்டறியப்பட்டால்</value>
+    <value>உங்களுக்கு COVID-19 நேர்மறையாக கண்டறியப்பட்டால்</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
