@@ -15,7 +15,7 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class SettingsPageViewModel : ViewModelBase, INotifyPropertyChanged
+    public class SettingsPageViewModel : ViewModelBase
     {
         private string _AppVersion;
 
@@ -65,6 +65,8 @@ namespace Covid19Radar.ViewModels
         {
             Title = AppResources.HomePageTitle;
             AppVer = AppConstants.AppVersion;
+            EnableExposureNotification = LocalStateManager.Instance.LastIsEnabled;
+            EnableLocalNotification = LocalStateManager.Instance.EnableNotifications;
         }
 
 
@@ -80,36 +82,60 @@ namespace Covid19Radar.ViewModels
         // Switch Behevior
         public ICommand OnChangeEnableExposureNotification => new Command(async () =>
         {
-            
+            await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
         });
 
         public ICommand OnChangeEnableNotification => new Command(async () =>
         {
-
+            await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
-
+            if (ResetData)
+            {
+                var check = await UserDialogs.Instance.ConfirmAsync("本当にすべてのデータをリセットしますか?", "データの全削除", "OK", "Cancel");
+                if (!check)
+                {
+                    ResetData = false;
+                }
+                await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
+            }
         });
 
 
         public Command OnSaveClick => new Command(async () =>
         {
+
             if (ResetData)
             {
-                var check = await UserDialogs.Instance.ConfirmAsync("Could you reset all data?", "Reset All Data", "OK", "Cancel");
-                if (check)
+                UserDialogs.Instance.ShowLoading("Deleting data");
+
+                if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 {
-                    UserDialogs.Instance.ShowLoading("Deleting data");
-
-                    // TODO Exposure notification reset all data
-
-                    UserDialogs.Instance.HideLoading();
-
-                    await UserDialogs.Instance.ConfirmAsync("The data has been reset.", "Reset", "OK");
+                    await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
                 }
+
+                // Reset All Data and Optout
+                LocalStateManager.Instance.LastIsEnabled = false;
+                LocalStateManager.Instance.IsWelcomed = false;
+                LocalStateManager.Instance.ExposureSummary = null;
+                LocalStateManager.Instance.ClearDiagnosis();
+                LocalStateManager.Instance.ServerBatchNumber = 0;
+                LocalStateManager.Save();
+
+                UserDialogs.Instance.HideLoading();
+                await UserDialogs.Instance.AlertAsync("全設定とデータを削除しました。アプリの再起動をしてください。");
+                Application.Current.Quit();
+
+                // Application close
+                Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
+                return;
             }
+            LocalStateManager.Instance.LastIsEnabled = EnableExposureNotification;
+            LocalStateManager.Instance.EnableNotifications = EnableLocalNotification;
+            LocalStateManager.Save();
+            await UserDialogs.Instance.AlertAsync("設定を保存しました。");
         });
 
 
