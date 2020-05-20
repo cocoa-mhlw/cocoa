@@ -19,33 +19,29 @@ using SQLite;
 using Acr.UserDialogs;
 using Covid19Radar.Renderers;
 using Covid19Radar.Droid.Renderers;
+using Plugin.LocalNotification;
 
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, Android.App.Application.IActivityLifecycleCallbacks
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        //public static MainActivity Instance { get; private set; }
         public static object dataLock = new object();
 
-        private SQLiteConnection _connection;
-
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.SetTheme(Resource.Style.MainTheme);
-            base.OnCreate(bundle);
+            base.OnCreate(savedInstanceState);
 
-            CrossCurrentActivity.Current.Init(this, bundle);
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-            //Instance = this;
 
-            Xamarin.Essentials.Platform.Init(this, bundle);
-            //            global::Rg.Plugins.Popup.Popup.Init(this, bundle);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            global::Xamarin.Forms.FormsMaterial.Init(this, bundle);
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
@@ -55,25 +51,11 @@ namespace Covid19Radar.Droid
 
             UserDialogs.Init(this);
 
+            NotificationCenter.CreateNotificationChannel();
             LoadApplication(new App(new AndroidInitializer()));
-            CreateNotificationFromIntent(Intent);
+            NotificationCenter.NotifyNotificationTapped(base.Intent);
         }
 
-        protected override void OnNewIntent(Intent intent)
-        {
-            CreateNotificationFromIntent(intent);
-        }
-
-        void CreateNotificationFromIntent(Intent intent)
-        {
-            if (intent?.Extras != null)
-            {
-                string title = intent.Extras.GetString(Services.NotificationService.TitleKey);
-                string message = intent.Extras.GetString(Services.NotificationService.MessageKey);
-                // DependencyService.Get<NotificationService>().ReceiveNotification(title, message);
-                App.Current.Container.Resolve<INotificationService>().ReceiveNotification(title, message);
-            }
-        }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -89,8 +71,6 @@ namespace Covid19Radar.Droid
             {
                 containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
                 containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
-                containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
-
             }
         }
 
@@ -100,17 +80,23 @@ namespace Covid19Radar.Droid
             {
                 string[] permissions = new string[] {
                     Android.Manifest.Permission.Bluetooth,
+                    Android.Manifest.Permission.BluetoothPrivileged,
                     Android.Manifest.Permission.BluetoothAdmin,
-                    Android.Manifest.Permission.AccessCoarseLocation,
-                    Android.Manifest.Permission.AccessFineLocation
                 };
 
                 RequestPermissions(permissions, 0);
             }
         }
 
-        #region IActivityLifecycleCallbacks
+        protected override void OnNewIntent(Intent intent)
+        {
+            NotificationCenter.NotifyNotificationTapped(intent);
 
+            base.OnNewIntent(intent);
+        }
+
+        /*
+        #region IActivityLifecycleCallbacks
         public void OnActivityCreated(Activity activity, Bundle savedInstanceState)
         {
         }
@@ -144,6 +130,7 @@ namespace Covid19Radar.Droid
         {
             base.OnDestroy();
         }
+        */
     }
 }
 

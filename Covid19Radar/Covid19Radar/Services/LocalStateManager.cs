@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
 using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Services
@@ -48,38 +48,45 @@ namespace Covid19Radar.Services
 
 		public bool EnableNotifications { get; set; } = true;
 
-		public ulong LatestKeysResponseIndex { get; set; } = 0;
+		public ulong ServerBatchNumber { get; set; } = 0;
 
-		public List<ExposureInfo> ExposureInformation { get; set; } = new List<ExposureInfo>();
+		public string Region { get; set; } = ExposureNotificationHandler.DefaultRegion;
+
+		public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
 
 		public ExposureDetectionSummary ExposureSummary { get; set; }
 
 		public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
 
-		PositiveDiagnosisState GetLatest()
+		public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
 		{
-			var latest = PositiveDiagnoses?.OrderByDescending(p => p.DiagnosisDate)?.FirstOrDefault();
+			var existing = PositiveDiagnoses?.Where(d => d.DiagnosisUid.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase))
+				.OrderByDescending(d => d.DiagnosisDate).FirstOrDefault();
 
-			if (latest == null)
+			if (existing != null)
+				return;
+
+			PositiveDiagnoses.Add(new PositiveDiagnosisState
 			{
-				latest = new PositiveDiagnosisState();
-				PositiveDiagnoses.Add(latest);
-			}
-
-			return latest;
+				DiagnosisDate = submissionDate,
+				DiagnosisUid = diagnosisUid,
+			});
 		}
+
+		public void ClearDiagnosis()
+			=> PositiveDiagnoses?.Clear();
 
 		public PositiveDiagnosisState LatestDiagnosis
-		{
-			get => GetLatest();
-			set
-			{
-				var latest = GetLatest();
-				latest.DiagnosisDate = value.DiagnosisDate;
-				latest.DiagnosisUid = value.DiagnosisUid;
-				latest.Shared = value.Shared;
-			}
-		}
+			=> PositiveDiagnoses?
+				.Where(d => d.Shared)
+				.OrderByDescending(p => p.DiagnosisDate)?
+				.FirstOrDefault();
+
+		public PositiveDiagnosisState PendingDiagnosis
+			=> PositiveDiagnoses?
+				.Where(d => !d.Shared)
+				.OrderByDescending(p => p.DiagnosisDate)?
+				.FirstOrDefault();
 	}
 
 	public class PositiveDiagnosisState
@@ -88,7 +95,6 @@ namespace Covid19Radar.Services
 
 		public DateTimeOffset DiagnosisDate { get; set; }
 
-		// Set true after actually submitted to server
-		public bool Shared { get; set; } = false;
+		public bool Shared { get; set; }
 	}
 }
