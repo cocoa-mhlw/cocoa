@@ -9,9 +9,9 @@ namespace Covid19Radar
 {
     public class TemporaryExposureKeyExportBatch
     {
-        public readonly ITemporaryExposureKeyService BatchService;
+        public readonly ITemporaryExposureKeyExportBatchService BatchService;
 
-        public TemporaryExposureKeyExportBatch(ITemporaryExposureKeyService batchService)
+        public TemporaryExposureKeyExportBatch(ITemporaryExposureKeyExportBatchService batchService)
         {
             BatchService = batchService;
         }

@@ -8,7 +8,11 @@ namespace Covid19Radar.DataAccess
 {
     public interface IDiagnosisRepository
     {
-        Task SubmitDiagnosisAsync(DiagnosisSubmissionParameter Parameter);
+
+        Task<DiagnosisModel[]> GetNotApprovedAsync();
+        Task<DiagnosisModel> GetAsync(string SubmissionNumber, string UserUuid);
+
+        Task SubmitDiagnosisAsync(string SubmissionNumber, string UserUuid, TemporaryExposureKeyModel[] Keys);
 
         Task Delete(IUser user);
     }

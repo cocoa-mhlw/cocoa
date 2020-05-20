@@ -46,6 +46,7 @@
 - Rachid Zarouali (French Translation)
 - Rikuya Kaminaka (Documentation)
 - Akira Kakkar (github actions)
+- M Reza Faisal (Indonesian Translation)
 
 # Beta Testers
 - Nagahata Kenji

@@ -24,24 +24,5 @@ namespace Covid19Radar.Tests.Models
             Helper.ModelTestHelper.PropetiesTest(model);
         }
 
-        [DataTestMethod]
-        [DataRow(UserStatus.Contacted)]
-        [DataRow(UserStatus.Infection)]
-        [DataRow(UserStatus.Inspection)]
-        [DataRow(UserStatus.None)]
-        [DataRow(UserStatus.OnSet)]
-        [DataRow(UserStatus.Recovery)]
-        [DataRow(UserStatus.Suspected)]
-        [DataRow(UserStatus.Treatment)]
-        public void SetStatusTest(UserStatus s)
-        {
-            // preparation
-            var model = new UserResultModel();
-            // action
-            model.SetStatus(s);
-            // assert
-            var expected = Enum.GetName(typeof(UserStatus), s);
-            Assert.AreEqual(expected, model.UserStatus);
-        }
     }
 }
