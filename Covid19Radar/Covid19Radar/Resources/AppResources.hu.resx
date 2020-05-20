@@ -248,7 +248,7 @@ Kérjük, ellenőrizze az SMS-t.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ha COVID19 pozitív</value>
+    <value>Ha COVID-19 pozitív</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

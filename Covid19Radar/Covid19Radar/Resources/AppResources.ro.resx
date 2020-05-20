@@ -248,7 +248,7 @@ Vă rugăm să verificați SMS-ul.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Dacă sunteți diagnosticat covid19 pozitiv</value>
+    <value>Dacă sunteți diagnosticat COVID-19 pozitiv</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

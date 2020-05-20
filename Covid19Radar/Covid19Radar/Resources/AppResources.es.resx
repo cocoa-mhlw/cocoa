@@ -248,7 +248,7 @@ Por favor, compruebe su SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Si le diagnostican COVID19 positivo</value>
+    <value>Si le diagnostican COVID-19 positivo</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

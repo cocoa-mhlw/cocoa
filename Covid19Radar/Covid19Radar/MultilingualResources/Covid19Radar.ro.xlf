@@ -283,7 +283,7 @@ Vă rugăm să verificați SMS-ul.</target>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
           <source>If you are diagnosed COVID-19 positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dacă sunteți diagnosticat covid19 pozitiv</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dacă sunteți diagnosticat COVID-19 pozitiv</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
