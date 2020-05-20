@@ -248,7 +248,7 @@ Skontrolujte prosím vaše SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ak ste diagnostikovaný COVID19 pozitívny</value>
+    <value>Ak ste diagnostikovaný COVID-19 pozitívny</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
