@@ -30,9 +30,6 @@ namespace Covid19Radar.DataStore
         // コンテナの自動生成
         private bool AutoGenerate;
 
-        // Beacon store name
-        private string BeaconStoreName;
-
         // The container we will create.
         public Container User { get => Database.GetContainer("User"); }
         public Container Notification { get => Database.GetContainer("Notification"); }

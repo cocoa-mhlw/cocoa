@@ -4,10 +4,7 @@ using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
@@ -52,7 +49,25 @@ namespace Covid19Radar.Services
             blockBlob.Metadata[batchRegionMetadataKey] = model.Region;
 
             await blockBlob.UploadFromStreamAsync(s);
+            Logger.LogInformation($" {nameof(WriteToBlobAsync)} upload {exportFileName}");
             await blockBlob.SetMetadataAsync();
+            Logger.LogInformation($" {nameof(WriteToBlobAsync)} set metadata {exportFileName}");
         }
+
+        public async Task DeleteAsync(TemporaryExposureKeyExportModel model)
+        {
+            Logger.LogInformation($"start {nameof(DeleteAsync)}");
+            var blobContainerName = $"{TekExportBlobStorageContainerPrefix}{model.Region}".ToLower();
+            var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
+            await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
+
+            // Filename is inferable as batch number
+            var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
+            var blockBlob = cloudBlobContainer.GetBlockBlobReference(exportFileName);
+
+            await blockBlob.DeleteIfExistsAsync();
+        }
+
+
     }
 }
