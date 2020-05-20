@@ -14,11 +14,10 @@ namespace Covid19Radar.Tests
         public void CreateMethod()
         {
             // preparation
-            var userRepo = new Mock<IUserRepository>();
             var notification = new Mock.NotificationServiceMock();
             var validation = new Mock.ValidationUserServiceMock();
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi(userRepo.Object, notification, validation, logger);
+            var userApi = new UserApi(notification, validation, logger);
         }
 
         [DataTestMethod]
@@ -26,11 +25,10 @@ namespace Covid19Radar.Tests
         public void RunMethod(string userUuid)
         {
             // preparation
-            var userRepo = new Mock<IUserRepository>();
             var notification = new Mock.NotificationServiceMock();
             var validation = new Mock.ValidationUserServiceMock();
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi(userRepo.Object, notification, validation, logger);
+            var userApi = new UserApi( notification, validation, logger);
             var context = new Mock.HttpContextMock();
             // action
             userApi.Run(context.Request, userUuid);
