@@ -9,6 +9,7 @@ using System.Reflection;
 namespace Covid19Radar.Tests.Common
 {
     [TestClass]
+    [TestCategory("Common")]
     public class UuidLockTest
     {
         static Type t = typeof(UuidLock);
