@@ -148,7 +148,6 @@
     <Compile Include="Renderers\GradientButtonRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
   </ItemGroup>
