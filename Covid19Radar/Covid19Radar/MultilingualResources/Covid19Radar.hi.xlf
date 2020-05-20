@@ -58,9 +58,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID19</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID19 से हमारे प्रियजनों की रक्षा</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
+          <source>Protecting our loved ones from COVID-19</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 से हमारे प्रियजनों की रक्षा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -88,8 +88,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
-          <source>Covid19Radar</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Covid19Radar</target>
+          <source>COVID-19Radar</source>
+          <target state="translated">COVID-19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
         <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
@@ -282,8 +282,8 @@ Please check your SMS.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID19 positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">यदि आपको COVID19 सकारात्मक का निदान किया जाता है</target>
+          <source>If you are diagnosed COVID-19 positive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">यदि आपको COVID-19 सकारात्मक का निदान किया जाता है</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">

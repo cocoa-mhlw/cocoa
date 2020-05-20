@@ -158,8 +158,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID19から大事な人を守る</value>
-    <comment>Protecting our loved ones from COVID19</comment>
+    <value>COVID-19から大事な人を守る</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
     <value>このアプリは、別のトレースアプリのユーザーの近くにいるかどうかを判断するために、Bluetooth信号を使用しています。
@@ -182,6 +182,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>登録</value>
     <comment>Register</comment>
   </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>同意しない</value>
+    <comment>Not Agree</comment>
+  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>同意</value>
     <comment>Agree</comment>
@@ -191,7 +195,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>Covid19Radar</value>
+    <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
