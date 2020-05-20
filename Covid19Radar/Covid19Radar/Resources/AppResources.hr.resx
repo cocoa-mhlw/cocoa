@@ -248,7 +248,7 @@ Provjerite svoj SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ako vam se dijagnosticira COVID19 pozitivna</value>
+    <value>Ako vam se dijagnosticira COVID-19 pozitivna</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

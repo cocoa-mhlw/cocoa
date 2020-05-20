@@ -248,7 +248,7 @@ Tarkista tekstiviestisi.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Jos sinulla on diagnosoitu COVID19 positiivinen</value>
+    <value>Jos sinulla on diagnosoitu COVID-19  positiivinen</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

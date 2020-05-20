@@ -281,8 +281,8 @@ Lees asseblief jou SMS.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID19 positive</source>
-          <target state="translated">As jy postief gediagnoseer word met COVID19</target>
+          <source>If you are diagnosed COVID-19 positive</source>
+          <target state="translated">As jy postief gediagnoseer word met COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
