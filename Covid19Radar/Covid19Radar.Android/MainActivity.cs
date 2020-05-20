@@ -5,7 +5,6 @@ using Prism;
 using Prism.Ioc;
 using Android.Runtime;
 using Android.Content;
-using Plugin.CurrentActivity;
 using Covid19Radar.Model;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +31,6 @@ namespace Covid19Radar.Droid
         {
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
-
-            CrossCurrentActivity.Current.Init(this, savedInstanceState);
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
