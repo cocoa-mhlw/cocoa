@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.External.Models
 {
     public class NotificationCreateParameter
     {

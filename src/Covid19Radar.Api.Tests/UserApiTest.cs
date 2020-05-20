@@ -4,36 +4,38 @@ using Covid19Radar.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Tests
 {
     [TestClass]
+    [TestCategory("Api")]
     public class UserApiTest
     {
         [TestMethod]
         public void CreateMethod()
         {
             // preparation
-            var userRepo = new Mock<IUserRepository>();
             var notification = new Mock.NotificationServiceMock();
             var validation = new Mock.ValidationUserServiceMock();
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi(userRepo.Object, notification, validation, logger);
+            var userApi = new UserApi(notification, validation, logger);
         }
 
         [DataTestMethod]
         [DataRow("")]
-        public void RunMethod(string userUuid)
+        [DataRow("UserUuid")]
+        [DataRow(null)]
+        public async Task RunAsyncMethod(string userUuid)
         {
             // preparation
-            var userRepo = new Mock<IUserRepository>();
             var notification = new Mock.NotificationServiceMock();
             var validation = new Mock.ValidationUserServiceMock();
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi(userRepo.Object, notification, validation, logger);
+            var userApi = new UserApi( notification, validation, logger);
             var context = new Mock.HttpContextMock();
             // action
-            userApi.Run(context.Request, userUuid);
+            await userApi.RunAsync(context.Request, userUuid);
             // assert
         }
     }
