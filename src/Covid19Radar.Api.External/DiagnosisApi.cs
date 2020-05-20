@@ -31,10 +31,10 @@ namespace Covid19Radar.Api.External
         }
 
         [FunctionName("DiagnosisApi")]
-        public async Task<IActionResult> Run(
+        public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "Diagnosis")] HttpRequest req)
         {
-            Logger.LogInformation($"{nameof(DiagnosisApi)} {nameof(Run)} processed a request.");
+            Logger.LogInformation($"{nameof(DiagnosisApi)} {nameof(RunAsync)} processed a request.");
 
             var result = await Diagnosis.GetNotApprovedAsync();
 
@@ -42,13 +42,13 @@ namespace Covid19Radar.Api.External
         }
 
         [FunctionName("DiagnosisApprovedApi")]
-        public async Task<IActionResult> RunApproved(
+        public async Task<IActionResult> RunApprovedAsync(
             [HttpTrigger(AuthorizationLevel.Function, "put", Route = "Diagnosis/{submissionNumber}/Approved/{userUuid}")] HttpRequest req,
             string submissionNumber,
             string userUuid
             )
         {
-            Logger.LogInformation($"{nameof(DiagnosisApi)} {nameof(RunApproved)} processed a request.");
+            Logger.LogInformation($"{nameof(DiagnosisApi)} {nameof(RunApprovedAsync)} processed a request.");
 
             var result = await Diagnosis.GetAsync(submissionNumber, userUuid);
             foreach(var key in result.Keys)
