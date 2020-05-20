@@ -10,8 +10,9 @@ using Newtonsoft.Json;
 using Covid19Radar.DataStore;
 using Covid19Radar.Models;
 using Covid19Radar.Services;
+using Covid19Radar.Api.External.Models;
 
-namespace Covid19Radar
+namespace Covid19Radar.Api.External
 {
     public class NotificationCreateApi
     {

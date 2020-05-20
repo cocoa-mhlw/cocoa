@@ -1,12 +1,8 @@
-﻿using Microsoft.Azure.KeyVault;
-using Microsoft.Azure.Services.AppAuthentication;
+﻿using Covid19Radar.Protobuf;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
@@ -15,7 +11,6 @@ namespace Covid19Radar.Services
     {
         public readonly ILogger<TemporaryExposureKeySignServiceDebug> Logger;
         private System.Security.Cryptography.ECDsa Key;
-        private byte[] PublicKey;
 
         public TemporaryExposureKeySignServiceDebug(
             IConfiguration config,
@@ -23,7 +18,6 @@ namespace Covid19Radar.Services
         {
             Logger = logger;
             Key = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256);
-            PublicKey = Key.ExportSubjectPublicKeyInfo();
         }
 
         public async Task<byte[]> SignAsync(Stream source)
@@ -37,10 +31,11 @@ namespace Covid19Radar.Services
             return Key.SignHash(hash);
         }
 
-        public async Task<byte[]> GetPublicKeyAsync()
+        public async Task SetSignatureAsync(SignatureInfo info)
         {
-            Logger.LogInformation($"start {nameof(GetPublicKeyAsync)}");
-            return PublicKey;
+            Logger.LogInformation($"start {nameof(SetSignatureAsync)}");
+            info.VerificationKeyId = "DebugKey";
+            info.VerificationKeyVersion = "DebugVersion";
         }
     }
 }

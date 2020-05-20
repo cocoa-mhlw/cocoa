@@ -42,8 +42,11 @@
 - oyasan_ba2 (Client Android / Translate Japanese)
 - Alberto Diaz Martin (Spanish Translation)
 - Ali Khaled Heikal (Arabic Translation)
+- Kaminaka Rikuya (Documentation)
 - Rachid Zarouali (French Translation)
 - Rikuya Kaminaka (Documentation)
+- Akira Kakkar (github actions)
+- M Reza Faisal (Indonesian Translation)
 
 # Beta Testers
 - Nagahata Kenji
