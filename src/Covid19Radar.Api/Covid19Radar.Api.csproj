@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AzureFunctionsVersion>v3</AzureFunctionsVersion>
-    <RootNamespace>Covid19Radar</RootNamespace>
+    <RootNamespace>Covid19Radar.Api</RootNamespace>
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
   <ItemGroup>

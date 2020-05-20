@@ -34,7 +34,7 @@ namespace Covid19Radar.Api
         }
 
         [FunctionName(nameof(UserApi))]
-        public async Task<IActionResult> Run(
+        public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "user/{userUuid}")] HttpRequest req,
             string userUuid)
         {

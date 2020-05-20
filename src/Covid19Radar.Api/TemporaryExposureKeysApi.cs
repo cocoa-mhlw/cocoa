@@ -1,36 +1,30 @@
-using System;
-using System.IO;
-using System.Threading.Tasks;
+using Covid19Radar.DataAccess;
+using Covid19Radar.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Covid19Radar.Services;
-using Covid19Radar.DataAccess;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc.Formatters.Internal;
-using Covid19Radar.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Covid19Radar
+namespace Covid19Radar.Api
 {
     public class TemporaryExposureKeysApi
     {
         private readonly ITemporaryExposureKeyExportRepository TekExport;
-        private readonly ICryptionService Cryption;
         private readonly ILogger<TemporaryExposureKeysApi> Logger;
         private readonly string ExportKeyUrl;
         private readonly string TekExportBlobStorageContainerPrefix;
 
         public TemporaryExposureKeysApi(
+            IConfiguration config,
             ITemporaryExposureKeyExportRepository tekExportRepository,
-            ICryptionService cryption,
-            ILogger<TemporaryExposureKeysApi> logger,
-            IConfiguration config)
+            ILogger<TemporaryExposureKeysApi> logger
+            )
         {
-            Cryption = cryption;
             Logger = logger;
             TekExport = tekExportRepository;
             ExportKeyUrl = config["ExportKeyUrl"];
@@ -38,7 +32,7 @@ namespace Covid19Radar
         }
 
         [FunctionName(nameof(TemporaryExposureKeysApi))]
-		public async Task<IActionResult> Run(
+		public async Task<IActionResult> RunAsync(
 			[HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys")] HttpRequest req)
 		{
 			if (!long.TryParse(req.Query?["since"], out var sinceEpochSeconds))

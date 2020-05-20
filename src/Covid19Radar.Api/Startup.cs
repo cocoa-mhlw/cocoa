@@ -1,18 +1,11 @@
-﻿using System;
+﻿using Covid19Radar.DataAccess;
 using Covid19Radar.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Http;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.Extensions.Logging.Debug;
-using Microsoft.AspNetCore.Http;
-using Covid19Radar.DataAccess;
 
-[assembly: FunctionsStartup(typeof(Covid19Radar.Startup))]
+[assembly: FunctionsStartup(typeof(Covid19Radar.Api.Startup))]
 
-namespace Covid19Radar
+namespace Covid19Radar.Api
 {
     public class Startup : FunctionsStartup
     {
