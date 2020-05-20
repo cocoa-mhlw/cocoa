@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Tests
+namespace Covid19Radar.Api.Tests
 {
     [TestClass]
     [TestCategory("Api")]
@@ -43,7 +43,8 @@ namespace Covid19Radar.Tests
             {
                 resultModels.Add(new TemporaryExposureKeyExportModel());
             }
-            tekExportRepo.Setup(_ => _.GetKeysAsync(It.IsAny<ulong>())).ReturnsAsync(resultModels.ToArray());
+            tekExportRepo.Setup(_ => _.GetKeysAsync(It.IsAny<ulong>()))
+                .ReturnsAsync(resultModels.ToArray());
             var logger = new Mock.LoggerMock<TemporaryExposureKeysApi>();
             var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, logger);
             var context = new Mock.HttpContextMock();
@@ -54,5 +55,23 @@ namespace Covid19Radar.Tests
             await temporaryExposureKeysApi.RunAsync(context.Request);
             // assert
         }
+
+        [TestMethod]
+        public async Task RunAsyncMethodWithNull()
+        {
+            // preparation
+            var config = new Mock<IConfiguration>();
+            var tekExportRepo = new Mock<ITemporaryExposureKeyExportRepository>();
+            var resultModels = new List<TemporaryExposureKeyExportModel>();
+            tekExportRepo.Setup(_ => _.GetKeysAsync(It.IsAny<ulong>())).ReturnsAsync(resultModels.ToArray());
+            var logger = new Mock.LoggerMock<TemporaryExposureKeysApi>();
+            var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, logger);
+            var context = new Mock.HttpContextMock();
+            context._Request.Query = null;
+            // action
+            await temporaryExposureKeysApi.RunAsync(context.Request);
+            // assert
+        }
+
     }
 }

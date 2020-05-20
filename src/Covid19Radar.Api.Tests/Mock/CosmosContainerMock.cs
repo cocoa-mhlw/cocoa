@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Scripts;
 
-namespace Covid19Radar.Tests.Mock
+namespace Covid19Radar.Api.Tests.Mock
 {
     public class CosmosContainerMock : Container
     {

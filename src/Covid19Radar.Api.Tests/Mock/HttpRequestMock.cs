@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace Covid19Radar.Tests.Mock
+namespace Covid19Radar.Api.Tests.Mock
 {
     public class HttpRequestMock : HttpRequest
     {
