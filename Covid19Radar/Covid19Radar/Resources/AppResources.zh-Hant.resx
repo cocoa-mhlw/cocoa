@@ -53,8 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>保護我們的親人免受 COVID19 的保護</value>
-    <comment>Protecting our loved ones from COVID19</comment>
+    <value>保護我們的親人免受 COVID-19 的保護</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
     <value>此應用程式使用藍牙信號來確定您是否靠近其他聯繫人跟蹤應用使用者。
@@ -248,7 +248,7 @@
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>如果您被診斷為 COVID19 陽性</value>
+    <value>如果您被診斷為 COVID-19 陽性</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

@@ -248,7 +248,7 @@ Lūdzu, pārbaudiet savu SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ja jums ir diagnosticēta COVID19 pozitīva</value>
+    <value>Ja jums ir diagnosticēta COVID-19 pozitīva</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

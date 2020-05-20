@@ -248,7 +248,7 @@ Tjek venligst din SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Hvis du får diagnosticeret COVID19 positiv</value>
+    <value>Hvis du får diagnosticeret COVID-19 positiv</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">

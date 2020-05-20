@@ -281,8 +281,8 @@ Por favor, compruebe su SMS.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID19 positive</source>
-          <target state="translated">Si le diagnostican COVID19 positivo</target>
+          <source>If you are diagnosed COVID-19 positive</source>
+          <target state="translated">Si le diagnostican COVID-19 positivo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
