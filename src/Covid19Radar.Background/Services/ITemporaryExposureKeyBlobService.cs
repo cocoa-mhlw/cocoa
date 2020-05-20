@@ -8,5 +8,7 @@ namespace Covid19Radar.Services
     public interface ITemporaryExposureKeyBlobService
     {
         Task WriteToBlobAsync(Stream s, TemporaryExposureKeyExportModel model, TemporaryExposureKeyExport bin, TEKSignatureList sig);
+
+        Task DeleteAsync(TemporaryExposureKeyExportModel model);
     }
 }
