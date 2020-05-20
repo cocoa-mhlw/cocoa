@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Views.SettingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Behavior="clr-namespace:Covid19Radar.Behaviors"
     xmlns:System="clr-namespace:System;assembly=netstandard"
     xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
@@ -16,12 +17,12 @@
     Visual="Material">
     <ContentPage.ToolbarItems>
         <ToolbarItem
-            Command="{Binding OnClickHelp}}"
+            Command="{Binding OnClickHelp}"
             Order="Primary"
             Priority="1"
             Text="{x:Static resources:AppResources.MainTutorial}" />
         <ToolbarItem
-            Command="{Binding OnClickHelp}}"
+            Command="{Binding OnClickHelp}"
             Order="Primary"
             Priority="2">
             <ToolbarItem.IconImageSource>
@@ -35,9 +36,21 @@
     </ContentPage.ToolbarItems>
 
     <ScrollView>
-        <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Label Style="{StaticResource DefaultTitleLabel}" Text="アプリの設定" />
-            <Grid HorizontalOptions="Center" RowSpacing="20">
+        <Grid Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Style="{StaticResource DefaultTitleLabel}"
+                Text="アプリの設定" />
+            <Grid
+                Grid.Row="1"
+                HorizontalOptions="Center"
+                RowSpacing="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="0.5*" />
@@ -99,7 +112,11 @@
                 <Switch
                     Grid.Row="2"
                     Grid.Column="1"
-                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
+                    IsToggled="{Binding EnableExposureNotification, Mode=TwoWay}">
+                    <Switch.Behaviors>
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeEnableExposureNotification}" />
+                    </Switch.Behaviors>
+                </Switch>
                 <BoxView
                     Grid.Row="3"
                     Grid.ColumnSpan="2"
@@ -124,7 +141,11 @@
                 <Switch
                     Grid.Row="4"
                     Grid.Column="1"
-                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
+                    IsToggled="{Binding EnableLocalNotification, Mode=TwoWay}">
+                    <Switch.Behaviors>
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeEnableNotification}" />
+                    </Switch.Behaviors>
+                </Switch>
                 <BoxView
                     Grid.Row="5"
                     Grid.ColumnSpan="2"
@@ -150,12 +171,22 @@
                 <Switch
                     Grid.Row="6"
                     Grid.Column="1"
-                    IsToggled="{Binding EnableNotifications, Mode=TwoWay}" />
+                    IsToggled="{Binding ResetData, Mode=TwoWay}">
+                    <Switch.Behaviors>
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeResetData}" />
+                    </Switch.Behaviors>
+                </Switch>
                 <BoxView
                     Grid.Row="7"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource DefaultLineStyle}" />
             </Grid>
-        </StackLayout>
+            <ce:GradientButton
+                Grid.Row="2"
+                AutomationId="Save"
+                Command="{Binding Path=OnSaveClick}"
+                Style="{StaticResource DefaultGradientButton}"
+                Text="Save" />
+        </Grid>
     </ScrollView>
 </ContentPage>
