@@ -9,15 +9,15 @@ namespace Covid19Radar
 {
     public class TemporaryExposureKeyExportBatch
     {
-        public readonly ITemporaryExposureKeyService BatchService;
+        public readonly ITemporaryExposureKeyExportBatchService BatchService;
 
-        public TemporaryExposureKeyExportBatch(ITemporaryExposureKeyService batchService)
+        public TemporaryExposureKeyExportBatch(ITemporaryExposureKeyExportBatchService batchService)
         {
             BatchService = batchService;
         }
 
         [FunctionName("TemporaryExposureKeyExportBatch")]
-        public async Task Run([TimerTrigger("0 * * * * *")]TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 0 * * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
