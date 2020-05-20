@@ -44,6 +44,7 @@
 - Ali Khaled Heikal (Arabic Translation)
 - Rachid Zarouali (French Translation)
 - Rikuya Kaminaka (Documentation)
+- M Reza Faisal (Indonesian Translation)
 
 # Beta Testers
 - Nagahata Kenji
