@@ -28,6 +28,7 @@ using Microsoft.AppCenter.Push;
 using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
+using Plugin.LocalNotification;
 
 /*
  * Our mission...is
@@ -53,6 +54,20 @@ namespace Covid19Radar
         protected override async void OnInitialized()
         {
             InitializeComponent();
+
+            // Exposure Notification
+
+#if DEBUG
+            // For debug mode, set the mock api provider to interact
+            // with some fake data
+            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+#endif
+            // Local Notification tap event listener
+            NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
+            Xamarin.ExposureNotifications.ExposureNotification.Init();
+
+            // Exposure Notification
+
             LogUnobservedTaskExceptions();
 
             Distribute.ReleaseAvailable = OnReleaseAvailable;
@@ -78,7 +93,8 @@ namespace Covid19Radar
             }
             else
             {
-                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
+                //result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
+                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
 
             if (!result.Success)
@@ -94,11 +110,9 @@ namespace Covid19Radar
             }
         }
 
-        protected void OnLocalNotificationTaped(object sender, EventArgs eventArgs)
+        protected void OnNotificationTapped(NotificationTappedEventArgs e)
         {
-            var e = (NotificationEventArgs)eventArgs;
-            System.Diagnostics.Debug.WriteLine(e.Title);
-            System.Diagnostics.Debug.WriteLine(e.Message);
+            NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -128,6 +142,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
             containerRegistry.RegisterForNavigation<UpdateInfomationPage, UpdateInfomationPageViewModel>();
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsPageViewModel>();
+            containerRegistry.RegisterForNavigation<DebugPage, DebugPageViewModel>();
 
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
