@@ -20,12 +20,12 @@ namespace Covid19Radar.Common
         public async Task<T> QueryWithCacheAsync(Func<Task<T>> query)
         {
             var time = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            if ((Timestamp + CacheTimeout) < time)
+            if ((Timestamp + CacheTimeout) <= time)
             {
                 try
                 {
                     Event.WaitOne();
-                    if ((Timestamp + CacheTimeout) < time)
+                    if ((Timestamp + CacheTimeout) <= time)
                     {
                         Cache = await query();
                         Timestamp = time;
