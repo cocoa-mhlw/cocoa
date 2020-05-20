@@ -13,16 +13,17 @@ namespace Covid19Radar.Models
         /// for CosmosDB id
         /// </summary>
         public string id { get => this.GetId(); }
+
         /// <summary>
         /// for CosmosDB PartitionKey
         /// </summary>
         public string PartitionKey { get => this.GetId(); }
+
         /// <summary>
         /// User UUID / take care misunderstand Becon ID
         /// </summary>
         /// <value>User UUID</value>
         public string UserUuid { get; set; }
-
 
         /// <summary>
         /// Protected Secret key
@@ -34,30 +35,5 @@ namespace Covid19Radar.Models
         /// ETAG
         /// </summary>
         public string _etag { get; set; }
-
-        /// <summary>
-        ///  Status Contacted,OnSet,Suspected,Inspection,Infection
-        /// </summary>
-        /// <value></value>
-        private UserStatus _UserStatus;
-        public string UserStatus
-        {
-            get
-            {
-                return Enum.GetName(typeof(Covid19Radar.Common.UserStatus), _UserStatus);
-            }
-            set
-            {
-                _UserStatus = Enum.Parse<Covid19Radar.Common.UserStatus>(value);
-            }
-        }
-        /// <summary>
-        /// set SserStatus
-        /// </summary>
-        /// <param name="s">UserStatus</param>
-        public void SetStatus(UserStatus s)
-        {
-            _UserStatus = s;
-        }
     }
 }

@@ -77,6 +77,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Register</value>
     <comment>Register</comment>
   </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Not Agree</value>
+    <comment>Not Agree</comment>
+  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Agree</value>
     <comment>Agree</comment>
@@ -86,7 +90,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>Covid19Radar</value>
+    <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
