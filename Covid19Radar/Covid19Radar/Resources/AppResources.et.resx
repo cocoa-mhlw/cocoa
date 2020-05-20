@@ -248,7 +248,7 @@ Palun kontrollige oma SMS-i.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Kui teil on diagnoositud COVID19 positiivne</value>
+    <value>Kui teil on diagnoositud COVID-19 positiivne</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
