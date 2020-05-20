@@ -1,12 +1,13 @@
 using Covid19Radar.Api;
 using Covid19Radar.DataAccess;
+using Covid19Radar.Models;
 using Covid19Radar.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Tests
+namespace Covid19Radar.Api.Tests
 {
     [TestClass]
     [TestCategory("Api")]
@@ -23,16 +24,21 @@ namespace Covid19Radar.Tests
         }
 
         [DataTestMethod]
-        [DataRow("")]
-        [DataRow("UserUuid")]
-        [DataRow(null)]
-        public async Task RunAsyncMethod(string userUuid)
+        [DataRow(true, "")]
+        [DataRow(true, "UserUuid")]
+        [DataRow(false, null)]
+        public async Task RunAsyncMethod(bool isValid, string userUuid)
         {
             // preparation
             var notification = new Mock.NotificationServiceMock();
-            var validation = new Mock.ValidationUserServiceMock();
+            var validation = new Mock<IValidationUserService>();
+            var validationResult = new IValidationUserService.ValidateResult()
+            {
+                IsValid = isValid
+            };
+            validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi( notification, validation, logger);
+            var userApi = new UserApi(notification, validation.Object, logger);
             var context = new Mock.HttpContextMock();
             // action
             await userApi.RunAsync(context.Request, userUuid);
