@@ -26,8 +26,6 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public static AppDelegate Instance { get; private set; }
-        private UserDataService _userDataService;
-        private NotificationService _notificationService;
         public AppDelegate()
         {
         }
@@ -131,7 +129,7 @@ namespace Covid19Radar.iOS
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
-            containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
+            //containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
         }
     }
 

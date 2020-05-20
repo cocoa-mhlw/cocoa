@@ -78,16 +78,18 @@ namespace Covid19Radar
             INavigationResult result;
             // Check user data and skip tutorial
             UserDataService userDataService = Container.Resolve<UserDataService>();
+
+            if (LocalStateManager.Instance.IsWelcomed)
+            {
+                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+            }
+            else
+            {
+                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
+            }
+/*
             if (userDataService.IsExistUserData)
             {
-                // TODO Wire Start Exposure Notification
-                /*
-                                var isStart = await ExposureNotification.IsEnabledAsync();
-                                if (!isStart)
-                                {
-                                    await ExposureNotification.StartAsync();
-                                }
-                */
                 UserDataModel _userData = userDataService.Get();
                 result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
@@ -96,7 +98,7 @@ namespace Covid19Radar
                 //result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
                 result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
-
+*/
             if (!result.Success)
             {
                 MainPage = new ExceptionPage

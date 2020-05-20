@@ -1,5 +1,6 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Renderers;
+using Covid19Radar.Services;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -13,17 +14,16 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.TitleDeviceAccess;
         }
 
-        public Command OnClickNotNow => new Command(() => NavigationService.NavigateAsync("SetupCompletedPage"));
+        public Command OnClickNotNow => new Command(async () =>
+        {
+            LocalStateManager.Instance.LastIsEnabled = false;
+            LocalStateManager.Save();
+            await NavigationService.NavigateAsync("SetupCompletedPage");
+        });
         public Command OnClickEnable => new Command(async () =>
         {
-            // TODO Enable Exposure Notification
-            /*
-            var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
-            if (!enabled)
-            {
-                await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
-            }
-            */
+            LocalStateManager.Instance.LastIsEnabled = true;
+            LocalStateManager.Save();
             await NavigationService.NavigateAsync(nameof(SetupCompletedPage));
 
         });
