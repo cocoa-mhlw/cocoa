@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -15,7 +16,7 @@
             Command="{Binding OnClickHelp}}"
             Order="Primary"
             Priority="1"
-            Text="使い方" />
+            Text="{x:Static resources:AppResources.MainTutorial}" />
         <ToolbarItem
             Command="{Binding OnClickHelp}}"
             Order="Primary"

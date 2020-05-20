@@ -17,7 +17,7 @@
             Command="{Binding OnClickHelp}}"
             Order="Primary"
             Priority="1"
-            Text="使い方" />
+            Text="{x:Static resources:AppResources.MainTutorial}" />
         <ToolbarItem
             Command="{Binding OnClickHelp}}"
             Order="Primary"
