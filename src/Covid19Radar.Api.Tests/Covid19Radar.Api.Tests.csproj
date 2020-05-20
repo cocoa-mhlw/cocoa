@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>Covid19Radar.Tests</RootNamespace>
+    <RootNamespace>Covid19Radar.Api.Tests</RootNamespace>
 
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar.Api.External\Covid19Radar.Api.External.csproj" />
     <ProjectReference Include="..\Covid19Radar.Api\Covid19Radar.Api.csproj" />
+    <ProjectReference Include="..\Covid19Radar.Background\Covid19Radar.Background.csproj" />
     <ProjectReference Include="..\Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj" />
   </ItemGroup>
 

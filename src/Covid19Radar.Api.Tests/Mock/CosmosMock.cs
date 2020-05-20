@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Covid19Radar.DataStore;
 using Microsoft.Azure.Cosmos;
 
-namespace Covid19Radar.Tests.Mock
+namespace Covid19Radar.Api.Tests.Mock
 {
     /// <summary>
     /// Mock Cosmos

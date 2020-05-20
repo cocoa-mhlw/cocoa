@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Tests
+namespace Covid19Radar.Api.Tests
 {
     [TestClass]
     [TestCategory("Api")]

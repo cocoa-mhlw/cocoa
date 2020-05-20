@@ -31,18 +31,11 @@ namespace Covid19Radar.Api.External
         }
 
         [FunctionName(nameof(NotificationCreateApi))]
-        public async Task<IActionResult> Run(
+        public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "Notification/Create")] HttpRequest req)
         {
             Logger.LogInformation($"{nameof(NotificationCreateApi)} processed a request.");
-
-            switch (req.Method)
-            {
-                case "POST":
-                    return await Post(req);
-            }
-            AddBadRequest(req);
-            return new BadRequestObjectResult("Not Supported");
+            return await Post(req);
         }
 
         private async Task<IActionResult> Post(HttpRequest req)
@@ -64,11 +57,6 @@ namespace Covid19Radar.Api.External
             var createResult = await Cosmos.Notification.CreateItemAsync(newNotification);
             var result = new NotificationCreateResult() { Message = createResult.Resource };
             return new OkObjectResult(result);
-        }
-
-        private void AddBadRequest(HttpRequest req)
-        {
-            // add deny list
         }
     }
 }

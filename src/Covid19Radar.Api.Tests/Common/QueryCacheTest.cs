@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Tests.Common
+namespace Covid19Radar.Api.Tests.Common
 {
     [TestClass]
     [TestCategory("Common")]
