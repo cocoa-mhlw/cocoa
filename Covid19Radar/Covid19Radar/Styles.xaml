@@ -104,7 +104,7 @@
         <Setter Property="Scale" Value="0.8" />
         <Style.Triggers>
             <Trigger TargetType="Button" Property="IsEnabled" Value="True">
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
             </Trigger>
             <Trigger TargetType="Button" Property="IsEnabled" Value="False">
                 <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
@@ -251,6 +251,16 @@
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
     </Style>
+
+
+    <Style x:Key="DefaultLabelSmallColor" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
 
     <Style x:Key="DefaultLabelSmall" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Start" />

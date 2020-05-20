@@ -212,7 +212,7 @@ Por favor, compruebe su SMS.</target>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
-          <target state=translated">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
@@ -508,7 +508,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
           <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="translatedn">Su diagnóstico no puede ser comprobado en este momento para ser enviado.</target>
+          <target state="translated">Su diagnóstico no puede ser comprobado en este momento para ser enviado.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
           <source>Verification Failed</source>
