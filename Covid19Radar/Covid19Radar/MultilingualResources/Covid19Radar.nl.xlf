@@ -263,7 +263,7 @@ Controleer uw SMS berichten.</target>
         </trans-unit>
         <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
           <source>Heads up</source>
-          <target state="translated" state-qualifier="tm-suggestion">Opgelet/target>
+          <target state="translated">Opgelet</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Heads up</note>
         </trans-unit>
         <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
