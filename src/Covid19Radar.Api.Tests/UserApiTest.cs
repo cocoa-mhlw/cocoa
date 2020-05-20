@@ -4,10 +4,12 @@ using Covid19Radar.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Tests
 {
     [TestClass]
+    [TestCategory("Api")]
     public class UserApiTest
     {
         [TestMethod]
@@ -22,7 +24,9 @@ namespace Covid19Radar.Tests
 
         [DataTestMethod]
         [DataRow("")]
-        public void RunMethod(string userUuid)
+        [DataRow("UserUuid")]
+        [DataRow(null)]
+        public async Task RunAsyncMethod(string userUuid)
         {
             // preparation
             var notification = new Mock.NotificationServiceMock();
@@ -31,7 +35,7 @@ namespace Covid19Radar.Tests
             var userApi = new UserApi( notification, validation, logger);
             var context = new Mock.HttpContextMock();
             // action
-            userApi.Run(context.Request, userUuid);
+            await userApi.RunAsync(context.Request, userUuid);
             // assert
         }
     }

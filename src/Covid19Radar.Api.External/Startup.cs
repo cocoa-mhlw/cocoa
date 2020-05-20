@@ -10,9 +10,9 @@ using Microsoft.Extensions.Logging.Debug;
 using Microsoft.AspNetCore.Http;
 using Covid19Radar.DataAccess;
 
-[assembly: FunctionsStartup(typeof(Covid19Radar.Startup))]
+[assembly: FunctionsStartup(typeof(Covid19Radar.Api.External.Startup))]
 
-namespace Covid19Radar
+namespace Covid19Radar.Api.External
 {
     public class Startup : FunctionsStartup
     {
