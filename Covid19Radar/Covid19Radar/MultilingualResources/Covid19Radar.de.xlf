@@ -409,7 +409,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie werden benachrichtigt, wenn Sie jemandem ausgesetzt wurden, der ein positives COVID-19-Ergebnis gemeldet hat.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie werden benachrichtigt, wenn Sie jemandem ausgesetzt wurden, der ein positives COVID-19Ergebnis gemeldet hat.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
         <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
@@ -455,7 +455,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Die eindeutige Testkennung, die mit Ihrem COVID-19-Test enthalten ist, muss verwendet werden, um Ihr positives Testergebnis zu überprüfen.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Die eindeutige Testkennung, die mit Ihrem COVID-19Test enthalten ist, muss verwendet werden, um Ihr positives Testergebnis zu überprüfen.</target>
         </trans-unit>
         <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
           <source>Verify and Share</source>
