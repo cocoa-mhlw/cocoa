@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:model="clr-namespace:Xamarin.ExposureNotifications;assembly=Xamarin.ExposureNotification"
     xmlns:prism="http://prismlibrary.com"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
@@ -35,14 +36,17 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <ContentPage.Content ItemsSource="{Binding ExposureInformation}">
+    <ContentPage.Content ItemsSource="{Binding ExposureInformation}" SelectionMode="None">
         <StackLayout Style="{StaticResource DefaultStackLayout}">
             <Label Style="{StaticResource DefaultTitleLabel}" Text="過去14日間の接触記録" />
             <StackLayout>
                 <CollectionView ItemsSource="{Binding ExposureInformation}" SelectionMode="Single">
                     <CollectionView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate x:DataType="model:ExposureInfo">
                             <StackLayout>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ExposuresPageViewModel}}, Path=ExposureSelectedCommand}" CommandParameter="{Binding .}" />
+                                </StackLayout.GestureRecognizers>
                                 <Grid RowSpacing="0">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
