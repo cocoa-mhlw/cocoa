@@ -44,9 +44,15 @@ namespace Covid19Radar.ViewModels
             NavigationService = navigationService;
         }
 
-        public virtual void Initialize(INavigationParameters parameters)
+        public virtual async void Initialize(INavigationParameters parameters)
         {
-
+            if (LocalStateManager.Instance.LastIsEnabled && LocalStateManager.Instance.IsWelcomed)
+            {
+                if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                {
+                    await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
+                }
+            }
         }
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters)
