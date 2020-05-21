@@ -102,7 +102,8 @@ namespace Covid19Radar.Api.Tests.Common.Services
             var instance = new CryptionService(config.Object, logger.Object);
             var option = new ParallelOptions() { MaxDegreeOfParallelism = 512 };
             // action
-            Parallel.For(0, 13000, option, i => {
+            Parallel.For(0, 13000, option, i =>
+            {
                 var userUuid = new string('x', i % 255) + "Z";
                 var secret = instance.CreateSecret(userUuid);
                 var actual = instance.ValidateSecret(userUuid, secret);
@@ -163,6 +164,30 @@ namespace Covid19Radar.Api.Tests.Common.Services
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ValidateSecretMethodParallelLoad()
+        {
+            // preparation
+            var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
+            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            var logger = new Mock<ILogger<CryptionService>>();
+            var instance = new CryptionService(config.Object, logger.Object);
+            var userUuid = "XXXXXXXXXXXXXXXXXXXXXXXXXX";
+            var secret = instance.CreateSecret(userUuid);
+            var option = new ParallelOptions() { MaxDegreeOfParallelism = 512 };
+            // action
+            Parallel.For(0, 13000, option, i =>
+            {
+                var actual = instance.ValidateSecret(userUuid, secret);
+                // assert
+                Assert.AreEqual(true, actual);
+            });
+        }
+
         [DataTestMethod]
         [DataRow("XXXXXXXXXX")]
         [DataRow("")]
@@ -186,5 +211,30 @@ namespace Covid19Radar.Api.Tests.Common.Services
             Assert.AreEqual(secretValue, actual);
         }
 
+        [TestMethod]
+        public void ProtectMethodParallelLoad()
+        {
+            // preparation
+            var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
+            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            var logger = new Mock<ILogger<CryptionService>>();
+            var instance = new CryptionService(config.Object, logger.Object);
+            var enc = System.Text.Encoding.UTF8;
+            var secretValue = Convert.ToBase64String(enc.GetBytes("Secret"));
+            var option = new ParallelOptions() { MaxDegreeOfParallelism = 512 };
+            // action
+            Parallel.For(0, 13000, option, i =>
+            {
+                // action
+                var protectSecret = instance.Protect(secretValue);
+                var actual = instance.Unprotect(protectSecret);
+                // assert
+                Assert.AreEqual(secretValue, actual);
+            });
+        }
     }
 }
