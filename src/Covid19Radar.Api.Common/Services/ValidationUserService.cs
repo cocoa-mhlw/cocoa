@@ -21,7 +21,6 @@ namespace Covid19Radar.Api.Services
         public ValidationUserService(
             ICosmos cosmos,
             ICryptionService cryption,
-            Microsoft.Extensions.Configuration.IConfiguration config,
             ILogger<ValidationUserService> logger)
         {
             Cosmos = cosmos;
@@ -71,8 +70,8 @@ namespace Covid19Radar.Api.Services
                     return new IValidationUserService.ValidateResult()
                     {
                         IsValid = isValid,
-                        User = itemResult.Resource,
-                        ErrorActionResult = (!isValid ? new BadRequestResult() : null)
+                        User = (isValid ? itemResult.Resource : null),
+                        ErrorActionResult = (isValid ? null : new BadRequestResult())
                     };
                 }
             }
