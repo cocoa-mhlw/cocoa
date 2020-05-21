@@ -389,4 +389,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>あとで設定する</value>
     <comment>NotNow Button</comment>
   </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>アプリの設定</value>
+    <comment>SettingsPage Title</comment>
+  </data>
 </root>
