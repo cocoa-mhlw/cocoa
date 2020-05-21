@@ -276,7 +276,7 @@
       <Version>7.1.0.442</Version>
     </PackageReference>
     <PackageReference Include="Google.Protobuf">
-      <Version>3.12.0</Version>
+      <Version>3.12.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>3.2.1</Version>
@@ -294,7 +294,7 @@
       <Version>1.1.6-beta</Version>
     </PackageReference>
     <PackageReference Include="Prism.DryIoc.Forms">
-      <Version>7.2.0.1422</Version>
+      <Version>8.0.0.1740-pre</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
@@ -311,9 +311,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.772" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.813-pre2" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.772</Version>
+      <Version>4.7.0.813-pre2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
       <Version>1.0.0-beta2</Version>
