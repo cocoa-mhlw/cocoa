@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace Covid19Radar.Api.Tests.Common.Services
 {
     [TestClass]
-    [TestCategory("Common")]
+    [TestCategory("Services")]
     public class CryptionServiceTest
     {
         [TestMethod]
