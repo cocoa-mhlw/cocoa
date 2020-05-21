@@ -17,11 +17,11 @@
     <comment>I want to help</comment>
   </data>
   <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Hoe het werkt</value>
+    <value>Hoe werkt het</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
-    <value>Next</value>
+    <value>Volgende</value>
     <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
@@ -33,19 +33,19 @@
     <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
-    <value>Het is niet nodig om persoonlijke informatie in te voeren. We gebruiken unieke ID, toegewezen aan u bij het installeren van een app.</value>
+    <value>Het is niet nodig om persoonlijke informatie in te voeren. We gebruiken een unieke ID, welke wordt toegekend tijdens het installeren van een app.</value>
     <comment>How it works page step 1 description</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
-    <value>Een contact met een andere app-gebruiker langer dan 30 min in totaal, binnen een straal dichter dan 2 m gemiddeld wordt geregistreerd als "Close Contact".</value>
+    <value>Een contact met een andere app-gebruiker langer dan 30 minuten totaal en binnen een straal van gemiddeld 2 meter, wordt geregistreerd als "Nabij Contact".</value>
     <comment>How it works page step 2 description</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Wijzig uw status handmatig in 'Positief' nadat u uw telefoonnummer hebt geverifieerd." Positieve" Workflow , Nu coördinatie met verwante partijen.</value>
+    <value>Wijzig uw status handmatig in 'Positief' nadat u uw telefoonnummer geverifieerd hebt. "Positieve" Workflow , Nu coördinatie met verwante partijen.</value>
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth moet ingeschakeld zijn om nauw contact op te nemen. Ga naar de volgende pagina om deze in te schakelen.</value>
+    <value>Bluetooth/blootstellingnotificaties moeten ingeschakeld zijn om nabij contact te registreren. Ga naar de volgende pagina om dit in te schakelen.</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Onze dierbaren beschermen tegen COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>Deze app maakt gebruik van Bluetooth-signalen om te bepalen of u zich in de buurt van een andere gebruiker van de contacttracering-app bevindt. 
-Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Bluetooth toestaan</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>Onze dierbaren beschermen tegen COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Apparaattoegang</value>
@@ -94,11 +85,11 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
     <comment>Status Settings Menu</comment>
   </data>
   <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>Lijst van bijdragers</value>
+    <value>Lijst van contribuanten</value>
     <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Update-informatie</value>
+    <value>Informatie bijwerken</value>
     <comment>Update Information Menu</comment>
   </data>
   <data name="ButtonHome" xml:space="preserve">
@@ -106,15 +97,15 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
     <comment>HOME</comment>
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Klaar om te beginnen</value>
+    <value>U bent klaar om te starten</value>
     <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Voltooid instellen</value>
+    <value>Configuratie voltooid</value>
     <comment>Set up Completed</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Als u een positieve diagnose hebt ontvangen, voert u uw mobiele nummer in en werkt u uw status bij om uw dierbaren te beschermen.</value>
+    <value>Als u een positieve diagnose ontvangen hebt, voer dan uw mobiele nummer in en werk uw status bij om uw dierbaren te beschermen.</value>
     <comment>Status settings page description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
@@ -123,32 +114,28 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
     <value>We sturen je een verificatiecode.
-Controleer uw SMS.</value>
+Controleer uw SMS berichten.</value>
     <comment>Status settings page verification sms code description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>We slaan uw telefoonnummer niet op. Het zal rechtstreeks naar de database van de overheid worden gestuurd.</value>
+    <value>Wij slaan uw telefoonnummer niet op. Deze zal rechtstreeks naar de database van de overheid worden verstuurd.</value>
     <comment>Status settings page sms info</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Als u een positieve diagnose kreeg</value>
+    <value>Als u een positieve diagnose ontving</value>
     <comment>Status settings page sub title</comment>
   </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>Statusinstellingen</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
+    <value>031-012-3456789</value>
     <comment>Placeholder text for phone number entry</comment>
   </data>
   <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Gedetecteerde beaconlijst</value>
+    <value>Lijst gedetecteerde bakens</value>
     <comment>Detected Beacon List Menu</comment>
   </data>
   <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Voer de code in die is verzonden 
-「{0}」</value>
+    <value>Voer de code die is verzonden naar 
+「{0}」in</value>
     <comment>Otp Enter the Code</comment>
   </data>
   <data name="TitleOtp" xml:space="preserve">
@@ -160,7 +147,7 @@ Controleer uw SMS.</value>
     <comment>Button Verify</comment>
   </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Heb je de code niet gekregen?</value>
+    <value>Code niet ontvangen?</value>
     <comment>Didn't get the code Text</comment>
   </data>
   <data name="InputSmsOTPPageResendText" xml:space="preserve">
@@ -176,35 +163,31 @@ Controleer uw SMS.</value>
     <comment>Status Update Complete page title</comment>
   </data>
   <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Lijst met bijdragers</value>
+    <value>Lijst met contribuanten</value>
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Gedetecteerde beacons</value>
+    <value>Gedetecteerde baken</value>
     <comment>Detected Beacons</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>Gebruiksrechtovereenkomst</value>
+    <value>Gebruiksvoorwaarden</value>
     <comment>License Agreement</comment>
   </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
-  </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/nl/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
   <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>id</value>
+    <value>ID</value>
     <comment>ID</comment>
   </data>
   <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Avarage Afstand</value>
+    <value>Gemiddelde afstand</value>
     <comment>TextAvgDistance</comment>
   </data>
   <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Telling</value>
+    <value>Aantal</value>
     <comment>TextCount</comment>
   </data>
   <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
@@ -224,19 +207,19 @@ Controleer uw SMS.</value>
     <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/nl/contributor.html</value>
     <comment>Url Contributor</comment>
   </data>
   <data name="UrlUpdate" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/nl/update.html</value>
     <comment>Update</comment>
   </data>
   <data name="TitleHeadsup" xml:space="preserve">
-    <value>Let op</value>
+    <value>Opgelet</value>
     <comment>Heads up</comment>
   </data>
   <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/nl/qna.html</value>
     <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
@@ -244,15 +227,193 @@ Controleer uw SMS.</value>
     <comment>How it works page step 1 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Dicht contact opnemen</value>
+    <value>Nabij contact opnemen</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Als u COVID-19 positief gediagnosticeerd</value>
+    <value>Als uw COVID-19 diagnose positief is</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Vereisten om deze app te gebruiken</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>Statusinstellingen</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>Statusinstellingen</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Opslaan</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Als u een positieve diagnose hebt ontvangen, voer dan uw mobiele nummer in en werk uw status bij om uw dierbaren te beschermen.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>Tik om de status te wijzigen</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Controleer uw netwerkverbinding.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>Inschakelen</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Niet nu</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>Deze app maakt gebruik van blootstellingsmeldingen / Bluetoothsignalen om te bepalen of u in de nabijheid van een andere contact tracing app gebruiker bent. 
+Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Belichtingsmelding toestaan / Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Contribuanten</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Blootstellingen</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Start</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>Licentie</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Melding</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Bijwerken</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Blootstellingen</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>Handmatig</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Informatie bijwerken</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Melding inschakelen</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>Geen blootstellingen bekend</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>U wordt op de hoogte gesteld als u blootgesteld bent aan iemand die een positief COVID-19-resultaat heeft gemeld.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Deel een positieve diagnose</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Deel een positieve diagnose</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>Als u positief getest bent op het virus dat COVID-19 veroorzaakt, kunt u ervoor kiezen om uw diagnose te delen.  Dit zal anderen in uw gemeenschap helpen de verspreiding van het virus te beperken.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Meer weten</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Als u een positieve diagnose ontving</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>Voer de diagnose-ID in</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>Deel een positieve diagnose</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>De testdatum helpt de app te bepalen wanneer u mogelijk besmettelijk bent geweest en stelt de juiste mensen op de hoogte van potentiële blootstelling.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>Alleen degenen die zijn blootgesteld, ontvangen een melding.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>De unieke test-ID die bij uw COVID-19-test meegeleverd is, moet worden gebruikt om uw positieve testresultaat te verifiëren.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>Verifiëren en delen</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>Probeer het later nog eens.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>Mislukt</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>Diagnose ingediend</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>Voltooien</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>Geef een diagnose-ID</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>Diagnose-ID vereist</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>Schakel blootstellingsmeldingen in voordat u een diagnose indient.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>Blootstellingsmeldingen uitgeschakeld</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>Diagnose indienen...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>Diagnose verifiëren...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>Uw diagnose kan op dit moment niet worden geverifieerd om te worden ingediend.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>Verificatie mislukt</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>Verzenden</value>
   </data>
 </root>
