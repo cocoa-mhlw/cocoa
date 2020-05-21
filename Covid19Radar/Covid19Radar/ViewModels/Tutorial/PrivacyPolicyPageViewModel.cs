@@ -47,7 +47,7 @@ namespace Covid19Radar.ViewModels
             {
                 // TODO Create and Get Secure API access token key per AES256 user from Azure Func Side
                 /*
-                 UserDataModel userData = await _userDataService.RegistUserAsync();
+                 UserDataModel userData = await _userDataService.RegisterUserAsync();
                 if (userData == null)
                 {
                     UserDialogs.Instance.HideLoading();
