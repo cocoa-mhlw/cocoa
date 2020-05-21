@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-    <file datatype="xml" source-language="en-US" target-language="fr" original="COVID19RADAR/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <file datatype="xml" source-language="en-US" target-language="fr" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
         <header>
             <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft"></tool>
         </header>
@@ -49,8 +49,7 @@
                 <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
                     <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
                     <target state="translated">Bluetooth doit être activé pour enregistrer un contact rapproché. S’il vous plaît aller à la page suivante pour l'activer.</target>
-                    <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-                    <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
+                              <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
                 </trans-unit>
                 <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
                     <source>Start</source>

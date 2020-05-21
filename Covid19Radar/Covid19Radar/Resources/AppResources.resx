@@ -158,8 +158,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Protecting our loved ones from COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
+    <value>Protecting our loved ones from COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
