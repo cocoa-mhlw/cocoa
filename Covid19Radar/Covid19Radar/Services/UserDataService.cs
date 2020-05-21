@@ -123,7 +123,7 @@ namespace Covid19Radar.Services
         public bool IsExistUserData { get => current != null; }
 
 
-        public async Task<UserDataModel> RegistUserAsync()
+        public async Task<UserDataModel> RegisterUserAsync()
         {
             UserDataModel userData = await httpDataService.PostRegisterUserAsync();
             if (userData == null)
