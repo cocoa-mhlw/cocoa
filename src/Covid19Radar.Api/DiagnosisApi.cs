@@ -18,15 +18,18 @@ namespace Covid19Radar.Api
     {
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly IValidationUserService Validation;
+        private readonly IDeviceValidationService DeviceCheck;
         private readonly ILogger<DiagnosisApi> Logger;
 
         public DiagnosisApi(
             IDiagnosisRepository diagnosisRepository,
             IValidationUserService validation,
+            IDeviceValidationService deviceCheck,
             ILogger<DiagnosisApi> logger)
         {
             DiagnosisRepository = diagnosisRepository;
             Validation = validation;
+            DeviceCheck = deviceCheck;
             Logger = logger;
         }
 
@@ -46,7 +49,12 @@ namespace Covid19Radar.Api
 
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
-            // TODO: Device verify
+            // Device validation
+            if (false == await DeviceCheck.Validation(diagnosis))
+            {
+                return validationResult.ErrorActionResult;
+            }
+
             await DiagnosisRepository.SubmitDiagnosisAsync(
                 diagnosis.SubmissionNumber,
                 diagnosis.UserUuid,
