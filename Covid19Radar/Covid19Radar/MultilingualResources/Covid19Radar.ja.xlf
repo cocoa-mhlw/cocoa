@@ -57,9 +57,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID19</source>
+          <source>Protecting our loved ones from COVID-19</source>
           <target state="translated">大切な人をCOVID-19から一緒に守りましょう</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -525,6 +525,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
           <source>SampleText</source>
           <target state="new">SampleText</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">アプリの設定</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
       </group>
     </body>
