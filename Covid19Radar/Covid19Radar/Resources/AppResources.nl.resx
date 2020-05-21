@@ -332,7 +332,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>U wordt op de hoogte gesteld als u blootgesteld bent aan iemand die een positief COVID-19-resultaat heeft gemeld.</value>
+    <value>U wordt op de hoogte gesteld als u blootgesteld bent aan iemand die een positief COVID-19 resultaat heeft gemeld.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NofityPageButtonSharePositive" xml:space="preserve">
@@ -368,7 +368,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
     <value>Alleen degenen die zijn blootgesteld, ontvangen een melding.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>De unieke test-ID die bij uw COVID-19-test meegeleverd is, moet worden gebruikt om uw positieve testresultaat te verifiëren.</value>
+    <value>De unieke test-ID die bij uw COVID-19 test meegeleverd is, moet worden gebruikt om uw positieve testresultaat te verifiëren.</value>
   </data>
   <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
     <value>Verifiëren en delen</value>

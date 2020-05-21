@@ -231,7 +231,7 @@ Kontrollera ditt SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Om du får diagnosen COVID-19-positiv</value>
+    <value>Om du får diagnosen COVID-19 positiv</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
@@ -368,7 +368,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Endast de som har utsatts kommer att få en anmälan.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Den unika testidentifieraren som följde med ditt COVID-19-test måste användas för att verifiera ditt positiva testresultat.</value>
+    <value>Den unika testidentifieraren som följde med ditt COVID-19 test måste användas för att verifiera ditt positiva testresultat.</value>
   </data>
   <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
     <value>Verifiera och dela</value>
