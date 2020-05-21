@@ -20,24 +20,16 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.MainExposures;
         }
 
-        public bool EnableNotifications
-        {
-            get => LocalStateManager.Instance.EnableNotifications;
-            set
-            {
-                LocalStateManager.Instance.EnableNotifications = value;
-                LocalStateManager.Save();
-            }
-        }
-
-
         public ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo> ExposureInformation
-            => LocalStateManager.Instance.ExposureInformation;
-
-        /*
-        public Command<ExposureInfo> ExposureSelectedCommand => new Command<ExposureInfo>(
-            (info) =>GoToAsync($"{nameof(ExposureDetailsPage)}?info={JsonConvert.SerializeObject(info)}"));
-        */
+            => new ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo>
+            {
+#if DEBUG
+                new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, Xamarin.ExposureNotifications.RiskLevel.High),
+                new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(10), 40, 3, Xamarin.ExposureNotifications.RiskLevel.Low),
+                new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(40), 20, 6, Xamarin.ExposureNotifications.RiskLevel.Medium),
+                new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(60), 60, 6, Xamarin.ExposureNotifications.RiskLevel.Highest),
+#endif
+			};
 
     }
 }
