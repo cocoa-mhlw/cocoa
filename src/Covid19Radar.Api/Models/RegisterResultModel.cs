@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.Models
 {
     [JsonObject("registerResultModel")]
     public class RegisterResultModel

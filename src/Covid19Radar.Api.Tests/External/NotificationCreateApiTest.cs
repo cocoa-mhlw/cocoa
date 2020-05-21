@@ -1,7 +1,7 @@
-﻿using Covid19Radar.DataAccess;
-using Covid19Radar.DataStore;
-using Covid19Radar.Models;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.DataStore;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Cosmos;
