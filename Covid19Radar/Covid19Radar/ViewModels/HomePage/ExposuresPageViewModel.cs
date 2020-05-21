@@ -8,38 +8,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ExposuresPageViewModel : ViewModelBase, IDisposable
+    public class ExposuresPageViewModel : ViewModelBase
     {
         public ExposuresPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.MainExposures;
-            MessagingCenter.Instance.Subscribe<ExposureNotificationHandler>(this, "exposure_info_changed", h =>
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    ExposureInformation.Clear();
-                    foreach (var i in LocalStateManager.Instance.ExposureInformation)
-                        ExposureInformation.Add(i);
-                }));
-
         }
 
-        public ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo> ExposureInformation
-            => new ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo>
+        public bool EnableNotifications
+        {
+            get => LocalStateManager.Instance.EnableNotifications;
+            set
             {
-#if DEBUG
-                new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, Xamarin.ExposureNotifications.RiskLevel.High),
-                new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(10), 40, 3, Xamarin.ExposureNotifications.RiskLevel.Low),
-                new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(40), 20, 6, Xamarin.ExposureNotifications.RiskLevel.Medium),
-                new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(60), 60, 6, Xamarin.ExposureNotifications.RiskLevel.Highest),
-#endif
-			};
+                LocalStateManager.Instance.EnableNotifications = value;
+                LocalStateManager.Save();
+            }
+        }
 
-        public void Dispose()
-            => MessagingCenter.Instance.Unsubscribe<ExposureNotificationHandler>(this, "exposure_info_changed");
+
+        public ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo> ExposureInformation
+            => LocalStateManager.Instance.ExposureInformation;
+
+        /*
+        public Command<ExposureInfo> ExposureSelectedCommand => new Command<ExposureInfo>(
+            (info) =>GoToAsync($"{nameof(ExposureDetailsPage)}?info={JsonConvert.SerializeObject(info)}"));
+        */
 
     }
 }
