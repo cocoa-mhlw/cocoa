@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeyBlobService : ITemporaryExposureKeyBlobService
     {

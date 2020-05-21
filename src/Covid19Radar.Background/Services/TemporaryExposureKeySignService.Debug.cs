@@ -5,7 +5,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeySignServiceDebug : ITemporaryExposureKeySignService
     {

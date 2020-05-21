@@ -10,7 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeyExportBatchService : ITemporaryExposureKeyExportBatchService
     {
