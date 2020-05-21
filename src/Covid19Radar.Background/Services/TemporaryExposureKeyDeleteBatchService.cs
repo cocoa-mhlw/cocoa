@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeyDeleteBatchService : ITemporaryExposureKeyDeleteBatchService
     {
