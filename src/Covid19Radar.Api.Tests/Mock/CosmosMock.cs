@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Covid19Radar.DataStore;
+using Covid19Radar.Api.DataStore;
 using Microsoft.Azure.Cosmos;
 
 namespace Covid19Radar.Api.Tests.Mock
