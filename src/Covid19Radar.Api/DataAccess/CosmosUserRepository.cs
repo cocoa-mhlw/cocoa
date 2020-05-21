@@ -1,5 +1,5 @@
-﻿using Covid19Radar.DataStore;
-using Covid19Radar.Models;
+﻿using Covid19Radar.Api.DataStore;
+using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
 using System;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 #nullable enable
 
-namespace Covid19Radar.DataAccess
+namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosUserRepository : IUserRepository
     {

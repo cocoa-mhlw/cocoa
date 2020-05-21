@@ -1,6 +1,6 @@
-﻿using Covid19Radar.DataAccess;
-using Covid19Radar.Models;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;

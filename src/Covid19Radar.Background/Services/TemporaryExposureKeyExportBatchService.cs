@@ -1,6 +1,6 @@
-﻿using Covid19Radar.DataAccess;
-using Covid19Radar.Models;
-using Covid19Radar.Protobuf;
+﻿using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Protobuf;
 using Google.Protobuf;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;

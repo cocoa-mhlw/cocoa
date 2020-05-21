@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Models;
+﻿using Covid19Radar.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -1,4 +1,4 @@
-﻿using Covid19Radar.DataAccess;
+﻿using Covid19Radar.Api.DataAccess;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;

@@ -1,5 +1,5 @@
 using Covid19Radar.Api;
-using Covid19Radar.DataAccess;
+using Covid19Radar.Api.DataAccess;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.Models
 {
 	public class DiagnosisSubmissionParameter : IUser
 	{
