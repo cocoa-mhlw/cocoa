@@ -17,11 +17,11 @@
     <comment>I want to help</comment>
   </data>
   <data name="TitleHowItWorks" xml:space="preserve">
-    <value>工作原理</value>
+    <value>运作原理</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
-    <value>下一张</value>
+    <value>下一页</value>
     <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
@@ -33,19 +33,19 @@
     <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
-    <value>无需输入个人信息。我们使用唯一 ID，在安装应用时分配给您。</value>
+    <value>您无需输入个人信息。在安装应用时，我们将会为您分配唯一ID.</value>
     <comment>How it works page step 1 description</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
-    <value>与其他应用用户的接触总计超过 30 分钟，平均半径接近 2 米，记录为"紧密联系人"。</value>
+    <value>在与其他本应用使用者接触超过30分钟且平均距离少于2米时，会被记录为一次“紧密接触”。</value>
     <comment>How it works page step 2 description</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>验证电话号码后，请手动将状态更改为"正"。积极"工作流，现在与相关方协调。</value>
+    <value>在验证您的电话号码后，请将状态更改为“阳性”。我们正在与相关方面协商“阳性”的应对流程。</value>
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>蓝牙需要打开才能记录密切接触。请转到下一页将其打开。</value>
+    <value>您需要启动蓝牙以记录紧密接触情况。请到下一页启动蓝牙。</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
@@ -53,24 +53,15 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>保护我们的亲人免受 COVID-19 的保护</value>
+    <value>从 COVID-19 手中保护我们的至爱</value>
     <comment>Protecting our loved ones from COVID-19</comment>
   </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>此应用程序使用蓝牙信号来确定您是否靠近其他联系人跟踪应用用户。
-选择"始终允许"以设置蓝牙。</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>允许使用蓝牙</value>
-    <comment>Device access page Bluetooth title</comment>
-  </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>设备访问</value>
+    <value>设备权限</value>
     <comment>Device access page title</comment>
   </data>
   <data name="TitleAppDescription" xml:space="preserve">
-    <value>应用说明</value>
+    <value>应用介绍</value>
     <comment>App Description</comment>
   </data>
   <data name="ButtonRegister" xml:space="preserve">
@@ -90,15 +81,15 @@
     <comment>App Name</comment>
   </data>
   <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>状态设置</value>
+    <value>状态设定</value>
     <comment>Status Settings Menu</comment>
   </data>
   <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>贡献者列表</value>
+    <value>贡献者名单</value>
     <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>更新信息</value>
+    <value>更新资讯</value>
     <comment>Update Information Menu</comment>
   </data>
   <data name="ButtonHome" xml:space="preserve">
@@ -106,53 +97,49 @@
     <comment>HOME</comment>
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>您已经准备好了</value>
+    <value>一切准备就绪</value>
     <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>设置已完成</value>
+    <value>安装完毕</value>
     <comment>Set up Completed</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>如果您收到阳性诊断，请输入您的手机号码并更新您的状态，以保护您的亲人。</value>
+    <value>如果您已被确诊为阳性，为了保护您身边的人，请输入电话号码并更新您的状态。</value>
     <comment>Status settings page description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>输入手机号码</value>
+    <value>请输入手机号码</value>
     <comment>Status settings page enter number text</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>我们将向您发送验证码。
-请检查您的短信。</value>
+    <value>我们将会向您发送验证码。
+请查看您的短讯。</value>
     <comment>Status settings page verification sms code description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>我们不会存储您的电话号码。它将直接发送到政府的数据库。</value>
+    <value>我们不会储存您的电话号码。它将会被直接发送到政府的数据库中。</value>
     <comment>Status settings page sms info</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>如果您收到阳性诊断</value>
+    <value>如果您被确诊为阳性</value>
     <comment>Status settings page sub title</comment>
-  </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>状态设置</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
   </data>
   <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>检测到信标列表</value>
+    <value>检测到的设备</value>
     <comment>Detected Beacon List Menu</comment>
   </data>
   <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>输入发送到的代码
+    <value>请输入验证码，验证码已被发送至
 「{0}」</value>
     <comment>Otp Enter the Code</comment>
   </data>
   <data name="TitleOtp" xml:space="preserve">
-    <value>输入代码</value>
+    <value>请输入验证码</value>
     <comment>Otp Title</comment>
   </data>
   <data name="ButtonVerify" xml:space="preserve">
@@ -160,7 +147,7 @@
     <comment>Button Verify</comment>
   </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>未获取代码？</value>
+    <value>没有收到验证码？</value>
     <comment>Didn't get the code Text</comment>
   </data>
   <data name="InputSmsOTPPageResendText" xml:space="preserve">
@@ -168,59 +155,55 @@
     <comment>Resend Text</comment>
   </data>
   <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>状态更新完成</value>
+    <value>状态已被更新</value>
     <comment>Status Update Complete page text</comment>
   </data>
   <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>状态更新完成</value>
+    <value>状态已被更新</value>
     <comment>Status Update Complete page title</comment>
   </data>
   <data name="TitleContributorsPage" xml:space="preserve">
-    <value>参与者列表</value>
+    <value>贡献者名单</value>
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>检测到信标</value>
+    <value>检测到的设备</value>
     <comment>Detected Beacons</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>许可协议</value>
+    <value>授权协议</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
   <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>编号</value>
+    <value>ID</value>
     <comment>ID</comment>
   </data>
   <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>阿瓦拉格距离</value>
+    <value>平均距离</value>
     <comment>TextAvgDistance</comment>
   </data>
   <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>计数</value>
+    <value>数目</value>
     <comment>TextCount</comment>
   </data>
   <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>已过时间</value>
+    <value>经过时间</value>
     <comment>TextElapsedTime</comment>
   </data>
   <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>上次时间</value>
+    <value>最后检测时间</value>
     <comment>TextLastTime</comment>
   </data>
   <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>少校否</value>
+    <value>主值</value>
     <comment>MajorNo</comment>
   </data>
   <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>次要否</value>
+    <value>副值</value>
     <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
@@ -232,7 +215,7 @@
     <comment>Update</comment>
   </data>
   <data name="TitleHeadsup" xml:space="preserve">
-    <value>请注意</value>
+    <value>注意事项</value>
     <comment>Heads up</comment>
   </data>
   <data name="UrlHeadsup" xml:space="preserve">
@@ -244,15 +227,199 @@
     <comment>How it works page step 1 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>录制密切接触者</value>
+    <value>记录紧密接触</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>如果您被诊断为 COVID-19 阳性</value>
+    <value>如果您被诊断为COVID-19阳性</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>使用此应用程序的要求</value>
+    <value>使用该应用需要</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>状态设置</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>状态设置</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>保存</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>如果您已被确诊为阳性，为了保护您身边的人，请输入电话号码并更新您的状态。</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>点击以更改状态</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>请检查您的网络连接。</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>确定</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>启用 </value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>暂时不</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>该应用会使用暴露通知/蓝牙信号来确定您是否与其他该追踪应用的用户有所接近。
+选择“始终允许”以设置蓝牙。</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>允许暴露通知/蓝牙</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>贡献者</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>暴露</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>主页</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>协议</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>通知</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>更新</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>暴露</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>指南</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>更新信息</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>启用通知</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>无已知暴露数据</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>如果您接触过确诊为 COVID-19 阳性结果的人，您将收到通知。</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>分享阳性诊断</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>分享阳性诊断</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>如果您被确诊为 COVID-19 阳性，您可以选择共享您的诊断结果。 这将有助于您所在社区的其他人控制病毒的传播。</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>了解更多</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>如果您收到阳性诊断</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>请输入诊断标记</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>分享阳性诊断</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>检测日期有助于应用推断您在何时可能具有传染性，并通知处于潜在暴露风险的用户。</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>仅被暴露用户才会收到通知。</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>必须使用 COVID-19 检测附带的唯一检测标记来验证您的阳性检测结果。</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>验证和共享</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>请稍后重试。</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>诊断已提交</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>请提供诊断标记</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>需要诊断标记</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>请在提交诊断之前启用暴露通知。</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>已禁用暴露通知</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>正在提交诊断结果...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>正在验证诊断结果...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>此时无法验证您的诊断结果。</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>验证失败</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>示例文本</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>示例文本</value>
   </data>
 </root>
