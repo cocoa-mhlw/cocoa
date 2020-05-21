@@ -27,7 +27,7 @@ namespace Covid19Radar.Common
         {
             if (this._timerRunning == true)
                 return;
-            RegistTimer(this.HandleFunc);
+            RegisterTimer(this.HandleFunc);
         }
 
         public void Stop()
@@ -47,12 +47,12 @@ namespace Covid19Radar.Common
                         this.TimeOutEvent(new EventArgs());
                     });
                 }
-                RegistTimer(this.HandleFunc);
+                RegisterTimer(this.HandleFunc);
             }
             return false;
         }
 
-        private void RegistTimer(Func<bool> callback)
+        private void RegisterTimer(Func<bool> callback)
         {
             this._startDateTime = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, DateTime.UtcNow.Hour, DateTime.UtcNow.Minute, 0);
             double spanMinutes = 60 - this._startDateTime.Minute + _timeDiffernce;
