@@ -332,7 +332,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>Sie werden benachrichtigt, wenn Sie jemandem ausgesetzt wurden, der ein positives COVID-19-Ergebnis gemeldet hat.</value>
+    <value>Sie werden benachrichtigt, wenn Sie jemandem ausgesetzt wurden, der ein positives COVID-19 Ergebnis gemeldet hat.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NofityPageButtonSharePositive" xml:space="preserve">
@@ -368,7 +368,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <value>Nur diejenigen, die exponiert wurden, erhalten eine Benachrichtigung.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Die eindeutige Testkennung, die mit Ihrem COVID-19-Test enthalten ist, muss verwendet werden, um Ihr positives Testergebnis zu überprüfen.</value>
+    <value>Die eindeutige Testkennung, die mit Ihrem COVID-19 Test enthalten ist, muss verwendet werden, um Ihr positives Testergebnis zu überprüfen.</value>
   </data>
   <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
     <value>Überprüfen und Freigeben</value>
