@@ -16,7 +16,7 @@
     <PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj" />
+    <ProjectReference Include="..\Covid19Radar.Api.Common\Covid19Radar.Api.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

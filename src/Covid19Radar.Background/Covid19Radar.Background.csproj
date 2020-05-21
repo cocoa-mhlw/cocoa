@@ -13,7 +13,7 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.6" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj" />
+    <ProjectReference Include="..\Covid19Radar.Api.Common\Covid19Radar.Api.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
