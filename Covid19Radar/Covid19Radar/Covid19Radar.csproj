@@ -73,9 +73,6 @@
     <Compile Update="Views\HomePage\DebugPage.xaml.cs">
       <DependentUpon>DebugPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\ExposureDetailPage.xaml.cs">
-      <DependentUpon>ExposureDetailPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\HomePage\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
