@@ -10,7 +10,7 @@ namespace Covid19Radar.Api.Extensions
 {
     public static class HttpRequestExtensions
     {
-        public static async Task<T> ParseAndThrow<T>(this HttpRequest request)
+        public static async Task<T> ParseAndThrowAsync<T>(this HttpRequest request)
         where T : IPayload
         {
             string requestBody = await new StreamReader(request.Body).ReadToEndAsync();
