@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>Yardım etmek istiyorum.</value>
+    <value>Yardım etmek istiyorum</value>
     <comment>I want to help</comment>
   </data>
   <data name="TitleHowItWorks" xml:space="preserve">
@@ -29,23 +29,23 @@
     <comment>Consent by user page</comment>
   </data>
   <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>Katılıyorum ve Devam Et</value>
+    <value>Onayla ve Devam Et</value>
     <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
-    <value>Kişisel bilgilerinizi sokmaya gerek yok. Bir uygulamayı yüklerken size tahsis edilmiş benzersiz bir kimlik kullanıyoruz.</value>
+    <value>Kişisel bilgilerinizi girmenize gerek bulunmamaktadır. Bir uygulamayı yüklerken size tahsis edilmiş özel bir numara kullanıyoruz.</value>
     <comment>How it works page step 1 description</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
-    <value>Ortalama 2 m'den daha yakın bir yarıçap içinde, toplamda 30 dakikadan daha uzun bir süre için başka bir uygulama kullanıcısıyla temas "Yakın İletişim" olarak kaydedilir.</value>
+    <value>Başka bir uygulama kullanıcısıyla ortalama 2 m'den daha yakın ve toplamda 30 dakikadan daha uzun bir süre birarada bulunmak "Yakın Temas" olarak kaydedilir.</value>
     <comment>How it works page step 2 description</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Lütfen telefon numaranızı doğruladıktan sonra durumunuzu el ile "Pozitif" olarak değiştirin." Pozitif" İş Akışı , Şimdi ilgili taraflarla koordinasyon.</value>
+    <value>Lütfen telefon numaranızı doğruladıktan sonra durumunuzu "Pozitif" olarak değiştirin." Pozitif" İş Akışı , Şimdi ilgili taraflarla koordinasyon sağlıyoruz.</value>
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth'un yakın temas kaydetmek için açık olması gerekir. Açmak için lütfen bir sonraki sayfaya gidin.</value>
+    <value>Yakın temasları kaydetmek için Bluetooth'unuzun açık durumda olması gerekir. Açmak için lütfen bir sonraki sayfaya ilerleyin.</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Sevdiklerimizi COVID19'dan korumak</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>Bu uygulama, başka bir kişi izleme uygulaması kullanıcısının yakınında olup olmadığınızı belirlemek için Bluetooth sinyallerini kullanır. 
-Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Bluetooth'a izin ver</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>Sevdiklerimizi COVID-19'dan korumak için</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Cihaz Erişimi</value>
@@ -74,7 +65,7 @@ Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
     <comment>App Description</comment>
   </data>
   <data name="ButtonRegister" xml:space="preserve">
-    <value>Kaydet</value>
+    <value>Kaydol</value>
     <comment>Register</comment>
   </data>
   <data name="ButtonAgree" xml:space="preserve">
@@ -82,7 +73,7 @@ Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
     <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
-    <value>GİRİŞ</value>
+    <value>ANA SAYFA</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
@@ -94,15 +85,15 @@ Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
     <comment>Status Settings Menu</comment>
   </data>
   <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>Katkıda Bulunanlar Listesi</value>
+    <value>Katkıda Bulunanlar</value>
     <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Bilgileri güncelleştir</value>
+    <value>Bilgileri Güncelle</value>
     <comment>Update Information Menu</comment>
   </data>
   <data name="ButtonHome" xml:space="preserve">
-    <value>GİRİŞ</value>
+    <value>ANA SAYFA</value>
     <comment>HOME</comment>
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
@@ -110,11 +101,11 @@ Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
     <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Tamamlandı'yı ayarlama</value>
+    <value>Kurulum Tamamlandı</value>
     <comment>Set up Completed</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Olumlu bir teşhis aldıysanız, lütfen cep telefonu numaranızı girin ve sevdiklerinizi korumak için durumunuzu güncelleyin.</value>
+    <value>Testiniz pozitif ise lütfen cep telefonu numaranızı girin ve sevdiklerimizi korumak için durumunuzu güncelleyin.</value>
     <comment>Status settings page description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
@@ -122,33 +113,27 @@ Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
     <comment>Status settings page enter number text</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Size bir doğrulama kodu göndereceğiz.
-Lütfen SMS'inizi kontrol edin.</value>
+    <value>Size bir doğrulama kodu göndereceğiz.Lütfen cep telefonu mesajlarınızı(SMS) kontrol edin.</value>
     <comment>Status settings page verification sms code description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Telefon numaranızı saklamayacağız. Doğrudan hükümetin veri tabanına gönderilecek.</value>
+    <value>Telefon numaranızı saklamıyoruz. Bu bilgi direk olarak devletin veri tabanına gönderilecektir.</value>
     <comment>Status settings page sms info</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Eğer pozitif tanı aldıysanız</value>
+    <value>Eğer test sonucunuz pozitif ise</value>
     <comment>Status settings page sub title</comment>
   </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>Durum Ayarları</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
+    <value>090-555-999-88-77</value>
     <comment>Placeholder text for phone number entry</comment>
   </data>
   <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Algılanan İşaret Listesi</value>
+    <value>Algılanan Cihaz Listesi</value>
     <comment>Detected Beacon List Menu</comment>
   </data>
   <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Gönderilen Kodu girin 
-「{0}」</value>
+    <value>Gönderilen Kodu girin「{0}」</value>
     <comment>Otp Enter the Code</comment>
   </data>
   <data name="TitleOtp" xml:space="preserve">
@@ -164,7 +149,7 @@ Lütfen SMS'inizi kontrol edin.</value>
     <comment>Didn't get the code Text</comment>
   </data>
   <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Yeniden gönder</value>
+    <value>Tekrar gönder</value>
     <comment>Resend Text</comment>
   </data>
   <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
@@ -176,39 +161,35 @@ Lütfen SMS'inizi kontrol edin.</value>
     <comment>Status Update Complete page title</comment>
   </data>
   <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Katkıda Bulunanlar Listesi</value>
+    <value>Katkıda Bulunanlar</value>
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Algılanan İşaretçiler</value>
+    <value>Algılanan Cihazlar</value>
     <comment>Detected Beacons</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisans Sözleşmesi</value>
     <comment>License Agreement</comment>
   </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
-  </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
   <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>kimlik</value>
+    <value>Kimlik</value>
     <comment>ID</comment>
   </data>
   <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Avarage Mesafesi</value>
+    <value>Ortalama Mesafe</value>
     <comment>TextAvgDistance</comment>
   </data>
   <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Sayı</value>
+    <value>Toplam</value>
     <comment>TextCount</comment>
   </data>
   <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>ElapsedTime</value>
+    <value>Geçen Zaman</value>
     <comment>TextElapsedTime</comment>
   </data>
   <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
@@ -216,11 +197,11 @@ Lütfen SMS'inizi kontrol edin.</value>
     <comment>TextLastTime</comment>
   </data>
   <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>Binbaşı No</value>
+    <value>Ana Numara</value>
     <comment>MajorNo</comment>
   </data>
   <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MinorNo</value>
+    <value>İkincil Numara</value>
     <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
@@ -232,7 +213,7 @@ Lütfen SMS'inizi kontrol edin.</value>
     <comment>Update</comment>
   </data>
   <data name="TitleHeadsup" xml:space="preserve">
-    <value>Ön bilgilendirme</value>
+    <value>Dikkat Edin</value>
     <comment>Heads up</comment>
   </data>
   <data name="UrlHeadsup" xml:space="preserve">
@@ -244,15 +225,192 @@ Lütfen SMS'inizi kontrol edin.</value>
     <comment>How it works page step 1 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Yakın İletişimi Kaydetme</value>
+    <value>Yakın Temas Kaydediliyor</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>EĞER COVID-19 pozitif tanısı konursa</value>
+    <value>Size COVID-19 pozitif tanısı konulursa</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Bu uygulamayı kullanma gereksinimleri</value>
+    <value>Uygulama gereksinimleri</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>Durum Ayarları</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>Durum Ayarları</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Kaydet</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Testiniz pozitif ise, lütfen cep telefonu numaranızı girin ve sevdiklerimizi korumak için durumunuzu güncelleyin.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>Durumunuzu değiştirmek için dokunun</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Lütfen ağ bağlantınızı kontrol edin.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>Tamam</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>Etkinleştir</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>NotNow</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>Bu uygulama, başka bir kişi izleme uygulaması kullanıcısının yakınında olup olmadığınızı belirlemek için Pozlama Bildirimi / Bluetooth sinyallerini kullanır. Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Pozlama Bildirimine İzin Ver / Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Katkıda bulunanlar</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Pozlama</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Giriş</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>Lisans</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Bildir</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Güncelleştir</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Pozlama</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>El ile</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Bilgi Mation'ı Güncelle</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Bildirimi Etkinleştir</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>Bilinen pozlama yok</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>Olumlu bir COVID-19 sonucu bildiren birine maruz kaldıysanız size bildirilir.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Olumlu Tanıyı Paylaşın</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Olumlu Tanıyı Paylaşın</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>COVID-19'a neden olan virüs için pozitif çıktıysanız, tanınızı paylaşmayı seçebilirsiniz.  Bu, topluluğunuzun diğer lerinin virüsün yayılmasını içermesine yardımcı olur.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Daha fazlasını öğrenin</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Eğer pozitif tanı aldıysanız</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>Lütfen Tanı Tanımlayıcısını girin</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>Olumlu Tanıyı Paylaşın</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>Test tarihi, uygulamanın ne zaman bulaşıcı olabileceğinibilmenize ve doğru kişileri potansiyel maruz kalma hakkında bilgilendirmesine yardımcı olur.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>Yalnızca maruz kalanlara bir bildirim gönderilir.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>COVID-19 testinizle birlikte gelen benzersiz test tanımlayıcısı pozitif test sonucunuzu doğrulamak için kullanılmalıdır.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>Doğrula ve Paylaş</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>Lütfen daha sonra yeniden deneyin.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>Başarısız</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>Tanı Gönderildi</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>Tamamlandı</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>Lütfen bir Tanı Tanımlayıcısı sağlayın</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>Tanı Tanımlayıcı Gerekli</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>Lütfen bir tanı göndermeden önce Pozlama Bildirimleri'ni etkinleştirin.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>Pozlama Bildirimleri Devre Dışı</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>Tanı Gönderme...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>Tanı doğrulama...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>Tanınız şu anda doğrulanamıyor.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>Doğrulama Başarısız Oldu</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>Gönder</value>
   </data>
 </root>
