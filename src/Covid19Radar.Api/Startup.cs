@@ -21,6 +21,7 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
             builder.Services.AddSingleton<IDiagnosisRepository, CosmosDiagnosisRepository>();
+            builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
         }
     }
 }

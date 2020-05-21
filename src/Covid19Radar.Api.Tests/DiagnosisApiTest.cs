@@ -21,14 +21,16 @@ namespace Covid19Radar.Api.Tests
             // preparation
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var validation = new Mock<IValidationUserService>();
+            var deviceCheck = new Mock<IDeviceValidationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
-            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, validation.Object, logger);
+            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, validation.Object, deviceCheck.Object, logger);
         }
 
         [DataTestMethod]
-        [DataRow(true, "xxxxx", "UserUuid")]
-        [DataRow(false, "xxxxx", "UserUuid")]
-        public async Task RunAsyncMethod(bool isValid, string submissionNumber, string userUuid)
+        [DataRow(true, true, "xxxxx", "UserUuid")]
+        [DataRow(false, true, "xxxxx", "UserUuid")]
+        [DataRow(false, true, "xxxxx", "UserUuid")]
+        public async Task RunAsyncMethod(bool isValid, bool isValidDevice, string submissionNumber, string userUuid)
         {
             // preparation
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
@@ -40,8 +42,10 @@ namespace Covid19Radar.Api.Tests
                 IsValid = isValid
             };
             validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
+            var deviceCheck = new Mock<IDeviceValidationService>();
+            deviceCheck.Setup(_ => _.Validation(It.IsAny<DiagnosisSubmissionParameter>())).ReturnsAsync(isValidDevice);
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
-            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, validation.Object, logger);
+            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, validation.Object, deviceCheck.Object, logger);
             var context = new Mock.HttpContextMock();
             var bodyJson = new DiagnosisSubmissionParameter()
             {
