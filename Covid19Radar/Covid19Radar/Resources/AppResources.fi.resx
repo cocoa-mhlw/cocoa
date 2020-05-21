@@ -332,7 +332,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>Saat ilmoituksen, jos olet altistunut jollekulle, joka ilmoitti positiivisesta COVID-19-tuloksesta.</value>
+    <value>Saat ilmoituksen, jos olet altistunut jollekulle, joka ilmoitti positiivisesta COVID-19 tuloksesta.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NofityPageButtonSharePositive" xml:space="preserve">
@@ -368,7 +368,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
     <value>Vain altistuneet saavat ilmoituksen.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Covid-19-testin mukana toimitettua yksilöllistä testitunnistetta on käytettävä positiivisen testituloksen vahvistamiseen.</value>
+    <value>Covid-19 testin mukana toimitettua yksilöllistä testitunnistetta on käytettävä positiivisen testituloksen vahvistamiseen.</value>
   </data>
   <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
     <value>Tarkista ja jaa</value>

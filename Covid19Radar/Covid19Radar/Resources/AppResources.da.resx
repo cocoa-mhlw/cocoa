@@ -332,7 +332,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>Du får besked, hvis du har været udsat for en person, der har rapporteret et positivt COVID-19-resultat.</value>
+    <value>Du får besked, hvis du har været udsat for en person, der har rapporteret et positivt COVID-19 resultat.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NofityPageButtonSharePositive" xml:space="preserve">
@@ -368,7 +368,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Kun dem, der er blevet udsat, vil modtage en meddelelse.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Den entydige test-id, der fulgte med din COVID-19-test, skal bruges til at bekræfte dit positive testresultat.</value>
+    <value>Den entydige test-id, der fulgte med din COVID-19 test, skal bruges til at bekræfte dit positive testresultat.</value>
   </data>
   <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
     <value>Bekræft og del</value>

@@ -409,7 +409,7 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Saat ilmoituksen, jos olet altistunut jollekulle, joka ilmoitti positiivisesta COVID-19-tuloksesta.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Saat ilmoituksen, jos olet altistunut jollekulle, joka ilmoitti positiivisesta COVID-19tuloksesta.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
         <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
@@ -455,7 +455,7 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
         </trans-unit>
         <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Covid-19-testin mukana toimitettua yksilöllistä testitunnistetta on käytettävä positiivisen testituloksen vahvistamiseen.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Covid-19 testin mukana toimitettua yksilöllistä testitunnistetta on käytettävä positiivisen testituloksen vahvistamiseen.</target>
         </trans-unit>
         <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
           <source>Verify and Share</source>
