@@ -46,6 +46,19 @@ namespace Covid19Radar.Api.Services
             symmetric2.IV = Convert.FromBase64String(config.GetSection("CRYPTION_IV2").Value);
         }
 
+        [ThreadStatic]
+        static byte[] bufHash;
+        private void InitBufHash()
+        {
+            if (bufHash == null) { bufHash = new byte[64]; }
+        }
+
+        [ThreadStatic]
+        static byte[] bufInput;
+        private void InitBufInput()
+        {
+            if (bufInput == null) { bufInput = new byte[2048]; }
+        }
 
         private byte[] Random()
         {
@@ -54,13 +67,11 @@ namespace Covid19Radar.Api.Services
             return r;
         }
 
-        [ThreadStatic]
-        static byte[] bufHash;
         public string CreateSecret(string userUuid)
         {
             var val = Random().Concat(Encoding.UTF8.GetBytes(userUuid)).ToArray();
             int hashSize;
-            if (bufHash == null) { bufHash = new byte[64]; }
+            InitBufHash();
             createHash().TryComputeHash(val, bufHash, out hashSize);
             var secret = val.Concat(bufHash).ToArray();
             using (var c = symmetric2.CreateEncryptor())
@@ -69,14 +80,12 @@ namespace Covid19Radar.Api.Services
             }
         }
 
-        [ThreadStatic]
-        static byte[] bufInput;
         public bool ValidateSecret(string userUuid, string secret)
         {
             if (string.IsNullOrWhiteSpace(userUuid)) { return false; }
             if (userUuid.Length > 256) { return false; }
             int bufInputLength;
-            if (bufInput == null) { bufInput = new byte[2048]; }
+            InitBufInput();
             Array.Clear(bufInput, 0, bufInput.Length);
             if (!Convert.TryFromBase64String(secret, bufInput, out bufInputLength)) { return false; }
             using (var c = symmetric2.CreateDecryptor())
@@ -87,7 +96,7 @@ namespace Covid19Radar.Api.Services
                     return false;
                 }
                 int hashSize;
-                if (bufHash == null) { bufHash = new byte[64]; }
+                InitBufHash();
                 createHash().TryComputeHash(result.AsSpan(0, result.Length - 64), bufHash, out hashSize);
                 return bufHash.SequenceEqual(result.Skip(result.Length - 64).Take(64));
             }
@@ -96,7 +105,7 @@ namespace Covid19Radar.Api.Services
         public string Protect(string secret)
         {
             int bufInputLength;
-            if (bufInput == null) { bufInput = new byte[2048]; }
+            InitBufInput();
             Array.Clear(bufInput, 0, bufInput.Length);
             Convert.TryFromBase64String(secret, bufInput, out bufInputLength);
             using (var c = symmetric.CreateEncryptor())
@@ -109,7 +118,7 @@ namespace Covid19Radar.Api.Services
         public string Unprotect(string protectSecret)
         {
             int bufInputLength;
-            if (bufInput == null) { bufInput = new byte[2048]; }
+            InitBufInput();
             Array.Clear(bufInput, 0, bufInput.Length);
             Convert.TryFromBase64String(protectSecret, bufInput, out bufInputLength);
             using (var c = symmetric.CreateDecryptor())
