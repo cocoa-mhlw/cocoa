@@ -12,6 +12,7 @@ using Prism.Navigation.Xaml;
 using Acr.UserDialogs;
 using Covid19Radar.Renderers;
 using Covid19Radar.Views;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -53,6 +54,27 @@ namespace Covid19Radar.ViewModels
             get { return _minDate; }
             set { SetProperty(ref _minDate, value); }
         }
+
+
+        public bool DiagnosisPending
+    => (LocalStateManager.Instance.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue)
+        >= DateTimeOffset.UtcNow.AddDays(-14);
+
+        public DateTimeOffset DiagnosisShareTimestamp
+            => LocalStateManager.Instance.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue;
+
+        public Command SharePositiveDiagnosisCommand
+            => new Command(() =>
+            {
+                // To Share Positive Diag
+            });
+
+        public Command LearnMoreCommand
+            => new Command(() =>
+            {
+                // TODO move to browser
+                Browser.OpenAsync("https://www.google.co.jp/");
+            });
 
 
 
