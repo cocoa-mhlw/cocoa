@@ -56,21 +56,6 @@
         <Setter Property="Color" Value="{StaticResource Primary}" />
     </Style>
 
-
-    <!--
-    <Style x:Key="ShellBaseStyle" TargetType="Element">
-        <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource Primary}" />
-        <Setter Property="Shell.ShellForegroundColor" Value="{StaticResource TextIcons}" />
-        <Setter Property="Shell.ShellTitleColor" Value="{StaticResource TextIcons}" />
-        <Setter Property="Shell.ShellDisabledColor" Value="{StaticResource Disabled}" />
-        <Setter Property="Shell.ShellUnselectedColor" Value="{StaticResource SecondaryText}" />
-        <Setter Property="Shell.ShellTabBarBackgroundColor" Value="{StaticResource Primary}" />
-        <Setter Property="Shell.ShellTabBarForegroundColor" Value="White"/>
-        <Setter Property="Shell.ShellTabBarUnselectedColor" Value="#95FFFFFF"/>
-        <Setter Property="Shell.ShellTabBarTitleColor" Value="White"/>
-    </Style>
-    <Style TargetType="ShellItem" BasedOn="{StaticResource ShellBaseStyle}" />-->
-
     <Style x:Key="DefaultEntry" TargetType="Entry">
         <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
         <Setter Property="BackgroundColor" Value="Transparent" />
@@ -329,17 +314,6 @@
         <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}" />
     </Style>
 
-    <Style x:Key="DefaultCardFrame" TargetType="Frame">
-        <Setter Property="BorderColor" Value="{StaticResource Background}" />
-        <Setter Property="CornerRadius" Value="5" />
-        <Setter Property="Padding" Value="10" />
-    </Style>
-
-    <Style x:Key="DefaultParentCardFrame" TargetType="Frame">
-        <Setter Property="CornerRadius" Value="10" />
-        <Setter Property="Padding" Value="14" />
-    </Style>
-
     <Style x:Key="DefaultActivityIndicatorFrame" TargetType="Frame">
         <Setter Property="BackgroundColor" Value="{StaticResource SecondaryText}" />
     </Style>
@@ -371,4 +345,52 @@
         <Setter Property="Margin" Value="10,0,0,0" />
         <Setter Property="VerticalOptions" Value="CenterAndExpand" />
     </Style>
+
+    <!--  Collection List  -->
+
+    <Style x:Key="CardLabelSmallColor" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
+
+    <Style x:Key="CardLabelSmall" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+    </Style>
+
+    <Style x:Key="ImageLableStackLayout" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Horizontal" />
+        <Setter Property="Spacing" Value="20" />
+    </Style>
+
+    <Style x:Key="DetailsStackLayout" TargetType="StackLayout">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="Start" />
+    </Style>
+
+    <Style x:Key="CardImageStyle" TargetType="Image">
+        <Setter Property="WidthRequest" Value="16" />
+        <Setter Property="HeightRequest" Value="16" />
+    </Style>
+
+    <Style x:Key="FrameCardViewStyle" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="OutlineColor" Value="LightGray" />
+        <Setter Property="BorderColor" Value="LightGray" />
+        <Setter Property="HasShadow" Value="True" />
+    </Style>
+
+    <Style x:Key="ItemsCardViewStackLayoutStyle" TargetType="StackLayout">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
 </ResourceDictionary>

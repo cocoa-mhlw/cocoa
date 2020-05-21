@@ -52,8 +52,9 @@
                 HorizontalOptions="Center"
                 RowSpacing="20">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*" />
-                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.2*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -85,12 +86,14 @@
                 <Label
                     Grid.Row="0"
                     Grid.Column="1"
+                    Grid.ColumnSpan="2"
                     HorizontalOptions="End"
                     Style="{StaticResource DefaultLabelSmall}"
-                    Text="{Binding AppVer}" />
+                    Text="{Binding AppVer}"
+                    VerticalOptions="Center" />
                 <BoxView
                     Grid.Row="1"
-                    Grid.ColumnSpan="2"
+                    Grid.ColumnSpan="3"
                     Style="{StaticResource DefaultLineStyle}" />
                 <Label Grid.Row="2" Grid.Column="0">
                     <Label.FormattedText>
@@ -109,6 +112,20 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <RadioButton
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    GroupName="EnotiGroup"
+                    IsChecked="True"
+                    Text="On"
+                    TextColor="Black" />
+                <RadioButton
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    GroupName="EnotiGroup"
+                    Text="Off"
+                    TextColor="Black" />
+                <!--
                 <Switch
                     Grid.Row="2"
                     Grid.Column="1"
@@ -117,9 +134,10 @@
                         <Behavior:SwitchBehavior Command="{Binding OnChangeEnableExposureNotification}" />
                     </Switch.Behaviors>
                 </Switch>
+                -->
                 <BoxView
                     Grid.Row="3"
-                    Grid.ColumnSpan="2"
+                    Grid.ColumnSpan="3"
                     Style="{StaticResource DefaultLineStyle}" />
                 <Label Grid.Row="4" Grid.Column="0">
                     <Label.FormattedText>
@@ -138,6 +156,20 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <RadioButton
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    GroupName="LnotiGroup"
+                    IsChecked="True"
+                    Text="On"
+                    TextColor="Black" />
+                <RadioButton
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    GroupName="LnotiGroup"
+                    Text="Off"
+                    TextColor="Black" />
+                <!--
                 <Switch
                     Grid.Row="4"
                     Grid.Column="1"
@@ -145,10 +177,10 @@
                     <Switch.Behaviors>
                         <Behavior:SwitchBehavior Command="{Binding OnChangeEnableNotification}" />
                     </Switch.Behaviors>
-                </Switch>
+                </Switch>-->
                 <BoxView
                     Grid.Row="5"
-                    Grid.ColumnSpan="2"
+                    Grid.ColumnSpan="3"
                     Style="{StaticResource DefaultLineStyle}" />
 
                 <Label Grid.Row="6" Grid.Column="0">
@@ -168,6 +200,16 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <ce:GradientButton
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    AutomationId="Reset"
+                    Command="{Binding Path=OnSaveClick}"
+                    Scale="0.8"
+                    Style="{StaticResource DefaultGradientButton}"
+                    Text="Reset" />
+                <!--
                 <Switch
                     Grid.Row="6"
                     Grid.Column="1"
@@ -175,18 +217,12 @@
                     <Switch.Behaviors>
                         <Behavior:SwitchBehavior Command="{Binding OnChangeResetData}" />
                     </Switch.Behaviors>
-                </Switch>
+                </Switch>-->
                 <BoxView
                     Grid.Row="7"
-                    Grid.ColumnSpan="2"
+                    Grid.ColumnSpan="3"
                     Style="{StaticResource DefaultLineStyle}" />
             </Grid>
-            <ce:GradientButton
-                Grid.Row="2"
-                AutomationId="Save"
-                Command="{Binding Path=OnSaveClick}"
-                Style="{StaticResource DefaultGradientButton}"
-                Text="Save" />
         </Grid>
     </ScrollView>
 </ContentPage>
