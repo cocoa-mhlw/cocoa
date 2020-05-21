@@ -1,11 +1,11 @@
 using System;
 using System.Threading.Tasks;
-using Covid19Radar.Services;
+using Covid19Radar.Background.Services;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
 
-namespace Covid19Radar
+namespace Covid19Radar.Background
 {
     public class TemporaryExposureKeyExportBatch
     {
