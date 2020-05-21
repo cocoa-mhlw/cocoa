@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="ms" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
@@ -132,7 +132,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page enter number text</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsSMSDescription" translate="yes" xml:space="preserve">
-          <source>We'll send you a verification code. Please check your SMS.</source>
+          <source>We'll send you a verification code.
+Please check your SMS.</source>
           <target state="translated">Kami akan menghantar kod pengesahan kepada anda. Sila semak SMS anda.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
         </trans-unit>
@@ -157,8 +158,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacon List Menu</note>
         </trans-unit>
         <trans-unit id="InputSmsOTPPageOtpEnterText" translate="yes" xml:space="preserve">
-          <source>Enter the Code that was sent to 「{0}」</source>
-          <target state="translated">Masukkan kod yang dihantar kepada 「 {0} 」</target>
+          <source>Enter the Code that was sent to 
+「{0}」</source>
+          <target state="translated">Masukkan kod yang dihantar kepada
+ {0} 」</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Otp Enter the Code</note>
         </trans-unit>
         <trans-unit id="TitleOtp" translate="yes" xml:space="preserve">
@@ -521,6 +524,11 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
         <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
           <source>SampleText</source>
           <target state="new">SampleText</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="new">Settings</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
       </group>
     </body>

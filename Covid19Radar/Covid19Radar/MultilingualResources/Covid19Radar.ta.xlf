@@ -526,6 +526,11 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>SampleText</source>
           <target state="new">SampleText</target>
         </trans-unit>
+        <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="new">Settings</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
+        </trans-unit>
       </group>
     </body>
   </file>

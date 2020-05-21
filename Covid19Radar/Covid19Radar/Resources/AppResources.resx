@@ -202,6 +202,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>List of Contributors</value>
     <comment>List Of Contributors Menu</comment>
   </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Settings</value>
+    <comment>SettingsPage Title</comment>
+  </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Update Information</value>
     <comment>Update Information Menu</comment>

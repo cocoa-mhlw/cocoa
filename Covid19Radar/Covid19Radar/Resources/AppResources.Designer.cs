@@ -601,7 +601,18 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("NotifyPageLearnMore", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("SettingsPageTitle", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   You&apos;re ready to go に類似しているローカライズされた文字列を検索します。
         /// </summary>
