@@ -64,7 +64,7 @@ namespace Covid19Radar
 #endif
             // Local Notification tap event listener
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
-            Xamarin.ExposureNotifications.ExposureNotification.Init();
+            await Xamarin.ExposureNotifications.ExposureNotification.Init();
 
             // Exposure Notification
 
