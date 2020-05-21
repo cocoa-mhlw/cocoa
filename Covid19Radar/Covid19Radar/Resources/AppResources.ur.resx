@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>اپنے پیاروں کی حفاظت سے COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>اس اپلی کیشن کا تعین کرنے کے لئے بلوٹوت سگنل کا استعمال کرتا ہے اگر آپ کسی دوسرے رابطے کے سراغ لگانا اپلی کیشن صارف کے قریب ہیں. 
-بلوٹوت قائم کرنے کے لئے ' ہمیشہ کی اجازت دیں ' کو منتخب کریں.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Bluetooth اجازت دیں</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>اپنے پیاروں کی حفاظت سے COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>آلہ تک رسائی</value>
@@ -134,10 +125,6 @@
     <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
     <comment>Status settings page sub title</comment>
   </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>حالت سیٹنگیں</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
@@ -186,10 +173,6 @@
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>لائسنس معاہدہ</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -254,5 +237,183 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>اس ایپ کو استعمال کرنے کی شرائط</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>حالت سیٹنگیں</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>حالت سیٹنگیں</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>محفوظ کریں</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>اگر آپ کو مثبت تشخیص موصول ہوئی ہے ، تو براہ کرم اپنا موبائل نمبر درج کریں اور اپنے پیاروں کی حفاظت کیلئے اپنی صورتِ حال اپ ڈیٹ کریں ۔</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>حالت تبدیل کرنے کے لیے ٹیپ کریں</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>اپنے نیٹ ورک کنکشن کی پڑتال کریں ۔</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>ٹھیک ہے</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>اہل بنائيں</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>نوٹناوو</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>اس اپلی کیشن کا تعین کرنے کے لئے نمائش کی اطلاع/بلوٹوت سگنل کا استعمال کرتا ہے اگر آپ کسی دوسرے رابطے سے متعلق اپلی کیشن صارف کے قریب ہیں. 
+بلوٹوت قائم کرنے کے لئے ' ہمیشہ کی اجازت دیں ' کو منتخب کریں.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>نمائش کی اطلاع/بلوٹوت کی اجازت دیں</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>کونٹرابوٹرس</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>سرمایہ کاری</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>ہوم</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>لائسنس</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>اطلاع دیں</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>‏‏تازہ کاری</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>سرمایہ کاری</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>دستی</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>تازہ کاری کریں</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>اعلان اہل بنائیں</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>معلوم سرمایہ کاری</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>آپ کو مطلع کیا جائے گا اگر آپ کسی ایسے شخص سے بے نقاب رہے ہیں جو کسی مثبت COVID کی اطلاع دی ہے-19 نتیجہ.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>ایک مثبت تشخیص کا اشتراک کریں</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>ایک مثبت تشخیص کا اشتراک کریں</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>اگر آپ نے وائرس کے لئے مثبت تجربہ کیا ہے جو COVID کا سبب بنتا ہے ، تو آپ اپنی تشخیص کا اشتراک کرنے کا انتخاب کرسکتے ہیں.  یہ آپ کی کمیونٹی میں دوسروں کی مدد کرے گا وائرس کے پھیلاؤ پر مشتمل ہے.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>مزید جانیں</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>تشخیص شناخت کار داخل کریں</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>ایک مثبت تشخیص کا اشتراک کریں</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>ٹیسٹ کی تاریخ ایپ کو جاننے میں مدد ملتی ہے جب آپ متعدی ہو سکتے ہیں اور ممکنہ نمائش کے صحیح لوگوں کو مطلع کرتے ہیں.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>صرف ان لوگوں کو جو بے نقاب کیا گیا ہے وہ ایک نوٹیفکیشن وصول کرے گا.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>آپ کے COVID کے ساتھ آئے کہ منفرد ٹیسٹ شناخت کنندہ-19 ٹیسٹ آپ کے مثبت ٹیسٹ کے نتائج کی تصدیق کرنے کے لئے استعمال کیا جانا چاہئے.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>تصدیق اور اشتراک</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>برائے مہربانی بعد میں دوبارہ کوشش کریں۔</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>ناکام</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>پیش تشخیص</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>مکمل</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>تشخیص شناخت کار مہیا کریں</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>تشخیص شناخت کار مطلوب</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>ٹھیک ہے</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>تشخیص جمع کرنے سے قبل براہ کرم نمائش کی اطلاعات کو فعال کریں ۔</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>نمائش اطلاعات غیر فعال</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>تشخیص جمع کر رہا ہے...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>تشخیص کی توثیق کررہا ہے...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>اس وقت پیش کرنے کے لیے آپ کی تشخیص کی توثیق نہیں کی جا سکتی ۔</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>توثیق ناکام ہوگئی ہے</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>‏‏جمع کریں</value>
   </data>
 </root>

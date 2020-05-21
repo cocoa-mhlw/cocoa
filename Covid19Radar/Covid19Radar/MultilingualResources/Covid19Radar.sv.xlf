@@ -250,7 +250,7 @@ Kontrollera ditt SMS.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">MajorNo (Svenska)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
         </trans-unit>
-         <!-- What is MinorNo? -->
+        <!-- What is MinorNo? -->
         <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
           <source>MinorNo</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">MinorNo (på något sätt)</target>
@@ -532,6 +532,11 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
         <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
           <source>SampleText</source>
           <target state="new">SampleText</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="new">Settings</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
       </group>
     </body>

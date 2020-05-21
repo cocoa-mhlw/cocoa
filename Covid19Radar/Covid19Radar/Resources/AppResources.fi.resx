@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Rakkaidemme suojaaminen COVID19:ltä</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>Tämä sovellus käyttää Bluetooth-signaaleja määrittää, jos olet lähellä toisen yhteystiedon jäljitys sovelluksen käyttäjä. 
-Määritä Bluetooth valitsemalla Salli aina.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Salli Bluetooth</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>Rakkaidemme suojaaminen COVID-19:ltä</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Laitteen käyttö</value>
@@ -134,10 +125,6 @@ Tarkista tekstiviestisi.</value>
     <value>Jos sait positiivisen diagnoosin</value>
     <comment>Status settings page sub title</comment>
   </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>Tila-asetukset</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
@@ -186,10 +173,6 @@ Tarkista tekstiviestisi.</value>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Käyttöoikeussopimus</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -248,11 +231,189 @@ Tarkista tekstiviestisi.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Jos sinulla on diagnosoitu COVID-19  positiivinen</value>
+    <value>Jos sinulla on diagnosoitu COVID-19 positiivinen</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Tämän sovelluksen käyttöä koskevat vaatimukset</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>Tila-asetukset</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>Tila-asetukset</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Tallenna</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Jos sait positiivisen diagnoosin, anna matkapuhelinnumerosi ja päivitä tilasi suojellaksesi läheisiäsi.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>Muuta tilaa napauttamalla</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Tarkista verkkoyhteys.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>OK\n</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>Ota käyttöön</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Ei nyt</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>Tämä sovellus käyttää Valotusilmoitus / Bluetooth-signaaleja määrittää, jos olet lähellä toisen yhteystiedon jäljitys sovelluksen käyttäjä. 
+Määritä Bluetooth valitsemalla Salli aina.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Salli valotuksen ilmoitus / Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Vastaajat</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Vastuut</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Koti</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>Käyttöoikeus</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Ilmoita</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Päivitä</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Vastuut</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>Manuaalinen</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Päivitä tiedot</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Ota ilmoitus käyttöön</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>Ei tunnettuja vastuita</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>Saat ilmoituksen, jos olet altistunut jollekulle, joka ilmoitti positiivisesta COVID-19-tuloksesta.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Jaa positiivinen diagnoosi</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Jaa positiivinen diagnoosi</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>Jos olet testannut positiivisen viruksen, joka aiheuttaa COVID-19, voit jakaa diagnoosin.  Tämä auttaa muita yhteisösi hillitsemään viruksen leviämistä.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Lisätietoja</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Jos sait positiivisen diagnoosin</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>Anna diagnoositunnus</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>Jaa positiivinen diagnoosi</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>Testipäivämäärä auttaa sovellusta tietäen, milloin olet saattanut tarttua, ja ilmoittaa oikeille ihmisille mahdollisesta altistumisesta.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>Vain altistuneet saavat ilmoituksen.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>Covid-19-testin mukana toimitettua yksilöllistä testitunnistetta on käytettävä positiivisen testituloksen vahvistamiseen.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>Tarkista ja jaa</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>Yritä myöhemmin uudelleen.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>Epäonnistui</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>Diagnoosi Lähetetty</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>Valmis</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>Anna diagnoositunnus</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>Diagnoosin tunniste vaaditaan</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>OK\n</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>Ota altistumisilmoitukset käyttöön ennen diagnoosin lähettämistä.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>Altistumisilmoitukset poistettu käytöstä</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>Lähetetään diagnoosia...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>Tarkistetaan diagnoosia...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>Diagnoosiaei voi tällä hetkellä vahvistaa.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>Vahvistus epäonnistui</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>Lähetä</value>
   </data>
 </root>
