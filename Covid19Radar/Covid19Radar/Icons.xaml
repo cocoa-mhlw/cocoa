@@ -42,4 +42,7 @@
     <x:String x:Key="IconFriends">&#xf0c0;</x:String>
     <x:String x:Key="IconContract">&#xf56c;</x:String>
 
+    <x:String x:Key="IconCalender">&#xf073;</x:String>
+    <x:String x:Key="IconClock">&#xf017;</x:String>
+    <x:String x:Key="IconAlert">&#xf071;</x:String>
 </ResourceDictionary>
