@@ -10,9 +10,9 @@ namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 
-    public partial class UpdateInfomationPage : ContentPage
+    public partial class UpdateInformationPage : ContentPage
     {
-        public UpdateInfomationPage()
+        public UpdateInformationPage()
         {
             InitializeComponent();
         }
