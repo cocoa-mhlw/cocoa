@@ -55,6 +55,8 @@ namespace Covid19Radar
         {
             InitializeComponent();
 
+            Xamarin.Forms.Device.SetFlags(new string[] { "RadioButton_Experimental" });
+
             // Exposure Notification
 
 #if DEBUG
