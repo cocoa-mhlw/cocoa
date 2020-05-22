@@ -531,6 +531,11 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <target state="new">Settings</target>
           <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
+        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
+          <source>Not Agree</source>
+          <target state="new">Not Agree</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
+        </trans-unit>
       </group>
     </body>
   </file>
