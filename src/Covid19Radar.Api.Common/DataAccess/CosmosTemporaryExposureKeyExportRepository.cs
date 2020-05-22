@@ -36,7 +36,7 @@ namespace Covid19Radar.Api.DataAccess
         {
             var pk = PartitionKey.None;
             var newItem = new TemporaryExposureKeyExportModel();
-            var batchNum = await _sequence.GetNextAsync(SequenceName, 1);
+            var batchNum = (int)await _sequence.GetNextAsync(SequenceName, 1);
             newItem.id = batchNum.ToString();
             newItem.BatchNum = batchNum;
             await _db.TemporaryExposureKeyExport.CreateItemAsync(newItem, pk);

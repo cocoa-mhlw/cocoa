@@ -7,6 +7,6 @@ namespace Covid19Radar.Api.DataAccess
 {
     public interface ISequenceRepository
     {
-        Task<int> GetNextAsync(string key, int startNo);
+        Task<ulong> GetNextAsync(string key, ulong startNo);
     }
 }

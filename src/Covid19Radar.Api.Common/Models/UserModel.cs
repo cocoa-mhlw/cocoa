@@ -32,6 +32,12 @@ namespace Covid19Radar.Api.Models
         public string ProtectSecret { get; set; }
 
         /// <summary>
+        /// Jump Consistent Hash 
+        /// </summary>
+        /// <value>Jump Consistent Hash</value>
+        public ulong JumpConsistentHash { get; set; }
+
+        /// <summary>
         /// ETAG
         /// </summary>
         public string _etag { get; set; }
