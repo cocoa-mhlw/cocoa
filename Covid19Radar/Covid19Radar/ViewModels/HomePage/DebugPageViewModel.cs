@@ -78,7 +78,7 @@ namespace Covid19Radar.ViewModels
         {
             LocalStateManager.Instance.ServerBatchNumber = 0;
             LocalStateManager.Save();
-            OnPropertyChanged(nameof(CurrentBatchFileIndex));
+            //OnPropertyChanged(nameof(CurrentBatchFileIndex));
             await UserDialogs.Instance.AlertAsync("Reset Batch file index!");
         });
 
@@ -87,7 +87,7 @@ namespace Covid19Radar.ViewModels
             using (UserDialogs.Instance.Loading("Fetching..."))
             {
                 await Xamarin.ExposureNotifications.ExposureNotification.UpdateKeysFromServer();
-                OnPropertyChanged(nameof(CurrentBatchFileIndex));
+                //OnPropertyChanged(nameof(CurrentBatchFileIndex));
             }
         });
 
