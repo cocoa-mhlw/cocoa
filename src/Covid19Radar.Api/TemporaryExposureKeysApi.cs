@@ -1,5 +1,5 @@
-using Covid19Radar.DataAccess;
-using Covid19Radar.Models;
+using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;

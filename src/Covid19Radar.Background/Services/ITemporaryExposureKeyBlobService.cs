@@ -1,9 +1,9 @@
-﻿using Covid19Radar.Models;
-using Covid19Radar.Protobuf;
+﻿using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Protobuf;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public interface ITemporaryExposureKeyBlobService
     {

@@ -1,5 +1,5 @@
-﻿using Covid19Radar.DataAccess;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,6 +21,7 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
             builder.Services.AddSingleton<IDiagnosisRepository, CosmosDiagnosisRepository>();
+            builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
         }
     }
 }
