@@ -1,24 +1,22 @@
-﻿using System;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Background.DataStore;
+using Covid19Radar.Background.Services;
+using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.DataStore;
+using Covid19Radar.Api.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.AspNetCore.Http;
-using Covid19Radar.DataAccess;
 
-[assembly: FunctionsStartup(typeof(Covid19Radar.Startup))]
+[assembly: FunctionsStartup(typeof(Covid19Radar.Background.Startup))]
 
-namespace Covid19Radar
+namespace Covid19Radar.Background
 {
     public class Startup : FunctionsStartup
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
             builder.Services.AddLogging();
-            builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
-            builder.Services.AddSingleton<DataStore.IStoringCosmos, DataStore.StoringCosmos>();
+            builder.Services.AddSingleton<ICosmos, Cosmos>();
+            builder.Services.AddSingleton<IStoringCosmos, StoringCosmos>();
             builder.Services.AddSingleton<INotificationService, NotificationService>();
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyRepository, CosmosTemporaryExposureKeyRepository>();

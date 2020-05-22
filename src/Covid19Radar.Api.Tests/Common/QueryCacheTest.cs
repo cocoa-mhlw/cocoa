@@ -1,5 +1,5 @@
 ﻿using Covid19Radar.Api;
-using Covid19Radar.Common;
+using Covid19Radar.Api.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

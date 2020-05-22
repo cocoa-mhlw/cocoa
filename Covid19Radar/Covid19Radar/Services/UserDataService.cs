@@ -69,27 +69,7 @@ namespace Covid19Radar.Services
                 return;
             }
             var hasNotification = downloadModel.LastNotificationTime != current.LastNotificationTime;
-            var hasStatusChange = downloadModel.UserStatus != current.UserStatus;
-            if (hasStatusChange)
-            {
-                // Notification Contacted
-                /*
-                if (downloadModel.UserStatus == UserStatus.Contactd)
-                {
-                    // TOOD Change to Resouce String
-                    notificationService.ScheduleNotification("TEST", "MESSAGE");
-                }
-                */
-                var newModel = new UserDataModel()
-                {
-                    UserUuid = current.UserUuid,
-                    Major = current.Major,
-                    Minor = current.Minor,
-                    UserStatus = downloadModel.UserStatus,
-                    LastNotificationTime = current.LastNotificationTime
-                };
-                await SetAsync(newModel);
-            }
+
             if (hasNotification)
             {
                 // Pull Notification.
@@ -98,9 +78,7 @@ namespace Covid19Radar.Services
                     var newModel = new UserDataModel()
                     {
                         UserUuid = current.UserUuid,
-                        Major = current.Major,
-                        Minor = current.Minor,
-                        UserStatus = current.UserStatus,
+                        JumpConsistentHash = current.JumpConsistentHash,
                         LastNotificationTime = downloadModel.LastNotificationTime
                     };
                     var result = await httpDataService.GetNotificationPullAsync(newModel);
@@ -123,9 +101,9 @@ namespace Covid19Radar.Services
         public bool IsExistUserData { get => current != null; }
 
 
-        public async Task<UserDataModel> RegistUserAsync()
+        public async Task<UserDataModel> RegisterUserAsync()
         {
-            UserDataModel userData = await httpDataService.PostRegisterUserAsync();
+            var userData = await httpDataService.PostRegisterUserAsync();
             if (userData == null)
             {
                 return null;
@@ -157,10 +135,7 @@ namespace Covid19Radar.Services
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             await Application.Current.SavePropertiesAsync();
             current = userData;
-            if (UserDataChanged != null)
-            {
-                UserDataChanged(this, current);
-            }
+            UserDataChanged?.Invoke(this, current);
             // only first time.
             if (isNull && userData != null)
             {

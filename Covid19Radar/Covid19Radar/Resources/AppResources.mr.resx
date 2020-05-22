@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>आपल्या प्रिय जनांचे COVID19 पासून संरक्षण करणे</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>हे अॅप आपण दुस-या संपर्क शोधअॅप वापरकर्त्याच्या जवळ आहोत की नाही हे ठरवण्यासाठी ब्लूटूथ संकेतांचा वापर करतो. 
-ब्लूटूथ सेट अप करण्यासाठी 'नेहमी परवानगी द्या' निवडा.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>ब्लूटूथ परवानगी द्या</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>आपल्या प्रिय जनांचे COVID-19 पासून संरक्षण करणे</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>साधन प्रवेश</value>
@@ -134,10 +125,6 @@
     <value>जर तुम्हाला सकारात्मक निदान झाले तर</value>
     <comment>Status settings page sub title</comment>
   </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>स्थिती संयोजना</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
@@ -186,10 +173,6 @@
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>परवाना करार</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -248,11 +231,189 @@
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>जर तुम्हाला COVID19 पॉझिटिव निदान झाले तर</value>
+    <value>जर तुम्हाला COVID-19 पॉझिटिव निदान झाले तर</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>हे अॅप वापरण्याकरीता आवश्यकता</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>स्थिती संयोजना</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>स्थिती संयोजना</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>सुरक्षित करा</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>तुम्हाला सकारात्मक निदान झाले तर कृपया आपला मोबाईल नंबर प्रविष्ट करा आणि आपल्या प्रिय जनांच्या संरक्षणासाठी आपली स्थिती अद्ययावत करा.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>स्थिती बदलण्यासाठी टॅप करा</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>कृपया आपले नेटवर्क कनेक्शन तपासा.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>ठीक</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>सक्षम करा</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>आता नाही</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>हे अॅप एक्स्पोजर नोटिफिकेशन / ब्लूटूथ संकेत ांचा वापर करते की तुम्ही दुस-या संपर्क शोधअॅप वापरकर्त्याजवळ आहात का हे निश्चित करण्यासाठी. 
+ब्लूटूथ सेट अप करण्यासाठी 'नेहमी परवानगी द्या' निवडा.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>एक्स्पोजर सूचना / ब्लूटूथ परवानगी द्या</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>योगदान</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>एक्स्पोजर</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>होम</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>अनुज्ञापत्र</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>सूचित करा</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>अपडेट करा</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>एक्स्पोजर</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>मॅन्युअल</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>माहिती अद्ययावत करा</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>सूचना कार्यान्वीत करा</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>ज्ञात एक्स्पोजर नाही</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>जर तुम्हाला एखाद्या सकारात्मक सीओव्हीआयडी-19 परिणामाची माहिती दिली असेल तर तुम्हाला सूचित केले जाईल.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>सकारात्मक निदान सामायिक करा</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>सकारात्मक निदान सामायिक करा</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>जर आपण सीओव्हीआयडी-19 मुळे निर्माण होणाऱ्या व्हायरसची चाचणी पॉझिटिव्ह घेतली तर आपण आपले निदान सामायिक करू शकता.  यामुळे तुमच्या समाजातील इतरांना विषाणूचा प्रसार आटोक्यात आणण्यासाठी मदत होईल.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>अधिक जाणून घ्या</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>जर तुम्हाला सकारात्मक निदान झाले तर</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>कृपया निदान ओळखकर्ता प्रविष्ट करा</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>सकारात्मक निदान शेअर करा</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>चाचणी दिनांक तुम्ही संसर्गजन्य केव्हा झाला असाल आणि संभाव्य संपर्कासंदर्भात योग्य लोकांना सूचित करण्यास मदत करतो.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>ज्यांना उघडकीस आले आहे, त्यांनाच सूचना मिळेल.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>तुमच्या सीओव्हीआयडी-१९ चाचणीसह आलेल्या युनिक टेस्ट आयडेंटिफायरचा उपयोग आपल्या सकारात्मक चाचणीचा निकाल तपासण्यासाठी केला पाहिजे.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>सत्यापित करा आणि सामायिक करा</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>कृपया नंतर पुन्हा प्रयत्न करा.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>अयशस्वी</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>सादर केलेले निदान</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>पूर्ण</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>कृपया निदान ओळखकर्ता प्रदान करा</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>निदान ओळखकर्ता आवश्यक</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>ठीक</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>कृपया निदान सादर करण्यापूर्वी एक्स्पोजर सूचना कार्यान्वीत करा.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>एक्सपोजर सूचना अकार्यान्वीत</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>निदान सबमिट करत आहे...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>निदान तपासणे...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>आपले निदान या वेळी सादर करण्यासाठी प्रमाणित करता येत नाही.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>पुष्टीकरण अयशस्वी</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>सबमिट करा</value>
   </data>
 </root>

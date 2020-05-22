@@ -76,8 +76,8 @@
     <Compile Update="Views\HomePage\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\UpdateInfomationPage.xaml.cs">
-      <DependentUpon>UpdateInfomationPage.xaml</DependentUpon>
+    <Compile Update="Views\HomePage\UpdateInformationPage.xaml.cs">
+      <DependentUpon>UpdateInformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
