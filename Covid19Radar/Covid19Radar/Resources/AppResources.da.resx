@@ -368,7 +368,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Kun dem, der er blevet udsat, vil modtage en meddelelse.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Den entydige test-id, der fulgte med din COVID-19 test, skal bruges til at bekræfte dit positive testresultat.</value>
+    <value>Den entydige test-id, der fulgte med din COVID-19test, skal bruges til at bekræfte dit positive testresultat.</value>
   </data>
   <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
     <value>Bekræft og del</value>
