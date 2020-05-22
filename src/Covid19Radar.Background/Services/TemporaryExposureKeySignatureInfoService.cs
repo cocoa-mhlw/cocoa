@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Protobuf;
+﻿using Covid19Radar.Api.Protobuf;
 using Microsoft.Azure.KeyVault.WebKey;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeySignatureInfoService : ITemporaryExposureKeySignatureInfoService
     {

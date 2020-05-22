@@ -1,6 +1,6 @@
-﻿using Covid19Radar.Protobuf;
+﻿using Covid19Radar.Api.Protobuf;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public interface ITemporaryExposureKeySignatureInfoService
     {
