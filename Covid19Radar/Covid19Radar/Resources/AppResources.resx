@@ -535,4 +535,12 @@ Please check your SMS.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>SampleText</value>
   </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>Do you want to turn on notifications?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
 </root>
