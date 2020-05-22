@@ -8,42 +8,42 @@
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
         <trans-unit id="ButtonIWantToHelp" translate="yes" xml:space="preserve">
           <source>I want to help</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">私は助けたい</target>
+          <target state="translated">協力する</target>
           <note from="MultilingualBuild" annotates="source" priority="2">I want to help</note>
         </trans-unit>
         <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
           <source>How it works</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">操作の流れ</target>
+          <target state="translated">操作の流れ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
         </trans-unit>
         <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
           <source>Next</source>
-          <target state="translated" state-qualifier="tm-suggestion">次へ</target>
+          <target state="translated">次</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Next button</note>
         </trans-unit>
         <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
           <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">サービス条件</target>
+          <target state="translated">サービス条件</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
         <trans-unit id="ButtonAgreeAndProceed" translate="yes" xml:space="preserve">
           <source>Agree and Proceed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">同意して続行する</target>
+          <target state="translated">同意して続行</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Agree and Proceed</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">個人情報を入力する必要はありません。アプリをインストールするときに割り当てられた一意の ID を使用しています。</target>
+          <target state="translated">個人情報を入力する必要はありません。アプリをインストールするときに割り当てる一意の ID を使用しています。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">平均2m以上の半径内で、合計で30分以上の他のアプリユーザーとの接触は、「クローズコンタクト」として記録されます。</target>
+          <target state="translated" state-qualifier="mt-suggestion">平均2m未満の半径内に合計30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">電話番号を確認した後、手動でステータスを 「正の状態」に変更してください。ポジティブ」ワークフロー、今関係者との調整。</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">電話番号を確認した後、手動でステータスを 「陽性」に変更してください。陽性入力およびその後のワークフローは関係者との調整中です。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
@@ -53,7 +53,7 @@
         </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">左端</target>
+          <target state="translated">スタート</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
@@ -118,7 +118,7 @@
         </trans-unit>
         <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
           <source>Set up Completed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">完了の設定</target>
+          <target state="translated" state-qualifier="mt-suggestion">設定完了</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
         </trans-unit>
         <trans-unit id="UserSettingPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
@@ -227,7 +227,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
           <source>Count</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">カウント</target>
+          <target state="translated" state-qualifier="tm-suggestion">回数</target>
           <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
@@ -237,7 +237,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextLastTime" translate="yes" xml:space="preserve">
           <source>LastTime</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ラストタイム</target>
+          <target state="translated" state-qualifier="mt-suggestion">最終接触時間</target>
           <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
@@ -262,7 +262,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
           <source>Heads up</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ヘッズアップ</target>
+          <target state="translated" state-qualifier="mt-suggestion">注意勧告</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Heads up</note>
         </trans-unit>
         <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
@@ -530,6 +530,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Settings</source>
           <target state="translated">アプリの設定</target>
           <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
+        </trans-unit>
+        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
+          <source>Not Agree</source>
+          <target state="translated">同意しない</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
       </group>
     </body>
