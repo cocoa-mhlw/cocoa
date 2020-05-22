@@ -47,6 +47,7 @@
 - Rikuya Kaminaka (Documentation)
 - Akira Kakkar (github actions)
 - M Reza Faisal (Indonesian Translation)
+- Mohamed BOUZIDI(github actions)
 
 # Beta Testers
 - Nagahata Kenji
