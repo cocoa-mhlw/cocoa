@@ -70,15 +70,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Not Agree に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNotAgree {
-            get {
-                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Agree に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonAgree {
@@ -129,6 +120,15 @@ namespace Covid19Radar.Resources {
         internal static string ButtonNext {
             get {
                 return ResourceManager.GetString("ButtonNext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Not Agree に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonNotAgree {
+            get {
+                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
             }
         }
         
@@ -349,6 +349,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Cancel に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DialogButtonCancel {
+            get {
+                return ResourceManager.GetString("DialogButtonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   OK に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogButtonOk {
@@ -426,6 +435,15 @@ namespace Covid19Radar.Resources {
         internal static string HomePageViewStatusSettingsMenu {
             get {
                 return ResourceManager.GetString("HomePageViewStatusSettingsMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Do you want to turn on notifications? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InitSettingPageDialogTextExposureNotificationTitle {
+            get {
+                return ResourceManager.GetString("InitSettingPageDialogTextExposureNotificationTitle", resourceCulture);
             }
         }
         
@@ -601,18 +619,16 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("NotifyPageLearnMore", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string SettingsPageTitle
-        {
-            get
-            {
+        internal static string SettingsPageTitle {
+            get {
                 return ResourceManager.GetString("SettingsPageTitle", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   You&apos;re ready to go に類似しているローカライズされた文字列を検索します。
         /// </summary>
