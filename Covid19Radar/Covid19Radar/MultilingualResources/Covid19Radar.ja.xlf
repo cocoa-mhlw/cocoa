@@ -73,17 +73,17 @@
         </trans-unit>
         <trans-unit id="ButtonRegister" translate="yes" xml:space="preserve">
           <source>Register</source>
-          <target state="translated" state-qualifier="tm-suggestion">登録</target>
+          <target state="translated">登録</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Register</note>
         </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
-          <target state="translated" state-qualifier="tm-suggestion">同意する</target>
+          <target state="translated">同意する</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Agree</note>
         </trans-unit>
         <trans-unit id="HomePageTitle" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="translated" state-qualifier="tm-suggestion">ホーム</target>
+          <target state="translated">ホーム</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
@@ -93,7 +93,7 @@
         </trans-unit>
         <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">ステータス設定</target>
+          <target state="translated">ステータス設定</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status Settings Menu</note>
         </trans-unit>
         <trans-unit id="HomePageViewListOfContributorsMenu" translate="yes" xml:space="preserve">
@@ -103,12 +103,12 @@
         </trans-unit>
         <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
           <source>Update Information</source>
-          <target state="translated" state-qualifier="tm-suggestion">更新情報</target>
+          <target state="translated">更新情報</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
         </trans-unit>
         <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="translated" state-qualifier="tm-suggestion">ホームへ</target>
+          <target state="translated">ホームへ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
         </trans-unit>
         <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
@@ -172,7 +172,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="ButtonVerify" translate="yes" xml:space="preserve">
           <source>Verify</source>
-          <target state="translated" state-qualifier="tm-suggestion">確認する</target>
+          <target state="translated">確認する</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button Verify</note>
         </trans-unit>
         <trans-unit id="InputSmsOTPPageDidntGetTheCodeText" translate="yes" xml:space="preserve">
@@ -182,7 +182,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="InputSmsOTPPageResendText" translate="yes" xml:space="preserve">
           <source>Resend</source>
-          <target state="translated" state-qualifier="tm-suggestion">再送信</target>
+          <target state="translated">再送信</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Resend Text</note>
         </trans-unit>
         <trans-unit id="StatusUpdateCompletePageTextStatusUpdateComplete" translate="yes" xml:space="preserve">
@@ -217,7 +217,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
           <source>ID</source>
-          <target state="translated" state-qualifier="tm-suggestion">ID</target>
+          <target state="translated">ID</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
@@ -227,7 +227,7 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
           <source>Count</source>
-          <target state="translated" state-qualifier="tm-suggestion">回数</target>
+          <target state="translated">回数</target>
           <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
@@ -292,17 +292,17 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="TitleUserSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">ステータス設定</target>
+          <target state="translated">ステータス設定</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Status Settings page title</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">ステータス設定</target>
+          <target state="translated">ステータス設定</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
         </trans-unit>
         <trans-unit id="ButtonSave" translate="yes" xml:space="preserve">
           <source>Save</source>
-          <target state="translated" state-qualifier="tm-suggestion">保存</target>
+          <target state="translated">保存</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button Save</note>
         </trans-unit>
         <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
@@ -322,12 +322,12 @@ Please check your SMS.</source>
         </trans-unit>
         <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="translated" state-qualifier="tm-suggestion">OK</target>
+          <target state="translated">OK</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
         </trans-unit>
         <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
           <source>Enable</source>
-          <target state="translated" state-qualifier="tm-suggestion">有効にする</target>
+          <target state="translated">有効にする</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
@@ -359,22 +359,22 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="MainHome" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="translated" state-qualifier="tm-suggestion">ホーム</target>
+          <target state="translated">ホーム</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
         </trans-unit>
         <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="translated" state-qualifier="tm-suggestion">ライセンスについて</target>
+          <target state="translated">ライセンスについて</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
         </trans-unit>
         <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
           <source>Notify</source>
-          <target state="translated" state-qualifier="tm-suggestion">通知</target>
+          <target state="translated">通知</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
         </trans-unit>
         <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
           <source>Update</source>
-          <target state="translated" state-qualifier="tm-suggestion">更新情報</target>
+          <target state="translated">更新情報</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
@@ -389,7 +389,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>Manual</source>
-          <target state="translated" state-qualifier="tm-suggestion">マニュアル</target>
+          <target state="translated">マニュアル</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
@@ -428,7 +428,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
           <source>Learn more</source>
-          <target state="translated" state-qualifier="tm-suggestion">詳細</target>
+          <target state="translated">詳細</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
@@ -464,11 +464,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
-          <target state="translated" state-qualifier="tm-suggestion">後でもう一度試してください。</target>
+          <target state="translated">後でもう一度試してください。</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
           <source>Failed</source>
-          <target state="translated" state-qualifier="tm-suggestion">失敗</target>
+          <target state="translated">失敗</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
@@ -476,7 +476,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
           <source>Complete</source>
-          <target state="translated" state-qualifier="tm-suggestion">完了しました</target>
+          <target state="translated">完了しました</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
           <source>Please provide a Diagnosis Identifier</source>
@@ -488,7 +488,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="translated" state-qualifier="tm-suggestion">OK</target>
+          <target state="translated">OK</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
@@ -512,11 +512,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
           <source>Verification Failed</source>
-          <target state="translated" state-qualifier="tm-suggestion">検証に失敗しました</target>
+          <target state="translated">検証に失敗しました</target>
         </trans-unit>
         <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
           <source>Submit</source>
-          <target state="translated" state-qualifier="tm-suggestion">提出</target>
+          <target state="translated">提出</target>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
           <source>SampleText</source>
