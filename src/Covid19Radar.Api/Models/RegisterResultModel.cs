@@ -19,5 +19,12 @@ namespace Covid19Radar.Api.Models
         [JsonProperty("secret")]
         public string Secret { get; set; }
 
+        /// <summary>
+        /// Jump Consistent Hash 
+        /// </summary>
+        /// <value>Jump Consistent Hash</value>
+        [JsonProperty("jumpConsistentHash")]
+        public ulong JumpConsistentHash { get; set; }
+
     }
 }

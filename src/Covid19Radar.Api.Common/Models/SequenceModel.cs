@@ -8,6 +8,6 @@ namespace Covid19Radar.Api.Models
     {
         public string id { get; set; }
         public string PartitionKey { get; set; }
-        public int value { get; set; }
+        public ulong value { get; set; }
     }
 }
