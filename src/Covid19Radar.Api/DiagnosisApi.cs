@@ -1,6 +1,6 @@
-using Covid19Radar.DataAccess;
-using Covid19Radar.Models;
-using Covid19Radar.Services;
+using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -18,15 +18,18 @@ namespace Covid19Radar.Api
     {
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly IValidationUserService Validation;
+        private readonly IDeviceValidationService DeviceCheck;
         private readonly ILogger<DiagnosisApi> Logger;
 
         public DiagnosisApi(
             IDiagnosisRepository diagnosisRepository,
             IValidationUserService validation,
+            IDeviceValidationService deviceCheck,
             ILogger<DiagnosisApi> logger)
         {
             DiagnosisRepository = diagnosisRepository;
             Validation = validation;
+            DeviceCheck = deviceCheck;
             Logger = logger;
         }
 
@@ -46,7 +49,12 @@ namespace Covid19Radar.Api
 
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
-            // TODO: Device verify
+            // Device validation
+            if (false == await DeviceCheck.Validation(diagnosis))
+            {
+                return validationResult.ErrorActionResult;
+            }
+
             await DiagnosisRepository.SubmitDiagnosisAsync(
                 diagnosis.SubmissionNumber,
                 diagnosis.UserUuid,

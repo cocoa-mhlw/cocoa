@@ -35,7 +35,7 @@
                 <Label
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultTitleLabelColor}"
-                    Text="ご登録いただきありがとうございました。" />
+                    Text="{x:Static resources:AppResources.SetupCompletedPageTextYoureReadyToGo}" />
 
             </StackLayout>
             <Grid Grid.Row="2">

@@ -21,6 +21,8 @@ namespace Covid19Radar.Api.Tests.Mock
         public Scripts ScriptsValue;
         public override Scripts Scripts => ScriptsValue;
 
+        public override Database Database => null;
+
         public override Task<ItemResponse<T>> CreateItemAsync<T>(T item, PartitionKey? partitionKey = null, ItemRequestOptions requestOptions = null, CancellationToken cancellationToken = default)
         {
             var returnValue = new CosmosItemResponseMock<T>();
@@ -181,6 +183,11 @@ namespace Covid19Radar.Api.Tests.Mock
         {
             var returnValue = new ResponseMessage();
             return Task.FromResult(returnValue);
+        }
+
+        public override Task<ThroughputResponse> ReplaceThroughputAsync(ThroughputProperties throughputProperties, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
         }
     }
 }

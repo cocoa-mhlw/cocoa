@@ -47,7 +47,7 @@
             <Tab.Icon>
                 <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconAbout}" />
             </Tab.Icon>
-            <ShellContent ContentTemplate="{DataTemplate view:UpdateInfomationPage}" />
+            <ShellContent ContentTemplate="{DataTemplate view:UpdateInformationPage}" />
         </Tab>
         <Tab Title="{x:Static resources:AppResources.MainContributors}" Route="contributers">
             <Tab.Icon>
