@@ -19,6 +19,12 @@ namespace Covid19Radar.Common
 //        public static readonly string ApiSecret = "API_SECRET";
         public static readonly string ApiSecret = "g***REMOVED***BaKQ==";
 
+        public const string DefaultRegion = "default";
+        public const string ApiUrlBase = "https://covid19radar.azurewebsites.net/api";
+        public const string ApiUrlBlobStorageBase = "https://exposurenotifications.blob.core.windows.net/";
+        public const string BlobStorageContainerNamePrefix = "c19r";
+
+
         /// <summary>
         /// Apple's company ibeacon code
         /// </summary>

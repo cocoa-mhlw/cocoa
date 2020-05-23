@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Covid19Radar.Common;
 using Covid19Radar.Services;
 using Newtonsoft.Json;
 using Plugin.LocalNotification;
@@ -16,12 +17,6 @@ namespace Covid19Radar.Services
     [Preserve] // Ensure this isn't linked out
     public class ExposureNotificationHandler : IExposureNotificationHandler
     {
-        public const string DefaultRegion = "default";
-
-        const string apiUrlBase = "https://exposurenotificationfunctions.azurewebsites.net/api/";
-        const string apiUrlBlobStorageBase = "https://exposurenotifications.blob.core.windows.net/";
-        const string blobStorageContainerNamePrefix = "c19r";
-
         static readonly HttpClient http = new HttpClient();
 
         // this string should be localized
@@ -60,7 +55,7 @@ namespace Covid19Radar.Services
         public async Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
         {
             // This is "default" by default
-            var region = LocalStateManager.Instance.Region ?? DefaultRegion;
+            var region = LocalStateManager.Instance.Region ?? AppConstants.DefaultRegion;
 
             var checkForMore = true;
             do
@@ -71,7 +66,7 @@ namespace Covid19Radar.Services
                     var batchNumber = LocalStateManager.Instance.ServerBatchNumber + 1;
 
                     // Build the blob storage url for the given batch file we are on next
-                    var url = $"{apiUrlBlobStorageBase}/{blobStorageContainerNamePrefix}{region}/{batchNumber}.dat";
+                    var url = $"{AppConstants.ApiUrlBlobStorageBase}/{AppConstants.BlobStorageContainerNamePrefix}{region}/{batchNumber}.dat";
 
                     var response = await http.GetAsync(url);
 
@@ -128,7 +123,7 @@ namespace Covid19Radar.Services
             try
             {
                 //var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
-                var url = $"{apiUrlBase.TrimEnd('/')}/diagnosis";
+                var url = $"{AppConstants.ApiUrlBase.TrimEnd('/')}/diagnosis";
 
                 //var json = JsonConvert.SerializeObject(new SelfDiagnosisSubmissionRequest
                 //{
@@ -143,7 +138,7 @@ namespace Covid19Radar.Services
                     SubmissionNumber = pendingDiagnosis.DiagnosisUid,
                     AppPackageName = Xamarin.Essentials.AppInfo.PackageName, // experimental
                     UserUuid = userDataService.Get().UserUuid,
-                    Region = DefaultRegion,
+                    Region = LocalStateManager.Instance.Region ?? AppConstants.DefaultRegion,
                     Platform = Device.RuntimePlatform.ToLower(),
                     Keys = temporaryExposureKeys.Select(_ => DiagnosisSubmissionRequest.Key.FromTemporaryExposureKey(_)).ToArray(),
                     DeviceVerificationPayload = "" // TODO: device payload
@@ -166,7 +161,7 @@ namespace Covid19Radar.Services
 
         internal static async Task<bool> VerifyDiagnosisUid(string diagnosisUid)
         {
-            var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+            var url = $"{AppConstants.ApiUrlBase.TrimEnd('/')}/selfdiagnosis";
 
             var http = new HttpClient();
 
