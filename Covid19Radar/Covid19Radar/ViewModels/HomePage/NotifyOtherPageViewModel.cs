@@ -11,6 +11,8 @@ using System.Windows.Input;
 using Prism.Navigation.Xaml;
 using Acr.UserDialogs;
 using Covid19Radar.Renderers;
+using Covid19Radar.Views;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -19,16 +21,80 @@ namespace Covid19Radar.ViewModels
         public NotifyOtherPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
+            SelectedDate = DateTime.Today;
+            MaxDate = DateTime.Today.AddMonths(1);
+            MinDate = DateTime.Today.AddMonths(-1);
         }
 
-        public Command SharePositiveDiagnosisCommand => (new Command(async () =>
+        private string _notifyCode;
+        public string NotifyCode
+        {
+            get { return _notifyCode; }
+            set { SetProperty(ref _notifyCode, value); }
+        }
+
+
+        private DateTime _selectedDate;
+        public DateTime SelectedDate
+        {
+            get { return _selectedDate; }
+            set { SetProperty(ref _selectedDate, value); }
+        }
+
+        private DateTime _maxDate;
+        public DateTime MaxDate
+        {
+            get { return _maxDate; }
+            set { SetProperty(ref _maxDate, value); }
+        }
+
+        private DateTime _minDate;
+        public DateTime MinDate
+        {
+            get { return _minDate; }
+            set { SetProperty(ref _minDate, value); }
+        }
+
+
+        public bool DiagnosisPending
+    => (LocalStateManager.Instance.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue)
+        >= DateTimeOffset.UtcNow.AddDays(-14);
+
+        public DateTimeOffset DiagnosisShareTimestamp
+            => LocalStateManager.Instance.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue;
+
+        public Command SharePositiveDiagnosisCommand
+            => new Command(() =>
+            {
+                // To Share Positive Diag
+            });
+
+        public Command LearnMoreCommand
+            => new Command(() =>
+            {
+                // TODO move to browser
+                Browser.OpenAsync("https://www.google.co.jp/");
+            });
+
+
+
+        public Command OnClickRegister => (new Command(async () =>
        {
-           await NavigationService.NavigateAsync("SharePositiveDiagnosisPage");
+           // Uploading EN File
+           //await NavigationService.NavigateAsync("SharePositiveDiagnosisPage");
+           // Sample Move to URL ( Open Browser)
+           // await Xamarin.Essentials.Browser.OpenAsync(Resources.AppResources.NotifyOthersLearnMoreUrl);
+
        }));
 
-        public Command LearnMoreCommand => (new Command(async () =>
+        public Command OnClickAfter => (new Command(async () =>
         {
-            await Xamarin.Essentials.Browser.OpenAsync(Resources.AppResources.NotifyOthersLearnMoreUrl);
+            var check = await UserDialogs.Instance.ConfirmAsync("あとで設定しますか?", "陽性登録", "後にする", "登録へ戻る");
+            if (check)
+            {
+                await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
+            }
+
         }));
     }
 }

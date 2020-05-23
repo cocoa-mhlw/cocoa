@@ -1,9 +1,9 @@
-﻿using Covid19Radar.Services;
+﻿using Covid19Radar.Api.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Covid19Radar.Tests.Mock
+namespace Covid19Radar.Api.Tests.Mock
 {
     public class CryptionServiceMock : ICryptionService
     {

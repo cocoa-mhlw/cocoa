@@ -9,9 +9,9 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <local:Colors />
-                <local:Styles />
-                <!--                <local:Fonts /> -->
                 <local:Icons />
+                <local:Fonts />
+                <local:Styles />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

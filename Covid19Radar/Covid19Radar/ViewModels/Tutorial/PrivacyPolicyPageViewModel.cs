@@ -36,12 +36,18 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickAgree => new Command(async () =>
         {
+            if (!LocalStateManager.Instance.IsWelcomed)
+            {
+                LocalStateManager.Instance.IsWelcomed = true;
+                LocalStateManager.Save();
+            }
+
             UserDialogs.Instance.ShowLoading("Waiting for register");
             if (!_userDataService.IsExistUserData)
             {
                 // TODO Create and Get Secure API access token key per AES256 user from Azure Func Side
                 /*
-                 UserDataModel userData = await _userDataService.RegistUserAsync();
+                 UserDataModel userData = await _userDataService.RegisterUserAsync();
                 if (userData == null)
                 {
                     UserDialogs.Instance.HideLoading();
@@ -53,9 +59,11 @@ namespace Covid19Radar.ViewModels
             UserDialogs.Instance.HideLoading();
             await NavigationService.NavigateAsync(nameof(DescriptionPage1));
         });
-        public Command OnClickNotAgree => new Command(async () =>
+        public Command OnClickNotAgree => new Command(() =>
         {
-            await NavigationService.GoBackAsync();
+            // Application close
+            Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
+
         });
 
     }

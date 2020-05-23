@@ -1,6 +1,7 @@
 ﻿using Covid19Radar.Model;
 using Covid19Radar.Renderers;
 using Covid19Radar.Services;
+using Covid19Radar.Views;
 using Prism.AppModel;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -20,6 +21,12 @@ namespace Covid19Radar.ViewModels
     public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
     {
 
+        public Command OnClickHelp => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
+        });
+
+
         // Navigation
         protected INavigationService NavigationService { get; private set; }
 
@@ -37,9 +44,15 @@ namespace Covid19Radar.ViewModels
             NavigationService = navigationService;
         }
 
-        public virtual void Initialize(INavigationParameters parameters)
+        public virtual async void Initialize(INavigationParameters parameters)
         {
-
+            if (LocalStateManager.Instance.LastIsEnabled && LocalStateManager.Instance.IsWelcomed)
+            {
+                if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                {
+                    await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
+                }
+            }
         }
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters)
@@ -56,6 +69,5 @@ namespace Covid19Radar.ViewModels
         {
 
         }
-
     }
 }

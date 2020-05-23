@@ -13,10 +13,13 @@
         "COSMOS_STORING_DATABASE_ID": "EXAMPLE",
         "AppBundleId": "AppBundleId",
         "AndroidPackage": "AndroidPackage",
-        "Region": "Country",
+        "Region": "Country", //ISO 3166-1 alpha-2
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
         "TekExportBlobStorageContainerPrefix": "c19r",
         "ExportKeyUrl": "http://127.0.0.1:10000/",
-        "TekExportKeyVaultKeyUrl": "https://xxxxxx.vault.azure.net/keys/xxxxSignaturexxx/XXXXXXXXXXXXXXXXXXXXXXXXX"
+        "TekExportKeyVaultKeyUrl": "https://xxxxxx.vault.azure.net/keys/xxxxSignaturexxx/XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "CdnResourceGroupName": "Covid19RadarCdnResouseGroupName",
+        "CdnProfileName": "Covid19RadarCdnProfile",
+        "CdnEndpointName": "Covid19RadarCdnEndpointName"
     }
 }

@@ -1,5 +1,5 @@
-﻿using Covid19Radar.DataStore;
-using Covid19Radar.Models;
+﻿using Covid19Radar.Api.DataStore;
+using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
 using System;
@@ -10,16 +10,22 @@ using System.Threading.Tasks;
 
 #nullable enable
 
-namespace Covid19Radar.DataAccess
+namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosUserRepository : IUserRepository
     {
+        const string SequenceName = "JumpConsistentHash";
         private readonly ICosmos _db;
+        private readonly ISequenceRepository _sequence;
         private readonly ILogger<CosmosUserRepository> _logger;
 
-        public CosmosUserRepository(ICosmos db, ILogger<CosmosUserRepository> logger)
+        public CosmosUserRepository(
+            ICosmos db,
+            ISequenceRepository sequence,
+            ILogger<CosmosUserRepository> logger)
         {
             _db = db;
+            _sequence = sequence;
             _logger = logger;
         }
 
@@ -34,9 +40,10 @@ namespace Covid19Radar.DataAccess
             return null;
         }
 
-        public Task Create(UserModel user)
+        public async Task Create(UserModel user)
         {
-            return _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
+            user.JumpConsistentHash = await _sequence.GetNextAsync(SequenceName, 1);
+            await _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
         }
 
         public async Task<bool> Exists(string id)
