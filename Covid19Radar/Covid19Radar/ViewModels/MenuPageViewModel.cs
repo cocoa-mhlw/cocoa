@@ -31,35 +31,35 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf965",
                 PageName = nameof(HomePage),
-                Title = "ホーム"
+                Title = Resources.AppResources.HomePageTitle
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf4fe",
                 PageName = nameof(SettingsPage),
-                Title = "アプリの設定"
+                Title = Resources.AppResources.SettingsPageTitle
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf2f1",
-                PageName = nameof(UpdateInfomationPage),
-                Title = "更新情報"
+                PageName = nameof(UpdateInformationPage),
+                Title = Resources.AppResources.TitleUpdateInformation
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf56c",
                 PageName = nameof(LicenseAgreementPage),
-                Title = "ライセンス"
+                Title = Resources.AppResources.TitleLicenseAgreement
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
                 PageName = nameof(ContributorsPage),
-                Title = "貢献者一覧"
+                Title = Resources.AppResources.TitleContributorsPage
             });
 
 #if DEBUG

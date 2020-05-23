@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.6.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
     <PackageReference Include="Moq" Version="4.14.1" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.1" />
@@ -23,10 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Covid19Radar.Api.Common\Covid19Radar.Api.Common.csproj" />
     <ProjectReference Include="..\Covid19Radar.Api.External\Covid19Radar.Api.External.csproj" />
     <ProjectReference Include="..\Covid19Radar.Api\Covid19Radar.Api.csproj" />
     <ProjectReference Include="..\Covid19Radar.Background\Covid19Radar.Background.csproj" />
-    <ProjectReference Include="..\Covid19Radar.Functions.Common\Covid19Radar.Functions.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

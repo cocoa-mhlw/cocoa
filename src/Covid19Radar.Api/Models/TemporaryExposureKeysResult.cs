@@ -1,10 +1,10 @@
-﻿using Covid19Radar.Common;
+﻿using Covid19Radar.Api.Common;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.Models
 {
     public class TemporaryExposureKeysResult
     {

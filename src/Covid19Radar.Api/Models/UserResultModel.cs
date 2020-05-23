@@ -1,8 +1,8 @@
 ﻿using System;
-using Covid19Radar.Common;
+using Covid19Radar.Api.Common;
 using Newtonsoft.Json;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.Models
 {
     [JsonObject("userResultModel")]
     public class UserResultModel

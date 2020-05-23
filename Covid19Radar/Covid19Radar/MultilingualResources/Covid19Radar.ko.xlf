@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="ko" original="COVID19RADAR/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="ko" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft" />
     </header>
@@ -49,7 +49,6 @@
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">가까운 연락처를 기록하려면 블루투스를 켜야 합니다. 다음 페이지로 이동하여 켜십시오.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
         </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
@@ -528,6 +527,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
           <source>SampleText</source>
           <target state="new">SampleText</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="new">Settings</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
+        </trans-unit>
+        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
+          <source>Not Agree</source>
+          <target state="new">Not Agree</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
+        </trans-unit>
+        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="new">Cancel</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
+        </trans-unit>
+        <trans-unit id="InitSettingPageDialogTextExposureNotificationTitle" translate="yes" xml:space="preserve">
+          <source>Do you want to turn on notifications?</source>
+          <target state="new">Do you want to turn on notifications?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
         </trans-unit>
       </group>
     </body>

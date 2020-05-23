@@ -10,7 +10,7 @@ namespace Covid19Radar.Common
         public static readonly string AppCenterTokensIOS = "APPCENTER_IOS";
 
         public static readonly string ApiUserSecretKeyPrefix = "Bearer";
-        public static readonly string AppName = "COVID-19-RADAR";
+        public static readonly string AppName = "COVID-19RADAR";
         public static readonly string AppVersion = "Ver 1.0.0";
         public static readonly string AppStoreUrl = "https://www.apple.com/jp/ios/app-store/";
         public static readonly string GooglePlayUrl = "https://play.google.com/store";
@@ -18,6 +18,12 @@ namespace Covid19Radar.Common
         public static readonly string ApiBaseUrl = "https://covid19radar.azurewebsites.net/api";
 //        public static readonly string ApiSecret = "API_SECRET";
         public static readonly string ApiSecret = "g***REMOVED***BaKQ==";
+
+        public const string DefaultRegion = "default";
+        public const string ApiUrlBase = "https://covid19radar.azurewebsites.net/api";
+        public const string ApiUrlBlobStorageBase = "https://exposurenotifications.blob.core.windows.net/";
+        public const string BlobStorageContainerNamePrefix = "c19r";
+
 
         /// <summary>
         /// Apple's company ibeacon code

@@ -8,10 +8,10 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Covid19Radar.Models;
-using Covid19Radar.DataStore;
-using Covid19Radar.Services;
-using Covid19Radar.DataAccess;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.DataStore;
+using Covid19Radar.Api.Services;
+using Covid19Radar.Api.DataAccess;
 
 #nullable enable
 

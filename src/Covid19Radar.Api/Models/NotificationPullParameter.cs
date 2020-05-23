@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.Models
 {
     [JsonObject("notificationPullParameter")]
     public class NotificationPullParameter : IUser
