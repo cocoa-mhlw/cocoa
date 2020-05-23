@@ -1,39 +1,47 @@
 using Covid19Radar.Api;
-using Covid19Radar.DataAccess;
-using Covid19Radar.Services;
+using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System.Threading.Tasks;
 
-namespace Covid19Radar.Tests
+namespace Covid19Radar.Api.Tests
 {
     [TestClass]
+    [TestCategory("Api")]
     public class UserApiTest
     {
         [TestMethod]
         public void CreateMethod()
         {
             // preparation
-            var userRepo = new Mock<IUserRepository>();
             var notification = new Mock.NotificationServiceMock();
             var validation = new Mock.ValidationUserServiceMock();
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi(userRepo.Object, notification, validation, logger);
+            var userApi = new UserApi(notification, validation, logger);
         }
 
         [DataTestMethod]
-        [DataRow("")]
-        public void RunMethod(string userUuid)
+        [DataRow(true, "")]
+        [DataRow(true, "UserUuid")]
+        [DataRow(false, null)]
+        public async Task RunAsyncMethod(bool isValid, string userUuid)
         {
             // preparation
-            var userRepo = new Mock<IUserRepository>();
             var notification = new Mock.NotificationServiceMock();
-            var validation = new Mock.ValidationUserServiceMock();
+            var validation = new Mock<IValidationUserService>();
+            var validationResult = new IValidationUserService.ValidateResult()
+            {
+                IsValid = isValid
+            };
+            validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi(userRepo.Object, notification, validation, logger);
+            var userApi = new UserApi(notification, validation.Object, logger);
             var context = new Mock.HttpContextMock();
             // action
-            userApi.Run(context.Request, userUuid);
+            await userApi.RunAsync(context.Request, userUuid);
             // assert
         }
     }

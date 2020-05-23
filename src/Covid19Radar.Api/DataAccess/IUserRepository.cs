@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Models;
+﻿using Covid19Radar.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 #nullable enable
 
-namespace Covid19Radar.DataAccess
+namespace Covid19Radar.Api.DataAccess
 {
     public interface IUserRepository
     {

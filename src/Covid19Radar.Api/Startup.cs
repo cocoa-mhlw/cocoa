@@ -1,18 +1,11 @@
-﻿using System;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Http;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.Extensions.Logging.Debug;
-using Microsoft.AspNetCore.Http;
-using Covid19Radar.DataAccess;
 
-[assembly: FunctionsStartup(typeof(Covid19Radar.Startup))]
+[assembly: FunctionsStartup(typeof(Covid19Radar.Api.Startup))]
 
-namespace Covid19Radar
+namespace Covid19Radar.Api
 {
     public class Startup : FunctionsStartup
     {
@@ -28,6 +21,7 @@ namespace Covid19Radar
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
             builder.Services.AddSingleton<IDiagnosisRepository, CosmosDiagnosisRepository>();
+            builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
         }
     }
 }

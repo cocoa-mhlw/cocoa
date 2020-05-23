@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Verndum ástvini okkar frá COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>Þetta forrit notar Bluetooth-merki til að ákvarða hvort þú sért nálægt öðru notandakenni tengiliðar. 
-Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Leyfa Bluetooth</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>Verndum ástvini okkar frá COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Aðgangur að búnaði</value>
@@ -134,10 +125,6 @@ Endilega Kíkið á SMS.</value>
     <value>Ef þú fékkst jákvæða greiningu</value>
     <comment>Status settings page sub title</comment>
   </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>Stillingar stöðu</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
@@ -186,10 +173,6 @@ Endilega Kíkið á SMS.</value>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Leyfissamningur</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -248,11 +231,189 @@ Endilega Kíkið á SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ef þú greinist COVID19 jákvætt</value>
+    <value>Ef þú greinist COVID-19 jákvætt</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Skilyrði til að nota þetta forrit</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>Stillingar stöðu</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>Stillingar stöðu</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Vista</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Ef þú fékkst jákvæða greiningu skaltu slá inn farsímanúmerið þitt og uppfæra stöðu þína til að vernda ástvini þína.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>Pikkaðu á til að breyta stöðu</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Athuga þarf nettenginguna.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>Í lagi</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>Gera virkt</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Ekki</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>Þetta forrit notar tilkynningar um útsetningu/Bluetooth-merki til að ákvarða hvort þú sért nálægt öðru notandakenni tengiliðar. 
+Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Leyfa útsetningu tilkynninga/Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Þvagleggur m hitamæli</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Stöður</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Heim</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>Leyfi</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Tilkynna</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Uppfæra</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Stöður</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>Handvirkt</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Uppfæra infomation</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Virkja tilkynningu</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>Engin þekkt útsetning</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>Þú verður látinn vita ef þú hefur orðið fyrir einhverjum sem tilkynnti um jákvæða COVID-19 niðurstöðu.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Deildu jákvæðri greiningu</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Deildu jákvæðri greiningu</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>Ef þú prófað jákvætt fyrir veiruna sem veldur COVID-19, getur þú valið að deila greiningu þinni.  Þetta mun hjálpa öðrum í samfélagi þínu að innihalda útbreiðslu veirunnar.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Frekari upplýsingar</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Ef þú fékkst jákvæða greiningu</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>Vinsamlegast sláðu inn auðkenni greiningar</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>Deildu jákvæðri greiningu</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>Prófunardagsetningin hjálpar forritinu að vita hvenær þú gætir hafa verið smitandi og látið rétta fólk af hugsanlegri útsetningu.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>Aðeins þeir sem hafa orðið fyrir vilja fá tilkynningu.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>Nota verður einkvæmt prófunarauðkenni sem fylgdi COVID-19 prófinu til að staðfesta jákvæða niðurstöðu prófana.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>Staðfestið og Deilið</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>Reyndu aftur síðar.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>Mistókst</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>Greining lögð</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>Ljúka</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>Vinsamlegast Gefðu upp auðkenni greiningar</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>Kenni greiningar krafist</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>Í lagi</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>Vinsamlegast virkjaðu tilkynningar um útsetningu áður en þú sendir greiningu.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>Tilkynningar um útsetningu fatlaðra</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>Senda inn greiningu...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>Sannprófun greiningar...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>Ekki er hægt að sannreyna greiningu á þessum tíma til að senda inn.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>Sannprófun mistókst</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>Senda</value>
   </data>
 </root>

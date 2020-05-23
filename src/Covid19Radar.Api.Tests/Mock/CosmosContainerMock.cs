@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Scripts;
 
-namespace Covid19Radar.Tests.Mock
+namespace Covid19Radar.Api.Tests.Mock
 {
     public class CosmosContainerMock : Container
     {
@@ -20,6 +20,8 @@ namespace Covid19Radar.Tests.Mock
 
         public Scripts ScriptsValue;
         public override Scripts Scripts => ScriptsValue;
+
+        public override Database Database => null;
 
         public override Task<ItemResponse<T>> CreateItemAsync<T>(T item, PartitionKey? partitionKey = null, ItemRequestOptions requestOptions = null, CancellationToken cancellationToken = default)
         {
@@ -181,6 +183,11 @@ namespace Covid19Radar.Tests.Mock
         {
             var returnValue = new ResponseMessage();
             return Task.FromResult(returnValue);
+        }
+
+        public override Task<ThroughputResponse> ReplaceThroughputAsync(ThroughputProperties throughputProperties, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
         }
     }
 }

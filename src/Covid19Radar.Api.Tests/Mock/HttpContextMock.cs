@@ -7,7 +7,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading;
 
-namespace Covid19Radar.Tests.Mock
+namespace Covid19Radar.Api.Tests.Mock
 {
     public class HttpContextMock : HttpContext
     {
@@ -21,10 +21,10 @@ namespace Covid19Radar.Tests.Mock
         public IFeatureCollection _Feature = new FeatureCollection();
         public override IFeatureCollection Features => _Feature;
 
-        private HttpRequest _Request;
+        public HttpRequestMock _Request;
         public override HttpRequest Request => _Request;
 
-        private HttpResponse _Response;
+        public HttpResponseMock _Response;
         public override HttpResponse Response => _Response;
 
         public ConnectionInfo _Connection = new ConnectionInfoMock();

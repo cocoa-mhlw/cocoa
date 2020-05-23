@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Covid19Radar.Api.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.External.Models
 {
     public class NotificationCreateResult
     {

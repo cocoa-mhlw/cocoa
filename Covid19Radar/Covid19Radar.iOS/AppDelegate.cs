@@ -26,8 +26,6 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public static AppDelegate Instance { get; private set; }
-        private UserDataService _userDataService;
-        private NotificationService _notificationService;
         public AppDelegate()
         {
         }
@@ -41,6 +39,8 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
+
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
 
@@ -50,6 +50,8 @@ namespace Covid19Radar.iOS
                 Logger = new Covid19Radar.Services.DebugLogger()
             });
             Distribute.DontCheckForUpdatesInDebug();
+
+            Plugin.LocalNotification.NotificationCenter.AskPermission();
 
             LoadApplication(new App(new iOSInitializer()));
 
@@ -62,6 +64,7 @@ namespace Covid19Radar.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        /*
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
         {
             // Check for new data, and display it
@@ -91,7 +94,13 @@ namespace Covid19Radar.iOS
                 }
             }).ConfigureAwait(false);
         }
+        */
 
+        public override void WillEnterForeground(UIApplication uiApplication)
+        {
+            Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
+        }
+        /*
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
         {
             var result = Push.DidReceiveRemoteNotification(userInfo);
@@ -114,6 +123,7 @@ namespace Covid19Radar.iOS
         {
             Push.RegisteredForRemoteNotifications(deviceToken);
         }
+        */
     }
 
     public class iOSInitializer : IPlatformInitializer
@@ -121,8 +131,7 @@ namespace Covid19Radar.iOS
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
-            containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
-            containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
+            //containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
         }
     }
 

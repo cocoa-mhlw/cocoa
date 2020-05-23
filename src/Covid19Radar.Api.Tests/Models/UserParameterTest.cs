@@ -1,11 +1,12 @@
 ﻿using System;
-using Covid19Radar.Common;
-using Covid19Radar.Models;
+using Covid19Radar.Api.Common;
+using Covid19Radar.Api.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Covid19Radar.Tests.Models
+namespace Covid19Radar.Api.Tests.Models
 {
     [TestClass]
+    [TestCategory("Models")]
     public class UserParameterTest
     {
         [TestMethod]

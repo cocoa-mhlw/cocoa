@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.Models
 {
 	public class DiagnosisSubmissionParameter : IUser
 	{
@@ -12,7 +12,37 @@ namespace Covid19Radar.Models
 		[JsonProperty("userUuid")]
 		public string UserUuid { get; set; }
         [JsonProperty("keys")]
-		public TemporaryExposureKeyModel[] Keys { get; set; }
-
+		public Key[] Keys { get; set; }
+		[JsonProperty("region")]
+		public string Region { get; set; }
+		[JsonProperty("platform")]
+		public string Platform { get; set; }
+		[JsonProperty("deviceVerificationPayload")]
+		public string DeviceVerificationPayload { get; set; }
+		[JsonProperty("appPackageName")]
+		public string AppPackageName { get; set; }
+		public class Key
+		{
+			[JsonProperty("keyData")]
+			public string KeyData { get; set; }
+			[JsonProperty("rollingStartNumber")]
+			public uint RollingStartNumber { get; set; }
+			[JsonProperty("rollingPeriod ")]
+			public uint RollingPeriod { get; set; }
+			[JsonProperty("transmissionRisk")]
+			public int TransmissionRisk { get; set; }
+			public TemporaryExposureKeyModel ToModel(DiagnosisSubmissionParameter p, ulong timestamp)
+			{
+				return new TemporaryExposureKeyModel()
+				{
+					KeyData = Convert.FromBase64String(this.KeyData),
+					Region = p.Region,
+					RollingPeriod = (int)this.RollingPeriod,
+					RollingStartIntervalNumber = (int)this.RollingStartNumber,
+					TransmissionRiskLevel = TransmissionRisk,
+					Timestamp = timestamp
+				};
+			}
+		}
 	}
 }

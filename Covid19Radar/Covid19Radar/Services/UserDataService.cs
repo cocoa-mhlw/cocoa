@@ -19,19 +19,15 @@ namespace Covid19Radar.Services
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
-        private readonly INotificationService notificationService;
         private readonly INavigationService navigationService;
         private MinutesTimer _downloadTimer;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
-        public UserDataService(HttpDataService httpDataService, INavigationService navigationService, INotificationService notificationService)
+        public UserDataService(HttpDataService httpDataService, INavigationService navigationService)
         {
             this.httpDataService = httpDataService;
             this.navigationService = navigationService;
-            this.notificationService = notificationService;
-            this.notificationService.Initialize();
-            this.notificationService.NotificationReceived += OnLocalNotificationTaped;
             current = Get();
             if (current != null)
             {
@@ -73,27 +69,7 @@ namespace Covid19Radar.Services
                 return;
             }
             var hasNotification = downloadModel.LastNotificationTime != current.LastNotificationTime;
-            var hasStatusChange = downloadModel.UserStatus != current.UserStatus;
-            if (hasStatusChange)
-            {
-                // Notification Contacted
-                /*
-                if (downloadModel.UserStatus == UserStatus.Contactd)
-                {
-                    // TOOD Change to Resouce String
-                    notificationService.ScheduleNotification("TEST", "MESSAGE");
-                }
-                */
-                var newModel = new UserDataModel()
-                {
-                    UserUuid = current.UserUuid,
-                    Major = current.Major,
-                    Minor = current.Minor,
-                    UserStatus = downloadModel.UserStatus,
-                    LastNotificationTime = current.LastNotificationTime
-                };
-                await SetAsync(newModel);
-            }
+
             if (hasNotification)
             {
                 // Pull Notification.
@@ -102,15 +78,15 @@ namespace Covid19Radar.Services
                     var newModel = new UserDataModel()
                     {
                         UserUuid = current.UserUuid,
-                        Major = current.Major,
-                        Minor = current.Minor,
-                        UserStatus = current.UserStatus,
+                        JumpConsistentHash = current.JumpConsistentHash,
                         LastNotificationTime = downloadModel.LastNotificationTime
                     };
                     var result = await httpDataService.GetNotificationPullAsync(newModel);
                     foreach (var notify in result.Messages)
                     {
-                        notificationService.ReceiveNotification(notify.Title, notify.Message);
+
+                        // TODO Positive Notify 
+                        // notificationService.ReceiveNotification(notify.Title, notify.Message);
                     }
                     await SetAsync(newModel);
                 }
@@ -125,9 +101,9 @@ namespace Covid19Radar.Services
         public bool IsExistUserData { get => current != null; }
 
 
-        public async Task<UserDataModel> RegistUserAsync()
+        public async Task<UserDataModel> RegisterUserAsync()
         {
-            UserDataModel userData = await httpDataService.PostRegisterUserAsync();
+            var userData = await httpDataService.PostRegisterUserAsync();
             if (userData == null)
             {
                 return null;
@@ -159,10 +135,7 @@ namespace Covid19Radar.Services
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             await Application.Current.SavePropertiesAsync();
             current = userData;
-            if (UserDataChanged != null)
-            {
-                UserDataChanged(this, current);
-            }
+            UserDataChanged?.Invoke(this, current);
             // only first time.
             if (isNull && userData != null)
             {
