@@ -1,185 +1,301 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Covid19Radar.Common;
 using Covid19Radar.Services;
 using Newtonsoft.Json;
 using Plugin.LocalNotification;
+using Prism.Ioc;
+using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.Services
 {
-	[Preserve] // Ensure this isn't linked out
-	public class ExposureNotificationHandler : IExposureNotificationHandler
-	{
-		public const string DefaultRegion = "default";
+    [Preserve] // Ensure this isn't linked out
+    public class ExposureNotificationHandler : IExposureNotificationHandler
+    {
+        static readonly HttpClient http = new HttpClient();
 
-		const string apiUrlBase = "https://exposurenotificationfunctions.azurewebsites.net/api/";
-		const string apiUrlBlobStorageBase = "https://exposurenotifications.blob.core.windows.net/";
-		const string blobStorageContainerNamePrefix = "";
+        // this string should be localized
+        public string UserExplanation
+            => "We need to make use of the keys to keep you healthy.";
 
-		static readonly HttpClient http = new HttpClient();
+        // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
+        public Task<Configuration> GetConfigurationAsync()
+            => Task.FromResult(new Configuration());
 
-		// this string should be localized
-		public string UserExplanation
-			=> "We need to make use of the keys to keep you healthy.";
+        // this will be called when a potential exposure has been detected
+        public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> exposureInfo)
+        {
+            LocalStateManager.Instance.ExposureSummary = summary;
 
-		// this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
-		public Task<Configuration> GetConfigurationAsync()
-			=> Task.FromResult(new Configuration());
+            // Add these on main thread in case the UI is visible so it can update
+            await Device.InvokeOnMainThreadAsync(() =>
+            {
+                foreach (var i in exposureInfo)
+                    LocalStateManager.Instance.ExposureInformation.Add(i);
+            });
 
-		// this will be called when a potential exposure has been detected
-		public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> exposureInfo)
-		{
-			LocalStateManager.Instance.ExposureSummary = summary;
+            LocalStateManager.Save();
 
-			// Add these on main thread in case the UI is visible so it can update
-			await Device.InvokeOnMainThreadAsync(() =>
-			{
-				foreach (var i in exposureInfo)
-					LocalStateManager.Instance.ExposureInformation.Add(i);
-			});
+            var notification = new NotificationRequest
+            {
+                NotificationId = 100,
+                Title = "Possible COVID-19 Exposure",
+                Description = "It is possible you have been exposed to someone who was a confirmed diagnosis of COVID-19.  Tap for more details."
+            };
 
-			LocalStateManager.Save();
+            NotificationCenter.Current.Show(notification);
+        }
 
-			var notification = new NotificationRequest
-			{
-				NotificationId = 100,
-				Title = "Possible COVID-19 Exposure",
-				Description = "It is possible you have been exposed to someone who was a confirmed diagnosis of COVID-19.  Tap for more details."
-			};
+        // this will be called when they keys need to be collected from the server
+        public async Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
+        {
+            try
+            {
+                var downloadedFiles = new List<string>();
+                var since = LocalStateManager.Instance.ServerLastTime;
+                var url = $"{AppConstants.ApiUrlBase.TrimEnd('/')}/TemporaryExposureKeys?since={since}";
+                var response = await http.GetAsync(url);
+                response.EnsureSuccessStatusCode();
 
-			NotificationCenter.Current.Show(notification);
-		}
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var resonseContentResult = JsonConvert.DeserializeObject<TemporaryExposureKeysResult>(responseContent);
+                foreach (var key in resonseContentResult.Keys)
+                {
+                    var responseKey = await http.GetAsync(url);
+                    responseKey.EnsureSuccessStatusCode();
 
-		// this will be called when they keys need to be collected from the server
-		public async Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
-		{
-			// This is "default" by default
-			var region = LocalStateManager.Instance.Region ?? DefaultRegion;
+                    var tmpFile = Path.Combine(FileSystem.CacheDirectory, Guid.NewGuid().ToString() + ".zip");
 
-			var checkForMore = true;
-			do
-			{
-				try
-				{
-					// Find next batch number
-					var batchNumber = LocalStateManager.Instance.ServerBatchNumber + 1;
+                    // Read the batch file stream into a temporary file
+                    using var responseStream = await response.Content.ReadAsStreamAsync();
+                    using var fileStream = File.Create(tmpFile);
+                    await responseStream.CopyToAsync(fileStream);
 
-					// Build the blob storage url for the given batch file we are on next
-					var url = $"{apiUrlBlobStorageBase}/{blobStorageContainerNamePrefix}{region}/{batchNumber}.dat";
+                    downloadedFiles.Add(tmpFile);
+                }
 
-					var response = await http.GetAsync(url);
+                // process the current directory, if there were any
+                if (downloadedFiles.Count > 0)
+                {
+                    // TODO: waiting release new nuget package
+                    //await submitBatches(downloadedFiles);
 
-					// If we get a 404, there are no newer batch files available to download
-					if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-					{
-						checkForMore = false;
-						break;
-					}
+                    // delete all temporary files
+                    foreach (var file in downloadedFiles)
+                    {
+                        try
+                        {
+                            File.Delete(file);
+                        }
+                        catch { }
+                    }
+                }
 
-					response.EnsureSuccessStatusCode();
+                LocalStateManager.Instance.ServerLastTime = resonseContentResult.Timestamp;
+                LocalStateManager.Save();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
 
-					// Skip batch files which are older than 14 days
-					if (response.Content.Headers.LastModified.HasValue)
-					{
-						if (response.Content.Headers.LastModified < DateTimeOffset.UtcNow.AddDays(-14))
-						{
-							LocalStateManager.Instance.ServerBatchNumber = batchNumber;
-							LocalStateManager.Save();
-							checkForMore = true;
-							continue;
-						}
-					}
+            //// This is "default" by default
+            //var region = LocalStateManager.Instance.Region ?? AppConstants.DefaultRegion;
 
-					// Read the batch file stream
-					using var responseStream = await response.Content.ReadAsStreamAsync();
+            //var checkForMore = true;
 
-					// Parse into a Proto.File
-					var batchFile = TemporaryExposureKeyBatch.Parser.ParseFrom(responseStream);
+            //do
+            //{
+            //    try
+            //    {
+            //        // Find next batch number
+            //        var batchNumber = LocalStateManager.Instance.ServerBatchNumber + 1;
 
-					// Submit to the batch processor
-					await batches.AddBatchAsync(batchFile);
+            //        // Build the blob storage url for the given batch file we are on next
+            //        var url = $"{AppConstants.ApiUrlBlobStorageBase}/{AppConstants.BlobStorageContainerNamePrefix}{region}/{batchNumber}.dat";
 
-					// Update the number we are on
-					LocalStateManager.Instance.ServerBatchNumber = batchNumber;
-					LocalStateManager.Save();
-				}
-				catch (Exception ex)
-				{
-					Console.WriteLine(ex);
-					checkForMore = false;
-				}
-			} while (checkForMore);
-		}
+            //        var response = await http.GetAsync(url);
 
-		// this will be called when the user is submitting a diagnosis and the local keys need to go to the server
-		public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
-		{
-			var pendingDiagnosis = LocalStateManager.Instance.PendingDiagnosis;
+            //        // If we get a 404, there are no newer batch files available to download
+            //        if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            //        {
+            //            checkForMore = false;
+            //            break;
+            //        }
 
-			if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
-				throw new InvalidOperationException();
+            //        response.EnsureSuccessStatusCode();
 
-			try
-			{
-				var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+            //        // Skip batch files which are older than 14 days
+            //        if (response.Content.Headers.LastModified.HasValue)
+            //        {
+            //            if (response.Content.Headers.LastModified < DateTimeOffset.UtcNow.AddDays(-14))
+            //            {
+            //                LocalStateManager.Instance.ServerBatchNumber = batchNumber;
+            //                LocalStateManager.Save();
+            //                checkForMore = true;
+            //                continue;
+            //            }
+            //        }
 
-				var json = JsonConvert.SerializeObject(new SelfDiagnosisSubmissionRequest
-				{
-					DiagnosisUid = pendingDiagnosis.DiagnosisUid,
-					TestDate = pendingDiagnosis.DiagnosisDate.ToUnixTimeMilliseconds(),
-					Keys = temporaryExposureKeys
-				});
+            //        // Read the batch file stream
+            //        using var responseStream = await response.Content.ReadAsStreamAsync();
 
-				var http = new HttpClient();
-				var response = await http.PutAsync(url, new StringContent(json));
+            //        // Parse into a Proto.File
+            //        var batchFile = TemporaryExposureKeyBatch.Parser.ParseFrom(responseStream);
 
-				response.EnsureSuccessStatusCode();
+            //        // Submit to the batch processor
+            //        await batches.AddBatchAsync(batchFile);
 
-				// Update pending status
-				pendingDiagnosis.Shared = true;
-				LocalStateManager.Save();
-			}
-			catch
-			{
-				throw;
-			}
-		}
+            //        // Update the number we are on
+            //        LocalStateManager.Instance.ServerBatchNumber = batchNumber;
+            //        LocalStateManager.Save();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Console.WriteLine(ex);
+            //        checkForMore = false;
+            //    }
+            //} while (checkForMore);
+        }
 
-		internal static async Task<bool> VerifyDiagnosisUid(string diagnosisUid)
-		{
-			var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+        // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
+        public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
+        {
+            var pendingDiagnosis = LocalStateManager.Instance.PendingDiagnosis;
 
-			var http = new HttpClient();
+            if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
+                throw new InvalidOperationException();
 
-			try
-			{
-				var json = "{\"diagnosisUid\":\"" + diagnosisUid + "\"}";
-				var response = await http.PostAsync(url, new StringContent(json));
+            try
+            {
+                //var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+                var url = $"{AppConstants.ApiUrlBase.TrimEnd('/')}/diagnosis";
 
-				response.EnsureSuccessStatusCode();
+                //var json = JsonConvert.SerializeObject(new SelfDiagnosisSubmissionRequest
+                //{
+                //    DiagnosisUid = pendingDiagnosis.DiagnosisUid,
+                //    TestDate = pendingDiagnosis.DiagnosisDate.ToUnixTimeMilliseconds(),
+                //    Keys = temporaryExposureKeys
+                //});
 
-				return true;
-			}
-			catch
-			{
-				return false;
-			}
-		}
+                UserDataService userDataService = App.Current.Container.Resolve<UserDataService>();
+                var request = new DiagnosisSubmissionRequest()
+                {
+                    SubmissionNumber = pendingDiagnosis.DiagnosisUid,
+                    AppPackageName = Xamarin.Essentials.AppInfo.PackageName, // experimental
+                    UserUuid = userDataService.Get().UserUuid,
+                    Region = LocalStateManager.Instance.Region ?? AppConstants.DefaultRegion,
+                    Platform = Device.RuntimePlatform.ToLower(),
+                    Keys = temporaryExposureKeys.Select(_ => DiagnosisSubmissionRequest.Key.FromTemporaryExposureKey(_)).ToArray(),
+                    DeviceVerificationPayload = "" // TODO: device payload
+                };
 
-		class SelfDiagnosisSubmissionRequest
-		{
-			[JsonProperty("diagnosisUid")]
-			public string DiagnosisUid { get; set; }
+                var http = new HttpClient();
+                var response = await http.PutAsync(url, new StringContent(JsonConvert.SerializeObject(request)));
 
-			[JsonProperty("testDate")]
-			public long TestDate { get; set; }
+                response.EnsureSuccessStatusCode();
 
-			[JsonProperty("keys")]
-			public IEnumerable<TemporaryExposureKey> Keys { get; set; }
-		}
-	}
+                // Update pending status
+                pendingDiagnosis.Shared = true;
+                LocalStateManager.Save();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        internal static async Task<bool> VerifyDiagnosisUid(string diagnosisUid)
+        {
+            var url = $"{AppConstants.ApiUrlBase.TrimEnd('/')}/selfdiagnosis";
+
+            var http = new HttpClient();
+
+            try
+            {
+                var json = "{\"diagnosisUid\":\"" + diagnosisUid + "\"}";
+                var response = await http.PostAsync(url, new StringContent(json));
+
+                response.EnsureSuccessStatusCode();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public class TemporaryExposureKeysResult
+        {
+            [JsonProperty("timestamp")]
+            public long Timestamp { get; set; }
+
+            [JsonProperty("keys")]
+            public IEnumerable<Key> Keys { get; set; }
+
+            public class Key
+            {
+                public string Url;
+            }
+        }
+
+        //class SelfDiagnosisSubmissionRequest
+        //{
+        //    [JsonProperty("diagnosisUid")]
+        //    public string DiagnosisUid { get; set; }
+
+        //    [JsonProperty("testDate")]
+        //    public long TestDate { get; set; }
+
+        //    [JsonProperty("keys")]
+        //    public IEnumerable<TemporaryExposureKey> Keys { get; set; }
+        //}
+
+        public class DiagnosisSubmissionRequest
+        {
+            [JsonProperty("submissionNumber")]
+            public string SubmissionNumber { get; set; }
+            [JsonProperty("userUuid")]
+            public string UserUuid { get; set; }
+            [JsonProperty("keys")]
+            public Key[] Keys { get; set; }
+            [JsonProperty("region")]
+            public string Region { get; set; }
+            [JsonProperty("platform")]
+            public string Platform { get; set; }
+            [JsonProperty("deviceVerificationPayload")]
+            public string DeviceVerificationPayload { get; set; }
+            [JsonProperty("appPackageName")]
+            public string AppPackageName { get; set; }
+            public class Key
+            {
+                [JsonProperty("keyData")]
+                public string KeyData { get; set; }
+                [JsonProperty("rollingStartNumber")]
+                public uint RollingStartNumber { get; set; }
+                [JsonProperty("rollingPeriod ")]
+                public uint RollingPeriod { get; set; }
+                [JsonProperty("transmissionRisk")]
+                public int TransmissionRisk { get; set; }
+                public static Key FromTemporaryExposureKey(TemporaryExposureKey key)
+                {
+                    return new Key()
+                    {
+                        KeyData = Convert.ToBase64String(key.KeyData),
+                        RollingStartNumber = (uint)(key.RollingStart.ToUnixTimeSeconds() / 60 / 10),
+                        RollingPeriod = (uint)(key.RollingDuration.TotalSeconds / 60 / 10),
+                        TransmissionRisk = (int)key.TransmissionRiskLevel
+                    };
+                }
+            }
+        }
+    }
 }

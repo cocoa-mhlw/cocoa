@@ -27,8 +27,8 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>Apple Development: Hirose Kazumi (B5NUWQDLW4)</CodesignKey>
+    <CodesignProvision>Covid19radar</CodesignProvision>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchSdkVersion>13.5</MtouchSdkVersion>
   </PropertyGroup>
@@ -110,6 +110,7 @@
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
     <Compile Include="Renderers\GradientButtonRenderer.cs" />
     <Compile Include="Services\CloseApplication.cs" />
+    <Compile Include="Services\DeviceCheckService.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
     <None Include="appcenter-pre-build.sh" />
     <ImageAsset Include="Assets.xcassets\Contents.json">

@@ -26,7 +26,7 @@
             <Label
                 Grid.Row="0"
                 Style="{StaticResource DefaultTitleLabel}"
-                Text="アプリの設定" />
+                Text="{Binding Title}" />
             <Grid
                 Grid.Row="1"
                 HorizontalOptions="Center"

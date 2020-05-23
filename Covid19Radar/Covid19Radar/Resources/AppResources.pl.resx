@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Ochrona naszych bliskich przed COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>Ta aplikacja używa sygnałów Bluetooth, aby ustalić, czy jesteś w pobliżu innego użytkownika aplikacji śledzenia kontaktów. 
-Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Zezwalaj na połączenia Bluetooth</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>Ochrona naszych bliskich przed COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Dostęp do urządzenia</value>
@@ -134,10 +125,6 @@ Sprawdź swój SMS.</value>
     <value>Jeśli pacjent otrzymał pozytywną diagnozę</value>
     <comment>Status settings page sub title</comment>
   </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>Ustawienia stanu</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
@@ -186,10 +173,6 @@ Sprawdź swój SMS.</value>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Umowa licencyjna</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -254,5 +237,183 @@ Sprawdź swój SMS.</value>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Wymagania dotyczące korzystania z tej aplikacji</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>Ustawienia stanu</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>Ustawienia stanu</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Zapisz</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Jeśli otrzymałeś pozytywną diagnozę, podaj swój numer telefonu komórkowego i zaktualizuj swój status, aby chronić swoich bliskich.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>Dotknij, aby zmienić stan</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Sprawdź połączenie sieciowe.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>Ok</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>Włącz</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>NotNow (Nienow)</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>Ta aplikacja wykorzystuje powiadomienia ekspozycji / sygnały Bluetooth, aby ustalić, czy jesteś w pobliżu innego użytkownika aplikacji śledzenia kontaktu. 
+Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Zezwalaj na powiadomienie o ekspozycji / Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Współpracowników</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Ekspozycji</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Strona główna</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>Licencja</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Powiadom</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Aktualizuj</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Ekspozycji</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>Ręcznie</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Informacje o aktualizacji</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Włącz powiadomienie</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>Brak znanych ekspozycji</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>Zostaniesz powiadomiony, jeśli byłeś narażony na działanie osoby, która zgłosiła pozytywny wynik COVID-19.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Podziel się pozytywną diagnozą</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Podziel się pozytywną diagnozą</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>Jeśli testowany pozytywny dla wirusa, który powoduje COVID-19, można podzielić się diagnozą.  Pomoże to innym w twojej społeczności powstrzymać rozprzestrzenianie się wirusa.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Dowiedz się więcej</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Jeśli pacjent otrzymał pozytywną diagnozę</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>Wprowadź identyfikator diagnostyczny</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>Podziel się pozytywną diagnozą</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>Data testu pomaga aplikacji wiedzieć, kiedy możesz być zaraźliwa i powiadomić odpowiednie osoby o potencjalnej ekspozycji.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>Tylko ci, którzy zostali ujawnieni, otrzymają powiadomienie.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>Unikatowy identyfikator testu, który został doszła do testu COVID-19, musi być użyty do zweryfikowania pozytywnego wyniku testu.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>Weryfikowanie i udostępnianie</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>Próbuj ponownie później.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>Niepowodzenie</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>Diagnoza Przedłożona</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>Wykonano</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>Proszę podać identyfikator diagnostyczny</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>Wymagany identyfikator diagnozy</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>Przed przesłaniem diagnozy włącz powiadomienia o ekspozycji.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>Powiadomienia o narażeniu wyłączone</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>Składanie diagnozy...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>Weryfikacja diagnozy...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>Twoja diagnoza nie może być zweryfikowana w tej chwili, aby zostać przesłana.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>Weryfikacja nie powiodła się</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>Prześlij</value>
   </data>
 </root>
