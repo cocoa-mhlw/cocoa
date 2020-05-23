@@ -14,11 +14,14 @@
     Visual="Material">
     <Grid Style="{StaticResource DefaultGridLayout}">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <ScrollView Grid.Row="0">
-
+        <StackLayout Grid.Row="0">
+            <Label Style="{StaticResource DefaultTitleLabelColor}" Text="プライバシーポリシー" />
+        </StackLayout>
+        <ScrollView Grid.Row="1">
             <StackLayout>
                 <WebView
                     HeightRequest="9999"
@@ -28,7 +31,7 @@
         </ScrollView>
 
         <Grid
-            Grid.Row="1"
+            Grid.Row="2"
             ColumnSpacing="10"
             RowSpacing="0">
             <Grid.ColumnDefinitions>
