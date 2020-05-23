@@ -325,9 +325,6 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.6.0.800</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.iOS.ExposureNotification">
-      <Version>1.0.0-beta2</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.21.9</Version>
     </PackageReference>
