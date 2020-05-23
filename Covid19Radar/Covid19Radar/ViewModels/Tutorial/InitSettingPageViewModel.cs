@@ -19,7 +19,7 @@ namespace Covid19Radar.ViewModels
         {
             LocalStateManager.Instance.LastIsEnabled = false;
             LocalStateManager.Save();
-            await NavigationService.NavigateAsync("SetupCompletedPage");
+            await NavigationService.NavigateAsync(nameof(SetupCompletedPage));
         });
         public Command OnClickEnable => new Command(async () =>
         {
