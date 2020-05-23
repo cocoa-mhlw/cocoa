@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using Covid19Radar.Services;
 using Newtonsoft.Json;
 using Plugin.LocalNotification;
 using Prism.Ioc;
+using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -54,62 +56,113 @@ namespace Covid19Radar.Services
         // this will be called when they keys need to be collected from the server
         public async Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
         {
-            // This is "default" by default
-            var region = LocalStateManager.Instance.Region ?? AppConstants.DefaultRegion;
-
-            var checkForMore = true;
-            do
+            try
             {
-                try
+                var downloadedFiles = new List<string>();
+                var since = LocalStateManager.Instance.ServerLastTime;
+                var url = $"{AppConstants.ApiUrlBase.TrimEnd('/')}/TemporaryExposureKeys?since={since}";
+                var response = await http.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var resonseContentResult = JsonConvert.DeserializeObject<TemporaryExposureKeysResult>(responseContent);
+                foreach (var key in resonseContentResult.Keys)
                 {
-                    // Find next batch number
-                    var batchNumber = LocalStateManager.Instance.ServerBatchNumber + 1;
+                    var responseKey = await http.GetAsync(url);
+                    responseKey.EnsureSuccessStatusCode();
 
-                    // Build the blob storage url for the given batch file we are on next
-                    var url = $"{AppConstants.ApiUrlBlobStorageBase}/{AppConstants.BlobStorageContainerNamePrefix}{region}/{batchNumber}.dat";
+                    var tmpFile = Path.Combine(FileSystem.CacheDirectory, Guid.NewGuid().ToString() + ".zip");
 
-                    var response = await http.GetAsync(url);
-
-                    // If we get a 404, there are no newer batch files available to download
-                    if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                    {
-                        checkForMore = false;
-                        break;
-                    }
-
-                    response.EnsureSuccessStatusCode();
-
-                    // Skip batch files which are older than 14 days
-                    if (response.Content.Headers.LastModified.HasValue)
-                    {
-                        if (response.Content.Headers.LastModified < DateTimeOffset.UtcNow.AddDays(-14))
-                        {
-                            LocalStateManager.Instance.ServerBatchNumber = batchNumber;
-                            LocalStateManager.Save();
-                            checkForMore = true;
-                            continue;
-                        }
-                    }
-
-                    // Read the batch file stream
+                    // Read the batch file stream into a temporary file
                     using var responseStream = await response.Content.ReadAsStreamAsync();
+                    using var fileStream = File.Create(tmpFile);
+                    await responseStream.CopyToAsync(fileStream);
 
-                    // Parse into a Proto.File
-                    var batchFile = TemporaryExposureKeyBatch.Parser.ParseFrom(responseStream);
-
-                    // Submit to the batch processor
-                    await batches.AddBatchAsync(batchFile);
-
-                    // Update the number we are on
-                    LocalStateManager.Instance.ServerBatchNumber = batchNumber;
-                    LocalStateManager.Save();
+                    downloadedFiles.Add(tmpFile);
                 }
-                catch (Exception ex)
+
+                // process the current directory, if there were any
+                if (downloadedFiles.Count > 0)
                 {
-                    Console.WriteLine(ex);
-                    checkForMore = false;
+                    // TODO: waiting release new nuget package
+                    //await submitBatches(downloadedFiles);
+
+                    // delete all temporary files
+                    foreach (var file in downloadedFiles)
+                    {
+                        try
+                        {
+                            File.Delete(file);
+                        }
+                        catch { }
+                    }
                 }
-            } while (checkForMore);
+
+                LocalStateManager.Instance.ServerLastTime = resonseContentResult.Timestamp;
+                LocalStateManager.Save();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            //// This is "default" by default
+            //var region = LocalStateManager.Instance.Region ?? AppConstants.DefaultRegion;
+
+            //var checkForMore = true;
+
+            //do
+            //{
+            //    try
+            //    {
+            //        // Find next batch number
+            //        var batchNumber = LocalStateManager.Instance.ServerBatchNumber + 1;
+
+            //        // Build the blob storage url for the given batch file we are on next
+            //        var url = $"{AppConstants.ApiUrlBlobStorageBase}/{AppConstants.BlobStorageContainerNamePrefix}{region}/{batchNumber}.dat";
+
+            //        var response = await http.GetAsync(url);
+
+            //        // If we get a 404, there are no newer batch files available to download
+            //        if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            //        {
+            //            checkForMore = false;
+            //            break;
+            //        }
+
+            //        response.EnsureSuccessStatusCode();
+
+            //        // Skip batch files which are older than 14 days
+            //        if (response.Content.Headers.LastModified.HasValue)
+            //        {
+            //            if (response.Content.Headers.LastModified < DateTimeOffset.UtcNow.AddDays(-14))
+            //            {
+            //                LocalStateManager.Instance.ServerBatchNumber = batchNumber;
+            //                LocalStateManager.Save();
+            //                checkForMore = true;
+            //                continue;
+            //            }
+            //        }
+
+            //        // Read the batch file stream
+            //        using var responseStream = await response.Content.ReadAsStreamAsync();
+
+            //        // Parse into a Proto.File
+            //        var batchFile = TemporaryExposureKeyBatch.Parser.ParseFrom(responseStream);
+
+            //        // Submit to the batch processor
+            //        await batches.AddBatchAsync(batchFile);
+
+            //        // Update the number we are on
+            //        LocalStateManager.Instance.ServerBatchNumber = batchNumber;
+            //        LocalStateManager.Save();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Console.WriteLine(ex);
+            //        checkForMore = false;
+            //    }
+            //} while (checkForMore);
         }
 
         // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
@@ -177,6 +230,20 @@ namespace Covid19Radar.Services
             catch
             {
                 return false;
+            }
+        }
+
+        public class TemporaryExposureKeysResult
+        {
+            [JsonProperty("timestamp")]
+            public long Timestamp { get; set; }
+
+            [JsonProperty("keys")]
+            public IEnumerable<Key> Keys { get; set; }
+
+            public class Key
+            {
+                public string Url;
             }
         }
 
