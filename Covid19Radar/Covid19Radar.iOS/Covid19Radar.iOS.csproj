@@ -108,6 +108,7 @@
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
     <Compile Include="Renderers\GradientButtonRenderer.cs" />
     <Compile Include="Services\CloseApplication.cs" />
+    <Compile Include="Services\DeviceCheckService.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
     <None Include="appcenter-pre-build.sh" />
     <ImageAsset Include="Assets.xcassets\Contents.json">
