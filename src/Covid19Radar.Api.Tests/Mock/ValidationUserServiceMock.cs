@@ -1,12 +1,12 @@
-﻿using Covid19Radar.Models;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Tests.Mock
+namespace Covid19Radar.Api.Tests.Mock
 {
     public class ValidationUserServiceMock : IValidationUserService
     {

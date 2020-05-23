@@ -21,7 +21,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <Label Style="{StaticResource DefaultTitleLabelColor}" Text="スマートフォン機能の許可" />
+                <Label Style="{StaticResource DefaultTitleLabelColor}" Text="{Binding Title}" />
                 <ffimageloading:CachedImage
                     Margin="30,0,30,0"
                     Aspect="AspectFit"
@@ -49,7 +49,7 @@
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNotNow}"
                     Style="{StaticResource DefaultGradientButtonGrayout}"
-                    Text="後から有効" />
+                    Text="{x:Static resources:AppResources.ButtonNotNow}" />
 
                 <ce:GradientButton
                     Grid.Row="0"
