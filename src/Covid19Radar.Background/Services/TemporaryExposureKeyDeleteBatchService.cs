@@ -1,4 +1,4 @@
-﻿using Covid19Radar.DataAccess;
+﻿using Covid19Radar.Api.DataAccess;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeyDeleteBatchService : ITemporaryExposureKeyDeleteBatchService
     {

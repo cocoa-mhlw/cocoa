@@ -18,6 +18,8 @@
         "Region": "Country",
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
         "TekExportBlobStorageContainerPrefix": "C19R",
-        "ExportKeyUrl": "http://127.0.0.1:10000/"
+        "ExportKeyUrl": "http://127.0.0.1:10000/",
+        "AppleBearerToken": "XXXXX",
+        "AndroidBearerToken": "XXXXX"
     }
 }
