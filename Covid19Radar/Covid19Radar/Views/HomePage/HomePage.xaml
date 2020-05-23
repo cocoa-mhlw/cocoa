@@ -16,12 +16,12 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
-            Command="{Binding OnClickHelp}}"
+            Command="{Binding OnClickHelp}"
             Order="Primary"
             Priority="1"
             Text="{x:Static resources:AppResources.MainTutorial}" />
         <ToolbarItem
-            Command="{Binding OnClickHelp}}"
+            Command="{Binding OnClickHelp}"
             Order="Primary"
             Priority="2">
             <ToolbarItem.IconImageSource>
