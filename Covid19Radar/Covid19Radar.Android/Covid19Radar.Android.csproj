@@ -242,6 +242,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\xamarin.exposurenotification\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj">
+      <Project>{2f0aa614-65a5-4d0b-89b9-6f4cd67caeec}</Project>
+      <Name>Xamarin.ExposureNotification</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{554EE1AB-B447-480C-90E5-C4F040891DE6}</Project>
       <Name>Covid19Radar</Name>
