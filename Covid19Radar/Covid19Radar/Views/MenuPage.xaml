@@ -4,19 +4,18 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
-    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Visual="Material">
     <MasterDetailPage.Master>
 
-        <NavigationPage Title="Menu">
+        <NavigationPage Title="Menu" Icon="ic_hamburger.png">
 
             <x:Arguments>
-                <ContentPage Title="Covid19Radar">
+                <ContentPage Title="COVID-19Radar">
+
                     <ListView
                         BackgroundColor="#e8e8e8"
                         ItemsSource="{Binding MenuItems}"
@@ -34,7 +33,7 @@
                                         Orientation="Horizontal"
                                         Spacing="20"
                                         VerticalOptions="FillAndExpand">
-                                        <Image>
+                                        <Image HeightRequest="35" WidthRequest="35">
                                             <Image.Source>
                                                 <FontImageSource
                                                     FontFamily="FA-S"
@@ -44,7 +43,7 @@
                                             </Image.Source>
                                         </Image>
                                         <Label
-                                            FontSize="Medium"
+                                            FontSize="Default"
                                             Text="{Binding Title}"
                                             TextColor="Black"
                                             VerticalOptions="Center" />

@@ -13,8 +13,6 @@ namespace Covid19Radar.ViewModels
 {
     public class MenuPageViewModel : ViewModelBase
     {
-        //private INavigationService _navigationService;
-
         public ObservableCollection<MainMenuModel> MenuItems { get; set; }
 
         private MainMenuModel selectedMenuItem;
@@ -29,47 +27,63 @@ namespace Covid19Radar.ViewModels
         public MenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             MenuItems = new ObservableCollection<MainMenuModel>();
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf965",
+                PageName = nameof(HomePage),
+                Title = Resources.AppResources.HomePageTitle
+            });
 
             MenuItems.Add(new MainMenuModel()
             {
-                Icon = "\uf0f3",
-                PageName = nameof(StartTutorialPage),
-                Title = "アプリの使い方"
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0f3",
+                Icon = "\uf4fe",
                 PageName = nameof(SettingsPage),
-                Title = "追跡情報の設定"
+                Title = Resources.AppResources.SettingsPageTitle
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf2f1",
-                PageName = nameof(UpdateInfomationPage),
-                Title = "更新情報"
+                PageName = nameof(UpdateInformationPage),
+                Title = Resources.AppResources.TitleUpdateInformation
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf56c",
                 PageName = nameof(LicenseAgreementPage),
-                Title = "ライセンス"
+                Title = Resources.AppResources.TitleLicenseAgreement
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
                 PageName = nameof(ContributorsPage),
-                Title = "貢献者一覧"
+                Title = Resources.AppResources.TitleContributorsPage
             });
+
+#if DEBUG
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(DebugPage),
+                Title = "デバッグ"
+            });
+
+#endif
 
             NavigateCommand = new DelegateCommand(Navigate);
         }
 
         async void Navigate()
         {
+            if (SelectedMenuItem.PageName == nameof(StartTutorialPage))
+            {
+                await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
+                return;
+            }
             await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
+            return;
         }
 
     }

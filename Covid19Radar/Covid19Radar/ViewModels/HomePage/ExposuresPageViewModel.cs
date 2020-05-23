@@ -8,23 +8,16 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ExposuresPageViewModel : ViewModelBase, IDisposable
+    public class ExposuresPageViewModel : ViewModelBase
     {
         public ExposuresPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.MainExposures;
-            MessagingCenter.Instance.Subscribe<ExposureNotificationHandler>(this, "exposure_info_changed", h =>
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    ExposureInformation.Clear();
-                    foreach (var i in LocalStateManager.Instance.ExposureInformation)
-                        ExposureInformation.Add(i);
-                }));
-
         }
 
         public ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo> ExposureInformation
@@ -37,9 +30,6 @@ namespace Covid19Radar.ViewModels
                 new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(60), 60, 6, Xamarin.ExposureNotifications.RiskLevel.Highest),
 #endif
 			};
-
-        public void Dispose()
-            => MessagingCenter.Instance.Unsubscribe<ExposureNotificationHandler>(this, "exposure_info_changed");
 
     }
 }

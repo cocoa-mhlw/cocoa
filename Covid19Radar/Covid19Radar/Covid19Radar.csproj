@@ -7,7 +7,7 @@
     <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
@@ -54,6 +54,7 @@
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="3.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.LocalNotification" Version="5.0.4" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
@@ -61,19 +62,22 @@
     <PackageReference Include="Xamarin.ExposureNotification" Version="0.2.1-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.772" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.772" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.772" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.800" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Icons.xaml.cs">
       <DependentUpon>Icons.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\HomePage\DebugPage.xaml.cs">
+      <DependentUpon>DebugPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\HomePage\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\UpdateInfomationPage.xaml.cs">
-      <DependentUpon>UpdateInfomationPage.xaml</DependentUpon>
+    <Compile Update="Views\HomePage\UpdateInformationPage.xaml.cs">
+      <DependentUpon>UpdateInformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
@@ -142,7 +146,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Behaviors\" />
     <Folder Include="Converters\" />
     <Folder Include="MultilingualResources\" />
     <Folder Include="Templates\" />

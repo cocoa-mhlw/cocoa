@@ -15,28 +15,16 @@ namespace Covid19Radar.Model
         public string UserUuid { get; set; }
 
         /// <summary>
-        /// User Major 0 to 65536
-        /// </summary>
-        /// <value>User Major</value>
-        public string Major { get; set; }
-
-        /// <summary>
-        /// User Minor 0 to 65536
-        /// </summary>
-        /// <value>User Minor</value>
-        public string Minor { get; set; }
-
-        /// <summary>
-        ///  Status Contactd,OnSet,Suspected,Inspection,Infection
-        /// </summary>
-        /// <value></value>
-        public UserStatus UserStatus { get; set; }
-
-        /// <summary>
         /// Secret key
         /// </summary>
         /// <value>Secret Key</value>
         public string Secret { get; set; }
+
+        /// <summary>
+        /// Jump Consistent Hash 
+        /// </summary>
+        /// <value>Jump Consistent Hash</value>
+        public ulong JumpConsistentHash { get; set; }
 
         /// <summary>
         /// Last notification date and time
@@ -46,9 +34,6 @@ namespace Covid19Radar.Model
         public bool Equals(UserDataModel other)
         {
             return UserUuid == other?.UserUuid
-                && Major == other?.Major
-                && Minor == other?.Minor
-                && UserStatus == other?.UserStatus
                 && LastNotificationTime == other?.LastNotificationTime;
         }
 
@@ -58,12 +43,12 @@ namespace Covid19Radar.Model
         /// <value>User Minor</value>
         public string GetId()
         {
-            return String.Format("{0}.{1}.{2}", UserUuid, Major.PadLeft(5, '0'), Minor.PadLeft(5, '0'));
+            return UserUuid;
         }
 
         public int GetJumpHashTimeDifference()
         {
-            return JumpHash.JumpConsistentHash(Convert.ToUInt64(Major) + Convert.ToUInt64(Minor), AppConstants.NumberOfGroup);
+            return JumpHash.JumpConsistentHash(JumpConsistentHash, AppConstants.NumberOfGroup);
         }
     }
 }
