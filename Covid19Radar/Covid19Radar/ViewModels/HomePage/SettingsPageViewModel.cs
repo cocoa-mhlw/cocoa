@@ -63,7 +63,7 @@ namespace Covid19Radar.ViewModels
 
         public SettingsPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = AppResources.HomePageTitle;
+            Title = AppResources.SettingsPageTitle;
             AppVer = AppConstants.AppVersion;
             EnableExposureNotification = LocalStateManager.Instance.LastIsEnabled;
             EnableLocalNotification = LocalStateManager.Instance.EnableNotifications;

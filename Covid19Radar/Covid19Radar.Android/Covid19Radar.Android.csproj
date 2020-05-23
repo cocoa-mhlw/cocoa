@@ -154,6 +154,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CloseApplication.cs" />
+    <Compile Include="Services\DeviceCheckService.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
   </ItemGroup>

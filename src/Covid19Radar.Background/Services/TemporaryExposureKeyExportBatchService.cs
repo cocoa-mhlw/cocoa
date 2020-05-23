@@ -1,6 +1,6 @@
-﻿using Covid19Radar.DataAccess;
-using Covid19Radar.Models;
-using Covid19Radar.Protobuf;
+﻿using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Protobuf;
 using Google.Protobuf;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -8,14 +8,16 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeyExportBatchService : ITemporaryExposureKeyExportBatchService
     {
         public const int MaxKeysPerFile = 25_000;
-        const int fixedHeaderWidth = 16;
+        const int FixedHeaderWidth = 16;
+        const string Header = "EK Export v1    ";
         const string ExportBinFileName = "export.bin";
         const string ExportSigFileName = "export.sig";
 
@@ -51,10 +53,12 @@ namespace Covid19Radar.Services
                 var items = await TekRepository.GetNextAsync();
                 foreach (var kv in items.GroupBy(_ => new { _.RollingStartUnixTimeSeconds, _.RollingPeriodSeconds, _.Region }))
                 {
+                    // Security considerations: Random Order TemporaryExposureKey
+                    var sorted = kv.OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
                     await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
                         (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
                         kv.Key.Region,
-                        kv.ToArray());
+                        sorted.ToArray());
                 }
             }
             catch (Exception ex)
@@ -106,7 +110,10 @@ namespace Covid19Radar.Services
                 var sig = new TEKSignatureList();
 
                 using var binStream = new MemoryStream();
-                bin.WriteTo(binStream);
+                using var binStreamCoded = new CodedOutputStream(binStream);
+                binStreamCoded.WriteBytes(ByteString.CopyFromUtf8(Header));
+                bin.WriteTo(binStreamCoded);
+                binStreamCoded.Flush();
                 await binStream.FlushAsync();
                 binStream.Seek(0, SeekOrigin.Begin);
                 var signature = await CreateSignatureAsync(binStream, bin.BatchNum, bin.BatchSize);
@@ -127,8 +134,10 @@ namespace Covid19Radar.Services
 
                         var sigEntry = z.CreateEntry(ExportSigFileName);
                         using (var sigFile = sigEntry.Open())
+                        using (var output = new CodedOutputStream(sigFile))
                         {
-                            sig.WriteTo(sigFile);
+                            sig.WriteTo(output);
+                            output.Flush();
                             await sigFile.FlushAsync();
                         }
                     }
