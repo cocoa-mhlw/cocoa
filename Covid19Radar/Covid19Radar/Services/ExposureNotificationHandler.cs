@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Services;
@@ -186,18 +187,26 @@ namespace Covid19Radar.Services
                 //});
 
                 UserDataService userDataService = App.Current.Container.Resolve<UserDataService>();
+                if (!userDataService.IsExistUserData)
+                {
+                    await userDataService.RegisterUserAsync();
+                }
+                var user = userDataService.Get();
                 var request = new DiagnosisSubmissionRequest()
                 {
                     SubmissionNumber = pendingDiagnosis.DiagnosisUid,
                     AppPackageName = Xamarin.Essentials.AppInfo.PackageName, // experimental
-                    UserUuid = userDataService.Get().UserUuid,
+                    UserUuid = user.UserUuid,
                     Region = LocalStateManager.Instance.Region ?? AppConstants.DefaultRegion,
                     Platform = Device.RuntimePlatform.ToLower(),
                     Keys = temporaryExposureKeys.Select(_ => DiagnosisSubmissionRequest.Key.FromTemporaryExposureKey(_)).ToArray(),
                     DeviceVerificationPayload = "" // TODO: device payload
                 };
 
-                var http = new HttpClient();
+                using var http = new HttpClient();
+                http.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", user.Secret);
+                http.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                http.DefaultRequestHeaders.Add("x-functions-key", AppConstants.ApiSecret);
                 var response = await http.PutAsync(url, new StringContent(JsonConvert.SerializeObject(request)));
 
                 response.EnsureSuccessStatusCode();
