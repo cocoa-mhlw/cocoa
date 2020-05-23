@@ -83,22 +83,8 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
-            if (ResetData)
-            {
-                var check = await UserDialogs.Instance.ConfirmAsync("本当にすべてのデータをリセットしますか?", "データの全削除", "OK", "Cancel");
-                if (!check)
-                {
-                    ResetData = false;
-                }
-                await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
-            }
-        });
-
-
-        public Command OnSaveClick => new Command(async () =>
-        {
-
-            if (ResetData)
+            var check = await UserDialogs.Instance.ConfirmAsync("本当にすべてのデータをリセットしますか?", "データの全削除", "OK", "Cancel");
+            if (check)
             {
                 UserDialogs.Instance.ShowLoading("Deleting data");
 
@@ -122,7 +108,13 @@ namespace Covid19Radar.ViewModels
                 // Application close
                 Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
                 return;
+
             }
+        });
+
+
+        public Command OnSaveClick => new Command(async () =>
+        {
             LocalStateManager.Instance.LastIsEnabled = EnableExposureNotification;
             LocalStateManager.Instance.EnableNotifications = EnableLocalNotification;
             LocalStateManager.Save();
