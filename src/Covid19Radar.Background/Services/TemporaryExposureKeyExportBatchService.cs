@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Background.Services
@@ -52,10 +53,12 @@ namespace Covid19Radar.Background.Services
                 var items = await TekRepository.GetNextAsync();
                 foreach (var kv in items.GroupBy(_ => new { _.RollingStartUnixTimeSeconds, _.RollingPeriodSeconds, _.Region }))
                 {
+                    // Security considerations: Random Order TemporaryExposureKey
+                    var sorted = kv.OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
                     await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
                         (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
                         kv.Key.Region,
-                        kv.ToArray());
+                        sorted.ToArray());
                 }
             }
             catch (Exception ex)
