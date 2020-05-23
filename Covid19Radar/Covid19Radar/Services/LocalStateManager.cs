@@ -51,6 +51,8 @@ namespace Covid19Radar.Services
 
 		public ulong ServerBatchNumber { get; set; } = 0;
 
+		public long ServerLastTime { get; set; } = 0;
+
 		public string Region { get; set; } = AppConstants.DefaultRegion;
 
 		public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
