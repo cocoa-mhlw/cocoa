@@ -146,7 +146,6 @@ namespace Covid19Radar.Services
                     Region = DefaultRegion,
                     Platform = Device.RuntimePlatform.ToLower(),
                     Keys = temporaryExposureKeys.Select(_ => DiagnosisSubmissionRequest.Key.FromTemporaryExposureKey(_)).ToArray(),
-                    TransmissionRisk = 0, // TODO: TransmissionRisk
                     DeviceVerificationPayload = "" // TODO: device payload
                 };
 
