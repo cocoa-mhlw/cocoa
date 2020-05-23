@@ -1,6 +1,7 @@
 ﻿using Acr.UserDialogs;
 using Covid19Radar.Renderers;
 using Covid19Radar.Services;
+using Covid19Radar.Views;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace Covid19Radar.ViewModels
 
         public Command CancelCommand => (new Command(async () =>
         {
-            await NavigationService.GoBackAsync();
+            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(HomePage));
         }));
 
 
@@ -78,7 +79,7 @@ namespace Covid19Radar.ViewModels
                         }
                         */
             UserDialogs.Instance.HideLoading();
-            await NavigationService.GoBackAsync();
+            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(HomePage));
         }));
 
 

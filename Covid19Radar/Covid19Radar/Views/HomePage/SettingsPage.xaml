@@ -15,26 +15,6 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Command="{Binding OnClickHelp}"
-            Order="Primary"
-            Priority="1"
-            Text="{x:Static resources:AppResources.MainTutorial}" />
-        <ToolbarItem
-            Command="{Binding OnClickHelp}"
-            Order="Primary"
-            Priority="2">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="FA-R"
-                    Glyph="&#xf059;"
-                    Size="35"
-                    Color="White" />
-            </ToolbarItem.IconImageSource>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
-
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
@@ -112,20 +92,6 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <RadioButton
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    GroupName="EnotiGroup"
-                    IsChecked="True"
-                    Text="On"
-                    TextColor="Black" />
-                <RadioButton
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    GroupName="EnotiGroup"
-                    Text="Off"
-                    TextColor="Black" />
-                <!--
                 <Switch
                     Grid.Row="2"
                     Grid.Column="1"
@@ -134,7 +100,6 @@
                         <Behavior:SwitchBehavior Command="{Binding OnChangeEnableExposureNotification}" />
                     </Switch.Behaviors>
                 </Switch>
-                -->
                 <BoxView
                     Grid.Row="3"
                     Grid.ColumnSpan="3"
@@ -156,20 +121,6 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <RadioButton
-                    Grid.Row="4"
-                    Grid.Column="1"
-                    GroupName="LnotiGroup"
-                    IsChecked="True"
-                    Text="On"
-                    TextColor="Black" />
-                <RadioButton
-                    Grid.Row="4"
-                    Grid.Column="2"
-                    GroupName="LnotiGroup"
-                    Text="Off"
-                    TextColor="Black" />
-                <!--
                 <Switch
                     Grid.Row="4"
                     Grid.Column="1"
@@ -177,7 +128,7 @@
                     <Switch.Behaviors>
                         <Behavior:SwitchBehavior Command="{Binding OnChangeEnableNotification}" />
                     </Switch.Behaviors>
-                </Switch>-->
+                </Switch>
                 <BoxView
                     Grid.Row="5"
                     Grid.ColumnSpan="3"
@@ -205,7 +156,7 @@
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
                     AutomationId="Reset"
-                    Command="{Binding Path=OnSaveClick}"
+                    Command="{Binding Path=OnChangeResetData}"
                     Scale="0.8"
                     Style="{StaticResource DefaultGradientButton}"
                     Text="Reset" />

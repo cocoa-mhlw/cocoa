@@ -13,8 +13,6 @@ namespace Covid19Radar.ViewModels
 {
     public class MenuPageViewModel : ViewModelBase
     {
-        //private INavigationService _navigationService;
-
         public ObservableCollection<MainMenuModel> MenuItems { get; set; }
 
         private MainMenuModel selectedMenuItem;
@@ -81,10 +79,11 @@ namespace Covid19Radar.ViewModels
         {
             if (SelectedMenuItem.PageName == nameof(StartTutorialPage))
             {
-                await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + SelectedMenuItem.PageName);
+                await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
                 return;
             }
-            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
+            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
+            return;
         }
 
     }
