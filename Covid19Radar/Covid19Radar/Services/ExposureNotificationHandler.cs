@@ -20,7 +20,7 @@ namespace Covid19Radar.Services
 
         const string apiUrlBase = "https://exposurenotificationfunctions.azurewebsites.net/api/";
         const string apiUrlBlobStorageBase = "https://exposurenotifications.blob.core.windows.net/";
-        const string blobStorageContainerNamePrefix = "";
+        const string blobStorageContainerNamePrefix = "c19r";
 
         static readonly HttpClient http = new HttpClient();
 
@@ -210,8 +210,6 @@ namespace Covid19Radar.Services
             public string Region { get; set; }
             [JsonProperty("platform")]
             public string Platform { get; set; }
-            [JsonProperty("transmissionRisk")]
-            public int TransmissionRisk { get; set; }
             [JsonProperty("deviceVerificationPayload")]
             public string DeviceVerificationPayload { get; set; }
             [JsonProperty("appPackageName")]
@@ -224,13 +222,16 @@ namespace Covid19Radar.Services
                 public uint RollingStartNumber { get; set; }
                 [JsonProperty("rollingPeriod ")]
                 public uint RollingPeriod { get; set; }
+                [JsonProperty("transmissionRisk")]
+                public int TransmissionRisk { get; set; }
                 public static Key FromTemporaryExposureKey(TemporaryExposureKey key)
                 {
                     return new Key()
                     {
                         KeyData = Convert.ToBase64String(key.KeyData),
                         RollingStartNumber = (uint)(key.RollingStart.ToUnixTimeSeconds() / 60 / 10),
-                        RollingPeriod = (uint)(key.RollingDuration.TotalSeconds / 60 / 10)
+                        RollingPeriod = (uint)(key.RollingDuration.TotalSeconds / 60 / 10),
+                        TransmissionRisk = (int)key.TransmissionRiskLevel
                     };
                 }
             }
