@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.9.1" />
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Azure.Management.Cdn.Fluent" Version="1.33.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.7" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="3.0.11" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.4" />

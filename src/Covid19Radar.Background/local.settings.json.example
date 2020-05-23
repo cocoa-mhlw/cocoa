@@ -17,6 +17,9 @@
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
         "TekExportBlobStorageContainerPrefix": "c19r",
         "ExportKeyUrl": "http://127.0.0.1:10000/",
-        "TekExportKeyVaultKeyUrl": "https://xxxxxx.vault.azure.net/keys/xxxxSignaturexxx/XXXXXXXXXXXXXXXXXXXXXXXXX"
+        "TekExportKeyVaultKeyUrl": "https://xxxxxx.vault.azure.net/keys/xxxxSignaturexxx/XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "CdnResourceGroupName": "Covid19RadarCdnResouseGroupName",
+        "CdnProfileName": "Covid19RadarCdnProfile",
+        "CdnEndpointName": "Covid19RadarCdnEndpointName"
     }
 }
