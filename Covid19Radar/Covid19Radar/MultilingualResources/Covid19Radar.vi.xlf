@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="vi" original="COVID19RADAR/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft"/>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
@@ -58,9 +58,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID-19</source>
-          <target state="final" state-qualifier="mt-suggestion">Bảo vệ những người thân yêu của chúng tôi tránh xa COVID-19</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
+          <source>Protecting our loved ones from COVID19</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bảo vệ những người thân yêu của chúng tôi tránh xa COVID-19</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -281,8 +282,9 @@ Please check your SMS.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
-          <target state="final" state-qualifier="mt-suggestion">Nếu bạn xét nghiệm COVID-19 dương tính</target>
+          <source>If you are diagnosed COVID19 positive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nếu bạn xét nghiệm COVID-19 dương tính</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">

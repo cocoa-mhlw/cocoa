@@ -58,9 +58,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID-19</source>
+          <source>Protecting our loved ones from COVID19</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 ನಿಂದ ನಮ್ಮ ಪ್ರೀತಿಪಾತ್ರರನ್ನು ರಕ್ಷಿಸುವುದು</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -282,8 +283,9 @@ Please check your SMS.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
+          <source>If you are diagnosed COVID19 positive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೀವು COVID-19 ಪಾಸಿಟಿವ್ ಅನ್ನು ಪತ್ತೆ ಮಾಡಿದಲ್ಲಿ</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">

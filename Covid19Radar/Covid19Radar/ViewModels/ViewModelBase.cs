@@ -23,7 +23,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickHelp => new Command(async () =>
         {
-            await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
+            await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
         });
 
 

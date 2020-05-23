@@ -87,7 +87,7 @@ namespace Covid19Radar
             }
             else
             {
-                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
+                result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
             }
 /*
             if (userDataService.IsExistUserData)
@@ -116,7 +116,7 @@ namespace Covid19Radar
 
         protected void OnNotificationTapped(NotificationTappedEventArgs e)
         {
-            NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+            NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -129,24 +129,24 @@ namespace Covid19Radar
 
             // Viewmodel
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MenuPage, MenuPageViewModel>();
-            containerRegistry.RegisterForNavigation<StartTutorialPage, StartTutorialPageViewModel>();
-            containerRegistry.RegisterForNavigation<DescriptionPage1, DescriptionPage1ViewModel>();
-            containerRegistry.RegisterForNavigation<DescriptionPage2, DescriptionPage2ViewModel>();
-            containerRegistry.RegisterForNavigation<DescriptionPage3, DescriptionPage3ViewModel>();
-            containerRegistry.RegisterForNavigation<DescriptionPage4, DescriptionPage4ViewModel>();
-            containerRegistry.RegisterForNavigation<PrivacyPolicyPage, PrivacyPolicyPageViewModel>();
-            containerRegistry.RegisterForNavigation<InitSettingPage, InitSettingPageViewModel>();
-            containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
-            containerRegistry.RegisterForNavigation<ContributorsPage, ContributorsPageViewModel>();
-            containerRegistry.RegisterForNavigation<SetupCompletedPage, SetupCompletedPageViewModel>();
-            containerRegistry.RegisterForNavigation<LicenseAgreementPage, LicenseAgreementPageViewModel>();
-            containerRegistry.RegisterForNavigation<NotifyOtherPage, NotifyOtherPageViewModel>();
-            containerRegistry.RegisterForNavigation<ExposuresPage, ExposuresPageViewModel>();
-            containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage, SharePositiveDiagnosisPageViewModel>();
-            containerRegistry.RegisterForNavigation<UpdateInfomationPage, UpdateInfomationPageViewModel>();
-            containerRegistry.RegisterForNavigation<SettingsPage, SettingsPageViewModel>();
-            containerRegistry.RegisterForNavigation<DebugPage, DebugPageViewModel>();
+            containerRegistry.RegisterForNavigation<MenuPage>();
+            containerRegistry.RegisterForNavigation<StartTutorialPage>();
+            containerRegistry.RegisterForNavigation<DescriptionPage1>();
+            containerRegistry.RegisterForNavigation<DescriptionPage2>();
+            containerRegistry.RegisterForNavigation<DescriptionPage3>();
+            containerRegistry.RegisterForNavigation<DescriptionPage4>();
+            containerRegistry.RegisterForNavigation<PrivacyPolicyPage>();
+            containerRegistry.RegisterForNavigation<InitSettingPage>();
+            containerRegistry.RegisterForNavigation<HomePage>();
+            containerRegistry.RegisterForNavigation<ContributorsPage>();
+            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
+            containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
+            containerRegistry.RegisterForNavigation<NotifyOtherPage>();
+            containerRegistry.RegisterForNavigation<ExposuresPage>();
+            containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage>();
+            containerRegistry.RegisterForNavigation<UpdateInfomationPage>();
+            containerRegistry.RegisterForNavigation<SettingsPage>();
+            containerRegistry.RegisterForNavigation<DebugPage>();
 
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
