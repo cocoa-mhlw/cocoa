@@ -1,5 +1,6 @@
 ﻿using Acr.UserDialogs;
 using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
@@ -10,15 +11,28 @@ namespace Covid19Radar.ViewModels
 {
     public class InitSettingPageViewModel : ViewModelBase
     {
-        public InitSettingPageViewModel(INavigationService navigationService) : base(navigationService)
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
+        public InitSettingPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = Resources.AppResources.TitleDeviceAccess;
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
+            this.userDataService.UserDataChanged += _userDataChanged;
+
         }
+
+        private void _userDataChanged(object sender, UserDataModel e)
+        {
+            userData = this.userDataService.Get();
+        }
+
 
         public Command OnClickNotNow => new Command(async () =>
         {
-            LocalStateManager.Instance.LastIsEnabled = false;
-            LocalStateManager.Save();
+            userData.LastIsEnabled = false;
+            await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(SetupCompletedPage));
         });
         public Command OnClickEnable => new Command(async () =>
@@ -36,10 +50,10 @@ namespace Covid19Radar.ViewModels
 
             UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextEnabling);
 
-            LocalStateManager.Instance.LastIsEnabled = true;
-            LocalStateManager.Save();
+            userData.LastIsEnabled = true;
+            await userDataService.SetAsync(userData);
 
-            if (LocalStateManager.Instance.LastIsEnabled && LocalStateManager.Instance.IsWelcomed)
+            if (userData.LastIsEnabled && userData.IsWelcomed)
             {
                 if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 {

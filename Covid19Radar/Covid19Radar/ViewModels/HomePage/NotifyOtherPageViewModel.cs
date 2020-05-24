@@ -18,13 +18,25 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
-        public NotifyOtherPageViewModel(INavigationService navigationService) : base(navigationService)
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
+        public NotifyOtherPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
             SelectedDate = DateTime.Today;
             MaxDate = DateTime.Today.AddMonths(1);
             MinDate = DateTime.Today.AddMonths(-1);
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
+            this.userDataService.UserDataChanged += _userDataChanged;
         }
+
+        private void _userDataChanged(object sender, UserDataModel e)
+        {
+            userData = this.userDataService.Get();
+        }
+
 
         private string _notifyCode;
         public string NotifyCode
@@ -57,11 +69,11 @@ namespace Covid19Radar.ViewModels
 
 
         public bool DiagnosisPending
-    => (LocalStateManager.Instance.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue)
+    => (userData.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue)
         >= DateTimeOffset.UtcNow.AddDays(-14);
 
         public DateTimeOffset DiagnosisShareTimestamp
-            => LocalStateManager.Instance.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue;
+            => userData.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue;
 
         public Command SharePositiveDiagnosisCommand
             => new Command(() =>
