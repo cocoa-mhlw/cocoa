@@ -23,8 +23,8 @@ namespace Covid19Radar.Api.Models
         /// Jump Consistent Hash 
         /// </summary>
         /// <value>Jump Consistent Hash</value>
-        [JsonProperty("jumpConsistentHash")]
-        public ulong JumpConsistentHash { get; set; }
+        [JsonProperty("jumpConsistentSeed")]
+        public ulong JumpConsistentSeed { get; set; }
 
     }
 }
