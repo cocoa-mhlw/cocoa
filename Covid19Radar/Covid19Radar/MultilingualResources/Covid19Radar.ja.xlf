@@ -551,6 +551,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">Reset</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
+          <source>Enabling</source>
+          <target state="translated">有効にしています</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Enabling</note>
+        </trans-unit>
       </group>
     </body>
   </file>
