@@ -553,6 +553,21 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <target state="new">Do you want to turn on notifications?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="new">Reset</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
+          <source>Enabling</source>
+          <target state="new">Enabling</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Enabling</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
+          <source>Deleting</source>
+          <target state="new">Deleting</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Deleting</note>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -543,4 +543,16 @@ Please check your SMS.</value>
     <value>Do you want to turn on notifications?</value>
     <comment>Confirmation dialog</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Reset</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Enabling</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Deleting</value>
+    <comment>Deleting</comment>
+  </data>
 </root>

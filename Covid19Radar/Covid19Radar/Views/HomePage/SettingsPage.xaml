@@ -159,7 +159,7 @@
                     Command="{Binding Path=OnChangeResetData}"
                     Scale="0.8"
                     Style="{StaticResource DefaultGradientButton}"
-                    Text="Reset" />
+                    Text="{x:Static resources:AppResources.ButtonReset}" />
                 <!--
                 <Switch
                     Grid.Row="6"

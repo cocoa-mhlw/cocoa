@@ -24,10 +24,10 @@ namespace Covid19Radar.Model
         public string Secret { get; set; }
 
         /// <summary>
-        /// Jump Consistent Hash 
+        /// Jump Consistent Seed
         /// </summary>
-        /// <value>Jump Consistent Hash</value>
-        public ulong JumpConsistentHash { get; set; }
+        /// <value>Jump Consistent Seed</value>
+        public ulong JumpConsistentSeed { get; set; }
 
         /// <summary>
         /// Last notification date and time
@@ -51,7 +51,7 @@ namespace Covid19Radar.Model
 
         public int GetJumpHashTimeDifference()
         {
-            return JumpHash.JumpConsistentHash(JumpConsistentHash, AppConstants.NumberOfGroup);
+            return JumpHash.JumpConsistentHash(JumpConsistentSeed, AppConstants.NumberOfGroup);
         }
 
         // From Xamarin.EN LocalState Class
