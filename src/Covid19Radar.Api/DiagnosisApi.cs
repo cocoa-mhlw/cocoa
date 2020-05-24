@@ -47,20 +47,21 @@ namespace Covid19Radar.Api
                 return validationResult.ErrorActionResult;
             }
 
-            var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-
             // Device validation
             if (false == await DeviceCheck.Validation(diagnosis))
             {
-                return validationResult.ErrorActionResult;
+                return new BadRequestResult();
             }
+
+            var timestamp = DateTimeOffset.UtcNow;
 
             await DiagnosisRepository.SubmitDiagnosisAsync(
                 diagnosis.SubmissionNumber,
+                timestamp,
                 diagnosis.UserUuid,
-                diagnosis.Keys.Select(_ => _.ToModel(diagnosis, timestamp)).ToArray());
+                diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray());
 
-            return new OkResult();
+            return new NoContentResult();
         }
     }
 }
