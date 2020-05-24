@@ -17,5 +17,9 @@ namespace Covid19Radar.Api.Common
         /// Cache Timeout
         /// </summary>
         public const int CacheTimeout = 60;
+        /// <summary>
+        /// Active Rolling Period
+        /// </summary>
+        public const uint ActiveRollingPeriod = 144;
     }
 }
