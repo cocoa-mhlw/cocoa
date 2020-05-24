@@ -553,6 +553,11 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <target state="new">Reset</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
+          <source>Enabling</source>
+          <target state="new">Enabling</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Enabling</note>
+        </trans-unit>
       </group>
     </body>
   </file>
