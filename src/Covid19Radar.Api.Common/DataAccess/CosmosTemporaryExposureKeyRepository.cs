@@ -29,7 +29,7 @@ namespace Covid19Radar.Api.DataAccess
         public async Task<TemporaryExposureKeyModel> GetAsync(string id)
         {
             _logger.LogInformation($"start {nameof(GetAsync)}");
-            return new TemporaryExposureKeyModel();
+            return await _db.TemporaryExposureKey.ReadItemAsync<TemporaryExposureKeyModel>(id, PartitionKey.None);
         }
 
         public async Task<TemporaryExposureKeyModel[]> GetNextAsync()
