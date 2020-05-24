@@ -16,7 +16,9 @@ namespace Covid19Radar.ViewModels
 {
     public class PrivacyPolicyPageViewModel : ViewModelBase
     {
-        private UserDataService _userDataService;
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
 
         private string _url;
         public string Url
@@ -25,36 +27,39 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public PrivacyPolicyPageViewModel(INavigationService navigationService)
-            : base(navigationService)
+        public PrivacyPolicyPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = AppResources.TitleConsentByUserPage;
             Url = Resources.AppResources.UrlPrivacyPolicy;
 
-            _userDataService = App.Current.Container.Resolve<UserDataService>();
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
+            this.userDataService.UserDataChanged += _userDataChanged;
+
+        }
+        private void _userDataChanged(object sender, UserDataModel e)
+        {
+            userData = this.userDataService.Get();
         }
 
         public Command OnClickAgree => new Command(async () =>
         {
-            if (!LocalStateManager.Instance.IsWelcomed)
+            if (!userData.IsWelcomed)
             {
-                LocalStateManager.Instance.IsWelcomed = true;
-                LocalStateManager.Save();
+                userData.IsWelcomed = true;
+                await userDataService.SetAsync(userData);
             }
 
             UserDialogs.Instance.ShowLoading("Waiting for register");
-            if (!_userDataService.IsExistUserData)
+            if (!userDataService.IsExistUserData)
             {
-                // TODO Create and Get Secure API access token key per AES256 user from Azure Func Side
-                /*
-                 UserDataModel userData = await _userDataService.RegisterUserAsync();
+                UserDataModel userData = await userDataService.RegisterUserAsync();
                 if (userData == null)
                 {
                     UserDialogs.Instance.HideLoading();
                     await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, "Connection error", Resources.AppResources.DialogButtonOk);
                     return;
                 }
-                */
             }
             UserDialogs.Instance.HideLoading();
             await NavigationService.NavigateAsync(nameof(DescriptionPage1));
