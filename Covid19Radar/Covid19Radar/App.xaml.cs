@@ -81,26 +81,26 @@ namespace Covid19Radar
             // Check user data and skip tutorial
             UserDataService userDataService = Container.Resolve<UserDataService>();
 
-            if (userDataService.Get().IsWelcomed)
-            {
-                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-            }
-            else
+            if (userDataService.IsExistUserData)
             {
                 result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
             }
-/*
-            if (userDataService.IsExistUserData)
-            {
-                UserDataModel _userData = userDataService.Get();
-                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-            }
             else
             {
-                //result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
                 result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
-*/
+            /*
+                        if (userDataService.IsExistUserData)
+                        {
+                            UserDataModel _userData = userDataService.Get();
+                            result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                        }
+                        else
+                        {
+                            //result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
+                            result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                        }
+            */
             if (!result.Success)
             {
                 MainPage = new ExceptionPage
