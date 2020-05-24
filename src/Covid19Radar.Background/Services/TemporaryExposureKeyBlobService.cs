@@ -25,8 +25,8 @@ namespace Covid19Radar.Background.Services
             IConfiguration config,
             ILogger<TemporaryExposureKeyBlobService> logger)
         {
-            TekExportBlobStorageConnectionString = config["TekExportBlobStorage"];
-            TekExportBlobStorageContainerPrefix = config["TekExportBlobStorageContainerPrefix"];
+            TekExportBlobStorageConnectionString = config.TekExportBlobStorage();
+            TekExportBlobStorageContainerPrefix = config.TekExportBlobStorageContainerPrefix();
             Logger = logger;
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
             BlobClient = StorageAccount.CreateCloudBlobClient();
