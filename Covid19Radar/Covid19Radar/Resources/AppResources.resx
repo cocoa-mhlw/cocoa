@@ -551,4 +551,8 @@ Please check your SMS.</value>
     <value>Enabling</value>
     <comment>Enabling</comment>
   </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Deleting</value>
+    <comment>Deleting</comment>
+  </data>
 </root>
