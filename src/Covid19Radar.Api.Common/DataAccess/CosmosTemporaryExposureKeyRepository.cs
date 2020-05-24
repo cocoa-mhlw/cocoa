@@ -35,9 +35,9 @@ namespace Covid19Radar.Api.DataAccess
         public async Task<TemporaryExposureKeyModel[]> GetNextAsync()
         {
             _logger.LogInformation($"start {nameof(GetNextAsync)}");
-            var oldest = DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds();
+            var oldest = (int)DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds() / 600;
             var query = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKeyModel>(true)
-                .Where(tek => tek.GetRollingStartUnixTimeSeconds() > oldest)
+                .Where(tek => tek.RollingStartIntervalNumber > oldest)
                 .Where(tek => tek.ExportId == null)
                 .ToFeedIterator();
             var e = Enumerable.Empty<TemporaryExposureKeyModel>();
@@ -51,9 +51,9 @@ namespace Covid19Radar.Api.DataAccess
         public async Task<TemporaryExposureKeyModel[]> GetOutOfTimeKeysAsync()
         {
             _logger.LogInformation($"start {nameof(GetOutOfTimeKeysAsync)}");
-            var oldest = DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds();
+            var oldest = (int)DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds() / 600;
             var query = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKeyModel>(true)
-                .Where(tek => tek.GetRollingStartUnixTimeSeconds() < oldest)
+                .Where(tek => tek.RollingStartIntervalNumber < oldest)
                 .ToFeedIterator();
 
             var e = Enumerable.Empty<TemporaryExposureKeyModel>();
