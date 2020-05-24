@@ -1,5 +1,4 @@
-﻿using Covid19Radar.Background.DataStore;
-using Covid19Radar.Background.Services;
+﻿using Covid19Radar.Background.Services;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Services;
@@ -16,7 +15,6 @@ namespace Covid19Radar.Background
         {
             builder.Services.AddLogging();
             builder.Services.AddSingleton<ICosmos, Cosmos>();
-            builder.Services.AddSingleton<IStoringCosmos, StoringCosmos>();
             builder.Services.AddSingleton<INotificationService, NotificationService>();
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyRepository, CosmosTemporaryExposureKeyRepository>();

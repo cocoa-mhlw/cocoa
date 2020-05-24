@@ -23,8 +23,8 @@ namespace Covid19Radar.Background.Services
             ILogger<TemporaryExposureKeySignatureInfoService> logger)
         {
             Logger = logger;
-            AppBundleId = config["AppBundleId"];
-            AndroidPackage = config["AndroidPackage"];
+            AppBundleId = config.AppBundleId();
+            AndroidPackage = config.AndroidPackage();
             Info = new SignatureInfo();
             Info.AppBundleId = AppBundleId;
             Info.AndroidPackage = AndroidPackage;

@@ -23,9 +23,9 @@ namespace Covid19Radar.Background.Services
             IConfiguration config
             )
         {
-            CdnResourceGroupName = config["CdnResourceGroupName"];
-            CdnProfileName = config["CdnProfileName"];
-            CdnEndpointName = config["CdnEndpointName"];
+            CdnResourceGroupName = config.CdnResourceGroupName();
+            CdnProfileName = config.CdnProfileName();
+            CdnEndpointName = config.CdnEndpointName();
             AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
             var mslogin = new MSILoginInformation(MSIResourceType.AppService);
             var credential = new AzureCredentials(mslogin, AzureEnvironment.AzureGlobalCloud);
