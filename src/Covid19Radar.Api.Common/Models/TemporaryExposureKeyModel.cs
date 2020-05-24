@@ -10,7 +10,7 @@ namespace Covid19Radar.Api.Models
 {
     public class TemporaryExposureKeyModel
     {
-        public string id { get; set; } = Guid.NewGuid().ToString();
+        public string id { get; set; } = Guid.NewGuid().ToString("N");
         public string PartitionKey { get; set; }
         public byte[] KeyData { get; set; }
         public int RollingPeriod { get; set; }
@@ -18,8 +18,8 @@ namespace Covid19Radar.Api.Models
         public int TransmissionRiskLevel { get; set; }
         public string Region { get; set; }
 
-        public long RollingStartUnixTimeSeconds { get => DateTimeOffset.FromUnixTimeSeconds(RollingStartIntervalNumber * 10 * 60).ToUnixTimeSeconds(); }
-        public long RollingPeriodSeconds { get => RollingPeriod * 10 * 60; }
+        public long GetRollingStartUnixTimeSeconds() => DateTimeOffset.FromUnixTimeSeconds(RollingStartIntervalNumber * 10 * 60).ToUnixTimeSeconds();
+        public long GetRollingPeriodSeconds() => RollingPeriod * 10 * 60;
 
         public ulong Timestamp { get; set; }
         public string ExportId { get; set; }

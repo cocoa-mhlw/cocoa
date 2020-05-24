@@ -19,8 +19,9 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<IValidationUserService, ValidationUserService>();
             builder.Services.AddSingleton<IUserRepository, CosmosUserRepository>();
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
-            builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
             builder.Services.AddSingleton<IDiagnosisRepository, CosmosDiagnosisRepository>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyRepository, CosmosTemporaryExposureKeyRepository>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
 #if DEBUG
             builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationDebugService>();
 #else
