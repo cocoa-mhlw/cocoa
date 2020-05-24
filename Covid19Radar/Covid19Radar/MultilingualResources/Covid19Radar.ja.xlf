@@ -546,6 +546,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">通知をオンにしますか？</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="translated">Reset</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>
