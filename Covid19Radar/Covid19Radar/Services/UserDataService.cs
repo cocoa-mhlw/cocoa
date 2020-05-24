@@ -86,7 +86,6 @@ namespace Covid19Radar.Services
                     var newModel = new UserDataModel()
                     {
                         UserUuid = current.UserUuid,
-                        JumpConsistentHash = current.JumpConsistentHash,
                         LastNotificationTime = downloadModel.LastNotificationTime
                     };
                     var result = await httpDataService.GetNotificationPullAsync(newModel);
