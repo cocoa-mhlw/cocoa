@@ -53,7 +53,7 @@ namespace Covid19Radar.Api
             var result = new RegisterResultModel();
             result.UserUuid = userUuid;
             result.Secret = secret;
-            result.JumpConsistentHash = newItem.JumpConsistentHash;
+            result.JumpConsistentSeed = newItem.JumpConsistentSeed;
             return new OkObjectResult(result);
         }
     }

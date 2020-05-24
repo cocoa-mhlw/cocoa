@@ -42,7 +42,7 @@ namespace Covid19Radar.Api.DataAccess
 
         public async Task Create(UserModel user)
         {
-            user.JumpConsistentHash = await _sequence.GetNextAsync(SequenceName, 1);
+            user.JumpConsistentSeed = await _sequence.GetNextAsync(SequenceName, 1);
             await _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
         }
 
