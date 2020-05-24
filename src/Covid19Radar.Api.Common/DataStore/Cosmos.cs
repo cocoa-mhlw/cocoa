@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Covid19Radar.Api.DataStore
@@ -15,10 +16,6 @@ namespace Covid19Radar.Api.DataStore
     public class Cosmos : ICosmos
     {
         private ILogger<ICosmos> Logger;
-
-        private string EndpointUri { get; set; }
-        // The primary key for the Azure Cosmos account.
-        private string PrimaryKey { get; set; }
         // Database Id
         private string DatabaseId { get; set; }
         // The Cosmos client instance
@@ -42,16 +39,18 @@ namespace Covid19Radar.Api.DataStore
         /// DI Constructor
         /// </summary>
         /// <param name="config">configuration</param>
-        public Cosmos(Microsoft.Extensions.Configuration.IConfiguration config, ILogger<ICosmos> logger)
+        /// <param name="client">cosmos db client</param>
+        /// <param name="logger">logger</param>
+        public Cosmos(IConfiguration config,
+                      CosmosClient client,
+                      ILogger<ICosmos> logger)
         {
             Logger = logger;
-            EndpointUri = config.CosmosEndpointUri();
-            PrimaryKey = config.CosmosPrimaryKey();
             DatabaseId = config.CosmosDatabaseId();
             AutoGenerate = config.CosmosAutoGenerate();
 
             // Create a new instance of the Cosmos Client
-            CosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+            CosmosClient = client;
 
             // Autogenerate
             GenerateAsync().Wait();
