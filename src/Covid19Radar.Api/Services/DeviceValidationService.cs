@@ -147,7 +147,7 @@ namespace Covid19Radar.Api.Services
                 var request = new HttpRequestMessage(HttpMethod.Post, UrlAndroid + AndroidBearerToken);
 
                 // response
-                var response = await ClientApple.SendAsync(request);
+                var response = await ClientAndroid.SendAsync(request);
                 var responseBody = await response.Content.ReadAsStringAsync();
                 var result = JsonConvert.DeserializeObject<AndroidResponse>(responseBody);
                 return result.IsValidSignature;
