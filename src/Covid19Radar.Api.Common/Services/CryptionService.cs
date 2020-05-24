@@ -27,9 +27,9 @@ namespace Covid19Radar.Api.Services
             symmetric.Mode = CipherMode.CBC;
             symmetric.Padding = PaddingMode.ISO10126;
             symmetric.KeySize = 256;
-            symmetric.Key = Convert.FromBase64String(config.GetSection("CRYPTION_KEY").Value);
-            symmetric.IV = Convert.FromBase64String(config.GetSection("CRYPTION_IV").Value);
-            hashKey = config.GetSection("CRYPTION_HASH").Value;
+            symmetric.Key = config.CryptionKey();
+            symmetric.IV = config.CryptionIV();
+            hashKey = config.CryptionHash();
             createHash = () =>
             {
                 if (hash == null)
@@ -42,8 +42,8 @@ namespace Covid19Radar.Api.Services
             symmetric2.Mode = CipherMode.CBC;
             symmetric2.Padding = PaddingMode.ISO10126;
             symmetric2.KeySize = 256;
-            symmetric2.Key = Convert.FromBase64String(config.GetSection("CRYPTION_KEY2").Value);
-            symmetric2.IV = Convert.FromBase64String(config.GetSection("CRYPTION_IV2").Value);
+            symmetric2.Key = config.CryptionKey2();
+            symmetric2.IV = config.CryptionIV2();
         }
 
         [ThreadStatic]

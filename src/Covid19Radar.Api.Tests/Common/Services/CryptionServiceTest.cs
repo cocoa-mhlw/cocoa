@@ -23,11 +23,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             // action
             var instance = new CryptionService(config.Object, logger.Object);
@@ -51,11 +51,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
             // preparation
             var userUuid = new string(u, length);
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             var instance = new CryptionService(config.Object, logger.Object);
             // action
@@ -70,11 +70,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             var instance = new CryptionService(config.Object, logger.Object);
             // action
@@ -93,11 +93,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             var instance = new CryptionService(config.Object, logger.Object);
             var option = new ParallelOptions() { MaxDegreeOfParallelism = 512 };
@@ -120,11 +120,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             var instance = new CryptionService(config.Object, logger.Object);
             // action
@@ -151,11 +151,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             var instance = new CryptionService(config.Object, logger.Object);
             // action
@@ -169,11 +169,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             var instance = new CryptionService(config.Object, logger.Object);
             var userUuid = "XXXXXXXXXXXXXXXXXXXXXXXXXX";
@@ -195,11 +195,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             var instance = new CryptionService(config.Object, logger.Object);
             var enc = System.Text.Encoding.UTF8;
@@ -216,11 +216,11 @@ namespace Covid19Radar.Api.Tests.Common.Services
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
-            config.Setup(_ => _.GetSection("CRYPTION_KEY").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
-            config.Setup(_ => _.GetSection("CRYPTION_HASH").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_KEY2").Value).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
-            config.Setup(_ => _.GetSection("CRYPTION_IV2").Value).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_KEY"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
+            config.Setup(_ => _["CRYPTION_HASH"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_KEY2"]).Returns("2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=");
+            config.Setup(_ => _["CRYPTION_IV2"]).Returns("o4Pm6LJ+/q3UxwZArVLdkQ==");
             var logger = new Mock<ILogger<CryptionService>>();
             var instance = new CryptionService(config.Object, logger.Object);
             var enc = System.Text.Encoding.UTF8;

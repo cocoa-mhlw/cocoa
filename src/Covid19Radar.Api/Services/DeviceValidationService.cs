@@ -32,9 +32,9 @@ namespace Covid19Radar.Api.Services
             IConfiguration config,
             IHttpClientFactory client)
         {
-            AndroidBearerToken = config["AndroidBearerToken"];
+            AndroidBearerToken = config.AndroidBearerToken();
             ClientAndroid = client.CreateClient();
-            AppleBearerToken = config["AppleBearerToken"];
+            AppleBearerToken = config.AppleBearerToken();
             ClientApple = client.CreateClient();
         }
 

@@ -1,5 +1,6 @@
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -27,16 +28,16 @@ namespace Covid19Radar.Api
         {
             Logger = logger;
             TekExport = tekExportRepository;
-            ExportKeyUrl = config["ExportKeyUrl"];
-            TekExportBlobStorageContainerPrefix = config["TekExportBlobStorageContainerPrefix"];
+            ExportKeyUrl = config.ExportKeyUrl();
+            TekExportBlobStorageContainerPrefix = config.TekExportBlobStorageContainerPrefix();
         }
 
         [FunctionName(nameof(TemporaryExposureKeysApi))]
-		public async Task<IActionResult> RunAsync(
-			[HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys")] HttpRequest req)
-		{
-			if (!long.TryParse(req.Query?["since"], out var sinceEpochSeconds))
-				sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
+        public async Task<IActionResult> RunAsync(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys")] HttpRequest req)
+        {
+            if (!long.TryParse(req.Query?["since"], out var sinceEpochSeconds))
+                sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
 
             var keysResponse = await TekExport.GetKeysAsync((ulong)sinceEpochSeconds);
             var result = new TemporaryExposureKeysResult();
@@ -46,6 +47,6 @@ namespace Covid19Radar.Api
                 .OrderByDescending(_ => _.TimestampSecondsSinceEpoch)
                 .FirstOrDefault()?.TimestampSecondsSinceEpoch ?? sinceEpochSeconds;
             return new OkObjectResult(result);
-		}
-	}
+        }
+    }
 }

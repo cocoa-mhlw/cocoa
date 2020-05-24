@@ -45,10 +45,10 @@ namespace Covid19Radar.Api.DataStore
         public Cosmos(Microsoft.Extensions.Configuration.IConfiguration config, ILogger<ICosmos> logger)
         {
             Logger = logger;
-            EndpointUri = config.GetSection("COSMOS_ENDPOINT_URI").Value;
-            PrimaryKey = config.GetSection("COSMOS_PRIMARY_KEY").Value;
-            DatabaseId = config.GetSection("COSMOS_DATABASE_ID").Value;
-            AutoGenerate = bool.Parse(config.GetSection("COSMOS_AUTO_GENERATE").Value);
+            EndpointUri = config.CosmosEndpointUri();
+            PrimaryKey = config.CosmosPrimaryKey();
+            DatabaseId = config.CosmosDatabaseId();
+            AutoGenerate = config.CosmosAutoGenerate();
 
             // Create a new instance of the Cosmos Client
             CosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
