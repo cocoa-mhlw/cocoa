@@ -3,6 +3,7 @@ using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Tests.External
@@ -26,7 +27,7 @@ namespace Covid19Radar.Api.Tests.External
         {
             // preparation
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
-            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
+            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<DateTimeOffset>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
                 .Returns(Task.CompletedTask);
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.External.DiagnosisApi>();
