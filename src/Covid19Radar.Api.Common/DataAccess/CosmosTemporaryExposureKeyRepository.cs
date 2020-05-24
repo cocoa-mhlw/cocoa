@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Api.DataStore;
+﻿using Covid19Radar.Api.Common;
+using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
@@ -13,7 +14,6 @@ namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosTemporaryExposureKeyRepository : ITemporaryExposureKeyRepository
     {
-        const int OutOfDate = -14;
         private readonly ICosmos _db;
         private readonly ILogger<CosmosTemporaryExposureKeyExportRepository> _logger;
 
@@ -35,22 +35,23 @@ namespace Covid19Radar.Api.DataAccess
         public async Task<TemporaryExposureKeyModel[]> GetNextAsync()
         {
             _logger.LogInformation($"start {nameof(GetNextAsync)}");
-            // TODO: implement query
-            var ins = new TemporaryExposureKeyModel();
-            ins.KeyData = new byte[64];
-            ins.RollingPeriod = 24 * 60 / 10;
-            ins.RollingStartIntervalNumber = (int)(DateTimeOffset.UtcNow.AddDays(-1).ToUnixTimeSeconds() / 60 / 10);
-            ins.Timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            ins.TransmissionRiskLevel = 0;
-            ins.Region = "Country";
-
-            return Enumerable.Repeat(ins, 40000).ToArray();
-
+            var oldest = DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds();
+            var query = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKeyModel>(true)
+                .Where(tek => tek.GetRollingStartUnixTimeSeconds() > oldest)
+                .Where(tek => tek.ExportId == null)
+                .ToFeedIterator();
+            var e = Enumerable.Empty<TemporaryExposureKeyModel>();
+            while (query.HasMoreResults)
+            {
+                var r = await query.ReadNextAsync();
+                e = e.Concat(r.Resource);
+            }
+            return e.ToArray();
         }
         public async Task<TemporaryExposureKeyModel[]> GetOutOfTimeKeysAsync()
         {
             _logger.LogInformation($"start {nameof(GetOutOfTimeKeysAsync)}");
-            var oldest = DateTimeOffset.UtcNow.AddDays(OutOfDate).ToUnixTimeSeconds();
+            var oldest = DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds();
             var query = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKeyModel>(true)
                 .Where(tek => tek.GetRollingStartUnixTimeSeconds() < oldest)
                 .ToFeedIterator();
