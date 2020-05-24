@@ -45,7 +45,7 @@
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>濃厚接触を記録するには、Bluetooth を有効にする必要があります。次のページに移動して有効にしてください。</value>
+    <value>濃厚接触を記録するには、Bluetooth/Exposure Notification を有効にする必要があります。次のページに移動して有効にしてください。</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
@@ -147,7 +147,7 @@
     <comment>Button Verify</comment>
   </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>コードを取得しませんでしたか?</value>
+    <value>コードを取得しませんでしたか？</value>
     <comment>Didn't get the code Text</comment>
   </data>
   <data name="InputSmsOTPPageResendText" xml:space="preserve">
@@ -288,7 +288,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>Tab Contributors</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
-    <value>エクスポー ジャー</value>
+    <value>Exposure</value>
     <comment>Tab Button</comment>
   </data>
   <data name="MainHome" xml:space="preserve">
@@ -308,7 +308,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>Tab Button</comment>
   </data>
   <data name="TitleExposures" xml:space="preserve">
-    <value>エクスポー ジャー</value>
+    <value>Exposure</value>
     <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
@@ -396,10 +396,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>OK</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
-    <value>診断を送信する前に露出通知を有効にしてください。</value>
+    <value>診断を送信する前に Exposure Notifications を有効にしてください。</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
-    <value>Exposure Notifications 通知が無効</value>
+    <value>Exposure Notifications 無効</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
     <value>診断を提出します。</value>
@@ -431,5 +431,17 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>通知をオンにしますか？</value>
     <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Reset</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>有効にしています</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>削除しています</value>
+    <comment>Deleting</comment>
   </data>
 </root>

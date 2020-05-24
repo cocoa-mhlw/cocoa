@@ -33,6 +33,11 @@ namespace Covid19Radar.Api.Models
         public bool Approved { get; set; }
 
         /// <summary>
+        /// timestamp unit time seconds
+        /// </summary>
+        public long Timestamp { get; set; }
+
+        /// <summary>
         /// Temporary Exposure Keys
         /// </summary>
         public TemporaryExposureKeyModel[] Keys { get; set; }
