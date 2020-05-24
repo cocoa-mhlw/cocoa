@@ -25,7 +25,7 @@ namespace Covid19Radar.Api.DataAccess
         {
             _logger.LogInformation($"start {nameof(GetNextAsync)}");
             var pk = new PartitionKey(key);
-            using (var l = new UuidLock(key))
+            using (var l = new KeyLock(key))
             {
 
                 for (var i = 0; i < 100; i++)
