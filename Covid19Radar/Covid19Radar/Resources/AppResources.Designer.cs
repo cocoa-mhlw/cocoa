@@ -504,6 +504,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Deleting に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LoadingTextDeleting {
+            get {
+                return ResourceManager.GetString("LoadingTextDeleting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Enabling に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LoadingTextEnabling {
