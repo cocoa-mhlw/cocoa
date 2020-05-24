@@ -160,6 +160,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Reset に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonReset {
+            get {
+                return ResourceManager.GetString("ButtonReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Save に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonSave {

@@ -543,6 +543,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="new">Do you want to turn on notifications?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="new">Reset</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>
