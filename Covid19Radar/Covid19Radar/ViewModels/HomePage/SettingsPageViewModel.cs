@@ -83,7 +83,13 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
-            var check = await UserDialogs.Instance.ConfirmAsync("本当にすべてのデータをリセットしますか?", "データの全削除", "OK", "Cancel");
+            var check = await UserDialogs.Instance.ConfirmAsync(
+                "本当にすべてのデータをリセットしますか?",
+                "データの全削除",
+                Resources.AppResources.DialogButtonOk,
+                Resources.AppResources.DialogButtonCancel
+            );
+
             if (check)
             {
                 UserDialogs.Instance.ShowLoading("Deleting data");
