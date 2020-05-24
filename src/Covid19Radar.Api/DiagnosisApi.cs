@@ -5,12 +5,14 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace Covid19Radar.Api
 {
@@ -21,8 +23,10 @@ namespace Covid19Radar.Api
         private readonly IValidationUserService Validation;
         private readonly IDeviceValidationService DeviceCheck;
         private readonly ILogger<DiagnosisApi> Logger;
+        private readonly string[] SupportRegions;
 
         public DiagnosisApi(
+            IConfiguration config,
             IDiagnosisRepository diagnosisRepository,
             ITemporaryExposureKeyRepository tekRepository,
             IValidationUserService validation,
@@ -34,6 +38,7 @@ namespace Covid19Radar.Api
             Validation = validation;
             DeviceCheck = deviceCheck;
             Logger = logger;
+            SupportRegions = config.SupportRegions();
         }
 
         [FunctionName(nameof(DiagnosisApi))]
@@ -46,7 +51,12 @@ namespace Covid19Radar.Api
             // payload valid
             if (!diagnosis.IsValid())
             {
-                return new BadRequestResult();
+                return new BadRequestErrorMessageResult("Invalid parameter");
+            }
+
+            if (!SupportRegions.Contains(diagnosis.Region))
+            {
+                return new BadRequestErrorMessageResult("Regions not supported.");
             }
 
             // validation
@@ -59,7 +69,7 @@ namespace Covid19Radar.Api
             // Device validation
             if (false == await DeviceCheck.Validation(diagnosis))
             {
-                return new BadRequestResult();
+                return new BadRequestErrorMessageResult("Invalid Device");
             }
 
             var timestamp = DateTimeOffset.UtcNow;

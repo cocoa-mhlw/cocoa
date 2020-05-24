@@ -15,7 +15,7 @@
         "CRYPTION_IV2": "o4Pm6LJ+/q3UxwZArVLdkQ==",
         "AppBundleId": "AppBundleId",
         "AndroidPackage": "AndroidPackage",
-        "Region": "Country",
+        "SupportRegions": "Country1,Country2", //ISO 3166-1 alpha-2
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
         "TekExportBlobStorageContainerPrefix": "C19R",
         "ExportKeyUrl": "http://127.0.0.1:10000/",
