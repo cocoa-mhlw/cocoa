@@ -51,7 +51,10 @@ namespace Covid19Radar.Background.Services
             {
                 Logger.LogInformation($"start {nameof(RunAsync)}");
                 var items = await TekRepository.GetNextAsync();
-                foreach (var kv in items.GroupBy(_ => new { _.RollingStartUnixTimeSeconds, _.RollingPeriodSeconds, _.Region }))
+                foreach (var kv in items.GroupBy(_ => new { 
+                    RollingStartUnixTimeSeconds = _.GetRollingStartUnixTimeSeconds(),
+                    RollingPeriodSeconds = _.GetRollingPeriodSeconds(),
+                    _.Region }))
                 {
                     // Security considerations: Random Order TemporaryExposureKey
                     var sorted = kv.OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
