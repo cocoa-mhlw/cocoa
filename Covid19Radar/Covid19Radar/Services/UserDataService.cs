@@ -1,14 +1,21 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using Plugin.LocalNotification;
 using Prism.Navigation;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using Xamarin.Essentials;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.Services
@@ -19,7 +26,7 @@ namespace Covid19Radar.Services
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
-        private readonly INavigationService navigationService;
+//        private readonly INavigationService navigationService;
         private MinutesTimer _downloadTimer;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
@@ -27,7 +34,7 @@ namespace Covid19Radar.Services
         public UserDataService(HttpDataService httpDataService, INavigationService navigationService)
         {
             this.httpDataService = httpDataService;
-            this.navigationService = navigationService;
+//            this.navigationService = navigationService;
             current = Get();
             if (current != null)
             {
@@ -42,7 +49,8 @@ namespace Covid19Radar.Services
 
         private async void OnLocalNotificationTaped(object sender, EventArgs e)
         {
-            await navigationService.NavigateAsync("NavigationPage/HeadsupPage");
+            // TODO  FIX Navigation
+            //await navigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
         private void StartTimer()
@@ -100,7 +108,6 @@ namespace Covid19Radar.Services
 
         public bool IsExistUserData { get => current != null; }
 
-
         public async Task<UserDataModel> RegisterUserAsync()
         {
             var userData = await httpDataService.PostRegisterUserAsync();
@@ -132,7 +139,7 @@ namespace Covid19Radar.Services
             {
                 userData.Secret = current.Secret;
             }
-            Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
+            Application.Current.Properties["UserData"] = Utils.SerializeToJson(current);
             await Application.Current.SavePropertiesAsync();
             current = userData;
             UserDataChanged?.Invoke(this, current);
@@ -143,4 +150,5 @@ namespace Covid19Radar.Services
             }
         }
     }
+
 }

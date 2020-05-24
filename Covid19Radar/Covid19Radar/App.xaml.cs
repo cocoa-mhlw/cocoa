@@ -81,7 +81,7 @@ namespace Covid19Radar
             // Check user data and skip tutorial
             UserDataService userDataService = Container.Resolve<UserDataService>();
 
-            if (LocalStateManager.Instance.IsWelcomed)
+            if (userDataService.Get().IsWelcomed)
             {
                 result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
@@ -150,6 +150,7 @@ namespace Covid19Radar
 
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
+            containerRegistry.RegisterSingleton<ExposureNotificationService>();
         }
 
         protected override void OnStart()
