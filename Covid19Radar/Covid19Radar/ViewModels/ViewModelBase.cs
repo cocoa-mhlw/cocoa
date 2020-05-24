@@ -26,6 +26,8 @@ namespace Covid19Radar.ViewModels
             await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
         });
 
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
 
         // Navigation
         protected INavigationService NavigationService { get; private set; }
@@ -39,14 +41,23 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public ViewModelBase(INavigationService navigationService)
+        public ViewModelBase(INavigationService navigationService, UserDataService userDataService)
         {
             NavigationService = navigationService;
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
+            this.userDataService.UserDataChanged += _userDataChanged;
+
         }
+        private void _userDataChanged(object sender, UserDataModel e)
+        {
+            userData = this.userDataService.Get();
+        }
+
 
         public virtual async void Initialize(INavigationParameters parameters)
         {
-            if (LocalStateManager.Instance.LastIsEnabled && LocalStateManager.Instance.IsWelcomed)
+            if (userData.LastIsEnabled && userData.IsWelcomed)
             {
                 if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 {

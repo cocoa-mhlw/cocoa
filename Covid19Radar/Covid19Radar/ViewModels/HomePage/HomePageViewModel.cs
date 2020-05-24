@@ -19,6 +19,9 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
     {
         private string _exposureCount;
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
 
         public string ExposureCount
         {
@@ -26,19 +29,28 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposureCount, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService) : base(navigationService)
+        public HomePageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = AppResources.HomePageTitle;
             ExposureCount = String.Format("{0}{1}",1, "件の接触がありました");
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
+            this.userDataService.UserDataChanged += _userDataChanged;
+
         }
+        private void _userDataChanged(object sender, UserDataModel e)
+        {
+            userData = this.userDataService.Get();
+        }
+
 
         public bool EnableNotifications
         {
-            get => LocalStateManager.Instance.EnableNotifications;
+            get => userData.EnableNotifications;
             set
             {
-                LocalStateManager.Instance.EnableNotifications = value;
-                LocalStateManager.Save();
+                userData.EnableNotifications = value;
+                userDataService.SetAsync(userData);
             }
         }
 

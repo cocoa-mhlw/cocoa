@@ -59,7 +59,6 @@
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.ExposureNotification" Version="0.2.1-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
@@ -149,5 +148,8 @@
     <Folder Include="Converters\" />
     <Folder Include="MultilingualResources\" />
     <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\xamarin.exposurenotification\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />
   </ItemGroup>
 </Project>

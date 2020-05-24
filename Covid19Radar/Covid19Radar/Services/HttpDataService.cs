@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Covid19Radar.Services
 {
@@ -59,6 +61,28 @@ namespace Covid19Radar.Services
             return null;
         }
 
+        // POST /diagnosis - upload self diagnosys file
+        public async Task<UserDataModel> PostSelfExposureKeysAsync(DiagnosisSubmissionHttpRequestModel request)
+        {
+            try
+            {
+                var url = $"{AppConstants.ApiUrlBase.TrimEnd('/')}/diagnosis";
+                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+                var result = await Post(url, content);
+                if (result != null)
+                {
+                    // TODO Implement if return result model
+                    throw new NotImplementedException();
+                    // return Utils.DeserializeFromJson<UserDataModel>(result);
+                }
+                return null;
+            }
+            catch (HttpRequestException) { }
+
+            return null;
+
+        }
+
         // GET /api/User/{userUuid} - check user status and user exists
         public async Task<UserDataModel> GetUserAsync(UserDataModel user)
         {
@@ -67,6 +91,17 @@ namespace Covid19Radar.Services
             if (result != null)
             {
                 return Utils.DeserializeFromJson<UserDataModel>(result);
+            }
+            return null;
+        }
+
+        public async Task<TemporaryExposureKeysHttpResultModel> GetTemporaryExposureKeys(long since)
+        {
+            string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys?since={since}";
+            var result = await Get(url);
+            if (result != null)
+            {
+                return Utils.DeserializeFromJson<TemporaryExposureKeysHttpResultModel>(result);
             }
             return null;
         }
@@ -85,11 +120,25 @@ namespace Covid19Radar.Services
             return null;
         }
 
+        public async Task<bool> GetFileAsync(string downloadUrl, string filePath)
+        {
+
+            var result = await GetStream(downloadUrl);
+            if (result != null)
+            {
+
+                var fileStream = File.Create(filePath);
+                await result.CopyToAsync(fileStream);
+                return true;
+            }
+            return false;
+        }
+
 
         private async Task<string> Get(string url)
         {
-            Task<HttpResponseMessage> stringAsync = httpClient.GetAsync(url);
-            HttpResponseMessage result = await stringAsync;
+            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
+            HttpResponseMessage result = await response;
             await result.Content.ReadAsStringAsync();
 
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
@@ -98,6 +147,20 @@ namespace Covid19Radar.Services
             }
             return null;
         }
+
+        private async Task<Stream> GetStream(string url)
+        {
+            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
+            HttpResponseMessage result = await response;
+            await result.Content.ReadAsStreamAsync();
+
+            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return await result.Content.ReadAsStreamAsync();
+            }
+            return null;
+        }
+
 
         private async Task<string> Post(string url, HttpContent body)
         {
@@ -121,19 +184,5 @@ namespace Covid19Radar.Services
             return null;
         }
 
-    }
-
-    public class NotificationPullResult
-    {
-        /// <summary>
-        /// Last notification date and time
-        /// </summary>
-        [JsonProperty("lastNotificationTime")]
-        public DateTime LastNotificationTime { get; set; }
-        /// <summary>
-        /// Notification Messages
-        /// </summary>
-        [JsonProperty("messages")]
-        public NotificationMessageModel[] Messages { get; set; }
     }
 }
