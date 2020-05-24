@@ -436,4 +436,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>Reset</value>
     <comment>Reset</comment>
   </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>有効にしています</value>
+    <comment>Enabling</comment>
+  </data>
 </root>
