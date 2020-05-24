@@ -61,12 +61,24 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        public SettingsPageViewModel(INavigationService navigationService) : base(navigationService)
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
+        public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppConstants.AppVersion;
-            EnableExposureNotification = LocalStateManager.Instance.LastIsEnabled;
-            EnableLocalNotification = LocalStateManager.Instance.EnableNotifications;
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
+            this.userDataService.UserDataChanged += _userDataChanged;
+
+            EnableExposureNotification = userData.LastIsEnabled;
+            EnableLocalNotification = userData.EnableNotifications;
+        }
+
+        private void _userDataChanged(object sender, UserDataModel e)
+        {
+            userData = this.userDataService.Get();
         }
 
 
@@ -94,12 +106,8 @@ namespace Covid19Radar.ViewModels
                 }
 
                 // Reset All Data and Optout
-                LocalStateManager.Instance.LastIsEnabled = false;
-                LocalStateManager.Instance.IsWelcomed = false;
-                LocalStateManager.Instance.ExposureSummary = null;
-                LocalStateManager.Instance.ClearDiagnosis();
-                LocalStateManager.Instance.ServerBatchNumber = 0;
-                LocalStateManager.Save();
+                UserDataModel userData = new UserDataModel();
+                await userDataService.SetAsync(userData);
 
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync("全設定とデータを削除しました。アプリの再起動をしてください。");
@@ -115,9 +123,9 @@ namespace Covid19Radar.ViewModels
 
         public Command OnSaveClick => new Command(async () =>
         {
-            LocalStateManager.Instance.LastIsEnabled = EnableExposureNotification;
-            LocalStateManager.Instance.EnableNotifications = EnableLocalNotification;
-            LocalStateManager.Save();
+            userData.LastIsEnabled = EnableExposureNotification;
+            userData.EnableNotifications = EnableLocalNotification;
+            await userDataService.SetAsync(userData);
             await UserDialogs.Instance.AlertAsync("設定を保存しました。");
         });
 
