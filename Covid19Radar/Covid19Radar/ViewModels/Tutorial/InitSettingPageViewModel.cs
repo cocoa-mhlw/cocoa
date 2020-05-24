@@ -34,7 +34,7 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
-            UserDialogs.Instance.ShowLoading("有効にしています。");
+            UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextEnabling);
 
             LocalStateManager.Instance.LastIsEnabled = true;
             LocalStateManager.Save();

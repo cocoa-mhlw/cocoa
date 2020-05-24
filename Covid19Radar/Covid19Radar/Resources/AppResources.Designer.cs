@@ -504,6 +504,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Enabling に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LoadingTextEnabling {
+            get {
+                return ResourceManager.GetString("LoadingTextEnabling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Contributors に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MainContributors {
