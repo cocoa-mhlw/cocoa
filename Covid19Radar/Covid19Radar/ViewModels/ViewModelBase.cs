@@ -41,6 +41,12 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
+        public ViewModelBase(INavigationService navigationService)
+        {
+            NavigationService = navigationService;
+
+        }
+
         public ViewModelBase(INavigationService navigationService, UserDataService userDataService)
         {
             NavigationService = navigationService;
