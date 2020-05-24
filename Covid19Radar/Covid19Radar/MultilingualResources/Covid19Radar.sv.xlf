@@ -563,6 +563,11 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <target state="new">Enabling</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Enabling</note>
         </trans-unit>
+        <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
+          <source>Deleting</source>
+          <target state="new">Deleting</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Deleting</note>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -92,7 +92,7 @@ namespace Covid19Radar.ViewModels
 
             if (check)
             {
-                UserDialogs.Instance.ShowLoading("Deleting data");
+                UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextDeleting);
 
                 if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 {
