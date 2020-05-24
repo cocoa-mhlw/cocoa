@@ -17,10 +17,10 @@ namespace Covid19Radar.Api.Tests
         public void CreateMethod()
         {
             // preparation
-            var notification = new Mock.NotificationServiceMock();
-            var validation = new Mock.ValidationUserServiceMock();
+            var notification = new Mock<INotificationService>();
+            var validation = new Mock<IValidationUserService>();
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi(notification, validation, logger);
+            var userApi = new UserApi(notification.Object, validation.Object, logger);
         }
 
         [DataTestMethod]
@@ -30,7 +30,7 @@ namespace Covid19Radar.Api.Tests
         public async Task RunAsyncMethod(bool isValid, string userUuid)
         {
             // preparation
-            var notification = new Mock.NotificationServiceMock();
+            var notification = new Mock<INotificationService>();
             var validation = new Mock<IValidationUserService>();
             var validationResult = new IValidationUserService.ValidateResult()
             {
@@ -38,10 +38,10 @@ namespace Covid19Radar.Api.Tests
             };
             validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
             var logger = new Mock.LoggerMock<UserApi>();
-            var userApi = new UserApi(notification, validation.Object, logger);
-            var context = new Mock.HttpContextMock();
+            var userApi = new UserApi(notification.Object, validation.Object, logger);
+            var context = new Mock<HttpContext>();
             // action
-            await userApi.RunAsync(context.Request, userUuid);
+            await userApi.RunAsync(context.Object.Request, userUuid);
             // assert
         }
     }
