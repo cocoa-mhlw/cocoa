@@ -19,9 +19,6 @@ namespace Covid19Radar.Background.Services
         /// The maximum number of keys in the TEKExport file
         /// </summary>
         public const int MaxKeysPerFile = 25_000;
-        /// <summary>
-        /// 
-        /// </summary>
         const int FixedHeaderWidth = 16;
         const string Header = "EK Export v1    ";
         const string ExportBinFileName = "export.bin";
