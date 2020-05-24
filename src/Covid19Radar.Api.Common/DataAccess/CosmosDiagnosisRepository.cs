@@ -65,7 +65,7 @@ namespace Covid19Radar.Api.DataAccess
                 Keys = Keys
             };
 
-            return _db.Diagnosis.UpsertItemAsync<DiagnosisModel>(item, PartitionKey.None);
+            return _db.Diagnosis.UpsertItemAsync<DiagnosisModel>(item);
         }
     }
 }
