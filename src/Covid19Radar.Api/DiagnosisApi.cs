@@ -43,6 +43,12 @@ namespace Covid19Radar.Api
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var diagnosis = JsonConvert.DeserializeObject<DiagnosisSubmissionParameter>(requestBody);
 
+            // payload valid
+            if (!diagnosis.IsValid())
+            {
+                return new BadRequestResult();
+            }
+
             // validation
             var validationResult = await Validation.ValidateAsync(req, diagnosis);
             if (!validationResult.IsValid)
