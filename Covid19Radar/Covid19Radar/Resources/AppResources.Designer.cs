@@ -160,6 +160,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Reset に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonReset {
+            get {
+                return ResourceManager.GetString("ButtonReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Save に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonSave {
@@ -491,6 +500,24 @@ namespace Covid19Radar.Resources {
         internal static string InputSmsOTPPageResendText {
             get {
                 return ResourceManager.GetString("InputSmsOTPPageResendText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Deleting に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LoadingTextDeleting {
+            get {
+                return ResourceManager.GetString("LoadingTextDeleting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enabling に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LoadingTextEnabling {
+            get {
+                return ResourceManager.GetString("LoadingTextEnabling", resourceCulture);
             }
         }
         

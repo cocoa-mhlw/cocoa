@@ -34,7 +34,7 @@ namespace Covid19Radar.Api.Tests
         {
             // preparation
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
-            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
+            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<DateTimeOffset>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
                 .Returns(Task.CompletedTask);
             var validation = new Mock<IValidationUserService>();
             var validationResult = new IValidationUserService.ValidateResult()

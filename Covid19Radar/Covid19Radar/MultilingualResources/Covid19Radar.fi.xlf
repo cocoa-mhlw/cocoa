@@ -57,10 +57,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID19</source>
+          <source>Protecting our loved ones from COVID-19</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Rakkaidemme suojaaminen COVID-19:ltä</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -282,7 +282,7 @@ Tarkista tekstiviestisi.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID19 positive</source>
+          <source>If you are diagnosed COVID-19 positive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jos sinulla on diagnosoitu COVID-19 positiivinen</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
@@ -547,6 +547,21 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Do you want to turn on notifications?</source>
           <target state="new">Do you want to turn on notifications?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
+        </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="new">Reset</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
+          <source>Enabling</source>
+          <target state="new">Enabling</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Enabling</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
+          <source>Deleting</source>
+          <target state="new">Deleting</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Deleting</note>
         </trans-unit>
       </group>
     </body>
