@@ -10,16 +10,16 @@ namespace Covid19Radar.Api.Tests.Common
 {
     [TestClass]
     [TestCategory("Common")]
-    public class UuidLockTest
+    public class KeyLockTest
     {
-        static Type t = typeof(UuidLock);
+        static Type t = typeof(KeyLock);
         static BindingFlags staticflags = BindingFlags.NonPublic | BindingFlags.Static;
-        public Dictionary<string, UuidLock.LockItem> Dictionary
+        public Dictionary<string, KeyLock.LockItem> Dictionary
         {
             get
             {
                 var field = t.GetField("Locks", staticflags);
-                return (Dictionary<string, UuidLock.LockItem>)field.GetValue(null);
+                return (Dictionary<string, KeyLock.LockItem>)field.GetValue(null);
             }
         }
 
@@ -32,7 +32,7 @@ namespace Covid19Radar.Api.Tests.Common
             var dic = Dictionary;
             dic.Clear();
             // action
-            using (var l = new UuidLock(uuid)) { }
+            using (var l = new KeyLock(uuid)) { }
         }
 
         [TestMethod]
@@ -44,7 +44,7 @@ namespace Covid19Radar.Api.Tests.Common
             // action
             Assert.ThrowsException<ArgumentNullException>(() =>
             {
-                using (var l = new UuidLock(null)) { }
+                using (var l = new KeyLock(null)) { }
             });
         }
 
@@ -60,7 +60,7 @@ namespace Covid19Radar.Api.Tests.Common
             for (var i = 0; i < 256; i++)
             {
                 // create
-                using (var l = new UuidLock("UUID"))
+                using (var l = new KeyLock("UUID"))
                 {
                     // Assert
                     Assert.AreEqual(1, dic.Count);
@@ -84,7 +84,7 @@ namespace Covid19Radar.Api.Tests.Common
             for (var i = 0; i < 256; i++)
             {
                 // create
-                using (var l = new UuidLock($"UUID_{i}"))
+                using (var l = new KeyLock($"UUID_{i}"))
                 {
                     // Assert
                     Assert.AreEqual(1, dic.Count);
@@ -104,12 +104,12 @@ namespace Covid19Radar.Api.Tests.Common
             dic.Clear();
             Assert.AreEqual(0, dic.Count);
 
-            var lockItems = new List<UuidLock>();
+            var lockItems = new List<KeyLock>();
             // action
             for (var i = 1; i < 256; i++)
             {
                 // create
-                var l = new UuidLock($"UUID_{i}");
+                var l = new KeyLock($"UUID_{i}");
                 lockItems.Add(l);
                 // Assert
                 Assert.AreEqual(i, dic.Count);

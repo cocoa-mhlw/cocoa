@@ -14,8 +14,6 @@ namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosTemporaryExposureKeyExportRepository : ITemporaryExposureKeyExportRepository
     {
-        const int OutOfDate = -14;
-        const int CacheTimeout = 60;
         const string SequenceName = "BatchNum";
         private readonly ICosmos _db;
         private readonly ISequenceRepository _sequence;
@@ -30,7 +28,7 @@ namespace Covid19Radar.Api.DataAccess
             _db = db;
             _sequence = sequence;
             _logger = logger;
-            GetKeysAsyncCache = new QueryCache<TemporaryExposureKeyExportModel[]>(CacheTimeout);
+            GetKeysAsyncCache = new QueryCache<TemporaryExposureKeyExportModel[]>(Constants.CacheTimeout);
         }
         public async Task<TemporaryExposureKeyExportModel> CreateAsync()
         {
@@ -53,7 +51,7 @@ namespace Covid19Radar.Api.DataAccess
         {
             _logger.LogInformation($"start {nameof(GetKeysAsync)}");
 
-            var oldest = (ulong)DateTimeOffset.UtcNow.AddDays(OutOfDate).ToUnixTimeSeconds();
+            var oldest = (ulong)DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds();
 
             // Only allow the last 14 days +
             if (sinceEpochSeconds < oldest)
@@ -81,7 +79,7 @@ namespace Covid19Radar.Api.DataAccess
         public async Task<TemporaryExposureKeyExportModel[]> GetOutOfTimeKeysAsync()
         {
             _logger.LogInformation($"start {nameof(GetOutOfTimeKeysAsync)}");
-            var oldest = (ulong)DateTimeOffset.UtcNow.AddDays(OutOfDate).ToUnixTimeSeconds();
+            var oldest = (ulong)DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds();
             var query = _db.TemporaryExposureKeyExport.GetItemLinqQueryable<TemporaryExposureKeyExportModel>(true)
                 .Where(tek => !tek.Deleted)
                 .Where(tek => tek.EndTimestamp < oldest)

@@ -14,7 +14,7 @@ namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosUserRepository : IUserRepository
     {
-        const string SequenceName = "JumpConsistentHash";
+        const string SequenceName = "JumpConsistentSeed";
         private readonly ICosmos _db;
         private readonly ISequenceRepository _sequence;
         private readonly ILogger<CosmosUserRepository> _logger;
