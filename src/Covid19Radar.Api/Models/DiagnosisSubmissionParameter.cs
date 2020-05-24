@@ -1,11 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using Covid19Radar.Api.Common;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
-	public class DiagnosisSubmissionParameter : IUser
+	public class DiagnosisSubmissionParameter : IUser, IPayload
 	{
 		[JsonProperty("submissionNumber")]
 		public string SubmissionNumber { get; set; }
@@ -21,7 +23,8 @@ namespace Covid19Radar.Api.Models
 		public string DeviceVerificationPayload { get; set; }
 		[JsonProperty("appPackageName")]
 		public string AppPackageName { get; set; }
-		public class Key
+
+        public class Key
 		{
 			[JsonProperty("keyData")]
 			public string KeyData { get; set; }
@@ -43,6 +46,33 @@ namespace Covid19Radar.Api.Models
 					Timestamp = timestamp
 				};
 			}
+			/// <summary>
+			/// Validation
+			/// </summary>
+			/// <returns>true if valid</returns>
+			public bool IsValid()
+			{
+				if (string.IsNullOrWhiteSpace(KeyData)) return false;
+				if (RollingPeriod != Constants.ActiveRollingPeriod) return false;
+				if (RollingStartNumber < (DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds() / 600)) return false;
+				return true;
+			}
+		}
+
+		/// <summary>
+		/// Validation
+		/// </summary>
+		/// <returns>true if valid</returns>
+		public bool IsValid()
+		{
+			if (string.IsNullOrWhiteSpace(SubmissionNumber)) return false;
+			if (string.IsNullOrWhiteSpace(UserUuid)) return false;
+			if (string.IsNullOrWhiteSpace(Region)) return false;
+			if (string.IsNullOrWhiteSpace(Platform)) return false;
+			if (string.IsNullOrWhiteSpace(DeviceVerificationPayload)) return false;
+			if (string.IsNullOrWhiteSpace(AppPackageName)) return false;
+			if (Keys.Any(_ => !_.IsValid())) return false;
+			return true;
 		}
 	}
 }
