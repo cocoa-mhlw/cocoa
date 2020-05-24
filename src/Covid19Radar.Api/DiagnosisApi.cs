@@ -17,17 +17,20 @@ namespace Covid19Radar.Api
     public class DiagnosisApi
     {
         private readonly IDiagnosisRepository DiagnosisRepository;
+        private readonly ITemporaryExposureKeyRepository TekRepository;
         private readonly IValidationUserService Validation;
         private readonly IDeviceValidationService DeviceCheck;
         private readonly ILogger<DiagnosisApi> Logger;
 
         public DiagnosisApi(
             IDiagnosisRepository diagnosisRepository,
+            ITemporaryExposureKeyRepository tekRepository,
             IValidationUserService validation,
             IDeviceValidationService deviceCheck,
             ILogger<DiagnosisApi> logger)
         {
             DiagnosisRepository = diagnosisRepository;
+            TekRepository = tekRepository;
             Validation = validation;
             DeviceCheck = deviceCheck;
             Logger = logger;
@@ -54,12 +57,18 @@ namespace Covid19Radar.Api
             }
 
             var timestamp = DateTimeOffset.UtcNow;
+            var keys = diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray();
 
             await DiagnosisRepository.SubmitDiagnosisAsync(
                 diagnosis.SubmissionNumber,
                 timestamp,
                 diagnosis.UserUuid,
-                diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray());
+                keys);
+
+            foreach (var k in keys)
+            {
+                await TekRepository.UpsertAsync(k);
+            }
 
             return new NoContentResult();
         }

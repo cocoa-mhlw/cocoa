@@ -20,10 +20,11 @@ namespace Covid19Radar.Api.Tests
         {
             // preparation
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
+            var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
-            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, validation.Object, deviceCheck.Object, logger);
+            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, tekRepo.Object, validation.Object, deviceCheck.Object, logger);
         }
 
         [DataTestMethod]
@@ -36,6 +37,7 @@ namespace Covid19Radar.Api.Tests
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<DateTimeOffset>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
                 .Returns(Task.CompletedTask);
+            var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
             var validationResult = new IValidationUserService.ValidateResult()
             {
@@ -45,7 +47,7 @@ namespace Covid19Radar.Api.Tests
             var deviceCheck = new Mock<IDeviceValidationService>();
             deviceCheck.Setup(_ => _.Validation(It.IsAny<DiagnosisSubmissionParameter>())).ReturnsAsync(isValidDevice);
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
-            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, validation.Object, deviceCheck.Object, logger);
+            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, tekRepo.Object, validation.Object, deviceCheck.Object, logger);
             var context = new Mock.HttpContextMock();
             var bodyJson = new DiagnosisSubmissionParameter()
             {
