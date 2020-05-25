@@ -566,6 +566,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">陽性と診断された場合</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
+        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+          <source>Share the App</source>
+          <target state="translated">アプリの共有</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
+        </trans-unit>
       </group>
     </body>
   </file>
