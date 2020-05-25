@@ -64,11 +64,11 @@ namespace Covid19Radar
             // with some fake data
             Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
+
             // Local Notification tap event listener
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             await Xamarin.ExposureNotifications.ExposureNotification.Init();
 
-            // Exposure Notification
 
             LogUnobservedTaskExceptions();
 
