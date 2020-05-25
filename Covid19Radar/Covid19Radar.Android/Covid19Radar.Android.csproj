@@ -145,6 +145,9 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification">
       <Version>18.0.2-eap.4</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
+      <Version>117.0.0-preview02</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Tasks">
       <Version>117.0.0-preview02</Version>
     </PackageReference>
