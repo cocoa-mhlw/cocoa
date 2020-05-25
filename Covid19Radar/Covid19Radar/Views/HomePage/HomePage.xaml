@@ -101,7 +101,7 @@
                 </Grid>
             </StackLayout>
             <StackLayout Margin="0,0,0,0" Spacing="0">
-                <Label Style="{StaticResource DefaultLabelColor}" Text="陽性と診断された場合" />
+                <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.HomePageSubtitle1}" />
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.2*" />
@@ -129,7 +129,7 @@
             </StackLayout>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
             <StackLayout Margin="0,0,0,0" Spacing="0">
-                <Label Style="{StaticResource DefaultLabelColor}" Text="アプリの共有" />
+                <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.HomePageSubtitle2}" />
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.2*" />
