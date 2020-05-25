@@ -17,7 +17,7 @@
     <comment>I want to help</comment>
   </data>
   <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Làm thế nào nó hoạt động</value>
+    <value>Nó hoạt động thế nào</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
@@ -33,19 +33,19 @@
     <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
-    <value>Không cần phải nhập thông tin cá nhân. Chúng tôi đang sử dụng ID duy nhất, được phân bổ cho bạn khi cài đặt ứng dụng.</value>
+    <value>Không cần phải nhập thông tin cá nhân. Chúng tôi sử dụng một ID duy nhất, được tạo ra cho bạn khi cài đặt ứng dụng.</value>
     <comment>How it works page step 1 description</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
-    <value>Một liên hệ với người dùng ứng dụng khác lâu hơn 30 phút trong tổng số, trong vòng bán kính gần hơn 2m trung bình được ghi nhận là "đóng liên hệ".</value>
+    <value>Một tiếp xúc với người dùng ứng dụng khác lâu hơn 30 phút, trong vòng bán kính gần hơn 2m (trung bình) được ghi nhận là "tiếp xúc gần".</value>
     <comment>How it works page step 2 description</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Hãy tự thay đổi trạng thái của bạn thành "tích cực" sau khi xác minh số điện thoại của bạn. " Tích cực "Workflow, bây giờ phối hợp với các bên liên quan.</value>
+    <value>Hãy tự thay đổi trạng thái của bạn thành "Dương tính" sau khi xác minh số điện thoại của bạn. Quy trình "Dương tính" bây giờ sẽ được phối hợp với các bên liên quan.</value>
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Cần phải bật Bluetooth để ghi lại liên hệ gần. Vui lòng truy cập trang tiếp theo để bật.</value>
+    <value>Cần phải bật Bluetooth để ghi nhận lại các tiếp xúc gần. Vui lòng truy cập trang tiếp theo để bật.</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Bảo vệ những người thân yêu của chúng tôi từ COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>Ứng dụng này sử dụng các tín hiệu Bluetooth để xác định xem bạn đang ở gần một liên hệ với người dùng ứng dụng truy tìm. 
-Chọn ' luôn cho phép ' để thiết lập Bluetooth.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Cho phép Bluetooth</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>Bảo vệ những người thân yêu của chúng tôi tránh xa COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Truy cập thiết bị</value>
@@ -86,7 +77,7 @@ Chọn ' luôn cho phép ' để thiết lập Bluetooth.</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID19Radar</value>
+    <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
@@ -106,15 +97,15 @@ Chọn ' luôn cho phép ' để thiết lập Bluetooth.</value>
     <comment>HOME</comment>
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Bạn đã sẵn sàng để đi</value>
+    <value>Bạn đã sẵn sàng</value>
     <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Thiết lập đã hoàn thành</value>
+    <value>Thiết lập hoàn tất</value>
     <comment>Set up Completed</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Nếu bạn nhận được một chẩn đoán tích cực, xin vui lòng nhập số điện thoại di động của bạn và cập nhật tình trạng của bạn để bảo vệ những người thân yêu của bạn.</value>
+    <value>Nếu bạn được xác nhận xét nghiệm dương tính, xin vui lòng nhập số điện thoại di động của bạn và cập nhật tình trạng của bạn để bảo vệ những người thân yêu của bạn.</value>
     <comment>Status settings page description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
@@ -122,8 +113,7 @@ Chọn ' luôn cho phép ' để thiết lập Bluetooth.</value>
     <comment>Status settings page enter number text</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Chúng tôi sẽ gửi cho bạn mã xác minh.
-Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
+    <value>Chúng tôi sẽ gửi cho bạn mã xác minh. Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
     <comment>Status settings page verification sms code description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
@@ -131,19 +121,15 @@ Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
     <comment>Status settings page sms info</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Nếu bạn nhận được một chẩn đoán tích cực</value>
+    <value>Nếu bạn nhận được một xét nghiệm dương tính</value>
     <comment>Status settings page sub title</comment>
-  </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>Cài đặt trạng thái</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
   </data>
   <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Danh sách Beacon phát hiện</value>
+    <value>Danh sách Beacon đã phát hiện</value>
     <comment>Detected Beacon List Menu</comment>
   </data>
   <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
@@ -168,11 +154,11 @@ Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
     <comment>Resend Text</comment>
   </data>
   <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Cập nhật trạng thái hoàn tất</value>
+    <value>Hoàn tất Cập nhật trạng thái</value>
     <comment>Status Update Complete page text</comment>
   </data>
   <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Cập nhật trạng thái hoàn tất</value>
+    <value>Hoàn tất Cập nhật trạng thái</value>
     <comment>Status Update Complete page title</comment>
   </data>
   <data name="TitleContributorsPage" xml:space="preserve">
@@ -180,16 +166,12 @@ Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Đèn hiệu đã phát hiện</value>
+    <value>Đã phát hiện Beacons</value>
     <comment>Detected Beacons</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Thoả thuận Cấp phép</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -200,7 +182,7 @@ Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
     <comment>ID</comment>
   </data>
   <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Khoảng cách avarage</value>
+    <value>Khoảng cách trung bình</value>
     <comment>TextAvgDistance</comment>
   </data>
   <data name="DetectedBeaconPageTextCount" xml:space="preserve">
@@ -208,19 +190,19 @@ Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
     <comment>TextCount</comment>
   </data>
   <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>ElapsedTime</value>
+    <value>Thời gian đã qua</value>
     <comment>TextElapsedTime</comment>
   </data>
   <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>Gặp</value>
+    <value>Gặp lần cuối</value>
     <comment>TextLastTime</comment>
   </data>
   <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>Không có</value>
+    <value>Chỉ số chính</value>
     <comment>MajorNo</comment>
   </data>
   <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MinorNo</value>
+    <value>Chỉ số phụ</value>
     <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
@@ -240,19 +222,200 @@ Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
     <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Cài đặt ứng dụng</value>
+    <value>Đang cài đặt ứng dụng</value>
     <comment>How it works page step 1 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Ghi đóng liên hệ</value>
+    <value>Đang ghi nhận tiếp xúc gần</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Nếu bạn được chẩn đoán COVID19 tích cực</value>
+    <value>Nếu bạn xét nghiệm COVID-19 dương tính</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Yêu cầu sử dụng ứng dụng này</value>
+    <value>Các yêu cầu cần có để sử dụng ứng dụng này</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>Cài đặt trạng thái</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>Cài đặt trạng thái</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Lưu</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Nếu bạn xác nhận xét nghiệm dương tính, xin vui lòng nhập số điện thoại di động của bạn và cập nhật tình trạng của bạn để bảo vệ những người thân yêu của bạn.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>Chạm để thay đổi trạng thái</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Vui lòng kiểm tra kết nối mạng của bạn.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>Bật</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Không phải bây giờ</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>Ứng dụng này sử dụng thông báo tiếp xúc gần / tín hiệu Bluetooth để xác định xem bạn đang tiếp xúc gần với người dùng ứng dụng tương ứng. 
+Chọn 'Always Allow' để thiết lập Bluetooth.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Cho phép thông báo tiếp xúc / Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Người đóng góp</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Tiếp xúc</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Trang chủ</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>Giấy phép</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Thông báo</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Cập nhật</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Tiếp xúc</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>Thủ công</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Thông tin Cập Nhật</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Bật thông báo</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>Không có thông tin tiếp xúc</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>Bạn sẽ được thông báo nếu bạn đã được tiếp xúc với một người báo cáo một kết quả COVID-19 dương tính.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Chia sẻ một xét nghiệm dương tính</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Chia sẻ một xét nghiệm dương tính</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>Nếu bạn xét nghiệm dương tính với vi rút gây ra COVID-19, bạn có thể chọn chia sẻ chẩn đoán của mình.  Điều này sẽ giúp những người khác trong cộng đồng của bạn ngăn chặn sự lây lan của virus.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Tìm hiểu thêm</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Nếu bạn xác nhận xét nghiệm dương tính</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>Vui lòng nhập mã định danh chẩn đoán</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>Chia sẻ một xét nghiệm Dương tính</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>Ngày xét nghiệm giúp ứng dụng biết khi nào bạn có thể lây nhiễm và thông báo cho đúng người có tiềm năng tiếp xúc.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>Chỉ những người đã được tiếp xúc sẽ nhận được một thông báo.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>Mã định danh kiểm tra duy nhất đi kèm với xét nghiệm COVID-19 của bạn phải được sử dụng để xác minh kết quả xét nghiệm dương tính của bạn.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>Xác minh và chia sẻ</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>Hãy thử lại sau.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>Không thành công</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>Xét nghiệm đã được gửi</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>Hoàn tất</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>Vui lòng cung cấp mã định danh xét nghiệm</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>Yêu cầu nhập Mã định danh xét nghiệm</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>Vui lòng bật thông báo phơi nhiễm trước khi gửi chẩn đoán.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>Thông báo phơi nhiễm đã tắt</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>Đệ trình chẩn đoán...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>Xác minh chẩn đoán...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>Chẩn đoán của bạn không thể được xác minh tại thời gian này để được đệ trình.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>Xác minh thất bại</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>Gửi</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Đoạn văn đơn giản</value>
   </data>
 </root>

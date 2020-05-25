@@ -7,16 +7,19 @@
         "COSMOS_PRIMARY_KEY": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
         "COSMOS_DATABASE_ID": "EXAMPLE",
         "COSMOS_AUTO_GENERATE": true,
-        "COSMOS_BEACON_STORE": "Beacon",
-        "TOTP_SECRET": "",
-        "TWILIO_SID": "",
-        "TWILIO_TOKEN": "",
-        "TWILIO_FROM_PHONE": "",
         "LAST_NOTIFICATION_CHECK_INTERVAL": "60",
         "CRYPTION_KEY": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
         "CRYPTION_IV": "o4Pm6LJ+/q3UxwZArVLdkQ==",
         "CRYPTION_HASH": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
         "CRYPTION_KEY2": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
-        "CRYPTION_IV2": "o4Pm6LJ+/q3UxwZArVLdkQ=="
+        "CRYPTION_IV2": "o4Pm6LJ+/q3UxwZArVLdkQ==",
+        "AppBundleId": "AppBundleId",
+        "AndroidPackage": "AndroidPackage",
+        "SupportRegions": "Country1,Country2", //ISO 3166-1 alpha-2
+        "TekExportBlobStorage": "UseDevelopmentStorage=true",
+        "TekExportBlobStorageContainerPrefix": "C19R",
+        "ExportKeyUrl": "http://127.0.0.1:10000/",
+        "AppleBearerToken": "XXXXX",
+        "AndroidBearerToken": "XXXXX"
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Covid19Radar.Resources;
+using Covid19Radar.Renderers;
+using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -13,7 +15,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickStart => new Command(async () =>
         {
-            await NavigationService.NavigateAsync("DescriptionPage");
+            await NavigationService.NavigateAsync(nameof(PrivacyPolicyPage));
         });
 
     }

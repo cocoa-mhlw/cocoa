@@ -1,8 +1,10 @@
 ﻿using CoreBluetooth;
 using CoreLocation;
 using Covid19Radar.Common;
+using Covid19Radar.iOS.Renderers;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Foundation;
 using Microsoft.AppCenter.Distribute;
@@ -24,9 +26,6 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public static AppDelegate Instance { get; private set; }
-        //private IBeaconService _beaconService;
-        private UserDataService _userDataService;
-        private NotificationService _notificationService;
         public AppDelegate()
         {
         }
@@ -40,16 +39,19 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
+
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
 
-            global::Rg.Plugins.Popup.Popup.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
             {
                 Logger = new Covid19Radar.Services.DebugLogger()
             });
             Distribute.DontCheckForUpdatesInDebug();
+
+            Plugin.LocalNotification.NotificationCenter.AskPermission();
 
             LoadApplication(new App(new iOSInitializer()));
 
@@ -62,6 +64,7 @@ namespace Covid19Radar.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        /*
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
         {
             // Check for new data, and display it
@@ -81,14 +84,6 @@ namespace Covid19Radar.iOS
                     {
                         InvokeOnMainThread(delegate
                         {
-                            /*
-                            _beaconService = DependencyService.Resolve<IBeaconService>();
-                            _userDataService = DependencyService.Resolve<UserDataService>();
-                            if (_userDataService.IsExistUserData)
-                            {
-                                _beaconService.StartAdvertisingBeacons(_userDataService.Get());
-                            }
-                            */
                         });
                         System.Threading.Thread.Sleep(60000);
                     }
@@ -99,7 +94,13 @@ namespace Covid19Radar.iOS
                 }
             }).ConfigureAwait(false);
         }
+        */
 
+        public override void WillEnterForeground(UIApplication uiApplication)
+        {
+            Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
+        }
+        /*
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
         {
             var result = Push.DidReceiveRemoteNotification(userInfo);
@@ -122,6 +123,7 @@ namespace Covid19Radar.iOS
         {
             Push.RegisteredForRemoteNotifications(deviceToken);
         }
+        */
     }
 
     public class iOSInitializer : IPlatformInitializer
@@ -129,9 +131,7 @@ namespace Covid19Radar.iOS
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
-            containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
-            containerRegistry.RegisterSingleton<INotificationService, NotificationService>();
-            //            containerRegistry.RegisterSingleton<IBeaconService, BeaconService>();
+            //containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
         }
     }
 

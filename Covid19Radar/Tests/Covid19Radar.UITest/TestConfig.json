@@ -1,5 +1,5 @@
 {
-  "Repl": false,
+  "Repl": true,
   "AndroidConfiguration": {
     "ApkName": null,
     "AppPath": "C:\\Work\\Xamarin\\Android\\net.kzmx.Covid19Radar.apk",

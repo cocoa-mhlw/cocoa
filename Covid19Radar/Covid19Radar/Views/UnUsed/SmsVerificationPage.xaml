@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.SmsVerificationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:Covid19Radar"
+    xmlns:prism="http://prismlibrary.com"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackLayout>
+                <Label Style="{StaticResource DefaultLabel}" Text="Please enter a phone number." />
+                <Entry
+                    ClearButtonVisibility="WhileEditing"
+                    FontSize="35"
+                    Keyboard="Telephone"
+                    MaxLength="11"
+                    Placeholder="09012341234"
+                    PlaceholderColor="#D1D1D1"
+                    Style="{StaticResource DefaultEntry}"
+                    Text="{Binding PhoneNumber}" />
+                <Label
+                    LineBreakMode="WordWrap"
+                    LineHeight="1.2"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="You will receive an SMS email after entering your phone number." />
+                <Label
+                    LineBreakMode="WordWrap"
+                    LineHeight="1.2"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="Check your SMS mail." />
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1" Padding="120,0,120,60">
+            <Button
+                Command="{Binding Path=OnClickNext}"
+                Style="{StaticResource DefaultGradientButton}"
+                Text="Register" />
+        </Grid>
+    </Grid>
+</ContentPage>

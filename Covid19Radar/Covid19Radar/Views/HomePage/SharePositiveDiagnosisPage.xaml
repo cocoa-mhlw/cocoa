@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Views.SharePositiveDiagnosisPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -19,8 +20,7 @@
             <Entry
                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageCodePlaceholder}"
                 Style="{StaticResource DefaultEntry}"
-                Text="{Binding DiagnosisUid, Mode=TwoWay}"
-                TextColor="{StaticResource Accent4Color}" />
+                Text="{Binding DiagnosisUid, Mode=TwoWay}" />
 
             <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText2}" />
             <DatePicker Date="{Binding DiagnosisDate}" Style="{StaticResource DefaultDatePicker}" />
@@ -35,16 +35,16 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Button
+                <ce:GradientButton
                     Grid.Column="0"
                     Command="{Binding CancelCommand}"
-                    Style="{StaticResource DefaultButton}"
+                    Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonNotNow}" />
 
-                <Button
+                <ce:GradientButton
                     Grid.Column="1"
                     Command="{Binding SubmitAndVerifyCommand}"
-                    Style="{StaticResource DefaultButton}"
+                    Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonPositiveSubmit}" />
             </Grid>
         </StackLayout>

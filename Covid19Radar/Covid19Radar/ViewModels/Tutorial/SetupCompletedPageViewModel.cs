@@ -1,5 +1,7 @@
 ﻿using System.Windows.Input;
+using Covid19Radar.Renderers;
 using Covid19Radar.Resources;
+using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -14,7 +16,8 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickToMain => new Command(async () =>
         {
-            await NavigationService.NavigateAsync("/MainPage");
+            
+            await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage), useModalNavigation: true);
         });
 
     }
