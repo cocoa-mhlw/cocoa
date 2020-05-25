@@ -56,7 +56,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xamariners.EndToEnd.Xamarin">
-      <Version>0.0.7</Version>
+      <Version>0.0.8</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

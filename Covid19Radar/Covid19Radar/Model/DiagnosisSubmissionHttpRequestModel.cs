@@ -36,7 +36,7 @@ namespace Covid19Radar.Model
             {
                 return new Key()
                 {
-                    //KeyData = Convert.ToBase64String(key.Key),
+                    KeyData = Convert.ToBase64String(key.Key),
                     RollingStartNumber = (uint)(key.RollingStart.ToUnixTimeSeconds() / 60 / 10),
                     RollingPeriod = (uint)(key.RollingDuration.TotalSeconds / 60 / 10),
                     TransmissionRisk = (int)key.TransmissionRiskLevel
