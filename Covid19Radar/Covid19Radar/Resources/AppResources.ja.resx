@@ -452,4 +452,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>アプリの共有</value>
     <comment>Home page subtitle 2</comment>
   </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>共有</value>
+    <comment>Share</comment>
+  </data>
 </root>
