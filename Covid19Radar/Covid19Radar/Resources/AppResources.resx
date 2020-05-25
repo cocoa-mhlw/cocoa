@@ -555,4 +555,8 @@ Please check your SMS.</value>
     <value>Deleting</value>
     <comment>Deleting</comment>
   </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>If you received a positive diagnosis</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
 </root>
