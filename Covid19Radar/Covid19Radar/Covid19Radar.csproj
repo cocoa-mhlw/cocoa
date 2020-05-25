@@ -15,6 +15,7 @@
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
+
   <ItemGroup>
     <Compile Remove="Behaviors\UnUsed\**" />
     <Compile Remove="Converters\UnUsed\**" />
@@ -38,6 +39,16 @@
     <None Remove="ViewModels\UnUsed\**" />
     <None Remove="Views\UnUsed\**" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Resources\Fonts\fa-brands-400.otf" />
+    <None Remove="Resources\Fonts\fa-regular-400.otf" />
+    <None Remove="Resources\Fonts\fa-solid-900.otf" />
+    <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
+    <None Remove="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
+    <None Remove="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
+    <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
@@ -59,7 +70,7 @@
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.ExposureNotification" Version="0.1.0-preview" />
+    <PackageReference Include="Xamarin.ExposureNotification" Version="0.2.1-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
@@ -70,11 +81,8 @@
     <Compile Update="Icons.xaml.cs">
       <DependentUpon>Icons.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\DebugPage.xaml.cs">
-      <DependentUpon>DebugPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\HomePage\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
+      <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\UpdateInformationPage.xaml.cs">
       <DependentUpon>UpdateInformationPage.xaml</DependentUpon>

@@ -124,7 +124,7 @@
       <Version>1.5.3.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.ExposureNotification">
-      <Version>0.1.0-preview</Version>
+      <Version>0.2.1-preview</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>

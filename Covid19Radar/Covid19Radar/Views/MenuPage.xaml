@@ -11,7 +11,7 @@
     Visual="Material">
     <MasterDetailPage.Master>
 
-        <NavigationPage Title="Menu" Icon="ic_hamburger.png">
+        <NavigationPage Title="Menu" Icon="ic_hamburger.png" AutomationId="MasterMenu">
 
             <x:Arguments>
                 <ContentPage Title="COVID-19Radar">
@@ -33,7 +33,7 @@
                                         Orientation="Horizontal"
                                         Spacing="20"
                                         VerticalOptions="FillAndExpand">
-                                        <Image HeightRequest="35" WidthRequest="35">
+                                        <Image HeightRequest="35" WidthRequest="35" AutomationId="{Binding Title}">
                                             <Image.Source>
                                                 <FontImageSource
                                                     FontFamily="FA-S"
@@ -43,10 +43,12 @@
                                             </Image.Source>
                                         </Image>
                                         <Label
+                                            AutomationId="{Binding Title}"
                                             FontSize="Default"
                                             Text="{Binding Title}"
                                             TextColor="Black"
-                                            VerticalOptions="Center" />
+                                            VerticalOptions="Center"
+                                            />
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
