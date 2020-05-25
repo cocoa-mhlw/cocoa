@@ -1,14 +1,21 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
+using Plugin.LocalNotification;
 using Prism.Navigation;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using Xamarin.Essentials;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.Services
@@ -19,19 +26,15 @@ namespace Covid19Radar.Services
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
-        private readonly INotificationService notificationService;
-        private readonly INavigationService navigationService;
+//        private readonly INavigationService navigationService;
         private MinutesTimer _downloadTimer;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
-        public UserDataService()
+        public UserDataService(HttpDataService httpDataService, INavigationService navigationService)
         {
-            httpDataService = DependencyService.Resolve<HttpDataService>();
-            navigationService = DependencyService.Resolve<INavigationService>();
-            notificationService = DependencyService.Resolve<INotificationService>();
-            notificationService.Initialize();
-            notificationService.NotificationReceived += OnLocalNotificationTaped;
+            this.httpDataService = httpDataService;
+//            this.navigationService = navigationService;
             current = Get();
             if (current != null)
             {
@@ -46,7 +49,8 @@ namespace Covid19Radar.Services
 
         private async void OnLocalNotificationTaped(object sender, EventArgs e)
         {
-            await navigationService.NavigateAsync("NavigationPage/HeadsupPage");
+            // TODO  FIX Navigation
+            //await navigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
         private void StartTimer()
@@ -73,27 +77,7 @@ namespace Covid19Radar.Services
                 return;
             }
             var hasNotification = downloadModel.LastNotificationTime != current.LastNotificationTime;
-            var hasStatusChange = downloadModel.UserStatus != current.UserStatus;
-            if (hasStatusChange)
-            {
-                // Notification Contacted
-                /*
-                if (downloadModel.UserStatus == UserStatus.Contactd)
-                {
-                    // TOOD Change to Resouce String
-                    notificationService.ScheduleNotification("TEST", "MESSAGE");
-                }
-                */
-                var newModel = new UserDataModel()
-                {
-                    UserUuid = current.UserUuid,
-                    Major = current.Major,
-                    Minor = current.Minor,
-                    UserStatus = downloadModel.UserStatus,
-                    LastNotificationTime = current.LastNotificationTime
-                };
-                await SetAsync(newModel);
-            }
+
             if (hasNotification)
             {
                 // Pull Notification.
@@ -102,15 +86,14 @@ namespace Covid19Radar.Services
                     var newModel = new UserDataModel()
                     {
                         UserUuid = current.UserUuid,
-                        Major = current.Major,
-                        Minor = current.Minor,
-                        UserStatus = current.UserStatus,
                         LastNotificationTime = downloadModel.LastNotificationTime
                     };
                     var result = await httpDataService.GetNotificationPullAsync(newModel);
                     foreach (var notify in result.Messages)
                     {
-                        notificationService.ReceiveNotification(notify.Title, notify.Message);
+
+                        // TODO Positive Notify 
+                        // notificationService.ReceiveNotification(notify.Title, notify.Message);
                     }
                     await SetAsync(newModel);
                 }
@@ -124,10 +107,9 @@ namespace Covid19Radar.Services
 
         public bool IsExistUserData { get => current != null; }
 
-
-        public async Task<UserDataModel> RegistUserAsync()
+        public async Task<UserDataModel> RegisterUserAsync()
         {
-            UserDataModel userData = await httpDataService.PostRegisterUserAsync();
+            var userData = await httpDataService.PostRegisterUserAsync();
             if (userData == null)
             {
                 return null;
@@ -156,13 +138,10 @@ namespace Covid19Radar.Services
             {
                 userData.Secret = current.Secret;
             }
-            Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
+            Application.Current.Properties["UserData"] = Utils.SerializeToJson(current);
             await Application.Current.SavePropertiesAsync();
             current = userData;
-            if (UserDataChanged != null)
-            {
-                UserDataChanged(this, current);
-            }
+            UserDataChanged?.Invoke(this, current);
             // only first time.
             if (isNull && userData != null)
             {
@@ -170,4 +149,5 @@ namespace Covid19Radar.Services
             }
         }
     }
+
 }

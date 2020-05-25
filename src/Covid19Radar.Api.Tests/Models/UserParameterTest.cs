@@ -1,11 +1,12 @@
 ﻿using System;
-using Covid19Radar.Common;
-using Covid19Radar.Models;
+using Covid19Radar.Api.Common;
+using Covid19Radar.Api.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Covid19Radar.Tests.Models
+namespace Covid19Radar.Api.Tests.Models
 {
     [TestClass]
+    [TestCategory("Models")]
     public class UserParameterTest
     {
         [TestMethod]
@@ -25,15 +26,13 @@ namespace Covid19Radar.Tests.Models
         }
 
         [DataTestMethod]
-        [DataRow("UUID", "0", "0", "UUID.00000.00000")]
-        [DataRow("UUID", "11111", "22222", "UUID.11111.22222")]
-        public void IdTest(string uuid, string major, string minor, string expected)
+        [DataRow("UUID1", "UUID1")]
+        [DataRow("UUID2", "UUID2")]
+        public void IdTest(string uuid, string expected)
         {
             // preparation
             var model = new UserParameter();
             model.UserUuid = uuid;
-            model.Major = major;
-            model.Minor = minor;
             // action
             var actual = model.GetId();
             // assert

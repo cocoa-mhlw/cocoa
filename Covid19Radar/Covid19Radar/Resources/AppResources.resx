@@ -158,8 +158,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Protecting our loved ones from COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
+    <value>Protecting our loved ones from COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
@@ -182,6 +182,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Register</value>
     <comment>Register</comment>
   </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Not Agree</value>
+    <comment>Not Agree</comment>
+  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Agree</value>
     <comment>Agree</comment>
@@ -191,7 +195,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID19Radar</value>
+    <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
@@ -201,6 +205,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
     <value>List of Contributors</value>
     <comment>List Of Contributors Menu</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Settings</value>
+    <comment>SettingsPage Title</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Update Information</value>
@@ -349,7 +357,7 @@ Please check your SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>If you are diagnosed COVID19 positive</value>
+    <value>If you are diagnosed COVID-19 positive</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
@@ -526,5 +534,25 @@ Please check your SMS.</value>
   </data>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>SampleText</value>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>Do you want to turn on notifications?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Reset</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Enabling</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Deleting</value>
+    <comment>Deleting</comment>
   </data>
 </root>
