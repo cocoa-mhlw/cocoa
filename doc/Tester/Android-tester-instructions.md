@@ -1,5 +1,5 @@
 # Android版アプリのテスターの方へ
-「COVID-19 Radar」アプリのテストにご参加いただきありがとうございます。  
+「COVID-19Radar」アプリのテストにご参加いただきありがとうございます。  
 本ドキュメントでは、テスターに向けてテストリリースのインストール方法をご紹介します。
 
 ## 前提条件
@@ -33,7 +33,7 @@ AppCenterのサインインページより、テスター登録時にFormに入�
 
 ### 3. アプリのダウンロード
 My Appsの画面にAndroid版とiOS版のアプリが表示されています。   
-「COVID-19 Radar」のAndroidアプリをクリックします。  
+「COVID-19Radar」のAndroidアプリをクリックします。  
 ![App Centerでアプリをダウンロード](../.attachments/Android_006_appcenter_selectapps.png)
 
 ダウンロードページへのQRコードが表示されますので、下部のリンク（赤枠部）をタップします。  
@@ -58,10 +58,10 @@ APKファイルのダウンロードが完了しましたら、インストー�
 無事にインストールが完了すると、以下の表示になります。  
 ![APKのインストール](../.attachments/Android_014_installed_apk.png)
 
-ランチャー内に「Covid19Radar」アプリが表示されていますので、こちらをご利用ください。  
+ランチャー内に「COVID-19Radar」アプリが表示されていますので、こちらをご利用ください。  
 ![ランチャー](../.attachments/Android_015_installed_apk.png)
 
-以上で、「Covid19Radar」のAndroidアプリをインストールすることができました。
+以上で、「COVID-19Radar」のAndroidアプリをインストールすることができました。
 
 ---
 ## アプリのアップデート方法
@@ -85,19 +85,19 @@ APKファイルのダウンロードが完了しましたら、インストー�
 ---
 ## アプリの利用方法
 以下のドキュメントを参照してください。  
-[Covid19Radar(GitHub) - HOW_TO_USE for Android](https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/How-to-use/Android-how-to-use.ja.md)
+[COVID-19Radar(GitHub) - HOW_TO_USE for Android](https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/How-to-use/Android-how-to-use.ja.md)
 
 ---
 ## バグを発見した場合
 バグの報告、および新機能の追加の提案をされたい場合、GitHub上リポジトリにて、Issueの作成をお願いします。  
 詳細は、リポジトリ内の「HOW_TO_CONTRIBUTE」をご覧ください。  
-[Covid19Radar(GitHub) - HOW_TO_CONTRIBUTE.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
+[COVID-19Radar(GitHub) - HOW_TO_CONTRIBUTE.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
 
 ## 相談をしたい場合
 チャットアプリケーション([Discord](https://discordapp.com/))にて、コントリビューター同士のコミュニケーションを行っております。  
 下記招待リンクより参加をお願いします。  
-[Covid19Radar(Discord)](https://discord.gg/EzaYhD)
+[COVID-19Radar(Discord)](https://discord.gg/EzaYhD)
 
 -----
-「COVID-19 Radar」は現在開発中のアプリです。  
+「COVID-19Radar」は現在開発中のアプリです。  
 コミットする都度、最新版の通知がメールアドレスに来ますので、最新版を都度ダウンロードいただきますよう、よろしくお願いいたします。
