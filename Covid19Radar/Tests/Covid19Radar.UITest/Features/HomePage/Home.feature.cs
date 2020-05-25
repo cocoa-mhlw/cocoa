@@ -118,10 +118,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I tap on MasterDetail Hamburger", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 10
- testRunner.Then("I can see a label marked as \"Home\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I can see a label marked as \"HOME\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 11
- testRunner.When("I tap on \"Home\" element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I tap on \"HOME\" element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
  testRunner.Then("I am on \"HOME\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

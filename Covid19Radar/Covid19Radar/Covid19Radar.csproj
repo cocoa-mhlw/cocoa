@@ -7,7 +7,7 @@
     <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
@@ -15,10 +15,31 @@
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
+
   <ItemGroup>
-    <EmbeddedResource Remove="Views\Dummy.xaml" />
-    <EmbeddedResource Remove="Views\DummyPage.xaml" />
+    <Compile Remove="Behaviors\UnUsed\**" />
+    <Compile Remove="Converters\UnUsed\**" />
+    <Compile Remove="Model\UnUsed\**" />
+    <Compile Remove="Services\UnUsed\**" />
+    <Compile Remove="Templates\UnUsed\**" />
+    <Compile Remove="ViewModels\UnUsed\**" />
+    <Compile Remove="Views\UnUsed\**" />
+    <EmbeddedResource Remove="Behaviors\UnUsed\**" />
+    <EmbeddedResource Remove="Converters\UnUsed\**" />
+    <EmbeddedResource Remove="Model\UnUsed\**" />
+    <EmbeddedResource Remove="Services\UnUsed\**" />
+    <EmbeddedResource Remove="Templates\UnUsed\**" />
+    <EmbeddedResource Remove="ViewModels\UnUsed\**" />
+    <EmbeddedResource Remove="Views\UnUsed\**" />
+    <None Remove="Behaviors\UnUsed\**" />
+    <None Remove="Converters\UnUsed\**" />
+    <None Remove="Model\UnUsed\**" />
+    <None Remove="Services\UnUsed\**" />
+    <None Remove="Templates\UnUsed\**" />
+    <None Remove="ViewModels\UnUsed\**" />
+    <None Remove="Views\UnUsed\**" />
   </ItemGroup>
+  
   <ItemGroup>
     <None Remove="Resources\Fonts\fa-brands-400.otf" />
     <None Remove="Resources\Fonts\fa-regular-400.otf" />
@@ -44,15 +65,16 @@
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="3.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.LocalNotification" Version="5.0.4" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.800" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Icons.xaml.cs">
@@ -61,8 +83,8 @@
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
       <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\UpdateInfomationPage.xaml.cs">
-      <DependentUpon>UpdateInfomationPage.xaml</DependentUpon>
+    <Compile Update="Views\HomePage\UpdateInformationPage.xaml.cs">
+      <DependentUpon>UpdateInformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
