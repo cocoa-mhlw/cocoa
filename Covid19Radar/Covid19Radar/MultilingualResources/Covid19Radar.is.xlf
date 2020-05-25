@@ -573,6 +573,11 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <target state="new">Share the App</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
+        <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="new">Share</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
+        </trans-unit>
       </group>
     </body>
   </file>

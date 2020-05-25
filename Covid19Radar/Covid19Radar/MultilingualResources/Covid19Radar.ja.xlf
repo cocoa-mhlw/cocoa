@@ -571,6 +571,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">アプリの共有</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
+        <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="translated">共有</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
+        </trans-unit>
       </group>
     </body>
   </file>
