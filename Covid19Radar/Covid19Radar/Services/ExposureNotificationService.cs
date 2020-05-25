@@ -38,12 +38,7 @@ namespace Covid19Radar.Services
 
         public Task<Configuration> GetConfigurationAsync()
     => Task.FromResult(new Configuration());
-
-        public Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
-        {
-            throw new NotImplementedException();
-        }
-
+        
 
         public async Task FetchExposureKeyBatchFilesFromServerAsync(Func<IEnumerable<string>, Task> submitBatches)
         {
