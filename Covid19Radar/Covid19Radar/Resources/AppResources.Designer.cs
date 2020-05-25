@@ -178,6 +178,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Share に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonShare {
+            get {
+                return ResourceManager.GetString("ButtonShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Start に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonStart {
@@ -408,6 +417,24 @@ namespace Covid19Radar.Resources {
         internal static string HomeEnableNotification {
             get {
                 return ResourceManager.GetString("HomeEnableNotification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you received a positive diagnosis に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageSubtitle1 {
+            get {
+                return ResourceManager.GetString("HomePageSubtitle1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Share the App に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageSubtitle2 {
+            get {
+                return ResourceManager.GetString("HomePageSubtitle2", resourceCulture);
             }
         }
         
