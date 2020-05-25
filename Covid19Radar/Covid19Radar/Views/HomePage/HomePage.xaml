@@ -16,11 +16,13 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
+            AutomationId="LabelMainTutorial"
             Command="{Binding OnClickHelp}"
             Order="Primary"
             Priority="1"
             Text="{x:Static resources:AppResources.MainTutorial}" />
         <ToolbarItem
+            AutomationId="ImageHelp"
             Command="{Binding OnClickHelp}"
             Order="Primary"
             Priority="2">
@@ -68,6 +70,7 @@
                     <!--  Button Control  -->
 
                     <Button
+                        AutomationId="ButtonExposures"
                         Grid.Column="0"
                         Grid.ColumnSpan="3"
                         Command="{Binding Path=OnClickExposures}"
@@ -122,7 +125,7 @@
                         Text="もし、新型コロナで陽性と診断された場合、あなたの周りの人を守るためにも、陽性登録へのご協力をお願いします。" />
                 </Grid>
                 <ce:GradientButton
-                    AutomationId="NextButton"
+                    AutomationId="ButtonNotifyOther"
                     Command="{Binding Path=OnClickNotifyOther}"
                     Style="{StaticResource DefaultGradientButton}"
                     Text="陽性情報の共有と他者への匿名通知へ" />
@@ -155,7 +158,7 @@
                         Text="本アプリは多くの方がインストールするほどに効果を発揮するため、身の回りの方にアプリを共有してください" />
                 </Grid>
                 <ce:GradientButton
-                    AutomationId="ShareButton"
+                    AutomationId="ButtonShareApp"
                     Command="{Binding Path=OnClickShareApp}"
                     Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonShare}" />
