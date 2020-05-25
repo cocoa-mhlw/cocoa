@@ -4,6 +4,7 @@ using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using Covid19Radar.Api.Extensions;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Background.Startup))]
 
@@ -14,6 +15,7 @@ namespace Covid19Radar.Background
         public override void Configure(IFunctionsHostBuilder builder)
         {
             builder.Services.AddLogging();
+            builder.Services.AddCosmosClient();
             builder.Services.AddSingleton<ICosmos, Cosmos>();
             builder.Services.AddSingleton<INotificationService, NotificationService>();
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
