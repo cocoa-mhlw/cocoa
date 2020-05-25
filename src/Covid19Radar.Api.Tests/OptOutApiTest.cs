@@ -43,9 +43,9 @@ namespace Covid19Radar.Api.Tests
             validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
             var logger = new Mock.LoggerMock<OptOutApi>();
             var optOutApi = new OptOutApi(userRepo.Object, diagnosisRepo.Object, validation.Object, logger);
-            var context = new Mock.HttpContextMock();
+            var context = new Mock<HttpContext>();
             // action
-            await optOutApi.RunAsync(context.Request, userUuid);
+            await optOutApi.RunAsync(context.Object.Request, userUuid);
             // assert
         }
     }
