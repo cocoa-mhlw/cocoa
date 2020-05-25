@@ -31,8 +31,8 @@ namespace Covid19Radar.Services
 			await WaitRandom();
 			return Preferences.Get("fake_enabled", false);
 		}
-
-		public async Task<IEnumerable<TemporaryExposureKey>> GetSelfTemporaryExposureKeysAsync()
+		
+        public async Task<IEnumerable<TemporaryExposureKey>> GetSelfTemporaryExposureKeysAsync()
 		{
 			var keys = new List<TemporaryExposureKey>();
 
@@ -44,7 +44,7 @@ namespace Covid19Radar.Services
 			return keys;
 		}
 
-		public Task<(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> info)> DetectExposuresAsync(IEnumerable<string> files)
+		public Task<(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> info)> DetectExposuresAsync(TemporaryExposureKeyBatches batches)
 		{
 			var summary = new ExposureDetectionSummary(10, 2, 5);
 
