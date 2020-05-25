@@ -36,9 +36,9 @@ namespace Covid19Radar.Api.Tests
             var notification = new Mock<INotificationService>();
             var logger = new Mock.LoggerMock<NotificationPullApi>();
             var notificationPullApi = new NotificationPullApi(userRepo.Object, notification.Object, logger);
-            var context = new Mock.HttpContextMock();
+            var context = new Mock<HttpContext>();
             // action
-            notificationPullApi.Run(context.Request, new DateTime(year, month, day));
+            notificationPullApi.Run(context.Object.Request, new DateTime(year, month, day));
             // assert
         }
     }
