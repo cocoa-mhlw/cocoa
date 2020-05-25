@@ -1,4 +1,4 @@
-# Covid19Radar (Japanese)
+# COVID-19Radar (Japanese)
 
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
@@ -64,15 +64,16 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 以下のURLにアクセスすると、画面遷移を確認いただけます。
 
-[プロトタイプ画面（日本語）](https://xd.adobe.com/view/9ccfd774-5667-4373-530f-591148c84aab-eafe/)
+[プロトタイプ画面（日本語）](https://xd.adobe.com/view/e984f53a-5fc7-4764-4ddf-902860407fad-9fb5/)
 
 ## ライセンス
 
-Covid19Radar is licensed under the GNU Affero General Public License v3.0. See
-[LICENSE](./LICENSE) for the full
-license text.
+COVID-19Radar is licensed under the GNU Affero General Public License v3.0. See [LICENSE](./LICENSE) for the full license text.
+
+以下は、原作者の意図に応じた、このライセンスの追加項目です。
+AGPLに加えて、このプロジェクトでは共著者の著作者人格権の行使を許可しません。
+各著者による論争または訴訟は一切許可されていません。
 
 ## サードパーティーソフトウェアについて
 
 This file incorporates components from the projects listed [document](./COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
-

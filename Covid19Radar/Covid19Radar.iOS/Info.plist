@@ -19,13 +19,13 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>13.4</string>
 	<key>CFBundleName</key>
 	<string>Covid19Radar</string>
 	<key>CFBundleDisplayName</key>
 	<string>Covid19Radar</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.kzmx.Covid19Radar</string>
+	<string>jp.go.mhlw.covid19radar</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>
@@ -81,11 +81,13 @@
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>covid19radar.z11.web.core.windows.net</key>
@@ -99,5 +101,9 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
