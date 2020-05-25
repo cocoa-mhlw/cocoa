@@ -33,9 +33,12 @@ namespace Covid19Radar.Services
         }
 
 
-        // Exposure Notification Implementation
-        public string UserExplanation => throw new NotImplementedException();
+        #region Exposure Notification
 
+        public string UserExplanation
+            => "We need to make use of the keys to keep you healthy.";
+
+        // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
         public Task<Configuration> GetConfigurationAsync()
     => Task.FromResult(new Configuration());
 
@@ -73,7 +76,7 @@ namespace Covid19Radar.Services
                     }
                 }
 
-                userData.ServerLastTime= resonseContentResult.Timestamp;
+                userData.ServerLastTime = resonseContentResult.Timestamp;
                 await userDataService.SetAsync(userData);
             }
             catch (Exception ex)
@@ -136,6 +139,7 @@ namespace Covid19Radar.Services
                 throw;
             }
         }
+        #endregion
 
     }
 }
