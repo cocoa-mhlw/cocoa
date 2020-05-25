@@ -158,7 +158,7 @@
                     AutomationId="ShareButton"
                     Command="{Binding Path=OnClickShareApp}"
                     Style="{StaticResource DefaultGradientButton}"
-                    Text="アプリを共有する" />
+                    Text="{x:Static resources:AppResources.ButtonShare}" />
 
             </StackLayout>
         </StackLayout>
