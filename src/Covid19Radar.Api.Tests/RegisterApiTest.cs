@@ -1,12 +1,15 @@
 using Covid19Radar.Api;
-using Covid19Radar.DataAccess;
+using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System.Threading.Tasks;
 
-namespace Covid19Radar.Tests
+namespace Covid19Radar.Api.Tests
 {
     [TestClass]
+    [TestCategory("Api")]
     public class RegisterApiTest
     {
         [TestMethod]
@@ -14,22 +17,22 @@ namespace Covid19Radar.Tests
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
-            var cryption = new Mock.CryptionServiceMock();
+            var cryption = new Mock<ICryptionService>();
             var logger = new Mock.LoggerMock<RegisterApi>();
-            var registerApi = new RegisterApi(userRepo.Object, cryption, logger);
+            var registerApi = new RegisterApi(userRepo.Object, cryption.Object, logger);
         }
 
         [TestMethod]
-        public void RunMethod()
+        public async Task RunAsyncMethod()
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
-            var cryption = new Mock.CryptionServiceMock();
+            var cryption = new Mock<ICryptionService>();
             var logger = new Mock.LoggerMock<RegisterApi>();
-            var registerApi = new RegisterApi(userRepo.Object, cryption, logger);
-            var context = new Mock.HttpContextMock();
+            var registerApi = new RegisterApi(userRepo.Object, cryption.Object, logger);
+            var context = new Mock<HttpContext>();
             // action
-            registerApi.Run(context.Request);
+            await registerApi.RunAsync(context.Object.Request);
             // assert
         }
     }

@@ -56,21 +56,37 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xamariners.EndToEnd.Xamarin">
-      <Version>0.0.6</Version>
+      <Version>0.0.7</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\HomePage\ContributorsList.feature.cs" />
+    <Compile Include="Features\HomePage\Home.feature.cs" />
+    <Compile Include="Features\HomePage\HomeFeature.cs" />
+    <Compile Include="Features\HomePage\ContributorsListFeature.cs" />
+    <Compile Include="Features\HomePage\LicenseAgreement.feature.cs" />
+    <Compile Include="Features\HomePage\UpdateInformation.feature.cs" />
+    <Compile Include="Features\HomePage\LicenseAgreementFeature.cs" />
+    <Compile Include="Features\HomePage\UpdateInformationFeature.cs" />
     <Compile Include="Features\Tutorial\TutorialFeature.cs" />
     <Compile Include="NUnitAssemblyHooks.cs" />
     <Compile Include="Features\Tutorial\Tutorial.feature.cs" />
+    <Compile Include="SharedSteps\ExampleSharedSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TestConfig.json" />
     <None Include="App.config" />
+    <None Include="Features\HomePage\Home.feature" />
+    <None Include="Features\HomePage\ContributorsList.feature" />
+    <None Include="Features\HomePage\LicenseAgreement.feature" />
+    <None Include="Features\HomePage\UpdateInformation.feature" />
     <None Include="Features\Tutorial\Tutorial.feature" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

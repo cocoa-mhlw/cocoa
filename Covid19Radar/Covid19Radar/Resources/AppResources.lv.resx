@@ -53,17 +53,8 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Aizsargājot mūsu tuviniekus no COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>Šī lietotne izmanto Bluetooth signālus, lai noteiktu, vai esat tuvu citam kontaktpersonu izsekošanas programmas lietotājam. 
-Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Atļaut Bluetooth</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>Aizsargājot mūsu tuviniekus no COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Piekļuve ierīcei</value>
@@ -86,7 +77,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID19Radar</value>
+    <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
@@ -133,10 +124,6 @@ Lūdzu, pārbaudiet savu SMS.</value>
   <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
     <value>Ja esat saņēmis pozitīvu diagnozi</value>
     <comment>Status settings page sub title</comment>
-  </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>Statusa iestatījumi</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
@@ -186,10 +173,6 @@ Lūdzu, pārbaudiet savu SMS.</value>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licences līgums</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -248,11 +231,189 @@ Lūdzu, pārbaudiet savu SMS.</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ja jums ir diagnosticēta COVID19 pozitīva</value>
+    <value>Ja jums ir diagnosticēta COVID-19 pozitīva</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Prasības, lai izmantotu šo lietotni</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>Statusa iestatījumi</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>Statusa iestatījumi</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Saglabāt</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Ja esat saņēmis pozitīvu diagnozi, lūdzu, ievadiet savu mobilā tālruņa numuru un atjauniniet savu statusu, lai aizsargātu savus tuviniekus.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>Pieskarieties, lai mainītu stāvokli</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Lūdzu, pārbaudiet tīkla savienojumu.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>Labi</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>Iespējot</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>NotNow</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>Šī lietotne izmanto ekspozīcijas paziņojumu/Bluetooth signālus, lai noteiktu, vai esat tuvu citam kontaktpersonu izsekošanas programmas lietotājam. 
+Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Atļaut ekspozīcijas paziņojumu/Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Ieguldītājiem</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Riska darījumiem</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Sākums</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>Licence</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Paziņot</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Atjaunināt</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Riska darījumiem</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>Manuāli</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Atjaunināt Infomation</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Iespējot paziņojumu</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>Nav zināmi riska darījumi</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>Jums tiks paziņots, ja jums ir saskāries ar kādu, kurš ziņoja pozitīvs COVID-19 rezultātu.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Ir pozitīva diagnoze</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Ir pozitīva diagnoze</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>Ja jūs testē pozitīvu vīrusu, kas izraisa COVID-19, jūs varat izvēlēties, lai dalītos savā diagnozi.  Tas palīdzēs citiem jūsu Kopienā ir vīrusa izplatīšanos.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Uzzināt vairāk</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Ja esat saņēmis pozitīvu diagnozi</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>Lūdzu, ievadiet diagnozes identifikatoru</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>Ir pozitīva diagnoze</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>Testa datums palīdz lietotnei zināt, kad esat bijis lipīgs un informē pareizos cilvēkus par potenciālo iedarbību.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>Paziņojumu saņems tikai tie, kas bijuši pakļauti iedarbībai.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>Lai verificētu pozitīvo testa rezultātu, jāizmanto unikālais testa identifikators, kas ir komplektā ar COVID-19 testu.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>Pārbaudīt un kopīgot</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>Lūdzu, vēlāk mēģiniet vēlreiz.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>Neizdevās</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>Diagnoze iesniegta</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>Pabeigts</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>Lūdzu, norādiet diagnozes identifikatoru</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>Nepieciešamais diagnozes identifikators</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>Labi</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>Pirms diagnozes iesniegšanas, lūdzu, iespējojiet ekspozīcijas paziņojumus.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>Ekspozīcijas paziņojumi atspējoti</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>Diagnozes iesniegšana...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>Notiek diagnozes pārbaude...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>Jūsu diagnozi šajā laikā nevar pārbaudīt.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>Pārbaude neizdevās.</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>Iesniegt</value>
   </data>
 </root>

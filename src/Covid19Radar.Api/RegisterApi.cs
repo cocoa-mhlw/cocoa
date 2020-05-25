@@ -1,18 +1,13 @@
-using System;
-using System.IO;
-using System.Threading.Tasks;
+using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Covid19Radar.Models;
-using Covid19Radar.DataStore;
-using Microsoft.Azure.Cosmos;
-using Microsoft.Azure.Cosmos.Linq;
-using Covid19Radar.Services;
-using Covid19Radar.DataAccess;
+using System;
+using System.Threading.Tasks;
 
 #nullable enable
 
@@ -35,7 +30,7 @@ namespace Covid19Radar.Api
         }
 
         [FunctionName(nameof(RegisterApi))]
-        public async Task<IActionResult> Run(
+        public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "register")] HttpRequest req)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
@@ -53,12 +48,12 @@ namespace Covid19Radar.Api
             var newItem = new UserModel();
             var secret = Cryption.CreateSecret(userUuid);
             newItem.UserUuid = userUuid;
-            newItem.SetStatus(Common.UserStatus.None);
             newItem.ProtectSecret = Cryption.Protect(secret);
             await UserRepository.Create(newItem);
             var result = new RegisterResultModel();
             result.UserUuid = userUuid;
             result.Secret = secret;
+            result.JumpConsistentSeed = newItem.JumpConsistentSeed;
             return new OkObjectResult(result);
         }
     }

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.Models
 {
     [JsonObject("userParameter")]
     public class UserParameter: IUser
@@ -12,18 +12,5 @@ namespace Covid19Radar.Models
         [JsonProperty("userUuid")]
         public string UserUuid { get; set; }
 
-        /// <summary>
-        /// User Major 0 to 65536
-        /// </summary>
-        /// <value>User Major</value>
-        [JsonProperty("major")]
-        public string Major { get; set; }
-
-        /// <summary>
-        /// User Minor 0 to 65536
-        /// </summary>
-        /// <value>User Minor</value>
-        [JsonProperty("minor")]
-        public string Minor { get; set; }
     }
 }

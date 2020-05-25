@@ -3,75 +3,100 @@
     x:Class="Covid19Radar.Views.ExposuresPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behaviors="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:model="clr-namespace:Xamarin.ExposureNotifications;assembly=Xamarin.ExposureNotification"
     xmlns:prism="http://prismlibrary.com"
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    xmlns:system="clr-namespace:System;assembly=netstandard"
     xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentPage.Content ItemsSource="{Binding ExposureInformation}">
-        <StackLayout Style="{DynamicResource DefaultStackLayout}">
-            <Label Style="{DynamicResource DefaultTitleLabel}" Text="Exposures in Past 14 Days" />
-            <Frame Style="{DynamicResource DefaultParentCardFrame}">
-                <StackLayout>
-                    <CollectionView ItemsSource="{Binding ExposureInformation}" SelectionMode="Single">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <StackLayout>
-                                    <Frame Style="{DynamicResource DefaultCardFrame}">
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*" />
-                                                <RowDefinition Height="*" />
-                                            </Grid.RowDefinitions>
-
-                                            <Label
-                                                Grid.Row="0"
-                                                Grid.Column="0"
-                                                Style="{DynamicResource DefaultSubSubTitleLabel}"
-                                                Text="Possible exposure" />
-                                            <Label
-                                                Grid.Row="1"
-                                                Grid.Column="0"
-                                                Style="{DynamicResource DefaultLabelLittle}"
-                                                Text="{Binding Timestamp}" />
-
-                                            <Image
-                                                Grid.Row="0"
-                                                Grid.RowSpan="2"
-                                                Grid.Column="1">
-                                                <Image.Source>
-                                                    <FontImageSource
-                                                        FontFamily="FA-R"
-                                                        Glyph="{StaticResource IconBell}"
-                                                        Size="18"
-                                                        Color="{DynamicResource Primary}" />
-                                                </Image.Source>
-                                            </Image>
-                                        </Grid>
-                                    </Frame>
+    <ContentPage.Content ItemsSource="{Binding ExposureInformation}" SelectionMode="None">
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <Label Style="{StaticResource DefaultTitleLabel}" Text="過去14日間の接触記録" />
+            <CollectionView ItemsSource="{Binding ExposureInformation}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Frame Style="{StaticResource FrameCardViewStyle}">
+                                <StackLayout Style="{StaticResource DetailsStackLayout}">
+                                    <StackLayout Style="{StaticResource ImageLableStackLayout}">
+                                        <Image Style="{StaticResource CardImageStyle}">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                    FontFamily="FA-R"
+                                                    Glyph="{StaticResource IconCalender}"
+                                                    Color="{DynamicResource Primary}" />
+                                            </Image.Source>
+                                        </Image>
+                                        <Label
+                                            HorizontalOptions="Start"
+                                            Style="{StaticResource CardLabelSmallColor}"
+                                            Text="接触した日と時間:" />
+                                        <Label Style="{StaticResource CardLabelSmall}" Text="{Binding Timestamp}" />
+                                    </StackLayout>
+                                    <StackLayout Style="{StaticResource ImageLableStackLayout}">
+                                        <Image Style="{StaticResource CardImageStyle}">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                    FontFamily="FA-R"
+                                                    Glyph="{StaticResource IconCalender}"
+                                                    Color="{DynamicResource Primary}" />
+                                            </Image.Source>
+                                        </Image>
+                                        <Label
+                                            HorizontalOptions="Start"
+                                            Style="{StaticResource CardLabelSmallColor}"
+                                            Text="接触時間(分):" />
+                                        <Label Style="{StaticResource CardLabelSmall}" Text="{Binding Duration}" />
+                                    </StackLayout>
+                                    <StackLayout Style="{StaticResource ImageLableStackLayout}">
+                                        <Image Style="{StaticResource CardImageStyle}">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                    FontFamily="FA-S"
+                                                    Glyph="{StaticResource IconAlert}"
+                                                    Color="{DynamicResource Primary}" />
+                                            </Image.Source>
+                                        </Image>
+                                        <Label Style="{StaticResource CardLabelSmallColor}" Text="リスクスコア:" />
+                                        <Label Style="{StaticResource CardLabelSmall}" Text="{Binding TotalRiskScore}" />
+                                    </StackLayout>
+                                    <StackLayout Style="{StaticResource ImageLableStackLayout}">
+                                        <Image Style="{StaticResource CardImageStyle}">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                    FontFamily="FA-S"
+                                                    Glyph="{StaticResource IconPeopleArrows}"
+                                                    Color="{DynamicResource Primary}" />
+                                            </Image.Source>
+                                        </Image>
+                                        <Label Style="{StaticResource CardLabelSmallColor}" Text="リスクレベル:" />
+                                        <Label Style="{StaticResource CardLabelSmall}" Text="{Binding TransmissionRiskLevel}" />
+                                    </StackLayout>
                                 </StackLayout>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                        <CollectionView.EmptyView>
-                            <StackLayout Orientation="Vertical">
-                                <Label Style="{DynamicResource DefaultSubSubTitleLabel}" Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
-                                <Label Style="{DynamicResource DefaultLabelLittle}" Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
-                            </StackLayout>
-                        </CollectionView.EmptyView>
-                    </CollectionView>
-                </StackLayout>
-            </Frame>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <StackLayout Orientation="Vertical">
+                        <Label Style="{DynamicResource DefaultSubSubTitleLabel}" Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
+                        <Label Style="{DynamicResource DefaultLabelLittle}" Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
+                    </StackLayout>
+                </CollectionView.EmptyView>
+            </CollectionView>
+
         </StackLayout>
     </ContentPage.Content>
+
 </ContentPage>

@@ -2,7 +2,7 @@
 
 ### iPhone（iOS）のテスターですが、現時点でApple Developer Program提供のiOSデバイスの登録上限に達し、新規のテスター登録をいただけない状況です。ご協力いただいた皆様、本当にありがとうございました。
 
-「COVID-19 Radar」アプリのテスターにご参加いただきありがとうございます。  
+「COVID-19Radar」アプリのテスターにご参加いただきありがとうございます。  
 以下、手順を記載しますので参考にされてください。
 
 - iPhone のブラウザは「Safari」を利用してください。  
@@ -24,7 +24,7 @@ My Appsの画面にAndroid版とiOS版のアプリが表示されています。
 
 ![iOSアプリをクリック](../.attachments/002-c0bd6cac-6123-45bc-9889-ce088d42d301.jpg)
 
-「COVID-19 Radar」のiOSアプリをクリックし、次のページの「Latest release」をクリック。
+「COVID-19Radar」のiOSアプリをクリックし、次のページの「Latest release」をクリック。
 
 ![My dexicesの登録](../.attachments/003-77b8ea07-d4db-46b6-8b04-e95a4c4afe46.jpg)
 
@@ -46,13 +46,13 @@ iPhoneの「設定」を開き、「プロファイルのインストール」�
 
 App Centerにデバイスが登録されたのを確認してください。  
 
-## 4. iPhoneに「COVID-19 Radar」アプリをインストール
+## 4. iPhoneに「COVID-19Radar」アプリをインストール
 
 ![iOSアプリをインストール](../.attachments/007-a2a39a61-b25b-4a95-843e-2319df02b5e3.jpg)
 
-以上の手順で、「Covid19Radar」のiOSアプリをインストールすることができます。
+以上の手順で、「COVID-19Radar」のiOSアプリをインストールすることができます。
 
 -----
 
-「COVID-19 Radar」は現在開発中のアプリです。  
+「COVID-19Radar」は現在開発中のアプリです。  
 コミットする都度、最新版の通知がメールアドレスに来ますので、最新版を都度ダウンロードいただきますよう、よろしくお願いいたします。
