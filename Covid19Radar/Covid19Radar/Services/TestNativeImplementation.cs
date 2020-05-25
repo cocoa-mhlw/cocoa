@@ -31,12 +31,7 @@ namespace Covid19Radar.Services
 			await WaitRandom();
 			return Preferences.Get("fake_enabled", false);
 		}
-
-        public Task<(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> info)> DetectExposuresAsync(TemporaryExposureKeyBatches batches)
-        {
-            throw new NotImplementedException();
-        }
-
+		
         public async Task<IEnumerable<TemporaryExposureKey>> GetSelfTemporaryExposureKeysAsync()
 		{
 			var keys = new List<TemporaryExposureKey>();

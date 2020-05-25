@@ -24,22 +24,5 @@ namespace Covid19Radar.UITest.SharedSteps
            // RunnerConfiguration.Current.App.PressEnter();
            throw new NotImplementedException();
         }
-
-        [Given(@"I See the Repl")]
-        [When(@"I See the Repl")]
-        [Then(@"I See the Repl")]
-        public void ThenISeeTheRepl()
-        {
-            RunnerConfiguration.Current.App.Repl();
-        }
-
-        [When(@"I tap on MasterDetail Hamburger")]
-        public void WhenITapOnMasterDetailHamburger()
-        {
-            if (RunnerConfiguration.Current.App.Query(x => x.Class("ImageButton").Marked("OK")).Any())
-                RunnerConfiguration.Current.App.Tap(x => x.Class("ImageButton").Marked("OK"));
-            else if (RunnerConfiguration.Current.App.Query(x => x.Class("AppCompatImageButton").Marked("OK")).Any())
-                RunnerConfiguration.Current.App.Tap(x => x.Class("AppCompatImageButton").Marked("OK"));
-        }
     }
 }
