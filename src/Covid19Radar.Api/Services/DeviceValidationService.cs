@@ -137,6 +137,8 @@ namespace Covid19Radar.Api.Services
             {
                 var token = new JwtSecurityToken(param.DeviceVerificationPayload);
 
+                // TODO: Token Validate
+
                 // request
                 var payload = new AndroidPayload()
                 {

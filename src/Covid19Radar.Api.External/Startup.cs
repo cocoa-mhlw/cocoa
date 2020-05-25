@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Logging.Debug;
 using Microsoft.AspNetCore.Http;
 using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Extensions;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Api.External.Startup))]
 
@@ -20,6 +21,7 @@ namespace Covid19Radar.Api.External
         {
             builder.Services.AddLogging();
             builder.Services.AddHttpClient();
+            builder.Services.AddCosmosClient();
             builder.Services.AddSingleton<ICryptionService, CryptionService>();
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
             builder.Services.AddSingleton<INotificationService, NotificationService>();
