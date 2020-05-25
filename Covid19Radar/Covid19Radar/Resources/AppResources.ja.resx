@@ -444,4 +444,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>削除しています</value>
     <comment>Deleting</comment>
   </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>陽性と診断された場合</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
 </root>

@@ -563,6 +563,11 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <target state="new">Deleting</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Deleting</note>
         </trans-unit>
+        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="new">If you received a positive diagnosis</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
+        </trans-unit>
       </group>
     </body>
   </file>
