@@ -8,7 +8,6 @@ using Covid19Radar.Model;
 using SQLite;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(Covid19Radar.Droid.Services.SQLiteConnectionProvider))]
 namespace Covid19Radar.Droid.Services
 {
     public class SQLiteConnectionProvider : ISQLiteConnectionProvider

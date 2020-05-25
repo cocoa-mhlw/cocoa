@@ -1,5 +1,5 @@
-﻿using Covid19Radar.DataStore;
-using Covid19Radar.Models;
+﻿using Covid19Radar.Api.DataStore;
+using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
 using System;
@@ -10,22 +10,28 @@ using System.Threading.Tasks;
 
 #nullable enable
 
-namespace Covid19Radar.DataAccess
+namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosUserRepository : IUserRepository
     {
+        const string SequenceName = "JumpConsistentSeed";
         private readonly ICosmos _db;
+        private readonly ISequenceRepository _sequence;
         private readonly ILogger<CosmosUserRepository> _logger;
 
-        public CosmosUserRepository(ICosmos db, ILogger<CosmosUserRepository> logger)
+        public CosmosUserRepository(
+            ICosmos db,
+            ISequenceRepository sequence,
+            ILogger<CosmosUserRepository> logger)
         {
             _db = db;
+            _sequence = sequence;
             _logger = logger;
         }
 
         public async Task<UserResultModel?> GetById(string id)
         {
-            var itemResult = await _db.User.ReadItemAsync<UserResultModel>(id, PartitionKey.None);
+            var itemResult = await _db.User.ReadItemAsync<UserResultModel>(id, new PartitionKey(id));
             if (itemResult.StatusCode == HttpStatusCode.OK)
             {
                 return itemResult.Resource;
@@ -34,9 +40,10 @@ namespace Covid19Radar.DataAccess
             return null;
         }
 
-        public Task Create(UserModel user)
+        public async Task Create(UserModel user)
         {
-            return _db.User.CreateItemAsync(user);
+            user.JumpConsistentSeed = await _sequence.GetNextAsync(SequenceName, 1);
+            await _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
         }
 
         public async Task<bool> Exists(string id)
@@ -44,7 +51,7 @@ namespace Covid19Radar.DataAccess
             bool userFound = false;
             try
             {
-                var userResult = await _db.User.ReadItemAsync<UserResultModel>(id, PartitionKey.None);
+                var userResult = await _db.User.ReadItemAsync<UserResultModel>(id, new PartitionKey(id));
                 if (userResult.StatusCode == HttpStatusCode.OK)
                 {
                     userFound = true;
@@ -66,7 +73,7 @@ namespace Covid19Radar.DataAccess
             bool userFound = false;
             try
             {
-                var result = await _db.User.DeleteItemAsync<UserModel>(user.GetId(), PartitionKey.None);
+                var result = await _db.User.DeleteItemAsync<UserModel>(user.GetId(), new PartitionKey(user.GetId()));
                 if (result.StatusCode == HttpStatusCode.OK)
                 {
                     userFound = true;
@@ -80,30 +87,6 @@ namespace Covid19Radar.DataAccess
                 }
             }
             return userFound;
-        }
-        public async Task<SequenceDataModel?> NextSequenceNumber()
-        {
-            var id = SequenceDataModel._id.ToString();
-            for (var i = 0; i < 100; i++)
-            {
-                var result = await _db.Sequence.ReadItemAsync<SequenceDataModel>(id, PartitionKey.None);
-                var model = result.Resource;
-                model.Increment();
-                var option = new ItemRequestOptions();
-                option.IfMatchEtag = model._etag;
-                try
-                {
-                    var resultReplace = await _db.Sequence.ReplaceItemAsync(model, id, null, option);
-                    return resultReplace.Resource;
-                }
-                catch (CosmosException ex)
-                {
-                    _logger.LogInformation(ex, $"GetNumber Retry {i}");
-                    continue;
-                }
-            }
-            _logger.LogWarning("GetNumber is over retry count.");
-            return null;
         }
 
     }
