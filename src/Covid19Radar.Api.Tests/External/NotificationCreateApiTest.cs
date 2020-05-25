@@ -3,6 +3,7 @@ using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Cosmos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -54,7 +55,7 @@ namespace Covid19Radar.Api.Tests.External
             var notification = new Mock<INotificationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.External.NotificationCreateApi>();
             var notificationCreateApi = new Covid19Radar.Api.External.NotificationCreateApi(cosmos.Object, notification.Object, logger);
-            var context = new Mock.HttpContextMock();
+            var context = new Mock<HttpContext>();
             var param = new Api.External.Models.NotificationCreateParameter()
             {
                 Title = title,
@@ -68,10 +69,10 @@ namespace Covid19Radar.Api.Tests.External
                 await writer.FlushAsync();
             }
             stream.Seek(0, System.IO.SeekOrigin.Begin);
-            context._Request.Body = stream;
+            context.Setup(_ => _.Request.Body).Returns(stream);
 
             // action
-            var actual = await notificationCreateApi.RunAsync(context.Request);
+            var actual = await notificationCreateApi.RunAsync(context.Object.Request);
             // assert
             Assert.IsInstanceOfType(actual, ResultType);
         }

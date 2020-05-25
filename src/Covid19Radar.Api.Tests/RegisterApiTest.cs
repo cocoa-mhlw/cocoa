@@ -1,5 +1,6 @@
 using Covid19Radar.Api;
 using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -16,9 +17,9 @@ namespace Covid19Radar.Api.Tests
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
-            var cryption = new Mock.CryptionServiceMock();
+            var cryption = new Mock<ICryptionService>();
             var logger = new Mock.LoggerMock<RegisterApi>();
-            var registerApi = new RegisterApi(userRepo.Object, cryption, logger);
+            var registerApi = new RegisterApi(userRepo.Object, cryption.Object, logger);
         }
 
         [TestMethod]
@@ -26,12 +27,12 @@ namespace Covid19Radar.Api.Tests
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
-            var cryption = new Mock.CryptionServiceMock();
+            var cryption = new Mock<ICryptionService>();
             var logger = new Mock.LoggerMock<RegisterApi>();
-            var registerApi = new RegisterApi(userRepo.Object, cryption, logger);
-            var context = new Mock.HttpContextMock();
+            var registerApi = new RegisterApi(userRepo.Object, cryption.Object, logger);
+            var context = new Mock<HttpContext>();
             // action
-            await registerApi.RunAsync(context.Request);
+            await registerApi.RunAsync(context.Object.Request);
             // assert
         }
     }

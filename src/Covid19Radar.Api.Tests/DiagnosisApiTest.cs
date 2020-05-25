@@ -66,7 +66,7 @@ namespace Covid19Radar.Api.Tests
                                                 validation.Object,
                                                 deviceCheck.Object,
                                                 logger);
-            var context = new Mock.HttpContextMock();
+            var context = new Mock<HttpContext>();
             var bodyJson = new DiagnosisSubmissionParameter()
             {
                 SubmissionNumber = submissionNumber,
@@ -82,9 +82,9 @@ namespace Covid19Radar.Api.Tests
                 await writer.FlushAsync();
             }
             stream.Seek(0, System.IO.SeekOrigin.Begin);
-            context._Request.Body = stream;
+            context.Setup(_ => _.Request.Body).Returns(stream);
             // action
-            await diagnosisApi.RunAsync(context.Request);
+            await diagnosisApi.RunAsync(context.Object.Request);
             // assert
         }
     }
