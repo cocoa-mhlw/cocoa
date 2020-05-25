@@ -178,6 +178,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Share に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonShare {
+            get {
+                return ResourceManager.GetString("ButtonShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Start に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonStart {
