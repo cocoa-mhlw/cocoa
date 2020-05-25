@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Views.SetupCompletedPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -13,21 +14,39 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
 
-    <StackLayout Style="{StaticResource DefaultStackLayout}">
-        <ffimageloading:CachedImage
-            HorizontalOptions="Center"
-            Source="Logo.png"
-            VerticalOptions="Center" />
+    <ScrollView>
+        <Grid Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <ffimageloading:CachedImage
+                    HorizontalOptions="Center"
+                    Source="Logo.png"
+                    VerticalOptions="Center" />
+                <Label
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.AppName}" />
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Label
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultTitleLabelColor}"
+                    Text="{x:Static resources:AppResources.SetupCompletedPageTextYoureReadyToGo}" />
 
-        <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.AppName}" />
+            </StackLayout>
+            <Grid Grid.Row="2">
+                <ce:GradientButton
+                    Grid.Row="2"
+                    AutomationId="ToMainButton"
+                    Command="{Binding Path=OnClickToMain}"
+                    Style="{StaticResource DefaultGradientButton}"
+                    Text="{x:Static resources:AppResources.ButtonHome}" />
 
-        <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.SetupCompletedPageTextYoureReadyToGo}" />
-
-        <Button
-            AutomationId="ToMainButton"
-            Command="{Binding Path=OnClickToMain}"
-            Style="{StaticResource DefaultButton}"
-            Text="{x:Static resources:AppResources.ButtonHome}" />
-    </StackLayout>
-
+            </Grid>
+        </Grid>
+    </ScrollView>
 </ContentPage>

@@ -21,31 +21,31 @@
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
-    <value>Seterusnya</value>
+    <value>Laman seterusnya</value>
     <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Terma Perkhidmatan</value>
+    <value>Syarat Perkhidmatan</value>
     <comment>Consent by user page</comment>
   </data>
   <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>Bersetuju dan meneruskan</value>
+    <value>Setuju dan Teruskan</value>
     <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
-    <value>Tidak perlu memasukkan maklumat peribadi. Kami menggunakan ID unik, yang diperuntukkan kepada anda semasa memasang apl.</value>
+    <value>Tidak perlu memasukkan maklumat peribadi. Kami menggunakan ID unik, yang diperuntukkan kepada anda semasa memasang aplikasi.</value>
     <comment>How it works page step 1 description</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
-    <value>Kenalan dengan pengguna apl lain selama lebih daripada 30 min secara keseluruhan, dalam radius lebih dekat daripada 2m pada purata direkodkan sebagai "kenalan rapat".</value>
+    <value>Kenalan dengan pengguna aplikasi lain selama lebih dari 30 min secara keseluruhan, dalam radius lebih dekat dari 2m rata-rata dicatat sebagai "Kontak Rapat".</value>
     <comment>How it works page step 2 description</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Sila tukar status anda secara manual kepada "positif" selepas mengesahkan nombor telefon anda. " Positif "aliran kerja, kini penyelarasan dengan pihak yang berkaitan.</value>
+    <value>Tukar status anda secara manual menjadi "Positif" setelah mengesahkan nombor telefon anda. Aliran Kerja "Positif", Sekarang koordinasi dengan pihak berkaitan.</value>
     <comment>How it works page step 3 description</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth perlu dihidupkan untuk merakam kenalan yang rapat. Sila pergi ke halaman seterusnya untuk menghidarkannya.</value>
+    <value>Pemberitahuan Bluetooth / Pendedahan perlu dihidupkan untuk merakam hubungan rapat. Sila pergi ke halaman seterusnya untuk menghidarkannya.</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
@@ -53,24 +53,15 @@
     <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Melindungi orang yang anda sayangi dari COVID19</value>
-    <comment>Protecting our loved ones from COVID19</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>Aplikasi ini menggunakan isyarat Bluetooth untuk menentukan sama ada anda berdekatan dengan pengguna apl yang mengesan kenalan lain. 
-Pilih ' sentiasa Benarkan ' untuk menyediakan Bluetooth.</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Benarkan Bluetooth</value>
-    <comment>Device access page Bluetooth title</comment>
+    <value>Melindungi orang yang anda sayangi dari COVID-19</value>
+    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Akses peranti</value>
+    <value>Akses Peranti</value>
     <comment>Device access page title</comment>
   </data>
   <data name="TitleAppDescription" xml:space="preserve">
-    <value>Perihalan aplikasi</value>
+    <value>Penerangan Aplikasi</value>
     <comment>App Description</comment>
   </data>
   <data name="ButtonRegister" xml:space="preserve">
@@ -82,11 +73,11 @@ Pilih ' sentiasa Benarkan ' untuk menyediakan Bluetooth.</value>
     <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
-    <value>RUMAH</value>
+    <value>Laman Utama</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID19Radar</value>
+    <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
   <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
@@ -94,23 +85,23 @@ Pilih ' sentiasa Benarkan ' untuk menyediakan Bluetooth.</value>
     <comment>Status Settings Menu</comment>
   </data>
   <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>Senarai penyumbang</value>
+    <value>Senarai Penyumbang</value>
     <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Maklumat pengemaskinian</value>
+    <value>Kemas kini Maklumat</value>
     <comment>Update Information Menu</comment>
   </data>
   <data name="ButtonHome" xml:space="preserve">
-    <value>RUMAH</value>
+    <value>Laman Utama</value>
     <comment>HOME</comment>
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Anda sudah bersedia untuk pergi</value>
+    <value>Anda sudah bersedia</value>
     <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Sediakan selesai</value>
+    <value>Penyediaan Selesai</value>
     <comment>Set up Completed</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
@@ -122,8 +113,7 @@ Pilih ' sentiasa Benarkan ' untuk menyediakan Bluetooth.</value>
     <comment>Status settings page enter number text</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Kami akan menghantar kod pengesahan kepada anda.
-Sila semak SMS anda.</value>
+    <value>Kami akan menghantar kod pengesahan kepada anda. Sila semak SMS anda.</value>
     <comment>Status settings page verification sms code description</comment>
   </data>
   <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
@@ -134,10 +124,6 @@ Sila semak SMS anda.</value>
     <value>Jika anda menerima diagnosis yang positif</value>
     <comment>Status settings page sub title</comment>
   </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>Seting status</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
     <value>090-1234-4567</value>
     <comment>Placeholder text for phone number entry</comment>
@@ -147,8 +133,8 @@ Sila semak SMS anda.</value>
     <comment>Detected Beacon List Menu</comment>
   </data>
   <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Masukkan kod yang dihantar kepada 
-「 {0} 」</value>
+    <value>Masukkan kod yang dihantar kepada
+ {0} 」</value>
     <comment>Otp Enter the Code</comment>
   </data>
   <data name="TitleOtp" xml:space="preserve">
@@ -156,7 +142,7 @@ Sila semak SMS anda.</value>
     <comment>Otp Title</comment>
   </data>
   <data name="ButtonVerify" xml:space="preserve">
-    <value>Tentu sahkan</value>
+    <value>Sahkan</value>
     <comment>Button Verify</comment>
   </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
@@ -168,28 +154,24 @@ Sila semak SMS anda.</value>
     <comment>Resend Text</comment>
   </data>
   <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Kemas kini status selesai</value>
+    <value>Kemas kini Status Selesai</value>
     <comment>Status Update Complete page text</comment>
   </data>
   <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Kemas kini status selesai</value>
+    <value>Kemas kini Status Selesai</value>
     <comment>Status Update Complete page title</comment>
   </data>
   <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Senarai penyumbang</value>
+    <value>Senarai Penyumbang</value>
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Isyarat yang dikesan</value>
+    <value>Beacon yang dikesan</value>
     <comment>Detected Beacons</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Perjanjian Lesen</value>
     <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -200,7 +182,7 @@ Sila semak SMS anda.</value>
     <comment>ID</comment>
   </data>
   <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Jarak Avar</value>
+    <value>Jarak Purata</value>
     <comment>TextAvgDistance</comment>
   </data>
   <data name="DetectedBeaconPageTextCount" xml:space="preserve">
@@ -208,19 +190,19 @@ Sila semak SMS anda.</value>
     <comment>TextCount</comment>
   </data>
   <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>ElapsedTime</value>
+    <value>Masa Berlalu</value>
     <comment>TextElapsedTime</comment>
   </data>
   <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>LastTime</value>
+    <value>Masa terakhir</value>
     <comment>TextLastTime</comment>
   </data>
   <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>MajorNo</value>
+    <value>Nilai Utama</value>
     <comment>MajorNo</comment>
   </data>
   <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MinorNo</value>
+    <value>Nilai Sekundel</value>
     <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
@@ -240,19 +222,197 @@ Sila semak SMS anda.</value>
     <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Memasang apl</value>
+    <value>Memasang Aplikasi</value>
     <comment>How it works page step 1 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Merakam kenalan yang rapat</value>
+    <value>Merakam Kontak rapat</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Jika anda didiagnos COVID19 positif</value>
+    <value>Jika anda didiagnos COVID-19 positif</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Keperluan untuk menggunakan aplikasi ini</value>
     <comment>How it works page step 4 title</comment>
+  </data>
+  <data name="TitleUserSettings" xml:space="preserve">
+    <value>Seting status</value>
+    <comment>Status Settings page title</comment>
+  </data>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>Seting status</value>
+    <comment>User Status Page Title</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Simpan</value>
+    <comment>Button Save</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
+    <value>Jika anda menerima diagnosis yang positif, sila masukkan nombor telefon bimbit anda dan kemas kini status anda untuk melindungi orang yang anda sayangi.</value>
+    <comment>User Status Page description</comment>
+  </data>
+  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
+    <value>Ketik untuk menukar keadaan</value>
+    <comment>User Status Page Status Change</comment>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Sila semak sambungan rangkaian anda.</value>
+    <comment>Dialog message for Network connection error</comment>
+  </data>
+  <data name="DialogButtonOk" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ButtonEnable" xml:space="preserve">
+    <value>Aktifkan</value>
+    <comment>Enable Button</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Bukan sekarang</value>
+    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>Aplikasi ini menggunakan pemberitahuan pendedahan/isyarat Bluetooth untuk menentukan sama ada anda berdekatan dengan pengguna aplikasi lain yang mengesan kenalan. 
+Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Membenarkan Pemberitahuan pendedahan/Bluetooth</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainContributors" xml:space="preserve">
+    <value>Penyumbang</value>
+    <comment>Tab Contributors</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Pendedahan</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="MainHome" xml:space="preserve">
+    <value>Laman Utama</value>
+    <comment>Tab Home</comment>
+  </data>
+  <data name="MainLicense" xml:space="preserve">
+    <value>Lesen</value>
+    <comment>Tab License</comment>
+  </data>
+  <data name="MainNotifyOther" xml:space="preserve">
+    <value>Maklumkan</value>
+    <comment>Tab Notify</comment>
+  </data>
+  <data name="MainUpdateInfo" xml:space="preserve">
+    <value>Kemas kini</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="TitleExposures" xml:space="preserve">
+    <value>Pendedahan</value>
+    <comment>Exposures Page</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>Manual</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="HomePageUpdateInfomation" xml:space="preserve">
+    <value>Maklumat Terkini</value>
+    <comment>Home Page Update Infomation text</comment>
+  </data>
+  <data name="HomeEnableNotification" xml:space="preserve">
+    <value>Aktifkan Pemberitahuan</value>
+    <comment>Home Setting Enable Notification</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>Tiada pendedahan yang diketahui</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>Anda akan dimaklumkan jika anda telah terdedah kepada seseorang yang melaporkan keputusan yang positif COVID-19.</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NofityPageButtonSharePositive" xml:space="preserve">
+    <value>Kongsi diagnosis positif</value>
+  </data>
+  <data name="NofityPageShareDiag" xml:space="preserve">
+    <value>Kongsi diagnosis positif</value>
+    <comment>Notify Page Share Diag</comment>
+  </data>
+  <data name="NofityPageShareYourCase" xml:space="preserve">
+    <value>Jika anda diuji positif untuk virus yang menyebabkan COVID-19, anda boleh memilih untuk berkongsi diagnosis anda.  Ini akan membantu orang lain dalam komuniti anda mengandungi penyebaran virus.</value>
+    <comment>NofityPageShareYourCase</comment>
+  </data>
+  <data name="NotifyPageLearnMore" xml:space="preserve">
+    <value>Ketahui selanjutnya</value>
+    <comment>Notify Page Learn more text</comment>
+  </data>
+  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
+    <value>Jika anda menerima diagnosis yang positif</value>
+    <comment>User Status Page subtitle</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>Sila masukkan pengecam diagnosis</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>Kongsi diagnosis positif</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>Tarikh ujian membantu aplikasi tahu bila anda mungkin telah berjangkit dan memaklumkan orang yang betul mengenai kemungkinan pendedahan.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>Hanya mereka yang telah terdedah akan menerima pemberitahuan.</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>Pengecam ujian unik yang datang dengan ujian COVID-19 anda mesti digunakan untuk mengesahkan keputusan ujian positif anda.</value>
+  </data>
+  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
+    <value>Sahkan dan kongsi</value>
+    <comment>Verify and Share</comment>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+    <value>Sila cuba lagi kemudian.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+    <value>Gagal</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+    <value>Diagnosis dihantar</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+    <value>Selesai</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>Sila berikan pengecam diagnosis</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>Pengecam diagnosis diperlukan</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+    <value>Sila dayakan pemberitahuan pendedahan sebelum menyerahkan diagnosis.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+    <value>Pemberitahuan pendedahan Dilumpuhkan</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+    <value>Menghantar diagnosis...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>Menentu sah diagnosis...</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>Diagnosis anda tidak boleh disahkan pada masa ini untuk dihantar.</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>Pengesahan Gagal</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>Hantar</value>
   </data>
 </root>

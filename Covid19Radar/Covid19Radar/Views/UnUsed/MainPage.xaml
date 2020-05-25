@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="Covid19Radar.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    xmlns:view="clr-namespace:Covid19Radar.Views"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Visual="Material"
+    mc:Ignorable="d">
+    <TabBar x:Name="TabBar">
+        <Tab Title="{x:Static resources:AppResources.MainTutorial}" Route="tutorial">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconHowToUse}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:StartTutorialPage}" />
+        </Tab>
+
+        <Tab Title="{x:Static resources:AppResources.MainExposures}" Route="exposures">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconPeopleArrows}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:ExposuresPage}" />
+        </Tab>
+
+        <Tab Title="{x:Static resources:AppResources.MainHome}" Route="home">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconHome}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:HomePage}" />
+        </Tab>
+
+        <Tab Title="{x:Static resources:AppResources.MainNotifyOther}" Route="notify">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconHouseUser}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:NotifyOtherPage}" />
+        </Tab>
+
+        <Tab Title="{x:Static resources:AppResources.MainUpdateInfo}" Route="update">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconAbout}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:UpdateInformationPage}" />
+        </Tab>
+        <Tab Title="{x:Static resources:AppResources.MainContributors}" Route="contributers">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconFriends}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:ContributorsPage}" />
+        </Tab>
+        <Tab Title="{x:Static resources:AppResources.MainLicense}" Route="license">
+            <Tab.Icon>
+                <FontImageSource FontFamily="FA-S" Glyph="{StaticResource IconContract}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:LicenseAgreementPage}" />
+        </Tab>
+
+    </TabBar>
+</Shell>

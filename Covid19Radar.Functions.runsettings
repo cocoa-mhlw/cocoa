@@ -31,7 +31,8 @@
               <Exclude>
                 <ModulePath>.*CPPUnitTestFramework.*</ModulePath>
                 <ModulePath>coverlet.*.dll</ModulePath>
-                <ModulePath>.*Covid19RadarAPI.Tests.dll</ModulePath>
+                <ModulePath>.*.WebJobs.Host.dll</ModulePath>
+                <ModulePath>.*Covid19Radar.Api.Tests.dll</ModulePath>
               </Exclude>
             </ModulePaths>
 

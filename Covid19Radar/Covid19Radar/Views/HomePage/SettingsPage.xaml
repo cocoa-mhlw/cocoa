@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Behavior="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:System="clr-namespace:System;assembly=netstandard"
+    xmlns:ce="clr-namespace:Covid19Radar.Controls"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <Grid Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Style="{StaticResource DefaultTitleLabel}"
+                Text="{Binding Title}" />
+            <Grid
+                Grid.Row="1"
+                HorizontalOptions="Center"
+                RowSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Small"
+                                Text="Version"
+                                TextColor="{StaticResource PrimaryText}" />
+                            <Span Text="{x:Static System:Environment.NewLine}" />
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Caption"
+                                Text="このアプリのバージョン番号"
+                                TextColor="{StaticResource SecondaryText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="End"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="{Binding AppVer}"
+                    VerticalOptions="Center" />
+                <BoxView
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    Style="{StaticResource DefaultLineStyle}" />
+                <Label Grid.Row="2" Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Small"
+                                Text="近距離無線通信"
+                                TextColor="{StaticResource PrimaryText}" />
+                            <Span Text="{x:Static System:Environment.NewLine}" />
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Caption"
+                                Text="発信と受信を停止する"
+                                TextColor="{StaticResource SecondaryText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Switch
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    IsToggled="{Binding EnableExposureNotification, Mode=TwoWay}">
+                    <Switch.Behaviors>
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeEnableExposureNotification}" />
+                    </Switch.Behaviors>
+                </Switch>
+                <BoxView
+                    Grid.Row="3"
+                    Grid.ColumnSpan="3"
+                    Style="{StaticResource DefaultLineStyle}" />
+                <Label Grid.Row="4" Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Small"
+                                Text="濃厚接触の通知"
+                                TextColor="{StaticResource PrimaryText}" />
+                            <Span Text="{x:Static System:Environment.NewLine}" />
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Caption"
+                                Text="濃厚接触時のアプリ通知"
+                                TextColor="{StaticResource SecondaryText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Switch
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    IsToggled="{Binding EnableLocalNotification, Mode=TwoWay}">
+                    <Switch.Behaviors>
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeEnableNotification}" />
+                    </Switch.Behaviors>
+                </Switch>
+                <BoxView
+                    Grid.Row="5"
+                    Grid.ColumnSpan="3"
+                    Style="{StaticResource DefaultLineStyle}" />
+
+                <Label Grid.Row="6" Grid.Column="0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Small"
+                                Text="記録の削除"
+                                TextColor="{StaticResource PrimaryText}" />
+                            <Span Text="{x:Static System:Environment.NewLine}" />
+                            <Span
+                                FontFamily="NotoSansRegularFontFamily"
+                                FontSize="Caption"
+                                Text="接触記録の全削除"
+                                TextColor="{StaticResource SecondaryText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ce:GradientButton
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    AutomationId="Reset"
+                    Command="{Binding Path=OnChangeResetData}"
+                    Scale="0.8"
+                    Style="{StaticResource DefaultGradientButton}"
+                    Text="{x:Static resources:AppResources.ButtonReset}" />
+                <!--
+                <Switch
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    IsToggled="{Binding ResetData, Mode=TwoWay}">
+                    <Switch.Behaviors>
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeResetData}" />
+                    </Switch.Behaviors>
+                </Switch>-->
+                <BoxView
+                    Grid.Row="7"
+                    Grid.ColumnSpan="3"
+                    Style="{StaticResource DefaultLineStyle}" />
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

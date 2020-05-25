@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Covid19Radar.Tests.Helper
+namespace Covid19Radar.Api.Tests.Helper
 {
     public class ModelTestHelper
     {

@@ -7,7 +7,7 @@
     <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
@@ -16,17 +16,27 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
-    <EmbeddedResource Remove="Views\Dummy.xaml" />
-    <EmbeddedResource Remove="Views\DummyPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Resources\Fonts\fa-brands-400.otf" />
-    <None Remove="Resources\Fonts\fa-regular-400.otf" />
-    <None Remove="Resources\Fonts\fa-solid-900.otf" />
-    <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
-    <None Remove="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
-    <None Remove="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
-    <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+    <Compile Remove="Behaviors\UnUsed\**" />
+    <Compile Remove="Converters\UnUsed\**" />
+    <Compile Remove="Model\UnUsed\**" />
+    <Compile Remove="Services\UnUsed\**" />
+    <Compile Remove="Templates\UnUsed\**" />
+    <Compile Remove="ViewModels\UnUsed\**" />
+    <Compile Remove="Views\UnUsed\**" />
+    <EmbeddedResource Remove="Behaviors\UnUsed\**" />
+    <EmbeddedResource Remove="Converters\UnUsed\**" />
+    <EmbeddedResource Remove="Model\UnUsed\**" />
+    <EmbeddedResource Remove="Services\UnUsed\**" />
+    <EmbeddedResource Remove="Templates\UnUsed\**" />
+    <EmbeddedResource Remove="ViewModels\UnUsed\**" />
+    <EmbeddedResource Remove="Views\UnUsed\**" />
+    <None Remove="Behaviors\UnUsed\**" />
+    <None Remove="Converters\UnUsed\**" />
+    <None Remove="Model\UnUsed\**" />
+    <None Remove="Services\UnUsed\**" />
+    <None Remove="Templates\UnUsed\**" />
+    <None Remove="ViewModels\UnUsed\**" />
+    <None Remove="Views\UnUsed\**" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
@@ -44,26 +54,29 @@
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="3.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.LocalNotification" Version="5.0.4" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.ExposureNotification" Version="0.2.0-preview01" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.800" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Icons.xaml.cs">
       <DependentUpon>Icons.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
-      <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
+    <Compile Update="Views\HomePage\DebugPage.xaml.cs">
+      <DependentUpon>DebugPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\UpdateInfomationPage.xaml.cs">
-      <DependentUpon>UpdateInfomationPage.xaml</DependentUpon>
+    <Compile Update="Views\HomePage\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomePage\UpdateInformationPage.xaml.cs">
+      <DependentUpon>UpdateInformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
@@ -77,29 +90,29 @@
     <Compile Update="Views\HomePage\NotifyOtherPage.xaml.cs">
       <DependentUpon>NotifyOtherPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\NotUsed\UserSettingPage.xaml.cs">
-      <DependentUpon>UserSettingPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Tutorial\DescriptionPage4.xaml.cs">
+      <DependentUpon>DescriptionPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Tutorial\DescriptionPage3.xaml.cs">
+      <DependentUpon>DescriptionPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Tutorial\DescriptionPage2.xaml.cs">
+      <DependentUpon>DescriptionPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Tutorial\DescriptionPage1.xaml.cs">
+      <DependentUpon>DescriptionPage1.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Tutorial\InitSettingPage.xaml.cs">
       <DependentUpon>InitSettingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\ConsentByUserPage.xaml.cs">
-      <DependentUpon>ConsentByUserPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\NotUsed\InputSmsOTPPage.xaml.cs">
-      <DependentUpon>InputSmsOTPPage.xaml</DependentUpon>
+    <Compile Update="Views\Tutorial\PrivacyPolicyPage.xaml.cs">
+      <DependentUpon>PrivacyPolicyPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Tutorial\StartTutorialPage.xaml.cs">
       <DependentUpon>StartTutorialPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\NotUsed\SmsVerificationPage.xaml.cs">
-      <DependentUpon>SmsVerificationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Tutorial\DescriptionPage.xaml.cs">
-      <DependentUpon>DescriptionPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Resources\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
@@ -118,12 +131,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Templates\ContributorItemTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Templates\StepItemTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Styles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -133,20 +140,16 @@
     <EmbeddedResource Update="Views\HomePage\SharePositiveDiagnosisPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\NotUsed\HeadsupPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\Tutorial\SetupCompletedPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\NotUsed\StatusUpdateCompletePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Converters\" />
     <Folder Include="MultilingualResources\" />
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\xamarin.exposurenotification\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />
   </ItemGroup>
 </Project>
