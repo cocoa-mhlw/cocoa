@@ -566,6 +566,11 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <target state="new">If you received a positive diagnosis</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
+        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+          <source>Share the App</source>
+          <target state="new">Share the App</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
+        </trans-unit>
       </group>
     </body>
   </file>
