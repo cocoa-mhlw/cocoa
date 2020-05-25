@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Covid19Radar.Models
+namespace Covid19Radar.Api.Models
 {
     [JsonObject("registerResultModel")]
     public class RegisterResultModel
@@ -18,6 +18,13 @@ namespace Covid19Radar.Models
         /// <value>Secret Key</value>
         [JsonProperty("secret")]
         public string Secret { get; set; }
+
+        /// <summary>
+        /// Jump Consistent Hash 
+        /// </summary>
+        /// <value>Jump Consistent Hash</value>
+        [JsonProperty("jumpConsistentSeed")]
+        public ulong JumpConsistentSeed { get; set; }
 
     }
 }

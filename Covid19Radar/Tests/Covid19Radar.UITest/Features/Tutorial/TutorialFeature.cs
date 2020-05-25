@@ -1,11 +1,9 @@
 ﻿using NUnit.Framework;
 using Xamarin.UITest;
 using Xamariners.EndToEnd.Xamarin.Features;
-using Xamariners.EndToEnd.Xamarin.Infrastructure;
 
 namespace Covid19Radar.UITest.Features.Tutorial
 {
-
     [TestFixture(Platform.Android)]
 #if __Apple__
     [TestFixture(Platform.iOS)]
@@ -15,7 +13,6 @@ namespace Covid19Radar.UITest.Features.Tutorial
     {
         public TutorialFeature(Platform platform) : base(platform)
         {
-            var bob = RunnerConfiguration.Current;
         }
     }
 }

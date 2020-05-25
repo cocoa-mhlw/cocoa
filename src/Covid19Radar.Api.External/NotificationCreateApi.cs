@@ -7,11 +7,12 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Covid19Radar.DataStore;
-using Covid19Radar.Models;
-using Covid19Radar.Services;
+using Covid19Radar.Api.DataStore;
+using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
+using Covid19Radar.Api.External.Models;
 
-namespace Covid19Radar
+namespace Covid19Radar.Api.External
 {
     public class NotificationCreateApi
     {
@@ -30,18 +31,11 @@ namespace Covid19Radar
         }
 
         [FunctionName(nameof(NotificationCreateApi))]
-        public async Task<IActionResult> Run(
+        public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "Notification/Create")] HttpRequest req)
         {
             Logger.LogInformation($"{nameof(NotificationCreateApi)} processed a request.");
-
-            switch (req.Method)
-            {
-                case "POST":
-                    return await Post(req);
-            }
-            AddBadRequest(req);
-            return new BadRequestObjectResult("Not Supported");
+            return await Post(req);
         }
 
         private async Task<IActionResult> Post(HttpRequest req)
@@ -63,11 +57,6 @@ namespace Covid19Radar
             var createResult = await Cosmos.Notification.CreateItemAsync(newNotification);
             var result = new NotificationCreateResult() { Message = createResult.Resource };
             return new OkObjectResult(result);
-        }
-
-        private void AddBadRequest(HttpRequest req)
-        {
-            // add deny list
         }
     }
 }

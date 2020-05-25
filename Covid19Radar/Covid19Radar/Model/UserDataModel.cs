@@ -1,7 +1,10 @@
 ﻿using Covid19Radar.Common;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
+using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Model
 {
@@ -15,28 +18,16 @@ namespace Covid19Radar.Model
         public string UserUuid { get; set; }
 
         /// <summary>
-        /// User Major 0 to 65536
-        /// </summary>
-        /// <value>User Major</value>
-        public string Major { get; set; }
-
-        /// <summary>
-        /// User Minor 0 to 65536
-        /// </summary>
-        /// <value>User Minor</value>
-        public string Minor { get; set; }
-
-        /// <summary>
-        ///  Status Contactd,OnSet,Suspected,Inspection,Infection
-        /// </summary>
-        /// <value></value>
-        public UserStatus UserStatus { get; set; }
-
-        /// <summary>
         /// Secret key
         /// </summary>
         /// <value>Secret Key</value>
         public string Secret { get; set; }
+
+        /// <summary>
+        /// Jump Consistent Seed
+        /// </summary>
+        /// <value>Jump Consistent Seed</value>
+        public ulong JumpConsistentSeed { get; set; }
 
         /// <summary>
         /// Last notification date and time
@@ -46,9 +37,6 @@ namespace Covid19Radar.Model
         public bool Equals(UserDataModel other)
         {
             return UserUuid == other?.UserUuid
-                && Major == other?.Major
-                && Minor == other?.Minor
-                && UserStatus == other?.UserStatus
                 && LastNotificationTime == other?.LastNotificationTime;
         }
 
@@ -58,12 +46,62 @@ namespace Covid19Radar.Model
         /// <value>User Minor</value>
         public string GetId()
         {
-            return String.Format("{0}.{1}.{2}", UserUuid, Major.PadLeft(5, '0'), Minor.PadLeft(5, '0'));
+            return UserUuid;
         }
 
         public int GetJumpHashTimeDifference()
         {
-            return JumpHash.JumpConsistentHash(Convert.ToUInt64(Major) + Convert.ToUInt64(Minor), AppConstants.NumberOfGroup);
+            return JumpHash.JumpConsistentHash(JumpConsistentSeed, AppConstants.NumberOfGroup);
         }
+
+        // From Xamarin.EN LocalState Class
+        public static readonly Dictionary<string, ulong> DefaultServerBatchNumbers = new Dictionary<string, ulong> { { "ZA", 0 }, { "CA", 0 } };
+
+        public bool IsWelcomed { get; set; }
+
+        public bool LastIsEnabled { get; set; } = false;
+
+        public bool EnableNotifications { get; set; } = true;
+        public long ServerLastTime { get; set; } = 0;
+        public string Region { get; set; } = AppConstants.DefaultRegion;
+
+        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = new Dictionary<string, ulong>(DefaultServerBatchNumbers);
+
+        public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
+
+        public ExposureDetectionSummary ExposureSummary { get; set; }
+
+        public List<PositiveDiagnosisStateModel> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisStateModel>();
+
+        public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
+        {
+            var existing = PositiveDiagnoses?.Where(d => d.DiagnosisUid.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase))
+                .OrderByDescending(d => d.DiagnosisDate).FirstOrDefault();
+
+            if (existing != null)
+                return;
+
+            PositiveDiagnoses.Add(new PositiveDiagnosisStateModel
+            {
+                DiagnosisDate = submissionDate,
+                DiagnosisUid = diagnosisUid,
+            });
+        }
+
+        public void ClearDiagnosis()
+            => PositiveDiagnoses?.Clear();
+
+        public PositiveDiagnosisStateModel LatestDiagnosis
+            => PositiveDiagnoses?
+                .Where(d => d.Shared)
+                .OrderByDescending(p => p.DiagnosisDate)?
+                .FirstOrDefault();
+
+        public PositiveDiagnosisStateModel PendingDiagnosis
+            => PositiveDiagnoses?
+                .Where(d => !d.Shared)
+                .OrderByDescending(p => p.DiagnosisDate)?
+                .FirstOrDefault();
+
     }
 }
