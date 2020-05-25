@@ -41,9 +41,8 @@ namespace Covid19Radar.Services
         // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
         public Task<Configuration> GetConfigurationAsync()
     => Task.FromResult(new Configuration());
-        
 
-        public async Task FetchExposureKeyBatchFilesFromServerAsync(Func<IEnumerable<string>, Task> submitBatches)
+       public async Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
         {
             try
             {
