@@ -48,7 +48,7 @@
 
         <ce:GradientButton
             Grid.Row="2"
-            AutomationId="StartButton"
+            AutomationId="ButtonStart"
             Command="{Binding Path=OnClickStart}"
             Style="{StaticResource DefaultGradientButton}"
             Text="{x:Static resources:AppResources.ButtonStart}" />
