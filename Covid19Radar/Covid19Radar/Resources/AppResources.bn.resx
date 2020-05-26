@@ -416,4 +416,50 @@
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>জমা দিন</value>
   </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>সামপ্লিটেক্সট</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>সামপ্লিটেক্সট</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>সেটিংস</value>
+    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>রাজি না</value>
+    <comment>Not Agree</comment>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>বাতিল করুন</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>আপনি কি বিজ্ঞপ্তিগুলি চালু করতে চান?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>রিসেট করুন</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>সক্রিয়</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>বিলোপ</value>
+    <comment>Deleting</comment>
+  </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
+  <data name="HomePageSubtitle2" xml:space="preserve">
+    <value>অ্যাপটি শেয়ার</value>
+    <comment>Home page subtitle 2</comment>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>শেয়ার করুন</value>
+    <comment>Share</comment>
+  </data>
 </root>

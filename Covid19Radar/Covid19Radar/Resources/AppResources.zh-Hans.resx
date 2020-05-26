@@ -422,4 +422,44 @@
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>示例文本</value>
   </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>设置</value>
+    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>不同意</value>
+    <comment>Not Agree</comment>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>取消</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>是否要打开通知？</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>重置</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>使</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>正在删除</value>
+    <comment>Deleting</comment>
+  </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>如果您收到阳性诊断</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
+  <data name="HomePageSubtitle2" xml:space="preserve">
+    <value>共享应用</value>
+    <comment>Home page subtitle 2</comment>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>共享</value>
+    <comment>Share</comment>
+  </data>
 </root>

@@ -415,7 +415,50 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Gửi</value>
   </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Văn bản SampleText</value>
+  </data>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Đoạn văn đơn giản</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Cài đặt</value>
+    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Không đồng ý</value>
+    <comment>Not Agree</comment>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>Hủy bỏ</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>Bạn có muốn bật thông báo không?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Đặt lại</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Cho phép</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Đang xóa</value>
+    <comment>Deleting</comment>
+  </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>Nếu bạn nhận được một chẩn đoán tích cực</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
+  <data name="HomePageSubtitle2" xml:space="preserve">
+    <value>Chia sẻ ứng dụng</value>
+    <comment>Home page subtitle 2</comment>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Chia sẻ</value>
+    <comment>Share</comment>
   </data>
 </root>

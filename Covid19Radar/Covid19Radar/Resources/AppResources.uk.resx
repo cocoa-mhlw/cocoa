@@ -416,4 +416,50 @@
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Надіслати</value>
   </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Самопледоб</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Самопледоб</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Настройки</value>
+    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Не згодні</value>
+    <comment>Not Agree</comment>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>Скасувати</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>Увімкнути сповіщення?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Скинути</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Увімкнення</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Видалення</value>
+    <comment>Deleting</comment>
+  </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>Якщо ви отримали позитивний діагноз</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
+  <data name="HomePageSubtitle2" xml:space="preserve">
+    <value>Поділіться додатком</value>
+    <comment>Home page subtitle 2</comment>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Поділитися</value>
+    <comment>Share</comment>
+  </data>
 </root>
