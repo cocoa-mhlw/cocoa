@@ -578,6 +578,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">แชร์</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">การแบ่งปันข้อมูลเชิงบวกและการแจ้งเตือนแบบไม่ระบุชื่อให้กับผู้อื่น</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>

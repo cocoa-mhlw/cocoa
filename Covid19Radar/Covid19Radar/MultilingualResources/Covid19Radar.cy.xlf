@@ -578,6 +578,11 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Rhannu</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rhannu gwybodaeth gadarnhaol a hysbysu pobl eraill yn ddienw</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>

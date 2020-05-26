@@ -462,4 +462,8 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
     <value>Deel</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Deel positiewe inligting en anonieme kennisgewing aan ander</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

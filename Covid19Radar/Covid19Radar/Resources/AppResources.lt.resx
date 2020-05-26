@@ -462,4 +462,8 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
     <value>Bendrinti</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Dalijimasis teigiama informacija ir anoniminis pranešimas kitiems</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

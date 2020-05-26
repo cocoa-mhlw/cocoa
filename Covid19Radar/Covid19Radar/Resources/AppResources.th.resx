@@ -462,4 +462,8 @@
     <value>แชร์</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>การแบ่งปันข้อมูลเชิงบวกและการแจ้งเตือนแบบไม่ระบุชื่อให้กับผู้อื่น</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

@@ -462,4 +462,8 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
     <value>Sdílet</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Sdílení pozitivních informací a anonymní oznámení ostatním</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

@@ -462,4 +462,8 @@
     <value>భాగస్వామ్యం చేయి</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>పాజిటివ్ సమాచారం మరియు అనామక నోటిఫికేషన్ ని ఇతరులకు పంచుకోవడం</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

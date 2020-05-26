@@ -462,4 +462,8 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
     <value>Deila</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Miðlun jákvæðra upplýsinga og nafnlaus tilkynning til annarra</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

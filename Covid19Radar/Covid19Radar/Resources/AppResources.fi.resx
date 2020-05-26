@@ -462,4 +462,8 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
     <value>Jaa</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Positiivisten tietojen jaanonyymin ilmoituksen jakaminen muille</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>
