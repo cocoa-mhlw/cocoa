@@ -578,6 +578,11 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Del</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deling af positive oplysninger og anonym underretning til andre</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>

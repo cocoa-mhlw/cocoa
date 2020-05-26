@@ -578,6 +578,11 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Sdílet</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sdílení pozitivních informací a anonymní oznámení ostatním</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -578,6 +578,11 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Jaa</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Positiivisten tietojen jaanonyymin ilmoituksen jakaminen muille</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>
