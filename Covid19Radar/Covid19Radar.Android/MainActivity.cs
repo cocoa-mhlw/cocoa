@@ -85,6 +85,13 @@ namespace Covid19Radar.Droid
             }
         }
 
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
+        }
+
         protected override void OnNewIntent(Intent intent)
         {
             NotificationCenter.NotifyNotificationTapped(intent);
