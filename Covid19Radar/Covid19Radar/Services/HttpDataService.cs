@@ -95,6 +95,7 @@ namespace Covid19Radar.Services
             return null;
         }
 
+        /* TOOD Marge EN
         public async Task<TemporaryExposureKeysHttpResultModel> GetTemporaryExposureKeys(long since)
         {
             string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys?since={since}";
@@ -105,7 +106,7 @@ namespace Covid19Radar.Services
             }
             return null;
         }
-
+        */
 
         // GET /api/notification/pull/{lastClientUpdateTime:datetime} - pull Notifications 
         public async Task<NotificationPullResult> GetNotificationPullAsync(UserDataModel user)
@@ -120,6 +121,7 @@ namespace Covid19Radar.Services
             return null;
         }
 
+        /* TOOD Marge EN
         public async Task<bool> GetFileAsync(string downloadUrl, string filePath)
         {
 
@@ -133,7 +135,7 @@ namespace Covid19Radar.Services
             }
             return false;
         }
-
+        */
 
         private async Task<string> Get(string url)
         {
