@@ -54,9 +54,6 @@ namespace Covid19Radar
         protected override async void OnInitialized()
         {
             InitializeComponent();
-
-            Xamarin.Forms.Device.SetFlags(new string[] { "RadioButton_Experimental" });
-
             // Exposure Notification
 
 #if DEBUG
@@ -64,11 +61,11 @@ namespace Covid19Radar
             // with some fake data
             Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
+            await Xamarin.ExposureNotifications.ExposureNotification.Init();
+
 
             // Local Notification tap event listener
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
-            await Xamarin.ExposureNotifications.ExposureNotification.Init();
-
 
             LogUnobservedTaskExceptions();
 
@@ -83,24 +80,30 @@ namespace Covid19Radar
 
             if (userDataService.IsExistUserData)
             {
-                result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
+                var userData = userDataService.Get();
+                if (userData.IsWelcomed)
+                {
+                    if (userData.IsExposureNotificationEnabled)
+                    {
+                        /*
+                        if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                        {
+                            await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
+                        }
+                        */
+                    }
+                    result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                }
+                else
+                {
+                    result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
+                }
             }
             else
             {
-                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
             }
-            /*
-                        if (userDataService.IsExistUserData)
-                        {
-                            UserDataModel _userData = userDataService.Get();
-                            result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-                        }
-                        else
-                        {
-                            //result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
-                            result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-                        }
-            */
+
             if (!result.Success)
             {
                 MainPage = new ExceptionPage
