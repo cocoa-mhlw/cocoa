@@ -416,6 +416,12 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>提出</value>
   </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>サンプルテキスト</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>サンプルテキスト</value>
+  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>アプリの設定</value>
     <comment>SettingsPage Title</comment>
