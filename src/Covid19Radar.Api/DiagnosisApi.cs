@@ -76,7 +76,7 @@ namespace Covid19Radar.Api
             var keys = diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray();
 
             await DiagnosisRepository.SubmitDiagnosisAsync(
-                diagnosis.SubmissionNumber,
+                diagnosis.VerificationPayload,
                 timestamp,
                 diagnosis.UserUuid,
                 keys);
