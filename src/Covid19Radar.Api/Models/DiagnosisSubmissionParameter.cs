@@ -9,8 +9,6 @@ namespace Covid19Radar.Api.Models
 {
 	public class DiagnosisSubmissionParameter : IUser, IPayload
 	{
-		[JsonProperty("submissionNumber")]
-		public string SubmissionNumber { get; set; }
 		[JsonProperty("userUuid")]
 		public string UserUuid { get; set; }
         [JsonProperty("keys")]
@@ -23,8 +21,14 @@ namespace Covid19Radar.Api.Models
 		public string DeviceVerificationPayload { get; set; }
 		[JsonProperty("appPackageName")]
 		public string AppPackageName { get; set; }
+		// Some signature / code confirming authorization by the verification authority.
+		[JsonProperty("verificationPayload")]
+		public string VerificationPayload { get; set; }
+		// Random data to obscure the size of the request network packet sniffers.
+		[JsonProperty("padding")]
+		public string Padding { get; set; }
 
-        public class Key
+		public class Key
 		{
 			[JsonProperty("keyData")]
 			public string KeyData { get; set; }
@@ -65,7 +69,7 @@ namespace Covid19Radar.Api.Models
 		/// <returns>true if valid</returns>
 		public bool IsValid()
 		{
-			if (string.IsNullOrWhiteSpace(SubmissionNumber)) return false;
+			if (string.IsNullOrWhiteSpace(VerificationPayload)) return false;
 			if (string.IsNullOrWhiteSpace(UserUuid)) return false;
 			if (string.IsNullOrWhiteSpace(Region)) return false;
 			if (string.IsNullOrWhiteSpace(Platform)) return false;
