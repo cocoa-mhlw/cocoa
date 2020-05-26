@@ -416,4 +416,50 @@
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>‏‏جمع کریں</value>
   </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>سامپلیٹاٹ</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>سامپلیٹاٹ</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>سیٹنگیں</value>
+    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>متفق نہیں</value>
+    <comment>Not Agree</comment>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>منسوخ کریں</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>کیا آپ نوٹیفکیشنز کو آن کرنا چاہتے ہیں ؟</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>پھر سيٹ کريں</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>کو چالو کرنے</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>حذف کر رہا ہے</value>
+    <comment>Deleting</comment>
+  </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
+  <data name="HomePageSubtitle2" xml:space="preserve">
+    <value>ایپ کا اشتراک کریں</value>
+    <comment>Home page subtitle 2</comment>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>حصہ داری کریں</value>
+    <comment>Share</comment>
+  </data>
 </root>
