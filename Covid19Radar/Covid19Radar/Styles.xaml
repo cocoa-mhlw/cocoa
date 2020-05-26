@@ -85,7 +85,7 @@
         <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="CornerRadius" Value="50" />
         <Setter Property="Scale" Value="0.8" />
         <Style.Triggers>
             <Trigger TargetType="Button" Property="IsEnabled" Value="True">
@@ -96,6 +96,36 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style x:Key="DefaultButtonGrayout" TargetType="Button">
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="Scale" Value="0.8" />
+        <Style.Triggers>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
+            </Trigger>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="DefaultToggleButton" TargetType="controls:ToggleButton">
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Scale" Value="0.8" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="CornerRadius" Value="50" />
+    </Style>
+
 
     <Style x:Key="DefaultGradientButton" TargetType="controls:GradientButton">
         <Setter Property="FontSize" Value="Medium" />
@@ -120,7 +150,6 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
 
     <Style x:Key="DefaultGradientButtonGrayout" TargetType="controls:GradientButton">
         <Setter Property="FontSize" Value="Medium" />

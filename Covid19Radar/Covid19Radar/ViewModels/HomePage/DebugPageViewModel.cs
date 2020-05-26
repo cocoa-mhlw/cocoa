@@ -39,6 +39,7 @@ namespace Covid19Radar.ViewModels
         public string CurrentBatchFileIndex
             => string.Join(", ", userData.ServerBatchNumbers.Select(p => $"{p.Key}={p.Value}"));
 
+
         public Command ResetSelfDiagnosis
             => new Command(async () =>
             {
@@ -52,7 +53,6 @@ namespace Covid19Radar.ViewModels
             => new Command(async () =>
             {
                 await Device.InvokeOnMainThreadAsync(() => userData.ExposureInformation.Clear());
-
                 userData.ExposureSummary = null;
                 await userDataService.SetAsync(userData);
                 await UserDialogs.Instance.AlertAsync("Exposures Cleared!");
@@ -87,9 +87,10 @@ namespace Covid19Radar.ViewModels
                 using (UserDialogs.Instance.Loading(string.Empty))
                 {
                     if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                    {
                         await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
-
-                    userData.LastIsEnabled = false;
+                    }
+                    userData.IsExposureNotificationEnabled = false;
                     await userDataService.SetAsync(userData);
                 }
                 await UserDialogs.Instance.AlertAsync("Last known enabled state reset!");
