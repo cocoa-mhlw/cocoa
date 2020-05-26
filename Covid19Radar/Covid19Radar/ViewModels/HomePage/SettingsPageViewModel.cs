@@ -72,29 +72,32 @@ namespace Covid19Radar.ViewModels
             userData = this.userDataService.Get();
             this.userDataService.UserDataChanged += _userDataChanged;
 
-            EnableExposureNotification = userData.LastIsEnabled;
-            EnableLocalNotification = userData.EnableNotifications;
+            EnableExposureNotification = userData.IsExposureNotificationEnabled;
+            EnableLocalNotification = userData.IsNotificationEnabled;
         }
 
         private void _userDataChanged(object sender, UserDataModel e)
         {
             userData = this.userDataService.Get();
+            EnableExposureNotification = userData.IsExposureNotificationEnabled;
+            EnableLocalNotification = userData.IsNotificationEnabled;
         }
 
-
-        // Switch Behevior
         public ICommand OnChangeEnableExposureNotification => new Command(async () =>
         {
-            await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
+            userData.IsExposureNotificationEnabled = !EnableExposureNotification;
+            await userDataService.SetAsync(userData);
         });
 
         public ICommand OnChangeEnableNotification => new Command(async () =>
         {
-            await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
+            userData.IsNotificationEnabled = !EnableLocalNotification;
+            await userDataService.SetAsync(userData);
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
+
             var check = await UserDialogs.Instance.ConfirmAsync(
                 "本当にすべてのデータをリセットしますか?",
                 "データの全削除",
@@ -129,10 +132,12 @@ namespace Covid19Radar.ViewModels
 
         public Command OnSaveClick => new Command(async () =>
         {
+            /*
             userData.LastIsEnabled = EnableExposureNotification;
             userData.EnableNotifications = EnableLocalNotification;
             await userDataService.SetAsync(userData);
             await UserDialogs.Instance.AlertAsync("設定を保存しました。");
+            */
         });
 
 

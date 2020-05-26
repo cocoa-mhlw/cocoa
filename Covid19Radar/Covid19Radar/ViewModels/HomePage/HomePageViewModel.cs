@@ -46,10 +46,10 @@ namespace Covid19Radar.ViewModels
 
         public bool EnableNotifications
         {
-            get => userData.EnableNotifications;
+            get => userData.IsNotificationEnabled;
             set
             {
-                userData.EnableNotifications = value;
+                userData.IsNotificationEnabled = value;
                 userDataService.SetAsync(userData);
             }
         }

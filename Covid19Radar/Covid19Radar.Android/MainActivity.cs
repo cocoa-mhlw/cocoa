@@ -32,8 +32,6 @@ namespace Covid19Radar.Droid
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
 
-            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
-
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -85,6 +83,13 @@ namespace Covid19Radar.Droid
 
                 RequestPermissions(permissions, 0);
             }
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
         }
 
         protected override void OnNewIntent(Intent intent)

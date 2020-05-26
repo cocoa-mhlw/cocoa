@@ -48,9 +48,14 @@ namespace Covid19Radar.Services
                 var result = await Post(url, content);
                 if (result != null)
                 {
-                    var userData = Utils.DeserializeFromJson<UserDataModel>(result);
-                    secret = userData.Secret;
-                    Application.Current.Properties["Secret"] = secret;
+                    var registerResult = Utils.DeserializeFromJson<RegisterResultModel>(result);
+
+                    UserDataModel userData = new UserDataModel();
+                    userData.Secret = registerResult.Secret;
+                    userData.UserUuid = registerResult.UserUuid;
+                    userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
+                    userData.IsWelcomed = true;
+                    Application.Current.Properties["Secret"] = registerResult.Secret;
                     await Application.Current.SavePropertiesAsync();
                     SetSecret();
                     return userData;
