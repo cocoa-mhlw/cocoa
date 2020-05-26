@@ -462,4 +462,8 @@
     <value>Поділитися</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Обмін позитивною інформацією та анонімними сповіщеннями інших користувачів</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

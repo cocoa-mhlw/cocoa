@@ -462,4 +462,8 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Del</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Deling af positive oplysninger og anonym underretning til andre</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

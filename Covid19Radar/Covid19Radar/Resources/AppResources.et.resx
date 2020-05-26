@@ -462,4 +462,8 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
     <value>Anna ühiskasutusse</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Positiivse teabe ja anonüümse teavitamise jagamine teistele</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

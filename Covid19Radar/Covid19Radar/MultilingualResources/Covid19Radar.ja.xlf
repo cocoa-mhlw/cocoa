@@ -573,8 +573,13 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
-          <target state="translated">共有</target>
+          <target state="translated">共有する</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
+        </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="translated">陽性情報の登録と他者への匿名通知へ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
       </group>
     </body>
