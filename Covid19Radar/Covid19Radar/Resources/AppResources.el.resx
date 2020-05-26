@@ -462,4 +462,8 @@
     <value>Κοινή χρήση</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Κοινή χρήση θετικών πληροφοριών και ανώνυμης ειδοποίησης σε άλλους</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

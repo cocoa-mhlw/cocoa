@@ -462,4 +462,8 @@
     <value>सामायिक करा</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>इतरांना सकारात्मक माहिती आणि निनावी सूचना देणे</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

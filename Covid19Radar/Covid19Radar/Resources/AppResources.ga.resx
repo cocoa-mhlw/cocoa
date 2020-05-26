@@ -462,4 +462,8 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
     <value>Comhroinn</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Faisnéis dhearfach agus fógra gan ainm a roinnt le daoine eile</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

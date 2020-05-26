@@ -462,4 +462,8 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
     <value>Bagikan</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Berbagi informasi positif dan pemberitahuan anonim kepada orang lain</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>
