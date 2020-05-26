@@ -44,7 +44,7 @@
             <ce:GradientButton
                 Grid.Row="0"
                 Grid.Column="0"
-                AutomationId="NextButton"
+                AutomationId="ButtonNotAgree"
                 Command="{Binding Path=OnClickNotAgree}"
                 Style="{StaticResource DefaultGradientButtonGrayout}"
                 Text="{x:Static resources:AppResources.ButtonNotAgree}" />
@@ -52,7 +52,7 @@
             <ce:GradientButton
                 Grid.Row="0"
                 Grid.Column="1"
-                AutomationId="NextButton"
+                AutomationId="ButtonAgree"
                 Command="{Binding Path=OnClickAgree}"
                 Style="{StaticResource DefaultGradientButton}"
                 Text="{x:Static resources:AppResources.ButtonAgree}" />
