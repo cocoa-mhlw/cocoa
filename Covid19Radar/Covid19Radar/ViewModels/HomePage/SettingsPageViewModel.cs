@@ -79,23 +79,25 @@ namespace Covid19Radar.ViewModels
         private void _userDataChanged(object sender, UserDataModel e)
         {
             userData = this.userDataService.Get();
+            EnableExposureNotification = userData.IsExposureNotificationEnabled;
+            EnableLocalNotification = userData.IsNotificationEnabled;
         }
 
-
-        // Switch Behevior
         public ICommand OnChangeEnableExposureNotification => new Command(async () =>
         {
-            //await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
+            userData.IsExposureNotificationEnabled = !EnableExposureNotification;
+            await userDataService.SetAsync(userData);
         });
 
         public ICommand OnChangeEnableNotification => new Command(async () =>
         {
-            //await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
+            userData.IsNotificationEnabled = !EnableLocalNotification;
+            await userDataService.SetAsync(userData);
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
-            /*
+
             var check = await UserDialogs.Instance.ConfirmAsync(
                 "本当にすべてのデータをリセットしますか?",
                 "データの全削除",
@@ -125,7 +127,6 @@ namespace Covid19Radar.ViewModels
                 return;
 
             }
-            */
         });
 
 
