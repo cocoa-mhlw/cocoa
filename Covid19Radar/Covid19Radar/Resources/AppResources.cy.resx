@@ -462,4 +462,8 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Rhannu</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Rhannu gwybodaeth gadarnhaol a hysbysu pobl eraill yn ddienw</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

@@ -459,7 +459,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
-    <value>共有</value>
+    <value>共有する</value>
     <comment>Share</comment>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>陽性情報の登録と他者への匿名通知へ</value>
+    <comment>Button NotifyOtherPage</comment>
   </data>
 </root>

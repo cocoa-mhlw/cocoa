@@ -462,4 +462,8 @@ SMS를 확인하십시오.</value>
     <value>공유</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>타인에게 긍정적인 정보와 익명 알림 공유</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

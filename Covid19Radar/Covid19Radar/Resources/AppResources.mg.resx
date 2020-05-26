@@ -462,4 +462,8 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Hizara</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Mizara fampahalalana tsara sy tsy fampilazana amin' ny hafa</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

@@ -462,4 +462,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Share</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Sharing positive information and anonymous notification to others</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

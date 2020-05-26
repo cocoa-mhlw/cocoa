@@ -462,4 +462,8 @@
     <value>Общий доступ</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Обмен положительной информацией и анонимным уведомлением другим лицам</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

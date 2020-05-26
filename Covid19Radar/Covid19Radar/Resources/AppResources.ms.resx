@@ -461,4 +461,8 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
     <value>Kongsi</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Berkongsi maklumat positif dan pemberitahuan tanpa nama kepada orang lain</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

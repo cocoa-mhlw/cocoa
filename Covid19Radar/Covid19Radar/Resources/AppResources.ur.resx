@@ -462,4 +462,8 @@
     <value>حصہ داری کریں</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>دوسروں کو مثبت معلومات اور گمنام اطلاع کا اشتراک کرنا</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

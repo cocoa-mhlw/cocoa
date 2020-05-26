@@ -462,4 +462,8 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
     <value>Kopīgot</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Pozitīvas informācijas un anonīma paziņojuma koplietošana citiem</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>
