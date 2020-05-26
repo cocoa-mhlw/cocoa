@@ -48,9 +48,12 @@ namespace Covid19Radar.Api.Services
 
         [ThreadStatic]
         static byte[] bufHash;
+        [ThreadStatic]
+        static byte[] bufHash2;
         private void InitBufHash()
         {
             if (bufHash == null) { bufHash = new byte[64]; }
+            if (bufHash2 == null) { bufHash2 = new byte[64]; }
         }
 
         [ThreadStatic]
@@ -60,20 +63,26 @@ namespace Covid19Radar.Api.Services
             if (bufInput == null) { bufInput = new byte[2048]; }
         }
 
-        private byte[] Random()
+        private ValueTuple<byte[], byte[]> Random()
         {
-            byte[] r = new byte[Length];
-            RNGCryptoServiceProvider.Fill(r);
-            return r;
+            var range = RNGCryptoServiceProvider.GetInt32(128, Length);
+            byte[] r1 = new byte[range];
+            byte[] r2 = new byte[Length - range];
+            RNGCryptoServiceProvider.Fill(r1);
+            RNGCryptoServiceProvider.Fill(r2);
+            return ValueTuple.Create(r1, r2);
         }
 
         public string CreateSecret(string userUuid)
         {
-            var val = Random().Concat(Encoding.UTF8.GetBytes(userUuid)).ToArray();
-            int hashSize;
+            var userUuidBytes = Encoding.UTF8.GetBytes(userUuid);
             InitBufHash();
-            createHash().TryComputeHash(val, bufHash, out hashSize);
-            var secret = val.Concat(bufHash).ToArray();
+            int hashSize;
+            createHash().TryComputeHash(userUuidBytes, bufHash, out hashSize);
+            var randoms = Random();
+            var val = randoms.Item1.Concat(bufHash).Concat(randoms.Item2).ToArray();
+            createHash().TryComputeHash(val, bufHash2, out hashSize);
+            var secret = val.Concat(bufHash2).ToArray();
             using (var c = symmetric2.CreateEncryptor())
             {
                 return Convert.ToBase64String(c.TransformFinalBlock(secret, 0, secret.Length));
@@ -91,14 +100,19 @@ namespace Covid19Radar.Api.Services
             using (var c = symmetric2.CreateDecryptor())
             {
                 var result = c.TransformFinalBlock(bufInput, 0, bufInputLength);
-                if (userUuid != Encoding.UTF8.GetString(result, Length, result.Length - Length - 64))
-                {
-                    return false;
-                }
-                int hashSize;
+                var userUuidBytes = Encoding.UTF8.GetBytes(userUuid);
                 InitBufHash();
-                createHash().TryComputeHash(result.AsSpan(0, result.Length - 64), bufHash, out hashSize);
-                return bufHash.SequenceEqual(result.Skip(result.Length - 64).Take(64));
+                int hashSize;
+                createHash().TryComputeHash(userUuidBytes, bufHash, out hashSize);
+                for (var i = Length; i >= 0; i--)
+                {
+                    if (result.Skip(i).SkipLast(64 + (Length - i)).SequenceEqual(bufHash))
+                    {
+                        createHash().TryComputeHash(result.AsSpan(0, result.Length - 64), bufHash2, out hashSize);
+                        return bufHash2.SequenceEqual(result.Skip(result.Length - 64).Take(64));
+                    }
+                }
+                return false;
             }
         }
 
