@@ -35,7 +35,9 @@ namespace Covid19Radar.Services
         {
             this.httpDataService = httpDataService;
 //            this.navigationService = navigationService;
+
             current = Get();
+            /*
             if (current != null)
             {
                 // User does't have secret
@@ -45,6 +47,7 @@ namespace Covid19Radar.Services
                 }
                 StartTimer();
             }
+*/
         }
 
         private async void OnLocalNotificationTaped(object sender, EventArgs e)
@@ -52,7 +55,7 @@ namespace Covid19Radar.Services
             // TODO  FIX Navigation
             //await navigationService.NavigateAsync("NavigationPage/MainPage");
         }
-
+        /*
         private void StartTimer()
         {
             _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
@@ -104,6 +107,7 @@ namespace Covid19Radar.Services
             }
 
         }
+        */
 
         public bool IsExistUserData { get => current != null; }
 
@@ -129,7 +133,7 @@ namespace Covid19Radar.Services
 
         public async Task SetAsync(UserDataModel userData)
         {
-            if (userData.Equals(current))
+            if (Equals(userData, current))
             {
                 return;
             }
@@ -138,15 +142,19 @@ namespace Covid19Radar.Services
             {
                 userData.Secret = current.Secret;
             }
+
+            current = userData;
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(current);
             await Application.Current.SavePropertiesAsync();
-            current = userData;
+
             UserDataChanged?.Invoke(this, current);
             // only first time.
+            /*
             if (isNull && userData != null)
             {
                 StartTimer();
             }
+            */
         }
     }
 

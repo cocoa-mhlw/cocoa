@@ -32,8 +32,6 @@ namespace Covid19Radar.Droid
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
 
-            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
-
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

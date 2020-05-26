@@ -19,22 +19,15 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.TitleDeviceAccess;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
-            this.userDataService.UserDataChanged += _userDataChanged;
-
         }
 
-        private void _userDataChanged(object sender, UserDataModel e)
+         public Command OnClickNotNow => new Command(async () =>
         {
-            userData = this.userDataService.Get();
-        }
-
-
-        public Command OnClickNotNow => new Command(async () =>
-        {
-            userData.LastIsEnabled = false;
+            userData.IsExposureNotificationEnabled = false;
             await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(SetupCompletedPage));
         });
+
         public Command OnClickEnable => new Command(async () =>
         {
             var check = await UserDialogs.Instance.ConfirmAsync(
@@ -50,10 +43,10 @@ namespace Covid19Radar.ViewModels
 
             UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextEnabling);
 
-            userData.LastIsEnabled = true;
+            userData.IsExposureNotificationEnabled = true;
             await userDataService.SetAsync(userData);
 
-            if (userData.LastIsEnabled && userData.IsWelcomed)
+            if (userData.IsExposureNotificationEnabled && userData.IsWelcomed)
             {
                 if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 {

@@ -57,11 +57,11 @@ namespace Covid19Radar.Model
         // From Xamarin.EN LocalState Class
         public static readonly Dictionary<string, ulong> DefaultServerBatchNumbers = new Dictionary<string, ulong> { { "ZA", 0 }, { "CA", 0 } };
 
-        public bool IsWelcomed { get; set; }
+        public bool IsWelcomed { get; set; } = false;
 
-        public bool LastIsEnabled { get; set; } = false;
+        public bool IsExposureNotificationEnabled { get; set; } = false;
 
-        public bool EnableNotifications { get; set; } = true;
+        public bool IsNotificationEnabled { get; set; } = true;
         public long ServerLastTime { get; set; } = 0;
         public string Region { get; set; } = AppConstants.DefaultRegion;
 
