@@ -34,21 +34,10 @@ namespace Covid19Radar.ViewModels
 
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
-            this.userDataService.UserDataChanged += _userDataChanged;
-
-        }
-        private void _userDataChanged(object sender, UserDataModel e)
-        {
-            userData = this.userDataService.Get();
         }
 
         public Command OnClickAgree => new Command(async () =>
         {
-            if (!userData.IsWelcomed)
-            {
-                userData.IsWelcomed = true;
-                await userDataService.SetAsync(userData);
-            }
 
             UserDialogs.Instance.ShowLoading("Waiting for register");
             if (!userDataService.IsExistUserData)
