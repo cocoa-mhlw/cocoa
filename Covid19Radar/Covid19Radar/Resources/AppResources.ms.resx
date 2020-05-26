@@ -415,4 +415,50 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Hantar</value>
   </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>SampleText</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>SampleText</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Seting</value>
+    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Tidak bersetuju</value>
+    <comment>Not Agree</comment>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>Batal</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>Adakah awda mahu memasang pemberitahuan?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Set Semula</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Membolehkan</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Memadamkan</value>
+    <comment>Deleting</comment>
+  </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>Jika anda menerima diagnosis yang positif</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
+  <data name="HomePageSubtitle2" xml:space="preserve">
+    <value>Berkongsi apl</value>
+    <comment>Home page subtitle 2</comment>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Kongsi</value>
+    <comment>Share</comment>
+  </data>
 </root>
