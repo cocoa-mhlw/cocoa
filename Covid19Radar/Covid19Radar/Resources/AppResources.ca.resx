@@ -462,4 +462,8 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
     <value>Comparteix</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Compartir informació positiva i notificació anònima als altres</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

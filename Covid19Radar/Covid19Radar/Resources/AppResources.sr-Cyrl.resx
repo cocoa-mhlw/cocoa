@@ -462,4 +462,8 @@
     <value>Дели</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Дељење позитивних информација и анонимних обавештења другима</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

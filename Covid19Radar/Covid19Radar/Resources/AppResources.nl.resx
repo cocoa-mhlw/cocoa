@@ -462,4 +462,8 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
     <value>Delen</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Het delen van positieve informatie en anonieme kennisgeving aan anderen</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

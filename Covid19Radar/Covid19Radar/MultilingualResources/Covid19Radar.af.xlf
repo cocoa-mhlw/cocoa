@@ -577,6 +577,11 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Deel</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deel positiewe inligting en anonieme kennisgewing aan ander</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>

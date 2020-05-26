@@ -462,4 +462,8 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Dela</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Dela positiv information och anonym anmälan till andra</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

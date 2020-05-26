@@ -462,4 +462,8 @@
     <value>শেয়ার করুন</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>অন্যদের কাছে ইতিবাচক তথ্য এবং বেনামী নোটিফিকেশন শেয়ার করা</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

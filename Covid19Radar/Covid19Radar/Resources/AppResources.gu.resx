@@ -462,4 +462,8 @@
     <value>સહિયારું કરો</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>હકારાત્મક માહિતી અને અનામી સૂચનાબીજાને વહેંચવી</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

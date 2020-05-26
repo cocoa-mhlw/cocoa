@@ -462,4 +462,8 @@ Prosimo, preverite SMS.</value>
     <value>Skupna raba</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Deljenje pozitivnih informacij in anonimnih obvestil drugim</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

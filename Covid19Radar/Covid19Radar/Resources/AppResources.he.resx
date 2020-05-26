@@ -462,4 +462,8 @@
     <value>שתף</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>שיתוף מידע חיובי והודעה אנונימית לאחרים</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

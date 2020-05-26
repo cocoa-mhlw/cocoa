@@ -578,6 +578,11 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Delen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Het delen van positieve informatie en anonieme kennisgeving aan anderen</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>
