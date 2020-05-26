@@ -461,4 +461,8 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
     <value>Chia sẻ</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Chia sẻ thông tin tích cực và thông báo ẩn danh cho người khác</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

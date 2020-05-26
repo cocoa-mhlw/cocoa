@@ -128,7 +128,7 @@
                     AutomationId="ButtonNotifyOther"
                     Command="{Binding Path=OnClickNotifyOther}"
                     Style="{StaticResource DefaultGradientButton}"
-                    Text="陽性情報の共有と他者への匿名通知へ" />
+                    Text="{x:Static resources:AppResources.ButtonNotifyOtherPage}" />
             </StackLayout>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
             <StackLayout Margin="0,0,0,0" Spacing="0">

@@ -462,4 +462,8 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
     <value>Deli</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Deljenje pozitivnih informacija i anonimnih obaveštenja drugima</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>
