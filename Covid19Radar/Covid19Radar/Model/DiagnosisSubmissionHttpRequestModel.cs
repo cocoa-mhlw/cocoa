@@ -27,18 +27,18 @@ namespace Covid19Radar.Model
             [JsonProperty("keyData")]
             public string KeyData { get; set; }
             [JsonProperty("rollingStartNumber")]
-            public uint RollingStartNumber { get; set; }
+            public long RollingStart  { get; set; }
             [JsonProperty("rollingPeriod ")]
-            public uint RollingPeriod { get; set; }
+            public int RollingDuration  { get; set; }
             [JsonProperty("transmissionRisk")]
             public int TransmissionRisk { get; set; }
             public static Key FromTemporaryExposureKey(TemporaryExposureKey key)
             {
                 return new Key()
                 {
-                    KeyData = Convert.ToBase64String(key.KeyData),
-                    RollingStartNumber = (uint)(key.RollingStart.ToUnixTimeSeconds() / 60 / 10),
-                    RollingPeriod = (uint)(key.RollingDuration.TotalSeconds / 60 / 10),
+                    KeyData = Convert.ToBase64String(key.Key),
+                    RollingStart  = (long)(key.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
+                    RollingDuration = (int)(key.RollingDuration.TotalMinutes / 10),
                     TransmissionRisk = (int)key.TransmissionRiskLevel
                 };
             }
