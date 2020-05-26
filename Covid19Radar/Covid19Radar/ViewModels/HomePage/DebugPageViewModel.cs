@@ -89,7 +89,7 @@ namespace Covid19Radar.ViewModels
                     if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                         await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
 
-                    userData.LastIsEnabled = false;
+                    userData.IsExposureNotificationEnabled = false;
                     await userDataService.SetAsync(userData);
                 }
                 await UserDialogs.Instance.AlertAsync("Last known enabled state reset!");

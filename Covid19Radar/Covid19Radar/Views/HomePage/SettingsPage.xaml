@@ -10,11 +10,12 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="{Binding Title}"
+    Title="設定"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
@@ -46,6 +47,8 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+                <!--
+
                 <Label Grid.Row="0" Grid.Column="0">
                     <Label.FormattedText>
                         <FormattedString>
@@ -133,7 +136,6 @@
                     Grid.Row="5"
                     Grid.ColumnSpan="3"
                     Style="{StaticResource DefaultLineStyle}" />
-
                 <Label Grid.Row="6" Grid.Column="0">
                     <Label.FormattedText>
                         <FormattedString>
@@ -156,23 +158,15 @@
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
                     AutomationId="Reset"
-                    Command="{Binding Path=OnChangeResetData}"
+                    Command="{Binding OnChangeResetData}"
                     Scale="0.8"
                     Style="{StaticResource DefaultGradientButton}"
-                    Text="{x:Static resources:AppResources.ButtonReset}" />
-                <!--
-                <Switch
-                    Grid.Row="6"
-                    Grid.Column="1"
-                    IsToggled="{Binding ResetData, Mode=TwoWay}">
-                    <Switch.Behaviors>
-                        <Behavior:SwitchBehavior Command="{Binding OnChangeResetData}" />
-                    </Switch.Behaviors>
-                </Switch>-->
+                    Text="リセット" />
                 <BoxView
                     Grid.Row="7"
                     Grid.ColumnSpan="3"
                     Style="{StaticResource DefaultLineStyle}" />
+                -->
             </Grid>
         </Grid>
     </ScrollView>
