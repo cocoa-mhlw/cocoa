@@ -10,12 +10,11 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="設定"
+    Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
@@ -30,12 +29,12 @@
                 Text="{Binding Title}" />
             <Grid
                 Grid.Row="1"
-                HorizontalOptions="Center"
+                HorizontalOptions="FillAndExpand"
                 RowSpacing="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.3*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -47,8 +46,6 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <!--
-
                 <Label Grid.Row="0" Grid.Column="0">
                     <Label.FormattedText>
                         <FormattedString>
@@ -70,7 +67,7 @@
                     Grid.Row="0"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
-                    HorizontalOptions="End"
+                    HorizontalOptions="Center"
                     Style="{StaticResource DefaultLabelSmall}"
                     Text="{Binding AppVer}"
                     VerticalOptions="Center" />
@@ -95,14 +92,32 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Switch
+                <ce:ToggleButton
                     Grid.Row="2"
                     Grid.Column="1"
-                    IsToggled="{Binding EnableExposureNotification, Mode=TwoWay}">
-                    <Switch.Behaviors>
-                        <Behavior:SwitchBehavior Command="{Binding OnChangeEnableExposureNotification}" />
-                    </Switch.Behaviors>
-                </Switch>
+                    Grid.ColumnSpan="2"
+                    Command="{Binding OnChangeEnableNotification}"
+                    IsToggled="{Binding EnableLocalNotification}"
+                    Style="{StaticResource DefaultToggleButton}">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="ToggleStates">
+                            <VisualState Name="ToggledOn">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="On" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="ToggledOff">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="Off" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
+                                    <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ce:ToggleButton>
                 <BoxView
                     Grid.Row="3"
                     Grid.ColumnSpan="3"
@@ -124,14 +139,32 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Switch
+                <ce:ToggleButton
                     Grid.Row="4"
                     Grid.Column="1"
-                    IsToggled="{Binding EnableLocalNotification, Mode=TwoWay}">
-                    <Switch.Behaviors>
-                        <Behavior:SwitchBehavior Command="{Binding OnChangeEnableNotification}" />
-                    </Switch.Behaviors>
-                </Switch>
+                    Grid.ColumnSpan="2"
+                    Command="{Binding OnChangeEnableExposureNotification}"
+                    IsToggled="{Binding EnableExposureNotification}"
+                    Style="{StaticResource DefaultToggleButton}">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="ToggleStates">
+                            <VisualState Name="ToggledOn">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="On" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState Name="ToggledOff">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="Off" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
+                                    <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ce:ToggleButton>
                 <BoxView
                     Grid.Row="5"
                     Grid.ColumnSpan="3"
@@ -153,20 +186,17 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ce:GradientButton
+                <Button
                     Grid.Row="6"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
-                    AutomationId="Reset"
                     Command="{Binding OnChangeResetData}"
-                    Scale="0.8"
-                    Style="{StaticResource DefaultGradientButton}"
-                    Text="リセット" />
+                    Style="{StaticResource DefaultButtonGrayout}"
+                    Text="Reset" />
                 <BoxView
                     Grid.Row="7"
                     Grid.ColumnSpan="3"
                     Style="{StaticResource DefaultLineStyle}" />
-                -->
             </Grid>
         </Grid>
     </ScrollView>
