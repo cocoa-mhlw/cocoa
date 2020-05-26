@@ -23,9 +23,9 @@ namespace Covid19Radar.Api.DataAccess
             _logger = logger;
         }
 
-        public async Task Delete(IUser user)
+        public async Task DeleteAsync(IUser user)
         {
-            _logger.LogInformation($"start {nameof(Delete)}");
+            _logger.LogInformation($"start {nameof(DeleteAsync)}");
             await _db.Diagnosis.DeleteItemAsync<DiagnosisModel>(user.GetId(), PartitionKey.None);
         }
 
@@ -39,9 +39,8 @@ namespace Covid19Radar.Api.DataAccess
         public async Task<DiagnosisModel[]> GetNotApprovedAsync()
         {
             _logger.LogInformation($"start {nameof(GetNotApprovedAsync)}");
-            var query = _db.Diagnosis.GetItemLinqQueryable<DiagnosisModel>()
-                   .Where(_ => _.Approved == false)
-                   .ToFeedIterator();
+            var q = new QueryDefinition("SELECT * FROM c WHERE c.Approved == false");
+            var query = _db.Diagnosis.GetItemQueryIterator<DiagnosisModel>(q);
             var e = Enumerable.Empty<DiagnosisModel>();
             while (query.HasMoreResults)
             {
@@ -52,7 +51,7 @@ namespace Covid19Radar.Api.DataAccess
             return e.ToArray();
         }
 
-        public Task SubmitDiagnosisAsync(string SubmissionNumber, DateTimeOffset timestamp, string UserUuid, TemporaryExposureKeyModel[] Keys)
+        public async Task<DiagnosisModel> SubmitDiagnosisAsync(string SubmissionNumber, DateTimeOffset timestamp, string UserUuid, TemporaryExposureKeyModel[] Keys)
         {
             _logger.LogInformation($"start {nameof(SubmitDiagnosisAsync)}");
             var item = new DiagnosisModel()
@@ -65,7 +64,7 @@ namespace Covid19Radar.Api.DataAccess
                 Keys = Keys
             };
 
-            return _db.Diagnosis.UpsertItemAsync<DiagnosisModel>(item);
+            return (await _db.Diagnosis.UpsertItemAsync<DiagnosisModel>(item)).Resource;
         }
     }
 }

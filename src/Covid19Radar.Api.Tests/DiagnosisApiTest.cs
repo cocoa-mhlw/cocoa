@@ -49,7 +49,7 @@ namespace Covid19Radar.Api.Tests
                                                             It.IsAny<DateTimeOffset>(),
                                                             It.IsAny<string>(),
                                                             It.IsAny<TemporaryExposureKeyModel[]>()))
-                .Returns(Task.CompletedTask);
+                .ReturnsAsync(new DiagnosisModel());
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
             var validationResult = new IValidationUserService.ValidateResult()
