@@ -70,9 +70,9 @@
                     <!--  Button Control  -->
 
                     <Button
-                        AutomationId="ButtonExposures"
                         Grid.Column="0"
                         Grid.ColumnSpan="3"
+                        AutomationId="ButtonExposures"
                         Command="{Binding Path=OnClickExposures}"
                         Style="{StaticResource CustomButtonStyle}" />
 
