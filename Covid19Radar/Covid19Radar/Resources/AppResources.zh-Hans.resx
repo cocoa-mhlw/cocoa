@@ -462,4 +462,8 @@
     <value>共享</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>与他人共享积极信息和匿名通知</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

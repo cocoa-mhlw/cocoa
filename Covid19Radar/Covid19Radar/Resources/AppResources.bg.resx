@@ -462,4 +462,8 @@
     <value>Споделяне</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Споделяне на положителна информация и анонимно уведомяване на други лица</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

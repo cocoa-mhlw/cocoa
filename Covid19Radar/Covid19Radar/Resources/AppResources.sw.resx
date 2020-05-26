@@ -462,4 +462,8 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
     <value>Shiriki</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Kushiriki taarifa nzuri na arifa isiyojulikana kwa wengine</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

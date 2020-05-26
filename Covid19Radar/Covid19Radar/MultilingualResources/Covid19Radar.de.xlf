@@ -578,6 +578,11 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Freigeben</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Weitergabe positiver Informationen und anonymer Benachrichtigungen an andere</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>

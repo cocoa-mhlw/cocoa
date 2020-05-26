@@ -462,4 +462,8 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
     <value>Condividi</value>
     <comment>Share</comment>
   </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Condivisione di informazioni positive e notifica anonima ad altri</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
 </root>

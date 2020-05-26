@@ -576,6 +576,11 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Megosztás</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Share</note>
         </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozitív információk és névtelen értesítések megosztása másoknak</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
       </group>
     </body>
   </file>
