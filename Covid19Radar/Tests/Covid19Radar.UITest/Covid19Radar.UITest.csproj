@@ -41,40 +41,54 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
-    <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="Shouldly">
       <Version>3.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="SpecFlow.NUnit">
+      <Version>3.1.97</Version>
     </PackageReference>
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
       <Version>3.1.97</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-<PrivateAssets>all</PrivateAssets>
-</PackageReference>
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Xamariners.EndToEnd.Xamarin">
-      <Version>0.0.4</Version>
+      <Version>0.0.8</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppInitializer.cs" />
-    <Compile Include="Features\BaseLocalFeature.cs" />
-    <Compile Include="Features\StartTutorialPageFeature.cs" />
-    <Compile Include="Infrastructure\BaseAppInitializer.cs" />
+    <Compile Include="Features\HomePage\ContributorsList.feature.cs" />
+    <Compile Include="Features\HomePage\Home.feature.cs" />
+    <Compile Include="Features\HomePage\HomeFeature.cs" />
+    <Compile Include="Features\HomePage\ContributorsListFeature.cs" />
+    <Compile Include="Features\HomePage\LicenseAgreement.feature.cs" />
+    <Compile Include="Features\HomePage\UpdateInformation.feature.cs" />
+    <Compile Include="Features\HomePage\LicenseAgreementFeature.cs" />
+    <Compile Include="Features\HomePage\UpdateInformationFeature.cs" />
+    <Compile Include="Features\Tutorial\TutorialFeature.cs" />
     <Compile Include="NUnitAssemblyHooks.cs" />
-    <Compile Include="StartTutorialPage.feature.cs" />
-    <Compile Include="Steps\CommonSteps.cs" />
+    <Compile Include="Features\Tutorial\Tutorial.feature.cs" />
+    <Compile Include="SharedSteps\ExampleSharedSteps.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="specflow.json" />
-    <EmbeddedResource Include="testsConfiguration.json" />
-    <None Include="StartTutorialPage.feature" />
+    <EmbeddedResource Include="TestConfig.json" />
+    <None Include="App.config" />
+    <None Include="Features\HomePage\Home.feature" />
+    <None Include="Features\HomePage\ContributorsList.feature" />
+    <None Include="Features\HomePage\LicenseAgreement.feature" />
+    <None Include="Features\HomePage\UpdateInformation.feature" />
+    <None Include="Features\Tutorial\Tutorial.feature" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-
   </PropertyGroup>
 </Project>

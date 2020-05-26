@@ -15,6 +15,7 @@
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
+
   <ItemGroup>
     <Compile Remove="Behaviors\UnUsed\**" />
     <Compile Remove="Converters\UnUsed\**" />
@@ -37,6 +38,16 @@
     <None Remove="Templates\UnUsed\**" />
     <None Remove="ViewModels\UnUsed\**" />
     <None Remove="Views\UnUsed\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Resources\Fonts\fa-brands-400.otf" />
+    <None Remove="Resources\Fonts\fa-regular-400.otf" />
+    <None Remove="Resources\Fonts\fa-solid-900.otf" />
+    <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
+    <None Remove="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
+    <None Remove="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
+    <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
@@ -70,11 +81,8 @@
     <Compile Update="Icons.xaml.cs">
       <DependentUpon>Icons.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\DebugPage.xaml.cs">
-      <DependentUpon>DebugPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\HomePage\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
+      <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\UpdateInformationPage.xaml.cs">
       <DependentUpon>UpdateInformationPage.xaml</DependentUpon>
