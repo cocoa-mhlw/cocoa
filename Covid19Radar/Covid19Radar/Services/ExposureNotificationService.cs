@@ -1,10 +1,12 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Newtonsoft.Json;
 using Plugin.LocalNotification;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -18,6 +20,11 @@ namespace Covid19Radar.Services
         private readonly HttpDataService httpDataService;
         private readonly UserDataService userDataService;
         private UserDataModel userData;
+
+        const string apiUrlBase = "http://exposurenotificationfunctions.azurewebsites.net/api/";
+        const string apiUrlBlobStorageBase = "https://exposurenotifications.blob.core.windows.net/";
+        const string blobStorageContainerNamePrefix = "region-";
+        static readonly HttpClient http = new HttpClient();
 
         public ExposureNotificationService(HttpDataService httpDataService, UserDataService userDataService)
         {
@@ -42,47 +49,105 @@ namespace Covid19Radar.Services
         public Task<Configuration> GetConfigurationAsync()
     => Task.FromResult(new Configuration());
 
-       public async Task FetchExposureKeysFromServerAsync(ITemporaryExposureKeyBatches batches)
+
+        // this will be called when they keys need to be collected from the server
+        public async Task FetchExposureKeyBatchFilesFromServerAsync(Func<IEnumerable<string>, Task> submitBatches)
         {
+            // This is "default" by default
+            var rightNow = DateTimeOffset.UtcNow;
+
             try
             {
-                var downloadedFiles = new List<string>();
-
-                var resonseContentResult = await httpDataService.GetTemporaryExposureKeys(userData.ServerLastTime);
-                foreach (var key in resonseContentResult.Keys)
+                foreach (var serverRegion in userData.ServerBatchNumbers.ToArray())
                 {
-                    var tmpFile = Path.Combine(FileSystem.CacheDirectory, Guid.NewGuid().ToString() + ".zip");
-                    if (await httpDataService.GetFileAsync(key.Url, tmpFile))
-                    {
-                        downloadedFiles.Add(tmpFile);
-                    }
-                }
+                    // Find next directory to start checking
+                    var dirNumber = serverRegion.Value + 1;
 
-                // process the current directory, if there were any
-                if (downloadedFiles.Count > 0)
-                {
-                    // TODO: waiting release new nuget package
-                    //await submitBatches(downloadedFiles);
-
-                    // delete all temporary files
-                    foreach (var file in downloadedFiles)
+                    // For all the directories
+                    while (true)
                     {
-                        try
+                        // Download all the files for this directory
+                        var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion.Key, dirNumber);
+                        if (batchNumber == 0)
+                            break;
+
+                        // Process the current directory, if there were any files
+                        if (downloadedFiles.Count > 0)
                         {
-                            File.Delete(file);
+                            await submitBatches(downloadedFiles);
+
+                            // delete all temporary files
+                            foreach (var file in downloadedFiles)
+                            {
+                                try
+                                {
+                                    File.Delete(file);
+                                }
+                                catch
+                                {
+                                    // no-op
+                                }
+                            }
                         }
-                        catch { }
+
+                        // Update the preferences
+                        userData.ServerBatchNumbers[serverRegion.Key] = dirNumber;
+                        await userDataService.SetAsync(userData);
+
+                        dirNumber++;
                     }
                 }
-
-                userData.ServerLastTime = resonseContentResult.Timestamp;
-                await userDataService.SetAsync(userData);
             }
             catch (Exception ex)
             {
+                // any expections, bail out and wait for the next time
+
+                // TODO: log the error on some server!
                 Console.WriteLine(ex);
             }
 
+            async Task<(int, List<string>)> DownloadBatchAsync(string region, ulong dirNumber)
+            {
+                var downloadedFiles = new List<string>();
+                var batchNumber = 0;
+
+                // For all the batches in a directory
+                while (true)
+                {
+                    // TODO Implement httpdata service
+                    // Build the blob storage url for the given batch file we are on next
+                    var url = $"{apiUrlBlobStorageBase}/{blobStorageContainerNamePrefix}{region.ToLowerInvariant()}/{dirNumber}/{batchNumber + 1}.dat";
+                    var response = await http.GetAsync(url);
+
+                    // If we get a 404, there are no newer batch files available to download
+                    if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+                        break;
+
+                    response.EnsureSuccessStatusCode();
+
+                    // Skip batch files which are older than 14 days
+                    if (response.Content.Headers.LastModified.HasValue && response.Content.Headers.LastModified < rightNow.AddDays(-14))
+                    {
+                        // If the first one is too old, the fake download it and pretend there was only one
+                        // We can do this because each batch was created at the same time
+                        batchNumber++;
+                        break;
+                    }
+
+                    var tmpFile = Path.Combine(FileSystem.CacheDirectory, Guid.NewGuid().ToString() + ".zip");
+
+                    // Read the batch file stream into a temporary file
+                    using var responseStream = await response.Content.ReadAsStreamAsync();
+                    using var fileStream = File.Create(tmpFile);
+                    await responseStream.CopyToAsync(fileStream);
+
+                    downloadedFiles.Add(tmpFile);
+
+                    batchNumber++;
+                }
+
+                return (batchNumber, downloadedFiles);
+            }
         }
 
         public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> exposureInfo)
@@ -108,9 +173,14 @@ namespace Covid19Radar.Services
             NotificationCenter.Current.Show(notification);
         }
 
+
+
+        /*
         public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
         {
-            if (userData.PendingDiagnosis == null || string.IsNullOrEmpty(userData.PendingDiagnosis.DiagnosisUid))
+            var pendingDiagnosis = userData.PendingDiagnosis;
+
+            if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
                 throw new InvalidOperationException();
 
             try
@@ -136,6 +206,60 @@ namespace Covid19Radar.Services
             catch
             {
                 throw;
+            }
+        }
+        */
+        // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
+        public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
+        {
+            var pendingDiagnosis = userData.PendingDiagnosis;
+
+            if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
+                throw new InvalidOperationException();
+
+            var selfDiag = await CreateSubmissionAsync();
+
+            var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+
+            var json = JsonConvert.SerializeObject(selfDiag);
+
+            using var http = new HttpClient();
+            var response = await http.PutAsync(url, new StringContent(json));
+
+            response.EnsureSuccessStatusCode();
+
+            // Update pending status
+            pendingDiagnosis.Shared = true;
+            await userDataService.SetAsync(userData);
+
+
+            async Task<SelfDiagnosisSubmission> CreateSubmissionAsync()
+            {
+                // Create the network keys
+                var keys = temporaryExposureKeys.Select(k => new ExposureKey
+                {
+                    Key = Convert.ToBase64String(k.Key),
+                    RollingStart = (long)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
+                    RollingDuration = (int)(k.RollingDuration.TotalMinutes / 10),
+                    TransmissionRisk = (int)k.TransmissionRiskLevel
+                });
+
+                // Create the submission
+                var submission = new SelfDiagnosisSubmission(true)
+                {
+                    AppPackageName = AppInfo.PackageName,
+                    DeviceVerificationPayload = null,
+                    Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
+                    Regions = userData.ServerBatchNumbers.Keys.ToArray(),
+                    Keys = keys.ToArray(),
+                    VerificationPayload = pendingDiagnosis.DiagnosisUid,
+                };
+
+                // See if we can add the device verification
+                if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
+                    submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
+
+                return submission;
             }
         }
         #endregion
