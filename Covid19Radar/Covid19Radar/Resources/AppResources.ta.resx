@@ -263,4 +263,8 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>பிறருக்கு சாதகமான தகவல் மற்றும் பெயரற்ற அறிவிப்பை பகிர்தல்</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>மீட்டமை</value>
+    <comment>Reset</comment>
+  </data>
 </root>

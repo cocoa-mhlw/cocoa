@@ -263,4 +263,8 @@
     <value>שיתוף מידע חיובי והודעה אנונימית לאחרים</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>איפוס</value>
+    <comment>Reset</comment>
+  </data>
 </root>

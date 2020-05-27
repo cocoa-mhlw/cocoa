@@ -263,4 +263,8 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Rhannu gwybodaeth gadarnhaol a hysbysu pobl eraill yn ddienw</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Ailosod</value>
+    <comment>Reset</comment>
+  </data>
 </root>

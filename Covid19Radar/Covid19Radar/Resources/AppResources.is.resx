@@ -263,4 +263,8 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
     <value>Miðlun jákvæðra upplýsinga og nafnlaus tilkynning til annarra</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Endurstilla</value>
+    <comment>Reset</comment>
+  </data>
 </root>

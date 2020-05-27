@@ -263,4 +263,8 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
     <value>Berkongsi maklumat positif dan pemberitahuan tanpa nama kepada orang lain</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Set Semula</value>
+    <comment>Reset</comment>
+  </data>
 </root>

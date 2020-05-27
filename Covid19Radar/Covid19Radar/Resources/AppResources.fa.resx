@@ -263,4 +263,8 @@
     <value>به اشتراک گذاری اطلاعات مثبت و اطلاع رسانی ناشناس به دیگران</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>‏‏بازنشانی</value>
+    <comment>Reset</comment>
+  </data>
 </root>
