@@ -80,22 +80,6 @@
     <value>പൂർത്തിയായി</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>കോഡ് കിട്ടിയില്ല?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>വീണ്ടും അയയ്ക്കുക</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് അപ്ഡേറ്റ് സമ്പൂർണ്ണ</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് അപ്ഡേറ്റ് സമ്പൂർണ്ണ</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>കോൺസ് ക്ടർമാർ ലിസ്റ്റ്</value>
     <comment>Contributors list page title</comment>
