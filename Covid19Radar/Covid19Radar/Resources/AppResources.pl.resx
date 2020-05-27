@@ -267,4 +267,8 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
     <value>Resetuj</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Zasady zachowania poufności informacji</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>

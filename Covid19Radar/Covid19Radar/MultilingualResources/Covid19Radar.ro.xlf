@@ -330,6 +330,11 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Reinițializare</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Politică de confidențialitate</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
       </group>
     </body>
   </file>

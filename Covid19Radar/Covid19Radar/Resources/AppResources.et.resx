@@ -267,4 +267,8 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
     <value>Lähtesta</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>privaatsuspoliitika</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>
