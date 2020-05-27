@@ -263,4 +263,8 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
     <value>Condivisione di informazioni positive e notifica anonima ad altri</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Reimposta</value>
+    <comment>Reset</comment>
+  </data>
 </root>

@@ -263,4 +263,8 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
     <value>Udostępnianie pozytywnych informacji i anonimowych powiadomień innym</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Resetuj</value>
+    <comment>Reset</comment>
+  </data>
 </root>

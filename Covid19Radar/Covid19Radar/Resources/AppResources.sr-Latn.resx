@@ -263,4 +263,8 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
     <value>Deljenje pozitivnih informacija i anonimnih obaveštenja drugima</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Poništi</value>
+    <comment>Reset</comment>
+  </data>
 </root>

@@ -263,4 +263,8 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Deling af positive oplysninger og anonym underretning til andre</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Nulstil</value>
+    <comment>Reset</comment>
+  </data>
 </root>

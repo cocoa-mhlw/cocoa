@@ -263,4 +263,8 @@
     <value>Дељење позитивних информација и анонимних обавештења другима</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Поништи</value>
+    <comment>Reset</comment>
+  </data>
 </root>
