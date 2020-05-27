@@ -47,7 +47,7 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <MandroidI18n />
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
-    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a</AndroidSupportedAbis>
+    <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -127,7 +127,7 @@
       <Version>1.5.3.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.ExposureNotification">
-      <Version>0.3.0-preview</Version>
+      <Version>0.4.0-preview</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
@@ -146,13 +146,13 @@
       <Version>4.6.0.800</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Basement">
-      <Version>117.1.0-preview02</Version>
+      <Version>117.1.0-preview03</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification">
-      <Version>18.0.2-eap.4</Version>
+      <Version>18.0.2-eap.6</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
-      <Version>117.0.0-preview02</Version>
+      <Version>117.0.0-preview03</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

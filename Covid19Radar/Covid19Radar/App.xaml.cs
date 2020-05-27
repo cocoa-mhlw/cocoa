@@ -61,7 +61,7 @@ namespace Covid19Radar
             // with some fake data
             Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
-            await Xamarin.ExposureNotifications.ExposureNotification.Init();
+            Xamarin.ExposureNotifications.ExposureNotification.Init();
 
 
             // Local Notification tap event listener
@@ -83,15 +83,6 @@ namespace Covid19Radar
                 var userData = userDataService.Get();
                 if (userData.IsWelcomed)
                 {
-                    if (userData.IsExposureNotificationEnabled)
-                    {
-                        /*
-                        if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-                        {
-                            await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
-                        }
-                        */
-                    }
                     result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
                 }
                 else
@@ -104,6 +95,8 @@ namespace Covid19Radar
                 result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
             }
 
+            _ = InitializeBackgroundTasks();
+
             if (!result.Success)
             {
                 MainPage = new ExceptionPage
@@ -115,6 +108,12 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
+        }
+
+        async Task InitializeBackgroundTasks()
+        {
+            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
 
         protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -158,21 +157,17 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
-            ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
-            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
+            OnResume();
+            //ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
         }
 
         protected override void OnResume()
         {
-            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-            base.OnResume();
 
         }
 
         protected override void OnSleep()
         {
-            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-            base.OnSleep();
         }
 
 
