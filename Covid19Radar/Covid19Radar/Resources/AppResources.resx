@@ -206,10 +206,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Contributors List</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Detected Beacons</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>License Agreement</value>
     <comment>License Agreement</comment>
@@ -217,34 +213,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>ID</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Average Distance</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Count</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>ElapsedTime</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>LastTime</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>MajorNo</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MinorNo</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>

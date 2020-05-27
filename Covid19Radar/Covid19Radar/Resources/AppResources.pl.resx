@@ -84,10 +84,6 @@
     <value>Lista współautorów</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Wykryte sygnały nawigacyjne</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Umowa licencyjna</value>
     <comment>License Agreement</comment>
@@ -95,34 +91,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>Identyfikator</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Odległość avarage</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Liczba</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>Czas, który upłynął</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>Ostatni czas</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>MajorNo</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MałoletniNie</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>

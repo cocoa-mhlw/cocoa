@@ -97,11 +97,6 @@
           <target state="translated">贡献者名单</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
-        <trans-unit id="TitleDetectedBeaconPage" translate="yes" xml:space="preserve">
-          <source>Detected Beacons</source>
-          <target state="translated">检测到的设备</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacons</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License Agreement</source>
           <target state="translated">授权协议</target>
@@ -111,41 +106,6 @@
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
-          <source>ID</source>
-          <target state="translated">ID</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
-          <source>Average Distance</source>
-          <target state="translated">平均距离</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
-          <source>Count</source>
-          <target state="translated">数目</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
-          <source>ElapsedTime</source>
-          <target state="translated">经过时间</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextElapsedTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextLastTime" translate="yes" xml:space="preserve">
-          <source>LastTime</source>
-          <target state="translated">最后检测时间</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
-          <source>MajorNo</source>
-          <target state="translated">主值</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
-          <source>MinorNo</source>
-          <target state="translated">副值</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MinorNo</note>
         </trans-unit>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>

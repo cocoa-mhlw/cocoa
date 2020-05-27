@@ -84,10 +84,6 @@
     <value>רשימת התורמים</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>משואות שזוהו</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>הסכם רישיון</value>
     <comment>License Agreement</comment>
@@ -95,34 +91,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>מזהה</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>מרחק אבאייג '</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>ספירה</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>זמן שיחלוף</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>וחמצות</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>מירלא</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>מינורנו</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>

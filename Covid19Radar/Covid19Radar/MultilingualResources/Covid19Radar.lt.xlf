@@ -97,11 +97,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bendraautorių sąrašas</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
-        <trans-unit id="TitleDetectedBeaconPage" translate="yes" xml:space="preserve">
-          <source>Detected Beacons</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aptikti švyturiai</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacons</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License Agreement</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Licencijos sutartis</target>
@@ -111,41 +106,6 @@
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
-          <source>ID</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Identifikatorius</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
-          <source>Average Distance</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avarage atstumas</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
-          <source>Count</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Skaičius</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
-          <source>ElapsedTime</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Praėjęs laikas</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextElapsedTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextLastTime" translate="yes" xml:space="preserve">
-          <source>LastTime</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Paskutinis laikas</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
-          <source>MajorNo</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">MajorasNo</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
-          <source>MinorNo</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">NepilnametisNo</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MinorNo</note>
         </trans-unit>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
