@@ -80,48 +80,6 @@
     <value>Iestatītu pabeigtos</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Ja esat saņēmis pozitīvu diagnozi, lūdzu, ievadiet savu mobilā tālruņa numuru un atjauniniet savu statusu, lai aizsargātu savus tuviniekus.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Ievadiet mobilā tālruņa numuru</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Mēs jums nosūtīsim verifikācijas kodu.
-Lūdzu, pārbaudiet savu SMS.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Mēs neglabāsim jūsu tālruņa numuru. Tas tiks nosūtīts tieši uz datubāzes valdība.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Ja esat saņēmis pozitīvu diagnozi</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Atklāto bāksignālu saraksts</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Ievadiet kodu, kas tika nosūtīts 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Ievadiet kodu</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Verificēt</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>Didn ' t get kodu?</value>
     <comment>Didn't get the code Text</comment>
@@ -213,10 +171,6 @@ Lūdzu, pārbaudiet savu SMS.</value>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Prasības, lai izmantotu šo lietotni</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Statusa iestatījumi</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Statusa iestatījumi</value>

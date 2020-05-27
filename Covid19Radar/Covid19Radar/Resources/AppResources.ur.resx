@@ -80,48 +80,6 @@
     <value>مکمل سیٹ اپ</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>اگر آپ کو مثبت تشخیص موصول ہوئی ہے ، تو براہ کرم اپنا موبائل نمبر درج کریں اور اپنے پیاروں کی حفاظت کیلئے اپنی صورتِ حال اپ ڈیٹ کریں ۔</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>موبائل نمبر درج کریں</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>ہم آپ کو ایک تصدیقی کوڈ بھیجیں گے ۔
-براہ مہربانی اپنے SMS کی جانچ کریں ۔</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>ہم آپ کے فون نمبر کو ذخیرہ نہیں کریں گے. یہ حکومت کے ڈیٹا بیس پر براہ راست بھیجا جائے گا.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>کھوج لگائے گئے بیکن فہرست</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>وہ کوڈ درج کریں جو بھیجا گیا تھا 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>کوڈ درج کریں</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>تصدیق کریں</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>کوڈ نہیں ملا ؟</value>
     <comment>Didn't get the code Text</comment>
@@ -213,10 +171,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>اس ایپ کو استعمال کرنے کی شرائط</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>حالت سیٹنگیں</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>حالت سیٹنگیں</value>

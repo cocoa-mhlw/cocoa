@@ -80,48 +80,6 @@
     <value>அமைவு முடிந்தது</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>உங்களுக்கு ஒரு நேர்மறையான ஆய்வு கிடைத்திருந்தால், உங்கள் மொபைல் எண்ணை உள்ளிட்டு, உங்கள் அன்புக்குரியவர்களை பாதுகாப்பதற்கு உங்கள் நிலையைப் புதுப்பிக்கவும்.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>மொபைல் எண்ணை உள்ளிடவும்</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>நாங்கள் ஒரு சரிபார்ப்பு குறியீட்டை அனுப்புவோம்.
-தயவுசெய்து உங்கள் SMS ஐ சரிபார்க்கவும்.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>உங்கள் தொலைபேசி எண்ணை சேமிக்க மாட்டோம். இது அரசின் தரவுதளத்திற்கு நேரடியாக அனுப்பப்படும்.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>கண்டுபிடிக்கப்பட்ட கலங்கரை விளக்கங்கள் பட்டியல்</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>அனுப்பப்பட்ட குறியீட்டை உள்ளிடவும் 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>குறியீட்டை உள்ளிடவும்</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>சரிபார்</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>குறியீடு கிடைக்கவில்லை?</value>
     <comment>Didn't get the code Text</comment>
@@ -213,10 +171,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>இந்த பயன்பாட்டை பயன்படுத்துவதற்கான தேவைகள்</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>நிலை அமைப்புகள்</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>நிலை அமைப்புகள்</value>
