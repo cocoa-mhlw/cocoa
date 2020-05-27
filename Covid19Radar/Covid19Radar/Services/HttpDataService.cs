@@ -67,14 +67,16 @@ namespace Covid19Radar.Services
         }
 
         // POST /diagnosis - upload self diagnosys file
-        public async Task<UserDataModel> PostSelfExposureKeysAsync(DiagnosisSubmissionHttpRequestModel request)
+        public async Task<UserDataModel> PostSelfExposureKeysAsync(SelfDiagnosisSubmission  request)
         {
             try
             {
-                var url = $"{AppConstants.ApiUrlBase.TrimEnd('/')}/diagnosis";
+                var url = $"{AppConstants.ApiBaseUrl.TrimEnd('/')}/diagnosis";
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
                 var result = await Post(url, content);
-                if (result != null)
+
+                // TODO Status Check response code check
+                if (result == null)
                 {
                     // TODO Implement if return result model
                     throw new NotImplementedException();
