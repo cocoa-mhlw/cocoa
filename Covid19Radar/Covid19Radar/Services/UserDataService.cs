@@ -50,11 +50,6 @@ namespace Covid19Radar.Services
 */
         }
 
-        private async void OnLocalNotificationTaped(object sender, EventArgs e)
-        {
-            // TODO  FIX Navigation
-            //await navigationService.NavigateAsync("NavigationPage/MainPage");
-        }
         /*
         private void StartTimer()
         {
