@@ -222,7 +222,7 @@ namespace Covid19Radar.Services
 
             var selfDiag = await CreateSubmissionAsync();
 
-            var url = $"{apiUrlBase.TrimEnd('/')}/selfdiagnosis";
+            var url = $"{apiUrlBase.TrimEnd('/')}/diagnosis";
 
             var json = JsonConvert.SerializeObject(selfDiag);
 

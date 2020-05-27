@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
 
-namespace Covid19Radar.Api.Tests.Common
+namespace Covid19Radar.Api.Tests.Common.DataStore
 {
     [TestClass]
     [TestCategory("Common")]

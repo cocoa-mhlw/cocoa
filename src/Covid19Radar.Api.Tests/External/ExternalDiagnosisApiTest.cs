@@ -29,7 +29,7 @@ namespace Covid19Radar.Api.Tests.External
             // preparation
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<DateTimeOffset>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
-                .Returns(Task.CompletedTask);
+                .ReturnsAsync(new DiagnosisModel());
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.External.DiagnosisApi>();
             var diagnosisApi = new Covid19Radar.Api.External.DiagnosisApi(diagnosisRepo.Object, tekRepo.Object, logger);

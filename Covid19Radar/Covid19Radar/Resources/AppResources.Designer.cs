@@ -133,6 +133,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Sharing positive information and anonymous notification to others に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonNotifyOtherPage {
+            get {
+                return ResourceManager.GetString("ButtonNotifyOtherPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   NotNow に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonNotNow {
