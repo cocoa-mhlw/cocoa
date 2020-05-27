@@ -25,9 +25,10 @@ namespace Covid19Radar.Background.Services
             IConfiguration config,
             ILogger<TemporaryExposureKeyBlobService> logger)
         {
+            Logger = logger;
+            Logger.LogInformation($"{nameof(TemporaryExposureKeyBlobService)} constructor");
             TekExportBlobStorageConnectionString = config.TekExportBlobStorage();
             TekExportBlobStorageContainerPrefix = config.TekExportBlobStorageContainerPrefix();
-            Logger = logger;
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
             BlobClient = StorageAccount.CreateCloudBlobClient();
         }
