@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>Saya ingin membantu</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>Bagaimana ia berfungsi</value>
     <comment>How it works page title</comment>
@@ -27,10 +23,6 @@
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Syarat Perkhidmatan</value>
     <comment>Consent by user page</comment>
-  </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>Setuju dan Teruskan</value>
-    <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
     <value>Tidak perlu memasukkan maklumat peribadi. Kami menggunakan ID unik, yang diperuntukkan kepada anda semasa memasang aplikasi.</value>
@@ -60,14 +52,6 @@
     <value>Akses Peranti</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>Penerangan Aplikasi</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>Daftar</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Setuju</value>
     <comment>Agree</comment>
@@ -79,14 +63,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>Seting status</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>Senarai Penyumbang</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Kemas kini Maklumat</value>
@@ -103,63 +79,6 @@
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Penyediaan Selesai</value>
     <comment>Set up Completed</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Jika anda menerima diagnosis yang positif, sila masukkan nombor telefon bimbit anda dan kemas kini status anda untuk melindungi orang yang anda sayangi.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Masukkan nombor telefon bimbit</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Kami akan menghantar kod pengesahan kepada anda. Sila semak SMS anda.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Kami tidak akan menyimpan nombor telefon anda. Ia akan dihantar terus ke pangkalan data kerajaan.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Jika anda menerima diagnosis yang positif</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Senarai Beacon yang dikesan</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Masukkan kod yang dihantar kepada
- {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Masukkan kod</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Sahkan</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Tidak mendapat kod?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Hantar Semula</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Kemas kini Status Selesai</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Kemas kini Status Selesai</value>
-    <comment>Status Update Complete page title</comment>
   </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Senarai Penyumbang</value>
@@ -236,10 +155,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Keperluan untuk menggunakan aplikasi ini</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Seting status</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Seting status</value>
@@ -414,5 +329,55 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Hantar</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>SampleText</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>SampleText</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Seting</value>
+    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Tidak bersetuju</value>
+    <comment>Not Agree</comment>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>Batal</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>Adakah awda mahu memasang pemberitahuan?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Set Semula</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Membolehkan</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Memadamkan</value>
+    <comment>Deleting</comment>
+  </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>Jika anda menerima diagnosis yang positif</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
+  <data name="HomePageSubtitle2" xml:space="preserve">
+    <value>Berkongsi apl</value>
+    <comment>Home page subtitle 2</comment>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Kongsi</value>
+    <comment>Share</comment>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Berkongsi maklumat positif dan pemberitahuan tanpa nama kepada orang lain</value>
+    <comment>Button NotifyOtherPage</comment>
   </data>
 </root>

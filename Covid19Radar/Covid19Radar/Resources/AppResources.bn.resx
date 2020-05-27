@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>সাহায্য করতে চাই</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>কী ভাবে কাজ করে</value>
     <comment>How it works page title</comment>
@@ -27,10 +23,6 @@
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>পরিষেবার বিধিসমূহ</value>
     <comment>Consent by user page</comment>
-  </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>সহমত এবং অগ্রসর হোন</value>
-    <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
     <value>ব্যক্তিগত তথ্য ইনপুট করার প্রয়োজন নেই । আমরা একটি অ্যাপ্লিকেশন ইনস্টল করার সময় আপনার জন্য বরাদ্দ অনন্য ID ব্যবহার করছি.</value>
@@ -60,14 +52,6 @@
     <value>ডিভাইস অ্যাক্সেস</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>অ্যাপ বর্ণনা</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>নিবন্ধন করুন</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>রাজি</value>
     <comment>Agree</comment>
@@ -79,14 +63,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>স্থিতি সেটিংস</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>অবদানকারী তালিকা</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>তথ্য হালনাগাদ করুন</value>
@@ -103,64 +79,6 @@
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>সমাপ্ত উপস্থাপনা</value>
     <comment>Set up Completed</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>আপনি যদি একটি ইতিবাচক নির্ণয় পান, তাহলে অনুগ্রহ করে আপনার মোবাইল নাম্বার লিখুন এবং আপনার প্রিয়জনকে রক্ষা করার জন্য আপনার স্ট্যাটাস আপডেট করুন ।</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>মোবাইল নম্বর লিখুন</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>আমরা আপনাকে একটি যাচাইকরণ কোড পাঠাবো ।
-অনুগ্রহ করে আপনার এসএমএস চেক করুন ।</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>আমরা আপনার ফোন নম্বর সংরক্ষণ করব না । তা সরাসরি সরকারের ডেটাবেসে পাঠানো হবে ।</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>সনাক্ত করা বাতিঘর তালিকা</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>পাঠানো কোড লিখুন 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>কোড লিখুন</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>যাচাই করুন</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>কোড পাইনি?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>পুন:প্রেরণ করুন</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>স্থিতি আধুনিকীকরণ সম্পূর্ণ</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>স্থিতি আধুনিকীকরণ সম্পূর্ণ</value>
-    <comment>Status Update Complete page title</comment>
   </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>অবদানকারী তালিকা</value>
@@ -237,10 +155,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>এই অ্যাপটি ব্যবহার করার প্রয়োজনীয়তা</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>স্থিতি সেটিংস</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>স্থিতি সেটিংস</value>
@@ -415,5 +329,55 @@
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>জমা দিন</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>সামপ্লিটেক্সট</value>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>সামপ্লিটেক্সট</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>সেটিংস</value>
+    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>রাজি না</value>
+    <comment>Not Agree</comment>
+  </data>
+  <data name="DialogButtonCancel" xml:space="preserve">
+    <value>বাতিল করুন</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+    <value>আপনি কি বিজ্ঞপ্তিগুলি চালু করতে চান?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>রিসেট করুন</value>
+    <comment>Reset</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>সক্রিয়</value>
+    <comment>Enabling</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>বিলোপ</value>
+    <comment>Deleting</comment>
+  </data>
+  <data name="HomePageSubtitle1" xml:space="preserve">
+    <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
+    <comment>Home page subtitle 1</comment>
+  </data>
+  <data name="HomePageSubtitle2" xml:space="preserve">
+    <value>অ্যাপটি শেয়ার</value>
+    <comment>Home page subtitle 2</comment>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>শেয়ার করুন</value>
+    <comment>Share</comment>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>অন্যদের কাছে ইতিবাচক তথ্য এবং বেনামী নোটিফিকেশন শেয়ার করা</value>
+    <comment>Button NotifyOtherPage</comment>
   </data>
 </root>

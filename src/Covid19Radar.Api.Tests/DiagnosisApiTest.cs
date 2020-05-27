@@ -39,7 +39,7 @@ namespace Covid19Radar.Api.Tests
         [DataRow(true, true, "xxxxx", "UserUuid")]
         [DataRow(false, true, "xxxxx", "UserUuid")]
         [DataRow(false, true, "xxxxx", "UserUuid")]
-        public async Task RunAsyncMethod(bool isValid, bool isValidDevice, string submissionNumber, string userUuid)
+        public async Task RunAsyncMethod(bool isValid, bool isValidDevice, string verificationPayload, string userUuid)
         {
             // preparation
             var config = new Mock<IConfiguration>();
@@ -49,7 +49,7 @@ namespace Covid19Radar.Api.Tests
                                                             It.IsAny<DateTimeOffset>(),
                                                             It.IsAny<string>(),
                                                             It.IsAny<TemporaryExposureKeyModel[]>()))
-                .Returns(Task.CompletedTask);
+                .ReturnsAsync(new DiagnosisModel());
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
             var validationResult = new IValidationUserService.ValidateResult()
@@ -69,7 +69,7 @@ namespace Covid19Radar.Api.Tests
             var context = new Mock<HttpContext>();
             var bodyJson = new DiagnosisSubmissionParameter()
             {
-                SubmissionNumber = submissionNumber,
+                VerificationPayload = verificationPayload,
                 UserUuid = userUuid,
                 Keys = new DiagnosisSubmissionParameter.Key[] {
                     new DiagnosisSubmissionParameter.Key() { KeyData = "", RollingPeriod = 1, RollingStartNumber = 1 } }
