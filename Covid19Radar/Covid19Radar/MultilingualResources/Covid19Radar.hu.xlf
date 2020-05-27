@@ -325,6 +325,11 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozitív információk és névtelen értesítések megosztása másoknak</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Alaphelyzet</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -325,6 +325,11 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Partajarea informațiilor pozitive și notificarea anonimă altor persoane</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Reinițializare</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

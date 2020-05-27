@@ -327,6 +327,11 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dele positiv informasjon og anonymt varsel til andre</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tilbakestill</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>
