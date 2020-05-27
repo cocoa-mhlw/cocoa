@@ -80,22 +80,6 @@
     <value>Vita Tanteraka</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Tsy nahazo ilay mari-pamantarana ve ianao?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Handefa hamerina handefa</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Famenoana ny Fanavaozana</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Famenoana ny Fanavaozana</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Votoatiny Lisitra</value>
     <comment>Contributors list page title</comment>

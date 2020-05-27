@@ -80,22 +80,6 @@
     <value>اكتمل الإعداد</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>لم تحصل على الرمز؟</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>إعادة الإرسال</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>تم اكتمل التحديث</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>تم اكتمل التحديث</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>قائمة المساهمين</value>
     <comment>Contributors list page title</comment>

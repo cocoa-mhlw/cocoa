@@ -80,22 +80,6 @@
     <value>I-set up ang nakumpleto</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Hindi nakuha ang code?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Ipadala Ulit</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Kumpleto ang status update</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Kumpleto ang status update</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Nag-ambag ng listahan</value>
     <comment>Contributors list page title</comment>

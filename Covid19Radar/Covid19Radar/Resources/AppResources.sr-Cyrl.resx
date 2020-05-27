@@ -80,22 +80,6 @@
     <value>Конфигурисање довршено</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Нисте добили кôд?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Поново пошаљи</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Ажурирање статуса довршено</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Ажурирање статуса довршено</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Листа сарадника</value>
     <comment>Contributors list page title</comment>
