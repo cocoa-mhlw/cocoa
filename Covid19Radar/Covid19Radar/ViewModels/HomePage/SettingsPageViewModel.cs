@@ -128,18 +128,5 @@ namespace Covid19Radar.ViewModels
 
             }
         });
-
-
-        public Command OnSaveClick => new Command(async () =>
-        {
-            /*
-            userData.LastIsEnabled = EnableExposureNotification;
-            userData.EnableNotifications = EnableLocalNotification;
-            await userDataService.SetAsync(userData);
-            await UserDialogs.Instance.AlertAsync("設定を保存しました。");
-            */
-        });
-
-
     }
 }
