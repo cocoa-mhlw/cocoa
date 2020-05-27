@@ -58,7 +58,7 @@ namespace Covid19Radar.Api.Tests
             };
             validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
             var deviceCheck = new Mock<IDeviceValidationService>();
-            deviceCheck.Setup(_ => _.Validation(It.IsAny<DiagnosisSubmissionParameter>())).ReturnsAsync(isValidDevice);
+            deviceCheck.Setup(_ => _.Validation(It.IsAny<DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
             var diagnosisApi = new DiagnosisApi(config.Object,
                                                 diagnosisRepo.Object,
