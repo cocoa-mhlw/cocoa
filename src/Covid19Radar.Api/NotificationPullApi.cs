@@ -8,6 +8,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 #nullable enable
 
@@ -30,7 +31,7 @@ namespace Covid19Radar.Api
         }
 
         [FunctionName(nameof(NotificationPullApi))]
-        public IActionResult Run(
+        public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get",
                          Route = "notification/pull/{lastClientUpdateTime:datetime}")]
             HttpRequest req,
@@ -39,17 +40,15 @@ namespace Covid19Radar.Api
             Logger.LogInformation($"{nameof(NotificationPullApi)} processed a request.");
 
             // Query to Notification Service.
-            return GetMessages(lastClientUpdateTime);
+            return await GetMessagesAsync(lastClientUpdateTime);
         }
 
-        private IActionResult GetMessages(DateTime lastClientUpdateTime)
+        private async Task<IActionResult> GetMessagesAsync(DateTime lastClientUpdateTime)
         {
             var result = new NotificationPullResult();
-            DateTime lastNotificationTime;
-            result.Messages = Notification.GetNotificationMessages(lastClientUpdateTime, out lastNotificationTime).ToArray();
-            result.LastNotificationTime = lastNotificationTime;
+            result.Messages = await Notification.GetNotificationMessagesAsync(lastClientUpdateTime);
+            result.LastNotificationTime = result.Messages.FirstOrDefault()?.Created ?? lastClientUpdateTime;
             return new OkObjectResult(result);
         }
-
     }
 }
