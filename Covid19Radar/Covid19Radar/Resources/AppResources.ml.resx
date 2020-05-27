@@ -271,4 +271,8 @@
     <value>സ്വകാര്യത നയം</value>
     <comment>PrivacyPolicyPage Title</comment>
   </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>രജിസ്റ്റര് ചെയ്യുന്നതിനായി കാത്തിരിക്കുന്നു</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>
