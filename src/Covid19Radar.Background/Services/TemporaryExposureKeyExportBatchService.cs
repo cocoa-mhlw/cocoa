@@ -30,6 +30,7 @@ namespace Covid19Radar.Background.Services
         public readonly ITemporaryExposureKeySignatureInfoService SignatureService;
         public readonly ITemporaryExposureKeyBlobService BlobService;
         public readonly ILogger<TemporaryExposureKeyExportBatchService> Logger;
+        private readonly string Region;
 
         public TemporaryExposureKeyExportBatchService(
             IConfiguration config,
@@ -47,6 +48,7 @@ namespace Covid19Radar.Background.Services
             SignService = signService;
             SignatureService = signatureService;
             BlobService = blobService;
+            Region = config.Region();
         }
 
         public async Task RunAsync()
@@ -55,16 +57,17 @@ namespace Covid19Radar.Background.Services
             {
                 Logger.LogInformation($"start {nameof(RunAsync)}");
                 var items = await TekRepository.GetNextAsync();
-                foreach (var kv in items.GroupBy(_ => new { 
+                foreach (var kv in items.GroupBy(_ => new
+                {
                     RollingStartUnixTimeSeconds = _.GetRollingStartUnixTimeSeconds(),
-                    RollingPeriodSeconds = _.GetRollingPeriodSeconds(),
-                    _.Region }))
+                    RollingPeriodSeconds = _.GetRollingPeriodSeconds()
+                }))
                 {
                     // Security considerations: Random Order TemporaryExposureKey
                     var sorted = kv.OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
                     await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
                         (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
-                        kv.Key.Region,
+                        Region,
                         sorted.ToArray());
                 }
             }

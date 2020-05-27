@@ -47,6 +47,7 @@ namespace Covid19Radar.Api
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var diagnosis = JsonConvert.DeserializeObject<DiagnosisSubmissionParameter>(requestBody);
+            var reqTime = DateTimeOffset.UtcNow;
 
             // payload valid
             if (!diagnosis.IsValid())
@@ -54,11 +55,12 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Invalid parameter");
             }
 
-            // validation support region 
-            if (!SupportRegions.Contains(diagnosis.Region))
+            // validation support region
+            if (!diagnosis.Regions.Any(_ => SupportRegions.Contains(_)))
             {
                 return new BadRequestErrorMessageResult("Regions not supported.");
             }
+
 
             // validation
             var validationResult = await Validation.ValidateAsync(req, diagnosis);
@@ -68,7 +70,7 @@ namespace Covid19Radar.Api
             }
 
             // validation device 
-            if (false == await DeviceCheck.Validation(diagnosis))
+            if (false == await DeviceCheck.Validation(diagnosis, reqTime))
             {
                 return new BadRequestErrorMessageResult("Invalid Device");
             }
@@ -81,7 +83,7 @@ namespace Covid19Radar.Api
             // TODO: validatetion VerificationPayload connnection error 5xx
             if (false == true)
             {
-                return new ObjectResult("Unable to communicate with center") { StatusCode = 503};
+                return new ObjectResult("Unable to communicate with center") { StatusCode = 503 };
             }
 
             var timestamp = DateTimeOffset.UtcNow;
