@@ -327,6 +327,11 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kei te tiritahi i te mōhiohio tōrunga me te whakamōhiotanga ingoamuna ki ētahi atu</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tautuhi anō</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

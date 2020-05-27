@@ -327,6 +327,11 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kushiriki taarifa nzuri na arifa isiyojulikana kwa wengine</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Weka upya</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>
