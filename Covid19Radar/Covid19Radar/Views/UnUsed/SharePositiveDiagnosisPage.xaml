@@ -35,18 +35,16 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <ce:GradientButton
                     Grid.Column="0"
-                    Command="{Binding CancelCommand}"
+                    Command="{Binding Path=CancelCommand}"
                     Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonNotNow}" />
 
                 <ce:GradientButton
                     Grid.Column="1"
-                    Command="{Binding SubmitAndVerifyCommand}"
-                    IsEnabled="{Binding IsEnabled}"
+                    Command="{Binding Path=SubmitAndVerifyCommand}"
                     Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonPositiveSubmit}" />
             </Grid>

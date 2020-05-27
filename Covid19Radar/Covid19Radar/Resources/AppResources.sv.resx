@@ -263,4 +263,8 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Dela positiv information och anonym anmälan till andra</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Återställ</value>
+    <comment>Reset</comment>
+  </data>
 </root>

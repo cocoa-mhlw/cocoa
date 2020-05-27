@@ -263,4 +263,8 @@
     <value>इतरांना सकारात्मक माहिती आणि निनावी सूचना देणे</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>रिसेट करा</value>
+    <comment>Reset</comment>
+  </data>
 </root>

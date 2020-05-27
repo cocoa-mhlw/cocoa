@@ -263,4 +263,8 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
     <value>Dalijimasis teigiama informacija ir anoniminis pranešimas kitiems</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Nustatyti iš naujo</value>
+    <comment>Reset</comment>
+  </data>
 </root>
