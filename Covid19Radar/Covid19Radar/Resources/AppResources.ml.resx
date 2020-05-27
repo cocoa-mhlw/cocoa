@@ -80,64 +80,6 @@
     <value>പൂർത്തിയായി</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് ഒരു പോസിറ്റീവ് രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ, നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകുക, പ്രിയപ്പെട്ടവരെ പരിരക്ഷിക്കുന്നതിന് നിങ്ങളുടെ സ്റ്റാറ്റസ് അപ്ഡേറ്റ് ചെയ്യുക.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>മൊബൈൽ നമ്പർ നൽകുക</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>ഞങ്ങൾ നിങ്ങൾക്ക് ഒരു വെരിഫിക്കേഷൻ കോഡ് അയയ്ക്കും.
-ദയവായി നിങ്ങളുടെ SMS പരിശോധിക്കുക.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>നിങ്ങളുടെ ഫോൺ നമ്പർ ഞങ്ങൾ സംഭരിക്കില്ല. അത് സർക്കാരിന്റെ ഡേറ്റാബേസിലേക്ക് നേരിട്ട് അയയ്ക്കും.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>ബീക്കണ് ലിസ്റ്റ് കണ്ടെത്തി</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>അയച്ചുകൊടുക്കുന്ന കോഡ് എന്റർ ചെയ്യുക 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>കോഡ് എന്റർ ചെയ്യുക</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>പരിശോധിക്കുക</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>കോഡ് കിട്ടിയില്ല?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>വീണ്ടും അയയ്ക്കുക</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് അപ്ഡേറ്റ് സമ്പൂർണ്ണ</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് അപ്ഡേറ്റ് സമ്പൂർണ്ണ</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>കോൺസ് ക്ടർമാർ ലിസ്റ്റ്</value>
     <comment>Contributors list page title</comment>
@@ -213,10 +155,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>ഈ ആപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നതിനുള്ള ആവശ്യകതകൾ</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് സജ്ജീകരണങ്ങള്</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>സ്റ്റാറ്റസ് സജ്ജീകരണങ്ങള്</value>

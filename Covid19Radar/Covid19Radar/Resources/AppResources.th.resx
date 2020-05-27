@@ -80,64 +80,6 @@
     <value>ตั้งค่าเสร็จสมบูรณ์</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>หากคุณได้รับการวินิจฉัยในว่าติดเชื้อ โปรดป้อนหมายเลขโทรศัพท์มือถือของคุณ และอัปเดตสถานะของคุณเพื่อปกป้องคนที่คุณรัก</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>ป้อนหมายเลขโทรศัพท์มือถือ</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>เราจะส่งรหัสยืนยันให้คุณ
-กรุณาตรวจสอบ SMS ของคุณ</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>เราจะไม่เก็บหมายเลขโทรศัพท์ของคุณ มันจะถูกส่งโดยตรงไปยังฐานข้อมูลของรัฐบาล</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>หากคุณได้รับการวินิจฉัยว่าติดเชื้อ</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>รายการจุดที่ตรวจพบ</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>ป้อนรหัส OTP ที่ส่งไปให้ 
-「{0}」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>ป้อนรหัส</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>ตรวจสอบ</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>ฉันยังไม่ได้รับรหัส?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>ส่งอีกครั้ง</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>การอัพเดตสถานะเสร็จสมบูรณ์</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>การอัพเดตสถานะเสร็จสมบูรณ์</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>รายการผู้มีส่วนร่วม</value>
     <comment>Contributors list page title</comment>
@@ -213,10 +155,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>ข้อกําหนดที่จำเป็นในการใช้แอพนี้</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>การตั้งค่าสถานะ</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>การตั้งค่าสถานะ</value>
