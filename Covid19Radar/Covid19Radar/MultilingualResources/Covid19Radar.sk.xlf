@@ -327,6 +327,11 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Zdieľanie pozitívnych informácií a anonymné oznamovanie iným osobám</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Obnoviť</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

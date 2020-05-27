@@ -327,6 +327,11 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Berbagi informasi positif dan pemberitahuan anonim kepada orang lain</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Atur ulang</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

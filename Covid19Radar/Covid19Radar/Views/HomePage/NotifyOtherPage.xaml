@@ -80,7 +80,7 @@
                     AutomationId="RegisterButton"
                     Command="{Binding Path=OnClickAfter}"
                     Style="{StaticResource DefaultGradientButtonGrayout}"
-                    Text="あとで設定する" />
+                    Text="{x:Static resources:AppResources.ButtonNotNow}" />
             </StackLayout>
         </Grid>
     </ScrollView>

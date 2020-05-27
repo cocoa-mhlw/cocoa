@@ -325,6 +325,11 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Berkongsi maklumat positif dan pemberitahuan tanpa nama kepada orang lain</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Set Semula</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>
