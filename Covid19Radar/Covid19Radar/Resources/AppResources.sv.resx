@@ -271,4 +271,8 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Sekretesspolicy</value>
     <comment>PrivacyPolicyPage Title</comment>
   </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Väntar på register</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

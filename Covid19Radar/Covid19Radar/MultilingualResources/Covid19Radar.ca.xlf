@@ -337,6 +337,11 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Estratègia de privadesa</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Esperant registre</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>
