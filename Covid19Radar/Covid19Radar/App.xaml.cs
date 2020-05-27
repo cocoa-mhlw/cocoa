@@ -59,7 +59,7 @@ namespace Covid19Radar
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            //Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
