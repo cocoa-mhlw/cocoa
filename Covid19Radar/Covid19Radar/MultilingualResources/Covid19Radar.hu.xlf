@@ -335,6 +335,11 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Adatvédelmi szabályzat</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Várakozás a regisztrációra</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>
