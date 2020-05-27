@@ -100,14 +100,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
   </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>Tista' tibda</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
-  </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Biex tinstalla applikazzjoni</value>
     <comment>How it works page step 1 title</comment>
@@ -127,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Issettjar tal-istatus</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Issejvja</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Jekk irċevejt dijanjożi pożittiva, jekk jogħġbok daħħal in-numru tal-mowbajl tiegħek u Aġġorna l-istatus tiegħek biex tipproteġi l-ma ħbubin tiegħek.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>Taptap biex tibdel l-Istat</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Iċċekkja l-konnessjoni tan-netwerk tiegħek.</value>
@@ -165,33 +145,9 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
     <value>Ippermetti n-notifika ta ' espożizzjoni/Bluetooth</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Kontributuri</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Riskji</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Paġna Ewlenija</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>Liċenzja</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>Jinnotifikaw lill</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>Aġġorna</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Riskji</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -201,14 +157,6 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
     <value>Manwali</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Aġġorna l-Infomation</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Attiva n-notifika</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>L-ebda skopertura magħrufa</value>
     <comment>If not found exposures data</comment>
@@ -216,25 +164,6 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Int tkun avżat jekk ġejt espost għal xi ħadd li rrapporta riżultat pożittiv COVID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Jikkondividu dijanjożi pożittiva</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Jikkondividu dijanjożi pożittiva</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Jekk ittestjat pożittiv għall-virus li jikkawża COVID-19, tista ' tagħżel li taqsam id-dijanjo Żi tiegħek.  Dan se jgħin lill-o ħrajn fil-Komunità tiegħek jinkludu t-tixrid tal-virus.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Sir af aktar</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Jekk irċevejt dijanjożi pożittiva</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Jekk jogħġbok daħħal l-identifikatur tad-dijanjo Żi</value>
@@ -251,10 +180,6 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>L-identifikatur uniku tat-test li ġie mat-test COVID-19 tiegħek għandu jintuża biex jivverifika r-ri żultat tat-test pożittiv tiegħek.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>Jivverifikaw u jikkondividu</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>Erġa’ pprova aktar tard.</value>
@@ -298,12 +223,6 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Issottometti</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Etext tal-kampjuni</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Etext tal-kampjuni</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Issettjar</value>
     <comment>SettingsPage Title</comment>
@@ -319,10 +238,6 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>Tixtieq tixgħel in-notifiki?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>Irrisettja</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Abilitanti</value>
