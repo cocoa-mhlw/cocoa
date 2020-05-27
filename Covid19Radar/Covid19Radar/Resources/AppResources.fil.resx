@@ -263,4 +263,8 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
     <value>Pagbabahagi ng positibong impormasyon at di-kilalang abiso sa iba</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>I-reset</value>
+    <comment>Reset</comment>
+  </data>
 </root>

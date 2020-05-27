@@ -263,4 +263,8 @@
     <value>పాజిటివ్ సమాచారం మరియు అనామక నోటిఫికేషన్ ని ఇతరులకు పంచుకోవడం</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>రీసెట్ చేయి</value>
+    <comment>Reset</comment>
+  </data>
 </root>

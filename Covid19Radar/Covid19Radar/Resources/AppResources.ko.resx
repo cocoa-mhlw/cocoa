@@ -263,4 +263,8 @@
     <value>타인에게 긍정적인 정보와 익명 알림 공유</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>다시 설정</value>
+    <comment>Reset</comment>
+  </data>
 </root>

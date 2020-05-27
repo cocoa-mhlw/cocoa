@@ -263,4 +263,8 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
     <value>Sdílení pozitivních informací a anonymní oznámení ostatním</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Obnovit</value>
+    <comment>Reset</comment>
+  </data>
 </root>

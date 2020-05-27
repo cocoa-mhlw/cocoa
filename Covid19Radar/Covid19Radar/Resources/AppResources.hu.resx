@@ -263,4 +263,8 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
     <value>Pozitív információk és névtelen értesítések megosztása másoknak</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Alaphelyzet</value>
+    <comment>Reset</comment>
+  </data>
 </root>
