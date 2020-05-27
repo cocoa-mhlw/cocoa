@@ -80,48 +80,6 @@
     <value>اكتمل الإعداد</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>إذا تلقيت تشخيصًا إيجابيًا، يرجى إدخال رقم هاتفك المحمول وتحديث حالتك لحماية أحبائك.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>أدخل رقم الهاتف المحمول</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>سنرسل لك رمز التحقق.
-يرجى التحقق من الرسائل الخاصة بك.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>لن نقوم بتخزين رقم هاتفك. سيتم إرساله مباشرة إلى قاعدة بيانات الحكومة.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>إذا تلقيت تشخيصًا إيجابيًا</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>قائمة المنارة المكتشفة</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>أدخل الرمز الذي تم إرساله إلى 
-「{0}」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>أدخل الرمز</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>تحقيق</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>لم تحصل على الرمز؟</value>
     <comment>Didn't get the code Text</comment>
@@ -213,10 +171,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>متطلبات استخدام هذا التطبيق</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>إعدادات الحالة</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>إعدادات الحالة</value>

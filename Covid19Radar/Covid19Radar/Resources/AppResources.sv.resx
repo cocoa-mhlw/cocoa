@@ -80,48 +80,6 @@
     <value>Konfiguration slutförd</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Om du fått en positiv diagnos, ange ditt mobilnummer och uppdatera din status för att skydda dina nära och kära.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Ange mobilnumret</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Vi skickar en verifieringskod.
-Kontrollera ditt SMS.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Vi kommer inte att lagra ditt telefonnummer. Det kommer att skickas direkt till databasen av regeringen.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Om du fick en positiv diagnos</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Lista över identifierade beacon</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Ange koden som skickades till 
-「{0}」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Ange koden</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Verifiera</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>Fick du inte koden?</value>
     <comment>Didn't get the code Text</comment>
@@ -213,10 +171,6 @@ Kontrollera ditt SMS.</value>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Villkor för att använda den här appen</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Statusinställningar</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Statusinställningar</value>
