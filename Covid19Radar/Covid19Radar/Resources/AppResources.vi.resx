@@ -267,4 +267,12 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
     <value>Đặt lại</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Chính sách về Quyền riêng tư</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Đang chờ đăng ký</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

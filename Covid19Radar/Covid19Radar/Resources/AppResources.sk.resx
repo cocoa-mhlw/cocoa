@@ -267,4 +267,12 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
     <value>Obnoviť</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Zásady ochrany osobných údajov</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Čakanie na registráciu</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

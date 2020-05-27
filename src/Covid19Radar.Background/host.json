@@ -1,11 +1,15 @@
 {
     "version": "2.0",
     "logging": {
+        "logLevel": {
+            "default": "Information"
+        },
         "applicationInsights": {
             "samplingExcludedTypes": "Request",
             "samplingSettings": {
                 "isEnabled": true
             }
         }
-    }
+    },
+    "functionTimeout": "00:10:00"
 }
