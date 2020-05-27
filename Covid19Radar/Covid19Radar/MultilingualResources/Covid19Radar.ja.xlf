@@ -327,13 +327,18 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
           <source>Reset</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">リセット</target>
+          <target state="translated">リセット</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">プライバシーポリシー</target>
+          <target state="translated">プライバシーポリシー</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="translated">登録中</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
       </group>
     </body>
