@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Renderers;
+﻿using Covid19Radar.Model;
+using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Prism.Commands;
 using Prism.Mvvm;
@@ -15,11 +16,20 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase
     {
-        public ExposuresPageViewModel(INavigationService navigationService) : base(navigationService)
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
+        public ExposuresPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = Resources.AppResources.MainExposures;
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
         }
 
+
+        public ObservableCollection<ExposureInfo> ExposureInformation
+            => userData.ExposureInformation;
+/*
         public ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo> ExposureInformation
             => new ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo>
             {
@@ -30,6 +40,6 @@ namespace Covid19Radar.ViewModels
                 new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(60), 60, 6, Xamarin.ExposureNotifications.RiskLevel.Highest),
 #endif
 			};
-
+*/
     }
 }

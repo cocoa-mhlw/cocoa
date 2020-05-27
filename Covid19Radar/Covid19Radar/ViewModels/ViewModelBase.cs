@@ -64,7 +64,7 @@ namespace Covid19Radar.ViewModels
         public virtual async void Initialize(INavigationParameters parameters)
         {
             // TODO AutoActivateEN
-            /*
+/*
             if (userData.LastIsEnabled && userData.IsWelcomed)
             {
                 if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
@@ -72,7 +72,7 @@ namespace Covid19Radar.ViewModels
                     await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
                 }
             }
-            */
+*/
         }
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters)
