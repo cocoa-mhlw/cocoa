@@ -27,6 +27,7 @@ namespace Covid19Radar.Services
         const string apiUrlBlobStorageBase = "https://exposurenotifications.blob.core.windows.net/";
         const string blobStorageContainerNamePrefix = "region-";
         static readonly HttpClient http = new HttpClient();
+        private readonly Configuration configuration;
 
         public ExposureNotificationService(HttpDataService httpDataService, UserDataService userDataService)
         {
@@ -34,6 +35,20 @@ namespace Covid19Radar.Services
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
             this.userDataService.UserDataChanged += _userDataChanged;
+            configuration = new Configuration
+            {
+                MinimumRiskScore = 1,
+                AttenuationWeight=50,
+                TransmissionWeight=50,
+                DurationWeight=50,
+                DaysSinceLastExposureWeight=50,
+                TransmissionRiskScores= new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                AttenuationScores= new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                DurationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                DurationAtAttenuationThresholds = new[] { 50, 70 }
+            };
+
         }
 
         private void _userDataChanged(object sender, UserDataModel e)
@@ -48,8 +63,9 @@ namespace Covid19Radar.Services
             => "We need to make use of the keys to keep you healthy.";
 
         // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
-        public Task<Configuration> GetConfigurationAsync()
-    => Task.FromResult(new Configuration());
+        public Task<Configuration> GetConfigurationAsync() => Task.FromResult(
+            configuration
+        );
 
 
         // this will be called when they keys need to be collected from the server
@@ -177,42 +193,6 @@ namespace Covid19Radar.Services
             NotificationCenter.Current.Show(notification);
         }
 
-
-
-        /*
-        public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
-        {
-            var pendingDiagnosis = userData.PendingDiagnosis;
-
-            if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
-                throw new InvalidOperationException();
-
-            try
-            {
-                var request = new DiagnosisSubmissionHttpRequestModel()
-                {
-                    SubmissionNumber = userData.PendingDiagnosis.DiagnosisUid,
-                    AppPackageName = Xamarin.Essentials.AppInfo.PackageName, // experimental
-                    UserUuid = userData.UserUuid,
-                    Region = userData.Region ?? AppConstants.DefaultRegion,
-                    Platform = Device.RuntimePlatform.ToLower(),
-                    Keys = temporaryExposureKeys.Select(_ => DiagnosisSubmissionHttpRequestModel.Key.FromTemporaryExposureKey(_)).ToArray(),
-                    DeviceVerificationPayload = "" // TODO: device payload
-                };
-
-                // TODO check implementation
-                await httpDataService.PostSelfExposureKeysAsync(request);
-
-                // Update pending status
-                userData.PendingDiagnosis.Shared = true;
-                await userDataService.SetAsync(userData);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-        */
         // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
         public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
         {

@@ -24,13 +24,13 @@ namespace Covid19Radar.Services
 		public async Task StopAsync()
 		{
 			await WaitRandom();
-			Preferences.Set("fake_enabled", false);
+			Preferences.Set("fake_enabled", true);
 		}
 
 		public async Task<bool> IsEnabledAsync()
 		{
 			await WaitRandom();
-			return Preferences.Get("fake_enabled", false);
+			return Preferences.Get("fake_enabled", true);
 		}
 
 		public async Task<IEnumerable<TemporaryExposureKey>> GetSelfTemporaryExposureKeysAsync()
@@ -46,7 +46,7 @@ namespace Covid19Radar.Services
 		}
 
 		public Task<Status> GetStatusAsync()
-			=> Task.FromResult(Preferences.Get("fake_enabled", false) ? Status.Active : Status.Disabled);
+			=> Task.FromResult(Preferences.Get("fake_enabled", true) ? Status.Active : Status.Disabled);
 
 		public Task<(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> info)> DetectExposuresAsync(IEnumerable<string> files)
 		{
