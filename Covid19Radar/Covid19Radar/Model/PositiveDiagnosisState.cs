@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Covid19Radar.Model
 {
-	public class PositiveDiagnosisStateModel
+	public class PositiveDiagnosisState
 	{
 		public string DiagnosisUid { get; set; }
 

@@ -85,7 +85,14 @@
         <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="CornerRadius">
+            <Setter.Value>
+                <OnPlatform
+                    x:TypeArguments="x:Decimal"
+                    Android="50"
+                    iOS="50" />
+            </Setter.Value>
+        </Setter>
         <Setter Property="Scale" Value="0.8" />
         <Style.Triggers>
             <Trigger TargetType="Button" Property="IsEnabled" Value="True">
@@ -103,7 +110,15 @@
         <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
         <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="CornerRadius">
+            <Setter.Value>
+                <OnPlatform
+                    x:TypeArguments="x:Decimal"
+                    Android="50"
+                    iOS="50" />
+            </Setter.Value>
+        </Setter>
+
         <Setter Property="Scale" Value="0.8" />
         <Style.Triggers>
             <Trigger TargetType="Button" Property="IsEnabled" Value="True">
@@ -123,9 +138,15 @@
         <Setter Property="Padding" Value="0" />
         <Setter Property="Scale" Value="0.8" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="CornerRadius">
+            <Setter.Value>
+                <OnPlatform
+                    x:TypeArguments="x:Decimal"
+                    Android="50"
+                    iOS="0" />
+            </Setter.Value>
+        </Setter>
     </Style>
-
 
     <Style x:Key="DefaultGradientButton" TargetType="controls:GradientButton">
         <Setter Property="FontSize" Value="Medium" />
@@ -174,31 +195,6 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
-    <!--
-    <Style x:Key="DefaultGradientButtonGrayout" TargetType="controls:GradientButton">
-        <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
-        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="20" />
-        <Setter Property="Scale" Value="0.9" />
-        <Setter Property="BorderWidth" Value="1" />
-        <Setter Property="BorderColor" Value="{StaticResource Primary}" />
-        <Style.Triggers>
-            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="True">
-                <Setter Property="StartColor" Value="{StaticResource Disabled}" />
-                <Setter Property="EndColor" Value="{StaticResource Disabled}" />
-                <Setter Property="GradientOrientation" Value="Horizontal" />
-            </Trigger>
-            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="False">
-                <Setter Property="StartColor" Value="{StaticResource Disabled}" />
-                <Setter Property="EndColor" Value="{StaticResource Disabled}" />
-                <Setter Property="GradientOrientation" Value="Horizontal" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>-->
 
     <Style x:Key="DefaultTitleLabelColor" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center" />
