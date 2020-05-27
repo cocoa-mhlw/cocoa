@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Services
 {
     public interface INotificationService
     {
-        DateTime LastNotificationTime { get; }
-        IEnumerable<NotificationMessageModel> GetNotificationMessages(DateTime lastScanTime, out DateTime lastNotificationTime);
+        Task<DateTime> GetLastNotificationTimeAsync();
+        Task<NotificationMessageModel[]> GetNotificationMessagesAsync(DateTime lastNotificationTime);
     }
 }

@@ -84,10 +84,6 @@
     <value>பங்களிப்பாளர்கள் பட்டியல்</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>பீக்கான்கள் கண்டறியப்படவில்லை</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>உரிம ஒப்பந்தம்</value>
     <comment>License Agreement</comment>
@@ -96,34 +92,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>ஐடி</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>அவர்வயது தூரம்</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>எண்ணிக்கை</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>எல்அசெஸ்நேரம்</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>நேரம்</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>மரோர்நோ</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>மினோநோ</value>
-    <comment>MinorNo</comment>
-  </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
     <comment>Url Contributor</comment>
@@ -131,14 +99,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>எச்சரிக்கை</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>ஒரு பயன்பாட்டை நிறுவுதல்</value>
@@ -159,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>நிலை அமைப்புகள்</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>சேமி</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>உங்களுக்கு ஒரு நேர்மறையான ஆய்வு கிடைத்திருந்தால், உங்கள் மொபைல் எண்ணை உள்ளிட்டு, உங்கள் அன்புக்குரியவர்களை பாதுகாப்பதற்கு உங்கள் நிலையைப் புதுப்பிக்கவும்.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>நிலையை மாற்ற தட்டவும்</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>தயவுகூர்ந்து உங்கள் பிணைய இணைப்பை சரிபார்க்கவும்.</value>
@@ -197,33 +145,9 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>வெளிப்பாடு அறிவிக்கை/புளூடூத் அனுமதி</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>பங்களிப்பாளர்கள்</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>அம்பலப்படுத்தல்</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>முகப்பு</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>உரிமம்</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>தெரியப்படுத்து</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>புதுப்பி</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>அம்பலப்படுத்தல்</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -233,14 +157,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>கைமுறை</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>தகவமைவை புதுப்பி</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>அறிவிப்பை செயல்படுத்து</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>அறியப்பட்ட அம்பலப்படுத்தல்கள் எதுவும் இல்லை</value>
     <comment>If not found exposures data</comment>
@@ -248,25 +164,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>நேர்மறை குறியீடாகவும்-19 முடிவாகவும் அறிவிக்கப்பட்ட ஒருவரிடம் நீங்கள் வெளிப்படுத்தப்பட்டால் உங்களுக்கு அறிவிக்கப்படுவீர்கள்.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>நீங்கள் கோவிட்-19 ஏற்படுத்தும் வைரஸ் நேர்மறை சோதனை என்றால், நீங்கள் உங்கள் ஆய்வு பகிர்ந்து கொள்ள தேர்வு செய்யலாம்.  உங்கள் சமூகத்தில் உள்ள மற்றவர்களுக்கு வைரஸ் பரவுவதை இது உதவும்.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>மேலும் அறிக</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>தயவுசெய்து நோய் கண்டறிதல் அடையாளங்காட்டி உள்ளிடவும்</value>
@@ -283,10 +180,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>உங்கள் கோவிட்-19 பரிசோதனையுடன் வந்த தனித்துவமான சோதனை அடையாளங்காட்டி உங்கள் நேர்மறை சோதனை முடிவை சரிபார்க்க பயன்படுத்தப்பட வேண்டும்.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>சரிபார்த்து பகிரவும்</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>பின்னர் மீண்டும் முயற்சிக்கவும்.</value>
@@ -330,12 +223,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>சமர்ப்பி</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>பொது உரை</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>பொது உரை</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>அமைப்புகள்</value>
     <comment>SettingsPage Title</comment>
@@ -351,10 +238,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>அறிவிப்புகளை இயக்க விரும்புகிறீர்களா?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>மீட்டமை</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>இயக்குவதால்</value>
