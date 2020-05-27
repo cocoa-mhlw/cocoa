@@ -263,4 +263,8 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
     <value>Kei te tiritahi i te mōhiohio tōrunga me te whakamōhiotanga ingoamuna ki ētahi atu</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Tautuhi anō</value>
+    <comment>Reset</comment>
+  </data>
 </root>

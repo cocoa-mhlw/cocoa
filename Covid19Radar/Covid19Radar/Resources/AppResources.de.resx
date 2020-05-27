@@ -263,4 +263,8 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <value>Weitergabe positiver Informationen und anonymer Benachrichtigungen an andere</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Zurücksetzen</value>
+    <comment>Reset</comment>
+  </data>
 </root>

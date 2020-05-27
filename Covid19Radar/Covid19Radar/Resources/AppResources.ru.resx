@@ -263,4 +263,8 @@
     <value>Обмен положительной информацией и анонимным уведомлением другим лицам</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Сброс</value>
+    <comment>Reset</comment>
+  </data>
 </root>

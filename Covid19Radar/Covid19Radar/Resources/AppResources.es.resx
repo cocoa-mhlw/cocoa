@@ -263,4 +263,8 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
     <value>Compartir información positiva y notificación anónima a otros</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Restablecer</value>
+    <comment>Reset</comment>
+  </data>
 </root>
