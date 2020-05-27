@@ -100,14 +100,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
   </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>Rhybudd ymlaen llaw</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
-  </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Wrthi'n gosod ap</value>
     <comment>How it works page step 1 title</comment>
@@ -127,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Gosodiadau statws</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Cadw</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Os ydych wedi cael diagnosis cadarnhaol, rhowch eich rhif ffôn symudol a diweddaru eich statws i ddiogelu eich anwyliaid.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>Tap i newid cyflwr</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Gwiriwch eich cysylltiad â'r rhwydwaith os gwelwch yn dda.</value>
@@ -165,33 +145,9 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Caniatáu hysbysiad amlygiad/Bluetooth</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Cyfranwyr</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Amlygiadau</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Hafan</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>Trwydded</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>Hysbysu</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>Diweddaru</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Amlygiadau</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -201,14 +157,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Â llaw</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Diweddaru gwybodaeth</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Galluogi hysbysu</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>Dim amlygiadau hysbys</value>
     <comment>If not found exposures data</comment>
@@ -216,25 +164,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Byddwch yn cael eich hysbysu os ydych wedi dod i gysylltiad â rhywun a gofnododd ganlyniad COVID-19 cadarnhaol.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Rhannu diagnosis cadarnhaol</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Rhannu diagnosis cadarnhaol</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Os gwnaethoch brofi'n bositif am y firws sy'n achosi COVID-19, gallwch ddewis rhannu eich diagnosis.  Bydd hyn yn helpu eraill yn eich cymuned i gynnwys lledaeniad y firws.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Dysgu mwy</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Pe byddech yn cael diagnosis cadarnhaol</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Nodwch y Dynodwr diagnosis</value>
@@ -251,10 +180,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Rhaid defnyddio'r dynodwr prawf unigryw a ddaeth gyda'ch prawf COVID-19 i gadarnhau canlyniad eich prawf cadarnhaol.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>Dilysu a rhannu</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>Rhowch gynnig arall arni rywbryd eto.</value>
@@ -298,12 +223,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Cyflwyno</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>SampleText</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>SampleText</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Gosodiadau</value>
     <comment>SettingsPage Title</comment>
@@ -319,10 +238,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>Ydych chi am roi hysbysiadau ar waith?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>Ailosod</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Galluogi</value>

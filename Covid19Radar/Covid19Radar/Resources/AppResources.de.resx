@@ -100,14 +100,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
   </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>Heads up</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
-  </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Installieren einer App</value>
     <comment>How it works page step 1 title</comment>
@@ -127,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Statuseinstellungen</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Speichern</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Wenn Sie eine positive Diagnose erhalten haben, geben Sie bitte Ihre Handynummer ein und aktualisieren Sie Ihren Status, um Ihre Lieben zu schützen.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>Tippen Sie, um den Zustand zu ändern</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Überprüfen Sie ihre Netzwerkverbindung.</value>
@@ -165,33 +145,9 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <value>Belichtungsbenachrichtigung / Bluetooth zulassen</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Beitragszahler</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Forderungen</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Startseite</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>Lizenz</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>Benachrichtigen</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>Aktualisieren</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Forderungen</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -201,14 +157,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <value>Manuell</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Aktualisierungsinfomation</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Benachrichtigung aktivieren</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>Keine bekannten Expositionen</value>
     <comment>If not found exposures data</comment>
@@ -216,25 +164,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Sie werden benachrichtigt, wenn Sie jemandem ausgesetzt wurden, der ein positives COVID-19Ergebnis gemeldet hat.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Teilen Sie eine positive Diagnose</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Teilen Sie eine positive Diagnose</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Wenn Sie positiv auf das Virus getestet haben, das COVID-19 verursacht, können Sie Ihre Diagnose teilen.  Dies wird anderen in Ihrer Community helfen, die Ausbreitung des Virus einzudämmen.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Weitere Informationen</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Wenn Sie eine positive Diagnose erhalten haben</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Bitte geben Sie den Diagnose-Identifier ein</value>
@@ -251,10 +180,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Die eindeutige Testkennung, die mit Ihrem COVID-19Test enthalten ist, muss verwendet werden, um Ihr positives Testergebnis zu überprüfen.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>Überprüfen und Freigeben</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>Versuchen Sie es später erneut.</value>
@@ -298,12 +223,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Senden</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>SampleText</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>SampleText</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Einstellungen</value>
     <comment>SettingsPage Title</comment>
@@ -319,10 +238,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>Möchten Sie Benachrichtigungen aktivieren?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>Zurücksetzen</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Aktivierung wird ausgeführt.</value>
