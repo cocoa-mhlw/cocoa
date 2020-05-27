@@ -359,6 +359,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Waiting for register に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LoadingTextRegistering {
+            get {
+                return ResourceManager.GetString("LoadingTextRegistering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Exposures に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MainExposures {

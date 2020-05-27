@@ -271,4 +271,8 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
     <value>Directiva de privacidad</value>
     <comment>PrivacyPolicyPage Title</comment>
   </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Esperando el registro</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

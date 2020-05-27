@@ -271,4 +271,8 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Polisi Preifatrwydd</value>
     <comment>PrivacyPolicyPage Title</comment>
   </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Aros am y gofrestr</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

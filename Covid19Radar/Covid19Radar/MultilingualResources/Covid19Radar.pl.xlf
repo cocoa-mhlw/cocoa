@@ -337,6 +337,11 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Zasady zachowania poufności informacji</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Oczekiwanie na rejestrację</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>
