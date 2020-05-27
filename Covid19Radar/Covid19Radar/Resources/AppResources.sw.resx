@@ -271,4 +271,8 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
     <value>Sera ya Faragha</value>
     <comment>PrivacyPolicyPage Title</comment>
   </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Inasubiri rejista</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

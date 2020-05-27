@@ -337,6 +337,11 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <target state="needs-review-translation" state-qualifier="tm-suggestion">தனியுரிமைக் கொள்கை</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">பதிவேட்டுக்காக காத்திருக்கும்</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>
