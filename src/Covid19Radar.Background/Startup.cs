@@ -16,7 +16,6 @@ namespace Covid19Radar.Background
         public override void Configure(IFunctionsHostBuilder builder)
         {
             builder.Services.AddLogging();
-            builder.Services.AddApplicationInsightsTelemetry();
             builder.Services.AddCosmosClient();
             builder.Services.AddSingleton<ICosmos, Cosmos>();
             builder.Services.AddSingleton<INotificationService, NotificationService>();
