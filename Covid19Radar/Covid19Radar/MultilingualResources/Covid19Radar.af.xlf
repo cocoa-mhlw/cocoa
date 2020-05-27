@@ -331,6 +331,16 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Stel terug</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">privaatheidsbeleid</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wag vir register</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>

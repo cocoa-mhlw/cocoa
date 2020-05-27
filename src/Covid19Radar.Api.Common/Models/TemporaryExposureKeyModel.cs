@@ -16,8 +16,6 @@ namespace Covid19Radar.Api.Models
         public int RollingPeriod { get; set; }
         public int RollingStartIntervalNumber { get; set; }
         public int TransmissionRiskLevel { get; set; }
-        public string Region { get; set; }
-
         public long GetRollingStartUnixTimeSeconds() => RollingStartIntervalNumber * 10 * 60;
         public long GetRollingPeriodSeconds() => RollingPeriod * 10 * 60;
 

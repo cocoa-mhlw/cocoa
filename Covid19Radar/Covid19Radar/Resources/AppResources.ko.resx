@@ -267,4 +267,12 @@
     <value>다시 설정</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>개인정보취급방침</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>등록 대기 중</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>
