@@ -96,11 +96,6 @@
           <target state="translated">貢献者リスト</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
-        <trans-unit id="TitleDetectedBeaconPage" translate="yes" xml:space="preserve">
-          <source>Detected Beacons</source>
-          <target state="translated">検出されたビーコン</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacons</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License Agreement</source>
           <target state="translated">使用許諾契約書</target>
@@ -111,41 +106,6 @@
           <target state="translated">https://covid19radar.z11.web.core.windows.net/ja/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
         </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
-          <source>ID</source>
-          <target state="translated">ID</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
-          <source>Average Distance</source>
-          <target state="translated">平均距離</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
-          <source>Count</source>
-          <target state="translated">回数</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
-          <source>ElapsedTime</source>
-          <target state="translated">経過時間</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextElapsedTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextLastTime" translate="yes" xml:space="preserve">
-          <source>LastTime</source>
-          <target state="translated">最終接触時間</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
-          <source>MajorNo</source>
-          <target state="translated">メジャーNo</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
-          <source>MinorNo</source>
-          <target state="translated">マイナーNo</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MinorNo</note>
-        </trans-unit>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
           <target state="translated">https://covid19radar.z11.web.core.windows.net/ja/contributor.html</target>
@@ -155,16 +115,6 @@
           <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
           <target state="translated">https://covid19radar.z11.web.core.windows.net/ja/update.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
-        </trans-unit>
-        <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
-          <source>Heads up</source>
-          <target state="translated">注意勧告</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Heads up</note>
-        </trans-unit>
-        <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/qna.html</source>
-          <target state="translated">https://covid19radar.z11.web.core.windows.net/ja/qna.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">If contacted , headsup and Correct coping method and contact information Try to be calm.</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
           <source>Installing an App</source>
@@ -190,21 +140,6 @@
           <source>Status Settings</source>
           <target state="translated">ステータス設定</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
-        </trans-unit>
-        <trans-unit id="ButtonSave" translate="yes" xml:space="preserve">
-          <source>Save</source>
-          <target state="translated">保存</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button Save</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="translated">陽性の診断結果を受けた場合は、携帯電話番号を入力し、あなたの愛する人を保護するためにあなたのステータスを更新してください。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
-          <source>Tap to change state</source>
-          <target state="translated">タップして状態を変更する</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
@@ -238,40 +173,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">Exposure Notification と Bluetooth の許可</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
-          <source>Contributors</source>
-          <target state="translated">貢献者たち</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
-        </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
           <target state="translated">Exposure</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="MainHome" translate="yes" xml:space="preserve">
-          <source>Home</source>
-          <target state="translated">ホーム</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
-        </trans-unit>
-        <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
-          <source>License</source>
-          <target state="translated">ライセンスについて</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
-        </trans-unit>
-        <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
-          <source>Notify</source>
-          <target state="translated">通知</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
-        </trans-unit>
-        <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
-          <source>Update</source>
-          <target state="translated">更新情報</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
-          <source>Exposures</source>
-          <target state="translated">Exposure</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://microsoft.com/</source>
@@ -283,16 +188,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">マニュアル</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
-        <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
-          <source>Update Infomation</source>
-          <target state="translated">更新情報</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
-        </trans-unit>
-        <trans-unit id="HomeEnableNotification" translate="yes" xml:space="preserve">
-          <source>Enable Notification</source>
-          <target state="translated">通知を有効にする</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home Setting Enable Notification</note>
-        </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
           <source>No known exposures</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">既知の露出はありません</target>
@@ -302,30 +197,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
           <target state="translated">COVID-19陽性を報告した人と接触していた場合は、通知されます。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
-        </trans-unit>
-        <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
-          <source>Share A Positive Diagnosis</source>
-          <target state="translated">陽性診断を共有する</target>
-        </trans-unit>
-        <trans-unit id="NofityPageShareDiag" translate="yes" xml:space="preserve">
-          <source>Share A Positive Diagnosis</source>
-          <target state="translated">陽性診断を共有する</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Share Diag</note>
-        </trans-unit>
-        <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
-          <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19の原因となるウイルスの陽性をテストした場合は、診断を共有することを選択できます。 これは、あなたのコミュニティの他の人がウイルスの拡散を含むのに役立ちます.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
-        </trans-unit>
-        <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
-          <source>Learn more</source>
-          <target state="translated">詳細</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="translated">陽性の診断を受けた場合</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
           <source>Please enter the Diagnosis Identifier</source>
@@ -347,11 +218,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 テストに付属の一意のテスト ID を使用して、陽性のテスト結果を検証する必要があります。</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
-          <source>Verify and Share</source>
-          <target state="translated">確認と共有</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
@@ -409,14 +275,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Submit</source>
           <target state="translated">提出</target>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">サンプルテキスト</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">サンプルテキスト</target>
-        </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="translated">アプリの設定</target>
@@ -436,11 +294,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Do you want to turn on notifications?</source>
           <target state="translated">通知をオンにしますか？</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
-        </trans-unit>
-        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
-          <source>Reset</source>
-          <target state="translated">Reset</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
         <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
           <source>Enabling</source>
@@ -471,6 +324,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Sharing positive information and anonymous notification to others</source>
           <target state="translated">陽性情報の登録と他者への匿名通知へ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">リセット</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
       </group>
     </body>

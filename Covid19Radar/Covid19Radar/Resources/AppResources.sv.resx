@@ -84,10 +84,6 @@
     <value>Lista över bidragsgivare</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Identifierade beacons</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licensavtal</value>
     <comment>License Agreement</comment>
@@ -96,34 +92,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>Id</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Genomsnittligt avstånd</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Antal</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>Förfluten tid</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>Senaste tid</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>MajorNo (Svenska)</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MinorNo (på något sätt)</value>
-    <comment>MinorNo</comment>
-  </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
     <comment>Url Contributor</comment>
@@ -131,14 +99,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>På gång</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Installera en app</value>
@@ -159,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Statusinställningar</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Spara</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Om du fått en positiv diagnos, ange ditt mobilnummer och uppdatera din status för att skydda dina nära och kära.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>Tryck för att ändra tillstånd</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Kontrollera nätverkets anslutning.</value>
@@ -197,33 +145,9 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Tillåt  Bluetooth</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Bidragsgivare</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exponeringar</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Hem</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>Licens</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>Meddela</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>Uppdatering</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Exponeringar</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -233,14 +157,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Manuell</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Uppdatera infomation</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Aktivera avisering</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>Inga kända exponeringar</value>
     <comment>If not found exposures data</comment>
@@ -248,25 +164,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Du kommer att meddelas om du har utsatts för någon som rapporterat ett positivt COVID-19 resultat.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Dela en positiv diagnos</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Dela en positiv diagnos</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Om du testats positivt för viruset som orsakar COVID-19 kan du välja att dela din diagnos.  Detta kommer att hjälpa andra i ditt samhälle för att minska spridningen av viruset.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Läs mer</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Om du fick en positiv diagnos</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Ange diagnosidentifieraren</value>
@@ -283,10 +180,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Den unika testidentifieraren som följde med ditt COVID-19 test måste användas för att verifiera ditt positiva testresultat.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>Verifiera och dela</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>Försök igen senare.</value>
@@ -330,12 +223,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Skicka</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>SampleText</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>SampleText</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Inställningar</value>
     <comment>SettingsPage Title</comment>
@@ -351,10 +238,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>Vill du aktivera aviseringar?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>Återställ</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Aktiveras</value>
