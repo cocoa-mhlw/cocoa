@@ -332,6 +332,11 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Atiestatīt</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Konfidencialitātes politika</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
       </group>
     </body>
   </file>

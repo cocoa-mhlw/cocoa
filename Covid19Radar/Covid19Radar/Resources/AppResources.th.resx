@@ -267,4 +267,8 @@
     <value>ตั้งค่าใหม่</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>นโยบายความเป็นส่วนตัว</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>
