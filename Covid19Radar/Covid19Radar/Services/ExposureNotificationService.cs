@@ -1,5 +1,6 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
+using ImTools;
 using Newtonsoft.Json;
 using Plugin.LocalNotification;
 using System;
@@ -220,50 +221,42 @@ namespace Covid19Radar.Services
             if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
                 throw new InvalidOperationException();
 
-            var selfDiag = await CreateSubmissionAsync();
-
-            var url = $"{apiUrlBase.TrimEnd('/')}/diagnosis";
-
-            var json = JsonConvert.SerializeObject(selfDiag);
-
-            using var http = new HttpClient();
-            var response = await http.PutAsync(url, new StringContent(json));
-
-            response.EnsureSuccessStatusCode();
-
+            var selfDiag = await CreateSubmissionAsync(pendingDiagnosis, temporaryExposureKeys);
+            await httpDataService.PostSelfExposureKeysAsync(selfDiag);
             // Update pending status
             pendingDiagnosis.Shared = true;
             await userDataService.SetAsync(userData);
-
-
-            async Task<SelfDiagnosisSubmission> CreateSubmissionAsync()
+        }
+        private async Task<SelfDiagnosisSubmission > CreateSubmissionAsync(PositiveDiagnosisState pendingDiagnosis, IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
+        {
+            // Create the network keys
+            var keys = temporaryExposureKeys.Select(k => new ExposureKey
             {
-                // Create the network keys
-                var keys = temporaryExposureKeys.Select(k => new ExposureKey
-                {
-                    Key = Convert.ToBase64String(k.Key),
-                    RollingStart = (long)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
-                    RollingDuration = (int)(k.RollingDuration.TotalMinutes / 10),
-                    TransmissionRisk = (int)k.TransmissionRiskLevel
-                });
+                KeyData = Convert.ToBase64String(k.Key),
+                RollingStart = (long)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
+                RollingDuration = (int)(k.RollingDuration.TotalMinutes / 10),
+                TransmissionRisk = (int)k.TransmissionRiskLevel
+            });
 
-                // Create the submission
-                var submission = new SelfDiagnosisSubmission(true)
-                {
-                    AppPackageName = AppInfo.PackageName,
-                    DeviceVerificationPayload = null,
-                    Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
-                    Regions = userData.ServerBatchNumbers.Keys.ToArray(),
-                    Keys = keys.ToArray(),
-                    VerificationPayload = pendingDiagnosis.DiagnosisUid,
-                };
+            // Create the submission
+            var submission = new SelfDiagnosisSubmission (true)
+            {
+                SubmissionNumber = userData.PendingDiagnosis.DiagnosisUid,
+                AppPackageName = AppInfo.PackageName,
+                UserUuid = userData.UserUuid,
+                DeviceVerificationPayload = null,
+                Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
+                Regions = userData.ServerBatchNumbers.Keys.ToArray(),
+                Keys = keys.ToArray(),
+                VerificationPayload = pendingDiagnosis.DiagnosisUid,
+            };
 
-                // See if we can add the device verification
-                if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
-                    submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
+            // See if we can add the device verification
+            if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
+                submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
 
-                return submission;
-            }
+            return submission;
+
         }
         #endregion
 
