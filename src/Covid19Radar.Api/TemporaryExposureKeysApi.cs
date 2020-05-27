@@ -42,7 +42,7 @@ namespace Covid19Radar.Api
             var keysResponse = await TekExport.GetKeysAsync((ulong)sinceEpochSeconds);
             var result = new TemporaryExposureKeysResult();
             // TODO: Url util
-            result.Keys = keysResponse.Select(_ => new TemporaryExposureKeysResult.Key() { Url = $"{ExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{_.BatchNum}.zip" });
+            result.Keys = keysResponse.Select(_ => new TemporaryExposureKeysResult.Key() { Url = $"{ExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{_.Region}/{_.BatchNum}.zip" });
             result.Timestamp = keysResponse
                 .OrderByDescending(_ => _.TimestampSecondsSinceEpoch)
                 .FirstOrDefault()?.TimestampSecondsSinceEpoch ?? sinceEpochSeconds;
