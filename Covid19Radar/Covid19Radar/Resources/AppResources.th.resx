@@ -263,4 +263,8 @@
     <value>การแบ่งปันข้อมูลเชิงบวกและการแจ้งเตือนแบบไม่ระบุชื่อให้กับผู้อื่น</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>ตั้งค่าใหม่</value>
+    <comment>Reset</comment>
+  </data>
 </root>

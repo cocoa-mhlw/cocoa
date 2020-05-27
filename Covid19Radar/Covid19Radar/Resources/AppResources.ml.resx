@@ -263,4 +263,8 @@
     <value>മറ്റുള്ളവർക്ക് അനുകൂലമായ വിവരങ്ങളും അജ്ഞാത അറിയിപ്പും പങ്കിടൽ</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>പുനഃസജ്ജീകരിക്കുക</value>
+    <comment>Reset</comment>
+  </data>
 </root>
