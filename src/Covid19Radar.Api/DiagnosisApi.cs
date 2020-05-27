@@ -54,6 +54,7 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Invalid parameter");
             }
 
+            // validation support region 
             if (!SupportRegions.Contains(diagnosis.Region))
             {
                 return new BadRequestErrorMessageResult("Regions not supported.");
@@ -66,10 +67,21 @@ namespace Covid19Radar.Api
                 return validationResult.ErrorActionResult;
             }
 
-            // Device validation
+            // validation device 
             if (false == await DeviceCheck.Validation(diagnosis))
             {
                 return new BadRequestErrorMessageResult("Invalid Device");
+            }
+
+            // TODO: validatetion VerificationPayload 4xx
+            if (false == true)
+            {
+                return new ObjectResult("Bad VerificationPayload") { StatusCode = 406 };
+            }
+            // TODO: validatetion VerificationPayload connnection error 5xx
+            if (false == true)
+            {
+                return new ObjectResult("Unable to communicate with center") { StatusCode = 503};
             }
 
             var timestamp = DateTimeOffset.UtcNow;
