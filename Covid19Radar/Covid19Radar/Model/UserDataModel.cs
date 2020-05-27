@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Xamarin.ExposureNotifications;
+using Covid19Radar.Model;
 
 namespace Covid19Radar.Model
 {
@@ -62,8 +63,10 @@ namespace Covid19Radar.Model
         public bool IsExposureNotificationEnabled { get; set; } = false;
 
         public bool IsNotificationEnabled { get; set; } = true;
-        public long ServerLastTime { get; set; } = 0;
-        public string Region { get; set; } = AppConstants.DefaultRegion;
+        
+        //public long ServerLastTime { get; set; } = 0;
+
+        //public string Region { get; set; } = AppConstants.DefaultRegion;
 
         public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = new Dictionary<string, ulong>(DefaultServerBatchNumbers);
 
@@ -71,17 +74,19 @@ namespace Covid19Radar.Model
 
         public ExposureDetectionSummary ExposureSummary { get; set; }
 
-        public List<PositiveDiagnosisStateModel> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisStateModel>();
+        public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
+
 
         public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
         {
-            var existing = PositiveDiagnoses?.Where(d => d.DiagnosisUid.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase))
-                .OrderByDescending(d => d.DiagnosisDate).FirstOrDefault();
-
-            if (existing != null)
+            var existing = PositiveDiagnoses.Any(d => d.DiagnosisUid.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase));
+            if (existing)
                 return;
 
-            PositiveDiagnoses.Add(new PositiveDiagnosisStateModel
+            // Remove ones that were not submitted as the new one is better
+            PositiveDiagnoses.RemoveAll(d => !d.Shared);
+
+            PositiveDiagnoses.Add(new PositiveDiagnosisState
             {
                 DiagnosisDate = submissionDate,
                 DiagnosisUid = diagnosisUid,
@@ -89,18 +94,18 @@ namespace Covid19Radar.Model
         }
 
         public void ClearDiagnosis()
-            => PositiveDiagnoses?.Clear();
+            => PositiveDiagnoses.Clear();
 
-        public PositiveDiagnosisStateModel LatestDiagnosis
-            => PositiveDiagnoses?
+        public PositiveDiagnosisState LatestDiagnosis
+            => PositiveDiagnoses
                 .Where(d => d.Shared)
-                .OrderByDescending(p => p.DiagnosisDate)?
+                .OrderByDescending(p => p.DiagnosisDate)
                 .FirstOrDefault();
 
-        public PositiveDiagnosisStateModel PendingDiagnosis
-            => PositiveDiagnoses?
+        public PositiveDiagnosisState PendingDiagnosis
+            => PositiveDiagnoses
                 .Where(d => !d.Shared)
-                .OrderByDescending(p => p.DiagnosisDate)?
+                .OrderByDescending(p => p.DiagnosisDate)
                 .FirstOrDefault();
 
     }

@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using Covid19Radar.Model;
 using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
@@ -12,76 +13,82 @@ namespace Covid19Radar.ViewModels
 {
     public class SharePositiveDiagnosisPageViewModel : ViewModelBase
     {
+        public bool IsEnabled { get; set; } = true;
         public string DiagnosisUid { get; set; }
-        public DateTime? DiagnosisDate { get; set; }
+        public DateTime? DiagnosisTimestamp { get; set; } = DateTime.Now;
 
-        public SharePositiveDiagnosisPageViewModel(INavigationService navigationService) : base(navigationService)
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
+        public SharePositiveDiagnosisPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = Resources.AppResources.TitileSharePositiveDiagnosis;
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
         }
 
         public Command CancelCommand => (new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(HomePage));
+            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
         }));
 
 
         public Command SubmitAndVerifyCommand => (new Command(async () =>
         {
-            UserDialogs.Instance.Loading(Resources.AppResources.SharePositiveDiagnosisPageVerifyDialog);
-            UserDialogs.Instance.HideLoading();
 
-            // TODO Waiting Enable EN
-            // Check the diagnosis is valid on the server before asking the native api's for the keys
-            /*
-                        if (!await ExposureNotificationHandler.VerifyDiagnosisUid(DiagnosisUid))
-                        {
-                            UserDialogs.Instance.HideLoading();
-                            await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageVerifyFailedDialogText, Resources.AppResources.SharePositiveDiagnosisPageVerifyFailedDialogTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-                            return;
-                        }
-            */
-            UserDialogs.Instance.Loading(Resources.AppResources.SharePositiveDiagnosisPageSubmittingDialog);
-            /*
-                        try
-                        {
-                            var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+            // Verify  Check the parameters
 
-                            if (!enabled)
-                            {
-                                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageNotEnabledENDialogText, Resources.AppResources.SharePositiveDiagnosisPageNotEnabledENDialogTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-                                return;
-                            }
+            if (string.IsNullOrEmpty(DiagnosisUid))
+            {
+                // Check gov's positive api check here!!
 
-                            if (string.IsNullOrEmpty(DiagnosisUid))
-                            {
-                                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageDiagUidIsEmptyText, Resources.AppResources.SharePositiveDiagnosisPageDiagUidIsEmptyTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-                                return;
-                            }
+                await UserDialogs.Instance.AlertAsync("Please provide a valid Diagnosis ID", "Invalid Diagnosis ID", "OK");
+                return;
+            }
+            if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
+            {
+                await UserDialogs.Instance.AlertAsync("Please provide a valid Test Date", "Invalid Test Date", "OK");
+                return;
+            }
 
-                            // Set the submitted UID
-                            LocalStateManager.Instance.LatestDiagnosis.DiagnosisUid = DiagnosisUid;
-                            LocalStateManager.Instance.LatestDiagnosis.DiagnosisDate = DiagnosisDate ?? DateTime.UtcNow;
-                            LocalStateManager.Save();
+            // Submit the UID
+            using var dialog = UserDialogs.Instance.Loading("Submitting Diagnosis...");
+            IsEnabled = false;
+            try
+            {
+                var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
 
-                            // Submit our diagnosis
-                            await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
+                if (!enabled)
+                {
+                    dialog.Hide();
 
-                            UserDialogs.Instance.HideLoading();
-                            await UserDialogs.Instance.AlertAsync(Resources.AppResources.SharePositiveDiagnosisPageDiagSubmittedText, Resources.AppResources.SharePositiveDiagnosisPageDiagSubmittedTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
+                    await UserDialogs.Instance.AlertAsync("Please enable Exposure Notifications before submitting a diagnosis.", "Exposure Notifications Disabled", "OK");
+                    return;
+                }
 
-                            await NavigationService.GoBackAsync();
-                        }
-                        catch
-                        {
-                            UserDialogs.Instance.HideLoading();
-                            UserDialogs.Instance.Alert(Resources.AppResources.SharePositiveDiagnosisPageDiagExceptionText, Resources.AppResources.SharePositiveDiagnosisPageDiagExceptionTitle, Resources.AppResources.SharePositiveDiagnosisPageDialogButton);
-                        }
-                        */
-            UserDialogs.Instance.HideLoading();
-            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(HomePage));
+                // Set the submitted UID
+                userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DiagnosisTimestamp.Value));
+                await userDataService.SetAsync(userData);
+
+                // Submit our diagnosis
+                await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
+
+                dialog.Hide();
+
+                await UserDialogs.Instance.AlertAsync("Diagnosis Submitted", "Complete", "OK");
+                await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+
+                dialog.Hide();
+                UserDialogs.Instance.Alert("Please try again later.", "Failed", "OK");
+            }
+            finally
+            {
+                IsEnabled = true;
+            }
         }));
-
-
     }
 }
