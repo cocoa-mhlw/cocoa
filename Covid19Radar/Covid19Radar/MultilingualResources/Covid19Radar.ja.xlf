@@ -325,6 +325,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">陽性情報の登録と他者への匿名通知へ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">リセット</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

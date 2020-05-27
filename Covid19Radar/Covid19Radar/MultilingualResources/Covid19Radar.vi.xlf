@@ -327,6 +327,11 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Chia sẻ thông tin tích cực và thông báo ẩn danh cho người khác</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Đặt lại</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

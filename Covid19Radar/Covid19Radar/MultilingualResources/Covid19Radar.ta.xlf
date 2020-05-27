@@ -327,6 +327,11 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <target state="needs-review-translation" state-qualifier="mt-suggestion">பிறருக்கு சாதகமான தகவல் மற்றும் பெயரற்ற அறிவிப்பை பகிர்தல்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">மீட்டமை</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

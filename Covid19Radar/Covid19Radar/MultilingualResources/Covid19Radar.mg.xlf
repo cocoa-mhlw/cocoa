@@ -327,6 +327,11 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mizara fampahalalana tsara sy tsy fampilazana amin' ny hafa</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Données</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

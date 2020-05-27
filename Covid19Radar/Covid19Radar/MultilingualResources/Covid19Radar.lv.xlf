@@ -327,6 +327,11 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozitīvas informācijas un anonīma paziņojuma koplietošana citiem</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Atiestatīt</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>
