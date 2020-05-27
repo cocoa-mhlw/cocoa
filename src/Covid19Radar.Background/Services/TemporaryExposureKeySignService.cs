@@ -20,6 +20,7 @@ namespace Covid19Radar.Background.Services
             ILogger<TemporaryExposureKeySignService> logger)
         {
             Logger = logger;
+            Logger.LogInformation($"{nameof(TemporaryExposureKeySignService)} constructor");
             TekExportKeyVaultKeyUrl = config.TekExportKeyVaultKeyUrl();
             AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
             var credentialCallback = new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback);

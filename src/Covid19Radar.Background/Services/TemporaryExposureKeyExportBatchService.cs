@@ -40,12 +40,13 @@ namespace Covid19Radar.Background.Services
             ITemporaryExposureKeyBlobService blobService,
             ILogger<TemporaryExposureKeyExportBatchService> logger)
         {
+            Logger = logger;
+            Logger.LogInformation($"{nameof(TemporaryExposureKeyExportBatchService)} constructor");
             TekRepository = tek;
             TekExportRepository = tekExport;
             SignService = signService;
             SignatureService = signatureService;
             BlobService = blobService;
-            Logger = logger;
         }
 
         public async Task RunAsync()
