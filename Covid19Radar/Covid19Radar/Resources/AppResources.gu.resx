@@ -84,10 +84,6 @@
     <value>ફાળો આપનાર યાદી</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>શોધાયેલ બીકોન્સ</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>લાઇસન્સ કરાર</value>
     <comment>License Agreement</comment>
@@ -96,34 +92,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>આઇ.ડી</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>અવરેજ અંતર</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>સંખ્યા</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>પસાર થયેલ સમય</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>છેલ્લો સમય</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>મેજરનો</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>માઇનોર નં.</value>
-    <comment>MinorNo</comment>
-  </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
     <comment>Url Contributor</comment>
@@ -131,14 +99,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>આગોતરી જાણકારી</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>એપ્લિકેશન ને સ્થાપિત કરી રહ્યા છીએ</value>
@@ -159,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>સ્થિતિ સુયોજનો</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>સાચવો</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>જો તમને હકારાત્મક નિદાન થયું હોય, તો કૃપા કરીને તમારો મોબાઇલ નંબર દાખલ કરો અને તમારા સ્વજનોની સુરક્ષા માટે તમારી સ્થિતિ અપડેટ કરો.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>સ્થિતિ બદલવા માટે ટેપ કરો</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>મહેરબાની કરીને તમારું નેટવર્ક જોડાણ ચકાસો.</value>
@@ -197,33 +145,9 @@
     <value>એક્સપોઝર સૂચના/ બ્લુટુથને પરવાનગી આપો</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>યોગદાન આપનાર</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>એક્સપોઝર્સ</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>હોમ</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>લાઇસન્સ</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>સૂચિત કરો</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>અપડેટ કરો</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>એક્સપોઝર્સ</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -233,14 +157,6 @@
     <value>મેન્યુઅલ</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>માહિતી સુધારો</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>સૂચના સક્રિય કરો</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>કોઈ જાણીતા એક્સપોઝર્સ નથી</value>
     <comment>If not found exposures data</comment>
@@ -248,25 +164,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>જો તમને કોઈ એવા વ્યક્તિ સાથે સંપર્ક થયો હોય કે જેણે હકારાત્મક COVID-19 પરિણામ ની જાણ કરી હોય તો તમને સૂચિત કરવામાં આવશે.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>હકારાત્મક નિદાન વહેંચો</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>હકારાત્મક નિદાન વહેંચો</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>જો તમે COVID-19 નું કારણ બને છે તે વાયરસ માટે પોઝિટિવ ટેસ્ટ કર્યો હોય તો તમે તમારું નિદાન વહેંચવાનું પસંદ કરી શકો છો.  આ તમારા સમુદાયના અન્ય લોકોને વાઇરસના ફેલાવાને રોકવામાં મદદ કરશે.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>વધુ જાણો</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>જો તમને હકારાત્મક નિદાન થયું હોય</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>કૃપા કરીને નિદાન ઓળખકર્તા દાખલ કરો</value>
@@ -283,10 +180,6 @@
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>તમારા COVID-19 ટેસ્ટ સાથે આવેલો અનન્ય ટેસ્ટ ઓળખનાર તમારા હકારાત્મક ટેસ્ટ પરિણામની ચકાસણી કરવા માટે ઉપયોગ થવો જ જોઇએ.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>ચકાસો અને વહેંચો</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>પછીથી ફરી પ્રયાસ કરો.</value>
@@ -330,12 +223,6 @@
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>સબમિટ કરો</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>નમૂનાલખાણ</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>નમૂનાલખાણ</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>સેટિંગ્સ</value>
     <comment>SettingsPage Title</comment>
@@ -351,10 +238,6 @@
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>શું તમે સૂચનાઓ ચાલુ કરવા માંગો છો?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>રીસેટ કરો;Reset</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>સક્રિય કરી રહ્યા છીએ</value>
