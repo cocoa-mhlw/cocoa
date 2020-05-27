@@ -80,48 +80,6 @@
     <value>Nustatyti baigtą</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Jei gavote teigiamą diagnozę, įveskite savo mobiliojo telefono numerį ir atnaujinkite savo statusą, kad apsaugotumėte savo artimuosius.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Įveskite mobiliojo telefono numerį</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Atsiųsime patvirtinimo kodą.
-Patikrinkite savo SMS žinutę.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Mes neišsaugosime jūsų telefono numerio. Jis bus išsiųstas tiesiai į vyriausybės duomenų bazę.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Jeigu jums buvo diagnozuota teigiama diagnozė</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Aptiktas švyturių sąrašas</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Įveskite kodą, kuris buvo išsiųstas 
-「{0}」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Įveskite kodą</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Tikrinti</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>Negavote kodo?</value>
     <comment>Didn't get the code Text</comment>
@@ -213,10 +171,6 @@ Patikrinkite savo SMS žinutę.</value>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Šios programos naudojimo reikalavimai</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Būsenos parametrai</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Būsenos parametrai</value>

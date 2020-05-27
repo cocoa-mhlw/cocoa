@@ -80,47 +80,6 @@
     <value>Thiết lập hoàn tất</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Nếu bạn được xác nhận xét nghiệm dương tính, xin vui lòng nhập số điện thoại di động của bạn và cập nhật tình trạng của bạn để bảo vệ những người thân yêu của bạn.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Nhập số điện thoại di động</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Chúng tôi sẽ gửi cho bạn mã xác minh. Vui lòng kiểm tra tin nhắn SMS của bạn.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Chúng tôi sẽ không lưu số điện thoại của bạn. Nó sẽ được gửi trực tiếp đến cơ sở dữ liệu của chính phủ.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Nếu bạn nhận được một xét nghiệm dương tính</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Danh sách Beacon đã phát hiện</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Nhập mã đã được gửi đến 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Nhập mã</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Kiểm chứng</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>Đã không nhận được mã?</value>
     <comment>Didn't get the code Text</comment>
@@ -212,10 +171,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Các yêu cầu cần có để sử dụng ứng dụng này</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Cài đặt trạng thái</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Cài đặt trạng thái</value>

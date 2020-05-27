@@ -80,48 +80,6 @@
     <value>Konfigurowanie zakończone</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Jeśli otrzymałeś pozytywną diagnozę, podaj swój numer telefonu komórkowego i zaktualizuj swój status, aby chronić swoich bliskich.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Wprowadź numer telefonu komórkowego</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Wyślemy Ci kod weryfikacyjny.
-Sprawdź swój SMS.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Nie będziemy przechowywać Twojego numeru telefonu. Zostanie on wysłany bezpośrednio do bazy danych rządu.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Jeśli pacjent otrzymał pozytywną diagnozę</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Lista wykrytych sygnałów nawigacyjnych</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Wprowadź kod, do który został wysłany 
-「{0}」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Wprowadź kod</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Weryfikuj</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>Nie otrzymałeś kodu?</value>
     <comment>Didn't get the code Text</comment>
@@ -213,10 +171,6 @@ Sprawdź swój SMS.</value>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Wymagania dotyczące korzystania z tej aplikacji</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Ustawienia stanu</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Ustawienia stanu</value>
