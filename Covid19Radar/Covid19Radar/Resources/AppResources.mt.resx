@@ -267,4 +267,8 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
     <value>Irrisettja</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Politika tal-Privatezza</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>

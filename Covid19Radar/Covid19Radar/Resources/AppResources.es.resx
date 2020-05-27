@@ -267,4 +267,8 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
     <value>Restablecer</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Directiva de privacidad</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>

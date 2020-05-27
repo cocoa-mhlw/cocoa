@@ -267,4 +267,8 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
     <value>Nustatyti iš naujo</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Privatumo strategija</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>
