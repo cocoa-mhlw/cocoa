@@ -51,7 +51,7 @@ namespace Covid19Radar.Api
             }
 
             var userResult = new UserResultModel();
-            userResult.LastNotificationTime = Notification.LastNotificationTime;
+            userResult.LastNotificationTime = await Notification.GetLastNotificationTimeAsync();
             return new OkObjectResult(userResult);
         }
 

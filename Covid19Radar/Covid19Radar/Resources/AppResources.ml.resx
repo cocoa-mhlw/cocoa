@@ -84,10 +84,6 @@
     <value>കോൺസ് ക്ടർമാർ ലിസ്റ്റ്</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>കണ്ടുപിടിക്കാത്ത ദീപസ്തംഭങ്ങൾ</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ലൈസൻസ് ഉടമ്പടി</value>
     <comment>License Agreement</comment>
@@ -96,34 +92,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>ID</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>അവർപ്രായ ദൂരം</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>എണ്ണം</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>എലെലസെ് സമയം.</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>ലസ്റ്റ്ടൈം</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>മയോര് ഗ</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>മിനോർനോ</value>
-    <comment>MinorNo</comment>
-  </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
     <comment>Url Contributor</comment>
@@ -131,14 +99,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>ഹെഡ്‌സ് അപ്പ്</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>ഒരു ആപ് ഇന് സ്റ്റോള് ചെയ്യുന്നു</value>
@@ -159,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>സ്റ്റാറ്റസ് സജ്ജീകരണങ്ങള്</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>സംരക്ഷിക്കുക</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് ഒരു പോസിറ്റീവ് രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ, നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകുക, പ്രിയപ്പെട്ടവരെ പരിരക്ഷിക്കുന്നതിന് നിങ്ങളുടെ സ്റ്റാറ്റസ് അപ്ഡേറ്റ് ചെയ്യുക.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>സംസ്ഥാനം മാറ്റുന്നതിന് ടാപ്പുചെയ്യുക</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>നിങ്ങളുടെ നെറ്റ് വർക്ക് കണക്ഷൻ പരിശോധിക്കുക.</value>
@@ -197,33 +145,9 @@
     <value>എക്സ്പോണറി അറിയിപ്പ്/ബ്ലൂടൂത്ത് അനുവദിക്കുക</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>കൺക്പ്റ്ററുകൾ</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>ഹോം</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>ലൈസന്‍സ്</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>അറിയിക്കുക</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>കാലികമാക്കുക</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Exposures</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -233,14 +157,6 @@
     <value>കരകൃതം</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>പരിഷ്കരിക്കുക</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>അറിയിപ്പ് സജ്ജമാക്കുക</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>അറിയപ്പെടുന്ന അമ്പലങ്ങളില്ല</value>
     <comment>If not found exposures data</comment>
@@ -248,25 +164,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>പോസിറ്റീവ് കോവിഡ്-19 ഫലം റിപ്പോർട്ട് ചെയ്ത ഒരാളുമായി സമ്പർക്കമുണ്ടെങ്കിൽ നിങ്ങളെ അറിയിക്കും.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>പോസിറ്റീവ് രോഗനിർണ്ണയം പങ്കിടുക</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>പോസിറ്റീവ് രോഗനിർണ്ണയം പങ്കിടുക</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>കോവിഡ്-19 കാരണമാകുന്ന വൈറസിന് പോസിറ്റീവ് ആയി പരീക്ഷിച്ചാൽ, രോഗനിർണ്ണയം പങ്കിടാൻ നിങ്ങൾക്ക് തീരുമാനിക്കാം.  ഇത് നിങ്ങളുടെ സമൂഹത്തിലെ മറ്റുള്ളവർക്ക് വൈറസിന്റെ വ്യാപ്തി ഉൾക്കൊള്ളാൻ സഹായിക്കും.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>കൂടുതലറിയുക</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>രോഗനിർണ്ണയ ഐഡന്റിഫയർ നൽകുക</value>
@@ -283,10 +180,6 @@
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>നിങ്ങളുടെ കോവിഡ്-19 ടെസ്റ്റുമായി ബന്ധപ്പെട്ട് വന്ന യുണീക്ക് ടെസ്റ്റ് ഐഡന്റിഫയർ നിങ്ങളുടെ പോസിറ്റീവ് പരിശോധനാ ഫലം പരിശോധിച്ചുറപ്പിക്കുന്നതിന് ഉപയോഗിക്കണം.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>പരിശോധിച്ചുറപ്പിക്കാനും പങ്കിടാനും</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</value>
@@ -330,12 +223,6 @@
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>സമർപ്പിക്കുക</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>സാമ്പലപാഠം</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>സാമ്പലപാഠം</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>ക്രമീകരണം</value>
     <comment>SettingsPage Title</comment>
@@ -351,10 +238,6 @@
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>നിങ്ങള് ക്ക് നോട്ടിഫിക്കേഷന് തിരിയ്ക്കണോ?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>പുനഃസജ്ജീകരിക്കുക</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>പ്രാപ്തമായ</value>

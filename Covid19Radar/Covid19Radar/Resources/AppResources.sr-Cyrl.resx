@@ -84,10 +84,6 @@
     <value>Листа сарадника</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Откривени монитори</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Уговор о лиценцирању</value>
     <comment>License Agreement</comment>
@@ -96,34 +92,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
   </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>ID</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Удаљеност од старости</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Број</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>ЕлапседТиме</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>Сећам</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>Маорно</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>МинорНо</value>
-    <comment>MinorNo</comment>
-  </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
     <comment>Url Contributor</comment>
@@ -131,14 +99,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>Најава</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Инсталирање апликације</value>
@@ -159,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Поставке статуса</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Сачувај</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Ако сте добили позитивну дијагностику, унесите свој број телефона и ажурирајте свој статус како бисте заштитили ваше вољене.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>Тапните да бисте променили стање</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Проверите везу са мрежом.</value>
@@ -197,33 +145,9 @@
     <value>Дозволи изложеност експозиције/Блуетоотх</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Цонтрибутерс</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Јонизирајуће</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Почетак</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>Лиценца</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>Obavesti</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>Ажурирај</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Јонизирајуће</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -233,14 +157,6 @@
     <value>Ручно</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Ажурирање информација</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Омогући обавештење</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>Нема познатих јонизирајуће</value>
     <comment>If not found exposures data</comment>
@@ -248,25 +164,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Бићете обавештени о томе да ли сте били изложени некоме ко је пријавио позитивне КОВИД-19 резултате.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Дељење позитивне дијагнозе</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Дељење позитивне дијагнозе</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Ако сте на позитиван начин тестирали вирус који узрокује КОВИД-19, можете одабрати да поделите своју дијагнозу.  То ће помоћи другима у вашој заједници да садрже ширење вируса.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Сазнајте више</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Ако сте добили позитивну дијагнозу</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Унесите идентификатор дијагностике</value>
@@ -283,10 +180,6 @@
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Јединствени идентификатор теста који сте добили уз ваш КОВИД-19 тест мора да се користи за верификацију позитивног резултата тестирања.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>Верификуј и дели</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>Покушајте поново касније.</value>
@@ -330,12 +223,6 @@
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Проследи</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Семплетни</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Семплетни</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Поставке</value>
     <comment>SettingsPage Title</comment>
@@ -351,10 +238,6 @@
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>Желите ли да укључите обавештења?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>Поништи</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Омогућавање</value>
