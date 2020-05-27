@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>Chcę pomóc</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>Jak to działa</value>
     <comment>How it works page title</comment>
@@ -27,10 +23,6 @@
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Warunki świadczenia usługi</value>
     <comment>Consent by user page</comment>
-  </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>Zgadzam się i kontynuuj</value>
-    <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
     <value>Nie ma potrzeby wprowadzania danych osobowych. Używamy unikatowego identyfikatora, przydzielonego do Ciebie podczas instalowania aplikacji.</value>
@@ -60,14 +52,6 @@
     <value>Dostęp do urządzenia</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>Opis aplikacji</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>Zarejestruj</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Zgadzam się</value>
     <comment>Agree</comment>
@@ -79,14 +63,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>Ustawienia stanu</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>Lista współautorów</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Informacje o aktualizacji</value>

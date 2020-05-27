@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>હું મદદ કરવા માગું છું</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>તે કેવી રીતે કામ કરે છે</value>
     <comment>How it works page title</comment>
@@ -27,10 +23,6 @@
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>સેવાની શરતો</value>
     <comment>Consent by user page</comment>
-  </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>સંમત થાવ અને આગળ વધો</value>
-    <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
     <value>અંગત માહિતી ને ઇનપુટ કરવાની જરૂર નથી. અમે યુનિક આઈડીનો ઉપયોગ કરી રહ્યા છીએ, જે એપ્લિકેશન ઇન્સ્ટોલ કરતી વખતે તમને ફાળવવામાં આવેલ છે.</value>
@@ -60,14 +52,6 @@
     <value>ઉપકરણ પ્રવેશ</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>એપ્લિકેશન વર્ણન</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>રજિસ્ટર કરો</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>સંમત</value>
     <comment>Agree</comment>
@@ -79,14 +63,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>સ્થિતિ સુયોજનો</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>યોગદાન આપનારાઓની યાદી</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>માહિતી સુધારો</value>
