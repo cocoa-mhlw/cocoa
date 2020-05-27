@@ -267,4 +267,12 @@
     <value>Начално състояние</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Правила за поверителност</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Изчакване на регистрация</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

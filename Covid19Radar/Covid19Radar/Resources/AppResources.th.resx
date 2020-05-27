@@ -267,4 +267,12 @@
     <value>ตั้งค่าใหม่</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>นโยบายความเป็นส่วนตัว</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>กําลังรอการลงทะเบียน</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

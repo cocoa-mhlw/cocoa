@@ -267,4 +267,12 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Nulstil</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Politik om beskyttelse af personlige oplysninger</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Venter på registrering</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>
