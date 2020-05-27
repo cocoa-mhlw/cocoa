@@ -39,7 +39,7 @@ namespace Covid19Radar.ViewModels
         public Command OnClickAgree => new Command(async () =>
         {
 
-            UserDialogs.Instance.ShowLoading("Waiting for register");
+            UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
             if (!userDataService.IsExistUserData)
             {
                 UserDataModel userData = await userDataService.RegisterUserAsync();

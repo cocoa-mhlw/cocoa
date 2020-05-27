@@ -337,6 +337,11 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Zásady ochrany osobných údajov</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Čakanie na registráciu</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>
