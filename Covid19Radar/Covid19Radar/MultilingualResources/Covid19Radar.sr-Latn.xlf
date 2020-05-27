@@ -337,6 +337,11 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Smernice za privatnost</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Čekanje na registraciju</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>
