@@ -100,14 +100,6 @@
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
   </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>Ambony ny lohany</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
-  </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Izao Application</value>
     <comment>How it works page step 1 title</comment>
@@ -127,18 +119,6 @@
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Toetoetry ny Toe-Javatra</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Afa</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Raha nahazo aretina tsara ianao, dia ampidiro ny laharan' ny finday ary ataovy izay ataonao mba hiarovana ireo olon-tianao.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>Kasiho raha hanova ny toe-javatra</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Jereo azafady ny fifandraisan' ny tambazotra.</value>
@@ -165,33 +145,9 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Omeo Fampilazana/Bluetooth</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Contributors</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Tokantrano</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>-Dalana</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>Ampandreneso</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>Fanavaozana</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Exposures</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -201,14 +157,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Boky torolalana</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Fanavaozana ny Infomation</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Manome fahafahana Fampilazana</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>Tsy fantatra ny exposures</value>
     <comment>If not found exposures data</comment>
@@ -216,25 +164,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Ho hampahafantarina ianao raha toa ka niharan' ny olona iray izay nanao tatitra tsara COVID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Mizarà Aretina Tsara</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Mizarà Aretina Tsara</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Raha toa ianao ka sedraina tsara ho an' ny otrik' aretina izay mahatonga ny COVID 19, dia afaka misafidy ny hizara ny aretina ianao.  Izany dia hanampy ny hafa eo amin' ny fiaraha-monina misy anao mba ho toy ny fiparitahan' ny otrik' aretina.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Mianara bebe kokoa</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Raha nahazo aretina tsara ianao.</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Ampidiro ny Aretina i</value>
@@ -251,10 +180,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Ilay fitsapam-pahaizana miavaka i izay tonga niaraka tamin' ny fanandramana COVID ny 19 taona dia tsy maintsy ampiasaina mba hitsapana ny vokatra tsara azo avy aminao.</value>
-  </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>Hamarino sy Zarao</value>
-    <comment>Verify and Share</comment>
   </data>
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>Mamerena manandrana aoriana kely azafady.</value>
@@ -298,12 +223,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Hanoa</value>
   </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>SampleText</value>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>SampleText</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Toe-javatra</value>
     <comment>SettingsPage Title</comment>
@@ -319,10 +238,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
     <value>Te-hitodika amin' ny fampilazana ve ianao?</value>
     <comment>Confirmation dialog</comment>
-  </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>Données</value>
-    <comment>Reset</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Manampin'</value>
