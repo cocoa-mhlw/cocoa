@@ -80,22 +80,6 @@
     <value>ಸೆಟ್ ಪೂರ್ಣಗೊಳಿಸಿದ</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>ಕೋಡ್ ಸಿಗಲಿಲ್ಲ?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>ಪುನಃ ಕಳುಹಿಸಿ</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>ಸ್ಟೇಟಸ್ ಅಪ್ ಡೇಟ್ ಕಂಪ್ಲೀಟ್</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>ಸ್ಟೇಟಸ್ ಅಪ್ ಡೇಟ್ ಕಂಪ್ಲೀಟ್</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>ಕೊಡುಗೆ ಪಟ್ಟಿ</value>
     <comment>Contributors list page title</comment>
