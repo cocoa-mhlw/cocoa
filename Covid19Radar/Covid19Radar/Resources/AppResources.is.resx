@@ -80,64 +80,6 @@
     <value>Setja upp lokið</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Ef þú fékkst jákvæða greiningu skaltu slá inn farsímanúmerið þitt og uppfæra stöðu þína til að vernda ástvini þína.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Sláðu inn farsímanúmerið</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Við sendum þér staðfestingarkóða.
-Endilega Kíkið á SMS.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Við munum ekki geyma símanúmerið þitt. Hún verður send beint í gagnagrunn ríkisstjórnarinnar.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Ef þú fékkst jákvæða greiningu</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Greindur Beacon listi</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Færa inn kóðann sem var sendur til 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Sláðu inn kóðann</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Sannprófa</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Fékk ekki kóðann?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Senda aftur</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Stöðuuppfærslu lokið</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Stöðuuppfærslu lokið</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Framarar lista</value>
     <comment>Contributors list page title</comment>
@@ -213,10 +155,6 @@ Endilega Kíkið á SMS.</value>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>Skilyrði til að nota þetta forrit</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Stillingar stöðu</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Stillingar stöðu</value>
