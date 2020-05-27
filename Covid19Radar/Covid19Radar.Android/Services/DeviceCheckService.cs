@@ -22,9 +22,7 @@ namespace Covid19Radar.Droid.Services
     public class DeviceCheckService : IDeviceVerifier
     {
 
-        readonly string safetyNetApiKey = "YOUR-KEY-HERE";
-
-        public Task<string> VerifyAsync(SelfDiagnosisSubmission submission)
+        public Task<string> VerifyAsync(SelfDiagnosisSubmission  submission)
         {
             var nonce = submission.GetAndroidNonce();
             return GetSafetyNetAttestationAsync(nonce);
@@ -37,7 +35,7 @@ namespace Covid19Radar.Droid.Services
         async Task<string> GetSafetyNetAttestationAsync(byte[] nonce)
         {
             using var client = SafetyNetClass.GetClient(Android.App.Application.Context);
-            using var response = await client.AttestAsync(nonce, safetyNetApiKey);
+            using var response = await client.AttestAsync(nonce, AppConstants.safetyNetApiKey);
             return response.JwsResult;
         }
     }
