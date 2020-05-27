@@ -327,6 +327,11 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dijeljenje pozitivnih informacija i anonimnih obavijesti drugima</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ponovno postavi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

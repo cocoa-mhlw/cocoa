@@ -327,6 +327,11 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Udostępnianie pozytywnych informacji i anonimowych powiadomień innym</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Resetuj</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>
