@@ -332,6 +332,11 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dela positiv information och anonym anmälan till andra</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Återställ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -326,6 +326,11 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Compartir información positiva y notificación anónima a otros</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Restablecer</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
+        </trans-unit>
       </group>
     </body>
   </file>
