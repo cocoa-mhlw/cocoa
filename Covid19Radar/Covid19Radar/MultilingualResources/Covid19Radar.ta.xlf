@@ -92,60 +92,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">அமைவு முடிந்தது</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
         </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">உங்களுக்கு ஒரு நேர்மறையான ஆய்வு கிடைத்திருந்தால், உங்கள் மொபைல் எண்ணை உள்ளிட்டு, உங்கள் அன்புக்குரியவர்களை பாதுகாப்பதற்கு உங்கள் நிலையைப் புதுப்பிக்கவும்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page description</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsEnterNumber" translate="yes" xml:space="preserve">
-          <source>Enter the mobile number</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">மொபைல் எண்ணை உள்ளிடவும்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page enter number text</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSMSDescription" translate="yes" xml:space="preserve">
-          <source>We'll send you a verification code.
-Please check your SMS.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நாங்கள் ஒரு சரிபார்ப்பு குறியீட்டை அனுப்புவோம்.
-தயவுசெய்து உங்கள் SMS ஐ சரிபார்க்கவும்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSMSInfo" translate="yes" xml:space="preserve">
-          <source>We will not store your phone number. It will be sent directly to the database of the government.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">உங்கள் தொலைபேசி எண்ணை சேமிக்க மாட்டோம். இது அரசின் தரவுதளத்திற்கு நேரடியாக அனுப்பப்படும்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sms info</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sub title</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextPhoneNumberPlaceholder" translate="yes" xml:space="preserve">
-          <source>090-1234-4567</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">090-1234-4567</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Placeholder text for phone number entry</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconListMenu" translate="yes" xml:space="preserve">
-          <source>Detected Beacon List</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">கண்டுபிடிக்கப்பட்ட கலங்கரை விளக்கங்கள் பட்டியல்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacon List Menu</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageOtpEnterText" translate="yes" xml:space="preserve">
-          <source>Enter the Code that was sent to 
-「{0}」</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">அனுப்பப்பட்ட குறியீட்டை உள்ளிடவும் 
-「 {0} 」</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Otp Enter the Code</note>
-        </trans-unit>
-        <trans-unit id="TitleOtp" translate="yes" xml:space="preserve">
-          <source>Enter the Code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">குறியீட்டை உள்ளிடவும்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Otp Title</note>
-        </trans-unit>
-        <trans-unit id="ButtonVerify" translate="yes" xml:space="preserve">
-          <source>Verify</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">சரிபார்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button Verify</note>
-        </trans-unit>
         <trans-unit id="InputSmsOTPPageDidntGetTheCodeText" translate="yes" xml:space="preserve">
           <source>Didn't get the code?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">குறியீடு கிடைக்கவில்லை?</target>
@@ -261,11 +207,6 @@ Please check your SMS.</source>
           <source>Requirements to use this app</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">இந்த பயன்பாட்டை பயன்படுத்துவதற்கான தேவைகள்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
-        </trans-unit>
-        <trans-unit id="TitleUserSettings" translate="yes" xml:space="preserve">
-          <source>Status Settings</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நிலை அமைப்புகள்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings page title</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>

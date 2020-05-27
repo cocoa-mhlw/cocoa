@@ -80,48 +80,6 @@
     <value>সমাপ্ত উপস্থাপনা</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>আপনি যদি একটি ইতিবাচক নির্ণয় পান, তাহলে অনুগ্রহ করে আপনার মোবাইল নাম্বার লিখুন এবং আপনার প্রিয়জনকে রক্ষা করার জন্য আপনার স্ট্যাটাস আপডেট করুন ।</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>মোবাইল নম্বর লিখুন</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>আমরা আপনাকে একটি যাচাইকরণ কোড পাঠাবো ।
-অনুগ্রহ করে আপনার এসএমএস চেক করুন ।</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>আমরা আপনার ফোন নম্বর সংরক্ষণ করব না । তা সরাসরি সরকারের ডেটাবেসে পাঠানো হবে ।</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>সনাক্ত করা বাতিঘর তালিকা</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>পাঠানো কোড লিখুন 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>কোড লিখুন</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>যাচাই করুন</value>
-    <comment>Button Verify</comment>
-  </data>
   <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
     <value>কোড পাইনি?</value>
     <comment>Didn't get the code Text</comment>
@@ -213,10 +171,6 @@
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>এই অ্যাপটি ব্যবহার করার প্রয়োজনীয়তা</value>
     <comment>How it works page step 4 title</comment>
-  </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>স্থিতি সেটিংস</value>
-    <comment>Status Settings page title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>স্থিতি সেটিংস</value>
