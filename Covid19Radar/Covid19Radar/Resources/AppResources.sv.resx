@@ -267,4 +267,8 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Återställ</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Sekretesspolicy</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>

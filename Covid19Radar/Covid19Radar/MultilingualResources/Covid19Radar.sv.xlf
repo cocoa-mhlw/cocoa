@@ -337,6 +337,11 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Återställ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sekretesspolicy</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
       </group>
     </body>
   </file>

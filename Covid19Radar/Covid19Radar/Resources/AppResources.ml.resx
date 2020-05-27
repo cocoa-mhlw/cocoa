@@ -267,4 +267,8 @@
     <value>പുനഃസജ്ജീകരിക്കുക</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>സ്വകാര്യത നയം</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>

@@ -267,4 +267,8 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
     <value>Set Semula</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Dasar Privasi</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
 </root>

@@ -331,6 +331,11 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Restablecer</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Directiva de privacidad</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
       </group>
     </body>
   </file>
