@@ -331,6 +331,16 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">إعادة تعيين</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">نهج الخصوصية</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">في انتظار التسجيل</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>

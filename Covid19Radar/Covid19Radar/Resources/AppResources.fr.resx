@@ -267,4 +267,12 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
     <value>réinitialiser</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>politique de confidentialité</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>En attente de registre</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

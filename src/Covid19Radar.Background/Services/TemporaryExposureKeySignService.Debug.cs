@@ -17,6 +17,7 @@ namespace Covid19Radar.Background.Services
             ILogger<TemporaryExposureKeySignServiceDebug> logger)
         {
             Logger = logger;
+            Logger.LogInformation($"{nameof(TemporaryExposureKeySignServiceDebug)} constructor");
             Key = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256);
         }
 

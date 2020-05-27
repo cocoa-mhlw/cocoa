@@ -13,8 +13,8 @@ namespace Covid19Radar.Api.Models
 		public string UserUuid { get; set; }
         [JsonProperty("keys")]
 		public Key[] Keys { get; set; }
-		[JsonProperty("region")]
-		public string Region { get; set; }
+		[JsonProperty("regions")]
+		public string[] Regions { get; set; }
 		[JsonProperty("platform")]
 		public string Platform { get; set; }
 		[JsonProperty("deviceVerificationPayload")]
@@ -43,7 +43,6 @@ namespace Covid19Radar.Api.Models
 				return new TemporaryExposureKeyModel()
 				{
 					KeyData = Convert.FromBase64String(this.KeyData),
-					Region = p.Region,
 					RollingPeriod = (int)this.RollingPeriod,
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
 					TransmissionRiskLevel = TransmissionRisk,
@@ -71,7 +70,7 @@ namespace Covid19Radar.Api.Models
 		{
 			if (string.IsNullOrWhiteSpace(VerificationPayload)) return false;
 			if (string.IsNullOrWhiteSpace(UserUuid)) return false;
-			if (string.IsNullOrWhiteSpace(Region)) return false;
+			if ((Regions?.Length ?? 0)  == 0) return false;
 			if (string.IsNullOrWhiteSpace(Platform)) return false;
 			if (string.IsNullOrWhiteSpace(DeviceVerificationPayload)) return false;
 			if (string.IsNullOrWhiteSpace(AppPackageName)) return false;

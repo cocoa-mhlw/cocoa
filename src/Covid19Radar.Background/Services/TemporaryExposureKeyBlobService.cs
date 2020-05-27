@@ -25,9 +25,10 @@ namespace Covid19Radar.Background.Services
             IConfiguration config,
             ILogger<TemporaryExposureKeyBlobService> logger)
         {
+            Logger = logger;
+            Logger.LogInformation($"{nameof(TemporaryExposureKeyBlobService)} constructor");
             TekExportBlobStorageConnectionString = config.TekExportBlobStorage();
             TekExportBlobStorageContainerPrefix = config.TekExportBlobStorageContainerPrefix();
-            Logger = logger;
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
             BlobClient = StorageAccount.CreateCloudBlobClient();
         }
@@ -36,7 +37,7 @@ namespace Covid19Radar.Background.Services
         {
             Logger.LogInformation($"start {nameof(WriteToBlobAsync)}");
             //  write to blob storage
-            var blobContainerName = $"{TekExportBlobStorageContainerPrefix}{model.Region}".ToLower();
+            var blobContainerName = $"{TekExportBlobStorageContainerPrefix}/{model.Region}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
 
@@ -57,7 +58,7 @@ namespace Covid19Radar.Background.Services
         public async Task DeleteAsync(TemporaryExposureKeyExportModel model)
         {
             Logger.LogInformation($"start {nameof(DeleteAsync)}");
-            var blobContainerName = $"{TekExportBlobStorageContainerPrefix}{model.Region}".ToLower();
+            var blobContainerName = $"{TekExportBlobStorageContainerPrefix}/{model.Region}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
 

@@ -332,6 +332,16 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Reimposta</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Informativa sulla privacy</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">In attesa di registrazione</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>

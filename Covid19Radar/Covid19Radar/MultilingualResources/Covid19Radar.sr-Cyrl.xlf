@@ -332,6 +332,16 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Поништи</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Reset</note>
         </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Смернице за приватност</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Чекање на регистрацију</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
       </group>
     </body>
   </file>

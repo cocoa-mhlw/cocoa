@@ -29,9 +29,9 @@ namespace Covid19Radar.Api.DataAccess
             _logger = logger;
         }
 
-        public async Task<UserResultModel?> GetById(string id)
+        public async Task<UserModel?> GetById(string id)
         {
-            var itemResult = await _db.User.ReadItemAsync<UserResultModel>(id, new PartitionKey(id));
+            var itemResult = await _db.User.ReadItemAsync<UserModel>(id, new PartitionKey(id));
             if (itemResult.StatusCode == HttpStatusCode.OK)
             {
                 return itemResult.Resource;
@@ -51,7 +51,7 @@ namespace Covid19Radar.Api.DataAccess
             bool userFound = false;
             try
             {
-                var userResult = await _db.User.ReadItemAsync<UserResultModel>(id, new PartitionKey(id));
+                var userResult = await _db.User.ReadItemAsync<UserModel>(id, new PartitionKey(id));
                 if (userResult.StatusCode == HttpStatusCode.OK)
                 {
                     userFound = true;

@@ -267,4 +267,12 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>リセット</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>プライバシーポリシー</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>登録中</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>

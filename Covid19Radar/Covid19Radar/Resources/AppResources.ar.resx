@@ -266,4 +266,12 @@
     <value>إعادة تعيين</value>
     <comment>Reset</comment>
   </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>نهج الخصوصية</value>
+    <comment>PrivacyPolicyPage Title</comment>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>في انتظار التسجيل</value>
+    <comment>Waiting for register</comment>
+  </data>
 </root>
