@@ -18,6 +18,8 @@
             <Label Style="{StaticResource DefaultTitleLabel}" Text="[Insert text from local Health authority]" />
             <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SharePositiveEntryCodeText}" />
             <Entry
+                ClearButtonVisibility="WhileEditing"
+                MaxLength="6"
                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageCodePlaceholder}"
                 Style="{StaticResource DefaultEntry}"
                 Text="{Binding DiagnosisUid, Mode=TwoWay}" />
@@ -44,6 +46,7 @@
                 <ce:GradientButton
                     Grid.Column="1"
                     Command="{Binding SubmitAndVerifyCommand}"
+                    IsEnabled="{Binding IsEnabled}"
                     Style="{StaticResource DefaultGradientButton}"
                     Text="{x:Static resources:AppResources.ButtonPositiveSubmit}" />
             </Grid>
