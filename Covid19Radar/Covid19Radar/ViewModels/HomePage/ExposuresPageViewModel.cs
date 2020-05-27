@@ -26,9 +26,9 @@ namespace Covid19Radar.ViewModels
             userData = this.userDataService.Get();
         }
 
-
         public ObservableCollection<ExposureInfo> ExposureInformation
             => userData.ExposureInformation;
+
 /*
         public ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo> ExposureInformation
             => new ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo>
@@ -41,5 +41,6 @@ namespace Covid19Radar.ViewModels
 #endif
 			};
 */
+
     }
 }
