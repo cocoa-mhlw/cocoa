@@ -263,4 +263,8 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
     <value>Berbagi informasi positif dan pemberitahuan anonim kepada orang lain</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Atur ulang</value>
+    <comment>Reset</comment>
+  </data>
 </root>

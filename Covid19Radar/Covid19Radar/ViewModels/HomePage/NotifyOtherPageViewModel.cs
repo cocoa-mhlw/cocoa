@@ -18,55 +18,24 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
+        public bool IsEnabled { get; set; } = true;
+        public string DiagnosisUid { get; set; }
+        public DateTime? DiagnosisTimestamp { get; set; } = DateTime.Now;
+
+        public DateTime? SelectedDate { get; } = DateTime.Today;
+        public DateTime? MaxDate { get;} = DateTime.Today.AddMonths(1);
+        public DateTime? MinDate { get; } = DateTime.Today.AddMonths(-1);
+
         private readonly UserDataService userDataService;
         private UserDataModel userData;
+
 
         public NotifyOtherPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
-            SelectedDate = DateTime.Today;
-            MaxDate = DateTime.Today.AddMonths(1);
-            MinDate = DateTime.Today.AddMonths(-1);
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
-            this.userDataService.UserDataChanged += _userDataChanged;
         }
-
-        private void _userDataChanged(object sender, UserDataModel e)
-        {
-            userData = this.userDataService.Get();
-        }
-
-
-        private string _notifyCode;
-        public string NotifyCode
-        {
-            get { return _notifyCode; }
-            set { SetProperty(ref _notifyCode, value); }
-        }
-
-
-        private DateTime _selectedDate;
-        public DateTime SelectedDate
-        {
-            get { return _selectedDate; }
-            set { SetProperty(ref _selectedDate, value); }
-        }
-
-        private DateTime _maxDate;
-        public DateTime MaxDate
-        {
-            get { return _maxDate; }
-            set { SetProperty(ref _maxDate, value); }
-        }
-
-        private DateTime _minDate;
-        public DateTime MinDate
-        {
-            get { return _minDate; }
-            set { SetProperty(ref _minDate, value); }
-        }
-
 
         public bool DiagnosisPending
     => (userData.LatestDiagnosis?.DiagnosisDate ?? DateTimeOffset.MinValue)

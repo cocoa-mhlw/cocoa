@@ -263,4 +263,8 @@
     <value>與他人共用積極資訊和匿名通知</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>重設</value>
+    <comment>Reset</comment>
+  </data>
 </root>

@@ -263,4 +263,8 @@
     <value>Κοινή χρήση θετικών πληροφοριών και ανώνυμης ειδοποίησης σε άλλους</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Επαναφορά</value>
+    <comment>Reset</comment>
+  </data>
 </root>

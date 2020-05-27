@@ -263,4 +263,8 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
     <value>Kushiriki taarifa nzuri na arifa isiyojulikana kwa wengine</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Weka upya</value>
+    <comment>Reset</comment>
+  </data>
 </root>

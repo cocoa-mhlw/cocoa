@@ -263,4 +263,8 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
     <value>Deel positiewe inligting en anonieme kennisgewing aan ander</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Stel terug</value>
+    <comment>Reset</comment>
+  </data>
 </root>
