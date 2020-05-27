@@ -263,4 +263,8 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
     <value>Partager des informations positives et une notification anonyme à d’autres</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>réinitialiser</value>
+    <comment>Reset</comment>
+  </data>
 </root>

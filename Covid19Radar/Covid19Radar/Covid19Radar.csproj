@@ -39,6 +39,15 @@
     <None Remove="ViewModels\UnUsed\**" />
     <None Remove="Views\UnUsed\**" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\HomePage\SharePositiveDiagnosisPageViewModel.cs" />
+    <Compile Remove="Views\HomePage\SharePositiveDiagnosisPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\HomePage\SharePositiveDiagnosisPage.xaml" />
+  </ItemGroup>
   
   <ItemGroup>
     <None Remove="Resources\Fonts\fa-brands-400.otf" />
@@ -144,9 +153,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\HomePage\ExposuresPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomePage\SharePositiveDiagnosisPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Tutorial\SetupCompletedPage.xaml">

@@ -263,4 +263,8 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Mizara fampahalalana tsara sy tsy fampilazana amin' ny hafa</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Données</value>
+    <comment>Reset</comment>
+  </data>
 </root>

@@ -263,4 +263,8 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
     <value>Qsim ta ' informazzjoni pożittiva u notifika anonima lil ħaddieħor</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Irrisettja</value>
+    <comment>Reset</comment>
+  </data>
 </root>

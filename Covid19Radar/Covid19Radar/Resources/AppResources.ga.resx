@@ -263,4 +263,8 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
     <value>Faisnéis dhearfach agus fógra gan ainm a roinnt le daoine eile</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>athshocraigh</value>
+    <comment>Reset</comment>
+  </data>
 </root>

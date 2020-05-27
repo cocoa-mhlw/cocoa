@@ -263,4 +263,8 @@
     <value>दूसरों को सकारात्मक जानकारी और गुमनाम अधिसूचना साझा करना</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>रीसेट करें</value>
+    <comment>Reset</comment>
+  </data>
 </root>
