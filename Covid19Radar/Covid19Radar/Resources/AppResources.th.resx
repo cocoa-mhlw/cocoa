@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>ฉันต้องการช่วย</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>วิธีการทํางาน</value>
     <comment>How it works page title</comment>
@@ -27,10 +23,6 @@
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>เงื่อนไขการใช้บริการ</value>
     <comment>Consent by user page</comment>
-  </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>ยอมรับและดําเนินการ</value>
-    <comment>Agree and Proceed</comment>
   </data>
   <data name="DescriptionPageTextStep1Description" xml:space="preserve">
     <value>ไม่จําเป็นต้องใส่ข้อมูลส่วนบุคคล เราจะใช้ ID พิเศษที่ไม่ซ้ํากัน ซึ่งจะถูกสร้างให้คุณระหว่างการติดตั้งแอพ</value>
@@ -60,14 +52,6 @@
     <value>การเข้าถึงอุปกรณ์</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>คําอธิบายเกี่ยวกับแอพ</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>ลงทะเบียน</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>เห็นด้วย</value>
     <comment>Agree</comment>
@@ -79,14 +63,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>การตั้งค่าสถานะ</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>รายชื่อผู้มีส่วนร่วม</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>ปรับปรุงข้อมูล</value>
