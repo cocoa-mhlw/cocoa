@@ -275,4 +275,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>是否确实要重置所有数据？</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>删除所有数据</value>
+  </data>
 </root>

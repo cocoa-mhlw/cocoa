@@ -275,4 +275,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Kas soovite tõesti kõik andmed lähtestada?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Kustuta kõik andmed</value>
+  </data>
 </root>

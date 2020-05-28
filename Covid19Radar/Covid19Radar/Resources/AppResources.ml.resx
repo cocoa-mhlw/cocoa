@@ -275,4 +275,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>നിങ്ങള് ക്കു് എല്ലാ ഡാറ്റയും പുനഃക്രമീകരിക്കാന് ആഗ്രഹിക്കുന്നുണ്ടോ?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>എല്ലാ ഡാറ്റയും മായ്ക്കുക</value>
+  </data>
 </root>

@@ -275,4 +275,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Verament tixtieq tirrisettja d-data kollha?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Ħassar id-data kollha</value>
+  </data>
 </root>

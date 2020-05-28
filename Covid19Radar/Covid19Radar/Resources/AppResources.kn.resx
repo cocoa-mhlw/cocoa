@@ -275,4 +275,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>ನೀವು ನಿಜವಾಗಲೂ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ರೀಸೆಟ್ ಮಾಡಲು ಬಯಸುತ್ತಿದ್ದೀರಿ?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸು</value>
+  </data>
 </root>

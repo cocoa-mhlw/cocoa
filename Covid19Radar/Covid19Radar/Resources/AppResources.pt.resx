@@ -275,4 +275,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Você realmente quer redefinir todos os dados?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Excluir todos os dados</value>
+  </data>
 </root>
