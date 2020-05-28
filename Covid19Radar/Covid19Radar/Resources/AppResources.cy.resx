@@ -199,7 +199,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Angen dynodydd diagnosis</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Galluogwch hysbysiadau amlygiad cyn cyflwyno diagnosis.</value>
   </data>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">

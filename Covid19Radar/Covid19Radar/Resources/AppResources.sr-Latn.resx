@@ -199,7 +199,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Potreban je identifikator dijagnostike</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Omogućite obaveštenja o ekspoziciji pre podnošenja dijagnoze.</value>
   </data>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">

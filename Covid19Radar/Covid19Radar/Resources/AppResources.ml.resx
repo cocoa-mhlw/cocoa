@@ -199,7 +199,7 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>രോഗനിർണ്ണയ ഐഡന്റിഫയർ ആവശ്യമാണ്</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നതിന് മുമ്പ് എക്സ്പോണറി അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക.</value>
   </data>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">

@@ -199,7 +199,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Kenni greiningar krafist</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Vinsamlegast virkjaðu tilkynningar um útsetningu áður en þú sendir greiningu.</value>
   </data>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">

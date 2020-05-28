@@ -199,7 +199,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Kitambulishi cha utambuzi kinahitajika</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Tafadhali Wezesha taarifa za ufichuzi kabla ya kuwasilisha utambuzi.</value>
   </data>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
