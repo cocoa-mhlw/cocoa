@@ -202,7 +202,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Activeu les notificacions d'exposició abans d'enviar un diagnòstic.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Notificacions d'exposició desactivades</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

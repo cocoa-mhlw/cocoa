@@ -202,7 +202,7 @@
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നതിന് മുമ്പ് എക്സ്പോണറി അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>എക്സ്പോണറി അറിയിപ്പുകൾ പ്രവർത്തനരഹിതമാക്കി</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

@@ -202,7 +202,7 @@
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>નિદાન રજૂ કરતા પહેલા એક્સપોઝર સૂચનાઓ ને સક્રિય કરો.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>એક્સપોઝર સૂચનાઓ નિષ્ક્રિય</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

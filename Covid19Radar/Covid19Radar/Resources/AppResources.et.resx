@@ -202,7 +202,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Palun lubage kokkupuute märguanded enne diagnoosi esitamist.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Kokkupuute teatised keelatud</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

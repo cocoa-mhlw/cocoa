@@ -202,7 +202,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Przed przesłaniem diagnozy włącz powiadomienia o ekspozycji.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Powiadomienia o narażeniu wyłączone</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
