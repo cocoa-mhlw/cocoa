@@ -228,7 +228,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
     <value>Hindi sumasang-ayon</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselahin</value>
     <comment>Cancel</comment>
   </data>

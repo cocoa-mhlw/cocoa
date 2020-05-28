@@ -228,7 +228,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
     <value>Tidak bersetuju</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Batal</value>
     <comment>Cancel</comment>
   </data>

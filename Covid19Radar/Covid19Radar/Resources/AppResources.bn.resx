@@ -228,7 +228,7 @@
     <value>রাজি না</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>বাতিল করুন</value>
     <comment>Cancel</comment>
   </data>

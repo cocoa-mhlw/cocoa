@@ -228,7 +228,7 @@
     <value>동의하지 않음</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>취소</value>
     <comment>Cancel</comment>
   </data>
