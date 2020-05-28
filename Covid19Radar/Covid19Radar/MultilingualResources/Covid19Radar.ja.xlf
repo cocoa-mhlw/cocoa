@@ -223,7 +223,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Please try again later.</source>
           <target state="translated">後でもう一度試してください。</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="translated">失敗</target>
         </trans-unit>

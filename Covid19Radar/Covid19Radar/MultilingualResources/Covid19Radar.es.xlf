@@ -224,7 +224,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Please try again later.</source>
           <target state="translated">Inténtelo de nuevo más tarde.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Error</target>
         </trans-unit>

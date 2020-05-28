@@ -225,7 +225,7 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Yritä myöhemmin uudelleen.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Epäonnistui</target>
         </trans-unit>

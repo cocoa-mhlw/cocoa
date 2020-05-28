@@ -225,7 +225,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Zopakujte akciu neskôr.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Neúspešné</target>
         </trans-unit>
