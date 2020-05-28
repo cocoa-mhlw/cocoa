@@ -147,7 +147,7 @@
           <target state="translated">Por favor, comprueba tu conexión de red.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
         </trans-unit>
-        <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
           <target state="translated">Aceptar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>

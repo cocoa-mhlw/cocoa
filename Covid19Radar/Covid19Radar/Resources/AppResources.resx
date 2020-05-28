@@ -246,7 +246,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Please enter the Diagnosis Identifier</value>
     <comment>Notify Other Page Code Input</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
     <comment>OK</comment>
   </data>
