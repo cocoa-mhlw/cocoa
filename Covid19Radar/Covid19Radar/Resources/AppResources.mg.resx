@@ -275,4 +275,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Moa ve tena tianao données ny tahirin-kevitra rehetra?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Esory avokoa ny tahirin-kevitra rehetra</value>
+  </data>
 </root>

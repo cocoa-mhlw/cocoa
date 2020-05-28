@@ -275,4 +275,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Θέλετε πραγματικά να επαναφέρετε όλα τα δεδομένα;</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Διαγραφή όλων των δεδομένων</value>
+  </data>
 </root>

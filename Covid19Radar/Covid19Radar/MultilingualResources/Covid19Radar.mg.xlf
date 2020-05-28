@@ -342,6 +342,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Moa ve tena tianao données ny tahirin-kevitra rehetra?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Esory avokoa ny tahirin-kevitra rehetra</target>
+        </trans-unit>
       </group>
     </body>
   </file>

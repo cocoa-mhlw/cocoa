@@ -275,4 +275,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Želite li zaista ponovno postaviti sve podatke?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Brisanje svih podataka</value>
+  </data>
 </root>

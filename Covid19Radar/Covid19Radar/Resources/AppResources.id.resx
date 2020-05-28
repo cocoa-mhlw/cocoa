@@ -275,4 +275,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Apakah Anda ingin me-reset semua data?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Hapus semua data</value>
+  </data>
 </root>

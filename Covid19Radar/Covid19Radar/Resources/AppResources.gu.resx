@@ -275,4 +275,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>શું તમે ખરેખર બધી માહિતીને પુનઃસુયોજિત કરવા માંગો છો?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>બધી માહિતી કાઢી નાંખો</value>
+  </data>
 </root>

@@ -342,6 +342,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">是否確實要重置所有數據?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">移除所有資料</target>
+        </trans-unit>
       </group>
     </body>
   </file>

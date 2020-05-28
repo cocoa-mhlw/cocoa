@@ -342,6 +342,10 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Naozaj chcete obnoviť všetky dáta?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Odstrániť všetky údaje</target>
+        </trans-unit>
       </group>
     </body>
   </file>

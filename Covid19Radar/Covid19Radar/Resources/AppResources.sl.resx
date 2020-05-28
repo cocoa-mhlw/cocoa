@@ -275,4 +275,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Ali res želite ponastaviti vse podatke?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Brisanje vseh podatkov</value>
+  </data>
 </root>

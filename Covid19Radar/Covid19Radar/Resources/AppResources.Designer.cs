@@ -440,15 +440,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Do you really want to reset all the data? に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SettingsPageDialogResetText {
-            get {
-                return ResourceManager.GetString("SettingsPageDialogResetText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Diagnosis Submitted に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDialogSubmittedText {
@@ -472,6 +463,24 @@ namespace Covid19Radar.Resources {
         internal static string PrivacyPolicyPageTitle {
             get {
                 return ResourceManager.GetString("PrivacyPolicyPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Do you really want to reset all the data? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDialogResetText {
+            get {
+                return ResourceManager.GetString("SettingsPageDialogResetText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Delete all data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDialogResetTitle {
+            get {
+                return ResourceManager.GetString("SettingsPageDialogResetTitle", resourceCulture);
             }
         }
         

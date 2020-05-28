@@ -275,4 +275,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Vil du virkelig tilbakestille alle dataene?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Slett alle data</value>
+  </data>
 </root>

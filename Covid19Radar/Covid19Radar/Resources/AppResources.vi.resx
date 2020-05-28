@@ -275,4 +275,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Bạn có thực sự muốn thiết lập lại tất cả các dữ liệu?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Xóa tất cả dữ liệu</value>
+  </data>
 </root>

@@ -274,4 +274,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Gerçekten tüm verileri sıfırlamak istiyor musunuz?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Tüm verileri silme</value>
+  </data>
 </root>

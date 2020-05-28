@@ -275,4 +275,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Czy naprawdę chcesz zresetować wszystkie dane?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Usuń wszystkie dane</value>
+  </data>
 </root>

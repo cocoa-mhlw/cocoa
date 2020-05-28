@@ -342,6 +342,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் நிஜமாகவே அனைத்து தரவையும் மீட்டமைக்க விரும்புகிறீர்களா?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">அனைத்து தரவையும் நீக்கு</target>
+        </trans-unit>
       </group>
     </body>
   </file>

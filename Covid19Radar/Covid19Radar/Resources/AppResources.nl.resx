@@ -275,4 +275,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Wil je echt alle gegevens resetten?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Alle gegevens verwijderen</value>
+  </data>
 </root>
