@@ -187,7 +187,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Tsy nahomby</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Aretina ny Fangatahana</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Aretina i Takiana</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Mba alefaso ny Fampilazana ny Hatsiaka alohan' ny fandefasana aretina.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hatsiaka Fampilazana Sembana</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Tsy Manaiky</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Manafoana</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Miandry ny fisoratana anarana</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Moa ve tena tianao données ny tahirin-kevitra rehetra?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Esory avokoa ny tahirin-kevitra rehetra</value>
   </data>
 </root>

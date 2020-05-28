@@ -187,7 +187,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Mistókst</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Greining lögð</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Kenni greiningar krafist</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Vinsamlegast virkjaðu tilkynningar um útsetningu áður en þú sendir greiningu.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Tilkynningar um útsetningu fatlaðra</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
     <value>Ekki sammála</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Hætta við</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Beðið eftir skráningu</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Viltu virkilega Endurstilla öll gögnin?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Eyða öllum gögnum</value>
   </data>
 </root>

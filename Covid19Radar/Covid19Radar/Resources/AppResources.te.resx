@@ -187,7 +187,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>విఫలమైంది</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>నిర్ధారణ సమర్పించిన</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>రోగ నిర్ధారణ నిర్ధారిణి అవసరం</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>రోగనిర్ధారణ సబ్మిట్ చేయడానికి ముందు దయచేసి ఎక్స్ పోజర్ నోటిఫికేషన్ లను ప్రారంభించండి.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>ప్రత్యక్షీకరణ ప్రకటనలు నిలిపివేయబడ్డాయి</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@
     <value>ఒప్పుకోరు</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>రద్దు చేయి</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>రిజిస్టర్ కొరకు వేచి ఉంది</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>మీరు నిజంగా మొత్తం డేటాను రీసెట్ చేయాలని అనుకుంటున్నారా?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>మొత్తం డేటాని తొలగించు</value>
   </data>
 </root>

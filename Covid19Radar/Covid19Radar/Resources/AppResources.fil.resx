@@ -187,7 +187,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Nabigo</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diyagnosis isinumite</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Pagsusuri ng diyagnosis kailangan</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Mangyaring magpagana ng mga notipikasyon ng pagkakalantad bago magsumite ng pagsusuri.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hindi pinagana ang mga notipikasyon</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
     <value>Hindi sumasang-ayon</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselahin</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Naghihintay na magparehistro</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Gusto mo ba talagang i-reset ang lahat ng data?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>I-delete ang lahat ng data</value>
   </data>
 </root>

@@ -73,8 +73,8 @@ namespace Covid19Radar.ViewModels
                     dialog.Hide();
 
                     await UserDialogs.Instance.AlertAsync(
-                        "Please enable Exposure Notifications before submitting a diagnosis.",
-                        "Exposure Notifications Disabled",
+                        Resources.AppResources.NotifyOtherPageDialogENDisabledText,
+                        Resources.AppResources.NotifyOtherPageDialogENDisabledTitle,
                         Resources.AppResources.ButtonOk
                     );
                     return;
@@ -90,7 +90,7 @@ namespace Covid19Radar.ViewModels
                 dialog.Hide();
 
                 await UserDialogs.Instance.AlertAsync(
-                    "Diagnosis Submitted",
+                    Resources.AppResources.NotifyOtherPageDialogSubmittedText,
                     Resources.AppResources.ButtonComplete,
                     Resources.AppResources.ButtonOk
                 );
@@ -117,7 +117,12 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickAfter => (new Command(async () =>
         {
-            var check = await UserDialogs.Instance.ConfirmAsync("あとで設定しますか?", "陽性登録", "後にする", "登録へ戻る");
+            var check = await UserDialogs.Instance.ConfirmAsync(
+                "あとで設定しますか?",
+                "陽性登録",
+                Resources.AppResources.ButtonNotNow,
+                "登録へ戻る"
+            );
             if (check)
             {
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));

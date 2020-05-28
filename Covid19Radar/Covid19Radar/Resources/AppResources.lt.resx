@@ -187,7 +187,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Nepavyko</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnozė Pateikta</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Reikalingas diagnozės identifikatorius</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Prieš pateikdami diagnozę įjunkite pranešimus apie ekspoziciją.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Pranešimai apie ekspoziciją išjungta</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
     <value>Nesutinku</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Atšaukti</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Laukiama registro</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Ar tikrai norite iš naujo nustatyti visus duomenis?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Visų duomenų naikinimas</value>
   </data>
 </root>

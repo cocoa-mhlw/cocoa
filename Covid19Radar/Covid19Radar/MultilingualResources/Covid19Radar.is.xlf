@@ -229,7 +229,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Mistókst</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Greining lögð</target>
         </trans-unit>
@@ -245,11 +245,11 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kenni greiningar krafist</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Vinsamlegast virkjaðu tilkynningar um útsetningu áður en þú sendir greiningu.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tilkynningar um útsetningu fatlaðra</target>
         </trans-unit>
@@ -283,7 +283,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ekki sammála</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Hætta við</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -337,6 +337,14 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Beðið eftir skráningu</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Viltu virkilega Endurstilla öll gögnin?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eyða öllum gögnum</target>
         </trans-unit>
       </group>
     </body>

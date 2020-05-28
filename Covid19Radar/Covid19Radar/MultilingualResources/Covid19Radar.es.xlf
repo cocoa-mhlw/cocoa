@@ -228,7 +228,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Error</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnóstico enviado</target>
         </trans-unit>
@@ -244,11 +244,11 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="translated">Identificador de diagnóstico requerido</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Habilite las notificaciones de exposición antes de enviar un diagnóstico.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Notificaciones de exposición desactivadas</target>
         </trans-unit>
@@ -282,7 +282,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">No está de acuerdo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Cancelar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -336,6 +336,14 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Esperando el registro</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">¿Realmente desea restablecer todos los datos?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eliminar todos los datos</target>
         </trans-unit>
       </group>
     </body>

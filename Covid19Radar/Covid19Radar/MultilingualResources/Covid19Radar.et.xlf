@@ -229,7 +229,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Nurjus</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Diagnoos esitatud</target>
         </trans-unit>
@@ -245,11 +245,11 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Diagnoosi identifikaator on nõutav</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Palun lubage kokkupuute märguanded enne diagnoosi esitamist.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kokkupuute teatised keelatud</target>
         </trans-unit>
@@ -283,7 +283,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pole nõus</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Loobu</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -337,6 +337,14 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Registreerimise ootel</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kas soovite tõesti kõik andmed lähtestada?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kustuta kõik andmed</target>
         </trans-unit>
       </group>
     </body>

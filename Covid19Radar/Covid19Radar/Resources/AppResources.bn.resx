@@ -187,7 +187,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>ব্যর্থ হয়েছে</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>নিদান জমা</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>রোগ নির্ণয় শনাক্তকারী প্রয়োজন</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>একটি নির্ণয়ের জমা দেওয়ার আগে অনুগ্রহ করে এক্সপোজার বিজ্ঞপ্তিসমূহ সক্রিয় করুন ।</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>এক্সপোজার বিজ্ঞপ্তিসমূহ অক্ষম</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@
     <value>রাজি না</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>বাতিল করুন</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>নিবন্ধনের জন্য অপেক্ষা করছে</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>আপনি কি সত্যিই সব ডাটা রিসেট করতে চান?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>সকল উপাত্ত মুছে ফেলুন</value>
   </data>
 </root>

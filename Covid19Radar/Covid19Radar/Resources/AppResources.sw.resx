@@ -187,7 +187,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Imeshindwa</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Utambuzi kuwasilishwa</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Kitambulishi cha utambuzi kinahitajika</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Tafadhali Wezesha taarifa za ufichuzi kabla ya kuwasilisha utambuzi.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Taarifa za ufichuzi zimelemazwa</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
     <value>Haikubaliana</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Katisha</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Inasubiri rejista</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Unataka kweli kuweka upya data zote?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Futa data zote</value>
   </data>
 </root>

@@ -187,7 +187,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Nereușit</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnostic prezentat</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identificator diagnostic necesar</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Activați Notificările de expunere înainte de a trimite un diagnostic.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Notificări de expunere dezactivate</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
     <value>Nu sunt de acord</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Anulare</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Se așteaptă înregistrarea</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Chiar doriți să resetați toate datele?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Ștergerea tuturor datelor</value>
   </data>
 </root>

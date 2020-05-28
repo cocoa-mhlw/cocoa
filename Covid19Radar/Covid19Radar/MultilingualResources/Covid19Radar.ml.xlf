@@ -229,7 +229,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">പരാജയപ്പെട്ടു</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">രോഗനിർണ്ണയം സമർപ്പിച്ച</target>
         </trans-unit>
@@ -245,11 +245,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">രോഗനിർണ്ണയ ഐഡന്റിഫയർ ആവശ്യമാണ്</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">രോഗനിർണ്ണയം സമർപ്പിക്കുന്നതിന് മുമ്പ് എക്സ്പോണറി അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">എക്സ്പോണറി അറിയിപ്പുകൾ പ്രവർത്തനരഹിതമാക്കി</target>
         </trans-unit>
@@ -283,7 +283,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">സമ്മതിച്ചില്ല</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">റദ്ദാക്കുക</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -337,6 +337,14 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">രജിസ്റ്റര് ചെയ്യുന്നതിനായി കാത്തിരിക്കുന്നു</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങള് ക്കു് എല്ലാ ഡാറ്റയും പുനഃക്രമീകരിക്കാന് ആഗ്രഹിക്കുന്നുണ്ടോ?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">എല്ലാ ഡാറ്റയും മായ്ക്കുക</target>
         </trans-unit>
       </group>
     </body>

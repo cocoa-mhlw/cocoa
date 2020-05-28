@@ -228,7 +228,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Failed</source>
           <target state="translated">Het misluk</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnose Ingedien</target>
         </trans-unit>
@@ -244,11 +244,11 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="translated">Diagnose-Identifiseerder Vereis</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Ontsper asseblief Blootstellings Kennisgewings voordat 'n diagnose ingedien word.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Blootstellings Kennisgewings is versper</target>
         </trans-unit>
@@ -282,7 +282,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nie saamstem</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Kanselleer</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -336,6 +336,14 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wag vir register</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wil jy regtig al die data terugstel?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verwyder alle data</target>
         </trans-unit>
       </group>
     </body>

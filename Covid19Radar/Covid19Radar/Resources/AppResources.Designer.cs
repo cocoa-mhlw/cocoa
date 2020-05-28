@@ -79,6 +79,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Cancel に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonCancel {
+            get {
+                return ResourceManager.GetString("ButtonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Complete に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonComplete {
@@ -268,15 +277,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Cancel に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DialogButtonCancel {
-            get {
-                return ResourceManager.GetString("DialogButtonCancel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Please check your network connection. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogNetworkConnectionError {
@@ -413,6 +413,42 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Please enable Exposure Notifications before submitting a diagnosis. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDialogENDisabledText {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDialogENDisabledText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Exposure Notifications Disabled に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDialogENDisabledTitle {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDialogENDisabledTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please try again later. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDialogExceptionText {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDialogExceptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Diagnosis Submitted に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDialogSubmittedText {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDialogSubmittedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   https://microsoft.com/ に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOthersLearnMoreUrl {
@@ -427,6 +463,24 @@ namespace Covid19Radar.Resources {
         internal static string PrivacyPolicyPageTitle {
             get {
                 return ResourceManager.GetString("PrivacyPolicyPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Do you really want to reset all the data? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDialogResetText {
+            get {
+                return ResourceManager.GetString("SettingsPageDialogResetText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Delete all data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDialogResetTitle {
+            get {
+                return ResourceManager.GetString("SettingsPageDialogResetTitle", resourceCulture);
             }
         }
         
@@ -458,24 +512,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please try again later. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogExceptionText {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogExceptionText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Diagnosis Submitted に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageDiagSubmittedText {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageDiagSubmittedText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Please provide a Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SharePositiveDiagnosisPageDiagUidIsEmptyText {
@@ -490,24 +526,6 @@ namespace Covid19Radar.Resources {
         internal static string SharePositiveDiagnosisPageDiagUidIsEmptyTitle {
             get {
                 return ResourceManager.GetString("SharePositiveDiagnosisPageDiagUidIsEmptyTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please enable Exposure Notifications before submitting a diagnosis. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageNotEnabledENDialogText {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageNotEnabledENDialogText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Exposure Notifications Disabled に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageNotEnabledENDialogTitle {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageNotEnabledENDialogTitle", resourceCulture);
             }
         }
         

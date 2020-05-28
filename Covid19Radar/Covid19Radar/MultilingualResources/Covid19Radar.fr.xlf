@@ -227,7 +227,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Failed</source>
           <target state="translated">Échec</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnostic soumis</target>
         </trans-unit>
@@ -243,11 +243,11 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="translated">Identification de diagnostic requis</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Veuillez activer les notifications d’exposition avant de soumettre un diagnostic.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Notifications d’exposition désactivées</target>
         </trans-unit>
@@ -281,7 +281,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pas d’accord</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuler</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -335,6 +335,14 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">En attente de registre</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voulez-vous vraiment réinitialiser toutes les données?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Supprimer toutes les données</target>
         </trans-unit>
       </group>
     </body>

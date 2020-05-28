@@ -227,7 +227,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Failed</source>
           <target state="translated">失敗</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="translated">診断結果の提出</target>
         </trans-unit>
@@ -243,11 +243,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">診断識別子が必要です</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">診断を送信する前に Exposure Notifications を有効にしてください。</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Exposure Notifications 無効</target>
         </trans-unit>
@@ -281,7 +281,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">同意しない</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="translated">Cancel</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -335,6 +335,14 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Waiting for register</source>
           <target state="translated">登録中</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">すべてのデータをリセットしますか?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">すべてのデータを削除する</target>
         </trans-unit>
       </group>
     </body>
