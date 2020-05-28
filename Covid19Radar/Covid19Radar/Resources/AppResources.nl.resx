@@ -235,7 +235,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
     <value>Annuleren</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Wilt u meldingen inschakelen?</value>
     <comment>Confirmation dialog</comment>
   </data>

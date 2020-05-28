@@ -235,7 +235,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
     <value>Cealaigh</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>An bhfuil fonn ort fógraí a chasadh air?</value>
     <comment>Confirmation dialog</comment>
   </data>

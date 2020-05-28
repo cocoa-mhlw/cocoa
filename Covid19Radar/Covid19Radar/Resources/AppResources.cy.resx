@@ -235,7 +235,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Canslo</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Ydych chi am roi hysbysiadau ar waith?</value>
     <comment>Confirmation dialog</comment>
   </data>
