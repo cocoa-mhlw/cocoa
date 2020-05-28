@@ -338,6 +338,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">రిజిస్టర్ కొరకు వేచి ఉంది</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">మీరు నిజంగా మొత్తం డేటాను రీసెట్ చేయాలని అనుకుంటున్నారా?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

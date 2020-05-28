@@ -272,4 +272,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Venter på registrering</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Vil du nulstille alle dataene?</value>
+  </data>
 </root>

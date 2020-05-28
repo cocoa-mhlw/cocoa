@@ -272,4 +272,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
     <value>In attesa di registrazione</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Vuoi davvero reimpostare tutti i dati?</value>
+  </data>
 </root>

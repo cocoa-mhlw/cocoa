@@ -336,6 +336,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Se așteaptă înregistrarea</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chiar doriți să resetați toate datele?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

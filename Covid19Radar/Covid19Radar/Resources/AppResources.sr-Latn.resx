@@ -272,4 +272,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
     <value>Čekanje na registraciju</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Želite li zaista da uspostavite početne vrednosti svih podataka?</value>
+  </data>
 </root>

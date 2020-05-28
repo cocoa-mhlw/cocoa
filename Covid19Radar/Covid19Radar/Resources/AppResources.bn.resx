@@ -272,4 +272,7 @@
     <value>নিবন্ধনের জন্য অপেক্ষা করছে</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>আপনি কি সত্যিই সব ডাটা রিসেট করতে চান?</value>
+  </data>
 </root>

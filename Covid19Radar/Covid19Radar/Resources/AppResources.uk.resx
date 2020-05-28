@@ -272,4 +272,7 @@
     <value>Чекаю реєстрації</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Ви дійсно бажаєте скинути всі дані?</value>
+  </data>
 </root>

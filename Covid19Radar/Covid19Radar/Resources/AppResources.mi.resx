@@ -272,4 +272,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
     <value>Kei te tatari ki te rēhita</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>E hiahia ana koe ki te tautuhi anō i te raraunga katoa?</value>
+  </data>
 </root>

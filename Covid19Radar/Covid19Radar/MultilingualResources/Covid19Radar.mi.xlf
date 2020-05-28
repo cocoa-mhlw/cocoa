@@ -338,6 +338,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kei te tatari ki te rēhita</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">E hiahia ana koe ki te tautuhi anō i te raraunga katoa?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

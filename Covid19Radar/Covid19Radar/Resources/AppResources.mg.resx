@@ -272,4 +272,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Miandry ny fisoratana anarana</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Moa ve tena tianao données ny tahirin-kevitra rehetra?</value>
+  </data>
 </root>
