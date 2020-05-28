@@ -252,9 +252,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   OK に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DialogButtonOk {
+        internal static string ButtonOk {
             get {
-                return ResourceManager.GetString("DialogButtonOk", resourceCulture);
+                return ResourceManager.GetString("ButtonOk", resourceCulture);
             }
         }
         
