@@ -229,7 +229,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Failed</source>
           <target state="translated">Mislukt</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnose ingediend</target>
         </trans-unit>
@@ -245,11 +245,11 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="translated">Diagnose-ID vereist</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Schakel blootstellingsmeldingen in voordat u een diagnose indient.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Blootstellingsmeldingen uitgeschakeld</target>
         </trans-unit>
@@ -283,7 +283,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Niet mee eens</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuleren</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -337,6 +337,14 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wachten op registratie</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wil je echt alle gegevens resetten?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle gegevens verwijderen</target>
         </trans-unit>
       </group>
     </body>

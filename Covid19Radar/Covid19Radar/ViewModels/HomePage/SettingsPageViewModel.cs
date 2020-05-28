@@ -99,10 +99,10 @@ namespace Covid19Radar.ViewModels
         {
 
             var check = await UserDialogs.Instance.ConfirmAsync(
-                "本当にすべてのデータをリセットしますか?",
-                "データの全削除",
+                Resources.AppResources.SettingsPageDialogResetText,
+                Resources.AppResources.SettingsPageDialogResetTitle,
                 Resources.AppResources.ButtonOk,
-                Resources.AppResources.DialogButtonCancel
+                Resources.AppResources.ButtonCancel
             );
 
             if (check)

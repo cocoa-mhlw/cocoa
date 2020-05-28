@@ -187,7 +187,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Mislykkedes</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnose indsendt</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnose-id påkrævet</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Aktivér eksponeringsmeddelelser, før du indsender en diagnose.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Meddelelser om eksponering er deaktiveret</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Ikke enig</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Annuller</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Venter på registrering</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Vil du nulstille alle dataene?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Slet alle data</value>
   </data>
 </root>

@@ -229,7 +229,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Không thành công</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="final" state-qualifier="mt-suggestion">Xét nghiệm đã được gửi</target>
         </trans-unit>
@@ -245,11 +245,11 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="final" state-qualifier="mt-suggestion">Yêu cầu nhập Mã định danh xét nghiệm</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="final" state-qualifier="mt-suggestion">Vui lòng bật thông báo phơi nhiễm trước khi gửi chẩn đoán.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="final" state-qualifier="mt-suggestion">Thông báo phơi nhiễm đã tắt</target>
         </trans-unit>
@@ -283,7 +283,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Không đồng ý</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Hủy bỏ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -337,6 +337,14 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Đang chờ đăng ký</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bạn có thực sự muốn thiết lập lại tất cả các dữ liệu?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Xóa tất cả dữ liệu</target>
         </trans-unit>
       </group>
     </body>

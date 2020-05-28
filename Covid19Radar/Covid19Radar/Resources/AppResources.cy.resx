@@ -187,7 +187,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Wedi methu</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnosis a gyflwynwyd</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Angen dynodydd diagnosis</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Galluogwch hysbysiadau amlygiad cyn cyflwyno diagnosis.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hysbysiadau datguddio'r anabl</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Ddim yn cytuno</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Canslo</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Aros am y gofrestr</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Ydych wir eisiau ailosod yr holl ddata?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Dileu'r holl ddata</value>
   </data>
 </root>
