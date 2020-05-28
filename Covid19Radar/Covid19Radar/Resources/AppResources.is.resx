@@ -181,7 +181,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Nota verður einkvæmt prófunarauðkenni sem fylgdi COVID-19 prófinu til að staðfesta jákvæða niðurstöðu prófana.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Reyndu aftur síðar.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

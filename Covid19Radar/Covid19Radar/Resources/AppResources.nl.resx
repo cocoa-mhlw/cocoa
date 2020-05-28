@@ -181,7 +181,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>De unieke test-ID die bij uw COVID-19 test meegeleverd is, moet worden gebruikt om uw positieve testresultaat te verifiëren.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Probeer het later nog eens.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

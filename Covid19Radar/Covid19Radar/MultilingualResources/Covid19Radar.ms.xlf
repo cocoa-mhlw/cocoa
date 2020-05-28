@@ -219,7 +219,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
           <target state="translated">Pengecam ujian unik yang datang dengan ujian COVID-19 anda mesti digunakan untuk mengesahkan keputusan ujian positif anda.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="translated">Sila cuba lagi kemudian.</target>
         </trans-unit>

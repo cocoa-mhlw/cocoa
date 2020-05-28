@@ -181,7 +181,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Identificatorul unic de test livrat împreună cu testul COVID-19 trebuie utilizat pentru a verifica rezultatul pozitiv al testului.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Vă rugăm să reîncercați mai târziu.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

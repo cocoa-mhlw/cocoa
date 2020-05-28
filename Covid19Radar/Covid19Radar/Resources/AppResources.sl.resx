@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Enolični preskusni identifikator, ki je priložen testu COVID-19, mora biti uporabljen za preverjanje pozitivnega rezultata testa.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Prosimo, poskusite znova kasneje.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

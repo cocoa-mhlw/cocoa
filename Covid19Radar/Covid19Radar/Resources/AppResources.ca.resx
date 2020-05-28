@@ -181,7 +181,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>L'identificador de prova únic que venia amb la seva prova de COVID-19 s'ha d'utilitzar per verificar el seu resultat de prova positiu.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Torneu-ho a provar més tard.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

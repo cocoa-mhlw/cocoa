@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Уникалният тестов идентификатор, който се появи с вашия тест COVID-19, трябва да се използва за потвърждаване на положителния резултат от теста.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Опитайте отново по-късно.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

@@ -181,7 +181,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Me whakamahi te kaitāutu whakamātau ahurei i haere me tō COVID whakamātau-ā-19 kia manatoko i tō hua whakamātau tōrunga.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Me ngana anō ā muri ake.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

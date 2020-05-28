@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>आपके COVID-19 परीक्षण के साथ आए अद्वितीय परीक्षण पहचानकर्ता का उपयोग आपके सकारात्मक परीक्षण परिणाम को सत्यापित करने के लिए किया जाना चाहिए।</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>कृपया बाद में पुन: प्रयास करें.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

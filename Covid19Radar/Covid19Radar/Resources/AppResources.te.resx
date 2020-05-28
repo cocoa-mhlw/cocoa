@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>మీ కోవిడ్-19 టెస్ట్ తో వచ్చిన ప్రత్యేక టెస్ట్ ఐడెంటిఫైయర్ మీ పాజిటివ్ టెస్ట్ ఫలితాన్ని వెరిఫై చేయడానికి విధిగా ఉపయోగించాలి.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

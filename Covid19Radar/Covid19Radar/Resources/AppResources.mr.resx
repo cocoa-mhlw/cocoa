@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>तुमच्या सीओव्हीआयडी-१९ चाचणीसह आलेल्या युनिक टेस्ट आयडेंटिफायरचा उपयोग आपल्या सकारात्मक चाचणीचा निकाल तपासण्यासाठी केला पाहिजे.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>कृपया नंतर पुन्हा प्रयत्न करा.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>必须使用 COVID-19 检测附带的唯一检测标记来验证您的阳性检测结果。</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>请稍后重试。</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">
