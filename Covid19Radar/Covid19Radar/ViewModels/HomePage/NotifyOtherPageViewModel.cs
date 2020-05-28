@@ -91,7 +91,7 @@ namespace Covid19Radar.ViewModels
 
                 await UserDialogs.Instance.AlertAsync(
                     "Diagnosis Submitted",
-                    "Complete",
+                    Resources.AppResources.Complete,
                     Resources.AppResources.ButtonOk
                 );
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
