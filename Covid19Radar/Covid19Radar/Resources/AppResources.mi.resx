@@ -275,4 +275,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>E hiahia ana koe ki te tautuhi anō i te raraunga katoa?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Mukua ngā raraunga katoa</value>
+  </data>
 </root>

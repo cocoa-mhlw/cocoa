@@ -275,4 +275,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Biztosan alaphelyzetbe állítja az összes adatot?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Az összes adat törlése</value>
+  </data>
 </root>

@@ -339,6 +339,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Gerçekten tüm verileri sıfırlamak istiyor musunuz?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tüm verileri silme</target>
+        </trans-unit>
       </group>
     </body>
   </file>

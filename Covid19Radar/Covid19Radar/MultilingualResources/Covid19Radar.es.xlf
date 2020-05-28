@@ -341,6 +341,10 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">¿Realmente desea restablecer todos los datos?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eliminar todos los datos</target>
+        </trans-unit>
       </group>
     </body>
   </file>

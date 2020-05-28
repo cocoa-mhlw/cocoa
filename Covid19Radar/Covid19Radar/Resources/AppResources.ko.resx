@@ -275,4 +275,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>모든 데이터를 다시 설정하시겠습니까?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>모든 데이터 삭제</value>
+  </data>
 </root>

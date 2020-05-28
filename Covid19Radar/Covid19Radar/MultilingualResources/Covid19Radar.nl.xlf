@@ -342,6 +342,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wil je echt alle gegevens resetten?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle gegevens verwijderen</target>
+        </trans-unit>
       </group>
     </body>
   </file>

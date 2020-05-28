@@ -342,6 +342,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Haluatko todella nollata kaikki tiedot?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Poista kaikki tiedot</target>
+        </trans-unit>
       </group>
     </body>
   </file>

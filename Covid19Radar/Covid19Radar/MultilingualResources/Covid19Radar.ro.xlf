@@ -340,6 +340,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Chiar doriți să resetați toate datele?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ștergerea tuturor datelor</target>
+        </trans-unit>
       </group>
     </body>
   </file>
