@@ -228,7 +228,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Failed</source>
           <target state="translated">Het misluk</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnose Ingedien</target>
         </trans-unit>
