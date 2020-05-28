@@ -1,0 +1,7 @@
+﻿{
+  "apiUrlBase": "https://exposurenotificationfunctions.azurewebsites.net/api/",
+  "blobStorageUrlBase": "https://exposurenotifications.blob.core.windows.net/",
+  "supportedRegions": "ca;za",
+  "blobStorageContainerNamePrefix": "region-",
+  "androidSafetyNetApiKey": "ANDROID-API-KEY"
+}

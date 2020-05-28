@@ -62,8 +62,10 @@
     <MtouchProfiling>true</MtouchProfiling>
     <CodesignProvision>Covid19radar</CodesignProvision>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
-    <MtouchSdkVersion>13.5</MtouchSdkVersion>
+    <MtouchSdkVersion>
+    </MtouchSdkVersion>
     <MtouchInterpreter>-all</MtouchInterpreter>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>

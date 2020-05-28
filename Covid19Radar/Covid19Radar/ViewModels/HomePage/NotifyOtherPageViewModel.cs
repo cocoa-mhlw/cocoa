@@ -58,6 +58,7 @@ namespace Covid19Radar.ViewModels
             IsEnabled = false;
             try
             {
+                /*
                 var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
 
                 if (!enabled)
@@ -67,7 +68,7 @@ namespace Covid19Radar.ViewModels
                     await UserDialogs.Instance.AlertAsync("Please enable Exposure Notifications before submitting a diagnosis.", "Exposure Notifications Disabled", "OK");
                     return;
                 }
-
+                */
                 // Set the submitted UID
                 userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DiagnosisTimestamp.Value));
                 await userDataService.SetAsync(userData);
