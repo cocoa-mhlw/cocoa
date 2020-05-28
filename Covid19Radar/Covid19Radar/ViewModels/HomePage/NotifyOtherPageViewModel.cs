@@ -74,7 +74,7 @@ namespace Covid19Radar.ViewModels
 
                     await UserDialogs.Instance.AlertAsync(
                         "Please enable Exposure Notifications before submitting a diagnosis.",
-                        "Exposure Notifications Disabled",
+                        Resources.AppResources.NotifyOtherPageDialogENDisabledText,
                         Resources.AppResources.ButtonOk
                     );
                     return;
