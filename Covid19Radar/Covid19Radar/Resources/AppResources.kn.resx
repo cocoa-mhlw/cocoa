@@ -228,7 +228,7 @@
     <value>ಒಪ್ಪುವುದಿಲ್ಲ</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>ರದ್ದುಮಾಡಿ</value>
     <comment>Cancel</comment>
   </data>

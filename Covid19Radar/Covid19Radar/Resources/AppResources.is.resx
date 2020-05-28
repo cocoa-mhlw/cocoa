@@ -228,7 +228,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
     <value>Ekki sammála</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Hætta við</value>
     <comment>Cancel</comment>
   </data>

@@ -270,9 +270,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Cancel に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DialogButtonCancel {
+        internal static string ButtonCancel {
             get {
-                return ResourceManager.GetString("DialogButtonCancel", resourceCulture);
+                return ResourceManager.GetString("ButtonCancel", resourceCulture);
             }
         }
         

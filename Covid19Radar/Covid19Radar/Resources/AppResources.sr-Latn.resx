@@ -228,7 +228,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
     <value>Ne slažu se</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Otkaži</value>
     <comment>Cancel</comment>
   </data>

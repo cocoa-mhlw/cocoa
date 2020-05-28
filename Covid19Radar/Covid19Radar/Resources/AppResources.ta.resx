@@ -228,7 +228,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>உடன்படவில்லை</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>ரத்துசெய்</value>
     <comment>Cancel</comment>
   </data>

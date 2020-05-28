@@ -228,7 +228,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Ikke enig</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Annuller</value>
     <comment>Cancel</comment>
   </data>

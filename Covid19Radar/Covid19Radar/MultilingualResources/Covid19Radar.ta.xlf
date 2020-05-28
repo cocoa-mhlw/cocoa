@@ -283,7 +283,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <target state="needs-review-translation" state-qualifier="mt-suggestion">உடன்படவில்லை</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ரத்துசெய்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>

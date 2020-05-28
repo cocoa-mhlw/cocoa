@@ -102,7 +102,7 @@ namespace Covid19Radar.ViewModels
                 "本当にすべてのデータをリセットしますか?",
                 "データの全削除",
                 Resources.AppResources.ButtonOk,
-                Resources.AppResources.DialogButtonCancel
+                Resources.AppResources.ButtonCancel
             );
 
             if (check)

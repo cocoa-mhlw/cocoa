@@ -228,7 +228,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
     <value>Tidak setuju</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Batal</value>
     <comment>Cancel</comment>
   </data>

@@ -228,7 +228,7 @@
     <value>സമ്മതിച്ചില്ല</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>റദ്ദാക്കുക</value>
     <comment>Cancel</comment>
   </data>
