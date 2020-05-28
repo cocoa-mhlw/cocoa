@@ -248,7 +248,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Ontsper asseblief Blootstellings Kennisgewings voordat 'n diagnose ingedien word.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Blootstellings Kennisgewings is versper</target>
         </trans-unit>

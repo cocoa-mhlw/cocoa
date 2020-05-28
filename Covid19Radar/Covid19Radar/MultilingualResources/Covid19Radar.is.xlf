@@ -249,7 +249,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Vinsamlegast virkjaðu tilkynningar um útsetningu áður en þú sendir greiningu.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tilkynningar um útsetningu fatlaðra</target>
         </trans-unit>

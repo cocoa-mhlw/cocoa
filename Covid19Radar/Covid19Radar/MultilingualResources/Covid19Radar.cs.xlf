@@ -249,7 +249,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Před odesláním diagnózy povolte oznámení o expozici.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Oznámení o expozici zakázána</target>
         </trans-unit>
