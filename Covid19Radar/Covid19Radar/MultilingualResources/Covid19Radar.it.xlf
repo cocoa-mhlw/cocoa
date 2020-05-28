@@ -233,7 +233,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnosi inviata</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="translated">Completa</target>
         </trans-unit>

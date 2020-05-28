@@ -232,7 +232,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnóstico enviado</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="translated">Completado</target>
         </trans-unit>
