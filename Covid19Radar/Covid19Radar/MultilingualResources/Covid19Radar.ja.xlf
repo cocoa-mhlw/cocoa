@@ -247,7 +247,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">診断を送信する前に Exposure Notifications を有効にしてください。</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Exposure Notifications 無効</target>
         </trans-unit>

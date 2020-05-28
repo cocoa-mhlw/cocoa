@@ -202,7 +202,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Mba alefaso ny Fampilazana ny Hatsiaka alohan' ny fandefasana aretina.</value>
   </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hatsiaka Fampilazana Sembana</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

@@ -202,7 +202,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Aktivieren Sie die Belichtungsbenachrichtigungen, bevor Sie eine Diagnose einreichen.</value>
   </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Belichtungsbenachrichtigungen deaktiviert</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

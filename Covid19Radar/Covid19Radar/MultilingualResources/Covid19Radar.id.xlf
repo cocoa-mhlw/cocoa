@@ -249,7 +249,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Silakan aktifkan ekspos notifikasi sebelum mengirimkan diagnosis.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Ekspos notifikasi dinonaktifkan</target>
         </trans-unit>

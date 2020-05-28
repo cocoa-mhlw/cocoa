@@ -202,7 +202,7 @@
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>निदान सबमिट करने से पहले एक्सपोजर नोटिफिकेशन को सक्षम करें।</value>
   </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>एक्सपोजर नोटिफिकेशन अक्षम</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

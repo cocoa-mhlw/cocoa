@@ -249,7 +249,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="final" state-qualifier="mt-suggestion">Vui lòng bật thông báo phơi nhiễm trước khi gửi chẩn đoán.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="final" state-qualifier="mt-suggestion">Thông báo phơi nhiễm đã tắt</target>
         </trans-unit>

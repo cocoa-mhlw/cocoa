@@ -201,7 +201,7 @@
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Lütfen bir tanı göndermeden önce Pozlama Bildirimleri'ni etkinleştirin.</value>
   </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Pozlama Bildirimleri Devre Dışı</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

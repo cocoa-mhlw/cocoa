@@ -202,7 +202,7 @@
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>אנא הפעל הודעות חשיפה לפני הגשת האבחון.</value>
   </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>הודעות חשיפה לא זמינות</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
