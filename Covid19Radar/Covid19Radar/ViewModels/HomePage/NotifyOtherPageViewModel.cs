@@ -90,7 +90,7 @@ namespace Covid19Radar.ViewModels
                 dialog.Hide();
 
                 await UserDialogs.Instance.AlertAsync(
-                    "Diagnosis Submitted",
+                    Resources.AppResources.NotifyOtherPageDialogSubmittedText,
                     Resources.AppResources.ButtonComplete,
                     Resources.AppResources.ButtonOk
                 );
