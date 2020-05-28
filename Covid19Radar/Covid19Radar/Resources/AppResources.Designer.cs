@@ -313,11 +313,20 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Exposure Notification Text に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InitSettingPageDialogExposureNotificationText {
+            get {
+                return ResourceManager.GetString("InitSettingPageDialogExposureNotificationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Do you want to turn on notifications? に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string InitSettingPageDialogTextExposureNotificationTitle {
+        internal static string InitSettingPageDialogExposureNotificationTitle {
             get {
-                return ResourceManager.GetString("InitSettingPageDialogTextExposureNotificationTitle", resourceCulture);
+                return ResourceManager.GetString("InitSettingPageDialogExposureNotificationTitle", resourceCulture);
             }
         }
         

@@ -235,7 +235,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
     <value>Odustani</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Želite li uključiti obavijesti?</value>
     <comment>Confirmation dialog</comment>
   </data>

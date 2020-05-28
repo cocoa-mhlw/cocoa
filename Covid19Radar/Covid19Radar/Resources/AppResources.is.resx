@@ -235,7 +235,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
     <value>Hætta við</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Viltu kveikja á tilkynningum?</value>
     <comment>Confirmation dialog</comment>
   </data>

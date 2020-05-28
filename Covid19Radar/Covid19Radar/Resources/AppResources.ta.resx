@@ -235,7 +235,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>ரத்துசெய்</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>அறிவிப்புகளை இயக்க விரும்புகிறீர்களா?</value>
     <comment>Confirmation dialog</comment>
   </data>
