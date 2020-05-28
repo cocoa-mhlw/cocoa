@@ -225,7 +225,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mamerena manandrana aoriana kely azafady.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tsy nahomby</target>
         </trans-unit>

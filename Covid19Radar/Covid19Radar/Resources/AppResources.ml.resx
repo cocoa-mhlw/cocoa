@@ -184,7 +184,7 @@
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>പരാജയപ്പെട്ടു</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">

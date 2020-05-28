@@ -225,7 +225,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">பின்னர் மீண்டும் முயற்சிக்கவும்.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">தோல்வியடைந்தது</target>
         </trans-unit>

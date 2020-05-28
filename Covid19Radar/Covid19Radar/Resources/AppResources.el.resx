@@ -184,7 +184,7 @@
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>Δοκιμάστε ξανά αργότερα.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Απέτυχε</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
