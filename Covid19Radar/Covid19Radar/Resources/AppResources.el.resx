@@ -235,7 +235,7 @@
     <value>Άκυρο</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Θέλετε να ενεργοποιήσετε τις ειδοποιήσεις;</value>
     <comment>Confirmation dialog</comment>
   </data>

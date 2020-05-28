@@ -235,7 +235,7 @@
     <value>বাতিল করুন</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>আপনি কি বিজ্ঞপ্তিগুলি চালু করতে চান?</value>
     <comment>Confirmation dialog</comment>
   </data>

@@ -235,7 +235,7 @@
     <value>منسوخ کریں</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>کیا آپ نوٹیفکیشنز کو آن کرنا چاہتے ہیں ؟</value>
     <comment>Confirmation dialog</comment>
   </data>

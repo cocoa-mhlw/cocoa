@@ -235,7 +235,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
     <value>Mégse</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Bekapcsolja az értesítéseket?</value>
     <comment>Confirmation dialog</comment>
   </data>
