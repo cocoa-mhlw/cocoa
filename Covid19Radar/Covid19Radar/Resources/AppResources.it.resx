@@ -235,7 +235,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
     <value>Annulla</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Vuoi attivare le notifiche?</value>
     <comment>Confirmation dialog</comment>
   </data>

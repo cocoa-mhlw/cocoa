@@ -235,7 +235,7 @@
     <value>రద్దు చేయి</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>నోటిఫికేషన్లను మీరు ఆన్ చేయాలని అనుకుంటున్నారా?</value>
     <comment>Confirmation dialog</comment>
   </data>
