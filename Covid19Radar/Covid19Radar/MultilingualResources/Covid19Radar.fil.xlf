@@ -225,7 +225,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Pakisubukang muli sa ibang pagkakataon.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Nabigo</target>
         </trans-unit>

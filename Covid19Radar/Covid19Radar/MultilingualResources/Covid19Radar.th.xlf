@@ -225,7 +225,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Please try again later.</source>
           <target state="translated">โปรดลองอีกครั้งในภายหลัง</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="translated">ล้มเหลว</target>
         </trans-unit>
