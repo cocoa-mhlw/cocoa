@@ -245,7 +245,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="translated">Identificatore di diagnosi richiesto</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Si prega di abilitare le notifiche di esposizione prima di inviare una diagnosi.</target>
         </trans-unit>
