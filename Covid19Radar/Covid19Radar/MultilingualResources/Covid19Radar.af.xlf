@@ -220,11 +220,11 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
           <target state="translated">Die unieke toetsidentifiseerder wat saam met jou COVID-19 toets gekom het moet gebruik word om jou positiewe toetsuitslae te verifieer.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="translated">Probeer asseblief weer later.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="translated">Het misluk</target>
         </trans-unit>
@@ -232,7 +232,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnose Ingedien</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="translated">Voltooi</target>
         </trans-unit>
@@ -243,10 +243,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>
           <target state="translated">Diagnose-Identifiseerder Vereis</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="translated">Goed</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>

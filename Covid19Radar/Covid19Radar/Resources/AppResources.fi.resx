@@ -181,16 +181,16 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Covid-19 testin mukana toimitettua yksilöllistä testitunnistetta on käytettävä positiivisen testituloksen vahvistamiseen.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Yritä myöhemmin uudelleen.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Epäonnistui</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>Diagnoosi Lähetetty</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Valmis</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnoosin tunniste vaaditaan</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK\n</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Ota altistumisilmoitukset käyttöön ennen diagnoosin lähettämistä.</value>
