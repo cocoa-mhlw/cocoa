@@ -124,7 +124,7 @@
     <value>મહેરબાની કરીને તમારું નેટવર્ક જોડાણ ચકાસો.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ઠીક</value>
     <comment>OK</comment>
   </data>

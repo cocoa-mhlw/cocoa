@@ -148,7 +148,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">네트워크 연결을 확인하십시오.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
         </trans-unit>
-        <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">확인</target>
           <note from="MultilingualBuild" annotates="source" priority="2">OK</note>

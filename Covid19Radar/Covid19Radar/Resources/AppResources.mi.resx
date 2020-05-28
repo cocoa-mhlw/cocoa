@@ -124,7 +124,7 @@
     <value>Tēnā, tirohia tō tūhononga whatunga.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ĀE</value>
     <comment>OK</comment>
   </data>

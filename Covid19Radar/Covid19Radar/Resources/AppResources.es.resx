@@ -124,7 +124,7 @@
     <value>Por favor, comprueba tu conexión de red.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>Aceptar</value>
     <comment>OK</comment>
   </data>
