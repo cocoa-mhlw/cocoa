@@ -91,7 +91,7 @@ namespace Covid19Radar.ViewModels
 
                 await UserDialogs.Instance.AlertAsync(
                     "Diagnosis Submitted",
-                    "Complete",
+                    Resources.AppResources.ButtonComplete,
                     Resources.AppResources.ButtonOk
                 );
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
@@ -102,8 +102,8 @@ namespace Covid19Radar.ViewModels
 
                 dialog.Hide();
                 UserDialogs.Instance.Alert(
-                    "Please try again later.",
-                    "Failed",
+                    Resources.AppResources.NotifyOtherPageDialogExceptionText,
+                    Resources.AppResources.ButtonFailed,
                     Resources.AppResources.ButtonOk
                 );
             }
