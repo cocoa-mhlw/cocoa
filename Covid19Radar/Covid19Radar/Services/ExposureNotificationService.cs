@@ -17,6 +17,7 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
+    [Xamarin.Forms.Internals.Preserve] // Ensure this isn't linked out
     class ExposureNotificationService : IExposureNotificationHandler
     {
         private readonly HttpDataService httpDataService;
@@ -28,6 +29,7 @@ namespace Covid19Radar.Services
         const string blobStorageContainerNamePrefix = "region-";
         static readonly HttpClient http = new HttpClient();
         private readonly Configuration configuration;
+
 
         public ExposureNotificationService(HttpDataService httpDataService, UserDataService userDataService)
         {
@@ -201,42 +203,44 @@ namespace Covid19Radar.Services
             if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
                 throw new InvalidOperationException();
 
-            var selfDiag = await CreateSubmissionAsync(pendingDiagnosis, temporaryExposureKeys);
+            var selfDiag = await CreateSubmissionAsync();
             await httpDataService.PostSelfExposureKeysAsync(selfDiag);
             // Update pending status
             pendingDiagnosis.Shared = true;
             await userDataService.SetAsync(userData);
-        }
-        private async Task<SelfDiagnosisSubmission > CreateSubmissionAsync(PositiveDiagnosisState pendingDiagnosis, IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
-        {
-            // Create the network keys
-            var keys = temporaryExposureKeys.Select(k => new ExposureKey
+
+            // Closure
+            async Task<SelfDiagnosisSubmission> CreateSubmissionAsync()
             {
-                KeyData = Convert.ToBase64String(k.Key),
-                RollingStart = (long)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
-                RollingDuration = (int)(k.RollingDuration.TotalMinutes / 10),
-                TransmissionRisk = (int)k.TransmissionRiskLevel
-            });
+                // Create the network keys
+                var keys = temporaryExposureKeys.Select(k => new ExposureKey
+                {
+                    KeyData = Convert.ToBase64String(k.Key),
+                    RollingStart = (long)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
+                    RollingDuration = (int)(k.RollingDuration.TotalMinutes / 10),
+                    TransmissionRisk = (int)k.TransmissionRiskLevel
+                });
 
-            // Create the submission
-            var submission = new SelfDiagnosisSubmission (true)
-            {
-                SubmissionNumber = userData.PendingDiagnosis.DiagnosisUid,
-                AppPackageName = AppInfo.PackageName,
-                UserUuid = userData.UserUuid,
-                DeviceVerificationPayload = null,
-                Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
-                Regions = userData.ServerBatchNumbers.Keys.ToArray(),
-                Keys = keys.ToArray(),
-                VerificationPayload = pendingDiagnosis.DiagnosisUid,
-            };
+                // Create the submission
+                var submission = new SelfDiagnosisSubmission(true)
+                {
+                    SubmissionNumber = userData.PendingDiagnosis.DiagnosisUid,
+                    AppPackageName = AppInfo.PackageName,
+                    UserUuid = userData.UserUuid,
+                    DeviceVerificationPayload = null,
+                    Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
+                    Regions = userData.ServerBatchNumbers.Keys.ToArray(),
+                    Keys = keys.ToArray(),
+                    VerificationPayload = pendingDiagnosis.DiagnosisUid,
+                };
 
-            // See if we can add the device verification
-            if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
-                submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
+                // See if we can add the device verification
+                if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
+                    submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
 
-            return submission;
+                return submission;
 
+            }
         }
         #endregion
 
