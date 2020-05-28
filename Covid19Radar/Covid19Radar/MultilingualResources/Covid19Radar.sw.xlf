@@ -249,7 +249,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tafadhali Wezesha taarifa za ufichuzi kabla ya kuwasilisha utambuzi.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Taarifa za ufichuzi zimelemazwa</target>
         </trans-unit>

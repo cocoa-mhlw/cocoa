@@ -505,9 +505,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Exposure Notifications Disabled に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string NotifyOtherPageDialogENDisabledText {
+        internal static string NotifyOtherPageDialogENDisabledTitle {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDialogENDisabledText", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialogENDisabledTitle", resourceCulture);
             }
         }
         

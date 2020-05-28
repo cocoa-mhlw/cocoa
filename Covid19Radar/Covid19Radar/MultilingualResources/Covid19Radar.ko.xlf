@@ -249,7 +249,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">진단을 제출하기 전에 노출 알림을 활성화하십시오.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">노출 알림 사용 안 함</target>
         </trans-unit>
