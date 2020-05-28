@@ -181,7 +181,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>A COVID-19 teszthez tartozó egyedi tesztazonosítót kell használni a pozitív teszt eredményének ellenőrzéséhez.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Próbálkozzon később.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

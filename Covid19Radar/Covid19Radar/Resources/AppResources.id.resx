@@ -181,7 +181,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Pengidentifikasi uji unik yang disertakan dengan tes COVID-19 Anda harus digunakan untuk memverifikasi hasil tes positif Anda.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Silakan coba lagi nanti.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

@@ -181,7 +181,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Die eindeutige Testkennung, die mit Ihrem COVID-19Test enthalten ist, muss verwendet werden, um Ihr positives Testergebnis zu überprüfen.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Versuchen Sie es später erneut.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

@@ -181,7 +181,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Lai verificētu pozitīvo testa rezultātu, jāizmanto unikālais testa identifikators, kas ir komplektā ar COVID-19 testu.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Lūdzu, vēlāk mēģiniet vēlreiz.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

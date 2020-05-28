@@ -221,7 +221,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
           <target state="final" state-qualifier="mt-suggestion">Mã định danh kiểm tra duy nhất đi kèm với xét nghiệm COVID-19 của bạn phải được sử dụng để xác minh kết quả xét nghiệm dương tính của bạn.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Hãy thử lại sau.</target>
         </trans-unit>

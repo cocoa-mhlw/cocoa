@@ -181,7 +181,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Jedinstveni identifikator testa koji ste dobili uz vaš KOVID-19 test mora da se koristi za verifikaciju pozitivnog rezultata testiranja.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Покушајте поново касније.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

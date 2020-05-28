@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Јединствени идентификатор теста који сте добили уз ваш КОВИД-19 тест мора да се користи за верификацију позитивног резултата тестирања.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Покушајте поново касније.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

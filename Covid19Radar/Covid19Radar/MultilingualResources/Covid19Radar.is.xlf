@@ -221,7 +221,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nota verður einkvæmt prófunarauðkenni sem fylgdi COVID-19 prófinu til að staðfesta jákvæða niðurstöðu prófana.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Reyndu aftur síðar.</target>
         </trans-unit>

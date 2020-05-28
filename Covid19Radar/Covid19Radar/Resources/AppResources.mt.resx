@@ -181,7 +181,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>L-identifikatur uniku tat-test li ġie mat-test COVID-19 tiegħek għandu jintuża biex jivverifika r-ri żultat tat-test pożittiv tiegħek.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Erġa’ pprova aktar tard.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

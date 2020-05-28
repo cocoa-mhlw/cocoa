@@ -181,7 +181,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Ang natatanging pagsubok na identifier na dumating sa iyong COVID pagsubok ay dapat gamitin upang i-verify ang iyong positibong resulta ng pagsubok.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Pakisubukang muli sa ibang pagkakataon.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

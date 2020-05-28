@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>ನಿಮ್ಮ ಕೋವಿಡ್-19 ಟೆಸ್ಟ್ ನೊಂದಿಗೆ ಬಂದ ವಿಶಿಷ್ಟವಾದ ಪರೀಕ್ಷಾ ಗುರುತುಪಟ್ಟಿಯು ನಿಮ್ಮ ಧನಾತ್ಮಕ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶವನ್ನು ಪರಿಶೀಲಿಸಲು ಬಳಸಿರಬೇಕು.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">
