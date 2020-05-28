@@ -44,12 +44,20 @@ namespace Covid19Radar.ViewModels
             {
                 // Check gov's positive api check here!!
 
-                await UserDialogs.Instance.AlertAsync("Please provide a valid Diagnosis ID", "Invalid Diagnosis ID", "OK");
+                await UserDialogs.Instance.AlertAsync(
+                    "Please provide a valid Diagnosis ID",
+                    "Invalid Diagnosis ID",
+                    Resources.AppResources.ButtonOk
+                );
                 return;
             }
             if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
             {
-                await UserDialogs.Instance.AlertAsync("Please provide a valid Test Date", "Invalid Test Date", "OK");
+                await UserDialogs.Instance.AlertAsync(
+                    "Please provide a valid Test Date",
+                    "Invalid Test Date",
+                    Resources.AppResources.ButtonOk
+                );
                 return;
             }
 
@@ -64,7 +72,11 @@ namespace Covid19Radar.ViewModels
                 {
                     dialog.Hide();
 
-                    await UserDialogs.Instance.AlertAsync("Please enable Exposure Notifications before submitting a diagnosis.", "Exposure Notifications Disabled", "OK");
+                    await UserDialogs.Instance.AlertAsync(
+                        "Please enable Exposure Notifications before submitting a diagnosis.",
+                        "Exposure Notifications Disabled",
+                        Resources.AppResources.ButtonOk
+                    );
                     return;
                 }
 
@@ -77,7 +89,11 @@ namespace Covid19Radar.ViewModels
 
                 dialog.Hide();
 
-                await UserDialogs.Instance.AlertAsync("Diagnosis Submitted", "Complete", "OK");
+                await UserDialogs.Instance.AlertAsync(
+                    "Diagnosis Submitted",
+                    "Complete",
+                    Resources.AppResources.ButtonOk
+                );
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
             }
             catch (Exception ex)
@@ -85,7 +101,11 @@ namespace Covid19Radar.ViewModels
                 Console.WriteLine(ex);
 
                 dialog.Hide();
-                UserDialogs.Instance.Alert("Please try again later.", "Failed", "OK");
+                UserDialogs.Instance.Alert(
+                    "Please try again later.",
+                    "Failed",
+                    Resources.AppResources.ButtonOk
+                );
             }
             finally
             {
