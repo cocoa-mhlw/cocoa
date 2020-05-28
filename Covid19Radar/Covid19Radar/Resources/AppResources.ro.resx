@@ -228,7 +228,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
     <value>Nu sunt de acord</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Anulare</value>
     <comment>Cancel</comment>
   </data>

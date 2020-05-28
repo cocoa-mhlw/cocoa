@@ -228,7 +228,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Tsy Manaiky</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Manafoana</value>
     <comment>Cancel</comment>
   </data>

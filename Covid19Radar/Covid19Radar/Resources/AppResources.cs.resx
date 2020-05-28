@@ -228,7 +228,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
     <value>Nesouhlasím</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Zrušit</value>
     <comment>Cancel</comment>
   </data>

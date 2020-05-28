@@ -228,7 +228,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
     <value>Ei samaa mieltä</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Peruuta</value>
     <comment>Cancel</comment>
   </data>

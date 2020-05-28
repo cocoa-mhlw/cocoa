@@ -228,7 +228,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
     <value>Không đồng ý</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Hủy bỏ</value>
     <comment>Cancel</comment>
   </data>

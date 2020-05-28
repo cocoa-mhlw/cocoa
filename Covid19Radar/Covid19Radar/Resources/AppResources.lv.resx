@@ -228,7 +228,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
     <value>Nepiekrītat</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Atcelt</value>
     <comment>Cancel</comment>
   </data>
