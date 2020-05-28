@@ -187,7 +187,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Epäonnistui</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnoosi Lähetetty</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

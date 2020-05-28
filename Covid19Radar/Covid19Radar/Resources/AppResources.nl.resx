@@ -187,7 +187,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Mislukt</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnose ingediend</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

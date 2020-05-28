@@ -187,7 +187,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Niepowodzenie</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnoza Przedłożona</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

@@ -187,7 +187,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Falha</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnóstico Submetido</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

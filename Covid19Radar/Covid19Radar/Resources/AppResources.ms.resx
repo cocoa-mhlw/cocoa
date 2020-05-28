@@ -187,7 +187,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Gagal</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnosis dihantar</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

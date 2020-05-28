@@ -187,7 +187,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Fehler</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnose eingereicht</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

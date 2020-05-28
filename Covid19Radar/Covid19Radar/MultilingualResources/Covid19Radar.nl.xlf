@@ -229,7 +229,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Failed</source>
           <target state="translated">Mislukt</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnose ingediend</target>
         </trans-unit>

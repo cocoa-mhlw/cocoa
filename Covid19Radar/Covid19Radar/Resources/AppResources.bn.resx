@@ -187,7 +187,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>ব্যর্থ হয়েছে</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>নিদান জমা</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

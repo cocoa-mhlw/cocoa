@@ -187,7 +187,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Neúspešné</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnóza predložená</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

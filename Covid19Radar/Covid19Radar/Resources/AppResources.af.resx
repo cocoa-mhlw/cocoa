@@ -187,7 +187,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Het misluk</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnose Ingedien</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

@@ -186,7 +186,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>Başarısız</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Tanı Gönderildi</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
