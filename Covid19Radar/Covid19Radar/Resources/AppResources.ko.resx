@@ -124,7 +124,7 @@
     <value>네트워크 연결을 확인하십시오.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>확인</value>
     <comment>OK</comment>
   </data>
