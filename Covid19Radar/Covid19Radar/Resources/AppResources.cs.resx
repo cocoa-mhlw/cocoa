@@ -181,16 +181,16 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>K ověření pozitivního výsledku testu musí být použit jedinečný identifikátor testu, který byl dodaný s testem COVID-19.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Zkuste to prosím znovu později.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Chyba</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>Diagnóza odeslána</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Dokončeno</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Je vyžadován identifikátor diagnózy.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Před odesláním diagnózy povolte oznámení o expozici.</value>

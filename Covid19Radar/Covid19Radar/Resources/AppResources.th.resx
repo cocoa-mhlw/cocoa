@@ -181,16 +181,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>หมายเลขไอดี หรือตัวระบุผลการทดสอบการติดเชื้อ COVID-19 ของคุณ ต้องถูกใช้เพื่อยืนยันผลการทดสอบที่เป็นบวก (ติดเชื้อ) ของคุณเท่านั้น</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>โปรดลองอีกครั้งในภายหลัง</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>ล้มเหลว</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>ส่งผลการวินิจฉัยแล้ว</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>เสร็จสมบูรณ์</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>ต้องการหมายเลขไอดี หรือตัวระบุผลการวินิจฉัย</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ตกลง</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>โปรดเปิดใช้งาน ตัวแจ้งเตือนการเปิดเผยตัวตน ก่อนที่จะส่งการวินิจฉัย</value>
