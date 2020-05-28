@@ -202,7 +202,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Ontsper asseblief Blootstellings Kennisgewings voordat 'n diagnose ingedien word.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Blootstellings Kennisgewings is versper</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
