@@ -338,6 +338,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Warten auf Registrierung</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Möchten Sie wirklich alle Daten zurücksetzen?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

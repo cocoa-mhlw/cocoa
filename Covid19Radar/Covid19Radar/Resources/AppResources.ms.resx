@@ -272,4 +272,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
     <value>Menunggu untuk mendaftar</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Adakah anda benar-benar mahu menetapkan semula semua data?</value>
+  </data>
 </root>

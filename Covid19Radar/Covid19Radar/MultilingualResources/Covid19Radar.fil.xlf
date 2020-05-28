@@ -338,6 +338,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Naghihintay na magparehistro</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gusto mo ba talagang i-reset ang lahat ng data?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

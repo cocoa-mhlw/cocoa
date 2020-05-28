@@ -271,4 +271,7 @@
     <value>في انتظار التسجيل</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>هل تريد حقًا إعادة تعيين جميع البيانات؟</value>
+  </data>
 </root>

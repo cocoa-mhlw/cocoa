@@ -338,6 +338,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Aros am y gofrestr</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ydych wir eisiau ailosod yr holl ddata?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

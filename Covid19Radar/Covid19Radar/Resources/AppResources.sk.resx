@@ -272,4 +272,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
     <value>Čakanie na registráciu</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Naozaj chcete obnoviť všetky dáta?</value>
+  </data>
 </root>

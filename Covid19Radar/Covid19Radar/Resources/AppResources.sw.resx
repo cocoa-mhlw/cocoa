@@ -272,4 +272,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
     <value>Inasubiri rejista</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Unataka kweli kuweka upya data zote?</value>
+  </data>
 </root>

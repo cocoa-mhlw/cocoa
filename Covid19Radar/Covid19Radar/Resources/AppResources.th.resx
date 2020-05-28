@@ -272,4 +272,7 @@
     <value>กําลังรอการลงทะเบียน</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>คุณต้องการรีเซ็ตข้อมูลทั้งหมดหรือไม่</value>
+  </data>
 </root>
