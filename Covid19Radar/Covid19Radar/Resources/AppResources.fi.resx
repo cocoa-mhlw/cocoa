@@ -202,7 +202,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Ota altistumisilmoitukset käyttöön ennen diagnoosin lähettämistä.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Altistumisilmoitukset poistettu käytöstä</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

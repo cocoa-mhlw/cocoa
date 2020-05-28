@@ -202,7 +202,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Schakel blootstellingsmeldingen in voordat u een diagnose indient.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Blootstellingsmeldingen uitgeschakeld</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

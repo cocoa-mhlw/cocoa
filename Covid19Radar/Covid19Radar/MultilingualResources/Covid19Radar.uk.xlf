@@ -249,7 +249,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Перш ніж надсилати діагноз, увімкніть сповіщення про експозицію.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Сповіщення про експозицію вимкнено</target>
         </trans-unit>
