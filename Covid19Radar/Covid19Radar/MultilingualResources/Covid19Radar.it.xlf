@@ -249,7 +249,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Si prega di abilitare le notifiche di esposizione prima di inviare una diagnosi.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Notifiche di esposizione disabilitate</target>
         </trans-unit>
