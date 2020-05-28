@@ -102,7 +102,7 @@ namespace Covid19Radar.ViewModels
 
                 dialog.Hide();
                 UserDialogs.Instance.Alert(
-                    "Please try again later.",
+                    Resources.AppResources.NotifyOtherPageDialogExceptionText,
                     Resources.AppResources.ButtonFailed,
                     Resources.AppResources.ButtonOk
                 );
