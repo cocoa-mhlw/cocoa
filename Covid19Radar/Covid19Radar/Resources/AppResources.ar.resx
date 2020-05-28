@@ -234,7 +234,7 @@
     <value>إلغاء الأمر</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>هل تريد تشغيل الإشعارات؟</value>
     <comment>Confirmation dialog</comment>
   </data>

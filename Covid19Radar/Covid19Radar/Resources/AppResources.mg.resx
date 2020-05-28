@@ -235,7 +235,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Manafoana</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Te-hitodika amin' ny fampilazana ve ianao?</value>
     <comment>Confirmation dialog</comment>
   </data>

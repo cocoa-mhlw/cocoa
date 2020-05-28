@@ -235,7 +235,7 @@
     <value>Отмена</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Вы хотите включить уведомления?</value>
     <comment>Confirmation dialog</comment>
   </data>

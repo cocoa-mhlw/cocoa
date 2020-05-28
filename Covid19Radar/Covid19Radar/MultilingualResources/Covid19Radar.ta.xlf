@@ -292,7 +292,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ரத்துசெய்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogTextExposureNotificationTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
           <source>Do you want to turn on notifications?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">அறிவிப்புகளை இயக்க விரும்புகிறீர்களா?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>

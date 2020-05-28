@@ -235,7 +235,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
     <value>Katisha</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Unataka kuwasha taarifa?</value>
     <comment>Confirmation dialog</comment>
   </data>
