@@ -187,7 +187,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Operazione non riuscita</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnosi inviata</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identificatore di diagnosi richiesto</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Si prega di abilitare le notifiche di esposizione prima di inviare una diagnosi.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Notifiche di esposizione disabilitate</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
     <value>Non sono d'accordo</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Annulla</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>In attesa di registrazione</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Vuoi davvero reimpostare tutti i dati?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Eliminare tutti i dati</value>
   </data>
 </root>

@@ -187,7 +187,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Falha</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnóstico Submetido</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identificador de diagnóstico necessário</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Ative as Notificações de Exposição antes de enviar um diagnóstico.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Notificações de exposição desativadas</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
     <value>Não Concordo</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Cancelar</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Esperando o registro</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Você realmente quer redefinir todos os dados?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Excluir todos os dados</value>
   </data>
 </root>

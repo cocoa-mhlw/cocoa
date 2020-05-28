@@ -187,7 +187,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Epäonnistui</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnoosi Lähetetty</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnoosin tunniste vaaditaan</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Ota altistumisilmoitukset käyttöön ennen diagnoosin lähettämistä.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Altistumisilmoitukset poistettu käytöstä</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
     <value>Ei samaa mieltä</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Peruuta</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Odotetaan rekisteröitymistä</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Haluatko todella nollata kaikki tiedot?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Poista kaikki tiedot</value>
   </data>
 </root>

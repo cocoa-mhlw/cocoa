@@ -187,7 +187,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Mislukt</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnose ingediend</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnose-ID vereist</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Schakel blootstellingsmeldingen in voordat u een diagnose indient.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Blootstellingsmeldingen uitgeschakeld</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
     <value>Niet mee eens</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Annuleren</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Wachten op registratie</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Wil je echt alle gegevens resetten?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Alle gegevens verwijderen</value>
   </data>
 </root>

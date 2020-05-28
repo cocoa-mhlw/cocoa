@@ -187,7 +187,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>ವಿಫಲವಾಗಿದೆ</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>ನಾಪತ್ತೆ ಅರ್ಜಿ</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>ರೋಗನಿರ್ಣಯ ಗುರುತುಪಟ್ಟಿ ಅಗತ್ಯ</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>ಒಂದು ರೋಗನಿರ್ಣಯವನ್ನು ಸಲ್ಲಿಸುವ ಮೊದಲು ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಅಧಿಸೂಚನೆಗಳನ್ನು ದಯವಿಟ್ಟು ಸಕ್ರಿಯಗೊಳಿಸಿ.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>ಬಹಿರ್ಮುಖತೆ ಅಧಿಸೂಚನೆಗಳು ಅಶಕ್ತcomment</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@
     <value>ಒಪ್ಪುವುದಿಲ್ಲ</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>ರದ್ದುಮಾಡಿ</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>ರಿಜಿಸ್ಟರ್ ಗಾಗಿ ಕಾಯುತ್ತಿದ್ದಾರೆ</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>ನೀವು ನಿಜವಾಗಲೂ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ರೀಸೆಟ್ ಮಾಡಲು ಬಯಸುತ್ತಿದ್ದೀರಿ?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸು</value>
   </data>
 </root>

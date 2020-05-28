@@ -186,7 +186,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>Başarısız</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Tanı Gönderildi</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -198,10 +198,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Tanı Tanımlayıcı Gerekli</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Lütfen bir tanı göndermeden önce Pozlama Bildirimleri'ni etkinleştirin.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Pozlama Bildirimleri Devre Dışı</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -227,7 +227,7 @@
     <value>Kabul Edilmedi</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>İptal</value>
     <comment>Cancel</comment>
   </data>
@@ -270,5 +270,11 @@
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Kayıt bekleniyor</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Gerçekten tüm verileri sıfırlamak istiyor musunuz?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Tüm verileri silme</value>
   </data>
 </root>

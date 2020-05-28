@@ -187,7 +187,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>പരാജയപ്പെട്ടു</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിച്ച</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>രോഗനിർണ്ണയ ഐഡന്റിഫയർ ആവശ്യമാണ്</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നതിന് മുമ്പ് എക്സ്പോണറി അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>എക്സ്പോണറി അറിയിപ്പുകൾ പ്രവർത്തനരഹിതമാക്കി</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@
     <value>സമ്മതിച്ചില്ല</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>റദ്ദാക്കുക</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>രജിസ്റ്റര് ചെയ്യുന്നതിനായി കാത്തിരിക്കുന്നു</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>നിങ്ങള് ക്കു് എല്ലാ ഡാറ്റയും പുനഃക്രമീകരിക്കാന് ആഗ്രഹിക്കുന്നുണ്ടോ?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>എല്ലാ ഡാറ്റയും മായ്ക്കുക</value>
   </data>
 </root>

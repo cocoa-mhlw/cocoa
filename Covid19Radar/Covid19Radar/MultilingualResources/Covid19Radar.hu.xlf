@@ -227,7 +227,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Sikertelen</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Benyújtott diagnosztika</target>
         </trans-unit>
@@ -243,11 +243,11 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Diagnosztikai azonosító szükséges</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kérjük, a diagnózis benyújtása előtt engedélyezze az expozíciós értesítéseket.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Expozíciós értesítések letiltva</target>
         </trans-unit>
@@ -281,7 +281,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nem ért egyet</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Mégse</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
@@ -335,6 +335,14 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Waiting for register</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Várakozás a regisztrációra</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Biztosan alaphelyzetbe állítja az összes adatot?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Az összes adat törlése</target>
         </trans-unit>
       </group>
     </body>
