@@ -187,7 +187,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Ma rnexxiex</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Dijanjożi ppreżentata</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identifikatur tad-dijanjo Żi meħtieġ</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Jekk jogħġbok ixgħel in-notifiki tal-espo żizzjoni qabel ma tippreżenta dijanjożi.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Notifiki ta ' espożizzjoni diżattivati</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
     <value>Ma jaqblux</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Ikkanċella</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Stennija għar-Reġistru</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Verament tixtieq tirrisettja d-data kollha?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Ħassar id-data kollha</value>
   </data>
 </root>

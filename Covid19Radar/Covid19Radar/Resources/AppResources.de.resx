@@ -187,7 +187,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Fehler</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnose eingereicht</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnose-Bezeichner erforderlich</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Aktivieren Sie die Belichtungsbenachrichtigungen, bevor Sie eine Diagnose einreichen.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Belichtungsbenachrichtigungen deaktiviert</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <value>Nicht zustimmen</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Abbrechen</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Warten auf Registrierung</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Möchten Sie wirklich alle Daten zurücksetzen?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Löschen aller Daten</value>
   </data>
 </root>

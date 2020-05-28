@@ -300,7 +300,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Failed</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnosis Submitted</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -312,10 +312,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnosis Identifier Required</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Please enable Exposure Notifications before submitting a diagnosis.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Exposure Notifications Disabled</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -333,7 +333,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Submit</value>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
     <comment>Cancel</comment>
   </data>
@@ -376,5 +376,11 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Waiting for register</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Do you really want to reset all the data?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Delete all data</value>
   </data>
 </root>

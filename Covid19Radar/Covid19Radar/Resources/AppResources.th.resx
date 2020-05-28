@@ -187,7 +187,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>ล้มเหลว</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>ส่งผลการวินิจฉัยแล้ว</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
@@ -199,10 +199,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>ต้องการหมายเลขไอดี หรือตัวระบุผลการวินิจฉัย</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>โปรดเปิดใช้งาน ตัวแจ้งเตือนการเปิดเผยตัวตน ก่อนที่จะส่งการวินิจฉัย</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>ตัวแจ้งเตือนการเปิดเผยตัวตนถูกปิดการทำงาน</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -228,7 +228,7 @@
     <value>ไม่ยอมรับ</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>ยกเลิก</value>
     <comment>Cancel</comment>
   </data>
@@ -271,5 +271,11 @@
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>กําลังรอการลงทะเบียน</value>
     <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>คุณต้องการรีเซ็ตข้อมูลทั้งหมดหรือไม่</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>ลบข้อมูลทั้งหมด</value>
   </data>
 </root>
