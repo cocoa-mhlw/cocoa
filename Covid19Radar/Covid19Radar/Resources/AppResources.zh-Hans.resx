@@ -235,7 +235,7 @@
     <value>取消</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>是否要打开通知？</value>
     <comment>Confirmation dialog</comment>
   </data>

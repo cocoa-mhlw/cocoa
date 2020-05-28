@@ -235,7 +235,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
     <value>Annuller</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Vil du slå notifikationer til?</value>
     <comment>Confirmation dialog</comment>
   </data>
