@@ -228,7 +228,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
     <value>Nie saamstem</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselleer</value>
     <comment>Cancel</comment>
   </data>

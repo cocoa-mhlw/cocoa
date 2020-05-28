@@ -333,7 +333,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Submit</value>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
     <comment>Cancel</comment>
   </data>

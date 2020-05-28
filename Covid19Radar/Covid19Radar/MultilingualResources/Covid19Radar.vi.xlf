@@ -283,7 +283,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Không đồng ý</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Hủy bỏ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>

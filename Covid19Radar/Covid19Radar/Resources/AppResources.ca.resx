@@ -228,7 +228,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
     <value>No està d'acord</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel·la</value>
     <comment>Cancel</comment>
   </data>

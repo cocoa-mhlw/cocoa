@@ -228,7 +228,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Inte överens</value>
     <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Avbryt</value>
     <comment>Cancel</comment>
   </data>

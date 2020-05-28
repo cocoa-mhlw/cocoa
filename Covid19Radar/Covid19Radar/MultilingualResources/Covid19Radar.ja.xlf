@@ -281,7 +281,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">同意しない</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
-        <trans-unit id="DialogButtonCancel" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="translated">Cancel</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
