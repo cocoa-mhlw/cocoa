@@ -181,7 +181,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Ní mór an t-aitheantóir tástála uathúil a tháinig le do thástáil COVID-19 a úsáid chun do thoradh dearfach tástála a fhíorú.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Bain triail eile as ar ball.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>شناسه تست منحصر به فرد که با آزمون COVID-19 شما آمد باید برای تأیید نتیجه آزمون مثبت شما استفاده شود.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>لطفاً بعداً دوباره تلاش کنید.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

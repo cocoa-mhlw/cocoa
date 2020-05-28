@@ -181,7 +181,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Ilay fitsapam-pahaizana miavaka i izay tonga niaraka tamin' ny fanandramana COVID ny 19 taona dia tsy maintsy ampiasaina mba hitsapana ny vokatra tsara azo avy aminao.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Mamerena manandrana aoriana kely azafady.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

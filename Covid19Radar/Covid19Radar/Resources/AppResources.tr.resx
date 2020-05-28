@@ -180,7 +180,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>COVID-19 testinizle birlikte gelen benzersiz test tanımlayıcısı pozitif test sonucunuzu doğrulamak için kullanılmalıdır.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Lütfen daha sonra yeniden deneyin.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

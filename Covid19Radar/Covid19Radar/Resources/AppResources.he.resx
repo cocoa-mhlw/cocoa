@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>מזהה הבדיקה הייחודי שהגיע עם מבחן COVID-19 שלך חייב לשמש כדי לאמת את תוצאת הבדיקה החיובית שלך.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>נסה שוב מאוחר יותר.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">
