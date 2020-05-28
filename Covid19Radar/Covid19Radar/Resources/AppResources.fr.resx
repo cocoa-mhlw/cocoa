@@ -235,7 +235,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
     <value>Annuler</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Voulez-vous activer les notifications ?</value>
     <comment>Confirmation dialog</comment>
   </data>

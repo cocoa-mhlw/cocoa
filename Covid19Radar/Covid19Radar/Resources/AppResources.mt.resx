@@ -235,7 +235,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
     <value>Ikkanċella</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Tixtieq tixgħel in-notifiki?</value>
     <comment>Confirmation dialog</comment>
   </data>

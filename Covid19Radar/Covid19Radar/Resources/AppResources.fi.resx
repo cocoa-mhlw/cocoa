@@ -235,7 +235,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
     <value>Peruuta</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Haluatko ottaa ilmoitukset käyttöön?</value>
     <comment>Confirmation dialog</comment>
   </data>
