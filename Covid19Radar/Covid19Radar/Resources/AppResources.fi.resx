@@ -275,4 +275,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Haluatko todella nollata kaikki tiedot?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Poista kaikki tiedot</value>
+  </data>
 </root>

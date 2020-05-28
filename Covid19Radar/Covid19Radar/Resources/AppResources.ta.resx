@@ -275,4 +275,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>நீங்கள் நிஜமாகவே அனைத்து தரவையும் மீட்டமைக்க விரும்புகிறீர்களா?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>அனைத்து தரவையும் நீக்கு</value>
+  </data>
 </root>

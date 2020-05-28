@@ -340,6 +340,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">すべてのデータをリセットしますか?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">すべてのデータを削除する</target>
+        </trans-unit>
       </group>
     </body>
   </file>

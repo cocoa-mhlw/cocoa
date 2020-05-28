@@ -342,6 +342,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bạn có thực sự muốn thiết lập lại tất cả các dữ liệu?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Xóa tất cả dữ liệu</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -275,4 +275,7 @@
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>آیا واقعا می خواهید تمام داده ها را بازنشانی کنید ؟</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>حذف همه داده ها</value>
+  </data>
 </root>

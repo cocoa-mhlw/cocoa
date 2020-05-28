@@ -275,4 +275,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>すべてのデータをリセットしますか?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>すべてのデータを削除する</value>
+  </data>
 </root>

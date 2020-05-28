@@ -342,6 +342,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>Do you really want to reset all the data?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ydych wir eisiau ailosod yr holl ddata?</target>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dileu'r holl ddata</target>
+        </trans-unit>
       </group>
     </body>
   </file>

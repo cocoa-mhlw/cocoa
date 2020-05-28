@@ -275,4 +275,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Wil jy regtig al die data terugstel?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Verwyder alle data</value>
+  </data>
 </root>

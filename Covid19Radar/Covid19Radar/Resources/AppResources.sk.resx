@@ -275,4 +275,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Naozaj chcete obnoviť všetky dáta?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Odstrániť všetky údaje</value>
+  </data>
 </root>

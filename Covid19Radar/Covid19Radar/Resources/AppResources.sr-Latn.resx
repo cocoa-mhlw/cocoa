@@ -275,4 +275,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Želite li zaista da uspostavite početne vrednosti svih podataka?</value>
   </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Izbriši sve podatke</value>
+  </data>
 </root>
