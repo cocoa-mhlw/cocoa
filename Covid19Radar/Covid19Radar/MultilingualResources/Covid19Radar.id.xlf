@@ -225,7 +225,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Please try again later.</source>
           <target state="translated">Silakan coba lagi nanti.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="translated">Gagal</target>
         </trans-unit>

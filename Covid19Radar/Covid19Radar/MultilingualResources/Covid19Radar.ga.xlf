@@ -225,7 +225,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Bain triail eile as ar ball.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Theip air</target>
         </trans-unit>

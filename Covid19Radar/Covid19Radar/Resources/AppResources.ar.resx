@@ -183,7 +183,7 @@
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>يرجى إعادة المحاولة لاحقًا.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>فشل</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">

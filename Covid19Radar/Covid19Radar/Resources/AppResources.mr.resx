@@ -184,7 +184,7 @@
   <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
     <value>कृपया नंतर पुन्हा प्रयत्न करा.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>अयशस्वी</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">

@@ -223,7 +223,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Please try again later.</source>
           <target state="translated">Veuillez réessayer ultérieurement.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="translated">Échec</target>
         </trans-unit>
