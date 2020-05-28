@@ -245,10 +245,6 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nepieciešamais diagnozes identifikators</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Labi</target>
-        </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pirms diagnozes iesniegšanas, lūdzu, iespējojiet ekspozīcijas paziņojumus.</target>

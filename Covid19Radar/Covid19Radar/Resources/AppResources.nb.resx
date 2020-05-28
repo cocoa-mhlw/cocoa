@@ -199,9 +199,6 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnose identifikator kreves</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ok</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Aktiver eksponeringsvarsler før du sender inn en diagnose.</value>
   </data>

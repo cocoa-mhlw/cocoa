@@ -199,9 +199,6 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Απαιτείται αναγνωριστικό διάγνωσης</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ΟΚ</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Ενεργοποιήστε τις Ειδοποιήσεις έκθεσης πριν υποβάλετε μια διάγνωση.</value>
   </data>

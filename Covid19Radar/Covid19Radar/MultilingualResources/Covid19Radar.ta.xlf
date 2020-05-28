@@ -245,10 +245,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நோய் கண்டறிதல் அடையாளங்காட்டி தேவை</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">சரி</target>
-        </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுசெய்து ஒரு பகுப்பாய்வு சமர்ப்பிக்கும் முன், வெளிப்பாடு அறிவிப்புகளை இயக்கவும்.</target>

@@ -199,9 +199,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnoosin tunniste vaaditaan</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK\n</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Ota altistumisilmoitukset käyttöön ennen diagnoosin lähettämistä.</value>
   </data>

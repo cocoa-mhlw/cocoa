@@ -199,9 +199,6 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>निदान ओळखकर्ता आवश्यक</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ठीक</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>कृपया निदान सादर करण्यापूर्वी एक्स्पोजर सूचना कार्यान्वीत करा.</value>
   </data>

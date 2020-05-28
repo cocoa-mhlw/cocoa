@@ -199,9 +199,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Pagsusuri ng diyagnosis kailangan</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Mangyaring magpagana ng mga notipikasyon ng pagkakalantad bago magsumite ng pagsusuri.</value>
   </data>
