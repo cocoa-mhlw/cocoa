@@ -199,9 +199,6 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identificador de diagnóstico requerido</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Aceptar</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Habilite las notificaciones de exposición antes de enviar un diagnóstico.</value>
   </data>

@@ -199,9 +199,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>診断識別子が必要です</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>診断を送信する前に Exposure Notifications を有効にしてください。</value>
   </data>
