@@ -124,7 +124,7 @@
     <value>Проверите везу са мрежом.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>У реду</value>
     <comment>OK</comment>
   </data>
