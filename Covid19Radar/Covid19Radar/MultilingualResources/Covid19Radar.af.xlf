@@ -232,7 +232,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnose Ingedien</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="translated">Voltooi</target>
         </trans-unit>

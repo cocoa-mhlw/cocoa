@@ -233,7 +233,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ஆய்வு அறிக்கை சமர்ப்பிக்கப்பட்டது</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">முழுமை</target>
         </trans-unit>

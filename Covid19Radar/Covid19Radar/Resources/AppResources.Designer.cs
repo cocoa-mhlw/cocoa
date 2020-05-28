@@ -478,9 +478,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Complete に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string SharePositiveDiagnosisPageDiagSubmittedTitle {
+        internal static string ButtonComplete {
             get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageDiagSubmittedTitle", resourceCulture);
+                return ResourceManager.GetString("ButtonComplete", resourceCulture);
             }
         }
         
