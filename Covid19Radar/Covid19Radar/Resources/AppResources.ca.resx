@@ -124,7 +124,7 @@
     <value>Si us plau comprovi la seva connexió de xarxa.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>D'acord</value>
     <comment>OK</comment>
   </data>
