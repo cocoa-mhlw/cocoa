@@ -247,7 +247,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Sila dayakan pemberitahuan pendedahan sebelum menyerahkan diagnosis.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Pemberitahuan pendedahan Dilumpuhkan</target>
         </trans-unit>

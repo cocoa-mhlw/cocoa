@@ -202,7 +202,7 @@
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>โปรดเปิดใช้งาน ตัวแจ้งเตือนการเปิดเผยตัวตน ก่อนที่จะส่งการวินิจฉัย</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>ตัวแจ้งเตือนการเปิดเผยตัวตนถูกปิดการทำงาน</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

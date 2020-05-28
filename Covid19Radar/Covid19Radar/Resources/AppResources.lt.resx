@@ -202,7 +202,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Prieš pateikdami diagnozę įjunkite pranešimus apie ekspoziciją.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Pranešimai apie ekspoziciją išjungta</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

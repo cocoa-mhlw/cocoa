@@ -202,7 +202,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Omogućite obaveštenja o ekspoziciji pre podnošenja dijagnoze.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Onemogućena obaveštenja o ekspozicije</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

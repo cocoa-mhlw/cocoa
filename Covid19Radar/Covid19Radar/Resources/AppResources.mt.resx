@@ -202,7 +202,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Jekk jogħġbok ixgħel in-notifiki tal-espo żizzjoni qabel ma tippreżenta dijanjożi.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Notifiki ta ' espożizzjoni diżattivati</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">

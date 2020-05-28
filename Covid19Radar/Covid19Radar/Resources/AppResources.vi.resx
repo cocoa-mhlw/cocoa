@@ -202,7 +202,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Vui lòng bật thông báo phơi nhiễm trước khi gửi chẩn đoán.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Thông báo phơi nhiễm đã tắt</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
