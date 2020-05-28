@@ -235,7 +235,7 @@
     <value>취소</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>알림을 켜시겠습니까?</value>
     <comment>Confirmation dialog</comment>
   </data>

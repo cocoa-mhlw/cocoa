@@ -235,7 +235,7 @@
     <value>لغو</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>می خواهید اعلان ها را روشن کنید ؟</value>
     <comment>Confirmation dialog</comment>
   </data>

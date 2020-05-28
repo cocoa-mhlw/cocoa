@@ -235,7 +235,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
     <value>Anulare</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Activați notificările?</value>
     <comment>Confirmation dialog</comment>
   </data>
