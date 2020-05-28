@@ -234,7 +234,7 @@
     <value>İptal</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Bildirimleri açmak istiyor musunuz?</value>
     <comment>Confirmation dialog</comment>
   </data>

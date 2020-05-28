@@ -235,7 +235,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Cancel</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Do you want to turn on notifications?</value>
     <comment>Confirmation dialog</comment>
   </data>

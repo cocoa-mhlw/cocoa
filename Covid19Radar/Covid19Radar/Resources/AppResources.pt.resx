@@ -235,7 +235,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
     <value>Cancelar</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Deseja ativar notificações?</value>
     <comment>Confirmation dialog</comment>
   </data>

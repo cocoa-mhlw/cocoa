@@ -235,7 +235,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
     <value>Hủy bỏ</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Bạn có muốn bật thông báo không?</value>
     <comment>Confirmation dialog</comment>
   </data>
