@@ -235,7 +235,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
     <value>Batal</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Adakah awda mahu memasang pemberitahuan?</value>
     <comment>Confirmation dialog</comment>
   </data>

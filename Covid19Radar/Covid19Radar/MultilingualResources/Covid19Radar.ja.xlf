@@ -290,7 +290,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">Cancel</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Cancel</note>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogTextExposureNotificationTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
           <source>Do you want to turn on notifications?</source>
           <target state="translated">通知をオンにしますか？</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>

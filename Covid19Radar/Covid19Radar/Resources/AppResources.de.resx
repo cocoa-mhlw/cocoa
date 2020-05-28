@@ -235,7 +235,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <value>Abbrechen</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Möchten Sie Benachrichtigungen aktivieren?</value>
     <comment>Confirmation dialog</comment>
   </data>

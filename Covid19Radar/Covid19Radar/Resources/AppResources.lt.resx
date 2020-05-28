@@ -235,7 +235,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
     <value>Atšaukti</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Ar norite įjungti pranešimus?</value>
     <comment>Confirmation dialog</comment>
   </data>

@@ -235,7 +235,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
     <value>Kanselahin</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Gusto mo bang magbukas ng mga notipikasyon?</value>
     <comment>Confirmation dialog</comment>
   </data>
