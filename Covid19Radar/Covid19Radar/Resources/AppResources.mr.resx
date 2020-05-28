@@ -235,7 +235,7 @@
     <value>रद्द करा</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>तुम्हाला सूचना चालू करायची आहेत का?</value>
     <comment>Confirmation dialog</comment>
   </data>

@@ -235,7 +235,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
     <value>Loobu</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Kas soovite märguanded sisse lülitada?</value>
     <comment>Confirmation dialog</comment>
   </data>

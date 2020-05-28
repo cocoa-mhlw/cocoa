@@ -235,7 +235,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>Cancel</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>通知をオンにしますか？</value>
     <comment>Confirmation dialog</comment>
   </data>

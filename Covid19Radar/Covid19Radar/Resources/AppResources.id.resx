@@ -235,7 +235,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
     <value>Batal</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Apakah Anda ingin mengaktifkan Notifikasi?</value>
     <comment>Confirmation dialog</comment>
   </data>
