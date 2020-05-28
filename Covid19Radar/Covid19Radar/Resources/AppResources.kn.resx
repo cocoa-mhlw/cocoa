@@ -272,4 +272,7 @@
     <value>ರಿಜಿಸ್ಟರ್ ಗಾಗಿ ಕಾಯುತ್ತಿದ್ದಾರೆ</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>ನೀವು ನಿಜವಾಗಲೂ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ರೀಸೆಟ್ ಮಾಡಲು ಬಯಸುತ್ತಿದ್ದೀರಿ?</value>
+  </data>
 </root>

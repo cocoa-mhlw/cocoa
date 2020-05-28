@@ -272,4 +272,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
     <value>En attente de registre</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Voulez-vous vraiment réinitialiser toutes les données?</value>
+  </data>
 </root>

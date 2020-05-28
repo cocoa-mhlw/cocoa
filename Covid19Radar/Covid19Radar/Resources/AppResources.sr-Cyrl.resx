@@ -272,4 +272,7 @@
     <value>Чекање на регистрацију</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Желите ли заиста да успоставите почетне вредности свих података?</value>
+  </data>
 </root>

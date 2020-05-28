@@ -272,4 +272,7 @@
     <value>Ожидание регистрации</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Вы действительно хотите сбросить все данные?</value>
+  </data>
 </root>

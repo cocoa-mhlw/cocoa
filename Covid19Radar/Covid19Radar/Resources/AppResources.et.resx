@@ -272,4 +272,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
     <value>Registreerimise ootel</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Kas soovite tõesti kõik andmed lähtestada?</value>
+  </data>
 </root>

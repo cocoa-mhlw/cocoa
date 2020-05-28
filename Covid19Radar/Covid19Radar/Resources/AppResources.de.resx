@@ -272,4 +272,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <value>Warten auf Registrierung</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Möchten Sie wirklich alle Daten zurücksetzen?</value>
+  </data>
 </root>

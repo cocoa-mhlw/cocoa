@@ -336,6 +336,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Várakozás a regisztrációra</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Biztosan alaphelyzetbe állítja az összes adatot?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

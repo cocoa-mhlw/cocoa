@@ -338,6 +338,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wachten op registratie</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wil je echt alle gegevens resetten?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

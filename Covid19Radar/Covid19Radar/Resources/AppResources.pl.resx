@@ -272,4 +272,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
     <value>Oczekiwanie na rejestrację</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Czy naprawdę chcesz zresetować wszystkie dane?</value>
+  </data>
 </root>

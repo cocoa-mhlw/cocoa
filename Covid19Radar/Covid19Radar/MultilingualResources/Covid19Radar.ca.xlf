@@ -338,6 +338,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Esperant registre</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Esteu segur que voleu reinicialitzar totes les dades?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

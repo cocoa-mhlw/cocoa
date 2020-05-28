@@ -337,6 +337,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wag vir register</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wil jy regtig al die data terugstel?</target>
+        </trans-unit>
       </group>
     </body>
   </file>
