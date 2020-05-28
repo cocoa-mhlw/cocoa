@@ -245,7 +245,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="final" state-qualifier="mt-suggestion">Yêu cầu nhập Mã định danh xét nghiệm</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="final" state-qualifier="mt-suggestion">Vui lòng bật thông báo phơi nhiễm trước khi gửi chẩn đoán.</target>
         </trans-unit>
