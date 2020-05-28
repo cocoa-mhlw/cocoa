@@ -233,7 +233,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">രോഗനിർണ്ണയം സമർപ്പിച്ച</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">പൂർത്തിയാക്കുക</target>
         </trans-unit>

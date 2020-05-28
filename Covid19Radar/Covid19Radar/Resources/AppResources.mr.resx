@@ -190,7 +190,7 @@
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>सादर केलेले निदान</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>पूर्ण</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">

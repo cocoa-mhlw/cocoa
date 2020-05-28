@@ -190,7 +190,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>ஆய்வு அறிக்கை சமர்ப்பிக்கப்பட்டது</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>முழுமை</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
