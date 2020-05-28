@@ -272,4 +272,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
     <value>Naghihintay na magparehistro</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Gusto mo ba talagang i-reset ang lahat ng data?</value>
+  </data>
 </root>

@@ -272,4 +272,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
     <value>Beðið eftir skráningu</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Viltu virkilega Endurstilla öll gögnin?</value>
+  </data>
 </root>

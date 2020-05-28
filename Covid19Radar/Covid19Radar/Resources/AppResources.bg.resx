@@ -272,4 +272,7 @@
     <value>Изчакване на регистрация</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Наистина ли искате да нулирате всички данни?</value>
+  </data>
 </root>

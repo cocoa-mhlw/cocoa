@@ -272,4 +272,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
     <value>Se așteaptă înregistrarea</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Chiar doriți să resetați toate datele?</value>
+  </data>
 </root>

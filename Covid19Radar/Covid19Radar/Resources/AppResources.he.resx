@@ -272,4 +272,7 @@
     <value>ממתין להרשמה</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>האם אתה באמת רוצה לאפס את כל הנתונים?</value>
+  </data>
 </root>

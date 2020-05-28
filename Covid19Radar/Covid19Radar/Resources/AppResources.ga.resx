@@ -272,4 +272,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
     <value>Ag feitheamh le clár</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>An bhfuil fonn ort na sonraí go léir a athshocrú?</value>
+  </data>
 </root>

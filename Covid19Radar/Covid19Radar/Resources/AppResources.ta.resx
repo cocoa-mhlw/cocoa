@@ -272,4 +272,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>பதிவேட்டுக்காக காத்திருக்கும்</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>நீங்கள் நிஜமாகவே அனைத்து தரவையும் மீட்டமைக்க விரும்புகிறீர்களா?</value>
+  </data>
 </root>

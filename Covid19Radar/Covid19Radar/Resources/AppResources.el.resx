@@ -272,4 +272,7 @@
     <value>Αναμονή για εγγραφή</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Θέλετε πραγματικά να επαναφέρετε όλα τα δεδομένα;</value>
+  </data>
 </root>

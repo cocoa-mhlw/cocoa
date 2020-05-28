@@ -272,4 +272,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
     <value>Esperando o registro</value>
     <comment>Waiting for register</comment>
   </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Você realmente quer redefinir todos os dados?</value>
+  </data>
 </root>

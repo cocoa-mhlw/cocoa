@@ -338,6 +338,10 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Menunggu pendaftaran</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Waiting for register</note>
         </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apakah Anda ingin me-reset semua data?</target>
+        </trans-unit>
       </group>
     </body>
   </file>
