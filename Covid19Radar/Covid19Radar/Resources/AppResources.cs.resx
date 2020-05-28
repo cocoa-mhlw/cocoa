@@ -235,7 +235,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
     <value>Zrušit</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Chcete zapnout oznámení?</value>
     <comment>Confirmation dialog</comment>
   </data>

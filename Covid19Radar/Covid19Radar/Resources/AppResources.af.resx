@@ -235,7 +235,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
     <value>Kanselleer</value>
     <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Wil jy kennisgewings aanskakel?</value>
     <comment>Confirmation dialog</comment>
   </data>
