@@ -181,7 +181,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Kitambulisho cha mtihani wa kipekee ambacho huja na mtihani wako wa tamaa-19 lazima itumike ili kuthibitisha matokeo yako mazuri ya mtihani.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Tafadhali jaribu tena baadaye.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

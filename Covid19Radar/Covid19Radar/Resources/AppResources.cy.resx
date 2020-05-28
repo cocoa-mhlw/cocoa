@@ -181,7 +181,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Rhaid defnyddio'r dynodwr prawf unigryw a ddaeth gyda'ch prawf COVID-19 i gadarnhau canlyniad eich prawf cadarnhaol.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Rhowch gynnig arall arni rywbryd eto.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

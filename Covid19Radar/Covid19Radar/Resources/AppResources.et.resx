@@ -181,7 +181,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Positiivse testi tulemuse kinnitamiseks tuleb kasutada oma COVID-19 testiga kaasas olevat ainulaadset testimisidentifikaatorit.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Proovi hiljem uuesti.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

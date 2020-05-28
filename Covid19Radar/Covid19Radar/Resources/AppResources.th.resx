@@ -181,7 +181,7 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>หมายเลขไอดี หรือตัวระบุผลการทดสอบการติดเชื้อ COVID-19 ของคุณ ต้องถูกใช้เพื่อยืนยันผลการทดสอบที่เป็นบวก (ติดเชื้อ) ของคุณเท่านั้น</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>โปรดลองอีกครั้งในภายหลัง</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

@@ -181,7 +181,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>K ověření pozitivního výsledku testu musí být použit jedinečný identifikátor testu, který byl dodaný s testem COVID-19.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Zkuste to prosím znovu později.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

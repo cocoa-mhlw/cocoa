@@ -181,7 +181,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Die unieke toetsidentifiseerder wat saam met jou COVID-19 toets gekom het moet gebruik word om jou positiewe toetsuitslae te verifieer.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Probeer asseblief weer later.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

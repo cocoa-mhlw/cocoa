@@ -460,9 +460,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Please try again later. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string SharePositiveDiagnosisPageDiagExceptionText {
+        internal static string NotifyOtherPageDialogExceptionText {
             get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageDiagExceptionText", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialogExceptionText", resourceCulture);
             }
         }
         

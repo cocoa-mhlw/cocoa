@@ -181,7 +181,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Den entydige test-id, der fulgte med din COVID-19test, skal bruges til at bekræfte dit positive testresultat.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Prøv igen senere.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">

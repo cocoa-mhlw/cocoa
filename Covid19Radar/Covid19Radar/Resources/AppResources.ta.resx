@@ -181,7 +181,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>உங்கள் கோவிட்-19 பரிசோதனையுடன் வந்த தனித்துவமான சோதனை அடையாளங்காட்டி உங்கள் நேர்மறை சோதனை முடிவை சரிபார்க்க பயன்படுத்தப்பட வேண்டும்.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>பின்னர் மீண்டும் முயற்சிக்கவும்.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">
