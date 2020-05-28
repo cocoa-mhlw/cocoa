@@ -199,9 +199,6 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>需要診斷識別碼</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>確定</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>請在提交診斷之前啟用曝光通知（Exposure Notifications）。</value>
   </data>

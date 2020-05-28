@@ -199,9 +199,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnosis Identifier Required</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Please enable Exposure Notifications before submitting a diagnosis.</value>
   </data>

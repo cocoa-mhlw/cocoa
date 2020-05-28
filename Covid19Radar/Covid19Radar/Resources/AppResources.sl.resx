@@ -199,9 +199,6 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Zahtevana oznaka diagnoze</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>V redu</value>
-  </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Prosimo, omogočite obvestila o izpostavljenosti pred predložitvijo diagnoze.</value>
   </data>

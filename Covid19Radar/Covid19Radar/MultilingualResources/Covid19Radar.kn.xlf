@@ -245,10 +245,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ರೋಗನಿರ್ಣಯ ಗುರುತುಪಟ್ಟಿ ಅಗತ್ಯ</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸರಿ</target>
-        </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಒಂದು ರೋಗನಿರ್ಣಯವನ್ನು ಸಲ್ಲಿಸುವ ಮೊದಲು ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಅಧಿಸೂಚನೆಗಳನ್ನು ದಯವಿಟ್ಟು ಸಕ್ರಿಯಗೊಳಿಸಿ.</target>

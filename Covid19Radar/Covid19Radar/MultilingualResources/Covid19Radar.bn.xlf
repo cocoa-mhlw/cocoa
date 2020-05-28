@@ -245,10 +245,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">রোগ নির্ণয় শনাক্তকারী প্রয়োজন</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ঠিক আছে</target>
-        </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">একটি নির্ণয়ের জমা দেওয়ার আগে অনুগ্রহ করে এক্সপোজার বিজ্ঞপ্তিসমূহ সক্রিয় করুন ।</target>

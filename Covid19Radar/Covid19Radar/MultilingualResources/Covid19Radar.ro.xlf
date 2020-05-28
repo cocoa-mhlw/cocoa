@@ -243,10 +243,6 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Identificator diagnostic necesar</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">OK</target>
-        </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Activați Notificările de expunere înainte de a trimite un diagnostic.</target>
