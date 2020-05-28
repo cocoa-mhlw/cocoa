@@ -124,7 +124,7 @@
     <value>దయచేసి మీ నెట్ వర్క్ కనెక్షన్ తనిఖీ చేయండి.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>సరే</value>
     <comment>OK</comment>
   </data>

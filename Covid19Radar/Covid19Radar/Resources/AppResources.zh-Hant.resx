@@ -124,7 +124,7 @@
     <value>請檢查網路連接。</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>確定</value>
     <comment>OK</comment>
   </data>

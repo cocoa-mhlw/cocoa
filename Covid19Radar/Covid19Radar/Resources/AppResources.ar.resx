@@ -124,7 +124,7 @@
     <value>الرجاء التحقق من اتصال الانترنت الخاص بك.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>موافق</value>
     <comment>OK</comment>
   </data>
