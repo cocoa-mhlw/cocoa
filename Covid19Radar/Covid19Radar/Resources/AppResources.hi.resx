@@ -181,16 +181,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>आपके COVID-19 परीक्षण के साथ आए अद्वितीय परीक्षण पहचानकर्ता का उपयोग आपके सकारात्मक परीक्षण परिणाम को सत्यापित करने के लिए किया जाना चाहिए।</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>कृपया बाद में पुन: प्रयास करें.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>विफल</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>निदान प्रस्तुत</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>पूर्ण करें</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>निदान पहचानकर्ता आवश्यक</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ठीक</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>निदान सबमिट करने से पहले एक्सपोजर नोटिफिकेशन को सक्षम करें।</value>

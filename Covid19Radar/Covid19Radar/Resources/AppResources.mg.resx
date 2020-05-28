@@ -181,16 +181,16 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Ilay fitsapam-pahaizana miavaka i izay tonga niaraka tamin' ny fanandramana COVID ny 19 taona dia tsy maintsy ampiasaina mba hitsapana ny vokatra tsara azo avy aminao.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Mamerena manandrana aoriana kely azafady.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Tsy nahomby</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>Aretina ny Fangatahana</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Fenoy</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Aretina i Takiana</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Tsy maninona</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Mba alefaso ny Fampilazana ny Hatsiaka alohan' ny fandefasana aretina.</value>

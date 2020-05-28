@@ -221,11 +221,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങളുടെ കോവിഡ്-19 ടെസ്റ്റുമായി ബന്ധപ്പെട്ട് വന്ന യുണീക്ക് ടെസ്റ്റ് ഐഡന്റിഫയർ നിങ്ങളുടെ പോസിറ്റീവ് പരിശോധനാ ഫലം പരിശോധിച്ചുറപ്പിക്കുന്നതിന് ഉപയോഗിക്കണം.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">പരാജയപ്പെട്ടു</target>
         </trans-unit>
@@ -233,7 +233,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">രോഗനിർണ്ണയം സമർപ്പിച്ച</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">പൂർത്തിയാക്കുക</target>
         </trans-unit>
@@ -244,10 +244,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">രോഗനിർണ്ണയ ഐഡന്റിഫയർ ആവശ്യമാണ്</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ശരി</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>

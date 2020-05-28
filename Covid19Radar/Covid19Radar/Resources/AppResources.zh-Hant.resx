@@ -181,16 +181,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>必須使用您的 COVID-19 檢測所附的唯一檢測識別碼來驗證您的陽性檢測結果。</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>請稍後再試一次。</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>失敗</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>診斷已提交</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>完成</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>需要診斷識別碼</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>確定</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>請在提交診斷之前啟用曝光通知（Exposure Notifications）。</value>

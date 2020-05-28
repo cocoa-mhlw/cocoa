@@ -181,16 +181,16 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Unikatowy identyfikator testu, który został doszła do testu COVID-19, musi być użyty do zweryfikowania pozytywnego wyniku testu.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Próbuj ponownie później.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Niepowodzenie</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>Diagnoza Przedłożona</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Wykonano</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Wymagany identyfikator diagnozy</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Ok</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Przed przesłaniem diagnozy włącz powiadomienia o ekspozycji.</value>

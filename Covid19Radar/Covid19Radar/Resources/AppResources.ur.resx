@@ -181,16 +181,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>آپ کے COVID کے ساتھ آئے کہ منفرد ٹیسٹ شناخت کنندہ-19 ٹیسٹ آپ کے مثبت ٹیسٹ کے نتائج کی تصدیق کرنے کے لئے استعمال کیا جانا چاہئے.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>برائے مہربانی بعد میں دوبارہ کوشش کریں۔</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>ناکام</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>پیش تشخیص</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>مکمل</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>تشخیص شناخت کار مطلوب</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ٹھیک ہے</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>تشخیص جمع کرنے سے قبل براہ کرم نمائش کی اطلاعات کو فعال کریں ۔</value>

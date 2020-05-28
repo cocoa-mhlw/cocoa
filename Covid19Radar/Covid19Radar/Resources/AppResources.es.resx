@@ -181,16 +181,16 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>El identificador de prueba único que viene con la prueba COVID-19 debe utilizarse para verificar el resultado positivo de la prueba.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Inténtelo de nuevo más tarde.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Error</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>Diagnóstico enviado</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Completado</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identificador de diagnóstico requerido</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Aceptar</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Habilite las notificaciones de exposición antes de enviar un diagnóstico.</value>

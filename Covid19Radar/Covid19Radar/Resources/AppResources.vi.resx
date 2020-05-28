@@ -181,16 +181,16 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Mã định danh kiểm tra duy nhất đi kèm với xét nghiệm COVID-19 của bạn phải được sử dụng để xác minh kết quả xét nghiệm dương tính của bạn.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Hãy thử lại sau.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Không thành công</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
     <value>Xét nghiệm đã được gửi</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Hoàn tất</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,9 +198,6 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Yêu cầu nhập Mã định danh xét nghiệm</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
   </data>
   <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
     <value>Vui lòng bật thông báo phơi nhiễm trước khi gửi chẩn đoán.</value>
