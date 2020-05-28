@@ -229,7 +229,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Απέτυχε</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Διάγνωση που υποβλήθηκε</target>
         </trans-unit>

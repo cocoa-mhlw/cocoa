@@ -187,7 +187,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Neizdevās</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnoze iesniegta</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

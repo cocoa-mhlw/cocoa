@@ -187,7 +187,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>Неуспешно</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Диагноза, представена</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

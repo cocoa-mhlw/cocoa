@@ -187,7 +187,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="ButtonFailed" xml:space="preserve">
     <value>தோல்வியடைந்தது</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>ஆய்வு அறிக்கை சமர்ப்பிக்கப்பட்டது</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

@@ -187,7 +187,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Nije uspjelo</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Dijagnoza poslana</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

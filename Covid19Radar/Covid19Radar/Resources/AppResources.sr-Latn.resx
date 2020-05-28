@@ -187,7 +187,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Nije uspelo</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Dijagnoza je podneta</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

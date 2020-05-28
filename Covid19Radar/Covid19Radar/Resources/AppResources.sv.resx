@@ -187,7 +187,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="ButtonFailed" xml:space="preserve">
     <value>Misslyckades</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Inlämnad diagnos</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

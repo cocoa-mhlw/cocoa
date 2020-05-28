@@ -187,7 +187,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Failed</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnosis Submitted</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

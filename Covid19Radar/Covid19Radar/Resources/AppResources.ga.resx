@@ -187,7 +187,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Theip air</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnóis curtha isteach</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
