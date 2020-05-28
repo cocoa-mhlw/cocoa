@@ -229,7 +229,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tsy nahomby</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Aretina ny Fangatahana</target>
         </trans-unit>

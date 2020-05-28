@@ -187,7 +187,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Gagal</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnosis yang diajukan</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

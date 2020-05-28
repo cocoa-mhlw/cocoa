@@ -187,7 +187,7 @@
   <data name="ButtonFailed" xml:space="preserve">
     <value>실패</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>제출된 진단</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

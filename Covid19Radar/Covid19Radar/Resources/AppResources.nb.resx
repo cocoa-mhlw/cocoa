@@ -187,7 +187,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Mislykket</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnose innsendt</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

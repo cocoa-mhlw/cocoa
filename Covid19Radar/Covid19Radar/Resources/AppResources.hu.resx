@@ -187,7 +187,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="ButtonFailed" xml:space="preserve">
     <value>Sikertelen</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Benyújtott diagnosztika</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

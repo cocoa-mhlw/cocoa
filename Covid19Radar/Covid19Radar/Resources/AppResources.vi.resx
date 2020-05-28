@@ -187,7 +187,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Không thành công</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Xét nghiệm đã được gửi</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">

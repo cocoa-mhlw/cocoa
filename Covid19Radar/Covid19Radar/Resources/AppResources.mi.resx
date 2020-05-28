@@ -187,7 +187,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="ButtonFailed" xml:space="preserve">
     <value>I Rahua</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Tataritanga i Tukuna</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
