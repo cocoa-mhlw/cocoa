@@ -54,12 +54,13 @@ namespace Covid19Radar
         protected override async void OnInitialized()
         {
             InitializeComponent();
+
             // Exposure Notification
 
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
-//            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            //Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
@@ -151,7 +152,6 @@ namespace Covid19Radar
 
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
-            containerRegistry.RegisterSingleton<ExposureNotificationService>();
         }
 
         protected override void OnStart()
