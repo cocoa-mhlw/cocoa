@@ -300,4 +300,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Slet data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Slet alle data</value>
+  </data>
 </root>

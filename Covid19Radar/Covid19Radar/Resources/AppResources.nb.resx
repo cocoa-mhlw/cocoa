@@ -300,4 +300,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Slett data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Slett alle data</value>
+  </data>
 </root>

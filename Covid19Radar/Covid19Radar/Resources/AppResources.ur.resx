@@ -300,4 +300,7 @@
   <data name="DeleteDataText" xml:space="preserve">
     <value>کوائف حذف کریں</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>تمام کوائف حذف کریں</value>
+  </data>
 </root>

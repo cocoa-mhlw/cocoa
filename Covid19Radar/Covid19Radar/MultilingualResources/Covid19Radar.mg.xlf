@@ -376,6 +376,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Fafao ireo tahirin</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Esory avokoa ny tahirin-kevitra rehetra</target>
+        </trans-unit>
       </group>
     </body>
   </file>

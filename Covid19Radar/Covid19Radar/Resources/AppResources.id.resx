@@ -300,4 +300,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Hapus data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Hapus semua data</value>
+  </data>
 </root>

@@ -181,7 +181,7 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Caption"
-                                Text="接触記録の全削除"
+                                Text="{x:Static resources:AppResources.DeleteDataDescription}"
                                 TextColor="{StaticResource SecondaryText}" />
                         </FormattedString>
                     </Label.FormattedText>

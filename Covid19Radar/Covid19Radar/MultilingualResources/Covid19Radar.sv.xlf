@@ -381,6 +381,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Ta bort data</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ta bort alla data</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -300,4 +300,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Magtanggal ng datos</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>I-delete ang lahat ng data</value>
+  </data>
 </root>

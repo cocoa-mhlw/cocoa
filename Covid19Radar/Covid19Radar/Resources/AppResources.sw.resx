@@ -300,4 +300,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Futa data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Futa data zote</value>
+  </data>
 </root>

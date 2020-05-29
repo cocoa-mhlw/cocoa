@@ -300,4 +300,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Usuń dane</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Usuń wszystkie dane</value>
+  </data>
 </root>

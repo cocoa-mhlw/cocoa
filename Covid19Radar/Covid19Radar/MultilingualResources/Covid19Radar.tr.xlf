@@ -373,6 +373,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Verileri sil</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tüm verileri silme</target>
+        </trans-unit>
       </group>
     </body>
   </file>

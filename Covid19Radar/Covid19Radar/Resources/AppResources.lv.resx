@@ -300,4 +300,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Dzēst datus</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Dzēst visus datus</value>
+  </data>
 </root>

@@ -300,4 +300,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Izbriši podatke</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Izbriši sve podatke</value>
+  </data>
 </root>

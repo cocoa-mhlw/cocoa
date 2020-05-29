@@ -300,4 +300,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Skrap data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Verwyder alle data</value>
+  </data>
 </root>

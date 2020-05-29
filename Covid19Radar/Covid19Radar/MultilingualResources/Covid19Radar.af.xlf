@@ -375,6 +375,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Skrap data</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verwyder alle data</target>
+        </trans-unit>
       </group>
     </body>
   </file>

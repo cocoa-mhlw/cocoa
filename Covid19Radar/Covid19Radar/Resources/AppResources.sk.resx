@@ -300,4 +300,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Odstrániť údaje</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Odstrániť všetky údaje</value>
+  </data>
 </root>

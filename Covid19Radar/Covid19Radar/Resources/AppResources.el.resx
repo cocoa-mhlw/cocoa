@@ -300,4 +300,7 @@
   <data name="DeleteDataText" xml:space="preserve">
     <value>Διαγραφή δεδομένων</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Διαγραφή όλων των δεδομένων</value>
+  </data>
 </root>

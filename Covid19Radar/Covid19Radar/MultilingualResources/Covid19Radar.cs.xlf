@@ -376,6 +376,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Odstranit data</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Odstranit všechna data</target>
+        </trans-unit>
       </group>
     </body>
   </file>

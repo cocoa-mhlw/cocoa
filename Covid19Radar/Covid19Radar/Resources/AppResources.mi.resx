@@ -300,4 +300,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Muku raraunga</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Mukua ngā raraunga katoa</value>
+  </data>
 </root>

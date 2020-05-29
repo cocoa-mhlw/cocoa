@@ -376,6 +376,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Excluir dados</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Exclua todos os dados</target>
+        </trans-unit>
       </group>
     </body>
   </file>

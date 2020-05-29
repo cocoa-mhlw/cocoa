@@ -223,6 +223,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Delete all data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DeleteDataDescription {
+            get {
+                return ResourceManager.GetString("DeleteDataDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Delete data に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DeleteDataText {

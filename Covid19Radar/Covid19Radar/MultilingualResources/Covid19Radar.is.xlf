@@ -376,6 +376,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Eyða gögnum</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eyða öllum gögnum</target>
+        </trans-unit>
       </group>
     </body>
   </file>

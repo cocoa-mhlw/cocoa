@@ -300,4 +300,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>データの削除</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>すべてのデータを削除</value>
+  </data>
 </root>
