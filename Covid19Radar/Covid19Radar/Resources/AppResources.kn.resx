@@ -288,4 +288,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>ಕಿರು-ಶ್ರೇಣಿಯ ನಿಸ್ತಂತು ಸಂವಹನ</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>ಕಳುಹಿಸಿ ಮತ್ತು ಸ್ವೀಕರಿಸಲು</value>
+  </data>
 </root>

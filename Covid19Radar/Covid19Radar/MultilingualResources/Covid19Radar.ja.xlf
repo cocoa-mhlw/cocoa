@@ -358,6 +358,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Short-range wireless communication</source>
           <target state="translated">近距離無線通信</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="translated">発信と受信をする</target>
+        </trans-unit>
       </group>
     </body>
   </file>

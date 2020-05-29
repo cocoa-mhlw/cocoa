@@ -360,6 +360,10 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Komunikacja bezprzewodowa bliskiego zasięgu</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Wyślij i odbierz</target>
+        </trans-unit>
       </group>
     </body>
   </file>

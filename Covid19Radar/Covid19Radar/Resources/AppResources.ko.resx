@@ -288,4 +288,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>단거리 무선 통신</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>송신 및 수신</value>
+  </data>
 </root>

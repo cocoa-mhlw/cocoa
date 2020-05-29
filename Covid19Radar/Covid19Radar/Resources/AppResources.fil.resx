@@ -288,4 +288,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Maikling hanay ng wireless na komunikasyon</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Magpadala at tumanggap</value>
+  </data>
 </root>

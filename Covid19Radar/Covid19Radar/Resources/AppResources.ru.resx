@@ -288,4 +288,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Беспроводная связь малой дальности</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Отправка и получение</value>
+  </data>
 </root>

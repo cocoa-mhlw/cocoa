@@ -360,6 +360,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Drahtlose Kurzstreckenkommunikation</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Senden und empfangen</target>
+        </trans-unit>
       </group>
     </body>
   </file>

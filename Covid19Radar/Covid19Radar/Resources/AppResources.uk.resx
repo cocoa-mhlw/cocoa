@@ -288,4 +288,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Бездротовий зв'язок з мережею</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Надсилання й отримання</value>
+  </data>
 </root>

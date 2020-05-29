@@ -288,4 +288,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Trådløs kommunikation med kort rækkevidde</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Send og modtag</value>
+  </data>
 </root>

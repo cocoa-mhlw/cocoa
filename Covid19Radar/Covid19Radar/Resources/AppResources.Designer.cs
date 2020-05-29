@@ -602,6 +602,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Send and receive に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ShortRangeWirelessCommunicationDescription {
+            get {
+                return ResourceManager.GetString("ShortRangeWirelessCommunicationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Protecting our loved ones from COVID-19 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string StartTutorialPageTextProtectingOurLovedOnes {

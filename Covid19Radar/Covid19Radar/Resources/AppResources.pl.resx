@@ -288,4 +288,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Komunikacja bezprzewodowa bliskiego zasięgu</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Wyślij i odbierz</value>
+  </data>
 </root>

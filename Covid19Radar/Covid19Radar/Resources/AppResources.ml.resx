@@ -288,4 +288,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>ഹ്രസ്വദൂര വയർലെസ് കമ്മ്യൂണിക്കേഷൻ</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>അയയ്ക്കുകയും സ്വീകരിക്കുകയും</value>
+  </data>
 </root>

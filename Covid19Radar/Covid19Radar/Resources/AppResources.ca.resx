@@ -288,4 +288,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Comunicació sense fils de curt abast</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Enviar i rebre</value>
+  </data>
 </root>

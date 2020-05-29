@@ -360,6 +360,10 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bežična komunikacija sa kratkim opsegom</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Slanje i primanje</target>
+        </trans-unit>
       </group>
     </body>
   </file>
