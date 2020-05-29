@@ -300,4 +300,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Naikinti duomenis</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Visų duomenų naikinimas</value>
+  </data>
 </root>

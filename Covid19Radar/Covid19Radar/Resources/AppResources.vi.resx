@@ -300,4 +300,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Xóa dữ liệu</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Xóa tất cả dữ liệu</value>
+  </data>
 </root>

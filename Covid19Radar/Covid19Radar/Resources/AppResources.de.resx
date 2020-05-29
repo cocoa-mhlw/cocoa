@@ -300,4 +300,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Daten löschen</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Löschen aller Daten</value>
+  </data>
 </root>

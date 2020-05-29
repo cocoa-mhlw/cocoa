@@ -300,4 +300,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="DeleteDataText" xml:space="preserve">
     <value>Adatok törlése</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Az összes adat törlése</value>
+  </data>
 </root>

@@ -300,4 +300,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Izbriši podatke</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Brisanje svih podataka</value>
+  </data>
 </root>

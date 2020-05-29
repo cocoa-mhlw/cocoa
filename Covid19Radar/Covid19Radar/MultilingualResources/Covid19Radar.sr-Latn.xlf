@@ -376,6 +376,10 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Izbriši podatke</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Izbriši sve podatke</target>
+        </trans-unit>
       </group>
     </body>
   </file>

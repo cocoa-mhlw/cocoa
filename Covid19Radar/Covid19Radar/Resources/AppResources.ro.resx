@@ -300,4 +300,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Ștergere date</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Ștergerea tuturor datelor</value>
+  </data>
 </root>

@@ -299,4 +299,7 @@
   <data name="DeleteDataText" xml:space="preserve">
     <value>حذف البيانات</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>حذف كافة البيانات</value>
+  </data>
 </root>

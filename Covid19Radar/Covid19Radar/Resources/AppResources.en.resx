@@ -300,4 +300,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Delete data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Delete all data</value>
+  </data>
 </root>

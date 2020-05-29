@@ -300,4 +300,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Tħassar data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Ħassar id-data kollha</value>
+  </data>
 </root>
