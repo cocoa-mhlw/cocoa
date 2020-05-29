@@ -222,7 +222,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>அமைப்புகள்</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>உடன்படவில்லை</value>
@@ -266,7 +265,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>தனியுரிமைக் கொள்கை</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>பதிவேட்டுக்காக காத்திருக்கும்</value>
@@ -277,5 +275,8 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>அனைத்து தரவையும் நீக்கு</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>அனைத்து அமைப்புகள் மற்றும் தரவு நீக்கப்பட்டுள்ளது. தயவுசெய்து பயன்பாட்டை மறுதொடக்கம் செய்யவும்.</value>
   </data>
 </root>

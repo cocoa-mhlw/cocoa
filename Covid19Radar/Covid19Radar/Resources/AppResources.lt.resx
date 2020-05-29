@@ -222,7 +222,6 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>parametrai</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nesutinku</value>
@@ -266,7 +265,6 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Privatumo strategija</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Laukiama registro</value>
@@ -277,5 +275,8 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Visų duomenų naikinimas</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Visi parametrai ir duomenys buvo panaikinti. Paleiskite programą iš naujo.</value>
   </data>
 </root>

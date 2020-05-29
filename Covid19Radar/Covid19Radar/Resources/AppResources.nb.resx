@@ -222,7 +222,6 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Innstillinger</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ikke enig</value>
@@ -266,7 +265,6 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Personvernerklæring</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Venter på register</value>
@@ -277,5 +275,8 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Slett alle data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Alle innstillinger og data er slettet. Start programmet på nytt.</value>
   </data>
 </root>

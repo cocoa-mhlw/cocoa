@@ -222,7 +222,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Settings</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Not Agree</value>
@@ -266,7 +265,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Privacy Policy</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Waiting for register</value>
@@ -277,5 +275,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Delete all data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>All settings and data have been deleted. Please restart the application.</value>
   </data>
 </root>
