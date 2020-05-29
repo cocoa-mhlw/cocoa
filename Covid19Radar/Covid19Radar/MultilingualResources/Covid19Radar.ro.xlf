@@ -366,6 +366,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Închidere notificare persoană de contact</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Notificări de aplicații în momentul contactului apropiat</target>
+        </trans-unit>
       </group>
     </body>
   </file>

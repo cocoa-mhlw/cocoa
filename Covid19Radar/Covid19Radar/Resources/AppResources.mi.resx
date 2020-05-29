@@ -294,4 +294,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Katia te Whakamōhiotanga Hoapā</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Ngā whakamōhiotanga taupānga i te wā kati hoapā</value>
+  </data>
 </root>

@@ -368,6 +368,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Aizvērt kontaktpersonu paziņojumu</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pieteikumu paziņojumi ciešas saziņas laikā</target>
+        </trans-unit>
       </group>
     </body>
   </file>

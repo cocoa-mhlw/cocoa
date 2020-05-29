@@ -294,4 +294,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Meddelelse om lukning af kontaktperson</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Ansøgningsmeddelelser på tidspunktet for tæt kontakt</value>
+  </data>
 </root>

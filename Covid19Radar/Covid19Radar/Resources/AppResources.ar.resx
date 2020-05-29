@@ -293,4 +293,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>إغلاق إعلام جهة الاتصال</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>إشعارات التطبيق في وقت الاتصال الوثيق</value>
+  </data>
 </root>

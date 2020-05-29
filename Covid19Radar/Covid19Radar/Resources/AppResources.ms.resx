@@ -294,4 +294,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Tutup pemberitahuan kenalan</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Pemberitahuan permohonan pada masa kenalan yang rapat</value>
+  </data>
 </root>

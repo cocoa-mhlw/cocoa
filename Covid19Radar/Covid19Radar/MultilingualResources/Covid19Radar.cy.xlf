@@ -368,6 +368,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hysbysiad cyswllt agos</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hysbysiadau cais ar adeg cyswllt agos</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -294,4 +294,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>연락처 알림 닫기</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>가까운 연락 시 의 응용 프로그램 알림</value>
+  </data>
 </root>

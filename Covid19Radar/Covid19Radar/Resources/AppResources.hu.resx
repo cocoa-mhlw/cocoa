@@ -294,4 +294,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Kapcsolattartó bezárása értesítés</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Alkalmazásértesítések a szoros kapcsolatfelvétel időpontjában</value>
+  </data>
 </root>

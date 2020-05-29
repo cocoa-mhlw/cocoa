@@ -368,6 +368,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Melding van contactpersonen sluiten</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Toepassingsmeldingen op het moment van nauw contact</target>
+        </trans-unit>
       </group>
     </body>
   </file>

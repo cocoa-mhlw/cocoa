@@ -368,6 +368,10 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Zatvori obavijest o kontaktu</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prijave u vrijeme bliskog kontakta</target>
+        </trans-unit>
       </group>
     </body>
   </file>
