@@ -222,7 +222,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Instellings</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nie saamstem</value>
@@ -266,7 +265,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>privaatheidsbeleid</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Wag vir register</value>
@@ -277,5 +275,8 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Verwyder alle data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Alle instellings en data is geskrap. Herlaai asseblief die toepassing.</value>
   </data>
 </root>

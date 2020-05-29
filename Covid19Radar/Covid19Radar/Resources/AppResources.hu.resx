@@ -222,7 +222,6 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Beállítások</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nem ért egyet</value>
@@ -266,7 +265,6 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Adatvédelmi szabályzat</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Várakozás a regisztrációra</value>
@@ -277,5 +275,8 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Az összes adat törlése</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Minden beállítás és adat törölve lett. Indítsa újra az alkalmazást.</value>
   </data>
 </root>
