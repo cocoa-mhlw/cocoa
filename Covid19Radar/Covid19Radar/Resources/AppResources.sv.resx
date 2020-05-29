@@ -288,4 +288,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Trådlös kommunikation på kort räckvidd</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Skicka och ta emot</value>
+  </data>
 </root>

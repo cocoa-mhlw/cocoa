@@ -288,4 +288,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>குறுகிய தூர கம்பியில்லா தகவல்தொடர்பு</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>அனுப்பு மற்றும் பெறு</value>
+  </data>
 </root>

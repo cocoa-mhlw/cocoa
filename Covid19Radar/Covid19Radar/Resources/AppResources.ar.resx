@@ -287,4 +287,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>اتصالات لاسلكية قصيرة المدى</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>إرسال واستلام</value>
+  </data>
 </root>

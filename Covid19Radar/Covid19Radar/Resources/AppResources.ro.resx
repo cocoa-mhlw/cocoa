@@ -288,4 +288,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Comunicare wireless cu rază scurtă de acțiune</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Trimiterea și primirea</value>
+  </data>
 </root>

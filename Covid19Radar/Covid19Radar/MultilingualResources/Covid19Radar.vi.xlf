@@ -360,6 +360,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Giao tiếp không dây tầm ngắn</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gửi và nhận</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -360,6 +360,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">குறுகிய தூர கம்பியில்லா தகவல்தொடர்பு</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">அனுப்பு மற்றும் பெறு</target>
+        </trans-unit>
       </group>
     </body>
   </file>

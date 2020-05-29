@@ -288,4 +288,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>近距離無線通信</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>発信と受信をする</value>
+  </data>
 </root>
