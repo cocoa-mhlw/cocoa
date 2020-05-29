@@ -288,4 +288,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Bežična komunikacija sa kratkim opsegom</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Slanje i primanje</value>
+  </data>
 </root>

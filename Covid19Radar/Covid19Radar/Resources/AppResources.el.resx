@@ -288,4 +288,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Ασύρματη επικοινωνία μικρής εμβέλειας</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Αποστολή και παραλαβή</value>
+  </data>
 </root>

@@ -288,4 +288,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>স্বল্প পরিসরের বেতার যোগাযোগ</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>প্রেরণ এবং গ্রহণ করুন</value>
+  </data>
 </root>

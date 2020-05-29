@@ -360,6 +360,10 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Komunikasi nirkabel jarak pendek</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kirim dan terima</target>
+        </trans-unit>
       </group>
     </body>
   </file>

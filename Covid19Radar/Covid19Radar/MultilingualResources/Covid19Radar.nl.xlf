@@ -360,6 +360,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Draadloze communicatie op korte afstand</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Verzenden en ontvangen</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -360,6 +360,10 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Trådløs kommunikation med kort rækkevidde</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Send og modtag</target>
+        </trans-unit>
       </group>
     </body>
   </file>

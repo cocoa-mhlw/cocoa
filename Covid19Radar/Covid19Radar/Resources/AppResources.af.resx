@@ -288,4 +288,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Kort-reeks draadlose kommunikasie</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Stuur en te ontvang</value>
+  </data>
 </root>

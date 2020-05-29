@@ -360,6 +360,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Comunicação sem fio de curto alcance</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Enviar e receber</target>
+        </trans-unit>
       </group>
     </body>
   </file>

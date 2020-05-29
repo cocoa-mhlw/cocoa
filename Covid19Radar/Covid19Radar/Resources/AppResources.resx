@@ -393,4 +393,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Short-range wireless communication</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Send and receive</value>
+  </data>
 </root>

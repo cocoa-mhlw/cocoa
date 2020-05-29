@@ -288,4 +288,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Comunicación inalámbrica de corto alcance</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Enviar y recibir</value>
+  </data>
 </root>

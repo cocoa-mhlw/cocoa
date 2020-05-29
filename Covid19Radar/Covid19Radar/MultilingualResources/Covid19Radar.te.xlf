@@ -360,6 +360,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">షార్ట్ రేంజ్ వైర్ లెస్ కమ్యూనికేషన్</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">పంపడం మరియు అందుకోవడం</target>
+        </trans-unit>
       </group>
     </body>
   </file>

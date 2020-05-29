@@ -288,4 +288,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Stutt-svið þráðlaus samskipti</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Senda og taka við</value>
+  </data>
 </root>

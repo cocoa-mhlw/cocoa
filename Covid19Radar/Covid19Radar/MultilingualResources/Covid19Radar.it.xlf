@@ -360,6 +360,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Comunicazione wireless a corto raggio</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Invia e ricevi</target>
+        </trans-unit>
       </group>
     </body>
   </file>

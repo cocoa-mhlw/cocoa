@@ -360,6 +360,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bezdrátová komunikace na krátkou vzdálenost</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Přijmout a odeslat</target>
+        </trans-unit>
       </group>
     </body>
   </file>
