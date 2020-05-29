@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>ಎಲ್ಲಾ ಸೆಟ್ಟಿಂಗ್ಸ್ ಮತ್ತು ಡಾಟಾ ಡಿಲೀಟ್ ಮಾಡಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಅರ್ಜಿಯನ್ನು ಪುನಃ ಆರಂಭಿಸಿ.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>ಆವೃತ್ತಿ</value>
+  </data>
 </root>

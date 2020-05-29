@@ -279,4 +279,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tinanggal na ang lahat ng setting at datos. Mangyaring muling-magsimula ng aplikasyon.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Bersyon</value>
+  </data>
 </root>

@@ -279,4 +279,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Wszystkie ustawienia i dane zostały usunięte. Uruchom ponownie aplikację.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
 </root>

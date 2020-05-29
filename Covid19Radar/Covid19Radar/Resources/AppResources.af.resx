@@ -279,4 +279,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Alle instellings en data is geskrap. Herlaai asseblief die toepassing.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Weergawe</value>
+  </data>
 </root>

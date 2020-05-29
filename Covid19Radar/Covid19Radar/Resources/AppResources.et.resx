@@ -279,4 +279,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Kõik sätted ja andmed on kustutatud. Palun taaskäivitage rakendus.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>versioon</value>
+  </data>
 </root>

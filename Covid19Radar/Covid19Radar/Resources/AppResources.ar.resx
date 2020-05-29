@@ -278,4 +278,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>تم حذف كافة الإعدادات والبيانات. الرجاء إعادة تشغيل التطبيق.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>الإصدار</value>
+  </data>
 </root>

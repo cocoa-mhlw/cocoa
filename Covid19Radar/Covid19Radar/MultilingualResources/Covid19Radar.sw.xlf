@@ -348,6 +348,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mipangilio yote na data zimefutwa. Tafadhali anzisha upya programu tumizi.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Toleo</target>
+        </trans-unit>
       </group>
     </body>
   </file>

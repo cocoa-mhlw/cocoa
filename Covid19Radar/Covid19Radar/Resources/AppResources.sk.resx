@@ -279,4 +279,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Všetky nastavenia a údaje boli odstránené. Reštartujte aplikáciu.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

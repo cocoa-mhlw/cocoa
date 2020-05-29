@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Όλες οι ρυθμίσεις και τα δεδομένα έχουν διαγραφεί. Επανεκκινήστε την εφαρμογή.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Έκδοση</value>
+  </data>
 </root>

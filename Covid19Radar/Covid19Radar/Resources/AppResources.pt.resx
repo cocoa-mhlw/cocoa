@@ -279,4 +279,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Todas as configurações e dados foram excluídos. Por favor, reinicie a aplicação.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versão</value>
+  </data>
 </root>

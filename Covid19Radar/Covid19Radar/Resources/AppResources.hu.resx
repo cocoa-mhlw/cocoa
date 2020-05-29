@@ -279,4 +279,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Minden beállítás és adat törölve lett. Indítsa újra az alkalmazást.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Verzió</value>
+  </data>
 </root>

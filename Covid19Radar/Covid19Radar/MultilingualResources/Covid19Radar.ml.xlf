@@ -348,6 +348,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">എല്ലാ സജ്ജീകരണങ്ങളും ഡാറ്റയും ഇല്ലാതാക്കിയിട്ടുണ്ട്. ആപ്ലിക്കേഷൻ പുനരാരംഭിക്കുക.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">പതിപ്പ്</target>
+        </trans-unit>
       </group>
     </body>
   </file>

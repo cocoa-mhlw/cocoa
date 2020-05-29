@@ -279,4 +279,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Kaikki asetukset ja tiedot on poistettu. Käynnistä sovellus uudelleen.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versio</value>
+  </data>
 </root>
