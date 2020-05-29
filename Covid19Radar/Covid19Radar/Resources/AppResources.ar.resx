@@ -221,7 +221,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>إعدادات</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>غير موافق</value>
@@ -265,7 +264,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>نهج الخصوصية</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>في انتظار التسجيل</value>
@@ -275,6 +273,33 @@
     <value>هل تريد حقًا إعادة تعيين جميع البيانات؟</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>حذف كافة البيانات</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>تم حذف كافة الإعدادات والبيانات. الرجاء إعادة تشغيل التطبيق.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>الإصدار</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>رقم الإصدار من هذا التطبيق</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>اتصالات لاسلكية قصيرة المدى</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>إرسال واستلام</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>إغلاق إعلام جهة الاتصال</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>إشعارات التطبيق في وقت الاتصال الوثيق</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>حذف البيانات</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>حذف كافة البيانات</value>
   </data>
 </root>

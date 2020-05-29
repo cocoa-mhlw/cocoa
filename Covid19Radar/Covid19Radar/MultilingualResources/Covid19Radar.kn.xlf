@@ -276,7 +276,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
         <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
           <source>Not Agree</source>
@@ -331,7 +330,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ಗೌಪ್ಯತೆ ನೀತಿ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
@@ -343,6 +341,42 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೀವು ನಿಜವಾಗಲೂ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ರೀಸೆಟ್ ಮಾಡಲು ಬಯಸುತ್ತಿದ್ದೀರಿ?</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸು</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
+          <source>All settings and data have been deleted. Please restart the application.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಎಲ್ಲಾ ಸೆಟ್ಟಿಂಗ್ಸ್ ಮತ್ತು ಡಾಟಾ ಡಿಲೀಟ್ ಮಾಡಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಅರ್ಜಿಯನ್ನು ಪುನಃ ಆರಂಭಿಸಿ.</target>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಆವೃತ್ತಿ</target>
+        </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಈ ಅಪ್ಲಿಕೇಶನ್ ನ ಆವೃತ್ತಿ ಸಂಖ್ಯೆ</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಕಿರು-ಶ್ರೇಣಿಯ ನಿಸ್ತಂತು ಸಂವಹನ</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಕಳುಹಿಸಿ ಮತ್ತು ಸ್ವೀಕರಿಸಲು</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ನಿಕಟ ಸಂಪರ್ಕ ಅಧಿಸೂಚನೆ</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ನಿಕಟ ಸಂಪರ್ಕದ ಸಮಯದಲ್ಲಿ ಅಪ್ಲಿಕೇಶನ್ ನೋಟಿಫಿಕೇಶನ್ ಗಳು</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ದತ್ತಾಂಶವನ್ನು ಅಳಿಸಿ</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸು</target>
         </trans-unit>

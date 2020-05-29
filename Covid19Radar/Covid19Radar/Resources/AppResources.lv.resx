@@ -222,7 +222,6 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Iestatījumi</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nepiekrītat</value>
@@ -266,7 +265,6 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Konfidencialitātes politika</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Gaida reģistrēties</value>
@@ -276,6 +274,33 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
     <value>Vai tiešām vēlaties atiestatīt visus datus?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Dzēst visus datus</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Visi iestatījumi un dati ir izdzēsti. Lūdzu, restartējiet lietojumprogrammu.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versija</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Šīs lietojumprogrammas versijas numurs</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Neliela diapazona bezvadu sakari</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Sūtīt un saņemt</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Aizvērt kontaktpersonu paziņojumu</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Pieteikumu paziņojumi ciešas saziņas laikā</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Dzēst datus</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Dzēst visus datus</value>
   </data>
 </root>

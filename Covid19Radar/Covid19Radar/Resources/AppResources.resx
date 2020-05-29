@@ -184,7 +184,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Settings</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Update Information</value>
@@ -371,7 +370,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Privacy Policy</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Waiting for register</value>
@@ -382,5 +380,32 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Delete all data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>All settings and data have been deleted. Please restart the application.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Version number of this application</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Short-range wireless communication</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Send and receive</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Application notifications at the time of close contact</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Close Contact Notification</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Delete all data</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Delete data</value>
   </data>
 </root>

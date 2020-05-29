@@ -222,7 +222,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Inställningar</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Inte överens</value>
@@ -266,7 +265,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Sekretesspolicy</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Väntar på register</value>
@@ -276,6 +274,33 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
     <value>Vill du verkligen återställa alla data?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Ta bort alla data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Alla inställningar och data har tagits bort. Starta om programmet.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versioner</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Versionsnummer för det här programmet</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Trådlös kommunikation på kort räckvidd</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Skicka och ta emot</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Stäng kontaktmeddelande</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Ansökan meddelanden vid tidpunkten för nära kontakt</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Ta bort data</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Ta bort alla data</value>
   </data>
 </root>

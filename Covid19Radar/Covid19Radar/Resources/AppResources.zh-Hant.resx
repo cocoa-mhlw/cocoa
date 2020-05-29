@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>設定</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>不同意</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>隱私權政策</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>等待註冊</value>
@@ -276,6 +274,33 @@
     <value>是否確實要重置所有數據?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>移除所有資料</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>所有設置和數據都已刪除。請重新啟動應用程式。</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>此應用程式的版本號</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>短距離無線通訊</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>傳送及接收</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>聯繫通知</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>密切接觸時的應用程式通知</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>刪除資料</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>移除所有資料</value>
   </data>
 </root>
