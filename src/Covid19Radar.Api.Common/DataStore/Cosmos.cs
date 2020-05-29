@@ -143,27 +143,25 @@ namespace Covid19Radar.Api.DataStore
             {
                 Id = "spIncrement",
                 Body = @"
-function increment(name, initialValue) {
-    var container = getContext().getCollection();
+function increment(name, initialValue, incrementValue) {
     function upsertCallback(err, resource, options) {
         if (err) throw err;
         var response = getContext().getResponse();
-        response.setBody(resource);
+        response.setBody({'value': resource.value});
     }
-    var result = __.filter(function(doc) { return doc.id === name; },
-    function (err, resources, options) {
-        if (err) throw err;
-        if (!resources || !resources.length) {
+    var isAccepted = __.readDocument(__.getAltLink() + '/docs/' + name, {},
+    function (err, resource, options) {
+        if (err && err.number == 404) {
             var body = {'id': name, 'PartitionKey': name, 'value': initialValue};
             if(!__.createDocument(__.getSelfLink(), body, {'disableAutomaticIdGeneration': true}, upsertCallback)) throw new Error('The createDocument was not accepted');
+            return;
         }
-        else {
-            var body = resources[0];
-            body.value += 1;
-            if(!__.replaceDocument(body._self, body, {'etag': body._etag }, upsertCallback)) throw new Error('The replaceDocument was not accepted');
-        }
+        if (err) throw err;
+        var body = resource;
+        body.value += incrementValue;
+        if(!__.replaceDocument(body._self, body, {'etag': body._etag }, upsertCallback)) throw new Error('The replaceDocument was not accepted');
     });
-    if (!result.isAccepted) throw new Error('The filter was not accepted by the server.');
+    if (!isAccepted) throw new Error('The filter was not accepted by the server.');
 }
 "
             });
