@@ -222,7 +222,6 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Socruithe</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Gan Aontú</value>
@@ -266,7 +265,6 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Polasaí Príobháideachais</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Ag feitheamh le clár</value>
@@ -277,5 +275,8 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Scrios na sonraí go léir</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Scriosadh gach socrú agus sonraí. Atosaigh an feidhmchlár, le do thoil.</value>
   </data>
 </root>

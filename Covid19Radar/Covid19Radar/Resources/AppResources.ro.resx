@@ -222,7 +222,6 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Setări</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nu sunt de acord</value>
@@ -266,7 +265,6 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Politică de confidențialitate</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Se așteaptă înregistrarea</value>
@@ -277,5 +275,8 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Ștergerea tuturor datelor</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Toate setările și datele au fost șterse. Reporniți aplicația.</value>
   </data>
 </root>

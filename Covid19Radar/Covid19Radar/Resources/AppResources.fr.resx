@@ -222,7 +222,6 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Paramètres</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Pas d’accord</value>
@@ -266,7 +265,6 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>politique de confidentialité</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>En attente de registre</value>
@@ -277,5 +275,8 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Supprimer toutes les données</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Tous les paramètres et données ont été supprimés. S’il vous plaît redémarrer l’application.</value>
   </data>
 </root>

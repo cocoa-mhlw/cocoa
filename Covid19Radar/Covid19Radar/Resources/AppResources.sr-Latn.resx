@@ -222,7 +222,6 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Postavke</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ne slažu se</value>
@@ -266,7 +265,6 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Smernice za privatnost</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Čekanje na registraciju</value>
@@ -277,5 +275,8 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Izbriši sve podatke</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Sve postavke i podaci su izbrisani. Ponovo pokrenite aplikaciju.</value>
   </data>
 </root>

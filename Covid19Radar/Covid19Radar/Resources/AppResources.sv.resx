@@ -222,7 +222,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Inställningar</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Inte överens</value>
@@ -266,7 +265,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Sekretesspolicy</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Väntar på register</value>
@@ -277,5 +275,8 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Ta bort alla data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Alla inställningar och data har tagits bort. Starta om programmet.</value>
   </data>
 </root>

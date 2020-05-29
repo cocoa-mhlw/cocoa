@@ -467,6 +467,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   All settings and data have been deleted. Please restart the application. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDialogResetCompletedText {
+            get {
+                return ResourceManager.GetString("SettingsPageDialogResetCompletedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Do you really want to reset all the data? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageDialogResetText {

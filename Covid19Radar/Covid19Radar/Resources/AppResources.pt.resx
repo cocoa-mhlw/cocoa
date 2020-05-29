@@ -222,7 +222,6 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Configurações</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Não Concordo</value>
@@ -266,7 +265,6 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Política de Privacidade</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Esperando o registro</value>
@@ -277,5 +275,8 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Excluir todos os dados</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Todas as configurações e dados foram excluídos. Por favor, reinicie a aplicação.</value>
   </data>
 </root>

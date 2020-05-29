@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>સેટિંગ્સ</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>સંમત નથી</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>ગોપનીયતા નીતિ</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>રજીસ્ટર માટે રાહ જોઈ રહ્યા છીએ</value>
@@ -277,5 +275,8 @@
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>બધી માહિતી કાઢી નાંખો</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>બધા સુયોજનો અને માહિતી કાઢી નાખવામાં આવી છે. મહેરબાની કરીને કાર્યક્રમ ફરી શરૂ કરો.</value>
   </data>
 </root>

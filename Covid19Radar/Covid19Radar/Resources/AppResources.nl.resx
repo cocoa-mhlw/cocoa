@@ -222,7 +222,6 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Instellingen</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Niet mee eens</value>
@@ -266,7 +265,6 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Privacybeleid</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Wachten op registratie</value>
@@ -277,5 +275,8 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Alle gegevens verwijderen</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Alle instellingen en gegevens zijn verwijderd. Start de aanvraag opnieuw.</value>
   </data>
 </root>
