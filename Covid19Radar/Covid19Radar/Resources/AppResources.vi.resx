@@ -285,4 +285,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Số phiên bản của ứng dụng này</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Giao tiếp không dây tầm ngắn</value>
+  </data>
 </root>

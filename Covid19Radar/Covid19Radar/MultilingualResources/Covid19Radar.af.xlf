@@ -355,6 +355,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Weergawe nommer van hierdie aansoek</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kort-reeks draadlose kommunikasie</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -356,6 +356,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Versjonsnummer for dette programmet</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trådløs kommunikasjon med kort rekkevidde</target>
+        </trans-unit>
       </group>
     </body>
   </file>

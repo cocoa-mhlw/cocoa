@@ -356,6 +356,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Rhif fersiwn y rhaglen hon</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cyfathrebu di-wifr amrediad byr</target>
+        </trans-unit>
       </group>
     </body>
   </file>

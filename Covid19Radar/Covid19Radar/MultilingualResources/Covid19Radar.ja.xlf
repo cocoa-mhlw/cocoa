@@ -354,6 +354,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Version number of this application</source>
           <target state="translated">このアプリのバージョン番号</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="translated">近距離無線通信</target>
+        </trans-unit>
       </group>
     </body>
   </file>

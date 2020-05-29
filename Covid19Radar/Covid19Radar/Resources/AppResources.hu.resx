@@ -285,4 +285,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="VersionDescription" xml:space="preserve">
     <value>Az alkalmazás verziószáma</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Rövid hatótávolságú vezeték nélküli kommunikáció</value>
+  </data>
 </root>

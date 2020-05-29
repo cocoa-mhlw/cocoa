@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>ಈ ಅಪ್ಲಿಕೇಶನ್ ನ ಆವೃತ್ತಿ ಸಂಖ್ಯೆ</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>ಕಿರು-ಶ್ರೇಣಿಯ ನಿಸ್ತಂತು ಸಂವಹನ</value>
+  </data>
 </root>

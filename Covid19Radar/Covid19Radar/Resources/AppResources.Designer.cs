@@ -593,6 +593,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Short-range wireless communication に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ShortRangeWirelessCommunicationText {
+            get {
+                return ResourceManager.GetString("ShortRangeWirelessCommunicationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Protecting our loved ones from COVID-19 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string StartTutorialPageTextProtectingOurLovedOnes {

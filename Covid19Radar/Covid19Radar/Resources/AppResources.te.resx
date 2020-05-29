@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>ఈ అనువర్తనం యొక్క సంస్కరణ సంఖ్య</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>షార్ట్ రేంజ్ వైర్ లెస్ కమ్యూనికేషన్</value>
+  </data>
 </root>

@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>Številka različice tega programa</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Brezžična komunikacija kratkega dosega</value>
+  </data>
 </root>

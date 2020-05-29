@@ -285,4 +285,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Numéro de version de cette application</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Communication sans fil à courte portée</value>
+  </data>
 </root>

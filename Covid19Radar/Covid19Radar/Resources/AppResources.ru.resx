@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>Номер версии этого приложения</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Беспроводная связь малой дальности</value>
+  </data>
 </root>

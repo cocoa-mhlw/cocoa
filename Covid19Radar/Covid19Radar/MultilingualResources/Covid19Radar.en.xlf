@@ -356,6 +356,10 @@ Select 'Always Allow' to set up Bluetooth.</target>
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Version number of this application</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Short-range wireless communication</target>
+        </trans-unit>
       </group>
     </body>
   </file>
