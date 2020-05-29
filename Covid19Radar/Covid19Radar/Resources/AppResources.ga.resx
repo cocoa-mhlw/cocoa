@@ -291,4 +291,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Seol agus faigh</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Dún An Fógra Teagmhála</value>
+  </data>
 </root>

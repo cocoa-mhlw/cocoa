@@ -291,4 +291,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Envoyer et recevoir</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Notification de contact rapprochée</value>
+  </data>
 </root>

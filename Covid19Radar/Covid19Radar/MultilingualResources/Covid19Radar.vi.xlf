@@ -364,6 +364,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Gửi và nhận</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Đóng thông báo liên hệ</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -291,4 +291,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Invia e ricevi</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Chiudi notifica di contatto</value>
+  </data>
 </root>

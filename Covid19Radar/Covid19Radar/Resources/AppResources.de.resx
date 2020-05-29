@@ -291,4 +291,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Senden und empfangen</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Schließen der Kontaktbenachrichtigung</value>
+  </data>
 </root>

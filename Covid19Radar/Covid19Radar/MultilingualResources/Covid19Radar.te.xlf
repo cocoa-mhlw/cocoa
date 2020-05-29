@@ -364,6 +364,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">పంపడం మరియు అందుకోవడం</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">సంప్రదింపు ప్రకటనను మూసివేయండి</target>
+        </trans-unit>
       </group>
     </body>
   </file>

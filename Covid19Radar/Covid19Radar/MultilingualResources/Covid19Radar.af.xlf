@@ -363,6 +363,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Stuur en te ontvang</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sluit Kontakkennisgewing</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -291,4 +291,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Alefaso ary raiso</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Hidio ny Fampilazana</value>
+  </data>
 </root>

@@ -205,6 +205,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Close Contact Notification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CloseContactNotificationText {
+            get {
+                return ResourceManager.GetString("CloseContactNotificationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   No need to input personal information. We are using unique ID, allocated to you when installing an app. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTextStep1Description {
@@ -593,20 +602,20 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Short-range wireless communication に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ShortRangeWirelessCommunicationText {
-            get {
-                return ResourceManager.GetString("ShortRangeWirelessCommunicationText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Send and receive に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShortRangeWirelessCommunicationDescription {
             get {
                 return ResourceManager.GetString("ShortRangeWirelessCommunicationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Short-range wireless communication に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ShortRangeWirelessCommunicationText {
+            get {
+                return ResourceManager.GetString("ShortRangeWirelessCommunicationText", resourceCulture);
             }
         }
         
