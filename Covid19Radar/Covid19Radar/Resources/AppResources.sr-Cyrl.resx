@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Поставке</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Не слажу се</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Смернице за приватност</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Чекање на регистрацију</value>
@@ -277,5 +275,8 @@
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Избриши све податке</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Све поставке и подаци су избрисани. Поново покрените апликацију.</value>
   </data>
 </root>

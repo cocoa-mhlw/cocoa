@@ -119,7 +119,7 @@ namespace Covid19Radar.ViewModels
                 await userDataService.SetAsync(userData);
 
                 UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync("全設定とデータを削除しました。アプリの再起動をしてください。");
+                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SettingsPageDialogResetCompletedText);
                 Application.Current.Quit();
 
                 // Application close
