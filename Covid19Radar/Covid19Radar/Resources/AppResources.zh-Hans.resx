@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>此应用程序的版本号</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>短距离无线通信</value>
+  </data>
 </root>

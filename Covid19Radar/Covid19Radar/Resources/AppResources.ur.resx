@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>اس ایپلی کیشن کا ورژن نمبر</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>مختصر رینج وائرلیس مواصلات</value>
+  </data>
 </root>

@@ -356,6 +356,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">이 응용 프로그램의 버전 번호</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">단거리 무선 통신</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -285,4 +285,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Šios taikomosios programos versijos numeris</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Mažojo nuotolio belaidis ryšys</value>
+  </data>
 </root>

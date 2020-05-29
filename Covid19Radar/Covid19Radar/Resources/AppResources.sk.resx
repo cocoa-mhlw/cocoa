@@ -285,4 +285,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Číslo verzie tejto aplikácie</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Bezdrôtová komunikácia s krátkym dosahom</value>
+  </data>
 </root>

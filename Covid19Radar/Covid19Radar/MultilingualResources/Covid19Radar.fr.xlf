@@ -354,6 +354,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Numéro de version de cette application</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Communication sans fil à courte portée</target>
+        </trans-unit>
       </group>
     </body>
   </file>
