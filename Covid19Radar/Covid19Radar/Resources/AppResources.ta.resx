@@ -279,4 +279,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>அனைத்து அமைப்புகள் மற்றும் தரவு நீக்கப்பட்டுள்ளது. தயவுசெய்து பயன்பாட்டை மறுதொடக்கம் செய்யவும்.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>பதிப்பு</value>
+  </data>
 </root>

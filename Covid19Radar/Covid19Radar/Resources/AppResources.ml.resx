@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>എല്ലാ സജ്ജീകരണങ്ങളും ഡാറ്റയും ഇല്ലാതാക്കിയിട്ടുണ്ട്. ആപ്ലിക്കേഷൻ പുനരാരംഭിക്കുക.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>പതിപ്പ്</value>
+  </data>
 </root>

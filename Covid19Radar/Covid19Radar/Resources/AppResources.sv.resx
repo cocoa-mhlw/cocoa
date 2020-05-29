@@ -279,4 +279,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Alla inställningar och data har tagits bort. Starta om programmet.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versioner</value>
+  </data>
 </root>

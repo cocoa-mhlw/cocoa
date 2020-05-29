@@ -346,6 +346,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tous les paramètres et données ont été supprimés. S’il vous plaît redémarrer l’application.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Version</target>
+        </trans-unit>
       </group>
     </body>
   </file>

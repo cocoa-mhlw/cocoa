@@ -348,6 +348,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kaikki asetukset ja tiedot on poistettu. Käynnistä sovellus uudelleen.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Versio</target>
+        </trans-unit>
       </group>
     </body>
   </file>

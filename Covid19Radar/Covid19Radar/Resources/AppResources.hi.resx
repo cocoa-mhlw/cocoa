@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>सभी सेटिंग और डेटा हटा दिए गए हैं। कृपया आवेदन को पुनः आरंभ करें।</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>संस्करण</value>
+  </data>
 </root>

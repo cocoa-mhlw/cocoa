@@ -52,7 +52,7 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Small"
-                                Text="Version"
+                                Text="{x:Static resources:AppResources.VersionText}"
                                 TextColor="{StaticResource PrimaryText}" />
                             <Span Text="{x:Static System:Environment.NewLine}" />
                             <Span

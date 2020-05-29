@@ -346,6 +346,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">すべての設定とデータが削除されました。アプリケーションを再起動してください。</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="translated">Version</target>
+        </trans-unit>
       </group>
     </body>
   </file>

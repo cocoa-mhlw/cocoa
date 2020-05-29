@@ -279,4 +279,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>All settings and data have been deleted. Please restart the application.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

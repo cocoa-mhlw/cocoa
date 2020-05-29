@@ -348,6 +348,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle innstillinger og data er slettet. Start programmet på nytt.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Versjon</target>
+        </trans-unit>
       </group>
     </body>
   </file>

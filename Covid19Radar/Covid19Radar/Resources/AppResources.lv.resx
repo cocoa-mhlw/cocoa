@@ -279,4 +279,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Visi iestatījumi un dati ir izdzēsti. Lūdzu, restartējiet lietojumprogrammu.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versija</value>
+  </data>
 </root>

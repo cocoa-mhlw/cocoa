@@ -279,4 +279,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Öllum stillingum og gögnum hefur verið eytt. Endurræsa þarf forritið.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Útgáfa</value>
+  </data>
 </root>

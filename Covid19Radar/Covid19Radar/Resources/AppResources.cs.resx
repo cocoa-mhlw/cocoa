@@ -279,4 +279,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Všechna nastavení a data byla odstraněna. Restartujte aplikaci.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Verze</value>
+  </data>
 </root>

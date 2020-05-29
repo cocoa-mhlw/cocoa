@@ -279,4 +279,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Sve postavke i podaci su izbrisani. Ponovno pokrenite aplikaciju.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Verzija</value>
+  </data>
 </root>

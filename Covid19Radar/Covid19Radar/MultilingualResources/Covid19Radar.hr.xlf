@@ -348,6 +348,10 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Sve postavke i podaci su izbrisani. Ponovno pokrenite aplikaciju.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Verzija</target>
+        </trans-unit>
       </group>
     </body>
   </file>

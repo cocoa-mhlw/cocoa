@@ -279,4 +279,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Toate setările și datele au fost șterse. Reporniți aplicația.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versiune</value>
+  </data>
 </root>
