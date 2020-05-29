@@ -27,32 +27,19 @@ namespace Covid19Radar.Api.DataAccess
             var pk = new PartitionKey(key);
             using (var l = new KeyLock(key))
             {
-
+                dynamic[] spParams = { key, startNo };
                 for (var i = 0; i < 100; i++)
                 {
                     try
                     {
-                        var r = await _db.Sequence.ReadItemAsync<SequenceModel>(key, pk);
-                        r.Resource.value++;
-                        var opt = new RequestOptions();
-                        opt.IfMatchEtag = r.ETag;
-                        var rReplece = await _db.Sequence.ReplaceItemAsync(r.Resource, key, pk);
+                        var r = await _db.Sequence.Scripts.ExecuteStoredProcedureAsync<SequenceModel>("spIncrement", pk, spParams);
+                        _logger.LogInformation($"spIncrement RequestCharge:{r.RequestCharge}");
                         return r.Resource.value;
                     }
                     catch (CosmosException ex)
                     {
-                        if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-                        {
-                            var resultCreate = await _db.Sequence.CreateItemAsync(new SequenceModel()
-                            {
-                                id = key,
-                                PartitionKey = key,
-                                value = startNo
-                            }, pk);
-                            return startNo;
-                        }
                         _logger.LogInformation(ex, $"GetNextAsync Retry {i}");
-                        await Task.Delay(100);
+                        await Task.Delay(200);
                         continue;
                     }
                 }

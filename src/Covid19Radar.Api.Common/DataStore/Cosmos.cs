@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos.Scripts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -138,6 +139,34 @@ namespace Covid19Radar.Api.DataStore
             catch { }
             var sequenceProperties = new ContainerProperties("Sequence", "/PartitionKey");
             var sequenceResult = await dbResult.Database.CreateContainerIfNotExistsAsync(sequenceProperties);
+            StoredProcedureResponse storedProcedureResponse = await sequenceResult.Container.Scripts.CreateStoredProcedureAsync(new StoredProcedureProperties
+            {
+                Id = "spIncrement",
+                Body = @"
+function increment(name, initialValue) {
+    var container = getContext().getCollection();
+    function upsertCallback(err, resource, options) {
+        if (err) throw err;
+        var response = getContext().getResponse();
+        response.setBody(resource);
+    }
+    var result = __.filter(function(doc) { return doc.id === name; },
+    function (err, resources, options) {
+        if (err) throw err;
+        if (!resources || !resources.length) {
+            var body = {'id': name, 'PartitionKey': name, 'value': initialValue};
+            if(!__.createDocument(__.getSelfLink(), body, {'disableAutomaticIdGeneration': true}, upsertCallback)) throw new Error('The createDocument was not accepted');
+        }
+        else {
+            var body = resources[0];
+            body.value += 1;
+            if(!__.replaceDocument(body._self, body, {'etag': body._etag }, upsertCallback)) throw new Error('The replaceDocument was not accepted');
+        }
+    });
+    if (!result.isAccepted) throw new Error('The filter was not accepted by the server.');
+}
+"
+            });
 
             // Container AuthorizedApp
             Logger.LogInformation("GenerateAsync Create AuthorizedApp Container");
