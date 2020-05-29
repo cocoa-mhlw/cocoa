@@ -294,4 +294,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>بند کریں رابطہ کی اطلاع</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>قریبی رابطے کے وقت درخواست کی اطلاعات</value>
+  </data>
 </root>

@@ -368,6 +368,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Katia te Whakamōhiotanga Hoapā</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ngā whakamōhiotanga taupānga i te wā kati hoapā</target>
+        </trans-unit>
       </group>
     </body>
   </file>

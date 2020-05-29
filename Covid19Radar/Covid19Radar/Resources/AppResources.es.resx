@@ -294,4 +294,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Cerrar notificación de contacto</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notificaciones de aplicaciones en el momento del contacto cercano</value>
+  </data>
 </root>

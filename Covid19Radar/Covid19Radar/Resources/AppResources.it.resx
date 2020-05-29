@@ -294,4 +294,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Chiudi notifica di contatto</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notifiche dell'applicazione al momento della stretta contatto</value>
+  </data>
 </root>

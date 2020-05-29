@@ -294,4 +294,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Notification de contact rapprochée</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notifications d’application au moment du contact étroit</value>
+  </data>
 </root>

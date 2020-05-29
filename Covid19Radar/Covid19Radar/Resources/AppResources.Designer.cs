@@ -205,6 +205,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Application notifications at the time of close contact に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CloseContactNotificationDescription {
+            get {
+                return ResourceManager.GetString("CloseContactNotificationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Close Contact Notification に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string CloseContactNotificationText {

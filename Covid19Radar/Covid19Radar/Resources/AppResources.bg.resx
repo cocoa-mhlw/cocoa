@@ -294,4 +294,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Уведомяване за затваряне на контакт</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Уведомления за кандидатстване в момента на близък контакт</value>
+  </data>
 </root>

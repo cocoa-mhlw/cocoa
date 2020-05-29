@@ -293,4 +293,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>İletişim Bildirimini Kapat</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Yakın temas sırasında uygulama bildirimleri</value>
+  </data>
 </root>
