@@ -21,11 +21,11 @@ namespace Covid19Radar.Api.DataAccess
             _logger = logger;
         }
 
-        public async Task<ulong> GetNextAsync(string key, ulong startNo)
+        public async Task<ulong> GetNextAsync(string key, ulong startNo, int increment = 1)
         {
-            _logger.LogInformation($"start {nameof(GetNextAsync)}");
+            _logger.LogInformation($"start {nameof(GetNextAsync)} {key}");
             var pk = new PartitionKey(key);
-            dynamic[] spParams = { key, startNo };
+            dynamic[] spParams = { key, startNo, increment };
             for (var i = 0; i < 50; i++)
             {
                 try
