@@ -360,6 +360,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Short-range wireless communication</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Lyhyen kantaman langaton tiedonsiirto</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Lähetä ja vastaanota</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -87,7 +87,7 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Caption"
-                                Text="発信と受信を停止する"
+                                Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationDescription}"
                                 TextColor="{StaticResource SecondaryText}" />
                         </FormattedString>
                     </Label.FormattedText>

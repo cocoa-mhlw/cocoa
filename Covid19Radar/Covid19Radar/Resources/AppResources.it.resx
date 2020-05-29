@@ -288,4 +288,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Comunicazione wireless a corto raggio</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Invia e ricevi</value>
+  </data>
 </root>

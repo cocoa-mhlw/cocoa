@@ -288,4 +288,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Trådløs kommunikasjon med kort rekkevidde</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Send og motta</value>
+  </data>
 </root>

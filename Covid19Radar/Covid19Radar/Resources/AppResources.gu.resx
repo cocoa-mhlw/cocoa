@@ -288,4 +288,7 @@
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>ટૂંકા અંતરના વાયરલેસ સંદેશાવ્યવહાર</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>મોકલો અને મેળવો</value>
+  </data>
 </root>

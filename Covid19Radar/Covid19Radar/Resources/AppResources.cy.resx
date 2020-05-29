@@ -288,4 +288,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Cyfathrebu di-wifr amrediad byr</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Anfon a derbyn</value>
+  </data>
 </root>

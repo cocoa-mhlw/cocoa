@@ -288,4 +288,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Traadita side lühivalik</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Saada ja võta vastu</value>
+  </data>
 </root>

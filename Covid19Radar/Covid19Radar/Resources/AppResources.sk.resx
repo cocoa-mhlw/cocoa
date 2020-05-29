@@ -288,4 +288,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
     <value>Bezdrôtová komunikácia s krátkym dosahom</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Odosielanie a prijímanie</value>
+  </data>
 </root>
