@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Обавештења о апликацијама у време блиског контакта</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Избриши податке</value>
+  </data>
 </root>

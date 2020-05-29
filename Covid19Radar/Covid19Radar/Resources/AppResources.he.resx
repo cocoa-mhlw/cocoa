@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>הודעות יישום בזמן הקשר הקרוב</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>מחיקת נתונים</value>
+  </data>
 </root>

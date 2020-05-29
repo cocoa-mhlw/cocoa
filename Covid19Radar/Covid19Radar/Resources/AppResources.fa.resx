@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>اعلان های برنامه در زمان تماس نزدیک</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>حذف داده ها</value>
+  </data>
 </root>

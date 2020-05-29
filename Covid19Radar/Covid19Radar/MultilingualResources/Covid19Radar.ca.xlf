@@ -372,6 +372,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Notificacions de l'aplicació en el moment del contacte estret</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Suprimeix les dades</target>
+        </trans-unit>
       </group>
     </body>
   </file>

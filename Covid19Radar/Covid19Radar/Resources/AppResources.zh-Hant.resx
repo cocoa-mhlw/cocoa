@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>密切接觸時的應用程式通知</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>刪除資料</value>
+  </data>
 </root>

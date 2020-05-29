@@ -175,7 +175,7 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Small"
-                                Text="記録の削除"
+                                Text="{x:Static resources:AppResources.DeleteDataText}"
                                 TextColor="{StaticResource PrimaryText}" />
                             <Span Text="{x:Static System:Environment.NewLine}" />
                             <Span

@@ -297,4 +297,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Pemberitahuan aplikasi pada saat kontak dekat</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Hapus data</value>
+  </data>
 </root>

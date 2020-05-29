@@ -372,6 +372,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Søknadsvarsler på tidspunktet for nær kontakt</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Slett data</target>
+        </trans-unit>
       </group>
     </body>
   </file>

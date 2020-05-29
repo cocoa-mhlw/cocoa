@@ -372,6 +372,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Rakenduse teatised tiheda kontakti ajal</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Kustuta andmed</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>जवळच्या संपर्काच्या वेळी अनुप्रयोग सूचना</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>डेटा हटवा</value>
+  </data>
 </root>

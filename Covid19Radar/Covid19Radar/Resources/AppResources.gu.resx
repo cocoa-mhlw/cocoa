@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>સંપર્ક બંધ થાય ત્યારે કાર્યક્રમ સૂચનાઓ</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>માહિતી કાઢી નાંખો</value>
+  </data>
 </root>
