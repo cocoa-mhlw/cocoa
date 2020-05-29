@@ -282,4 +282,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Versi</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Nomor versi aplikasi ini</value>
+  </data>
 </root>

@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>Različica</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Številka različice tega programa</value>
+  </data>
 </root>

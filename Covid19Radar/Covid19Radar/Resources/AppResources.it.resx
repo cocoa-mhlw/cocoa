@@ -282,4 +282,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Versione </value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numero di versione dell'applicazione</value>
+  </data>
 </root>

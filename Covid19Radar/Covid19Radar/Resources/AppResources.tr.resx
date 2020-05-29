@@ -281,4 +281,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>Sürüm</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Bu uygulamanın sürüm numarası</value>
+  </data>
 </root>

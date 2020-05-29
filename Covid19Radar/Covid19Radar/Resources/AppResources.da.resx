@@ -282,4 +282,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Version2</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Versionsnummeret på denne ansøgning</value>
+  </data>
 </root>

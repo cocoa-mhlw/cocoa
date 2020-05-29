@@ -282,4 +282,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Fersiwn</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Rhif fersiwn y rhaglen hon</value>
+  </data>
 </root>

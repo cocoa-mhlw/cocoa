@@ -350,6 +350,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Version</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Numéro de version de cette application</target>
+        </trans-unit>
       </group>
     </body>
   </file>

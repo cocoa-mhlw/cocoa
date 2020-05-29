@@ -352,6 +352,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Putanga</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tau putanga o tēnei taupānga</target>
+        </trans-unit>
       </group>
     </body>
   </file>

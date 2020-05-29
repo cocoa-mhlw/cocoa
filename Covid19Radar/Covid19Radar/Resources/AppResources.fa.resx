@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>‏‏نسخه</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>شماره نسخه این برنامه</value>
+  </data>
 </root>

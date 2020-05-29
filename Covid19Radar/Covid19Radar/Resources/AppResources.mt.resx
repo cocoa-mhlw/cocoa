@@ -282,4 +282,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Verżjoni</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numru tal-ver żjoni ta ' din l-applikazzjoni</value>
+  </data>
 </root>

@@ -352,6 +352,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Phiên bản</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Số phiên bản của ứng dụng này</target>
+        </trans-unit>
       </group>
     </body>
   </file>

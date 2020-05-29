@@ -282,4 +282,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Versjon</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Versjonsnummer for dette programmet</value>
+  </data>
 </root>

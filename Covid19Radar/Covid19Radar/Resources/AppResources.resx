@@ -387,4 +387,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Version number of this application</value>
+  </data>
 </root>

@@ -282,4 +282,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Útgáfa</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Útgáfunúmer þessa forrits</value>
+  </data>
 </root>

@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>버전</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>이 응용 프로그램의 버전 번호</value>
+  </data>
 </root>

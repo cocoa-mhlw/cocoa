@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>સંસ્કરણ</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>આ કાર્યક્રમની આવૃત્તિ સંખ્યા</value>
+  </data>
 </root>

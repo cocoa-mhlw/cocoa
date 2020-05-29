@@ -282,4 +282,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Versi</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Nombor versi aplikasi ini</value>
+  </data>
 </root>

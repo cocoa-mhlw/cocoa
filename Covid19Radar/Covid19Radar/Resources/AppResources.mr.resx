@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>आवृत्ती</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>या अनुप्रयोगाची आवृत्ती संख्या</value>
+  </data>
 </root>
