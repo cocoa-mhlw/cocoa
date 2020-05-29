@@ -372,6 +372,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mga notipikasyon ng aplikasyon sa oras ng pagtatapos ng kontak</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Magtanggal ng datos</target>
+        </trans-unit>
       </group>
     </body>
   </file>

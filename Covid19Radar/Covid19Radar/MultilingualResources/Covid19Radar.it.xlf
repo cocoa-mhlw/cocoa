@@ -372,6 +372,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Notifiche dell'applicazione al momento della stretta contatto</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Elimina dati</target>
+        </trans-unit>
       </group>
     </body>
   </file>

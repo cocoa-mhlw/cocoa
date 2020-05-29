@@ -371,6 +371,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Aansoek kennisgewings ten tyde van die noue kontak</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Skrap data</target>
+        </trans-unit>
       </group>
     </body>
   </file>

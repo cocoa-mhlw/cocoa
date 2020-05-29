@@ -297,4 +297,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Rakenduse teatised tiheda kontakti ajal</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Kustuta andmed</value>
+  </data>
 </root>

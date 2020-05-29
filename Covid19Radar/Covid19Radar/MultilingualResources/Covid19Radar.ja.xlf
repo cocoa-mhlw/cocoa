@@ -370,6 +370,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Application notifications at the time of close contact</source>
           <target state="translated">濃厚接触時のアプリ通知</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="translated">データの削除</target>
+        </trans-unit>
       </group>
     </body>
   </file>

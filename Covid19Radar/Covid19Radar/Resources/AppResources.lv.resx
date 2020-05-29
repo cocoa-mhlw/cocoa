@@ -297,4 +297,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Pieteikumu paziņojumi ciešas saziņas laikā</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Dzēst datus</value>
+  </data>
 </root>

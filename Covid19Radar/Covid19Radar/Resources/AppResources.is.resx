@@ -297,4 +297,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Umsókn tilkynningar á þeim tíma sem loka tengilið</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Eyða gögnum</value>
+  </data>
 </root>

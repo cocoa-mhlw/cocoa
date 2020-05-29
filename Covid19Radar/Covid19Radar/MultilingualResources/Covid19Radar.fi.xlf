@@ -372,6 +372,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hakemusilmoitukset läheisen yhteydenpidon yhteydessä</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Poista tiedot</target>
+        </trans-unit>
       </group>
     </body>
   </file>

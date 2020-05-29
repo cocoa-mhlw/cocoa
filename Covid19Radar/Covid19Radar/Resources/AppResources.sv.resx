@@ -297,4 +297,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Ansökan meddelanden vid tidpunkten för nära kontakt</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Ta bort data</value>
+  </data>
 </root>

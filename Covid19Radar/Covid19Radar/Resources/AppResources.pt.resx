@@ -297,4 +297,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Notificações de aplicativos no momento do contato próximo</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Excluir dados</value>
+  </data>
 </root>

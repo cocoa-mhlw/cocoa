@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Уведомления о применении на момент тесного контакта</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Удаление данных</value>
+  </data>
 </root>

@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>క్లోజ్ కాంటాక్ట్ సమయంలో అప్లికేషన్ నోటిఫికేషన్ లు</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>డేటాను తొలగించు</value>
+  </data>
 </root>
