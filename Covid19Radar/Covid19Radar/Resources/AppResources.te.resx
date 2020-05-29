@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>సంస్కరణ</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>ఈ అనువర్తనం యొక్క సంస్కరణ సంఖ్య</value>
+  </data>
 </root>

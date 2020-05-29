@@ -352,6 +352,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">பதிப்பு</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">இந்த பயன்பாட்டின் பதிப்பு எண்</target>
+        </trans-unit>
       </group>
     </body>
   </file>

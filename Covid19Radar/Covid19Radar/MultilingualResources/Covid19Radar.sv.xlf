@@ -357,6 +357,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Versioner</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Versionsnummer för det här programmet</target>
+        </trans-unit>
       </group>
     </body>
   </file>

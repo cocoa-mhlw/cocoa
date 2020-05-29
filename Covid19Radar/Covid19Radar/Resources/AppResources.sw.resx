@@ -282,4 +282,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Toleo</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Namba ya toleo ya programu hii</value>
+  </data>
 </root>

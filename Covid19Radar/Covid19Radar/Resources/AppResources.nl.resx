@@ -282,4 +282,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Versie</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Versienummer van deze toepassing</value>
+  </data>
 </root>

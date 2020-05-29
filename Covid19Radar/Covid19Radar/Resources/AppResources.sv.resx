@@ -282,4 +282,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="VersionText" xml:space="preserve">
     <value>Versioner</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Versionsnummer för det här programmet</value>
+  </data>
 </root>

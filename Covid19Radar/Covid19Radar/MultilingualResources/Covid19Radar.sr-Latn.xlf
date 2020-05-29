@@ -352,6 +352,10 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Verzija</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Broj verzije ove aplikacije</target>
+        </trans-unit>
       </group>
     </body>
   </file>

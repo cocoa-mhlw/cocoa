@@ -352,6 +352,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Leagan</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uimhir leagan an fheidhmchláir seo</target>
+        </trans-unit>
       </group>
     </body>
   </file>

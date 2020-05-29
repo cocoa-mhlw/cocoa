@@ -352,6 +352,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Versjon</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Versjonsnummer for dette programmet</target>
+        </trans-unit>
       </group>
     </body>
   </file>

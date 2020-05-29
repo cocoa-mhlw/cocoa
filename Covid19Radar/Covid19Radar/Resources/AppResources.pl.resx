@@ -282,4 +282,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Nazwa</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numer wersji tej aplikacji</value>
+  </data>
 </root>

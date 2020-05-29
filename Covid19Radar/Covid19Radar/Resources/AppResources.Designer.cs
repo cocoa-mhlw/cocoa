@@ -710,6 +710,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Version number of this application に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string VersionDescription {
+            get {
+                return ResourceManager.GetString("VersionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Version に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string VersionText {

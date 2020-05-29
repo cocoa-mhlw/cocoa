@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>ಆವೃತ್ತಿ</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>ಈ ಅಪ್ಲಿಕೇಶನ್ ನ ಆವೃತ್ತಿ ಸಂಖ್ಯೆ</value>
+  </data>
 </root>
