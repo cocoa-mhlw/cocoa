@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>सर्व संयोजना आणि डेटा नष्ट करण्यात आले आहे. कृपया अनुप्रयोग पुन्हा सुरू करा.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>आवृत्ती</value>
+  </data>
 </root>

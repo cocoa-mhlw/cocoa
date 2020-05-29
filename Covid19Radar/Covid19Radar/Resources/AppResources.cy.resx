@@ -279,4 +279,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Mae'r holl leoliadau a'r data wedi'u dileu. Ailgychwynnwch y rhaglen os gwelwch yn dda.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Fersiwn</value>
+  </data>
 </root>

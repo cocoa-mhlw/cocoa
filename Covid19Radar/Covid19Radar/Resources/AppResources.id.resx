@@ -279,4 +279,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Semua pengaturan dan data telah dihapus. Silakan restart aplikasi.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versi</value>
+  </data>
 </root>

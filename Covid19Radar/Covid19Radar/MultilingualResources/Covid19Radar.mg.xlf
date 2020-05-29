@@ -348,6 +348,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Voafafa ny toe-javatra sy ny tahirin-kevitra rehetra. Azafady averina velomina indray ny fanaovana fampiharana.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Version</target>
+        </trans-unit>
       </group>
     </body>
   </file>

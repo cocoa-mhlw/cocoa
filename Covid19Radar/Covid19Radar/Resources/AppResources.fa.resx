@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>همه تنظیمات و داده ها حذف شده اند. لطفاً برنامه را راه اندازی مجدد کنید.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>‏‏نسخه</value>
+  </data>
 </root>

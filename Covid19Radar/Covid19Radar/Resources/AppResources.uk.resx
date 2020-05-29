@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Всі налаштування та дані були вилучені. Будь ласка, перезапустіть програму.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Версія</value>
+  </data>
 </root>

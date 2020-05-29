@@ -278,4 +278,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tüm ayarlar ve veriler silindi. Lütfen başvuruyu yeniden başlatın.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Sürüm</value>
+  </data>
 </root>

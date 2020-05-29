@@ -279,4 +279,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Mipangilio yote na data zimefutwa. Tafadhali anzisha upya programu tumizi.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Toleo</value>
+  </data>
 </root>

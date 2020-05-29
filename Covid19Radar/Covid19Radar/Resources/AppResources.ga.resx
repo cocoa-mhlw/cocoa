@@ -279,4 +279,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Scriosadh gach socrú agus sonraí. Atosaigh an feidhmchlár, le do thoil.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Leagan</value>
+  </data>
 </root>

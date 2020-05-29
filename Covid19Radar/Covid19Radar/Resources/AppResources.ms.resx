@@ -279,4 +279,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Semua seting dan data telah dihapuskan. Sila mulakan semula aplikasi.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versi</value>
+  </data>
 </root>

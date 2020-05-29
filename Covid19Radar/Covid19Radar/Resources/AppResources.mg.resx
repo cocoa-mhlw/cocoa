@@ -279,4 +279,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Voafafa ny toe-javatra sy ny tahirin-kevitra rehetra. Azafady averina velomina indray ny fanaovana fampiharana.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

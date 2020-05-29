@@ -348,6 +348,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle instellingen en gegevens zijn verwijderd. Start de aanvraag opnieuw.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Versie</target>
+        </trans-unit>
       </group>
     </body>
   </file>

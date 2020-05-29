@@ -279,4 +279,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>すべての設定とデータが削除されました。アプリケーションを再起動してください。</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

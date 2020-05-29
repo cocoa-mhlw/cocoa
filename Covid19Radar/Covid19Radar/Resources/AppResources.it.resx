@@ -279,4 +279,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tutte le impostazioni e i dati sono stati eliminati. Riavviare l'applicazione.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versione </value>
+  </data>
 </root>

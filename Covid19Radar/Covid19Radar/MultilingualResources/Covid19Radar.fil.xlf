@@ -348,6 +348,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tinanggal na ang lahat ng setting at datos. Mangyaring muling-magsimula ng aplikasyon.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bersyon</target>
+        </trans-unit>
       </group>
     </body>
   </file>

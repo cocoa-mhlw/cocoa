@@ -279,4 +279,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tất cả các cài đặt và dữ liệu đã bị xóa. Hãy khởi động lại ứng dụng.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
 </root>

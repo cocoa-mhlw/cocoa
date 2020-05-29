@@ -279,4 +279,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Alle instellingen en gegevens zijn verwijderd. Start de aanvraag opnieuw.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versie</value>
+  </data>
 </root>

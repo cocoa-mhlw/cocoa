@@ -279,4 +279,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tous les paramètres et données ont été supprimés. S’il vous plaît redémarrer l’application.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

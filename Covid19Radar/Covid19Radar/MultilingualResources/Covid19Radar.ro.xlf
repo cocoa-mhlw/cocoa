@@ -346,6 +346,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Toate setările și datele au fost șterse. Reporniți aplicația.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Versiune</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -279,4 +279,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Kua mukua ngā tautuhinga me te raraunga katoa. Tīmata anō koa i te taupānga.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Putanga</value>
+  </data>
 </root>

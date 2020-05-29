@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>모든 설정및데이터가 삭제되었습니다. 응용 프로그램을 다시 시작하십시오.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>버전</value>
+  </data>
 </root>

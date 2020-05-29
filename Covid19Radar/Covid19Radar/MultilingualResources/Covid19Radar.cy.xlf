@@ -348,6 +348,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mae'r holl leoliadau a'r data wedi'u dileu. Ailgychwynnwch y rhaglen os gwelwch yn dda.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Fersiwn</target>
+        </trans-unit>
       </group>
     </body>
   </file>

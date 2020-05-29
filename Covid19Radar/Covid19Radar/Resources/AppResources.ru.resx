@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Все настройки и данные были удалены. Пожалуйста, перезапустите приложение.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Версия</value>
+  </data>
 </root>

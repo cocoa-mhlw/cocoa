@@ -279,4 +279,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Alle indstillinger og data er blevet slettet. Genstart programmet.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version2</value>
+  </data>
 </root>

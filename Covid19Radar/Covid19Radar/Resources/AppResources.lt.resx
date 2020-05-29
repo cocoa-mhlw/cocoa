@@ -279,4 +279,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Visi parametrai ir duomenys buvo panaikinti. Paleiskite programą iš naujo.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

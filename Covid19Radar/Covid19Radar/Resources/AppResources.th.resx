@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>การตั้งค่าและข้อมูลทั้งหมดถูกลบแล้ว กรุณาเริ่มการทํางานของโปรแกรมประยุกต์</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>เวอร์ชัน</value>
+  </data>
 </root>
