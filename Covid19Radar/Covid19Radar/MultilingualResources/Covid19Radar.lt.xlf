@@ -364,6 +364,10 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Siųsti ir gauti</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uždaryti kontaktų pranešimą</target>
+        </trans-unit>
       </group>
     </body>
   </file>

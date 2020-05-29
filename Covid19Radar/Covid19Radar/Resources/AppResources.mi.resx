@@ -291,4 +291,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Tuku me te whiwhi</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Katia te Whakamōhiotanga Hoapā</value>
+  </data>
 </root>

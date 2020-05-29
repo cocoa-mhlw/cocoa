@@ -291,4 +291,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Enviar i rebre</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Tanca la notificació de contacte</value>
+  </data>
 </root>

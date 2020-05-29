@@ -291,4 +291,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Lähetä ja vastaanota</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Sulje yhteystietoilmoitus</value>
+  </data>
 </root>

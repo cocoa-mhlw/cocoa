@@ -364,6 +364,10 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kirim dan terima</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tutup kontak pemberitahuan</target>
+        </trans-unit>
       </group>
     </body>
   </file>

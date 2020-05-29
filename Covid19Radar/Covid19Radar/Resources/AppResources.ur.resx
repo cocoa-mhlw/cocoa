@@ -291,4 +291,7 @@
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>بھیجیں اور وصولیں</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>بند کریں رابطہ کی اطلاع</value>
+  </data>
 </root>

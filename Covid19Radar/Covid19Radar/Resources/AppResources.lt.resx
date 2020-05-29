@@ -291,4 +291,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Siųsti ir gauti</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Uždaryti kontaktų pranešimą</value>
+  </data>
 </root>

@@ -291,4 +291,7 @@
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>송신 및 수신</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>연락처 알림 닫기</value>
+  </data>
 </root>

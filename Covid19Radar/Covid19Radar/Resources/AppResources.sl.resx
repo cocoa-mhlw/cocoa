@@ -291,4 +291,7 @@
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Pošiljanje in prejemanje</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Zapri obvestilo o stiku</value>
+  </data>
 </root>

@@ -291,4 +291,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Send og modtag</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Meddelelse om lukning af kontaktperson</value>
+  </data>
 </root>

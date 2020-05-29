@@ -361,6 +361,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Gönderme ve alma</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">İletişim Bildirimini Kapat</target>
+        </trans-unit>
       </group>
     </body>
   </file>

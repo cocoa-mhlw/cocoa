@@ -291,4 +291,7 @@
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>ಕಳುಹಿಸಿ ಮತ್ತು ಸ್ವೀಕರಿಸಲು</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>ನಿಕಟ ಸಂಪರ್ಕ ಅಧಿಸೂಚನೆ</value>
+  </data>
 </root>

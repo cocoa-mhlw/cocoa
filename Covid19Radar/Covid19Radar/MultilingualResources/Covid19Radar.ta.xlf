@@ -364,6 +364,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">அனுப்பு மற்றும் பெறு</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தொடர்பு அறிவிப்பை மூடு</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -364,6 +364,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tuma na pokea</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Funga taarifa ya mwasiliani</target>
+        </trans-unit>
       </group>
     </body>
   </file>

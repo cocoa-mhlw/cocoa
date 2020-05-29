@@ -291,4 +291,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Slanje i primanje</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Zatvori obavijest o kontaktu</value>
+  </data>
 </root>
