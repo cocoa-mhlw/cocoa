@@ -290,4 +290,7 @@
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Gönderme ve alma</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>İletişim Bildirimini Kapat</value>
+  </data>
 </root>

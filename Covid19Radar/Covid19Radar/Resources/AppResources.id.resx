@@ -291,4 +291,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Kirim dan terima</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Tutup kontak pemberitahuan</value>
+  </data>
 </root>

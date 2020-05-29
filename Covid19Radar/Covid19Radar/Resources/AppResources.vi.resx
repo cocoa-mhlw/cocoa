@@ -291,4 +291,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Gửi và nhận</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Đóng thông báo liên hệ</value>
+  </data>
 </root>

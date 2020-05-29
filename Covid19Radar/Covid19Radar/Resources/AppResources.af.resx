@@ -291,4 +291,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Stuur en te ontvang</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Sluit Kontakkennisgewing</value>
+  </data>
 </root>

@@ -364,6 +364,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Send og motta</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Varsel om lukk kontakt</target>
+        </trans-unit>
       </group>
     </body>
   </file>

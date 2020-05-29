@@ -362,6 +362,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Envoyer et recevoir</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Notification de contact rapprochée</target>
+        </trans-unit>
       </group>
     </body>
   </file>

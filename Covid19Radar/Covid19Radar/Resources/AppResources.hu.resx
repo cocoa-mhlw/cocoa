@@ -291,4 +291,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Küldés és fogadás</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Kapcsolattartó bezárása értesítés</value>
+  </data>
 </root>

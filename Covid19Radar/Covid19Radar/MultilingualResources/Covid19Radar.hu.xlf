@@ -362,6 +362,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Küldés és fogadás</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kapcsolattartó bezárása értesítés</target>
+        </trans-unit>
       </group>
     </body>
   </file>

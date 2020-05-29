@@ -128,7 +128,7 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Small"
-                                Text="濃厚接触の通知"
+                                Text="{x:Static resources:AppResources.CloseContactNotificationText}"
                                 TextColor="{StaticResource PrimaryText}" />
                             <Span Text="{x:Static System:Environment.NewLine}" />
                             <Span

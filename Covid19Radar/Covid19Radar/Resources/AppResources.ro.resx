@@ -291,4 +291,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Trimiterea și primirea</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Închidere notificare persoană de contact</value>
+  </data>
 </root>

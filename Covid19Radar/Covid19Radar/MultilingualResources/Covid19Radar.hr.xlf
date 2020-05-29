@@ -364,6 +364,10 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Slanje i primanje</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zatvori obavijest o kontaktu</target>
+        </trans-unit>
       </group>
     </body>
   </file>

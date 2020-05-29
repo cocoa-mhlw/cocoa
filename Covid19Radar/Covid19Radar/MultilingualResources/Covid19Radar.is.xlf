@@ -364,6 +364,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Senda og taka við</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tilkynning um lokun tengiliðar</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -291,4 +291,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Menghantar dan menerima</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Tutup pemberitahuan kenalan</value>
+  </data>
 </root>
