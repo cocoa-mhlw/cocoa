@@ -222,7 +222,6 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Sätted</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Pole nõus</value>
@@ -266,7 +265,6 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>privaatsuspoliitika</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Registreerimise ootel</value>
@@ -276,6 +274,33 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
     <value>Kas soovite tõesti kõik andmed lähtestada?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Kustuta kõik andmed</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Kõik sätted ja andmed on kustutatud. Palun taaskäivitage rakendus.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>versioon</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Selle rakenduse versiooninumber</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Traadita side lühivalik</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Saada ja võta vastu</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Sule Kontaktteatis</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Rakenduse teatised tiheda kontakti ajal</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Kustuta andmed</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Kustuta kõik andmed</value>
   </data>
 </root>

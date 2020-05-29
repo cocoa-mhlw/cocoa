@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>การตั้งค่า</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>ไม่ยอมรับ</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>นโยบายความเป็นส่วนตัว</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>กําลังรอการลงทะเบียน</value>
@@ -276,6 +274,33 @@
     <value>คุณต้องการรีเซ็ตข้อมูลทั้งหมดหรือไม่</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>ลบข้อมูลทั้งหมด</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>การตั้งค่าและข้อมูลทั้งหมดถูกลบแล้ว กรุณาเริ่มการทํางานของโปรแกรมประยุกต์</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>เวอร์ชัน</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>หมายเลขรุ่นของโปรแกรมประยุกต์นี้</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>การสื่อสารไร้สายระยะสั้น</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>ส่งและรับ</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>ปิดการแจ้งเตือนผู้ติดต่อ</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>การแจ้งเตือนแอปพลิเคชันในเวลาที่มีการติดต่อใกล้ชิด</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>ลบข้อมูล</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>ลบข้อมูลทั้งหมด</value>
   </data>
 </root>

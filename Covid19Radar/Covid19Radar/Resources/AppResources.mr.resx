@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>सेटिंग्ज</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>सहमत नाही</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>गोपनीयता धोरण</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>नोंदणीची प्रतीक्षा</value>
@@ -276,6 +274,33 @@
     <value>तुम्हाला खरच सर्व डेटा रिसेट करायचा आहे का?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>सर्व डेटा नष्ट करा</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>सर्व संयोजना आणि डेटा नष्ट करण्यात आले आहे. कृपया अनुप्रयोग पुन्हा सुरू करा.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>आवृत्ती</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>या अनुप्रयोगाची आवृत्ती संख्या</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>अल्प पल्ल्याचे वायरलेस संवाद</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>पाठवा आणि प्राप्त करा</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>संपर्क सूचना बंद करा</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>जवळच्या संपर्काच्या वेळी अनुप्रयोग सूचना</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>डेटा हटवा</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>सर्व डेटा नष्ट करा</value>
   </data>
 </root>

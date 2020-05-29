@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>সেটিংস</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>রাজি না</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>গোপনীয়তা নীতি</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>নিবন্ধনের জন্য অপেক্ষা করছে</value>
@@ -276,6 +274,33 @@
     <value>আপনি কি সত্যিই সব ডাটা রিসেট করতে চান?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>সকল উপাত্ত মুছে ফেলুন</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>সকল সেটিংস এবং ডাটা বিলোপ করা হয়েছে. অনুগ্রহ করে প্রয়োগণটি পুনর্সূচনা করুন.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>সংস্করণ</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>এই অ্যাপ্লিকেশনের সংস্করণ সংখ্যা</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>স্বল্প পরিসরের বেতার যোগাযোগ</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>প্রেরণ এবং গ্রহণ করুন</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>যোগাযোগ বিজ্ঞপ্তি বন্ধ করুন</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>ঘনিষ্ঠ পরিচিতির সময় অ্যাপ্লিকেশন বিজ্ঞপ্তিসমূহ</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>ডাটা বিলোপ করুন</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>সকল উপাত্ত মুছে ফেলুন</value>
   </data>
 </root>

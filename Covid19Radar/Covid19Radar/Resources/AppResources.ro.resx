@@ -222,7 +222,6 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Setări</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nu sunt de acord</value>
@@ -266,7 +265,6 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Politică de confidențialitate</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Se așteaptă înregistrarea</value>
@@ -276,6 +274,33 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
     <value>Chiar doriți să resetați toate datele?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Ștergerea tuturor datelor</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Toate setările și datele au fost șterse. Reporniți aplicația.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versiune</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numărul de versiune al acestei aplicații</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Comunicare wireless cu rază scurtă de acțiune</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Trimiterea și primirea</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Închidere notificare persoană de contact</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notificări de aplicații în momentul contactului apropiat</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Ștergere date</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Ștergerea tuturor datelor</value>
   </data>
 </root>

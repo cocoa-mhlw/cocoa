@@ -222,7 +222,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Einstellungen</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nicht zustimmen</value>
@@ -266,7 +265,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Datenschutzrichtlinie</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Warten auf Registrierung</value>
@@ -276,6 +274,33 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
     <value>Möchten Sie wirklich alle Daten zurücksetzen?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Löschen aller Daten</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Alle Einstellungen und Daten wurden gelöscht. Starten Sie die Anwendung neu.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Versionsnummer dieser Anwendung</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Drahtlose Kurzstreckenkommunikation</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Senden und empfangen</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Schließen der Kontaktbenachrichtigung</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Anwendungsmeldungen zum Zeitpunkt des engen Kontakts</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Daten löschen</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Löschen aller Daten</value>
   </data>
 </root>

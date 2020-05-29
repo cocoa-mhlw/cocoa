@@ -222,7 +222,6 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Socruithe</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Gan Aontú</value>
@@ -266,7 +265,6 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Polasaí Príobháideachais</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Ag feitheamh le clár</value>
@@ -276,6 +274,33 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
     <value>An bhfuil fonn ort na sonraí go léir a athshocrú?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Scrios na sonraí go léir</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Scriosadh gach socrú agus sonraí. Atosaigh an feidhmchlár, le do thoil.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Leagan</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Uimhir leagan an fheidhmchláir seo</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Cumarsáid gan sreang gearr-raoin</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Seol agus faigh</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Dún An Fógra Teagmhála</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Fógraí iarratais tráth dlúththeagmhála</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Scrios sonraí</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Scrios na sonraí go léir</value>
   </data>
 </root>

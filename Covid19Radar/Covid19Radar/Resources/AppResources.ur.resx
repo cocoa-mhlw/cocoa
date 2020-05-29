@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>سیٹنگیں</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>متفق نہیں</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>نجی حیثیت پالیسی</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>انتظار برائے رجسٹر</value>
@@ -276,6 +274,33 @@
     <value>کیا آپ واقعی تمام کوائف پھر سیٹ کرنا چاہتے ہیں ؟</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>تمام کوائف حذف کریں</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>تمام سیٹنگیں اور کوائف حذف کر دیے گئے ہیں ۔ اپیلی کیشن پھر شروع کریں ۔</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>ورژن</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>اس ایپلی کیشن کا ورژن نمبر</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>مختصر رینج وائرلیس مواصلات</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>بھیجیں اور وصولیں</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>بند کریں رابطہ کی اطلاع</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>قریبی رابطے کے وقت درخواست کی اطلاعات</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>کوائف حذف کریں</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>تمام کوائف حذف کریں</value>
   </data>
 </root>

@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>설정</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>동의하지 않음</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>개인정보취급방침</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>등록 대기 중</value>
@@ -276,6 +274,33 @@
     <value>모든 데이터를 다시 설정하시겠습니까?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>모든 데이터 삭제</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>모든 설정및데이터가 삭제되었습니다. 응용 프로그램을 다시 시작하십시오.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>이 응용 프로그램의 버전 번호</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>단거리 무선 통신</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>송신 및 수신</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>연락처 알림 닫기</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>가까운 연락 시 의 응용 프로그램 알림</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>데이터 삭제</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>모든 데이터 삭제</value>
   </data>
 </root>
