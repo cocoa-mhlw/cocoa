@@ -374,6 +374,10 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Padam data</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Memadam semua data</target>
+        </trans-unit>
       </group>
     </body>
   </file>

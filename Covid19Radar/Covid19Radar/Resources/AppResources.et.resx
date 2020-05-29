@@ -300,4 +300,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Kustuta andmed</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Kustuta kõik andmed</value>
+  </data>
 </root>

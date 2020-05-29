@@ -376,6 +376,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தரவை நீக்கு</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">அனைத்து தரவையும் நீக்கு</target>
+        </trans-unit>
       </group>
     </body>
   </file>

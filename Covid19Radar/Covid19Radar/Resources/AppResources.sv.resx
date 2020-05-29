@@ -300,4 +300,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="DeleteDataText" xml:space="preserve">
     <value>Ta bort data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Ta bort alla data</value>
+  </data>
 </root>

@@ -374,6 +374,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Delete data</source>
           <target state="translated">データの削除</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="translated">すべてのデータを削除</target>
+        </trans-unit>
       </group>
     </body>
   </file>

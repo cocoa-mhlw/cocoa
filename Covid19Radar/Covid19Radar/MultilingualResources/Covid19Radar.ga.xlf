@@ -376,6 +376,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Scrios sonraí</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scrios na sonraí go léir</target>
+        </trans-unit>
       </group>
     </body>
   </file>

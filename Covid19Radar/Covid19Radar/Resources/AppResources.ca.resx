@@ -300,4 +300,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Suprimeix les dades</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Suprimir totes les dades</value>
+  </data>
 </root>

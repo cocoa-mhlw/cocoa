@@ -300,4 +300,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Eyða gögnum</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Eyða öllum gögnum</value>
+  </data>
 </root>

@@ -402,6 +402,9 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Close Contact Notification</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Delete all data</value>
+  </data>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Delete data</value>
   </data>

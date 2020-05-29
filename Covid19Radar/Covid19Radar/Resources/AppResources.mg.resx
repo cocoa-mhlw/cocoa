@@ -300,4 +300,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Fafao ireo tahirin</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Esory avokoa ny tahirin-kevitra rehetra</value>
+  </data>
 </root>

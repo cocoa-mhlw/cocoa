@@ -376,6 +376,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">데이터 삭제</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">모든 데이터 삭제</target>
+        </trans-unit>
       </group>
     </body>
   </file>

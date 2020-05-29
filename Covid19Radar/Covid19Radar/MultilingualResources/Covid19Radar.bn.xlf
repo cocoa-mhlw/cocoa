@@ -376,6 +376,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ডাটা বিলোপ করুন</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">সকল উপাত্ত মুছে ফেলুন</target>
+        </trans-unit>
       </group>
     </body>
   </file>
