@@ -300,4 +300,7 @@
   <data name="DeleteDataText" xml:space="preserve">
     <value>డేటాను తొలగించు</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>మొత్తం డేటాని తొలగించు</value>
+  </data>
 </root>

@@ -300,4 +300,7 @@
   <data name="DeleteDataText" xml:space="preserve">
     <value>ডাটা বিলোপ করুন</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>সকল উপাত্ত মুছে ফেলুন</value>
+  </data>
 </root>

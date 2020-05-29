@@ -300,4 +300,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Dileu data</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Dileu'r holl ddata</value>
+  </data>
 </root>

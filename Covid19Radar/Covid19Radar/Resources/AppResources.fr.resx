@@ -300,4 +300,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Supprimer les données</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Supprimer toutes les données</value>
+  </data>
 </root>

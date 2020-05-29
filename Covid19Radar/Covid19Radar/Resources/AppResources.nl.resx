@@ -300,4 +300,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Gegevens verwijderen</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Alle gegevens verwijderen</value>
+  </data>
 </root>

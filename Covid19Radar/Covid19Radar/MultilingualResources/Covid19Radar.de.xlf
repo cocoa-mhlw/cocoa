@@ -376,6 +376,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Daten löschen</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Löschen aller Daten</target>
+        </trans-unit>
       </group>
     </body>
   </file>

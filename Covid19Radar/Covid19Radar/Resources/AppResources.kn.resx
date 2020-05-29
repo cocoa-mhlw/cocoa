@@ -300,4 +300,7 @@
   <data name="DeleteDataText" xml:space="preserve">
     <value>ದತ್ತಾಂಶವನ್ನು ಅಳಿಸಿ</value>
   </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸು</value>
+  </data>
 </root>

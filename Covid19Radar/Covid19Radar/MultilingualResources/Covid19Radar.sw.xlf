@@ -376,6 +376,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Delete data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Futa data</target>
         </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Futa data zote</target>
+        </trans-unit>
       </group>
     </body>
   </file>
