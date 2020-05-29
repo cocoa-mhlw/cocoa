@@ -58,7 +58,7 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Caption"
-                                Text="このアプリのバージョン番号"
+                                Text="{x:Static resources:AppResources.VersionDescription}"
                                 TextColor="{StaticResource SecondaryText}" />
                         </FormattedString>
                     </Label.FormattedText>

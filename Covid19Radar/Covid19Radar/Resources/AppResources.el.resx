@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>Έκδοση</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Αριθμός έκδοσης αυτής της εφαρμογής</value>
+  </data>
 </root>

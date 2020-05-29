@@ -282,4 +282,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Versija</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Šīs lietojumprogrammas versijas numurs</value>
+  </data>
 </root>

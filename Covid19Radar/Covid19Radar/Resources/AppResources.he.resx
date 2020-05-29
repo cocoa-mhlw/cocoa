@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>גירסה</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>מספר גירסה של יישום זה</value>
+  </data>
 </root>

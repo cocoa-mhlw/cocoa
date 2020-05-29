@@ -282,4 +282,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Verzija</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Broj verzije ove aplikacije</value>
+  </data>
 </root>

@@ -282,4 +282,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Versiune</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numărul de versiune al acestei aplicații</value>
+  </data>
 </root>

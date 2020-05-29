@@ -352,6 +352,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Version</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Famoahana ny laharan' ity fampiharana ity</target>
+        </trans-unit>
       </group>
     </body>
   </file>

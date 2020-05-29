@@ -351,6 +351,10 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Versión</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Número de versión de esta aplicación</target>
+        </trans-unit>
       </group>
     </body>
   </file>

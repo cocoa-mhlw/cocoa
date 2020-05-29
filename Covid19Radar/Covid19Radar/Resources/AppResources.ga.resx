@@ -282,4 +282,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Leagan</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Uimhir leagan an fheidhmchláir seo</value>
+  </data>
 </root>

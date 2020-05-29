@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>ورژن</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>اس ایپلی کیشن کا ورژن نمبر</value>
+  </data>
 </root>

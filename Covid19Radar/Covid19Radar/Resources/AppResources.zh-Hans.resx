@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>VERSION</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>此应用程序的版本号</value>
+  </data>
 </root>

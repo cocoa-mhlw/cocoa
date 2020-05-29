@@ -282,4 +282,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Info</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Versionsnummer dieser Anwendung</value>
+  </data>
 </root>

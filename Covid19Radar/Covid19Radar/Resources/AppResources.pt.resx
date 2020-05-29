@@ -282,4 +282,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Versão</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Número da versão deste aplicativo</value>
+  </data>
 </root>

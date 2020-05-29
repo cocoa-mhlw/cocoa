@@ -352,6 +352,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Versie</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Versienummer van deze toepassing</target>
+        </trans-unit>
       </group>
     </body>
   </file>
