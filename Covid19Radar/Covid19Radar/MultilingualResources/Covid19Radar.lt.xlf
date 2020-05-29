@@ -368,6 +368,10 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Uždaryti kontaktų pranešimą</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pranešimai apie taikomąją programą glaudaus kontakto metu</target>
+        </trans-unit>
       </group>
     </body>
   </file>

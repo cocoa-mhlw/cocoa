@@ -134,7 +134,7 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Caption"
-                                Text="濃厚接触時のアプリ通知"
+                                Text="{x:Static resources:AppResources.CloseContactNotificationDescription}"
                                 TextColor="{StaticResource SecondaryText}" />
                         </FormattedString>
                     </Label.FormattedText>

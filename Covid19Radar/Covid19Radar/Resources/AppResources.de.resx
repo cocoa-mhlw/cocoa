@@ -294,4 +294,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Schließen der Kontaktbenachrichtigung</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Anwendungsmeldungen zum Zeitpunkt des engen Kontakts</value>
+  </data>
 </root>

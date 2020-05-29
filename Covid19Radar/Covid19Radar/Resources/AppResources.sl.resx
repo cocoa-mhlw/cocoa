@@ -294,4 +294,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Zapri obvestilo o stiku</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Obvestila o aplikaciji v času tesnega stika</value>
+  </data>
 </root>

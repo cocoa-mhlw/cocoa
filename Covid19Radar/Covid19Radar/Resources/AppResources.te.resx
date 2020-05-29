@@ -294,4 +294,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>సంప్రదింపు ప్రకటనను మూసివేయండి</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>క్లోజ్ కాంటాక్ట్ సమయంలో అప్లికేషన్ నోటిఫికేషన్ లు</value>
+  </data>
 </root>

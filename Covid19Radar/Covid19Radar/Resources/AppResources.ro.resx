@@ -294,4 +294,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Închidere notificare persoană de contact</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notificări de aplicații în momentul contactului apropiat</value>
+  </data>
 </root>

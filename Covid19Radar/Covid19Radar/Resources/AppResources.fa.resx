@@ -294,4 +294,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>بستن تماس با اعلان</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>اعلان های برنامه در زمان تماس نزدیک</value>
+  </data>
 </root>

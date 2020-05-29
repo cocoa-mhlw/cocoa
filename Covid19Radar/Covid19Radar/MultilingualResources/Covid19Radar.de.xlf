@@ -368,6 +368,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Schließen der Kontaktbenachrichtigung</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anwendungsmeldungen zum Zeitpunkt des engen Kontakts</target>
+        </trans-unit>
       </group>
     </body>
   </file>

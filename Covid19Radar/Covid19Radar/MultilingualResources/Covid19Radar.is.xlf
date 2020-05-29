@@ -368,6 +368,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tilkynning um lokun tengiliðar</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Umsókn tilkynningar á þeim tíma sem loka tengilið</target>
+        </trans-unit>
       </group>
     </body>
   </file>

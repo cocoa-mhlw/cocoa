@@ -294,4 +294,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Isara ang abiso ng kontak</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Mga notipikasyon ng aplikasyon sa oras ng pagtatapos ng kontak</value>
+  </data>
 </root>

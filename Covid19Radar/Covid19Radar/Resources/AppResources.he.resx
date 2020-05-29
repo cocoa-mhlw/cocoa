@@ -294,4 +294,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>סגור הודעת איש קשר</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>הודעות יישום בזמן הקשר הקרוב</value>
+  </data>
 </root>
