@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Настройки</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Не съм съгласен</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Правила за поверителност</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Изчакване на регистрация</value>
@@ -276,6 +274,33 @@
     <value>Наистина ли искате да нулирате всички данни?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Изтриване на всички данни</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Всички настройки и данни са изтрити. Рестартирайте приложението.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Номер на версията на това приложение</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Безжична комуникация с малък обхват</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Изпращане и получаване</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Уведомяване за затваряне на контакт</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Уведомления за кандидатстване в момента на близък контакт</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Изтриване на данните</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Изтриване на всички данни</value>
   </data>
 </root>

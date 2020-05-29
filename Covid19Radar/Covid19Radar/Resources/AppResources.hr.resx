@@ -222,7 +222,6 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Postavke</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ne slažem se</value>
@@ -266,7 +265,6 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Pravilnik o zaštiti privatnosti</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Čekanje na registar</value>
@@ -276,6 +274,33 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
     <value>Želite li zaista ponovno postaviti sve podatke?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Brisanje svih podataka</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Sve postavke i podaci su izbrisani. Ponovno pokrenite aplikaciju.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Verzija</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Broj verzije ove aplikacije</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Bežična komunikacija kratkog dometa</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Slanje i primanje</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Zatvori obavijest o kontaktu</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Prijave u vrijeme bliskog kontakta</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Izbriši podatke</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Brisanje svih podataka</value>
   </data>
 </root>

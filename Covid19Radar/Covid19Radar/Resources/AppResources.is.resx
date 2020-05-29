@@ -222,7 +222,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Stillingar</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ekki sammála</value>
@@ -266,7 +265,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>persónuverndarstefna</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Beðið eftir skráningu</value>
@@ -276,6 +274,33 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
     <value>Viltu virkilega Endurstilla öll gögnin?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Eyða öllum gögnum</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Öllum stillingum og gögnum hefur verið eytt. Endurræsa þarf forritið.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Útgáfa</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Útgáfunúmer þessa forrits</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Stutt-svið þráðlaus samskipti</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Senda og taka við</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Tilkynning um lokun tengiliðar</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Umsókn tilkynningar á þeim tíma sem loka tengilið</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Eyða gögnum</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Eyða öllum gögnum</value>
   </data>
 </root>

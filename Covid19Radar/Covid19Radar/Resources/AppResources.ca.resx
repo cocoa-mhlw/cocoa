@@ -222,7 +222,6 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Configuració</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>No està d'acord</value>
@@ -266,7 +265,6 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Estratègia de privadesa</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Esperant registre</value>
@@ -276,6 +274,33 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
     <value>Esteu segur que voleu reinicialitzar totes les dades?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Suprimir totes les dades</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>S'han suprimit tots els paràmetres i les dades. Torneu a iniciar l'aplicació.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versió</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Número de versió d'aquesta aplicació</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Comunicació sense fils de curt abast</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Enviar i rebre</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Tanca la notificació de contacte</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notificacions de l'aplicació en el moment del contacte estret</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Suprimeix les dades</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Suprimir totes les dades</value>
   </data>
 </root>

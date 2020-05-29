@@ -222,7 +222,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>アプリの設定</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>同意しない</value>
@@ -266,7 +265,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>プライバシーポリシー</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>登録中</value>
@@ -277,5 +275,32 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>すべてのデータを削除する</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>すべての設定とデータが削除されました。アプリケーションを再起動してください。</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>このアプリのバージョン番号</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>近距離無線通信</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>発信と受信をする</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>濃厚接触の通知</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>濃厚接触時のアプリ通知</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>データの削除</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>すべてのデータを削除</value>
   </data>
 </root>

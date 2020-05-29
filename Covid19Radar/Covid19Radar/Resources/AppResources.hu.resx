@@ -222,7 +222,6 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Beállítások</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nem ért egyet</value>
@@ -266,7 +265,6 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Adatvédelmi szabályzat</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Várakozás a regisztrációra</value>
@@ -276,6 +274,33 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
     <value>Biztosan alaphelyzetbe állítja az összes adatot?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Az összes adat törlése</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Minden beállítás és adat törölve lett. Indítsa újra az alkalmazást.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Verzió</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Az alkalmazás verziószáma</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Rövid hatótávolságú vezeték nélküli kommunikáció</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Küldés és fogadás</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Kapcsolattartó bezárása értesítés</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Alkalmazásértesítések a szoros kapcsolatfelvétel időpontjában</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Adatok törlése</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Az összes adat törlése</value>
   </data>
 </root>

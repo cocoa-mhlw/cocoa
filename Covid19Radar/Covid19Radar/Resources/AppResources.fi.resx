@@ -222,7 +222,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Asetukset</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ei samaa mieltä</value>
@@ -266,7 +265,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>tietosuojakäytäntö</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Odotetaan rekisteröitymistä</value>
@@ -276,6 +274,33 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
     <value>Haluatko todella nollata kaikki tiedot?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Poista kaikki tiedot</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Kaikki asetukset ja tiedot on poistettu. Käynnistä sovellus uudelleen.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versio</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Tämän sovelluksen versionumero</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Lyhyen kantaman langaton tiedonsiirto</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Lähetä ja vastaanota</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Sulje yhteystietoilmoitus</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Hakemusilmoitukset läheisen yhteydenpidon yhteydessä</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Poista tiedot</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Poista kaikki tiedot</value>
   </data>
 </root>

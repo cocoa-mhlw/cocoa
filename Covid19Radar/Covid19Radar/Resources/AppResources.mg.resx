@@ -222,7 +222,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Toe-javatra</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Tsy Manaiky</value>
@@ -266,7 +265,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Fitsipika tsiambaratelo</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Miandry ny fisoratana anarana</value>
@@ -276,6 +274,33 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
     <value>Moa ve tena tianao données ny tahirin-kevitra rehetra?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Esory avokoa ny tahirin-kevitra rehetra</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Voafafa ny toe-javatra sy ny tahirin-kevitra rehetra. Azafady averina velomina indray ny fanaovana fampiharana.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Famoahana ny laharan' ity fampiharana ity</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Fifandraisana wireless</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Alefaso ary raiso</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Hidio ny Fampilazana</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Fampiharana ny fampilazana amin' ny fotoana manaraka.</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Fafao ireo tahirin</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Esory avokoa ny tahirin-kevitra rehetra</value>
   </data>
 </root>
