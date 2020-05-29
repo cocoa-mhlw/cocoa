@@ -81,7 +81,7 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Small"
-                                Text="近距離無線通信"
+                                Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationText}"
                                 TextColor="{StaticResource PrimaryText}" />
                             <Span Text="{x:Static System:Environment.NewLine}" />
                             <Span

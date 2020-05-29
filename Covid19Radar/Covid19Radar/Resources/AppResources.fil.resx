@@ -285,4 +285,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Numero ng bersiyon ng aplikasyong ito</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Maikling hanay ng wireless na komunikasyon</value>
+  </data>
 </root>

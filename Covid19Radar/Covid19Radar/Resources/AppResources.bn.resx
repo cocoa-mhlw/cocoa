@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>এই অ্যাপ্লিকেশনের সংস্করণ সংখ্যা</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>স্বল্প পরিসরের বেতার যোগাযোগ</value>
+  </data>
 </root>

@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>ഈ പ്രയോഗത്തിന്റെ പതിപ്പ് സംഖ്യ</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>ഹ്രസ്വദൂര വയർലെസ് കമ്മ്യൂണിക്കേഷൻ</value>
+  </data>
 </root>

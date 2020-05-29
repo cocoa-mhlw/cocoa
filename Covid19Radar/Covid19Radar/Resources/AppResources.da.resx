@@ -285,4 +285,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Versionsnummeret på denne ansøgning</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Trådløs kommunikation med kort rækkevidde</value>
+  </data>
 </root>

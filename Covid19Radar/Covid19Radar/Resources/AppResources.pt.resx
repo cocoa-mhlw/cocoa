@@ -285,4 +285,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Número da versão deste aplicativo</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Comunicação sem fio de curto alcance</value>
+  </data>
 </root>

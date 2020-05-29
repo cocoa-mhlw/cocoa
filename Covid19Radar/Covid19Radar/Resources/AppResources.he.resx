@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>מספר גירסה של יישום זה</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>תקשורת אלחוטית לטווח קצר</value>
+  </data>
 </root>

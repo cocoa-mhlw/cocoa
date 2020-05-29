@@ -285,4 +285,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Uimhir leagan an fheidhmchláir seo</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Cumarsáid gan sreang gearr-raoin</value>
+  </data>
 </root>

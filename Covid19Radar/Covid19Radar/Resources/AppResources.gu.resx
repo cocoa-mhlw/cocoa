@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>આ કાર્યક્રમની આવૃત્તિ સંખ્યા</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>ટૂંકા અંતરના વાયરલેસ સંદેશાવ્યવહાર</value>
+  </data>
 </root>

@@ -285,4 +285,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="VersionDescription" xml:space="preserve">
     <value>இந்த பயன்பாட்டின் பதிப்பு எண்</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>குறுகிய தூர கம்பியில்லா தகவல்தொடர்பு</value>
+  </data>
 </root>

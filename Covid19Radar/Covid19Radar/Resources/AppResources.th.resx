@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>หมายเลขรุ่นของโปรแกรมประยุกต์นี้</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>การสื่อสารไร้สายระยะสั้น</value>
+  </data>
 </root>

@@ -285,4 +285,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Numru tal-ver żjoni ta ' din l-applikazzjoni</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Komunikazzjoni mingħajr fili fuq medda qasira</value>
+  </data>
 </root>

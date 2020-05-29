@@ -285,4 +285,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Broj verzije ove aplikacije</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Bežična komunikacija kratkog dometa</value>
+  </data>
 </root>

@@ -285,4 +285,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Nomor versi aplikasi ini</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Komunikasi nirkabel jarak pendek</value>
+  </data>
 </root>

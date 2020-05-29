@@ -390,4 +390,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Version number of this application</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Short-range wireless communication</value>
+  </data>
 </root>
