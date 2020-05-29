@@ -370,6 +370,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Notificări de aplicații în momentul contactului apropiat</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ștergere date</target>
+        </trans-unit>
       </group>
     </body>
   </file>

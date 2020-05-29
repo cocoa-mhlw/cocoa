@@ -372,6 +372,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pieteikumu paziņojumi ciešas saziņas laikā</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Dzēst datus</target>
+        </trans-unit>
       </group>
     </body>
   </file>

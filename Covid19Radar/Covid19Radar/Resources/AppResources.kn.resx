@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>ನಿಕಟ ಸಂಪರ್ಕದ ಸಮಯದಲ್ಲಿ ಅಪ್ಲಿಕೇಶನ್ ನೋಟಿಫಿಕೇಶನ್ ಗಳು</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>ದತ್ತಾಂಶವನ್ನು ಅಳಿಸಿ</value>
+  </data>
 </root>

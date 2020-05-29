@@ -297,4 +297,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Fampiharana ny fampilazana amin' ny fotoana manaraka.</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Fafao ireo tahirin</value>
+  </data>
 </root>

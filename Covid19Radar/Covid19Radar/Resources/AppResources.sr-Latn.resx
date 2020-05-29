@@ -297,4 +297,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Obaveštenja o aplikacijama u vreme bliskog kontakta</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Izbriši podatke</value>
+  </data>
 </root>

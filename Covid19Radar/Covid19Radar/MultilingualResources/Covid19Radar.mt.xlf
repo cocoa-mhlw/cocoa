@@ -372,6 +372,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Notifiki ta ' applikazzjoni fil-ħin ta ' kuntatt mill-qrib</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tħassar data</target>
+        </trans-unit>
       </group>
     </body>
   </file>

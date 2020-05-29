@@ -297,4 +297,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Hysbysiadau cais ar adeg cyswllt agos</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Dileu data</value>
+  </data>
 </root>

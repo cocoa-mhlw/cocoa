@@ -297,4 +297,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Notificări de aplicații în momentul contactului apropiat</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Ștergere date</value>
+  </data>
 </root>

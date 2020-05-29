@@ -223,6 +223,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Delete data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DeleteDataText {
+            get {
+                return ResourceManager.GetString("DeleteDataText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   No need to input personal information. We are using unique ID, allocated to you when installing an app. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTextStep1Description {

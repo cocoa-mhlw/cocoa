@@ -296,4 +296,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>إشعارات التطبيق في وقت الاتصال الوثيق</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>حذف البيانات</value>
+  </data>
 </root>

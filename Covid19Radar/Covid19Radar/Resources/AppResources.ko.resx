@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>가까운 연락 시 의 응용 프로그램 알림</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>데이터 삭제</value>
+  </data>
 </root>

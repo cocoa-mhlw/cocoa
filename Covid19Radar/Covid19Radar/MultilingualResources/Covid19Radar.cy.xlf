@@ -372,6 +372,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hysbysiadau cais ar adeg cyswllt agos</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dileu data</target>
+        </trans-unit>
       </group>
     </body>
   </file>
