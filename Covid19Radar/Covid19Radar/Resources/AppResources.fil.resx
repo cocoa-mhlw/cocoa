@@ -222,7 +222,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Mga Setting</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Hindi sumasang-ayon</value>
@@ -266,7 +265,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Patakaran ng Pagiging Pribado</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Naghihintay na magparehistro</value>
@@ -276,6 +274,33 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
     <value>Gusto mo ba talagang i-reset ang lahat ng data?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>I-delete ang lahat ng data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Tinanggal na ang lahat ng setting at datos. Mangyaring muling-magsimula ng aplikasyon.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Bersyon</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numero ng bersiyon ng aplikasyong ito</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Maikling hanay ng wireless na komunikasyon</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Magpadala at tumanggap</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Isara ang abiso ng kontak</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Mga notipikasyon ng aplikasyon sa oras ng pagtatapos ng kontak</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Magtanggal ng datos</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>I-delete ang lahat ng data</value>
   </data>
 </root>

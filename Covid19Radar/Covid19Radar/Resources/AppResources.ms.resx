@@ -222,7 +222,6 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Seting</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Tidak bersetuju</value>
@@ -266,7 +265,6 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Dasar Privasi</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Menunggu untuk mendaftar</value>
@@ -276,6 +274,33 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
     <value>Adakah anda benar-benar mahu menetapkan semula semua data?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Memadam semua data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Semua seting dan data telah dihapuskan. Sila mulakan semula aplikasi.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versi</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Nombor versi aplikasi ini</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Komunikasi wayarles jarak dekat</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Menghantar dan menerima</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Tutup pemberitahuan kenalan</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Pemberitahuan permohonan pada masa kenalan yang rapat</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Padam data</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Memadam semua data</value>
   </data>
 </root>

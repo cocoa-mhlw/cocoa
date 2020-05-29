@@ -276,7 +276,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">设置</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
         <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
           <source>Not Agree</source>
@@ -331,7 +330,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">隐私策略</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
@@ -343,6 +341,42 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">是否确实要重置所有数据？</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">删除所有数据</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
+          <source>All settings and data have been deleted. Please restart the application.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">所有设置和数据都已删除。请重新启动应用程序。</target>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">VERSION</target>
+        </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">此应用程序的版本号</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">短距离无线通信</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">发送和接收</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">联系通知</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">密切接触时的应用程序通知</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">删除数据</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">删除所有数据</target>
         </trans-unit>

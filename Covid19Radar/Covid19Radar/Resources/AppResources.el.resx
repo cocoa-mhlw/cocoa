@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ρυθμίσεις</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Δεν συμφωνώ</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Πολιτική προστασίας προσωπικών δεδομένων</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Αναμονή για εγγραφή</value>
@@ -276,6 +274,33 @@
     <value>Θέλετε πραγματικά να επαναφέρετε όλα τα δεδομένα;</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Διαγραφή όλων των δεδομένων</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Όλες οι ρυθμίσεις και τα δεδομένα έχουν διαγραφεί. Επανεκκινήστε την εφαρμογή.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Έκδοση</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Αριθμός έκδοσης αυτής της εφαρμογής</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Ασύρματη επικοινωνία μικρής εμβέλειας</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Αποστολή και παραλαβή</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Ειδοποίηση κλεισίματος επαφής</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Ειδοποιήσεις αιτήσεων κατά τη στιγμή της στενής επαφής</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Διαγραφή δεδομένων</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Διαγραφή όλων των δεδομένων</value>
   </data>
 </root>

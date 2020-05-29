@@ -222,7 +222,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Gosodiadau</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ddim yn cytuno</value>
@@ -266,7 +265,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Polisi Preifatrwydd</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Aros am y gofrestr</value>
@@ -276,6 +274,33 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Ydych wir eisiau ailosod yr holl ddata?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Dileu'r holl ddata</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Mae'r holl leoliadau a'r data wedi'u dileu. Ailgychwynnwch y rhaglen os gwelwch yn dda.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Fersiwn</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Rhif fersiwn y rhaglen hon</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Cyfathrebu di-wifr amrediad byr</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Anfon a derbyn</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Hysbysiad cyswllt agos</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Hysbysiadau cais ar adeg cyswllt agos</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Dileu data</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Dileu'r holl ddata</value>
   </data>
 </root>

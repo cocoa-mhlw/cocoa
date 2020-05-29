@@ -222,7 +222,6 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Paramètres</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Pas d’accord</value>
@@ -266,7 +265,6 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>politique de confidentialité</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>En attente de registre</value>
@@ -276,6 +274,33 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
     <value>Voulez-vous vraiment réinitialiser toutes les données?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Supprimer toutes les données</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Tous les paramètres et données ont été supprimés. S’il vous plaît redémarrer l’application.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numéro de version de cette application</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Communication sans fil à courte portée</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Envoyer et recevoir</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Notification de contact rapprochée</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notifications d’application au moment du contact étroit</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Supprimer les données</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Supprimer toutes les données</value>
   </data>
 </root>

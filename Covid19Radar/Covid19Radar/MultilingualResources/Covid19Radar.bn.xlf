@@ -276,7 +276,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">সেটিংস</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
         <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
           <source>Not Agree</source>
@@ -331,7 +330,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">গোপনীয়তা নীতি</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
@@ -343,6 +341,42 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">আপনি কি সত্যিই সব ডাটা রিসেট করতে চান?</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">সকল উপাত্ত মুছে ফেলুন</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
+          <source>All settings and data have been deleted. Please restart the application.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">সকল সেটিংস এবং ডাটা বিলোপ করা হয়েছে. অনুগ্রহ করে প্রয়োগণটি পুনর্সূচনা করুন.</target>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">সংস্করণ</target>
+        </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">এই অ্যাপ্লিকেশনের সংস্করণ সংখ্যা</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">স্বল্প পরিসরের বেতার যোগাযোগ</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">প্রেরণ এবং গ্রহণ করুন</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">যোগাযোগ বিজ্ঞপ্তি বন্ধ করুন</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ঘনিষ্ঠ পরিচিতির সময় অ্যাপ্লিকেশন বিজ্ঞপ্তিসমূহ</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ডাটা বিলোপ করুন</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">সকল উপাত্ত মুছে ফেলুন</target>
         </trans-unit>

@@ -276,7 +276,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Параметры</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
         <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
           <source>Not Agree</source>
@@ -331,7 +330,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Политика конфиденциальности</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
@@ -343,6 +341,42 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Вы действительно хотите сбросить все данные?</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Удалить все данные</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
+          <source>All settings and data have been deleted. Please restart the application.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Все настройки и данные были удалены. Пожалуйста, перезапустите приложение.</target>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Версия</target>
+        </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Номер версии этого приложения</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Беспроводная связь малой дальности</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Отправка и получение</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Уведомление о близком контакте</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Уведомления о применении на момент тесного контакта</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Удаление данных</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Удалить все данные</target>
         </trans-unit>

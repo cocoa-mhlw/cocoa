@@ -276,7 +276,6 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Indstillinger</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
         </trans-unit>
         <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
           <source>Not Agree</source>
@@ -331,7 +330,6 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Politik om beskyttelse af personlige oplysninger</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicyPage Title</note>
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
@@ -343,6 +341,42 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Vil du nulstille alle dataene?</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Slet alle data</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
+          <source>All settings and data have been deleted. Please restart the application.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle indstillinger og data er blevet slettet. Genstart programmet.</target>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Version2</target>
+        </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Versionsnummeret på denne ansøgning</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trådløs kommunikation med kort rækkevidde</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Send og modtag</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Meddelelse om lukning af kontaktperson</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ansøgningsmeddelelser på tidspunktet for tæt kontakt</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Slet data</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Slet alle data</target>
         </trans-unit>

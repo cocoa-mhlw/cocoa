@@ -205,6 +205,42 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Application notifications at the time of close contact に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CloseContactNotificationDescription {
+            get {
+                return ResourceManager.GetString("CloseContactNotificationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Close Contact Notification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CloseContactNotificationText {
+            get {
+                return ResourceManager.GetString("CloseContactNotificationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Delete all data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DeleteDataDescription {
+            get {
+                return ResourceManager.GetString("DeleteDataDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Delete data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DeleteDataText {
+            get {
+                return ResourceManager.GetString("DeleteDataText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   No need to input personal information. We are using unique ID, allocated to you when installing an app. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTextStep1Description {
@@ -467,6 +503,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   All settings and data have been deleted. Please restart the application. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDialogResetCompletedText {
+            get {
+                return ResourceManager.GetString("SettingsPageDialogResetCompletedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Do you really want to reset all the data? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageDialogResetText {
@@ -584,6 +629,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Send and receive に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ShortRangeWirelessCommunicationDescription {
+            get {
+                return ResourceManager.GetString("ShortRangeWirelessCommunicationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Short-range wireless communication に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ShortRangeWirelessCommunicationText {
+            get {
+                return ResourceManager.GetString("ShortRangeWirelessCommunicationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Protecting our loved ones from COVID-19 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string StartTutorialPageTextProtectingOurLovedOnes {
@@ -697,6 +760,24 @@ namespace Covid19Radar.Resources {
         internal static string UrlUpdate {
             get {
                 return ResourceManager.GetString("UrlUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Version number of this application に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string VersionDescription {
+            get {
+                return ResourceManager.GetString("VersionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Version に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string VersionText {
+            get {
+                return ResourceManager.GetString("VersionText", resourceCulture);
             }
         }
     }

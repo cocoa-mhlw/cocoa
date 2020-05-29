@@ -222,7 +222,6 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Cài đặt</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Không đồng ý</value>
@@ -266,7 +265,6 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Chính sách về Quyền riêng tư</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Đang chờ đăng ký</value>
@@ -276,6 +274,33 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
     <value>Bạn có thực sự muốn thiết lập lại tất cả các dữ liệu?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Xóa tất cả dữ liệu</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Tất cả các cài đặt và dữ liệu đã bị xóa. Hãy khởi động lại ứng dụng.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Số phiên bản của ứng dụng này</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Giao tiếp không dây tầm ngắn</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Gửi và nhận</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Đóng thông báo liên hệ</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Thông báo ứng dụng tại thời gian liên lạc gần</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Xóa dữ liệu</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>Xóa tất cả dữ liệu</value>
   </data>
 </root>

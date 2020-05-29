@@ -222,7 +222,6 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>સેટિંગ્સ</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>સંમત નથી</value>
@@ -266,7 +265,6 @@
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>ગોપનીયતા નીતિ</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>રજીસ્ટર માટે રાહ જોઈ રહ્યા છીએ</value>
@@ -276,6 +274,33 @@
     <value>શું તમે ખરેખર બધી માહિતીને પુનઃસુયોજિત કરવા માંગો છો?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>બધી માહિતી કાઢી નાંખો</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>બધા સુયોજનો અને માહિતી કાઢી નાખવામાં આવી છે. મહેરબાની કરીને કાર્યક્રમ ફરી શરૂ કરો.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>સંસ્કરણ</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>આ કાર્યક્રમની આવૃત્તિ સંખ્યા</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>ટૂંકા અંતરના વાયરલેસ સંદેશાવ્યવહાર</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>મોકલો અને મેળવો</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>સંપર્ક સૂચન બંધ કરો</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>સંપર્ક બંધ થાય ત્યારે કાર્યક્રમ સૂચનાઓ</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>માહિતી કાઢી નાંખો</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
     <value>બધી માહિતી કાઢી નાંખો</value>
   </data>
 </root>
