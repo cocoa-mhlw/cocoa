@@ -370,6 +370,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Alkalmazásértesítések a szoros kapcsolatfelvétel időpontjában</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Adatok törlése</target>
+        </trans-unit>
       </group>
     </body>
   </file>

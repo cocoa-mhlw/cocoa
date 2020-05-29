@@ -297,4 +297,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Taarifa za maombi wakati wa kuwasiliana karibu</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Futa data</value>
+  </data>
 </root>

@@ -372,6 +372,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">క్లోజ్ కాంటాక్ట్ సమయంలో అప్లికేషన్ నోటిఫికేషన్ లు</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">డేటాను తొలగించు</target>
+        </trans-unit>
       </group>
     </body>
   </file>

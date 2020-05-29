@@ -297,4 +297,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Notifiki ta ' applikazzjoni fil-ħin ta ' kuntatt mill-qrib</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Tħassar data</value>
+  </data>
 </root>

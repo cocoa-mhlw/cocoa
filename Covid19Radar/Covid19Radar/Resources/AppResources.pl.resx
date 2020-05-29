@@ -297,4 +297,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Powiadomienia o aplikacjach w momencie bliskiego kontaktu</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Usuń dane</value>
+  </data>
 </root>

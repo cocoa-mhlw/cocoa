@@ -297,4 +297,7 @@
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Ειδοποιήσεις αιτήσεων κατά τη στιγμή της στενής επαφής</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Διαγραφή δεδομένων</value>
+  </data>
 </root>

@@ -372,6 +372,10 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Oznámenia o žiadostiach v čase úzkeho kontaktu</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Odstrániť údaje</target>
+        </trans-unit>
       </group>
     </body>
   </file>

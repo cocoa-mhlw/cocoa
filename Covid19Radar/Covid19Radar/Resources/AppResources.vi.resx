@@ -297,4 +297,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Thông báo ứng dụng tại thời gian liên lạc gần</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Xóa dữ liệu</value>
+  </data>
 </root>

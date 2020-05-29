@@ -372,6 +372,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நெருங்கிய தொடர்பின் போது விண்ணப்ப அறிவிப்புகள்</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தரவை நீக்கு</target>
+        </trans-unit>
       </group>
     </body>
   </file>

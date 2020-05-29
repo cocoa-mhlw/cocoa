@@ -297,4 +297,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="CloseContactNotificationDescription" xml:space="preserve">
     <value>Oznámenia o žiadostiach v čase úzkeho kontaktu</value>
   </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Odstrániť údaje</value>
+  </data>
 </root>

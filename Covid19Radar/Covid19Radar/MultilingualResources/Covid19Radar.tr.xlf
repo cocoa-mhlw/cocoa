@@ -369,6 +369,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Yakın temas sırasında uygulama bildirimleri</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Verileri sil</target>
+        </trans-unit>
       </group>
     </body>
   </file>

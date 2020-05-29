@@ -372,6 +372,10 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Application notifications at the time of close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pemberitahuan aplikasi pada saat kontak dekat</target>
         </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Hapus data</target>
+        </trans-unit>
       </group>
     </body>
   </file>
