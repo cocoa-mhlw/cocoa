@@ -294,4 +294,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Sulje yhteystietoilmoitus</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Hakemusilmoitukset läheisen yhteydenpidon yhteydessä</value>
+  </data>
 </root>

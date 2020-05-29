@@ -294,4 +294,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Melding van contactpersonen sluiten</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Toepassingsmeldingen op het moment van nauw contact</value>
+  </data>
 </root>

@@ -366,6 +366,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kapcsolattartó bezárása értesítés</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alkalmazásértesítések a szoros kapcsolatfelvétel időpontjában</target>
+        </trans-unit>
       </group>
     </body>
   </file>

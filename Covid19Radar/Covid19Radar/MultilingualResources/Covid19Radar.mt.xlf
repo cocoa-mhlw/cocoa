@@ -368,6 +368,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Notifika ta ' kuntatt mill-qrib</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Notifiki ta ' applikazzjoni fil-ħin ta ' kuntatt mill-qrib</target>
+        </trans-unit>
       </group>
     </body>
   </file>

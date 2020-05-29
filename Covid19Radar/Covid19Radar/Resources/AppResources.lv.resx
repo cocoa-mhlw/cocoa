@@ -294,4 +294,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Aizvērt kontaktpersonu paziņojumu</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Pieteikumu paziņojumi ciešas saziņas laikā</value>
+  </data>
 </root>

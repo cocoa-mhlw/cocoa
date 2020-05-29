@@ -294,4 +294,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Uždaryti kontaktų pranešimą</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Pranešimai apie taikomąją programą glaudaus kontakto metu</value>
+  </data>
 </root>

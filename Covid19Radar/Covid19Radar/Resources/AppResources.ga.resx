@@ -294,4 +294,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Dún An Fógra Teagmhála</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Fógraí iarratais tráth dlúththeagmhála</value>
+  </data>
 </root>

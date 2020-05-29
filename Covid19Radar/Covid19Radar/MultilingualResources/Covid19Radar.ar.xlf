@@ -367,6 +367,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">إغلاق إعلام جهة الاتصال</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">إشعارات التطبيق في وقت الاتصال الوثيق</target>
+        </trans-unit>
       </group>
     </body>
   </file>

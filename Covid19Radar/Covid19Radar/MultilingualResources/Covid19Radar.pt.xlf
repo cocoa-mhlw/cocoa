@@ -368,6 +368,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Notificação de contato de perto</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Notificações de aplicativos no momento do contato próximo</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -368,6 +368,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Varsel om lukk kontakt</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Søknadsvarsler på tidspunktet for nær kontakt</target>
+        </trans-unit>
       </group>
     </body>
   </file>

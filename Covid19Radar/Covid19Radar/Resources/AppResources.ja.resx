@@ -294,4 +294,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>濃厚接触の通知</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>濃厚接触時のアプリ通知</value>
+  </data>
 </root>

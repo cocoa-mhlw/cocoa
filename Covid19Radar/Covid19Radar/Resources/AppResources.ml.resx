@@ -294,4 +294,7 @@
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>സമ്പർക്ക അറിയിപ്പ് അടയ്ക്കുക</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>അടുത്ത സമ്പർക്ക സമയത്തെ അപേക്ഷാ അറിയിപ്പുകൾ</value>
+  </data>
 </root>

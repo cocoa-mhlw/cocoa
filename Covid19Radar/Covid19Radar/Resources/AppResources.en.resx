@@ -294,4 +294,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Close Contact Notification</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Application notifications at the time of close contact</value>
+  </data>
 </root>

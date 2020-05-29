@@ -294,4 +294,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="CloseContactNotificationText" xml:space="preserve">
     <value>Sluit Kontakkennisgewing</value>
   </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Aansoek kennisgewings ten tyde van die noue kontak</value>
+  </data>
 </root>

@@ -368,6 +368,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Close Contact Notification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Funga taarifa ya mwasiliani</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Taarifa za maombi wakati wa kuwasiliana karibu</target>
+        </trans-unit>
       </group>
     </body>
   </file>
