@@ -291,4 +291,7 @@
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Αποστολή και παραλαβή</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Ειδοποίηση κλεισίματος επαφής</value>
+  </data>
 </root>

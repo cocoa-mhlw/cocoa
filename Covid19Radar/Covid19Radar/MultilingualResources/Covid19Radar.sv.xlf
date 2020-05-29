@@ -369,6 +369,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Skicka och ta emot</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stäng kontaktmeddelande</target>
+        </trans-unit>
       </group>
     </body>
   </file>

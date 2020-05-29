@@ -291,4 +291,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Senda og taka við</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Tilkynning um lokun tengiliðar</value>
+  </data>
 </root>

@@ -291,4 +291,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Anfon a derbyn</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Hysbysiad cyswllt agos</value>
+  </data>
 </root>

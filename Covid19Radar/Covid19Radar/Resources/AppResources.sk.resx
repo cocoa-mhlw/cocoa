@@ -291,4 +291,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Odosielanie a prijímanie</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Zavrieť upozornenie kontaktu</value>
+  </data>
 </root>

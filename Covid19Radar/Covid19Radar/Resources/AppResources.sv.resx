@@ -291,4 +291,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Skicka och ta emot</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Stäng kontaktmeddelande</value>
+  </data>
 </root>

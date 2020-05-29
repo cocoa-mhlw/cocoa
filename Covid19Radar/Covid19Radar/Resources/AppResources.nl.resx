@@ -291,4 +291,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Verzenden en ontvangen</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Melding van contactpersonen sluiten</value>
+  </data>
 </root>

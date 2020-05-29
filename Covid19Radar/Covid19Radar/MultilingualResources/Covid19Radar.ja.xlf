@@ -362,6 +362,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Send and receive</source>
           <target state="translated">発信と受信をする</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="translated">濃厚接触の通知</target>
+        </trans-unit>
       </group>
     </body>
   </file>

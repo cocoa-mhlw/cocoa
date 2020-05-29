@@ -364,6 +364,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Verzenden en ontvangen</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Melding van contactpersonen sluiten</target>
+        </trans-unit>
       </group>
     </body>
   </file>

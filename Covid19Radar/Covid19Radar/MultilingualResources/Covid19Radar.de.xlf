@@ -364,6 +364,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Senden und empfangen</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schließen der Kontaktbenachrichtigung</target>
+        </trans-unit>
       </group>
     </body>
   </file>

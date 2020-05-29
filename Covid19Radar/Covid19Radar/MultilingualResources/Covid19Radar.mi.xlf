@@ -364,6 +364,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>Send and receive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tuku me te whiwhi</target>
         </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Katia te Whakamōhiotanga Hoapā</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -291,4 +291,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>அனுப்பு மற்றும் பெறு</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>தொடர்பு அறிவிப்பை மூடு</value>
+  </data>
 </root>

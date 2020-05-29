@@ -396,4 +396,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
     <value>Send and receive</value>
   </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Close Contact Notification</value>
+  </data>
 </root>
