@@ -352,6 +352,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Verze</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Číslo verze této aplikace</target>
+        </trans-unit>
       </group>
     </body>
   </file>

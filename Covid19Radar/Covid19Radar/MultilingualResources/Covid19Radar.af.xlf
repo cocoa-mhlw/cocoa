@@ -351,6 +351,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Weergawe</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Weergawe nommer van hierdie aansoek</target>
+        </trans-unit>
       </group>
     </body>
   </file>

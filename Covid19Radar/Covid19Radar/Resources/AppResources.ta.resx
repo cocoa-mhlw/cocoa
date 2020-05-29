@@ -282,4 +282,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="VersionText" xml:space="preserve">
     <value>பதிப்பு</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>இந்த பயன்பாட்டின் பதிப்பு எண்</value>
+  </data>
 </root>

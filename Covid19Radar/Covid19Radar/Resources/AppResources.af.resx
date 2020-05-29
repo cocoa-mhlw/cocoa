@@ -282,4 +282,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Weergawe</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Weergawe nommer van hierdie aansoek</value>
+  </data>
 </root>

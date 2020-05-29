@@ -282,4 +282,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Verze</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Číslo verze této aplikace</value>
+  </data>
 </root>

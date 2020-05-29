@@ -352,6 +352,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Toleo</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Namba ya toleo ya programu hii</target>
+        </trans-unit>
       </group>
     </body>
   </file>

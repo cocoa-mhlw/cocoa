@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>संस्करण</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>इस आवेदन का संस्करण संख्या</value>
+  </data>
 </root>

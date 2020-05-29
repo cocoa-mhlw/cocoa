@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>সংস্করণ</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>এই অ্যাপ্লিকেশনের সংস্করণ সংখ্যা</value>
+  </data>
 </root>

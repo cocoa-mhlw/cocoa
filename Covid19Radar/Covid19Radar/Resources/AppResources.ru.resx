@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>Версия</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Номер версии этого приложения</value>
+  </data>
 </root>

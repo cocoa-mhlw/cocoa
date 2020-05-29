@@ -282,4 +282,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="VersionText" xml:space="preserve">
     <value>versioon</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Selle rakenduse versiooninumber</value>
+  </data>
 </root>

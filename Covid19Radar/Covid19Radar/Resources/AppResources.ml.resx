@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>പതിപ്പ്</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>ഈ പ്രയോഗത്തിന്റെ പതിപ്പ് സംഖ്യ</value>
+  </data>
 </root>

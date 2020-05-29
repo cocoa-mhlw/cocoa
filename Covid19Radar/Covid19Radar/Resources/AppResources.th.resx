@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>เวอร์ชัน</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>หมายเลขรุ่นของโปรแกรมประยุกต์นี้</value>
+  </data>
 </root>

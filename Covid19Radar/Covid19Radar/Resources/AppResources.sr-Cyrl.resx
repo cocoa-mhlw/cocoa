@@ -282,4 +282,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>Верзија</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Број верзије ове апликације</value>
+  </data>
 </root>

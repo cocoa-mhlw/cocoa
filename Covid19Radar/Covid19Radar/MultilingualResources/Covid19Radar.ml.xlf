@@ -352,6 +352,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">പതിപ്പ്</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ഈ പ്രയോഗത്തിന്റെ പതിപ്പ് സംഖ്യ</target>
+        </trans-unit>
       </group>
     </body>
   </file>

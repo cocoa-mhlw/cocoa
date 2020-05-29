@@ -281,4 +281,7 @@
   <data name="VersionText" xml:space="preserve">
     <value>الإصدار</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>رقم الإصدار من هذا التطبيق</value>
+  </data>
 </root>

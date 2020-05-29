@@ -282,4 +282,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="VersionText" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>このアプリのバージョン番号</value>
+  </data>
 </root>

@@ -282,4 +282,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Putanga</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Tau putanga o tēnei taupānga</value>
+  </data>
 </root>

@@ -282,4 +282,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="VersionText" xml:space="preserve">
     <value>Phiên bản</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Số phiên bản của ứng dụng này</value>
+  </data>
 </root>

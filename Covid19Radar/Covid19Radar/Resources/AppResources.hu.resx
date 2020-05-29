@@ -282,4 +282,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="VersionText" xml:space="preserve">
     <value>Verzió</value>
   </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Az alkalmazás verziószáma</value>
+  </data>
 </root>

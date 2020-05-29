@@ -352,6 +352,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">버전</target>
         </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">이 응용 프로그램의 버전 번호</target>
+        </trans-unit>
       </group>
     </body>
   </file>
