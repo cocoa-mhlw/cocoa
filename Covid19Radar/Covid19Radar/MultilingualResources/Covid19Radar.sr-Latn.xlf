@@ -356,6 +356,10 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Broj verzije ove aplikacije</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bežična komunikacija sa kratkim opsegom</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -285,4 +285,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Namba ya toleo ya programu hii</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Mawasiliano ya Wireless ya masafa mafupi</value>
+  </data>
 </root>

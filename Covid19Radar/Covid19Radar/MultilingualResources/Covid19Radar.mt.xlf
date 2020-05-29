@@ -356,6 +356,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Numru tal-ver żjoni ta ' din l-applikazzjoni</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Komunikazzjoni mingħajr fili fuq medda qasira</target>
+        </trans-unit>
       </group>
     </body>
   </file>

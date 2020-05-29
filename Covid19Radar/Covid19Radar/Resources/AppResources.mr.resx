@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>या अनुप्रयोगाची आवृत्ती संख्या</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>अल्प पल्ल्याचे वायरलेस संवाद</value>
+  </data>
 </root>

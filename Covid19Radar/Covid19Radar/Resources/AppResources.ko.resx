@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>이 응용 프로그램의 버전 번호</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>단거리 무선 통신</value>
+  </data>
 </root>

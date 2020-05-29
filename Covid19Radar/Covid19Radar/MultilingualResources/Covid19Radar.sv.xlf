@@ -361,6 +361,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Version number of this application</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Versionsnummer för det här programmet</target>
         </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trådlös kommunikation på kort räckvidd</target>
+        </trans-unit>
       </group>
     </body>
   </file>

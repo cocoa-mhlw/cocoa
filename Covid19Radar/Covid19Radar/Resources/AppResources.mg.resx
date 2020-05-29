@@ -285,4 +285,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Famoahana ny laharan' ity fampiharana ity</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Fifandraisana wireless</value>
+  </data>
 </root>

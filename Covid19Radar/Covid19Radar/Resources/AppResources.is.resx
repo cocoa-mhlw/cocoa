@@ -285,4 +285,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Útgáfunúmer þessa forrits</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Stutt-svið þráðlaus samskipti</value>
+  </data>
 </root>

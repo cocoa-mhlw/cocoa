@@ -285,4 +285,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Versionsnummer dieser Anwendung</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Drahtlose Kurzstreckenkommunikation</value>
+  </data>
 </root>

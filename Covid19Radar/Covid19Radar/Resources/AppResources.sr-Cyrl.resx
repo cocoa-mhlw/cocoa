@@ -285,4 +285,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>Број верзије ове апликације</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Бежична комуникација са кратким опсегом</value>
+  </data>
 </root>

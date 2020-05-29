@@ -284,4 +284,7 @@
   <data name="VersionDescription" xml:space="preserve">
     <value>رقم الإصدار من هذا التطبيق</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>اتصالات لاسلكية قصيرة المدى</value>
+  </data>
 </root>

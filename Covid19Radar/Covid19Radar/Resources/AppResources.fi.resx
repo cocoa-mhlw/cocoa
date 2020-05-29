@@ -285,4 +285,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Tämän sovelluksen versionumero</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Lyhyen kantaman langaton tiedonsiirto</value>
+  </data>
 </root>

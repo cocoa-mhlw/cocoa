@@ -285,4 +285,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="VersionDescription" xml:space="preserve">
     <value>Rhif fersiwn y rhaglen hon</value>
   </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Cyfathrebu di-wifr amrediad byr</value>
+  </data>
 </root>
