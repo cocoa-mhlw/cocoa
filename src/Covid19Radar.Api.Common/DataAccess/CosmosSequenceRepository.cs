@@ -25,23 +25,20 @@ namespace Covid19Radar.Api.DataAccess
         {
             _logger.LogInformation($"start {nameof(GetNextAsync)}");
             var pk = new PartitionKey(key);
-            using (var l = new KeyLock(key))
+            dynamic[] spParams = { key, startNo };
+            for (var i = 0; i < 100; i++)
             {
-                dynamic[] spParams = { key, startNo };
-                for (var i = 0; i < 100; i++)
+                try
                 {
-                    try
-                    {
-                        var r = await _db.Sequence.Scripts.ExecuteStoredProcedureAsync<SequenceModel>("spIncrement", pk, spParams);
-                        _logger.LogInformation($"spIncrement RequestCharge:{r.RequestCharge}");
-                        return r.Resource.value;
-                    }
-                    catch (CosmosException ex)
-                    {
-                        _logger.LogInformation(ex, $"GetNextAsync Retry {i}");
-                        await Task.Delay(200);
-                        continue;
-                    }
+                    var r = await _db.Sequence.Scripts.ExecuteStoredProcedureAsync<SequenceModel>("spIncrement", pk, spParams);
+                    _logger.LogInformation($"spIncrement RequestCharge:{r.RequestCharge}");
+                    return r.Resource.value;
+                }
+                catch (CosmosException ex)
+                {
+                    _logger.LogInformation(ex, $"GetNextAsync Retry {i} RequestCharge:{ex.RequestCharge}");
+                    await Task.Delay(200);
+                    continue;
                 }
             }
             _logger.LogWarning("GetNextAsync is over retry count.");
