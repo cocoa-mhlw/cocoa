@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>所有設置和數據都已刪除。請重新啟動應用程式。</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>版本</value>
+  </data>
 </root>

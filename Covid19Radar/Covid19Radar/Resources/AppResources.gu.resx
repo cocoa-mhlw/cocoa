@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>બધા સુયોજનો અને માહિતી કાઢી નાખવામાં આવી છે. મહેરબાની કરીને કાર્યક્રમ ફરી શરૂ કરો.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>સંસ્કરણ</value>
+  </data>
 </root>

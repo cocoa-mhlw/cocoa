@@ -347,6 +347,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle instellings en data is geskrap. Herlaai asseblief die toepassing.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Weergawe</target>
+        </trans-unit>
       </group>
     </body>
   </file>

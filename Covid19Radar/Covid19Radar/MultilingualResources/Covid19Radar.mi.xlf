@@ -348,6 +348,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kua mukua ngā tautuhinga me te raraunga katoa. Tīmata anō koa i te taupānga.</target>
         </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Putanga</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>تمام سیٹنگیں اور کوائف حذف کر دیے گئے ہیں ۔ اپیلی کیشن پھر شروع کریں ۔</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>ورژن</value>
+  </data>
 </root>

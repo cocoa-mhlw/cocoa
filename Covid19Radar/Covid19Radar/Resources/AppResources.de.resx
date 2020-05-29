@@ -279,4 +279,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Alle Einstellungen und Daten wurden gelöscht. Starten Sie die Anwendung neu.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Info</value>
+  </data>
 </root>

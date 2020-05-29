@@ -279,4 +279,7 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>כל ההגדרות והנתונים נמחקו. נא הפעל מחדש את היישום.</value>
   </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>גירסה</value>
+  </data>
 </root>
