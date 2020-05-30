@@ -23,7 +23,7 @@
     <value>Điều khoản Dịch vụ</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Không cần phải nhập thông tin cá nhân. Chúng tôi sử dụng một ID duy nhất, được tạo ra cho bạn khi cài đặt ứng dụng.</value>
     <comment>How it works page step 1 description</comment>
   </data>

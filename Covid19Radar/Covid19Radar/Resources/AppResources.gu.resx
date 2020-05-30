@@ -23,7 +23,7 @@
     <value>સેવાની શરતો</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>અંગત માહિતી ને ઇનપુટ કરવાની જરૂર નથી. અમે યુનિક આઈડીનો ઉપયોગ કરી રહ્યા છીએ, જે એપ્લિકેશન ઇન્સ્ટોલ કરતી વખતે તમને ફાળવવામાં આવેલ છે.</value>
     <comment>How it works page step 1 description</comment>
   </data>

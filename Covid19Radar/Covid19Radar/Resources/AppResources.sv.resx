@@ -23,7 +23,7 @@
     <value>Användningsvillkor</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Du behöver inte ange personlig information. Vi använder ett unikt ID som tilldelas dig när du installerar app'en.</value>
     <comment>How it works page step 1 description</comment>
   </data>

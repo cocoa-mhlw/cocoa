@@ -23,7 +23,7 @@
     <value>सेवा अटी</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>वैयक्तिक माहिती इनपुट करण्याची गरज नाही. अॅप इन्स्टॉल करताना आम्ही युनिक आयडी वापरत आहोत.</value>
     <comment>How it works page step 1 description</comment>
   </data>

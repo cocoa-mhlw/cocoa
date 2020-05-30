@@ -23,7 +23,7 @@
     <value>Όροι παροχής υπηρεσιών</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Δεν χρειάζεται να προσθέσετε προσωπικές πληροφορίες. Χρησιμοποιούμε μοναδικό αναγνωριστικό, το οποίο σας έχει εκχωρηθεί κατά την εγκατάσταση μιας εφαρμογής.</value>
     <comment>How it works page step 1 description</comment>
   </data>

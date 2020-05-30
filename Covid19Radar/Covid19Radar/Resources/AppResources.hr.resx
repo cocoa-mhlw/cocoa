@@ -23,7 +23,7 @@
     <value>Uvjeti pružanja usluge</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nema potrebe za unososobnih podataka. Koristimo jedinstveni ID, koji vam je dodijeljen prilikom instalacije aplikacije.</value>
     <comment>How it works page step 1 description</comment>
   </data>

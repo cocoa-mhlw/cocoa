@@ -23,7 +23,7 @@
     <value>ಸೇವಾ ನಿಯಮಗಳು</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಇನ್ ಪುಟ್ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲ. ಆ್ಯಪ್ ಇನ್ ಸ್ಟಾಲ್ ಮಾಡುವಾಗ ನಿಮಗೆ ವಿತರಿಸುವ, ವಿಶಿಷ್ಟವಾದ ಐಡಿ ಬಳಸುತ್ತಿದ್ದೇವೆ.</value>
     <comment>How it works page step 1 description</comment>
   </data>

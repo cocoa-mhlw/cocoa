@@ -20,7 +20,7 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">સેવાની શરતો</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">અંગત માહિતી ને ઇનપુટ કરવાની જરૂર નથી. અમે યુનિક આઈડીનો ઉપયોગ કરી રહ્યા છીએ, જે એપ્લિકેશન ઇન્સ્ટોલ કરતી વખતે તમને ફાળવવામાં આવેલ છે.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>

@@ -23,7 +23,7 @@
     <value>Pogoji storitve</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Ni potrebe za vnos osebnih podatkov. Uporabljamo Enolični ID, dodeljen vam pri nameščanju aplikacije.</value>
     <comment>How it works page step 1 description</comment>
   </data>

@@ -23,7 +23,7 @@
     <value>服务条款</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>您无需输入个人信息。在安装应用时，我们将会为您分配唯一ID.</value>
     <comment>How it works page step 1 description</comment>
   </data>

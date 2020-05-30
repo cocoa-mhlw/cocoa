@@ -252,9 +252,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   No need to input personal information. We are using unique ID, allocated to you when installing an app. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DescriptionPageTextStep1Description {
+        internal static string DescriptionPageTextStep1Description1 {
             get {
-                return ResourceManager.GetString("DescriptionPageTextStep1Description", resourceCulture);
+                return ResourceManager.GetString("DescriptionPageTextStep1Description1", resourceCulture);
             }
         }
         

@@ -20,7 +20,7 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">תנאי השירות של Power BI</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">אין צורך להזין מידע אישי. אנו משתמשים במזהה ייחודי, המוקצה לך בעת התקנת יישום.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>

@@ -20,7 +20,7 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">شرایط خدمات</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">بدون نیاز به ورودی اطلاعات شخصی. ما از شناسه منحصربه فرد استفاده می کنیم که هنگام نصب یک برنامه به شما اختصاص داده شده است.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
