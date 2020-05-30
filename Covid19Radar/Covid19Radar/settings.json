@@ -3,5 +3,5 @@
   "blobStorageUrlBase": "https://exposurenotifications.blob.core.windows.net/",
   "supportedRegions": "440;441",
   "blobStorageContainerNamePrefix": "region-",
-  "androidSafetyNetApiKey": "ANDROID-API-KEY"
+  "androidSafetyNetApiKey": "AIzaSyBEJ6CxooG3ZYtYtqW_6gAswRZr0GKbuJw"
 }
