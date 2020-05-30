@@ -287,4 +287,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>تمام کوائف حذف کریں</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ناجائز تشخیص شناخت</value>
+  </data>
 </root>

@@ -287,4 +287,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Eliminare tutti i dati</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID diagnosi non valido</value>
+  </data>
 </root>

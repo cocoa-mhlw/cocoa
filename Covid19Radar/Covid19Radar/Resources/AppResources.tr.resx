@@ -286,4 +286,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Tüm verileri silme</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Geçersiz Tanı Kimliği</value>
+  </data>
 </root>

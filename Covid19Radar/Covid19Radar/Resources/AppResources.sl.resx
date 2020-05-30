@@ -287,4 +287,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Brisanje vseh podatkov</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Neveljaven ID za diagnostiko</value>
+  </data>
 </root>

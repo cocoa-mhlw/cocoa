@@ -287,4 +287,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Mukua ngā raraunga katoa</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID Tataritanga muhu</value>
+  </data>
 </root>

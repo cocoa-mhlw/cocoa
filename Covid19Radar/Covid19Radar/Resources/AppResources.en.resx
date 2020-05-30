@@ -287,4 +287,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Delete all data</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Invalid Diagnosis ID</value>
+  </data>
 </root>

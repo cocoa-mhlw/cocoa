@@ -476,6 +476,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Invalid Diagnosis ID に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDialogInvalidDiagnosisIDTitle {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDialogInvalidDiagnosisIDTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Diagnosis Submitted に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDialogSubmittedText {
