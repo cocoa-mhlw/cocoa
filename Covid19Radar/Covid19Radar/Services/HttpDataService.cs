@@ -54,6 +54,7 @@ namespace Covid19Radar.Services
                     userData.Secret = registerResult.Secret;
                     userData.UserUuid = registerResult.UserUuid;
                     userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
+                    userData.IsOptined = true;
                     Application.Current.Properties["Secret"] = registerResult.Secret;
                     await Application.Current.SavePropertiesAsync();
                     SetSecret();
@@ -65,28 +66,17 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        // POST /diagnosis - upload self diagnosys file
-        public async Task<UserDataModel> PostSelfExposureKeysAsync(SelfDiagnosisSubmission  request)
+        // Put /diagnosis - upload self diagnosys file
+        public async Task PutSelfExposureKeysAsync(SelfDiagnosisSubmission request)
         {
-            try
+            System.Console.WriteLine(Utils.SerializeToJson(request));
+            var url = $"{AppConstants.ApiBaseUrl.TrimEnd('/')}/diagnosis";
+            var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
+            var result = await Put(url, content);
+            if (result != null)
             {
-                var url = $"{AppConstants.ApiBaseUrl.TrimEnd('/')}/diagnosis";
-                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
-                var result = await Post(url, content);
-
-                // TODO Status Check response code check
-                if (result == null)
-                {
-                    // TODO Implement if return result model
-                    throw new NotImplementedException();
-                    // return Utils.DeserializeFromJson<UserDataModel>(result);
-                }
-                return null;
+                System.Console.WriteLine(Utils.SerializeToJson(result));
             }
-            catch (HttpRequestException) { }
-
-            return null;
-
         }
 
         // GET /api/User/{userUuid} - check user status and user exists
@@ -115,7 +105,7 @@ namespace Covid19Radar.Services
         // GET /api/notification/pull/{lastClientUpdateTime:datetime} - pull Notifications 
         public async Task<NotificationPullResult> GetNotificationPullAsync(UserDataModel user)
         {
-            string url = AppConstants.ApiBaseUrl 
+            string url = AppConstants.ApiBaseUrl
                 + $"/notification/pull/{user.LastNotificationTime.ToString("yyyy-MM-ddTHH:mm:ss")}";
             var result = await Get(url);
             if (result != null)
@@ -184,6 +174,10 @@ namespace Covid19Radar.Services
             var result = await httpClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return await result.Content.ReadAsStringAsync();
+            }
+            else if (result.StatusCode == System.Net.HttpStatusCode.BadRequest)
             {
                 return await result.Content.ReadAsStringAsync();
             }

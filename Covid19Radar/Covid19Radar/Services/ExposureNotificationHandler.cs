@@ -96,7 +96,7 @@ namespace Covid19Radar.Services
 				foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
 				{
 					// Find next directory to start checking
-					var dirNumber = LocalStateManager.Instance.ServerBatchNumbers[serverRegion] + 1;
+					var dirNumber = userData.ServerBatchNumbers[serverRegion] + 1;
 
 					// For all the directories
 					while (true)
@@ -193,49 +193,48 @@ namespace Covid19Radar.Services
 		{
 			var pendingDiagnosis = userData.PendingDiagnosis;
 
-			if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
+			if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid)) { 
 				throw new InvalidOperationException();
+			}
 
-			var selfDiag = await CreateSubmissionAsync();
-			await httpDataService.PostSelfExposureKeysAsync(selfDiag);
+			var selfDiag = await CreateSubmissionAsync(temporaryExposureKeys, pendingDiagnosis);
+			await httpDataService.PutSelfExposureKeysAsync(selfDiag);
 			// Update pending status
 			pendingDiagnosis.Shared = true;
 			await userDataService.SetAsync(userData);
-
-			// Closure
-			async Task<SelfDiagnosisSubmission> CreateSubmissionAsync()
-			{
-				// Create the network keys
-				var keys = temporaryExposureKeys.Select(k => new ExposureKey
-				{
-					KeyData = Convert.ToBase64String(k.Key),
-					RollingStart = (long)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
-					RollingDuration = (int)(k.RollingDuration.TotalMinutes / 10),
-					TransmissionRisk = (int)k.TransmissionRiskLevel
-				});
-
-				// Create the submission
-				var submission = new SelfDiagnosisSubmission(true)
-				{
-					SubmissionNumber = userData.PendingDiagnosis.DiagnosisUid,
-					AppPackageName = AppInfo.PackageName,
-					UserUuid = userData.UserUuid,
-					DeviceVerificationPayload = null,
-					Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
-					Regions = AppSettings.Instance.SupportedRegions,
-					Keys = keys.ToArray(),
-					VerificationPayload = pendingDiagnosis.DiagnosisUid,
-				};
-
-				// See if we can add the device verification
-				if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
-					submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
-
-				return submission;
-
-			}
 		}
 
 
+		private async Task<SelfDiagnosisSubmission> CreateSubmissionAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys, PositiveDiagnosisState pendingDiagnosis)
+		{
+			// Create the network keys
+			var keys = temporaryExposureKeys.Select(k => new ExposureKey
+			{
+				KeyData = Convert.ToBase64String(k.Key),
+				RollingStart = (long)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
+				RollingDuration = (int)(k.RollingDuration.TotalMinutes / 10),
+				TransmissionRisk = (int)k.TransmissionRiskLevel
+			});
+
+			// Create the submission
+			var submission = new SelfDiagnosisSubmission(true)
+			{
+				SubmissionNumber = userData.PendingDiagnosis.DiagnosisUid,
+				AppPackageName = AppInfo.PackageName,
+				UserUuid = userData.UserUuid,
+				DeviceVerificationPayload = null,
+				Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
+				Regions = AppSettings.Instance.SupportedRegions,
+				Keys = keys.ToArray(),
+				VerificationPayload = pendingDiagnosis.DiagnosisUid,
+			};
+
+			// See if we can add the device verification
+			if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier) { 
+				submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
+			}
+			return submission;
+
+		}
 	}
 }
