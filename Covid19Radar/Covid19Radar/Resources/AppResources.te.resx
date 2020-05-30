@@ -23,7 +23,7 @@
     <value>సేవా నిబంధనలు</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>వ్యక్తిగత సమాచారాన్ని ఇన్ పుట్ చేయాల్సిన అవసరం లేదు. యాప్ ఇన్ స్టాల్ చేసేటప్పుడు మీకు కేటాయించబడ్డ ప్రత్యేక ID ని మేం ఉపయోగిస్తున్నాం.</value>
     <comment>How it works page step 1 description</comment>
   </data>

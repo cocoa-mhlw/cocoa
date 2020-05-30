@@ -23,7 +23,7 @@
     <value>Condizioni per l'utilizzo del servizio</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Non c'è bisogno di inserire informazioni personali. Stiamo utilizzando un ID univoco, che ti è stato assegnato durante l'installazione dell'app.</value>
     <comment>How it works page step 1 description</comment>
   </data>

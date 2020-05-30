@@ -23,7 +23,7 @@
     <value>Telerau Gwasanaeth</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Dim angen mewnbynnu gwybodaeth bersonol. Rydym yn defnyddio ID unigryw, a ddyrannwyd i chi wrth osod ap.</value>
     <comment>How it works page step 1 description</comment>
   </data>

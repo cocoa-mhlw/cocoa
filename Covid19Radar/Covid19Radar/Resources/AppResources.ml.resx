@@ -23,7 +23,7 @@
     <value>സേവന നിബന്ധനകൾ</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>വ്യക്തിഗത വിവരങ്ങൾ ഇൻപുട്ട് ചെയ്യേണ്ട ആവശ്യമില്ല. ഒരു ആപ്ലിക്കേഷൻ ഇൻസ്റ്റാൾ ചെയ്യുമ്പോൾ നിങ്ങളെ നിയോഗിച്ചുകൊണ്ടുള്ള യുണീക്ക് ഐഡി ഞങ്ങൾ ഉപയോഗിക്കുന്നുണ്ട്.</value>
     <comment>How it works page step 1 description</comment>
   </data>

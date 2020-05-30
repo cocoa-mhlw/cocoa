@@ -23,7 +23,7 @@
     <value>Diensbepalings</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Geen behoefte om persoonlike inligting in te voer nie. Ons gebruik unieke ID wat aan jou toegeken is wanneer jy 'n program installeer.</value>
     <comment>How it works page step 1 description</comment>
   </data>

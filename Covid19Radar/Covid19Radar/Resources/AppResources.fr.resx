@@ -23,7 +23,7 @@
     <value>Conditions d'utilisation</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Inutile de saisir des renseignements personnels. Nous utilisons un Identifiant unique qui vous est attribué lors de l’installation d’une application.</value>
     <comment>How it works page step 1 description</comment>
   </data>
