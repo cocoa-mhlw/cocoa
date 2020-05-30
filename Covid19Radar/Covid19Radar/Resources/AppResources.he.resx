@@ -23,9 +23,9 @@
     <value>תנאי השירות של Power BI</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>אין צורך להזין מידע אישי. אנו משתמשים במזהה ייחודי, המוקצה לך בעת התקנת יישום.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>איש קשר עם משתמש יישום אחר במשך יותר מ-30 דקות בסך הכל, ברדיוס הקרוב יותר מ-2 מ' נרשם כ"איש קשר סגור".</value>
@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>הודעות חשיפה לא זמינות</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>הגשת אבחון...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>מחק את כל הנתונים</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>מזהה אבחון לא חוקי</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>נא ספק מזהה אבחון חוקי</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>תאריך בדיקה לא חוקי</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>נא ספק תאריך בדיקה חוקי</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>חזור להרשמה</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>הרשמה חיובית</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>האם ברצונך להירשם באופן חיובי מאוחר יותר?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>בעת הפעלת היישום, הוא יפיק ויאחסן מזהה אנונימי בכל טלפון חכם. יישום זה אינו רוכש כל מידע הקשור לפרטיות כגון מספר טלפון ומידע מיקום.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
