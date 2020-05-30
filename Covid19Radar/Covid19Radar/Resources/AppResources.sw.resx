@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Hakuna haja ya kuingiza maelezo ya kibinafsi. Tunatumia ID ya kipekee, zilizotengwa kwako wakati wa kufunga programu.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Kuwasiliana na mtumiaji mwingine wa programu kwa muda mrefu zaidi ya 30 min kwa jumla, ndani ya eneo karibu zaidi ya 2m kwa wastani ni kumbukumbu kama "Funga mawasiliano".</value>
@@ -307,5 +307,9 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ungependa kujisajili vizuri baadaye?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Wakati unapoendesha programu, itazalisha na kuhifadhi ID isiyojulikana kwenye kila smartphone. Programu tumizi hii haina kupata maelezo yoyote yanayohusiana na faragha kama vile namba ya simu na taarifa ya eneo.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

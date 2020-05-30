@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nav nepieciešams ievadīt personisku informāciju. Mēs izmantojam unikālo ID, kas jums tiek piešķirts, instalējot lietotni.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Kontaktu ar citu lietotnes lietotāju ilgāk nekā 30 minūtes kopā rādiusu, kas ir tuvāk par 2m, reģistrē kā "ciešu kontaktu".</value>
@@ -307,5 +307,9 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vai jūs vēlētos reģistrēties pozitīvi vēlāk?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Palaižot programmu, tas radīs un uzglabā anonīmu ID katrā viedtālrunis. Šī lietojumprogramma neiegādājas informāciju, kas saistīta ar privātumu, piemēram, tālruņa numuru un atrašanās vietas informāciju.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

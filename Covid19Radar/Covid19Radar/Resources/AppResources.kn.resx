@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಇನ್ ಪುಟ್ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲ. ಆ್ಯಪ್ ಇನ್ ಸ್ಟಾಲ್ ಮಾಡುವಾಗ ನಿಮಗೆ ವಿತರಿಸುವ, ವಿಶಿಷ್ಟವಾದ ಐಡಿ ಬಳಸುತ್ತಿದ್ದೇವೆ.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>ಒಟ್ಟಾರೆ, ಸರಾಸರಿ 2ಮೀ ಗಿಂತ ಹತ್ತಿರದ ತ್ರಿಜ್ಯದೊಳಗೆ, ಒಟ್ಟು 30 min ಹೆಚ್ಚು ಕಾಲ ಮತ್ತೊಂದು ಆಪ್ ಬಳಕೆದಾರನೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು "ನಿಕಟ ಸಂಪರ್ಕ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ.</value>
@@ -307,5 +307,9 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>ನೀವು ಮುಂದೆ ಸಕಾರಾತ್ಮಕವಾಗಿ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಲು ಇಷ್ಟಪಡುತ್ತೀರಾ?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ನೀವು ಓಡಿಸಿದಾಗ ಅದು ಪ್ರತಿ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ನಲ್ಲಿ ಅನಾಮಿಕ ಐಡಿಯನ್ನು ಉತ್ಪಾದಿಸಿ ಸ್ಟೋರ್ ಮಾಡುತ್ತದೆ. ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಮತ್ತು ಸ್ಥಳದ ಮಾಹಿತಿಯನ್ನಷ್ಟೇ ಗೌಪ್ಯತೆಗೆ ಸಂಬಂಧಿಸಿದ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ಈ ಅಪ್ಲಿಕೇಶನ್ ಪಡೆದುಕೊಳ್ಳುವುದಿಲ್ಲ.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

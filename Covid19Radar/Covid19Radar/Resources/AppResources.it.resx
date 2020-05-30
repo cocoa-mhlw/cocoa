@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Non c'è bisogno di inserire informazioni personali. Stiamo utilizzando un ID univoco, che ti è stato assegnato durante l'installazione dell'app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Un contatto con un altro utente dell'app per almeno 30 min in totale, entro un raggio minore di 2 m di media viene registrato come "Contatto ravvicinato".</value>
@@ -307,5 +307,9 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vuoi registrarti positivamente più tardi?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Quando si esegue l'applicazione , verrà generato e memorizzare un ID anonimo su ogni smartphone. Questa applicazione non acquisisce alcuna informazione relativa alla privacy come il numero di telefono e le informazioni sulla posizione.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Het is niet nodig om persoonlijke informatie in te voeren. We gebruiken een unieke ID, welke wordt toegekend tijdens het installeren van een app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Een contact met een andere app-gebruiker langer dan 30 minuten totaal en binnen een straal van gemiddeld 2 meter, wordt geregistreerd als "Nabij Contact".</value>
@@ -307,5 +307,9 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Wilt u zich later positief registreren?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Wanneer u de applicatie uitvoert, genereert en slaat deze een anonieme ID op elke smartphone. Deze applicatie verwerft geen informatie met betrekking tot privacy, zoals telefoonnummer en locatiegegevens.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>您无需输入个人信息。在安装应用时，我们将会为您分配唯一ID.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>在与其他本应用使用者接触超过30分钟且平均距离少于2米时，会被记录为一次“紧密接触”。</value>
@@ -307,5 +307,9 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>以后要积极注册吗？</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>当您运行该应用程序时，它将在每个智能手机上生成并存储匿名 ID。此应用程序不获取与隐私相关的任何信息，如电话号码和位置信息。</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

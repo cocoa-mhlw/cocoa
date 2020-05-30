@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>No need to input personal information. We are using unique ID, allocated to you when installing an app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</value>
@@ -307,5 +307,9 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Would you like to register positively later?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

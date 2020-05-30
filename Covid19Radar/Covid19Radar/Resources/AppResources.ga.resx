@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Ní gá faisnéis phearsanta a ionchur. Táimid ag baint úsáide as ID uathúil, leithdháilte ar tú nuair a shuiteáil app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Taifeadtar teagmháil le húsáideoir feidhmchláir eile ar feadh níos mó ná 30 nóiméad san iomlán, laistigh de gha níos gaire ná 2m ar an meán mar "Dún Teagmháil".</value>
@@ -307,5 +307,9 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ar mhaith leat clárú go dearfach níos déanaí?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Nuair a ritheann tú an t-iarratas, ginfidh sé agus stórálfaidh sé aitheantas gan ainm ar gach fón cliste. Ní fhaigheann an t-iarratas seo aon fhaisnéis a bhaineann le príobháideachas ar nós uimhir theileafóin agus faisnéis suímh.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
