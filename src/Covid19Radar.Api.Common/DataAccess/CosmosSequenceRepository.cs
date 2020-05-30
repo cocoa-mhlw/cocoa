@@ -21,40 +21,24 @@ namespace Covid19Radar.Api.DataAccess
             _logger = logger;
         }
 
-        public async Task<ulong> GetNextAsync(string key, ulong startNo)
+        public async Task<ulong> GetNextAsync(string key, ulong startNo, int increment = 1)
         {
-            _logger.LogInformation($"start {nameof(GetNextAsync)}");
+            _logger.LogInformation($"start {nameof(GetNextAsync)} {key}");
             var pk = new PartitionKey(key);
-            using (var l = new KeyLock(key))
+            dynamic[] spParams = { key, startNo, increment };
+            for (var i = 0; i < 50; i++)
             {
-
-                for (var i = 0; i < 100; i++)
+                try
                 {
-                    try
-                    {
-                        var r = await _db.Sequence.ReadItemAsync<SequenceModel>(key, pk);
-                        r.Resource.value++;
-                        var opt = new RequestOptions();
-                        opt.IfMatchEtag = r.ETag;
-                        var rReplece = await _db.Sequence.ReplaceItemAsync(r.Resource, key, pk);
-                        return r.Resource.value;
-                    }
-                    catch (CosmosException ex)
-                    {
-                        if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-                        {
-                            var resultCreate = await _db.Sequence.CreateItemAsync(new SequenceModel()
-                            {
-                                id = key,
-                                PartitionKey = key,
-                                value = startNo
-                            }, pk);
-                            return startNo;
-                        }
-                        _logger.LogInformation(ex, $"GetNextAsync Retry {i}");
-                        await Task.Delay(100);
-                        continue;
-                    }
+                    var r = await _db.Sequence.Scripts.ExecuteStoredProcedureAsync<SequenceModel>("spIncrement", pk, spParams);
+                    _logger.LogInformation($"spIncrement RequestCharge:{r.RequestCharge}");
+                    return r.Resource.value;
+                }
+                catch (CosmosException ex)
+                {
+                    _logger.LogInformation(ex, $"GetNextAsync Retry {i} RequestCharge:{ex.RequestCharge}");
+                    await Task.Delay(5);
+                    continue;
                 }
             }
             _logger.LogWarning("GetNextAsync is over retry count.");

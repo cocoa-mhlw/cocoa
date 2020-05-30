@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Li jmiss</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Termini tas-Servizz</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Ibda</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Nipproteġu l-ma ħbubin tagħna minn COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Aċċess għat-tagħmir</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Aqbel</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>PAĠNA EWLENIJA</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Lest biex tmur</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Stabbilita lesta</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Ftehim tal-li ċenzja</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>Iċċekkja l-konnessjoni tan-netwerk tiegħek.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Attiva</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Din l-App tuża n-notifika tal-espo żizzjoni/is-sinjali tal-Bluetooth biex tiddetermina jekk intix ħdejn kuntatt ieħor mal-utent tal-applikazzjoni. 
@@ -181,16 +172,16 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>L-identifikatur uniku tat-test li ġie mat-test COVID-19 tiegħek għandu jintuża biex jivverifika r-ri żultat tat-test pożittiv tiegħek.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Erġa’ pprova aktar tard.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Ma rnexxiex</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Dijanjożi ppreżentata</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Lest</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identifikatur tad-dijanjo Żi meħtieġ</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Jekk jogħġbok ixgħel in-notifiki tal-espo żizzjoni qabel ma tippreżenta dijanjożi.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Notifiki ta ' espożizzjoni diżattivati</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Issettjar</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ma jaqblux</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Ikkanċella</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Tixtieq tixgħel in-notifiki?</value>
@@ -241,11 +226,9 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Abilitanti</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Tħassir</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Jekk irċevejt dijanjożi pożittiva</value>
@@ -257,7 +240,6 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Ixxerja</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Qsim ta ' informazzjoni pożittiva u notifika anonima lil ħaddieħor</value>
@@ -265,14 +247,44 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Irrisettja</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Politika tal-Privatezza</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Stennija għar-Reġistru</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Verament tixtieq tirrisettja d-data kollha?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Ħassar id-data kollha</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>L-issettjar u d-data kollha tħassru. Irristartja l-applikazzjoni.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Verżjoni</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numru tal-ver żjoni ta ' din l-applikazzjoni</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Komunikazzjoni mingħajr fili fuq medda qasira</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Tibgħat u tirċievi</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Notifika ta ' kuntatt mill-qrib</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notifiki ta ' applikazzjoni fil-ħin ta ' kuntatt mill-qrib</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Tħassar data</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Ħassar id-data kollha</value>
   </data>
 </root>

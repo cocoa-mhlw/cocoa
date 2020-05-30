@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Susunod</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Mga Tuntunin ng Serbisyo</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Simula</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Pagprotekta sa ating mga mahal sa buhay mula sa COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Access ng aparato</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Sumasang-ayon</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>HOME</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Ikaw ay handa nang pumunta</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>I-set up ang nakumpleto</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisensiya ng kasunduan</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>Pakitingnan ang iyong koneksiyon sa network.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Paganahin</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Sa ngayon</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Ang app na ito ay gumagamit ng pagkakalantad notification/Bluetooth signal para malaman kung malapit ka sa ibang kontak na app na user. 
@@ -181,16 +172,16 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Ang natatanging pagsubok na identifier na dumating sa iyong COVID pagsubok ay dapat gamitin upang i-verify ang iyong positibong resulta ng pagsubok.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Pakisubukang muli sa ibang pagkakataon.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Nabigo</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diyagnosis isinumite</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Kumpleto</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Pagsusuri ng diyagnosis kailangan</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Mangyaring magpagana ng mga notipikasyon ng pagkakalantad bago magsumite ng pagsusuri.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hindi pinagana ang mga notipikasyon</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Mga Setting</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Hindi sumasang-ayon</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselahin</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Gusto mo bang magbukas ng mga notipikasyon?</value>
@@ -241,11 +226,9 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Nagbibigay-kakayahang</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Nagtatanggal ng</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Kung nakatanggap ka ng isang positibong pagsusuri</value>
@@ -257,7 +240,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Ibahagi</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Pagbabahagi ng positibong impormasyon at di-kilalang abiso sa iba</value>
@@ -265,14 +247,44 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>I-reset</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Patakaran ng Pagiging Pribado</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Naghihintay na magparehistro</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Gusto mo ba talagang i-reset ang lahat ng data?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>I-delete ang lahat ng data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Tinanggal na ang lahat ng setting at datos. Mangyaring muling-magsimula ng aplikasyon.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Bersyon</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numero ng bersiyon ng aplikasyong ito</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Maikling hanay ng wireless na komunikasyon</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Magpadala at tumanggap</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Isara ang abiso ng kontak</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Mga notipikasyon ng aplikasyon sa oras ng pagtatapos ng kontak</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Magtanggal ng datos</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>I-delete ang lahat ng data</value>
   </data>
 </root>

@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Επόμενο</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Όροι παροχής υπηρεσιών</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Έναρξη</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Προστατεύοντας τους αγαπημένους μας από το COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Πρόσβαση συσκευής</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Συμφωνώ</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ΑΡΧΙΚΗ</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Είσαι έτοιμος να φύγεις.</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Ρύθμιση ολοκληρώθηκε</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Άδεια Χρήσης</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>Ελέγξτε τη σύνδεση δικτύου.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ΟΚ</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Ενεργοποίηση</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Όχι τώρα</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Αυτή η εφαρμογή χρησιμοποιεί ειδοποιήσεις έκθεσης / σήματα Bluetooth για να προσδιορίσετε αν βρίσκεστε κοντά σε άλλο χρήστη της εφαρμογής εντοπισμού επαφών. 
@@ -181,16 +172,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Το μοναδικό αναγνωριστικό δοκιμής που συνοδεύει τη δοκιμή COVID-19 πρέπει να χρησιμοποιηθεί για την επαλήθευση του θετικού αποτελέσματος της δοκιμής σας.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Δοκιμάστε ξανά αργότερα.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Απέτυχε</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Διάγνωση που υποβλήθηκε</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Ολοκληρώθηκε</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Απαιτείται αναγνωριστικό διάγνωσης</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ΟΚ</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Ενεργοποιήστε τις Ειδοποιήσεις έκθεσης πριν υποβάλετε μια διάγνωση.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Ειδοποιήσεις έκθεσης απενεργοποιημένες</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ρυθμίσεις</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Δεν συμφωνώ</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Άκυρο</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Θέλετε να ενεργοποιήσετε τις ειδοποιήσεις;</value>
@@ -241,11 +226,9 @@
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Ενεργοποίηση</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Διαγραφή σε εξέλιξη</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Εάν λάβατε θετική διάγνωση</value>
@@ -257,7 +240,6 @@
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Κοινή χρήση</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Κοινή χρήση θετικών πληροφοριών και ανώνυμης ειδοποίησης σε άλλους</value>
@@ -265,14 +247,44 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Επαναφορά</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Πολιτική προστασίας προσωπικών δεδομένων</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Αναμονή για εγγραφή</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Θέλετε πραγματικά να επαναφέρετε όλα τα δεδομένα;</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Διαγραφή όλων των δεδομένων</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Όλες οι ρυθμίσεις και τα δεδομένα έχουν διαγραφεί. Επανεκκινήστε την εφαρμογή.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Έκδοση</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Αριθμός έκδοσης αυτής της εφαρμογής</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Ασύρματη επικοινωνία μικρής εμβέλειας</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Αποστολή και παραλαβή</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Ειδοποίηση κλεισίματος επαφής</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Ειδοποιήσεις αιτήσεων κατά τη στιγμή της στενής επαφής</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Διαγραφή δεδομένων</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Διαγραφή όλων των δεδομένων</value>
   </data>
 </root>
