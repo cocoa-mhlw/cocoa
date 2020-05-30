@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>รหัสการวินิจฉัยไม่ถูกต้อง</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>โปรดระบุรหัสการวินิจฉัยที่ถูกต้อง</value>
+  </data>
 </root>

@@ -366,6 +366,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ID diagnostic nevalid</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vă rugăm să furnizați un id de diagnostic valabil</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -290,4 +290,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Kitambulisho cha utambuzi batili</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Tafadhali toa kitambulisho cha utambuzi halali</value>
+  </data>
 </root>
