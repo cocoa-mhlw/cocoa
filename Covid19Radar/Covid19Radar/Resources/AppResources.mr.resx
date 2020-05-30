@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>अवैध निदान ओळखपत्र</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>कृपया वैध निदान ओळखपत्र प्रदान करा</value>
+  </data>
 </root>

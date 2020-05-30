@@ -290,4 +290,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Virheellinen diagnoositunnus</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Anna kelvollinen diagnoositunnus</value>
+  </data>
 </root>

@@ -290,4 +290,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Ongeldige diagnose-ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Verskaf asseblief 'n geldige diagnose-ID</value>
+  </data>
 </root>

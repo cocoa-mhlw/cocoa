@@ -368,6 +368,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ID diagnosi non valido</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fornire un ID diagnosi valido</target>
+        </trans-unit>
       </group>
     </body>
   </file>

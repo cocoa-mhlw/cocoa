@@ -290,4 +290,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Diagnostika ID ei sobi</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Palun esitage kehtiv diagnoosi ID</value>
+  </data>
 </root>

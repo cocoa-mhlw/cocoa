@@ -366,6 +366,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">無効な診断 ID</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">有効な診断 ID を入力してください</target>
+        </trans-unit>
       </group>
     </body>
   </file>

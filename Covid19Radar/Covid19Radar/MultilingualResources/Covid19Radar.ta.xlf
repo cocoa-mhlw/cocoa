@@ -368,6 +368,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">செல்லுபடியாகாத நோயறிதல் ID</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</target>
+        </trans-unit>
       </group>
     </body>
   </file>

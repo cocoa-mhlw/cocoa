@@ -289,4 +289,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Geçersiz Tanı Kimliği</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Lütfen geçerli bir Tanı Kimliği sağlayın</value>
+  </data>
 </root>

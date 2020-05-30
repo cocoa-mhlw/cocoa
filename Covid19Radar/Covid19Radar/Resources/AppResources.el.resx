@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Το αναγνωριστικό διάγνωσης δεν είναι έγκυρο</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Δώστε ένα έγκυρο αναγνωριστικό διάγνωσης</value>
+  </data>
 </root>

@@ -368,6 +368,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ógilt Greiningarkenni</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vinsamlegast Gefðu upp gilt Greiningarkenni</target>
+        </trans-unit>
       </group>
     </body>
   </file>

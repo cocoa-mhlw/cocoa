@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>અયોગ્ય નિદાન ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>કૃપા કરીને માન્ય નિદાન ID પ્રદાન કરો</value>
+  </data>
 </root>
