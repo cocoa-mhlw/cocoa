@@ -243,7 +243,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Blootstellings Kennisgewings is versper</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="translated">Diagnose word ingedien...</target>
         </trans-unit>

@@ -244,7 +244,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Exposure Notifications Disabled</source>
           <target state="translated">ตัวแจ้งเตือนการเปิดเผยตัวตนถูกปิดการทำงาน</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="translated">กําลังส่งการวินิจฉัย...</target>
         </trans-unit>

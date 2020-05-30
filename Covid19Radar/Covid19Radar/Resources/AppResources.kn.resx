@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>ಬಹಿರ್ಮುಖತೆ ಅಧಿಸೂಚನೆಗಳು ಅಶಕ್ತcomment</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
