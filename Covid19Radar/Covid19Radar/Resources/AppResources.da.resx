@@ -302,4 +302,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Tilbage til registrering</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positiv registrering</value>
+  </data>
 </root>

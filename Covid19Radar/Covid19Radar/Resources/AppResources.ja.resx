@@ -302,4 +302,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>登録に戻る</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>陽性登録</value>
+  </data>
 </root>

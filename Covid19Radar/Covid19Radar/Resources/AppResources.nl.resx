@@ -302,4 +302,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Terug naar registratie</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positieve registratie</value>
+  </data>
 </root>

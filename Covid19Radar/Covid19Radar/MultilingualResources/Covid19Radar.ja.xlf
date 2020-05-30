@@ -380,7 +380,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">登録に戻る</target>
+          <target state="translated">登録に戻る</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="translated">陽性登録</target>
         </trans-unit>
       </group>
     </body>

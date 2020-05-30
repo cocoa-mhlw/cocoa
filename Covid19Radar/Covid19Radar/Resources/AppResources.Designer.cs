@@ -548,6 +548,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Positive registration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PositiveRegistrationText {
+            get {
+                return ResourceManager.GetString("PositiveRegistrationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Privacy Policy に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PrivacyPolicyPageTitle {

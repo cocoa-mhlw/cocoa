@@ -302,4 +302,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>பதிவுக்கான திருப்பம்</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>பாசிடிவ் பதிவு</value>
+  </data>
 </root>

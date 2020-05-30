@@ -302,4 +302,7 @@
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>नोंदणीकडे परत</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>सकारात्मक नोंदणी</value>
+  </data>
 </root>
