@@ -23,9 +23,9 @@
     <value>Termos de Serviço</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Não há necessidade de inserir informações pessoais. Estamos usando id exclusivo, alocado para você ao instalar um aplicativo.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Um contato com outro usuário de aplicativo por mais de 30 min no total, dentro de um raio superior a 2m em média é registrado como "Contato Próximo".</value>
@@ -196,7 +196,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Notificações de exposição desativadas</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Submetendo diagnóstico...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Exclua todos os dados</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID de diagnóstico inválido</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Por favor, forneça um ID de diagnóstico válido</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Data do teste inválida</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Por favor, forneça uma data de teste válida</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Retorno ao registro</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Cadastro positivo</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Gostaria de se registrar positivamente mais tarde?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Quando você executa o aplicativo, ele irá gerar e armazenar um ID anônimo em cada smartphone. Este aplicativo não adquire nenhuma informação relacionada à privacidade, como número de telefone e informações de localização.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

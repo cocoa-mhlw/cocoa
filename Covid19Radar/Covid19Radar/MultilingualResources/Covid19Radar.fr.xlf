@@ -20,10 +20,10 @@
           <target state="translated">Conditions d'utilisation</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="translated">Inutile de saisir des renseignements personnels. Nous utilisons un Identifiant unique qui vous est attribué lors de l’installation d’une application.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
@@ -242,7 +242,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Notifications d’exposition désactivées</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="translated">Soumission du diagnostic...</target>
         </trans-unit>
@@ -361,6 +361,39 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
         <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Supprimer toutes les données</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Id de diagnostic invalide</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Veuillez fournir une pièce d’identité de diagnostic valide</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Date de test invalide</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Veuillez fournir une date de test valide</target>
+        </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Retour à l’inscription</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enregistrement positif</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Souhaitez-vous vous inscrire positivement plus tard?</target>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
+          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lorsque vous exécutez l’application, elle générera et stockera un IDENTIFIANT anonyme sur chaque smartphone. Cette application n’acquiert aucune information relative à la protection de la vie privée, comme le numéro de téléphone et les renseignements de localisation.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
         </trans-unit>
       </group>
     </body>

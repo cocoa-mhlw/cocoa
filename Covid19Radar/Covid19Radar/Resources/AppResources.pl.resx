@@ -23,9 +23,9 @@
     <value>Warunki świadczenia usługi</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nie ma potrzeby wprowadzania danych osobowych. Używamy unikatowego identyfikatora, przydzielonego do Ciebie podczas instalowania aplikacji.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Kontakt z innym użytkownikiem aplikacji przez łącznie dłużej niż 30 minut, w promieniu bliższym niż 2 m średnio jest rejestrowany jako "Bliski kontakt".</value>
@@ -196,7 +196,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Powiadomienia o narażeniu wyłączone</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Składanie diagnozy...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Usuń wszystkie dane</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Nieprawidłowy identyfikator diagnozy</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Proszę podać ważny identyfikator diagnostyczny</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Nieprawidłowa data testu</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Podaj prawidłową datę testu</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Powrót do rejestracji</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Rejestracja pozytywna</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Czy chcesz zarejestrować się później pozytywnie?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Po uruchomieniu aplikacji wygeneruje i zapisze anonimowy identyfikator na każdym smartfonie. Ta aplikacja nie uzyskuje żadnych informacji związanych z prywatnością, takich jak numer telefonu i informacje o lokalizacji.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

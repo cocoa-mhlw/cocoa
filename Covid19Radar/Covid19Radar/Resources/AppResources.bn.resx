@@ -23,9 +23,9 @@
     <value>পরিষেবার বিধিসমূহ</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>ব্যক্তিগত তথ্য ইনপুট করার প্রয়োজন নেই । আমরা একটি অ্যাপ্লিকেশন ইনস্টল করার সময় আপনার জন্য বরাদ্দ অনন্য ID ব্যবহার করছি.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>মোট 30 মিনিটের বেশি সময় ধরে অন্য অ্যাপ ব্যবহারকারীর সাথে যোগাযোগ করা হলে, গড়ে 2এম এর চেয়ে কাছাকাছি একটি ব্যাসার্ধের মধ্যে "ঘনিষ্ঠ যোগাযোগ" হিসাবে রেকর্ড করা হয় ।</value>
@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>এক্সপোজার বিজ্ঞপ্তিসমূহ অক্ষম</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>নির্ণয়ের জমা দেওয়া হচ্ছে...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>সকল উপাত্ত মুছে ফেলুন</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>অকার্যকর নির্ণয় ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>অনুগ্রহ করে একটি বৈধ নির্ণয়ের ID প্রদান করুন</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>অকার্যকর পরীক্ষার তারিখ</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>অনুগ্রহ করে একটি বৈধ পরীক্ষার তারিখ প্রদান করুন</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>রেজিস্ট্রেশনে ফিরুন</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>ইতিবাচক নিবন্ধীকরণ</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>আপনি কি পরে ইতিবাচক নিবন্ধন করতে চান?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>যখন আপনি অ্যাপ্লিকেশন চালাবেন, এটি প্রতিটি স্মার্টফোনে একটি বেনামী আইডি জেনারেট এবং স্টোর করবে । এই প্রয়োগণটি ফোন নম্বর এবং অবস্থান তথ্যের মতো গোপনীয়তা সম্পর্কিত কোনো তথ্য অর্জন করে না ।</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

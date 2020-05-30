@@ -23,9 +23,9 @@
     <value>Pakalpojuma noteikumi</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nav nepieciešams ievadīt personisku informāciju. Mēs izmantojam unikālo ID, kas jums tiek piešķirts, instalējot lietotni.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Kontaktu ar citu lietotnes lietotāju ilgāk nekā 30 minūtes kopā rādiusu, kas ir tuvāk par 2m, reģistrē kā "ciešu kontaktu".</value>
@@ -196,7 +196,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Ekspozīcijas paziņojumi atspējoti</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnozes iesniegšana...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Dzēst visus datus</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Nederīgs diagnozes ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Lūdzu, norādiet derīgu diagnozes ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Nederīgs testa datums</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Lūdzu, norādiet derīgu testa datumu</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Atgriešanās pie reģistrācijas</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Pozitīva reģistrācija</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Vai jūs vēlētos reģistrēties pozitīvi vēlāk?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Palaižot programmu, tas radīs un uzglabā anonīmu ID katrā viedtālrunis. Šī lietojumprogramma neiegādājas informāciju, kas saistīta ar privātumu, piemēram, tālruņa numuru un atrašanās vietas informāciju.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

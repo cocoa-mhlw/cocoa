@@ -23,9 +23,9 @@
     <value>Conditions d'utilisation</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Inutile de saisir des renseignements personnels. Nous utilisons un Identifiant unique qui vous est attribué lors de l’installation d’une application.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Un contact avec un autre utilisateur de l'application pendant plus de 30 minutes au total, dans un rayon inférieur à 2m en moyenne est enregistré comme "Contact rapproché".</value>
@@ -196,7 +196,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Notifications d’exposition désactivées</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Soumission du diagnostic...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Supprimer toutes les données</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Id de diagnostic invalide</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Veuillez fournir une pièce d’identité de diagnostic valide</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Date de test invalide</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Veuillez fournir une date de test valide</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Retour à l’inscription</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Enregistrement positif</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Souhaitez-vous vous inscrire positivement plus tard?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Lorsque vous exécutez l’application, elle générera et stockera un IDENTIFIANT anonyme sur chaque smartphone. Cette application n’acquiert aucune information relative à la protection de la vie privée, comme le numéro de téléphone et les renseignements de localisation.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

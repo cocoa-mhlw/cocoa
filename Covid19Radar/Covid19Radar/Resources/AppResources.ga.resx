@@ -23,9 +23,9 @@
     <value>Téarmaí Seirbhíse</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Ní gá faisnéis phearsanta a ionchur. Táimid ag baint úsáide as ID uathúil, leithdháilte ar tú nuair a shuiteáil app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Taifeadtar teagmháil le húsáideoir feidhmchláir eile ar feadh níos mó ná 30 nóiméad san iomlán, laistigh de gha níos gaire ná 2m ar an meán mar "Dún Teagmháil".</value>
@@ -196,7 +196,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Fógraí Nochta faoi Mhíchumas</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnóis a chur isteach...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Scrios na sonraí go léir</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Aitheantas Diagnóis neamhbhailí</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Tabhair aitheantas diagnóise bailí le do thoil</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Dáta Tástála Neamhbhailí</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Tabhair Dáta Tástála bailí le do thoil</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Fill ar chlárú</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Clárú dearfach</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Ar mhaith leat clárú go dearfach níos déanaí?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Nuair a ritheann tú an t-iarratas, ginfidh sé agus stórálfaidh sé aitheantas gan ainm ar gach fón cliste. Ní fhaigheann an t-iarratas seo aon fhaisnéis a bhaineann le príobháideachas ar nós uimhir theileafóin agus faisnéis suímh.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
