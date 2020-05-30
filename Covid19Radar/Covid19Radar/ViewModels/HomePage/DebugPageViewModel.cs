@@ -11,34 +11,57 @@ using System.Text;
 using Xamarin.Forms;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
+using System.ComponentModel;
 
 namespace Covid19Radar.ViewModels
 {
     public class DebugPageViewModel : ViewModelBase
     {
         private readonly UserDataService userDataService;
+        private readonly ExposureNotificationService exposureNotificationService;
         private UserDataModel userData;
 
-        public DebugPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
+        public DebugPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = "Debug";
             this.userDataService = userDataService;
+            this.exposureNotificationService = exposureNotificationService;
             userData = this.userDataService.Get();
+            EnStatus = this.exposureNotificationService.CurrentStatusMessage;
+            FlgEn = userData.IsExposureNotificationEnabled.ToString();
+            FlgLn = userData.IsNotificationEnabled.ToString();
+            FlgWl = userData.IsWelcomed.ToString();
             this.userDataService.UserDataChanged += _userDataChanged;
-
+            RaisePropertyChanged(nameof(EnStatus));
+            RaisePropertyChanged(nameof(FlgEn));
+            RaisePropertyChanged(nameof(FlgLn));
+            RaisePropertyChanged(nameof(FlgWl));
         }
+
         private void _userDataChanged(object sender, UserDataModel e)
         {
             userData = this.userDataService.Get();
+            EnStatus = this.exposureNotificationService.CurrentStatusMessage;
+            FlgEn = userData.IsExposureNotificationEnabled.ToString();
+            FlgLn = userData.IsNotificationEnabled.ToString();
+            FlgWl = userData.IsWelcomed.ToString();
+            RaisePropertyChanged(nameof(EnStatus));
+            RaisePropertyChanged(nameof(FlgEn));
+            RaisePropertyChanged(nameof(FlgLn));
+            RaisePropertyChanged(nameof(FlgWl));
         }
 
         public string NativeImplementationName
             => Xamarin.ExposureNotifications.ExposureNotification.OverridesNativeImplementation
                 ? "TEST" : "LIVE";
 
+        public string EnStatus { get; set; }
+        public string FlgEn { get; set; }
+        public string FlgLn { get; set; }
+        public string FlgWl { get; set; }
+
         public string CurrentBatchFileIndex
             => string.Join(", ", userData.ServerBatchNumbers.Select(p => $"{p.Key}={p.Value}"));
-
 
         public Command ResetSelfDiagnosis
             => new Command(async () =>
@@ -73,13 +96,19 @@ namespace Covid19Radar.ViewModels
                 });
             });
 
-        public Command ResetWelcome
-            => new Command(async () =>
-            {
-                userData.IsWelcomed = false;
-                await userDataService.SetAsync(userData);
-                await UserDialogs.Instance.AlertAsync("Welcome state reset!");
-            });
+
+        public Command ToggleWelcome => new Command(async () =>
+        {
+            userData.IsWelcomed = !userData.IsWelcomed;
+            await userDataService.SetAsync(userData);
+        });
+
+        public Command ToggleEn => new Command(async () =>
+        {
+            userData.IsExposureNotificationEnabled = !userData.IsExposureNotificationEnabled;
+            await userDataService.SetAsync(userData);
+        });
+
 
         public Command ResetEnabled
             => new Command(async () =>
@@ -90,7 +119,6 @@ namespace Covid19Radar.ViewModels
                     {
                         await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
                     }
-                    userData.IsExposureNotificationEnabled = false;
                     await userDataService.SetAsync(userData);
                 }
                 await UserDialogs.Instance.AlertAsync("Last known enabled state reset!");

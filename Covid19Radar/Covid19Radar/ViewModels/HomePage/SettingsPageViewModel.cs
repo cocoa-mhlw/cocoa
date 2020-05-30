@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -25,93 +26,104 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _AppVersion, value); }
         }
 
-        private bool _EnableExposureNotification;
+        private bool _IsExposureNotificationEnabled;
 
-        public bool EnableExposureNotification
+        public bool IsExposureNotificationEnabled
         {
-            get { return _EnableExposureNotification; }
-            set
-            {
-                SetProperty(ref _EnableExposureNotification, value);
-                RaisePropertyChanged(nameof(EnableExposureNotification));
+            get { return exposureNotificationService.GetExposureNotificationStatus(); }
+            set {
+                exposureNotificationService.SetExposureNotificationStatusAsync(value);
+                SetProperty(ref _IsExposureNotificationEnabled, value);
             }
         }
 
-        private bool _EnableLocalNotification;
+        private string _IsNotificationEnabledText;
 
-        public bool EnableLocalNotification
+        public string OnEnableNotificationText
         {
-            get { return _EnableLocalNotification; }
+            get { return _IsNotificationEnabledText; }
             set
             {
-                SetProperty(ref _EnableLocalNotification, value);
-                RaisePropertyChanged(nameof(EnableLocalNotification));
+                SetProperty(ref _IsNotificationEnabledText, value);
             }
         }
 
-        private bool _ResetData;
+        private string _IsExposureNotificationEnabledText;
 
-        public bool ResetData
+        public string OnEnableExposureNotificationText
         {
-            get { return _ResetData; }
+            get { return _IsExposureNotificationEnabledText; }
             set
             {
-                SetProperty(ref _ResetData, value);
-                RaisePropertyChanged(nameof(ResetData));
+                SetProperty(ref _IsExposureNotificationEnabledText, value);
             }
         }
 
+
+        private readonly ExposureNotificationService exposureNotificationService;
+        /*
         private readonly UserDataService userDataService;
-        private UserDataModel userData;
-
-        public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
+        public UserDataModel userData;
+        */
+        public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppConstants.AppVersion;
+            /*
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
-            this.userDataService.UserDataChanged += _userDataChanged;
-
-            EnableExposureNotification = userData.IsExposureNotificationEnabled;
-            EnableLocalNotification = userData.IsNotificationEnabled;
+            */
+            this.exposureNotificationService = exposureNotificationService;
+            OnEnableNotificationText = exposureNotificationService.GetNotificationStatus() ? "Off" : "On";
         }
 
-        private void _userDataChanged(object sender, UserDataModel e)
+        public ICommand OnChangeExposureNotificationState => new Command(() =>
         {
-            userData = this.userDataService.Get();
-            EnableExposureNotification = userData.IsExposureNotificationEnabled;
-            EnableLocalNotification = userData.IsNotificationEnabled;
-        }
-
-        public ICommand OnChangeEnableExposureNotification => new Command(async () =>
-        {
-            userData.IsExposureNotificationEnabled = !EnableExposureNotification;
-            await userDataService.SetAsync(userData);
+            var status = exposureNotificationService.GetExposureNotificationStatus();
+            if (status)
+            {
+                exposureNotificationService.SetExposureNotificationStatusAsync(!status);
+                OnEnableNotificationText = "On";
+            }
+            else
+            {
+                exposureNotificationService.SetExposureNotificationStatusAsync(!status);
+                OnEnableNotificationText = "Off";
+            }
         });
 
-        public ICommand OnChangeEnableNotification => new Command(async () =>
+
+        public ICommand OnChangeNotificationState => new Command(() =>
         {
-            userData.IsNotificationEnabled = !EnableLocalNotification;
-            await userDataService.SetAsync(userData);
+            var status = exposureNotificationService.GetNotificationStatus();
+            if (status)
+            {
+                exposureNotificationService.SetNotificationStatus(!status);
+                OnEnableNotificationText = "On";
+            }
+            else
+            {
+                exposureNotificationService.SetNotificationStatus(!status);
+                OnEnableNotificationText = "Off";
+            }
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
-
             var check = await UserDialogs.Instance.ConfirmAsync(
                 "本当にすべてのデータをリセットしますか?",
                 "データの全削除",
                 Resources.AppResources.DialogButtonOk,
                 Resources.AppResources.DialogButtonCancel
             );
-
+            /*
             if (check)
             {
                 UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextDeleting);
 
-                if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                if (await ExposureNotification.IsEnabledAsync())
                 {
-                    await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
+                    await ExposureNotification.StopAsync();
                 }
 
                 // Reset All Data and Optout
@@ -125,8 +137,8 @@ namespace Covid19Radar.ViewModels
                 // Application close
                 Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
                 return;
-
             }
+            */
         });
     }
 }
