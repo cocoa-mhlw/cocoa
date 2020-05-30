@@ -287,4 +287,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>מחק את כל הנתונים</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>מזהה אבחון לא חוקי</value>
+  </data>
 </root>

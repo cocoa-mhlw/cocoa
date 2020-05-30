@@ -364,6 +364,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Löschen aller Daten</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ungültige Diagnose-ID</target>
+        </trans-unit>
       </group>
     </body>
   </file>

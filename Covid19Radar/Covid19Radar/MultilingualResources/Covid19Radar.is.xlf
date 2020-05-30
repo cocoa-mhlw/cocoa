@@ -364,6 +364,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Eyða öllum gögnum</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ógilt Greiningarkenni</target>
+        </trans-unit>
       </group>
     </body>
   </file>

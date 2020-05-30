@@ -287,4 +287,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>அனைத்து தரவையும் நீக்கு</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>செல்லுபடியாகாத நோயறிதல் ID</value>
+  </data>
 </root>

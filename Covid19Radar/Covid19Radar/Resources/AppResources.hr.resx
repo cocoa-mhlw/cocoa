@@ -287,4 +287,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Brisanje svih podataka</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID dijagnoze nije valjan</value>
+  </data>
 </root>

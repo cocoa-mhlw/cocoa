@@ -287,4 +287,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>移除所有資料</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>診斷識別碼無效</value>
+  </data>
 </root>

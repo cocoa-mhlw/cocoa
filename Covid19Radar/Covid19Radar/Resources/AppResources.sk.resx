@@ -287,4 +287,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Odstrániť všetky údaje</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Neplatná identifikácia diagnózy</value>
+  </data>
 </root>

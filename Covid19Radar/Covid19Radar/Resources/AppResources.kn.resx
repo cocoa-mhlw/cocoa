@@ -287,4 +287,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸು</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ಅಮಾನ್ಯಗೊಂಡ ರೋಗನಿರ್ಣಯ ID</value>
+  </data>
 </root>

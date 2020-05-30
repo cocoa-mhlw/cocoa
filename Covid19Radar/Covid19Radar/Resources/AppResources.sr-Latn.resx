@@ -287,4 +287,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Izbriši sve podatke</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Nevažeći ID dijagnostike</value>
+  </data>
 </root>

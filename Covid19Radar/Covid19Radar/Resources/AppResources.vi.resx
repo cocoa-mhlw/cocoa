@@ -287,4 +287,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Xóa tất cả dữ liệu</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID chẩn đoán không hợp lệ</value>
+  </data>
 </root>
