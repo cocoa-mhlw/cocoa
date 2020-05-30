@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>유효한 시험 날짜를 입력하십시오.</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>등록으로 돌아가기</value>
+  </data>
 </root>

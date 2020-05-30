@@ -299,4 +299,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Geef een geldige testdatum op</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Terug naar registratie</value>
+  </data>
 </root>

@@ -298,4 +298,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>يرجى تقديم تاريخ اختبار صالح</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>العودة إلى التسجيل</value>
+  </data>
 </root>

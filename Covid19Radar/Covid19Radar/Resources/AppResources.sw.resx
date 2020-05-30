@@ -299,4 +299,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Tafadhali toa tarehe halali ya mtihani</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Rudi kwenye usajili</value>
+  </data>
 </root>

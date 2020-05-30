@@ -380,6 +380,10 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Unesite važeći datum testiranja</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vrati se na registraciju</target>
+        </trans-unit>
       </group>
     </body>
   </file>

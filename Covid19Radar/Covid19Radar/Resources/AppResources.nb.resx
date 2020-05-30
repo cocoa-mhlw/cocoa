@@ -299,4 +299,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Oppgi en gyldig testdato</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Gå tilbake til registrering</value>
+  </data>
 </root>

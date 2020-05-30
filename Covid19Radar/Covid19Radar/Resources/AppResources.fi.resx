@@ -299,4 +299,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Anna kelvollinen testipäivämäärä</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Paluu rekisteröitymiseen</value>
+  </data>
 </root>

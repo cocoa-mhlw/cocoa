@@ -380,6 +380,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Geef een geldige testdatum op</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Terug naar registratie</target>
+        </trans-unit>
       </group>
     </body>
   </file>

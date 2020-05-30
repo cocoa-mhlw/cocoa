@@ -380,6 +380,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tafadhali toa tarehe halali ya mtihani</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rudi kwenye usajili</target>
+        </trans-unit>
       </group>
     </body>
   </file>

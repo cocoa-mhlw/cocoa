@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>ದಯವಿಟ್ಟು ಒಂದು ಸಿಂಧುವಾದ ಪರೀಕ್ಷಾ ದಿನಾಂಕವನ್ನು ಒದಗಿಸಿ</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>ನೋಂದಣಿಗೆ ತಿರುವು</value>
+  </data>
 </root>

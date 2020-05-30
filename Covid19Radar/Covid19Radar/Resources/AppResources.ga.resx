@@ -299,4 +299,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Tabhair Dáta Tástála bailí le do thoil</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Fill ar chlárú</value>
+  </data>
 </root>
