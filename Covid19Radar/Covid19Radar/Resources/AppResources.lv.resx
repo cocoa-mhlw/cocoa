@@ -299,4 +299,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Lūdzu, norādiet derīgu testa datumu</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Atgriešanās pie reģistrācijas</value>
+  </data>
 </root>

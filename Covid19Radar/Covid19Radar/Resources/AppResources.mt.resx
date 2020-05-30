@@ -299,4 +299,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Jekk jogħġbok ipprovdi data tat-test valida</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Ritorn għar-reġistrazzjoni</value>
+  </data>
 </root>

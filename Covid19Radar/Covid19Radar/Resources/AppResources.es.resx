@@ -299,4 +299,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Proporcione una fecha de prueba válida</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Volver al registro</value>
+  </data>
 </root>

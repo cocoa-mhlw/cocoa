@@ -380,6 +380,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">મહેરબાની કરીને યોગ્ય ચકાસણી તારીખ પૂરી પાડો</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">નોંધણી માં પાછા ફરો</target>
+        </trans-unit>
       </group>
     </body>
   </file>

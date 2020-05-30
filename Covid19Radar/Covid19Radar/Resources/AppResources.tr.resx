@@ -298,4 +298,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Lütfen geçerli bir Sınav Tarihi verin</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Kayıt için geri dön</value>
+  </data>
 </root>

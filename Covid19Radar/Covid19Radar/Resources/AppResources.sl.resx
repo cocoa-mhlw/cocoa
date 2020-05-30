@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Navedite veljaven datum preskusa</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Vrnitev na registracijo</value>
+  </data>
 </root>

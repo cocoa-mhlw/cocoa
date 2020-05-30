@@ -121,7 +121,7 @@ namespace Covid19Radar.ViewModels
                 "あとで設定しますか?",
                 "陽性登録",
                 Resources.AppResources.ButtonNotNow,
-                "登録へ戻る"
+                Resources.AppResources.ButtonReturnToRegistration
             );
             if (check)
             {

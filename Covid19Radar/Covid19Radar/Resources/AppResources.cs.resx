@@ -299,4 +299,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Uveďte platné datum testu.</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Návrat k registraci</value>
+  </data>
 </root>

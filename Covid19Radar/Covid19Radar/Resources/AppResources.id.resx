@@ -299,4 +299,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Harap berikan tanggal ujian yang valid</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Kembali ke pendaftaran</value>
+  </data>
 </root>

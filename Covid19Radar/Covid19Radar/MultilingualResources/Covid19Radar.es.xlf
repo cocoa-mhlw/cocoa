@@ -379,6 +379,10 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Proporcione una fecha de prueba válida</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Volver al registro</target>
+        </trans-unit>
       </group>
     </body>
   </file>

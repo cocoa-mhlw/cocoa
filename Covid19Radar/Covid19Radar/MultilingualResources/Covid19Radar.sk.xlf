@@ -380,6 +380,10 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Uveďte platný dátum testu</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Návrat k registrácii</target>
+        </trans-unit>
       </group>
     </body>
   </file>

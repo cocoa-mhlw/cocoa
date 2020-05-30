@@ -299,4 +299,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Podaj prawidłową datę testu</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Powrót do rejestracji</value>
+  </data>
 </root>

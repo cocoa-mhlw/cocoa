@@ -380,6 +380,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bitte geben Sie ein gültiges Testdatum an</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zurück zur Registrierung</target>
+        </trans-unit>
       </group>
     </body>
   </file>

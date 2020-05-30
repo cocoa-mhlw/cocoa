@@ -380,6 +380,10 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Podaj prawidłową datę testu</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Powrót do rejestracji</target>
+        </trans-unit>
       </group>
     </body>
   </file>

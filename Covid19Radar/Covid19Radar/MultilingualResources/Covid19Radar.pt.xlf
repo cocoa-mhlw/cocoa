@@ -380,6 +380,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Por favor, forneça uma data de teste válida</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Retorno ao registro</target>
+        </trans-unit>
       </group>
     </body>
   </file>
