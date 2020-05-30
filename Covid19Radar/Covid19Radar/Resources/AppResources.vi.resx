@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Tiếp theo</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Điều khoản Dịch vụ</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Bắt đầu</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Bảo vệ những người thân yêu của chúng tôi tránh xa COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Truy cập thiết bị</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Đồng ý</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>TRANG CHỦ</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Bạn đã sẵn sàng</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Thiết lập hoàn tất</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Thoả thuận Cấp phép</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Bật</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Không phải bây giờ</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Ứng dụng này sử dụng thông báo tiếp xúc gần / tín hiệu Bluetooth để xác định xem bạn đang tiếp xúc gần với người dùng ứng dụng tương ứng. 
@@ -225,11 +216,9 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Không đồng ý</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Hủy bỏ</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Bạn có muốn bật thông báo không?</value>
@@ -237,11 +226,9 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Cho phép</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Đang xóa</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Nếu bạn nhận được một chẩn đoán tích cực</value>
@@ -253,7 +240,6 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Chia sẻ</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Chia sẻ thông tin tích cực và thông báo ẩn danh cho người khác</value>
@@ -261,14 +247,12 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Đặt lại</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Chính sách về Quyền riêng tư</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Đang chờ đăng ký</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Bạn có thực sự muốn thiết lập lại tất cả các dữ liệu?</value>

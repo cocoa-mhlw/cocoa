@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>அடுத்து</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>சேவை விதிமுறைகள்</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>தொடக்கம்</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 இருந்து எங்கள் அன்புக்குரியவர்களைப் பாதுகாத்தல்</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>சாதன அணுகல்</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>ஏற்பு</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>முகப்பு</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>நீங்கள் செல்ல தயாராக இருக்கிறீர்கள்</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>அமைவு முடிந்தது</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>உரிம ஒப்பந்தம்</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>சரி</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>செயல்படுத்து</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>இப்போது இல்லை</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>இந்த செயலி எக்ஸ்போசர்/புளூடூத் சிக்னல்களைப் பயன்படுத்துகிறது. 
@@ -225,11 +216,9 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>உடன்படவில்லை</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>ரத்துசெய்</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>அறிவிப்புகளை இயக்க விரும்புகிறீர்களா?</value>
@@ -237,11 +226,9 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>இயக்குவதால்</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>நீக்குகிறது</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
@@ -253,7 +240,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>பகிர்</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>பிறருக்கு சாதகமான தகவல் மற்றும் பெயரற்ற அறிவிப்பை பகிர்தல்</value>
@@ -261,14 +247,12 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>மீட்டமை</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>தனியுரிமைக் கொள்கை</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>பதிவேட்டுக்காக காத்திருக்கும்</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>நீங்கள் நிஜமாகவே அனைத்து தரவையும் மீட்டமைக்க விரும்புகிறீர்களா?</value>
