@@ -16,10 +16,11 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
+    public class HomePageViewModel : ViewModelBase
     {
         private string _exposureCount;
         private readonly UserDataService userDataService;
+        private readonly ExposureNotificationService exposureNotificationService;
         private UserDataModel userData;
 
 
@@ -29,29 +30,15 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposureCount, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
+        public HomePageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.HomePageTitle;
-            ExposureCount = String.Format("{0}{1}",1, "件の接触がありました");
+            ExposureCount = String.Format("{0}{1}", 1, "件の接触がありました");
             this.userDataService = userDataService;
+            this.exposureNotificationService = exposureNotificationService;
+
+            _ = exposureNotificationService.StartExposureNotification();
             userData = this.userDataService.Get();
-            this.userDataService.UserDataChanged += _userDataChanged;
-
-        }
-        private void _userDataChanged(object sender, UserDataModel e)
-        {
-            userData = this.userDataService.Get();
-        }
-
-
-        public bool EnableNotifications
-        {
-            get => userData.IsNotificationEnabled;
-            set
-            {
-                userData.IsNotificationEnabled = value;
-                userDataService.SetAsync(userData);
-            }
         }
 
         public Command OnClickNotifyOther => new Command(async () =>
