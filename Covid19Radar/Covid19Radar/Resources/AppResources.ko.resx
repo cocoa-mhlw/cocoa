@@ -23,9 +23,9 @@
     <value>서비스 약관</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>개인 정보를 입력 할 필요가 없습니다. 앱을 설치할 때 할당된 고유 ID를 사용하고 있습니다.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "닫기 접촉"으로 기록됩니다.</value>
@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>노출 알림 사용 안 함</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>진단 제출 중...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>모든 데이터 삭제</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>잘못된 진단 ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>유효한 진단 ID를 제공하십시오.</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>잘못된 테스트 날짜</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>유효한 시험 날짜를 입력하십시오.</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>등록으로 돌아가기</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>긍정적 인 등록</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>나중에 긍정적으로 등록하시겠습니까?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>응용 프로그램을 실행하면 각 스마트 폰에 익명 ID를 생성하고 저장합니다. 이 응용 프로그램은 전화 번호 및 위치 정보와 같은 개인 정보 보호와 관련된 정보를 취득하지 않습니다.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

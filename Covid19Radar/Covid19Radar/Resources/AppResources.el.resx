@@ -23,9 +23,9 @@
     <value>Όροι παροχής υπηρεσιών</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Δεν χρειάζεται να προσθέσετε προσωπικές πληροφορίες. Χρησιμοποιούμε μοναδικό αναγνωριστικό, το οποίο σας έχει εκχωρηθεί κατά την εγκατάσταση μιας εφαρμογής.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Μια επαφή με έναν άλλο χρήστη της εφαρμογής για περισσότερο από 30 λεπτά συνολικά, σε ακτίνα μικρότερη από 2 m κατά μέσο όρο καταγράφεται ως "Στενή επαφή".</value>
@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Ειδοποιήσεις έκθεσης απενεργοποιημένες</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Υποβολή διάγνωσης...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Διαγραφή όλων των δεδομένων</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Το αναγνωριστικό διάγνωσης δεν είναι έγκυρο</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Δώστε ένα έγκυρο αναγνωριστικό διάγνωσης</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ημ/νία δοκιμής δεν είναι έγκυρη</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Παρακαλείσθε να δώσετε μια έγκυρη ημερομηνία δοκιμής</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Επιστροφή στην εγγραφή</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Θετική καταχώριση</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Θέλετε να εγγραφείτε θετικά αργότερα;</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Όταν εκτελείτε την εφαρμογή , θα δημιουργήσει και θα αποθηκεύσει ένα ανώνυμο αναγνωριστικό σε κάθε smartphone. Αυτή η εφαρμογή δεν αποκτά πληροφορίες σχετικά με το απόρρητο, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

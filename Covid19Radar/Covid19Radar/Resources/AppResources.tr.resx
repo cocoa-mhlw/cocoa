@@ -23,9 +23,9 @@
     <value>Hizmet Koşulları</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Kişisel bilgilerinizi girmenize gerek bulunmamaktadır. Bir uygulamayı yüklerken size tahsis edilmiş özel bir numara kullanıyoruz.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Başka bir uygulama kullanıcısıyla ortalama 2 m'den daha yakın ve toplamda 30 dakikadan daha uzun bir süre birarada bulunmak "Yakın Temas" olarak kaydedilir.</value>
@@ -195,7 +195,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Pozlama Bildirimleri Devre Dışı</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Tanı Gönderme...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -285,5 +285,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Tüm verileri silme</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Geçersiz Tanı Kimliği</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Lütfen geçerli bir Tanı Kimliği sağlayın</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Geçersiz Sınav Tarihi</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Lütfen geçerli bir Sınav Tarihi verin</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Kayıt için geri dön</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Pozitif kayıt</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Daha sonra olumlu kayıt yaptırmak ister misiniz?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Uygulamayı çalıştırdığınızda, her akıllı telefonda anonim bir kimlik oluşturur ve saklar. Bu uygulama, telefon numarası ve konum bilgileri gibi gizlilikle ilgili herhangi bir bilgi edinmez.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

@@ -23,9 +23,9 @@
     <value>Điều khoản Dịch vụ</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Không cần phải nhập thông tin cá nhân. Chúng tôi sử dụng một ID duy nhất, được tạo ra cho bạn khi cài đặt ứng dụng.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Một tiếp xúc với người dùng ứng dụng khác lâu hơn 30 phút, trong vòng bán kính gần hơn 2m (trung bình) được ghi nhận là "tiếp xúc gần".</value>
@@ -196,7 +196,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Thông báo phơi nhiễm đã tắt</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Đệ trình chẩn đoán...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Xóa tất cả dữ liệu</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID chẩn đoán không hợp lệ</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Vui lòng cung cấp ID chẩn đoán hợp lệ</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ngày kiểm tra không hợp lệ</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Vui lòng cung cấp ngày thi hợp lệ</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Quay trở lại đăng ký</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Đăng ký tích cực</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Bạn có muốn đăng ký tích cực sau này?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Khi bạn chạy ứng dụng, nó sẽ tạo ra và lưu trữ một ID ẩn danh trên mỗi điện thoại thông minh. Ứng dụng này không có bất kỳ thông tin liên quan đến quyền riêng tư như số điện thoại và thông tin vị trí.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

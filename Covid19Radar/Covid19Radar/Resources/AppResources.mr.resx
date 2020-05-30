@@ -23,9 +23,9 @@
     <value>सेवा अटी</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>वैयक्तिक माहिती इनपुट करण्याची गरज नाही. अॅप इन्स्टॉल करताना आम्ही युनिक आयडी वापरत आहोत.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>एकूण ३० मि. पेक्षा जास्त काळ इतर अॅप वापरकर्त्याशी संपर्क साधा, सरासरी २० लाखांपेक्षा जास्त परिघात "क्लोज कॉन्टॅक्ट" म्हणून नोंदले जाते.</value>
@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>एक्सपोजर सूचना अकार्यान्वीत</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>निदान सबमिट करत आहे...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>सर्व डेटा नष्ट करा</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>अवैध निदान ओळखपत्र</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>कृपया वैध निदान ओळखपत्र प्रदान करा</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>अवैध चाचणी दिनांक</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>कृपया वैध चाचणी दिनांक प्रदान करा</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>नोंदणीकडे परत</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>सकारात्मक नोंदणी</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>नंतर तुम्हाला सकारात्मक नोंदणी करायची आहे का?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>जेव्हा तुम्ही अनुप्रयोग चालवता तेव्हा प्रत्येक स्मार्टफोनवर एक निनावी आयडी तयार करून साठवला जाईल. या अनुप्रयोगाला फोन नंबर आणि लोकेशन माहिती यांसारखी गोपनीयतेशी संबंधित कोणतीही माहिती प्राप्त होत नाही.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

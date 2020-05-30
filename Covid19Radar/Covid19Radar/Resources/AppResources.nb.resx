@@ -23,9 +23,9 @@
     <value>Vilkår for bruk</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Du trenger ikke å legge inn personlig informasjon. Vi bruker unik ID, tildelt deg når du installerer en app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>En kontakt med en annen appbruker i mer enn 30 minutter totalt, innenfor en radius nærmere enn 2 m i gjennomsnitt registreres som "Nærkontakt".</value>
@@ -196,7 +196,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Eksponeringsvarsler deaktivert</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Sende inn diagnose...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Slett alle data</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Ugyldig diagnose-ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Vennligst oppgi en gyldig diagnose-ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ugyldig testdato</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Oppgi en gyldig testdato</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Gå tilbake til registrering</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positiv registrering</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Vil du registrere deg positivt senere?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Når du kjører programmet, vil det generere og lagre en anonym ID på hver smarttelefon. Dette programmet innhenter ikke informasjon knyttet til personvern, for eksempel telefonnummer og stedsinformasjon.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
