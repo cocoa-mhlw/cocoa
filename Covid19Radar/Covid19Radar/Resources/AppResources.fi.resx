@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Seuraava</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Palveluehdot</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Alku</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Rakkaidemme suojaaminen COVID-19:ltä</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Laitteen käyttö</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Hyväksy</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>KOTI</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Olet valmis lähtemään.</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Määritä valmis</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Käyttöoikeussopimus</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>Tarkista verkkoyhteys.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK\n</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Ota käyttöön</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Ei nyt</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Tämä sovellus käyttää Valotusilmoitus / Bluetooth-signaaleja määrittää, jos olet lähellä toisen yhteystiedon jäljitys sovelluksen käyttäjä. 
@@ -181,16 +172,16 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Covid-19 testin mukana toimitettua yksilöllistä testitunnistetta on käytettävä positiivisen testituloksen vahvistamiseen.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Yritä myöhemmin uudelleen.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Epäonnistui</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnoosi Lähetetty</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Valmis</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnoosin tunniste vaaditaan</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK\n</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Ota altistumisilmoitukset käyttöön ennen diagnoosin lähettämistä.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Altistumisilmoitukset poistettu käytöstä</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Asetukset</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ei samaa mieltä</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Peruuta</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Haluatko ottaa ilmoitukset käyttöön?</value>
@@ -241,11 +226,9 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Mahdollistaa</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Poistaminen</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Jos sait positiivisen diagnoosin</value>
@@ -257,7 +240,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Jaa</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Positiivisten tietojen jaanonyymin ilmoituksen jakaminen muille</value>
@@ -265,14 +247,44 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Nollaa</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>tietosuojakäytäntö</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Odotetaan rekisteröitymistä</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Haluatko todella nollata kaikki tiedot?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Poista kaikki tiedot</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Kaikki asetukset ja tiedot on poistettu. Käynnistä sovellus uudelleen.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versio</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Tämän sovelluksen versionumero</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Lyhyen kantaman langaton tiedonsiirto</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Lähetä ja vastaanota</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Sulje yhteystietoilmoitus</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Hakemusilmoitukset läheisen yhteydenpidon yhteydessä</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Poista tiedot</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Poista kaikki tiedot</value>
   </data>
 </root>

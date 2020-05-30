@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Edasi</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Teenusetingimused</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>algus</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Meie lähedaste kaitsmine alates COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Seadme juurdepääs</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Nõus</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>AVALEHT</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Sa oled valmis minema</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Valmis seadistamine</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Litsentsileping</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>Palun kontrollige oma võrguühendust.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Luba</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Mitte praegu.</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>See rakendus kasutab kokkupuute teatamine/Bluetooth signaale, et teha kindlaks, kas olete lähedal teise kontakti jälgimise rakenduse kasutaja. 
@@ -181,16 +172,16 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Positiivse testi tulemuse kinnitamiseks tuleb kasutada oma COVID-19 testiga kaasas olevat ainulaadset testimisidentifikaatorit.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Proovi hiljem uuesti.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Nurjus</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnoos esitatud</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Valmis</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnoosi identifikaator on nõutav</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Palun lubage kokkupuute märguanded enne diagnoosi esitamist.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Kokkupuute teatised keelatud</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Sätted</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Pole nõus</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Loobu</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Kas soovite märguanded sisse lülitada?</value>
@@ -241,11 +226,9 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Võimaldab</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Kustutan</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Kui te saite positiivse diagnoosi</value>
@@ -257,7 +240,6 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Anna ühiskasutusse</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Positiivse teabe ja anonüümse teavitamise jagamine teistele</value>
@@ -265,14 +247,44 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Lähtesta</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>privaatsuspoliitika</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Registreerimise ootel</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Kas soovite tõesti kõik andmed lähtestada?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Kustuta kõik andmed</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Kõik sätted ja andmed on kustutatud. Palun taaskäivitage rakendus.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>versioon</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Selle rakenduse versiooninumber</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Traadita side lühivalik</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Saada ja võta vastu</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Sule Kontaktteatis</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Rakenduse teatised tiheda kontakti ajal</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Kustuta andmed</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Kustuta kõik andmed</value>
   </data>
 </root>

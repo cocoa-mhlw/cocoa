@@ -111,10 +111,10 @@ namespace Covid19Radar.ViewModels
         public ICommand OnChangeResetData => new Command(async () =>
         {
             var check = await UserDialogs.Instance.ConfirmAsync(
-                "本当にすべてのデータをリセットしますか?",
-                "データの全削除",
-                Resources.AppResources.DialogButtonOk,
-                Resources.AppResources.DialogButtonCancel
+                Resources.AppResources.SettingsPageDialogResetText,
+                Resources.AppResources.SettingsPageDialogResetTitle,
+                Resources.AppResources.ButtonOk,
+                Resources.AppResources.ButtonCancel
             );
             /*
             if (check)
@@ -131,7 +131,7 @@ namespace Covid19Radar.ViewModels
                 await userDataService.SetAsync(userData);
 
                 UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync("全設定とデータを削除しました。アプリの再起動をしてください。");
+                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SettingsPageDialogResetCompletedText);
                 Application.Current.Quit();
 
                 // Application close
