@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Următorul</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Termenii serviciului</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Pornire</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Protejarea celor dragi de COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Acces dispozitiv</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>De acord</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>PORNIRE</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Ești gata de plecare.</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Configurare terminată</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Acord de licenţă</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Activare</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Nu acum.</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Această aplicație utilizează notificare de expunere / semnale Bluetooth pentru a determina dacă vă aflați lângă un alt utilizator de aplicație de urmărire de contact. 
@@ -225,11 +216,9 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nu sunt de acord</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Anulare</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Activați notificările?</value>
@@ -237,11 +226,9 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Permite</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>În curs de ştergere</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Dacă ați primit un diagnostic pozitiv</value>
@@ -253,7 +240,6 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Partajare</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Partajarea informațiilor pozitive și notificarea anonimă altor persoane</value>
@@ -261,14 +247,12 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Reinițializare</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Politică de confidențialitate</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Se așteaptă înregistrarea</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Chiar doriți să resetați toate datele?</value>
