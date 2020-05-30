@@ -302,4 +302,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Powrót do rejestracji</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Rejestracja pozytywna</value>
+  </data>
 </root>

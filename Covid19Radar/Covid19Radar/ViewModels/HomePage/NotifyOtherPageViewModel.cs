@@ -119,7 +119,7 @@ namespace Covid19Radar.ViewModels
         {
             var check = await UserDialogs.Instance.ConfirmAsync(
                 "あとで設定しますか?",
-                "陽性登録",
+                Resources.AppResources.PositiveRegistrationText,
                 Resources.AppResources.ButtonNotNow,
                 Resources.AppResources.ButtonReturnToRegistration
             );

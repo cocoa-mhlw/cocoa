@@ -384,6 +384,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dychwelyd i gofrestru</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cofrestru cadarnhaol</target>
+        </trans-unit>
       </group>
     </body>
   </file>

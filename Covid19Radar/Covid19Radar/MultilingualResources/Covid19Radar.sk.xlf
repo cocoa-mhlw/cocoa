@@ -384,6 +384,10 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Návrat k registrácii</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozitívna registrácia</target>
+        </trans-unit>
       </group>
     </body>
   </file>

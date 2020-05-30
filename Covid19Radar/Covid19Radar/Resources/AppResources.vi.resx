@@ -302,4 +302,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Quay trở lại đăng ký</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Đăng ký tích cực</value>
+  </data>
 </root>

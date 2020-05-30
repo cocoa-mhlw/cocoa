@@ -302,4 +302,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Revenirea la înregistrare</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Înregistrare pozitivă</value>
+  </data>
 </root>

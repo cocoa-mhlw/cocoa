@@ -302,4 +302,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Skil á skráningu</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Jákvæð skráning</value>
+  </data>
 </root>
