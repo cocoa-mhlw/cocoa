@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Volgende</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Diensbepalings</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Begin</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Beskerm ons geliefdes teen COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Toestel Toegang</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Stem in</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>TUIS</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Jy is gereed om te gaan</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Opstel Voltooi</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisensie-Ooreenkoms</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>Goed</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Aktiveer</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Nie Nou Nie</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Hierdie program gebruik Blootstelling Kennisgewing / Bluetooth seine om te bepaal of jy naby 'n ander kontak opsporings program gebruiker is. 
@@ -225,11 +216,9 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nie saamstem</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselleer</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Wil jy kennisgewings aanskakel?</value>
@@ -237,11 +226,9 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Sodat</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Skrap tans</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>As jy 'n positiewe diagnose ontvang het</value>
@@ -253,7 +240,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Deel</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Deel positiewe inligting en anonieme kennisgewing aan ander</value>
@@ -261,14 +247,12 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Stel terug</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>privaatheidsbeleid</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Wag vir register</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Wil jy regtig al die data terugstel?</value>
