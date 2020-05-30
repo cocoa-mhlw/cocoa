@@ -293,4 +293,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Darparwch ID diagnosis dilys</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Dyddiad prawf annilys</value>
+  </data>
 </root>

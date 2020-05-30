@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Пожалуйста, предоставьте действительный идентификатор диагноза</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Недействительной даты тестирования</value>
+  </data>
 </root>

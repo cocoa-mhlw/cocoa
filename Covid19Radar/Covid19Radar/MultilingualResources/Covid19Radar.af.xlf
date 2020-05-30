@@ -371,6 +371,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Verskaf asseblief 'n geldige diagnose-ID</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ongeldige Toetsdatum</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>请提供有效的诊断 ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>无效测试日期</value>
+  </data>
 </root>

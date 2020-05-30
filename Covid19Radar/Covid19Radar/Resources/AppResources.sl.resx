@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Navedite veljaven ID za diagnostiko</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Neveljaven datum preskusa</value>
+  </data>
 </root>

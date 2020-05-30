@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>অনুগ্রহ করে একটি বৈধ নির্ণয়ের ID প্রদান করুন</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>অকার্যকর পরীক্ষার তারিখ</value>
+  </data>
 </root>

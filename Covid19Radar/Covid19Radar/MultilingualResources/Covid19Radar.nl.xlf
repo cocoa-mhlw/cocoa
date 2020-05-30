@@ -372,6 +372,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Geef een geldig diagnose-id op</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ongeldige testdatum</target>
+        </trans-unit>
       </group>
     </body>
   </file>
