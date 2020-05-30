@@ -244,7 +244,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Taarifa za ufichuzi zimelemazwa</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuwasilisha utambuzi ...</target>
         </trans-unit>
