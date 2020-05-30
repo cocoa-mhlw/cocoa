@@ -29,14 +29,12 @@ namespace Covid19Radar.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
 
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 
@@ -67,7 +65,6 @@ namespace Covid19Radar.Droid
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
                 containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
-                containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             }
         }
 
@@ -99,42 +96,6 @@ namespace Covid19Radar.Droid
             base.OnNewIntent(intent);
         }
 
-        /*
-        #region IActivityLifecycleCallbacks
-        public void OnActivityCreated(Activity activity, Bundle savedInstanceState)
-        {
-        }
-
-        public void OnActivityDestroyed(Activity activity)
-        {
-        }
-
-        public void OnActivityPaused(Activity activity)
-        {
-        }
-
-        public void OnActivityResumed(Activity activity)
-        {
-        }
-
-        public void OnActivitySaveInstanceState(Activity activity, Bundle outState)
-        {
-        }
-
-        public void OnActivityStarted(Activity activity)
-        {
-        }
-
-        public void OnActivityStopped(Activity activity)
-        {
-        }
-        #endregion
-
-        protected override void OnDestroy()
-        {
-            base.OnDestroy();
-        }
-        */
     }
 }
 
