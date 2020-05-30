@@ -128,9 +128,13 @@
     <value>Terms of Service</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>No need to input personal information. We are using unique ID, allocated to you when installing an app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</value>
@@ -307,7 +311,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Exposure Notifications Disabled</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Submitting Diagnosis...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -391,5 +395,26 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="DeleteDataText" xml:space="preserve">
     <value>Delete data</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Invalid Diagnosis ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Please provide a valid Diagnosis ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Invalid Test Date</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Please provide a valid Test Date</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Return to registration</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positive registration</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Would you like to register positively later?</value>
   </data>
 </root>

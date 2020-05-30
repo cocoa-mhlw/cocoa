@@ -23,9 +23,9 @@
     <value>Palveluehdot</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Henkilökohtaisia tietoja ei tarvitse syöttää. Käytämme yksilöllistä tunnusta, joka on varattu sinulle sovelluksen asennuksen yhteydessä.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Yhteydenpito toiseen sovelluksen käyttäjään yli 30 minuutin ajan, joka on keskimäärin yli 2 metrin säteellä, tallennetaan "Sulje yhteystieto"-muodossa.</value>
@@ -196,7 +196,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Altistumisilmoitukset poistettu käytöstä</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Lähetetään diagnoosia...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Poista kaikki tiedot</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Virheellinen diagnoositunnus</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Anna kelvollinen diagnoositunnus</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Virheellinen testipäivämäärä</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Anna kelvollinen testipäivämäärä</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Paluu rekisteröitymiseen</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positiivinen rekisteröinti</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Haluatko rekisteröityä positiivisesti myöhemmin?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Kun suoritat sovelluksen , se luo ja tallentaa anonyymin tunnuksen jokaiseen älypuhelimeen. Tämä sovellus ei saa mitään tietosuojaan liittyviä tietoja, kuten puhelinnumeroa ja sijaintitietoja.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
