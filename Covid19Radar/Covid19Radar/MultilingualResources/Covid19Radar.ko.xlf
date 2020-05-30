@@ -20,10 +20,10 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">서비스 약관</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">개인 정보를 입력 할 필요가 없습니다. 앱을 설치할 때 할당된 고유 ID를 사용하고 있습니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
@@ -244,7 +244,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">노출 알림 사용 안 함</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">진단 제출 중...</target>
         </trans-unit>
@@ -363,6 +363,39 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">모든 데이터 삭제</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">잘못된 진단 ID</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">유효한 진단 ID를 제공하십시오.</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">잘못된 테스트 날짜</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">유효한 시험 날짜를 입력하십시오.</target>
+        </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">등록으로 돌아가기</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">긍정적 인 등록</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">나중에 긍정적으로 등록하시겠습니까?</target>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
+          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">응용 프로그램을 실행하면 각 스마트 폰에 익명 ID를 생성하고 저장합니다. 이 응용 프로그램은 전화 번호 및 위치 정보와 같은 개인 정보 보호와 관련된 정보를 취득하지 않습니다.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
         </trans-unit>
       </group>
     </body>

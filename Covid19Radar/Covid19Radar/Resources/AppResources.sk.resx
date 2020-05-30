@@ -23,9 +23,9 @@
     <value>Podmienky poskytovania služby</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nie je potrebné zadávať osobné údaje. Používame jedinečný identifikátor, ktorý vám bol pridelený pri inštalácii aplikácie.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Kontakt s iným používateľom aplikácie po dobu dlhšiu ako 30 min, v okruhu bližšie ako 2 m v priemere je zaznamenaný ako "blízky kontakt".</value>
@@ -196,7 +196,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Oznámenia o expozícii vypnuté</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Podanie diagnózy...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Odstrániť všetky údaje</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Neplatná identifikácia diagnózy</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Uveďte platný preukaz diagnózy</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Neplatný dátum testu</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Uveďte platný dátum testu</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Návrat k registrácii</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Pozitívna registrácia</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Chcete sa neskôr zaregistrovať pozitívne?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Keď spustíte aplikáciu , bude generovať a ukladať anonymný ID na každom smartphone. Táto aplikácia nezískava žiadne informácie týkajúce sa súkromia, ako je telefónne číslo a informácie o polohe.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

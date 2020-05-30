@@ -20,10 +20,10 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">சேவை விதிமுறைகள்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தனிப்பட்ட தகவலை உள்ளிடுதல் தேவையில்லை. ஒரு பயன்பாட்டை நிறுவும்போது உங்களுக்கு ஒதுக்கப்பட்ட தனித்துவமான ID-ஐ நாங்கள் பயன்படுத்துகிறோம்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
@@ -244,7 +244,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்புகள் முடக்கப்பட்டன</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நோய் கண்டறிதல்...</target>
         </trans-unit>
@@ -363,6 +363,39 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
         <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">அனைத்து தரவையும் நீக்கு</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">செல்லுபடியாகாத நோயறிதல் ID</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">செல்லுபடியாகாத தேர்வு தேதி</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">செல்லத்தக்க சோதனை தேதியை வழங்கவும்</target>
+        </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">பதிவுக்கான திருப்பம்</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">பாசிடிவ் பதிவு</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் பின்னர் நேர்மறையாக பதிவு செய்ய விரும்புகிறீர்களா?</target>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
+          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் பயன்பாட்டை இயக்கும் போது, அது ஒவ்வொரு ஸ்மார்ட்ஃபோனிலும் அநாமதேய ID உருவாக்கி சேமித்து வைக்கும். இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனியுரிமை தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
         </trans-unit>
       </group>
     </body>

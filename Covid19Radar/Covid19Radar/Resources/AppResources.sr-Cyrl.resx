@@ -23,9 +23,9 @@
     <value>Услови коришћења услуге</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Нема потребе за уносом личних информација. Користимо јединствени ИД који вам је додељен приликом инсталирања апликације.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Контакт са другим корисником апликације за дужи од 30 минута у збиру, у радијусу који је већи од 2 метра у просеку, записује се као "близак контакт".</value>
@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Онемогућена обавештења о експозиције</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Подношење дијагнозе...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Избриши све податке</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Неважећи ИД дијагностике</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Наведите важећи ИД дијагностике</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Неважећи датум тестирања</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Унесите важећи датум тестирања</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Врати се на регистрацију</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Позитивна регистрација</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Желите ли касније да се региструјете?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Када покренете апликацију, она ће генерисати и ускладиштити анонимни ИД на сваком паметном телефону. Ова апликација не стиче никакве информације везане за приватност, као што су број телефона и информације о локацији.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
