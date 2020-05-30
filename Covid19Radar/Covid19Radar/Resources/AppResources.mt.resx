@@ -293,4 +293,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Jekk jogħġbok ipprovdi ID ta ' dijanjożi valida</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Data tat-test invalida</value>
+  </data>
 </root>

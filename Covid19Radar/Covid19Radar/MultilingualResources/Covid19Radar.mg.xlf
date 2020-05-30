@@ -372,6 +372,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Omeo FAMANTARANA Aretina misy feo ianao.</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Daty nahitana-Pahaizana</target>
+        </trans-unit>
       </group>
     </body>
   </file>

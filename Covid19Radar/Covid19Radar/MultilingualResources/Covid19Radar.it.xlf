@@ -372,6 +372,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Fornire un ID diagnosi valido</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Data test non valida</target>
+        </trans-unit>
       </group>
     </body>
   </file>

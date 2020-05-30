@@ -293,4 +293,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>செல்லுபடியாகாத தேர்வு தேதி</value>
+  </data>
 </root>

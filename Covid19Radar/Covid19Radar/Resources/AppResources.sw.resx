@@ -293,4 +293,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Tafadhali toa kitambulisho cha utambuzi halali</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Tarehe batili ya jaribio</value>
+  </data>
 </root>

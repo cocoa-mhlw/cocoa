@@ -293,4 +293,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Mangyaring magbigay ng valid na pagsusuri na ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Imbalidong petsa ng pagsusuri</value>
+  </data>
 </root>

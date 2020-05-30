@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Δώστε ένα έγκυρο αναγνωριστικό διάγνωσης</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ημ/νία δοκιμής δεν είναι έγκυρη</value>
+  </data>
 </root>

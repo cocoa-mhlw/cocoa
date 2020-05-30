@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>कृपया एक वैध निदान आईडी प्रदान करें</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>अमान्य परीक्षण तिथि</value>
+  </data>
 </root>
