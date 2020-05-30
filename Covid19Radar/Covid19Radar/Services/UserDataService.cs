@@ -27,7 +27,7 @@ namespace Covid19Radar.Services
     {
         private readonly HttpDataService httpDataService;
 //        private readonly INavigationService navigationService;
-        private MinutesTimer _downloadTimer;
+//        private MinutesTimer _downloadTimer;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
@@ -128,10 +128,14 @@ namespace Covid19Radar.Services
 
         public async Task SetAsync(UserDataModel userData)
         {
-            if (Equals(userData, current))
+            /*
+            var NewerSerialized = Utils.SerializeToJson(userData);
+            var currentSerialized = Utils.SerializeToJson(current);
+            if (NewerSerialized == currentSerialized)
             {
                 return;
             }
+            */
             var isNull = current == null;
             if (!isNull && string.IsNullOrWhiteSpace(userData.Secret))
             {

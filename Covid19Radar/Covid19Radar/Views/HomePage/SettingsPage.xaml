@@ -23,18 +23,18 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Label
+            <!--            <Label
                 Grid.Row="0"
                 Style="{StaticResource DefaultTitleLabel}"
-                Text="{Binding Title}" />
+                Text="{Binding Title}" />-->
             <Grid
                 Grid.Row="1"
                 HorizontalOptions="FillAndExpand"
                 RowSpacing="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -46,7 +46,10 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" Grid.Column="0">
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span
@@ -66,7 +69,6 @@
                 <Label
                     Grid.Row="0"
                     Grid.Column="1"
-                    Grid.ColumnSpan="2"
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultLabelSmall}"
                     Text="{Binding AppVer}"
@@ -92,32 +94,14 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ce:ToggleButton
+                <Button
                     Grid.Row="2"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
-                    Command="{Binding OnChangeEnableNotification}"
-                    IsToggled="{Binding EnableLocalNotification}"
-                    Style="{StaticResource DefaultToggleButton}">
-                    <VisualStateManager.VisualStateGroups>
-                        <VisualStateGroup Name="ToggleStates">
-                            <VisualState Name="ToggledOn">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="On" />
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
-                                    <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState Name="ToggledOff">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="Off" />
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
-                                    <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateManager.VisualStateGroups>
-                </ce:ToggleButton>
+                    Command="{Binding OnChangeExposureNotificationState}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{Binding OnEnableExposureNotificationText, Mode=TwoWay}" />
+
                 <BoxView
                     Grid.Row="3"
                     Grid.ColumnSpan="3"
@@ -139,32 +123,13 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <ce:ToggleButton
+                <Button
                     Grid.Row="4"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
-                    Command="{Binding OnChangeEnableExposureNotification}"
-                    IsToggled="{Binding EnableExposureNotification}"
-                    Style="{StaticResource DefaultToggleButton}">
-                    <VisualStateManager.VisualStateGroups>
-                        <VisualStateGroup Name="ToggleStates">
-                            <VisualState Name="ToggledOn">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="On" />
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
-                                    <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState Name="ToggledOff">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="Off" />
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
-                                    <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateManager.VisualStateGroups>
-                </ce:ToggleButton>
+                    Command="{Binding OnChangeNotificationState}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{Binding OnEnableNotificationText, Mode=TwoWay}" />
                 <BoxView
                     Grid.Row="5"
                     Grid.ColumnSpan="3"

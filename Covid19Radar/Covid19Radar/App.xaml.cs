@@ -64,10 +64,8 @@ namespace Covid19Radar
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
-
             // Local Notification tap event listener
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
-
             LogUnobservedTaskExceptions();
 
             Distribute.ReleaseAvailable = OnReleaseAvailable;
@@ -96,8 +94,6 @@ namespace Covid19Radar
                 result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
             }
 
-            _ = InitializeBackgroundTasks();
-
             if (!result.Success)
             {
                 MainPage = new ExceptionPage
@@ -109,12 +105,6 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
-        }
-
-        async Task InitializeBackgroundTasks()
-        {
-            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
 
         protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -151,6 +141,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<DebugPage>();
 
             containerRegistry.RegisterSingleton<UserDataService>();
+            containerRegistry.RegisterSingleton<ExposureNotificationService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
         }
 
@@ -160,9 +151,32 @@ namespace Covid19Radar
             //ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
         }
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
+            await InitExposureNotification();
+        }
 
+        private async Task InitExposureNotification()
+        {
+            /*
+            UserDataService userDataService = Container.Resolve<UserDataService>();
+
+            if (!userDataService.IsExistUserData)
+            {
+                return;
+            }
+            var userData = userDataService.Get();
+            if (!userData.IsExposureNotificationEnabled)
+            {
+                return;
+            }
+            var IsEnabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+            if (!IsEnabled)
+            {
+                await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
+            }
+            await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
+            */
         }
 
         protected override void OnSleep()
