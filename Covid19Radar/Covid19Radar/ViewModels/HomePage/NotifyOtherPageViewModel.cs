@@ -45,8 +45,8 @@ namespace Covid19Radar.ViewModels
                 // Check gov's positive api check here!!
 
                 await UserDialogs.Instance.AlertAsync(
-                    "Please provide a valid Diagnosis ID",
-                    "Invalid Diagnosis ID",
+                    Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDText,
+                    Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDTitle,
                     Resources.AppResources.ButtonOk
                 );
                 return;
@@ -54,15 +54,15 @@ namespace Covid19Radar.ViewModels
             if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "Please provide a valid Test Date",
-                    "Invalid Test Date",
+                    Resources.AppResources.NotifyOtherPageDialogInvalidTestDateText,
+                    Resources.AppResources.NotifyOtherPageDialogInvalidTestDateTitle,
                     Resources.AppResources.ButtonOk
                 );
                 return;
             }
 
             // Submit the UID
-            using var dialog = UserDialogs.Instance.Loading("Submitting Diagnosis...");
+            using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
             IsEnabled = false;
             try
             {
@@ -119,10 +119,10 @@ namespace Covid19Radar.ViewModels
         public Command OnClickAfter => (new Command(async () =>
         {
             var check = await UserDialogs.Instance.ConfirmAsync(
-                "あとで設定しますか?",
-                "陽性登録",
+                Resources.AppResources.PositiveRegistrationConfirmText,
+                Resources.AppResources.PositiveRegistrationText,
                 Resources.AppResources.ButtonNotNow,
-                "登録へ戻る"
+                Resources.AppResources.ButtonReturnToRegistration
             );
             if (check)
             {
