@@ -288,16 +288,16 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>すべてのデータを削除</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>無効な診断 ID</value>
+    <value>無効な処理番号</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>有効な診断 ID を入力してください</value>
+    <value>有効な処理番号を入力してください</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>無効なテスト日付</value>
+    <value>無効な検査日</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>有効なテスト日を指定してください</value>
+    <value>有効な検査日を指定してください</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>登録に戻る</value>
