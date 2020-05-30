@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>अगला</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>सेवा की शर्तें</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>प्रारंभ करें</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 से हमारे प्रियजनों की रक्षा</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>डिवाइस एक्सेस</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>सहमत हूँ</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>होम</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>आप जाने के लिए तैयार हैं</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>पूरी की स्थापना की</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>लायसेंस अनुबंध</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ठीक</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>सक्षम करें</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>नॉटअब</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>यह ऐप एक्सपोजर नोटिफिकेशन/ब्लूटूथ सिग्नल ्स का इस्तेमाल करता है ताकि यह तय किया जा सके कि आप किसी अन्य कॉन्टैक्ट ट्रेसिंग ऐप यूजर के पास हैं या नहीं । 
@@ -225,11 +216,9 @@
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>सहमत नहीं</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>रद्द करें</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>क्या आप सूचनाओं को चालू करना चाहते हैं?</value>
@@ -237,11 +226,9 @@
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>सक्षम</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>हटा रहा है</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>यदि आपको सकारात्मक निदान मिला</value>
@@ -253,7 +240,6 @@
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>साझा करें</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>दूसरों को सकारात्मक जानकारी और गुमनाम अधिसूचना साझा करना</value>
@@ -261,14 +247,12 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>रीसेट करें</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>गोपनीयता नीति</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>रजिस्टर की प्रतीक्षा</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>क्या आप वास्तव में सभी डेटा रीसेट करना चाहते हैं?</value>
