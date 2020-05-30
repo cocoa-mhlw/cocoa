@@ -290,4 +290,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Ugyldig diagnose-ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Vennligst oppgi en gyldig diagnose-ID</value>
+  </data>
 </root>

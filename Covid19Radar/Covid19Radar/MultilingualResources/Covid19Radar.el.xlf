@@ -368,6 +368,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Το αναγνωριστικό διάγνωσης δεν είναι έγκυρο</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Δώστε ένα έγκυρο αναγνωριστικό διάγνωσης</target>
+        </trans-unit>
       </group>
     </body>
   </file>

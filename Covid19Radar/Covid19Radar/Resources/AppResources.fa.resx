@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>شناسه تشخیص غیرمعتبر</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>لطفا یک شناسه تشخیص معتبر ارائه دهید</value>
+  </data>
 </root>

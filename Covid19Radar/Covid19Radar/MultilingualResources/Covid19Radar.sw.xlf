@@ -368,6 +368,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kitambulisho cha utambuzi batili</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tafadhali toa kitambulisho cha utambuzi halali</target>
+        </trans-unit>
       </group>
     </body>
   </file>

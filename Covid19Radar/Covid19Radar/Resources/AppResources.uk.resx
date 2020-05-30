@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Неприпустимий код діагностики</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Будь ласка, надайте дійсний код діагностики</value>
+  </data>
 </root>

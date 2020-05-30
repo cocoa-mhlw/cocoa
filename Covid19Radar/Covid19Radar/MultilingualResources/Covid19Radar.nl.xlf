@@ -368,6 +368,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ongeldige diagnose-id</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geef een geldig diagnose-id op</target>
+        </trans-unit>
       </group>
     </body>
   </file>

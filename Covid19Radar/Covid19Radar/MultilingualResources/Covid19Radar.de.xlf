@@ -368,6 +368,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ungültige Diagnose-ID</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bitte geben Sie eine gültige Diagnose-ID an</target>
+        </trans-unit>
       </group>
     </body>
   </file>

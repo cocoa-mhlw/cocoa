@@ -368,6 +368,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Diagnostika ID ei sobi</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Palun esitage kehtiv diagnoosi ID</target>
+        </trans-unit>
       </group>
     </body>
   </file>

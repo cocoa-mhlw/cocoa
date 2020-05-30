@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>చెల్లని నిర్ధారణ ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>దయచేసి చెల్లుబాటు అయ్యే డయగ్నాస్టిక్ ఐడి ఇవ్వండి</value>
+  </data>
 </root>

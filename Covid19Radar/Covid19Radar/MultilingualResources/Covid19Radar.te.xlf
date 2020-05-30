@@ -368,6 +368,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">చెల్లని నిర్ధారణ ID</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">దయచేసి చెల్లుబాటు అయ్యే డయగ్నాస్టిక్ ఐడి ఇవ్వండి</target>
+        </trans-unit>
       </group>
     </body>
   </file>

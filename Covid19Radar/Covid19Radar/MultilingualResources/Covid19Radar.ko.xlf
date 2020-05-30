@@ -368,6 +368,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">잘못된 진단 ID</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">유효한 진단 ID를 제공하십시오.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

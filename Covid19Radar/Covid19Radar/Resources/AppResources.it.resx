@@ -290,4 +290,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ID diagnosi non valido</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Fornire un ID diagnosi valido</value>
+  </data>
 </root>

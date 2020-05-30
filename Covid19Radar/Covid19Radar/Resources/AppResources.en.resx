@@ -290,4 +290,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Invalid Diagnosis ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Please provide a valid Diagnosis ID</value>
+  </data>
 </root>

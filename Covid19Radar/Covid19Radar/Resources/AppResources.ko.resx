@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>잘못된 진단 ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>유효한 진단 ID를 제공하십시오.</value>
+  </data>
 </root>

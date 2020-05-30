@@ -290,4 +290,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Nahitana Aretina ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Omeo FAMANTARANA Aretina misy feo ianao.</value>
+  </data>
 </root>

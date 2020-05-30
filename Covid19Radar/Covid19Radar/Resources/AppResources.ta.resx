@@ -290,4 +290,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>செல்லுபடியாகாத நோயறிதல் ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</value>
+  </data>
 </root>

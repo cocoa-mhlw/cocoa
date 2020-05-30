@@ -45,7 +45,7 @@ namespace Covid19Radar.ViewModels
                 // Check gov's positive api check here!!
 
                 await UserDialogs.Instance.AlertAsync(
-                    "Please provide a valid Diagnosis ID",
+                    Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDText,
                     Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDTitle,
                     Resources.AppResources.ButtonOk
                 );
