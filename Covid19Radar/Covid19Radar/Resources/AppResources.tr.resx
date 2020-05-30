@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>İleri</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Hizmet Koşulları</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Başlat</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Sevdiklerimizi COVID-19'dan korumak için</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Cihaz Erişimi</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Kabul Et</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ANA SAYFA</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Başlamaya hazırsın</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Kurulum Tamamlandı</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisans Sözleşmesi</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>Tamam</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Etkinleştir</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Bu uygulama, başka bir kişi izleme uygulaması kullanıcısının yakınında olup olmadığınızı belirlemek için Pozlama Bildirimi / Bluetooth sinyallerini kullanır. Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
@@ -224,11 +215,9 @@
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Kabul Edilmedi</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>İptal</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Bildirimleri açmak istiyor musunuz?</value>
@@ -236,11 +225,9 @@
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Etkinleştirme</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Siliniyor</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Eğer pozitif tanı aldıysanız</value>
@@ -252,7 +239,6 @@
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Paylaş</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Olumlu bilgilerin ve anonim bildirimin başkalarına paylaşılması</value>
@@ -260,14 +246,12 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Sıfırla</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Gizlilik İlkesi</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Kayıt bekleniyor</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Gerçekten tüm verileri sıfırlamak istiyor musunuz?</value>
