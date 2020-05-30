@@ -23,9 +23,9 @@
     <value>Paslaugos teikimo sąlygos</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nereikia įvesti asmeninės informacijos. Diegiame programą, naudojame jums priskirtą unikalų ID.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Kontaktas su kitu programos naudotoju ilgiau nei 30 minučių iš viso, esant vidutiniškai didesniam nei 2 m spinduliui, įrašomas kaip "Uždaryti kontaktą".</value>
@@ -196,7 +196,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Pranešimai apie ekspoziciją išjungta</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Pateikti diagnozę...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Visų duomenų naikinimas</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Netinkamas diagnozės ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Pateikite galiojantį diagnozės ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Netinkama bandymo data</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Pateikite tinkamą bandymo datą</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Grįžti į registraciją</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Teigiama registracija</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Ar norite užsiregistruoti teigiamai vėliau?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Kai paleisite programą , ji sukurs ir išsaugos anoniminį ID kiekviename išmaniajame telefone. Ši programa neįsigyja jokios informacijos, susijusios su privatumu, pvz., telefono numerio ir vietos informacijos.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
