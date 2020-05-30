@@ -305,4 +305,7 @@
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>పాజిటివ్ రిజిస్ట్రేషన్</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>మీరు తరువాత సానుకూలంగా రిజిస్టర్ చేసుకోవాలని అనుకుంటున్నారా?</value>
+  </data>
 </root>

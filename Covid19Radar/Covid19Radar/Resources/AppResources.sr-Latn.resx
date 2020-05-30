@@ -305,4 +305,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Pozitivna registracija</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Želite li kasnije da se registrujete?</value>
+  </data>
 </root>

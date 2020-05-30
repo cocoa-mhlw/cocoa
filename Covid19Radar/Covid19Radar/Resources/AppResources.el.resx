@@ -305,4 +305,7 @@
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Θετική καταχώριση</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Θέλετε να εγγραφείτε θετικά αργότερα;</value>
+  </data>
 </root>

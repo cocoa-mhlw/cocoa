@@ -305,4 +305,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Usajili mzuri</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Ungependa kujisajili vizuri baadaye?</value>
+  </data>
 </root>

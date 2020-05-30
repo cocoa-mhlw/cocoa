@@ -118,7 +118,7 @@ namespace Covid19Radar.ViewModels
         public Command OnClickAfter => (new Command(async () =>
         {
             var check = await UserDialogs.Instance.ConfirmAsync(
-                "あとで設定しますか?",
+                Resources.AppResources.PositiveRegistrationConfirmText,
                 Resources.AppResources.PositiveRegistrationText,
                 Resources.AppResources.ButtonNotNow,
                 Resources.AppResources.ButtonReturnToRegistration

@@ -388,6 +388,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Reġistrazzjoni pożittiva</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tixtieq tirreġistra b ' mod pożittiv aktar tard?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

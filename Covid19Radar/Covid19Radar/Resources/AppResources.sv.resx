@@ -305,4 +305,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Positiv registrering</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Vill du registrera dig positivt senare?</value>
+  </data>
 </root>

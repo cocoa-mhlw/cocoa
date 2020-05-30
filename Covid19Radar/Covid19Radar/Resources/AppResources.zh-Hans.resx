@@ -305,4 +305,7 @@
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>正注册</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>以后要积极注册吗？</value>
+  </data>
 </root>

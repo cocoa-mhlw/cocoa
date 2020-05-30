@@ -386,6 +386,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Positive registration</source>
           <target state="translated">陽性登録</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="translated">後で陽性の登録をしますか？</target>
+        </trans-unit>
       </group>
     </body>
   </file>

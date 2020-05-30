@@ -388,6 +388,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Clárú dearfach</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ar mhaith leat clárú go dearfach níos déanaí?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

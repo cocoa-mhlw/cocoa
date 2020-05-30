@@ -305,4 +305,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Rēhitatanga tōrunga</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Me rēhita tonu tika ā muri ake?</value>
+  </data>
 </root>
