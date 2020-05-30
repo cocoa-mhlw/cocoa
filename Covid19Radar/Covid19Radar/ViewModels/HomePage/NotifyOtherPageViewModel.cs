@@ -62,7 +62,7 @@ namespace Covid19Radar.ViewModels
             }
 
             // Submit the UID
-            using var dialog = UserDialogs.Instance.Loading("Submitting Diagnosis...");
+            using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
             IsEnabled = false;
             try
             {
