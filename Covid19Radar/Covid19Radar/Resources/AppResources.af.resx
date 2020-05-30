@@ -296,4 +296,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Ongeldige Toetsdatum</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Verskaf asseblief 'n geldige Toetsdatum</value>
+  </data>
 </root>

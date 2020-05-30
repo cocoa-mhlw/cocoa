@@ -296,4 +296,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Virheellinen testipäivämäärä</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Anna kelvollinen testipäivämäärä</value>
+  </data>
 </root>

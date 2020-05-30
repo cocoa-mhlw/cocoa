@@ -296,4 +296,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Daty nahitana-Pahaizana</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Omeo Daty misy Fitiliana ve ianao.</value>
+  </data>
 </root>

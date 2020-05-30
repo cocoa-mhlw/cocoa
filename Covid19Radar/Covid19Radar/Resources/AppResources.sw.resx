@@ -296,4 +296,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Tarehe batili ya jaribio</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Tafadhali toa tarehe halali ya mtihani</value>
+  </data>
 </root>

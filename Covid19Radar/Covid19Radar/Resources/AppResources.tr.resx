@@ -295,4 +295,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Geçersiz Sınav Tarihi</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Lütfen geçerli bir Sınav Tarihi verin</value>
+  </data>
 </root>

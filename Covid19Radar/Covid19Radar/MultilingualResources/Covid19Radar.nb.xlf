@@ -376,6 +376,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ugyldig testdato</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Oppgi en gyldig testdato</target>
+        </trans-unit>
       </group>
     </body>
   </file>

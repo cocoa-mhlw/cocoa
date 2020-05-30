@@ -294,6 +294,9 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>有効な診断 ID を入力してください</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>無効な検査日付</value>
+    <value>無効なテスト日付</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>有効なテスト日を指定してください</value>
   </data>
 </root>

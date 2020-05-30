@@ -376,6 +376,10 @@ Select 'Always Allow' to set up Bluetooth.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Invalid Test Date</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Please provide a valid Test Date</target>
+        </trans-unit>
       </group>
     </body>
   </file>

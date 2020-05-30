@@ -296,4 +296,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>วันที่ทดสอบไม่ถูกต้อง</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>โปรดระบุวันสอบที่ถูกต้อง</value>
+  </data>
 </root>

@@ -296,4 +296,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Data nevalidă a testului</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Vă rugăm să furnizați o dată de testare validă</value>
+  </data>
 </root>

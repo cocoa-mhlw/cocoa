@@ -296,4 +296,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Ngày kiểm tra không hợp lệ</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Vui lòng cung cấp ngày thi hợp lệ</value>
+  </data>
 </root>

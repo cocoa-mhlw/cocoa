@@ -374,6 +374,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Data nevalidă a testului</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vă rugăm să furnizați o dată de testare validă</target>
+        </trans-unit>
       </group>
     </body>
   </file>
