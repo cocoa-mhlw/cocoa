@@ -296,4 +296,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Ημ/νία δοκιμής δεν είναι έγκυρη</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Παρακαλείσθε να δώσετε μια έγκυρη ημερομηνία δοκιμής</value>
+  </data>
 </root>

@@ -494,6 +494,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Please provide a valid Test Date に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDialogInvalidTestDateText {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDialogInvalidTestDateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Invalid Test Date に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDialogInvalidTestDateTitle {

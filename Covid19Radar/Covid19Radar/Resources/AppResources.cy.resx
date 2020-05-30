@@ -296,4 +296,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Dyddiad prawf annilys</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Rhowch ddyddiad prawf dilys os gwelwch yn dda</value>
+  </data>
 </root>

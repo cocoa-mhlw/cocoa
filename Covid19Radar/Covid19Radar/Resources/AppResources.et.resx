@@ -296,4 +296,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Sobimatu Testkuupäev</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Palun esitage kehtiv Katsekuupäev</value>
+  </data>
 </root>

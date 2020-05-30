@@ -296,4 +296,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>செல்லுபடியாகாத தேர்வு தேதி</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>செல்லத்தக்க சோதனை தேதியை வழங்கவும்</value>
+  </data>
 </root>

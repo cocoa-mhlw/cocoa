@@ -296,4 +296,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Ógild prófunardagsetning</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Vinsamlegast Gefðu upp gilda Prófunardagsetningu</value>
+  </data>
 </root>

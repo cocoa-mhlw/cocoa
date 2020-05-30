@@ -296,4 +296,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Data do teste inválida</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Por favor, forneça uma data de teste válida</value>
+  </data>
 </root>

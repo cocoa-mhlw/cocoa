@@ -296,4 +296,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>ಅಮಾನ್ಯವಾದ ಪರೀಕ್ಷಾ ದಿನಾಂಕ</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>ದಯವಿಟ್ಟು ಒಂದು ಸಿಂಧುವಾದ ಪರೀಕ್ಷಾ ದಿನಾಂಕವನ್ನು ಒದಗಿಸಿ</value>
+  </data>
 </root>
