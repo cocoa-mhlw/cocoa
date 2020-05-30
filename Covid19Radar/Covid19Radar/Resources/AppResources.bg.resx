@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Напред</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Условия за услуги</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Начало</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Защита на нашите близки от COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Достъп до устройството</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Съгласявам се</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>НАЧАЛО</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Готов си да тръгваме.</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Настройването е завършено</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Лицензионно споразумение</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ОК</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Разрешаване</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Не сега</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Това приложение използва експонация уведомление / Bluetooth сигнали, за да определи дали сте близо до друг контакт проследяване на потребител на приложението. 
@@ -225,11 +216,9 @@
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Не съм съгласен</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Отказ</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Искате ли да включите известията?</value>
@@ -237,11 +226,9 @@
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Позволява</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Изтриване</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Ако сте получили положителна диагноза</value>
@@ -253,7 +240,6 @@
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Споделяне</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Споделяне на положителна информация и анонимно уведомяване на други лица</value>
@@ -261,14 +247,12 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Начално състояние</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Правила за поверителност</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Изчакване на регистрация</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Наистина ли искате да нулирате всички данни?</value>

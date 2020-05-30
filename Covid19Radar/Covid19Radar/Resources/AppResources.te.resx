@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>తదుపరి</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>సేవా నిబంధనలు</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>ప్రారంభం</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 నుండి మా ప్రియమైన వారిని రక్షించే</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>పరికర ప్రాప్తి</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>అంగీకరించు</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>హోమ్</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>మీరు వెళ్ళడానికి సిద్ధంగా ఉన్నారు</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>పూర్తి ఏర్పాటు</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>లైసెన్స్ అగ్రిమెంట్</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>సరే</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>ప్రారంభించు</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>నోట్నౌ</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>మీరు మరో కాంటాక్ట్ ట్రేసింగ్ యాప్ యూజర్ కు దగ్గరల్లో ఉన్నారా లేదా అని తెలుసుకోవడం కొరకు ఈ యాప్ ఎక్స్ పోజర్ నోటిఫికేషన్/బ్లూటూత్ సిగ్నల్స్ ని ఉపయోగిస్తుంది. 
@@ -225,11 +216,9 @@
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>ఒప్పుకోరు</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>రద్దు చేయి</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>నోటిఫికేషన్లను మీరు ఆన్ చేయాలని అనుకుంటున్నారా?</value>
@@ -237,11 +226,9 @@
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>ఎనేబుల్</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>తొలగిస్తోంది</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>ఒకవేళ మీరు పాజిటివ్ డయాగ్నసిస్ అందుకుంటే</value>
@@ -253,7 +240,6 @@
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>భాగస్వామ్యం చేయి</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>పాజిటివ్ సమాచారం మరియు అనామక నోటిఫికేషన్ ని ఇతరులకు పంచుకోవడం</value>
@@ -261,14 +247,12 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>రీసెట్ చేయి</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>గోప్యతా విధానం</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>రిజిస్టర్ కొరకు వేచి ఉంది</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>మీరు నిజంగా మొత్తం డేటాను రీసెట్ చేయాలని అనుకుంటున్నారా?</value>
