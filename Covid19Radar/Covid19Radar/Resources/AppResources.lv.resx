@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Tālāk</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Pakalpojuma noteikumi</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Sākums</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Aizsargājot mūsu tuviniekus no COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Piekļuve ierīcei</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Piekrītu</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>SĀKUMS</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Jūs esat gatavs doties</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Iestatītu pabeigtos</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licences līgums</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>Lūdzu, pārbaudiet tīkla savienojumu.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>Labi</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Iespējot</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Šī lietotne izmanto ekspozīcijas paziņojumu/Bluetooth signālus, lai noteiktu, vai esat tuvu citam kontaktpersonu izsekošanas programmas lietotājam. 
@@ -181,16 +172,16 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Lai verificētu pozitīvo testa rezultātu, jāizmanto unikālais testa identifikators, kas ir komplektā ar COVID-19 testu.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Lūdzu, vēlāk mēģiniet vēlreiz.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Neizdevās</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnoze iesniegta</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Pabeigts</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Nepieciešamais diagnozes identifikators</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Labi</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Pirms diagnozes iesniegšanas, lūdzu, iespējojiet ekspozīcijas paziņojumus.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Ekspozīcijas paziņojumi atspējoti</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Iestatījumi</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nepiekrītat</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Atcelt</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Vai vēlaties ieslēgt paziņojumus?</value>
@@ -241,11 +226,9 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Iespējo</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Dzēšana</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Ja esat saņēmis pozitīvu diagnozi</value>
@@ -257,7 +240,6 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Kopīgot</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Pozitīvas informācijas un anonīma paziņojuma koplietošana citiem</value>
@@ -265,14 +247,44 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Atiestatīt</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Konfidencialitātes politika</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Gaida reģistrēties</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Vai tiešām vēlaties atiestatīt visus datus?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Dzēst visus datus</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Visi iestatījumi un dati ir izdzēsti. Lūdzu, restartējiet lietojumprogrammu.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versija</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Šīs lietojumprogrammas versijas numurs</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Neliela diapazona bezvadu sakari</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Sūtīt un saņemt</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Aizvērt kontaktpersonu paziņojumu</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Pieteikumu paziņojumi ciešas saziņas laikā</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Dzēst datus</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Dzēst visus datus</value>
   </data>
 </root>

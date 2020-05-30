@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Dalej</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Warunki świadczenia usługi</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Uruchom</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Ochrona naszych bliskich przed COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Dostęp do urządzenia</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Zgadzam się</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>STRONA GŁÓWNA</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Możesz zaczynać</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Konfigurowanie zakończone</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Umowa licencyjna</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>Sprawdź połączenie sieciowe.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>Ok</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Włącz</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow (Nienow)</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Ta aplikacja wykorzystuje powiadomienia ekspozycji / sygnały Bluetooth, aby ustalić, czy jesteś w pobliżu innego użytkownika aplikacji śledzenia kontaktu. 
@@ -181,16 +172,16 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Unikatowy identyfikator testu, który został doszła do testu COVID-19, musi być użyty do zweryfikowania pozytywnego wyniku testu.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Próbuj ponownie później.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Niepowodzenie</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnoza Przedłożona</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Wykonano</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Wymagany identyfikator diagnozy</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Przed przesłaniem diagnozy włącz powiadomienia o ekspozycji.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Powiadomienia o narażeniu wyłączone</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ustawienia</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Nie zgadzam się</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Anuluj</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Czy chcesz włączyć powiadomienia?</value>
@@ -241,11 +226,9 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Włączanie</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Usuwanie</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Jeśli pacjent otrzymał pozytywną diagnozę</value>
@@ -257,7 +240,6 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Udostępnij</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Udostępnianie pozytywnych informacji i anonimowych powiadomień innym</value>
@@ -265,14 +247,44 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Resetuj</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Zasady zachowania poufności informacji</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Oczekiwanie na rejestrację</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Czy naprawdę chcesz zresetować wszystkie dane?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Usuń wszystkie dane</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Wszystkie ustawienia i dane zostały usunięte. Uruchom ponownie aplikację.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numer wersji tej aplikacji</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Komunikacja bezprzewodowa bliskiego zasięgu</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Wyślij i odbierz</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Powiadomienie o bliskim kontakcie</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Powiadomienia o aplikacjach w momencie bliskiego kontaktu</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Usuń dane</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Usuń wszystkie dane</value>
   </data>
 </root>

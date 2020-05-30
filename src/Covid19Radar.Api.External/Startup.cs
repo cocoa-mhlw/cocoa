@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.Extensions.Logging.Debug;
 using Microsoft.AspNetCore.Http;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Extensions;

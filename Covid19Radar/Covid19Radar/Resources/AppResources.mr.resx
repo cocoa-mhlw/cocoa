@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>पुढील</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>सेवा अटी</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>प्रारंभ</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>आपल्या प्रिय जनांचे COVID-19 पासून संरक्षण करणे</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>साधन प्रवेश</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>सहमत</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>होम</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>तुम्ही जायला तयार आहात</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>पूर्ण करा</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>परवाना करार</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>कृपया आपले नेटवर्क कनेक्शन तपासा.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ठीक</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>सक्षम करा</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>आता नाही</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>हे अॅप एक्स्पोजर नोटिफिकेशन / ब्लूटूथ संकेत ांचा वापर करते की तुम्ही दुस-या संपर्क शोधअॅप वापरकर्त्याजवळ आहात का हे निश्चित करण्यासाठी. 
@@ -181,16 +172,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>तुमच्या सीओव्हीआयडी-१९ चाचणीसह आलेल्या युनिक टेस्ट आयडेंटिफायरचा उपयोग आपल्या सकारात्मक चाचणीचा निकाल तपासण्यासाठी केला पाहिजे.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>कृपया नंतर पुन्हा प्रयत्न करा.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>अयशस्वी</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>सादर केलेले निदान</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>पूर्ण</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>निदान ओळखकर्ता आवश्यक</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ठीक</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>कृपया निदान सादर करण्यापूर्वी एक्स्पोजर सूचना कार्यान्वीत करा.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>एक्सपोजर सूचना अकार्यान्वीत</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>सेटिंग्ज</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>सहमत नाही</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>रद्द करा</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>तुम्हाला सूचना चालू करायची आहेत का?</value>
@@ -241,11 +226,9 @@
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>कार्यान्वीत करत आहे</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>हटवणे</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>जर तुम्हाला सकारात्मक निदान झाले तर</value>
@@ -257,7 +240,6 @@
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>सामायिक करा</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>इतरांना सकारात्मक माहिती आणि निनावी सूचना देणे</value>
@@ -265,14 +247,44 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>रिसेट करा</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>गोपनीयता धोरण</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>नोंदणीची प्रतीक्षा</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>तुम्हाला खरच सर्व डेटा रिसेट करायचा आहे का?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>सर्व डेटा नष्ट करा</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>सर्व संयोजना आणि डेटा नष्ट करण्यात आले आहे. कृपया अनुप्रयोग पुन्हा सुरू करा.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>आवृत्ती</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>या अनुप्रयोगाची आवृत्ती संख्या</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>अल्प पल्ल्याचे वायरलेस संवाद</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>पाठवा आणि प्राप्त करा</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>संपर्क सूचना बंद करा</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>जवळच्या संपर्काच्या वेळी अनुप्रयोग सूचना</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>डेटा हटवा</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>सर्व डेटा नष्ट करा</value>
   </data>
 </root>

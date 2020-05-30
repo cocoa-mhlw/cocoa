@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Manaraka</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Ireo teny Fanompoana</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Manomboka</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Miaro ireo olon-tiantsika amin' ny COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Fitaovana Hahazoana ny</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Manaiky</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>TOKANTRANO</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Vonona ny handeha ianao</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Vita Tanteraka</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Fifanarahana avy amin' ny fahazoan</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>Jereo azafady ny fifandraisan' ny tambazotra.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>Tsy maninona</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Fahafahana</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Ity rafi-baovao ity dia mampiasa ny Fampilazana/Bluetooth mampilaza mba hamantarana raha toa ianao ka eo akaikin' ny mpampiasa ny rafi-kafa. 
@@ -181,16 +172,16 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Ilay fitsapam-pahaizana miavaka i izay tonga niaraka tamin' ny fanandramana COVID ny 19 taona dia tsy maintsy ampiasaina mba hitsapana ny vokatra tsara azo avy aminao.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Mamerena manandrana aoriana kely azafady.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Tsy nahomby</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Aretina ny Fangatahana</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Fenoy</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Aretina i Takiana</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Tsy maninona</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Mba alefaso ny Fampilazana ny Hatsiaka alohan' ny fandefasana aretina.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hatsiaka Fampilazana Sembana</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Toe-javatra</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Tsy Manaiky</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Manafoana</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Te-hitodika amin' ny fampilazana ve ianao?</value>
@@ -241,11 +226,9 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Manampin'</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Raha nahazo aretina tsara ianao.</value>
@@ -257,7 +240,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Hizara</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Mizara fampahalalana tsara sy tsy fampilazana amin' ny hafa</value>
@@ -265,14 +247,44 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Données</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Fitsipika tsiambaratelo</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Miandry ny fisoratana anarana</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Moa ve tena tianao données ny tahirin-kevitra rehetra?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Esory avokoa ny tahirin-kevitra rehetra</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Voafafa ny toe-javatra sy ny tahirin-kevitra rehetra. Azafady averina velomina indray ny fanaovana fampiharana.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Famoahana ny laharan' ity fampiharana ity</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Fifandraisana wireless</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Alefaso ary raiso</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Hidio ny Fampilazana</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Fampiharana ny fampilazana amin' ny fotoana manaraka.</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Fafao ireo tahirin</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Esory avokoa ny tahirin-kevitra rehetra</value>
   </data>
 </root>
