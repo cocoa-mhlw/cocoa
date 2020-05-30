@@ -388,6 +388,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Positiivinen rekisteröinti</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Haluatko rekisteröityä positiivisesti myöhemmin?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

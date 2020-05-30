@@ -305,4 +305,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Positiivne registreerimine</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Kas soovite hiljem positiivselt registreerida?</value>
+  </data>
 </root>

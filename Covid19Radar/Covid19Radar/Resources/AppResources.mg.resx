@@ -305,4 +305,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Fisoratana anarana tsara</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Tianao ve ny hanao ny fisoratana anarana ao aoriana kely?</value>
+  </data>
 </root>

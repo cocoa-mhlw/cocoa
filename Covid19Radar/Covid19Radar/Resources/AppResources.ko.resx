@@ -305,4 +305,7 @@
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>긍정적 인 등록</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>나중에 긍정적으로 등록하시겠습니까?</value>
+  </data>
 </root>

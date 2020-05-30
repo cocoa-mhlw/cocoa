@@ -305,4 +305,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Pozitív regisztráció</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Szeretne később pozitívan regisztrálni?</value>
+  </data>
 </root>

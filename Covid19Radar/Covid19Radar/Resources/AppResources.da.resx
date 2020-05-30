@@ -305,4 +305,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Positiv registrering</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Vil du registrere dig positivt senere?</value>
+  </data>
 </root>

@@ -305,4 +305,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Clárú dearfach</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Ar mhaith leat clárú go dearfach níos déanaí?</value>
+  </data>
 </root>

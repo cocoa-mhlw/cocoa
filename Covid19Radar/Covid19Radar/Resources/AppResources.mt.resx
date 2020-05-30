@@ -305,4 +305,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Reġistrazzjoni pożittiva</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Tixtieq tirreġistra b ' mod pożittiv aktar tard?</value>
+  </data>
 </root>

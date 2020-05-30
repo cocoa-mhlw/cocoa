@@ -305,4 +305,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Înregistrare pozitivă</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Doriți să vă înregistrați pozitiv mai târziu?</value>
+  </data>
 </root>

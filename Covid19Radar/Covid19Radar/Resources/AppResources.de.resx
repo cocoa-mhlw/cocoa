@@ -305,4 +305,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Positive Registrierung</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Möchten Sie sich später positiv registrieren?</value>
+  </data>
 </root>
