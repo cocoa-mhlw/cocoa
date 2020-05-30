@@ -14,9 +14,10 @@ namespace Covid19Radar.Common
         public static readonly string AppVersion = "Ver 1.0.0";
         public static readonly string AppStoreUrl = "https://www.apple.com/jp/ios/app-store/";
         public static readonly string GooglePlayUrl = "https://play.google.com/store";
+        //public static readonly string ApiBaseUrl = "http://192.168.1.2:7071/api";
 
         public static readonly string ApiBaseUrl = "https://covid19radar.azurewebsites.net/api";
-//        public static readonly string ApiSecret = "API_SECRET";
+        //        public static readonly string ApiSecret = "API_SECRET";
         public static readonly string ApiSecret = "g***REMOVED***BaKQ==";
 
         public static readonly int NumberOfGroup = 86400;

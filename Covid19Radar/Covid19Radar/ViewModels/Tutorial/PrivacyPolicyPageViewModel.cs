@@ -42,19 +42,15 @@ namespace Covid19Radar.ViewModels
             UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
             if (!userDataService.IsExistUserData)
             {
-                UserDataModel userData = await userDataService.RegisterUserAsync();
+                userData = await userDataService.RegisterUserAsync();
                 if (userData == null)
                 {
                     UserDialogs.Instance.HideLoading();
                     await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, "Connection error", Resources.AppResources.ButtonOk);
                     return;
                 }
-                userData.IsOptined = true;
             }
-            else
-            {
-                userData.IsOptined = true;
-            }
+            userData.IsOptined = true;
             await userDataService.SetAsync(userData);
             UserDialogs.Instance.HideLoading();
             await NavigationService.NavigateAsync(nameof(DescriptionPage1));
