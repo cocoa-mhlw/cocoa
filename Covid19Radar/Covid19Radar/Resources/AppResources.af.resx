@@ -293,4 +293,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Verskaf asseblief 'n geldige diagnose-ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ongeldige Toetsdatum</value>
+  </data>
 </root>

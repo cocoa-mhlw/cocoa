@@ -293,4 +293,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Tabhair aitheantas diagnóise bailí le do thoil</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Dáta Tástála Neamhbhailí</value>
+  </data>
 </root>

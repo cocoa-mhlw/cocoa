@@ -293,4 +293,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Vă rugăm să furnizați un id de diagnostic valabil</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Data nevalidă a testului</value>
+  </data>
 </root>

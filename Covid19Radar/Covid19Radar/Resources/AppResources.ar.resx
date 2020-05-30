@@ -292,4 +292,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>يرجى تقديم معرف تشخيص صالح</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>تاريخ اختبار غير صالح</value>
+  </data>
 </root>

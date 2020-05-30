@@ -371,6 +371,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">يرجى تقديم معرف تشخيص صالح</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">تاريخ اختبار غير صالح</target>
+        </trans-unit>
       </group>
     </body>
   </file>

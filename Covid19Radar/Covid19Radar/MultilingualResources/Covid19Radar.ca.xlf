@@ -372,6 +372,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Proporcioneu un identificador de diagnòstic vàlid</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Data de prova no vàlida</target>
+        </trans-unit>
       </group>
     </body>
   </file>

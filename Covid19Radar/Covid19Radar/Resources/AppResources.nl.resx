@@ -293,4 +293,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Geef een geldig diagnose-id op</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ongeldige testdatum</value>
+  </data>
 </root>

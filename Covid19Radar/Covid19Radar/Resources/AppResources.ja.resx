@@ -293,4 +293,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>有効な診断 ID を入力してください</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>無効な検査日付</value>
+  </data>
 </root>

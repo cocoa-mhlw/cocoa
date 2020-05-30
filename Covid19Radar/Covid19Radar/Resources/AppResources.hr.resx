@@ -293,4 +293,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Navedite valjani ID dijagnoze</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Datum testiranja nije valjan</value>
+  </data>
 </root>

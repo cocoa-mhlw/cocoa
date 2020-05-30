@@ -293,4 +293,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Vinsamlegast Gefðu upp gilt Greiningarkenni</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ógild prófunardagsetning</value>
+  </data>
 </root>

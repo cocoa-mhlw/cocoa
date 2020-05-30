@@ -55,7 +55,7 @@ namespace Covid19Radar.ViewModels
             {
                 await UserDialogs.Instance.AlertAsync(
                     "Please provide a valid Test Date",
-                    "Invalid Test Date",
+                    Resources.AppResources.NotifyOtherPageDialogInvalidTestDateTitle,
                     Resources.AppResources.ButtonOk
                 );
                 return;
