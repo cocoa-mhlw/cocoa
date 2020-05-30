@@ -244,7 +244,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Ekspos notifikasi dinonaktifkan</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="translated">Mengirimkan diagnosis...</target>
         </trans-unit>

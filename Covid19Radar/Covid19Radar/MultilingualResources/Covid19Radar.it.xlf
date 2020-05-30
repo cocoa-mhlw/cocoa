@@ -244,7 +244,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Notifiche di esposizione disabilitate</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="translated">Invio della diagnosi in corso...</target>
         </trans-unit>

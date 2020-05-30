@@ -242,7 +242,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Expozíciós értesítések letiltva</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">A diagnózis benyújtása...</target>
         </trans-unit>
