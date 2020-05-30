@@ -375,6 +375,10 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Fecha de prueba no válida</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Proporcione una fecha de prueba válida</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -376,6 +376,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ungültiges Testdatum</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bitte geben Sie ein gültiges Testdatum an</target>
+        </trans-unit>
       </group>
     </body>
   </file>

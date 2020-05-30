@@ -381,6 +381,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ogiltigt testdatum</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ange ett giltigt testdatum</target>
+        </trans-unit>
       </group>
     </body>
   </file>

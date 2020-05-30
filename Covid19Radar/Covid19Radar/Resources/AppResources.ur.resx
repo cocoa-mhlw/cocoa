@@ -296,4 +296,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>ناجائز جانچ تاریخ</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>ایک جائز جانچ تاریخ مہیا کریں</value>
+  </data>
 </root>

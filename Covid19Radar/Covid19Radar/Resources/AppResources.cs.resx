@@ -296,4 +296,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Neplatné datum testu</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Uveďte platné datum testu.</value>
+  </data>
 </root>

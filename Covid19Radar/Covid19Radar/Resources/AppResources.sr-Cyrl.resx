@@ -296,4 +296,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Неважећи датум тестирања</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Унесите важећи датум тестирања</value>
+  </data>
 </root>

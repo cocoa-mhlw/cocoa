@@ -376,6 +376,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Virheellinen testipäivämäärä</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anna kelvollinen testipäivämäärä</target>
+        </trans-unit>
       </group>
     </body>
   </file>

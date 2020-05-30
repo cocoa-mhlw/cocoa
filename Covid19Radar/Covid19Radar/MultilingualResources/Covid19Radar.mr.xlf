@@ -376,6 +376,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">अवैध चाचणी दिनांक</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">कृपया वैध चाचणी दिनांक प्रदान करा</target>
+        </trans-unit>
       </group>
     </body>
   </file>

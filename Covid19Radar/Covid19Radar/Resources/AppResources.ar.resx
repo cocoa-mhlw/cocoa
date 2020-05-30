@@ -295,4 +295,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>تاريخ اختبار غير صالح</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>يرجى تقديم تاريخ اختبار صالح</value>
+  </data>
 </root>

@@ -376,6 +376,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">잘못된 테스트 날짜</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">유효한 시험 날짜를 입력하십시오.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

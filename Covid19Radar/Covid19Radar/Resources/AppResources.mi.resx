@@ -296,4 +296,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Rā Whakamātau muhu</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Homai koa he Rā Whakamātau tika</value>
+  </data>
 </root>

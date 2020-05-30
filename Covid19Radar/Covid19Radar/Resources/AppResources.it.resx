@@ -296,4 +296,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Data test non valida</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Specificare una Data di prova valida</value>
+  </data>
 </root>

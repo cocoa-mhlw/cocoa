@@ -296,4 +296,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Ungültiges Testdatum</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Bitte geben Sie ein gültiges Testdatum an</value>
+  </data>
 </root>
