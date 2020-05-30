@@ -23,9 +23,9 @@
     <value>Условия предоставления услуг</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Нет необходимости ввода личной информации. Мы используем уникальный идентификатор, выделенный вам при установке приложения.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Контакт с другим пользователем приложения в общей сложности более 30 минут, в радиусе ближе, чем 2 м в среднем, регистрируется как "Близкий контакт".</value>
@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Уведомления об экспозиции отключены</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Представление диагноза...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Удалить все данные</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Идентификатор недействительной диагностики</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Пожалуйста, предоставьте действительный идентификатор диагноза</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Недействительной даты тестирования</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Пожалуйста, укажите действительный тест Дата</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Возвращение к регистрации</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Позитивная регистрация</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Хотите зарегистрироваться позже?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>При запуске приложения, он будет генерировать и хранить анонимный ID на каждом смартфоне. Это приложение не получает никакой информации, связанной с конфиденциальностью, такой как номер телефона и информация о местоположении.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
