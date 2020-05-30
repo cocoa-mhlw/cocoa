@@ -302,4 +302,7 @@
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>రిజిస్ట్రేషన్ కు రిటర్న్</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>పాజిటివ్ రిజిస్ట్రేషన్</value>
+  </data>
 </root>

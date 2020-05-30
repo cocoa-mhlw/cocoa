@@ -301,4 +301,7 @@
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>العودة إلى التسجيل</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>التسجيل الإيجابي</value>
+  </data>
 </root>

@@ -301,4 +301,7 @@
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Kayıt için geri dön</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Pozitif kayıt</value>
+  </data>
 </root>

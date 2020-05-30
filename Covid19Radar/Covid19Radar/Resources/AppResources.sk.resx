@@ -302,4 +302,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Návrat k registrácii</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Pozitívna registrácia</value>
+  </data>
 </root>

@@ -302,4 +302,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Tagasi registreerimiseks</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positiivne registreerimine</value>
+  </data>
 </root>

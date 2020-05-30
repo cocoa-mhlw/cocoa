@@ -302,4 +302,7 @@
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>രജിസ്ട്രേഷന് തിരികെ നല് കൂ</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>പോസിറ്റീവ് രജിസ്ട്രേഷൻ</value>
+  </data>
 </root>

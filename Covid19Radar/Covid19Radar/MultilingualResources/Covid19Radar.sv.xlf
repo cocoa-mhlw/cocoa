@@ -389,6 +389,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Återgå till registrering</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Positiv registrering</target>
+        </trans-unit>
       </group>
     </body>
   </file>

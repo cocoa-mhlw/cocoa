@@ -384,6 +384,10 @@ Select 'Always Allow' to set up Bluetooth.</target>
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Return to registration</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Positive registration</target>
+        </trans-unit>
       </group>
     </body>
   </file>

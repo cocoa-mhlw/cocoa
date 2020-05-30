@@ -302,4 +302,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Rudi kwenye usajili</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Usajili mzuri</value>
+  </data>
 </root>

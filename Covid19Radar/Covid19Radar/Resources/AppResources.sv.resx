@@ -302,4 +302,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Återgå till registrering</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positiv registrering</value>
+  </data>
 </root>

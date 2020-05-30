@@ -302,4 +302,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Hoki ki te rēhitatanga</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Rēhitatanga tōrunga</value>
+  </data>
 </root>

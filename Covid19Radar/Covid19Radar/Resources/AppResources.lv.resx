@@ -302,4 +302,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Atgriešanās pie reģistrācijas</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Pozitīva reģistrācija</value>
+  </data>
 </root>
