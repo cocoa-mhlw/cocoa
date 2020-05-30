@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Δεν χρειάζεται να προσθέσετε προσωπικές πληροφορίες. Χρησιμοποιούμε μοναδικό αναγνωριστικό, το οποίο σας έχει εκχωρηθεί κατά την εγκατάσταση μιας εφαρμογής.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Μια επαφή με έναν άλλο χρήστη της εφαρμογής για περισσότερο από 30 λεπτά συνολικά, σε ακτίνα μικρότερη από 2 m κατά μέσο όρο καταγράφεται ως "Στενή επαφή".</value>
@@ -307,5 +307,9 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Θέλετε να εγγραφείτε θετικά αργότερα;</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Όταν εκτελείτε την εφαρμογή , θα δημιουργήσει και θα αποθηκεύσει ένα ανώνυμο αναγνωριστικό σε κάθε smartphone. Αυτή η εφαρμογή δεν αποκτά πληροφορίες σχετικά με το απόρρητο, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>ไม่จําเป็นต้องใส่ข้อมูลส่วนบุคคล เราจะใช้ ID พิเศษที่ไม่ซ้ํากัน ซึ่งจะถูกสร้างให้คุณระหว่างการติดตั้งแอพ</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>การพบปะกับผู้ใช้แอพคนอื่นนานกว่า 30 นาที ภายในรัศมีต่ำกว่า 2 เมตร จะถูกบันทึกเป็น "การติดต่อแบบใกล้ชิด"</value>
@@ -307,5 +307,9 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>คุณต้องการลงทะเบียนในเชิงบวกในภายหลังหรือไม่</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>เมื่อคุณเรียกใช้โปรแกรมประยุกต์, มันจะสร้าง และจัดเก็บ ID ที่ไม่ระบุชื่อบนสมาร์ทโฟนแต่ละ. โปรแกรมนี้ไม่ได้รับข้อมูลใด ๆ ที่เกี่ยวข้องกับความเป็นส่วนตัวเช่นหมายเลขโทรศัพท์และข้อมูลสถานที่</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

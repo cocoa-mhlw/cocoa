@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>بدون نیاز به ورودی اطلاعات شخصی. ما از شناسه منحصربه فرد استفاده می کنیم که هنگام نصب یک برنامه به شما اختصاص داده شده است.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>یک تماس با یک کاربر برنامه دیگر برای بیش از 30 دقیقه در مجموع ، در شعاع نزدیک تر از 2m به طور متوسط به عنوان "تماس نزدیک" ثبت می شود.</value>
@@ -307,5 +307,9 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>آیا می خواهید به ثبت نام مثبت بعد ؟</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>هنگامی که برنامه را اجرا می کنید ، یک شناسه ناشناس را در هر گوشی هوشمند تولید و ذخیره می کند. این نرم افزار هیچ اطلاعاتی مربوط به حریم خصوصی مانند شماره تلفن و اطلاعات مکان را به دست نمی آورد.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

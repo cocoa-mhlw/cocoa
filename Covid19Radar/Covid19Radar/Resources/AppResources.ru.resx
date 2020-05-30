@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Нет необходимости ввода личной информации. Мы используем уникальный идентификатор, выделенный вам при установке приложения.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Контакт с другим пользователем приложения в общей сложности более 30 минут, в радиусе ближе, чем 2 м в среднем, регистрируется как "Близкий контакт".</value>
@@ -307,5 +307,9 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Хотите зарегистрироваться позже?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>При запуске приложения, он будет генерировать и хранить анонимный ID на каждом смартфоне. Это приложение не получает никакой информации, связанной с конфиденциальностью, такой как номер телефона и информация о местоположении.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

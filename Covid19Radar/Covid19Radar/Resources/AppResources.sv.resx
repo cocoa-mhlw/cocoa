@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Du behöver inte ange personlig information. Vi använder ett unikt ID som tilldelas dig när du installerar app'en.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>En kontakt med en annan användare under längre tid än 30 minuter och inom en radie närmare än 2 m, registreras som "Stäng kontakt".</value>
@@ -307,5 +307,9 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vill du registrera dig positivt senare?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>När du kör programmet kommer det att generera och lagra ett anonymt ID på varje smartphone. Denna ansökan inte förvärva någon information om sekretess såsom telefonnummer och platsinformation.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

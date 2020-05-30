@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Me tāuru te mōhiohio whaiaro. Kei te whakamahi mātou i te ID ahurei, tiritiri ki a koe ina tāuta koe i tētahi taupānga.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>He hoapā ki tētahi atu kaiwhakamahi taupānga kia roa ake i te 30 meneti i te tapeke, i roto i tētahi tarawhāiti iti ake i te 2m i te wawaenga e whakapūketetia ana hei "Kati Hoapā".</value>
@@ -307,5 +307,9 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Me rēhita tonu tika ā muri ake?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Ina whakahaere koe i te taupānga, ka waihanga, ka penapena hoki i tētahi ID ingoamuna ki ia waea atamai. Kāore e whiwhi tēnei taupānga i ngā mōhiohio e pā ana ki te tūmataitinga pēnei i te tau waea me te mōhiohio tauwāhi.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
