@@ -60,8 +60,12 @@
     <None Remove="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
     <None Remove="Services\ExposureNotificationHandler.cs.txt" />
+    <None Remove="settings.json" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="settings.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-solid-900.otf" />
