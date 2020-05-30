@@ -1,3 +1,11 @@
+# COVID-19Radar Japan Core contributors
+- Kazumi Hirose
+- Kristina Yasuda
+- Noriko Matsumoto
+- Yasuaki Matsuda
+- Takashi Takebayashi
+- Akihiko Kodama
+
 # COVID-19Radar Contributors
 - Kazumi Hirose (Organizer)
 - Noriko Matsumoto (Designer/Device iOS Lending)

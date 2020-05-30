@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>അടുത്തത്</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>സേവന നിബന്ധനകൾ</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>ആരംഭിക്കുക</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 നിന്ന് ഞങ്ങളുടെ പ്രിയപ്പെട്ടവരെ സംരക്ഷിക്കുക</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>ഉപകരണ ആക്സസ്</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>അംഗീകരിക്കുക</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ഹോം</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>നീ പോകാന് തയ്യാറാണ്.</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>പൂർത്തിയായി</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ലൈസൻസ് ഉടമ്പടി</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +118,14 @@
     <value>നിങ്ങളുടെ നെറ്റ് വർക്ക് കണക്ഷൻ പരിശോധിക്കുക.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ശരി</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>പ്രാപ്‌തമാക്കുക</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ഇപ്പോൾ നോട്ടൗട്ട്</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>നിങ്ങൾ മറ്റൊരു സമ്പർക്ക ട്രേസ് ആപ്ലിക്കേഷൻ ഉപയോക്താവിനു് സമീപമുണ്ടെങ്കിൽ നിർണ്ണയിക്കുന്നതിന് എക്സ്പോണറി അറിയിപ്പ്/ബ്ലൂടൂത്ത് സിഗ്നലുകളാണ് ഈ ആപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നത്. 
@@ -181,16 +172,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>നിങ്ങളുടെ കോവിഡ്-19 ടെസ്റ്റുമായി ബന്ധപ്പെട്ട് വന്ന യുണീക്ക് ടെസ്റ്റ് ഐഡന്റിഫയർ നിങ്ങളുടെ പോസിറ്റീവ് പരിശോധനാ ഫലം പരിശോധിച്ചുറപ്പിക്കുന്നതിന് ഉപയോഗിക്കണം.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>പരാജയപ്പെട്ടു</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിച്ച</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>പൂർത്തിയാക്കുക</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,13 +190,10 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>രോഗനിർണ്ണയ ഐഡന്റിഫയർ ആവശ്യമാണ്</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ശരി</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നതിന് മുമ്പ് എക്സ്പോണറി അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>എക്സ്പോണറി അറിയിപ്പുകൾ പ്രവർത്തനരഹിതമാക്കി</value>
   </data>
   <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
@@ -225,15 +213,12 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>ക്രമീകരണം</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>സമ്മതിച്ചില്ല</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>റദ്ദാക്കുക</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>നിങ്ങള് ക്ക് നോട്ടിഫിക്കേഷന് തിരിയ്ക്കണോ?</value>
@@ -241,11 +226,9 @@
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>പ്രാപ്തമായ</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>ഇല്ലാതാക്കുന്നു</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
@@ -257,7 +240,6 @@
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>പങ്കിടുക</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>മറ്റുള്ളവർക്ക് അനുകൂലമായ വിവരങ്ങളും അജ്ഞാത അറിയിപ്പും പങ്കിടൽ</value>
@@ -265,14 +247,44 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>പുനഃസജ്ജീകരിക്കുക</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>സ്വകാര്യത നയം</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>രജിസ്റ്റര് ചെയ്യുന്നതിനായി കാത്തിരിക്കുന്നു</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>നിങ്ങള് ക്കു് എല്ലാ ഡാറ്റയും പുനഃക്രമീകരിക്കാന് ആഗ്രഹിക്കുന്നുണ്ടോ?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>എല്ലാ ഡാറ്റയും മായ്ക്കുക</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>എല്ലാ സജ്ജീകരണങ്ങളും ഡാറ്റയും ഇല്ലാതാക്കിയിട്ടുണ്ട്. ആപ്ലിക്കേഷൻ പുനരാരംഭിക്കുക.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>പതിപ്പ്</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>ഈ പ്രയോഗത്തിന്റെ പതിപ്പ് സംഖ്യ</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>ഹ്രസ്വദൂര വയർലെസ് കമ്മ്യൂണിക്കേഷൻ</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>അയയ്ക്കുകയും സ്വീകരിക്കുകയും</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>സമ്പർക്ക അറിയിപ്പ് അടയ്ക്കുക</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>അടുത്ത സമ്പർക്ക സമയത്തെ അപേക്ഷാ അറിയിപ്പുകൾ</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>ഡേറ്റാ നീക്കം ചെയ്യുക</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>എല്ലാ ഡാറ്റയും മായ്ക്കുക</value>
   </data>
 </root>
