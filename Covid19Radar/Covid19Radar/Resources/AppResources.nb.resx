@@ -287,4 +287,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Slett alle data</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Ugyldig diagnose-ID</value>
+  </data>
 </root>

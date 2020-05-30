@@ -364,6 +364,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mukua ngā raraunga katoa</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ID Tataritanga muhu</target>
+        </trans-unit>
       </group>
     </body>
   </file>

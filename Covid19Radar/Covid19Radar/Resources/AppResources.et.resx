@@ -287,4 +287,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Kustuta kõik andmed</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Diagnostika ID ei sobi</value>
+  </data>
 </root>

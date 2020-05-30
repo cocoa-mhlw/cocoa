@@ -287,4 +287,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Usuń wszystkie dane</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Nieprawidłowy identyfikator diagnozy</value>
+  </data>
 </root>

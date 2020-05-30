@@ -287,4 +287,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Supprimer toutes les données</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Id de diagnostic invalide</value>
+  </data>
 </root>

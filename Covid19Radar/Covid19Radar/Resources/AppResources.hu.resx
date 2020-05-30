@@ -287,4 +287,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Az összes adat törlése</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Érvénytelen diagnosztikai azonosító</value>
+  </data>
 </root>

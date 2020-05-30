@@ -287,4 +287,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Ștergerea tuturor datelor</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID diagnostic nevalid</value>
+  </data>
 </root>

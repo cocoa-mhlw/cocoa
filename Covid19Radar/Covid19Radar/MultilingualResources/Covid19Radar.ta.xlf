@@ -364,6 +364,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">அனைத்து தரவையும் நீக்கு</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">செல்லுபடியாகாத நோயறிதல் ID</target>
+        </trans-unit>
       </group>
     </body>
   </file>

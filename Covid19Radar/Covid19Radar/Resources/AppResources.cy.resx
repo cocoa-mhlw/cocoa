@@ -287,4 +287,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Dileu'r holl ddata</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID diagnosis annilys</value>
+  </data>
 </root>

@@ -287,4 +287,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Ħassar id-data kollha</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID ta ' dijanjożi invalida</value>
+  </data>
 </root>

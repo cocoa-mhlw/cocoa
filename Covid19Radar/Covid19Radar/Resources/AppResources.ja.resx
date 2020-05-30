@@ -287,4 +287,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>すべてのデータを削除</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>無効な診断 ID</value>
+  </data>
 </root>
