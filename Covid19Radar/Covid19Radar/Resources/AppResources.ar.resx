@@ -23,9 +23,9 @@
     <value>بنود الخدمة</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>لا حاجة لإدخال المعلومات الشخصية. نحن نستخدم معرف فريد، مخصص لك عند تثبيت التطبيق.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>تفاعل المستخدم مع مستخدم آخر للتطبيق لمدة تزيد عن 30 دقيقة إجمالاً ، في مسافة أقرب من 2 متر في المتوسط تسجل على أنها "جهة اتصال قريبة".</value>
@@ -195,7 +195,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>تم تعطيل إشعارات التعرض</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تقديم التشخيص...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -285,5 +285,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>حذف كافة البيانات</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>معرف التشخيص غير الصالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>يرجى تقديم معرف تشخيص صالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>تاريخ اختبار غير صالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>يرجى تقديم تاريخ اختبار صالح</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>العودة إلى التسجيل</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>التسجيل الإيجابي</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>هل ترغب في التسجيل بشكل إيجابي في وقت لاحق؟</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>عند تشغيل التطبيق، فإنه سيتم إنشاء وتخزين معرف مجهول على كل هاتف ذكي. لا يحصل هذا التطبيق على أي معلومات تتعلق بالخصوصية مثل رقم الهاتف ومعلومات الموقع.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

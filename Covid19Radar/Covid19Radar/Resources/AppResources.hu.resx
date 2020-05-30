@@ -23,9 +23,9 @@
     <value>Szolgáltatási feltételek</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nem kell megadni a személyes adatokat. Egyedi azonosítót használunk, amelyet az alkalmazás telepítésekor osztanak ki.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Egy másik alkalmazásfelhasználóval való, összesen 30 min-nél hosszabb ideig, átlagosan 2 m-nél közelebbi sugarú körben tartott kapcsolat "Közeli kapcsolat" néven kerül rögzítésre.</value>
@@ -196,7 +196,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Expozíciós értesítések letiltva</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>A diagnózis benyújtása...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Az összes adat törlése</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Érvénytelen diagnosztikai azonosító</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Kérjük, adjon meg érvényes diagnosztikai azonosítót</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Érvénytelen tesztdátum</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Kérjük, adjon meg érvényes tesztdátumot</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Visszatérés a regisztrációhoz</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Pozitív regisztráció</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Szeretne később pozitívan regisztrálni?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Amikor futtatja az alkalmazást, létrehoz és tárol egy névtelen azonosítót minden okostelefonon. Ez az alkalmazás nem szerez semmilyen információt kapcsolatos adatvédelmi, mint a telefonszám és a helyadatait.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
