@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -24,94 +25,59 @@ namespace Covid19Radar.ViewModels
             get { return _AppVersion; }
             set { SetProperty(ref _AppVersion, value); }
         }
-
-        private bool _EnableExposureNotification;
-
-        public bool EnableExposureNotification
+        private UserDataModel _UserData;
+        public UserDataModel UserData
         {
-            get { return _EnableExposureNotification; }
-            set
-            {
-                SetProperty(ref _EnableExposureNotification, value);
-                RaisePropertyChanged(nameof(EnableExposureNotification));
-            }
+            get { return _UserData; }
+            set { SetProperty(ref _UserData, value); }
         }
 
-        private bool _EnableLocalNotification;
-
-        public bool EnableLocalNotification
-        {
-            get { return _EnableLocalNotification; }
-            set
-            {
-                SetProperty(ref _EnableLocalNotification, value);
-                RaisePropertyChanged(nameof(EnableLocalNotification));
-            }
-        }
-
-        private bool _ResetData;
-
-        public bool ResetData
-        {
-            get { return _ResetData; }
-            set
-            {
-                SetProperty(ref _ResetData, value);
-                RaisePropertyChanged(nameof(ResetData));
-            }
-        }
+        private readonly ExposureNotificationService exposureNotificationService;
 
         private readonly UserDataService userDataService;
-        private UserDataModel userData;
-
-        public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
+        public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppConstants.AppVersion;
             this.userDataService = userDataService;
-            userData = this.userDataService.Get();
-            this.userDataService.UserDataChanged += _userDataChanged;
-
-            EnableExposureNotification = userData.IsExposureNotificationEnabled;
-            EnableLocalNotification = userData.IsNotificationEnabled;
+            _UserData = this.userDataService.Get();
+            this.exposureNotificationService = exposureNotificationService;
         }
+
 
         private void _userDataChanged(object sender, UserDataModel e)
         {
-            userData = this.userDataService.Get();
-            EnableExposureNotification = userData.IsExposureNotificationEnabled;
-            EnableLocalNotification = userData.IsNotificationEnabled;
+            _UserData = this.userDataService.Get();
+            RaisePropertyChanged();
         }
 
-        public ICommand OnChangeEnableExposureNotification => new Command(async () =>
+
+        public ICommand OnChangeExposureNotificationState => new Command(async () =>
         {
-            userData.IsExposureNotificationEnabled = !EnableExposureNotification;
-            await userDataService.SetAsync(userData);
+            await userDataService.SetAsync(_UserData);
         });
 
-        public ICommand OnChangeEnableNotification => new Command(async () =>
+
+        public ICommand OnChangeNotificationState => new Command(async () =>
         {
-            userData.IsNotificationEnabled = !EnableLocalNotification;
-            await userDataService.SetAsync(userData);
+            await userDataService.SetAsync(_UserData);
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
-
             var check = await UserDialogs.Instance.ConfirmAsync(
                 Resources.AppResources.SettingsPageDialogResetText,
                 Resources.AppResources.SettingsPageDialogResetTitle,
                 Resources.AppResources.ButtonOk,
                 Resources.AppResources.ButtonCancel
             );
-
             if (check)
             {
                 UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextDeleting);
 
-                if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                if (await ExposureNotification.IsEnabledAsync())
                 {
-                    await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
+                    await ExposureNotification.StopAsync();
                 }
 
                 // Reset All Data and Optout
@@ -125,7 +91,6 @@ namespace Covid19Radar.ViewModels
                 // Application close
                 Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
                 return;
-
             }
         });
     }
