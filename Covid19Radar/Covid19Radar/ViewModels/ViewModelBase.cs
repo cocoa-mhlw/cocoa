@@ -14,6 +14,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -26,11 +27,10 @@ namespace Covid19Radar.ViewModels
             await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
         });
 
-        private readonly UserDataService userDataService;
-        private UserDataModel userData;
-
         // Navigation
         protected INavigationService NavigationService { get; private set; }
+        protected UserDataService UserDataService { get; private set; }
+        protected ExposureNotificationService ExposureNotificationService { get; private set; }
 
         // PageTite
         private string _title;
@@ -44,35 +44,25 @@ namespace Covid19Radar.ViewModels
         public ViewModelBase(INavigationService navigationService)
         {
             NavigationService = navigationService;
-
         }
 
         public ViewModelBase(INavigationService navigationService, UserDataService userDataService)
         {
             NavigationService = navigationService;
-            this.userDataService = userDataService;
-            userData = this.userDataService.Get();
-            this.userDataService.UserDataChanged += _userDataChanged;
-
-        }
-        private void _userDataChanged(object sender, UserDataModel e)
-        {
-            userData = this.userDataService.Get();
+            UserDataService = userDataService;
         }
 
-
-        public virtual async void Initialize(INavigationParameters parameters)
+        public ViewModelBase(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService)
         {
-            // TODO AutoActivateEN
-/*
-            if (userData.LastIsEnabled && userData.IsWelcomed)
-            {
-                if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-                {
-                    await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
-                }
-            }
-*/
+            NavigationService = navigationService;
+            UserDataService = userDataService;
+            ExposureNotificationService = exposureNotificationService;
+        }
+
+
+        public virtual void Initialize(INavigationParameters parameters)
+        {
+
         }
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters)
