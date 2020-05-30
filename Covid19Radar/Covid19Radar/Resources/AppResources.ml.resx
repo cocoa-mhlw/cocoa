@@ -296,4 +296,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>അസാധുവായ പരിശോധനാ തീയതി</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>സാധുതയുള്ള പരിശോധനാ തീയതി നൽകുക</value>
+  </data>
 </root>

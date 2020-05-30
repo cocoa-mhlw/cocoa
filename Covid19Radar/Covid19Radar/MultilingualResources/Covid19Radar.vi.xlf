@@ -376,6 +376,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ngày kiểm tra không hợp lệ</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vui lòng cung cấp ngày thi hợp lệ</target>
+        </trans-unit>
       </group>
     </body>
   </file>

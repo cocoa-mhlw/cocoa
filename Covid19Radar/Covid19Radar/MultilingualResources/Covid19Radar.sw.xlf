@@ -376,6 +376,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tarehe batili ya jaribio</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tafadhali toa tarehe halali ya mtihani</target>
+        </trans-unit>
       </group>
     </body>
   </file>

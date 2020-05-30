@@ -54,7 +54,7 @@ namespace Covid19Radar.ViewModels
             if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "Please provide a valid Test Date",
+                    Resources.AppResources.NotifyOtherPageDialogInvalidTestDateText,
                     Resources.AppResources.NotifyOtherPageDialogInvalidTestDateTitle,
                     Resources.AppResources.ButtonOk
                 );

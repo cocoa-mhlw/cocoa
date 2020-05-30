@@ -296,4 +296,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Ugyldig testdato</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Oppgi en gyldig testdato</value>
+  </data>
 </root>

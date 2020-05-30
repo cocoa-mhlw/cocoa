@@ -296,4 +296,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>చెల్లని పరీక్ష తేదీ</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>దయచేసి చెల్లుబాటు అయ్యే టెస్ట్ తేదీని అందించండి</value>
+  </data>
 </root>

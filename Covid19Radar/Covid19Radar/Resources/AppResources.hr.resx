@@ -296,4 +296,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Datum testiranja nije valjan</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Navedite valjani datum testiranja</value>
+  </data>
 </root>

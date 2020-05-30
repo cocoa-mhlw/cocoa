@@ -296,4 +296,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>תאריך בדיקה לא חוקי</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>נא ספק תאריך בדיקה חוקי</value>
+  </data>
 </root>

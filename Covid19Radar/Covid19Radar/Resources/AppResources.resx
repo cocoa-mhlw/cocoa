@@ -401,4 +401,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
     <value>Invalid Test Date</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Please provide a valid Test Date</value>
+  </data>
 </root>

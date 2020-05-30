@@ -376,6 +376,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Invalid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ongeldige testdatum</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geef een geldige testdatum op</target>
+        </trans-unit>
       </group>
     </body>
   </file>
