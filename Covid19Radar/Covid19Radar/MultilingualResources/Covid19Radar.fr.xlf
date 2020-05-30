@@ -242,7 +242,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Notifications d’exposition désactivées</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="translated">Soumission du diagnostic...</target>
         </trans-unit>

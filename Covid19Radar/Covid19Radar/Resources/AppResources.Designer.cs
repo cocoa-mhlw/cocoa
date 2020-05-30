@@ -613,9 +613,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Submitting Diagnosis... に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string SharePositiveDiagnosisPageSubmittingDialog {
+        internal static string LoadingTextSubmittingDiagnosis {
             get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageSubmittingDialog", resourceCulture);
+                return ResourceManager.GetString("LoadingTextSubmittingDiagnosis", resourceCulture);
             }
         }
         
