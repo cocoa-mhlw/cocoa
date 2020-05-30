@@ -80,7 +80,7 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 var userData = userDataService.Get();
-                if (userData.IsWelcomed)
+                if (userData.IsOptined)
                 {
                     result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
                 }

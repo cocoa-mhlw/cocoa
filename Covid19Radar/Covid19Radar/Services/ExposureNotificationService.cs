@@ -2,6 +2,7 @@
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Views;
+using ImTools;
 using Prism.Navigation;
 using Prism.Navigation.Xaml;
 using System;
@@ -19,7 +20,7 @@ namespace Covid19Radar.Services
         private readonly UserDataService userDataService;
         private readonly INavigationService navigationService;
         //private UserDataModel userData;
-        public string CurrentStatusMessage { get; set; }
+        public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
         private UserDataModel userData;
@@ -38,7 +39,7 @@ namespace Covid19Radar.Services
             Console.WriteLine("User Data has Changed!!!");
             this.userData = userDataService.Get();
             Console.WriteLine(Utils.SerializeToJson(userData));
-            
+
             if (userData.IsExposureNotificationEnabled)
             {
                 await StartExposureNotification();
@@ -48,9 +49,23 @@ namespace Covid19Radar.Services
                 await StopExposureNotification();
             }
 
+            Status status = await ExposureNotification.GetStatusAsync();
+            GetStatusMessage(status);
         }
 
-        public async void SetExposureNotificationStatusAsync(bool flg)
+        /*
+        public async Task SetOptinStatusAsync(bool flg)
+        {
+            userData.IsOptined = flg;
+            await userDataService.SetAsync(userData);
+        }
+        public bool GetOptInStatus()
+        {
+            return userData.IsOptined;
+        }
+
+
+        public async Task SetExposureNotificationStatusAsync(bool flg)
         {
             userData.IsExposureNotificationEnabled = flg;
             await userDataService.SetAsync(userData);
@@ -60,7 +75,7 @@ namespace Covid19Radar.Services
             return userData.IsExposureNotificationEnabled;
         }
 
-        public async void SetNotificationStatus(bool flg)
+        public async Task SetNotificationStatusAsync(bool flg)
         {
             userData.IsNotificationEnabled = flg;
             await userDataService.SetAsync(userData);
@@ -69,10 +84,10 @@ namespace Covid19Radar.Services
         {
             return userData.IsNotificationEnabled;
         }
-
+        */
         public async Task<bool> StartExposureNotification()
         {
-            if (!userData.IsWelcomed)
+            if (!userData.IsOptined)
             {
                 await UserDialogs.Instance.AlertAsync("利用規約に同意する必要があります。同意ページへ遷移します。");
                 await navigationService.NavigateAsync(nameof(PrivacyPolicyPage));
@@ -80,7 +95,7 @@ namespace Covid19Radar.Services
 
             Status status = await ExposureNotification.GetStatusAsync();
             if (status == Status.BluetoothOff
-//            || status == Status.Restricted
+            //            || status == Status.Restricted
             || status == Status.NotAuthorized)
             {
                 await UserDialogs.Instance.AlertAsync(GetStatusMessage(status));
@@ -89,9 +104,9 @@ namespace Covid19Radar.Services
                 return false;
             }
 
-//            bool IsEnabled = await ExposureNotification.IsEnabledAsync();
+            //            bool IsEnabled = await ExposureNotification.IsEnabledAsync();
 
-            if (userData.IsWelcomed && userData.IsExposureNotificationEnabled && (status == Status.Unknown || status == Status.Active || status == Status.Disabled))
+            if (userData.IsOptined && userData.IsExposureNotificationEnabled && (status == Status.Unknown || status == Status.Active || status == Status.Disabled))
             {
                 try
                 {
@@ -114,9 +129,10 @@ namespace Covid19Radar.Services
             return true;
         }
 
-        private string GetStatusMessage(Status status)
+        public string GetStatusMessage(Status status)
         {
             var message = "";
+
             switch (status)
             {
                 case Status.Unknown:
@@ -140,6 +156,12 @@ namespace Covid19Radar.Services
                 default:
                     break;
             }
+
+            if (!userData.IsOptined)
+            {
+                message.Append("/利用規約に同意する必要があります。");
+            }
+
             this.CurrentStatusMessage = message;
             Console.WriteLine(message);
             return message;

@@ -25,87 +25,42 @@ namespace Covid19Radar.ViewModels
             get { return _AppVersion; }
             set { SetProperty(ref _AppVersion, value); }
         }
-
-        private bool _IsExposureNotificationEnabled;
-
-        public bool IsExposureNotificationEnabled
+        private UserDataModel _UserData;
+        public UserDataModel UserData
         {
-            get { return exposureNotificationService.GetExposureNotificationStatus(); }
-            set {
-                exposureNotificationService.SetExposureNotificationStatusAsync(value);
-                SetProperty(ref _IsExposureNotificationEnabled, value);
-            }
+            get { return _UserData; }
+            set { SetProperty(ref _UserData, value); }
         }
-
-        private string _IsNotificationEnabledText;
-
-        public string OnEnableNotificationText
-        {
-            get { return _IsNotificationEnabledText; }
-            set
-            {
-                SetProperty(ref _IsNotificationEnabledText, value);
-            }
-        }
-
-        private string _IsExposureNotificationEnabledText;
-
-        public string OnEnableExposureNotificationText
-        {
-            get { return _IsExposureNotificationEnabledText; }
-            set
-            {
-                SetProperty(ref _IsExposureNotificationEnabledText, value);
-            }
-        }
-
 
         private readonly ExposureNotificationService exposureNotificationService;
-        /*
+
         private readonly UserDataService userDataService;
-        public UserDataModel userData;
-        */
         public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppConstants.AppVersion;
-            /*
             this.userDataService = userDataService;
-            userData = this.userDataService.Get();
-            */
+            _UserData = this.userDataService.Get();
             this.exposureNotificationService = exposureNotificationService;
-            OnEnableNotificationText = exposureNotificationService.GetNotificationStatus() ? "Off" : "On";
         }
 
-        public ICommand OnChangeExposureNotificationState => new Command(() =>
+
+        private void _userDataChanged(object sender, UserDataModel e)
         {
-            var status = exposureNotificationService.GetExposureNotificationStatus();
-            if (status)
-            {
-                exposureNotificationService.SetExposureNotificationStatusAsync(!status);
-                OnEnableNotificationText = "On";
-            }
-            else
-            {
-                exposureNotificationService.SetExposureNotificationStatusAsync(!status);
-                OnEnableNotificationText = "Off";
-            }
+            _UserData = this.userDataService.Get();
+            RaisePropertyChanged();
+        }
+
+
+        public ICommand OnChangeExposureNotificationState => new Command(async () =>
+        {
+            await userDataService.SetAsync(_UserData);
         });
 
 
-        public ICommand OnChangeNotificationState => new Command(() =>
+        public ICommand OnChangeNotificationState => new Command(async () =>
         {
-            var status = exposureNotificationService.GetNotificationStatus();
-            if (status)
-            {
-                exposureNotificationService.SetNotificationStatus(!status);
-                OnEnableNotificationText = "On";
-            }
-            else
-            {
-                exposureNotificationService.SetNotificationStatus(!status);
-                OnEnableNotificationText = "Off";
-            }
+            await userDataService.SetAsync(_UserData);
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
@@ -116,7 +71,6 @@ namespace Covid19Radar.ViewModels
                 Resources.AppResources.ButtonOk,
                 Resources.AppResources.ButtonCancel
             );
-            /*
             if (check)
             {
                 UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextDeleting);
@@ -138,7 +92,6 @@ namespace Covid19Radar.ViewModels
                 Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
                 return;
             }
-            */
         });
     }
 }
