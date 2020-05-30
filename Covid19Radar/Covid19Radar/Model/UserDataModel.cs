@@ -31,6 +31,11 @@ namespace Covid19Radar.Model
         public ulong JumpConsistentSeed { get; set; }
 
         /// <summary>
+        /// StartDate
+        /// </summary>
+        public DateTime StartDateTime { get; } = DateTime.UtcNow;
+
+        /// <summary>
         /// Last notification date and time
         /// </summary>
         public DateTime LastNotificationTime { get; set; }
@@ -58,11 +63,11 @@ namespace Covid19Radar.Model
         // From Xamarin.EN LocalState Class
         public static readonly Dictionary<string, ulong> DefaultServerBatchNumbers = new Dictionary<string, ulong> { { "ZA", 0 }, { "CA", 0 } };
 
-        public bool IsWelcomed { get; set; } = false;
+        public bool IsOptined { get; set; } = false;
 
         public bool IsExposureNotificationEnabled { get; set; } = false;
 
-        public bool IsNotificationEnabled { get; set; } = true;
+        public bool IsNotificationEnabled { get; set; } = false;
         
         //public long ServerLastTime { get; set; } = 0;
 
@@ -75,7 +80,6 @@ namespace Covid19Radar.Model
         public ExposureDetectionSummary ExposureSummary { get; set; }
 
         public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
-
 
         public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
         {
