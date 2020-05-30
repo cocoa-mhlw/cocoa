@@ -23,7 +23,7 @@
     <value>서비스 약관</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>개인 정보를 입력 할 필요가 없습니다. 앱을 설치할 때 할당된 고유 ID를 사용하고 있습니다.</value>
     <comment>How it works page step 1 description</comment>
   </data>

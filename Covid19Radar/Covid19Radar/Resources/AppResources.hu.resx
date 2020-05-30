@@ -23,7 +23,7 @@
     <value>Szolgáltatási feltételek</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nem kell megadni a személyes adatokat. Egyedi azonosítót használunk, amelyet az alkalmazás telepítésekor osztanak ki.</value>
     <comment>How it works page step 1 description</comment>
   </data>

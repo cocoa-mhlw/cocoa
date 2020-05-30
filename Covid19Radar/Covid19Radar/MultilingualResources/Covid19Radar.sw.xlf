@@ -20,7 +20,7 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Masharti ya Huduma</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hakuna haja ya kuingiza maelezo ya kibinafsi. Tunatumia ID ya kipekee, zilizotengwa kwako wakati wa kufunga programu.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
