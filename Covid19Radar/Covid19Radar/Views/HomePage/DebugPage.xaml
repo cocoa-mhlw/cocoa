@@ -38,7 +38,7 @@
                             FontAttributes="Bold"
                             FontSize="Subtitle"
                             Style="{StaticResource DefaultLabelSmall}"
-                            Text="{Binding EnStatus}" />
+                            Text="{Binding EnMessage, Mode=TwoWay}" />
                         <Label
                             FontAttributes="Bold"
                             FontSize="Subtitle"
@@ -49,7 +49,7 @@
                             FontAttributes="Bold"
                             FontSize="Subtitle"
                             Style="{StaticResource DefaultLabelSmall}"
-                            Text="{Binding FlgEn}" />
+                            Text="{Binding UserData.IsExposureNotificationEnabled, Mode=TwoWay}" />
                         <Label
                             FontAttributes="Bold"
                             FontSize="Subtitle"
@@ -60,7 +60,7 @@
                             FontAttributes="Bold"
                             FontSize="Subtitle"
                             Style="{StaticResource DefaultLabelSmall}"
-                            Text="{Binding FlgLn}" />
+                            Text="{Binding UserData.IsNotificationEnabled, Mode=TwoWay}" />
                         <Label
                             FontAttributes="Bold"
                             FontSize="Subtitle"
@@ -71,7 +71,7 @@
                             FontAttributes="Bold"
                             FontSize="Subtitle"
                             Style="{StaticResource DefaultLabelSmall}"
-                            Text="{Binding FlgWl}" />
+                            Text="{Binding UserData.IsOptined, Mode=TwoWay}" />
 
                     </StackLayout>
 

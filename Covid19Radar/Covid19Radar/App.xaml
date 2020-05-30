@@ -3,7 +3,6 @@
     x:Class="Covid19Radar.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:converters="clr-namespace:Covid19Radar.Converters"
     xmlns:local="clr-namespace:Covid19Radar"
     xmlns:prism="http://prismlibrary.com">
     <Application.Resources>
