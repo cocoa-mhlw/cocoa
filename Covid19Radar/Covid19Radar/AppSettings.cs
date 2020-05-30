@@ -18,7 +18,7 @@ namespace Covid19Radar
 		{
 			var assembly = Assembly.GetExecutingAssembly();
 
-			using var file = assembly.GetManifestResourceStream("ExposureNotification.App.settings.json");
+			using var file = assembly.GetManifestResourceStream("Covid19Radar.settings.json");
 			using var sr = new StreamReader(file);
 			var json = sr.ReadToEnd();
 			var j = JObject.Parse(json);
