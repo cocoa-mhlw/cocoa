@@ -21,9 +21,62 @@
                             Style="{StaticResource DefaultLabelSmall}"
                             Text="{Binding NativeImplementationName}" />
                     </StackLayout>
+                    <StackLayout>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmallColor}"
+                            Text="ステータス" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="ExposureNotificationStatus" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{Binding EnStatus}" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="EnStatus" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{Binding FlgEn}" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="FlgLn" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{Binding FlgLn}" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="FlgWl" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{Binding FlgWl}" />
+
+                    </StackLayout>
 
                     <Button
-                        Command="{Binding ResetWelcome}"
+                        Command="{Binding ToggleWelcome}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
                         Text="Reset Welcome State" />
@@ -34,6 +87,11 @@
                         Style="{StaticResource DefaultButton}"
                         Text="Reset Last Enabled State" />
 
+                    <Button
+                        Command="{Binding ToggleEn}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="EnableEn" />
                 </StackLayout>
 
                 <StackLayout>
@@ -86,7 +144,6 @@
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
                         Text="Reset Batch File Index" />
-
 
                     <Button
                         Command="{Binding ManualTriggerKeyFetch}"
