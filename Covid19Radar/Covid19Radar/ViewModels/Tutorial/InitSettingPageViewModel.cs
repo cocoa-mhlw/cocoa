@@ -33,21 +33,23 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickEnable => new Command(async () =>
         {
-/*
-            var check = await UserDialogs.Instance.ConfirmAsync(
-                "周辺の他のスマートフォンとの間でランダムIDを安全に収集したり共有したりするには、Bluetoothを使用する必要があります。\nCOVID-19(新型コロナウイルス感染症)の検査結果が陽性だった人があなたの周囲にいた場合、 [TODO Replace Public Health Authority] から通知を受け取ることができます。\n濃厚接触の可能性がある日付、期間、電波強度がアプリと共有されます。",
-                Resources.AppResources.InitSettingPageDialogExposureNotificationTitle,
-                Resources.AppResources.ButtonOk,
-                Resources.AppResources.ButtonCancel
-            );
-            if (!check){
+            /*
+                        var check = await UserDialogs.Instance.ConfirmAsync(
+                            "周辺の他のスマートフォンとの間でランダムIDを安全に収集したり共有したりするには、Bluetoothを使用する必要があります。\nCOVID-19(新型コロナウイルス感染症)の検査結果が陽性だった人があなたの周囲にいた場合、 [TODO Replace Public Health Authority] から通知を受け取ることができます。\n濃厚接触の可能性がある日付、期間、電波強度がアプリと共有されます。",
+                            Resources.AppResources.InitSettingPageDialogExposureNotificationTitle,
+                            Resources.AppResources.ButtonOk,
+                            Resources.AppResources.ButtonCancel
+                        );
+                        if (!check){
 
-            }
-*/
-            if (await ExposureNotificationService.StartExposureNotification())
-            {
-                await NavigationService.NavigateAsync(nameof(SetupCompletedPage));
-            }
+                        }
+            */
+
+            userData.IsExposureNotificationEnabled = true;
+            userData.IsNotificationEnabled = true;
+            await userDataService.SetAsync(userData);
+            await NavigationService.NavigateAsync(nameof(SetupCompletedPage));
+
         });
     }
 }
