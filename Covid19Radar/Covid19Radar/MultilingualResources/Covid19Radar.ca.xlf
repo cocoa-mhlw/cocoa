@@ -384,6 +384,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tornar a la inscripció</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Registre positiu</target>
+        </trans-unit>
       </group>
     </body>
   </file>

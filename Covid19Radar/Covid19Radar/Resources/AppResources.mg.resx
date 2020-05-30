@@ -302,4 +302,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Hiverina amin' ny fisoratana anarana</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Fisoratana anarana tsara</value>
+  </data>
 </root>

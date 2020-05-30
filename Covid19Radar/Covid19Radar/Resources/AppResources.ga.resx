@@ -302,4 +302,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Fill ar chlárú</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Clárú dearfach</value>
+  </data>
 </root>

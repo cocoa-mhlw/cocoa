@@ -302,4 +302,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Ritorn għar-reġistrazzjoni</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Reġistrazzjoni pożittiva</value>
+  </data>
 </root>

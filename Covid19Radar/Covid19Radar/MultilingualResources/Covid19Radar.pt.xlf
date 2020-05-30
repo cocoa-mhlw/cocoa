@@ -384,6 +384,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Retorno ao registro</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cadastro positivo</target>
+        </trans-unit>
       </group>
     </body>
   </file>

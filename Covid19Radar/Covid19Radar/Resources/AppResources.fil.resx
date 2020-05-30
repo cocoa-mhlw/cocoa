@@ -302,4 +302,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Bumalik sa pagrerehistro</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positibong rehistrasyon</value>
+  </data>
 </root>

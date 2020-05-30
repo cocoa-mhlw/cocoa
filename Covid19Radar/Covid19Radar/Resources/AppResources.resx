@@ -407,4 +407,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Return to registration</value>
   </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positive registration</value>
+  </data>
 </root>
