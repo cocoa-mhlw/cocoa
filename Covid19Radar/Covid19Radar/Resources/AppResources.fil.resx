@@ -23,9 +23,9 @@
     <value>Mga Tuntunin ng Serbisyo</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Hindi na kailangang input ng personal na impormasyon. Gumagamit kami ng bukod-tanging ID, na inilaan sa iyo kapag mag-instala ng app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Ang isang contact na may isa pang app user para sa mas mahaba kaysa sa 30 min sa kabuuan, sa loob ng isang radius mas malapit sa 2m sa average ay naitala bilang "isara contact".</value>
@@ -196,7 +196,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hindi pinagana ang mga notipikasyon</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Nagsusumite ng pagsusuri ...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>I-delete ang lahat ng data</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Imbalidong ID ng pagsusuri</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Mangyaring magbigay ng valid na pagsusuri na ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Imbalidong petsa ng pagsusuri</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Mangyaring magbigay ng balidong petsa ng pagsusuri</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Bumalik sa pagrerehistro</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positibong rehistrasyon</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Gusto mo bang magparehistro ng positibo mamaya?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Kapag patakbuhin mo ang application, ito ay bumuo at mag-imbak ng isang hindi kilalang ID sa bawat smartphone. Ang aplikasyong ito ay walang anumang impormasyong may kaugnayan sa privacy tulad ng numero ng telepono at impormasyon sa lokasyon.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

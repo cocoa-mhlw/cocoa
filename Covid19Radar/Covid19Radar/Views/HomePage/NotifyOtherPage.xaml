@@ -53,7 +53,7 @@
                 </Grid>
             </StackLayout>
             <StackLayout Grid.Row="1">
-                <Label Style="{StaticResource DefaultLabelColor}" Text="陽性登録" />
+                <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.PositiveRegistrationText}" />
                 <BoxView Style="{StaticResource DefaultLineStyle}" />
                 <Label Style="{StaticResource DefaultLabel}" Text="公的機関から発行された「処理番号」を入力してください" />
                 <Entry

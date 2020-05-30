@@ -26,9 +26,9 @@
             </StackLayout>
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep11.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep1Description}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep1Description1}" />
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep12.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="アプリを実行した際、各スマートフォンに匿名IDを生成して保持します。このアプリは、電話番号・位置情報など、プライバシーに関わる情報は一切取得をしません。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep1Description2}" />
             </StackLayout>
             <Grid Grid.Row="2">
                 <ce:GradientButton
