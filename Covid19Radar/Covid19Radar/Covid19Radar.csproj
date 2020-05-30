@@ -163,7 +163,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Converters\" />
     <Folder Include="MultilingualResources\" />
     <Folder Include="Templates\" />
   </ItemGroup>
