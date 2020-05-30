@@ -31,6 +31,11 @@ namespace Covid19Radar.Model
         public ulong JumpConsistentSeed { get; set; }
 
         /// <summary>
+        /// StartDate
+        /// </summary>
+        public DateTime StartDateTime { get; } = DateTime.UtcNow;
+
+        /// <summary>
         /// Last notification date and time
         /// </summary>
         public DateTime LastNotificationTime { get; set; }
@@ -75,7 +80,6 @@ namespace Covid19Radar.Model
         public ExposureDetectionSummary ExposureSummary { get; set; }
 
         public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
-
 
         public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
         {
