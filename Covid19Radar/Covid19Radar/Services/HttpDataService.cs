@@ -54,7 +54,6 @@ namespace Covid19Radar.Services
                     userData.Secret = registerResult.Secret;
                     userData.UserUuid = registerResult.UserUuid;
                     userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
-                    userData.IsWelcomed = true;
                     Application.Current.Properties["Secret"] = registerResult.Secret;
                     await Application.Current.SavePropertiesAsync();
                     SetSecret();

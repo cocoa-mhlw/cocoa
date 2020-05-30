@@ -128,20 +128,19 @@ namespace Covid19Radar.Services
 
         public async Task SetAsync(UserDataModel userData)
         {
-            /*
-            var NewerSerialized = Utils.SerializeToJson(userData);
-            var currentSerialized = Utils.SerializeToJson(current);
-            if (NewerSerialized == currentSerialized)
+            var newdata = Utils.SerializeToJson(userData);
+            var currentdata = Utils.SerializeToJson(current);
+            if (currentdata.Equals(newdata))
             {
                 return;
             }
-            */
+            /*
             var isNull = current == null;
             if (!isNull && string.IsNullOrWhiteSpace(userData.Secret))
             {
                 userData.Secret = current.Secret;
             }
-
+            */
             current = userData;
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(current);
             await Application.Current.SavePropertiesAsync();

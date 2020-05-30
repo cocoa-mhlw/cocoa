@@ -19,21 +19,13 @@
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-
-            <!--            <Label
-                Grid.Row="0"
-                Style="{StaticResource DefaultTitleLabel}"
-                Text="{Binding Title}" />-->
             <Grid
-                Grid.Row="1"
+                Grid.Row="0"
                 HorizontalOptions="FillAndExpand"
                 RowSpacing="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="0.5*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -46,10 +38,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2">
+                <Label Grid.Row="0" Grid.Column="0">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span
@@ -75,7 +64,7 @@
                     VerticalOptions="Center" />
                 <BoxView
                     Grid.Row="1"
-                    Grid.ColumnSpan="3"
+                    Grid.ColumnSpan="2"
                     Style="{StaticResource DefaultLineStyle}" />
                 <Label Grid.Row="2" Grid.Column="0">
                     <Label.FormattedText>
@@ -94,17 +83,18 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Button
+                <Switch
                     Grid.Row="2"
                     Grid.Column="1"
-                    Grid.ColumnSpan="2"
-                    Command="{Binding OnChangeExposureNotificationState}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{Binding OnEnableExposureNotificationText, Mode=TwoWay}" />
+                    IsToggled="{Binding UserData.IsExposureNotificationEnabled, Mode=TwoWay}">
+                    <Switch.Behaviors>
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeExposureNotificationState}" />
+                    </Switch.Behaviors>
+                </Switch>
 
                 <BoxView
                     Grid.Row="3"
-                    Grid.ColumnSpan="3"
+                    Grid.ColumnSpan="2"
                     Style="{StaticResource DefaultLineStyle}" />
                 <Label Grid.Row="4" Grid.Column="0">
                     <Label.FormattedText>
@@ -123,16 +113,19 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Button
+                <Switch
                     Grid.Row="4"
                     Grid.Column="1"
-                    Grid.ColumnSpan="2"
-                    Command="{Binding OnChangeNotificationState}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{Binding OnEnableNotificationText, Mode=TwoWay}" />
+                    IsToggled="{Binding UserData.IsNotificationEnabled, Mode=TwoWay}">
+                    <Switch.Behaviors>
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeNotificationState}" />
+                    </Switch.Behaviors>
+
+                </Switch>
+
                 <BoxView
                     Grid.Row="5"
-                    Grid.ColumnSpan="3"
+                    Grid.ColumnSpan="2"
                     Style="{StaticResource DefaultLineStyle}" />
                 <Label Grid.Row="6" Grid.Column="0">
                     <Label.FormattedText>
@@ -154,13 +147,12 @@
                 <Button
                     Grid.Row="6"
                     Grid.Column="1"
-                    Grid.ColumnSpan="2"
                     Command="{Binding OnChangeResetData}"
                     Style="{StaticResource DefaultButtonGrayout}"
                     Text="{x:Static resources:AppResources.ButtonReset}" />
                 <BoxView
                     Grid.Row="7"
-                    Grid.ColumnSpan="3"
+                    Grid.ColumnSpan="2"
                     Style="{StaticResource DefaultLineStyle}" />
             </Grid>
         </Grid>
