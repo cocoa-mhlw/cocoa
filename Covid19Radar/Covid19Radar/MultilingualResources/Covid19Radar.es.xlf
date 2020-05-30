@@ -363,6 +363,10 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Eliminar todos los datos</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Identificador de diagnóstico no válido</target>
+        </trans-unit>
       </group>
     </body>
   </file>

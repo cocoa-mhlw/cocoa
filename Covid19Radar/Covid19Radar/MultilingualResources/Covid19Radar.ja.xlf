@@ -362,6 +362,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Delete all data</source>
           <target state="translated">すべてのデータを削除</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">無効な診断 ID</target>
+        </trans-unit>
       </group>
     </body>
   </file>

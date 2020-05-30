@@ -287,4 +287,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Esory avokoa ny tahirin-kevitra rehetra</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Nahitana Aretina ID</value>
+  </data>
 </root>

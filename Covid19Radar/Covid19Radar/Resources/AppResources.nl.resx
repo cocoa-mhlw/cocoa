@@ -287,4 +287,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Alle gegevens verwijderen</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Ongeldige diagnose-id</value>
+  </data>
 </root>

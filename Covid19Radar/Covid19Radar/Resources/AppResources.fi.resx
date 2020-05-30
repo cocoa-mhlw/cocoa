@@ -287,4 +287,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Poista kaikki tiedot</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Virheellinen diagnoositunnus</value>
+  </data>
 </root>

@@ -46,7 +46,7 @@ namespace Covid19Radar.ViewModels
 
                 await UserDialogs.Instance.AlertAsync(
                     "Please provide a valid Diagnosis ID",
-                    "Invalid Diagnosis ID",
+                    Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDTitle,
                     Resources.AppResources.ButtonOk
                 );
                 return;

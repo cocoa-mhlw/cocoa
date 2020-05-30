@@ -287,4 +287,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Διαγραφή όλων των δεδομένων</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Το αναγνωριστικό διάγνωσης δεν είναι έγκυρο</value>
+  </data>
 </root>

@@ -287,4 +287,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Ta bort alla data</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Ogiltigt diagnos-ID</value>
+  </data>
 </root>

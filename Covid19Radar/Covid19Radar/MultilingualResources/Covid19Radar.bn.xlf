@@ -364,6 +364,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Delete all data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">সকল উপাত্ত মুছে ফেলুন</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">অকার্যকর নির্ণয় ID</target>
+        </trans-unit>
       </group>
     </body>
   </file>

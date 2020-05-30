@@ -287,4 +287,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Hapus semua data</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID diagnosis tidak valid</value>
+  </data>
 </root>

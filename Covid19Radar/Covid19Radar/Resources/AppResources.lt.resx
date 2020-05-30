@@ -287,4 +287,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Visų duomenų naikinimas</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Netinkamas diagnozės ID</value>
+  </data>
 </root>

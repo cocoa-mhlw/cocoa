@@ -287,4 +287,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Scrios na sonraí go léir</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Aitheantas Diagnóis neamhbhailí</value>
+  </data>
 </root>

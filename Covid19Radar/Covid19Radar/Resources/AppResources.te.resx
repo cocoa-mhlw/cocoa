@@ -287,4 +287,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>మొత్తం డేటాని తొలగించు</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>చెల్లని నిర్ధారణ ID</value>
+  </data>
 </root>

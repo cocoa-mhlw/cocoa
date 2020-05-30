@@ -287,4 +287,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Eyða öllum gögnum</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Ógilt Greiningarkenni</value>
+  </data>
 </root>

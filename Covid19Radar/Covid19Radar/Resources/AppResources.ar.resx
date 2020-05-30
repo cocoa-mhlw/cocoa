@@ -286,4 +286,7 @@
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>حذف كافة البيانات</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>معرف التشخيص غير الصالح</value>
+  </data>
 </root>

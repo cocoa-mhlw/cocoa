@@ -287,4 +287,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Verwyder alle data</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Ongeldige diagnose-ID</value>
+  </data>
 </root>
