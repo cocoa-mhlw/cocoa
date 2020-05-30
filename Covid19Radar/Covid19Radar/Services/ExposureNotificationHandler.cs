@@ -72,16 +72,17 @@ namespace Covid19Radar.Services
 			});
 
 			await userDataService.SetAsync(userData);
-
-			var notification = new NotificationRequest
+			if (userData.IsNotificationEnabled)
 			{
-				NotificationId = 100,
-				Title = "Possible COVID-19 Exposure",
-				Description = "It is possible you have been exposed to someone who was a confirmed diagnosis of COVID-19.  Tap for more details."
-			};
+				var notification = new NotificationRequest
+				{
+					NotificationId = 100,
+					Title = "Possible COVID-19 Exposure",
+					Description = "It is possible you have been exposed to someone who was a confirmed diagnosis of COVID-19.  Tap for more details."
+				};
 
-			NotificationCenter.Current.Show(notification);
-
+				NotificationCenter.Current.Show(notification);
+			}
 		}
 
 		// this will be called when they keys need to be collected from the server
@@ -92,10 +93,10 @@ namespace Covid19Radar.Services
 
 			try
 			{
-				foreach (var serverRegion in userData.ServerBatchNumbers.ToArray())
+				foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
 				{
 					// Find next directory to start checking
-					var dirNumber = serverRegion.Value + 1;
+					var dirNumber = LocalStateManager.Instance.ServerBatchNumbers[serverRegion] + 1;
 
 					// For all the directories
 					while (true)
@@ -103,7 +104,7 @@ namespace Covid19Radar.Services
 						cancellationToken.ThrowIfCancellationRequested();
 
 						// Download all the files for this directory
-						var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion.Key, dirNumber, cancellationToken);
+						var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion, dirNumber, cancellationToken);
 						if (batchNumber == 0)
 							break;
 
@@ -127,7 +128,7 @@ namespace Covid19Radar.Services
 						}
 
 						// Update the preferences
-						userData.ServerBatchNumbers[serverRegion.Key] = dirNumber;
+						userData.ServerBatchNumbers[serverRegion] = dirNumber;
 						await userDataService.SetAsync(userData);
 
 						dirNumber++;
@@ -152,7 +153,7 @@ namespace Covid19Radar.Services
 				{
 					// TODO Implement httpdata service
 					// Build the blob storage url for the given batch file we are on next
-					var url = $"{apiUrlBlobStorageBase}/{blobStorageContainerNamePrefix}{region.ToLowerInvariant()}/{dirNumber}/{batchNumber + 1}.dat";
+					var url = $"{AppSettings.Instance.BlobStorageUrlBase}/{AppSettings.Instance.BlobStorageContainerNamePrefix}{region.ToLowerInvariant()}/{dirNumber}/{batchNumber + 1}.dat";
 					var response = await http.GetAsync(url, cancellationToken);
 
 					// If we get a 404, there are no newer batch files available to download
@@ -221,7 +222,7 @@ namespace Covid19Radar.Services
 					UserUuid = userData.UserUuid,
 					DeviceVerificationPayload = null,
 					Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
-					Regions = userData.ServerBatchNumbers.Keys.ToArray(),
+					Regions = AppSettings.Instance.SupportedRegions,
 					Keys = keys.ToArray(),
 					VerificationPayload = pendingDiagnosis.DiagnosisUid,
 				};

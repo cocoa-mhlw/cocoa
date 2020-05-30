@@ -339,6 +339,11 @@
         <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}" />
     </Style>
 
+    <Style x:Key="DefaultSwitch" TargetType="Switch">
+        <Setter Property="OnColor" Value="{StaticResource PrimaryLight}" />
+        <Setter Property="ThumbColor" Value="{StaticResource Primary}" />
+    </Style>
+
     <Style x:Key="DefaultActivityIndicatorFrame" TargetType="Frame">
         <Setter Property="BackgroundColor" Value="{StaticResource SecondaryText}" />
     </Style>
