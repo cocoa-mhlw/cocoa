@@ -66,6 +66,7 @@ namespace Covid19Radar.ViewModels
             IsEnabled = false;
             try
             {
+                /*
                 var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
 
                 if (!enabled)
@@ -79,7 +80,7 @@ namespace Covid19Radar.ViewModels
                     );
                     return;
                 }
-
+                */
                 // Set the submitted UID
                 userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DiagnosisTimestamp.Value));
                 await userDataService.SetAsync(userData);
