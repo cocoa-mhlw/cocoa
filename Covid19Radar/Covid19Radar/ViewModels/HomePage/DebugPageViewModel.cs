@@ -19,55 +19,51 @@ namespace Covid19Radar.ViewModels
     {
         private readonly UserDataService userDataService;
         private readonly ExposureNotificationService exposureNotificationService;
-        private UserDataModel userData;
 
         public DebugPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = "Debug";
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
-            userData = this.userDataService.Get();
-            EnStatus = this.exposureNotificationService.CurrentStatusMessage;
-            FlgEn = userData.IsExposureNotificationEnabled.ToString();
-            FlgLn = userData.IsNotificationEnabled.ToString();
-            FlgWl = userData.IsWelcomed.ToString();
+            _UserData = this.userDataService.Get();
+            _EnMessage = this.exposureNotificationService.CurrentStatusMessage;
             this.userDataService.UserDataChanged += _userDataChanged;
-            RaisePropertyChanged(nameof(EnStatus));
-            RaisePropertyChanged(nameof(FlgEn));
-            RaisePropertyChanged(nameof(FlgLn));
-            RaisePropertyChanged(nameof(FlgWl));
         }
 
         private void _userDataChanged(object sender, UserDataModel e)
         {
-            userData = this.userDataService.Get();
-            EnStatus = this.exposureNotificationService.CurrentStatusMessage;
-            FlgEn = userData.IsExposureNotificationEnabled.ToString();
-            FlgLn = userData.IsNotificationEnabled.ToString();
-            FlgWl = userData.IsWelcomed.ToString();
-            RaisePropertyChanged(nameof(EnStatus));
-            RaisePropertyChanged(nameof(FlgEn));
-            RaisePropertyChanged(nameof(FlgLn));
-            RaisePropertyChanged(nameof(FlgWl));
+            _UserData = this.userDataService.Get();
+            _EnMessage = this.exposureNotificationService.CurrentStatusMessage;
         }
 
         public string NativeImplementationName
             => Xamarin.ExposureNotifications.ExposureNotification.OverridesNativeImplementation
                 ? "TEST" : "LIVE";
 
-        public string EnStatus { get; set; }
-        public string FlgEn { get; set; }
-        public string FlgLn { get; set; }
-        public string FlgWl { get; set; }
+        private UserDataModel _UserData;
+
+        public UserDataModel UserData
+        {
+            get { return _UserData; }
+            set { SetProperty(ref _UserData, value); }
+        }
+
+        private string _EnMessage;
+
+        public string EnMessage
+        {
+            get { return _EnMessage; }
+            set { SetProperty(ref _EnMessage, value); }
+        }
 
         public string CurrentBatchFileIndex
-            => string.Join(", ", userData.ServerBatchNumbers.Select(p => $"{p.Key}={p.Value}"));
+            => string.Join(", ", _UserData.ServerBatchNumbers.Select(p => $"{p.Key}={p.Value}"));
 
         public Command ResetSelfDiagnosis
             => new Command(async () =>
             {
-                userData.ClearDiagnosis();
-                await userDataService.SetAsync(userData);
+                _UserData.ClearDiagnosis();
+                await userDataService.SetAsync(_UserData);
                 await UserDialogs.Instance.AlertAsync("Self Diagnosis Cleared!");
             });
 
@@ -75,9 +71,9 @@ namespace Covid19Radar.ViewModels
         public Command ResetExposures
             => new Command(async () =>
             {
-                await Device.InvokeOnMainThreadAsync(() => userData.ExposureInformation.Clear());
-                userData.ExposureSummary = null;
-                await userDataService.SetAsync(userData);
+                await Device.InvokeOnMainThreadAsync(() => _UserData.ExposureInformation.Clear());
+                _UserData.ExposureSummary = null;
+                await userDataService.SetAsync(_UserData);
                 await UserDialogs.Instance.AlertAsync("Exposures Cleared!");
             });
 
@@ -86,12 +82,12 @@ namespace Covid19Radar.ViewModels
             {
                 await Device.InvokeOnMainThreadAsync(async () =>
                 {
-                    userData.ExposureInformation.Add(
+                    _UserData.ExposureInformation.Add(
                         new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, Xamarin.ExposureNotifications.RiskLevel.High));
-                    userData.ExposureInformation.Add(
+                    _UserData.ExposureInformation.Add(
                         new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(10), 40, 3, Xamarin.ExposureNotifications.RiskLevel.Low));
 
-                    await userDataService.SetAsync(userData);
+                    await userDataService.SetAsync(_UserData);
 
                 });
             });
@@ -99,14 +95,14 @@ namespace Covid19Radar.ViewModels
 
         public Command ToggleWelcome => new Command(async () =>
         {
-            userData.IsWelcomed = !userData.IsWelcomed;
-            await userDataService.SetAsync(userData);
+            _UserData.IsOptined = !_UserData.IsOptined;
+            await userDataService.SetAsync(_UserData);
         });
 
         public Command ToggleEn => new Command(async () =>
         {
-            userData.IsExposureNotificationEnabled = !userData.IsExposureNotificationEnabled;
-            await userDataService.SetAsync(userData);
+            _UserData.IsExposureNotificationEnabled = !_UserData.IsExposureNotificationEnabled;
+            await userDataService.SetAsync(_UserData);
         });
 
 
@@ -119,7 +115,7 @@ namespace Covid19Radar.ViewModels
                     {
                         await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
                     }
-                    await userDataService.SetAsync(userData);
+                    await userDataService.SetAsync(_UserData);
                 }
                 await UserDialogs.Instance.AlertAsync("Last known enabled state reset!");
             });
@@ -127,8 +123,8 @@ namespace Covid19Radar.ViewModels
         public Command ResetBatchFileIndex
             => new Command(async () =>
             {
-                userData.ServerBatchNumbers = new Dictionary<string, ulong>(UserDataModel.DefaultServerBatchNumbers);
-                await userDataService.SetAsync(userData);
+                _UserData.ServerBatchNumbers = new Dictionary<string, ulong>(UserDataModel.DefaultServerBatchNumbers);
+                await userDataService.SetAsync(_UserData);
                 RaisePropertyChanged(nameof(CurrentBatchFileIndex));
                 await UserDialogs.Instance.AlertAsync("Reset Batch file index!");
             });
