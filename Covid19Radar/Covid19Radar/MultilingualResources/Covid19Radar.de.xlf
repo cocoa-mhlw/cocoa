@@ -23,7 +23,7 @@
         <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Keine Notwendigkeit, persönliche Informationen einzugeben. Wir verwenden eine eindeutige ID, die Ihnen bei der Installation einer App zugewiesen wurde.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
@@ -391,6 +391,11 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Möchten Sie sich später positiv registrieren?</target>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
+          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wenn Sie die Anwendung ausführen, wird auf jedem Smartphone eine anonyme ID generiert und gespeichert. Diese Anwendung erfasst keine Informationen zum Datenschutz wie Telefonnummer und Standortinformationen.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
         </trans-unit>
       </group>
     </body>

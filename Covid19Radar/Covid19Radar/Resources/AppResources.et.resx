@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Ei ole vaja sisestada isiklikku teavet. Me kasutame unikaalset ID-ga, mis on teile rakenduse installimisel eraldatud.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Kontakti teise rakenduse kasutajaga rohkem kui 30 min kokku, raadiuses lähemal kui 2 m keskmiselt registreeritakse "Close kontakt".</value>
@@ -307,5 +307,9 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Kas soovite hiljem positiivselt registreerida?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Kui käivitate rakenduse, see loob ja salvestab anonüümse ID iga nutitelefoni. See rakendus ei Hangi teavet privaatsuse kohta, nagu telefoninumber ja asukohateave.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

@@ -23,7 +23,7 @@
         <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dim angen mewnbynnu gwybodaeth bersonol. Rydym yn defnyddio ID unigryw, a ddyrannwyd i chi wrth osod ap.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
@@ -391,6 +391,11 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">A hoffech gofrestru'n gadarnhaol yn nes ymlaen?</target>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
+          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pan fyddwch yn rhedeg y cais, bydd yn cynhyrchu ac yn storio ID dienw ar bob ffôn smart. Nid yw'r cais hwn yn caffael unrhyw wybodaeth sy'n gysylltiedig â phreifatrwydd fel rhif ffôn a gwybodaeth lleoliad.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
         </trans-unit>
       </group>
     </body>

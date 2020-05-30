@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Não há necessidade de inserir informações pessoais. Estamos usando id exclusivo, alocado para você ao instalar um aplicativo.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Um contato com outro usuário de aplicativo por mais de 30 min no total, dentro de um raio superior a 2m em média é registrado como "Contato Próximo".</value>
@@ -307,5 +307,9 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Gostaria de se registrar positivamente mais tarde?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Quando você executa o aplicativo, ele irá gerar e armazenar um ID anônimo em cada smartphone. Este aplicativo não adquire nenhuma informação relacionada à privacidade, como número de telefone e informações de localização.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

@@ -259,6 +259,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DescriptionPageTextStep1Description2 {
+            get {
+                return ResourceManager.GetString("DescriptionPageTextStep1Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as &quot;Close Contact&quot;. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTextStep2Description {
