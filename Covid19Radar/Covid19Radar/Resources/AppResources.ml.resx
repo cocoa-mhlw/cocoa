@@ -290,4 +290,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>അസാധുവായ രോഗനിർണ്ണയ ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>സാധുതയുള്ള രോഗനിർണ്ണയ ഐഡി നൽകുക</value>
+  </data>
 </root>

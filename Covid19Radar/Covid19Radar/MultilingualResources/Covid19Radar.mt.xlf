@@ -368,6 +368,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Invalid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ID ta ' dijanjożi invalida</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jekk jogħġbok ipprovdi ID ta ' dijanjożi valida</target>
+        </trans-unit>
       </group>
     </body>
   </file>

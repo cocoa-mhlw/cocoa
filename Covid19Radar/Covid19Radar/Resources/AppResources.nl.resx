@@ -290,4 +290,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Ongeldige diagnose-id</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Geef een geldig diagnose-id op</value>
+  </data>
 </root>
