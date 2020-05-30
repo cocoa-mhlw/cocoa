@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>অনুগ্রহ করে একটি বৈধ পরীক্ষার তারিখ প্রদান করুন</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>রেজিস্ট্রেশনে ফিরুন</value>
+  </data>
 </root>

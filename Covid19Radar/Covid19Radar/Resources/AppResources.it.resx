@@ -299,4 +299,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Specificare una Data di prova valida</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Ritorno alla registrazione</value>
+  </data>
 </root>

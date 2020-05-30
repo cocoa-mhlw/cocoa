@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>സാധുതയുള്ള പരിശോധനാ തീയതി നൽകുക</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>രജിസ്ട്രേഷന് തിരികെ നല് കൂ</value>
+  </data>
 </root>

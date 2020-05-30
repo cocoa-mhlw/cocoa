@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>โปรดระบุวันสอบที่ถูกต้อง</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>กลับไปที่การลงทะเบียน</value>
+  </data>
 </root>

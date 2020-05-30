@@ -380,6 +380,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>Please provide a valid Test Date</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Rhowch ddyddiad prawf dilys os gwelwch yn dda</target>
         </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dychwelyd i gofrestru</target>
+        </trans-unit>
       </group>
     </body>
   </file>

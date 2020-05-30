@@ -187,6 +187,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Return to registration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonReturnToRegistration {
+            get {
+                return ResourceManager.GetString("ButtonReturnToRegistration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Share に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonShare {
@@ -422,6 +431,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Submitting Diagnosis... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LoadingTextSubmittingDiagnosis {
+            get {
+                return ResourceManager.GetString("LoadingTextSubmittingDiagnosis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Exposures に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MainExposures {
@@ -607,15 +625,6 @@ namespace Covid19Radar.Resources {
         internal static string SharePositiveDiagnosisPageDiagUidIsEmptyTitle {
             get {
                 return ResourceManager.GetString("SharePositiveDiagnosisPageDiagUidIsEmptyTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Submitting Diagnosis... に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string LoadingTextSubmittingDiagnosis {
-            get {
-                return ResourceManager.GetString("LoadingTextSubmittingDiagnosis", resourceCulture);
             }
         }
         

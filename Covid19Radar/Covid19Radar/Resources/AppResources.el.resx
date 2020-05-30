@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Παρακαλείσθε να δώσετε μια έγκυρη ημερομηνία δοκιμής</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Επιστροφή στην εγγραφή</value>
+  </data>
 </root>

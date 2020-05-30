@@ -299,4 +299,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Rhowch ddyddiad prawf dilys os gwelwch yn dda</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Dychwelyd i gofrestru</value>
+  </data>
 </root>

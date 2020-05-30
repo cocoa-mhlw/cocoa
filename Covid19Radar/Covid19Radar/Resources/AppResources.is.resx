@@ -299,4 +299,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Vinsamlegast Gefðu upp gilda Prófunardagsetningu</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Skil á skráningu</value>
+  </data>
 </root>

@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>कृपया एक वैध परीक्षण तिथि प्रदान करें</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>पंजीकरण पर वापसी</value>
+  </data>
 </root>

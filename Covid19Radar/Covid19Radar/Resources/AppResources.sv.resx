@@ -299,4 +299,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Ange ett giltigt testdatum</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Återgå till registrering</value>
+  </data>
 </root>
