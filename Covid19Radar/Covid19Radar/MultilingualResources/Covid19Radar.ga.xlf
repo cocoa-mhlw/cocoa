@@ -372,6 +372,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tabhair aitheantas diagnóise bailí le do thoil</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dáta Tástála Neamhbhailí</target>
+        </trans-unit>
       </group>
     </body>
   </file>

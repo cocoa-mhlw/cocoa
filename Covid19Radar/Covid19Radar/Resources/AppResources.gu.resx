@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>કૃપા કરીને માન્ય નિદાન ID પ્રદાન કરો</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>અયોગ્ય ચકાસણી તારીખ</value>
+  </data>
 </root>

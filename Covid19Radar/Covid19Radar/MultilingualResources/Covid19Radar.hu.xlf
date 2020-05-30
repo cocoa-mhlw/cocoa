@@ -370,6 +370,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kérjük, adjon meg érvényes diagnosztikai azonosítót</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Érvénytelen tesztdátum</target>
+        </trans-unit>
       </group>
     </body>
   </file>

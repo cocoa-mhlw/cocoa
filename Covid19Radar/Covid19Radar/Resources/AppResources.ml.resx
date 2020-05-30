@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>സാധുതയുള്ള രോഗനിർണ്ണയ ഐഡി നൽകുക</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>അസാധുവായ പരിശോധനാ തീയതി</value>
+  </data>
 </root>

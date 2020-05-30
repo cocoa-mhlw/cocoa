@@ -372,6 +372,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bitte geben Sie eine gültige Diagnose-ID an</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ungültiges Testdatum</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -293,4 +293,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Proporcione un ID de diagnóstico válido</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Fecha de prueba no válida</value>
+  </data>
 </root>

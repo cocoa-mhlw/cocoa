@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>ایک جائز تشخیص شناخت مہیا کریں</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>ناجائز جانچ تاریخ</value>
+  </data>
 </root>

@@ -293,4 +293,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Kérjük, adjon meg érvényes diagnosztikai azonosítót</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Érvénytelen tesztdátum</value>
+  </data>
 </root>

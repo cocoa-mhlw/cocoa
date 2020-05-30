@@ -372,6 +372,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Please provide a valid Diagnosis ID</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ದಯವಿಟ್ಟು ಒಂದು ಮಾನ್ಯವಾದ ರೋಗನಿರ್ಣಯ ID ಯನ್ನು ಒದಗಿಸಿ</target>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಅಮಾನ್ಯವಾದ ಪರೀಕ್ಷಾ ದಿನಾಂಕ</target>
+        </trans-unit>
       </group>
     </body>
   </file>

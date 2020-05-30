@@ -292,4 +292,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Lütfen geçerli bir Tanı Kimliği sağlayın</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Geçersiz Sınav Tarihi</value>
+  </data>
 </root>

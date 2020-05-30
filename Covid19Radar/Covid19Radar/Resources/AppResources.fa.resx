@@ -293,4 +293,7 @@
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>لطفا یک شناسه تشخیص معتبر ارائه دهید</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>تاریخ آزمون نامعتبر</value>
+  </data>
 </root>

@@ -293,4 +293,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Vui lòng cung cấp ID chẩn đoán hợp lệ</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ngày kiểm tra không hợp lệ</value>
+  </data>
 </root>

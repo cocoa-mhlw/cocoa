@@ -293,4 +293,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Palun esitage kehtiv diagnoosi ID</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Sobimatu Testkuupäev</value>
+  </data>
 </root>

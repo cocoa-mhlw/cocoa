@@ -293,4 +293,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
     <value>Omeo FAMANTARANA Aretina misy feo ianao.</value>
   </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Daty nahitana-Pahaizana</value>
+  </data>
 </root>
