@@ -388,6 +388,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Đăng ký tích cực</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bạn có muốn đăng ký tích cực sau này?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

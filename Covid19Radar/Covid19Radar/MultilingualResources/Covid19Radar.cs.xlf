@@ -388,6 +388,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozitivní registrace</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chcete se později zaregistrovat pozitivně?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

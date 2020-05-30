@@ -305,4 +305,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Đăng ký tích cực</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Bạn có muốn đăng ký tích cực sau này?</value>
+  </data>
 </root>

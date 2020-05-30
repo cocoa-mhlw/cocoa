@@ -387,6 +387,10 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Registro positivo</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">¿Desea registrarse positivamente más tarde?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

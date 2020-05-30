@@ -305,4 +305,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Positibong rehistrasyon</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Gusto mo bang magparehistro ng positibo mamaya?</value>
+  </data>
 </root>

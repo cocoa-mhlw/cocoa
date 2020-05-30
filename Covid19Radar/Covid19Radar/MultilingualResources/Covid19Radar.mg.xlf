@@ -388,6 +388,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Fisoratana anarana tsara</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tianao ve ny hanao ny fisoratana anarana ao aoriana kely?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

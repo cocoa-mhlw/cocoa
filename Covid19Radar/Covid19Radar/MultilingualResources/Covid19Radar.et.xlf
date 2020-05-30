@@ -388,6 +388,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Positiivne registreerimine</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kas soovite hiljem positiivselt registreerida?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

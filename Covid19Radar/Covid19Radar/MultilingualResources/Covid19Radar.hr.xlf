@@ -388,6 +388,10 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozitivna registracija</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Želite li se kasnije pozitivno registrirati?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

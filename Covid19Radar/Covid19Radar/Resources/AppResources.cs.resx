@@ -305,4 +305,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Pozitivní registrace</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Chcete se později zaregistrovat pozitivně?</value>
+  </data>
 </root>

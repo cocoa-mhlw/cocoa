@@ -388,6 +388,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Cadastro positivo</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gostaria de se registrar positivamente mais tarde?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

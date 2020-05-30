@@ -305,4 +305,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Positieve registratie</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Wilt u zich later positief registreren?</value>
+  </data>
 </root>

@@ -305,4 +305,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Positiivinen rekisteröinti</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Haluatko rekisteröityä positiivisesti myöhemmin?</value>
+  </data>
 </root>

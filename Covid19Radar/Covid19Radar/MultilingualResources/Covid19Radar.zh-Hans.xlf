@@ -386,6 +386,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">正注册</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">以后要积极注册吗？</target>
+        </trans-unit>
       </group>
     </body>
   </file>

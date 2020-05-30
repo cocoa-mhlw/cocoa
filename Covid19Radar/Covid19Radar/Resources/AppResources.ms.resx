@@ -305,4 +305,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Pendaftaran positif</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Adakah anda mahu mendaftar secara positif kemudian?</value>
+  </data>
 </root>

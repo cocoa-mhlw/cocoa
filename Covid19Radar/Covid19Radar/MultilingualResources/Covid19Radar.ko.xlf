@@ -388,6 +388,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">긍정적 인 등록</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">나중에 긍정적으로 등록하시겠습니까?</target>
+        </trans-unit>
       </group>
     </body>
   </file>
