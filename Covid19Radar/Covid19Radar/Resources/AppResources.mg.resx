@@ -23,9 +23,9 @@
     <value>Ireo teny Fanompoana</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Tsy mila fampidirana ny mombamomba azy manokana. Mampiasa FAMANTARANA miavaka isika, draharaha aminareo rehefa izao ny rafibaovao.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Ny fifandraisana misy eo amin' ny rafi-baovao hafa mandritra ny 30 min-tena, ao anatin' ny radius akaiky kokoa noho ny 2m-antonontonony dia voarakitra ho toy ny "Manakaiky".</value>
@@ -196,7 +196,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hatsiaka Fampilazana Sembana</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Fanekena ny Aretina ...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Esory avokoa ny tahirin-kevitra rehetra</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Nahitana Aretina ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Omeo FAMANTARANA Aretina misy feo ianao.</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Daty nahitana-Pahaizana</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Omeo Daty misy Fitiliana ve ianao.</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Hiverina amin' ny fisoratana anarana</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Fisoratana anarana tsara</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Tianao ve ny hanao ny fisoratana anarana ao aoriana kely?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Rehefa manao ny fampiharana ianao, dia nalaina izany ary tsy eo amin' ny smartphone tsirairay. Ity fampiharana ity dia tsy mahazo fampahalalana izay mifandray amin' ny tsiambaratelo toy ny hoe laharan' ny telefaonina sy ny toerana misy izany.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

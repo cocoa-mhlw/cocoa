@@ -23,9 +23,9 @@
     <value>Diensbepalings</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Geen behoefte om persoonlike inligting in te voer nie. Ons gebruik unieke ID wat aan jou toegeken is wanneer jy 'n program installeer.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>'n kontak met 'n ander prgram gebruiker vir langer as 30 min in totaal, binne 'n radius nader as 2m gemiddeld is aangeteken as "Noue Kontak".</value>
@@ -196,7 +196,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Blootstellings Kennisgewings is versper</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnose word ingedien...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>Verwyder alle data</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Ongeldige diagnose-ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Verskaf asseblief 'n geldige diagnose-ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ongeldige Toetsdatum</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Verskaf asseblief 'n geldige Toetsdatum</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Terugkeer na registrasie</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positiewe registrasie</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Wil jy later positief registreer?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Wanneer jy die toepassing uitvoer, sal dit 'n anonieme ID op elke slimfoon genereer en stoor. Hierdie toepassing verkry nie enige inligting wat verband hou met privaatheid soos foonnommer en liggingsinligting nie.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
