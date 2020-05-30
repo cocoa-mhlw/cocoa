@@ -23,9 +23,9 @@
     <value>شرایط خدمات</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>بدون نیاز به ورودی اطلاعات شخصی. ما از شناسه منحصربه فرد استفاده می کنیم که هنگام نصب یک برنامه به شما اختصاص داده شده است.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>یک تماس با یک کاربر برنامه دیگر برای بیش از 30 دقیقه در مجموع ، در شعاع نزدیک تر از 2m به طور متوسط به عنوان "تماس نزدیک" ثبت می شود.</value>
@@ -196,7 +196,7 @@
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>اعلان نوردهی غیرفعال شد</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>ارسال تشخیص...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -286,5 +286,30 @@
   </data>
   <data name="DeleteDataDescription" xml:space="preserve">
     <value>حذف همه داده ها</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>شناسه تشخیص غیرمعتبر</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>لطفا یک شناسه تشخیص معتبر ارائه دهید</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>تاریخ آزمون نامعتبر</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>لطفا یک تاریخ آزمون معتبر ارائه دهید</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>بازگشت به ثبت نام</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>ثبت نام مثبت</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>آیا می خواهید به ثبت نام مثبت بعد ؟</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>هنگامی که برنامه را اجرا می کنید ، یک شناسه ناشناس را در هر گوشی هوشمند تولید و ذخیره می کند. این نرم افزار هیچ اطلاعاتی مربوط به حریم خصوصی مانند شماره تلفن و اطلاعات مکان را به دست نمی آورد.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
