@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nema potrebe za unosom ličnih informacija. Koristimo jedinstveni ID koji vam je dodeljen prilikom instaliranja aplikacije.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Kontakt sa drugim korisnikom aplikacije za duži od 30 minuta u zbiru, u radijusu koji je veći od 2 metra u proseku, zapisuje se kao "blizak kontakt".</value>
@@ -307,5 +307,9 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Želite li kasnije da se registrujete?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Kada pokrenete aplikaciju, ona će generisati i uskladištiti anonimni ID na svakom pametnom telefonu. Ova aplikacija ne stiče nikakve informacije vezane za privatnost, kao što su broj telefona i informacije o lokaciji.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

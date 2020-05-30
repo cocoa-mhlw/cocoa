@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Henkilökohtaisia tietoja ei tarvitse syöttää. Käytämme yksilöllistä tunnusta, joka on varattu sinulle sovelluksen asennuksen yhteydessä.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Yhteydenpito toiseen sovelluksen käyttäjään yli 30 minuutin ajan, joka on keskimäärin yli 2 metrin säteellä, tallennetaan "Sulje yhteystieto"-muodossa.</value>
@@ -307,5 +307,9 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Haluatko rekisteröityä positiivisesti myöhemmin?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Kun suoritat sovelluksen , se luo ja tallentaa anonyymin tunnuksen jokaiseen älypuhelimeen. Tämä sovellus ei saa mitään tietosuojaan liittyviä tietoja, kuten puhelinnumeroa ja sijaintitietoja.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

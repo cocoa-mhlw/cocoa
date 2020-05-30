@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Не потрібно вводити особисту інформацію. Ми використовуємо унікальний ІДЕНТИФІКАТОР, виділений для вас під час встановлення програми.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Контакт з іншим користувачем програми для більш ніж 30 хв в цілому, в радіусі ближче ніж 2 м в середньому записується як "тісний контакт".</value>
@@ -307,5 +307,9 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ви хотіли б зареєструвати позитивно пізніше?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Під час запуску програми він створить та зберігатиме анонімний ІДЕНТИФІКАТОР на кожному смартфоні. Ця програма не купує будь-яку інформацію, пов'язану з конфіденційністю, наприклад, номер телефону та інформацію про місцезнаходження.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

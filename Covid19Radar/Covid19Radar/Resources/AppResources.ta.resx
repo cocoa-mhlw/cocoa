@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>தனிப்பட்ட தகவலை உள்ளிடுதல் தேவையில்லை. ஒரு பயன்பாட்டை நிறுவும்போது உங்களுக்கு ஒதுக்கப்பட்ட தனித்துவமான ID-ஐ நாங்கள் பயன்படுத்துகிறோம்.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>மொத்த 30 நிமிடத்திற்கும் அதிகமாக உள்ள ஒரு பயன்பாட்டைப் பயன்படுத்துபவர், சராசரியாக 2m க்கு அருகில் உள்ள ஆரத்திற்குள், "நெருங்கிய தொடர்பு" என பதிவு செய்யப்படுகிறது.</value>
@@ -307,5 +307,9 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>நீங்கள் பின்னர் நேர்மறையாக பதிவு செய்ய விரும்புகிறீர்களா?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>நீங்கள் பயன்பாட்டை இயக்கும் போது, அது ஒவ்வொரு ஸ்மார்ட்ஃபோனிலும் அநாமதேய ID உருவாக்கி சேமித்து வைக்கும். இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனியுரிமை தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>

@@ -25,7 +25,7 @@
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Dim angen mewnbynnu gwybodaeth bersonol. Rydym yn defnyddio ID unigryw, a ddyrannwyd i chi wrth osod ap.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description" xml:space="preserve">
     <value>Mae cyswllt gyda defnyddiwr app arall am fwy na 30 munud i gyd, o fewn radiws sy'n agosach na 2m ar gyfartaledd yn cael ei gofnodi fel "cyswllt agos".</value>
@@ -307,5 +307,9 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>A hoffech gofrestru'n gadarnhaol yn nes ymlaen?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Pan fyddwch yn rhedeg y cais, bydd yn cynhyrchu ac yn storio ID dienw ar bob ffôn smart. Nid yw'r cais hwn yn caffael unrhyw wybodaeth sy'n gysylltiedig â phreifatrwydd fel rhif ffôn a gwybodaeth lleoliad.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
 </root>
