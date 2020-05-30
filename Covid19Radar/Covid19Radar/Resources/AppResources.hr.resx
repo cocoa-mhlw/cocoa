@@ -299,4 +299,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Navedite valjani datum testiranja</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Povratak na registraciju</value>
+  </data>
 </root>

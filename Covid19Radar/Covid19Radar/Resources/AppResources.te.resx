@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>దయచేసి చెల్లుబాటు అయ్యే టెస్ట్ తేదీని అందించండి</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>రిజిస్ట్రేషన్ కు రిటర్న్</value>
+  </data>
 </root>

@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Моля, посочете валидна дата на теста</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Връщане към регистрация</value>
+  </data>
 </root>

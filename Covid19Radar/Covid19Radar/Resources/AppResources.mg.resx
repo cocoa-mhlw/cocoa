@@ -299,4 +299,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Omeo Daty misy Fitiliana ve ianao.</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Hiverina amin' ny fisoratana anarana</value>
+  </data>
 </root>

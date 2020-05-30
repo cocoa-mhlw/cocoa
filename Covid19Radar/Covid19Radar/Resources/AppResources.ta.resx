@@ -299,4 +299,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>செல்லத்தக்க சோதனை தேதியை வழங்கவும்</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>பதிவுக்கான திருப்பம்</value>
+  </data>
 </root>

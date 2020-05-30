@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Будь ласка, надайте правильну дату тесту</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Повернутися до реєстрації</value>
+  </data>
 </root>

@@ -299,4 +299,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Pateikite tinkamą bandymo datą</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Grįžti į registraciją</value>
+  </data>
 </root>

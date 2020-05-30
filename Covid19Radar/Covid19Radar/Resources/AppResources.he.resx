@@ -299,4 +299,7 @@
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>נא ספק תאריך בדיקה חוקי</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>חזור להרשמה</value>
+  </data>
 </root>

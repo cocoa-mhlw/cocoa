@@ -299,4 +299,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Vui lòng cung cấp ngày thi hợp lệ</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Quay trở lại đăng ký</value>
+  </data>
 </root>

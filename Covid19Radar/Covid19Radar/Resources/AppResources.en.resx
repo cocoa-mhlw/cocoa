@@ -299,4 +299,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Please provide a valid Test Date</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Return to registration</value>
+  </data>
 </root>

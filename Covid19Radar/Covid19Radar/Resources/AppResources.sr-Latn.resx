@@ -299,4 +299,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
     <value>Unesite važeći datum testiranja</value>
   </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Vrati se na registraciju</value>
+  </data>
 </root>
