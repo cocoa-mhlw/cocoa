@@ -23,7 +23,7 @@
     <value>Persyaratan Layanan</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Tidak perlu memasukkan informasi pribadi. Kami menggunakan ID unik yang dialokasikan untuk Anda saat memasang aplikasi.</value>
     <comment>How it works page step 1 description</comment>
   </data>

@@ -23,7 +23,7 @@
     <value>சேவை விதிமுறைகள்</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>தனிப்பட்ட தகவலை உள்ளிடுதல் தேவையில்லை. ஒரு பயன்பாட்டை நிறுவும்போது உங்களுக்கு ஒதுக்கப்பட்ட தனித்துவமான ID-ஐ நாங்கள் பயன்படுத்துகிறோம்.</value>
     <comment>How it works page step 1 description</comment>
   </data>

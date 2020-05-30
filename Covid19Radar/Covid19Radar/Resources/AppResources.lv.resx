@@ -23,7 +23,7 @@
     <value>Pakalpojuma noteikumi</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nav nepieciešams ievadīt personisku informāciju. Mēs izmantojam unikālo ID, kas jums tiek piešķirts, instalējot lietotni.</value>
     <comment>How it works page step 1 description</comment>
   </data>

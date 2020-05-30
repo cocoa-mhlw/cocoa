@@ -23,7 +23,7 @@
     <value>เงื่อนไขการใช้บริการ</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>ไม่จําเป็นต้องใส่ข้อมูลส่วนบุคคล เราจะใช้ ID พิเศษที่ไม่ซ้ํากัน ซึ่งจะถูกสร้างให้คุณระหว่างการติดตั้งแอพ</value>
     <comment>How it works page step 1 description</comment>
   </data>

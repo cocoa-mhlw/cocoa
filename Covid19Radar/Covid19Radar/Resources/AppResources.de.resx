@@ -23,7 +23,7 @@
     <value>Vertragsbedingungen</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Keine Notwendigkeit, persönliche Informationen einzugeben. Wir verwenden eine eindeutige ID, die Ihnen bei der Installation einer App zugewiesen wurde.</value>
     <comment>How it works page step 1 description</comment>
   </data>

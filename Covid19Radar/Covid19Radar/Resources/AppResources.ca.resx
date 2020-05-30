@@ -23,7 +23,7 @@
     <value>Condicions del servei</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>No hi ha necessitat d'introduir informació personal. Estem utilitzant ID únic, assignat a vostè en instal·lar una aplicació.</value>
     <comment>How it works page step 1 description</comment>
   </data>

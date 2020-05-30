@@ -23,7 +23,7 @@
     <value>Servicevoorwaarden</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Het is niet nodig om persoonlijke informatie in te voeren. We gebruiken een unieke ID, welke wordt toegekend tijdens het installeren van een app.</value>
     <comment>How it works page step 1 description</comment>
   </data>
