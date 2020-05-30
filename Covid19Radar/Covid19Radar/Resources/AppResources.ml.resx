@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>അടുത്തത്</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>സേവന നിബന്ധനകൾ</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>ആരംഭിക്കുക</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 നിന്ന് ഞങ്ങളുടെ പ്രിയപ്പെട്ടവരെ സംരക്ഷിക്കുക</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>ഉപകരണ ആക്സസ്</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>അംഗീകരിക്കുക</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ഹോം</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>നീ പോകാന് തയ്യാറാണ്.</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>പൂർത്തിയായി</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ലൈസൻസ് ഉടമ്പടി</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ശരി</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>പ്രാപ്‌തമാക്കുക</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ഇപ്പോൾ നോട്ടൗട്ട്</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>നിങ്ങൾ മറ്റൊരു സമ്പർക്ക ട്രേസ് ആപ്ലിക്കേഷൻ ഉപയോക്താവിനു് സമീപമുണ്ടെങ്കിൽ നിർണ്ണയിക്കുന്നതിന് എക്സ്പോണറി അറിയിപ്പ്/ബ്ലൂടൂത്ത് സിഗ്നലുകളാണ് ഈ ആപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നത്. 
@@ -225,11 +216,9 @@
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>സമ്മതിച്ചില്ല</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>റദ്ദാക്കുക</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>നിങ്ങള് ക്ക് നോട്ടിഫിക്കേഷന് തിരിയ്ക്കണോ?</value>
@@ -237,11 +226,9 @@
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>പ്രാപ്തമായ</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>ഇല്ലാതാക്കുന്നു</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
@@ -253,7 +240,6 @@
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>പങ്കിടുക</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>മറ്റുള്ളവർക്ക് അനുകൂലമായ വിവരങ്ങളും അജ്ഞാത അറിയിപ്പും പങ്കിടൽ</value>
@@ -261,14 +247,12 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>പുനഃസജ്ജീകരിക്കുക</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>സ്വകാര്യത നയം</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>രജിസ്റ്റര് ചെയ്യുന്നതിനായി കാത്തിരിക്കുന്നു</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>നിങ്ങള് ക്കു് എല്ലാ ഡാറ്റയും പുനഃക്രമീകരിക്കാന് ആഗ്രഹിക്കുന്നുണ്ടോ?</value>

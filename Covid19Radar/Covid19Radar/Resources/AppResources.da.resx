@@ -18,7 +18,6 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Næste</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Servicebetingelser</value>
@@ -42,11 +41,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Startpunkt</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Beskyttelse af vores kære mod COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Adgang til enhed</value>
@@ -54,7 +51,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Acceptér</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>STARTSIDE</value>
@@ -74,7 +70,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Du er klar til at gå</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Opsætning afsluttet</value>
@@ -86,7 +81,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licensaftale</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -126,15 +120,12 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Aktivér</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow (NotNow)</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Denne app bruger Eksponering svarbesked / Bluetooth-signaler til at afgøre, om du er i nærheden af en anden kontakt sporing app bruger. 
@@ -225,11 +216,9 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ikke enig</value>
-    <comment>Not Agree</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Annuller</value>
-    <comment>Cancel</comment>
   </data>
   <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Vil du slå notifikationer til?</value>
@@ -237,11 +226,9 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Aktiveres</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Slettes</value>
-    <comment>Deleting</comment>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Hvis du har fået en positiv diagnose</value>
@@ -253,7 +240,6 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Del</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Deling af positive oplysninger og anonym underretning til andre</value>
@@ -261,14 +247,12 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Nulstil</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Politik om beskyttelse af personlige oplysninger</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Venter på registrering</value>
-    <comment>Waiting for register</comment>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Vil du nulstille alle dataene?</value>
