@@ -388,6 +388,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Positibong rehistrasyon</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gusto mo bang magparehistro ng positibo mamaya?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

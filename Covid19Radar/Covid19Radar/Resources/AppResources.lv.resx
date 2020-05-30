@@ -305,4 +305,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Pozitīva reģistrācija</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Vai jūs vēlētos reģistrēties pozitīvi vēlāk?</value>
+  </data>
 </root>

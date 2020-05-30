@@ -305,4 +305,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Registrazione positiva</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Vuoi registrarti positivamente più tardi?</value>
+  </data>
 </root>

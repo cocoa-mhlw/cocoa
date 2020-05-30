@@ -305,4 +305,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Jákvæð skráning</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Á að skrá jákvætt síðar?</value>
+  </data>
 </root>

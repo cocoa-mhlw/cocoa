@@ -305,4 +305,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Enregistrement positif</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Souhaitez-vous vous inscrire positivement plus tard?</value>
+  </data>
 </root>

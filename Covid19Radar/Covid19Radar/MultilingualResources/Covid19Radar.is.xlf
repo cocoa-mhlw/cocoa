@@ -388,6 +388,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Positive registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jákvæð skráning</target>
         </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Á að skrá jákvætt síðar?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

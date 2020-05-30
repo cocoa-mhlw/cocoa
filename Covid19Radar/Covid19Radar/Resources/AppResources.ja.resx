@@ -305,4 +305,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>陽性登録</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>後で陽性の登録をしますか？</value>
+  </data>
 </root>

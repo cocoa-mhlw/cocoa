@@ -305,4 +305,7 @@
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>सकारात्मक पंजीकरण</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>क्या आप बाद में सकारात्मक पंजीकरण करना चाहेंगे?</value>
+  </data>
 </root>

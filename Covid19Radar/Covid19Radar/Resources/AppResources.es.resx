@@ -305,4 +305,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="PositiveRegistrationText" xml:space="preserve">
     <value>Registro positivo</value>
   </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>¿Desea registrarse positivamente más tarde?</value>
+  </data>
 </root>
