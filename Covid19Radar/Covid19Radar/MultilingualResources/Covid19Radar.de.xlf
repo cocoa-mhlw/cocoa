@@ -404,6 +404,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt mit positiven Testern in den letzten 14 Tagen</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wenn Sie mit der neuen Corona positiv sind, kooperieren Sie bitte mit der positiven Registrierung, um die Menschen um Sie herum zu schützen.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

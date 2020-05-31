@@ -317,4 +317,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt med positiva testare under de senaste 14 dagarna</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Om du är positiv med den nya Corona, vänligen samarbeta med den positiva registreringen för att skydda människor omkring dig.</value>
+  </data>
 </root>

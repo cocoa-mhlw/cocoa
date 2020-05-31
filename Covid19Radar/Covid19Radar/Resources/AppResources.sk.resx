@@ -317,4 +317,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt s pozitívnymi testery za posledných 14 dní</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ak ste pozitívni s novou Corona, prosím, spolupracovať s pozitívnou registráciou na ochranu ľudí okolo vás.</value>
+  </data>
 </root>

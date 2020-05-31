@@ -404,6 +404,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Επαφή με θετικούς δοκιμαστές τις τελευταίες 14 ημέρες</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Εάν είστε θετικοί με τη νέα Corona, παρακαλούμε συνεργαστείτε με τη θετική εγγραφή για να προστατεύσετε τους ανθρώπους γύρω σας.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

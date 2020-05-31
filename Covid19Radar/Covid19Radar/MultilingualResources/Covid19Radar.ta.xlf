@@ -404,6 +404,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">கடந்த 14 நாட்களில் நேச்சுரல் டெஸ்டர்களுடனான தொடர்பு</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">புதிய கோரோனா உடன் நீங்கள் நேர்மறையாக இருந்தால், உங்களைச் சுற்றியுள்ள மக்களைப் பாதுகாக்க நேர்மறையான பதிவிற்கு ஒத்துழைக்கவும்.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

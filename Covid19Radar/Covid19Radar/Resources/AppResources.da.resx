@@ -317,4 +317,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt med positive testere inden for de seneste 14 dage</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Hvis du er positiv med den nye Corona, skal du samarbejde med den positive registrering for at beskytte folk omkring dig.</value>
+  </data>
 </root>

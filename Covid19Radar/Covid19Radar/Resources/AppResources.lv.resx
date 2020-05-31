@@ -317,4 +317,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakts ar pozitīviem testētājiem pēdējo 14 dienu laikā</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ja jums ir pozitīvs ar New Corona, lūdzu, sadarboties ar pozitīvu reģistrāciju, lai aizsargātu cilvēkus ap jums.</value>
+  </data>
 </root>

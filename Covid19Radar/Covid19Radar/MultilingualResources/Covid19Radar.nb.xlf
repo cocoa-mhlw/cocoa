@@ -404,6 +404,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt med positive testere de siste 14 dagene</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvis du er positiv med den nye Corona, kan du samarbeide med den positive registreringen for å beskytte menneskene rundt deg.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

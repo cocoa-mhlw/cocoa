@@ -404,6 +404,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">在過去 14 天內與陽性測試人員聯繫</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">如果您對新的 Corona 持樂觀態度,請配合積極的註冊,以保護您周圍的人。</target>
+        </trans-unit>
       </group>
     </body>
   </file>
