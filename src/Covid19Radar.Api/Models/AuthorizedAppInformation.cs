@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
-    public class AuthorizedApp
+    public class AuthorizedAppInformation
     {
         public string id { get => Platform; }
 
