@@ -30,11 +30,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "닫기 접촉"으로 기록됩니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">전화번호를 확인한 후 상태를 '양수'로 수동으로 변경하십시오. 긍정적" 워크플로우, 이제 관련 당사자와의 조정.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">가까운 연락처를 기록하려면 블루투스를 켜야 합니다. 다음 페이지로 이동하여 켜십시오.</target>
@@ -401,6 +396,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">응용 프로그램이 실행되는 동안 서로의 스마트폰은 지난 2주 동안 서로의 익명 아이디를 기록합니다. 2주 미만의 기록은 삭제되며, 각 익명 ID는 개인 정보를 보호하기 위해 주기적으로 변경됩니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">다른 사용자는 정기적으로 긍정적 인 것들의 익명 의 아이디의 목록을 얻을. 획득 후 스마트폰에 기록된 연락처 레코드가 일치합니다. 경기 결과가 중대한 접촉인 경우, 당사는 귀하의 스마트폰에 통보하고 귀하가 협조하기를 원하는 필요한 조치를 귀하에게 알려드립니다.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
       </group>
     </body>

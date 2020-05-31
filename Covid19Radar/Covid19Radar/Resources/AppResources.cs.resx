@@ -31,10 +31,6 @@
     <value>Kontakt s jiným uživatelem aplikace po dobu delší než 30 minut celkem, v okruhu blíže než 2 m v průměru je zaznamenán jako "Blízký kontakt".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Po ověření telefonního čísla změňte svůj stav ručně na Pozitivní." Pozitivní" Workflow , Nyní koordinace se spřízněnými stranami.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth je třeba zapnout, aby bylo možné zaznamenat blízký kontakt. Chcete-li ji zapnout, přejděte na další stránku.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Zatímco aplikace běží, smartphone si navzájem zaznamená anonymní IDS za poslední dva týdny. Záznamy starší než 2 týdny budou smazány a každé anonymní ID bude pravidelně měněn, aby bylo chráněno soukromí.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Ostatní uživatelé pravidelně získají seznam anonymních IDENTIÍ pozitivních. Po pořízení bude záznam kontaktu zaznamenaný na smartphonu spárován. Pokud je výsledkem zápasu těžký kontakt, upozorníme váš smartphone a informujeme vás o nezbytných akcích, se kterými byste chtěli, abychom spolupracovali.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

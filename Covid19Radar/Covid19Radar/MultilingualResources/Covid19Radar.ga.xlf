@@ -30,11 +30,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Taifeadtar teagmháil le húsáideoir feidhmchláir eile ar feadh níos mó ná 30 nóiméad san iomlán, laistigh de gha níos gaire ná 2m ar an meán mar "Dún Teagmháil".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Athraigh do stádas de láimh go "Dearfach" tar éis d'uimhir theileafóin a fhíorú." ['Dearfach" Sreabhadh Oibre , Anois comhordú le páirtithe gaolmhara.\n']</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ní mór Bluetooth a iompú ar aghaidh chun dlúth-theagmháil a thaifeadadh. Téigh go dtí an chéad leathanach eile chun é a chasadh air.</target>
@@ -401,6 +396,11 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Cé go bhfuil an t-iarratas ag rith, déanfaidh fón póca a chéile aitheantais gan ainm a chéile a thaifeadadh le dhá sheachtain anuas. Scriosfar taifid níos sine ná 2 sheachtain agus athrófar gach ID gan ainm go tréimhsiúil chun príobháideacht a chosaint.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Faigheann úsáideoirí eile liosta de na hAithenais anaithnid de na cinn dhearfacha go rialta. Tar éis na héadála, déanfar an taifead teagmhála a thaifeadadh ar an bhfón cliste a mheaitseáil. Más teagmháil throm é toradh an chluiche, cuirfimid in iúl do do ghuthán cliste agus cuirfimid in iúl duit faoi na gníomhartha riachtanacha ar mhaith leat dúinn comhoibriú leo.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
       </group>
     </body>
