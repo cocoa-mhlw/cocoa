@@ -228,11 +228,9 @@
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>긍정적인 진단을 받은 경우</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>앱 공유</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>공유</value>
@@ -315,5 +313,8 @@
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>다른 사용자는 정기적으로 긍정적 인 것들의 익명 의 아이디의 목록을 얻을. 획득 후 스마트폰에 기록된 연락처 레코드가 일치합니다. 경기 결과가 중대한 접촉인 경우, 당사는 귀하의 스마트폰에 통보하고 귀하가 협조하기를 원하는 필요한 조치를 귀하에게 알려드립니다.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>지난 14일 동안 양성 테스터와의 접촉</value>
   </data>
 </root>

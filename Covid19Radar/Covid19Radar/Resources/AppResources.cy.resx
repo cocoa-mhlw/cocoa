@@ -228,11 +228,9 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Pe byddech yn cael diagnosis cadarnhaol</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Rhannu'r ap</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Rhannu</value>
@@ -315,5 +313,8 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Defnyddwyr eraill yn rheolaidd yn cael rhestr o IDs anhysbys o rai cadarnhaol. Ar ôl y caffaeliad, bydd y cofnod cyswllt a gofnodir ar y Smartphone yn cael ei baru. Os yw canlyniad y gêm yn gyswllt trwm, byddwn yn rhoi gwybod i'ch Smartphone ac yn eich hysbysu o'r camau gweithredu angenrheidiol yr hoffech i ni gydweithredu â nhw.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Cyswllt gyda profwyr positif yn y 14 diwrnod diwethaf</value>
   </data>
 </root>

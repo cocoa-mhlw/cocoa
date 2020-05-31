@@ -367,6 +367,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Contact with positive testers in the last 14 days に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageHeader1Title {
+            get {
+                return ResourceManager.GetString("HomePageHeader1Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   If you received a positive diagnosis に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageSubtitle1 {

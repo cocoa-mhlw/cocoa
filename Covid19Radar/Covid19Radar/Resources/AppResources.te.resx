@@ -228,11 +228,9 @@
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>ఒకవేళ మీరు పాజిటివ్ డయాగ్నసిస్ అందుకుంటే</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>అనువర్తనాన్ని పంచుకోండి</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>భాగస్వామ్యం చేయి</value>
@@ -315,5 +313,8 @@
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>ఇతర వినియోగదారులు క్రమం తప్పకుండా అనుకూల వారి అనామక Idల జాబితాను పొందుతారు. అక్విజేషన్ పూర్తయ్యాక స్మార్ట్ ఫోన్ లో రికార్డ్ చేసిన కాంటాక్ట్ రికార్డు మ్యాచ్ అవుతుంది. ఒకవేళ మ్యాచ్ యొక్క ఫలితం హెవీ కాంటాక్ట్ అయితే, మేం మీ స్మార్ట్ ఫోన్ కు తెలియజేస్తాం మరియు మీరు మాకు సహకరించాలని అనుకునే అవసరమైన చర్యలను మీకు తెలియజేస్తాం.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>గత 14 రోజుల్లో సానుకూల ముష్కరులతో పరిచయం</value>
   </data>
 </root>
