@@ -31,10 +31,6 @@
     <value>અન્ય એપ્લિકેશન વપરાશકર્તા સાથે નો સંપર્ક કુલ 30 મિનિટથી વધુ સમય માટે, સરેરાશ 2m થી વધુ ત્રિજ્યાની અંદર "ક્લોઝ કોન્ટેક્ટ" તરીકે નોંધવામાં આવે છે.</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>કૃપા કરીને તમારો ફોન નંબર ચકાસ્યા પછી જાતે જ તમારી સ્થિતિને "પોઝિટિવ" માં બદલો." પોઝિટિવ" વર્કફ્લો , હવે સંબંધિત પક્ષો સાથે સંકલન.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>નજીકનો સંપર્ક રેકોર્ડ કરવા માટે બ્લુટુથ ને ચાલુ કરવાની જરૂર છે. કૃપા કરીને તેને ચાલુ કરવા માટે આગળના પાના પર જાવ.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>એપ્લિકેશન ચાલી રહી છે ત્યારે એકબીજાનો સ્માર્ટફોન છેલ્લા બે અઠવાડિયાથી એકબીજાના અનામી આઈ.ડી.ની નોંધ કરશે. 2 અઠવાડિયાથી જૂના રેકોર્ડ્સ કાઢી નાખવામાં આવશે અને દરેક અનામી ઓળખપત્રને ગોપનીયતાની સુરક્ષા માટે સમયાંતરે બદલવામાં આવશે.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>અન્ય વપરાશકર્તાઓ ને નિયમિત પણે પોઝિટિવ આઇ.ડી.ની યાદી મળે છે. અધિગ્રહણ બાદ, સ્માર્ટફોન પર રેકોર્ડ કરવામાં આવેલા કોન્ટેક્ટ રેકોર્ડને મેચ કરવામાં આવશે. જો મેચનું પરિણામ ભારે સંપર્ક હોય, તો અમે તમારા સ્માર્ટફોનને સૂચિત કરીશું અને તમને જરૂરી પગલાં વિશે જણાવીશું કે જેનો તમે સહકાર આપવા માંગો છો.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

@@ -31,10 +31,6 @@
     <value>En kontakt med en anden appbruger i mere end 30 min i alt, inden for en radius tættere end 2m i gennemsnit registreres som "Luk kontakt".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Ret din status manuelt til "Positiv", når du har bekræftet dit telefonnummer." Positiv" Workflow , Nu koordinering med nærtstående parter.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth skal være slået til for at optage tæt kontakt. Gå til næste side for at slå den til.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Mens programmet kører, vil hinandens smartphone optage hinandens anonyme id'er for de sidste to uger. Poster, der er ældre end 2 uger, slettes, og hvert anonymt id ændres med jævne mellemrum for at beskytte privatlivets fred.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Andre brugere får jævnligt en liste over anonyme id'er med positive. Efter købet vil den kontaktpost, der er registreret på smartphonen, blive matchet. Hvis resultatet af kampen er en tung kontakt, vil vi underrette din smartphone og informere dig om de nødvendige handlinger, som du gerne vil have os til at samarbejde med.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

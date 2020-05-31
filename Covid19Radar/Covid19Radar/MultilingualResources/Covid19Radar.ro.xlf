@@ -30,11 +30,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Un contact cu un alt utilizator al aplicației pentru mai mult de 30 de minute în total, pe o rază mai mică de 2 m în medie, este înregistrat ca "Close Contact".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Modificați manual starea la "Pozitiv" după verificarea numărului de telefon." Pozitiv "Flux de lucru, Acum, coordonarea cu părțile afiliate.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth trebuie să fie activat pentru a înregistra contactul de închidere. Vă rugăm să mergeți la pagina următoare pentru a o activa.</target>
@@ -399,6 +394,11 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">În timp ce aplicația se execută, smartphone-ul celuilalt va înregistra reciproc ID-urile anonime pentru ultimele două săptămâni. Înregistrările mai vechi de 2 săptămâni vor fi șterse și fiecare ID anonim va fi modificat periodic pentru a proteja confidențialitatea.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alți utilizatori primesc în mod regulat o listă de ID-uri anonime ale celor pozitive. După achiziție, înregistrarea de contact înregistrată pe smartphone va fi egalată. Dacă rezultatul meciului este un contact intens, vă vom notifica smartphone-ul și vă vom informa cu privire la acțiunile necesare cu care doriți să cooperăm.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
       </group>
     </body>
