@@ -66,7 +66,7 @@
     </MtouchSdkVersion>
     <MtouchInterpreter>-all</MtouchInterpreter>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -335,6 +335,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\xamarin.exposurenotification\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj">
+      <Project>{6d693e42-556d-4d38-ad18-99dbc7c3ff92}</Project>
+      <Name>Xamarin.ExposureNotification</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{554EE1AB-B447-480C-90E5-C4F040891DE6}</Project>
       <Name>Covid19Radar</Name>
