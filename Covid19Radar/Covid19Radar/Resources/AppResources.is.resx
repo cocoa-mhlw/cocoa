@@ -229,7 +229,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ef þú fékkst jákvæða greiningu</value>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Deildu forritinu</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">

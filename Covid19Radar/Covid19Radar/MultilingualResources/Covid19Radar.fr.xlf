@@ -286,7 +286,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Si vous avez reçu un diagnostic positif</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Partager l'application</target>
         </trans-unit>

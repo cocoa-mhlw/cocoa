@@ -286,7 +286,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ha pozitív diagnózist kapott</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Az alkalmazás megosztása</target>
         </trans-unit>

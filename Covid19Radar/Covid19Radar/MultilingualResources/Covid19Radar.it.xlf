@@ -288,7 +288,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Se hai ricevuto una diagnosi positiva</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Condividi l'app</target>
         </trans-unit>

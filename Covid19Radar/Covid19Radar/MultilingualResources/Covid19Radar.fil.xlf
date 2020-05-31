@@ -288,7 +288,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kung nakatanggap ka ng isang positibong pagsusuri</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ibahagi ang app</target>
         </trans-unit>
