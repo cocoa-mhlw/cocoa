@@ -320,4 +320,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Mehemea kei runga koe i te Kurahauao hou, ka whakahoahoa koa ki te rēhitatanga tōrunga hei pare i te iwi.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Nā te mea ka tika tēnei taupānga kia tāuta i ngā tāngata maha, nā reira tiri koa i te taupānga ki te iwi i a koe e haere ana.</value>
+  </data>
 </root>

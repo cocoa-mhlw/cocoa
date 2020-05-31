@@ -408,6 +408,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Als u positief bent met de nieuwe Corona, u samenwerken met de positieve registratie om de mensen om je heen te beschermen.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deze applicatie is zo effectief dat veel mensen het installeren, dus deel de applicatie met mensen om je heen.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

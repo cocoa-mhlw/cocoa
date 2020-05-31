@@ -320,4 +320,7 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>اگر شما با تاج جدید مثبت هستید ، لطفا با ثبت نام مثبت برای محافظت از مردم در اطراف خود همکاری کنید.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>این نرم افزار بسیار موثر است که بسیاری از مردم آن را نصب می کنند ، بنابراین لطفا برنامه را با افراد اطراف خود به اشتراک بگذارید.</value>
+  </data>
 </root>

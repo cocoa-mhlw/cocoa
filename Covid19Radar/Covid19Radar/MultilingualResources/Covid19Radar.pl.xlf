@@ -408,6 +408,10 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jeśli jesteś pozytywnie nastawiony do nowej Korony, współpracuj z pozytywną rejestracją, aby chronić ludzi wokół ciebie.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ta aplikacja jest tak skuteczna, że wiele osób ją instaluje, więc proszę podzielić się aplikacją z ludźmi wokół ciebie.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
