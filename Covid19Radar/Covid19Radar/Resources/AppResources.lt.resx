@@ -317,4 +317,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Sąlytis su testatojais, kurių tyrimo rezultatai teigiami per pastarąsias 14 dienų</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Jei esate teigiamas su nauja Corona, prašome bendradarbiauti su teigiama registracija apsaugoti žmones aplink jus.</value>
+  </data>
 </root>

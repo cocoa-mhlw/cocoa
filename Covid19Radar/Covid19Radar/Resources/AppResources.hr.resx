@@ -317,4 +317,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt s pozitivnim testers u posljednjih 14 dana</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ako ste pozitivni s novom Coronom, molimo vas da surađujete s pozitivnom registracijom kako biste zaštitili ljude oko sebe.</value>
+  </data>
 </root>

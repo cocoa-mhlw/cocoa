@@ -317,4 +317,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Contacto con probadores positivos en los últimos 14 días</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Si usted es positivo con la nueva Corona, por favor coopere con el registro positivo para proteger a las personas que lo rodean.</value>
+  </data>
 </root>

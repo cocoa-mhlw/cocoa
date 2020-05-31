@@ -402,6 +402,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="translated">過去14日間の陽性判定者との接触</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="translated">もし、新型コロナで陽性と診断された場合、あなたの周りの人を守るためにも、陽性登録へのご協力をお願いします。</target>
+        </trans-unit>
       </group>
     </body>
   </file>

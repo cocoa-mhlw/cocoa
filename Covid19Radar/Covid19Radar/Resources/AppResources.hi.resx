@@ -317,4 +317,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>पिछले 14 दिनों में सकारात्मक परीक्षकों के साथ संपर्क करें</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>यदि आप नए कोरोना के साथ सकारात्मक हैं, तो कृपया अपने आसपास के लोगों की रक्षा के लिए सकारात्मक पंजीकरण के साथ सहयोग करें।</value>
+  </data>
 </root>

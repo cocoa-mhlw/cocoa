@@ -317,4 +317,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Контакт з позитивними тестувальників за останні 14 днів</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Якщо ви позитивні з новою коронка, будь ласка, співпрацювати з позитивною реєстрацією, щоб захистити оточуючих Вас людей.</value>
+  </data>
 </root>

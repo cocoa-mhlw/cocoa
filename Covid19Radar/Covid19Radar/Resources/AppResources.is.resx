@@ -317,4 +317,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Samband við jákvæða prófunartæki á síðustu 14 dögum</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ef þú ert jákvæður með nýja Corona skaltu hafa samstarf við jákvæða skráningu til að vernda fólkið í kringum þig.</value>
+  </data>
 </root>

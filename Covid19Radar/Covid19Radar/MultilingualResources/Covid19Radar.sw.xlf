@@ -404,6 +404,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wasiliana na testers nzuri katika siku za mwisho za 14</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kama wewe ni mzuri na Corona mpya, tafadhali Shirikiana na usajili chanya ili kuwalinda watu walio karibu nawe.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
