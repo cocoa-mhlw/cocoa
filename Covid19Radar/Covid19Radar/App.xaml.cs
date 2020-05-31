@@ -73,6 +73,8 @@ namespace Covid19Radar
             AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
             Container.Resolve<ILogger>().Log("Started App Center");
 
+            _ = InitializeBackgroundTasks();
+
             INavigationResult result;
             // Check user data and skip tutorial
             UserDataService userDataService = Container.Resolve<UserDataService>();
@@ -153,30 +155,12 @@ namespace Covid19Radar
 
         protected override async void OnResume()
         {
-            await InitExposureNotification();
         }
 
-        private async Task InitExposureNotification()
+        async Task InitializeBackgroundTasks()
         {
-            /*
-            UserDataService userDataService = Container.Resolve<UserDataService>();
-
-            if (!userDataService.IsExistUserData)
-            {
-                return;
-            }
-            var userData = userDataService.Get();
-            if (!userData.IsExposureNotificationEnabled)
-            {
-                return;
-            }
-            var IsEnabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
-            if (!IsEnabled)
-            {
-                await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
-            }
+            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
             await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
-            */
         }
 
         protected override void OnSleep()
