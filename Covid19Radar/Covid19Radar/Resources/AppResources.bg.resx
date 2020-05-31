@@ -27,7 +27,7 @@
     <value>Няма нужда да въвеждате лични данни. Използваме уникален идентификационен номер, който ви е предоставен при инсталирането на приложение.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Контакт с друг потребител на приложение за повече от 30 мин общо, в радиус, по-близък от 2 m средно, се записва като "Затвори контакт".</value>
     <comment>How it works page step 2 description</comment>
   </data>

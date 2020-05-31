@@ -27,7 +27,7 @@
     <value>Нет необходимости ввода личной информации. Мы используем уникальный идентификатор, выделенный вам при установке приложения.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Контакт с другим пользователем приложения в общей сложности более 30 минут, в радиусе ближе, чем 2 м в среднем, регистрируется как "Близкий контакт".</value>
     <comment>How it works page step 2 description</comment>
   </data>
