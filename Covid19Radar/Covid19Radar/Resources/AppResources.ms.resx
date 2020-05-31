@@ -27,7 +27,7 @@
     <value>Tidak perlu memasukkan maklumat peribadi. Kami menggunakan ID unik, yang diperuntukkan kepada anda semasa memasang aplikasi.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kenalan dengan pengguna aplikasi lain selama lebih dari 30 min secara keseluruhan, dalam radius lebih dekat dari 2m rata-rata dicatat sebagai "Kontak Rapat".</value>
     <comment>How it works page step 2 description</comment>
   </data>

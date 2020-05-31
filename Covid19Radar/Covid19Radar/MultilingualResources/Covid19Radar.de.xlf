@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Keine Notwendigkeit, persönliche Informationen einzugeben. Wir verwenden eine eindeutige ID, die Ihnen bei der Installation einer App zugewiesen wurde.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ein Kontakt mit einem anderen App-Nutzer für mehr als 30 min insgesamt, in einem Radius näher als 2m im Durchschnitt wird als "Close Contact" aufgezeichnet.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

@@ -27,7 +27,7 @@
     <value>No need to input personal information. We are using unique ID, allocated to you when installing an app.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</value>
     <comment>How it works page step 2 description</comment>
   </data>

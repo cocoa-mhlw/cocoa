@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">വ്യക്തിഗത വിവരങ്ങൾ ഇൻപുട്ട് ചെയ്യേണ്ട ആവശ്യമില്ല. ഒരു ആപ്ലിക്കേഷൻ ഇൻസ്റ്റാൾ ചെയ്യുമ്പോൾ നിങ്ങളെ നിയോഗിച്ചുകൊണ്ടുള്ള യുണീക്ക് ഐഡി ഞങ്ങൾ ഉപയോഗിക്കുന്നുണ്ട്.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ശരാശരി 30 മിനിറ്റ് ദൈർഘ്യമുള്ളതിനേക്കാൾ, മറ്റൊരു ആപ്ലിക്കേഷൻ ഉപയോക്താവുമായി ഒരു സമ്പർക്കം ശരാശരിയിൽ 2m-നേക്കാൾ കൂടുതൽ ചുറ്റളവിലുള്ള, "അടുത്ത സമ്പർക്കം" എന്ന് രേഖപ്പെടുത്തപ്പെടും.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

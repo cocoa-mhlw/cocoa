@@ -27,7 +27,7 @@
     <value>Ni potrebe za vnos osebnih podatkov. Uporabljamo Enolični ID, dodeljen vam pri nameščanju aplikacije.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Stik z drugim uporabnikom aplikacije, ki je v celoti daljši od 30 minut, je v radiju bližje kot 2m v povprečju zabeležen kot "tesnem stiku".</value>
     <comment>How it works page step 2 description</comment>
   </data>
