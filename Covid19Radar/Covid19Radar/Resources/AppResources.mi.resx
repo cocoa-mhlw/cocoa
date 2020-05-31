@@ -27,13 +27,9 @@
     <value>Me tāuru te mōhiohio whaiaro. Kei te whakamahi mātou i te ID ahurei, tiritiri ki a koe ina tāuta koe i tētahi taupānga.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>He hoapā ki tētahi atu kaiwhakamahi taupānga kia roa ake i te 30 meneti i te tapeke, i roto i tētahi tarawhāiti iti ake i te 2m i te wawaenga e whakapūketetia ana hei "Kati Hoapā".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Me huri ā-ringa tō tūnga ki "Tōrunga" i muri i te manatoko i tō tau waea. " Taha tōrunga "Rerengamahi, coordination me ngā nga rōpū pātahi.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Me whakakā te Bluetooth hei pūkete kati i te hoapā. Haere koa ki te whārangi panuku hei whakakā.</value>
@@ -230,13 +226,11 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Muku Ana</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Mēnā i whiwhi koe i tētahi tataritanga tōrunga</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Tiria te Taupānga</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Tiri</value>
@@ -311,5 +305,22 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Ina whakahaere koe i te taupānga, ka waihanga, ka penapena hoki i tētahi ID ingoamuna ki ia waea atamai. Kāore e whiwhi tēnei taupānga i ngā mōhiohio e pā ana ki te tūmataitinga pēnei i te tau waea me te mōhiohio tauwāhi.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>I te wā e haere ana te taupānga, ka taea e ētahi atu waea atamai te tāhopu i ngā Tautuhinga ingoamuna o ngā wiki e rua. Ka mukua ngā pūkete tawhito ake i te 2 wiki, ā, ka hurihia te ID ingoamuna hei pare i te tūmataitinga.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Ka whiwhi ētahi atu kaiwhakamahi i tētahi rārangi o ngā Tt ingoamuna o ngā mea tōrunga. I muri i te tango, ka ōrite te pūkete hoapā i hopukina ki te waea atamai. Ki te kore te hua o te ōrite, ka whakamōhio atu ki tō waea atamai me te whakamōhio atu i a koe i ngā hohenga e hiahiatia ana e hiahia ana koe ki te whakahoahoa.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Whakapā atu ki te testers tōrunga i roto i ngā rā 14 whakamutunga</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Mehemea kei runga koe i te Kurahauao hou, ka whakahoahoa koa ki te rēhitatanga tōrunga hei pare i te iwi.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Nā te mea ka tika tēnei taupānga kia tāuta i ngā tāngata maha, nā reira tiri koa i te taupānga ki te iwi i a koe e haere ana.</value>
   </data>
 </root>
