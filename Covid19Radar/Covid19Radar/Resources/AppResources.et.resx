@@ -226,7 +226,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Kustutan</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Kui te saite positiivse diagnoosi</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

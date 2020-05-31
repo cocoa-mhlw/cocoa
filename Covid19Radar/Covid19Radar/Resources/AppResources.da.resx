@@ -226,7 +226,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Slettes</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Hvis du har fået en positiv diagnose</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

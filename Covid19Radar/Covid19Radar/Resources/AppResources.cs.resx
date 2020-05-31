@@ -226,7 +226,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Odstraňování</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Pokud jste obdržel(a) pozitivní diagnózu</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

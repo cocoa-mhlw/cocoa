@@ -226,7 +226,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Suppression en cours</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Si vous avez reçu un diagnostic positif</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

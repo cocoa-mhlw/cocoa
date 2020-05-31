@@ -226,7 +226,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>În curs de ştergere</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Dacă ați primit un diagnostic pozitiv</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
