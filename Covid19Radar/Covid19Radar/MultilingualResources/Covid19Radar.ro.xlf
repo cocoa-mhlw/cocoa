@@ -406,6 +406,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dacă sunteți pozitiv cu noul Corona, vă rugăm să coopereze cu înregistrarea pozitivă pentru a proteja oamenii din jurul tău.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Această aplicație este atât de eficientă încât mulți oameni îl instalează, așa că vă rugăm să partajați aplicația cu oamenii din jurul tău.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

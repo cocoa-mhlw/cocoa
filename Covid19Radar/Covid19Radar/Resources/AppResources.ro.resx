@@ -320,4 +320,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Dacă sunteți pozitiv cu noul Corona, vă rugăm să coopereze cu înregistrarea pozitivă pentru a proteja oamenii din jurul tău.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Această aplicație este atât de eficientă încât mulți oameni îl instalează, așa că vă rugăm să partajați aplicația cu oamenii din jurul tău.</value>
+  </data>
 </root>

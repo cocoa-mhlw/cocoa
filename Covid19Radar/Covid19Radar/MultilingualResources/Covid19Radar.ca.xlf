@@ -408,6 +408,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Si ets positiu amb la nova Corona, si us plau, col·labora amb el registre positiu per protegir les persones que t'envolten.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aquesta aplicació és tan eficaç que moltes persones l'instal·len, així que si us plau comparteixi l'aplicació amb gent al seu voltant.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

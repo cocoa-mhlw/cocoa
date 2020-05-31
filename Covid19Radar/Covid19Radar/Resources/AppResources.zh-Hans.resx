@@ -320,4 +320,7 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>如果您对新的 Corona 持乐观态度，请配合积极的注册，以保护您周围的人。</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>此应用程序是如此有效，很多人安装它，所以请与您周围的人共享应用程序。</value>
+  </data>
 </root>

@@ -408,6 +408,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Se sei positivo con la nuova Corona, si prega di collaborare con la registrazione positiva per proteggere le persone intorno a te.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Questa applicazione è così efficace che molte persone installarlo, quindi si prega di condividere l'applicazione con le persone intorno a te.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

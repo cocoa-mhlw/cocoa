@@ -408,6 +408,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pokud jste s novou Coronou pozitivní, spolupracujte prosím s pozitivní registrací, abyste ochránili lidi kolem vás.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tato aplikace je tak efektivní, že mnoho lidí nainstalovat, tak prosím sdílet aplikaci s lidmi kolem vás.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -405,6 +405,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Eğer yeni Corona ile olumlu iseniz, çevrenizdeki insanları korumak için olumlu kayıt ile işbirliği lütfen.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bu uygulama birçok kişi yüklemek çok etkili, bu yüzden çevrenizdeki insanlarla uygulama paylaşmak lütfen.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

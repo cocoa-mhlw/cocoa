@@ -406,6 +406,10 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jika anda positif dengan Corona baru, sila bekerjasama dengan pendaftaran positif untuk melindungi orang di sekeliling anda.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Permohonan ini begitu berkesan bahawa ramai orang memasangnya, jadi sila berkongsi permohonan dengan orang di sekeliling anda.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
