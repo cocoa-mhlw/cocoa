@@ -320,4 +320,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Os ydych yn gadarnhaol gyda'r Corona newydd, os gwelwch yn dda cydweithredu â'r cofrestru cadarnhaol i amddiffyn y bobl o'ch cwmpas.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Mae'r cais hwn mor effeithiol fel bod llawer o bobl yn ei osod, felly Rhannwch y cais gyda phobl o'ch cwmpas.</value>
+  </data>
 </root>

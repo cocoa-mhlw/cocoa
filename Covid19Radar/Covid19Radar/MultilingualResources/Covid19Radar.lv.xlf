@@ -408,6 +408,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ja jums ir pozitīvs ar New Corona, lūdzu, sadarboties ar pozitīvu reģistrāciju, lai aizsargātu cilvēkus ap jums.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Šis pieteikums ir tik efektīva, ka daudzi cilvēki instalēt, tāpēc, lūdzu, dalīties ar pieteikumu ar cilvēkiem ap jums.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

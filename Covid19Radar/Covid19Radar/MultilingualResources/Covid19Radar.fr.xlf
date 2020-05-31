@@ -406,6 +406,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Si vous êtes positif avec la nouvelle Corona, s’il vous plaît coopérer avec l’enregistrement positif pour protéger les gens autour de vous.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cette application est si efficace que beaucoup de gens l’installent, donc s’il vous plaît partager l’application avec les gens autour de vous.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

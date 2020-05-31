@@ -320,4 +320,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jika Anda positif dengan Corona baru, silakan bekerja sama dengan pendaftaran positif untuk melindungi orang di sekitar Anda.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Aplikasi ini sangat efektif sehingga banyak orang yang menginstalnya, jadi silakan berbagi aplikasi dengan orang di sekitar Anda.</value>
+  </data>
 </root>

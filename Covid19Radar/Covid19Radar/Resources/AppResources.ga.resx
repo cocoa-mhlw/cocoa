@@ -320,4 +320,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Má tá tú dearfach leis an gCorona nua, le do thoil comhoibriú leis an gclárú dearfach chun na daoine timpeall ort a chosaint.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Tá an t-iarratas seo chomh héifeachtach sin go suiteálann go leor daoine é, mar sin roinn an t-iarratas le daoine timpeall ort.</value>
+  </data>
 </root>

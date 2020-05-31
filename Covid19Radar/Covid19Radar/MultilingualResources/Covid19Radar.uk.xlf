@@ -408,6 +408,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Якщо ви позитивні з новою коронка, будь ласка, співпрацювати з позитивною реєстрацією, щоб захистити оточуючих Вас людей.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ця програма є настільки ефективним, що багато людей встановити його, тому, будь ласка, поділіться додатком з оточувами навколо вас.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

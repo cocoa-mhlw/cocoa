@@ -407,6 +407,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">As jy positief is met die nuwe Corona, saamwerk asseblief met die positiewe registrasie om die mense rondom jou te beskerm.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hierdie aansoek is so effektief dat baie mense dit installeer, so deel asseblief die aansoek met mense rondom jou.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
