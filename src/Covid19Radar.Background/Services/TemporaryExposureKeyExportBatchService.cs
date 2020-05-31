@@ -30,7 +30,7 @@ namespace Covid19Radar.Background.Services
         public readonly ITemporaryExposureKeySignatureInfoService SignatureService;
         public readonly ITemporaryExposureKeyBlobService BlobService;
         public readonly ILogger<TemporaryExposureKeyExportBatchService> Logger;
-        private readonly string Region;
+        private readonly string[] Regions;
 
         public TemporaryExposureKeyExportBatchService(
             IConfiguration config,
@@ -48,7 +48,7 @@ namespace Covid19Radar.Background.Services
             SignService = signService;
             SignatureService = signatureService;
             BlobService = blobService;
-            Region = config.Region();
+            Regions = config.SupportRegions();
         }
 
         public async Task RunAsync()
@@ -63,12 +63,16 @@ namespace Covid19Radar.Background.Services
                     RollingPeriodSeconds = _.GetRollingPeriodSeconds()
                 }))
                 {
-                    // Security considerations: Random Order TemporaryExposureKey
-                    var sorted = kv.OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
-                    await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
-                        (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
-                        Region,
-                        sorted.ToArray());
+                    foreach (var region in Regions)
+                    {
+                        // Security considerations: Random Order TemporaryExposureKey
+                        var sorted = kv
+                            .OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
+                        await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
+                            (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
+                            region,
+                            sorted.ToArray());
+                    }
                 }
             }
             catch (Exception ex)
