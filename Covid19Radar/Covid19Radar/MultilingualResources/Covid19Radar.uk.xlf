@@ -30,11 +30,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Контакт з іншим користувачем програми для більш ніж 30 хв в цілому, в радіусі ближче ніж 2 м в середньому записується як "тісний контакт".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Будь ласка, вручну Змініть свій статус на "позитивний" після перевірки вашого номера телефону. " Позитивний "робочий процес, в даний час координації з пов'язаними сторонами.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Щоб записати тісний контакт, потрібно ввімкнути Bluetooth. Будь ласка, перейдіть на наступну сторінку, щоб увімкнути його.</target>
@@ -401,6 +396,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">У той час як додаток працює, смартфон один одного буде записувати анонімні ідентифікатори один одного протягом останніх двох тижнів. Записи старше 2 тижнів будуть видалені, і кожен анонімний ІДЕНТИФІКАТОР буде періодично змінюватися для захисту конфіденційності.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Інші користувачі регулярно отримують Список анонімних ідентифікаторів позитивних. Після придбання, запис контактної особи, записаної на смартфоні, буде зіставлятися. Якщо результат матчу є важким контактом, ми повідомимо ваш смартфон і повідомимо вам про необхідні дії, які ви хотіли б з нами співпрацювати.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
       </group>
     </body>

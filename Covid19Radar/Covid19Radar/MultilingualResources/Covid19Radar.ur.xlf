@@ -30,11 +30,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">کل 30 منٹ سے زیادہ کے لئے ایک دوسرے اپلی کیشن صارف کے ساتھ ایک رابطہ ، اوسط پر 2m سے قریب ایک رداس کے اندر میں "بند رابطہ" کے طور پر ریکارڈ کیا جاتا ہے.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">اپنے فون نمبر کی توثیق کے بعد دستی طور پر اپنی حیثیت کو "مثبت" میں تبدیل کریں ۔ مثبت "ورک فلو, اب متعلقہ جماعتوں کے ساتھ تعاون.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">بلوٹوت کو بند رابطے ریکارڈ کرنے کے لئے تبدیل کرنے کی ضرورت ہے. براہ کرم اگلے صفحے پر جائیں اسے تبدیل کرنے کے لئے.</target>
@@ -401,6 +396,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">جب درخواست چل رہی ہے تو ، ایک دوسرے کے سمارٹ فون گزشتہ دو ہفتوں تک ایک دوسرے کی گمنام شناخت ریکارڈ کرے گا. 2 ہفتوں سے بڑی عمر کے ریکارڈ کو خارج کر دیا جائے گا اور رازداری کی حفاظت کے لئے ہر ایک گمنام ID کو تبدیل کیا جائے گا.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">دوسرے صارفین کو باقاعدگی سے مثبت لوگوں کی گمنام شناخت کی ایک فہرست حاصل. حصول کے بعد ، اسمارٹ فون پر ریکارڈ کردہ رابطہ ریکارڈ مل جائے گا. میچ کے نتیجے میں ایک بھاری رابطہ ہے تو, ہم آپ کے اسمارٹ فون کو مطلع کریں گے اور آپ کے ساتھ تعاون کرنے کے لئے چاہتے ہیں کہ ضروری اعمال کے آپ کو مطلع کرے گا.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
       </group>
     </body>

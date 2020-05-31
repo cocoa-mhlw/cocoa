@@ -30,11 +30,6 @@
           <target state="translated">Kontak dengan pengguna aplikasi lain selama lebih dari 30 menit secara keseluruhan, dalam radius yang lebih dekat dari 2m pada rerata tercatat sebagai "kontak dekat".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="translated">Harap ganti status Anda secara manual menjadi "positif" setelah memverifikasi nomor telepon Anda. "Positif" Workflow, sekarang koordinasi dengan pihak terkait.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="translated">Bluetooth harus dihidupkan untuk merekam kontak dekat. Silakan pergi ke halaman berikutnya untuk menyalakannya.</target>
@@ -401,6 +396,11 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Saat aplikasi berjalan, smartphone satu sama lain akan mencatat id anonim satu sama lain selama dua minggu terakhir. Catatan yang lebih lama dari 2 minggu akan dihapus dan setiap ID anonim akan diubah secara berkala untuk melindungi privasi.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pengguna lain secara teratur mendapatkan daftar anonim id yang positif. Setelah akuisisi, rekaman kontak yang direkam pada ponsel cerdas akan dicocokkan. Jika hasil dari pertandingan adalah kontak berat, kami akan memberitahu smartphone Anda dan memberitahu Anda tentang tindakan yang diperlukan yang Anda ingin kami untuk bekerja sama dengan.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
       </group>
     </body>

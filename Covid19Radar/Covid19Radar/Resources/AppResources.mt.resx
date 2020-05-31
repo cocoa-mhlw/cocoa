@@ -31,10 +31,6 @@
     <value>Kuntatt ma ' utent ieħor tal-applikazzjoni għal aktar minn 30 min b ' kollox, f ' raġġ eqreb minn 2m bħala medja jiġi rreġistrat bħala "kuntatt mill-qrib".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Jekk jogħġbok Ibdel l-istatus tiegħek manwalment għal "pożittiv" wara li tivverifika n-numru tat-telefon tiegħek. " Pożittiva tal-"fluss tax-xog Ħol, issa koordinazzjoni ma ' partijiet relatati.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Il-Bluetooth jeħtieġ li jinxtegħel biex jirreġistra kuntatt mill-qrib. Jekk jogħġbok Mur fil-Pa ġna li jmiss biex tixegħlu.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Filwaqt li l-applikazzjoni qed taħdem, smartphone ta ' xulxin se jirreġistra IDs anonimi ta ' xulxin għall-aħħar ġimgħatejn. Rekords ta ' aktar minn ġimagħtejn se jitħassru u kull ID anonima tinbidel perjodikament biex tiġi protetta l-privatezza.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Utenti oħra regolarment jiksbu lista ta ' IDs anonimi ta ' dawk pożittivi. Wara l-akkwi żizzjoni, ir-rekord ta ' kuntatt irreġistrat fuq il-smartphone se jkun imqabbel. Jekk ir-ri żultat tal-log ħba huwa kuntatt tqil, aħna se tinnotifika smartphone tiegħek u ninfurmak dwar l-azzjonijiet meħtieġa li inti tixtieq minna biex jikkooperaw ma '.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

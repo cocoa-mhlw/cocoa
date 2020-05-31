@@ -31,10 +31,6 @@
     <value>Een contact met een andere app-gebruiker langer dan 30 minuten totaal en binnen een straal van gemiddeld 2 meter, wordt geregistreerd als "Nabij Contact".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Wijzig uw status handmatig in 'Positief' nadat u uw telefoonnummer geverifieerd hebt. "Positieve" Workflow , Nu coördinatie met verwante partijen.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth/blootstellingnotificaties moeten ingeschakeld zijn om nabij contact te registreren. Ga naar de volgende pagina om dit in te schakelen.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Terwijl de applicatie wordt uitgevoerd, zal elkaars smartphone elkaars anonieme id's van de afgelopen twee weken opnemen. Records ouder dan 2 weken worden verwijderd en elke anonieme ID wordt periodiek gewijzigd om de privacy te beschermen.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Andere gebruikers krijgen regelmatig een lijst van anonieme id's van positieve. Na de overname wordt het contactrecord dat op de smartphone is opgenomen, gematcht. Als het resultaat van de wedstrijd een zwaar contact is, zullen we uw smartphone op de hoogte stellen en u op de hoogte brengen van de noodzakelijke acties waarmee u wilt dat we samenwerken.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

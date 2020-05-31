@@ -31,10 +31,6 @@
     <value>Kontakti teise rakenduse kasutajaga rohkem kui 30 min kokku, raadiuses lähemal kui 2 m keskmiselt registreeritakse "Close kontakt".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Palun muutke oma olekut käsitsi pärast telefoninumbri kontrollimist "positiivseks". " Positiivne "töövoog, nüüd koordineerimine seotud osapooltega.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Lähedise kontakti salvestamiseks peab Bluetooth olema sisse lülitatud. Palun järgmisele leheküljele, et see sisse lülitada.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Kui rakendus töötab, salvestab üksteise nutitelefon viimase kahe nädala jooksul üksteise anonüümsed ID-d. Vanemad kui 2 nädalat kirjed kustutatakse ja iga anonüümse ID muudetakse perioodiliselt, et kaitsta privaatsust.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Teised kasutajad saavad regulaarselt nimekirja anonüümsete ID-de positiivsetest. Pärast omandamist sobitatakse nutitelefoni salvestatud kontaktiloirje. Kui mängu tulemus on raske kontakt, teavitame teie nutitelefoni ja informeerime teid vajalikest toimingutest, millega soovite meiega koostööd teha.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

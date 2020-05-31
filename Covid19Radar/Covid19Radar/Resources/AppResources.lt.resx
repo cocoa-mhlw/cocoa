@@ -31,10 +31,6 @@
     <value>Kontaktas su kitu programos naudotoju ilgiau nei 30 minučių iš viso, esant vidutiniškai didesniam nei 2 m spinduliui, įrašomas kaip "Uždaryti kontaktą".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Patvirtinę telefono numerį, rankiniu būdu pakeiskite būseną į "Teigiamas". Teigiamas" Darbo eiga , Dabar koordinavimas su susijusiomis šalimis.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>"Bluetooth" reikia įjungti, kad būtų įrašytas artimas kontaktas. Norėdami jį įjungti, eikite į kitą puslapį.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Kol programa veikia, vienas kito išmanusis telefonas per pastarąsias dvi savaites įrašys vienas kito anoniminius ID. Senesni nei 2 savaičių įrašai bus panaikinti ir kiekvienas anoniminis ID bus periodiškai keičiamas siekiant apsaugoti privatumą.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Kiti vartotojai reguliariai gauna anoniminių teigiamų iD sąrašą. Po įsigijimo išmaniajame telefone įrašytas kontakto įrašas bus suderintas. Jei rungtynių rezultatas yra sunkus kontaktas, mes informuosime jūsų išmanųjį telefoną ir informuosime jus apie būtinus veiksmus, su kuriais norėtumėte bendradarbiauti.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>
