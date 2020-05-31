@@ -54,8 +54,10 @@ namespace Covid19Radar.Api.DataStore
             // Create a new instance of the Cosmos Client
             CosmosClient = client;
 
-            // Autogenerate
+            // Autogenerate: only DEBUG
+#if DEBUG 
             GenerateAsync().Wait();
+#endif
 
             // get database
             Database = this.CosmosClient.GetDatabase(DatabaseId);
