@@ -408,6 +408,10 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jei esate teigiamas su nauja Corona, prašome bendradarbiauti su teigiama registracija apsaugoti žmones aplink jus.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ši programa yra tokia veiksminga, kad daugelis žmonių ją įdiegti, todėl prašome pasidalinti programa su žmonėmis aplink jus.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -408,6 +408,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kung ikaw ay positibo sa bagong Corona, mangyaring makipagtulungan sa positibong pagpaparehistro upang protektahan ang mga tao sa paligid mo.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ang application na ito ay kaya epektibo na ang maraming mga tao i-install ito, kaya mangyaring ibahagi ang application sa mga tao sa paligid mo.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
