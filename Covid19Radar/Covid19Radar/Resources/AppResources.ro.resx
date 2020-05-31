@@ -31,10 +31,6 @@
     <value>Un contact cu un alt utilizator al aplicației pentru mai mult de 30 de minute în total, pe o rază mai mică de 2 m în medie, este înregistrat ca "Close Contact".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Modificați manual starea la "Pozitiv" după verificarea numărului de telefon." Pozitiv "Flux de lucru, Acum, coordonarea cu părțile afiliate.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth trebuie să fie activat pentru a înregistra contactul de închidere. Vă rugăm să mergeți la pagina următoare pentru a o activa.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>În timp ce aplicația se execută, smartphone-ul celuilalt va înregistra reciproc ID-urile anonime pentru ultimele două săptămâni. Înregistrările mai vechi de 2 săptămâni vor fi șterse și fiecare ID anonim va fi modificat periodic pentru a proteja confidențialitatea.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Alți utilizatori primesc în mod regulat o listă de ID-uri anonime ale celor pozitive. După achiziție, înregistrarea de contact înregistrată pe smartphone va fi egalată. Dacă rezultatul meciului este un contact intens, vă vom notifica smartphone-ul și vă vom informa cu privire la acțiunile necesare cu care doriți să cooperăm.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

@@ -31,10 +31,6 @@
     <value>איש קשר עם משתמש יישום אחר במשך יותר מ-30 דקות בסך הכל, ברדיוס הקרוב יותר מ-2 מ' נרשם כ"איש קשר סגור".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>נא שנה באופן ידני את מצבך ל-"חיובי" לאחר שמאמת את מספר הטלפון שלך. " "זרימת עבודה חיובית", כעת תיאום עם גורמים קשורים.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>יש לסובב את Bluetooth לצורך הקלטת קשר קרוב. נא עבור לדף הבא כדי להפעיל אותו.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>בעוד היישום פועל, הטלפון החכם של השני יהיה להקליט את הזהויות האנונימיות של זה בשבועיים האחרונים. רשומות שגילן עולה על 2 שבועות יימחקו וכל מזהה אנונימי ישתנה מעת לעת כדי להגן על הפרטיות.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>משתמשים אחרים מקבלים בקביעות רשימה של מזהים אנונימיים של חיוביים. לאחר הרכישה, רשומת איש הקשר שנרשמה על הטלפון החכם יהיה מותאם. אם התוצאה של המשחק היא קשר כבד, נודיע לטלפון החכם שלך וליידע אותך על הפעולות הדרושות שאתה רוצה שנשתף פעולה עם.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

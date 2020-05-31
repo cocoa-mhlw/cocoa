@@ -286,11 +286,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please manually change your status to &quot;Positive&quot; after verifying your phone number.&quot;Positive&quot; Workflow , Now coordination with related parties. に類似しているローカライズされた文字列を検索します。
+        ///   Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DescriptionPageTextStep3Description {
+        internal static string DescriptionPageTextStep3Description1 {
             get {
-                return ResourceManager.GetString("DescriptionPageTextStep3Description", resourceCulture);
+                return ResourceManager.GetString("DescriptionPageTextStep3Description1", resourceCulture);
             }
         }
         
