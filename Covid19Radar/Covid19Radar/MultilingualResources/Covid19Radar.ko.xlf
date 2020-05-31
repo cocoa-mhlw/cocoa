@@ -287,12 +287,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">긍정적인 진단을 받은 경우</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">앱 공유</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">다른 사용자는 정기적으로 긍정적 인 것들의 익명 의 아이디의 목록을 얻을. 획득 후 스마트폰에 기록된 연락처 레코드가 일치합니다. 경기 결과가 중대한 접촉인 경우, 당사는 귀하의 스마트폰에 통보하고 귀하가 협조하기를 원하는 필요한 조치를 귀하에게 알려드립니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">지난 14일 동안 양성 테스터와의 접촉</target>
         </trans-unit>
       </group>
     </body>

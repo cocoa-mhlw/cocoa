@@ -228,11 +228,9 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Dacă ați primit un diagnostic pozitiv</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Partajați aplicația</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Partajare</value>
@@ -315,5 +313,8 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Alți utilizatori primesc în mod regulat o listă de ID-uri anonime ale celor pozitive. După achiziție, înregistrarea de contact înregistrată pe smartphone va fi egalată. Dacă rezultatul meciului este un contact intens, vă vom notifica smartphone-ul și vă vom informa cu privire la acțiunile necesare cu care doriți să cooperăm.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Contact cu testeri pozitivi în ultimele 14 zile</value>
   </data>
 </root>

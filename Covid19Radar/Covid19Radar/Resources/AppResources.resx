@@ -346,13 +346,14 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
   </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Contact with positive testers in the last 14 days</value>
+  </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>If you received a positive diagnosis</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Share the App</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Share</value>

@@ -287,12 +287,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Se você recebeu um diagnóstico positivo</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Compartilhar o Aplicativo</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Outros usuários recebem regularmente uma lista de IDs anônimos de positivos. Após a aquisição, o registro de contato registrado no smartphone será igualado. Se o resultado da partida for um contato pesado, notificaremos seu smartphone e informaremos sobre as ações necessárias com as quais você gostaria que cooperássemos.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contato com testadores positivos nos últimos 14 dias</target>
         </trans-unit>
       </group>
     </body>
