@@ -149,6 +149,19 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<DebugPage>();
 
+            // Norij Work View
+            containerRegistry.RegisterForNavigation<TutorialPage1>();
+            containerRegistry.RegisterForNavigation<TutorialPage2>();
+            containerRegistry.RegisterForNavigation<TutorialPage3>();
+            containerRegistry.RegisterForNavigation<TutorialPage4>();
+            containerRegistry.RegisterForNavigation<TutorialPage5>();
+            containerRegistry.RegisterForNavigation<TutorialPage6>();
+
+            containerRegistry.RegisterForNavigation<HelpPage2>();
+            containerRegistry.RegisterForNavigation<HelpPage3>();
+            containerRegistry.RegisterForNavigation<HelpPage4>();
+            containerRegistry.RegisterForNavigation<HelpPage5>();
+
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
