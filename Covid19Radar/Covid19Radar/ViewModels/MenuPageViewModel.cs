@@ -67,7 +67,67 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf0c0",
                 PageName = nameof(DebugPage),
-                Title = "デバッグ"
+                Title = nameof(DebugPage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(TutorialPage1),
+                Title = nameof(TutorialPage1)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(TutorialPage2),
+                Title = nameof(TutorialPage2)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(TutorialPage3),
+                Title = nameof(TutorialPage3)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(TutorialPage4),
+                Title = nameof(TutorialPage4)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(TutorialPage5),
+                Title = nameof(TutorialPage5)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(TutorialPage6),
+                Title = nameof(TutorialPage6)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(HelpPage2),
+                Title = nameof(HelpPage2)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(HelpPage3),
+                Title = nameof(HelpPage3)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(HelpPage4),
+                Title = nameof(HelpPage4)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(HelpPage5),
+                Title = nameof(HelpPage5)
             });
 
 #endif
