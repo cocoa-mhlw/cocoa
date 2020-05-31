@@ -16,17 +16,17 @@ namespace Covid19Radar.Api.DataStore
     /// </summary>
     public class Cosmos : ICosmos
     {
-        private ILogger<ICosmos> Logger;
+        private readonly ILogger<ICosmos> Logger;
         // Database Id
         private string DatabaseId { get; set; }
         // The Cosmos client instance
-        private CosmosClient CosmosClient;
+        private readonly CosmosClient CosmosClient;
 
         // The database we will create
-        private Database Database;
+        private readonly Database Database;
 
         // コンテナの自動生成
-        private bool AutoGenerate;
+        private readonly bool AutoGenerate;
 
         // The container we will create.
         public Container User { get => Database.GetContainer("User"); }

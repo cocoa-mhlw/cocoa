@@ -19,7 +19,12 @@
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
         "TekExportBlobStorageContainerPrefix": "C19R",
         "ExportKeyUrl": "http://127.0.0.1:10000/",
-        "AppleBearerToken": "XXXXX",
-        "AndroidBearerToken": "XXXXX"
+        "VerificationKeyId": null,
+        "VerificationKeyVersion": null,
+        "AndroidPackageName": null,
+        "iOSBundleId": null,
+        "iOSDeviceCheckKeyId": null,
+        "iOSDeviceCheckPrivateKey": null,
+        "iOSDeviceCheckTeamId": null
     }
 }
