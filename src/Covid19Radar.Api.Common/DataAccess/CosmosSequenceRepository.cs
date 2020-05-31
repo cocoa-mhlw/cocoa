@@ -26,7 +26,7 @@ namespace Covid19Radar.Api.DataAccess
             _logger.LogInformation($"start {nameof(GetNextAsync)} {key}");
             var pk = new PartitionKey(key);
             dynamic[] spParams = { key, startNo, increment };
-            for (var i = 0; i < 50; i++)
+            for (var i = 0; i < 10; i++)
             {
                 try
                 {
@@ -36,8 +36,9 @@ namespace Covid19Radar.Api.DataAccess
                 }
                 catch (CosmosException ex)
                 {
-                    _logger.LogInformation(ex, $"GetNextAsync Retry {i} RequestCharge:{ex.RequestCharge}");
-                    await Task.Delay(5);
+                    int ms = (int)(ex.RetryAfter.HasValue ? ex.RetryAfter.Value.TotalMilliseconds : 5);
+                    _logger.LogInformation(ex, $"GetNextAsync Retry {i} RequestCharge:{ex.RequestCharge} RetryAfter:{ms}");
+                    await Task.Delay(ms);
                     continue;
                 }
             }
