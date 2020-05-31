@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>औसतन 2m से अधिक त्रिज्या के भीतर कुल 30 मिनट से अधिक समय तक किसी अन्य ऐप उपयोगकर्ता के साथ संपर्क "क्लोज कॉन्टैक्ट" के रूप में दर्ज किया जाता है।</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>कृपया अपने फ़ोन नंबर को सत्यापित करने के बाद अपनी स्थिति को "सकारात्मक" में बदल दें. सकारात्मक "कार्यप्रवाह, अब संबंधित दलों के साथ समन्वय।</value>
@@ -311,5 +311,9 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>जब आप आवेदन चलाते हैं, तो यह प्रत्येक स्मार्टफोन पर एक गुमनाम आईडी उत्पन्न और संग्रहीत करेगा। यह एप्लिकेशन गोपनीयता से संबंधित कोई भी जानकारी प्राप्त नहीं करता है जैसे फोन नंबर और स्थान की जानकारी।</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>जहां एप्लीकेशन चल रही है, वहीं एक-दूसरे का स्मार्टफोन पिछले दो हफ्तों से एक-दूसरे की गुमनाम आईडीएस रिकॉर्ड करेगा । 2 सप्ताह से पुराने रिकॉर्ड हटा दिए जाएंगे और गोपनीयता की रक्षा के लिए प्रत्येक गुमनाम आईडी को समय-समय पर बदला जाएगा।</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

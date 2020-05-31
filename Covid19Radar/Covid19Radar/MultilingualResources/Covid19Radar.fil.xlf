@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ang isang contact na may isa pang app user para sa mas mahaba kaysa sa 30 min sa kabuuan, sa loob ng isang radius mas malapit sa 2m sa average ay naitala bilang "isara contact".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -396,6 +396,11 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kapag patakbuhin mo ang application, ito ay bumuo at mag-imbak ng isang hindi kilalang ID sa bawat smartphone. Ang aplikasyong ito ay walang anumang impormasyong may kaugnayan sa privacy tulad ng numero ng telepono at impormasyon sa lokasyon.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Habang tumatakbo ang aplikasyon, ang smartphone ng isat isa ay inirerekord ang mga hindi kilalang ID ng isa sa nakaraang dalawang linggo. Ang mga rekord na mas luma sa 2 linggo ay matatanggal at ang bawat ID na Anonymous ay papalitan sa pana-panahon upang protektahan ang privacy.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>

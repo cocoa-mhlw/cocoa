@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakt s drugim korisnikom aplikacije u ukupnom iznosu duljem od 30 min, u radijusu bližem od 2 m u prosjeku bilježi se kao "Zatvori kontakt".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Ručno promijenite status u "Pozitivno" nakon potvrde telefonskog broja." "Pozitivan" Tijek rada , Sada koordinacija s povezanim stranama.</value>
@@ -311,5 +311,9 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Kada pokrenete aplikaciju , generirat će i pohraniti anonimni ID na svaki pametni telefon. Ova aplikacija ne pribavlja nikakve informacije vezane uz privatnost kao što su telefonski broj i podaci o lokaciji.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Dok je aplikacija pokrenuta, pametni telefon jedni drugih snimat će anonimne isprave jednih drugih u posljednja dva tjedna. Zapisi stariji od 2 tjedna bit će izbrisani i svaki anonimni ID povremeno će se mijenjati radi zaštite privatnosti.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

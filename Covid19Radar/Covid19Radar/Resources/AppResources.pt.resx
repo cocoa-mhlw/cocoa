@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Um contato com outro usuário de aplicativo por mais de 30 min no total, dentro de um raio superior a 2m em média é registrado como "Contato Próximo".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Por favor, altere manualmente seu status para "Positivo" depois de verificar seu número de telefone." Positivo" Fluxo de trabalho , Agora coordenação com partes relacionadas.</value>
@@ -311,5 +311,9 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Quando você executa o aplicativo, ele irá gerar e armazenar um ID anônimo em cada smartphone. Este aplicativo não adquire nenhuma informação relacionada à privacidade, como número de telefone e informações de localização.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Enquanto o aplicativo estiver em execução, o smartphone um do outro gravará as IDs anônimas um do outro nas últimas duas semanas. Os registros com mais de 2 semanas serão excluídos e cada ID anônimo será alterado periodicamente para proteger a privacidade.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

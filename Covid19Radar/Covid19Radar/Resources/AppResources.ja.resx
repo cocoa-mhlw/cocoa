@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>平均2m未満の半径内に合計30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>電話番号を確認した後、手動でステータスを 「陽性」に変更してください。陽性入力およびその後のワークフローは関係者との調整中です。</value>
@@ -311,5 +311,9 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>アプリケーションを実行すると、各スマートフォンで匿名 ID が生成され、保存されます。このアプリケーションは、電話番号や位置情報など、プライバシーに関する情報を一切取得しません。</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>アプリケーションの実行中、お互いのスマートフォンは、過去2週間お互いの匿名IDを記録します。2 週間を経過したレコードは削除され、各匿名 ID はプライバシー保護のために定期的に変更されます。</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

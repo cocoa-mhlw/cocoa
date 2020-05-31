@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Ein Kontakt mit einem anderen App-Nutzer für mehr als 30 min insgesamt, in einem Radius näher als 2m im Durchschnitt wird als "Close Contact" aufgezeichnet.</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Bitte ändern Sie Ihren Status manuell in "Positiv", nachdem Sie Ihre Telefonnummer überprüft haben." Positiv" Workflow , Jetzt Koordination mit nahestehenden Personen.</value>
@@ -311,5 +311,9 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Wenn Sie die Anwendung ausführen, wird auf jedem Smartphone eine anonyme ID generiert und gespeichert. Diese Anwendung erfasst keine Informationen zum Datenschutz wie Telefonnummer und Standortinformationen.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Während die Anwendung läuft, zeichnet das Smartphone des anderen die anonymen IDs der anderen in den letzten zwei Wochen auf. Datensätze, die älter als 2 Wochen sind, werden gelöscht und jede anonyme ID wird regelmäßig geändert, um die Privatsphäre zu schützen.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

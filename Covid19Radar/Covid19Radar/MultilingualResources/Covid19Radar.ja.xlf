@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">平均2m未満の半径内に合計30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -394,6 +394,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="translated">アプリケーションを実行すると、各スマートフォンで匿名 ID が生成され、保存されます。このアプリケーションは、電話番号や位置情報など、プライバシーに関する情報を一切取得しません。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">アプリケーションの実行中、お互いのスマートフォンは、過去2週間お互いの匿名IDを記録します。2 週間を経過したレコードは削除され、各匿名 ID はプライバシー保護のために定期的に変更されます。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>

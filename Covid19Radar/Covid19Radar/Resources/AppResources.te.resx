@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>మొత్తం మీద 30 నిమిషాల కంటే ఎక్కువ సేపు మరో యాప్ యూజర్ తో ఒక కాంటాక్ట్, సగటున 2m కంటే దగ్గరగా ఉన్న వ్యాసార్థంలో ' ' క్లోజ్ కాంటాక్ట్ ' ' వలే రికార్డ్ చేయబడింది.</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>మీ ఫోన్ నెంబరును వెరిఫై చేసిన తరువాత మీ స్టేటస్ ని ' పాజిటివ్ ' కు దయచేసి మాన్యువల్ గా మార్చండి. పాజిటివ్ "వర్క్, ఇప్పుడు సంబంధిత పార్టీలతో సమన్వయం.</value>
@@ -311,5 +311,9 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>మీరు అప్లికేషన్ ని రన్ చేసినప్పుడు, అది ప్రతి స్మార్ట్ ఫోన్ మీద ఒక అనామక IDని జనరేట్ చేసి, స్టోర్ చేస్తుంది. ఈ అనువర్తనం ఫోన్ నంబర్ మరియు స్థాన సమాచారం వంటి గోప్యతకు సంబంధించిన ఏ సమాచారాన్ని పొందదు.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>అప్లికేషన్ రన్ అవుతుండగా, ఒక్కో స్మార్ట్ ఫోన్ గత రెండు వారాలుగా ఒకరి అనామక ఐడిలను రికార్డ్ చేస్తుంది. 2 వారాల కంటే ఎక్కువ వయస్సు ఉన్న రికార్డులు డిలీట్ చేయబడతాయి మరియు గోప్యతను సంరక్షించడం కొరకు ప్రతి అజ్ఞాత ID నియతానుసారంగా మార్చబడుతుంది.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>
