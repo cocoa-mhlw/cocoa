@@ -76,12 +76,18 @@ namespace Covid19Radar.Api.Tests.Common.DataStore
             client.Setup(_ => _.CreateDatabaseIfNotExistsAsync
                 (It.IsAny<string>(), It.IsAny<int?>(), It.IsAny<Microsoft.Azure.Cosmos.RequestOptions>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(databaseResponse.Object);
-
+            client.Setup(_ => _.GetDatabase(It.IsAny<string>())).Throws(new Exception());
             var logger = new LoggerMock<ICosmos>();
             // action
+#if DEBUG
             Assert.ThrowsException<AggregateException>(() => {
                 var instance = new Cosmos(config.Object, client.Object, logger);
             });
+#else 
+            Assert.ThrowsException<Exception>(() => {
+                var instance = new Cosmos(config.Object, client.Object, logger);
+            });
+#endif
         }
 
         [TestMethod]
