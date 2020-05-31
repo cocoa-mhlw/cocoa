@@ -27,13 +27,9 @@
     <value>Tsy mila fampidirana ny mombamomba azy manokana. Mampiasa FAMANTARANA miavaka isika, draharaha aminareo rehefa izao ny rafibaovao.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Ny fifandraisana misy eo amin' ny rafi-baovao hafa mandritra ny 30 min-tena, ao anatin' ny radius akaiky kokoa noho ny 2m-antonontonony dia voarakitra ho toy ny "Manakaiky".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Manually mba hanova ny toe-tsainao ho "Tsara" aorian' ny verifying ny telefaona. " Ny "Workflow tsara dia fandrindrana amin' ny andiany mifandraika amin' izany.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Ny Bluetooth dia mila mifantoka amin' ny rakitsoratra akaiky. Mandehana azafady any amin' ny pejy manaraka mba hamadika izany.</value>
@@ -230,13 +226,11 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Raha nahazo aretina tsara ianao.</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Zarao ny Application</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Hizara</value>
@@ -311,5 +305,22 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Rehefa manao ny fampiharana ianao, dia nalaina izany ary tsy eo amin' ny smartphone tsirairay. Ity fampiharana ity dia tsy mahazo fampahalalana izay mifandray amin' ny tsiambaratelo toy ny hoe laharan' ny telefaonina sy ny toerana misy izany.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Raha toa ka mihazakazaka ny fampiharana dia smartphone ny tsy ny tsirairay avy amin' ireo IDs ny olona iray izay efa roa herinandro lasa. Ho voafafa ny rakitsoratra latsaky ny 2 herinandro ary tsy ny FAMANTARANA tsirairay dia hiova matetika mba hiarovana ny tsiambaratelo.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Ny mpampiasa hafa dia ahitana ny lisitry ny tsy IDs ireo olona tsara. Aorian' ilay fahazoana dia ho manana volon ny teny hoe rakitsoratra voarakitra ao amin' ilay smartphone. Raha toa ka zava-mavesatra ny vokatry ny fampifandraisana, dia ampandreneso ny smartphone isika ary hampahafantatra anareo ireo fihetsika ilaina izay tianao cooperate.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Miresaha amin' ny testers tsara amin' ny 14 andro farany.</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Raha tsara ianao miaraka amin' ilay Faribolam pahazavana vaovao dia aoka cooperate amin' ny fisoratana anarana tsara mba hiarovana ny olona manodidina anao.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Ity fampiharana ity dia tena mahomby tokoa ka ny olona maro no asio izany, koa dia mba zarao amin' ny olona manodidina anao ny fampiharana izany.</value>
   </data>
 </root>

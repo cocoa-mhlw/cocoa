@@ -270,18 +270,27 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as &quot;Close Contact&quot;. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DescriptionPageTextStep2Description {
+        internal static string DescriptionPageTextStep2Description1 {
             get {
-                return ResourceManager.GetString("DescriptionPageTextStep2Description", resourceCulture);
+                return ResourceManager.GetString("DescriptionPageTextStep2Description1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Please manually change your status to &quot;Positive&quot; after verifying your phone number.&quot;Positive&quot; Workflow , Now coordination with related parties. に類似しているローカライズされた文字列を検索します。
+        ///   While the application is running, each other&apos;s smartphone will record each other&apos;s anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy. に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DescriptionPageTextStep3Description {
+        internal static string DescriptionPageTextStep2Description2 {
             get {
-                return ResourceManager.GetString("DescriptionPageTextStep3Description", resourceCulture);
+                return ResourceManager.GetString("DescriptionPageTextStep2Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DescriptionPageTextStep3Description1 {
+            get {
+                return ResourceManager.GetString("DescriptionPageTextStep3Description1", resourceCulture);
             }
         }
         
@@ -358,20 +367,47 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Contact with positive testers in the last 14 days に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageHeader1Title {
+            get {
+                return ResourceManager.GetString("HomePageHeader1Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageHeader2Description {
+            get {
+                return ResourceManager.GetString("HomePageHeader2Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   If you received a positive diagnosis に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string HomePageSubtitle1 {
+        internal static string HomePageHeader2Title {
             get {
-                return ResourceManager.GetString("HomePageSubtitle1", resourceCulture);
+                return ResourceManager.GetString("HomePageHeader2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   This application is so effective that many people install it, so please share the application with people around you. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageHeader3Description {
+            get {
+                return ResourceManager.GetString("HomePageHeader3Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Share the App に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string HomePageSubtitle2 {
+        internal static string HomePageHeader3Title {
             get {
-                return ResourceManager.GetString("HomePageSubtitle2", resourceCulture);
+                return ResourceManager.GetString("HomePageHeader3Title", resourceCulture);
             }
         }
         

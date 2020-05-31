@@ -27,13 +27,9 @@
     <value>Geen behoefte om persoonlike inligting in te voer nie. Ons gebruik unieke ID wat aan jou toegeken is wanneer jy 'n program installeer.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>'n kontak met 'n ander prgram gebruiker vir langer as 30 min in totaal, binne 'n radius nader as 2m gemiddeld is aangeteken as "Noue Kontak".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Verander self asseblief jou status na "positief" nadat jy jou foonnommer geverifieer het. "Positiewe" Werkvloei, nou gekoördineer met verwante partye.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth/Kennisgewing van blootstelling moet aangeskakel word om noue kontak aan te teken. Gaan asseblief na die volgende bladsy om dit aan te skakel.</value>
@@ -230,13 +226,11 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Skrap tans</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>As jy 'n positiewe diagnose ontvang het</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Deel die program</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Deel</value>
@@ -311,5 +305,22 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Wanneer jy die toepassing uitvoer, sal dit 'n anonieme ID op elke slimfoon genereer en stoor. Hierdie toepassing verkry nie enige inligting wat verband hou met privaatheid soos foonnommer en liggingsinligting nie.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Terwyl die aansoek loop, sal mekaar se slimfoon mekaar se anonieme ID's vir die afgelope twee weke opneem. Rekords ouer as 2 weke sal verwyder word en elke anonieme ID sal periodiek verander word om privaatheid te beskerm.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Ander gebruikers kry gereeld 'n lys van anonieme ID's van positiewe kinders. Na afloop van die verkryging sal die kontadrekord wat op die slimfoon aangeteken is, ooreenstem. As die resultaat van die wedstryd is 'n swaar kontak, sal ons u slimfoon in kennis stel en u inlig oor die nodige aksies wat u wil hê ons moet saamwerk.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontak met positiewe toetsers in die afgelope 14 dae</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>As jy positief is met die nuwe Corona, saamwerk asseblief met die positiewe registrasie om die mense rondom jou te beskerm.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Hierdie aansoek is so effektief dat baie mense dit installeer, so deel asseblief die aansoek met mense rondom jou.</value>
   </data>
 </root>

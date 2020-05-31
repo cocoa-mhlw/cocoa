@@ -27,13 +27,9 @@
     <value>Nie ma potrzeby wprowadzania danych osobowych. Używamy unikatowego identyfikatora, przydzielonego do Ciebie podczas instalowania aplikacji.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakt z innym użytkownikiem aplikacji przez łącznie dłużej niż 30 minut, w promieniu bliższym niż 2 m średnio jest rejestrowany jako "Bliski kontakt".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Po zweryfikowaniu numeru telefonu należy ręcznie zmienić swój status na "Pozytywny". Pozytywny" Przepływ pracy , Teraz koordynacja z podmiotami powiązanymi.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth musi być włączony, aby nagrać bliski kontakt. Przejdź do następnej strony, aby ją włączyć.</value>
@@ -230,13 +226,11 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Usuwanie</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Jeśli pacjent otrzymał pozytywną diagnozę</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Udostępnij aplikację</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Udostępnij</value>
@@ -311,5 +305,22 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Po uruchomieniu aplikacji wygeneruje i zapisze anonimowy identyfikator na każdym smartfonie. Ta aplikacja nie uzyskuje żadnych informacji związanych z prywatnością, takich jak numer telefonu i informacje o lokalizacji.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Gdy aplikacja jest uruchomiona, smartfon będzie nagrywał anonimowe identyfikatory siebie przez ostatnie dwa tygodnie. Rekordy starsze niż 2 tygodnie zostaną usunięte, a każdy anonimowy identyfikator będzie okresowo zmieniany w celu ochrony prywatności.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Inni użytkownicy regularnie otrzymują listę anonimowych identyfikatorów pozytywnych. Po przejęciu rekord kontaktu zapisany na smartfonie zostanie dopasowany. Jeśli wynik meczu jest ciężki kontakt, powiadomimy Twój smartfon i poinformujemy Cię o niezbędnych działaniach, z którymi chcesz, abyśmy współpracowali.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt z pozytywnymi testerami w ciągu ostatnich 14 dni</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Jeśli jesteś pozytywnie nastawiony do nowej Korony, współpracuj z pozytywną rejestracją, aby chronić ludzi wokół ciebie.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Ta aplikacja jest tak skuteczna, że wiele osób ją instaluje, więc proszę podzielić się aplikacją z ludźmi wokół ciebie.</value>
   </data>
 </root>

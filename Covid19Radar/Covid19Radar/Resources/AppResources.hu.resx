@@ -27,13 +27,9 @@
     <value>Nem kell megadni a személyes adatokat. Egyedi azonosítót használunk, amelyet az alkalmazás telepítésekor osztanak ki.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Egy másik alkalmazásfelhasználóval való, összesen 30 min-nél hosszabb ideig, átlagosan 2 m-nél közelebbi sugarú körben tartott kapcsolat "Közeli kapcsolat" néven kerül rögzítésre.</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Kérjük, a telefonszám ellenőrzése után manuálisan módosítsa az állapotát "Pozitív" állásra. Pozitív" Munkafolyamat , Most koordináció a kapcsolódó felekkel.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>A szoros kapcsolat felvételéhez be kell kapcsolni a Bluetooth-t. Kérjük, lépjen a következő oldalra, hogy bekapcsolja.</value>
@@ -230,13 +226,11 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Törlés folyamatban</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ha pozitív diagnózist kapott</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Az alkalmazás megosztása</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Megosztás</value>
@@ -311,5 +305,22 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Amikor futtatja az alkalmazást, létrehoz és tárol egy névtelen azonosítót minden okostelefonon. Ez az alkalmazás nem szerez semmilyen információt kapcsolatos adatvédelmi, mint a telefonszám és a helyadatait.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Amíg az alkalmazás fut, egymás okostelefonja rögzíti egymás névtelen azonosítóit az elmúlt két hétben. A 2 hétnél régebbi rekordok törlődnek, és minden névtelen azonosító rendszeres időközönként módosul a személyes adatok védelme érdekében.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Más felhasználók rendszeresen kap egy listát a névtelen azonosítók pozitív is. Az akvizíció után az okostelefonon rögzített kapcsolatfelvételi rekord egyeztetésre kerül. Ha a mérkőzés eredménye nehéz kapcsolat, értesíteni fogjuk az okostelefonját, és tájékoztatjuk Önt a szükséges lépésekről, amelyekkel együtt kíván működni.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Érintkezés pozitív tesztelőkkel az elmúlt 14 napban</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ha pozitív az új Corona, kérjük, működjön együtt a pozitív regisztráció, hogy megvédje az emberek körülötted.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Ez az alkalmazás annyira hatékony, hogy sokan telepítik, ezért kérjük, ossza meg az alkalmazást az emberek körülötted.</value>
   </data>
 </root>

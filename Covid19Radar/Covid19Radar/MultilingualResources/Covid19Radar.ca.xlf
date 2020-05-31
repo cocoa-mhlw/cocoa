@@ -25,15 +25,10 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">No hi ha necessitat d'introduir informació personal. Estem utilitzant ID únic, assignat a vostè en instal·lar una aplicació.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Un contacte amb un altre usuari de l'aplicació durant més de 30 minuts en total, en un radi més proper a 2m de mitjana, es registra com a "contacte estret".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si us plau, canvieu manualment l'estat a "positiu" després de verificar el vostre número de telèfon. " Flux positiu ", ara coordinació amb les parts vinculades.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
@@ -289,15 +284,13 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Suprimir</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Si has rebut un diagnòstic positiu</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Compartir l'aplicació</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -396,6 +389,28 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Quan executeu l'aplicació, generarà i emmagatzemarà un ID anònim en cada smartphone. Aquesta aplicació no adquireix cap informació relacionada amb la privacitat, com ara el número de telèfon i la informació d'ubicació.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mentre l'aplicació s'està executant, el telèfon intel·ligent de l'altre es registrarà els altres identificadors anònims de les dues últimes setmanes. Els registres majors de 2 setmanes s'eliminaran i cada ID anònim es canviarà periòdicament per protegir la privadesa.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Els altres usuaris tenen regularment una llista d'identificadors anònims de positius. Després de l'adquisició, el registre de contacte registrat al telèfon intel·ligent es veurà coincident. Si el resultat del partit és un contacte pesat, li notificarem el seu smartphone i li informem de les accions necessàries que li agradaria que col·laborés.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contacti amb comprovadors positius en els últims 14 dies</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si ets positiu amb la nova Corona, si us plau, col·labora amb el registre positiu per protegir les persones que t'envolten.</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aquesta aplicació és tan eficaç que moltes persones l'instal·len, així que si us plau comparteixi l'aplicació amb gent al seu voltant.</target>
         </trans-unit>
       </group>
     </body>
