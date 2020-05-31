@@ -288,7 +288,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">જો તમને હકારાત્મક નિદાન થયું હોય</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">એપ્લિકેશન ને વહેંચો</target>
         </trans-unit>
