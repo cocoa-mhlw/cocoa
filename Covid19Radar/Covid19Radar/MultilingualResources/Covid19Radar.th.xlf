@@ -30,11 +30,6 @@
           <target state="translated">การพบปะกับผู้ใช้แอพคนอื่นนานกว่า 30 นาที ภายในรัศมีต่ำกว่า 2 เมตร จะถูกบันทึกเป็น "การติดต่อแบบใกล้ชิด"</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="translated">โปรดเปลี่ยนสถานะของคุณเป็น "ติดเชื้อ" ด้วยตนเอง หลังจากยืนยันหมายเลขโทรศัพท์ของคุณแล้ว ขั้นตอนการดำเนินงานสำหรับ "ผู้ติดเชื้อ", กำลังประสานงานกับหน่วยงานที่เกี่ยวข้อง</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="translated">ต้องมีการเปิดตัวแจ้งเตือนบลูทูธเพื่อบันทึกการพบปะ โปรดไปที่หน้าถัดไป เพื่อเปิดการทำงาน</target>
@@ -401,6 +396,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ในขณะที่แอปพลิเคชันกําลังทํางานอยู่ สมาร์ทโฟนของกันและกันจะบันทึกรหัสที่ไม่ระบุชื่อของกันและกันในช่วงสองสัปดาห์ที่ผ่านมา บันทึกที่เก่ากว่า 2 สัปดาห์จะถูกลบ และรหัสที่ไม่ระบุชื่อแต่ละรหัสจะถูกเปลี่ยนเป็นระยะเพื่อป้องกันความเป็นส่วนตัว</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ผู้ใช้รายอื่นเป็นประจําได้รับรายชื่อของ ID ที่ไม่ระบุชื่อของบวก หลังจากได้รับบันทึกการติดต่อที่บันทึกบนสมาร์ทโฟนจะถูกจับคู่ หากผลของการแข่งขันเป็นผู้ติดต่อที่หนักเราจะแจ้งให้มาร์ทโฟนของคุณและแจ้งให้คุณทราบถึงการกระทําที่จําเป็นที่คุณต้องการให้เราร่วมมือ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
       </group>
     </body>

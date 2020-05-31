@@ -30,7 +30,7 @@
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep31.png" />
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep32.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="他の利用者は定期的に陽性となった方の匿名ID一覧を取得しています。取得した後、スマートフォンに記録された接触記録と突合を行います。突合の結果、濃厚接触に該当する場合は、あなたのスマートフォンにお知らせします、協力いただきたい必要な行動についてご案内します。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep3Description1}" />
             </StackLayout>
             <Grid Grid.Row="2">
                 <ce:GradientButton

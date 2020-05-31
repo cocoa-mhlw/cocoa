@@ -31,10 +31,6 @@
     <value>Stik z drugim uporabnikom aplikacije, ki je v celoti daljši od 30 minut, je v radiju bližje kot 2m v povprečju zabeležen kot "tesnem stiku".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Prosimo, da ročno spremenite svoj status na "pozitivni" po preverjanju svojo telefonsko številko. " Pozitivni "potek dela, zdaj usklajevanje s povezanimi stranmi.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth je treba vklopiti za beleženje tesnega stika. Prosimo, pojdite na naslednjo stran, da jo vklopite.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Medtem ko se aplikacija izvaja, drug drugemu pametni telefon bo zabeležil anonimne ID-je v zadnjih dveh tednih. Zapisi, starejši od 2 tednov, bodo izbrisani, vsak anonimni ID pa se bo redno spreminjal za zaščito zasebnosti.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Drugi uporabniki redno dobijo seznam anonimnih ID-jev pozitivnih. Po pridobitvi se bo zapis stika, zabeležen na pametnem telefonu, ujemala. Če je rezultat tekme težak stik, bomo o tem obvestili pametni telefon in vas obvestili o potrebnih dejanjih, s katerimi bi radi sodelovali.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

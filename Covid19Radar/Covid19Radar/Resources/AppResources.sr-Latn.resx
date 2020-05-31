@@ -31,10 +31,6 @@
     <value>Kontakt sa drugim korisnikom aplikacije za duži od 30 minuta u zbiru, u radijusu koji je veći od 2 metra u proseku, zapisuje se kao "blizak kontakt".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Ručno promenite svoj status u "pozitivan" nakon što proverite broj telefona. " Pozitivan "tok posla, sada koordinacija sa srodnim strankama.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth mora biti uključen da bi se zabeležio zatvori kontakt. Idite na sledeću stranicu da biste je uključili.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Dok je aplikacija pokrenuta, smartphone uređaj drugih telefona će se u protekle dve nedelje snimati za anonimne ID-ove. Zapisi stariji od 2 nedelje će biti izbrisani, a svaki anonimni ID će se povremeno promeniti kako bi se zaštitila privatnost.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Drugi korisnici redovno dobijaju listu anonimnih identifikacija pozitivnih. Nakon kupovine, zapis kontakta snimljen na pametnom telefonu biće podudarno. Ako je rezultat utakmice težak kontakt, obavestićemo vaš pametni telefon i informisati vas o neophodnim radnjama sa kojima biste želeli da sarađujemo.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

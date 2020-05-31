@@ -31,10 +31,6 @@
     <value>Một tiếp xúc với người dùng ứng dụng khác lâu hơn 30 phút, trong vòng bán kính gần hơn 2m (trung bình) được ghi nhận là "tiếp xúc gần".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Hãy tự thay đổi trạng thái của bạn thành "Dương tính" sau khi xác minh số điện thoại của bạn. Quy trình "Dương tính" bây giờ sẽ được phối hợp với các bên liên quan.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Cần phải bật Bluetooth để ghi nhận lại các tiếp xúc gần. Vui lòng truy cập trang tiếp theo để bật.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Trong khi ứng dụng đang chạy, điện thoại thông minh của nhau sẽ ghi lại ID ẩn danh của nhau trong hai tuần qua. Hồ sơ cũ hơn 2 tuần sẽ bị xóa và mỗi ID ẩn danh sẽ được thay đổi định kỳ để bảo vệ sự riêng tư.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Người dùng khác thường xuyên nhận được một danh sách các ID ẩn danh của những người tích cực. Sau khi mua lại, bản ghi người liên hệ ghi trên điện thoại thông minh sẽ được khớp. Nếu kết quả của trận đấu là một liên hệ nặng, chúng tôi sẽ thông báo cho điện thoại thông minh của bạn và thông báo cho bạn về những hành động cần thiết mà bạn muốn chúng tôi hợp tác.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

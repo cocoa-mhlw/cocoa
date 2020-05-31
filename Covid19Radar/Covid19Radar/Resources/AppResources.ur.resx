@@ -31,10 +31,6 @@
     <value>کل 30 منٹ سے زیادہ کے لئے ایک دوسرے اپلی کیشن صارف کے ساتھ ایک رابطہ ، اوسط پر 2m سے قریب ایک رداس کے اندر میں "بند رابطہ" کے طور پر ریکارڈ کیا جاتا ہے.</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>اپنے فون نمبر کی توثیق کے بعد دستی طور پر اپنی حیثیت کو "مثبت" میں تبدیل کریں ۔ مثبت "ورک فلو, اب متعلقہ جماعتوں کے ساتھ تعاون.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>بلوٹوت کو بند رابطے ریکارڈ کرنے کے لئے تبدیل کرنے کی ضرورت ہے. براہ کرم اگلے صفحے پر جائیں اسے تبدیل کرنے کے لئے.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>جب درخواست چل رہی ہے تو ، ایک دوسرے کے سمارٹ فون گزشتہ دو ہفتوں تک ایک دوسرے کی گمنام شناخت ریکارڈ کرے گا. 2 ہفتوں سے بڑی عمر کے ریکارڈ کو خارج کر دیا جائے گا اور رازداری کی حفاظت کے لئے ہر ایک گمنام ID کو تبدیل کیا جائے گا.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>دوسرے صارفین کو باقاعدگی سے مثبت لوگوں کی گمنام شناخت کی ایک فہرست حاصل. حصول کے بعد ، اسمارٹ فون پر ریکارڈ کردہ رابطہ ریکارڈ مل جائے گا. میچ کے نتیجے میں ایک بھاری رابطہ ہے تو, ہم آپ کے اسمارٹ فون کو مطلع کریں گے اور آپ کے ساتھ تعاون کرنے کے لئے چاہتے ہیں کہ ضروری اعمال کے آپ کو مطلع کرے گا.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

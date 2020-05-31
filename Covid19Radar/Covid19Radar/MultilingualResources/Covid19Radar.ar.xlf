@@ -30,11 +30,6 @@
           <target state="translated">تفاعل المستخدم مع مستخدم آخر للتطبيق لمدة تزيد عن 30 دقيقة إجمالاً ، في مسافة أقرب من 2 متر في المتوسط تسجل على أنها "جهة اتصال قريبة".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="translated">الرجاء تغيير حالتك يدويًا إلى "إيجابي" بعد تأكيد رقم هاتفك. جريان "إيجابي" ، يجب التنسيق مع الجهات المعنية.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
           <target state="translated">يجب تشغيل البلوتوث / الإخطارات لتسجيل أي اتصال وثيق مع المستخدمين الآخرين. يرجى الانتقال إلى الصفحة التالية لتشغيله.</target>
@@ -400,6 +395,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">أثناء تشغيل التطبيق ، سيقوم الهاتف الذكي لكل منهما بتسجيل الـ IDs المجهولين لبعضهما البعض خلال الأسبوعين الماضيين. سيتم حذف السجلات التي يزيد عمرها عن أسبوعين وسيتم تغيير كل معرف مجهول بشكل دوري لحماية الخصوصية.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">يحصل المستخدمون الآخرون بانتظام على قائمة بـ IDs مجهولة الهوية الإيجابية. بعد الاستحواذ، سيتم مطابقة سجل جهة الاتصال المسجل على الهاتف الذكي. إذا كانت نتيجة المباراة هي اتصال كثيف، سنقوم بإخطار هاتفك الذكي وإبلاغك بالإجراءات الضرورية التي ترغب في تعاوننا معها.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
       </group>
     </body>

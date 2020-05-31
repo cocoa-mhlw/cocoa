@@ -31,10 +31,6 @@
     <value>Egy másik alkalmazásfelhasználóval való, összesen 30 min-nél hosszabb ideig, átlagosan 2 m-nél közelebbi sugarú körben tartott kapcsolat "Közeli kapcsolat" néven kerül rögzítésre.</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Kérjük, a telefonszám ellenőrzése után manuálisan módosítsa az állapotát "Pozitív" állásra. Pozitív" Munkafolyamat , Most koordináció a kapcsolódó felekkel.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>A szoros kapcsolat felvételéhez be kell kapcsolni a Bluetooth-t. Kérjük, lépjen a következő oldalra, hogy bekapcsolja.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Amíg az alkalmazás fut, egymás okostelefonja rögzíti egymás névtelen azonosítóit az elmúlt két hétben. A 2 hétnél régebbi rekordok törlődnek, és minden névtelen azonosító rendszeres időközönként módosul a személyes adatok védelme érdekében.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Más felhasználók rendszeresen kap egy listát a névtelen azonosítók pozitív is. Az akvizíció után az okostelefonon rögzített kapcsolatfelvételi rekord egyeztetésre kerül. Ha a mérkőzés eredménye nehéz kapcsolat, értesíteni fogjuk az okostelefonját, és tájékoztatjuk Önt a szükséges lépésekről, amelyekkel együtt kíván működni.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

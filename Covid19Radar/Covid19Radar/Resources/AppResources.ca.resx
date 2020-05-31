@@ -31,10 +31,6 @@
     <value>Un contacte amb un altre usuari de l'aplicació durant més de 30 minuts en total, en un radi més proper a 2m de mitjana, es registra com a "contacte estret".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Si us plau, canvieu manualment l'estat a "positiu" després de verificar el vostre número de telèfon. " Flux positiu ", ara coordinació amb les parts vinculades.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth necessita ser engegat per enregistrar contacte estret. Aneu a la pàgina següent per activar-la.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Mentre l'aplicació s'està executant, el telèfon intel·ligent de l'altre es registrarà els altres identificadors anònims de les dues últimes setmanes. Els registres majors de 2 setmanes s'eliminaran i cada ID anònim es canviarà periòdicament per protegir la privadesa.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Els altres usuaris tenen regularment una llista d'identificadors anònims de positius. Després de l'adquisició, el registre de contacte registrat al telèfon intel·ligent es veurà coincident. Si el resultat del partit és un contacte pesat, li notificarem el seu smartphone i li informem de les accions necessàries que li agradaria que col·laborés.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

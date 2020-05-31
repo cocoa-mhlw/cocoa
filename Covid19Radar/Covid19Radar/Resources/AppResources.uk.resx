@@ -31,10 +31,6 @@
     <value>Контакт з іншим користувачем програми для більш ніж 30 хв в цілому, в радіусі ближче ніж 2 м в середньому записується як "тісний контакт".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Будь ласка, вручну Змініть свій статус на "позитивний" після перевірки вашого номера телефону. " Позитивний "робочий процес, в даний час координації з пов'язаними сторонами.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Щоб записати тісний контакт, потрібно ввімкнути Bluetooth. Будь ласка, перейдіть на наступну сторінку, щоб увімкнути його.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>У той час як додаток працює, смартфон один одного буде записувати анонімні ідентифікатори один одного протягом останніх двох тижнів. Записи старше 2 тижнів будуть видалені, і кожен анонімний ІДЕНТИФІКАТОР буде періодично змінюватися для захисту конфіденційності.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Інші користувачі регулярно отримують Список анонімних ідентифікаторів позитивних. Після придбання, запис контактної особи, записаної на смартфоні, буде зіставлятися. Якщо результат матчу є важким контактом, ми повідомимо ваш смартфон і повідомимо вам про необхідні дії, які ви хотіли б з нами співпрацювати.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>
