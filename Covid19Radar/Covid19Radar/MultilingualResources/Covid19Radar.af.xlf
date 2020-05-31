@@ -403,6 +403,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontak met positiewe toetsers in die afgelope 14 dae</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">As jy positief is met die nuwe Corona, saamwerk asseblief met die positiewe registrasie om die mense rondom jou te beskerm.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -317,4 +317,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Contatto con tester positivi negli ultimi 14 giorni</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Se sei positivo con la nuova Corona, si prega di collaborare con la registrazione positiva per proteggere le persone intorno a te.</value>
+  </data>
 </root>

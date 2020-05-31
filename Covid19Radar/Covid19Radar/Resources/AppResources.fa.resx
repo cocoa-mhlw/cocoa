@@ -317,4 +317,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>تماس با آزمایشکنندگان مثبت در 14 روز گذشته</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>اگر شما با تاج جدید مثبت هستید ، لطفا با ثبت نام مثبت برای محافظت از مردم در اطراف خود همکاری کنید.</value>
+  </data>
 </root>

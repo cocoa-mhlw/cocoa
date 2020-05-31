@@ -317,4 +317,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>கடந்த 14 நாட்களில் நேச்சுரல் டெஸ்டர்களுடனான தொடர்பு</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>புதிய கோரோனா உடன் நீங்கள் நேர்மறையாக இருந்தால், உங்களைச் சுற்றியுள்ள மக்களைப் பாதுகாக்க நேர்மறையான பதிவிற்கு ஒத்துழைக்கவும்.</value>
+  </data>
 </root>

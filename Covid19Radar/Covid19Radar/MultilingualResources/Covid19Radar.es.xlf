@@ -403,6 +403,10 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Contacto con probadores positivos en los últimos 14 días</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si usted es positivo con la nueva Corona, por favor coopere con el registro positivo para proteger a las personas que lo rodean.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -122,7 +122,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="もし、新型コロナで陽性と診断された場合、あなたの周りの人を守るためにも、陽性登録へのご協力をお願いします。" />
+                        Text="{x:Static resources:AppResources.HomePageHeader2Description}" />
                 </Grid>
                 <ce:GradientButton
                     AutomationId="ButtonNotifyOther"

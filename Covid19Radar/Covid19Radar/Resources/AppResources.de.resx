@@ -317,4 +317,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt mit positiven Testern in den letzten 14 Tagen</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Wenn Sie mit der neuen Corona positiv sind, kooperieren Sie bitte mit der positiven Registrierung, um die Menschen um Sie herum zu schützen.</value>
+  </data>
 </root>

@@ -317,4 +317,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>ติดต่อกับผู้ทดสอบในเชิงบวกในช่วง 14 วัน</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>หากคุณเป็นบวกกับ Corona ใหม่โปรดร่วมมือกับการลงทะเบียนในเชิงบวกเพื่อปกป้องคนรอบข้างคุณ</value>
+  </data>
 </root>

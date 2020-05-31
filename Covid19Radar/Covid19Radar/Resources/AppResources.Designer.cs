@@ -376,6 +376,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageHeader2Description {
+            get {
+                return ResourceManager.GetString("HomePageHeader2Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   If you received a positive diagnosis に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader2Title {

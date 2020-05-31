@@ -317,4 +317,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Контакт са позитивним тестерима у последњих 14 дана</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ако сте позитивни са новом Цорона, молимо вас да сарађујете са позитивном регистрацијом како бисте заштитили људе око себе.</value>
+  </data>
 </root>

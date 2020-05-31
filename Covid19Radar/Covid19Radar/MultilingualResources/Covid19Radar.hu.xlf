@@ -402,6 +402,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Érintkezés pozitív tesztelőkkel az elmúlt 14 napban</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ha pozitív az új Corona, kérjük, működjön együtt a pozitív regisztráció, hogy megvédje az emberek körülötted.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

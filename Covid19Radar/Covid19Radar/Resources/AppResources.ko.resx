@@ -317,4 +317,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>지난 14일 동안 양성 테스터와의 접촉</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>새로운 코로나에 긍정적 인 경우, 당신의 주위에 사람들을 보호하기 위해 긍정적 인 등록과 협력하시기 바랍니다.</value>
+  </data>
 </root>
