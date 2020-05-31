@@ -228,11 +228,9 @@
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Če ste prejeli pozitivno diagnozo</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Skupna raba aplikacije</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Skupna raba</value>
@@ -315,5 +313,8 @@
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Drugi uporabniki redno dobijo seznam anonimnih ID-jev pozitivnih. Po pridobitvi se bo zapis stika, zabeležen na pametnem telefonu, ujemala. Če je rezultat tekme težak stik, bomo o tem obvestili pametni telefon in vas obvestili o potrebnih dejanjih, s katerimi bi radi sodelovali.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt s pozitivnimi preskuševalci v zadnjih 14 dneh</value>
   </data>
 </root>

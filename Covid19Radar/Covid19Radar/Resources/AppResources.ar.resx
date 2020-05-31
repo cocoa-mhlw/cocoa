@@ -227,11 +227,9 @@
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>إذا تلقيت تشخيصًا إيجابيًا</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>مشاركة التطبيق</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>مشاركة</value>
@@ -314,5 +312,8 @@
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>يحصل المستخدمون الآخرون بانتظام على قائمة بـ IDs مجهولة الهوية الإيجابية. بعد الاستحواذ، سيتم مطابقة سجل جهة الاتصال المسجل على الهاتف الذكي. إذا كانت نتيجة المباراة هي اتصال كثيف، سنقوم بإخطار هاتفك الذكي وإبلاغك بالإجراءات الضرورية التي ترغب في تعاوننا معها.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>الاتصال مع المختبرين الإيجابيين في الأيام الـ 14 الماضية</value>
   </data>
 </root>

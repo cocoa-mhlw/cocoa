@@ -228,11 +228,9 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Kama umepokea utambuzi mzuri</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Gawiza programu</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Shiriki</value>
@@ -315,5 +313,8 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Watumiaji wengine hupata orodha ya vitambulisho vya wale chanya. Baada ya upatikanaji, rekodi ya kuwasiliana iliyoandikwa kwenye smartphone itaoana. Ikiwa matokeo ya mechi ni anwani nzito, tutaarifu smartphone yako na kukujulisha vitendo muhimu ambavyo ungependa sisi kushirikiana na.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Wasiliana na testers nzuri katika siku za mwisho za 14</value>
   </data>
 </root>

@@ -228,11 +228,9 @@
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Ако сте получили положителна диагноза</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Споделяне на приложението</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Споделяне</value>
@@ -315,5 +313,8 @@
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Други потребители редовно получават списък на анонимни идентификатори на положителните. След придобиването записът на контакт, записан на смартфона, ще бъде съчетан. Ако резултатът от срещата е тежък контакт, ще ви уведомим за необходимите действия, с които искате да съдействаме.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Контакт с положителните тестери през последните 14 дни</value>
   </data>
 </root>
