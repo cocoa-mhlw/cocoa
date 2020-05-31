@@ -25,7 +25,7 @@
           <target state="translated">No es necesario introducir información personal. Estamos usando un identificador único, asignado a usted al instalar una aplicación.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">Un contacto con otro usuario de la aplicación durante más de 30 minutos en total, dentro de un radio inferior a 2m en promedio se registra como "Contacto cercano".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

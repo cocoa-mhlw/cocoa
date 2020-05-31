@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಇನ್ ಪುಟ್ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲ. ಆ್ಯಪ್ ಇನ್ ಸ್ಟಾಲ್ ಮಾಡುವಾಗ ನಿಮಗೆ ವಿತರಿಸುವ, ವಿಶಿಷ್ಟವಾದ ಐಡಿ ಬಳಸುತ್ತಿದ್ದೇವೆ.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಒಟ್ಟಾರೆ, ಸರಾಸರಿ 2ಮೀ ಗಿಂತ ಹತ್ತಿರದ ತ್ರಿಜ್ಯದೊಳಗೆ, ಒಟ್ಟು 30 min ಹೆಚ್ಚು ಕಾಲ ಮತ್ತೊಂದು ಆಪ್ ಬಳಕೆದಾರನೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು "ನಿಕಟ ಸಂಪರ್ಕ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

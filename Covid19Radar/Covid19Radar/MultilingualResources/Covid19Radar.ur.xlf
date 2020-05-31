@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ان پٹ ذاتی معلومات کی ضرورت نہیں. ایپ نصب کرتے وقت ہم منفرد ID استعمال کرتے ہیں جو آپ کو مختص کرتے ہیں ۔</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">کل 30 منٹ سے زیادہ کے لئے ایک دوسرے اپلی کیشن صارف کے ساتھ ایک رابطہ ، اوسط پر 2m سے قریب ایک رداس کے اندر میں "بند رابطہ" کے طور پر ریکارڈ کیا جاتا ہے.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

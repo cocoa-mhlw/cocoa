@@ -25,7 +25,7 @@
           <target state="translated">ไม่จําเป็นต้องใส่ข้อมูลส่วนบุคคล เราจะใช้ ID พิเศษที่ไม่ซ้ํากัน ซึ่งจะถูกสร้างให้คุณระหว่างการติดตั้งแอพ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">การพบปะกับผู้ใช้แอพคนอื่นนานกว่า 30 นาที ภายในรัศมีต่ำกว่า 2 เมตร จะถูกบันทึกเป็น "การติดต่อแบบใกล้ชิด"</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

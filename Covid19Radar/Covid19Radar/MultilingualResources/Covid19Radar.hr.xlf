@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nema potrebe za unososobnih podataka. Koristimo jedinstveni ID, koji vam je dodijeljen prilikom instalacije aplikacije.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt s drugim korisnikom aplikacije u ukupnom iznosu duljem od 30 min, u radijusu bližem od 2 m u prosjeku bilježi se kao "Zatvori kontakt".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

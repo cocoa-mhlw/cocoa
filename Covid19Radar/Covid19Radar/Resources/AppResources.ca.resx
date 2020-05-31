@@ -27,7 +27,7 @@
     <value>No hi ha necessitat d'introduir informació personal. Estem utilitzant ID únic, assignat a vostè en instal·lar una aplicació.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Un contacte amb un altre usuari de l'aplicació durant més de 30 minuts en total, en un radi més proper a 2m de mitjana, es registra com a "contacte estret".</value>
     <comment>How it works page step 2 description</comment>
   </data>
