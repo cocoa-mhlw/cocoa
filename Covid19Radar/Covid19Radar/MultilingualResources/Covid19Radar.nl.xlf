@@ -288,7 +288,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Als u een positieve diagnose kreeg</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">De app delen</target>
         </trans-unit>

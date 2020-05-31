@@ -229,7 +229,7 @@
   <data name="HomePageHeader2Title" xml:space="preserve">
     <value>หากคุณได้รับการวินิจฉัยในเชิงบวก</value>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>แชร์แอพ</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
