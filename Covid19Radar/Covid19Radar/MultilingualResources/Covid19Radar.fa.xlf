@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">بدون نیاز به ورودی اطلاعات شخصی. ما از شناسه منحصربه فرد استفاده می کنیم که هنگام نصب یک برنامه به شما اختصاص داده شده است.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">یک تماس با یک کاربر برنامه دیگر برای بیش از 30 دقیقه در مجموع ، در شعاع نزدیک تر از 2m به طور متوسط به عنوان "تماس نزدیک" ثبت می شود.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

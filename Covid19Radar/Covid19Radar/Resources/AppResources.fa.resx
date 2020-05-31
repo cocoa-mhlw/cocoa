@@ -27,7 +27,7 @@
     <value>بدون نیاز به ورودی اطلاعات شخصی. ما از شناسه منحصربه فرد استفاده می کنیم که هنگام نصب یک برنامه به شما اختصاص داده شده است.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>یک تماس با یک کاربر برنامه دیگر برای بیش از 30 دقیقه در مجموع ، در شعاع نزدیک تر از 2m به طور متوسط به عنوان "تماس نزدیک" ثبت می شود.</value>
     <comment>How it works page step 2 description</comment>
   </data>

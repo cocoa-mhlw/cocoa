@@ -40,8 +40,8 @@ namespace Covid19Radar.ViewModels
                     Title = Resources.AppResources.DescriptionPageTitleTextStep2,
                     Image = "descriptionStep21.png",
                     Image2 = "descriptionStep22.png",
-                    Description = Resources.AppResources.DescriptionPageTextStep2Description,
-                    Description2 = Resources.AppResources.DescriptionPageTextStep2Description2,
+                    Description = Resources.AppResources.DescriptionPageTextStep2Description1,
+                    Description2 = Resources.AppResources.DescriptionPageTextStep2Description12,
                     StepNumber = 2
                 },
                 new StepModel

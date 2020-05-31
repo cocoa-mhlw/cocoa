@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">వ్యక్తిగత సమాచారాన్ని ఇన్ పుట్ చేయాల్సిన అవసరం లేదు. యాప్ ఇన్ స్టాల్ చేసేటప్పుడు మీకు కేటాయించబడ్డ ప్రత్యేక ID ని మేం ఉపయోగిస్తున్నాం.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">మొత్తం మీద 30 నిమిషాల కంటే ఎక్కువ సేపు మరో యాప్ యూజర్ తో ఒక కాంటాక్ట్, సగటున 2m కంటే దగ్గరగా ఉన్న వ్యాసార్థంలో ' ' క్లోజ్ కాంటాక్ట్ ' ' వలే రికార్డ్ చేయబడింది.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

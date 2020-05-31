@@ -27,7 +27,7 @@
     <value>Inutile de saisir des renseignements personnels. Nous utilisons un Identifiant unique qui vous est attribué lors de l’installation d’une application.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Un contact avec un autre utilisateur de l'application pendant plus de 30 minutes au total, dans un rayon inférieur à 2m en moyenne est enregistré comme "Contact rapproché".</value>
     <comment>How it works page step 2 description</comment>
   </data>

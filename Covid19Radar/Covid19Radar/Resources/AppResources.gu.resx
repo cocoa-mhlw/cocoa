@@ -27,7 +27,7 @@
     <value>અંગત માહિતી ને ઇનપુટ કરવાની જરૂર નથી. અમે યુનિક આઈડીનો ઉપયોગ કરી રહ્યા છીએ, જે એપ્લિકેશન ઇન્સ્ટોલ કરતી વખતે તમને ફાળવવામાં આવેલ છે.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>અન્ય એપ્લિકેશન વપરાશકર્તા સાથે નો સંપર્ક કુલ 30 મિનિટથી વધુ સમય માટે, સરેરાશ 2m થી વધુ ત્રિજ્યાની અંદર "ક્લોઝ કોન્ટેક્ટ" તરીકે નોંધવામાં આવે છે.</value>
     <comment>How it works page step 2 description</comment>
   </data>

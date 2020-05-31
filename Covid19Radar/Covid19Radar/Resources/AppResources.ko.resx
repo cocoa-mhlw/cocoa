@@ -27,7 +27,7 @@
     <value>개인 정보를 입력 할 필요가 없습니다. 앱을 설치할 때 할당된 고유 ID를 사용하고 있습니다.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "닫기 접촉"으로 기록됩니다.</value>
     <comment>How it works page step 2 description</comment>
   </data>

@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">અંગત માહિતી ને ઇનપુટ કરવાની જરૂર નથી. અમે યુનિક આઈડીનો ઉપયોગ કરી રહ્યા છીએ, જે એપ્લિકેશન ઇન્સ્ટોલ કરતી વખતે તમને ફાળવવામાં આવેલ છે.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">અન્ય એપ્લિકેશન વપરાશકર્તા સાથે નો સંપર્ક કુલ 30 મિનિટથી વધુ સમય માટે, સરેરાશ 2m થી વધુ ત્રિજ્યાની અંદર "ક્લોઝ કોન્ટેક્ટ" તરીકે નોંધવામાં આવે છે.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

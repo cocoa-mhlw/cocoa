@@ -27,7 +27,7 @@
     <value>ان پٹ ذاتی معلومات کی ضرورت نہیں. ایپ نصب کرتے وقت ہم منفرد ID استعمال کرتے ہیں جو آپ کو مختص کرتے ہیں ۔</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>کل 30 منٹ سے زیادہ کے لئے ایک دوسرے اپلی کیشن صارف کے ساتھ ایک رابطہ ، اوسط پر 2m سے قریب ایک رداس کے اندر میں "بند رابطہ" کے طور پر ریکارڈ کیا جاتا ہے.</value>
     <comment>How it works page step 2 description</comment>
   </data>

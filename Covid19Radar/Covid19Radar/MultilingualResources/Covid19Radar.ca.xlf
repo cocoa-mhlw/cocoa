@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">No hi ha necessitat d'introduir informació personal. Estem utilitzant ID únic, assignat a vostè en instal·lar una aplicació.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Un contacte amb un altre usuari de l'aplicació durant més de 30 minuts en total, en un radi més proper a 2m de mitjana, es registra com a "contacte estret".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

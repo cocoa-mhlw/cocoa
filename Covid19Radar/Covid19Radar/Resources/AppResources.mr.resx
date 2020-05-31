@@ -27,7 +27,7 @@
     <value>वैयक्तिक माहिती इनपुट करण्याची गरज नाही. अॅप इन्स्टॉल करताना आम्ही युनिक आयडी वापरत आहोत.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>एकूण ३० मि. पेक्षा जास्त काळ इतर अॅप वापरकर्त्याशी संपर्क साधा, सरासरी २० लाखांपेक्षा जास्त परिघात "क्लोज कॉन्टॅक्ट" म्हणून नोंदले जाते.</value>
     <comment>How it works page step 2 description</comment>
   </data>
