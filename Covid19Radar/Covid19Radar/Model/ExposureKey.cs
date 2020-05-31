@@ -14,7 +14,7 @@ namespace Covid19Radar.Model
         [JsonProperty("rollingStartNumber")]
         public long RollingStart { get; set; }
         // Number of intervals that the key is valid for
-        [JsonProperty("rollingPeriod ")]
+        [JsonProperty("rollingPeriod")]
         public int RollingDuration { get; set; }
         // Must be >= 0 and <= 8
         [JsonProperty("transmissionRisk")]
