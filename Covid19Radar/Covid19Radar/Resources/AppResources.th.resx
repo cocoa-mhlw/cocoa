@@ -27,7 +27,7 @@
     <value>ไม่จําเป็นต้องใส่ข้อมูลส่วนบุคคล เราจะใช้ ID พิเศษที่ไม่ซ้ํากัน ซึ่งจะถูกสร้างให้คุณระหว่างการติดตั้งแอพ</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>การพบปะกับผู้ใช้แอพคนอื่นนานกว่า 30 นาที ภายในรัศมีต่ำกว่า 2 เมตร จะถูกบันทึกเป็น "การติดต่อแบบใกล้ชิด"</value>
     <comment>How it works page step 2 description</comment>
   </data>

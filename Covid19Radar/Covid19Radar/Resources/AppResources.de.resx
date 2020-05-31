@@ -27,7 +27,7 @@
     <value>Keine Notwendigkeit, persönliche Informationen einzugeben. Wir verwenden eine eindeutige ID, die Ihnen bei der Installation einer App zugewiesen wurde.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Ein Kontakt mit einem anderen App-Nutzer für mehr als 30 min insgesamt, in einem Radius näher als 2m im Durchschnitt wird als "Close Contact" aufgezeichnet.</value>
     <comment>How it works page step 2 description</comment>
   </data>

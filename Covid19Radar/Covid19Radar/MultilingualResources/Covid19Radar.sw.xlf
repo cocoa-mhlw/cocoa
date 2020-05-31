@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hakuna haja ya kuingiza maelezo ya kibinafsi. Tunatumia ID ya kipekee, zilizotengwa kwako wakati wa kufunga programu.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuwasiliana na mtumiaji mwingine wa programu kwa muda mrefu zaidi ya 30 min kwa jumla, ndani ya eneo karibu zaidi ya 2m kwa wastani ni kumbukumbu kama "Funga mawasiliano".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

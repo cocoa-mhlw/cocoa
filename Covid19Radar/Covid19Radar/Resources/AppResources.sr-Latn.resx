@@ -27,7 +27,7 @@
     <value>Nema potrebe za unosom ličnih informacija. Koristimo jedinstveni ID koji vam je dodeljen prilikom instaliranja aplikacije.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakt sa drugim korisnikom aplikacije za duži od 30 minuta u zbiru, u radijusu koji je veći od 2 metra u proseku, zapisuje se kao "blizak kontakt".</value>
     <comment>How it works page step 2 description</comment>
   </data>

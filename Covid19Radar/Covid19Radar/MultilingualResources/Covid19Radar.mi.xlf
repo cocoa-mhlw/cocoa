@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Me tāuru te mōhiohio whaiaro. Kei te whakamahi mātou i te ID ahurei, tiritiri ki a koe ina tāuta koe i tētahi taupānga.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">He hoapā ki tētahi atu kaiwhakamahi taupānga kia roa ake i te 30 meneti i te tapeke, i roto i tētahi tarawhāiti iti ake i te 2m i te wawaenga e whakapūketetia ana hei "Kati Hoapā".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

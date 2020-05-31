@@ -27,7 +27,7 @@
     <value>Ei ole vaja sisestada isiklikku teavet. Me kasutame unikaalset ID-ga, mis on teile rakenduse installimisel eraldatud.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakti teise rakenduse kasutajaga rohkem kui 30 min kokku, raadiuses lähemal kui 2 m keskmiselt registreeritakse "Close kontakt".</value>
     <comment>How it works page step 2 description</comment>
   </data>

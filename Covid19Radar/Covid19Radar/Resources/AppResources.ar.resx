@@ -27,7 +27,7 @@
     <value>لا حاجة لإدخال المعلومات الشخصية. نحن نستخدم معرف فريد، مخصص لك عند تثبيت التطبيق.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>تفاعل المستخدم مع مستخدم آخر للتطبيق لمدة تزيد عن 30 دقيقة إجمالاً ، في مسافة أقرب من 2 متر في المتوسط تسجل على أنها "جهة اتصال قريبة".</value>
     <comment>How it works page step 2 description</comment>
   </data>

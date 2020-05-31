@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ni potrebe za vnos osebnih podatkov. Uporabljamo Enolični ID, dodeljen vam pri nameščanju aplikacije.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Stik z drugim uporabnikom aplikacije, ki je v celoti daljši od 30 minut, je v radiju bližje kot 2m v povprečju zabeležen kot "tesnem stiku".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tsy mila fampidirana ny mombamomba azy manokana. Mampiasa FAMANTARANA miavaka isika, draharaha aminareo rehefa izao ny rafibaovao.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ny fifandraisana misy eo amin' ny rafi-baovao hafa mandritra ny 30 min-tena, ao anatin' ny radius akaiky kokoa noho ny 2m-antonontonony dia voarakitra ho toy ny "Manakaiky".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
