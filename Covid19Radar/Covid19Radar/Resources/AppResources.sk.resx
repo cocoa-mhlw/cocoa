@@ -320,4 +320,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ak ste pozitívni s novou Corona, prosím, spolupracovať s pozitívnou registráciou na ochranu ľudí okolo vás.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Táto aplikácia je tak účinná, že veľa ľudí ju nainštalovať, tak prosím, podeľte sa o aplikáciu s ľuďmi okolo vás.</value>
+  </data>
 </root>

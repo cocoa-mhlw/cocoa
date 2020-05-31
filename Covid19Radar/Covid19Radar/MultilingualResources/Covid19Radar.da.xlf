@@ -408,6 +408,10 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvis du er positiv med den nye Corona, skal du samarbejde med den positive registrering for at beskytte folk omkring dig.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dette program er så effektiv, at mange mennesker installerer det, så kan du dele programmet med folk omkring dig.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -408,6 +408,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jekk inti pożittiv bil-corona l-ġdida, jekk jogħġbok tikkoopera mar-Re ġistrazzjoni pożittiva biex tipproteġi n-nies ta ' madwarek.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Din l-applikazzjoni hija tant effettiva li ħafna nies tinstallahom, għalhekk jekk jogħġbok jaqsmu l-applikazzjoni ma ' nies ta ' madwarek.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

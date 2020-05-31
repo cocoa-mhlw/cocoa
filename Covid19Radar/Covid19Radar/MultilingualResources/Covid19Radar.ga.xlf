@@ -408,6 +408,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Má tá tú dearfach leis an gCorona nua, le do thoil comhoibriú leis an gclárú dearfach chun na daoine timpeall ort a chosaint.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tá an t-iarratas seo chomh héifeachtach sin go suiteálann go leor daoine é, mar sin roinn an t-iarratas le daoine timpeall ort.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -320,4 +320,7 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>ನೀವು ಹೊಸ ಕರೋನದ ಜೊತೆ ಸಕಾರಾತ್ಮಕವಾಗಿದ್ದಲ್ಲಿ, ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರನ್ನು ರಕ್ಷಿಸಲು ಧನಾತ್ಮಕ ನೋಂದಣಿಗೆ ದಯವಿಟ್ಟು ಸಹಕರಿಸಿ.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>ಈ ಅಪ್ಲಿಕೇಶನ್ ಎಷ್ಟು ಪರಿಣಾಮಕಾರಿಯಾಗಿರುತ್ತದೆ ಎಂದರೆ ಅನೇಕ ಜನರು ಅದನ್ನು ಇನ್ಸ್ಟಾಲ್ ಮಾಡುತ್ತಾರೆ, ಆದ್ದರಿಂದ ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ.</value>
+  </data>
 </root>

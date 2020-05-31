@@ -406,6 +406,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">如果您对新的 Corona 持乐观态度，请配合积极的注册，以保护您周围的人。</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">此应用程序是如此有效，很多人安装它，所以请与您周围的人共享应用程序。</target>
+        </trans-unit>
       </group>
     </body>
   </file>

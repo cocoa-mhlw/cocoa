@@ -394,6 +394,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   This application is so effective that many people install it, so please share the application with people around you. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageHeader3Description {
+            get {
+                return ResourceManager.GetString("HomePageHeader3Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Share the App に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader3Title {

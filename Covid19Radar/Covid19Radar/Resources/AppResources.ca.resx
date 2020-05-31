@@ -320,4 +320,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Si ets positiu amb la nova Corona, si us plau, col·labora amb el registre positiu per protegir les persones que t'envolten.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Aquesta aplicació és tan eficaç que moltes persones l'instal·len, així que si us plau comparteixi l'aplicació amb gent al seu voltant.</value>
+  </data>
 </root>

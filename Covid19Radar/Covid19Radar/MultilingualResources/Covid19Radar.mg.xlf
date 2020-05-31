@@ -408,6 +408,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Raha tsara ianao miaraka amin' ilay Faribolam pahazavana vaovao dia aoka cooperate amin' ny fisoratana anarana tsara mba hiarovana ny olona manodidina anao.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ity fampiharana ity dia tena mahomby tokoa ka ny olona maro no asio izany, koa dia mba zarao amin' ny olona manodidina anao ny fampiharana izany.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -320,4 +320,7 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>जर तुम्ही नवीन कोरोनाशी सकारात्मक असाल तर, तुमच्या आजूबाजूच्या लोकांचे संरक्षण करण्यासाठी कृपया सकारात्मक नोंदणीसह सहकार्य करा.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>हे अनुप्रयोग इतके प्रभावी आहे की अनेक लोक ते इन्स्टॉल करतात, त्यामुळे कृपया आपल्या आजूबाजूच्या लोकांना ते अनुप्रयोग सामायिक करा.</value>
+  </data>
 </root>
