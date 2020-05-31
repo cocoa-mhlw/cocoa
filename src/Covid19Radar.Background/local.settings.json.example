@@ -8,8 +8,6 @@
         "COSMOS_DATABASE_ID": "EXAMPLE",
         "COSMOS_AUTO_GENERATE": true,
         "COSMOS_CONNECTION": "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
-        "AppBundleId": "AppBundleId",
-        "AndroidPackage": "AndroidPackage",
         "SupportRegions": "Country1,Country2", //ISO 3166-1 alpha-2
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
         "TekExportBlobStorageContainerPrefix": "c19r",
@@ -18,6 +16,10 @@
         "CdnResourceGroupName": "Covid19RadarCdnResouseGroupName",
         "CdnProfileName": "Covid19RadarCdnProfile",
         "CdnEndpointName": "Covid19RadarCdnEndpointName",
-        "X509Certificate2Csr": "MIIBMTCB2AIBADBdMQswCQYDVQQGEwJKUDETMBEGA1UECAwKU29tZS1TdGF0ZTEhMB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRYwFAYDVQQDDA1jb3ZpZC0xOXJhZGFyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFqFYT+4RzlXWZV0QhQ1G2iy5K4EzUTXmbZ/8Pj9pe7sNFz/H65xGC1DDHJKY7/ek5KxVQY/FLG/kOfHIik/3haAZMBcGCSqGSIb3DQEJBzEKDAhwYXNzd29yZDAKBggqhkjOPQQDAgNIADBFAiBiPjCFbWhN1TnYPM8ODmRuKHiCrdegqsFxDks6moFZUAIhALX3i+JJXWQTej3R8VHt9aKNBBQiFlOIQJ4oOalZhjI5"
+        "SigningKeyBase64String": "MIIBMTCB2AIBADBdMQswCQYDVQQGEwJKUDETMBEGA1UECAwKU29tZS1TdGF0ZTEhMB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRYwFAYDVQQDDA1jb3ZpZC0xOXJhZGFyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFqFYT+4RzlXWZV0QhQ1G2iy5K4EzUTXmbZ/8Pj9pe7sNFz/H65xGC1DDHJKY7/ek5KxVQY/FLG/kOfHIik/3haAZMBcGCSqGSIb3DQEJBzEKDAhwYXNzd29yZDAKBggqhkjOPQQDAgNIADBFAiBiPjCFbWhN1TnYPM8ODmRuKHiCrdegqsFxDks6moFZUAIhALX3i+JJXWQTej3R8VHt9aKNBBQiFlOIQJ4oOalZhjI5",
+        "AndroidPackageName": "AndroidPackageName",
+        "iOSBundleId": "AppBundleId",
+        "VerificationKeyId": null,
+        "VerificationKeyVersion": null
     }
 }
