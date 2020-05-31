@@ -31,10 +31,6 @@
     <value>Başka bir uygulama kullanıcısıyla ortalama 2 m'den daha yakın ve toplamda 30 dakikadan daha uzun bir süre birarada bulunmak "Yakın Temas" olarak kaydedilir.</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Lütfen telefon numaranızı doğruladıktan sonra durumunuzu "Pozitif" olarak değiştirin." Pozitif" İş Akışı , Şimdi ilgili taraflarla koordinasyon sağlıyoruz.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Yakın temasları kaydetmek için Bluetooth'unuzun açık durumda olması gerekir. Açmak için lütfen bir sonraki sayfaya ilerleyin.</value>
     <comment>How it works page step 4 description</comment>
@@ -314,5 +310,9 @@
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Uygulama çalışırken, birbirlerinin akıllı telefonu son iki hafta boyunca birbirlerinin anonim kimliklerini kaydedecek. 2 haftadan eski kayıtlar silinir ve gizliliği korumak için her anonim kimlik düzenli aralıklarla değiştirilir.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Diğer kullanıcılar düzenli olarak olumlu olanların anonim kimliklerinin bir listesini alırsınız. Satın alındıktan sonra akıllı telefona kaydedilen iletişim kaydı eşleşecektir. Maçın sonucu yoğun bir temas sayılsa, akıllı telefonunuzu bilgilendirecek ve işbirliği yapmamızı istediğiniz gerekli eylemleri size bildireceğiz.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

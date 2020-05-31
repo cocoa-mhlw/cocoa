@@ -31,10 +31,6 @@
     <value>Un contatto con un altro utente dell'app per almeno 30 min in totale, entro un raggio minore di 2 m di media viene registrato come "Contatto ravvicinato".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Si prega di modificare manualmente il proprio stato in "Positivo" dopo aver verificato il numero di telefono. Il Flusso di lavoro "Positivo",sarà ora coordinato con le parti correlate.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Il Bluetooth deve essere attivato per registrare i contatti vicini . Vai alla pagina successiva per attivarlo.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Mentre l'applicazione è in esecuzione, lo smartphone l'altro registrerà gli ID anonimi l'uno dell'altro nelle ultime due settimane. I record più vecchi di 2 settimane verranno eliminati e ogni ID anonimo verrà modificato periodicamente per proteggere la privacy.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Altri utenti ricevono regolarmente un elenco di ID anonimi di quelli positivi. Dopo l'acquisizione, il record di contatto registrato sullo smartphone verrà abbinato. Se il risultato della partita è un contatto pesante, informeremo il tuo smartphone e ti informeremo delle azioni necessarie con cui vorresti che collaborassimo.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

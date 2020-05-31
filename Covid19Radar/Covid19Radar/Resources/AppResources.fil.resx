@@ -31,10 +31,6 @@
     <value>Ang isang contact na may isa pang app user para sa mas mahaba kaysa sa 30 min sa kabuuan, sa loob ng isang radius mas malapit sa 2m sa average ay naitala bilang "isara contact".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Mangyaring mano-manong baguhin ang iyong katayuan sa "positibong" pagkatapos na nagpapatunay ng iyong numero ng telepono. " Positibong "workflow, ngayon na koordinasyon sa mga kaugnay na Partido.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Kailangang naka-on ang Bluetooth sa record malapit sa contact. Magpunta lamang sa kasunod na pahina para buksan ito.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Habang tumatakbo ang aplikasyon, ang smartphone ng isat isa ay inirerekord ang mga hindi kilalang ID ng isa sa nakaraang dalawang linggo. Ang mga rekord na mas luma sa 2 linggo ay matatanggal at ang bawat ID na Anonymous ay papalitan sa pana-panahon upang protektahan ang privacy.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Regular na kumukuha ang ibang gumagamit ng listahan ng mga hindi kilalang ID ng mga positibo. Pagkatapos ng pagkuha ng mga talaan, ang contact record na nakatala sa smartphone ay dapat tumugma. Kung ang resulta ng tugma ay isang mabigat na contact, aabisuhan namin ang iyong smartphone at ipaalam sa iyo ang mga kinakailangang aksyon na nais mong makipagtulungan sa amin.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>

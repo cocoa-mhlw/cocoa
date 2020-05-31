@@ -31,10 +31,6 @@
     <value>Um contato com outro usuário de aplicativo por mais de 30 min no total, dentro de um raio superior a 2m em média é registrado como "Contato Próximo".</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Por favor, altere manualmente seu status para "Positivo" depois de verificar seu número de telefone." Positivo" Fluxo de trabalho , Agora coordenação com partes relacionadas.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth precisa ser ligado para gravar contato próximo. Por favor, vá para a próxima página para ligá-lo.</value>
     <comment>How it works page step 4 description</comment>
@@ -315,5 +311,9 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
     <value>Enquanto o aplicativo estiver em execução, o smartphone um do outro gravará as IDs anônimas um do outro nas últimas duas semanas. Os registros com mais de 2 semanas serão excluídos e cada ID anônimo será alterado periodicamente para proteger a privacidade.</value>
     <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Outros usuários recebem regularmente uma lista de IDs anônimos de positivos. Após a aquisição, o registro de contato registrado no smartphone será igualado. Se o resultado da partida for um contato pesado, notificaremos seu smartphone e informaremos sobre as ações necessárias com as quais você gostaria que cooperássemos.</value>
+    <comment>How it works page step 3 description</comment>
   </data>
 </root>
