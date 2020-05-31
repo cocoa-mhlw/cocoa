@@ -1,0 +1,87 @@
+﻿<ContentPage
+    x:Class="ExposureNotification.App.Views.ExposuresPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="clr-namespace:Xamarin.ExposureNotifications;assembly=Xamarin.ExposureNotification"
+    xmlns:viewmodel="clr-namespace:ExposureNotification.App.ViewModels"
+    Title="Possible Exposures"
+    x:DataType="viewmodel:ExposuresViewModel"
+    BackgroundColor="{DynamicResource BackgroundColor}"
+    mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewmodel:ExposuresViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="0" Style="{DynamicResource Container}">
+
+        <Label
+            Margin="10,10,10,0"
+            FontAttributes="Bold"
+            Style="{DynamicResource SubtitleLabelStyle}"
+            Text="Exposures in Past 14 Days" />
+
+        <CollectionView ItemsSource="{Binding ExposureInformation}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:ExposureInfo">
+                    <StackLayout Padding="8,0,8,8">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ExposuresViewModel}}, Path=ExposureSelectedCommand}" CommandParameter="{Binding .}" />
+                        </StackLayout.GestureRecognizers>
+                        <Frame Style="{StaticResource CardFrame}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    Style="{DynamicResource MediumLabelStyle}"
+                                    Text="Possible exposure" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Style="{DynamicResource SmallLabelStyle}"
+                                    Text="{Binding Timestamp}" />
+
+                                <Image
+                                    Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    Grid.Column="1">
+                                    <Image.Source>
+                                        <FontImageSource
+                                            FontFamily="FA-R"
+                                            Glyph="{StaticResource IconRightArrow}"
+                                            Size="18"
+                                            Color="{DynamicResource PrimaryColor}" />
+                                    </Image.Source>
+                                </Image>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+
+
+                <StackLayout Orientation="Vertical" Style="{DynamicResource Container}">
+                    <Label Margin="0,10,0,0" Text="No known exposures." />
+                    <Label Margin="0,10,0,0" Text="You will be notified if you have been exposed to someone who reported a positive COVID-19 result." />
+                </StackLayout>
+
+
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+    </StackLayout>
+
+</ContentPage>

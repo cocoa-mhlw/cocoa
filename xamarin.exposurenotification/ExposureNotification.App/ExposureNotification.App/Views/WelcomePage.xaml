@@ -1,0 +1,93 @@
+﻿<ContentPage
+    x:Class="ExposureNotification.App.Views.WelcomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:ExposureNotification.App.ViewModels"
+    Title="Exposure Notifications"
+    x:DataType="viewmodel:WelcomeViewModel"
+    BackgroundColor="{DynamicResource BackgroundColor}"
+    mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewmodel:WelcomeViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Style="{DynamicResource Container}">
+            <Frame IsVisible="{Binding IsWelcomed, Converter={StaticResource InvertedBoolConverter}}" Style="{DynamicResource CardFrame}">
+                <StackLayout>
+
+                    <Image Margin="0,30,0,30" HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FA-R"
+                                Glyph="{DynamicResource IconStar}"
+                                Size="72"
+                                Color="{DynamicResource SystemGray}" />
+                        </Image.Source>
+                    </Image>
+
+                    <Label
+                        Margin="0,0,0,10"
+                        FontAttributes="Bold"
+                        Style="{DynamicResource TitleLabelStyle}"
+                        HorizontalTextAlignment="Center"
+                        Text="Welcome to the Sample Public Health Authority COVID-19 App" />
+
+                    <Label Margin="0,10,0,0" Style="{DynamicResource SmallLabelStyle}" Text="[Actual copy to be provided by Public Health Authority]" />
+
+                    <Button
+                        Margin="0,10,0,0"
+                        Command="{Binding GetStartedCommand}"
+                        HorizontalOptions="End"
+                        Style="{DynamicResource ButtonRounded}"
+                        Text="Get Started" />
+
+                </StackLayout>
+            </Frame>
+
+            <Frame IsVisible="{Binding IsWelcomed}" Style="{DynamicResource CardFrame}">
+                <StackLayout>
+
+                    <Label Style="{DynamicResource SmallLabelStyle}" Text="If you enable exposure notifications, this app may notify you after you've been exposed to a person who later reports themselves as positive for COVID-19.  You can choose to disable exposure notifications at any time." />
+
+                    <Label Style="{DynamicResource SmallLabelStyle}" Margin="0,10,0,0" Text="Exposure notifications rely on the sharing and collecting of random IDs over Bluetooth.  These IDs are a random string of numbers that change many times a day to help protect your privacy.  Random IDs do not include information about your identity or locations." />
+
+                    <Label Style="{DynamicResource SmallLabelStyle}" Margin="0,10,0,0" Text="Your device will exchange random IDs with nearby devices that also have exposure notifications turned on.  If the owner of another device shares a positive COVID-19 diagnosis your device will notify you if you've been near any of the random IDs of their device." />
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Button
+                            Grid.Column="1"
+                            Margin="0,10,0,0"
+                            BackgroundColor="{DynamicResource BackgroundColor}"
+                            BorderColor="Transparent"
+                            Command="{Binding NotNowCommand}"
+                            HorizontalOptions="End"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Not Now"
+                            TextColor="{DynamicResource TextPrimaryColor}"
+                            VerticalOptions="Center" />
+
+                        <Button
+                            Grid.Column="2"
+                            Margin="0,10,0,0"
+                            Command="{Binding EnableCommand}"
+                            HorizontalOptions="End"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Turn On"
+                            VerticalOptions="Center" />
+                    </Grid>
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
