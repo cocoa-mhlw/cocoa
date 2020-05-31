@@ -317,4 +317,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>गेल्या 14 दिवसांत सकारात्मक परीक्षकांशी संपर्क</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>जर तुम्ही नवीन कोरोनाशी सकारात्मक असाल तर, तुमच्या आजूबाजूच्या लोकांचे संरक्षण करण्यासाठी कृपया सकारात्मक नोंदणीसह सहकार्य करा.</value>
+  </data>
 </root>

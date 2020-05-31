@@ -317,4 +317,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Miresaha amin' ny testers tsara amin' ny 14 andro farany.</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Raha tsara ianao miaraka amin' ilay Faribolam pahazavana vaovao dia aoka cooperate amin' ny fisoratana anarana tsara mba hiarovana ny olona manodidina anao.</value>
+  </data>
 </root>

@@ -316,4 +316,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>الاتصال مع المختبرين الإيجابيين في الأيام الـ 14 الماضية</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>إذا كنت إيجابيًا مع كورونا الجديدة ، يرجى التعاون مع التسجيل الإيجابي لحماية الأشخاص من حولك.</value>
+  </data>
 </root>
