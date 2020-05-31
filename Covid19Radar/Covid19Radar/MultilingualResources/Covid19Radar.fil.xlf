@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hindi na kailangang input ng personal na impormasyon. Gumagamit kami ng bukod-tanging ID, na inilaan sa iyo kapag mag-instala ng app.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ang isang contact na may isa pang app user para sa mas mahaba kaysa sa 30 min sa kabuuan, sa loob ng isang radius mas malapit sa 2m sa average ay naitala bilang "isara contact".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

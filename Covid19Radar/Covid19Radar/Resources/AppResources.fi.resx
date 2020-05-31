@@ -27,7 +27,7 @@
     <value>Henkilökohtaisia tietoja ei tarvitse syöttää. Käytämme yksilöllistä tunnusta, joka on varattu sinulle sovelluksen asennuksen yhteydessä.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Yhteydenpito toiseen sovelluksen käyttäjään yli 30 minuutin ajan, joka on keskimäärin yli 2 metrin säteellä, tallennetaan "Sulje yhteystieto"-muodossa.</value>
     <comment>How it works page step 2 description</comment>
   </data>

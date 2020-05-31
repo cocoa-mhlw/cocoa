@@ -25,7 +25,7 @@
           <target state="translated">你毋須提供輸入個人資料. 在安裝應用程式時, 我們會為你分配唯一ID.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">與其他本應用程式使用者接觸超過30分鐘, 平均距離少於2米時, 會被記錄為"緊密接觸".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

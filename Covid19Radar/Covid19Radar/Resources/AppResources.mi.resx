@@ -27,7 +27,7 @@
     <value>Me tāuru te mōhiohio whaiaro. Kei te whakamahi mātou i te ID ahurei, tiritiri ki a koe ina tāuta koe i tētahi taupānga.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>He hoapā ki tētahi atu kaiwhakamahi taupānga kia roa ake i te 30 meneti i te tapeke, i roto i tētahi tarawhāiti iti ake i te 2m i te wawaenga e whakapūketetia ana hei "Kati Hoapā".</value>
     <comment>How it works page step 2 description</comment>
   </data>

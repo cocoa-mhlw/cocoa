@@ -25,7 +25,7 @@
           <target state="translated">Non c'è bisogno di inserire informazioni personali. Stiamo utilizzando un ID univoco, che ti è stato assegnato durante l'installazione dell'app.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">Un contatto con un altro utente dell'app per almeno 30 min in totale, entro un raggio minore di 2 m di media viene registrato come "Contatto ravvicinato".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

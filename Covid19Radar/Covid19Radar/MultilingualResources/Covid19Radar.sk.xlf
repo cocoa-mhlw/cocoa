@@ -25,7 +25,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nie je potrebné zadávať osobné údaje. Používame jedinečný identifikátor, ktorý vám bol pridelený pri inštalácii aplikácie.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt s iným používateľom aplikácie po dobu dlhšiu ako 30 min, v okruhu bližšie ako 2 m v priemere je zaznamenaný ako "blízky kontakt".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

@@ -27,7 +27,7 @@
     <value>你毋須提供輸入個人資料. 在安裝應用程式時, 我們會為你分配唯一ID.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>與其他本應用程式使用者接觸超過30分鐘, 平均距離少於2米時, 會被記錄為"緊密接觸".</value>
     <comment>How it works page step 2 description</comment>
   </data>

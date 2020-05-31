@@ -25,7 +25,7 @@
           <target state="translated">Inutile de saisir des renseignements personnels. Nous utilisons un Identifiant unique qui vous est attribué lors de l’installation d’une application.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">Un contact avec un autre utilisateur de l'application pendant plus de 30 minutes au total, dans un rayon inférieur à 2m en moyenne est enregistré comme "Contact rapproché".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>

@@ -27,7 +27,7 @@
     <value>Nie je potrebné zadávať osobné údaje. Používame jedinečný identifikátor, ktorý vám bol pridelený pri inštalácii aplikácie.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakt s iným používateľom aplikácie po dobu dlhšiu ako 30 min, v okruhu bližšie ako 2 m v priemere je zaznamenaný ako "blízky kontakt".</value>
     <comment>How it works page step 2 description</comment>
   </data>
