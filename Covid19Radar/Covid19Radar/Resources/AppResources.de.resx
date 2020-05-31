@@ -27,13 +27,9 @@
     <value>Keine Notwendigkeit, persönliche Informationen einzugeben. Wir verwenden eine eindeutige ID, die Ihnen bei der Installation einer App zugewiesen wurde.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Ein Kontakt mit einem anderen App-Nutzer für mehr als 30 min insgesamt, in einem Radius näher als 2m im Durchschnitt wird als "Close Contact" aufgezeichnet.</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Bitte ändern Sie Ihren Status manuell in "Positiv", nachdem Sie Ihre Telefonnummer überprüft haben." Positiv" Workflow , Jetzt Koordination mit nahestehenden Personen.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth muss aktiviert sein, um engen Kontakt aufzuzeichnen. Gehen Sie zur nächsten Seite, um sie einzuschalten.</value>
@@ -230,13 +226,11 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Es wird gelöscht</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Wenn Sie eine positive Diagnose erhalten haben</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>App teilen</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Freigeben</value>
@@ -311,5 +305,22 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Wenn Sie die Anwendung ausführen, wird auf jedem Smartphone eine anonyme ID generiert und gespeichert. Diese Anwendung erfasst keine Informationen zum Datenschutz wie Telefonnummer und Standortinformationen.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Während die Anwendung läuft, zeichnet das Smartphone des anderen die anonymen IDs der anderen in den letzten zwei Wochen auf. Datensätze, die älter als 2 Wochen sind, werden gelöscht und jede anonyme ID wird regelmäßig geändert, um die Privatsphäre zu schützen.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Andere Benutzer erhalten regelmäßig eine Liste anonymer IDs positiver IDs. Nach der Erfassung wird der auf dem Smartphone aufgezeichnete Kontaktdatensatz abgeglichen. Wenn das Ergebnis des Spiels ein starker Kontakt ist, werden wir Ihr Smartphone benachrichtigen und Sie über die notwendigen Maßnahmen informieren, mit denen Wir zusammenarbeiten möchten.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt mit positiven Testern in den letzten 14 Tagen</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Wenn Sie mit der neuen Corona positiv sind, kooperieren Sie bitte mit der positiven Registrierung, um die Menschen um Sie herum zu schützen.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Diese Anwendung ist so effektiv, dass viele Menschen installieren, so teilen Sie bitte die Anwendung mit Menschen um Sie herum.</value>
   </data>
 </root>

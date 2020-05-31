@@ -27,13 +27,9 @@
     <value>Du trenger ikke å legge inn personlig informasjon. Vi bruker unik ID, tildelt deg når du installerer en app.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>En kontakt med en annen appbruker i mer enn 30 minutter totalt, innenfor en radius nærmere enn 2 m i gjennomsnitt registreres som "Nærkontakt".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Vennligst endre statusen manuelt til "Positiv" etter at du har bekreftet telefonnummeret ditt." Positiv" Arbeidsflyt , Nå koordinering med nærstående parter.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth må være slått på for å registrere nær kontakt. Gå til neste side for å slå den på.</value>
@@ -230,13 +226,11 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Sletter</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Hvis du fikk en positiv diagnose</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Del appen</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Del</value>
@@ -311,5 +305,22 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Når du kjører programmet, vil det generere og lagre en anonym ID på hver smarttelefon. Dette programmet innhenter ikke informasjon knyttet til personvern, for eksempel telefonnummer og stedsinformasjon.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Mens programmet kjører, vil hverandres smarttelefon ta opp hverandres anonyme ID-er de siste to ukene. Poster eldre enn 2 uker vil bli slettet, og hver anonym ID vil bli endret med jevne mellomrom for å beskytte personvernet.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Andre brukere får regelmessig en liste over anonyme ID-er med positive. Etter oppkjøpet vil kontaktoppføringen som er registrert på smarttelefonen, bli matchet. Hvis resultatet av kampen er en tung kontakt, vil vi varsle smarttelefonen din og informere deg om de nødvendige handlingene du ønsker at vi skal samarbeide med.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt med positive testere de siste 14 dagene</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Hvis du er positiv med den nye Corona, kan du samarbeide med den positive registreringen for å beskytte menneskene rundt deg.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Dette programmet er så effektivt at mange installerer det, så vennligst del programmet med folk rundt deg.</value>
   </data>
 </root>

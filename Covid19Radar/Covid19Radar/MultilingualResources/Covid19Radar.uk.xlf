@@ -25,15 +25,10 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Не потрібно вводити особисту інформацію. Ми використовуємо унікальний ІДЕНТИФІКАТОР, виділений для вас під час встановлення програми.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Контакт з іншим користувачем програми для більш ніж 30 хв в цілому, в радіусі ближче ніж 2 м в середньому записується як "тісний контакт".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Будь ласка, вручну Змініть свій статус на "позитивний" після перевірки вашого номера телефону. " Позитивний "робочий процес, в даний час координації з пов'язаними сторонами.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
@@ -289,15 +284,13 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Видалення</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Якщо ви отримали позитивний діагноз</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Поділіться додатком</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -396,6 +389,28 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Під час запуску програми він створить та зберігатиме анонімний ІДЕНТИФІКАТОР на кожному смартфоні. Ця програма не купує будь-яку інформацію, пов'язану з конфіденційністю, наприклад, номер телефону та інформацію про місцезнаходження.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">У той час як додаток працює, смартфон один одного буде записувати анонімні ідентифікатори один одного протягом останніх двох тижнів. Записи старше 2 тижнів будуть видалені, і кожен анонімний ІДЕНТИФІКАТОР буде періодично змінюватися для захисту конфіденційності.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Інші користувачі регулярно отримують Список анонімних ідентифікаторів позитивних. Після придбання, запис контактної особи, записаної на смартфоні, буде зіставлятися. Якщо результат матчу є важким контактом, ми повідомимо ваш смартфон і повідомимо вам про необхідні дії, які ви хотіли б з нами співпрацювати.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Контакт з позитивними тестувальників за останні 14 днів</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Якщо ви позитивні з новою коронка, будь ласка, співпрацювати з позитивною реєстрацією, щоб захистити оточуючих Вас людей.</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ця програма є настільки ефективним, що багато людей встановити його, тому, будь ласка, поділіться додатком з оточувами навколо вас.</target>
         </trans-unit>
       </group>
     </body>

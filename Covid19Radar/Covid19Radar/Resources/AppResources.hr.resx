@@ -27,13 +27,9 @@
     <value>Nema potrebe za unososobnih podataka. Koristimo jedinstveni ID, koji vam je dodijeljen prilikom instalacije aplikacije.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakt s drugim korisnikom aplikacije u ukupnom iznosu duljem od 30 min, u radijusu bližem od 2 m u prosjeku bilježi se kao "Zatvori kontakt".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Ručno promijenite status u "Pozitivno" nakon potvrde telefonskog broja." "Pozitivan" Tijek rada , Sada koordinacija s povezanim stranama.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth treba uključiti da bi se snimio bliski kontakt. Idite na sljedeću stranicu da biste je uključili.</value>
@@ -230,13 +226,11 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Brisanje</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ako ste primili pozitivnu dijagnozu</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Dijeljenje aplikacije</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Zajedničko korištenje</value>
@@ -311,5 +305,22 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Kada pokrenete aplikaciju , generirat će i pohraniti anonimni ID na svaki pametni telefon. Ova aplikacija ne pribavlja nikakve informacije vezane uz privatnost kao što su telefonski broj i podaci o lokaciji.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Dok je aplikacija pokrenuta, pametni telefon jedni drugih snimat će anonimne isprave jednih drugih u posljednja dva tjedna. Zapisi stariji od 2 tjedna bit će izbrisani i svaki anonimni ID povremeno će se mijenjati radi zaštite privatnosti.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Drugi korisnici redovito dobiju popis anonimnih ID-ova pozitivnih. Nakon stjecanja, kontakt rekord snimljen na pametnom telefonu bit će usklađen. Ako je rezultat utakmice težak kontakt, obavijestit ćemo vaš pametni telefon i obavijestiti vas o potrebnim radnjama s kojima želite da surađujemo.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt s pozitivnim testers u posljednjih 14 dana</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ako ste pozitivni s novom Coronom, molimo vas da surađujete s pozitivnom registracijom kako biste zaštitili ljude oko sebe.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Ovaj program je toliko učinkovit da mnogi ljudi ga instalirati, pa vas molimo da podijelite aplikaciju s ljudima oko vas.</value>
   </data>
 </root>

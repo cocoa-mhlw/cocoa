@@ -27,13 +27,9 @@
     <value>Du behöver inte ange personlig information. Vi använder ett unikt ID som tilldelas dig när du installerar app'en.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>En kontakt med en annan användare under längre tid än 30 minuter och inom en radie närmare än 2 m, registreras som "Stäng kontakt".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Ändra din status till "Positiv" när du har verifierat ditt telefonnummer." Positivt" Arbetsflöde , Nu samordning med närstående.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth måste vara aktiverat för att uppfatta en kontakt. Gå till nästa sida för att slå på den.</value>
@@ -230,13 +226,11 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Tas bort</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Om du fick en positiv diagnos</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Dela appen</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Dela</value>
@@ -311,5 +305,22 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>När du kör programmet kommer det att generera och lagra ett anonymt ID på varje smartphone. Denna ansökan inte förvärva någon information om sekretess såsom telefonnummer och platsinformation.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Medan programmet körs kommer varandras smartphone att spela in varandras anonyma ID under de senaste två veckorna. Poster äldre än 2 veckor kommer att raderas och varje anonymt ID ändras regelbundet för att skydda sekretessen.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Andra användare får regelbundet en lista över anonyma ID:er av positiva. Efter förvärvet kommer kontaktposten som registrerats på smarttelefonen att matchas. Om resultatet av matchen är en tung kontakt kommer vi att meddela din smartphone och informera dig om de nödvändiga åtgärder som du vill att vi ska samarbeta med.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt med positiva testare under de senaste 14 dagarna</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Om du är positiv med den nya Corona, vänligen samarbeta med den positiva registreringen för att skydda människor omkring dig.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Denna ansökan är så effektiv att många människor installerar det, så vänligen dela programmet med människor omkring dig.</value>
   </data>
 </root>
