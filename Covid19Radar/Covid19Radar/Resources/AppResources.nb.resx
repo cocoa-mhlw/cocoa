@@ -228,11 +228,9 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Hvis du fikk en positiv diagnose</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Del appen</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Del</value>
@@ -315,5 +313,8 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Andre brukere får regelmessig en liste over anonyme ID-er med positive. Etter oppkjøpet vil kontaktoppføringen som er registrert på smarttelefonen, bli matchet. Hvis resultatet av kampen er en tung kontakt, vil vi varsle smarttelefonen din og informere deg om de nødvendige handlingene du ønsker at vi skal samarbeide med.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt med positive testere de siste 14 dagene</value>
   </data>
 </root>

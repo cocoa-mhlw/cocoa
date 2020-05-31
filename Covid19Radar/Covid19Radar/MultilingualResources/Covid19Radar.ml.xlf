@@ -287,12 +287,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ആപ്പ് പങ്കിടുക</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">മറ്റു ഉപയോക്താക്കൾക്കും പതിവായി പോസിറ്റീവ് ഉള്ള അജ്ഞാത ഐഡികളുടെ പട്ടിക ലഭിക്കുന്നു. ഏറ്റെടുക്കലിന് ശേഷം സ്മാര് ട്ട് ഫോണില് രേഖപ്പെടുത്തിയ കോണ്ടാക്ട് റെക്കോഡ് ഒത്തുചേരും. മത്സരത്തിന്റെ ഫലം കനത്ത സമ്പർക്കമാണെങ്കിൽ, ഞങ്ങൾ നിങ്ങളുടെ സ്മാർട്ട് ഫോണിനെ അറിയിക്കും, ഞങ്ങൾ സഹകരിക്കണമെന്ന് നിങ്ങൾ ആഗ്രഹിക്കുന്നു എന്ന് ആവശ്യമായ പ്രവൃത്തികൾ നിങ്ങളെ അറിയിക്കുകയും ചെയ്യും.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">കഴിഞ്ഞ 14 ദിവസത്തിനുള്ളിൽ പോസിറ്റീവ് ടെസ്റ്റേഴ്സ് ആയി ബന്ധപ്പെടുക</target>
         </trans-unit>
       </group>
     </body>

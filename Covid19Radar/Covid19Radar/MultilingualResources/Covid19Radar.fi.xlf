@@ -287,12 +287,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jos sait positiivisen diagnoosin</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Sovelluksen jakaminen</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Muut käyttäjät saavat säännöllisesti luettelon positiivisista anonyymeistä tunnuksista. Hankinnan jälkeen älypuhelimeen tallennettu yhteyshenkilötietue täsmää. Jos ottelun tulos on raskas kontakti, ilmoitamme sinulle älypuhelimestasi ja ilmoitamme sinulle tarvittavista toimista, joiden kanssa haluat meidän yhteistyötä.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kosketus positiivisiin testaajiin viimeisten 14 päivän aikana</target>
         </trans-unit>
       </group>
     </body>

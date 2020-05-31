@@ -287,12 +287,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">பயன்பாட்டை பகிரவும்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">மற்ற பயனர்கள் தொடர்ந்து நேர்மறையர்களின் பெயரில்லாத Id களின் பட்டியலை பெறுவர். கையகப்படுத்துபின், ஸ்மார்ட்போன் தொடர்பாக பதிவு செய்துள்ள தொடர்பு பதிவுகள் பொருத்தமாக இருக்கும். போட்டியின் முடிவு பலத்த தொடர்பால், நாங்கள் உங்கள் ஸ்மார்ட்ஃபோனை தெரிவிப்போம், மேலும் எங்களுக்கு நீங்கள் ஒத்துழைக்க விரும்பும் அவசியமான நடவடிக்கைகளை தெரியப்படுத்துவோம்.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">கடந்த 14 நாட்களில் நேச்சுரல் டெஸ்டர்களுடனான தொடர்பு</target>
         </trans-unit>
       </group>
     </body>

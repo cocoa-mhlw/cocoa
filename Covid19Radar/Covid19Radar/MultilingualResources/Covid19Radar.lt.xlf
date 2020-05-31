@@ -287,12 +287,10 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jeigu jums buvo diagnozuota teigiama diagnozė</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Programos bendrinimas</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kiti vartotojai reguliariai gauna anoniminių teigiamų iD sąrašą. Po įsigijimo išmaniajame telefone įrašytas kontakto įrašas bus suderintas. Jei rungtynių rezultatas yra sunkus kontaktas, mes informuosime jūsų išmanųjį telefoną ir informuosime jus apie būtinus veiksmus, su kuriais norėtumėte bendradarbiauti.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sąlytis su testatojais, kurių tyrimo rezultatai teigiami per pastarąsias 14 dienų</target>
         </trans-unit>
       </group>
     </body>
