@@ -320,4 +320,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Om du är positiv med den nya Corona, vänligen samarbeta med den positiva registreringen för att skydda människor omkring dig.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Denna ansökan är så effektiv att många människor installerar det, så vänligen dela programmet med människor omkring dig.</value>
+  </data>
 </root>

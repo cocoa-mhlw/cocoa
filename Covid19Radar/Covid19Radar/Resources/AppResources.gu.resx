@@ -320,4 +320,7 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>જો તમે નવા કોરોના સાથે હકારાત્મક હો, તો કૃપા કરીને તમારી આસપાસના લોકોની સુરક્ષા માટે હકારાત્મક નોંધણીમાં સહકાર આપો.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>આ એપ્લિકેશન એટલી અસરકારક છે કે ઘણા લોકો તેને ઇન્સ્ટોલ કરે છે, તેથી કૃપા કરીને તમારી આસપાસના લોકો સાથે એપ્લિકેશન ને શેર કરો.</value>
+  </data>
 </root>

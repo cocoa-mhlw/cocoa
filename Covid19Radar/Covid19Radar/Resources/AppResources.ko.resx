@@ -320,4 +320,7 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>새로운 코로나에 긍정적 인 경우, 당신의 주위에 사람들을 보호하기 위해 긍정적 인 등록과 협력하시기 바랍니다.</value>
   </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>이 응용 프로그램은 많은 사람들이 그것을 설치너무 효과적이다, 그래서 당신의 주위에 사람들과 응용 프로그램을 공유하시기 바랍니다.</value>
+  </data>
 </root>

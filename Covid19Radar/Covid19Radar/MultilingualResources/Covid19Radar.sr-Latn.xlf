@@ -408,6 +408,10 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ako ste pozitivni sa novom Corona, molimo vas da sarađujete sa pozitivnom registracijom kako biste zaštitili ljude oko sebe.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ova aplikacija je toliko efikasna da ga mnogi ljudi instaliraju, tako da možete da podelite aplikaciju sa ljudima oko vas.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

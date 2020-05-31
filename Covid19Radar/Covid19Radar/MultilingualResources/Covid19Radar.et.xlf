@@ -408,6 +408,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kui sa oled uue Corona suhtes positiivne, siis palun tee positiivse registreerimisega koostööd, et kaitsta inimesi enda ümber.</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">See rakendus on nii tõhus, et paljud inimesed seda installida, nii et palun jagage taotluse inimestega ümber.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
