@@ -29,13 +29,11 @@ namespace Covid19Radar.Api.Services
     {
         const string UrlAndroid = "https://www.googleapis.com/androidcheck/v1/attestations/verify?key=";
         private readonly HttpClient ClientAndroid;
-        private readonly string AndroidBearerToken;
 
         public DeviceValidationAndroidService(
             IConfiguration config,
             IHttpClientFactory client)
         {
-            AndroidBearerToken = config.AndroidBearerToken();
             ClientAndroid = client.CreateClient();
         }
 
