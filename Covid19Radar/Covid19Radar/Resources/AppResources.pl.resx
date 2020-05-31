@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakt z innym użytkownikiem aplikacji przez łącznie dłużej niż 30 minut, w promieniu bliższym niż 2 m średnio jest rejestrowany jako "Bliski kontakt".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Po zweryfikowaniu numeru telefonu należy ręcznie zmienić swój status na "Pozytywny". Pozytywny" Przepływ pracy , Teraz koordynacja z podmiotami powiązanymi.</value>
@@ -311,5 +311,9 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Po uruchomieniu aplikacji wygeneruje i zapisze anonimowy identyfikator na każdym smartfonie. Ta aplikacja nie uzyskuje żadnych informacji związanych z prywatnością, takich jak numer telefonu i informacje o lokalizacji.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Gdy aplikacja jest uruchomiona, smartfon będzie nagrywał anonimowe identyfikatory siebie przez ostatnie dwa tygodnie. Rekordy starsze niż 2 tygodnie zostaną usunięte, a każdy anonimowy identyfikator będzie okresowo zmieniany w celu ochrony prywatności.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

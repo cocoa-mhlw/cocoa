@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kenalan dengan pengguna aplikasi lain selama lebih dari 30 min secara keseluruhan, dalam radius lebih dekat dari 2m rata-rata dicatat sebagai "Kontak Rapat".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Tukar status anda secara manual menjadi "Positif" setelah mengesahkan nombor telefon anda. Aliran Kerja "Positif", Sekarang koordinasi dengan pihak berkaitan.</value>
@@ -311,5 +311,9 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Apabila anda menjalankan aplikasi, ia akan menjana dan menyimpan ID tanpa nama pada setiap telefon pintar. Permohonan ini tidak mendapat sebarang maklumat yang berkaitan dengan privasi seperti nombor telefon dan maklumat lokasi.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Walaupun permohonan itu berjalan, telefon pintar setiap satu lagi akan merekodkan ID tanpa nama setiap satu lagi untuk dua minggu yang lalu. Rekod yang lebih lama daripada 2 minggu akan dihapuskan dan setiap ID tanpa nama akan ditukar secara berkala untuk melindungi privasi.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

@@ -28,7 +28,7 @@
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep21.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep2Description1}" />
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep22.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="アプリの実行中、お互いのスマートフォンでは、過去2週間の互いの匿名IDの記録が行われます。2週間を超えた記録は削除され、お互いの匿名IDはプライバシー保護の為に周期的に変わります。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.DescriptionPageTextStep2Description2}" />
             </StackLayout>
             <Grid Grid.Row="2">
                 <ce:GradientButton

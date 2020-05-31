@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Контакт с другим пользователем приложения в общей сложности более 30 минут, в радиусе ближе, чем 2 м в среднем, регистрируется как "Близкий контакт".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Пожалуйста, вручную измените свой статус на "Позитивный" после проверки номера телефона". Положительный" Рабочий процесс, Теперь координация с связанными сторонами.</value>
@@ -311,5 +311,9 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>При запуске приложения, он будет генерировать и хранить анонимный ID на каждом смартфоне. Это приложение не получает никакой информации, связанной с конфиденциальностью, такой как номер телефона и информация о местоположении.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Пока приложение работает, смартфон друг друга будет записывать анонимные идентификации друг друга в течение последних двух недель. Записи старше 2 недель будут удалены, и каждый анонимный идентификатор будет периодически меняться для защиты конфиденциальности.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>
