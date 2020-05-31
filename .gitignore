@@ -378,3 +378,6 @@ local.settings.json
 
 # Tools config file
 /Tools/UpdateUserStatusTool/UpdateUserStatusTool/App.config
+
+# Direct Reference Project (debug/check)
+xamarin.exposurenotification/
