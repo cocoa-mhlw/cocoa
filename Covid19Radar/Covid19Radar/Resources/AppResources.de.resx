@@ -229,7 +229,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Wenn Sie eine positive Diagnose erhalten haben</value>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>App teilen</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">

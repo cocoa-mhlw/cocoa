@@ -229,7 +229,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Kui te saite positiivse diagnoosi</value>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Rakenduse jagamine</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">

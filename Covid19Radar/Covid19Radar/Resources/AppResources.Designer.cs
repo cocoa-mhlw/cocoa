@@ -387,9 +387,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Share the App に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string HomePageSubtitle2 {
+        internal static string HomePageHeader3Title {
             get {
-                return ResourceManager.GetString("HomePageSubtitle2", resourceCulture);
+                return ResourceManager.GetString("HomePageHeader3Title", resourceCulture);
             }
         }
         
