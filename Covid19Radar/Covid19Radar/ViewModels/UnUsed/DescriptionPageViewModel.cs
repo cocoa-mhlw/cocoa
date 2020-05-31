@@ -32,7 +32,7 @@ namespace Covid19Radar.ViewModels
                     Image = "descriptionStep11.png",
                     Image2 = "descriptionStep12.png",
                     Description = Resources.AppResources.DescriptionPageTextStep1Description1,
-                    Description2 = Resources.AppResources.DescriptionPageTextStep1Description12,
+                    Description2 = Resources.AppResources.DescriptionPageTextStep1Description2,
                     StepNumber = 1
                 },
                 new StepModel
@@ -41,14 +41,14 @@ namespace Covid19Radar.ViewModels
                     Image = "descriptionStep21.png",
                     Image2 = "descriptionStep22.png",
                     Description = Resources.AppResources.DescriptionPageTextStep2Description1,
-                    Description2 = Resources.AppResources.DescriptionPageTextStep2Description12,
+                    Description2 = Resources.AppResources.DescriptionPageTextStep2Description2,
                     StepNumber = 2
                 },
                 new StepModel
                 {
                     Title = Resources.AppResources.DescriptionPageTitleTextStep3,
                     Image = "descriptionStep3.png",
-                    Description = Resources.AppResources.DescriptionPageTextStep3Description,
+                    Description = Resources.AppResources.DescriptionPageTextStep3Description1,
                     StepNumber = 3
                 },
                 new StepModel
