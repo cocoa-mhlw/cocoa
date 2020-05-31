@@ -226,7 +226,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Törlés folyamatban</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ha pozitív diagnózist kapott</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

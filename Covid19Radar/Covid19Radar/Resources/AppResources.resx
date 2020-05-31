@@ -349,7 +349,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Contact with positive testers in the last 14 days</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>If you received a positive diagnosis</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

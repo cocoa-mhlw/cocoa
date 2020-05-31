@@ -284,7 +284,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Verið er að fella af skrá</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ef þú fékkst jákvæða greiningu</target>
         </trans-unit>
