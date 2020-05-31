@@ -228,11 +228,9 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Má fuair tú diagnóis dhearfach</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Comhroinn an Feidhmchlár</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Comhroinn</value>
@@ -315,5 +313,8 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Faigheann úsáideoirí eile liosta de na hAithenais anaithnid de na cinn dhearfacha go rialta. Tar éis na héadála, déanfar an taifead teagmhála a thaifeadadh ar an bhfón cliste a mheaitseáil. Más teagmháil throm é toradh an chluiche, cuirfimid in iúl do do ghuthán cliste agus cuirfimid in iúl duit faoi na gníomhartha riachtanacha ar mhaith leat dúinn comhoibriú leo.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Teagmháil le tástálaithe dearfacha le 14 lá anuas</value>
   </data>
 </root>

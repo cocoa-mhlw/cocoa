@@ -228,11 +228,9 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Jos sait positiivisen diagnoosin</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Sovelluksen jakaminen</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Jaa</value>
@@ -315,5 +313,8 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Muut käyttäjät saavat säännöllisesti luettelon positiivisista anonyymeistä tunnuksista. Hankinnan jälkeen älypuhelimeen tallennettu yhteyshenkilötietue täsmää. Jos ottelun tulos on raskas kontakti, ilmoitamme sinulle älypuhelimestasi ja ilmoitamme sinulle tarvittavista toimista, joiden kanssa haluat meidän yhteistyötä.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kosketus positiivisiin testaajiin viimeisten 14 päivän aikana</value>
   </data>
 </root>

@@ -228,11 +228,9 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Pokud jste obdržel(a) pozitivní diagnózu</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Sdílení aplikace</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Sdílet</value>
@@ -315,5 +313,8 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Ostatní uživatelé pravidelně získají seznam anonymních IDENTIÍ pozitivních. Po pořízení bude záznam kontaktu zaznamenaný na smartphonu spárován. Pokud je výsledkem zápasu těžký kontakt, upozorníme váš smartphone a informujeme vás o nezbytných akcích, se kterými byste chtěli, abychom spolupracovali.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt s pozitivními testery za posledních 14 dnů</value>
   </data>
 </root>

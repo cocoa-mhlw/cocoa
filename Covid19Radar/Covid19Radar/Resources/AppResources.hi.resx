@@ -228,11 +228,9 @@
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>यदि आपको सकारात्मक निदान मिला</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>ऐप साझा करें</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>साझा करें</value>
@@ -315,5 +313,8 @@
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>अन्य उपयोगकर्ताओं को नियमित रूप से सकारात्मक लोगों की गुमनाम आईडीएस की सूची मिलती है। अधिग्रहण के बाद स्मार्टफोन पर दर्ज कॉन्टैक्ट रिकॉर्ड का मिलान किया जाएगा। यदि मैच का परिणाम भारी संपर्क है, तो हम आपके स्मार्टफोन को सूचित करेंगे और आपको आवश्यक कार्यों के बारे में सूचित करेंगे जिन्हें आप चाहते हैं कि हम सहयोग करें।</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>पिछले 14 दिनों में सकारात्मक परीक्षकों के साथ संपर्क करें</value>
   </data>
 </root>

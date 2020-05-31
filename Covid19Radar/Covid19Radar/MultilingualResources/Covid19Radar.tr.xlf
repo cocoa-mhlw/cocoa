@@ -284,12 +284,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Eğer pozitif tanı aldıysanız</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Uygulamayı Paylaşın</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -398,6 +396,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Diğer kullanıcılar düzenli olarak olumlu olanların anonim kimliklerinin bir listesini alırsınız. Satın alındıktan sonra akıllı telefona kaydedilen iletişim kaydı eşleşecektir. Maçın sonucu yoğun bir temas sayılsa, akıllı telefonunuzu bilgilendirecek ve işbirliği yapmamızı istediğiniz gerekli eylemleri size bildireceğiz.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Son 14 gün içinde pozitif test ile temas</target>
         </trans-unit>
       </group>
     </body>

@@ -287,12 +287,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">如果您收到陽性診斷</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">分享應用程式</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">其他使用者定期獲得正數的匿名 ID 清單。收購後,智慧手機上記錄的接觸記錄將匹配。如果比賽結果是一個沉重的接觸,我們將通知您的智能手機,並通知您必要的行動,您希望我們合作。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">在過去 14 天內與陽性測試人員聯繫</target>
         </trans-unit>
       </group>
     </body>

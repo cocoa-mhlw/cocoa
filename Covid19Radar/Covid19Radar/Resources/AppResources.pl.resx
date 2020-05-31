@@ -228,11 +228,9 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Jeśli pacjent otrzymał pozytywną diagnozę</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Udostępnij aplikację</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Udostępnij</value>
@@ -315,5 +313,8 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Inni użytkownicy regularnie otrzymują listę anonimowych identyfikatorów pozytywnych. Po przejęciu rekord kontaktu zapisany na smartfonie zostanie dopasowany. Jeśli wynik meczu jest ciężki kontakt, powiadomimy Twój smartfon i poinformujemy Cię o niezbędnych działaniach, z którymi chcesz, abyśmy współpracowali.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt z pozytywnymi testerami w ciągu ostatnich 14 dni</value>
   </data>
 </root>

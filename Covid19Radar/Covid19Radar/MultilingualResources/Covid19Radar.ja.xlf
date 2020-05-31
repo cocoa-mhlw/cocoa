@@ -285,12 +285,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="translated">陽性と診断された場合</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="translated">アプリの共有</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -399,6 +397,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="translated">他の利用者は定期的に陽性となった方の匿名ID一覧を取得しています。取得した後、スマートフォンに記録された接触記録と突合を行います。突合の結果、濃厚接触に該当する場合は、あなたのスマートフォンにお知らせします、ご協力いただきたい必要な行動についてご案内します。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="translated">過去14日間の陽性判定者との接触</target>
         </trans-unit>
       </group>
     </body>

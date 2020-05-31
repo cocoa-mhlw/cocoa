@@ -287,12 +287,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ایپ کا اشتراک کریں</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">دوسرے صارفین کو باقاعدگی سے مثبت لوگوں کی گمنام شناخت کی ایک فہرست حاصل. حصول کے بعد ، اسمارٹ فون پر ریکارڈ کردہ رابطہ ریکارڈ مل جائے گا. میچ کے نتیجے میں ایک بھاری رابطہ ہے تو, ہم آپ کے اسمارٹ فون کو مطلع کریں گے اور آپ کے ساتھ تعاون کرنے کے لئے چاہتے ہیں کہ ضروری اعمال کے آپ کو مطلع کرے گا.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">آخری 14 دنوں میں مثبت ٹیسٹرز کے ساتھ رابطہ کریں</target>
         </trans-unit>
       </group>
     </body>

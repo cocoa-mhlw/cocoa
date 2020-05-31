@@ -228,11 +228,9 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Ef þú fékkst jákvæða greiningu</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Deildu forritinu</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Deila</value>
@@ -315,5 +313,8 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Aðrir notendur fá reglulega lista yfir nafnlaus auðkenni jákvæðra sjálfur. Eftir kaupin verður tengiliðafærslu sem skráð er á snjallsíma jafnað. Ef afleiðing af passa er þungur snerting, munum við tilkynna snjallsímann þinn og upplýsa þig um nauðsynlegar aðgerðir sem þú vilt að við vinnum með.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Samband við jákvæða prófunartæki á síðustu 14 dögum</value>
   </data>
 </root>
