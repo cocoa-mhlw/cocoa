@@ -6,8 +6,6 @@ namespace Covid19Radar.Api
     {
         public static string ExportKeyUrl(this IConfiguration config) => config["ExportKeyUrl"];
         public static string TekExportBlobStorageContainerPrefix(this IConfiguration config) => config["TekExportBlobStorageContainerPrefix"];
-        public static string AndroidBearerToken(this IConfiguration config) => config["AndroidBearerToken"];
-        public static string AppleBearerToken(this IConfiguration config) => config["AppleBearerToken"];
         public static string[] SupportRegions(this IConfiguration config) => config["SupportRegions"].Split(',');
         public static string VerificationKeyId(this IConfiguration config) => config["VerificationKeyId"];
         public static string VerificationKeyVersion(this IConfiguration config) => config["VerificationKeyVersion"];
