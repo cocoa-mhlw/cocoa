@@ -27,13 +27,9 @@
     <value>Ní gá faisnéis phearsanta a ionchur. Táimid ag baint úsáide as ID uathúil, leithdháilte ar tú nuair a shuiteáil app.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Taifeadtar teagmháil le húsáideoir feidhmchláir eile ar feadh níos mó ná 30 nóiméad san iomlán, laistigh de gha níos gaire ná 2m ar an meán mar "Dún Teagmháil".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Athraigh do stádas de láimh go "Dearfach" tar éis d'uimhir theileafóin a fhíorú." ['Dearfach" Sreabhadh Oibre , Anois comhordú le páirtithe gaolmhara.\n']</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Ní mór Bluetooth a iompú ar aghaidh chun dlúth-theagmháil a thaifeadadh. Téigh go dtí an chéad leathanach eile chun é a chasadh air.</value>
@@ -230,13 +226,11 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Ag scriosadh</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Má fuair tú diagnóis dhearfach</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Comhroinn an Feidhmchlár</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Comhroinn</value>
@@ -311,5 +305,22 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Nuair a ritheann tú an t-iarratas, ginfidh sé agus stórálfaidh sé aitheantas gan ainm ar gach fón cliste. Ní fhaigheann an t-iarratas seo aon fhaisnéis a bhaineann le príobháideachas ar nós uimhir theileafóin agus faisnéis suímh.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Cé go bhfuil an t-iarratas ag rith, déanfaidh fón póca a chéile aitheantais gan ainm a chéile a thaifeadadh le dhá sheachtain anuas. Scriosfar taifid níos sine ná 2 sheachtain agus athrófar gach ID gan ainm go tréimhsiúil chun príobháideacht a chosaint.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Faigheann úsáideoirí eile liosta de na hAithenais anaithnid de na cinn dhearfacha go rialta. Tar éis na héadála, déanfar an taifead teagmhála a thaifeadadh ar an bhfón cliste a mheaitseáil. Más teagmháil throm é toradh an chluiche, cuirfimid in iúl do do ghuthán cliste agus cuirfimid in iúl duit faoi na gníomhartha riachtanacha ar mhaith leat dúinn comhoibriú leo.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Teagmháil le tástálaithe dearfacha le 14 lá anuas</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Má tá tú dearfach leis an gCorona nua, le do thoil comhoibriú leis an gclárú dearfach chun na daoine timpeall ort a chosaint.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Tá an t-iarratas seo chomh héifeachtach sin go suiteálann go leor daoine é, mar sin roinn an t-iarratas le daoine timpeall ort.</value>
   </data>
 </root>

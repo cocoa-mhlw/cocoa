@@ -27,13 +27,9 @@
     <value>M ' hemmx bżonn li tiddaħħal informazzjoni personali. Qed nużaw ID unika, allokata lilek meta tkun qed tinstalla applikazzjoni.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kuntatt ma ' utent ieħor tal-applikazzjoni għal aktar minn 30 min b ' kollox, f ' raġġ eqreb minn 2m bħala medja jiġi rreġistrat bħala "kuntatt mill-qrib".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Jekk jogħġbok Ibdel l-istatus tiegħek manwalment għal "pożittiv" wara li tivverifika n-numru tat-telefon tiegħek. " Pożittiva tal-"fluss tax-xog Ħol, issa koordinazzjoni ma ' partijiet relatati.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Il-Bluetooth jeħtieġ li jinxtegħel biex jirreġistra kuntatt mill-qrib. Jekk jogħġbok Mur fil-Pa ġna li jmiss biex tixegħlu.</value>
@@ -230,13 +226,11 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Tħassir</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Jekk irċevejt dijanjożi pożittiva</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ixxerja l-App</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Ixxerja</value>
@@ -311,5 +305,22 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Meta tmexxi l-applikazzjoni, se tiġġenera u taħżen ID anonima fuq kull smartphone. Din l-applikazzjoni ma takkwista l-ebda informazzjoni relatata mal-privatezza bħal numru tat-telefon u informazzjoni dwar il-post.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Filwaqt li l-applikazzjoni qed taħdem, smartphone ta ' xulxin se jirreġistra IDs anonimi ta ' xulxin għall-aħħar ġimgħatejn. Rekords ta ' aktar minn ġimagħtejn se jitħassru u kull ID anonima tinbidel perjodikament biex tiġi protetta l-privatezza.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Utenti oħra regolarment jiksbu lista ta ' IDs anonimi ta ' dawk pożittivi. Wara l-akkwi żizzjoni, ir-rekord ta ' kuntatt irreġistrat fuq il-smartphone se jkun imqabbel. Jekk ir-ri żultat tal-log ħba huwa kuntatt tqil, aħna se tinnotifika smartphone tiegħek u ninfurmak dwar l-azzjonijiet meħtieġa li inti tixtieq minna biex jikkooperaw ma '.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kuntatt ma ' testers pożittivi f ' dawn l-a ħħar 14-il jum</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Jekk inti pożittiv bil-corona l-ġdida, jekk jogħġbok tikkoopera mar-Re ġistrazzjoni pożittiva biex tipproteġi n-nies ta ' madwarek.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Din l-applikazzjoni hija tant effettiva li ħafna nies tinstallahom, għalhekk jekk jogħġbok jaqsmu l-applikazzjoni ma ' nies ta ' madwarek.</value>
   </data>
 </root>

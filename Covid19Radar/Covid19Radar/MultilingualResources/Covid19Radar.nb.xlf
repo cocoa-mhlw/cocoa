@@ -25,15 +25,10 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Du trenger ikke å legge inn personlig informasjon. Vi bruker unik ID, tildelt deg når du installerer en app.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">En kontakt med en annen appbruker i mer enn 30 minutter totalt, innenfor en radius nærmere enn 2 m i gjennomsnitt registreres som "Nærkontakt".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vennligst endre statusen manuelt til "Positiv" etter at du har bekreftet telefonnummeret ditt." Positiv" Arbeidsflyt , Nå koordinering med nærstående parter.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
@@ -289,15 +284,13 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Sletter</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvis du fikk en positiv diagnose</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Del appen</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -396,6 +389,28 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Når du kjører programmet, vil det generere og lagre en anonym ID på hver smarttelefon. Dette programmet innhenter ikke informasjon knyttet til personvern, for eksempel telefonnummer og stedsinformasjon.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mens programmet kjører, vil hverandres smarttelefon ta opp hverandres anonyme ID-er de siste to ukene. Poster eldre enn 2 uker vil bli slettet, og hver anonym ID vil bli endret med jevne mellomrom for å beskytte personvernet.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Andre brukere får regelmessig en liste over anonyme ID-er med positive. Etter oppkjøpet vil kontaktoppføringen som er registrert på smarttelefonen, bli matchet. Hvis resultatet av kampen er en tung kontakt, vil vi varsle smarttelefonen din og informere deg om de nødvendige handlingene du ønsker at vi skal samarbeide med.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt med positive testere de siste 14 dagene</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvis du er positiv med den nye Corona, kan du samarbeide med den positive registreringen for å beskytte menneskene rundt deg.</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dette programmet er så effektivt at mange installerer det, så vennligst del programmet med folk rundt deg.</target>
         </trans-unit>
       </group>
     </body>

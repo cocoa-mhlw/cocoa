@@ -25,15 +25,10 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ni potrebe za vnos osebnih podatkov. Uporabljamo Enolični ID, dodeljen vam pri nameščanju aplikacije.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Stik z drugim uporabnikom aplikacije, ki je v celoti daljši od 30 minut, je v radiju bližje kot 2m v povprečju zabeležen kot "tesnem stiku".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prosimo, da ročno spremenite svoj status na "pozitivni" po preverjanju svojo telefonsko številko. " Pozitivni "potek dela, zdaj usklajevanje s povezanimi stranmi.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
@@ -289,15 +284,13 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Brisanje</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Če ste prejeli pozitivno diagnozo</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Skupna raba aplikacije</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -396,6 +389,28 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ko zaženete aplikacijo, bo ustvarila in shranjala anonimni ID na vsakem pametnem telefonu. Ta aplikacija ne pridobi nobenih informacij, povezanih z zasebnostjo, kot so telefonska številka in informacije o lokaciji.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Medtem ko se aplikacija izvaja, drug drugemu pametni telefon bo zabeležil anonimne ID-je v zadnjih dveh tednih. Zapisi, starejši od 2 tednov, bodo izbrisani, vsak anonimni ID pa se bo redno spreminjal za zaščito zasebnosti.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Drugi uporabniki redno dobijo seznam anonimnih ID-jev pozitivnih. Po pridobitvi se bo zapis stika, zabeležen na pametnem telefonu, ujemala. Če je rezultat tekme težak stik, bomo o tem obvestili pametni telefon in vas obvestili o potrebnih dejanjih, s katerimi bi radi sodelovali.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt s pozitivnimi preskuševalci v zadnjih 14 dneh</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Če ste pozitivni z novim Corona, prosimo, sodelujte s pozitivno registracijo za zaščito ljudi okoli sebe.</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ta aplikacija je tako učinkovita, da veliko ljudi ga namestite, zato vas prosimo, delite aplikacijo z ljudmi okoli vas.</target>
         </trans-unit>
       </group>
     </body>

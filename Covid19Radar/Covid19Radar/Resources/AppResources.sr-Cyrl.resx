@@ -27,13 +27,9 @@
     <value>Нема потребе за уносом личних информација. Користимо јединствени ИД који вам је додељен приликом инсталирања апликације.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Контакт са другим корисником апликације за дужи од 30 минута у збиру, у радијусу који је већи од 2 метра у просеку, записује се као "близак контакт".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Ручно промените свој статус у "позитиван" након што проверите број телефона. " Позитиван "ток посла, сада координација са сродним странкама.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Блуетоотх мора бити укључен да би се забележио затвори контакт. Идите на следећу страницу да бисте је укључили.</value>
@@ -230,13 +226,11 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Брисање</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ако сте добили позитивну дијагнозу</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Делите апликацију</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Дели</value>
@@ -311,5 +305,22 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Када покренете апликацију, она ће генерисати и ускладиштити анонимни ИД на сваком паметном телефону. Ова апликација не стиче никакве информације везане за приватност, као што су број телефона и информације о локацији.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Док је апликација покренута, смартпхоне уређај других телефона ће се у протекле две недеље снимати за анонимне ИД-ове. Записи старији од 2 недеље ће бити избрисани, а сваки анонимни ИД ће се повремено променити како би се заштитила приватност.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Други корисници редовно добијају листу анонимних идентификација позитивних. Након куповине, запис контакта снимљен на паметном телефону биће подударно. Ако је резултат утакмице тежак контакт, обавестићемо ваш паметни телефон и информисати вас о неопходним радњама са којима бисте желели да сарађујемо.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Контакт са позитивним тестерима у последњих 14 дана</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ако сте позитивни са новом Цорона, молимо вас да сарађујете са позитивном регистрацијом како бисте заштитили људе око себе.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Ова апликација је толико ефикасна да га многи људи инсталирају, тако да можете да поделите апликацију са људима око вас.</value>
   </data>
 </root>
