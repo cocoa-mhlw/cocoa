@@ -29,13 +29,11 @@ namespace Covid19Radar.Api.Services
     {
         const string UrlApple = "https://api.development.devicecheck.apple.com/v1/validate_device_token";
         private readonly HttpClient ClientApple;
-        private readonly string AppleBearerToken;
 
         public DeviceValidationAppleService(
             IConfiguration config,
             IHttpClientFactory client)
         {
-            AppleBearerToken = config.AppleBearerToken();
             ClientApple = client.CreateClient();
         }
 
