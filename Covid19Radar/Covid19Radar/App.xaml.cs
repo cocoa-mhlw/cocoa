@@ -157,11 +157,13 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
 
+            containerRegistry.RegisterForNavigation<HelpPage1>();
             containerRegistry.RegisterForNavigation<HelpPage2>();
             containerRegistry.RegisterForNavigation<HelpPage3>();
             containerRegistry.RegisterForNavigation<HelpPage4>();
             containerRegistry.RegisterForNavigation<HelpPage5>();
 
+            // Services
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
