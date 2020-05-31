@@ -34,7 +34,7 @@ namespace Covid19Radar.Api.Models
 			public string KeyData { get; set; }
 			[JsonProperty("rollingStartNumber")]
 			public uint RollingStartNumber { get; set; }
-			[JsonProperty("rollingPeriod ")]
+			[JsonProperty("rollingPeriod")]
 			public uint RollingPeriod { get; set; }
 			[JsonProperty("transmissionRisk")]
 			public int TransmissionRisk { get; set; }
