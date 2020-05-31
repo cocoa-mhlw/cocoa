@@ -404,6 +404,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kosketus positiivisiin testaajiin viimeisten 14 päivän aikana</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jos olet positiivinen uuden Corona, tee yhteistyötä positiivinen rekisteröinti suojella ihmisiä ympärilläsi.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

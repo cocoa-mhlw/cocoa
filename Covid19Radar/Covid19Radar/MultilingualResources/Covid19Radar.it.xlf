@@ -404,6 +404,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Contatto con tester positivi negli ultimi 14 giorni</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Se sei positivo con la nuova Corona, si prega di collaborare con la registrazione positiva per proteggere le persone intorno a te.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

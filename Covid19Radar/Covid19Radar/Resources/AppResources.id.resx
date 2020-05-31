@@ -317,4 +317,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontak dengan penguji positif dalam 14 hari terakhir</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Jika Anda positif dengan Corona baru, silakan bekerja sama dengan pendaftaran positif untuk melindungi orang di sekitar Anda.</value>
+  </data>
 </root>

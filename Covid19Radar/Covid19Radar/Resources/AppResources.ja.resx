@@ -317,4 +317,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>過去14日間の陽性判定者との接触</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>もし、新型コロナで陽性と診断された場合、あなたの周りの人を守るためにも、陽性登録へのご協力をお願いします。</value>
+  </data>
 </root>

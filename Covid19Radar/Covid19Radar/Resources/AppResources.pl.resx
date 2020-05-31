@@ -317,4 +317,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt z pozytywnymi testerami w ciągu ostatnich 14 dni</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Jeśli jesteś pozytywnie nastawiony do nowej Korony, współpracuj z pozytywną rejestracją, aby chronić ludzi wokół ciebie.</value>
+  </data>
 </root>

@@ -402,6 +402,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Contact with positive testers in the last 14 days</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Contact cu testeri pozitivi în ultimele 14 zile</target>
         </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dacă sunteți pozitiv cu noul Corona, vă rugăm să coopereze cu înregistrarea pozitivă pentru a proteja oamenii din jurul tău.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -317,4 +317,7 @@
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>יצירת קשר עם בודקי חיוביות ב -14 הימים האחרונים</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>אם אתה חיובי עם קורונה חדש, בבקשה לשתף פעולה עם הרישום החיובי כדי להגן על האנשים סביבך.</value>
+  </data>
 </root>
