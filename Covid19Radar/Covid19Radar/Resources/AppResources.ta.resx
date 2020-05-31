@@ -226,7 +226,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>நீக்குகிறது</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

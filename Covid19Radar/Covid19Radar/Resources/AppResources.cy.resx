@@ -226,7 +226,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Wrthi'n dileu</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Pe byddech yn cael diagnosis cadarnhaol</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

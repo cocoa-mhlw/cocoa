@@ -226,7 +226,7 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>正在删除</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>如果您收到阳性诊断</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

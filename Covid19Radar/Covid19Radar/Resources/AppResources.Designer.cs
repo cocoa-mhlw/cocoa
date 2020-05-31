@@ -378,9 +378,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   If you received a positive diagnosis に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string HomePageSubtitle1 {
+        internal static string HomePageHeader2Title {
             get {
-                return ResourceManager.GetString("HomePageSubtitle1", resourceCulture);
+                return ResourceManager.GetString("HomePageHeader2Title", resourceCulture);
             }
         }
         
