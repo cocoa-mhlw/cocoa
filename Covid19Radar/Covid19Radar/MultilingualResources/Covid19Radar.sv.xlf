@@ -293,7 +293,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Om du fick en positiv diagnos</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dela appen</target>
         </trans-unit>
