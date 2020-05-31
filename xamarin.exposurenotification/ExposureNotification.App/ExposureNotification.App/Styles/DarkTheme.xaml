@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="ExposureNotification.App.Styles.DarkTheme">
+    
+    <Color x:Key="PrimaryColor">#0A84FF</Color>
+    <Color x:Key="AccentColor">#FFD60A</Color>
+    <Color x:Key="BackgroundColor">#1E2222</Color>
+    <Color x:Key="TransparentWindowBackgroundColor">#981E2222</Color>
+    <Color x:Key="LoadingBackgroundColor">#80000000</Color>
+    <Color x:Key="LoadingTextColor">White</Color>
+
+    <Color x:Key="SystemBlue">#0A84FF</Color>
+    <Color x:Key="SystemGreen">#30D158</Color>
+    <Color x:Key="SystemIndigo">#5E5CE6</Color>
+    <Color x:Key="SystemOrange">#FF9F0A</Color>
+    <Color x:Key="SystemPink">#FF375F</Color>
+    <Color x:Key="SystemPurple">#BF5AF2</Color>
+    <Color x:Key="SystemRed">#FF453A</Color>
+    <Color x:Key="SystemTeal">#64D2FF</Color>
+    <Color x:Key="SystemYellow">#FFD60A</Color>
+
+    <Color x:Key="SystemGray">#8E8E93</Color>
+    <Color x:Key="SystemGray2">#636366</Color>
+    <Color x:Key="SystemGray3">#484848</Color>
+    <Color x:Key="SystemGray4">#3A3A3C</Color>
+    <Color x:Key="SystemGray5">#2C2C2E</Color>
+    <Color x:Key="SystemGray6">#1C1C1E</Color>
+
+    <!--Shell-->
+    <Color x:Key="ShellTabBarBackgroundColor">#1E2222</Color>
+
+    <!--Seperator-->
+    <Color x:Key="SeparatorColor">#757575</Color>
+    <Color x:Key="OpaqueSeparatorColor">#757575</Color>
+
+    <!--Frame-->
+    <Color x:Key="FrameBackgroundColor">#1E2222</Color>
+    <Color x:Key="FrameBorderColor">#5A5C60</Color>
+    
+    <!--Entry-->
+    <Color x:Key="EntryBackgroundColor">#5A5C60</Color>
+
+    <!--RefreshView-->
+    <Color x:Key="RefreshViewBackgroundColor">Black</Color>
+
+
+</ResourceDictionary>

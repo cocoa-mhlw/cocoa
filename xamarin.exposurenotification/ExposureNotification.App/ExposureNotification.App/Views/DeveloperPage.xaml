@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ExposureNotification.App.Views.DeveloperPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:ExposureNotification.App.ViewModels"
+    Title="Developer"
+    x:DataType="viewmodel:DeveloperViewModel"
+    BackgroundColor="{DynamicResource BackgroundColor}"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <viewmodel:DeveloperViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Style="{DynamicResource Container}">
+                <Frame Style="{DynamicResource CardFrame}">
+                    <StackLayout Spacing="20">
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                            <Label Style="{DynamicResource SmallLabelStyle}" Text="Native Implementation: " />
+                            <Label
+                                FontAttributes="Bold"
+                                Style="{DynamicResource SmallLabelStyle}"
+                                Text="{Binding NativeImplementationName}" />
+                        </StackLayout>
+
+                        <Button
+                            Command="{Binding ResetWelcome}"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Reset Welcome State" />
+
+                        <Button
+                            Command="{Binding ResetEnabled}"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Reset Last Enabled State" />
+
+                    </StackLayout>
+                </Frame>
+
+
+                <Frame Style="{DynamicResource CardFrame}">
+                    <StackLayout Spacing="20">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{DynamicResource SmallLabelStyle}"
+                            Text="Notify Others" />
+
+                        <Button
+                            Command="{Binding ResetSelfDiagnosis}"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Reset Self Diagnosis" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame Style="{DynamicResource CardFrame}">
+                    <StackLayout Spacing="20">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{DynamicResource SmallLabelStyle}"
+                            Text="Exposures" />
+                        <Button
+                            Command="{Binding ResetExposures}"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Reset Exposures" />
+                        <Button
+                            Command="{Binding AddExposures}"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Add Exposures" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame Style="{DynamicResource CardFrame}">
+                    <StackLayout Spacing="20">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Style="{DynamicResource SmallLabelStyle}"
+                            Text="Batch File Index" />
+
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                            <Label Style="{DynamicResource SmallLabelStyle}" Text="Latest Batch File Processed: " />
+                            <Label
+                                FontAttributes="Bold"
+                                Style="{DynamicResource SmallLabelStyle}"
+                                Text="{Binding CurrentBatchFileIndex}" />
+                        </StackLayout>
+
+                        <Button
+                            Command="{Binding ResetBatchFileIndex}"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Reset Batch File Index" />
+
+
+                        <Button
+                            Command="{Binding ManualTriggerKeyFetch}"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Trigger Key Fetch" />
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
