@@ -228,11 +228,9 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Wenn Sie eine positive Diagnose erhalten haben</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>App teilen</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Freigeben</value>
@@ -315,5 +313,8 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Andere Benutzer erhalten regelmäßig eine Liste anonymer IDs positiver IDs. Nach der Erfassung wird der auf dem Smartphone aufgezeichnete Kontaktdatensatz abgeglichen. Wenn das Ergebnis des Spiels ein starker Kontakt ist, werden wir Ihr Smartphone benachrichtigen und Sie über die notwendigen Maßnahmen informieren, mit denen Wir zusammenarbeiten möchten.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt mit positiven Testern in den letzten 14 Tagen</value>
   </data>
 </root>

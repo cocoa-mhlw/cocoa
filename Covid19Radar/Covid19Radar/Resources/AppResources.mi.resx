@@ -228,11 +228,9 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Mēnā i whiwhi koe i tētahi tataritanga tōrunga</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Tiria te Taupānga</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Tiri</value>
@@ -315,5 +313,8 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Ka whiwhi ētahi atu kaiwhakamahi i tētahi rārangi o ngā Tt ingoamuna o ngā mea tōrunga. I muri i te tango, ka ōrite te pūkete hoapā i hopukina ki te waea atamai. Ki te kore te hua o te ōrite, ka whakamōhio atu ki tō waea atamai me te whakamōhio atu i a koe i ngā hohenga e hiahiatia ana e hiahia ana koe ki te whakahoahoa.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Whakapā atu ki te testers tōrunga i roto i ngā rā 14 whakamutunga</value>
   </data>
 </root>

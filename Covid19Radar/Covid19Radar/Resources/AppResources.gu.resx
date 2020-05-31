@@ -228,11 +228,9 @@
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>જો તમને હકારાત્મક નિદાન થયું હોય</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>એપ્લિકેશન ને વહેંચો</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>સહિયારું કરો</value>
@@ -315,5 +313,8 @@
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>અન્ય વપરાશકર્તાઓ ને નિયમિત પણે પોઝિટિવ આઇ.ડી.ની યાદી મળે છે. અધિગ્રહણ બાદ, સ્માર્ટફોન પર રેકોર્ડ કરવામાં આવેલા કોન્ટેક્ટ રેકોર્ડને મેચ કરવામાં આવશે. જો મેચનું પરિણામ ભારે સંપર્ક હોય, તો અમે તમારા સ્માર્ટફોનને સૂચિત કરીશું અને તમને જરૂરી પગલાં વિશે જણાવીશું કે જેનો તમે સહકાર આપવા માંગો છો.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>છેલ્લા 14 દિવસમાં પોઝિટિવ ટેસ્ટર્સ સાથે સંપર્ક</value>
   </data>
 </root>

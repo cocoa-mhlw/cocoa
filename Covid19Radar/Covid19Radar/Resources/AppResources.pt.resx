@@ -228,11 +228,9 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>Se você recebeu um diagnóstico positivo</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>Compartilhar o Aplicativo</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Compartilhar</value>
@@ -315,5 +313,8 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>Outros usuários recebem regularmente uma lista de IDs anônimos de positivos. Após a aquisição, o registro de contato registrado no smartphone será igualado. Se o resultado da partida for um contato pesado, notificaremos seu smartphone e informaremos sobre as ações necessárias com as quais você gostaria que cooperássemos.</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Contato com testadores positivos nos últimos 14 dias</value>
   </data>
 </root>

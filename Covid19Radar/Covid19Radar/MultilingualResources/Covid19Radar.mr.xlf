@@ -287,12 +287,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">जर तुम्हाला सकारात्मक निदान झाले तर</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 1</note>
         </trans-unit>
         <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">अॅप शेअर करा</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home page subtitle 2</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -401,6 +399,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">इतर वापरकर्त्यांना नियमितपणे सकारात्मक माहितीच्या निनावी आयडची यादी मिळते. अधिग्रहणानंतर, स्मार्टफोनवर रेकॉर्ड केलेला संपर्क रेकॉर्ड जुळणार आहे. जर मॅचचा परिणाम जड संपर्क असेल तर आम्ही तुमच्या स्मार्टफोनला कळवू आणि तुम्हाला सहकार्य करण्यासाठी आवश्यक त्या कृतीची माहिती देऊ.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">गेल्या 14 दिवसांत सकारात्मक परीक्षकांशी संपर्क</target>
         </trans-unit>
       </group>
     </body>

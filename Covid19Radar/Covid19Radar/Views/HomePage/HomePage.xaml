@@ -39,7 +39,7 @@
     <ScrollView>
         <StackLayout Style="{StaticResource DefaultStackLayout}">
             <StackLayout Margin="0,0,0,0" Spacing="0">
-                <Label Style="{StaticResource DefaultLabelColor}" Text="過去14日間の陽性判定者との接触" />
+                    <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.HomePageHeader1Title}" />
                 <!--  TODO Maybe change touch gesture GestureRecognizers based label  -->
                 <Grid HorizontalOptions="FillAndExpand">
                     <Grid.RowDefinitions>

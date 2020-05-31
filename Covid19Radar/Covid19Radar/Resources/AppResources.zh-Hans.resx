@@ -228,11 +228,9 @@
   </data>
   <data name="HomePageSubtitle1" xml:space="preserve">
     <value>如果您收到阳性诊断</value>
-    <comment>Home page subtitle 1</comment>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
     <value>共享应用</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>共享</value>
@@ -315,5 +313,8 @@
   <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
     <value>其他用户定期获得正数的匿名 ID 列表。收购后，智能手机上记录的接触记录将匹配。如果比赛结果是一个沉重的接触，我们将通知您的智能手机，并通知您必要的行动，您希望我们合作。</value>
     <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>在过去 14 天内与阳性测试人员联系</value>
   </data>
 </root>
