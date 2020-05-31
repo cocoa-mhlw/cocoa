@@ -5,6 +5,7 @@ using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Tests.Mock;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos.Scripts;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -27,8 +28,11 @@ namespace Covid19Radar.Api.Tests.Common.DataStore
             // preparation
             var config = new Mock<IConfiguration>();
             config.Setup(_ => _["COSMOS_AUTO_GENERATE"]).Returns("true");
+            var containerScripts = new Mock<Scripts>();
             var container = new Mock<Container>();
+            container.Setup(_ => _.Scripts).Returns(containerScripts.Object);
             var containerResponse = new Mock<ContainerResponse>();
+            containerResponse.Setup(_ => _.Container).Returns(container.Object);
             var database = new Mock<Database>();
             database.Setup(_ => _.CreateContainerIfNotExistsAsync
                 (It.IsAny<ContainerProperties>(), It.IsAny<int?>(), It.IsAny<Microsoft.Azure.Cosmos.RequestOptions>(), It.IsAny<CancellationToken>()))
@@ -54,8 +58,11 @@ namespace Covid19Radar.Api.Tests.Common.DataStore
             // preparation
             var config = new Mock<IConfiguration>();
             config.Setup(_ => _["COSMOS_AUTO_GENERATE"]).Returns("true");
+            var containerScripts = new Mock<Scripts>();
             var container = new Mock<Container>();
+            container.Setup(_ => _.Scripts).Returns(containerScripts.Object);
             var containerResponse = new Mock<ContainerResponse>();
+            containerResponse.Setup(_ => _.Container).Returns(container.Object);
             var database = new Mock<Database>();
             database.Setup(_ => _.CreateContainerIfNotExistsAsync
                 (It.IsAny<ContainerProperties>(), It.IsAny<int?>(), It.IsAny<Microsoft.Azure.Cosmos.RequestOptions>(), It.IsAny<CancellationToken>()))
@@ -83,8 +90,11 @@ namespace Covid19Radar.Api.Tests.Common.DataStore
             // preparation
             var config = new Mock<IConfiguration>();
             config.Setup(_ => _["COSMOS_AUTO_GENERATE"]).Returns("true");
+            var containerScripts = new Mock<Scripts>();
             var container = new Mock<Container>();
+            container.Setup(_ => _.Scripts).Returns(containerScripts.Object);
             var containerResponse = new Mock<ContainerResponse>();
+            containerResponse.Setup(_ => _.Container).Returns(container.Object);
             var database = new Mock<Database>();
             database.Setup(_ => _.CreateContainerIfNotExistsAsync
                 (It.IsAny<ContainerProperties>(), It.IsAny<int?>(), It.IsAny<Microsoft.Azure.Cosmos.RequestOptions>(), It.IsAny<CancellationToken>()))
