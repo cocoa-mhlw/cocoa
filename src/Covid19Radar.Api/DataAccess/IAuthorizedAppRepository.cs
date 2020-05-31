@@ -8,6 +8,6 @@ namespace Covid19Radar.Api.DataAccess
 {
     public interface IAuthorizedAppRepository
     {
-        Task<AuthorizedApp> GetAsync(string platform);
+        Task<AuthorizedAppInformation> GetAsync(string platform);
     }
 }
