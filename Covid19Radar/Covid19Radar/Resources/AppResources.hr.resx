@@ -226,7 +226,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Brisanje</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ako ste primili pozitivnu dijagnozu</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

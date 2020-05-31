@@ -282,7 +282,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Törlés folyamatban</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ha pozitív diagnózist kapott</target>
         </trans-unit>

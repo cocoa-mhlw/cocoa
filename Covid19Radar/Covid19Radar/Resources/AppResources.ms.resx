@@ -226,7 +226,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Memadamkan</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Jika anda menerima diagnosis yang positif</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

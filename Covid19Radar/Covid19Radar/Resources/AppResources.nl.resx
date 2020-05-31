@@ -226,7 +226,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Verwijderen</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Als u een positieve diagnose kreeg</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

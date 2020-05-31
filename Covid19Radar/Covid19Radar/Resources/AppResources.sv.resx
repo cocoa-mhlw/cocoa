@@ -226,7 +226,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Tas bort</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Om du fick en positiv diagnos</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">
