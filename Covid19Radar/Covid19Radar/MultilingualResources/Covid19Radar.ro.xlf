@@ -282,7 +282,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">În curs de ştergere</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dacă ați primit un diagnostic pozitiv</target>
         </trans-unit>

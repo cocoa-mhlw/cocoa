@@ -226,7 +226,7 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>বিলোপ</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

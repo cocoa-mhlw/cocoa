@@ -282,7 +282,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Deleting</source>
           <target state="translated" state-qualifier="tm-suggestion">正在删除</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="translated" state-qualifier="mt-suggestion">如果您收到阳性诊断</target>
         </trans-unit>

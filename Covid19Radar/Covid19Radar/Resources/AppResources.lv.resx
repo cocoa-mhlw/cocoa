@@ -226,7 +226,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Dzēšana</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ja esat saņēmis pozitīvu diagnozi</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

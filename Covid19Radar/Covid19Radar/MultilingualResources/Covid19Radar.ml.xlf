@@ -284,7 +284,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ഇല്ലാതാക്കുന്നു</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</target>
         </trans-unit>
