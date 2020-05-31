@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>איש קשר עם משתמש יישום אחר במשך יותר מ-30 דקות בסך הכל, ברדיוס הקרוב יותר מ-2 מ' נרשם כ"איש קשר סגור".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>נא שנה באופן ידני את מצבך ל-"חיובי" לאחר שמאמת את מספר הטלפון שלך. " "זרימת עבודה חיובית", כעת תיאום עם גורמים קשורים.</value>
@@ -311,5 +311,9 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>בעת הפעלת היישום, הוא יפיק ויאחסן מזהה אנונימי בכל טלפון חכם. יישום זה אינו רוכש כל מידע הקשור לפרטיות כגון מספר טלפון ומידע מיקום.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>בעוד היישום פועל, הטלפון החכם של השני יהיה להקליט את הזהויות האנונימיות של זה בשבועיים האחרונים. רשומות שגילן עולה על 2 שבועות יימחקו וכל מזהה אנונימי ישתנה מעת לעת כדי להגן על הפרטיות.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

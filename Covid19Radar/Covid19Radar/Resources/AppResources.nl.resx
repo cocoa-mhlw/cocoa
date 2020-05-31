@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Een contact met een andere app-gebruiker langer dan 30 minuten totaal en binnen een straal van gemiddeld 2 meter, wordt geregistreerd als "Nabij Contact".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Wijzig uw status handmatig in 'Positief' nadat u uw telefoonnummer geverifieerd hebt. "Positieve" Workflow , Nu coördinatie met verwante partijen.</value>
@@ -311,5 +311,9 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Wanneer u de applicatie uitvoert, genereert en slaat deze een anonieme ID op elke smartphone. Deze applicatie verwerft geen informatie met betrekking tot privacy, zoals telefoonnummer en locatiegegevens.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Terwijl de applicatie wordt uitgevoerd, zal elkaars smartphone elkaars anonieme id's van de afgelopen twee weken opnemen. Records ouder dan 2 weken worden verwijderd en elke anonieme ID wordt periodiek gewijzigd om de privacy te beschermen.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

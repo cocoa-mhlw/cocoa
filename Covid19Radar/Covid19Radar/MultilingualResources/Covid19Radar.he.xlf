@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">איש קשר עם משתמש יישום אחר במשך יותר מ-30 דקות בסך הכל, ברדיוס הקרוב יותר מ-2 מ' נרשם כ"איש קשר סגור".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -396,6 +396,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">בעת הפעלת היישום, הוא יפיק ויאחסן מזהה אנונימי בכל טלפון חכם. יישום זה אינו רוכש כל מידע הקשור לפרטיות כגון מספר טלפון ומידע מיקום.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">בעוד היישום פועל, הטלפון החכם של השני יהיה להקליט את הזהויות האנונימיות של זה בשבועיים האחרונים. רשומות שגילן עולה על 2 שבועות יימחקו וכל מזהה אנונימי ישתנה מעת לעת כדי להגן על הפרטיות.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>

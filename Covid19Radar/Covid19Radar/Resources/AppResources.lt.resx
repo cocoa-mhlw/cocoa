@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontaktas su kitu programos naudotoju ilgiau nei 30 minučių iš viso, esant vidutiniškai didesniam nei 2 m spinduliui, įrašomas kaip "Uždaryti kontaktą".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Patvirtinę telefono numerį, rankiniu būdu pakeiskite būseną į "Teigiamas". Teigiamas" Darbo eiga , Dabar koordinavimas su susijusiomis šalimis.</value>
@@ -311,5 +311,9 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Kai paleisite programą , ji sukurs ir išsaugos anoniminį ID kiekviename išmaniajame telefone. Ši programa neįsigyja jokios informacijos, susijusios su privatumu, pvz., telefono numerio ir vietos informacijos.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Kol programa veikia, vienas kito išmanusis telefonas per pastarąsias dvi savaites įrašys vienas kito anoniminius ID. Senesni nei 2 savaičių įrašai bus panaikinti ir kiekvienas anoniminis ID bus periodiškai keičiamas siekiant apsaugoti privatumą.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

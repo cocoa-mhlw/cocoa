@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt s jiným uživatelem aplikace po dobu delší než 30 minut celkem, v okruhu blíže než 2 m v průměru je zaznamenán jako "Blízký kontakt".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -396,6 +396,11 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Při spuštění aplikace vygeneruje a uloží anonymní ID na každém smartphonu. Tato aplikace nezískává žádné informace týkající se ochrany osobních údajů, jako je telefonní číslo a informace o poloze.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zatímco aplikace běží, smartphone si navzájem zaznamená anonymní IDS za poslední dva týdny. Záznamy starší než 2 týdny budou smazány a každé anonymní ID bude pravidelně měněn, aby bylo chráněno soukromí.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>
