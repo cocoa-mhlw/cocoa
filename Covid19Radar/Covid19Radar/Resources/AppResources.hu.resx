@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Egy másik alkalmazásfelhasználóval való, összesen 30 min-nél hosszabb ideig, átlagosan 2 m-nél közelebbi sugarú körben tartott kapcsolat "Közeli kapcsolat" néven kerül rögzítésre.</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Kérjük, a telefonszám ellenőrzése után manuálisan módosítsa az állapotát "Pozitív" állásra. Pozitív" Munkafolyamat , Most koordináció a kapcsolódó felekkel.</value>
@@ -311,5 +311,9 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Amikor futtatja az alkalmazást, létrehoz és tárol egy névtelen azonosítót minden okostelefonon. Ez az alkalmazás nem szerez semmilyen információt kapcsolatos adatvédelmi, mint a telefonszám és a helyadatait.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Amíg az alkalmazás fut, egymás okostelefonja rögzíti egymás névtelen azonosítóit az elmúlt két hétben. A 2 hétnél régebbi rekordok törlődnek, és minden névtelen azonosító rendszeres időközönként módosul a személyes adatok védelme érdekében.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

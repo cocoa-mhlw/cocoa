@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakti teise rakenduse kasutajaga rohkem kui 30 min kokku, raadiuses lähemal kui 2 m keskmiselt registreeritakse "Close kontakt".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Palun muutke oma olekut käsitsi pärast telefoninumbri kontrollimist "positiivseks". " Positiivne "töövoog, nüüd koordineerimine seotud osapooltega.</value>
@@ -311,5 +311,9 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Kui käivitate rakenduse, see loob ja salvestab anonüümse ID iga nutitelefoni. See rakendus ei Hangi teavet privaatsuse kohta, nagu telefoninumber ja asukohateave.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Kui rakendus töötab, salvestab üksteise nutitelefon viimase kahe nädala jooksul üksteise anonüümsed ID-d. Vanemad kui 2 nädalat kirjed kustutatakse ja iga anonüümse ID muudetakse perioodiliselt, et kaitsta privaatsust.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

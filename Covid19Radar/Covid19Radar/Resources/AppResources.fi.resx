@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Yhteydenpito toiseen sovelluksen käyttäjään yli 30 minuutin ajan, joka on keskimäärin yli 2 metrin säteellä, tallennetaan "Sulje yhteystieto"-muodossa.</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Muuta tilaksi "Positiivinen" manuaalisesti sen jälkeen, kun olet vahvistanut puhelinnumerosi." Positiivinen" Työnkulku , Nyt koordinointi etuyhteydessä osapuolten kanssa.</value>
@@ -311,5 +311,9 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Kun suoritat sovelluksen , se luo ja tallentaa anonyymin tunnuksen jokaiseen älypuhelimeen. Tämä sovellus ei saa mitään tietosuojaan liittyviä tietoja, kuten puhelinnumeroa ja sijaintitietoja.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Kun sovellus on käynnissä, toistensa älypuhelin tallentaa toistensa anonyymit tunnukset kahden viime viikon ajalta. Yli 2 viikon ikäisiä tietueita poistetaan ja jokaista anonyymiä tunnusta muutetaan säännöllisesti yksityisyyden suojaamiseksi.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

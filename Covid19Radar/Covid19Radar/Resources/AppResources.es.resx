@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Un contacto con otro usuario de la aplicación durante más de 30 minutos en total, dentro de un radio inferior a 2m en promedio se registra como "Contacto cercano".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Por favor, cambie manualmente su estado a "Positivo" después de verificar su número de teléfono. Flujo de trabajo "Positivo", Ahora coordinando con terceros relacionados.</value>
@@ -311,5 +311,9 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Al ejecutar la aplicación, generará y almacenará un ID anónimo en cada smartphone. Esta aplicación no adquiere ninguna información relacionada con la privacidad, como el número de teléfono y la información de ubicación.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Mientras la aplicación se está ejecutando, el teléfono inteligente del otro registrará los ID anónimos del otro durante las últimas dos semanas. Los registros de más de 2 semanas se eliminarán y cada ID anónimo se cambiará periódicamente para proteger la privacidad.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>
