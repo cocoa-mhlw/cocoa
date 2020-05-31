@@ -27,13 +27,9 @@
     <value>No hi ha necessitat d'introduir informació personal. Estem utilitzant ID únic, assignat a vostè en instal·lar una aplicació.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Un contacte amb un altre usuari de l'aplicació durant més de 30 minuts en total, en un radi més proper a 2m de mitjana, es registra com a "contacte estret".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Si us plau, canvieu manualment l'estat a "positiu" després de verificar el vostre número de telèfon. " Flux positiu ", ara coordinació amb les parts vinculades.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth necessita ser engegat per enregistrar contacte estret. Aneu a la pàgina següent per activar-la.</value>
@@ -230,13 +226,11 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Suprimir</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Si has rebut un diagnòstic positiu</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Compartir l'aplicació</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Comparteix</value>
@@ -311,5 +305,22 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Quan executeu l'aplicació, generarà i emmagatzemarà un ID anònim en cada smartphone. Aquesta aplicació no adquireix cap informació relacionada amb la privacitat, com ara el número de telèfon i la informació d'ubicació.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Mentre l'aplicació s'està executant, el telèfon intel·ligent de l'altre es registrarà els altres identificadors anònims de les dues últimes setmanes. Els registres majors de 2 setmanes s'eliminaran i cada ID anònim es canviarà periòdicament per protegir la privadesa.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Els altres usuaris tenen regularment una llista d'identificadors anònims de positius. Després de l'adquisició, el registre de contacte registrat al telèfon intel·ligent es veurà coincident. Si el resultat del partit és un contacte pesat, li notificarem el seu smartphone i li informem de les accions necessàries que li agradaria que col·laborés.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Contacti amb comprovadors positius en els últims 14 dies</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Si ets positiu amb la nova Corona, si us plau, col·labora amb el registre positiu per protegir les persones que t'envolten.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Aquesta aplicació és tan eficaç que moltes persones l'instal·len, així que si us plau comparteixi l'aplicació amb gent al seu voltant.</value>
   </data>
 </root>

@@ -27,13 +27,9 @@
     <value>Tidak perlu memasukkan maklumat peribadi. Kami menggunakan ID unik, yang diperuntukkan kepada anda semasa memasang aplikasi.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kenalan dengan pengguna aplikasi lain selama lebih dari 30 min secara keseluruhan, dalam radius lebih dekat dari 2m rata-rata dicatat sebagai "Kontak Rapat".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Tukar status anda secara manual menjadi "Positif" setelah mengesahkan nombor telefon anda. Aliran Kerja "Positif", Sekarang koordinasi dengan pihak berkaitan.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Pemberitahuan Bluetooth / Pendedahan perlu dihidupkan untuk merakam hubungan rapat. Sila pergi ke halaman seterusnya untuk menghidarkannya.</value>
@@ -230,13 +226,11 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Memadamkan</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Jika anda menerima diagnosis yang positif</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Berkongsi apl</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Kongsi</value>
@@ -311,5 +305,22 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Apabila anda menjalankan aplikasi, ia akan menjana dan menyimpan ID tanpa nama pada setiap telefon pintar. Permohonan ini tidak mendapat sebarang maklumat yang berkaitan dengan privasi seperti nombor telefon dan maklumat lokasi.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Walaupun permohonan itu berjalan, telefon pintar setiap satu lagi akan merekodkan ID tanpa nama setiap satu lagi untuk dua minggu yang lalu. Rekod yang lebih lama daripada 2 minggu akan dihapuskan dan setiap ID tanpa nama akan ditukar secara berkala untuk melindungi privasi.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Pengguna lain secara tetap mendapat senarai ID tanpa nama yang positif. Selepas pengambilalihan, rekod kenalan yang direkodkan pada telefon pintar akan dipadankan. Jika hasil padanan adalah kenalan berat, kami akan memaklumkan telefon pintar anda dan memaklumkan anda tentang tindakan yang perlu anda mahu kami bekerjasama dengan.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kenalan dengan penguji positif dalam 14 hari yang lalu</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Jika anda positif dengan Corona baru, sila bekerjasama dengan pendaftaran positif untuk melindungi orang di sekeliling anda.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Permohonan ini begitu berkesan bahawa ramai orang memasangnya, jadi sila berkongsi permohonan dengan orang di sekeliling anda.</value>
   </data>
 </root>

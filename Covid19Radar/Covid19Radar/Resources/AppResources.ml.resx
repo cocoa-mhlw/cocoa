@@ -27,13 +27,9 @@
     <value>വ്യക്തിഗത വിവരങ്ങൾ ഇൻപുട്ട് ചെയ്യേണ്ട ആവശ്യമില്ല. ഒരു ആപ്ലിക്കേഷൻ ഇൻസ്റ്റാൾ ചെയ്യുമ്പോൾ നിങ്ങളെ നിയോഗിച്ചുകൊണ്ടുള്ള യുണീക്ക് ഐഡി ഞങ്ങൾ ഉപയോഗിക്കുന്നുണ്ട്.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>ശരാശരി 30 മിനിറ്റ് ദൈർഘ്യമുള്ളതിനേക്കാൾ, മറ്റൊരു ആപ്ലിക്കേഷൻ ഉപയോക്താവുമായി ഒരു സമ്പർക്കം ശരാശരിയിൽ 2m-നേക്കാൾ കൂടുതൽ ചുറ്റളവിലുള്ള, "അടുത്ത സമ്പർക്കം" എന്ന് രേഖപ്പെടുത്തപ്പെടും.</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>നിങ്ങളുടെ ഫോൺ നമ്പർ പരിശോധിച്ചുറപ്പിക്കുന്നതിന് ശേഷം "പോസിറ്റീവ്" ആയി നിങ്ങളുടെ സ്റ്റാറ്റസ് മാന്വലായി മാറ്റുക. പോസിറ്റീവ് "വർക്ക് ഫ്ലോ, ഇപ്പോൾ അനുബന്ധ കക്ഷികളുമായി ഏകോപനം.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>അടുത്ത സമ്പർക്കം രേഖപ്പെടുത്താൻ ബ്ലൂടൂത്ത് ഓണായി ചെയ്യേണ്ടതുണ്ട്. ഓണാക്കുക അടുത്ത പേജിലേക്ക് പോകുക.</value>
@@ -230,13 +226,11 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>ഇല്ലാതാക്കുന്നു</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ആപ്പ് പങ്കിടുക</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>പങ്കിടുക</value>
@@ -311,5 +305,22 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>നിങ്ങൾ ആപ്ലിക്കേഷൻ പ്രവർത്തിപ്പിക്കുമ്പോൾ, ഓരോ സ്മാർട്ട് ഫോണിലും ഒരു അജ്ഞാത ഐഡി ജനറേറ്റ് ചെയ്യുകയും സംഭരിക്കുകയും ചെയ്യും. ഫോൺ നമ്പർ, ലൊക്കേഷൻ വിവരങ്ങൾ എന്നിങ്ങനെയുള്ള സ്വകാര്യതയുമായി ബന്ധപ്പെട്ട വിവരങ്ങളൊന്നും ഈ അപേക്ഷയിൽ നേടിയില്ല.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>ആപ്ലിക്കേഷൻ പ്രവർത്തിപ്പിക്കുമ്പോൾ ഓരോരുത്തരുടെയും സ്മാർട്ട് ഫോൺ കഴിഞ്ഞ രണ്ടാഴ്ചയായി ഓരോരുത്തരുടെയും അജ്ഞാത ഐഡികൾ രേഖപ്പെടുത്തും. 2 ആഴ്ചയിൽ കൂടുതൽ പ്രായമുള്ള രേഖകൾ ഇല്ലാതാക്കപ്പെടും, സ്വകാര്യത പരിരക്ഷിക്കുന്നതിന് ഓരോ അജ്ഞാത ID മാറ്റുകയും ചെയ്യും.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>മറ്റു ഉപയോക്താക്കൾക്കും പതിവായി പോസിറ്റീവ് ഉള്ള അജ്ഞാത ഐഡികളുടെ പട്ടിക ലഭിക്കുന്നു. ഏറ്റെടുക്കലിന് ശേഷം സ്മാര് ട്ട് ഫോണില് രേഖപ്പെടുത്തിയ കോണ്ടാക്ട് റെക്കോഡ് ഒത്തുചേരും. മത്സരത്തിന്റെ ഫലം കനത്ത സമ്പർക്കമാണെങ്കിൽ, ഞങ്ങൾ നിങ്ങളുടെ സ്മാർട്ട് ഫോണിനെ അറിയിക്കും, ഞങ്ങൾ സഹകരിക്കണമെന്ന് നിങ്ങൾ ആഗ്രഹിക്കുന്നു എന്ന് ആവശ്യമായ പ്രവൃത്തികൾ നിങ്ങളെ അറിയിക്കുകയും ചെയ്യും.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>കഴിഞ്ഞ 14 ദിവസത്തിനുള്ളിൽ പോസിറ്റീവ് ടെസ്റ്റേഴ്സ് ആയി ബന്ധപ്പെടുക</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>പുതിയ കൊറോണ നിങ്ങൾക്ക് പോസിറ്റീവാണെങ്കിൽ, ചുറ്റുമുള്ള ആളുകളെ പരിരക്ഷിക്കുന്നതിന് പോസിറ്റീവ് രജിസ്ട്രേഷനുമായി സഹകരിക്കുക.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>അനവധി ആളുകൾ ഇൻസ്റ്റാൾ ചെയ്യുന്നതിന് ഈ ആപ്ലിക്കേഷൻ വളരെ ഫലപ്രദമാണ്, അതിനാൽ നിങ്ങളുടെ ചുറ്റുമുള്ള ആളുകളോടൊപ്പം ആപ്ലിക്കേഷൻ പങ്കിടുക.</value>
   </data>
 </root>

@@ -27,13 +27,9 @@
     <value>Няма нужда да въвеждате лични данни. Използваме уникален идентификационен номер, който ви е предоставен при инсталирането на приложение.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Контакт с друг потребител на приложение за повече от 30 мин общо, в радиус, по-близък от 2 m средно, се записва като "Затвори контакт".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Моля, променете ръчно състоянието си на "Положително", след като сте потвърдили телефонния си номер." Положителен" Работен процес , Сега координация със свързани лица.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>За да се запише близък контакт, трябва да се включи Bluetooth. Моля, преминете към следващата страница, за да я включите.</value>
@@ -230,13 +226,11 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Изтриване</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ако сте получили положителна диагноза</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Споделяне на приложението</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Споделяне</value>
@@ -311,5 +305,22 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Когато стартирате приложението , то ще генерира и съхранява анонимен ИД на всеки смартфон. Това приложение не придобива никаква информация, свързана с поверителността, като например телефонен номер и информация за местоположението.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Докато приложението работи, смартфонът на другата страна ще записва анонимно идентификаторите на другия за последните две седмици. Записите, по-стари от 2 седмици, ще бъдат изтрити и всеки анонимен идентификационен номер ще се променя периодично, за да се защити поверителността.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Други потребители редовно получават списък на анонимни идентификатори на положителните. След придобиването записът на контакт, записан на смартфона, ще бъде съчетан. Ако резултатът от срещата е тежък контакт, ще ви уведомим за необходимите действия, с които искате да съдействаме.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Контакт с положителните тестери през последните 14 дни</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ако сте позитивни с новата Корона, моля, съдействайте с положителната регистрация, за да защитите хората около вас.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Това приложение е толкова ефективно, че много хора го инсталират, така че моля да споделите приложението с хората около вас.</value>
   </data>
 </root>
