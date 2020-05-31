@@ -283,7 +283,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Eliminando</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Si recibió un diagnóstico positivo</target>
         </trans-unit>

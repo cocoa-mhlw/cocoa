@@ -283,7 +283,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Skrap tans</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">As jy 'n positiewe diagnose ontvang het</target>
         </trans-unit>

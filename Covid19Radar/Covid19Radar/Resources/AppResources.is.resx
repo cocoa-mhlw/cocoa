@@ -226,7 +226,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Verið er að fella af skrá</value>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ef þú fékkst jákvæða greiningu</value>
   </data>
   <data name="HomePageSubtitle2" xml:space="preserve">

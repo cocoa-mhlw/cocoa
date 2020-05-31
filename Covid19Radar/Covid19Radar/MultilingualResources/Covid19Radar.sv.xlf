@@ -289,7 +289,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Tas bort</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle1" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Om du fick en positiv diagnos</target>
         </trans-unit>
