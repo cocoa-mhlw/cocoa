@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ExposureNotification.App.Views.NotifyOthersPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:ExposureNotification.App.ViewModels"
+    Title="Notify Others"
+    x:DataType="viewmodel:NotifyOthersViewModel"
+    BackgroundColor="{DynamicResource BackgroundColor}"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <viewmodel:NotifyOthersViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Style="{DynamicResource Container}">
+            <Frame IsVisible="{Binding DiagnosisPending, Converter={StaticResource InvertedBoolConverter}}" Style="{DynamicResource CardFrame}">
+                <StackLayout>
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Subtitle"
+                        Style="{DynamicResource SubtitleLabelStyle}"
+                        Text="Share A Positive Diagnosis" />
+
+                    <Label
+                        Margin="0,12,0,0"
+                        Style="{DynamicResource SmallLabelStyle}"
+                        Text="If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus." />
+
+                    <Label
+                        FontAttributes="Bold"
+                        Style="{DynamicResource SmallLabelStyle}"
+                        Text="Learn more"
+                        TextColor="{DynamicResource PrimaryColor}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+
+                    <Button
+                        Margin="0,20,0,0"
+                        Command="{Binding SharePositiveDiagnosisCommand}"
+                        HorizontalOptions="End"
+                        IsEnabled="{Binding IsEnabled}"
+                        Style="{DynamicResource ButtonRounded}"
+                        Text="Share A Positive Diagnosis" />
+
+                </StackLayout>
+            </Frame>
+
+            <Frame IsVisible="{Binding DiagnosisPending}" Style="{DynamicResource CardFrame}">
+                <StackLayout>
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Subtitle"
+                        Style="{DynamicResource SubtitleLabelStyle}"
+                        Text="Diagnosis Shared" />
+
+                    <Label
+                        Margin="0,12,0,0"
+                        Style="{DynamicResource SmallLabelStyle}"
+                        Text="Your diagnosis was shared on:" />
+
+                    <Label
+                        Margin="0,12,0,0"
+                        FontAttributes="Bold"
+                        Style="{DynamicResource SmallLabelStyle}"
+                        Text="{Binding DiagnosisShareTimestamp, StringFormat='{0:yyyy-MM-dd}'}" />
+
+                    <Label
+                        Margin="0,12,0,0"
+                        Style="{DynamicResource SmallLabelStyle}"
+                        Text="This will help others in your community contain the spread of the virus." />
+
+                    <Label
+                        FontAttributes="Bold"
+                        Style="{DynamicResource SmallLabelStyle}"
+                        Text="Learn more"
+                        TextColor="{DynamicResource PrimaryColor}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LearnMoreCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

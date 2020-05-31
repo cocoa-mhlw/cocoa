@@ -1,0 +1,91 @@
+﻿<ContentPage
+    x:Class="ExposureNotification.App.Views.SharePositiveDiagnosisPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:ExposureNotification.App.ViewModels"
+    Title="Share a Positive Diagnosis"
+    ios:Page.UseSafeArea="True"
+    x:DataType="viewmodel:SharePositiveDiagnosisViewModel"
+    BackgroundColor="{DynamicResource BackgroundColor}"
+    Shell.PresentationMode="ModalAnimated"
+    Visual="Material"
+    mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewmodel:SharePositiveDiagnosisViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid Padding="{OnPlatform Android='0,12,0,0', iOS='0,24,0,0'}" RowSpacing="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Frame
+            AutomationProperties.HelpText="Button - Close Page"
+            AutomationProperties.IsInAccessibleTree="True"
+            Style="{DynamicResource CloseFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CancelCommand}" />
+            </Frame.GestureRecognizers>
+            <Label Style="{DynamicResource CloseLabel}" />
+        </Frame>
+        <Label
+            FontSize="Medium"
+            HorizontalOptions="Center"
+            Style="{DynamicResource MediumLabelStyle}"
+            Text="Share a Positive Diagnosis"
+            TextColor="{DynamicResource PrimaryColor}"
+            VerticalOptions="Center" />
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Style="{DynamicResource Container}">
+                <Frame Style="{DynamicResource CardFrame}">
+                    <StackLayout>
+
+                        <Label Style="{DynamicResource SmallLabelStyle}" Text="[Insert text from local Health authority]" />
+
+                        <Label
+                            Margin="0,12,0,0"
+                            Style="{DynamicResource SmallLabelStyle}"
+                            Text="Only those who have been exposed will receive a notification." />
+
+                        <Entry
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Diagnosis Identifier"
+                            Style="{DynamicResource EntryStyle}"
+                            BackgroundColor="{DynamicResource BackgroundColor}"
+                            Text="{Binding DiagnosisUid, Mode=TwoWay}" />
+
+                        <Label
+                            Margin="0,12,0,0"
+                            Style="{DynamicResource SmallLabelStyle}"
+                            Text="The unique test identifier that came with your COVID-19 test must be used to verify your positive test result." />
+
+                        <DatePicker
+                            Margin="0,20,0,0"
+                            Date="{Binding DiagnosisTimestamp}"
+                            Style="{DynamicResource DatePickerStyle}"
+                            BackgroundColor="{DynamicResource BackgroundColor}"/>
+
+                        <Label
+                            Margin="0,12,0,0"
+                            Style="{DynamicResource SmallLabelStyle}"
+                            Text="The test date helps the app know when you may have been contagious and notify the right people of potential exposure." />
+
+
+                        <Button
+                            Command="{Binding SubmitDiagnosisCommand}"
+                            HorizontalOptions="End"
+                            IsEnabled="{Binding IsEnabled}"
+                            Style="{DynamicResource ButtonRounded}"
+                            Text="Next" />
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
