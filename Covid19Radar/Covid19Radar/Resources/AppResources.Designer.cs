@@ -277,6 +277,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   While the application is running, each other&apos;s smartphone will record each other&apos;s anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DescriptionPageTextStep2Description2 {
+            get {
+                return ResourceManager.GetString("DescriptionPageTextStep2Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Please manually change your status to &quot;Positive&quot; after verifying your phone number.&quot;Positive&quot; Workflow , Now coordination with related parties. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTextStep3Description {

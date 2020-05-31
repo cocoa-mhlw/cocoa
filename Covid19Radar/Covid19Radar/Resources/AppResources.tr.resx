@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Başka bir uygulama kullanıcısıyla ortalama 2 m'den daha yakın ve toplamda 30 dakikadan daha uzun bir süre birarada bulunmak "Yakın Temas" olarak kaydedilir.</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Lütfen telefon numaranızı doğruladıktan sonra durumunuzu "Pozitif" olarak değiştirin." Pozitif" İş Akışı , Şimdi ilgili taraflarla koordinasyon sağlıyoruz.</value>
@@ -310,5 +310,9 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Uygulamayı çalıştırdığınızda, her akıllı telefonda anonim bir kimlik oluşturur ve saklar. Bu uygulama, telefon numarası ve konum bilgileri gibi gizlilikle ilgili herhangi bir bilgi edinmez.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Uygulama çalışırken, birbirlerinin akıllı telefonu son iki hafta boyunca birbirlerinin anonim kimliklerini kaydedecek. 2 haftadan eski kayıtlar silinir ve gizliliği korumak için her anonim kimlik düzenli aralıklarla değiştirilir.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

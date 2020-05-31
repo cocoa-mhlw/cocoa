@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Egy másik alkalmazásfelhasználóval való, összesen 30 min-nél hosszabb ideig, átlagosan 2 m-nél közelebbi sugarú körben tartott kapcsolat "Közeli kapcsolat" néven kerül rögzítésre.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -394,6 +394,11 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Amikor futtatja az alkalmazást, létrehoz és tárol egy névtelen azonosítót minden okostelefonon. Ez az alkalmazás nem szerez semmilyen információt kapcsolatos adatvédelmi, mint a telefonszám és a helyadatait.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Amíg az alkalmazás fut, egymás okostelefonja rögzíti egymás névtelen azonosítóit az elmúlt két hétben. A 2 hétnél régebbi rekordok törlődnek, és minden névtelen azonosító rendszeres időközönként módosul a személyes adatok védelme érdekében.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>

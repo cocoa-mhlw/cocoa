@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Контакт с друг потребител на приложение за повече от 30 мин общо, в радиус, по-близък от 2 m средно, се записва като "Затвори контакт".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Моля, променете ръчно състоянието си на "Положително", след като сте потвърдили телефонния си номер." Положителен" Работен процес , Сега координация със свързани лица.</value>
@@ -311,5 +311,9 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Когато стартирате приложението , то ще генерира и съхранява анонимен ИД на всеки смартфон. Това приложение не придобива никаква информация, свързана с поверителността, като например телефонен номер и информация за местоположението.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Докато приложението работи, смартфонът на другата страна ще записва анонимно идентификаторите на другия за последните две седмици. Записите, по-стари от 2 седмици, ще бъдат изтрити и всеки анонимен идентификационен номер ще се променя периодично, за да се защити поверителността.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

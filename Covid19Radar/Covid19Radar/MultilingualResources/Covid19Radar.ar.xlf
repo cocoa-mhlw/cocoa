@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">تفاعل المستخدم مع مستخدم آخر للتطبيق لمدة تزيد عن 30 دقيقة إجمالاً ، في مسافة أقرب من 2 متر في المتوسط تسجل على أنها "جهة اتصال قريبة".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -395,6 +395,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">عند تشغيل التطبيق، فإنه سيتم إنشاء وتخزين معرف مجهول على كل هاتف ذكي. لا يحصل هذا التطبيق على أي معلومات تتعلق بالخصوصية مثل رقم الهاتف ومعلومات الموقع.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">أثناء تشغيل التطبيق ، سيقوم الهاتف الذكي لكل منهما بتسجيل الـ IDs المجهولين لبعضهما البعض خلال الأسبوعين الماضيين. سيتم حذف السجلات التي يزيد عمرها عن أسبوعين وسيتم تغيير كل معرف مجهول بشكل دوري لحماية الخصوصية.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>

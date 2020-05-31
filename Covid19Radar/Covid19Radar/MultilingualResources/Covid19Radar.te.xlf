@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">మొత్తం మీద 30 నిమిషాల కంటే ఎక్కువ సేపు మరో యాప్ యూజర్ తో ఒక కాంటాక్ట్, సగటున 2m కంటే దగ్గరగా ఉన్న వ్యాసార్థంలో ' ' క్లోజ్ కాంటాక్ట్ ' ' వలే రికార్డ్ చేయబడింది.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -396,6 +396,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">మీరు అప్లికేషన్ ని రన్ చేసినప్పుడు, అది ప్రతి స్మార్ట్ ఫోన్ మీద ఒక అనామక IDని జనరేట్ చేసి, స్టోర్ చేస్తుంది. ఈ అనువర్తనం ఫోన్ నంబర్ మరియు స్థాన సమాచారం వంటి గోప్యతకు సంబంధించిన ఏ సమాచారాన్ని పొందదు.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">అప్లికేషన్ రన్ అవుతుండగా, ఒక్కో స్మార్ట్ ఫోన్ గత రెండు వారాలుగా ఒకరి అనామక ఐడిలను రికార్డ్ చేస్తుంది. 2 వారాల కంటే ఎక్కువ వయస్సు ఉన్న రికార్డులు డిలీట్ చేయబడతాయి మరియు గోప్యతను సంరక్షించడం కొరకు ప్రతి అజ్ఞాత ID నియతానుసారంగా మార్చబడుతుంది.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>

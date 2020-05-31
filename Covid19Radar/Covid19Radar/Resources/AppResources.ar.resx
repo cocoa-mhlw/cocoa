@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>تفاعل المستخدم مع مستخدم آخر للتطبيق لمدة تزيد عن 30 دقيقة إجمالاً ، في مسافة أقرب من 2 متر في المتوسط تسجل على أنها "جهة اتصال قريبة".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>الرجاء تغيير حالتك يدويًا إلى "إيجابي" بعد تأكيد رقم هاتفك. جريان "إيجابي" ، يجب التنسيق مع الجهات المعنية.</value>
@@ -310,5 +310,9 @@
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>عند تشغيل التطبيق، فإنه سيتم إنشاء وتخزين معرف مجهول على كل هاتف ذكي. لا يحصل هذا التطبيق على أي معلومات تتعلق بالخصوصية مثل رقم الهاتف ومعلومات الموقع.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>أثناء تشغيل التطبيق ، سيقوم الهاتف الذكي لكل منهما بتسجيل الـ IDs المجهولين لبعضهما البعض خلال الأسبوعين الماضيين. سيتم حذف السجلات التي يزيد عمرها عن أسبوعين وسيتم تغيير كل معرف مجهول بشكل دوري لحماية الخصوصية.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

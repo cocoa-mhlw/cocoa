@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ny fifandraisana misy eo amin' ny rafi-baovao hafa mandritra ny 30 min-tena, ao anatin' ny radius akaiky kokoa noho ny 2m-antonontonony dia voarakitra ho toy ny "Manakaiky".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -396,6 +396,11 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Rehefa manao ny fampiharana ianao, dia nalaina izany ary tsy eo amin' ny smartphone tsirairay. Ity fampiharana ity dia tsy mahazo fampahalalana izay mifandray amin' ny tsiambaratelo toy ny hoe laharan' ny telefaonina sy ny toerana misy izany.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Raha toa ka mihazakazaka ny fampiharana dia smartphone ny tsy ny tsirairay avy amin' ireo IDs ny olona iray izay efa roa herinandro lasa. Ho voafafa ny rakitsoratra latsaky ny 2 herinandro ary tsy ny FAMANTARANA tsirairay dia hiova matetika mba hiarovana ny tsiambaratelo.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>

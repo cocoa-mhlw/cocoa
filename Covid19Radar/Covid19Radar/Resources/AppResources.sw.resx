@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kuwasiliana na mtumiaji mwingine wa programu kwa muda mrefu zaidi ya 30 min kwa jumla, ndani ya eneo karibu zaidi ya 2m kwa wastani ni kumbukumbu kama "Funga mawasiliano".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Tafadhali Badilisha kwa mkono hali yako kwa "chanya" baada ya kuthibitisha nambari yako ya simu. " Chanya "mtiririko wa kazi, sasa uratibu na vyama husika.</value>
@@ -311,5 +311,9 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Wakati unapoendesha programu, itazalisha na kuhifadhi ID isiyojulikana kwenye kila smartphone. Programu tumizi hii haina kupata maelezo yoyote yanayohusiana na faragha kama vile namba ya simu na taarifa ya eneo.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Wakati programu hiyo inaendesha, smartphone ya kila mmoja itarekodi vitambulisho vya kila mmoja kwa wiki mbili zilizopita. Rekodi zaidi ya wiki za 2 zitafutwa na kila kitambulisho cha bila majina zitabadilishwa kwa vipindi ili kulinda faragha.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

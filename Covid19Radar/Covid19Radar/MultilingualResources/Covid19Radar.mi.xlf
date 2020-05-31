@@ -28,7 +28,7 @@
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">He hoapā ki tētahi atu kaiwhakamahi taupānga kia roa ake i te 30 meneti i te tapeke, i roto i tētahi tarawhāiti iti ake i te 2m i te wawaenga e whakapūketetia ana hei "Kati Hoapā".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
@@ -396,6 +396,11 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ina whakahaere koe i te taupānga, ka waihanga, ka penapena hoki i tētahi ID ingoamuna ki ia waea atamai. Kāore e whiwhi tēnei taupānga i ngā mōhiohio e pā ana ki te tūmataitinga pēnei i te tau waea me te mōhiohio tauwāhi.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">I te wā e haere ana te taupānga, ka taea e ētahi atu waea atamai te tāhopu i ngā Tautuhinga ingoamuna o ngā wiki e rua. Ka mukua ngā pūkete tawhito ake i te 2 wiki, ā, ka hurihia te ID ingoamuna hei pare i te tūmataitinga.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
         </trans-unit>
       </group>
     </body>
