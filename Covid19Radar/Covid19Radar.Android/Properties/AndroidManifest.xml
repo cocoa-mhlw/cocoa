@@ -2,16 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="jp.go.mhlw.covid19radar" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
 	<application android:label="COVID-19Radar" android:icon="@mipmap/ic_launcher">
-    <receiver  android:name=".nearby.ExposureNotificationBroadcastReceiver"  android:permission="com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK"  android:exported="true">
-      <intent-filter>
-        <action android:name="com.google.android.gms.exposurenotification.ACTION_EXPOSURE_STATE_UPDATED" />
-      </intent-filter>
-    </receiver>
-  </application>
+		<receiver android:name=".nearby.ExposureNotificationBroadcastReceiver" android:permission="com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK" android:exported="true">
+			<intent-filter>
+				<action android:name="com.google.android.gms.exposurenotification.ACTION_EXPOSURE_STATE_UPDATED" />
+			</intent-filter>
+		</receiver>
+	</application>
 	<uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
 	<uses-feature android:name="android.hardware.bluetooth" />
-  <uses-permission android:name="android.permission.BLUETOOTH" />
-  <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.REORDER_TASKS" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
