@@ -317,4 +317,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Whakapā atu ki te testers tōrunga i roto i ngā rā 14 whakamutunga</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Mehemea kei runga koe i te Kurahauao hou, ka whakahoahoa koa ki te rēhitatanga tōrunga hei pare i te iwi.</value>
+  </data>
 </root>

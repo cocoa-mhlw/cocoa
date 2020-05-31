@@ -317,4 +317,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontak met positiewe toetsers in die afgelope 14 dae</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>As jy positief is met die nuwe Corona, saamwerk asseblief met die positiewe registrasie om die mense rondom jou te beskerm.</value>
+  </data>
 </root>

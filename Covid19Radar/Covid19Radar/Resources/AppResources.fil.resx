@@ -317,4 +317,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Makipag-ugnay sa positibong tagasubok sa huling 14 na araw</value>
   </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Kung ikaw ay positibo sa bagong Corona, mangyaring makipagtulungan sa positibong pagpaparehistro upang protektahan ang mga tao sa paligid mo.</value>
+  </data>
 </root>
