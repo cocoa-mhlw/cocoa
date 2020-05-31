@@ -229,7 +229,7 @@
   <data name="HomePageHeader2Title" xml:space="preserve">
     <value>긍정적인 진단을 받은 경우</value>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>앱 공유</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">

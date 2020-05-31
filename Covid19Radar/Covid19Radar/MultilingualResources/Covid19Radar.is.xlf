@@ -288,7 +288,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ef þú fékkst jákvæða greiningu</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Deildu forritinu</target>
         </trans-unit>

@@ -287,7 +287,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>If you received a positive diagnosis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">As jy 'n positiewe diagnose ontvang het</target>
         </trans-unit>
-        <trans-unit id="HomePageSubtitle2" translate="yes" xml:space="preserve">
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Deel die program</target>
         </trans-unit>

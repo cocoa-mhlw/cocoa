@@ -229,7 +229,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Jeigu jums buvo diagnozuota teigiama diagnozė</value>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Programos bendrinimas</value>
   </data>
   <data name="ButtonShare" xml:space="preserve">
