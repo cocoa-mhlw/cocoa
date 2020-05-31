@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Un contact avec un autre utilisateur de l'application pendant plus de 30 minutes au total, dans un rayon inférieur à 2m en moyenne est enregistré comme "Contact rapproché".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Veuillez modifier manuellement votre statut en « positif » après vérification de votre numéro de téléphone. Processus positif , Coordination automatique en cours</value>
@@ -311,5 +311,9 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Lorsque vous exécutez l’application, elle générera et stockera un IDENTIFIANT anonyme sur chaque smartphone. Cette application n’acquiert aucune information relative à la protection de la vie privée, comme le numéro de téléphone et les renseignements de localisation.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Pendant que l’application est en cours d’exécution, le smartphone de l’autre enregistrera les ids anonymes de l’autre pour les deux dernières semaines. Les enregistrements de plus de 2 semaines seront supprimés et chaque ID anonyme sera modifié périodiquement pour protéger la vie privée.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>

@@ -29,7 +29,7 @@
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakt s iným používateľom aplikácie po dobu dlhšiu ako 30 min, v okruhu bližšie ako 2 m v priemere je zaznamenaný ako "blízky kontakt".</value>
-    <comment>How it works page step 2 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep3Description" xml:space="preserve">
     <value>Po overení telefónneho čísla manuálne zmeňte stav na "pozitívne". " Pozitívny "workflow, teraz koordinácia so spriaznými stranami.</value>
@@ -311,5 +311,9 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
     <value>Keď spustíte aplikáciu , bude generovať a ukladať anonymný ID na každom smartphone. Táto aplikácia nezískava žiadne informácie týkajúce sa súkromia, ako je telefónne číslo a informácie o polohe.</value>
     <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Kým je aplikácia spustená, bude navzájom smartphone zaznamenávať navzájom anonymné ID za posledné dva týždne. Záznamy staršie ako 2 týždne sa odstránia a každá anonymná identifikácia sa bude pravidelne meniť, aby sa chránilo súkromie.</value>
+    <comment>How it works page step 2 description 2</comment>
   </data>
 </root>
