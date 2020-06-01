@@ -26,8 +26,8 @@
             <StackLayout Grid.Row="1" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
+                        <ColumnDefinition Width="0.4*" />
+                        <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -47,29 +47,29 @@
             <StackLayout Grid.Row="2" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.8*" />
-                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="0.7*" />
+                        <ColumnDefinition Width="0.3*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。" />
                     <ffimageloading:CachedImage
                         Grid.Row="0"
                         Grid.Column="0"
                         Aspect="AspectFit"
                         Source="TutorialPage11.png" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。" />
                 </Grid>
             </StackLayout>
             <StackLayout Grid.Row="3" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
+                        <ColumnDefinition Width="0.4*" />
+                        <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
