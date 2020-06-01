@@ -24,22 +24,22 @@
     <comment>Consent by user page</comment>
   </data>
   <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>개인 정보를 입력 할 필요가 없습니다. 앱을 설치할 때 할당된 고유 ID를 사용하고 있습니다.</value>
+    <value>개인 정보를 입력 할 필요가 없습니다. 앱 설치시 할당된 고유 ID를 사용하고 있습니다.</value>
     <comment>How it works page step 1 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "닫기 접촉"으로 기록됩니다.</value>
+    <value>평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "밀접접촉"으로 기록됩니다.</value>
     <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>가까운 연락처를 기록하려면 블루투스를 켜야 합니다. 다음 페이지로 이동하여 켜십시오.</value>
+    <value>저장 된 가까운 접촉자를 확인하기 위해 블루투스가 필요합니다. 다음 페이지로 이동하여 블루투스를 켜십시오.</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>시작</value>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID-19로부터 사랑하는 사람을 보호</value>
+    <value>COVID-19로부터 사랑하는 사람을 보호해주세요.</value>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>장치 액세스</value>
@@ -103,7 +103,7 @@
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>이 응용 프로그램을 사용하는 요구 사항</value>
+    <value>이 애플리케이션의 요구 사항</value>
     <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -124,8 +124,8 @@
     <value>NotNow</value>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>이 응용 프로그램은 당신이 다른 연락처 추적 응용 프로그램 사용자 근처에 있는지 확인하기 위해 노출 알림 / 블루투스 신호를 사용합니다. 
-블루투스를 설정하려면 '항상 허용'을 선택합니다.</value>
+    <value>이 애플리케이션은 당신의 다른 연락처에 있는 추적 애플리케이션 사용자가 근처에 있는지 확인하기 위해 알람 및 블루투스 신호를 사용합니다. 
+블루투스를 사용을 위해 '항상 허용'을 선택합니다.</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
   </data>
   <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
@@ -149,7 +149,7 @@
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>COVID-19 결과를 긍정적으로 보고한 사람에게 노출된 경우 알림을 받게 됩니다.</value>
+    <value>COVID-19 결과가 양성으로 보고 된 사람에게 노출된 경우 알림을 받게 됩니다.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
@@ -157,7 +157,7 @@
     <comment>Notify Other Page Code Input</comment>
   </data>
   <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>긍정적인 진단 공유</value>
+    <value>양성진단 공유</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>테스트 날짜는 앱이 언제 전염성이 있었는지 파악하고 적절한 사람들에게 잠재적 노출을 알리는 데 도움이 됩니다.</value>
@@ -187,10 +187,10 @@
     <value>진단 식별자 필요</value>
   </data>
   <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>진단을 제출하기 전에 노출 알림을 활성화하십시오.</value>
+    <value>진단을 제출하기 전에 노출알림을 활성화 하십시오.</value>
   </data>
   <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>노출 알림 사용 안 함</value>
+    <value>노출알림 사용 안 함</value>
   </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>진단 제출 중...</value>
