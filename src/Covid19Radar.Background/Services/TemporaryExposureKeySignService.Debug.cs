@@ -17,10 +17,11 @@ namespace Covid19Radar.Background.Services
             ILogger<TemporaryExposureKeySignServiceDebug> logger)
         {
             Logger = logger;
+            Logger.LogInformation($"{nameof(TemporaryExposureKeySignServiceDebug)} constructor");
             Key = System.Security.Cryptography.ECDsaCng.Create(ECCurve.NamedCurves.nistP256);
         }
 
-        public async Task<byte[]> SignAsync(Stream source)
+        public Task<byte[]> SignAsync(Stream source)
         {
             Logger.LogInformation($"start {nameof(SignAsync)}");
             byte[] hash;
@@ -28,14 +29,15 @@ namespace Covid19Radar.Background.Services
             {
                 hash = sha.ComputeHash(source);
             }
-            return Key.SignHash(hash);
+            return Task.FromResult(Key.SignHash(hash));
         }
 
-        public async Task SetSignatureAsync(SignatureInfo info)
+        public Task SetSignatureAsync(SignatureInfo info)
         {
             Logger.LogInformation($"start {nameof(SetSignatureAsync)}");
             info.VerificationKeyId = "DebugKey";
             info.VerificationKeyVersion = "DebugVersion";
+            return Task.CompletedTask;
         }
     }
 }

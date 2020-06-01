@@ -47,7 +47,9 @@ namespace Covid19Radar.Api
             }
 
             // delete tek
-            await DiagnosisRepository.Delete(user);
+            await DiagnosisRepository.DeleteAsync(user);
+
+            // NOTE:consider privacy: delete published Tek at after 14 days.
 
             // delete user
             await UserRepository.Delete(user);

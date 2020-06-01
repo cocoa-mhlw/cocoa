@@ -16,9 +16,13 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
+    public class HomePageViewModel : ViewModelBase
     {
         private string _exposureCount;
+        private readonly UserDataService userDataService;
+        private readonly ExposureNotificationService exposureNotificationService;
+        private UserDataModel userData;
+
 
         public string ExposureCount
         {
@@ -26,30 +30,25 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposureCount, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService) : base(navigationService)
+        public HomePageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.HomePageTitle;
-            ExposureCount = String.Format("{0}{1}",1, "件の接触がありました");
-        }
+            ExposureCount = String.Format("{0}{1}", 1, "件の接触がありました");
+            this.userDataService = userDataService;
+            this.exposureNotificationService = exposureNotificationService;
 
-        public bool EnableNotifications
-        {
-            get => LocalStateManager.Instance.EnableNotifications;
-            set
-            {
-                LocalStateManager.Instance.EnableNotifications = value;
-                LocalStateManager.Save();
-            }
+            _ = exposureNotificationService.StartExposureNotification();
+            userData = this.userDataService.Get();
         }
 
         public Command OnClickNotifyOther => new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(MenuPage) + "/"+ nameof(NotifyOtherPage));
+            await NavigationService.NavigateAsync(nameof(NotifyOtherPage));
         });
 
         public Command OnClickExposures => new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(ExposuresPage));
+            await NavigationService.NavigateAsync(nameof(ExposuresPage));
         });
 
         public Command OnClickShareApp => new Command(async () =>
