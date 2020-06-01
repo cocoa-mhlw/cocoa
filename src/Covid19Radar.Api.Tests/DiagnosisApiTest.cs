@@ -2,6 +2,7 @@
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -19,23 +20,37 @@ namespace Covid19Radar.Api.Tests
         public void CreateMethod()
         {
             // preparation
+            var config = new Mock<IConfiguration>();
+            config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
+            var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
-            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, validation.Object, deviceCheck.Object, logger);
+            var diagnosisApi = new DiagnosisApi(config.Object,
+                                                diagnosisRepo.Object,
+                                                tekRepo.Object,
+                                                validation.Object,
+                                                deviceCheck.Object,
+                                                logger);
         }
 
         [DataTestMethod]
         [DataRow(true, true, "xxxxx", "UserUuid")]
         [DataRow(false, true, "xxxxx", "UserUuid")]
         [DataRow(false, true, "xxxxx", "UserUuid")]
-        public async Task RunAsyncMethod(bool isValid, bool isValidDevice, string submissionNumber, string userUuid)
+        public async Task RunAsyncMethod(bool isValid, bool isValidDevice, string verificationPayload, string userUuid)
         {
             // preparation
+            var config = new Mock<IConfiguration>();
+            config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
-            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
-                .Returns(Task.CompletedTask);
+            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(),
+                                                            It.IsAny<DateTimeOffset>(),
+                                                            It.IsAny<string>(),
+                                                            It.IsAny<TemporaryExposureKeyModel[]>()))
+                .ReturnsAsync(new DiagnosisModel());
+            var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
             var validationResult = new IValidationUserService.ValidateResult()
             {
@@ -43,13 +58,18 @@ namespace Covid19Radar.Api.Tests
             };
             validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
             var deviceCheck = new Mock<IDeviceValidationService>();
-            deviceCheck.Setup(_ => _.Validation(It.IsAny<DiagnosisSubmissionParameter>())).ReturnsAsync(isValidDevice);
+            deviceCheck.Setup(_ => _.Validation(It.IsAny<DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
-            var diagnosisApi = new Covid19Radar.Api.DiagnosisApi(diagnosisRepo.Object, validation.Object, deviceCheck.Object, logger);
-            var context = new Mock.HttpContextMock();
+            var diagnosisApi = new DiagnosisApi(config.Object,
+                                                diagnosisRepo.Object,
+                                                tekRepo.Object,
+                                                validation.Object,
+                                                deviceCheck.Object,
+                                                logger);
+            var context = new Mock<HttpContext>();
             var bodyJson = new DiagnosisSubmissionParameter()
             {
-                SubmissionNumber = submissionNumber,
+                VerificationPayload = verificationPayload,
                 UserUuid = userUuid,
                 Keys = new DiagnosisSubmissionParameter.Key[] {
                     new DiagnosisSubmissionParameter.Key() { KeyData = "", RollingPeriod = 1, RollingStartNumber = 1 } }
@@ -62,9 +82,9 @@ namespace Covid19Radar.Api.Tests
                 await writer.FlushAsync();
             }
             stream.Seek(0, System.IO.SeekOrigin.Begin);
-            context._Request.Body = stream;
+            context.Setup(_ => _.Request.Body).Returns(stream);
             // action
-            await diagnosisApi.RunAsync(context.Request);
+            await diagnosisApi.RunAsync(context.Object.Request);
             // assert
         }
     }

@@ -22,23 +22,21 @@ using Plugin.LocalNotification;
 
 namespace Covid19Radar.Droid
 {
-    [Activity(Label = "Covid19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "COVID-19Radar", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         public static object dataLock = new object();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
 
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
+            Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
@@ -67,7 +65,6 @@ namespace Covid19Radar.Droid
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
                 containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
-                containerRegistry.RegisterSingleton<UserDataService, UserDataService>();
             }
         }
 
@@ -85,6 +82,13 @@ namespace Covid19Radar.Droid
             }
         }
 
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
+        }
+
         protected override void OnNewIntent(Intent intent)
         {
             NotificationCenter.NotifyNotificationTapped(intent);
@@ -92,42 +96,6 @@ namespace Covid19Radar.Droid
             base.OnNewIntent(intent);
         }
 
-        /*
-        #region IActivityLifecycleCallbacks
-        public void OnActivityCreated(Activity activity, Bundle savedInstanceState)
-        {
-        }
-
-        public void OnActivityDestroyed(Activity activity)
-        {
-        }
-
-        public void OnActivityPaused(Activity activity)
-        {
-        }
-
-        public void OnActivityResumed(Activity activity)
-        {
-        }
-
-        public void OnActivitySaveInstanceState(Activity activity, Bundle outState)
-        {
-        }
-
-        public void OnActivityStarted(Activity activity)
-        {
-        }
-
-        public void OnActivityStopped(Activity activity)
-        {
-        }
-        #endregion
-
-        protected override void OnDestroy()
-        {
-            base.OnDestroy();
-        }
-        */
     }
 }
 

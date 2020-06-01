@@ -1,8 +1,10 @@
 ﻿using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Tests.External
@@ -26,15 +28,15 @@ namespace Covid19Radar.Api.Tests.External
         {
             // preparation
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
-            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
-                .Returns(Task.CompletedTask);
+            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(), It.IsAny<DateTimeOffset>(), It.IsAny<string>(), It.IsAny<TemporaryExposureKeyModel[]>()))
+                .ReturnsAsync(new DiagnosisModel());
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.External.DiagnosisApi>();
             var diagnosisApi = new Covid19Radar.Api.External.DiagnosisApi(diagnosisRepo.Object, tekRepo.Object, logger);
-            var context = new Mock.HttpContextMock();
+            var context = new Mock<HttpContext>();
 
             // action
-            await diagnosisApi.RunAsync(context.Request);
+            await diagnosisApi.RunAsync(context.Object.Request);
             // assert
         }
 
@@ -61,13 +63,13 @@ namespace Covid19Radar.Api.Tests.External
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.External.DiagnosisApi>();
             var diagnosisApi = new Covid19Radar.Api.External.DiagnosisApi(diagnosisRepo.Object, tekRepo.Object, logger);
-            var context = new Mock.HttpContextMock();
+            var context = new Mock<HttpContext>();
 
             tekRepo.Setup(_ => _.UpsertAsync(It.IsAny<TemporaryExposureKeyModel>()))
                 .Verifiable();
 
             // action
-            await diagnosisApi.RunApprovedAsync(context.Request, submissionNumber, userUuid);
+            await diagnosisApi.RunApprovedAsync(context.Object.Request, submissionNumber, userUuid);
             // assert
         }
     }

@@ -1,6 +1,6 @@
 # iPhone のテスターの方へ
 
-「COVID-19 Radar」アプリのテスターにご参加いただきありがとうございます。  
+「COVID-19Radar」アプリのテスターにご参加いただきありがとうございます。  
 以下、手順を記載しますので参考にされてください。
 
 ※iPhone のブラウザは「Safari」を利用してください。
@@ -19,7 +19,7 @@ My Appsの画面にAndroid版とiOS版のアプリが表示されています。
 
 ![iOSアプリをクリック](../.attachments/002-c0bd6cac-6123-45bc-9889-ce088d42d301.jpg)
 
-「COVID-19 Radar」のiOSアプリをクリックし、次のページの「Latest release」をクリック。
+「COVID-19Radar」のiOSアプリをクリックし、次のページの「Latest release」をクリック。
 
 ![My dexicesの登録](../.attachments/003-77b8ea07-d4db-46b6-8b04-e95a4c4afe46.jpg)
 
@@ -47,5 +47,5 @@ App Centerにデバイスが登録されたのを確認してください。
 
 -----
 
-「COVID-19 Radar」は現在開発中のアプリです。  
+「COVID-19Radar」は現在開発中のアプリです。  
 コミットする都度、最新版の通知がメールアドレスに来ますので、最新版を都度ダウンロードいただきますよう、よろしくお願いいたします。

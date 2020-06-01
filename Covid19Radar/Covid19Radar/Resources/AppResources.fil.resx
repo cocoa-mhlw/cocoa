@@ -12,37 +12,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>Gusto kong tumulong</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>Paano ito gumagana</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Susunod</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Mga Tuntunin ng Serbisyo</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>Sumang-ayon at magpatuloy</value>
-    <comment>Agree and Proceed</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Hindi na kailangang input ng personal na impormasyon. Gumagamit kami ng bukod-tanging ID, na inilaan sa iyo kapag mag-instala ng app.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Ang isang contact na may isa pang app user para sa mas mahaba kaysa sa 30 min sa kabuuan, sa loob ng isang radius mas malapit sa 2m sa average ay naitala bilang "isara contact".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Mangyaring mano-manong baguhin ang iyong katayuan sa "positibong" pagkatapos na nagpapatunay ng iyong numero ng telepono. " Positibong "workflow, ngayon na koordinasyon sa mga kaugnay na Partido.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Kailangang naka-on ang Bluetooth sa record malapit sa contact. Magpunta lamang sa kasunod na pahina para buksan ito.</value>
@@ -50,27 +37,16 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Simula</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Pagprotekta sa ating mga mahal sa buhay mula sa COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Access ng aparato</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>Deskripsiyon ng app</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>Irehistro</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Sumasang-ayon</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>HOME</value>
@@ -79,14 +55,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>Status settings</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>Listahan ng mga nag-ambag</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Magsunod-sa-panahon ng impormasyon</value>
@@ -98,113 +66,21 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Ikaw ay handa nang pumunta</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>I-set up ang nakumpleto</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Kung nakatanggap ka ng positibong pagsusuri, mangyaring ipasok ang iyong mobile number at i-update ang iyong status upang protektahan ang iyong mga mahal sa buhay.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Ipasok ang mobile number</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Padadalhan namin kayo ng verification code.
-Pakitingnan ang iyong SMS.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Hindi namin iniimbak ang numero ng iyong telepono. Ito ay direktang ipadadala sa database ng pamahalaan.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Kung nakatanggap ka ng isang positibong pagsusuri</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Natukoy na listahan ng Beacon</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Ipasok ang code na ipinadala sa 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Ipasok ang code</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Kumpirmahin</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Hindi nakuha ang code?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Ipadala Ulit</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Kumpleto ang status update</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Kumpleto ang status update</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Nag-ambag ng listahan</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Nakita Beacon</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisensiya ng kasunduan</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>ID</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Avarage distansya</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Bilang</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>ElapsedTime</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>LastTime</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>MajorNo</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MinorNo</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -213,14 +89,6 @@ Pakitingnan ang iyong SMS.</value>
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>Maghanda</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Pag-install ng app</value>
@@ -238,41 +106,22 @@ Pakitingnan ang iyong SMS.</value>
     <value>Mga kailangang gamitin sa app na ito</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Status settings</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Status settings</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>I-save</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Kung nakatanggap ka ng positibong pagsusuri, mangyaring ipasok ang iyong mobile number at i-update ang iyong status upang protektahan ang iyong mga mahal sa buhay.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>I-tap upang baguhin ang estado</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Pakitingnan ang iyong koneksiyon sa network.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Paganahin</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Sa ngayon</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Ang app na ito ay gumagamit ng pagkakalantad notification/Bluetooth signal para malaman kung malapit ka sa ibang kontak na app na user. 
@@ -283,33 +132,9 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
     <value>Payagan ang pagkakalantad notification/Bluetooth</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Contributors</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposure</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Tahanan</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>Lisensiya</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>Abisuhan</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>i-update</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Exposure</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -319,14 +144,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
     <value>Manu-mano</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Update ng</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Magpagana ng notipikasyon</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>Walang kilalang exposure</value>
     <comment>If not found exposures data</comment>
@@ -334,25 +151,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Ikaw ay aabisuhan kung ikaw ay napakita sa isang tao na iniulat ng isang positibong COVID na resulta.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Ibahagi ang isang positibong pagsusuri</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Ibahagi ang isang positibong pagsusuri</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Kung ikaw ay nasubok positibo para sa mga virus na nagiging sanhi ng COVID-19, maaari mong piliin na ibahagi ang iyong pagsusuri.  Ito ay makakatulong sa iba sa iyong komunidad na naglalaman ng pagkalat ng virus.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Alamin pa</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Kung nakatanggap ka ng isang positibong pagsusuri</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Mangyaring ipasok ang diyagnosis identifier</value>
@@ -370,20 +168,16 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Ang natatanging pagsubok na identifier na dumating sa iyong COVID pagsubok ay dapat gamitin upang i-verify ang iyong positibong resulta ng pagsubok.</value>
   </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>I-verify at ibahagi</value>
-    <comment>Verify and Share</comment>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Pakisubukang muli sa ibang pagkakataon.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Nabigo</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diyagnosis isinumite</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Kumpleto</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -392,16 +186,13 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Pagsusuri ng diyagnosis kailangan</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Mangyaring magpagana ng mga notipikasyon ng pagkakalantad bago magsumite ng pagsusuri.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hindi pinagana ang mga notipikasyon</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Nagsusumite ng pagsusuri ...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -415,5 +206,121 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Isumite</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Mga Setting</value>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Hindi sumasang-ayon</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Kanselahin</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>Gusto mo bang magbukas ng mga notipikasyon?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Nagbibigay-kakayahang</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Nagtatanggal ng</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>Kung nakatanggap ka ng isang positibong pagsusuri</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>Ibahagi ang app</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Ibahagi</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Pagbabahagi ng positibong impormasyon at di-kilalang abiso sa iba</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>I-reset</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Patakaran ng Pagiging Pribado</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Naghihintay na magparehistro</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Gusto mo ba talagang i-reset ang lahat ng data?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>I-delete ang lahat ng data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Tinanggal na ang lahat ng setting at datos. Mangyaring muling-magsimula ng aplikasyon.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Bersyon</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numero ng bersiyon ng aplikasyong ito</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Maikling hanay ng wireless na komunikasyon</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Magpadala at tumanggap</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Isara ang abiso ng kontak</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Mga notipikasyon ng aplikasyon sa oras ng pagtatapos ng kontak</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Magtanggal ng datos</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>I-delete ang lahat ng data</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Imbalidong ID ng pagsusuri</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Mangyaring magbigay ng valid na pagsusuri na ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Imbalidong petsa ng pagsusuri</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Mangyaring magbigay ng balidong petsa ng pagsusuri</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Bumalik sa pagrerehistro</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positibong rehistrasyon</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Gusto mo bang magparehistro ng positibo mamaya?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Kapag patakbuhin mo ang application, ito ay bumuo at mag-imbak ng isang hindi kilalang ID sa bawat smartphone. Ang aplikasyong ito ay walang anumang impormasyong may kaugnayan sa privacy tulad ng numero ng telepono at impormasyon sa lokasyon.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Habang tumatakbo ang aplikasyon, ang smartphone ng isat isa ay inirerekord ang mga hindi kilalang ID ng isa sa nakaraang dalawang linggo. Ang mga rekord na mas luma sa 2 linggo ay matatanggal at ang bawat ID na Anonymous ay papalitan sa pana-panahon upang protektahan ang privacy.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Regular na kumukuha ang ibang gumagamit ng listahan ng mga hindi kilalang ID ng mga positibo. Pagkatapos ng pagkuha ng mga talaan, ang contact record na nakatala sa smartphone ay dapat tumugma. Kung ang resulta ng tugma ay isang mabigat na contact, aabisuhan namin ang iyong smartphone at ipaalam sa iyo ang mga kinakailangang aksyon na nais mong makipagtulungan sa amin.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Makipag-ugnay sa positibong tagasubok sa huling 14 na araw</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Kung ikaw ay positibo sa bagong Corona, mangyaring makipagtulungan sa positibong pagpaparehistro upang protektahan ang mga tao sa paligid mo.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Ang application na ito ay kaya epektibo na ang maraming mga tao i-install ito, kaya mangyaring ibahagi ang application sa mga tao sa paligid mo.</value>
   </data>
 </root>

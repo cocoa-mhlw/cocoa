@@ -12,37 +12,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>میں مدد کرنا چاہتا ہوں</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>یہ کیسے کام کرتا ہے</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>اگلا</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>شرائط٘ خدمت</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>اتفاق کرتے ہیں اور آگے بڑھیں</value>
-    <comment>Agree and Proceed</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>ان پٹ ذاتی معلومات کی ضرورت نہیں. ایپ نصب کرتے وقت ہم منفرد ID استعمال کرتے ہیں جو آپ کو مختص کرتے ہیں ۔</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>کل 30 منٹ سے زیادہ کے لئے ایک دوسرے اپلی کیشن صارف کے ساتھ ایک رابطہ ، اوسط پر 2m سے قریب ایک رداس کے اندر میں "بند رابطہ" کے طور پر ریکارڈ کیا جاتا ہے.</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>اپنے فون نمبر کی توثیق کے بعد دستی طور پر اپنی حیثیت کو "مثبت" میں تبدیل کریں ۔ مثبت "ورک فلو, اب متعلقہ جماعتوں کے ساتھ تعاون.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>بلوٹوت کو بند رابطے ریکارڈ کرنے کے لئے تبدیل کرنے کی ضرورت ہے. براہ کرم اگلے صفحے پر جائیں اسے تبدیل کرنے کے لئے.</value>
@@ -50,27 +37,16 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>شروع کریں</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>اپنے پیاروں کی حفاظت سے COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>آلہ تک رسائی</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>ایپ کی تفصیل</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>رجسٹر کریں</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>میں اتفاق کرتا ہوں</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ابتدائی صفحہ</value>
@@ -79,14 +55,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>حالت سیٹنگیں</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>شراکت دار کی فہرست</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>تازہ معلومات</value>
@@ -98,113 +66,21 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>آپ جانے کے لیے تیار ہیں</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>مکمل سیٹ اپ</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>اگر آپ کو مثبت تشخیص موصول ہوئی ہے ، تو براہ کرم اپنا موبائل نمبر درج کریں اور اپنے پیاروں کی حفاظت کیلئے اپنی صورتِ حال اپ ڈیٹ کریں ۔</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>موبائل نمبر درج کریں</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>ہم آپ کو ایک تصدیقی کوڈ بھیجیں گے ۔
-براہ مہربانی اپنے SMS کی جانچ کریں ۔</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>ہم آپ کے فون نمبر کو ذخیرہ نہیں کریں گے. یہ حکومت کے ڈیٹا بیس پر براہ راست بھیجا جائے گا.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>کھوج لگائے گئے بیکن فہرست</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>وہ کوڈ درج کریں جو بھیجا گیا تھا 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>کوڈ درج کریں</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>تصدیق کریں</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>کوڈ نہیں ملا ؟</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>دوبارہ بھیجیں</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>حالت تازہ کاری مکمل</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>حالت تازہ کاری مکمل</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>فہرست شراکت</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>کھوج بیکن</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>لائسنس معاہدہ</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>شناخت</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>اواراگی فاصلہ</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>گنتی</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>الاپسادٹامی</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>لاسٹامی</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>ماجورنو</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>مانورنو</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -213,14 +89,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>‏‏سربراہی</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>ایک ایپ انسٹال کرنا</value>
@@ -238,41 +106,22 @@
     <value>اس ایپ کو استعمال کرنے کی شرائط</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>حالت سیٹنگیں</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>حالت سیٹنگیں</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>محفوظ کریں</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>اگر آپ کو مثبت تشخیص موصول ہوئی ہے ، تو براہ کرم اپنا موبائل نمبر درج کریں اور اپنے پیاروں کی حفاظت کیلئے اپنی صورتِ حال اپ ڈیٹ کریں ۔</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>حالت تبدیل کرنے کے لیے ٹیپ کریں</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>اپنے نیٹ ورک کنکشن کی پڑتال کریں ۔</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ٹھیک ہے</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>اہل بنائيں</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>نوٹناوو</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>اس اپلی کیشن کا تعین کرنے کے لئے نمائش کی اطلاع/بلوٹوت سگنل کا استعمال کرتا ہے اگر آپ کسی دوسرے رابطے سے متعلق اپلی کیشن صارف کے قریب ہیں. 
@@ -283,33 +132,9 @@
     <value>نمائش کی اطلاع/بلوٹوت کی اجازت دیں</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>کونٹرابوٹرس</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>سرمایہ کاری</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>ہوم</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>لائسنس</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>اطلاع دیں</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>‏‏تازہ کاری</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>سرمایہ کاری</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -319,14 +144,6 @@
     <value>دستی</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>تازہ کاری کریں</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>اعلان اہل بنائیں</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>معلوم سرمایہ کاری</value>
     <comment>If not found exposures data</comment>
@@ -334,25 +151,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>آپ کو مطلع کیا جائے گا اگر آپ کسی ایسے شخص سے بے نقاب رہے ہیں جو کسی مثبت COVID کی اطلاع دی ہے-19 نتیجہ.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>ایک مثبت تشخیص کا اشتراک کریں</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>ایک مثبت تشخیص کا اشتراک کریں</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>اگر آپ نے وائرس کے لئے مثبت تجربہ کیا ہے جو COVID کا سبب بنتا ہے ، تو آپ اپنی تشخیص کا اشتراک کرنے کا انتخاب کرسکتے ہیں.  یہ آپ کی کمیونٹی میں دوسروں کی مدد کرے گا وائرس کے پھیلاؤ پر مشتمل ہے.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>مزید جانیں</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>تشخیص شناخت کار داخل کریں</value>
@@ -370,20 +168,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>آپ کے COVID کے ساتھ آئے کہ منفرد ٹیسٹ شناخت کنندہ-19 ٹیسٹ آپ کے مثبت ٹیسٹ کے نتائج کی تصدیق کرنے کے لئے استعمال کیا جانا چاہئے.</value>
   </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>تصدیق اور اشتراک</value>
-    <comment>Verify and Share</comment>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>برائے مہربانی بعد میں دوبارہ کوشش کریں۔</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>ناکام</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>پیش تشخیص</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>مکمل</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -392,16 +186,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>تشخیص شناخت کار مطلوب</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ٹھیک ہے</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>تشخیص جمع کرنے سے قبل براہ کرم نمائش کی اطلاعات کو فعال کریں ۔</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>نمائش اطلاعات غیر فعال</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تشخیص جمع کر رہا ہے...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -415,5 +206,121 @@
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>‏‏جمع کریں</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>سیٹنگیں</value>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>متفق نہیں</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>منسوخ کریں</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>کیا آپ نوٹیفکیشنز کو آن کرنا چاہتے ہیں ؟</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>کو چالو کرنے</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>حذف کر رہا ہے</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>ایپ کا اشتراک کریں</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>حصہ داری کریں</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>دوسروں کو مثبت معلومات اور گمنام اطلاع کا اشتراک کرنا</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>پھر سيٹ کريں</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>نجی حیثیت پالیسی</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>انتظار برائے رجسٹر</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>کیا آپ واقعی تمام کوائف پھر سیٹ کرنا چاہتے ہیں ؟</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>تمام کوائف حذف کریں</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>تمام سیٹنگیں اور کوائف حذف کر دیے گئے ہیں ۔ اپیلی کیشن پھر شروع کریں ۔</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>ورژن</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>اس ایپلی کیشن کا ورژن نمبر</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>مختصر رینج وائرلیس مواصلات</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>بھیجیں اور وصولیں</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>بند کریں رابطہ کی اطلاع</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>قریبی رابطے کے وقت درخواست کی اطلاعات</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>کوائف حذف کریں</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>تمام کوائف حذف کریں</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ناجائز تشخیص شناخت</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>ایک جائز تشخیص شناخت مہیا کریں</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>ناجائز جانچ تاریخ</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>ایک جائز جانچ تاریخ مہیا کریں</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>رجسٹریشن پر واپس جائیں</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>مثبت رجسٹریشن</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>کیا آپ بعد میں مثبت طور پر رجسٹر کرنا چاہیں گے ؟</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>جب آپ درخواست چلاتے ہیں ، تو یہ ہر اسمارٹ فون پر ایک گمنام ID پیدا اور ذخیرہ کرے گا. اس درخواست میں فون نمبر اور مقام کی معلومات جیسے رازداری سے متعلق کوئی معلومات حاصل نہیں ہوتی ۔</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>جب درخواست چل رہی ہے تو ، ایک دوسرے کے سمارٹ فون گزشتہ دو ہفتوں تک ایک دوسرے کی گمنام شناخت ریکارڈ کرے گا. 2 ہفتوں سے بڑی عمر کے ریکارڈ کو خارج کر دیا جائے گا اور رازداری کی حفاظت کے لئے ہر ایک گمنام ID کو تبدیل کیا جائے گا.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>دوسرے صارفین کو باقاعدگی سے مثبت لوگوں کی گمنام شناخت کی ایک فہرست حاصل. حصول کے بعد ، اسمارٹ فون پر ریکارڈ کردہ رابطہ ریکارڈ مل جائے گا. میچ کے نتیجے میں ایک بھاری رابطہ ہے تو, ہم آپ کے اسمارٹ فون کو مطلع کریں گے اور آپ کے ساتھ تعاون کرنے کے لئے چاہتے ہیں کہ ضروری اعمال کے آپ کو مطلع کرے گا.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>آخری 14 دنوں میں مثبت ٹیسٹرز کے ساتھ رابطہ کریں</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>اگر آپ نئے تاج کے ساتھ مثبت ہیں ، تو براہ کرم آپ کے ارد گرد لوگوں کی حفاظت کے لئے مثبت رجسٹریشن کے ساتھ تعاون کریں.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>یہ ایپلی کیشن بہت مؤثر ہے کہ بہت سے لوگوں کو اس کی تنصیب ہے ، لہذا براہ مہربانی آپ کے ارد گرد لوگوں کے ساتھ درخواست کا اشتراک کریں.</value>
   </data>
 </root>

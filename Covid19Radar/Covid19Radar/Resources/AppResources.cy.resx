@@ -12,37 +12,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>Yr wyf am helpu</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>Sut mae'n gweithio</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Next</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Telerau Gwasanaeth</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>Cytuno a mynd ymlaen</value>
-    <comment>Agree and Proceed</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Dim angen mewnbynnu gwybodaeth bersonol. Rydym yn defnyddio ID unigryw, a ddyrannwyd i chi wrth osod ap.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Mae cyswllt gyda defnyddiwr app arall am fwy na 30 munud i gyd, o fewn radiws sy'n agosach na 2m ar gyfartaledd yn cael ei gofnodi fel "cyswllt agos".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Newidwch eich statws i "positif" eich hun ar ôl gwirio eich rhif ffôn. " Cadarnhaol "llif gwaith, bellach yn cydgysylltu â phartïon cysylltiedig.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Mae angen i Bluetooth gael ei droi ymlaen i gofnodi cyswllt agos. Ewch i'r dudalen nesaf i'w roi ar waith.</value>
@@ -50,27 +37,16 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Cychwyn</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Amddiffyn ein hanwyliaid rhag COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Mynediad dyfais</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>Ap Description</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>Cofrestru</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Cytuno</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>HAFAN</value>
@@ -79,14 +55,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>Gosodiadau statws</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>Rhestr cyfranwyr</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Diweddaru gwybodaeth</value>
@@ -98,113 +66,21 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Rydych chi'n barod i fynd</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Wedi gorffen gosod</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Os ydych wedi cael diagnosis cadarnhaol, rhowch eich rhif ffôn symudol a diweddaru eich statws i ddiogelu eich anwyliaid.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Rhowch y rhif ffôn symudol</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Byddwn yn anfon cod dilysu atoch.
-Gwiriwch eich SMS.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Ni fyddwn yn storio eich rhif ffôn. Caiff ei anfon yn uniongyrchol i gronfa ddata'r Llywodraeth.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Pe byddech yn cael diagnosis cadarnhaol</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Rhestr Beacon a ganfuwyd</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Rhowch y Cod a anfonwyd at 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Rhowch y Cod</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Dilysu</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Heb gael y Cod?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Ailanfon</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Wedi gorffen diweddaru statws</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Wedi gorffen diweddaru statws</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Rhestr cyfranwyr</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Traethau wedi'u canfod</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Cytundeb trwydded</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>Manylion Adnabod</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Pellter avarage</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Cyfrif</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>Amser Elai</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>LastTime</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>MajorNo</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MinorNo</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -213,14 +89,6 @@ Gwiriwch eich SMS.</value>
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>Rhybudd ymlaen llaw</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Wrthi'n gosod ap</value>
@@ -238,41 +106,22 @@ Gwiriwch eich SMS.</value>
     <value>Y gofynion i ddefnyddio'r ap hwn</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Gosodiadau statws</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Gosodiadau statws</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Cadw</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Os ydych wedi cael diagnosis cadarnhaol, rhowch eich rhif ffôn symudol a diweddaru eich statws i ddiogelu eich anwyliaid.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>Tap i newid cyflwr</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Gwiriwch eich cysylltiad â'r rhwydwaith os gwelwch yn dda.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>Iawn</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Galluogi</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Mae'r app hwn yn defnyddio hysbysiad amlygiad/signalau Bluetooth i benderfynu a ydych chi'n agos at ddefnyddiwr cyswllt arall. 
@@ -283,33 +132,9 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Caniatáu hysbysiad amlygiad/Bluetooth</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Cyfranwyr</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Amlygiadau</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Hafan</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>Trwydded</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>Hysbysu</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>Diweddaru</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Amlygiadau</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -319,14 +144,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
     <value>Â llaw</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Diweddaru gwybodaeth</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Galluogi hysbysu</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>Dim amlygiadau hysbys</value>
     <comment>If not found exposures data</comment>
@@ -334,25 +151,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Byddwch yn cael eich hysbysu os ydych wedi dod i gysylltiad â rhywun a gofnododd ganlyniad COVID-19 cadarnhaol.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Rhannu diagnosis cadarnhaol</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Rhannu diagnosis cadarnhaol</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Os gwnaethoch brofi'n bositif am y firws sy'n achosi COVID-19, gallwch ddewis rhannu eich diagnosis.  Bydd hyn yn helpu eraill yn eich cymuned i gynnwys lledaeniad y firws.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Dysgu mwy</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Pe byddech yn cael diagnosis cadarnhaol</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Nodwch y Dynodwr diagnosis</value>
@@ -370,20 +168,16 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Rhaid defnyddio'r dynodwr prawf unigryw a ddaeth gyda'ch prawf COVID-19 i gadarnhau canlyniad eich prawf cadarnhaol.</value>
   </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>Dilysu a rhannu</value>
-    <comment>Verify and Share</comment>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Rhowch gynnig arall arni rywbryd eto.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Wedi methu</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnosis a gyflwynwyd</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Wedi gorffen</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -392,16 +186,13 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Angen dynodydd diagnosis</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Iawn</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Galluogwch hysbysiadau amlygiad cyn cyflwyno diagnosis.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Hysbysiadau datguddio'r anabl</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Wrthi'n cyflwyno diagnosis ...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -415,5 +206,121 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Cyflwyno</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Gosodiadau</value>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Ddim yn cytuno</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Canslo</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>Ydych chi am roi hysbysiadau ar waith?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Galluogi</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Wrthi'n dileu</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>Pe byddech yn cael diagnosis cadarnhaol</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>Rhannu'r ap</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Rhannu</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Rhannu gwybodaeth gadarnhaol a hysbysu pobl eraill yn ddienw</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Ailosod</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Polisi Preifatrwydd</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Aros am y gofrestr</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Ydych wir eisiau ailosod yr holl ddata?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Dileu'r holl ddata</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Mae'r holl leoliadau a'r data wedi'u dileu. Ailgychwynnwch y rhaglen os gwelwch yn dda.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Fersiwn</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Rhif fersiwn y rhaglen hon</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Cyfathrebu di-wifr amrediad byr</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Anfon a derbyn</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Hysbysiad cyswllt agos</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Hysbysiadau cais ar adeg cyswllt agos</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Dileu data</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Dileu'r holl ddata</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID diagnosis annilys</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Darparwch ID diagnosis dilys</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Dyddiad prawf annilys</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Rhowch ddyddiad prawf dilys os gwelwch yn dda</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Dychwelyd i gofrestru</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Cofrestru cadarnhaol</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>A hoffech gofrestru'n gadarnhaol yn nes ymlaen?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Pan fyddwch yn rhedeg y cais, bydd yn cynhyrchu ac yn storio ID dienw ar bob ffôn smart. Nid yw'r cais hwn yn caffael unrhyw wybodaeth sy'n gysylltiedig â phreifatrwydd fel rhif ffôn a gwybodaeth lleoliad.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Tra bod y cais yn rhedeg, bydd ffôn smart ei gilydd yn cofnodi IDs dienw ei gilydd am y pythefnos blaenorol. Bydd cofnodion sy'n hŷn na 2 wythnos yn cael eu dileu a bydd pob ID dienw yn cael ei newid o bryd i'w gilydd i ddiogelu preifatrwydd.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Defnyddwyr eraill yn rheolaidd yn cael rhestr o IDs anhysbys o rai cadarnhaol. Ar ôl y caffaeliad, bydd y cofnod cyswllt a gofnodir ar y Smartphone yn cael ei baru. Os yw canlyniad y gêm yn gyswllt trwm, byddwn yn rhoi gwybod i'ch Smartphone ac yn eich hysbysu o'r camau gweithredu angenrheidiol yr hoffech i ni gydweithredu â nhw.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Cyswllt gyda profwyr positif yn y 14 diwrnod diwethaf</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Os ydych yn gadarnhaol gyda'r Corona newydd, os gwelwch yn dda cydweithredu â'r cofrestru cadarnhaol i amddiffyn y bobl o'ch cwmpas.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Mae'r cais hwn mor effeithiol fel bod llawer o bobl yn ei osod, felly Rhannwch y cais gyda phobl o'ch cwmpas.</value>
   </data>
 </root>

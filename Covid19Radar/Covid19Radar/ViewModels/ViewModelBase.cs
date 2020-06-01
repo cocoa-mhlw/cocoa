@@ -14,6 +14,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -23,12 +24,13 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickHelp => new Command(async () =>
         {
-            await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
+            await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
         });
-
 
         // Navigation
         protected INavigationService NavigationService { get; private set; }
+        protected UserDataService UserDataService { get; private set; }
+        protected ExposureNotificationService ExposureNotificationService { get; private set; }
 
         // PageTite
         private string _title;
@@ -44,15 +46,23 @@ namespace Covid19Radar.ViewModels
             NavigationService = navigationService;
         }
 
-        public virtual async void Initialize(INavigationParameters parameters)
+        public ViewModelBase(INavigationService navigationService, UserDataService userDataService)
         {
-            if (LocalStateManager.Instance.LastIsEnabled && LocalStateManager.Instance.IsWelcomed)
-            {
-                if (!await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-                {
-                    await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
-                }
-            }
+            NavigationService = navigationService;
+            UserDataService = userDataService;
+        }
+
+        public ViewModelBase(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService)
+        {
+            NavigationService = navigationService;
+            UserDataService = userDataService;
+            ExposureNotificationService = exposureNotificationService;
+        }
+
+
+        public virtual void Initialize(INavigationParameters parameters)
+        {
+
         }
 
         public virtual void OnNavigatedFrom(INavigationParameters parameters)

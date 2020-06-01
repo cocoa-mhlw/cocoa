@@ -13,6 +13,8 @@ namespace Covid19Radar.Background.Services
         public readonly KeyVaultClient KeyVault;
         public readonly string TekExportKeyVaultKeyUrl;
         public readonly ILogger<TemporaryExposureKeySignService> Logger;
+        public readonly string VerificationKeyId;
+        public readonly string VerificationKeyVersion;
         private Microsoft.Azure.KeyVault.Models.KeyBundle KeyVaultKey;
 
         public TemporaryExposureKeySignService(
@@ -20,7 +22,10 @@ namespace Covid19Radar.Background.Services
             ILogger<TemporaryExposureKeySignService> logger)
         {
             Logger = logger;
-            TekExportKeyVaultKeyUrl = config["TekExportKeyVaultKeyUrl"];
+            Logger.LogInformation($"{nameof(TemporaryExposureKeySignService)} constructor");
+            TekExportKeyVaultKeyUrl = config.TekExportKeyVaultKeyUrl();
+            VerificationKeyId = config.VerificationKeyId();
+            VerificationKeyVersion = config.VerificationKeyVersion();
             AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
             var credentialCallback = new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback);
             KeyVault = new KeyVaultClient(credentialCallback);
@@ -52,8 +57,8 @@ namespace Covid19Radar.Background.Services
         {
             Logger.LogInformation($"start {nameof(SetSignatureAsync)}");
             await InitializeAsync();
-            info.VerificationKeyId = KeyVaultKey.Key.Kid;
-            info.VerificationKeyVersion = KeyVaultKey.KeyIdentifier.Version;
+            info.VerificationKeyId = VerificationKeyId;
+            info.VerificationKeyVersion = VerificationKeyVersion;
         }
 
     }

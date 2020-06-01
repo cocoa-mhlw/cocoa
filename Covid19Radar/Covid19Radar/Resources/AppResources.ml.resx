@@ -12,37 +12,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>സഹായിക്കണം</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>എങ്ങനെ പ്രവർത്തിക്കുന്നു</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>അടുത്തത്</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>സേവന നിബന്ധനകൾ</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>സമ്മതിക്കുകയും മുന്നോട്ടുപോവുക</value>
-    <comment>Agree and Proceed</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>വ്യക്തിഗത വിവരങ്ങൾ ഇൻപുട്ട് ചെയ്യേണ്ട ആവശ്യമില്ല. ഒരു ആപ്ലിക്കേഷൻ ഇൻസ്റ്റാൾ ചെയ്യുമ്പോൾ നിങ്ങളെ നിയോഗിച്ചുകൊണ്ടുള്ള യുണീക്ക് ഐഡി ഞങ്ങൾ ഉപയോഗിക്കുന്നുണ്ട്.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>ശരാശരി 30 മിനിറ്റ് ദൈർഘ്യമുള്ളതിനേക്കാൾ, മറ്റൊരു ആപ്ലിക്കേഷൻ ഉപയോക്താവുമായി ഒരു സമ്പർക്കം ശരാശരിയിൽ 2m-നേക്കാൾ കൂടുതൽ ചുറ്റളവിലുള്ള, "അടുത്ത സമ്പർക്കം" എന്ന് രേഖപ്പെടുത്തപ്പെടും.</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>നിങ്ങളുടെ ഫോൺ നമ്പർ പരിശോധിച്ചുറപ്പിക്കുന്നതിന് ശേഷം "പോസിറ്റീവ്" ആയി നിങ്ങളുടെ സ്റ്റാറ്റസ് മാന്വലായി മാറ്റുക. പോസിറ്റീവ് "വർക്ക് ഫ്ലോ, ഇപ്പോൾ അനുബന്ധ കക്ഷികളുമായി ഏകോപനം.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>അടുത്ത സമ്പർക്കം രേഖപ്പെടുത്താൻ ബ്ലൂടൂത്ത് ഓണായി ചെയ്യേണ്ടതുണ്ട്. ഓണാക്കുക അടുത്ത പേജിലേക്ക് പോകുക.</value>
@@ -50,27 +37,16 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>ആരംഭിക്കുക</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 നിന്ന് ഞങ്ങളുടെ പ്രിയപ്പെട്ടവരെ സംരക്ഷിക്കുക</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>ഉപകരണ ആക്സസ്</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>ആപ് വിവരണം</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>രജിസ്റ്റർ ചെയ്യുക</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>അംഗീകരിക്കുക</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ഹോം</value>
@@ -79,14 +55,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് സജ്ജീകരണങ്ങള്</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>കൺസെപ്റ്റർ ലിസ്റ്റുകളുടെ പട്ടിക.</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>വിവരങ്ങള് പരിഷ്കരിക്കുക</value>
@@ -98,113 +66,21 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>നീ പോകാന് തയ്യാറാണ്.</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>പൂർത്തിയായി</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് ഒരു പോസിറ്റീവ് രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ, നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകുക, പ്രിയപ്പെട്ടവരെ പരിരക്ഷിക്കുന്നതിന് നിങ്ങളുടെ സ്റ്റാറ്റസ് അപ്ഡേറ്റ് ചെയ്യുക.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>മൊബൈൽ നമ്പർ നൽകുക</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>ഞങ്ങൾ നിങ്ങൾക്ക് ഒരു വെരിഫിക്കേഷൻ കോഡ് അയയ്ക്കും.
-ദയവായി നിങ്ങളുടെ SMS പരിശോധിക്കുക.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>നിങ്ങളുടെ ഫോൺ നമ്പർ ഞങ്ങൾ സംഭരിക്കില്ല. അത് സർക്കാരിന്റെ ഡേറ്റാബേസിലേക്ക് നേരിട്ട് അയയ്ക്കും.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>ബീക്കണ് ലിസ്റ്റ് കണ്ടെത്തി</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>അയച്ചുകൊടുക്കുന്ന കോഡ് എന്റർ ചെയ്യുക 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>കോഡ് എന്റർ ചെയ്യുക</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>പരിശോധിക്കുക</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>കോഡ് കിട്ടിയില്ല?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>വീണ്ടും അയയ്ക്കുക</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് അപ്ഡേറ്റ് സമ്പൂർണ്ണ</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് അപ്ഡേറ്റ് സമ്പൂർണ്ണ</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>കോൺസ് ക്ടർമാർ ലിസ്റ്റ്</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>കണ്ടുപിടിക്കാത്ത ദീപസ്തംഭങ്ങൾ</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ലൈസൻസ് ഉടമ്പടി</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>ID</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>അവർപ്രായ ദൂരം</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>എണ്ണം</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>എലെലസെ് സമയം.</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>ലസ്റ്റ്ടൈം</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>മയോര് ഗ</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>മിനോർനോ</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -213,14 +89,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>ഹെഡ്‌സ് അപ്പ്</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>ഒരു ആപ് ഇന് സ്റ്റോള് ചെയ്യുന്നു</value>
@@ -238,41 +106,22 @@
     <value>ഈ ആപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നതിനുള്ള ആവശ്യകതകൾ</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>സ്റ്റാറ്റസ് സജ്ജീകരണങ്ങള്</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>സ്റ്റാറ്റസ് സജ്ജീകരണങ്ങള്</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>സംരക്ഷിക്കുക</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് ഒരു പോസിറ്റീവ് രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ, നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകുക, പ്രിയപ്പെട്ടവരെ പരിരക്ഷിക്കുന്നതിന് നിങ്ങളുടെ സ്റ്റാറ്റസ് അപ്ഡേറ്റ് ചെയ്യുക.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>സംസ്ഥാനം മാറ്റുന്നതിന് ടാപ്പുചെയ്യുക</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>നിങ്ങളുടെ നെറ്റ് വർക്ക് കണക്ഷൻ പരിശോധിക്കുക.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ശരി</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>പ്രാപ്‌തമാക്കുക</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ഇപ്പോൾ നോട്ടൗട്ട്</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>നിങ്ങൾ മറ്റൊരു സമ്പർക്ക ട്രേസ് ആപ്ലിക്കേഷൻ ഉപയോക്താവിനു് സമീപമുണ്ടെങ്കിൽ നിർണ്ണയിക്കുന്നതിന് എക്സ്പോണറി അറിയിപ്പ്/ബ്ലൂടൂത്ത് സിഗ്നലുകളാണ് ഈ ആപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നത്. 
@@ -283,33 +132,9 @@
     <value>എക്സ്പോണറി അറിയിപ്പ്/ബ്ലൂടൂത്ത് അനുവദിക്കുക</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>കൺക്പ്റ്ററുകൾ</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>ഹോം</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>ലൈസന്‍സ്</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>അറിയിക്കുക</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>കാലികമാക്കുക</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Exposures</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -319,14 +144,6 @@
     <value>കരകൃതം</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>പരിഷ്കരിക്കുക</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>അറിയിപ്പ് സജ്ജമാക്കുക</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>അറിയപ്പെടുന്ന അമ്പലങ്ങളില്ല</value>
     <comment>If not found exposures data</comment>
@@ -334,25 +151,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>പോസിറ്റീവ് കോവിഡ്-19 ഫലം റിപ്പോർട്ട് ചെയ്ത ഒരാളുമായി സമ്പർക്കമുണ്ടെങ്കിൽ നിങ്ങളെ അറിയിക്കും.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>പോസിറ്റീവ് രോഗനിർണ്ണയം പങ്കിടുക</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>പോസിറ്റീവ് രോഗനിർണ്ണയം പങ്കിടുക</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>കോവിഡ്-19 കാരണമാകുന്ന വൈറസിന് പോസിറ്റീവ് ആയി പരീക്ഷിച്ചാൽ, രോഗനിർണ്ണയം പങ്കിടാൻ നിങ്ങൾക്ക് തീരുമാനിക്കാം.  ഇത് നിങ്ങളുടെ സമൂഹത്തിലെ മറ്റുള്ളവർക്ക് വൈറസിന്റെ വ്യാപ്തി ഉൾക്കൊള്ളാൻ സഹായിക്കും.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>കൂടുതലറിയുക</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>രോഗനിർണ്ണയ ഐഡന്റിഫയർ നൽകുക</value>
@@ -370,20 +168,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>നിങ്ങളുടെ കോവിഡ്-19 ടെസ്റ്റുമായി ബന്ധപ്പെട്ട് വന്ന യുണീക്ക് ടെസ്റ്റ് ഐഡന്റിഫയർ നിങ്ങളുടെ പോസിറ്റീവ് പരിശോധനാ ഫലം പരിശോധിച്ചുറപ്പിക്കുന്നതിന് ഉപയോഗിക്കണം.</value>
   </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>പരിശോധിച്ചുറപ്പിക്കാനും പങ്കിടാനും</value>
-    <comment>Verify and Share</comment>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>പരാജയപ്പെട്ടു</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിച്ച</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>പൂർത്തിയാക്കുക</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -392,16 +186,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>രോഗനിർണ്ണയ ഐഡന്റിഫയർ ആവശ്യമാണ്</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ശരി</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നതിന് മുമ്പ് എക്സ്പോണറി അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>എക്സ്പോണറി അറിയിപ്പുകൾ പ്രവർത്തനരഹിതമാക്കി</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നത്...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -415,5 +206,121 @@
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>സമർപ്പിക്കുക</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>ക്രമീകരണം</value>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>സമ്മതിച്ചില്ല</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>റദ്ദാക്കുക</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>നിങ്ങള് ക്ക് നോട്ടിഫിക്കേഷന് തിരിയ്ക്കണോ?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>പ്രാപ്തമായ</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>ഇല്ലാതാക്കുന്നു</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>ആപ്പ് പങ്കിടുക</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>പങ്കിടുക</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>മറ്റുള്ളവർക്ക് അനുകൂലമായ വിവരങ്ങളും അജ്ഞാത അറിയിപ്പും പങ്കിടൽ</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>പുനഃസജ്ജീകരിക്കുക</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>സ്വകാര്യത നയം</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>രജിസ്റ്റര് ചെയ്യുന്നതിനായി കാത്തിരിക്കുന്നു</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>നിങ്ങള് ക്കു് എല്ലാ ഡാറ്റയും പുനഃക്രമീകരിക്കാന് ആഗ്രഹിക്കുന്നുണ്ടോ?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>എല്ലാ ഡാറ്റയും മായ്ക്കുക</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>എല്ലാ സജ്ജീകരണങ്ങളും ഡാറ്റയും ഇല്ലാതാക്കിയിട്ടുണ്ട്. ആപ്ലിക്കേഷൻ പുനരാരംഭിക്കുക.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>പതിപ്പ്</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>ഈ പ്രയോഗത്തിന്റെ പതിപ്പ് സംഖ്യ</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>ഹ്രസ്വദൂര വയർലെസ് കമ്മ്യൂണിക്കേഷൻ</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>അയയ്ക്കുകയും സ്വീകരിക്കുകയും</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>സമ്പർക്ക അറിയിപ്പ് അടയ്ക്കുക</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>അടുത്ത സമ്പർക്ക സമയത്തെ അപേക്ഷാ അറിയിപ്പുകൾ</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>ഡേറ്റാ നീക്കം ചെയ്യുക</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>എല്ലാ ഡാറ്റയും മായ്ക്കുക</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>അസാധുവായ രോഗനിർണ്ണയ ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>സാധുതയുള്ള രോഗനിർണ്ണയ ഐഡി നൽകുക</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>അസാധുവായ പരിശോധനാ തീയതി</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>സാധുതയുള്ള പരിശോധനാ തീയതി നൽകുക</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>രജിസ്ട്രേഷന് തിരികെ നല് കൂ</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>പോസിറ്റീവ് രജിസ്ട്രേഷൻ</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>പിന്നീട് പോസിറ്റീവായി രജിസ്റ്റർ ചെയ്യാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നു?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>നിങ്ങൾ ആപ്ലിക്കേഷൻ പ്രവർത്തിപ്പിക്കുമ്പോൾ, ഓരോ സ്മാർട്ട് ഫോണിലും ഒരു അജ്ഞാത ഐഡി ജനറേറ്റ് ചെയ്യുകയും സംഭരിക്കുകയും ചെയ്യും. ഫോൺ നമ്പർ, ലൊക്കേഷൻ വിവരങ്ങൾ എന്നിങ്ങനെയുള്ള സ്വകാര്യതയുമായി ബന്ധപ്പെട്ട വിവരങ്ങളൊന്നും ഈ അപേക്ഷയിൽ നേടിയില്ല.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>ആപ്ലിക്കേഷൻ പ്രവർത്തിപ്പിക്കുമ്പോൾ ഓരോരുത്തരുടെയും സ്മാർട്ട് ഫോൺ കഴിഞ്ഞ രണ്ടാഴ്ചയായി ഓരോരുത്തരുടെയും അജ്ഞാത ഐഡികൾ രേഖപ്പെടുത്തും. 2 ആഴ്ചയിൽ കൂടുതൽ പ്രായമുള്ള രേഖകൾ ഇല്ലാതാക്കപ്പെടും, സ്വകാര്യത പരിരക്ഷിക്കുന്നതിന് ഓരോ അജ്ഞാത ID മാറ്റുകയും ചെയ്യും.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>മറ്റു ഉപയോക്താക്കൾക്കും പതിവായി പോസിറ്റീവ് ഉള്ള അജ്ഞാത ഐഡികളുടെ പട്ടിക ലഭിക്കുന്നു. ഏറ്റെടുക്കലിന് ശേഷം സ്മാര് ട്ട് ഫോണില് രേഖപ്പെടുത്തിയ കോണ്ടാക്ട് റെക്കോഡ് ഒത്തുചേരും. മത്സരത്തിന്റെ ഫലം കനത്ത സമ്പർക്കമാണെങ്കിൽ, ഞങ്ങൾ നിങ്ങളുടെ സ്മാർട്ട് ഫോണിനെ അറിയിക്കും, ഞങ്ങൾ സഹകരിക്കണമെന്ന് നിങ്ങൾ ആഗ്രഹിക്കുന്നു എന്ന് ആവശ്യമായ പ്രവൃത്തികൾ നിങ്ങളെ അറിയിക്കുകയും ചെയ്യും.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>കഴിഞ്ഞ 14 ദിവസത്തിനുള്ളിൽ പോസിറ്റീവ് ടെസ്റ്റേഴ്സ് ആയി ബന്ധപ്പെടുക</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>പുതിയ കൊറോണ നിങ്ങൾക്ക് പോസിറ്റീവാണെങ്കിൽ, ചുറ്റുമുള്ള ആളുകളെ പരിരക്ഷിക്കുന്നതിന് പോസിറ്റീവ് രജിസ്ട്രേഷനുമായി സഹകരിക്കുക.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>അനവധി ആളുകൾ ഇൻസ്റ്റാൾ ചെയ്യുന്നതിന് ഈ ആപ്ലിക്കേഷൻ വളരെ ഫലപ്രദമാണ്, അതിനാൽ നിങ്ങളുടെ ചുറ്റുമുള്ള ആളുകളോടൊപ്പം ആപ്ലിക്കേഷൻ പങ്കിടുക.</value>
   </data>
 </root>
