@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,25 +23,24 @@ namespace Covid19Radar.Api.DataAccess
             _logger = logger;
         }
 
-        public async Task Delete(IUser user)
+        public async Task DeleteAsync(IUser user)
         {
-            _logger.LogInformation($"start {nameof(Delete)}");
-            await _db.Diagnosis.DeleteItemAsync<DiagnosisModel>(user.GetId(), PartitionKey.Null);
+            _logger.LogInformation($"start {nameof(DeleteAsync)}");
+            await _db.Diagnosis.DeleteItemAsync<DiagnosisModel>(user.GetId(), PartitionKey.None);
         }
 
         public async Task<DiagnosisModel> GetAsync(string submissionNumber, string userUuid)
         {
             _logger.LogInformation($"start {nameof(GetAsync)}");
-            var response = await _db.Diagnosis.ReadItemAsync<DiagnosisModel>(userUuid, new PartitionKey(submissionNumber));
+            var response = await _db.Diagnosis.ReadItemAsync<DiagnosisModel>(userUuid, PartitionKey.None);
             return response.Resource;
         }
 
         public async Task<DiagnosisModel[]> GetNotApprovedAsync()
         {
             _logger.LogInformation($"start {nameof(GetNotApprovedAsync)}");
-            var query = _db.Diagnosis.GetItemLinqQueryable<DiagnosisModel>()
-                   .Where(_ => _.Approved == false)
-                   .ToFeedIterator();
+            var q = new QueryDefinition("SELECT * FROM c WHERE c.Approved == false");
+            var query = _db.Diagnosis.GetItemQueryIterator<DiagnosisModel>(q);
             var e = Enumerable.Empty<DiagnosisModel>();
             while (query.HasMoreResults)
             {
@@ -51,18 +51,20 @@ namespace Covid19Radar.Api.DataAccess
             return e.ToArray();
         }
 
-        public Task SubmitDiagnosisAsync(string SubmissionNumber, string UserUuid, TemporaryExposureKeyModel[] Keys)
+        public async Task<DiagnosisModel> SubmitDiagnosisAsync(string SubmissionNumber, DateTimeOffset timestamp, string UserUuid, TemporaryExposureKeyModel[] Keys)
         {
             _logger.LogInformation($"start {nameof(SubmitDiagnosisAsync)}");
             var item = new DiagnosisModel()
             {
                 id = UserUuid,
-                PartitionKey = SubmissionNumber,
                 UserUuid = UserUuid,
+                SubmissionNumber = SubmissionNumber,
+                Approved = false,
+                Timestamp = timestamp.ToUnixTimeSeconds(),
                 Keys = Keys
             };
 
-            return _db.Diagnosis.UpsertItemAsync<DiagnosisModel>(item, new PartitionKey(item.PartitionKey));
+            return (await _db.Diagnosis.UpsertItemAsync<DiagnosisModel>(item)).Resource;
         }
     }
 }

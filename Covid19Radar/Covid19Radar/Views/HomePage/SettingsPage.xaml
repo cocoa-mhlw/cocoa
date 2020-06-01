@@ -15,44 +15,17 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Command="{Binding OnClickHelp}"
-            Order="Primary"
-            Priority="1"
-            Text="{x:Static resources:AppResources.MainTutorial}" />
-        <ToolbarItem
-            Command="{Binding OnClickHelp}"
-            Order="Primary"
-            Priority="2">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="FA-R"
-                    Glyph="&#xf059;"
-                    Size="35"
-                    Color="White" />
-            </ToolbarItem.IconImageSource>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
-
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-
-            <Label
-                Grid.Row="0"
-                Style="{StaticResource DefaultTitleLabel}"
-                Text="{Binding Title}" />
             <Grid
-                Grid.Row="1"
-                HorizontalOptions="Center"
+                Grid.Row="0"
+                HorizontalOptions="FillAndExpand"
                 RowSpacing="20">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="0.5*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -71,13 +44,13 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Small"
-                                Text="Version"
+                                Text="{x:Static resources:AppResources.VersionText}"
                                 TextColor="{StaticResource PrimaryText}" />
                             <Span Text="{x:Static System:Environment.NewLine}" />
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Caption"
-                                Text="このアプリのバージョン番号"
+                                Text="{x:Static resources:AppResources.VersionDescription}"
                                 TextColor="{StaticResource SecondaryText}" />
                         </FormattedString>
                     </Label.FormattedText>
@@ -85,9 +58,10 @@
                 <Label
                     Grid.Row="0"
                     Grid.Column="1"
-                    HorizontalOptions="End"
+                    HorizontalOptions="Center"
                     Style="{StaticResource DefaultLabelSmall}"
-                    Text="{Binding AppVer}" />
+                    Text="{Binding AppVer}"
+                    VerticalOptions="Center" />
                 <BoxView
                     Grid.Row="1"
                     Grid.ColumnSpan="2"
@@ -98,13 +72,13 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Small"
-                                Text="近距離無線通信"
+                                Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationText}"
                                 TextColor="{StaticResource PrimaryText}" />
                             <Span Text="{x:Static System:Environment.NewLine}" />
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Caption"
-                                Text="発信と受信を停止する"
+                                Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationDescription}"
                                 TextColor="{StaticResource SecondaryText}" />
                         </FormattedString>
                     </Label.FormattedText>
@@ -112,11 +86,12 @@
                 <Switch
                     Grid.Row="2"
                     Grid.Column="1"
-                    IsToggled="{Binding EnableExposureNotification, Mode=TwoWay}">
+                    IsToggled="{Binding UserData.IsExposureNotificationEnabled, Mode=TwoWay}">
                     <Switch.Behaviors>
-                        <Behavior:SwitchBehavior Command="{Binding OnChangeEnableExposureNotification}" />
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeExposureNotificationState}" />
                     </Switch.Behaviors>
                 </Switch>
+
                 <BoxView
                     Grid.Row="3"
                     Grid.ColumnSpan="2"
@@ -127,13 +102,13 @@
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Small"
-                                Text="濃厚接触の通知"
+                                Text="{x:Static resources:AppResources.CloseContactNotificationText}"
                                 TextColor="{StaticResource PrimaryText}" />
                             <Span Text="{x:Static System:Environment.NewLine}" />
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Caption"
-                                Text="濃厚接触時のアプリ通知"
+                                Text="{x:Static resources:AppResources.CloseContactNotificationDescription}"
                                 TextColor="{StaticResource SecondaryText}" />
                         </FormattedString>
                     </Label.FormattedText>
@@ -141,52 +116,45 @@
                 <Switch
                     Grid.Row="4"
                     Grid.Column="1"
-                    IsToggled="{Binding EnableLocalNotification, Mode=TwoWay}">
+                    IsToggled="{Binding UserData.IsNotificationEnabled, Mode=TwoWay}">
                     <Switch.Behaviors>
-                        <Behavior:SwitchBehavior Command="{Binding OnChangeEnableNotification}" />
+                        <Behavior:SwitchBehavior Command="{Binding OnChangeNotificationState}" />
                     </Switch.Behaviors>
+
                 </Switch>
+
                 <BoxView
                     Grid.Row="5"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource DefaultLineStyle}" />
-
                 <Label Grid.Row="6" Grid.Column="0">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Small"
-                                Text="記録の削除"
+                                Text="{x:Static resources:AppResources.DeleteDataText}"
                                 TextColor="{StaticResource PrimaryText}" />
                             <Span Text="{x:Static System:Environment.NewLine}" />
                             <Span
                                 FontFamily="NotoSansRegularFontFamily"
                                 FontSize="Caption"
-                                Text="接触記録の全削除"
+                                Text="{x:Static resources:AppResources.DeleteDataDescription}"
                                 TextColor="{StaticResource SecondaryText}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Switch
+                <Button
                     Grid.Row="6"
                     Grid.Column="1"
-                    IsToggled="{Binding ResetData, Mode=TwoWay}">
-                    <Switch.Behaviors>
-                        <Behavior:SwitchBehavior Command="{Binding OnChangeResetData}" />
-                    </Switch.Behaviors>
-                </Switch>
+                    Command="{Binding OnChangeResetData}"
+                    Style="{StaticResource DefaultButtonGrayout}"
+                    Text="{x:Static resources:AppResources.ButtonReset}" />
                 <BoxView
                     Grid.Row="7"
                     Grid.ColumnSpan="2"
                     Style="{StaticResource DefaultLineStyle}" />
             </Grid>
-            <ce:GradientButton
-                Grid.Row="2"
-                AutomationId="Save"
-                Command="{Binding Path=OnSaveClick}"
-                Style="{StaticResource DefaultGradientButton}"
-                Text="Save" />
         </Grid>
     </ScrollView>
 </ContentPage>

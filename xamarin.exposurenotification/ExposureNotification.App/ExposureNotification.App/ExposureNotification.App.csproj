@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Fonts\fa-brands-400.ttf" />
+		<EmbeddedResource Include="Resources\Fonts\fa-regular-400.ttf" />
+		<EmbeddedResource Include="Resources\Fonts\fa-solid-900.ttf" />
+		<EmbeddedResource Include="settings.json" Condition="'$(Configuration)' != 'Debug' or !Exists('local.settings.json')" />
+		<EmbeddedResource Include="local.settings.json" Link="settings.json" Condition="'$(Configuration)' == 'Debug' and Exists('local.settings.json')" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Acr.UserDialogs" Version="7.1.0.442" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="Refractored.MvvmHelpers" Version="1.6.1-beta" />
+		<PackageReference Include="System.Text.Json" Version="4.7.1" />
+		<PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
+		<PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.726" />
+		<PackageReference Include="Plugin.LocalNotification" Version="5.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\ExposureNotification.Backend.Network\ExposureNotification.Backend.Network.csproj" />
+		<ProjectReference Include="..\..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />
+	</ItemGroup>
+
+</Project>
