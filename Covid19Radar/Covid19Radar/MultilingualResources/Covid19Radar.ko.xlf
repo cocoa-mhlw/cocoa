@@ -22,22 +22,17 @@
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">개인 정보를 입력 할 필요가 없습니다. 앱 설치시 할당된 고유 ID를 사용하고 있습니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+          <target state="translated">개인 정보를 입력 할 필요가 없습니다. 앱 설치시 할당된 고유 ID를 사용하고 있습니다.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "밀접접촉"으로 기록됩니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">전화번호를 확인한 후 상태를 '양성'으로 수동 변경십시오. 이제 이해관계자와의 조정이 필요합니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+          <target state="translated">평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "밀접접촉"으로 기록됩니다.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">저장 된 가까운 접촉자를 확인하기 위해 블루투스가 필요합니다. 다음 페이지로 이동하여 블루투스를 켜십시오.</target>
+          <target state="translated">저장 된 가까운 접촉자를 확인하기 위해 블루투스가 필요합니다. 다음 페이지로 이동하여 블루투스를 켜십시오.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
         </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
@@ -46,8 +41,7 @@
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
           <source>Protecting our loved ones from COVID-19</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19로부터 사랑하는 사람을 보호해주세요.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
+          <target state="translated">COVID-19로부터 사랑하는 사람을 보호해주세요.</target>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -87,80 +81,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">완료된 설정</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
         </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">양성진단을 받은경우, 휴대전화 번호를 입력 후 사랑하는 사람을 보호하기 위해 상태를 업데이트 하시기 바랍니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page description</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsEnterNumber" translate="yes" xml:space="preserve">
-          <source>Enter the mobile number</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">휴대전화 번호를 입력합니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page enter number text</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSMSDescription" translate="yes" xml:space="preserve">
-          <source>We'll send you a verification code.
-Please check your SMS.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">확인 코드를 보내드립니다.
-SMS를 확인하십시오.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSMSInfo" translate="yes" xml:space="preserve">
-          <source>We will not store your phone number. It will be sent directly to the database of the government.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">우리는 여러분의 전화번호를 저장하지 않습니다. 다만 정부의 데이터베이스로 전송할 수 있습니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sms info</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">양성진단을 받은 경우</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sub title</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextPhoneNumberPlaceholder" translate="yes" xml:space="preserve">
-          <source>090-1234-4567</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">090-1234-4567</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Placeholder text for phone number entry</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconListMenu" translate="yes" xml:space="preserve">
-          <source>Detected Beacon List</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">감지된 비콘 목록</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacon List Menu</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageOtpEnterText" translate="yes" xml:space="preserve">
-          <source>Enter the Code that was sent to 
-「{0}」</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">전송된 코드를 입력합니다. 
-「{0}」</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Otp Enter the Code</note>
-        </trans-unit>
-        <trans-unit id="TitleOtp" translate="yes" xml:space="preserve">
-          <source>Enter the Code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">코드 입력</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Otp Title</note>
-        </trans-unit>
-        <trans-unit id="ButtonVerify" translate="yes" xml:space="preserve">
-          <source>Verify</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">확인</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button Verify</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageDidntGetTheCodeText" translate="yes" xml:space="preserve">
-          <source>Didn't get the code?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">코드를 받지 못했나요?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Didn't get the code Text</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageResendText" translate="yes" xml:space="preserve">
-          <source>Resend</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">다시 보내기</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Resend Text</note>
-        </trans-unit>
-        <trans-unit id="StatusUpdateCompletePageTextStatusUpdateComplete" translate="yes" xml:space="preserve">
-          <source>Status Update Complete</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">상태 업데이트 완료</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Update Complete page text</note>
-        </trans-unit>
-        <trans-unit id="TitleStatusUpdateComplete" translate="yes" xml:space="preserve">
-          <source>Status Update Complete</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">상태 업데이트 완료</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Update Complete page title</note>
-        </trans-unit>
         <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
           <source>Contributors List</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">기고자 목록</target>
@@ -174,41 +94,6 @@ SMS를 확인하십시오.</target>
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
-          <source>ID</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ID</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
-          <source>Average Distance</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">평균 거리</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
-          <source>Count</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">개수</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
-          <source>ElapsedTime</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">경과 시간</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextElapsedTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextLastTime" translate="yes" xml:space="preserve">
-          <source>LastTime</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">마지막 시간</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
-          <source>MajorNo</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">주 번호</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
-          <source>MinorNo</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">보조 번호</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MinorNo</note>
         </trans-unit>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
@@ -246,21 +131,6 @@ SMS를 확인하십시오.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">상태 설정</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
         </trans-unit>
-        <trans-unit id="ButtonSave" translate="yes" xml:space="preserve">
-          <source>Save</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">저장</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button Save</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">양성진단을 받은 경우, 휴대전화 번호를 입력 후 사랑하는 사람을 보호하기 위해 상태를 업데이트하십시오.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
-          <source>Tap to change state</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">탭하여 상태 변경</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
-        </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">네트워크 연결을 확인하십시오.</target>
@@ -281,7 +151,7 @@ SMS를 확인하십시오.</target>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
 Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">이 애플리케이션은 당신의 다른 연락처에 있는 추적 애플리케이션 사용자가 근처에 있는지 확인하기 위해 알람 및 블루투스 신호를 사용합니다. 
+          <target state="translated">이 애플리케이션은 당신의 다른 연락처에 있는 추적 애플리케이션 사용자가 근처에 있는지 확인하기 위해 알람 및 블루투스 신호를 사용합니다. 
 블루투스를 사용을 위해 '항상 허용'을 선택합니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
         </trans-unit>
@@ -305,16 +175,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">수동</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
-        <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
-          <source>Update Infomation</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">업데이트 정보화</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
-        </trans-unit>
-        <trans-unit id="HomeEnableNotification" translate="yes" xml:space="preserve">
-          <source>Enable Notification</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">알림 사용</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home Setting Enable Notification</note>
-        </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
           <source>No known exposures</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">알려진 노출 없음</target>
@@ -322,32 +182,8 @@ Select 'Always Allow' to set up Bluetooth.</source>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 결과가 양성으로 보고 된 사람에게 노출된 경우 알림을 받게 됩니다.</target>
+          <target state="translated">COVID-19 결과가 양성으로 보고 된 사람에게 노출된 경우 알림을 받게 됩니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
-        </trans-unit>
-        <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
-          <source>Share A Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">양성진단 공유</target>
-        </trans-unit>
-        <trans-unit id="NofityPageShareDiag" translate="yes" xml:space="preserve">
-          <source>Share A Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">양성진단 공유</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Share Diag</note>
-        </trans-unit>
-        <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
-          <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19를 일으키는 바이러스에 대해 양성 반응이 나온 경우, 진단공유 여부를 선택할 수 있습니다. 공유 된 정보는 지역사회 감염을 방지해 바이러스 확산저지에 도움이 될 것입니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
-        </trans-unit>
-        <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
-          <source>Learn more</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">자세히</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">양성진단을 받은 경우</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
           <source>Please enter the Diagnosis Identifier</source>
@@ -356,7 +192,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
         </trans-unit>
         <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
           <source>Share a Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">양성진단 공유</target>
+          <target state="translated">양성진단 공유</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
           <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
@@ -396,11 +232,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">진단을 제출하기 전에 노출알림을 활성화 하십시오.</target>
+          <target state="translated">진단을 제출하기 전에 노출알림을 활성화 하십시오.</target>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">노출알림 사용 안 함</target>
+          <target state="translated">노출알림 사용 안 함</target>
         </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
