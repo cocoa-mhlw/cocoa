@@ -1,5 +1,6 @@
 ﻿using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Common;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,7 +15,7 @@ namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosUserRepository : IUserRepository
     {
-        const string SequenceName = "JumpConsistentSeed";
+        private readonly PartitionKeyRotation _keys;
         private readonly ICosmos _db;
         private readonly ISequenceRepository _sequence;
         private readonly ILogger<CosmosUserRepository> _logger;
@@ -27,6 +28,10 @@ namespace Covid19Radar.Api.DataAccess
             _db = db;
             _sequence = sequence;
             _logger = logger;
+            _keys = new PartitionKeyRotation(new string[] { "JumpConsistentSeed1",
+                                                            "JumpConsistentSeed2",
+                                                            "JumpConsistentSeed3",
+                                                            "JumpConsistentSeed4"});
         }
 
         public async Task<UserModel?> GetById(string id)
@@ -42,7 +47,7 @@ namespace Covid19Radar.Api.DataAccess
 
         public async Task Create(UserModel user)
         {
-            user.JumpConsistentSeed = await _sequence.GetNextAsync(SequenceName, 1);
+            user.JumpConsistentSeed = await _sequence.GetNextAsync(_keys.Next(), 1);
             var r = await _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
             _logger.LogInformation($"{nameof(Create)} RequestCharge:{r.RequestCharge}");
         }
