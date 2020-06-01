@@ -10,86 +10,134 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 using Acr.UserDialogs;
+using Covid19Radar.Model;
+using System.ComponentModel;
 
 namespace Covid19Radar.ViewModels
 {
     public class DebugPageViewModel : ViewModelBase
     {
-        public DebugPageViewModel(INavigationService navigationService) : base(navigationService)
+        private readonly UserDataService userDataService;
+        private readonly ExposureNotificationService exposureNotificationService;
+
+        public DebugPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = "Debug";
+            this.userDataService = userDataService;
+            this.exposureNotificationService = exposureNotificationService;
+            _UserData = this.userDataService.Get();
+            _EnMessage = this.exposureNotificationService.CurrentStatusMessage;
+            this.userDataService.UserDataChanged += _userDataChanged;
         }
+
+        private void _userDataChanged(object sender, UserDataModel e)
+        {
+            _UserData = this.userDataService.Get();
+            _EnMessage = this.exposureNotificationService.CurrentStatusMessage;
+        }
+
         public string NativeImplementationName
-    => Xamarin.ExposureNotifications.ExposureNotification.OverridesNativeImplementation
-        ? "TEST" : "LIVE";
+            => Xamarin.ExposureNotifications.ExposureNotification.OverridesNativeImplementation
+                ? "TEST" : "LIVE";
+
+        private UserDataModel _UserData;
+
+        public UserDataModel UserData
+        {
+            get { return _UserData; }
+            set { SetProperty(ref _UserData, value); }
+        }
+
+        private string _EnMessage;
+
+        public string EnMessage
+        {
+            get { return _EnMessage; }
+            set { SetProperty(ref _EnMessage, value); }
+        }
 
         public string CurrentBatchFileIndex
-            => LocalStateManager.Instance.ServerBatchNumber.ToString();
+            => string.Join(", ", _UserData.ServerBatchNumbers.Select(p => $"{p.Key}={p.Value}"));
 
-        public Command ResetSelfDiagnosis => new Command(async () =>
-        {
-            LocalStateManager.Instance.ClearDiagnosis();
-            LocalStateManager.Save();
-            await UserDialogs.Instance.AlertAsync("Self Diagnosis Cleared!");
-        });
-
-
-        public Command ResetExposures => new Command(async () =>
-           {
-               await Device.InvokeOnMainThreadAsync(() => LocalStateManager.Instance.ExposureInformation.Clear());
-               LocalStateManager.Instance.ExposureSummary = null;
-               LocalStateManager.Save();
-               await UserDialogs.Instance.AlertAsync("Exposures Cleared!");
-           });
-
-        public Command AddExposures => new Command(async () =>
-        {
-            await Device.InvokeOnMainThreadAsync(() =>
+        public Command ResetSelfDiagnosis
+            => new Command(async () =>
             {
-                LocalStateManager.Instance.ExposureInformation.Add(new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, Xamarin.ExposureNotifications.RiskLevel.High));
-                LocalStateManager.Instance.ExposureInformation.Add(new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(10), 40, 3, Xamarin.ExposureNotifications.RiskLevel.Low));
-                LocalStateManager.Save();
+                _UserData.ClearDiagnosis();
+                await userDataService.SetAsync(_UserData);
+                await UserDialogs.Instance.AlertAsync("Self Diagnosis Cleared!");
             });
-        });
 
-        public Command ResetWelcome => new Command(async () =>
-        {
-            LocalStateManager.Instance.IsWelcomed = false;
-            LocalStateManager.Save();
-            await UserDialogs.Instance.AlertAsync("Welcome state reset!");
-        });
 
-        public Command ResetEnabled => new Command(async () =>
-        {
-            using (UserDialogs.Instance.Loading(string.Empty))
+        public Command ResetExposures
+            => new Command(async () =>
             {
-                if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                await Device.InvokeOnMainThreadAsync(() => _UserData.ExposureInformation.Clear());
+                _UserData.ExposureSummary = null;
+                await userDataService.SetAsync(_UserData);
+                await UserDialogs.Instance.AlertAsync("Exposures Cleared!");
+            });
+
+        public Command AddExposures
+            => new Command(async () =>
+            {
+                await Device.InvokeOnMainThreadAsync(async () =>
                 {
-                    await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
-                }
+                    _UserData.ExposureInformation.Add(
+                        new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, Xamarin.ExposureNotifications.RiskLevel.High));
+                    _UserData.ExposureInformation.Add(
+                        new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(10), 40, 3, Xamarin.ExposureNotifications.RiskLevel.Low));
 
-                LocalStateManager.Instance.LastIsEnabled = false;
-                LocalStateManager.Save();
-            }
-            await UserDialogs.Instance.AlertAsync("Last known enabled state reset!");
+                    await userDataService.SetAsync(_UserData);
+
+                });
+            });
+
+
+        public Command ToggleWelcome => new Command(async () =>
+        {
+            _UserData.IsOptined = !_UserData.IsOptined;
+            await userDataService.SetAsync(_UserData);
         });
 
-        public Command ResetBatchFileIndex => new Command(async () =>
+        public Command ToggleEn => new Command(async () =>
         {
-            LocalStateManager.Instance.ServerBatchNumber = 0;
-            LocalStateManager.Save();
-            OnPropertyChanged(nameof(CurrentBatchFileIndex));
-            await UserDialogs.Instance.AlertAsync("Reset Batch file index!");
+            _UserData.IsExposureNotificationEnabled = !_UserData.IsExposureNotificationEnabled;
+            await userDataService.SetAsync(_UserData);
         });
 
-        public Command ManualTriggerKeyFetch => new Command(async () =>
-        {
-            using (UserDialogs.Instance.Loading("Fetching..."))
+
+        public Command ResetEnabled
+            => new Command(async () =>
             {
-                await Xamarin.ExposureNotifications.ExposureNotification.UpdateKeysFromServer();
-                OnPropertyChanged(nameof(CurrentBatchFileIndex));
-            }
-        });
+                using (UserDialogs.Instance.Loading(string.Empty))
+                {
+                    if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                    {
+                        await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
+                    }
+                    await userDataService.SetAsync(_UserData);
+                }
+                await UserDialogs.Instance.AlertAsync("Last known enabled state reset!");
+            });
 
+        public Command ResetBatchFileIndex
+            => new Command(async () =>
+            {
+                _UserData.ServerBatchNumbers = new Dictionary<string, ulong>(UserDataModel.DefaultServerBatchNumbers);
+                await userDataService.SetAsync(_UserData);
+                RaisePropertyChanged(nameof(CurrentBatchFileIndex));
+                await UserDialogs.Instance.AlertAsync("Reset Batch file index!");
+            });
+
+        public Command ManualTriggerKeyFetch
+            => new Command(async () =>
+            {
+                using (UserDialogs.Instance.Loading("Fetching..."))
+                {
+                    await Xamarin.ExposureNotifications.ExposureNotification.UpdateKeysFromServer();
+
+                    RaisePropertyChanged(nameof(CurrentBatchFileIndex));
+                }
+            });
     }
 }

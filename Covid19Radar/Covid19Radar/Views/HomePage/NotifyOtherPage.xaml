@@ -14,26 +14,6 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Command="{Binding OnClickHelp}}"
-            Order="Primary"
-            Priority="1"
-            Text="使い方" />
-        <ToolbarItem
-            Command="{Binding OnClickHelp}}"
-            Order="Primary"
-            Priority="2">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="FA-R"
-                    Glyph="&#xf059;"
-                    Size="35"
-                    Color="White" />
-            </ToolbarItem.IconImageSource>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
-
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
@@ -73,7 +53,7 @@
                 </Grid>
             </StackLayout>
             <StackLayout Grid.Row="1">
-                <Label Style="{StaticResource DefaultLabelColor}" Text="陽性登録" />
+                <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.PositiveRegistrationText}" />
                 <BoxView Style="{StaticResource DefaultLineStyle}" />
                 <Label Style="{StaticResource DefaultLabel}" Text="公的機関から発行された「処理番号」を入力してください" />
                 <Entry
@@ -82,10 +62,10 @@
                     MaxLength="10"
                     Placeholder="10桁の処理番号"
                     Style="{StaticResource DefaultEntry}"
-                    Text="{Binding NotifyCode, Mode=TwoWay}" />
+                    Text="{Binding DiagnosisUid, Mode=TwoWay}" />
                 <Label Style="{StaticResource DefaultLabel}" Text="検査日は、アプリがいつあなたが伝染した可能性があるかを知るのに役立ち、接触した履歴のある人への通知を行います。" />
                 <DatePicker
-                    Date="{Binding SelectedDate, Mode=TwoWay}"
+                    Date="{Binding DiagnosisTimestamp, Mode=TwoWay}"
                     FontSize="Large"
                     MaximumDate="{Binding MaxDate}"
                     MinimumDate="{Binding MinDate}" />
@@ -99,8 +79,9 @@
                 <ce:GradientButton
                     AutomationId="RegisterButton"
                     Command="{Binding Path=OnClickAfter}"
+                    IsEnabled="{Binding IsEnabled}"
                     Style="{StaticResource DefaultGradientButtonGrayout}"
-                    Text="あとで設定する" />
+                    Text="{x:Static resources:AppResources.ButtonNotNow}" />
             </StackLayout>
         </Grid>
     </ScrollView>

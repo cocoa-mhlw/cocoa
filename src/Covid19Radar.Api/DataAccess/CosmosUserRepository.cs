@@ -14,18 +14,24 @@ namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosUserRepository : IUserRepository
     {
+        const string SequenceName = "JumpConsistentSeed";
         private readonly ICosmos _db;
+        private readonly ISequenceRepository _sequence;
         private readonly ILogger<CosmosUserRepository> _logger;
 
-        public CosmosUserRepository(ICosmos db, ILogger<CosmosUserRepository> logger)
+        public CosmosUserRepository(
+            ICosmos db,
+            ISequenceRepository sequence,
+            ILogger<CosmosUserRepository> logger)
         {
             _db = db;
+            _sequence = sequence;
             _logger = logger;
         }
 
-        public async Task<UserResultModel?> GetById(string id)
+        public async Task<UserModel?> GetById(string id)
         {
-            var itemResult = await _db.User.ReadItemAsync<UserResultModel>(id, new PartitionKey(id));
+            var itemResult = await _db.User.ReadItemAsync<UserModel>(id, new PartitionKey(id));
             if (itemResult.StatusCode == HttpStatusCode.OK)
             {
                 return itemResult.Resource;
@@ -34,9 +40,11 @@ namespace Covid19Radar.Api.DataAccess
             return null;
         }
 
-        public Task Create(UserModel user)
+        public async Task Create(UserModel user)
         {
-            return _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
+            user.JumpConsistentSeed = await _sequence.GetNextAsync(SequenceName, 1);
+            var r = await _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
+            _logger.LogInformation($"{nameof(Create)} RequestCharge:{r.RequestCharge}");
         }
 
         public async Task<bool> Exists(string id)
@@ -44,7 +52,7 @@ namespace Covid19Radar.Api.DataAccess
             bool userFound = false;
             try
             {
-                var userResult = await _db.User.ReadItemAsync<UserResultModel>(id, new PartitionKey(id));
+                var userResult = await _db.User.ReadItemAsync<UserModel>(id, new PartitionKey(id));
                 if (userResult.StatusCode == HttpStatusCode.OK)
                 {
                     userFound = true;

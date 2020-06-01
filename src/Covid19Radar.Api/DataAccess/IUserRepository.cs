@@ -10,7 +10,7 @@ namespace Covid19Radar.Api.DataAccess
 {
     public interface IUserRepository
     {
-        Task<UserResultModel?> GetById(string id);
+        Task<UserModel?> GetById(string id);
 
         Task Create(UserModel user);
 

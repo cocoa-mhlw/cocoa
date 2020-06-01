@@ -6,45 +6,29 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-        <trans-unit id="ButtonIWantToHelp" translate="yes" xml:space="preserve">
-          <source>I want to help</source>
-          <target state="translated">Yardım etmek istiyorum</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">I want to help</note>
-        </trans-unit>
         <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
           <source>How it works</source>
-          <target state="translated" state-qualifier="tm-suggestion">Nasıl çalışır?</target>
+          <target state="translated">Nasıl çalışır?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
         </trans-unit>
         <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
           <source>Next</source>
-          <target state="translated" state-qualifier="tm-suggestion">İleri</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Next button</note>
+          <target state="translated">İleri</target>
         </trans-unit>
         <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
           <source>Terms of Service</source>
-          <target state="translated" state-qualifier="tm-suggestion">Hizmet Koşulları</target>
+          <target state="translated">Hizmet Koşulları</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="ButtonAgreeAndProceed" translate="yes" xml:space="preserve">
-          <source>Agree and Proceed</source>
-          <target state="translated">Onayla ve Devam Et</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Agree and Proceed</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="translated">Kişisel bilgilerinizi girmenize gerek bulunmamaktadır. Bir uygulamayı yüklerken size tahsis edilmiş özel bir numara kullanıyoruz.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">Başka bir uygulama kullanıcısıyla ortalama 2 m'den daha yakın ve toplamda 30 dakikadan daha uzun bir süre birarada bulunmak "Yakın Temas" olarak kaydedilir.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="translated">Lütfen telefon numaranızı doğruladıktan sonra durumunuzu "Pozitif" olarak değiştirin." Pozitif" İş Akışı , Şimdi ilgili taraflarla koordinasyon sağlıyoruz.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
@@ -53,37 +37,24 @@
         </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
-          <target state="translated" state-qualifier="tm-suggestion">Başlat</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
+          <target state="translated">Başlat</target>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
           <source>Protecting our loved ones from COVID-19</source>
           <target state="translated">Sevdiklerimizi COVID-19'dan korumak için</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
           <target state="translated">Cihaz Erişimi</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
         </trans-unit>
-        <trans-unit id="TitleAppDescription" translate="yes" xml:space="preserve">
-          <source>App Description</source>
-          <target state="translated">Uygulama Açıklaması</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">App Description</note>
-        </trans-unit>
-        <trans-unit id="ButtonRegister" translate="yes" xml:space="preserve">
-          <source>Register</source>
-          <target state="translated" state-qualifier="tm-suggestion">Kaydol</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Register</note>
-        </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
-          <target state="translated" state-qualifier="tm-suggestion">Kabul Et</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Agree</note>
+          <target state="translated">Kabul Et</target>
         </trans-unit>
         <trans-unit id="HomePageTitle" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="translated" state-qualifier="tm-suggestion">ANA SAYFA</target>
+          <target state="translated">ANA SAYFA</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
@@ -91,162 +62,38 @@
           <target state="translated">COVID-19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
-          <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Durum Ayarları</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings Menu</note>
-        </trans-unit>
-        <trans-unit id="HomePageViewListOfContributorsMenu" translate="yes" xml:space="preserve">
-          <source>List of Contributors</source>
-          <target state="translated">Katkıda Bulunanlar</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">List Of Contributors Menu</note>
-        </trans-unit>
         <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
           <source>Update Information</source>
-          <target state="translated" state-qualifier="tm-suggestion">Bilgileri Güncelle</target>
+          <target state="translated">Bilgileri Güncelle</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
         </trans-unit>
         <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="translated" state-qualifier="tm-suggestion">ANA SAYFA</target>
+          <target state="translated">ANA SAYFA</target>
           <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
         </trans-unit>
         <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
           <source>You're ready to go</source>
-          <target state="translated" state-qualifier="tm-suggestion">Başlamaya hazırsın</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">You're ready to go</note>
+          <target state="translated">Başlamaya hazırsın</target>
         </trans-unit>
         <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
           <source>Set up Completed</source>
           <target state="translated">Kurulum Tamamlandı</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
         </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="translated">Testiniz pozitif ise lütfen cep telefonu numaranızı girin ve sevdiklerimizi korumak için durumunuzu güncelleyin.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page description</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsEnterNumber" translate="yes" xml:space="preserve">
-          <source>Enter the mobile number</source>
-          <target state="translated">Cep telefonu numarasını girin</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page enter number text</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSMSDescription" translate="yes" xml:space="preserve">
-          <source>We'll send you a verification code.
-Please check your SMS.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Size bir doğrulama kodu göndereceğiz.Lütfen cep telefonu mesajlarınızı(SMS) kontrol edin.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSMSInfo" translate="yes" xml:space="preserve">
-          <source>We will not store your phone number. It will be sent directly to the database of the government.</source>
-          <target state="translated">Telefon numaranızı saklamıyoruz. Bu bilgi direk olarak devletin veri tabanına gönderilecektir.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sms info</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="translated">Eğer test sonucunuz pozitif ise</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sub title</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextPhoneNumberPlaceholder" translate="yes" xml:space="preserve">
-          <source>090-1234-4567</source>
-          <target state="translated">090-555-999-88-77</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Placeholder text for phone number entry</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconListMenu" translate="yes" xml:space="preserve">
-          <source>Detected Beacon List</source>
-          <target state="translated">Algılanan Cihaz Listesi</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacon List Menu</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageOtpEnterText" translate="yes" xml:space="preserve">
-          <source>Enter the Code that was sent to 
-「{0}」</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gönderilen Kodu girin「{0}」</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Otp Enter the Code</note>
-        </trans-unit>
-        <trans-unit id="TitleOtp" translate="yes" xml:space="preserve">
-          <source>Enter the Code</source>
-          <target state="translated">Kodu Girin</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Otp Title</note>
-        </trans-unit>
-        <trans-unit id="ButtonVerify" translate="yes" xml:space="preserve">
-          <source>Verify</source>
-          <target state="translated" state-qualifier="tm-suggestion">Doğrula</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button Verify</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageDidntGetTheCodeText" translate="yes" xml:space="preserve">
-          <source>Didn't get the code?</source>
-          <target state="translated">Kodu almadın mı?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Didn't get the code Text</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageResendText" translate="yes" xml:space="preserve">
-          <source>Resend</source>
-          <target state="translated" state-qualifier="tm-suggestion">Tekrar gönder</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Resend Text</note>
-        </trans-unit>
-        <trans-unit id="StatusUpdateCompletePageTextStatusUpdateComplete" translate="yes" xml:space="preserve">
-          <source>Status Update Complete</source>
-          <target state="translated">Durum Güncellemesi Tamamlandı</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Update Complete page text</note>
-        </trans-unit>
-        <trans-unit id="TitleStatusUpdateComplete" translate="yes" xml:space="preserve">
-          <source>Status Update Complete</source>
-          <target state="translated">Durum Güncellemesi Tamamlandı</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Update Complete page title</note>
-        </trans-unit>
         <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
           <source>Contributors List</source>
           <target state="translated">Katkıda Bulunanlar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
-        <trans-unit id="TitleDetectedBeaconPage" translate="yes" xml:space="preserve">
-          <source>Detected Beacons</source>
-          <target state="translated">Algılanan Cihazlar</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacons</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License Agreement</source>
-          <target state="translated" state-qualifier="tm-suggestion">Lisans Sözleşmesi</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">License Agreement</note>
+          <target state="translated">Lisans Sözleşmesi</target>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
           <target state="translated">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
-          <source>ID</source>
-          <target state="translated" state-qualifier="tm-suggestion">Kimlik</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
-          <source>Average Distance</source>
-          <target state="translated">Ortalama Mesafe</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
-          <source>Count</source>
-          <target state="translated" state-qualifier="tm-suggestion">Toplam</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
-          <source>ElapsedTime</source>
-          <target state="translated">Geçen Zaman</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextElapsedTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextLastTime" translate="yes" xml:space="preserve">
-          <source>LastTime</source>
-          <target state="translated">Son Kez</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
-          <source>MajorNo</source>
-          <target state="translated">Ana Numara</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
-          <source>MinorNo</source>
-          <target state="translated">İkincil Numara</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MinorNo</note>
         </trans-unit>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
@@ -257,16 +104,6 @@ Please check your SMS.</source>
           <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
           <target state="translated">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
-        </trans-unit>
-        <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
-          <source>Heads up</source>
-          <target state="translated" state-qualifier="tm-suggestion">Dikkat Edin</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Heads up</note>
-        </trans-unit>
-        <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/qna.html</source>
-          <target state="translated">https://covid19radar.z11.web.core.windows.net/en/qna.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">If contacted , headsup and Correct coping method and contact information Try to be calm.</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
           <source>Installing an App</source>
@@ -288,50 +125,27 @@ Please check your SMS.</source>
           <target state="translated">Uygulama gereksinimleri</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
         </trans-unit>
-        <trans-unit id="TitleUserSettings" translate="yes" xml:space="preserve">
-          <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Durum Ayarları</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings page title</note>
-        </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Durum Ayarları</target>
+          <target state="translated">Durum Ayarları</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
-        </trans-unit>
-        <trans-unit id="ButtonSave" translate="yes" xml:space="preserve">
-          <source>Save</source>
-          <target state="translated" state-qualifier="tm-suggestion">Kaydet</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button Save</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="translated">Testiniz pozitif ise, lütfen cep telefonu numaranızı girin ve sevdiklerimizi korumak için durumunuzu güncelleyin.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
-          <source>Tap to change state</source>
-          <target state="translated">Durumunuzu değiştirmek için dokunun</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Lütfen ağ bağlantınızı kontrol edin.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
         </trans-unit>
-        <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Tamam</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
         </trans-unit>
         <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
           <source>Enable</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Etkinleştir</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">NotNow</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
@@ -344,40 +158,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozlama Bildirimine İzin Ver / Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
-          <source>Contributors</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Katkıda bulunanlar</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
-        </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozlama</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="MainHome" translate="yes" xml:space="preserve">
-          <source>Home</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Giriş</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
-        </trans-unit>
-        <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
-          <source>License</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Lisans</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
-        </trans-unit>
-        <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
-          <source>Notify</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bildir</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
-        </trans-unit>
-        <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
-          <source>Update</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Güncelleştir</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
-          <source>Exposures</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozlama</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://microsoft.com/</source>
@@ -389,16 +173,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">El ile</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
-        <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
-          <source>Update Infomation</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bilgi Mation'ı Güncelle</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
-        </trans-unit>
-        <trans-unit id="HomeEnableNotification" translate="yes" xml:space="preserve">
-          <source>Enable Notification</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bildirimi Etkinleştir</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home Setting Enable Notification</note>
-        </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
           <source>No known exposures</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bilinen pozlama yok</target>
@@ -408,30 +182,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Olumlu bir COVID-19 sonucu bildiren birine maruz kaldıysanız size bildirilir.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
-        </trans-unit>
-        <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
-          <source>Share A Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Olumlu Tanıyı Paylaşın</target>
-        </trans-unit>
-        <trans-unit id="NofityPageShareDiag" translate="yes" xml:space="preserve">
-          <source>Share A Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Olumlu Tanıyı Paylaşın</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Share Diag</note>
-        </trans-unit>
-        <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
-          <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19'a neden olan virüs için pozitif çıktıysanız, tanınızı paylaşmayı seçebilirsiniz.  Bu, topluluğunuzun diğer lerinin virüsün yayılmasını içermesine yardımcı olur.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
-        </trans-unit>
-        <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
-          <source>Learn more</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Daha fazlasını öğrenin</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eğer pozitif tanı aldıysanız</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
           <source>Please enter the Diagnosis Identifier</source>
@@ -454,24 +204,19 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 testinizle birlikte gelen benzersiz test tanımlayıcısı pozitif test sonucunuzu doğrulamak için kullanılmalıdır.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
-          <source>Verify and Share</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Doğrula ve Paylaş</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Lütfen daha sonra yeniden deneyin.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Başarısız</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tanı Gönderildi</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Tamamlandı</target>
         </trans-unit>
@@ -483,19 +228,15 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Diagnosis Identifier Required</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tanı Tanımlayıcı Gerekli</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tamam</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Lütfen bir tanı göndermeden önce Pozlama Bildirimleri'ni etkinleştirin.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozlama Bildirimleri Devre Dışı</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tanı Gönderme...</target>
         </trans-unit>
@@ -515,18 +256,158 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Submit</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Gönder</target>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="new">SampleText</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="new">SampleText</target>
-        </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>Settings</source>
-          <target state="new">Settings</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ayarlar</target>
+        </trans-unit>
+        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
+          <source>Not Agree</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kabul Edilmedi</target>
+        </trans-unit>
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">İptal</target>
+        </trans-unit>
+        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
+          <source>Do you want to turn on notifications?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bildirimleri açmak istiyor musunuz?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
+          <source>Enabling</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Etkinleştirme</target>
+        </trans-unit>
+        <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
+          <source>Deleting</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Siliniyor</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eğer pozitif tanı aldıysanız</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
+          <source>Share the App</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uygulamayı Paylaşın</target>
+        </trans-unit>
+        <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Paylaş</target>
+        </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Olumlu bilgilerin ve anonim bildirimin başkalarına paylaşılması</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sıfırla</target>
+        </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Gizlilik İlkesi</target>
+        </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kayıt bekleniyor</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gerçekten tüm verileri sıfırlamak istiyor musunuz?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tüm verileri silme</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
+          <source>All settings and data have been deleted. Please restart the application.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tüm ayarlar ve veriler silindi. Lütfen başvuruyu yeniden başlatın.</target>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sürüm</target>
+        </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bu uygulamanın sürüm numarası</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kısa menzilli kablosuz iletişim</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gönderme ve alma</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">İletişim Bildirimini Kapat</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Yakın temas sırasında uygulama bildirimleri</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Verileri sil</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tüm verileri silme</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geçersiz Tanı Kimliği</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lütfen geçerli bir Tanı Kimliği sağlayın</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geçersiz Sınav Tarihi</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lütfen geçerli bir Sınav Tarihi verin</target>
+        </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kayıt için geri dön</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pozitif kayıt</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Daha sonra olumlu kayıt yaptırmak ister misiniz?</target>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
+          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uygulamayı çalıştırdığınızda, her akıllı telefonda anonim bir kimlik oluşturur ve saklar. Bu uygulama, telefon numarası ve konum bilgileri gibi gizlilikle ilgili herhangi bir bilgi edinmez.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uygulama çalışırken, birbirlerinin akıllı telefonu son iki hafta boyunca birbirlerinin anonim kimliklerini kaydedecek. 2 haftadan eski kayıtlar silinir ve gizliliği korumak için her anonim kimlik düzenli aralıklarla değiştirilir.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Diğer kullanıcılar düzenli olarak olumlu olanların anonim kimliklerinin bir listesini alırsınız. Satın alındıktan sonra akıllı telefona kaydedilen iletişim kaydı eşleşecektir. Maçın sonucu yoğun bir temas sayılsa, akıllı telefonunuzu bilgilendirecek ve işbirliği yapmamızı istediğiniz gerekli eylemleri size bildireceğiz.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Son 14 gün içinde pozitif test ile temas</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eğer yeni Corona ile olumlu iseniz, çevrenizdeki insanları korumak için olumlu kayıt ile işbirliği lütfen.</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bu uygulama birçok kişi yüklemek çok etkili, bu yüzden çevrenizdeki insanlarla uygulama paylaşmak lütfen.</target>
         </trans-unit>
       </group>
     </body>
