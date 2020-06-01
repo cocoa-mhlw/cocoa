@@ -6,45 +6,29 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-        <trans-unit id="ButtonIWantToHelp" translate="yes" xml:space="preserve">
-          <source>I want to help</source>
-          <target state="translated">Je veux aider</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">I want to help</note>
-        </trans-unit>
         <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
           <source>How it works</source>
-          <target state="translated" state-qualifier="tm-suggestion">Fonctionnement</target>
+          <target state="translated">Fonctionnement</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
         </trans-unit>
         <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
           <source>Next</source>
-          <target state="translated" state-qualifier="tm-suggestion">Suivant</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Next button</note>
+          <target state="translated">Suivant</target>
         </trans-unit>
         <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
           <source>Terms of Service</source>
-          <target state="translated" state-qualifier="tm-suggestion">Conditions d'utilisation</target>
+          <target state="translated">Conditions d'utilisation</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
         </trans-unit>
-        <trans-unit id="ButtonAgreeAndProceed" translate="yes" xml:space="preserve">
-          <source>Agree and Proceed</source>
-          <target state="translated">Accepter et continuer</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Agree and Proceed</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
           <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
           <target state="translated">Inutile de saisir des renseignements personnels. Nous utilisons un Identifiant unique qui vous est attribué lors de l’installation d’une application.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description" translate="yes" xml:space="preserve">
+        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
           <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
           <target state="translated">Un contact avec un autre utilisateur de l'application pendant plus de 30 minutes au total, dans un rayon inférieur à 2m en moyenne est enregistré comme "Contact rapproché".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
-          <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="translated">Veuillez modifier manuellement votre statut en « positif » après vérification de votre numéro de téléphone. Processus positif , Coordination automatique en cours</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
           <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
@@ -53,37 +37,24 @@
         </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
-          <target state="translated" state-qualifier="tm-suggestion">Démarrer</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
+          <target state="translated">Démarrer</target>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
           <source>Protecting our loved ones from COVID-19</source>
           <target state="translated">Protégeons nos proches contre le COVID-19</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
           <target state="translated">Accès à l’appareil</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
         </trans-unit>
-        <trans-unit id="TitleAppDescription" translate="yes" xml:space="preserve">
-          <source>App Description</source>
-          <target state="translated">Description de l’application</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">App Description</note>
-        </trans-unit>
-        <trans-unit id="ButtonRegister" translate="yes" xml:space="preserve">
-          <source>Register</source>
-          <target state="translated" state-qualifier="tm-suggestion">Inscription</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Register</note>
-        </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
-          <target state="translated" state-qualifier="tm-suggestion">Accepter</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Agree</note>
+          <target state="translated">Accepter</target>
         </trans-unit>
         <trans-unit id="HomePageTitle" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="translated" state-qualifier="tm-suggestion">ACCUEIL</target>
+          <target state="translated">ACCUEIL</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
@@ -91,164 +62,38 @@
           <target state="translated">COVID-19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="HomePageViewStatusSettingsMenu" translate="yes" xml:space="preserve">
-          <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Paramètres du status</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings Menu</note>
-        </trans-unit>
-        <trans-unit id="HomePageViewListOfContributorsMenu" translate="yes" xml:space="preserve">
-          <source>List of Contributors</source>
-          <target state="translated">Liste des contributeurs</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">List Of Contributors Menu</note>
-        </trans-unit>
         <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
           <source>Update Information</source>
-          <target state="translated" state-qualifier="tm-suggestion">Infos de mise à jour</target>
+          <target state="translated">Infos de mise à jour</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
         </trans-unit>
         <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="translated" state-qualifier="tm-suggestion">ACCUEIL</target>
+          <target state="translated">ACCUEIL</target>
           <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
         </trans-unit>
         <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
           <source>You're ready to go</source>
-          <target state="translated" state-qualifier="tm-suggestion">Vous êtes prêt à utiliser l'application</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">You're ready to go</note>
+          <target state="translated">Vous êtes prêt à utiliser l'application</target>
         </trans-unit>
         <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
           <source>Set up Completed</source>
           <target state="translated">Configuration terminée</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
         </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="translated">Si vous avez reçu un diagnostic positif, veuillez entrer votre numéro de téléphone mobile et mettre à jour votre statut afin de protéger vos proches.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page description</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsEnterNumber" translate="yes" xml:space="preserve">
-          <source>Enter the mobile number</source>
-          <target state="translated">Entrez votre numéro mobile</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page enter number text</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSMSDescription" translate="yes" xml:space="preserve">
-          <source>We'll send you a verification code.
-Please check your SMS.</source>
-          <target state="translated">Nous vous enverrons un code de vérification.
-S’il vous plaît vérifier votre SMS.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page verification sms code description</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSMSInfo" translate="yes" xml:space="preserve">
-          <source>We will not store your phone number. It will be sent directly to the database of the government.</source>
-          <target state="translated">Nous ne stockerons pas votre numéro de téléphone. Il sera envoyé directement à la base de données du gouvernement.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sms info</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="translated">Si vous avez reçu un diagnostic positif</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status settings page sub title</note>
-        </trans-unit>
-        <trans-unit id="UserSettingPageTextPhoneNumberPlaceholder" translate="yes" xml:space="preserve">
-          <source>090-1234-4567</source>
-          <target state="translated">090-1234-4567</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Placeholder text for phone number entry</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconListMenu" translate="yes" xml:space="preserve">
-          <source>Detected Beacon List</source>
-          <target state="translated">Liste de balises détectées</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacon List Menu</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageOtpEnterText" translate="yes" xml:space="preserve">
-          <source>Enter the Code that was sent to 
-「{0}」</source>
-          <target state="translated">Entrez le Code qui a été envoyé à 
-「{0}」</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Otp Enter the Code</note>
-        </trans-unit>
-        <trans-unit id="TitleOtp" translate="yes" xml:space="preserve">
-          <source>Enter the Code</source>
-          <target state="translated">Entrez le Code</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Otp Title</note>
-        </trans-unit>
-        <trans-unit id="ButtonVerify" translate="yes" xml:space="preserve">
-          <source>Verify</source>
-          <target state="translated" state-qualifier="tm-suggestion">Vérifier</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button Verify</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageDidntGetTheCodeText" translate="yes" xml:space="preserve">
-          <source>Didn't get the code?</source>
-          <target state="translated">Vous n’avez pas reçu le code ?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Didn't get the code Text</note>
-        </trans-unit>
-        <trans-unit id="InputSmsOTPPageResendText" translate="yes" xml:space="preserve">
-          <source>Resend</source>
-          <target state="translated" state-qualifier="tm-suggestion">Renvoyer</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Resend Text</note>
-        </trans-unit>
-        <trans-unit id="StatusUpdateCompletePageTextStatusUpdateComplete" translate="yes" xml:space="preserve">
-          <source>Status Update Complete</source>
-          <target state="translated">Mise à jour du status terminé</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Update Complete page text</note>
-        </trans-unit>
-        <trans-unit id="TitleStatusUpdateComplete" translate="yes" xml:space="preserve">
-          <source>Status Update Complete</source>
-          <target state="translated">Mise à jour du status terminé</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Update Complete page title</note>
-        </trans-unit>
         <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
           <source>Contributors List</source>
           <target state="translated">Liste des contributeurs</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
-        <trans-unit id="TitleDetectedBeaconPage" translate="yes" xml:space="preserve">
-          <source>Detected Beacons</source>
-          <target state="translated">Balises détectées</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Detected Beacons</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License Agreement</source>
-          <target state="translated" state-qualifier="tm-suggestion">Contrat de licence</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">License Agreement</note>
+          <target state="translated">Contrat de licence</target>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
           <target state="translated">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
-          <source>ID</source>
-          <target state="translated" state-qualifier="tm-suggestion">Identifiant</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ID</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextAvgDistance" translate="yes" xml:space="preserve">
-          <source>Average Distance</source>
-          <target state="translated">Distance moyenne</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextAvgDistance</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextCount" translate="yes" xml:space="preserve">
-          <source>Count</source>
-          <target state="translated" state-qualifier="tm-suggestion">Nombre</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextCount</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextElapsedTime" translate="yes" xml:space="preserve">
-          <source>ElapsedTime</source>
-          <target state="translated">Temps écoulé</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextElapsedTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextLastTime" translate="yes" xml:space="preserve">
-          <source>LastTime</source>
-          <target state="translated">Dernière fois</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">TextLastTime</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMajorNo" translate="yes" xml:space="preserve">
-          <source>MajorNo</source>
-          <target state="translated">N° Max</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MajorNo</note>
-        </trans-unit>
-        <trans-unit id="DetectedBeaconPageTextMinorNo" translate="yes" xml:space="preserve">
-          <source>MinorNo</source>
-          <target state="translated">N° Min</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">MinorNo</note>
         </trans-unit>
         <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
@@ -259,16 +104,6 @@ S’il vous plaît vérifier votre SMS.</target>
           <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
           <target state="translated">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
-        </trans-unit>
-        <trans-unit id="TitleHeadsup" translate="yes" xml:space="preserve">
-          <source>Heads up</source>
-          <target state="translated" state-qualifier="tm-suggestion">Avertissement</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Heads up</note>
-        </trans-unit>
-        <trans-unit id="UrlHeadsup" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/qna.html</source>
-          <target state="translated">https://covid19radar.z11.web.core.windows.net/en/qna.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">If contacted , headsup and Correct coping method and contact information Try to be calm.</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
           <source>Installing an App</source>
@@ -290,50 +125,27 @@ S’il vous plaît vérifier votre SMS.</target>
           <target state="translated">Prérequis de l'application</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
         </trans-unit>
-        <trans-unit id="TitleUserSettings" translate="yes" xml:space="preserve">
-          <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Paramètres du status</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Status Settings page title</note>
-        </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="tm-suggestion">Paramètres du status</target>
+          <target state="translated">Paramètres du status</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
-        </trans-unit>
-        <trans-unit id="ButtonSave" translate="yes" xml:space="preserve">
-          <source>Save</source>
-          <target state="translated" state-qualifier="tm-suggestion">Enregistrer</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button Save</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsDescription" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis, please enter your mobile number and update your status to protect your loved ones.</source>
-          <target state="translated">Si vous avez reçu un diagnostic positif, veuillez entrer votre numéro de téléphone mobile et mettre à jour votre statut afin de protéger vos proches.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page description</note>
-        </trans-unit>
-        <trans-unit id="UserStatusPageTextStatusSettingsPickerTitle" translate="yes" xml:space="preserve">
-          <source>Tap to change state</source>
-          <target state="translated">Appuyez pour changer d’état</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Status Change</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="translated">Veuillez vérifier votre connexion réseau.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
         </trans-unit>
-        <trans-unit id="DialogButtonOk" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="translated" state-qualifier="tm-suggestion">OK</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">OK</note>
+          <target state="translated">OK</target>
         </trans-unit>
         <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
           <source>Enable</source>
-          <target state="translated" state-qualifier="tm-suggestion">Activer</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Enable Button</note>
+          <target state="translated">Activer</target>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="translated">Pas maintenant</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">NotNow Button</note>
         </trans-unit>
         <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
           <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
@@ -347,40 +159,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <target state="translated">Autoriser la notification d’exposition / Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
-        <trans-unit id="MainContributors" translate="yes" xml:space="preserve">
-          <source>Contributors</source>
-          <target state="translated">Contributeurs</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Contributors</note>
-        </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
           <target state="translated">Expositions</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="MainHome" translate="yes" xml:space="preserve">
-          <source>Home</source>
-          <target state="translated" state-qualifier="tm-suggestion">Accueil</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Home</note>
-        </trans-unit>
-        <trans-unit id="MainLicense" translate="yes" xml:space="preserve">
-          <source>License</source>
-          <target state="translated" state-qualifier="tm-suggestion">Licence</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab License</note>
-        </trans-unit>
-        <trans-unit id="MainNotifyOther" translate="yes" xml:space="preserve">
-          <source>Notify</source>
-          <target state="translated" state-qualifier="tm-suggestion">Notifier</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Notify</note>
-        </trans-unit>
-        <trans-unit id="MainUpdateInfo" translate="yes" xml:space="preserve">
-          <source>Update</source>
-          <target state="translated" state-qualifier="tm-suggestion">Mise à jour</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="TitleExposures" translate="yes" xml:space="preserve">
-          <source>Exposures</source>
-          <target state="translated">Expositions</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposures Page</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://microsoft.com/</source>
@@ -389,18 +171,8 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>Manual</source>
-          <target state="translated" state-qualifier="tm-suggestion">Manuel</target>
+          <target state="translated">Manuel</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
-        </trans-unit>
-        <trans-unit id="HomePageUpdateInfomation" translate="yes" xml:space="preserve">
-          <source>Update Infomation</source>
-          <target state="translated">Infomation de mise à jour</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home Page Update Infomation text</note>
-        </trans-unit>
-        <trans-unit id="HomeEnableNotification" translate="yes" xml:space="preserve">
-          <source>Enable Notification</source>
-          <target state="translated">Activer la notification</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Home Setting Enable Notification</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
           <source>No known exposures</source>
@@ -411,30 +183,6 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
           <target state="translated">Vous serez notifié si vous avez été exposé à quelqu’un qui a déclaré un résultat positif au COVID-19.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
-        </trans-unit>
-        <trans-unit id="NofityPageButtonSharePositive" translate="yes" xml:space="preserve">
-          <source>Share A Positive Diagnosis</source>
-          <target state="translated">Partager un diagnostic positif</target>
-        </trans-unit>
-        <trans-unit id="NofityPageShareDiag" translate="yes" xml:space="preserve">
-          <source>Share A Positive Diagnosis</source>
-          <target state="translated">Partager un diagnostic positif</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Share Diag</note>
-        </trans-unit>
-        <trans-unit id="NofityPageShareYourCase" translate="yes" xml:space="preserve">
-          <source>If you tested positive for the virus that causes COVID-19, you can choose to share your diagnosis.  This will help others in your community contain the spread of the virus.</source>
-          <target state="translated">Si vous avez été testé positif au COVID-19, vous pouvez choisir de partager votre diagnostic. Cela aidera les autres membres de votre communauté à limiter la propagation du virus.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">NofityPageShareYourCase</note>
-        </trans-unit>
-        <trans-unit id="NotifyPageLearnMore" translate="yes" xml:space="preserve">
-          <source>Learn more</source>
-          <target state="translated" state-qualifier="tm-suggestion">En savoir plus</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Page Learn more text</note>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageTextStatusSettingsSubtitle" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="translated">Si vous avez reçu un diagnostic positif</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page subtitle</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
           <source>Please enter the Diagnosis Identifier</source>
@@ -457,26 +205,21 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
           <target state="translated">L’identifiant de test unique reçu avec votre test COVID-19 doit être utilisé pour vérifier le résultat.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveSubmitAndVerify" translate="yes" xml:space="preserve">
-          <source>Verify and Share</source>
-          <target state="translated">Vérifier et partager</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Verify and Share</note>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
-          <target state="translated" state-qualifier="tm-suggestion">Veuillez réessayer ultérieurement.</target>
+          <target state="translated">Veuillez réessayer ultérieurement.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagExceptionTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
-          <target state="translated" state-qualifier="tm-suggestion">Échec</target>
+          <target state="translated">Échec</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
           <target state="translated">Diagnostic soumis</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagSubmittedTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
-          <target state="translated" state-qualifier="tm-suggestion">Terminé</target>
+          <target state="translated">Terminé</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
           <source>Please provide a Diagnosis Identifier</source>
@@ -486,19 +229,15 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Diagnosis Identifier Required</source>
           <target state="translated">Identification de diagnostic requis</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDialogButton" translate="yes" xml:space="preserve">
-          <source>OK</source>
-          <target state="translated" state-qualifier="tm-suggestion">OK</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogText" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
           <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
           <target state="translated">Veuillez activer les notifications d’exposition avant de soumettre un diagnostic.</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageNotEnabledENDialogTitle" translate="yes" xml:space="preserve">
+        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notifications Disabled</source>
           <target state="translated">Notifications d’exposition désactivées</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageSubmittingDialog" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="translated">Soumission du diagnostic...</target>
         </trans-unit>
@@ -512,24 +251,164 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
           <source>Verification Failed</source>
-          <target state="translated" state-qualifier="tm-suggestion">Échec de la vérification</target>
+          <target state="translated">Échec de la vérification</target>
         </trans-unit>
         <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
           <source>Submit</source>
-          <target state="translated" state-qualifier="tm-suggestion">Envoyer</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="new">SampleText</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="new">SampleText</target>
+          <target state="translated">Envoyer</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>Settings</source>
-          <target state="new">Settings</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">SettingsPage Title</note>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
+          <source>Not Agree</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pas d’accord</target>
+        </trans-unit>
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuler</target>
+        </trans-unit>
+        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
+          <source>Do you want to turn on notifications?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voulez-vous activer les notifications ?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
+          <source>Enabling</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Activation</target>
+        </trans-unit>
+        <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
+          <source>Deleting</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Suppression en cours</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
+          <source>If you received a positive diagnosis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si vous avez reçu un diagnostic positif</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
+          <source>Share the App</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Partager l'application</target>
+        </trans-unit>
+        <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
+          <source>Share</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Partager</target>
+        </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>Sharing positive information and anonymous notification to others</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Partager des informations positives et une notification anonyme à d’autres</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>Reset</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">réinitialiser</target>
+        </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>Privacy Policy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">politique de confidentialité</target>
+        </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>Waiting for register</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">En attente de registre</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>Do you really want to reset all the data?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voulez-vous vraiment réinitialiser toutes les données?</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Supprimer toutes les données</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
+          <source>All settings and data have been deleted. Please restart the application.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tous les paramètres et données ont été supprimés. S’il vous plaît redémarrer l’application.</target>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Version</target>
+        </trans-unit>
+        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
+          <source>Version number of this application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Numéro de version de cette application</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Communication sans fil à courte portée</target>
+        </trans-unit>
+        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Envoyer et recevoir</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Notification de contact rapprochée</target>
+        </trans-unit>
+        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Notifications d’application au moment du contact étroit</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Supprimer les données</target>
+        </trans-unit>
+        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Supprimer toutes les données</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Id de diagnostic invalide</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Diagnosis ID</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Veuillez fournir une pièce d’identité de diagnostic valide</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
+          <source>Invalid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Date de test invalide</target>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
+          <source>Please provide a valid Test Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Veuillez fournir une date de test valide</target>
+        </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>Return to registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Retour à l’inscription</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>Positive registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enregistrement positif</target>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>Would you like to register positively later?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Souhaitez-vous vous inscrire positivement plus tard?</target>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
+          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lorsque vous exécutez l’application, elle générera et stockera un IDENTIFIANT anonyme sur chaque smartphone. Cette application n’acquiert aucune information relative à la protection de la vie privée, comme le numéro de téléphone et les renseignements de localisation.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
+          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pendant que l’application est en cours d’exécution, le smartphone de l’autre enregistrera les ids anonymes de l’autre pour les deux dernières semaines. Les enregistrements de plus de 2 semaines seront supprimés et chaque ID anonyme sera modifié périodiquement pour protéger la vie privée.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
+        </trans-unit>
+        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
+          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">D’autres utilisateurs reçoivent régulièrement une liste d’ID anonymes de cartes positives. Après l’acquisition, l’enregistrement de contact enregistré sur le smartphone sera égalé. Si le résultat du match est un contact lourd, nous vous informerons de vos informations sur les actions nécessaires avec lesquelles vous souhaitez que nous coopérions.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
+          <source>Contact with positive testers in the last 14 days</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contact avec des testeurs positifs au cours des 14 derniers jours</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si vous êtes positif avec la nouvelle Corona, s’il vous plaît coopérer avec l’enregistrement positif pour protéger les gens autour de vous.</target>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>This application is so effective that many people install it, so please share the application with people around you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cette application est si efficace que beaucoup de gens l’installent, donc s’il vous plaît partager l’application avec les gens autour de vous.</target>
         </trans-unit>
       </group>
     </body>

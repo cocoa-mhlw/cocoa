@@ -1,110 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -117,87 +12,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>協力する</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>操作の流れ</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>次</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>サービスへの同意</value>
+    <value>サービス条件</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>同意して続行する</value>
-    <comment>Agree and Proceed</comment>
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
+    <value>個人情報を入力する必要はありません。アプリをインストールするときに割り当てる一意の ID を使用しています。</value>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
-    <value>個人情報を入力する必要はありません。アプリをインストールするときに割り当てた一意の ID を使用しています。</value>
-    <comment>How it works page step 1 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
-    <value>平均2m未満の半径内で、合計で30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>電話番号を確認した後、手動でステータスを 「陽性」に変更してください。陽性入力およびその後のワークフローは関係者との調整中です。</value>
-    <comment>How it works page step 3 description</comment>
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
+    <value>平均2m未満の半径内に合計30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</value>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>濃厚接触を記録するには、Bluetooth をオンにする必要があります。次のページに移動してオンにしてください。</value>
+    <value>濃厚接触を記録するには、Bluetooth/Exposure Notification を有効にする必要があります。次のページに移動して有効にしてください。</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>スタート</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID-19から大事な人を守る</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>このアプリは、Exposure Notification と Bluetooth を使用して、他のアプリのユーザーの近くにいるかどうか判断します。
-Bluetooth を設定するには、[常に許可] を選択します。</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextBluetoothDescription" xml:space="preserve">
-    <value>このアプリは、別のトレースアプリのユーザーの近くにいるかどうかを判断するために、Bluetooth信号を使用しています。
-Bluetooth を設定するには、[常に許可] を選択します。</value>
-    <comment>Device access page Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextAllowBluetooth" xml:space="preserve">
-    <value>Bluetoothを許可する</value>
-    <comment>Device access page Bluetooth title</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Exposure Notification と Bluetooth を許可</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+    <value>大切な人をCOVID-19から一緒に守りましょう</value>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>デバイスアクセス</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>アプリの説明</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>登録</value>
-    <comment>Register</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>同意しない</value>
-    <comment>Not Agree</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
-    <value>同意</value>
-    <comment>Agree</comment>
+    <value>同意する</value>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ホーム</value>
@@ -207,139 +56,31 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>ステータス設定</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>貢献者一覧</value>
-    <comment>List Of Contributors Menu</comment>
-  </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>更新情報</value>
     <comment>Update Information Menu</comment>
   </data>
   <data name="ButtonHome" xml:space="preserve">
-    <value>ホーム</value>
+    <value>ホームへ</value>
     <comment>HOME</comment>
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>準備ができました</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>設定完了</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>陽性診断を受けた場合は、あなたの大事な人を保護するためにあなたのステータスを更新してください。</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>携帯電話番号を入力してください</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>確認コードをお送りします。
-お使いの SMS を確認してください。</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>電話番号は保存されません。予定では政府のデータベースに直接送信されます。</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>陽性診断を受けた場合</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="TitleStatusSettings" xml:space="preserve">
-    <value>ステータス設定</value>
-    <comment>Status Settings page title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>検出ビーコン一覧</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>送信されたコードを入力してください
-「{0}」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>コードを入力してください</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>確認する</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>コードを取得しませんでしたか?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>再送信</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>ステータス更新の完了</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>ステータス更新の完了</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>貢献者リスト</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>検出済ビーコン</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>使用許諾契約書</value>
-    <comment>License Agreement</comment>
-  </data>
-  <data name="UrlLicense" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/ja/agpl.html</value>
-    <comment>AGPL3.0</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/ja/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>ID</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>平均距離</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>回数</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>経過時間</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>最終接触時間</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>メジャー番号</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>マイナー番号</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/ja/contributor.html</value>
@@ -348,14 +89,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/ja/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>注意勧告</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/ja/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>アプリのインストール</value>
@@ -366,31 +99,228 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>How it works page step 2 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>COVID19陽性と診断された場合</value>
+    <value>COVID-19陽性と診断されたら？</value>
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
     <value>このアプリを使用するための要件</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
-    <value>OK</value>
-    <comment>OK</comment>
+  <data name="TitileUserStatusSettings" xml:space="preserve">
+    <value>ステータス設定</value>
+    <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>ネットワーク接続を確認してください。</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>有効にする</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>あとで設定する</value>
-    <comment>NotNow Button</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
+    <value>このアプリは、Exposure Notification と Bluetooth を使用して、他のアプリのユーザーの近くにいるかどうか判断します。
+Bluetooth を設定するには、[常に許可] を選択します。</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
+  </data>
+  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
+    <value>Exposure Notification と Bluetooth の許可</value>
+    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
+  </data>
+  <data name="MainExposures" xml:space="preserve">
+    <value>Exposure</value>
+    <comment>Tab Button</comment>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com/</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="MainTutorial" xml:space="preserve">
+    <value>マニュアル</value>
+    <comment>Tab How to use</comment>
+  </data>
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
+    <value>既知の露出はありません</value>
+    <comment>If not found exposures data</comment>
+  </data>
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+    <value>COVID-19陽性を報告した人と接触していた場合は、通知されます。</value>
+    <comment>exposures comment</comment>
+  </data>
+  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
+    <value>診断識別子を入力してください</value>
+    <comment>Notify Other Page Code Input</comment>
+  </data>
+  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
+    <value>陽性診断を共有する</value>
+  </data>
+  <data name="SharePositiveDiagDateText" xml:space="preserve">
+    <value>テスト日は、あなたが伝染した可能性があるときにアプリを知り、潜在的な暴露を適切な人々に通知するのに役立ちます。</value>
+  </data>
+  <data name="SharePositiveEntryCodeText" xml:space="preserve">
+    <value>公開されたユーザーのみが通知を受け取ります。</value>
+  </data>
+  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
+    <value>COVID-19 テストに付属の一意のテスト ID を使用して、陽性のテスト結果を検証する必要があります。</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>後でもう一度試してください。</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
+    <value>診断結果の提出</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>完了しました</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
+    <value>診断識別子を指定してください</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
+    <value>診断識別子が必要です</value>
+  </data>
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
+    <value>診断を送信する前に Exposure Notifications を有効にしてください。</value>
+  </data>
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
+    <value>Exposure Notifications 無効</value>
+  </data>
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
+    <value>診断を提出します。</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
+    <value>診断を確認しています。</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
+    <value>現時点では、診断を確認できません。</value>
+  </data>
+  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
+    <value>検証に失敗しました</value>
+  </data>
+  <data name="ButtonPositiveSubmit" xml:space="preserve">
+    <value>提出</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>アプリの設定</value>
-    <comment>SettingsPage Title</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>同意しない</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>通知をオンにしますか？</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>有効にしています</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>削除しています</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>陽性と診断された場合</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>アプリの共有</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>共有する</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>陽性情報の登録と他者への匿名通知へ</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>リセット</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>プライバシーポリシー</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>登録中</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>すべてのデータをリセットしますか?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>すべてのデータを削除する</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>すべての設定とデータが削除されました。アプリケーションを再起動してください。</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>このアプリのバージョン番号</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>近距離無線通信</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>発信と受信をする</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>濃厚接触の通知</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>濃厚接触時のアプリ通知</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>データの削除</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>すべてのデータを削除</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>無効な処理番号</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>有効な処理番号を入力してください</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>無効な検査日</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>有効な検査日を指定してください</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>登録に戻る</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>陽性登録</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>後で陽性の登録をしますか？</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>アプリケーションを実行すると、各スマートフォンで匿名 ID が生成され、保存されます。このアプリケーションは、電話番号や位置情報など、プライバシーに関する情報を一切取得しません。</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>アプリケーションの実行中、お互いのスマートフォンは、過去2週間お互いの匿名IDを記録します。2 週間を経過したレコードは削除され、各匿名 ID はプライバシー保護のために定期的に変更されます。</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>他の利用者は定期的に陽性となった方の匿名ID一覧を取得しています。取得した後、スマートフォンに記録された接触記録と突合を行います。突合の結果、濃厚接触に該当する場合は、あなたのスマートフォンにお知らせします、ご協力いただきたい必要な行動についてご案内します。</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>過去14日間の陽性判定者との接触</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>もし、新型コロナで陽性と診断された場合、あなたの周りの人を守るためにも、陽性登録へのご協力をお願いします。</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>本アプリケーションは多くの方がインストールするほどに効果を発揮するため、身の回りの方にアプリケーションを共有してください。</value>
   </data>
 </root>

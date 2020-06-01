@@ -12,37 +12,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>நான் உதவ விரும்புகிறேன்</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>இது எப்படி வேலை செய்கிறது</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>அடுத்து</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>சேவை விதிமுறைகள்</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>ஏற்கவும் தொடரவும்</value>
-    <comment>Agree and Proceed</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>தனிப்பட்ட தகவலை உள்ளிடுதல் தேவையில்லை. ஒரு பயன்பாட்டை நிறுவும்போது உங்களுக்கு ஒதுக்கப்பட்ட தனித்துவமான ID-ஐ நாங்கள் பயன்படுத்துகிறோம்.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>மொத்த 30 நிமிடத்திற்கும் அதிகமாக உள்ள ஒரு பயன்பாட்டைப் பயன்படுத்துபவர், சராசரியாக 2m க்கு அருகில் உள்ள ஆரத்திற்குள், "நெருங்கிய தொடர்பு" என பதிவு செய்யப்படுகிறது.</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>உங்கள் தொலைபேசி எண்ணை சரிபார்க்கும்போது, உங்கள் நிலையை கைமுறையாக "நேர்மறையாக" மாற்றிடுங்கள். " நேர்மறை "பணிஓட்டம், இப்போது தொடர்புடைய கட்சிகளுடன் ஒருங்கிணைப்பு.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>நெருங்கிய தொடர்பை பதிவு செய்ய Bluetooth ஆன் செய்யப்பட வேண்டும். அதை அணைக்க அடுத்த பக்கத்திற்கு செல்லவும்.</value>
@@ -50,27 +37,16 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>தொடக்கம்</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 இருந்து எங்கள் அன்புக்குரியவர்களைப் பாதுகாத்தல்</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>சாதன அணுகல்</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>செயலி விளக்கம்</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>பதிவு செய்</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>ஏற்பு</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>முகப்பு</value>
@@ -79,14 +55,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>நிலை அமைப்புகள்</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>பங்களிப்பாளர்கள் பட்டியல்</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>புதுப்பித்தல் தகவல்</value>
@@ -98,113 +66,21 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>நீங்கள் செல்ல தயாராக இருக்கிறீர்கள்</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>அமைவு முடிந்தது</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>உங்களுக்கு ஒரு நேர்மறையான ஆய்வு கிடைத்திருந்தால், உங்கள் மொபைல் எண்ணை உள்ளிட்டு, உங்கள் அன்புக்குரியவர்களை பாதுகாப்பதற்கு உங்கள் நிலையைப் புதுப்பிக்கவும்.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>மொபைல் எண்ணை உள்ளிடவும்</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>நாங்கள் ஒரு சரிபார்ப்பு குறியீட்டை அனுப்புவோம்.
-தயவுசெய்து உங்கள் SMS ஐ சரிபார்க்கவும்.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>உங்கள் தொலைபேசி எண்ணை சேமிக்க மாட்டோம். இது அரசின் தரவுதளத்திற்கு நேரடியாக அனுப்பப்படும்.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>கண்டுபிடிக்கப்பட்ட கலங்கரை விளக்கங்கள் பட்டியல்</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>அனுப்பப்பட்ட குறியீட்டை உள்ளிடவும் 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>குறியீட்டை உள்ளிடவும்</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>சரிபார்</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>குறியீடு கிடைக்கவில்லை?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>மீண்டும் அனுப்பு</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>நிலை புதுப்பித்தல் நிறைவடைந்தது</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>நிலை புதுப்பித்தல் நிறைவடைந்தது</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>பங்களிப்பாளர்கள் பட்டியல்</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>பீக்கான்கள் கண்டறியப்படவில்லை</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>உரிம ஒப்பந்தம்</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>ஐடி</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>அவர்வயது தூரம்</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>எண்ணிக்கை</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>எல்அசெஸ்நேரம்</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>நேரம்</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>மரோர்நோ</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>மினோநோ</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -213,14 +89,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>எச்சரிக்கை</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>ஒரு பயன்பாட்டை நிறுவுதல்</value>
@@ -238,41 +106,22 @@
     <value>இந்த பயன்பாட்டை பயன்படுத்துவதற்கான தேவைகள்</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>நிலை அமைப்புகள்</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>நிலை அமைப்புகள்</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>சேமி</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>உங்களுக்கு ஒரு நேர்மறையான ஆய்வு கிடைத்திருந்தால், உங்கள் மொபைல் எண்ணை உள்ளிட்டு, உங்கள் அன்புக்குரியவர்களை பாதுகாப்பதற்கு உங்கள் நிலையைப் புதுப்பிக்கவும்.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>நிலையை மாற்ற தட்டவும்</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>தயவுகூர்ந்து உங்கள் பிணைய இணைப்பை சரிபார்க்கவும்.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>சரி</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>செயல்படுத்து</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>இப்போது இல்லை</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>இந்த செயலி எக்ஸ்போசர்/புளூடூத் சிக்னல்களைப் பயன்படுத்துகிறது. 
@@ -283,33 +132,9 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>வெளிப்பாடு அறிவிக்கை/புளூடூத் அனுமதி</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>பங்களிப்பாளர்கள்</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>அம்பலப்படுத்தல்</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>முகப்பு</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>உரிமம்</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>தெரியப்படுத்து</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>புதுப்பி</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>அம்பலப்படுத்தல்</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -319,14 +144,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>கைமுறை</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>தகவமைவை புதுப்பி</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>அறிவிப்பை செயல்படுத்து</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>அறியப்பட்ட அம்பலப்படுத்தல்கள் எதுவும் இல்லை</value>
     <comment>If not found exposures data</comment>
@@ -334,25 +151,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>நேர்மறை குறியீடாகவும்-19 முடிவாகவும் அறிவிக்கப்பட்ட ஒருவரிடம் நீங்கள் வெளிப்படுத்தப்பட்டால் உங்களுக்கு அறிவிக்கப்படுவீர்கள்.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>நீங்கள் கோவிட்-19 ஏற்படுத்தும் வைரஸ் நேர்மறை சோதனை என்றால், நீங்கள் உங்கள் ஆய்வு பகிர்ந்து கொள்ள தேர்வு செய்யலாம்.  உங்கள் சமூகத்தில் உள்ள மற்றவர்களுக்கு வைரஸ் பரவுவதை இது உதவும்.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>மேலும் அறிக</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>தயவுசெய்து நோய் கண்டறிதல் அடையாளங்காட்டி உள்ளிடவும்</value>
@@ -370,20 +168,16 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>உங்கள் கோவிட்-19 பரிசோதனையுடன் வந்த தனித்துவமான சோதனை அடையாளங்காட்டி உங்கள் நேர்மறை சோதனை முடிவை சரிபார்க்க பயன்படுத்தப்பட வேண்டும்.</value>
   </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>சரிபார்த்து பகிரவும்</value>
-    <comment>Verify and Share</comment>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>பின்னர் மீண்டும் முயற்சிக்கவும்.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>தோல்வியடைந்தது</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>ஆய்வு அறிக்கை சமர்ப்பிக்கப்பட்டது</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>முழுமை</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -392,16 +186,13 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>நோய் கண்டறிதல் அடையாளங்காட்டி தேவை</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>சரி</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>தயவுசெய்து ஒரு பகுப்பாய்வு சமர்ப்பிக்கும் முன், வெளிப்பாடு அறிவிப்புகளை இயக்கவும்.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>வெளிப்பாடு அறிவிப்புகள் முடக்கப்பட்டன</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>நோய் கண்டறிதல்...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -415,5 +206,121 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>சமர்ப்பி</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>அமைப்புகள்</value>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>உடன்படவில்லை</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>ரத்துசெய்</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>அறிவிப்புகளை இயக்க விரும்புகிறீர்களா?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>இயக்குவதால்</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>நீக்குகிறது</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>பயன்பாட்டை பகிரவும்</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>பகிர்</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>பிறருக்கு சாதகமான தகவல் மற்றும் பெயரற்ற அறிவிப்பை பகிர்தல்</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>மீட்டமை</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>தனியுரிமைக் கொள்கை</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>பதிவேட்டுக்காக காத்திருக்கும்</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>நீங்கள் நிஜமாகவே அனைத்து தரவையும் மீட்டமைக்க விரும்புகிறீர்களா?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>அனைத்து தரவையும் நீக்கு</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>அனைத்து அமைப்புகள் மற்றும் தரவு நீக்கப்பட்டுள்ளது. தயவுசெய்து பயன்பாட்டை மறுதொடக்கம் செய்யவும்.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>பதிப்பு</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>இந்த பயன்பாட்டின் பதிப்பு எண்</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>குறுகிய தூர கம்பியில்லா தகவல்தொடர்பு</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>அனுப்பு மற்றும் பெறு</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>தொடர்பு அறிவிப்பை மூடு</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>நெருங்கிய தொடர்பின் போது விண்ணப்ப அறிவிப்புகள்</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>தரவை நீக்கு</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>அனைத்து தரவையும் நீக்கு</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>செல்லுபடியாகாத நோயறிதல் ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>செல்லுபடியாகாத தேர்வு தேதி</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>செல்லத்தக்க சோதனை தேதியை வழங்கவும்</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>பதிவுக்கான திருப்பம்</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>பாசிடிவ் பதிவு</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>நீங்கள் பின்னர் நேர்மறையாக பதிவு செய்ய விரும்புகிறீர்களா?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>நீங்கள் பயன்பாட்டை இயக்கும் போது, அது ஒவ்வொரு ஸ்மார்ட்ஃபோனிலும் அநாமதேய ID உருவாக்கி சேமித்து வைக்கும். இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனியுரிமை தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>பயன்பாடு இயங்கும் போது, ஒவ்வொரு மற்ற ஸ்மார்ட்போன் கடந்த இரண்டு வாரங்களுக்கு ஒருவருக்கொருவர் அநாமதேய Idகளை பதிவு செய்யும். 2 வாரங்களுக்கு முன்பு உள்ள பதிவுகள் நீக்கப்படும் மற்றும் தனியுரிமை பாதுகாக்க ஒவ்வொரு பெயரிட ID அவ்வப்போது மாற்றப்படும்.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>மற்ற பயனர்கள் தொடர்ந்து நேர்மறையர்களின் பெயரில்லாத Id களின் பட்டியலை பெறுவர். கையகப்படுத்துபின், ஸ்மார்ட்போன் தொடர்பாக பதிவு செய்துள்ள தொடர்பு பதிவுகள் பொருத்தமாக இருக்கும். போட்டியின் முடிவு பலத்த தொடர்பால், நாங்கள் உங்கள் ஸ்மார்ட்ஃபோனை தெரிவிப்போம், மேலும் எங்களுக்கு நீங்கள் ஒத்துழைக்க விரும்பும் அவசியமான நடவடிக்கைகளை தெரியப்படுத்துவோம்.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>கடந்த 14 நாட்களில் நேச்சுரல் டெஸ்டர்களுடனான தொடர்பு</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>புதிய கோரோனா உடன் நீங்கள் நேர்மறையாக இருந்தால், உங்களைச் சுற்றியுள்ள மக்களைப் பாதுகாக்க நேர்மறையான பதிவிற்கு ஒத்துழைக்கவும்.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>இந்த பயன்பாடு மிகவும் பயனுள்ளதாக உள்ளது பல மக்கள் அதை நிறுவ, எனவே தயவு செய்து உங்கள் சுற்றி மக்கள் விண்ணப்ப பகிர்ந்து.</value>
   </data>
 </root>

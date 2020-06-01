@@ -12,37 +12,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>Chcem pomôcť</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>Ako to funguje</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Ďalej</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Podmienky poskytovania služby</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>Dohodnúť a postupovať</value>
-    <comment>Agree and Proceed</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Nie je potrebné zadávať osobné údaje. Používame jedinečný identifikátor, ktorý vám bol pridelený pri inštalácii aplikácie.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kontakt s iným používateľom aplikácie po dobu dlhšiu ako 30 min, v okruhu bližšie ako 2 m v priemere je zaznamenaný ako "blízky kontakt".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Po overení telefónneho čísla manuálne zmeňte stav na "pozitívne". " Pozitívny "workflow, teraz koordinácia so spriaznými stranami.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Ak chcete zaznamenať blízky kontakt, je potrebné zapnúť Bluetooth. Ak ho chcete zapnúť, prejdite na nasledujúcu stránku.</value>
@@ -50,27 +37,16 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Začiatok</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Ochrana našich blízkych od COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Prístup k zariadeniu</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>Popis aplikácie</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>Registrovať</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Súhlasím</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>DOMOV</value>
@@ -79,14 +55,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>Nastavenia stavu</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>Zoznam prispievateľov</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Informácie o aktualizácii</value>
@@ -98,113 +66,21 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Ste pripravení ísť</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Nastavenie dokončené</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Ak ste dostali pozitívnu diagnózu, zadajte svoje mobilné číslo a aktualizujte svoj status na ochranu svojich blízkych.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>Zadajte číslo mobilného telefónu</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>Pošleme vám overovací kód.
-Skontrolujte prosím vaše SMS.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>Nebudeme uchovávať vaše telefónne číslo. Bude odoslaná priamo do databázy vlády.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Ak ste dostali pozitívnu diagnózu</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>Zistený zoznam signálov</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>Zadajte kód, ktorý bol odoslaný do 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>Zadajte kód</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>Overiť</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>Nedostal kód?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>Znovu odoslať</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>Aktualizácia stavu je dokončená</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>Aktualizácia stavu je dokončená</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>Zoznam prispievateľov</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>Zistené majáky</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licenčná zmluva</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>Identifikácia</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>Vzdialenosť odstávok</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>Počet</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>ElapsedTime</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>LastTime</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>MajorNo</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>MinorNo</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -213,14 +89,6 @@ Skontrolujte prosím vaše SMS.</value>
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>Hlavu hore</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Inštalácia aplikácie</value>
@@ -238,41 +106,22 @@ Skontrolujte prosím vaše SMS.</value>
     <value>Požiadavky na používanie tejto aplikácie</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>Nastavenia stavu</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Nastavenia stavu</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>Uložiť</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>Ak ste dostali pozitívnu diagnózu, zadajte svoje mobilné číslo a aktualizujte svoj status na ochranu svojich blízkych.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>Ťuknutím na položku zmeníte stav</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Skontrolujte sieťové pripojenie.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Povoliť</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Táto aplikácia používa upozornenie na expozíciu/Bluetooth signály na určenie, či sa nachádzate v blízkosti iného používateľa aplikácie sledovanie kontaktov. 
@@ -283,33 +132,9 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
     <value>Povoliť oznamovanie expozície/Bluetooth</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>Prispievatelia</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Expozície</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>Domov</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>Licencia</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>S upozornením</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>Aktualizovať</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>Expozície</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -319,14 +144,6 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
     <value>Manuálne</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>Aktualizácia infomation</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>Povoliť oznamovanie</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>Žiadne známe expozície</value>
     <comment>If not found exposures data</comment>
@@ -334,25 +151,6 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Budete upozornení, ak ste boli vystavení niekomu, kto hlásil pozitívny COVID-19 výsledok.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>Podeľte sa o pozitívnu diagnózu</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>Podeľte sa o pozitívnu diagnózu</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>Ak ste testovali pozitívne na vírus, ktorý spôsobuje COVID-19, môžete sa rozhodnúť pre zdieľanie vašej diagnózy.  To pomôže ostatným vo vašej komunite obsahujú šírenie vírusu.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>Ďalšie informácie</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>Ak ste dostali pozitívnu diagnózu</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>Prosím, zadajte identifikátor diagnostiky</value>
@@ -370,20 +168,16 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Na overenie pozitívneho výsledku testu sa musí použiť jedinečný testovací identifikátor, ktorý bol dodaný s testom COVID-19.</value>
   </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>Overenie a zdieľanie</value>
-    <comment>Verify and Share</comment>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Zopakujte akciu neskôr.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Neúspešné</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Diagnóza predložená</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Dokončené</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -392,16 +186,13 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Vyžaduje sa identifikátor diagnostiky</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Pred podaním diagnózy povoľte upozornenia na expozíciu.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Oznámenia o expozícii vypnuté</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Podanie diagnózy...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -415,5 +206,121 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Odoslať</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Nastavenia</value>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Nesúhlasí</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>Chcete zapnúť upozornenia?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>Zapína sa</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Odstraňujú sa</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>Ak ste dostali pozitívnu diagnózu</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>Zdieľanie aplikácie</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Zdieľať</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>Zdieľanie pozitívnych informácií a anonymné oznamovanie iným osobám</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Obnoviť</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Zásady ochrany osobných údajov</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>Čakanie na registráciu</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Naozaj chcete obnoviť všetky dáta?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Odstrániť všetky údaje</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Všetky nastavenia a údaje boli odstránené. Reštartujte aplikáciu.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Číslo verzie tejto aplikácie</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Bezdrôtová komunikácia s krátkym dosahom</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Odosielanie a prijímanie</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Zavrieť upozornenie kontaktu</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Oznámenia o žiadostiach v čase úzkeho kontaktu</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Odstrániť údaje</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Odstrániť všetky údaje</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Neplatná identifikácia diagnózy</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Uveďte platný preukaz diagnózy</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Neplatný dátum testu</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Uveďte platný dátum testu</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Návrat k registrácii</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Pozitívna registrácia</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Chcete sa neskôr zaregistrovať pozitívne?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Keď spustíte aplikáciu , bude generovať a ukladať anonymný ID na každom smartphone. Táto aplikácia nezískava žiadne informácie týkajúce sa súkromia, ako je telefónne číslo a informácie o polohe.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Kým je aplikácia spustená, bude navzájom smartphone zaznamenávať navzájom anonymné ID za posledné dva týždne. Záznamy staršie ako 2 týždne sa odstránia a každá anonymná identifikácia sa bude pravidelne meniť, aby sa chránilo súkromie.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Ostatní používatelia pravidelne získať zoznam anonymných identifikátorov pozitívnych. Po akvizícii sa zhodný záznam kontaktu zaznamenaný v smartfóne. Ak je výsledkom zápasu ťažký kontakt, oznámime váš smartfón a budeme vás informovať o potrebných opatreniach, s ktorými by ste chceli, aby sme s vami spolupracovali.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt s pozitívnymi testery za posledných 14 dní</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ak ste pozitívni s novou Corona, prosím, spolupracovať s pozitívnou registráciou na ochranu ľudí okolo vás.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Táto aplikácia je tak účinná, že veľa ľudí ju nainštalovať, tak prosím, podeľte sa o aplikáciu s ľuďmi okolo vás.</value>
   </data>
 </root>

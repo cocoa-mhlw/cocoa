@@ -12,37 +12,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>أريد أن أساعد</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>كيف يعمل</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>التالي</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>بنود الخدمة</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>الموافقة والمتابعة</value>
-    <comment>Agree and Proceed</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>لا حاجة لإدخال المعلومات الشخصية. نحن نستخدم معرف فريد، مخصص لك عند تثبيت التطبيق.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>تفاعل المستخدم مع مستخدم آخر للتطبيق لمدة تزيد عن 30 دقيقة إجمالاً ، في مسافة أقرب من 2 متر في المتوسط تسجل على أنها "جهة اتصال قريبة".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>الرجاء تغيير حالتك يدويًا إلى "إيجابي" بعد تأكيد رقم هاتفك. جريان "إيجابي" ، يجب التنسيق مع الجهات المعنية.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>يجب تشغيل البلوتوث / الإخطارات لتسجيل أي اتصال وثيق مع المستخدمين الآخرين. يرجى الانتقال إلى الصفحة التالية لتشغيله.</value>
@@ -50,27 +37,16 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>البدء</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>حماية أحبائنا من فيروس كورونا المستجد</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>صلاحيات الوصول</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>وصف التطبيق</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>تسجيل</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>موافقة</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>الصفحة الرئيسية</value>
@@ -79,14 +55,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>إعدادات الحالة</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>قائمة المساهمين</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>تحديث المعلومات</value>
@@ -98,113 +66,21 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>انت جاهز</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>اكتمل الإعداد</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>إذا تلقيت تشخيصًا إيجابيًا، يرجى إدخال رقم هاتفك المحمول وتحديث حالتك لحماية أحبائك.</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>أدخل رقم الهاتف المحمول</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>سنرسل لك رمز التحقق.
-يرجى التحقق من الرسائل الخاصة بك.</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>لن نقوم بتخزين رقم هاتفك. سيتم إرساله مباشرة إلى قاعدة بيانات الحكومة.</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>إذا تلقيت تشخيصًا إيجابيًا</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>قائمة المنارة المكتشفة</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>أدخل الرمز الذي تم إرساله إلى 
-「{0}」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>أدخل الرمز</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>تحقيق</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>لم تحصل على الرمز؟</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>إعادة الإرسال</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>تم اكتمل التحديث</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>تم اكتمل التحديث</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>قائمة المساهمين</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>المنارات المكتشفة</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>اتفاقية الترخيص</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>الهوية</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>متوسط المسافة</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>اجمالي</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>الوقت المنقضي</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>آخر مرة</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>الرقم الرئيسي</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>الرقم الرئيسي</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -213,14 +89,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>ملاحظة</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>تثبيت التطبيق</value>
@@ -238,41 +106,22 @@
     <value>متطلبات استخدام هذا التطبيق</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>إعدادات الحالة</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>إعدادات الحالة</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>حفظ</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>إذا تلقيت تشخيصًا إيجابيًا، يرجى إدخال رقم هاتفك المحمول وتحديث حالتك لحماية أحبائك.</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>اضغط لتغيير الحالة</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>الرجاء التحقق من اتصال الانترنت الخاص بك.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>موافق</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>تمكين</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ليس الان</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>يستخدم هذا التطبيق الإخطارات / البلوتوث لتحديد ما إذا كنت بالقرب من مستخدم آخر للتطبيق. اختر "السماح دائمًا" للسماح بإعداد البلوتوث.</value>
@@ -282,33 +131,9 @@
     <value>السماح بالإخطارات / البلوتوث</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>المساهمين</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>تعرضات</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>الصفحة الرئيسية</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>الترخيص</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>إعلام</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>تحديث</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>تعرضات</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -318,14 +143,6 @@
     <value>ارشادات</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>تحديث المعلومات</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>تفعيل الإشعارات</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>لا يوجد تعرضات متاحة</value>
     <comment>If not found exposures data</comment>
@@ -333,25 +150,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>سيتم إعلامك إذا كنت قد تعرضت لشخص أبلغ عن إصابتة بفيروس كورونا المستجد.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>مشاركة تشخيص إيجابي</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>مشاركة تشخيص إيجابي</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>إذا كنت إيجابيًا لفيروس كورونا المستجد ، فيمكنك اختيار مشاركة التشخيص. سيساعد ذلك الآخرين في مجتمعك على احتواء انتشار الفيروس.</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>معرفة المزيد</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>إذا تلقيت تشخيصًا إيجابيًا</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>الرجاء إدخال هوية التشخيص</value>
@@ -369,20 +167,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>يجب استخدام معرّف الاختبار الفريد المرفق مع اختبار فيروس كورونا المستجد للتحقق من نتيجة الاختبار الإيجابية.</value>
   </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>التحقق والمشاركة</value>
-    <comment>Verify and Share</comment>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>يرجى إعادة المحاولة لاحقًا.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>فشل</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>التشخيصات المقدمة</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>مكتمل</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -391,16 +185,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>معرف التشخيص المطلوب</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>موافق</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>يرجى تمكين إشعارات التعرض قبل تقديم التشخيص.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>تم تعطيل إشعارات التعرض</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تقديم التشخيص...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -415,10 +206,120 @@
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>إرسال</value>
   </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>إعدادات</value>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>غير موافق</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>هل تريد تشغيل الإشعارات؟</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>تمكين</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>إذا تلقيت تشخيصًا إيجابيًا</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>مشاركة التطبيق</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>مشاركة</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>مشاركة المعلومات الإيجابية وإعلام مجهول للآخرين</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>نهج الخصوصية</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>في انتظار التسجيل</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>هل تريد حقًا إعادة تعيين جميع البيانات؟</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>حذف كافة البيانات</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>تم حذف كافة الإعدادات والبيانات. الرجاء إعادة تشغيل التطبيق.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>الإصدار</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>رقم الإصدار من هذا التطبيق</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>اتصالات لاسلكية قصيرة المدى</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>إرسال واستلام</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>إغلاق إعلام جهة الاتصال</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>إشعارات التطبيق في وقت الاتصال الوثيق</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>حذف البيانات</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>حذف كافة البيانات</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>معرف التشخيص غير الصالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>يرجى تقديم معرف تشخيص صالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>تاريخ اختبار غير صالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>يرجى تقديم تاريخ اختبار صالح</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>العودة إلى التسجيل</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>التسجيل الإيجابي</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>هل ترغب في التسجيل بشكل إيجابي في وقت لاحق؟</value>
+  </data>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>مثال نصي</value>
+    <value>عند تشغيل التطبيق، فإنه سيتم إنشاء وتخزين معرف مجهول على كل هاتف ذكي. لا يحصل هذا التطبيق على أي معلومات تتعلق بالخصوصية مثل رقم الهاتف ومعلومات الموقع.</value>
+    <comment>How it works page step 1 description 2</comment>
   </data>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>مثال نصي</value>
+    <value>أثناء تشغيل التطبيق ، سيقوم الهاتف الذكي لكل منهما بتسجيل الـ IDs المجهولين لبعضهما البعض خلال الأسبوعين الماضيين. سيتم حذف السجلات التي يزيد عمرها عن أسبوعين وسيتم تغيير كل معرف مجهول بشكل دوري لحماية الخصوصية.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>يحصل المستخدمون الآخرون بانتظام على قائمة بـ IDs مجهولة الهوية الإيجابية. بعد الاستحواذ، سيتم مطابقة سجل جهة الاتصال المسجل على الهاتف الذكي. إذا كانت نتيجة المباراة هي اتصال كثيف، سنقوم بإخطار هاتفك الذكي وإبلاغك بالإجراءات الضرورية التي ترغب في تعاوننا معها.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>الاتصال مع المختبرين الإيجابيين في الأيام الـ 14 الماضية</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>إذا كنت إيجابيًا مع كورونا الجديدة ، يرجى التعاون مع التسجيل الإيجابي لحماية الأشخاص من حولك.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>هذا التطبيق فعال جدا أن العديد من الناس تثبيته، لذا يرجى مشاركة التطبيق مع الناس من حولك.</value>
   </data>
 </root>

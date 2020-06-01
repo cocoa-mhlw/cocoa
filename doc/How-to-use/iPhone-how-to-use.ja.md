@@ -1,7 +1,7 @@
-# COVID-19 Radar for iOS　使用方法
+# COVID-19Radar for iOS　使用方法
 
-「COVID-19 Radar」アプリをご利用いただき、ありがとうございます。  
-本ドキュメントでは、「COVID-19 Radar」iOS版の使用方法をご説明します。
+「COVID-19Radar」アプリをご利用いただき、ありがとうございます。  
+本ドキュメントでは、「COVID-19Radar」iOS版の使用方法をご説明します。
 
 ### 注意事項
 - 本ドキュメントは、Version 1.0 (184)をベースに作成されております。
@@ -19,17 +19,17 @@
 ![App Opening](.attachments/iPhone-Opening-SS.png)
 
 ### 2. アプリの概要・使い方
-「COVID-19 Radar」の概要についての解説です。  
+「COVID-19Radar」の概要についての解説です。  
 下にスクロールしますと、最下部に「次へ」ボタンが表示されますので、タップして次に進みます。  
 ![iPhone About App](.attachments/iPhone-AboutApp-SS.png)
 
 ### 3. プライバシーポリシーへの同意
-「COVID-19 Radar」のプライバシーポリシー（個人情報の取り扱いに関する規定）の同意画面です。  
+「COVID-19Radar」のプライバシーポリシー（個人情報の取り扱いに関する規定）の同意画面です。  
 同意いただけるようでしたら、「同意する」ボタンをタップして次に進みます。  
 ![iPhone Privacy-Policy](.attachments/iPhone-Privacy-Policy-SS.png)
 
 ### 4. Bluetoothの使用について
-「COVID-19 Radar」は、iOSデバイスのBluetoothを使用します。  
+「COVID-19Radar」は、iOSデバイスのBluetoothを使用します。  
 「次へ」ボタンをタップして次に進みます。   
 ![Bluetooth Information](.attachments/iPhone-Bluetooth-Information-SS.png)
 
@@ -54,7 +54,7 @@
 ## 陽性反応が出た場合
 医療機関を受診し、PCR検査において陽性反応が確認された際には、以下の手順にて登録をお願いします。  
 SMSにより電話番号を確認した後、アプリ内ではなく厚生労働省のデータベースに保管されます。  
-併せて、「COVID-19 Radar」を使用しているユーザーのうち、接触した履歴のある方へ、匿名での通知がなされます。  
+併せて、「COVID-19Radar」を使用しているユーザーのうち、接触した履歴のある方へ、匿名での通知がなされます。  
 
 ### 1. 「ステータス設定」を開く
 アプリのホーム画面より、「ステータス設定」をタップします。  
@@ -80,5 +80,5 @@ SMSが受信可能であれば、通話が出来なくとも問題ありませ�
 
 -----
 
-「COVID-19 Radar」は現在開発中のアプリです。  
+「COVID-19Radar」は現在開発中のアプリです。  
 コミットする都度、最新版の通知がメールアドレスに来ますので、最新版を都度ダウンロードいただきますよう、よろしくお願いいたします。

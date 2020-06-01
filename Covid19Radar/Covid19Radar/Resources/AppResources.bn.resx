@@ -12,37 +12,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonIWantToHelp" xml:space="preserve">
-    <value>সাহায্য করতে চাই</value>
-    <comment>I want to help</comment>
-  </data>
   <data name="TitleHowItWorks" xml:space="preserve">
     <value>কী ভাবে কাজ করে</value>
     <comment>How it works page title</comment>
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>পরবর্তী</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>পরিষেবার বিধিসমূহ</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="ButtonAgreeAndProceed" xml:space="preserve">
-    <value>সহমত এবং অগ্রসর হোন</value>
-    <comment>Agree and Proceed</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>ব্যক্তিগত তথ্য ইনপুট করার প্রয়োজন নেই । আমরা একটি অ্যাপ্লিকেশন ইনস্টল করার সময় আপনার জন্য বরাদ্দ অনন্য ID ব্যবহার করছি.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>মোট 30 মিনিটের বেশি সময় ধরে অন্য অ্যাপ ব্যবহারকারীর সাথে যোগাযোগ করা হলে, গড়ে 2এম এর চেয়ে কাছাকাছি একটি ব্যাসার্ধের মধ্যে "ঘনিষ্ঠ যোগাযোগ" হিসাবে রেকর্ড করা হয় ।</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>অনুগ্রহ করে আপনার ফোন নম্বর যাচাই করার পরে "ইতিবাচক" তে আপনার স্থিতি পরিবর্তন করুন । ইতিবাচক ' কাজের, এখন সংশ্লিষ্ট দলগুলোর সঙ্গে সমন্বয় ।</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>ব্লু-টুথ বন্ধ করার জন্য চালু করা প্রয়োজন । অনুগ্রহ করে এটি চালু করার জন্য পরবর্তী পৃষ্ঠায় যান ।</value>
@@ -50,27 +37,16 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>শুরু</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 থেকে আমাদের প্রিয়জনকে রক্ষা করা</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>ডিভাইস অ্যাক্সেস</value>
     <comment>Device access page title</comment>
   </data>
-  <data name="TitleAppDescription" xml:space="preserve">
-    <value>অ্যাপ বর্ণনা</value>
-    <comment>App Description</comment>
-  </data>
-  <data name="ButtonRegister" xml:space="preserve">
-    <value>নিবন্ধন করুন</value>
-    <comment>Register</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>রাজি</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>হোম</value>
@@ -79,14 +55,6 @@
   <data name="AppName" xml:space="preserve">
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
-  </data>
-  <data name="HomePageViewStatusSettingsMenu" xml:space="preserve">
-    <value>স্থিতি সেটিংস</value>
-    <comment>Status Settings Menu</comment>
-  </data>
-  <data name="HomePageViewListOfContributorsMenu" xml:space="preserve">
-    <value>অবদানকারী তালিকা</value>
-    <comment>List Of Contributors Menu</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>তথ্য হালনাগাদ করুন</value>
@@ -98,113 +66,21 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>তুমি যেতে প্রস্তুত</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>সমাপ্ত উপস্থাপনা</value>
     <comment>Set up Completed</comment>
   </data>
-  <data name="UserSettingPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>আপনি যদি একটি ইতিবাচক নির্ণয় পান, তাহলে অনুগ্রহ করে আপনার মোবাইল নাম্বার লিখুন এবং আপনার প্রিয়জনকে রক্ষা করার জন্য আপনার স্ট্যাটাস আপডেট করুন ।</value>
-    <comment>Status settings page description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsEnterNumber" xml:space="preserve">
-    <value>মোবাইল নম্বর লিখুন</value>
-    <comment>Status settings page enter number text</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSDescription" xml:space="preserve">
-    <value>আমরা আপনাকে একটি যাচাইকরণ কোড পাঠাবো ।
-অনুগ্রহ করে আপনার এসএমএস চেক করুন ।</value>
-    <comment>Status settings page verification sms code description</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSMSInfo" xml:space="preserve">
-    <value>আমরা আপনার ফোন নম্বর সংরক্ষণ করব না । তা সরাসরি সরকারের ডেটাবেসে পাঠানো হবে ।</value>
-    <comment>Status settings page sms info</comment>
-  </data>
-  <data name="UserSettingPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
-    <comment>Status settings page sub title</comment>
-  </data>
-  <data name="UserSettingPageTextPhoneNumberPlaceholder" xml:space="preserve">
-    <value>090-1234-4567</value>
-    <comment>Placeholder text for phone number entry</comment>
-  </data>
-  <data name="DetectedBeaconListMenu" xml:space="preserve">
-    <value>সনাক্ত করা বাতিঘর তালিকা</value>
-    <comment>Detected Beacon List Menu</comment>
-  </data>
-  <data name="InputSmsOTPPageOtpEnterText" xml:space="preserve">
-    <value>পাঠানো কোড লিখুন 
-「 {0} 」</value>
-    <comment>Otp Enter the Code</comment>
-  </data>
-  <data name="TitleOtp" xml:space="preserve">
-    <value>কোড লিখুন</value>
-    <comment>Otp Title</comment>
-  </data>
-  <data name="ButtonVerify" xml:space="preserve">
-    <value>যাচাই করুন</value>
-    <comment>Button Verify</comment>
-  </data>
-  <data name="InputSmsOTPPageDidntGetTheCodeText" xml:space="preserve">
-    <value>কোড পাইনি?</value>
-    <comment>Didn't get the code Text</comment>
-  </data>
-  <data name="InputSmsOTPPageResendText" xml:space="preserve">
-    <value>পুন:প্রেরণ করুন</value>
-    <comment>Resend Text</comment>
-  </data>
-  <data name="StatusUpdateCompletePageTextStatusUpdateComplete" xml:space="preserve">
-    <value>স্থিতি আধুনিকীকরণ সম্পূর্ণ</value>
-    <comment>Status Update Complete page text</comment>
-  </data>
-  <data name="TitleStatusUpdateComplete" xml:space="preserve">
-    <value>স্থিতি আধুনিকীকরণ সম্পূর্ণ</value>
-    <comment>Status Update Complete page title</comment>
-  </data>
   <data name="TitleContributorsPage" xml:space="preserve">
     <value>অবদানকারী তালিকা</value>
     <comment>Contributors list page title</comment>
   </data>
-  <data name="TitleDetectedBeaconPage" xml:space="preserve">
-    <value>সনাক্ত বিকন</value>
-    <comment>Detected Beacons</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>লাইসেন্স চুক্তি</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>PrivacyPolicy</comment>
-  </data>
-  <data name="DetectedBeaconPageTextId" xml:space="preserve">
-    <value>আইডি</value>
-    <comment>ID</comment>
-  </data>
-  <data name="DetectedBeaconPageTextAvgDistance" xml:space="preserve">
-    <value>লোভ</value>
-    <comment>TextAvgDistance</comment>
-  </data>
-  <data name="DetectedBeaconPageTextCount" xml:space="preserve">
-    <value>গণনা</value>
-    <comment>TextCount</comment>
-  </data>
-  <data name="DetectedBeaconPageTextElapsedTime" xml:space="preserve">
-    <value>ইল্লাসেকাল</value>
-    <comment>TextElapsedTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextLastTime" xml:space="preserve">
-    <value>শেষসময়</value>
-    <comment>TextLastTime</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMajorNo" xml:space="preserve">
-    <value>মাজনো</value>
-    <comment>MajorNo</comment>
-  </data>
-  <data name="DetectedBeaconPageTextMinorNo" xml:space="preserve">
-    <value>মিননো</value>
-    <comment>MinorNo</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -213,14 +89,6 @@
   <data name="UrlUpdate" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
     <comment>Update</comment>
-  </data>
-  <data name="TitleHeadsup" xml:space="preserve">
-    <value>হেডস আপ</value>
-    <comment>Heads up</comment>
-  </data>
-  <data name="UrlHeadsup" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/qna.html</value>
-    <comment>If contacted , headsup and Correct coping method and contact information Try to be calm.</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>একটি অ্যাপ্লিকেশন সংস্থাপন করা হচ্ছে</value>
@@ -238,41 +106,22 @@
     <value>এই অ্যাপটি ব্যবহার করার প্রয়োজনীয়তা</value>
     <comment>How it works page step 4 title</comment>
   </data>
-  <data name="TitleUserSettings" xml:space="preserve">
-    <value>স্থিতি সেটিংস</value>
-    <comment>Status Settings page title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>স্থিতি সেটিংস</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>সংরক্ষণ করুন</value>
-    <comment>Button Save</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsDescription" xml:space="preserve">
-    <value>আপনি যদি একটি ইতিবাচক নির্ণয় পান, তাহলে অনুগ্রহ করে আপনার মোবাইল নাম্বার লিখুন এবং আপনার প্রিয়জনকে রক্ষা করার জন্য আপনার স্ট্যাটাস আপডেট করুন ।</value>
-    <comment>User Status Page description</comment>
-  </data>
-  <data name="UserStatusPageTextStatusSettingsPickerTitle" xml:space="preserve">
-    <value>অবস্থা পরিবর্তন করতে ট্যাপ করুন</value>
-    <comment>User Status Page Status Change</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>অনুগ্রহ করে আপনার নেটওয়ার্ক কানেকশন চেক করুন.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ঠিক আছে</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>সক্রিয় করুন</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>এখন</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>এই অ্যাপটি এক্সপোজার নোটিফিকেশন/ব্লুটুথ সিগন্যাল ব্যবহার করে যদি আপনি অন্য কোনও কনট্যাক্ট ট্রেসিং অ্যাপ ব্যবহারকারীর কাছে থাকেন । 
@@ -283,33 +132,9 @@
     <value>এক্সপোজার প্রজ্ঞাপন/ব্লুটুথ মঞ্জুরি দিন</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
-  <data name="MainContributors" xml:space="preserve">
-    <value>কন্ট্রিবিউটার</value>
-    <comment>Tab Contributors</comment>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>এক্সপোজার</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="MainHome" xml:space="preserve">
-    <value>বাড়ী</value>
-    <comment>Tab Home</comment>
-  </data>
-  <data name="MainLicense" xml:space="preserve">
-    <value>লাইসেন্স</value>
-    <comment>Tab License</comment>
-  </data>
-  <data name="MainNotifyOther" xml:space="preserve">
-    <value>অবহিত</value>
-    <comment>Tab Notify</comment>
-  </data>
-  <data name="MainUpdateInfo" xml:space="preserve">
-    <value>আপডেট করুন</value>
-    <comment>Tab Button</comment>
-  </data>
-  <data name="TitleExposures" xml:space="preserve">
-    <value>এক্সপোজার</value>
-    <comment>Exposures Page</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
@@ -319,14 +144,6 @@
     <value>নির্দেশিকা</value>
     <comment>Tab How to use</comment>
   </data>
-  <data name="HomePageUpdateInfomation" xml:space="preserve">
-    <value>আধুনিকীকরণ ইনফমোলেশন</value>
-    <comment>Home Page Update Infomation text</comment>
-  </data>
-  <data name="HomeEnableNotification" xml:space="preserve">
-    <value>প্রজ্ঞাপন সক্রিয় করুন</value>
-    <comment>Home Setting Enable Notification</comment>
-  </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>কোন পরিচিত এক্পোজারের নাম নেই</value>
     <comment>If not found exposures data</comment>
@@ -334,25 +151,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>আপনি যদি কেউ ইতিবাচক COVID-19 ফলাফল রিপোর্ট প্রকাশ করা হয়েছে আপনি অবহিত করা হবে.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NofityPageButtonSharePositive" xml:space="preserve">
-    <value>একটি ইতিবাচক নির্ণয় ভাগ করুন</value>
-  </data>
-  <data name="NofityPageShareDiag" xml:space="preserve">
-    <value>একটি ইতিবাচক নির্ণয় ভাগ করুন</value>
-    <comment>Notify Page Share Diag</comment>
-  </data>
-  <data name="NofityPageShareYourCase" xml:space="preserve">
-    <value>যদি আপনি ভাইরাসের জন্য পজিটিভ পরীক্ষা করেন যা COVID-19 এর কারণ, আপনি আপনার নির্ণয়ের ভাগ চয়ন করতে পারেন ।  এটি আপনার সম্প্রদায়ের অন্যদের ভাইরাস বিস্তার ধারণ করতে সাহায্য করবে ।</value>
-    <comment>NofityPageShareYourCase</comment>
-  </data>
-  <data name="NotifyPageLearnMore" xml:space="preserve">
-    <value>আরও জানুন</value>
-    <comment>Notify Page Learn more text</comment>
-  </data>
-  <data name="NotifyOtherPageTextStatusSettingsSubtitle" xml:space="preserve">
-    <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
-    <comment>User Status Page subtitle</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
     <value>অনুগ্রহ করে নির্ণয় শনাক্তকারী প্রবেশ করান</value>
@@ -370,20 +168,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>অনন্য পরীক্ষা শনাক্তকারী যে আপনার COVID-19 পরীক্ষা সঙ্গে এসেছে আপনার ইতিবাচক পরীক্ষার ফলাফল যাচাই করতে ব্যবহার করতে হবে.</value>
   </data>
-  <data name="SharePositiveSubmitAndVerify" xml:space="preserve">
-    <value>যাচাই করুন এবং শেয়ার করুন</value>
-    <comment>Verify and Share</comment>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>অনুগ্রহ করে পরে আবার চেষ্টা করুন।</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>ব্যর্থ হয়েছে</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>নিদান জমা</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>সম্পন্ন হয়েছে</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -392,16 +186,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>রোগ নির্ণয় শনাক্তকারী প্রয়োজন</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ঠিক আছে</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>একটি নির্ণয়ের জমা দেওয়ার আগে অনুগ্রহ করে এক্সপোজার বিজ্ঞপ্তিসমূহ সক্রিয় করুন ।</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>এক্সপোজার বিজ্ঞপ্তিসমূহ অক্ষম</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>নির্ণয়ের জমা দেওয়া হচ্ছে...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -415,5 +206,121 @@
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>জমা দিন</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>সেটিংস</value>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>রাজি না</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>বাতিল করুন</value>
+  </data>
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
+    <value>আপনি কি বিজ্ঞপ্তিগুলি চালু করতে চান?</value>
+    <comment>Confirmation dialog</comment>
+  </data>
+  <data name="LoadingTextEnabling" xml:space="preserve">
+    <value>সক্রিয়</value>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>বিলোপ</value>
+  </data>
+  <data name="HomePageHeader2Title" xml:space="preserve">
+    <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
+  </data>
+  <data name="HomePageHeader3Title" xml:space="preserve">
+    <value>অ্যাপটি শেয়ার</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>শেয়ার করুন</value>
+  </data>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>অন্যদের কাছে ইতিবাচক তথ্য এবং বেনামী নোটিফিকেশন শেয়ার করা</value>
+    <comment>Button NotifyOtherPage</comment>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>রিসেট করুন</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>গোপনীয়তা নীতি</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>নিবন্ধনের জন্য অপেক্ষা করছে</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>আপনি কি সত্যিই সব ডাটা রিসেট করতে চান?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>সকল উপাত্ত মুছে ফেলুন</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>সকল সেটিংস এবং ডাটা বিলোপ করা হয়েছে. অনুগ্রহ করে প্রয়োগণটি পুনর্সূচনা করুন.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>সংস্করণ</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>এই অ্যাপ্লিকেশনের সংস্করণ সংখ্যা</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>স্বল্প পরিসরের বেতার যোগাযোগ</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>প্রেরণ এবং গ্রহণ করুন</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>যোগাযোগ বিজ্ঞপ্তি বন্ধ করুন</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>ঘনিষ্ঠ পরিচিতির সময় অ্যাপ্লিকেশন বিজ্ঞপ্তিসমূহ</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>ডাটা বিলোপ করুন</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>সকল উপাত্ত মুছে ফেলুন</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>অকার্যকর নির্ণয় ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>অনুগ্রহ করে একটি বৈধ নির্ণয়ের ID প্রদান করুন</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>অকার্যকর পরীক্ষার তারিখ</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>অনুগ্রহ করে একটি বৈধ পরীক্ষার তারিখ প্রদান করুন</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>রেজিস্ট্রেশনে ফিরুন</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>ইতিবাচক নিবন্ধীকরণ</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>আপনি কি পরে ইতিবাচক নিবন্ধন করতে চান?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>যখন আপনি অ্যাপ্লিকেশন চালাবেন, এটি প্রতিটি স্মার্টফোনে একটি বেনামী আইডি জেনারেট এবং স্টোর করবে । এই প্রয়োগণটি ফোন নম্বর এবং অবস্থান তথ্যের মতো গোপনীয়তা সম্পর্কিত কোনো তথ্য অর্জন করে না ।</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>আবেদনপত্র চালাচালি হলেও একে অপরের স্মার্টফোন গত দুই সপ্তাহ ধরে একে অপরের বেনামী পরিচয়পত্র রেকর্ড করবে । ২ সপ্তাহের পুরোনো রেকর্ড মুছে ফেলা হবে এবং গোপনীয়তা রক্ষার জন্য প্রত্যেক বেনামী আইডি পর্যায়ক্রমে পরিবর্তিত হবে ।</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>অন্য ব্যবহারকারীরা নিয়মিত পজিটিভ জনের বেনামী পরিচয়পত্রের তালিকা পান । অধিগ্রহণের পর স্মার্টফোনে যে কনট্যাক্ট রেকর্ড রেকর্ড করা হবে, তা মিলবে । যদি ম্যাচের ফল ভারি যোগাযোগ হয়, তাহলে আমরা আপনার স্মার্টফোনকে অবহিত করব এবং প্রয়োজনীয় কাজগুলি জানাব যা আপনি আমাদের সাথে সহযোগিতা করতে চান ।</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>গত ১৪ দিনে পজিটিভ টেস্টারের সঙ্গে যোগাযোগ</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>আপনি যদি নতুন করোনা দিয়ে ইতিবাচক হন, তাহলে আপনার চারপাশের জনগণকে সুরক্ষিত রাখতে দয়া করে ইতিবাচক নিবন্ধকে সহযোগিতা করুন ।</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>এই অ্যাপ্লিকেশন এতটাই কার্যকর যে অনেকেই এটি ইনস্টল করেন, তাই দয়া করে আপনার চারপাশের লোকেদের সাথে অ্যাপ্লিকেশন শেয়ার করুন.</value>
   </data>
 </root>

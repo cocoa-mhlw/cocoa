@@ -1,0 +1,62 @@
+﻿<ContentPage
+    x:Class="ExposureNotification.App.Views.ExposureDetailsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="clr-namespace:ExposureNotification.App.ViewModels"
+    Title="Possible Exposure Details"
+    ios:Page.UseSafeArea="True"
+    x:DataType="viewmodel:ExposureDetailsViewModel"
+    BackgroundColor="{DynamicResource BackgroundColor}"
+    Shell.PresentationMode="ModalAnimated"
+    mc:Ignorable="d">
+
+    <Grid Padding="{OnPlatform Android='0,12,0,0', iOS='0,24,0,0'}" RowSpacing="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Frame
+            AutomationProperties.HelpText="Button - Close Page"
+            AutomationProperties.IsInAccessibleTree="True"
+            Style="{DynamicResource CloseFrame}">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CancelCommand}" />
+            </Frame.GestureRecognizers>
+            <Label Style="{DynamicResource CloseLabel}" />
+        </Frame>
+        <Label
+            HorizontalOptions="Center"
+            Style="{DynamicResource MediumLabelStyle}"
+            Text="Possible Exposure Details"
+            TextColor="{DynamicResource PrimaryColor}"
+            VerticalOptions="Center" />
+
+        <StackLayout Grid.Row="1" Style="{DynamicResource Container}">
+            <Frame Style="{DynamicResource CardFrame}">
+                <StackLayout Spacing="20">
+                    <Label Style="{DynamicResource SmallLabelStyle}" Text="[Actual copy to be provided by Public Health Authority]" />
+
+                    <BoxView BackgroundColor="{DynamicResource TextPrimaryColor}" HeightRequest="2" />
+
+                    <Label Style="{DynamicResource SmallLabelStyle}" Text="The person's test result has been verified.  You were near this person at:" />
+                    <Label
+                        FontAttributes="Bold"
+                        Style="{DynamicResource SmallLabelStyle}"
+                        Text="{Binding When, StringFormat='{0:MMMM d, yyyy h:mm tt}'}" />
+
+                    <Label Style="{DynamicResource SmallLabelStyle}" Text="You were exposed to this person for approximately:" />
+                    <Label
+                        FontAttributes="Bold"
+                        Style="{DynamicResource SmallLabelStyle}"
+                        Text="{Binding Duration, StringFormat='{0:%m} minutes'}" />
+
+                    <Label Style="{DynamicResource SmallLabelStyle}" Text="Next steps: [Actual copy to be provided by Public Health Authority]." />
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>

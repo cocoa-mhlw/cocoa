@@ -22,10 +22,11 @@ namespace Covid19Radar.Background.Services
             ITemporaryExposureKeyBlobService blobService,
             ILogger<TemporaryExposureKeyDeleteBatchService> logger)
         {
+            Logger = logger;
+            Logger.LogInformation($"{nameof(TemporaryExposureKeyDeleteBatchService)} constructor");
             TekRepository = tek;
             TekExportRepository = tekExport;
             BlobService = blobService;
-            Logger = logger;
         }
 
         public async Task RunAsync()
