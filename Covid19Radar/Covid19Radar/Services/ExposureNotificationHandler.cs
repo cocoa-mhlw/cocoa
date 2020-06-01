@@ -60,9 +60,11 @@ namespace Covid19Radar.Services
 			=> Task.FromResult(configuration);
 
 		// this will be called when a potential exposure has been detected
-		public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> exposureInfo)
+		public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getExposureInfo)
 		{
 			userData.ExposureSummary = summary;
+
+			var exposureInfo = await getExposureInfo();
 
 			// Add these on main thread in case the UI is visible so it can update
 			await Device.InvokeOnMainThreadAsync(() =>
@@ -72,6 +74,7 @@ namespace Covid19Radar.Services
 			});
 
 			await userDataService.SetAsync(userData);
+			// If Enabled Local Notifications
 			if (userData.IsNotificationEnabled)
 			{
 				var notification = new NotificationRequest
