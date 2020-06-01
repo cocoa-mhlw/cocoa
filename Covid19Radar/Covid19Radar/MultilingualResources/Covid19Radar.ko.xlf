@@ -32,7 +32,7 @@
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep3Description" translate="yes" xml:space="preserve">
           <source>Please manually change your status to "Positive" after verifying your phone number."Positive" Workflow , Now coordination with related parties.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">전화번호를 확인한 후 상태를 '양성'으로 수동 변경십시오. 이제 이해관계자와의 조정이 필요합니다./target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">전화번호를 확인한 후 상태를 '양성'으로 수동 변경십시오. 이제 이해관계자와의 조정이 필요합니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
