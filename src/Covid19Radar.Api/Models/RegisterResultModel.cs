@@ -6,18 +6,25 @@ namespace Covid19Radar.Api.Models
     public class RegisterResultModel
     {
         /// <summary>
-        /// User UUID / take care misunderstand Becon ID
+        /// User Internal UUID
         /// </summary>
-        /// <value>User UUID</value>
+        /// <value>User Internal UUID</value>
         [JsonProperty("userUuid")]
         public string UserUuid { get; set; }
 
         /// <summary>
-        /// Secret key
+        /// API Secret key
         /// </summary>
         /// <value>Secret Key</value>
         [JsonProperty("secret")]
         public string Secret { get; set; }
+
+        /// <summary>
+        /// Jump Consistent Hash Key
+        /// </summary>
+        /// <value>Jump Consistent Hash</value>
+        [JsonProperty("jumpConsistentSeed")]
+        public ulong JumpConsistentSeed { get; set; }
 
     }
 }

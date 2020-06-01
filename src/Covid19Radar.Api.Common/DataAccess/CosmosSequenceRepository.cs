@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Api.DataStore;
+﻿using Covid19Radar.Api.Common;
+using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
@@ -20,35 +21,24 @@ namespace Covid19Radar.Api.DataAccess
             _logger = logger;
         }
 
-        public async Task<int> GetNextAsync(string key, int startNo)
+        public async Task<ulong> GetNextAsync(string key, ulong startNo, int increment = 1)
         {
-            _logger.LogInformation($"start {nameof(GetNextAsync)}");
+            _logger.LogInformation($"start {nameof(GetNextAsync)} {key}");
             var pk = new PartitionKey(key);
-            for (var i = 0; i < 100; i++)
+            dynamic[] spParams = { key, startNo, increment };
+            for (var i = 0; i < 10; i++)
             {
                 try
                 {
-                    var r = await _db.Sequence.ReadItemAsync<SequenceModel>(key, pk);
-                    r.Resource.value++;
-                    var opt = new RequestOptions();
-                    opt.IfMatchEtag = r.ETag;
-                    var rReplece = await _db.Sequence.ReplaceItemAsync(r.Resource, key, pk);
+                    var r = await _db.Sequence.Scripts.ExecuteStoredProcedureAsync<SequenceModel>("spIncrement", pk, spParams);
+                    _logger.LogInformation($"spIncrement RequestCharge:{r.RequestCharge}");
                     return r.Resource.value;
                 }
                 catch (CosmosException ex)
                 {
-                    if (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
-                    {
-                        var resultCreate = await _db.Sequence.CreateItemAsync(new SequenceModel()
-                        {
-                            id = key,
-                            PartitionKey = key,
-                            value = startNo
-                        }, pk);
-                        return startNo;
-                    }
-                    _logger.LogInformation(ex, $"GetNextAsync Retry {i}");
-                    await Task.Delay(100);
+                    int ms = (int)(ex.RetryAfter.HasValue ? ex.RetryAfter.Value.TotalMilliseconds : 5);
+                    _logger.LogInformation(ex, $"GetNextAsync Retry {i} RequestCharge:{ex.RequestCharge} RetryAfter:{ms}");
+                    await Task.Delay(ms);
                     continue;
                 }
             }

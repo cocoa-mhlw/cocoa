@@ -1,22 +1,22 @@
-name: Deploy Covid19 to Azure Functions
+name: Deploy Covid19Radar API to Azure Functions
 
 on:
   push:
     branches:
       - master
     paths:
-      - Covid19RadarAPI/**
+      - src/**
       - .github/workflows/**
   pull_request:
     branches-ignore:
       - master
     paths:
-      - Covid19RadarAPI/**
+      - src/**
       - .github/workflows/**
 
 env:
   AZURE_FUNCTIONAPP_NAME: covid19radar
-  AZURE_FUNCTIONS_PROJECT: Covid19RadarAPI/Covid19RadarAPI.csproj
+  AZURE_FUNCTIONS_PROJECT: src/Covid19Radar.Api/Covid19Radar.Api.csproj
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ${{ env.AZURE_FUNCTIONS_PROJECT }}
     - name: Build
       run: dotnet build ${{ env.AZURE_FUNCTIONS_PROJECT }} --configuration Release --no-restore --output ${{ env.ARTIFACT_STAGING_PATH }}
     - name: Test
