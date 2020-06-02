@@ -46,7 +46,8 @@ namespace Covid19Radar.Api.Models
 					RollingPeriod = (int)this.RollingPeriod,
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
 					TransmissionRiskLevel = TransmissionRisk,
-					Timestamp = timestamp
+					Timestamp = timestamp,
+					Exported = false
 				};
 			}
 			/// <summary>
