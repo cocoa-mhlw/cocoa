@@ -167,6 +167,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\" />
     <Folder Include="MultilingualResources\" />
     <Folder Include="Templates\" />
   </ItemGroup>

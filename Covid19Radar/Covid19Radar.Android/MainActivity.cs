@@ -17,7 +17,6 @@ using Xamarin.Forms;
 using SQLite;
 using Acr.UserDialogs;
 using Covid19Radar.Renderers;
-using Covid19Radar.Droid.Renderers;
 using Plugin.LocalNotification;
 
 namespace Covid19Radar.Droid

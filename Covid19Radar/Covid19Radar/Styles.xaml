@@ -78,121 +78,6 @@
         <Setter Property="Opacity" Value="0.6" />
         <Setter Property="FontSize" Value="Medium" />
     </Style>
-    <!--
-    <Style x:Key="DefaultButton" TargetType="Button">
-        <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
-        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius">
-            <Setter.Value>
-                <OnPlatform
-                    x:TypeArguments="x:Decimal"
-                    Android="50"
-                    iOS="50" />
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Scale" Value="0.8" />
-        <Style.Triggers>
-            <Trigger TargetType="Button" Property="IsEnabled" Value="True">
-                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
-            </Trigger>
-            <Trigger TargetType="Button" Property="IsEnabled" Value="False">
-                <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-    <Style x:Key="DefaultButtonGrayout" TargetType="Button">
-        <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
-        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius">
-            <Setter.Value>
-                <OnPlatform
-                    x:TypeArguments="x:Decimal"
-                    Android="50"
-                    iOS="50" />
-            </Setter.Value>
-        </Setter>
-
-        <Setter Property="Scale" Value="0.8" />
-        <Style.Triggers>
-            <Trigger TargetType="Button" Property="IsEnabled" Value="True">
-                <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
-            </Trigger>
-            <Trigger TargetType="Button" Property="IsEnabled" Value="False">
-                <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>-->
-
-    <Style x:Key="DefaultToggleButton" TargetType="controls:ToggleButton">
-        <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
-        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="Scale" Value="0.8" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius">
-            <Setter.Value>
-                <OnPlatform
-                    x:TypeArguments="x:Decimal"
-                    Android="50"
-                    iOS="0" />
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--
-    <Style x:Key="DefaultGradientButton" TargetType="controls:GradientButton">
-        <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
-        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="20" />
-        <Setter Property="Scale" Value="0.9" />
-        <Setter Property="BorderWidth" Value="1" />
-        <Setter Property="BorderColor" Value="{StaticResource Primary}" />
-        <Style.Triggers>
-            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="True">
-                <Setter Property="StartColor" Value="{StaticResource Primary}" />
-                <Setter Property="EndColor" Value="{StaticResource Accent}" />
-                <Setter Property="GradientOrientation" Value="Horizontal" />
-            </Trigger>
-            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="False">
-                <Setter Property="StartColor" Value="{StaticResource Disabled}" />
-                <Setter Property="EndColor" Value="{StaticResource Disabled}" />
-                <Setter Property="GradientOrientation" Value="Horizontal" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
-
-    <Style x:Key="DefaultGradientButtonGrayout" TargetType="controls:GradientButton">
-        <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
-        <Setter Property="TextColor" Value="{StaticResource TextIcons}" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="20" />
-        <Setter Property="Scale" Value="0.9" />
-        <Setter Property="BorderWidth" Value="3" />
-        <Setter Property="BorderColor" Value="{StaticResource SecondaryText}" />
-        <Style.Triggers>
-            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="True">
-                <Setter Property="StartColor" Value="{StaticResource Disabled}" />
-                <Setter Property="EndColor" Value="{StaticResource Disabled}" />
-                <Setter Property="GradientOrientation" Value="Horizontal" />
-            </Trigger>
-            <Trigger TargetType="controls:GradientButton" Property="IsEnabled" Value="False">
-                <Setter Property="StartColor" Value="{StaticResource Disabled}" />
-                <Setter Property="EndColor" Value="{StaticResource Disabled}" />
-                <Setter Property="GradientOrientation" Value="Horizontal" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>-->
     <Style x:Key="DefaultTitleLabelColor" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="TextColor" Value="{StaticResource Primary}" />
@@ -345,34 +230,44 @@
         <Setter Property="BackgroundColor" Value="{StaticResource SecondaryText}" />
     </Style>
 
-    <Style x:Key="CustomButtonInternalHeadImageStyle" TargetType="Image">
-        <Setter Property="HorizontalOptions" Value="Center" />
-        <Setter Property="Margin" Value="10,0,0,0" />
-        <Setter Property="VerticalOptions" Value="Center" />
-        <Setter Property="InputTransparent" Value="True" />
-    </Style>
-    <Style x:Key="CustomButtonInternalFootImageStyle" TargetType="Image">
-        <Setter Property="HorizontalOptions" Value="Center" />
-        <Setter Property="Margin" Value="0,0,10,0" />
-        <Setter Property="VerticalOptions" Value="Center" />
-        <Setter Property="InputTransparent" Value="True" />
-    </Style>
 
     <Style x:Key="DefaultButton" TargetType="Button">
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+        <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="BorderColor" Value="{StaticResource ButtonBorder}" />
-        <Setter Property="BorderWidth" Value="100" />
+        <Setter Property="BorderWidth" Value="4" />
         <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="MinimumHeightRequest" Value="70" />
         <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
+        <Style.Triggers>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
+            </Trigger>
+            <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
-    <Style x:Key="CustomButtonInternalLabelStyle" TargetType="Label">
-        <Setter Property="LineBreakMode" Value="WordWrap" />
+
+    <Style x:Key="DefaultButtonGrayedOut" TargetType="Button">
+        <Setter Property="Visual" Value="Default" />
+        <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="BorderColor" Value="{StaticResource ButtonBorder}" />
+        <Setter Property="BorderWidth" Value="4" />
+        <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
+        <Setter Property="FontSize" Value="Medium" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="Margin" Value="10,0,0,0" />
-        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="HeightRequest" Value="70" />
+        <Setter Property="WidthRequest" Value="300" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
     </Style>
+
 
     <!--  Collection List  -->
 
