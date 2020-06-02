@@ -34,10 +34,10 @@
                         Text="有効にする" />
 
                     <Button
+                        Margin="0,10,0,0"
                         AutomationId="NextButton"
                         Command="{Binding Path=OnClickNext}"
                         Style="{StaticResource DefaultButtonGrayedOut}"
-                        Margin="0,10,0,0"
                         Text="あとで設定する" />
                 </StackLayout>
             </Grid>

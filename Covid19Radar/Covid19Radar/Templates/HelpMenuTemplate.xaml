@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Covid19Radar.Templates.HelpMenuTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout
+        Padding="10"
+        BackgroundColor="#CCCCCC"
+        Spacing="20">
+        <Frame Padding="16" CornerRadius="10">
+            <StackLayout Spacing="16">
+                <Grid ColumnSpacing="10" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.9*" />
+                        <ColumnDefinition Width="0.1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Style="{StaticResource HelpMenuLabel}"
+                        Text="{Binding Title}" />
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HeightRequest="35"
+                        VerticalOptions="Center"
+                        WidthRequest="35">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FA-S"
+                                Glyph="{Binding Icon}"
+                                Size="35"
+                                Color="#CCCCCC" />
+                        </Image.Source>
+                    </Image>
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentView>
