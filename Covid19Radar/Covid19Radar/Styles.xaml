@@ -265,6 +265,16 @@
         <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
     </Style>
 
+    <!--  Help Card View  -->
+
+    <Style x:Key="HelpMenuLabel" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
 
     <!--  Collection List  -->
 
