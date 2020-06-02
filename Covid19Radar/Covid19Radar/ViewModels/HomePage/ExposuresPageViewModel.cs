@@ -28,7 +28,6 @@ namespace Covid19Radar.ViewModels
 
         public ObservableCollection<ExposureInfo> ExposureInformation
             => userData.ExposureInformation;
-
 /*
         public ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo> ExposureInformation
             => new ObservableCollection<Xamarin.ExposureNotifications.ExposureInfo>
