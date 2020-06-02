@@ -131,10 +131,10 @@
                 </Grid>
             </StackLayout>
             <Grid Grid.Row="5">
-                <ce:GradientButton
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="陽性情報の登録と他者への匿名通知へ" />
             </Grid>
         </Grid>

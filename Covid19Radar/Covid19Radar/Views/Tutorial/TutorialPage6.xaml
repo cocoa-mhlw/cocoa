@@ -28,16 +28,16 @@
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="ご登録いただき ありがとうございました" />
             </StackLayout>
             <Grid Grid.Row="2">
-                <ce:GradientButton
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="ホーム画面へ" />
                     
-                <ce:GradientButton
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="使い方を学ぶ" />
             </Grid>
         </Grid>
