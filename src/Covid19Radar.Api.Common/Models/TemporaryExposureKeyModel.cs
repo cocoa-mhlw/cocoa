@@ -18,7 +18,7 @@ namespace Covid19Radar.Api.Models
         public long GetRollingPeriodSeconds() => RollingPeriod * 10 * 60;
 
         public ulong Timestamp { get; set; }
-        public string ExportId { get; set; }
+        public bool Exported { get; set; }
     }
 
 }

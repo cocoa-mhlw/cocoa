@@ -38,7 +38,7 @@ namespace Covid19Radar.Api.DataAccess
             var oldest = (int)DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds() / 600;
             var query = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKeyModel>(true)
                 .Where(tek => tek.RollingStartIntervalNumber > oldest)
-                .Where(tek => tek.ExportId == null)
+                .Where(tek => tek.Exported == false)
                 .ToFeedIterator();
             var e = Enumerable.Empty<TemporaryExposureKeyModel>();
             while (query.HasMoreResults)

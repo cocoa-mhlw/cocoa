@@ -60,6 +60,7 @@ namespace Covid19Radar.Api.DataStore
 #endif
 
             // get database
+            this.CosmosClient.ClientOptions.EnableTcpConnectionEndpointRediscovery = true;
             Database = this.CosmosClient.GetDatabase(DatabaseId);
         }
 
