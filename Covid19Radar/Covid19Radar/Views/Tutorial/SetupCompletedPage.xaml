@@ -39,11 +39,11 @@
 
             </StackLayout>
             <Grid Grid.Row="2">
-                <ce:GradientButton
+                <Button
                     Grid.Row="2"
                     AutomationId="ToMainButton"
                     Command="{Binding Path=OnClickToMain}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ButtonHome}" />
 
             </Grid>
