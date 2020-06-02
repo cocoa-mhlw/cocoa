@@ -1,6 +1,7 @@
 ﻿using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
-using Covid19Radar.Api.Protobuf;
+using Covid19Radar.Background.Extentions;
+using Covid19Radar.Background.Protobuf;
 using Google.Protobuf;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -110,7 +111,7 @@ namespace Covid19Radar.Background.Services
                 exportModel.StartTimestamp = startTimestamp;
                 exportModel.EndTimestamp = endTimestamp;
                 exportModel.Region = region;
-                exportModel.SignatureInfos = new SignatureInfo[] { signatureInfo };
+                //exportModel.SignatureInfos = new SignatureInfo[] { signatureInfo };
 
                 var bin = new TemporaryExposureKeyExport();
                 bin.Keys.AddRange(exportKeys);
