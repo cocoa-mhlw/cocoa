@@ -23,8 +23,8 @@
             <StackLayout Grid.Row="0" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
+                        <ColumnDefinition Width="0.4*" />
+                        <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -44,20 +44,20 @@
             <StackLayout Grid.Row="1" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.8*" />
-                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="0.6*" />
+                        <ColumnDefinition Width="0.4*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
+                        Grid.Row="1"
+                        Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
                         Text="保健所等公的機関から登録用の「処理番号」が発行されます。" />
                     <ffimageloading:CachedImage
-                        Grid.Row="0"
-                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.Column="1"
                         Aspect="AspectFit"
                         Source="HelpPage41.png" />
                 </Grid>
@@ -65,8 +65,8 @@
             <StackLayout Grid.Row="2" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
+                        <ColumnDefinition Width="0.4*" />
+                        <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -83,7 +83,7 @@
                         Text="本アプリを用いて処理番号の登録を行います。" />
                     <ffimageloading:CachedImage
                         Grid.Row="0"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         Aspect="AspectFit"
                         Source="HelpPage43.png" />                    
                 </Grid>
@@ -91,20 +91,20 @@
             <StackLayout Grid.Row="3" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.8*" />
-                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="0.6*" />
+                        <ColumnDefinition Width="0.4*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
+                        Grid.Row="1"
+                        Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
                         Text="あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）" />
                     <ffimageloading:CachedImage
-                        Grid.Row="0"
-                        Grid.Column="0"
+                        Grid.Row="1"
+                        Grid.Column="1"
                         Aspect="AspectFit"
                         Source="HelpPage44.png" />
                 </Grid>
@@ -112,8 +112,8 @@
             <StackLayout Grid.Row="4" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
+                        <ColumnDefinition Width="0.4*" />
+                        <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
