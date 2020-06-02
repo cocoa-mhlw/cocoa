@@ -26,17 +26,20 @@
                 <Label Style="{StaticResource DefaultLabel}" Text="本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。" />
             </StackLayout>
             <Grid Grid.Row="2">
-                <Button
-                    AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="有効にする" />
+                <StackLayout>
+                    <Button
+                        AutomationId="NextButton"
+                        Command="{Binding Path=OnClickNext}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="有効にする" />
 
-                <Button
-                    AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="あとで設定する" />
+                    <Button
+                        Margin="0,10,0,0"
+                        AutomationId="NextButton"
+                        Command="{Binding Path=OnClickNext}"
+                        Style="{StaticResource DefaultButtonGrayedOut}"
+                        Text="あとで設定する" />
+                </StackLayout>
             </Grid>
         </Grid>
     </ScrollView>
