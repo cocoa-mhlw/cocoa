@@ -494,7 +494,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Manual に類似しているローカライズされた文字列を検索します。
+        ///   How to use に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MainTutorial {
             get {
