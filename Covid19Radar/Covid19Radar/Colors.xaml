@@ -23,4 +23,11 @@
     <Color x:Key="Background">#FFFFFF</Color>
     <Color x:Key="Divider">#BDBDBD</Color>
     <Color x:Key="Disabled">#BDBDBD</Color>
+
+    <Color x:Key="CardBackground">#EEEEEE</Color>
+
+    <Color x:Key="ButtonBorder">#2196F3</Color>
+    <Color x:Key="ButtonBackground">#E8F7FF</Color>
+    <Color x:Key="ButtonText">#000000</Color>
+    <Color x:Key="ButtonGrayedOut">#A4A4A4</Color>
 </ResourceDictionary>
