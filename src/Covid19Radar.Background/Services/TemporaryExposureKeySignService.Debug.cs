@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Api.Protobuf;
+﻿using Covid19Radar.Background.Protobuf;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.IO;
