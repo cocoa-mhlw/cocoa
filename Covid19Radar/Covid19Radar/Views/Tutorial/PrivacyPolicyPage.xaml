@@ -41,7 +41,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <ce:GradientButton
+            <Button
                 Grid.Row="0"
                 Grid.Column="0"
                 AutomationId="ButtonNotAgree"
@@ -49,12 +49,12 @@
                 Style="{StaticResource DefaultGradientButtonGrayout}"
                 Text="{x:Static resources:AppResources.ButtonNotAgree}" />
 
-            <ce:GradientButton
+            <Button
                 Grid.Row="0"
                 Grid.Column="1"
                 AutomationId="ButtonAgree"
                 Command="{Binding Path=OnClickAgree}"
-                Style="{StaticResource DefaultGradientButton}"
+                Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.ButtonAgree}" />
         </Grid>
     </Grid>

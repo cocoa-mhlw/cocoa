@@ -43,7 +43,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <ce:GradientButton
+                <Button
                     Grid.Row="0"
                     Grid.Column="0"
                     AutomationId="NextButton"
@@ -51,12 +51,12 @@
                     Style="{StaticResource DefaultGradientButtonGrayout}"
                     Text="{x:Static resources:AppResources.ButtonNotNow}" />
 
-                <ce:GradientButton
+                <Button
                     Grid.Row="0"
                     Grid.Column="1"
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickEnable}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ButtonEnable}" />
             </Grid>
         </Grid>

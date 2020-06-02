@@ -150,10 +150,10 @@
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HomePageHeader2Description}" />
                 </Grid>
-                <ce:GradientButton
+                <Button
                     AutomationId="ButtonNotifyOther"
                     Command="{Binding Path=OnClickNotifyOther}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ButtonNotifyOtherPage}" />
             </StackLayout>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
@@ -183,10 +183,10 @@
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HomePageHeader3Description}" />
                 </Grid>
-                <ce:GradientButton
+                <Button
                     AutomationId="ButtonShareApp"
                     Command="{Binding Path=OnClickShareApp}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ButtonShare}" />
 
             </StackLayout>
