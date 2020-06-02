@@ -37,10 +37,38 @@
     </ContentPage.ToolbarItems>
 
     <ScrollView>
+        <StackLayout
+            Padding="10"
+            BackgroundColor="#CCCCCC"
+            Spacing="20">
+            <Frame Padding="16" CornerRadius="5">
+                <StackLayout Spacing="16">
+                    <ffimageloading:CachedImage
+                        Margin="-16,-16,-16,0"
+                        Aspect="AspectFit"
+                        Source="TopMainImg.png" />
+                    <Label
+                        FontSize="24"
+                        Text="Walk below the arches"
+                        TextColor="#000000" />
+                    <Label
+                        FontSize="14"
+                        Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
+                        TextColor="#CCCCCC" />
+                    <Button
+                        Command="{Binding Path=OnClickExposures}"
+                        HorizontalOptions="End"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Next" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+        <!--
         <StackLayout Style="{StaticResource DefaultStackLayout}">
             <StackLayout Margin="0,0,0,0" Spacing="0">
                     <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.HomePageHeader1Title}" />
-                <!--  TODO Maybe change touch gesture GestureRecognizers based label  -->
+
                 <Grid HorizontalOptions="FillAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition>
@@ -67,7 +95,6 @@
                                 Color="#2196F3" />
                         </Image.Source>
                     </Image>
-                    <!--  Button Control  -->
 
                     <Button
                         Grid.Column="0"
@@ -91,7 +118,6 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <!--  Icon Image  -->
                     <Image Grid.Column="2" Style="{StaticResource CustomButtonInternalFootImageStyle}">
                         <Image.Source>
                             <FontImageSource
@@ -124,10 +150,10 @@
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HomePageHeader2Description}" />
                 </Grid>
-                <ce:GradientButton
+                <Button
                     AutomationId="ButtonNotifyOther"
                     Command="{Binding Path=OnClickNotifyOther}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ButtonNotifyOtherPage}" />
             </StackLayout>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
@@ -157,13 +183,14 @@
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HomePageHeader3Description}" />
                 </Grid>
-                <ce:GradientButton
+                <Button
                     AutomationId="ButtonShareApp"
                     Command="{Binding Path=OnClickShareApp}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ButtonShare}" />
 
             </StackLayout>
         </StackLayout>
+        -->
     </ScrollView>
 </ContentPage>
