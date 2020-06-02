@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 
 namespace Covid19Radar.Services
 {
@@ -35,7 +36,7 @@ namespace Covid19Radar.Services
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(AppConstants.ApiUserSecretKeyPrefix, secret);
         }
 
-        public bool HasSecret() => secret != null;
+        //public bool HasSecret() => secret != null;
 
 
         // POST /api/Register - Register User
@@ -45,7 +46,7 @@ namespace Covid19Radar.Services
             {
                 string url = AppConstants.ApiBaseUrl + "/register";
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
-                var result = await Post(url, content);
+                var result = await PostAsync(url, content);
                 if (result != null)
                 {
                     var registerResult = Utils.DeserializeFromJson<RegisterResultModel>(result);
@@ -72,42 +73,36 @@ namespace Covid19Radar.Services
             System.Console.WriteLine(Utils.SerializeToJson(request));
             var url = $"{AppConstants.ApiBaseUrl.TrimEnd('/')}/diagnosis";
             var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
-            var result = await Put(url, content);
+            var result = await PutAsync(url, content);
             if (result != null)
             {
                 System.Console.WriteLine(Utils.SerializeToJson(result));
             }
         }
 
-        // GET /api/User/{userUuid} - check user status and user exists
-        public async Task<UserDataModel> GetUserAsync(UserDataModel user)
+        public async Task<TemporaryExposureKeysResult> GetTemporaryExposureKeys(long since, CancellationToken cancellationToken)
         {
-            string url = AppConstants.ApiBaseUrl + $"/user/{user.UserUuid}";
-            var result = await Get(url);
+            string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys?since={since}";
+            var result = await GetAsync(url, cancellationToken);
             if (result != null)
             {
-                return Utils.DeserializeFromJson<UserDataModel>(result);
+                return Utils.DeserializeFromJson<TemporaryExposureKeysResult>(result);
             }
             return null;
         }
 
-        public async Task<TemporaryExposureKeysHttpResultModel> GetTemporaryExposureKeys(long since)
+        public async Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
         {
-            string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys?since={since}";
-            var result = await Get(url);
-            if (result != null)
-            {
-                return Utils.DeserializeFromJson<TemporaryExposureKeysHttpResultModel>(result);
-            }
-            return null;
+            return await GetStreamAsync(url,cancellationToken);
         }
+
 
         // GET /api/notification/pull/{lastClientUpdateTime:datetime} - pull Notifications 
         public async Task<NotificationPullResult> GetNotificationPullAsync(UserDataModel user)
         {
             string url = AppConstants.ApiBaseUrl
                 + $"/notification/pull/{user.LastNotificationTime.ToString("yyyy-MM-ddTHH:mm:ss")}";
-            var result = await Get(url);
+            var result = await GetAsync(url);
             if (result != null)
             {
                 return Utils.DeserializeFromJson<NotificationPullResult>(result);
@@ -115,23 +110,8 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        /* TOOD Marge EN
-        public async Task<bool> GetFileAsync(string downloadUrl, string filePath)
-        {
 
-            var result = await GetStream(downloadUrl);
-            if (result != null)
-            {
-
-                var fileStream = File.Create(filePath);
-                await result.CopyToAsync(fileStream);
-                return true;
-            }
-            return false;
-        }
-        */
-
-        private async Task<string> Get(string url)
+        private async Task<string> GetAsync(string url)
         {
             Task<HttpResponseMessage> response = httpClient.GetAsync(url);
             HttpResponseMessage result = await response;
@@ -144,9 +124,23 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        private async Task<Stream> GetStream(string url)
+        private async Task<string> GetAsync(string url, CancellationToken cancellationToken)
         {
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
+            Task<HttpResponseMessage> response = httpClient.GetAsync(url, cancellationToken);
+            HttpResponseMessage result = await response;
+            await result.Content.ReadAsStringAsync();
+
+            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return await result.Content.ReadAsStringAsync();
+            }
+            return null;
+        }
+
+
+        private async Task<Stream> GetStreamAsync(string url,CancellationToken cancellationToken)
+        {
+            Task<HttpResponseMessage> response = httpClient.GetAsync(url, cancellationToken);
             HttpResponseMessage result = await response;
             await result.Content.ReadAsStreamAsync();
 
@@ -158,7 +152,7 @@ namespace Covid19Radar.Services
         }
 
 
-        private async Task<string> Post(string url, HttpContent body)
+        private async Task<string> PostAsync(string url, HttpContent body)
         {
             HttpResponseMessage result = await httpClient.PostAsync(url, body);
             await result.Content.ReadAsStringAsync();
@@ -169,7 +163,7 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        private async Task<string> Put(string url, HttpContent body)
+        private async Task<string> PutAsync(string url, HttpContent body)
         {
             var result = await httpClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
