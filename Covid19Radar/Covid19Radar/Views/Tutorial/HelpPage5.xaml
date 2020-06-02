@@ -26,8 +26,8 @@
             </StackLayout>
             <Grid Grid.Row="2">
                 <Button
-                    AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
+                    AutomationId="OnClickSetting"
+                    Command="{Binding Path=OnClickSetting}"
                     Style="{StaticResource DefaultButton}"
                     Text="アプリの設定へ" />
             </Grid>
