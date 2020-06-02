@@ -27,17 +27,19 @@
                 <Label Style="{StaticResource DefaultLabel}" Text="技術的な詳細について" />
             </StackLayout>
             <Grid Grid.Row="2">
-                <Button
-                    AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="有効にする" />
+                <StackLayout>
+                    <Button
+                        AutomationId="NextButton"
+                        Command="{Binding Path=OnClickNext}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="有効にする" />
 
-                <Button
-                    AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="あとで設定する" />
+                    <Button
+                        AutomationId="NextButton"
+                        Command="{Binding Path=OnClickNext}"
+                        Style="{StaticResource DefaultButtonGrayedOut}"
+                        Text="あとで設定する" />
+                </StackLayout>
             </Grid>
         </Grid>
     </ScrollView>
