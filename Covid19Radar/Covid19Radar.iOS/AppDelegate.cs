@@ -1,7 +1,6 @@
 ﻿using CoreBluetooth;
 using CoreLocation;
 using Covid19Radar.Common;
-using Covid19Radar.iOS.Renderers;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.Model;
 using Covid19Radar.Renderers;
