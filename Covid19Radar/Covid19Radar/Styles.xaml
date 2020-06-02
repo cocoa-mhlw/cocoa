@@ -78,7 +78,7 @@
         <Setter Property="Opacity" Value="0.6" />
         <Setter Property="FontSize" Value="Medium" />
     </Style>
-
+    <!--
     <Style x:Key="DefaultButton" TargetType="Button">
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
@@ -102,8 +102,7 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
             </Trigger>
         </Style.Triggers>
-    </Style>
-
+    </Style>    -->
     <Style x:Key="DefaultButtonGrayout" TargetType="Button">
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
@@ -361,7 +360,7 @@
         <Setter Property="InputTransparent" Value="True" />
     </Style>
 
-    <Style x:Key="CustomButtonStyle" TargetType="Button">
+    <Style x:Key="DefaultButton" TargetType="Button">
         <Setter Property="BorderColor" Value="#2196F3" />
         <Setter Property="BorderWidth" Value="3" />
         <Setter Property="TextColor" Value="Black" />
