@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Covid19Radar.Common
 {
-    public class JumpHash
+    public static class JumpHash
     {
         private const ulong constant = 2862933555777941757L;
         private const long constant2 = 1L << 31;

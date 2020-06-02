@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Covid19Radar.Model
 {
-    public class TemporaryExposureKeysHttpResultModel
+    public class TemporaryExposureKeysResult
     {
         [JsonProperty("timestamp")]
         public long Timestamp { get; set; }
@@ -18,5 +18,4 @@ namespace Covid19Radar.Model
             public string Url;
         }
     }
-
 }
