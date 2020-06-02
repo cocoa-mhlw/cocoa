@@ -123,7 +123,7 @@ namespace Covid19Radar.ViewModels
         public Command ResetBatchFileIndex
             => new Command(async () =>
             {
-                _UserData.ServerBatchNumbers = new Dictionary<string, ulong>(UserDataModel.DefaultServerBatchNumbers);
+                _UserData.ServerBatchNumbers = AppSettings.Instance.GetDefaultDefaultBatch();
                 await userDataService.SetAsync(_UserData);
                 RaisePropertyChanged(nameof(CurrentBatchFileIndex));
                 await UserDialogs.Instance.AlertAsync("Reset Batch file index!");
