@@ -3,11 +3,9 @@
     x:Class="Covid19Radar.Views.TutorialPage5"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="通知をご利用いただくために"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -28,16 +26,16 @@
                 <Label Style="{StaticResource DefaultLabel}" Text="本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。" />
             </StackLayout>
             <Grid Grid.Row="2">
-                <ce:GradientButton
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="有効にする" />
-                    
-                <ce:GradientButton
+
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="あとで設定する" />
             </Grid>
         </Grid>
