@@ -34,11 +34,15 @@
                 VerticalOptions="Center" />
             <Label
                 Grid.Row="1"
+                AutomationProperties.IsInAccessibleTree="true"
+                AutomationProperties.Name="AppName"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultTitleLabel}"
                 Text="{x:Static resources:AppResources.AppName}" />
             <Label
                 Grid.Row="2"
+                AutomationProperties.IsInAccessibleTree="true"
+                AutomationProperties.Name="StartTutorialPageTextProtectingOurLovedOnes"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultSubTitleLabel}"
                 Text="{x:Static resources:AppResources.StartTutorialPageTextProtectingOurLovedOnes}" />
