@@ -102,7 +102,7 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
             </Trigger>
         </Style.Triggers>
-    </Style>    -->
+    </Style>
     <Style x:Key="DefaultButtonGrayout" TargetType="Button">
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
@@ -127,8 +127,7 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
             </Trigger>
         </Style.Triggers>
-    </Style>
-
+    </Style>-->
 
     <Style x:Key="DefaultToggleButton" TargetType="controls:ToggleButton">
         <Setter Property="FontSize" Value="Medium" />
@@ -146,7 +145,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    <!--
     <Style x:Key="DefaultGradientButton" TargetType="controls:GradientButton">
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
@@ -193,8 +192,7 @@
                 <Setter Property="GradientOrientation" Value="Horizontal" />
             </Trigger>
         </Style.Triggers>
-    </Style>
-
+    </Style>-->
     <Style x:Key="DefaultTitleLabelColor" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="TextColor" Value="{StaticResource Primary}" />
@@ -361,12 +359,13 @@
     </Style>
 
     <Style x:Key="DefaultButton" TargetType="Button">
-        <Setter Property="BorderColor" Value="#2196F3" />
-        <Setter Property="BorderWidth" Value="3" />
-        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="BorderColor" Value="{StaticResource ButtonBorder}" />
+        <Setter Property="BorderWidth" Value="100" />
+        <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
     </Style>
     <Style x:Key="CustomButtonInternalLabelStyle" TargetType="Label">
         <Setter Property="LineBreakMode" Value="WordWrap" />
