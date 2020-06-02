@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Covid19Radar.Model;
 using Covid19Radar.Renderers;
 using Covid19Radar.Views;
+using Prism.Commands;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -9,14 +12,53 @@ namespace Covid19Radar.ViewModels
 {
     public class HelpPage1ViewModel : ViewModelBase
     {
+        public ObservableCollection<MainMenuModel> MenuItems { get; set; }
+
+        private MainMenuModel selectedMenuItem;
+        public MainMenuModel SelectedMenuItem
+        {
+            get => selectedMenuItem;
+            set => SetProperty(ref selectedMenuItem, value);
+        }
+
+        public DelegateCommand NavigateCommand { get; private set; }
+
         public HelpPage1ViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleHowItWorks;
+            MenuItems = new ObservableCollection<MainMenuModel>();
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf105",
+                PageName = nameof(HelpPage2),
+                Title = "どのようにして接触を記録していますか？"
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf105",
+                PageName = nameof(HelpPage3),
+                Title = "接触の有無はどのように知ることができますか？？"
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf105",
+                PageName = nameof(HelpPage4),
+                Title = "新型コロナウィルスに感染していると判定されたら？"
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf105",
+                PageName = nameof(HelpPage5),
+                Title = "個人情報の記録を停止/情報を削除するには"
+            });
+
+            NavigateCommand = new DelegateCommand(Navigate);
         }
 
-        public Command OnClickNext => new Command(async () =>
+        async void Navigate()
         {
-            await NavigationService.NavigateAsync(nameof(HelpPage3));
-        });
+            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + SelectedMenuItem.PageName);
+            return;
+        }
     }
 }

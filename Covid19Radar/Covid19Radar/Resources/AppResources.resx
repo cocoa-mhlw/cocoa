@@ -268,7 +268,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
-    <value>Manual</value>
+    <value>How to use</value>
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
