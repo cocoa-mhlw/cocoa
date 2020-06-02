@@ -87,10 +87,10 @@
                 </Grid>
             </StackLayout>
             <Grid Grid.Row="4">
-                <ce:GradientButton
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="次へ" />
             </Grid>
         </Grid>
