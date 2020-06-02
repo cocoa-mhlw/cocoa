@@ -74,6 +74,12 @@ namespace Covid19Radar.Background.Services
                             region,
                             sorted.ToArray());
                     }
+
+                    foreach (var key in kv)
+                    {
+                        key.Exported = true;
+                        await TekRepository.UpsertAsync(key);
+                    }
                 }
             }
             catch (Exception ex)
@@ -85,6 +91,7 @@ namespace Covid19Radar.Background.Services
 
         public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
         {
+            Logger.LogInformation($"start {nameof(CreateSignatureAsync)}");
             var s = new TEKSignature();
             s.BatchNum = batchNum;
             s.BatchSize = batchSize;
