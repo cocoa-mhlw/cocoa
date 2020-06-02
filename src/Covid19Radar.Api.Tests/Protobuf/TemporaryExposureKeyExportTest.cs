@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Api.Protobuf;
+﻿using Covid19Radar.Background.Protobuf;
 using Google.Protobuf;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
