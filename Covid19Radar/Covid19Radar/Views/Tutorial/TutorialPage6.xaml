@@ -34,10 +34,10 @@
                         Text="ホーム画面へ" />
 
                     <Button
+                        Margin="0,10,0,0"
                         AutomationId="NextButton"
                         Command="{Binding Path=OnClickNext}"
                         Style="{StaticResource DefaultButton}"
-                        Margin="0,10,0,0"
                         Text="使い方を学ぶ" />
                 </StackLayout>
             </Grid>
