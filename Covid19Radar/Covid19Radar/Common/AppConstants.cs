@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Covid19Radar.Common
 {
-    public class AppConstants
+    public static class AppConstants
     {
         public static readonly string AppCenterTokensAndroid = "APPCENTER_ANDROID";
         public static readonly string AppCenterTokensIOS = "APPCENTER_IOS";
