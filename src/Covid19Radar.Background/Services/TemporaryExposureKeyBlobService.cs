@@ -1,5 +1,5 @@
 ﻿using Covid19Radar.Api.Models;
-using Covid19Radar.Api.Protobuf;
+using Covid19Radar.Background.Protobuf;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;

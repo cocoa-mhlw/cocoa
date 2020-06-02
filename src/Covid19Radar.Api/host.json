@@ -2,7 +2,7 @@
     "version": "2.0",
     "extensions": {
         "http": {
-            "maxOutstandingRequests": 400,
+            "maxOutstandingRequests": 200,
             "maxConcurrentRequests": 25
         }
     },
@@ -16,5 +16,12 @@
                 "isEnabled": true
             }
         }
+    },
+    "healthMonitor": {
+        "enabled": true,
+        "healthCheckInterval": "00:00:03",
+        "healthCheckWindow": "00:00:15",
+        "healthCheckThreshold": 6,
+        "counterThreshold": 0.70
     }
 }

@@ -1,7 +1,7 @@
-﻿
-using System;
+﻿using System;
 using Covid19Radar.Api.Common;
 using Covid19Radar.Api.Models;
+using Covid19Radar.Background.Extentions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Covid19Radar.Api.Tests.Common.Models

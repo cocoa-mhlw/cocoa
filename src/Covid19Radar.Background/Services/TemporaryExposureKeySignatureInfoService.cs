@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Api.Protobuf;
+﻿using Covid19Radar.Background.Protobuf;
 using Microsoft.Azure.KeyVault.WebKey;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;

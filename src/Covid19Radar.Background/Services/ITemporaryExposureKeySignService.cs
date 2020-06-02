@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Api.Protobuf;
+﻿using Covid19Radar.Background.Protobuf;
 using System.IO;
 using System.Threading.Tasks;
 
