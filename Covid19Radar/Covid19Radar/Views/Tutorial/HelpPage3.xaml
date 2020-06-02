@@ -3,11 +3,9 @@
     x:Class="Covid19Radar.Views.HelpPage3"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="接触の確認方法"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -23,11 +21,14 @@
             <StackLayout Grid.Row="0">
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="通知" />
             </StackLayout>
-            <StackLayout Grid.Row="1" Margin="0,0,0,0" Spacing="0">
+            <StackLayout
+                Grid.Row="1"
+                Margin="0,0,0,0"
+                Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
+                        <ColumnDefinition Width="0.4*" />
+                        <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -45,22 +46,14 @@
                 </Grid>
             </StackLayout>
             <StackLayout Grid.Row="2">
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage30.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。" />
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="ホーム画面" />
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage31.png" />
+                <Label Style="{StaticResource DefaultLabel}" Text="最近の接触件数の確認へはホーム画面からも移動することができます。" />
             </StackLayout>
             <StackLayout Grid.Row="3">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="ホーム画面" />
-            </StackLayout>
-            <StackLayout Grid.Row="4">
-                <Label Style="{StaticResource DefaultLabel}" Text="最近の接触件数の確認へはホーム画面からも移動することができます。" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage31.png" />
-            </StackLayout>
-            <StackLayout Grid.Row="5">
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="陽性者との接触があった場合" />
-            </StackLayout>
-            <StackLayout Grid.Row="6">
-                <Label Style="{StaticResource DefaultLabel}" Text="接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。" />
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage32.png" />
+                <Label Style="{StaticResource DefaultLabel}" Text="接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。" />
             </StackLayout>
         </Grid>
     </ScrollView>

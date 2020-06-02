@@ -135,7 +135,6 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(HelpPage5),
                 Title = nameof(HelpPage5)
             });
-
 #endif
 
             NavigateCommand = new DelegateCommand(Navigate);
