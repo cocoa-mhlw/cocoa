@@ -148,7 +148,7 @@
                     Grid.Row="6"
                     Grid.Column="1"
                     Command="{Binding OnChangeResetData}"
-                    Style="{StaticResource DefaultButtonGrayout}"
+                    Style="{StaticResource DefaultButtonGrayedOut}"
                     Text="{x:Static resources:AppResources.ButtonReset}" />
                 <BoxView
                     Grid.Row="7"
