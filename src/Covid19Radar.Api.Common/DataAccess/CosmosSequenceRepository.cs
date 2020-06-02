@@ -25,12 +25,38 @@ namespace Covid19Radar.Api.DataAccess
         {
             _logger.LogInformation($"start {nameof(GetNextAsync)} {key}");
             var pk = new PartitionKey(key);
-            dynamic[] spParams = { key, startNo, increment };
+            dynamic[] spParams = { key, startNo, increment, null };
             for (var i = 0; i < 10; i++)
             {
                 try
                 {
                     var r = await _db.Sequence.Scripts.ExecuteStoredProcedureAsync<SequenceModel>("spIncrement", pk, spParams);
+                    _logger.LogInformation($"spIncrement RequestCharge:{r.RequestCharge}");
+                    return r.Resource.value;
+                }
+                catch (CosmosException ex)
+                {
+                    int ms = (int)(ex.RetryAfter.HasValue ? ex.RetryAfter.Value.TotalMilliseconds : 5);
+                    _logger.LogInformation(ex, $"GetNextAsync Retry {i} RequestCharge:{ex.RequestCharge} RetryAfter:{ms}");
+                    await Task.Delay(ms);
+                    continue;
+                }
+            }
+            _logger.LogWarning("GetNextAsync is over retry count.");
+            throw new ApplicationException("GetNextAsync is over retry count.");
+        }
+
+        public async Task<ulong> GetNextAsync(PartitionKeyRotation.KeyInformation key, ulong startNo, int increment = 1)
+        {
+            _logger.LogInformation($"start {nameof(GetNextAsync)} {key.Key}");
+            var pk = new PartitionKey(key.Key);
+            dynamic[] spParams = { key.Key, startNo, increment, key.Self };
+            for (var i = 0; i < 10; i++)
+            {
+                try
+                {
+                    var r = await _db.Sequence.Scripts.ExecuteStoredProcedureAsync<SequenceModel>("spIncrement", pk, spParams);
+                    key.SetSelf(r.Resource._self);
                     _logger.LogInformation($"spIncrement RequestCharge:{r.RequestCharge}");
                     return r.Resource.value;
                 }

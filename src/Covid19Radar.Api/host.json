@@ -19,9 +19,9 @@
     },
     "healthMonitor": {
         "enabled": true,
-        "healthCheckInterval": "00:00:03",
-        "healthCheckWindow": "00:00:15",
-        "healthCheckThreshold": 6,
-        "counterThreshold": 0.70
+        "healthCheckInterval": "00:00:01",
+        "healthCheckWindow": "00:00:05",
+        "healthCheckThreshold": 3,
+        "counterThreshold": 0.80
     }
 }
