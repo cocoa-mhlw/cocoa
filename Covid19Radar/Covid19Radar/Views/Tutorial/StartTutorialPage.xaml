@@ -3,7 +3,6 @@
     x:Class="Covid19Radar.Views.StartTutorialPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -46,11 +45,11 @@
 
         <ffimageloading:CachedImage Grid.Row="1" Source="TopMainImg.png" />
 
-        <ce:GradientButton
+        <Button
             Grid.Row="2"
             AutomationId="ButtonStart"
             Command="{Binding Path=OnClickStart}"
-            Style="{StaticResource DefaultGradientButton}"
+            Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.ButtonStart}" />
     </Grid>
 </ContentPage>
