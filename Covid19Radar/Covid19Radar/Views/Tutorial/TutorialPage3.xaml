@@ -27,10 +27,10 @@
                 <Label Style="{StaticResource DefaultLabel}" Text="※この部分はWebページの読み込み？" />
             </StackLayout>
             <Grid Grid.Row="2">
-                <ce:GradientButton
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="規約に同意して次へ" />
             </Grid>
         </Grid>
