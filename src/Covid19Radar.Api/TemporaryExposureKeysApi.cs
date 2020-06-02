@@ -42,7 +42,27 @@ namespace Covid19Radar.Api
             var keysResponse = await TekExport.GetKeysAsync((ulong)sinceEpochSeconds);
             var result = new TemporaryExposureKeysResult();
             // TODO: Url util
-            result.Keys = keysResponse.Select(_ => new TemporaryExposureKeysResult.Key() { Url = $"{ExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{_.Region}/{_.BatchNum}.zip" });
+            result.Keys = keysResponse
+                .Select(_ => new TemporaryExposureKeysResult.Key() { Url = $"{ExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{_.Region}/{_.BatchNum}.zip" });
+            result.Timestamp = keysResponse
+                .OrderByDescending(_ => _.TimestampSecondsSinceEpoch)
+                .FirstOrDefault()?.TimestampSecondsSinceEpoch ?? sinceEpochSeconds;
+            return new OkObjectResult(result);
+        }
+
+        [FunctionName(nameof(TemporaryExposureKeysApi) + "WithRegion")]
+        public async Task<IActionResult> RunWithRegionAsync(
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys/{region}")] HttpRequest req,
+            string region)
+        {
+            if (!long.TryParse(req.Query?["since"], out var sinceEpochSeconds))
+                sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
+
+            var keysResponse = await TekExport.GetKeysAsync((ulong)sinceEpochSeconds, region);
+            var result = new TemporaryExposureKeysResult();
+            // TODO: Url util
+            result.Keys = keysResponse
+                .Select(_ => new TemporaryExposureKeysResult.Key() { Url = $"{ExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{_.Region}/{_.BatchNum}.zip" });
             result.Timestamp = keysResponse
                 .OrderByDescending(_ => _.TimestampSecondsSinceEpoch)
                 .FirstOrDefault()?.TimestampSecondsSinceEpoch ?? sinceEpochSeconds;

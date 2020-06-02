@@ -10,7 +10,13 @@ namespace Covid19Radar.Api.Extensions
         {
             return services.AddSingleton<CosmosClient, CosmosClient>((sp) => {
                 var config = sp.GetRequiredService<IConfiguration>();
-                return new CosmosClient(config.CosmosEndpointUri(), config.CosmosPrimaryKey());
+                return new CosmosClient(config.CosmosEndpointUri(),
+                                        config.CosmosPrimaryKey(),
+                                        new CosmosClientOptions() { 
+                                            ConnectionMode = ConnectionMode.Direct,
+                                            MaxRequestsPerTcpConnection = 16,
+
+                                        });
             });
         }
     }
