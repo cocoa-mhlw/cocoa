@@ -3,11 +3,9 @@
     x:Class="Covid19Radar.Views.TutorialPage2"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="プライバシーについて"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -26,14 +24,14 @@
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="TutorialPage20.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。" />
-                <Label Style="{StaticResource DefaultLabel}" Text="接触の記録は、あなたのスマートフォンの中に記録され、行政や開発者はあなたから事前に同意を得ない限り利用することはできません。" />                
+                <Label Style="{StaticResource DefaultLabel}" Text="接触の記録は、あなたのスマートフォンの中に記録され、行政や開発者はあなたから事前に同意を得ない限り利用することはできません。" />
                 <Label Style="{StaticResource DefaultLabel}" Text="接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。" />
             </StackLayout>
             <Grid Grid.Row="2">
-                <ce:GradientButton
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="利用規約へ" />
             </Grid>
         </Grid>

@@ -3,11 +3,9 @@
     x:Class="Covid19Radar.Views.TutorialPage1"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ce="clr-namespace:Covid19Radar.Controls"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="このアプリでできること"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -23,11 +21,11 @@
             <StackLayout Grid.Row="0">
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="このアプリでできること" />
             </StackLayout>
-            <StackLayout Grid.Row="1" Margin="0,0,0,0" Spacing="0">
+            <StackLayout Grid.Row="1" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
+                        <ColumnDefinition Width="0.4*" />
+                        <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -41,35 +39,33 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="本アプリをスマートフォンに設定した人どうしの接触を記録します。" />
+                        Text="本アプリをスマートフォンに設定した人どうしの接触を記録します。"
+                        VerticalTextAlignment="Center" />
                 </Grid>
-            </StackLayout>
-            <StackLayout Grid.Row="2" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.8*" />
-                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="0.6*" />
+                        <ColumnDefinition Width="0.4*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。" />
                     <ffimageloading:CachedImage
                         Grid.Row="0"
-                        Grid.Column="0"
+                        Grid.Column="1"
                         Aspect="AspectFit"
                         Source="TutorialPage11.png" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。"
+                        VerticalTextAlignment="Center" />
                 </Grid>
-            </StackLayout>
-            <StackLayout Grid.Row="3" Margin="0,0,0,0" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
+                        <ColumnDefinition Width="0.4*" />
+                        <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -83,14 +79,15 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。" />
+                        Text="最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。"
+                        VerticalTextAlignment="Center" />
                 </Grid>
             </StackLayout>
-            <Grid Grid.Row="4">
-                <ce:GradientButton
+            <Grid Grid.Row="2">
+                <Button
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
-                    Style="{StaticResource DefaultGradientButton}"
+                    Style="{StaticResource DefaultButton}"
                     Text="次へ" />
             </Grid>
         </Grid>

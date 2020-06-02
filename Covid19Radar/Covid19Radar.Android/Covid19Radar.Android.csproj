@@ -150,14 +150,11 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
-    <Compile Include="Renderers\CustomEntryRenderer.cs" />
-    <Compile Include="Renderers\GradientButtonRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CloseApplication.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
     <Compile Include="Services\SQLiteConnectionProvider.cs" />
-    <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
@@ -1411,5 +1408,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\TutorialPage60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
   </ItemGroup>
 </Project>
