@@ -241,7 +241,6 @@
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="CornerRadius" Value="30" />
-        <Setter Property="MinimumHeightRequest" Value="70" />
         <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
         <Style.Triggers>
             <Trigger TargetType="Button" Property="IsEnabled" Value="True">
@@ -257,15 +256,13 @@
         <Setter Property="Visual" Value="Default" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="BorderColor" Value="{StaticResource ButtonBorder}" />
-        <Setter Property="BorderWidth" Value="4" />
-        <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
+        <Setter Property="BorderColor" Value="{StaticResource ButtonGrayedOut}" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="TextColor" Value="{StaticResource ButtonGrayedOut}" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="CornerRadius" Value="30" />
-        <Setter Property="HeightRequest" Value="70" />
-        <Setter Property="WidthRequest" Value="300" />
-        <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
     </Style>
 
 
