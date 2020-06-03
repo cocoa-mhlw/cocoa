@@ -13,5 +13,11 @@ namespace Covid19Radar.ViewModels
         {
             Title = Resources.AppResources.HelpPage3Title;
         }
+
+        public Command OnClickNotifyOtherPage => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync(nameof(NotifyOtherPage));
+        });
+
     }
 }
