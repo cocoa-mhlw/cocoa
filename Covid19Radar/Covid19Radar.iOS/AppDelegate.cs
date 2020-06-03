@@ -1,7 +1,6 @@
 ﻿using CoreBluetooth;
 using CoreLocation;
 using Covid19Radar.Common;
-using Covid19Radar.iOS.Renderers;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.Model;
 using Covid19Radar.Renderers;
@@ -39,6 +38,7 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            global::Rg.Plugins.Popup.Popup.Init();
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
 
