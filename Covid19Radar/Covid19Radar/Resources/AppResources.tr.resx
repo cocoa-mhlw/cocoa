@@ -349,4 +349,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>İletişim bilgilerini kaydetme</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Şu anda, ilgili kişinin iletişim kodu uygulamaya kaydedilir. Kişi bilgileri, her iki kullanıcı da pozitif kayıt olana kadar kullanılmaz. Temas geçmişi 14 gün sonra silinir. *Kişi kodu düzenli olarak değişir.</value>
+  </data>
 </root>

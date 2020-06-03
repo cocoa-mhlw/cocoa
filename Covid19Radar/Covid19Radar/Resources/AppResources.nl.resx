@@ -350,4 +350,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Contactgegevens opnemen</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Op dit moment wordt de contactcode van de gecontacteerde persoon geregistreerd in de toepassing. Contactgegevens worden pas gebruikt als een gebruiker zich positief heeft geregistreerd. De contactgeschiedenis wordt na 14 dagen gewist. *De contactcode verandert regelmatig.</value>
+  </data>
 </root>

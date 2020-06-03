@@ -350,4 +350,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Kapcsolattartási adatok rögzítése</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Ekkor a kapcsolatfelvételi személy kapcsolatfelvételi kódját rögzítik az alkalmazásban. A kapcsolattartási adatok nem lesznek felhasználva, amíg egyik felhasználó sem regisztrált pozitív eredményt. A kapcsolatfelvételi előzmények 14 nap után törlődnek. *A kapcsolatfelvételi kód rendszeresen változik.</value>
+  </data>
 </root>

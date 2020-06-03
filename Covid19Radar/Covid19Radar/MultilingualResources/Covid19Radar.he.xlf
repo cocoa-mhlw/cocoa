@@ -449,6 +449,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">הקלטת פרטי קשר</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">בשלב זה, קוד איש הקשר של האדם הנוצר מקשר נרשם ביישום. לא נעשה שימוש במידע ליצירת קשר עד שהמשתמש נרשם כחיובי. היסטוריית הקשר תימחק. לאחר 14 ימים * קוד איש הקשר משתנה באופן סדיר.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

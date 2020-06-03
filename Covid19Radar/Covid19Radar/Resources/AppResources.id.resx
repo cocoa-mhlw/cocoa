@@ -350,4 +350,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Merekam informasi kontak</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Saat ini, kode kontak dari orang yang dihubungi dicatat dalam aplikasi. Informasi kontak tidak akan digunakan sampai salah satu pengguna telah terdaftar positif. Riwayat kontak akan terhapus setelah 14 hari. * Kode kontak berubah secara teratur.</value>
+  </data>
 </root>
