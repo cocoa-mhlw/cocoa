@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Api.Protobuf;
+﻿using Covid19Radar.Background.Protobuf;
 using Microsoft.Azure.KeyVault.WebKey;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -24,8 +24,8 @@ namespace Covid19Radar.Background.Services
         {
             Logger = logger;
             Logger.LogInformation($"{nameof(TemporaryExposureKeySignatureInfoService)} constructor");
-            AppBundleId = config.AppBundleId();
-            AndroidPackage = config.AndroidPackage();
+            AppBundleId = config.iOSBundleId();
+            AndroidPackage = config.AndroidPackageName();
             Info = new SignatureInfo();
             Info.AppBundleId = AppBundleId;
             Info.AndroidPackage = AndroidPackage;
