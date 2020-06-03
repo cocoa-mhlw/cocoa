@@ -433,6 +433,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ustavitev/brisanje snemanja</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ko zaženete to aplikacijo, bo vsak pametni telefon ustvaril in imel kontaktno kodo. Poleg tega ta aplikacija ne pridobi nobenih informacij, povezanih z osebnimi podatki, kot so telefonska številka in informacije o lokaciji.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pogoji za stik, zabeleženi</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt z drugimi uporabniki aplikacije v 1 meter za 15 minut ali več se zabeleži kot "kontakt".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Beleženje kontaktnih podatkov</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">V tem času je kontaktna koda osebe, ki je stopila v stik, zabeležena v aplikaciji. Kontaktni podatki se ne bodo uporabljali, dokler se uporabnik ne registrira pozitivno. Zgodovina stikov bo izbrisana po 14 dneh. * Kontaktna koda se redno spreminja.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -338,4 +338,19 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Gravação de parada/exclusão</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Quando você executa este aplicativo, cada smartphone irá gerar e ter um código de contato. Além disso, este aplicativo não adquire nenhuma informação relacionada a informações pessoais, como número de telefone e informações de localização.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Condições de contato registradas</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>O contato com outros usuários do aplicativo dentro de 1 metro por 15 minutos ou mais é registrado como "contato".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Registrando informações de contato</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Neste momento, o código de contato da pessoa contatada é registrado no aplicativo. As informações de contato não serão usadas até que qualquer usuário tenha registrado positivo. O histórico de contatos será apagado após 14 dias. *O código de contato muda regularmente.</value>
+  </data>
 </root>

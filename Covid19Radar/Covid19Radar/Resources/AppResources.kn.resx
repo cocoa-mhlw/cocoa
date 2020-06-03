@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ನಿಲ್ಲಿಸಿ/ಅಳಿಸು</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>ಈ ಆಪ್ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ, ಪ್ರತಿಯೊಂದು ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಉತ್ಪಾದಿಸಲಿದೆ ಮತ್ತು ಕಾಂಟ್ಯಾಕ್ಟ್ ಕೋಡ್ ಇರುತ್ತದೆ. ಜೊತೆಗೆ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಗಳಾದ ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಮತ್ತು ಸ್ಥಳದ ಮಾಹಿತಿಗೂ ಸಂಬಂಧಿಸಿದ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ಈ ಆಪ್ ಗಳು ಪಡೆದುಕೊಳ್ಳುವುದಿಲ್ಲ.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>ಸಂಪರ್ಕದ ಪರಿಸ್ಥಿತಿಗಳು ದಾಖಲಾಗಿವೆ</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 ನಿಮಿಷಗಳು ಅಥವಾ ಅದಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಕಾಲ 1 ಮೀಟರ್ ನೊಳಗೆ ಇತರ ಆಪ್ ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು "ಸಂಪರ್ಕ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ.</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ದಾಖಲಿಸುವುದು</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>ಈ ವೇಳೆ ಸಂಪರ್ಕಿಸಿದ ವ್ಯಕ್ತಿಯ ಕಾಂಟ್ಯಾಕ್ಟ್ ಕೋಡ್ ಅರ್ಜಿಯಲ್ಲಿ ದಾಖಲಿಸಲಾಗುತ್ತದೆ. ಯಾವುದೇ ಬಳಕೆದಾರ ಧನಾತ್ಮಕ ನೋಂದಣಿ ಮಾಡುವವರೆಗೆ ಸಂಪರ್ಕ ಮಾಹಿತಿಯು ಬಳಕೆಯಾಗುವುದಿಲ್ಲ. 14 ದಿನಗಳ ಬಳಿಕ ಸಂಪರ್ಕ ಇತಿಹಾಸ ಎರವಾಗಲಿದೆ. * ಕಾಂಟ್ಯಾಕ್ಟ್ ಕೋಡ್ ನಿಯಮಿತವಾಗಿ ಬದಲಾಗುತ್ತದೆ.</value>
+  </data>
 </root>

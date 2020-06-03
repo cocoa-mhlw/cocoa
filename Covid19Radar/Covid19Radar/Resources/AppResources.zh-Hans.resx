@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>停止/删除录制</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>运行此应用时，每部智能手机都将生成并具有联系人代码。此外，此应用程序不获取与个人信息相关的任何信息，如电话号码和位置信息。</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>记录的接触条件</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>1 米内的其他应用用户联系 15 分钟或更长时间将记录为"联系人"。</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>记录联系信息</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>此时，联系人的联系人代码将记录在应用程序中。在任一用户注册为正之前，不会使用联系信息。联系历史记录将在 14 天后删除。*联系人代码会定期更改。</value>
+  </data>
 </root>

@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>रेकॉर्डिंग थांबवा /नष्ट करा</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>जेव्हा तुम्ही हे अॅप चालवता, तेव्हा प्रत्येक स्मार्टफोन तयार होईल आणि एक कॉन्टॅक्ट कोड असेल. याखेरीज, या अॅपमध्ये टेलिफोन नंबर आणि लोकेशन माहिती सारख्या वैयक्तिक माहितीशी संबंधित कोणतीही माहिती प्राप्त होत नाही.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>संपर्काची स्थिती रेकॉर्ड</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 मिनिटे किंवा त्यापेक्षा जास्त वेळ इतर अॅप वापरकर्त्याशी संपर्क "संपर्क" म्हणून नोंदला जातो.</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>संपर्क माहिती रेकॉर्ड करणे</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>या वेळी, संपर्क झालेल्या व्यक्तीचा संपर्क कोड अर्जात नोंदवला जातो. जोपर्यंत कोणत्याही वापरकर्त्याने सकारात्मक नोंद केल्याशिवाय संपर्क माहिती वापरली जाणार नाही. संपर्क इतिहास १४ दिवसांनंतर पुसला जाईल. *संपर्क कोड नियमितपणे बदलतो.</value>
+  </data>
 </root>

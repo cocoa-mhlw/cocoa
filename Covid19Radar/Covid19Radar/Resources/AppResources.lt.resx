@@ -338,4 +338,19 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Įrašymo sustabdymas / naikinimas</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Paleidus šią programą, kiekvienas išmanusis telefonas generuos ir turės kontaktinį kodą. Be to, ši programa neįsigyja jokios informacijos, susijusios su asmenine informacija, pvz., telefono numeriu ir vietos informacija.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Registruojamos sąlyčio sąlygos</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontaktas su kitais programos naudotojais per 1 metrą 15 minučių ar ilgiau įrašomas kaip "kontaktas".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Kontaktinės informacijos įrašymas</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Šiuo metu prašyme įrašomas asmens, į kurį buvo sąlytis, kontaktinio asmens kontaktinio asmens kontaktinio asmens kontaktinis kodas. Kontaktinė informacija nebus naudojama, kol kuris nors vartotojas nebus užregistruotas teigiamas. Kontaktų retrospektyva bus ištrinta po 14 dienų. *Kontakto kodas reguliariai keičiasi.</value>
+  </data>
 </root>

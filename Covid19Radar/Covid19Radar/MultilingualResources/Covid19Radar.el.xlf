@@ -433,6 +433,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Διακοπή/διαγραφή εγγραφής</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Όταν εκτελείτε αυτήν την εφαρμογή, κάθε smartphone θα δημιουργήσει και θα έχει έναν κωδικό επαφής. Επιπλέον, αυτή η εφαρμογή δεν αποκτά πληροφορίες που σχετίζονται με προσωπικές πληροφορίες, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Καταγραφόμενες συνθήκες επαφής</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Η επαφή με άλλους χρήστες της εφαρμογής εντός 1 μέτρου για 15 λεπτά ή περισσότερο καταγράφεται ως "επαφή".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Καταγραφή στοιχείων επαφής</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Προς το παρόν, ο κωδικός επικοινωνίας του ατόμου που έρχεται σε επαφή καταγράφεται στην αίτηση. Τα στοιχεία επικοινωνίας δεν θα χρησιμοποιηθούν μέχρι να καταχωρηθεί θετικά από οποιονδήποτε χρήστη. Το ιστορικό επαφών θα σβηστεί μετά από 14 ημέρες. *Ο κωδικός επαφής αλλάζει τακτικά.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

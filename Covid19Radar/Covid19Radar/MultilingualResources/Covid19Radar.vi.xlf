@@ -433,6 +433,26 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dừng/xóa ghi âm</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Khi bạn chạy ứng dụng này, mỗi điện thoại thông minh sẽ tạo ra và có một mã liên lạc. Ngoài ra, ứng dụng này không có được bất kỳ thông tin liên quan đến thông tin cá nhân như số điện thoại và thông tin vị trí.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Điều kiện liên lạc được ghi lại</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Liên hệ với người dùng ứng dụng khác trong vòng 1 mét trong 15 phút trở lên được ghi lại là "liên hệ".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ghi lại thông tin liên lạc</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tại thời gian này, mã số liên lạc của người liên lạc được ghi lại trong ứng dụng. Thông tin liên hệ sẽ không được sử dụng cho đến khi một trong hai người dùng đã đăng ký tích cực. Lịch sử liên lạc sẽ bị xóa sau 14 ngày. * Mã liên lạc thay đổi thường xuyên.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -433,6 +433,26 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Opname stoppen/verwijderen</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wanneer u deze app uitvoert, genereert elke smartphone een contactcode en heeft deze een contactcode. Bovendien verwerft deze app geen informatie met betrekking tot persoonlijke informatie zoals telefoonnummer- en locatiegegevens.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geregistreerde contactvoorwaarden</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contact met andere app-gebruikers binnen 1 meter gedurende 15 minuten of meer wordt geregistreerd als "contact".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contactgegevens opnemen</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Op dit moment wordt de contactcode van de gecontacteerde persoon geregistreerd in de toepassing. Contactgegevens worden pas gebruikt als een gebruiker zich positief heeft geregistreerd. De contactgeschiedenis wordt na 14 dagen gewist. *De contactcode verandert regelmatig.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

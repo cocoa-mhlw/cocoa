@@ -338,4 +338,19 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Stopp/Löschen der Aufzeichnung</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Wenn Sie diese App ausführen, wird jedes Smartphone generieren und einen Kontaktcode haben. Darüber hinaus erfasst diese App keine Informationen zu persönlichen Informationen wie Telefonnummer und Standortinformationen.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Kontaktbedingungen aufgezeichnet</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Der Kontakt mit anderen App-Nutzern innerhalb von 1 Meter für 15 Minuten oder mehr wird als "Kontakt" aufgezeichnet.</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Aufzeichnen von Kontaktinformationen</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Zu diesem Zeitpunkt wird der Kontaktcode der kontaktierten Person in der Anwendung aufgezeichnet. Kontaktinformationen werden erst verwendet, wenn sich einer der Benutzer positiv registriert hat. Der Kontaktverlauf wird nach 14 Tagen ausgegeut. *Der Kontaktcode ändert sich regelmäßig.</value>
+  </data>
 </root>

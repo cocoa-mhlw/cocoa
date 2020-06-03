@@ -338,4 +338,19 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Atura o suprimeix l'enregistrament</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Quan executeu aquesta aplicació, cada smartphone generarà i tindrà un codi de contacte. A més, aquesta app no adquireix cap informació relacionada amb dades personals com el número de telèfon i la informació d'ubicació.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Condicions de contacte enregistrades</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>El contacte amb altres usuaris de l'aplicació dins d' 1 metre durant 15 minuts o més es registra com a "contacte".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Enregistrament de la informació de contacte</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>En aquest moment, el codi de contacte de la persona contactada es registra en l'aplicació. La informació de contacte no s'utilitzarà fins que no s'hagi registrat cap usuari positiu. L'Historial de contacte s'esborrarà després de 14 dies. * El codi de contacte canvia regularment.</value>
+  </data>
 </root>
