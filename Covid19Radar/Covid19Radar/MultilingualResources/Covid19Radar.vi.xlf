@@ -463,6 +463,36 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <target state="new">From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</note>
         </trans-unit>
+        <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
+          <source>Records the contact between people who set this application on a smartphone.</source>
+          <target state="new">Records the contact between people who set this application on a smartphone.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリをスマートフォンに設定した人どうしの接触を記録します。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Description2" translate="yes" xml:space="preserve">
+          <source>You can also move from the home screen to check the number of recent contacts.</source>
+          <target state="new">You can also move from the home screen to check the number of recent contacts.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最近の接触件数の確認へはホーム画面からも移動することができます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Description3" translate="yes" xml:space="preserve">
+          <source>You can check the list of contact dates. We will also provide you with the appropriate contact information.</source>
+          <target state="new">You can check the list of contact dates. We will also provide you with the appropriate contact information.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Label1" translate="yes" xml:space="preserve">
+          <source>notification</source>
+          <target state="new">notification</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Label2" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <target state="new">Home</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ホーム画面</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Label3" translate="yes" xml:space="preserve">
+          <source>If you contacted with a positive person</source>
+          <target state="new">If you contacted with a positive person</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触があった場合</note>
+        </trans-unit>
       </group>
     </body>
   </file>
