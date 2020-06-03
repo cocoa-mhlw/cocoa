@@ -323,4 +323,19 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>இந்த பயன்பாடு மிகவும் பயனுள்ளதாக உள்ளது பல மக்கள் அதை நிறுவ, எனவே தயவு செய்து உங்கள் சுற்றி மக்கள் விண்ணப்ப பகிர்ந்து.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>எப்படிப் பயன்படுத்துவது</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>முனைய அடையாளம் காணுதல்</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>தொடர்பு உறுதிப்படுத்தல் முறை</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>தொற்றுக்கு என தீர்மானித்தால்</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>பதிவை நிறுத்து/நீக்கு</value>
+  </data>
 </root>

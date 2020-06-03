@@ -323,4 +323,19 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Táto aplikácia je tak účinná, že veľa ľudí ju nainštalovať, tak prosím, podeľte sa o aplikáciu s ľuďmi okolo vás.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Ako používať</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Identifikácia terminálu</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Spôsob potvrdenia kontaktu</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Ak je určené na infekciu</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Zastaviť/odstrániť nahrávanie</value>
+  </data>
 </root>

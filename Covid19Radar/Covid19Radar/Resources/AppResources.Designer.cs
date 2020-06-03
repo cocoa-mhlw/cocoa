@@ -367,6 +367,51 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   How to use に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageTitle {
+            get {
+                return ResourceManager.GetString("HelpMenuPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Terminal identification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Title {
+            get {
+                return ResourceManager.GetString("HelpPage1Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Contact confirmation method に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage2Title {
+            get {
+                return ResourceManager.GetString("HelpPage2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If determined to be infected に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage3Title {
+            get {
+                return ResourceManager.GetString("HelpPage3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Stop/delete recording に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage4Title {
+            get {
+                return ResourceManager.GetString("HelpPage4Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Contact with positive testers in the last 14 days に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader1Title {

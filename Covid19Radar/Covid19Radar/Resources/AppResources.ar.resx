@@ -322,4 +322,19 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>هذا التطبيق فعال جدا أن العديد من الناس تثبيته، لذا يرجى مشاركة التطبيق مع الناس من حولك.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>كيفية استخدام</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>تعريف المحطة الطرفية</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>طريقة تأكيد الاتصال</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>إذا تم تحديد الإصابة بالعدوى</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>إيقاف/حذف التسجيل</value>
+  </data>
 </root>
