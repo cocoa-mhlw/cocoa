@@ -323,4 +323,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Dette programmet er så effektivt at mange installerer det, så vennligst del programmet med folk rundt deg.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Hvordan bruke</value>
+  </data>
 </root>

@@ -413,6 +413,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಈ ಅಪ್ಲಿಕೇಶನ್ ಎಷ್ಟು ಪರಿಣಾಮಕಾರಿಯಾಗಿರುತ್ತದೆ ಎಂದರೆ ಅನೇಕ ಜನರು ಅದನ್ನು ಇನ್ಸ್ಟಾಲ್ ಮಾಡುತ್ತಾರೆ, ಆದ್ದರಿಂದ ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಬಳಸುವುದು ಹೇಗೆ</target>
+        </trans-unit>
       </group>
     </body>
   </file>

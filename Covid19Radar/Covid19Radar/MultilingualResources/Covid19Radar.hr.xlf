@@ -413,6 +413,10 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ovaj program je toliko učinkovit da mnogi ljudi ga instalirati, pa vas molimo da podijelite aplikaciju s ljudima oko vas.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kako koristiti</target>
+        </trans-unit>
       </group>
     </body>
   </file>

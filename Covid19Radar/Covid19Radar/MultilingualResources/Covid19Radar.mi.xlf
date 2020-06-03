@@ -413,6 +413,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nā te mea ka tika tēnei taupānga kia tāuta i ngā tāngata maha, nā reira tiri koa i te taupānga ki te iwi i a koe e haere ana.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Me pēhea te whakamahi</target>
+        </trans-unit>
       </group>
     </body>
   </file>

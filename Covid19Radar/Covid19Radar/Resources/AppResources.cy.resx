@@ -323,4 +323,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Mae'r cais hwn mor effeithiol fel bod llawer o bobl yn ei osod, felly Rhannwch y cais gyda phobl o'ch cwmpas.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Sut i ddefnyddio</value>
+  </data>
 </root>

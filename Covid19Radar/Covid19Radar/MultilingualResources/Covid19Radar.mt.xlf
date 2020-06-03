@@ -413,6 +413,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Din l-applikazzjoni hija tant effettiva li ħafna nies tinstallahom, għalhekk jekk jogħġbok jaqsmu l-applikazzjoni ma ' nies ta ' madwarek.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kif tuża</target>
+        </trans-unit>
       </group>
     </body>
   </file>

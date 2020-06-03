@@ -413,6 +413,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Aquesta aplicació és tan eficaç que moltes persones l'instal·len, així que si us plau comparteixi l'aplicació amb gent al seu voltant.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Com utilitzar</target>
+        </trans-unit>
       </group>
     </body>
   </file>

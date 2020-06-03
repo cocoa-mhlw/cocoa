@@ -413,6 +413,10 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ta aplikacja jest tak skuteczna, że wiele osób ją instaluje, więc proszę podzielić się aplikacją z ludźmi wokół ciebie.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jak używać</target>
+        </trans-unit>
       </group>
     </body>
   </file>

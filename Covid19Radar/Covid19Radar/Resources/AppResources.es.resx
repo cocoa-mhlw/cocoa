@@ -323,4 +323,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Esta aplicación es tan eficaz que muchas personas lo instalan, así que por favor comparta la aplicación con las personas a su alrededor.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Cómo usar</value>
+  </data>
 </root>

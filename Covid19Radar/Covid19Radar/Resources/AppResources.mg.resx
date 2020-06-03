@@ -323,4 +323,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ity fampiharana ity dia tena mahomby tokoa ka ny olona maro no asio izany, koa dia mba zarao amin' ny olona manodidina anao ny fampiharana izany.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Ahoana no hampiasana</value>
+  </data>
 </root>
