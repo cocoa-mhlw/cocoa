@@ -170,7 +170,6 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
-            OnResume();
             //ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
         }
 

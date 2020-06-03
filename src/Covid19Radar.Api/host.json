@@ -1,14 +1,27 @@
 {
     "version": "2.0",
+    "extensions": {
+        "http": {
+            "maxOutstandingRequests": 200,
+            "maxConcurrentRequests": 25
+        }
+    },
     "logging": {
         "logLevel": {
             "default": "Information"
         },
         "applicationInsights": {
-            "samplingExcludedTypes": "Request",
+            "samplingExcludedTypes": "Request;Exception",
             "samplingSettings": {
                 "isEnabled": true
             }
         }
+    },
+    "healthMonitor": {
+        "enabled": true,
+        "healthCheckInterval": "00:00:01",
+        "healthCheckWindow": "00:00:05",
+        "healthCheckThreshold": 3,
+        "counterThreshold": 0.80
     }
 }

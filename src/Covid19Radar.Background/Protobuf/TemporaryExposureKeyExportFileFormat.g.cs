@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Covid19Radar.Api.Protobuf
+namespace Covid19Radar.Background.Protobuf
 {
 
     /// <summary>Holder for reflection information generated from TemporaryExposureKeyExportFileFormat.proto</summary>
@@ -46,15 +46,15 @@ namespace Covid19Radar.Api.Protobuf
                   "dXJlIoABCgxURUtTaWduYXR1cmUSNgoOc2lnbmF0dXJlX2luZm8YASABKAsy",
                   "Hi5nb29nbGUucHJvdG9idWYuU2lnbmF0dXJlSW5mbxIRCgliYXRjaF9udW0Y",
                   "AiABKAUSEgoKYmF0Y2hfc2l6ZRgDIAEoBRIRCglzaWduYXR1cmUYBCABKAxC",
-                  "HKoCGUNvdmlkMTlSYWRhci5BcGkuUHJvdG9idWY="));
+                  "I6oCIENvdmlkMTlSYWRhci5CYWNrZ3JvdW5kLlByb3RvYnVm"));
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
                 new pbr::FileDescriptor[] { },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Api.Protobuf.TemporaryExposureKeyExport), global::Covid19Radar.Api.Protobuf.TemporaryExposureKeyExport.Parser, new[]{ "StartTimestamp", "EndTimestamp", "Region", "BatchNum", "BatchSize", "SignatureInfos", "Keys" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Api.Protobuf.SignatureInfo), global::Covid19Radar.Api.Protobuf.SignatureInfo.Parser, new[]{ "AppBundleId", "AndroidPackage", "VerificationKeyVersion", "VerificationKeyId", "SignatureAlgorithm" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Api.Protobuf.TemporaryExposureKey), global::Covid19Radar.Api.Protobuf.TemporaryExposureKey.Parser, new[]{ "KeyData", "TransmissionRiskLevel", "RollingStartIntervalNumber", "RollingPeriod" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Api.Protobuf.TEKSignatureList), global::Covid19Radar.Api.Protobuf.TEKSignatureList.Parser, new[]{ "Signatures" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Api.Protobuf.TEKSignature), global::Covid19Radar.Api.Protobuf.TEKSignature.Parser, new[]{ "SignatureInfo", "BatchNum", "BatchSize", "Signature" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Background.Protobuf.TemporaryExposureKeyExport), global::Covid19Radar.Background.Protobuf.TemporaryExposureKeyExport.Parser, new[]{ "StartTimestamp", "EndTimestamp", "Region", "BatchNum", "BatchSize", "SignatureInfos", "Keys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Background.Protobuf.SignatureInfo), global::Covid19Radar.Background.Protobuf.SignatureInfo.Parser, new[]{ "AppBundleId", "AndroidPackage", "VerificationKeyVersion", "VerificationKeyId", "SignatureAlgorithm" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Background.Protobuf.TemporaryExposureKey), global::Covid19Radar.Background.Protobuf.TemporaryExposureKey.Parser, new[]{ "KeyData", "TransmissionRiskLevel", "RollingStartIntervalNumber", "RollingPeriod" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Background.Protobuf.TEKSignatureList), global::Covid19Radar.Background.Protobuf.TEKSignatureList.Parser, new[]{ "Signatures" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Covid19Radar.Background.Protobuf.TEKSignature), global::Covid19Radar.Background.Protobuf.TEKSignature.Parser, new[]{ "SignatureInfo", "BatchNum", "BatchSize", "Signature" }, null, null, null, null)
                 }));
         }
         #endregion
@@ -72,7 +72,7 @@ namespace Covid19Radar.Api.Protobuf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Covid19Radar.Api.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[0]; }
+            get { return global::Covid19Radar.Background.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -259,28 +259,28 @@ namespace Covid19Radar.Api.Protobuf
 
         /// <summary>Field number for the "signature_infos" field.</summary>
         public const int SignatureInfosFieldNumber = 6;
-        private static readonly pb::FieldCodec<global::Covid19Radar.Api.Protobuf.SignatureInfo> _repeated_signatureInfos_codec
-            = pb::FieldCodec.ForMessage(50, global::Covid19Radar.Api.Protobuf.SignatureInfo.Parser);
-        private readonly pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.SignatureInfo> signatureInfos_ = new pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.SignatureInfo>();
+        private static readonly pb::FieldCodec<global::Covid19Radar.Background.Protobuf.SignatureInfo> _repeated_signatureInfos_codec
+            = pb::FieldCodec.ForMessage(50, global::Covid19Radar.Background.Protobuf.SignatureInfo.Parser);
+        private readonly pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.SignatureInfo> signatureInfos_ = new pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.SignatureInfo>();
         /// <summary>
         /// Information about associated signatures
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.SignatureInfo> SignatureInfos
+        public pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.SignatureInfo> SignatureInfos
         {
             get { return signatureInfos_; }
         }
 
         /// <summary>Field number for the "keys" field.</summary>
         public const int KeysFieldNumber = 7;
-        private static readonly pb::FieldCodec<global::Covid19Radar.Api.Protobuf.TemporaryExposureKey> _repeated_keys_codec
-            = pb::FieldCodec.ForMessage(58, global::Covid19Radar.Api.Protobuf.TemporaryExposureKey.Parser);
-        private readonly pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.TemporaryExposureKey> keys_ = new pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.TemporaryExposureKey>();
+        private static readonly pb::FieldCodec<global::Covid19Radar.Background.Protobuf.TemporaryExposureKey> _repeated_keys_codec
+            = pb::FieldCodec.ForMessage(58, global::Covid19Radar.Background.Protobuf.TemporaryExposureKey.Parser);
+        private readonly pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TemporaryExposureKey> keys_ = new pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TemporaryExposureKey>();
         /// <summary>
         /// The TemporaryExposureKeys themselves
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.TemporaryExposureKey> Keys
+        public pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TemporaryExposureKey> Keys
         {
             get { return keys_; }
         }
@@ -499,7 +499,7 @@ namespace Covid19Radar.Api.Protobuf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Covid19Radar.Api.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[1]; }
+            get { return global::Covid19Radar.Background.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -879,7 +879,7 @@ namespace Covid19Radar.Api.Protobuf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Covid19Radar.Api.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[2]; }
+            get { return global::Covid19Radar.Background.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1210,7 +1210,7 @@ namespace Covid19Radar.Api.Protobuf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Covid19Radar.Api.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[3]; }
+            get { return global::Covid19Radar.Background.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1242,11 +1242,11 @@ namespace Covid19Radar.Api.Protobuf
 
         /// <summary>Field number for the "signatures" field.</summary>
         public const int SignaturesFieldNumber = 1;
-        private static readonly pb::FieldCodec<global::Covid19Radar.Api.Protobuf.TEKSignature> _repeated_signatures_codec
-            = pb::FieldCodec.ForMessage(10, global::Covid19Radar.Api.Protobuf.TEKSignature.Parser);
-        private readonly pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.TEKSignature> signatures_ = new pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.TEKSignature>();
+        private static readonly pb::FieldCodec<global::Covid19Radar.Background.Protobuf.TEKSignature> _repeated_signatures_codec
+            = pb::FieldCodec.ForMessage(10, global::Covid19Radar.Background.Protobuf.TEKSignature.Parser);
+        private readonly pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TEKSignature> signatures_ = new pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TEKSignature>();
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Covid19Radar.Api.Protobuf.TEKSignature> Signatures
+        public pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TEKSignature> Signatures
         {
             get { return signatures_; }
         }
@@ -1356,7 +1356,7 @@ namespace Covid19Radar.Api.Protobuf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor
         {
-            get { return global::Covid19Radar.Api.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[4]; }
+            get { return global::Covid19Radar.Background.Protobuf.TemporaryExposureKeyExportFileFormatReflection.Descriptor.MessageTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1392,12 +1392,12 @@ namespace Covid19Radar.Api.Protobuf
 
         /// <summary>Field number for the "signature_info" field.</summary>
         public const int SignatureInfoFieldNumber = 1;
-        private global::Covid19Radar.Api.Protobuf.SignatureInfo signatureInfo_;
+        private global::Covid19Radar.Background.Protobuf.SignatureInfo signatureInfo_;
         /// <summary>
         /// Info about the signing key, version, algorithm, etc
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Covid19Radar.Api.Protobuf.SignatureInfo SignatureInfo
+        public global::Covid19Radar.Background.Protobuf.SignatureInfo SignatureInfo
         {
             get { return signatureInfo_; }
             set
@@ -1620,7 +1620,7 @@ namespace Covid19Radar.Api.Protobuf
             {
                 if (!HasSignatureInfo)
                 {
-                    SignatureInfo = new global::Covid19Radar.Api.Protobuf.SignatureInfo();
+                    SignatureInfo = new global::Covid19Radar.Background.Protobuf.SignatureInfo();
                 }
                 SignatureInfo.MergeFrom(other.SignatureInfo);
             }
@@ -1654,7 +1654,7 @@ namespace Covid19Radar.Api.Protobuf
                         {
                             if (!HasSignatureInfo)
                             {
-                                SignatureInfo = new global::Covid19Radar.Api.Protobuf.SignatureInfo();
+                                SignatureInfo = new global::Covid19Radar.Background.Protobuf.SignatureInfo();
                             }
                             input.ReadMessage(SignatureInfo);
                             break;
