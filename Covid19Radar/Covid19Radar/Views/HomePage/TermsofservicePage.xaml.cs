@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HelpMenuPage : ContentPage
+    public partial class TermsofservicePage : ContentPage
     {
-        public HelpMenuPage()
+        public TermsofservicePage()
         {
             InitializeComponent();
         }

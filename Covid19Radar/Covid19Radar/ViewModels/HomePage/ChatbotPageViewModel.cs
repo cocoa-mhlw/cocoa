@@ -16,7 +16,7 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class SettingsPageViewModel : ViewModelBase
+    public class ChatbotPageViewModel : ViewModelBase
     {
         private string _AppVersion;
 
@@ -35,7 +35,7 @@ namespace Covid19Radar.ViewModels
         private readonly ExposureNotificationService exposureNotificationService;
 
         private readonly UserDataService userDataService;
-        public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
+        public ChatbotPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppConstants.AppVersion;
@@ -55,11 +55,6 @@ namespace Covid19Radar.ViewModels
         public ICommand OnChangeExposureNotificationState => new Command(async () =>
         {
             await userDataService.SetAsync(_UserData);
-        });
-
-        public Command OnClickLicenseAgreement => new Command(async () =>
-        {
-            await NavigationService.NavigateAsync(nameof(LicenseAgreementPage));
         });
 
 

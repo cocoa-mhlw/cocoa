@@ -10,6 +10,7 @@
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
+    NavigationPage.HasNavigationBar="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
