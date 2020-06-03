@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HelpPage1ViewModel : ViewModelBase
+    public class HelpMenuPageViewModel : ViewModelBase
     {
         public ObservableCollection<MainMenuModel> MenuItems { get; set; }
 
@@ -23,32 +23,32 @@ namespace Covid19Radar.ViewModels
 
         public DelegateCommand NavigateCommand { get; private set; }
 
-        public HelpPage1ViewModel(INavigationService navigationService) : base(navigationService)
+        public HelpMenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleHowItWorks;
             MenuItems = new ObservableCollection<MainMenuModel>();
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
-                PageName = nameof(HelpPage2),
+                PageName = nameof(HelpPage1),
                 Title = "どのようにして接触を記録していますか？"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
-                PageName = nameof(HelpPage3),
+                PageName = nameof(HelpPage2),
                 Title = "接触の有無はどのように知ることができますか？？"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
-                PageName = nameof(HelpPage4),
+                PageName = nameof(HelpPage3),
                 Title = "新型コロナウィルスに感染していると判定されたら？"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
-                PageName = nameof(HelpPage5),
+                PageName = nameof(HelpPage4),
                 Title = "個人情報の記録を停止/情報を削除するには"
             });
 
@@ -57,7 +57,7 @@ namespace Covid19Radar.ViewModels
 
         async void Navigate()
         {
-            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + SelectedMenuItem.PageName);
+            await NavigationService.NavigateAsync(nameof(SelectedMenuItem.PageName));
             return;
         }
     }

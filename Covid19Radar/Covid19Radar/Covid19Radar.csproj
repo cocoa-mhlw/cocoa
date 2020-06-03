@@ -84,10 +84,7 @@
     <PackageReference Include="Plugin.LocalNotification" Version="5.0.4" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
-    <PackageReference Include="Roslynator.Analyzers" Version="2.3.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.ExposureNotification" Version="0.6.0-preview" />
@@ -133,6 +130,21 @@
     </Compile>
     <Compile Update="Views\Tutorial\DescriptionPage1.xaml.cs">
       <DependentUpon>DescriptionPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HelpPage\HelpMenuPage.xaml.cs">
+      <DependentUpon>HelpMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HelpPage\HelpPage1.xaml.cs">
+      <DependentUpon>HelpPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HelpPage\HelpPage2.xaml.cs">
+      <DependentUpon>HelpPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HelpPage\HelpPage3.xaml.cs">
+      <DependentUpon>HelpPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HelpPage\HelpPage4.xaml.cs">
+      <DependentUpon>HelpPage4.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Tutorial\InitSettingPage.xaml.cs">
       <DependentUpon>InitSettingPage.xaml</DependentUpon>

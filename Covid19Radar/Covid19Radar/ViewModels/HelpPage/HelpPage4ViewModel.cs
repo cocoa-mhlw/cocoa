@@ -7,16 +7,16 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HelpPage2ViewModel : ViewModelBase
+    public class HelpPage4ViewModel : ViewModelBase
     {
-        public HelpPage2ViewModel(INavigationService navigationService) : base(navigationService)
+        public HelpPage4ViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = Resources.AppResources.TitleHowItWorks;
         }
 
-        public Command OnClickNext => new Command(async () =>
+        public Command OnClickSetting => new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(HelpPage3));
+            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(SettingsPage));
         });
     }
 }
