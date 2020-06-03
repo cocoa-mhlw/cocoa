@@ -429,6 +429,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kung determinadong maging impeksyon</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Itigil/burahin ang pagrekord</target>
+        </trans-unit>
       </group>
     </body>
   </file>

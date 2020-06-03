@@ -335,4 +335,7 @@
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Если установлено, что инфицировано</value>
   </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Остановка/удаление записи</value>
+  </data>
 </root>

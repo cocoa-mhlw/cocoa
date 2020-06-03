@@ -429,6 +429,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Raha toa ka tapa-kevitra ny ho tratran' aretina</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atsaharo/fafao ny firaketana</target>
+        </trans-unit>
       </group>
     </body>
   </file>

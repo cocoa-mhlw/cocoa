@@ -429,6 +429,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Si es determina que s'infecti</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atura o suprimeix l'enregistrament</target>
+        </trans-unit>
       </group>
     </body>
   </file>
