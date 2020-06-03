@@ -425,6 +425,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Phương thức xác nhận liên lạc</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nếu được xác định là bị nhiễm bệnh</target>
+        </trans-unit>
       </group>
     </body>
   </file>

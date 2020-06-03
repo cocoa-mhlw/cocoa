@@ -430,6 +430,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Metod för kontaktbekräftelse</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Om det bedöms vara infekterat</target>
+        </trans-unit>
       </group>
     </body>
   </file>

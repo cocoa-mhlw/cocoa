@@ -425,6 +425,10 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakto patvirtinimo metodas</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jei nustatoma, kad jie yra užsikrėtę</target>
+        </trans-unit>
       </group>
     </body>
   </file>

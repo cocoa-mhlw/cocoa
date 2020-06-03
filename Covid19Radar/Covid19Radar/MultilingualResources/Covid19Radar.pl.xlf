@@ -425,6 +425,10 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Metoda potwierdzenia kontaktu</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">W przypadku stwierdzenia zakażenia</target>
+        </trans-unit>
       </group>
     </body>
   </file>
