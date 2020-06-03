@@ -422,6 +422,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Contact confirmation method</source>
           <target state="translated">接触の確認方法</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="translated">感染していると判定されたら</target>
+        </trans-unit>
       </group>
     </body>
   </file>

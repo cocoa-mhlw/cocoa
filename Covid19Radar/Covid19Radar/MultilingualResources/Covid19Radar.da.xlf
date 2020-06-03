@@ -425,6 +425,10 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Metode til bekræftelse af kontaktperson</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvis det konstateres, at de er smittet</target>
+        </trans-unit>
       </group>
     </body>
   </file>

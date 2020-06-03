@@ -424,6 +424,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">طريقة تأكيد الاتصال</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">إذا تم تحديد الإصابة بالعدوى</target>
+        </trans-unit>
       </group>
     </body>
   </file>
