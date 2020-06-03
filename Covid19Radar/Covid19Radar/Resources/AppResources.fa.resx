@@ -323,4 +323,34 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>این نرم افزار بسیار موثر است که بسیاری از مردم آن را نصب می کنند ، بنابراین لطفا برنامه را با افراد اطراف خود به اشتراک بگذارید.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>نحوه استفاده از</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>شناسایی ترمینال</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>تماس با روش تایید</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>اگر مصمم به آلوده</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>توقف/حذف ضبط</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>هنگامی که این برنامه را اجرا می کنید ، هر گوشی هوشمند تولید می کند و یک کد تماس دارد. علاوه بر این ، این برنامه هیچ اطلاعاتی مربوط به اطلاعات شخصی مانند شماره تلفن و اطلاعات مکان را به دست نمی آورد.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>شرایط تماس ضبط شده</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>تماس با دیگر کاربران برنامه در عرض 1 متر برای 15 دقیقه یا بیشتر به عنوان "تماس" ثبت شده است.</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>ضبط اطلاعات تماس</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>در این زمان ، کد تماس فرد تماس گرفته شده در برنامه ثبت می شود. اطلاعات تماس استفاده نخواهد شد تا زمانی که کاربر ثبت نام مثبت است. سابقه تماس پس از 14 روز پاک می شود. * کد تماس به طور منظم تغییر میکند.</value>
+  </data>
 </root>
