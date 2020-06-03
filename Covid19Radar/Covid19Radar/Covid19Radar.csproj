@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <Compile Remove="Behaviors\UnUsed\**" />
+    <Compile Remove="Controls\**" />
     <Compile Remove="Converters\UnUsed\**" />
     <Compile Remove="Model\UnUsed\**" />
     <Compile Remove="Services\UnUsed\**" />
@@ -27,6 +28,7 @@
     <Compile Remove="ViewModels\UnUsed\**" />
     <Compile Remove="Views\UnUsed\**" />
     <EmbeddedResource Remove="Behaviors\UnUsed\**" />
+    <EmbeddedResource Remove="Controls\**" />
     <EmbeddedResource Remove="Converters\UnUsed\**" />
     <EmbeddedResource Remove="Model\UnUsed\**" />
     <EmbeddedResource Remove="Services\UnUsed\**" />
@@ -34,6 +36,7 @@
     <EmbeddedResource Remove="ViewModels\UnUsed\**" />
     <EmbeddedResource Remove="Views\UnUsed\**" />
     <None Remove="Behaviors\UnUsed\**" />
+    <None Remove="Controls\**" />
     <None Remove="Converters\UnUsed\**" />
     <None Remove="Model\UnUsed\**" />
     <None Remove="Services\UnUsed\**" />
@@ -197,7 +200,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\" />
     <Folder Include="MultilingualResources\" />
   </ItemGroup>
 </Project>
