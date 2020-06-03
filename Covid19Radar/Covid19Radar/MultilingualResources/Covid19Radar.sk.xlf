@@ -417,6 +417,10 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ako používať</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Identifikácia terminálu</target>
+        </trans-unit>
       </group>
     </body>
   </file>

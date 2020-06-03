@@ -415,6 +415,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Comment utiliser</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Identification terminale</target>
+        </trans-unit>
       </group>
     </body>
   </file>

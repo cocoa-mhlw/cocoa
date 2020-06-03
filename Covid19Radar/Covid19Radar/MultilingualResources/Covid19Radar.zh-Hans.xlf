@@ -415,6 +415,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">如何使用</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">端子识别</target>
+        </trans-unit>
       </group>
     </body>
   </file>

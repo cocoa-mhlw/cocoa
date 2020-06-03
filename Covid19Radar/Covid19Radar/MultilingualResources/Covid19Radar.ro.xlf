@@ -415,6 +415,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">se utilizează</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Identificarea terminalului</target>
+        </trans-unit>
       </group>
     </body>
   </file>
