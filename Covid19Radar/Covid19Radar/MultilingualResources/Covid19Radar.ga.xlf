@@ -425,6 +425,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Modh deimhnithe teagmhála</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Má chinntear a bheith ionfhabhtaithe</target>
+        </trans-unit>
       </group>
     </body>
   </file>

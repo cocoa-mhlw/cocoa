@@ -425,6 +425,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Makipag-ugnayan sa confirmation paraan</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kung determinadong maging impeksyon</target>
+        </trans-unit>
       </group>
     </body>
   </file>

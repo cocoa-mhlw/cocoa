@@ -332,4 +332,7 @@
   <data name="HelpPage2Title" xml:space="preserve">
     <value>संपर्क पुष्टी पद्धत</value>
   </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>संसर्ग होण्याचा निश्चय केल्यास</value>
+  </data>
 </root>
