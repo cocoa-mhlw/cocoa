@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Условия контакта записаны</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Контакт с другими пользователями приложения в пределах 1 метра в течение 15 минут или более записывается как "контакт".</value>
+  </data>
 </root>

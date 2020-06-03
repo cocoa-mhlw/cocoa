@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>સંપર્કની શરતો રેકોર્ડ થયેલ છે</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 મિનિટ અથવા તેનાથી વધુ સમય માટે 1 મીટરની અંદર અન્ય એપ્લિકેશન વપરાશકર્તાઓ સાથે સંપર્ક ને "સંપર્ક" તરીકે નોંધવામાં આવે છે.</value>
+  </data>
 </root>

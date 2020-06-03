@@ -344,4 +344,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Amodau cyswllt a gofnodir</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Cofnodir cysylltiad â defnyddwyr eraill yr apiau o fewn 1 meter am 15 munud neu fwy fel "Contact".</value>
+  </data>
 </root>

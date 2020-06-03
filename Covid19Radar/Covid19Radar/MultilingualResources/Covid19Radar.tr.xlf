@@ -438,6 +438,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kaydedilen iletişim koşulları</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">15 dakika veya daha uzun süre 1 metre içinde diğer uygulama kullanıcılarıile iletişim "iletişim" olarak kaydedilir.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

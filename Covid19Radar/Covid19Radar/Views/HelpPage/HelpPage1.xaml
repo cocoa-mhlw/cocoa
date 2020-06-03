@@ -31,7 +31,7 @@
             </StackLayout>
             <StackLayout Grid.Row="3">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage22.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Text}" />
             </StackLayout>
             <StackLayout Grid.Row="4">
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="接触情報の記録" />

@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Pogoji za stik, zabeleženi</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt z drugimi uporabniki aplikacije v 1 meter za 15 minut ali več se zabeleži kot "kontakt".</value>
+  </data>
 </root>

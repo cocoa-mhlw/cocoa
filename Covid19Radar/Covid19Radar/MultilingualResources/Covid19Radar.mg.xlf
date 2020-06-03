@@ -441,6 +441,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ireo fepetra mifandray amin' ny voarakitra</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mifandraisa amin' ny fitaovana hafa mpampiasa ao amin' ny 1 metatra mandritra ny 15 minitra na mihoatra izany dia voarakitra ho toy ny "mifandray".</target>
+        </trans-unit>
       </group>
     </body>
   </file>

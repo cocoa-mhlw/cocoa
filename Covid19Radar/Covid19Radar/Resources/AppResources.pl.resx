@@ -344,4 +344,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Zarejestrowane warunki kontaktu</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt z innymi użytkownikami aplikacji w odległości 1 metra przez 15 minut lub dłużej jest rejestrowany jako "kontakt".</value>
+  </data>
 </root>
