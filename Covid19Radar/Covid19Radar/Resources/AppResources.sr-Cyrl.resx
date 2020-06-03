@@ -323,4 +323,34 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ова апликација је толико ефикасна да га многи људи инсталирају, тако да можете да поделите апликацију са људима око вас.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Како се користи</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Идентификација терминала</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Начин потврде контакта</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Ако је утврђено да је заражен</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Заустави /Избриши снимање</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Када покренете ову апликацију, сваки паметни телефон ће генерисати и имати кôд контакта. Поред тога, ова апликација не стиче никакве информације везане за личне информације као што су број телефона и информације о локацији.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Записани услови за контакт</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Контакт са другим корисницима апликација у оквиру једног метра за 15 минута или више се снима као "Контакт".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Записивање информација о контакту</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>У овом тренутку, у апликацији је записана Шифра контакта контактирани. Контакт информације неће бити коришћене док се било који корисник не региструје позитивно. Историја контакта ће бити избрисана после 14 дана. * Шифра контакта редовно мења.</value>
+  </data>
 </root>

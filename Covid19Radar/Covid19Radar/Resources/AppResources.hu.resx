@@ -323,4 +323,34 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ez az alkalmazás annyira hatékony, hogy sokan telepítik, ezért kérjük, ossza meg az alkalmazást az emberek körülötted.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Hogyan kell használni</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminál azonosítása</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Kapcsolatmegerősítési módszer</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Ha megállapítást nyer, hogy fertőzött</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Felvétel leállítása/törlése</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Amikor futtatja ezt az alkalmazást, minden okostelefon létrehoz, és egy kapcsolatkódot. Ezen túlmenően, ez az alkalmazás nem szerez semmilyen információt kapcsolatos személyes adatokat, mint a telefonszám és a helyadatait.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>A rögzített érintkezés feltételei</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>A többi alkalmazásfelhasználóval való kapcsolat 1 méteren belül 15 percen vagy annál több ideig "kapcsolattartóként" kerül rögzítésre.</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Kapcsolattartási adatok rögzítése</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Ekkor a kapcsolatfelvételi személy kapcsolatfelvételi kódját rögzítik az alkalmazásban. A kapcsolattartási adatok nem lesznek felhasználva, amíg egyik felhasználó sem regisztrált pozitív eredményt. A kapcsolatfelvételi előzmények 14 nap után törlődnek. *A kapcsolatfelvételi kód rendszeresen változik.</value>
+  </data>
 </root>
