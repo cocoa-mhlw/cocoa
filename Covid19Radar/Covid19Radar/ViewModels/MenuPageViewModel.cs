@@ -43,6 +43,19 @@ namespace Covid19Radar.ViewModels
 
             MenuItems.Add(new MainMenuModel()
             {
+                Icon = "\uf0c0",
+                PageName = nameof(TermsofservicePage),
+                Title = "利用規約"
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(InqueryPage),
+                Title = "お問い合わせ"
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
                 Icon = "\uf2f1",
                 PageName = nameof(UpdateInformationPage),
                 Title = Resources.AppResources.TitleUpdateInformation
@@ -50,19 +63,23 @@ namespace Covid19Radar.ViewModels
 
             MenuItems.Add(new MainMenuModel()
             {
-                Icon = "\uf56c",
-                PageName = nameof(LicenseAgreementPage),
-                Title = Resources.AppResources.TitleLicenseAgreement
+                Icon = "\uf0c0",
+                PageName = nameof(ThankYouNotifyOtherPage),
+                Title = nameof(ThankYouNotifyOtherPage)
             });
-
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
-                PageName = nameof(ContributorsPage),
-                Title = Resources.AppResources.TitleContributorsPage
+                PageName = nameof(NotContactPage),
+                Title = nameof(NotContactPage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(ContactedNotifyPage),
+                Title = nameof(ContactedNotifyPage)
             });
 
-#if DEBUG
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
@@ -135,7 +152,20 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(HelpPage4),
                 Title = nameof(HelpPage4)
             });
-#endif
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(ChatbotPage),
+                Title = nameof(ChatbotPage)
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(NotifyOtherPage),
+                Title = nameof(NotifyOtherPage)
+            });
 
             NavigateCommand = new DelegateCommand(Navigate);
         }

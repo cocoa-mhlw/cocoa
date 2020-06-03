@@ -57,7 +57,7 @@ namespace Covid19Radar.ViewModels
 
         async void Navigate()
         {
-            await NavigationService.NavigateAsync(nameof(SelectedMenuItem.PageName));
+            await NavigationService.NavigateAsync(SelectedMenuItem.PageName);
             return;
         }
     }

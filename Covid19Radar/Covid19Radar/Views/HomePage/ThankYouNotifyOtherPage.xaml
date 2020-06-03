@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.ThankYouNotifyOtherPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    Title="ありがとうございます"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <Grid Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="TutorialPage60.png" />
+                <Label
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="新型コロナウイルス&#10;接触確認アプリ" />
+                <Label
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="陽性のご登録をいただき&#10;ありがとうございました" />
+
+                <Frame
+                    Padding="0,0,0,0"
+                    BackgroundColor="#FFF3DD"
+                    CornerRadius="10">
+                    <StackLayout Spacing="0">
+                        <Label Style="{StaticResource DefaultLabel}" Text="登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <Grid Grid.Row="1">
+                <Button
+                    AutomationId="OnClickShareApp"
+                    Command="{Binding Path=OnClickShareApp}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="アプリを周りの人に知らせる" />
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
