@@ -332,4 +332,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Staðfestingaraðferð tengiliðar</value>
   </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Ef ákveðið er að smitast</value>
+  </data>
 </root>

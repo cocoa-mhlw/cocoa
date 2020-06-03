@@ -425,6 +425,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Método de confirmação de contato</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Se determinado a ser infectado</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -425,6 +425,10 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mifandraisa amin' ny fomba fandraisana ho mpikambana</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Raha toa ka tapa-kevitra ny ho tratran' aretina</target>
+        </trans-unit>
       </group>
     </body>
   </file>

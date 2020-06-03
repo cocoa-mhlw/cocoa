@@ -425,6 +425,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Metodu ta ' konferma ta ' kuntatt</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jekk ikun determinat li huwa infettat</target>
+        </trans-unit>
       </group>
     </body>
   </file>

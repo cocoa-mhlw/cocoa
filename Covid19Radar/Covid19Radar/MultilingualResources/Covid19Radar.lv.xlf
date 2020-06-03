@@ -425,6 +425,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakta apstiprinājuma metode</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ja ir konstatēts, ka tas ir inficēts</target>
+        </trans-unit>
       </group>
     </body>
   </file>

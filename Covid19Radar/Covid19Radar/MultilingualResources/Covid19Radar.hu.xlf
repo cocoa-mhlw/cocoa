@@ -423,6 +423,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kapcsolatmegerősítési módszer</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ha megállapítást nyer, hogy fertőzött</target>
+        </trans-unit>
       </group>
     </body>
   </file>
