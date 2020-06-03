@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ThankYouNotifyOtherPage : ContentPage
+    public partial class ContactedNotifyPage : ContentPage
     {
-        public ThankYouNotifyOtherPage()
+        public ContactedNotifyPage()
         {
             InitializeComponent();
         }
