@@ -16,7 +16,7 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ContactPageViewModel : ViewModelBase
+    public class InqueryPageViewModel : ViewModelBase
     {
         private string _url;
 
@@ -26,7 +26,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public ContactPageViewModel() : base()
+        public InqueryPageViewModel() : base()
         {
             // TODO Change ContactPage
             Url = AppConstants.LicenseUrl;
