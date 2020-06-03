@@ -323,4 +323,34 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Esta aplicación es tan eficaz que muchas personas lo instalan, así que por favor comparta la aplicación con las personas a su alrededor.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Cómo usar</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Identificación de la terminal</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Método de confirmación de contacto</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Si se determina que está infectado</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Detener/eliminar grabación</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Al ejecutar esta aplicación, cada teléfono inteligente generará y tendrá un código de contacto. Además, esta aplicación no adquiere ninguna información relacionada con la información personal, como el número de teléfono y la información de ubicación.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Condiciones de contacto registradas</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>El contacto con otros usuarios de la aplicación dentro de 1 metro durante 15 minutos o más se registra como "contacto".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Grabación de la información de contacto</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>En este momento, el código de contacto de la persona contactada se registra en la aplicación. La información de contacto no se utilizará hasta que cualquiera de los usuarios haya registrado positivo. El historial de contactos se borrará después de 14 días. *El código de contacto cambia regularmente.</value>
+  </data>
 </root>

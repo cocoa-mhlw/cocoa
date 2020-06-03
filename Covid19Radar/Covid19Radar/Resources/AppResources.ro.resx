@@ -323,4 +323,34 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Această aplicație este atât de eficientă încât mulți oameni îl instalează, așa că vă rugăm să partajați aplicația cu oamenii din jurul tău.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>se utilizează</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Identificarea terminalului</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Metoda de confirmare a contactului</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Dacă este determinat să fie infectat</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Oprire/ștergere înregistrare</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Când rulați această aplicație, fiecare smartphone va genera și au un cod de contact. În plus, această aplicație nu obține informații legate de informații personale, ar fi numărul de telefon și informațiile de locație.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Condiții de contact înregistrate</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Contactul cu alți utilizatori ai aplicației în termen de 1 metru timp de 15 minute sau mai mult este înregistrat ca "contact".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Înregistrarea informațiilor de contact</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>În acest moment, codul de contact al persoanei contactate este înregistrat în aplicație. Informațiile de contact nu vor fi utilizate până când niciunul dintre utilizatori nu s-a înregistrat pozitiv. Istoricul contactelor va fi șters după 14 zile. *Codul de contact se modifică în mod regulat.</value>
+  </data>
 </root>
