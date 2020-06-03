@@ -43,12 +43,24 @@ namespace Covid19Radar.ViewModels
 
             MenuItems.Add(new MainMenuModel()
             {
+                Icon = "\uf0c0",
+                PageName = nameof(TermsofservicePage),
+                Title = nameof(TermsofservicePage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(ContactPage),
+                Title = nameof(ContactPage)
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
                 Icon = "\uf2f1",
                 PageName = nameof(UpdateInformationPage),
                 Title = Resources.AppResources.TitleUpdateInformation
             });
 
-#if DEBUG
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
@@ -125,22 +137,9 @@ namespace Covid19Radar.ViewModels
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
-                PageName = nameof(ContactPage),
-                Title = nameof(ContactPage)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
                 PageName = nameof(ChatbotPage),
                 Title = nameof(ChatbotPage)
             });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(TermsofservicePage),
-                Title = nameof(TermsofservicePage)
-            });
-#endif
 
             NavigateCommand = new DelegateCommand(Navigate);
         }
