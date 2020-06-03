@@ -29,6 +29,7 @@ using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
 using Plugin.LocalNotification;
+using Prism.Plugin.Popups;
 
 /*
  * Our mission...is
@@ -118,6 +119,10 @@ namespace Covid19Radar
         {
             // logger
             var logger = new AppCenterLogger();
+
+            containerRegistry.RegisterPopupNavigationService();
+            containerRegistry.RegisterPopupDialogService();
+
             containerRegistry.RegisterInstance<ILogger>(logger);
             containerRegistry.RegisterInstance<ILoggerFacade>(logger);
             containerRegistry.RegisterSingleton<IMiniLogger, FFImageLoadingLogger>();
@@ -150,12 +155,13 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
 
+            containerRegistry.RegisterForNavigation<HelpMenuPage>();
+            /*
             containerRegistry.RegisterForNavigation<HelpPage1>();
             containerRegistry.RegisterForNavigation<HelpPage2>();
             containerRegistry.RegisterForNavigation<HelpPage3>();
             containerRegistry.RegisterForNavigation<HelpPage4>();
-            containerRegistry.RegisterForNavigation<HelpPage5>();
-
+            */
             // Services
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
