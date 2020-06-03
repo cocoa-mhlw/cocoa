@@ -323,4 +323,19 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ứng dụng này là như vậy có hiệu quả mà nhiều người cài đặt nó, vì vậy hãy chia sẻ các ứng dụng với những người xung quanh bạn.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Cách sử dụng</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Nhận dạng nhà ga</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Phương thức xác nhận liên lạc</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Nếu được xác định là bị nhiễm bệnh</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Dừng/xóa ghi âm</value>
+  </data>
 </root>

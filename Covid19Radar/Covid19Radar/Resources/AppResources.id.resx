@@ -323,4 +323,19 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Aplikasi ini sangat efektif sehingga banyak orang yang menginstalnya, jadi silakan berbagi aplikasi dengan orang di sekitar Anda.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Cara menggunakan</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Identifikasi terminal</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Metode konfirmasi kontak</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Jika bertekad untuk terinfeksi</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Berhenti/Hapus rekaman</value>
+  </data>
 </root>
