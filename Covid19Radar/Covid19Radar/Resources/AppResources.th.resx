@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>หยุด/ลบการบันทึก</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>เมื่อคุณเรียกใช้ app นี้มาร์ทโฟนแต่ละจะสร้างและมีรหัสติดต่อ นอกจากนี้แอปนี้ไม่ได้รับข้อมูลใด ๆ ที่เกี่ยวข้องกับข้อมูลส่วนบุคคลเช่นหมายเลขโทรศัพท์และข้อมูลสถานที่</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>เงื่อนไขของผู้ติดต่อที่บันทึกไว้</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>ติดต่อกับผู้ใช้แอปอื่น ๆ ภายใน 1 เมตรเป็นเวลา 15 นาทีหรือมากกว่าจะถูกบันทึกเป็น "ติดต่อ"</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>การบันทึกข้อมูลการติดต่อ</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>รหัสผู้ติดต่อของผู้ติดต่อจะถูกบันทึกไว้ในใบสมัคร ข้อมูลการติดต่อจะไม่ถูกใช้จนกว่าผู้ใช้รายใดรายหนึ่งได้ลงทะเบียนเป็นบวก ประวัติการติดต่อจะถูกลบหลังจาก 14 วัน *รหัสติดต่อเปลี่ยนแปลงเป็นประจํา</value>
+  </data>
 </root>

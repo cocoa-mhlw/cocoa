@@ -338,4 +338,19 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Stopio/dileu recordiad</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Pan fyddwch yn rhedeg yr app hwn, bydd pob ffôn smart yn cynhyrchu ac yn cael Cod cyswllt. Yn ogystal, nid yw'r app hwn yn caffael unrhyw wybodaeth sy'n gysylltiedig â gwybodaeth bersonol fel rhif ffôn a gwybodaeth lleoliad.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Amodau cyswllt a gofnodir</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Cofnodir cysylltiad â defnyddwyr eraill yr apiau o fewn 1 meter am 15 munud neu fwy fel "Contact".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Cofnodi gwybodaeth gyswllt</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Ar yr adeg hon, mae Cod cyswllt y person y cysylltwyd ag ef wedi'i gofnodi yn y cais. Ni chaiff manylion cyswllt eu defnyddio nes bod y naill ddefnyddiwr a'r llall wedi cofrestru'n gadarnhaol. Bydd y hanes cyswllt yn cael ei ddileu ar ôl diwrnodau 14. * Mae'r Cod cyswllt yn newid yn rheolaidd.</value>
+  </data>
 </root>

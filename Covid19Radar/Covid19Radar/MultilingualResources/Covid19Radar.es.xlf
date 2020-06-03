@@ -432,6 +432,26 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Detener/eliminar grabación</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Al ejecutar esta aplicación, cada teléfono inteligente generará y tendrá un código de contacto. Además, esta aplicación no adquiere ninguna información relacionada con la información personal, como el número de teléfono y la información de ubicación.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Condiciones de contacto registradas</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">El contacto con otros usuarios de la aplicación dentro de 1 metro durante 15 minutos o más se registra como "contacto".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Grabación de la información de contacto</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">En este momento, el código de contacto de la persona contactada se registra en la aplicación. La información de contacto no se utilizará hasta que cualquiera de los usuarios haya registrado positivo. El historial de contactos se borrará después de 14 días. *El código de contacto cambia regularmente.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

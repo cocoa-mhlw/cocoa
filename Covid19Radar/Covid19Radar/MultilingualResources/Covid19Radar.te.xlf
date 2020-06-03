@@ -433,6 +433,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">రికార్డింగ్ ఆపివేయడం/తొలగించడం</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ఈ యాప్ ను రన్ చేయగానే ప్రతి స్మార్ట్ ఫోన్ ను జనరేట్ చేసి కాంటాక్ట్ కోడ్ ను కలిగి ఉంటుంది. దీనికి అదనంగా, టెలిఫోన్ నెంబరు మరియు లొకేషన్ సమాచారం వంటి వ్యక్తిగత సమాచారానికి సంబంధించిన ఎలాంటి సమాచారాన్ని ఈ యాప్ పొందదు.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">కాంటాక్ట్ యొక్క కండిషన్ లు రికార్డ్ చేయబడ్డాయి</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">1 మీటర్ లో 15 నిమిషాలు లేదా అంతకంటే ఎక్కువ ఉన్న ఇతర యాప్ యూజర్ లతో కాంటాక్ట్ "కాంటాక్ట్" వలే రికార్డ్ చేయబడింది.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">సంప్రదింపు సమాచారాన్ని నమోదు చేయడం</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ఈ సమయంలో సంప్రదించిన వ్యక్తి కాంటాక్ట్ కోడ్ ను దరఖాస్తులో నమోదు చేస్తారు. యూజర్ పాజిటివ్ గా రిజిస్టర్ చేసుకునే వరకు కాంటాక్ట్ సమాచారం ఉపయోగించరాదు. 14 రోజుల తరువాత కాంటాక్ట్ హిస్టరీ తుడిచివేయబడుతుంది. * కాంటాక్ట్ కోడ్ ఎప్పటికప్పుడు మారిపోతుంది.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

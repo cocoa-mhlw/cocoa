@@ -338,4 +338,19 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Whakamutua/mukua te tāhopu</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Ina whakahaere koe i tēnei taupānga, ka waihanga waea atamai, ā, he waehere hoapā. Hei āpitihanga, kāore tēnei taupānga e whiwhi i ngā mōhiohio e hāngai ana ki ngā mōhiohio whaiaro pēnei i te tau waea me te mōhiohio tauwāhi.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Ngā whakaritenga o te hoapā kua whakapūketetia</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Whakapā atu ki ētahi atu kaiwhakamahi taupānga i roto i 1 mita mō te 15 meneti, i te mea kua whakapūketetia rānei hei "hoapā".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Mōhiohio hoapā pūkete</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>I tēnei wā, kua whakapūketetia te waehere hoapā o te tangata whakapā ki te taupānga. Kāore e whakamahia te mōhiohio hoapā kia noho tika te kaiwhakamahi. Ka mukua te hītori hoapā i muri i te 14 rā. * I te auau o ngā huringa waehere hoapā.</value>
+  </data>
 </root>

@@ -31,25 +31,25 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage1),
-                Title = "どのようにして接触を記録していますか？"
+                Title = Resources.AppResources.HelpPage1Title
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage2),
-                Title = "接触の有無はどのように知ることができますか？？"
+                Title = Resources.AppResources.HelpPage2Title
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage3),
-                Title = "新型コロナウィルスに感染していると判定されたら？"
+                Title = Resources.AppResources.HelpPage3Title
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage4),
-                Title = "個人情報の記録を停止/情報を削除するには"
+                Title = Resources.AppResources.HelpPage4Title
             });
 
             NavigateCommand = new DelegateCommand(Navigate);

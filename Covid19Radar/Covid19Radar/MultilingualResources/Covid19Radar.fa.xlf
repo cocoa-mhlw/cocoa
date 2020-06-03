@@ -433,6 +433,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">توقف/حذف ضبط</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">هنگامی که این برنامه را اجرا می کنید ، هر گوشی هوشمند تولید می کند و یک کد تماس دارد. علاوه بر این ، این برنامه هیچ اطلاعاتی مربوط به اطلاعات شخصی مانند شماره تلفن و اطلاعات مکان را به دست نمی آورد.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">شرایط تماس ضبط شده</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">تماس با دیگر کاربران برنامه در عرض 1 متر برای 15 دقیقه یا بیشتر به عنوان "تماس" ثبت شده است.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ضبط اطلاعات تماس</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">در این زمان ، کد تماس فرد تماس گرفته شده در برنامه ثبت می شود. اطلاعات تماس استفاده نخواهد شد تا زمانی که کاربر ثبت نام مثبت است. سابقه تماس پس از 14 روز پاک می شود. * کد تماس به طور منظم تغییر میکند.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
