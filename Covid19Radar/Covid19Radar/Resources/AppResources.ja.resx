@@ -141,7 +141,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
-    <value>使い方</value>
+    <value>マニュアル</value>
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">

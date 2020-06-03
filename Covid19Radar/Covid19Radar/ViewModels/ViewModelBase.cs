@@ -22,11 +22,6 @@ namespace Covid19Radar.ViewModels
     public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
     {
 
-        public Command OnClickHelp => new Command(async () =>
-        {
-            await NavigationService.NavigateAsync(nameof(HelpPage1));
-        });
-
         // Navigation
         protected INavigationService NavigationService { get; private set; }
         protected UserDataService UserDataService { get; private set; }
