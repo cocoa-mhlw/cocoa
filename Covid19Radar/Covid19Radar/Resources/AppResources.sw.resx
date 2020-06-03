@@ -344,4 +344,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Masharti ya kuwasiliana yaliyorekodiwa</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Wasiliana na watumiaji wengine wa programu ndani ya mita ya 1 kwa dakika 15 au zaidi imeandikwa kama "Wasiliana".</value>
+  </data>
 </root>

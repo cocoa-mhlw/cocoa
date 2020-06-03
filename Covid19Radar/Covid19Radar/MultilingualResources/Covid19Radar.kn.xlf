@@ -441,6 +441,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸಂಪರ್ಕದ ಪರಿಸ್ಥಿತಿಗಳು ದಾಖಲಾಗಿವೆ</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">15 ನಿಮಿಷಗಳು ಅಥವಾ ಅದಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಕಾಲ 1 ಮೀಟರ್ ನೊಳಗೆ ಇತರ ಆಪ್ ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು "ಸಂಪರ್ಕ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -344,4 +344,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Keadaan hubungan yang direkodkan</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Hubungi dengan pengguna aplikasi lain dalam 1 meter selama 15 minit atau lebih direkodkan sebagai "kenalan".</value>
+  </data>
 </root>

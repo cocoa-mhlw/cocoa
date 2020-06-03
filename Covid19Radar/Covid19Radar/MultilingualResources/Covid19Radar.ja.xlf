@@ -438,6 +438,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Conditions of contact recorded</source>
           <target state="translated">記録される接触の条件</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="translated">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</target>
+        </trans-unit>
       </group>
     </body>
   </file>
