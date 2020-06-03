@@ -426,6 +426,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>If determined to be infected</source>
           <target state="translated">感染していると判定されたら</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="translated">記録の停止／削除</target>
+        </trans-unit>
       </group>
     </body>
   </file>

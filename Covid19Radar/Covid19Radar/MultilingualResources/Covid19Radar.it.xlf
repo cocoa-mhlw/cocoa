@@ -429,6 +429,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Se viene ritenuto infetto</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Interrompere/eliminare la registrazione</target>
+        </trans-unit>
       </group>
     </body>
   </file>

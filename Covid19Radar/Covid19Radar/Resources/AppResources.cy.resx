@@ -335,4 +335,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Os penderfynir ei fod wedi'i heintio</value>
   </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Stopio/dileu recordiad</value>
+  </data>
 </root>

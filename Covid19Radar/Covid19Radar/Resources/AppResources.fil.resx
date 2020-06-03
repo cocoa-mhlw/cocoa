@@ -335,4 +335,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Kung determinadong maging impeksyon</value>
   </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Itigil/burahin ang pagrekord</value>
+  </data>
 </root>
