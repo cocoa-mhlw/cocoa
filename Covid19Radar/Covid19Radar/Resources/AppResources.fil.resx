@@ -323,4 +323,34 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ang application na ito ay kaya epektibo na ang maraming mga tao i-install ito, kaya mangyaring ibahagi ang application sa mga tao sa paligid mo.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Paano gamitin ang</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminal identification</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Makipag-ugnayan sa confirmation paraan</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Kung determinadong maging impeksyon</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Itigil/burahin ang pagrekord</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Kapag patakbuhin mo ang app na ito, bawat smartphone ay bumuo at magkakaroon ng isang contact code. Bilang karagdagan, ang app na ito ay walang anumang impormasyon na may kaugnayan sa personal na impormasyon tulad ng numero ng telepono at impormasyon sa lokasyon.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Mga kondisyon ng pagkontak na nakatala</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Makipag-ugnay sa iba pang mga gumagamit ng app sa loob ng 1 metro para sa 15 minuto o higit pa ay naitala bilang "contact".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Pagrerekord ng contact information</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Sa panahong ito, ang contact code ng taong nakontak ay nakatala sa aplikasyon. Ang contact information ay hindi gagamitin hanggang sa nakarehistro nang positibo ang alinman sa user. Ang contact history ay mabubura pagkaraan ng 14 na araw. * Ang contact Code ay regular na nagbabago.</value>
+  </data>
 </root>

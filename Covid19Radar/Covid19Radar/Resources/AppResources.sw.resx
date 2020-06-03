@@ -323,4 +323,34 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Programu hii ni ya ufanisi sana kwamba watu wengi kufunga hiyo, hivyo tafadhali kushiriki maombi na watu walio karibu nawe.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Jinsi ya kutumia</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Kitambulisho cha Temino</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Mbinu ya uthibitisho wa mawasiliano</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Kama nia ya kuambukizwa</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Komesha/Futa kurekodi</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Wakati unapoendesha programu hii, kila smartphone itazalisha na kuwa na msimbo wa kuwasiliana. Kwa kuongezea, programu hii haina kupata maelezo yoyote yanayohusiana na maelezo ya kibinafsi kama vile namba ya simu na maelezo ya eneo.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Masharti ya kuwasiliana yaliyorekodiwa</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Wasiliana na watumiaji wengine wa programu ndani ya mita ya 1 kwa dakika 15 au zaidi imeandikwa kama "Wasiliana".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Kurekodi taarifa ya mwasiliani</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Kwa wakati huu, msimbo wa kuwasiliana wa mtu anayewasiliana umeandikwa kwenye programu. Taarifa ya mwasiliani haititumike hadi ama mtumiaji amesajiliwa chanya. Historia ya mwasiliani itakufutwa baada ya siku 14. * Msimbo wa kuwasiliana hubadilika kila mara.</value>
+  </data>
 </root>
