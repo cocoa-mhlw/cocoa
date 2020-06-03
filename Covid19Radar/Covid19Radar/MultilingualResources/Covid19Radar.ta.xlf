@@ -433,6 +433,26 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">பதிவை நிறுத்து/நீக்கு</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">இந்த செயலியை இயக்கும் போது, ஒவ்வொரு ஸ்மார்ட்ஃபோனும் உருவாக்கி, ஒரு தொடர்பு குறியீட்டை கொண்டிருக்கும். மேலும், இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனிப்பட்ட தகவல்கள் தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தொடர்பு நிலைகள் பதிவு</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">1 மீட்டருடன் 15 நிமிடங்கள் அல்லது அதற்கும் மேற்பட்ட பயன்பாட்டைப் பயன்படுத்துவோரின் தொடர்பு "தொடர்பு" என பதியப்படும்.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தொடர்பு தகவலை பதிவுசெய்தல்</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">இந்த நேரத்தில், தொடர்பு கொண்ட நபரின் தொடர்பு குறியீடு, விண்ணப்பத்தில் பதிவு செய்யப்படுகிறது. பயனர் நேர்மறை பதிவு செய்யும் வரை தொடர்புத் தகவல் பயன்படுத்தப்படாது. 14 நாட்களுக்குப் பிறகு தொடர்பு வரலாறு அழித்து விடும். * தொடர்பு குறியீடு அவ்வப்போது மாறும்.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

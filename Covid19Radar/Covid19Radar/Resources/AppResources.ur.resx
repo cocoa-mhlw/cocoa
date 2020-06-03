@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>ریکارڈنگ روکیں/حذف کریں</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>جب آپ اس اپلی کیشن کو چلاتے ہیں تو ، ہر اسمارٹ فون پیدا کرے گا اور رابطہ کوڈ ہے. اس کے علاوہ ، اس اپلی کیشن کو ذاتی معلومات جیسے ٹیلی فون نمبر اور مقام کی معلومات سے متعلق کوئی معلومات حاصل نہیں ہوتی ہے ۔</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>روابط کی ریکارڈ کردہ شرائط</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>دوسرے ایپ کے صارفین سے رابطہ کریں 1 میٹر کے اندر 15 منٹ یا اس سے زیادہ کے طور پر ریکارڈ کیا جاتا ہے "رابطہ".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>رابطے کی معلومات ریکارڈنگ</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>اس وقت ، رابطہ فرد کے رابطہ کوڈ کی درخواست میں ریکارڈ کیا جاتا ہے. رابطہ کی معلومات استعمال نہیں کی جائے گی جب تک کہ صارف نے مثبت طور پر رجسٹرڈ نہ کیا ہو ۔ رابطے کی تاریخ 14 دن کے بعد ختم ہو جائے گی. * رابطہ کوڈ باقاعدگی سے تبدیل ہوتا ہے.</value>
+  </data>
 </root>

@@ -432,6 +432,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">إيقاف/حذف التسجيل</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">عند تشغيل هذا التطبيق، سيقوم كل هاتف ذكي بإنشاء رمز جهة اتصال ويكون له. بالإضافة إلى ذلك، لا يحصل هذا التطبيق على أي معلومات تتعلق بالمعلومات الشخصية مثل رقم الهاتف ومعلومات الموقع.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">شروط الاتصال المسجلة</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">يتم تسجيل الاتصال مع مستخدمي التطبيق الآخرين في غضون متر واحد لمدة 15 دقيقة أو أكثر على أنه "جهة اتصال".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">تسجيل معلومات الاتصال</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">في هذا الوقت، يتم تسجيل رمز الاتصال للشخص الذي تم الاتصال به في التطبيق. لن يتم استخدام معلومات الاتصال حتى يتم تسجيل أي من المستخدمين بشكل إيجابي. سيتم مسح سجل الاتصال بعد 14 يومًا. * يتغير رمز جهة الاتصال بانتظام.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

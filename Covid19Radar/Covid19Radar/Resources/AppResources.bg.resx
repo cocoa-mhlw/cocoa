@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Спиране/изтриване на запис</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Когато стартирате това приложение, всеки смартфон ще генерира и да има код за контакт. В допълнение, това приложение не придобива никаква информация, свързана с лична информация, като например телефонен номер и информация за местоположението.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Условия за контакт, записани</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Контакт с други потребители на приложението в рамките на 1 метър за 15 минути или повече се записва като "контакт".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Записване на информация за контакт</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Към този момент в заявлението се записва кодът за контакт на лицето, с което е контактирано. Информацията за контакт няма да се използва, докато никой от потребителите не се регистрира положително. Историята на контактите ще бъде изтрита след 14 дни. *Кодът за контакт се променя редовно.</value>
+  </data>
 </root>
