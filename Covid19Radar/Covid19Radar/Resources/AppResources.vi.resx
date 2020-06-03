@@ -323,4 +323,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ứng dụng này là như vậy có hiệu quả mà nhiều người cài đặt nó, vì vậy hãy chia sẻ các ứng dụng với những người xung quanh bạn.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Cách sử dụng</value>
+  </data>
 </root>

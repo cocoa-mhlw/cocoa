@@ -413,6 +413,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">See rakendus on nii tõhus, et paljud inimesed seda installida, nii et palun jagage taotluse inimestega ümber.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuidas kasutada</target>
+        </trans-unit>
       </group>
     </body>
   </file>

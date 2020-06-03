@@ -413,6 +413,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dette programmet er så effektivt at mange installerer det, så vennligst del programmet med folk rundt deg.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvordan bruke</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -323,4 +323,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Þetta forrit er svo árangursríkt að margir setja það upp, svo vinsamlegast deila umsókn með fólki í kringum þig.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Hvernig á að nota</value>
+  </data>
 </root>

@@ -323,4 +323,7 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ця програма є настільки ефективним, що багато людей встановити його, тому, будь ласка, поділіться додатком з оточувами навколо вас.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Як використовувати</value>
+  </data>
 </root>

@@ -323,4 +323,7 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>이 응용 프로그램은 많은 사람들이 그것을 설치너무 효과적이다, 그래서 당신의 주위에 사람들과 응용 프로그램을 공유하시기 바랍니다.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>사용 방법</value>
+  </data>
 </root>

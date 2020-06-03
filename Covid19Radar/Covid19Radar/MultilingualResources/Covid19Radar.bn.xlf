@@ -413,6 +413,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">এই অ্যাপ্লিকেশন এতটাই কার্যকর যে অনেকেই এটি ইনস্টল করেন, তাই দয়া করে আপনার চারপাশের লোকেদের সাথে অ্যাপ্লিকেশন শেয়ার করুন.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">কীভাবে ব্যবহার করবেন</target>
+        </trans-unit>
       </group>
     </body>
   </file>
