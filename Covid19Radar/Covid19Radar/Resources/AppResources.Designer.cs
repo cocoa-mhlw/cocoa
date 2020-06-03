@@ -430,6 +430,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Records the contact between people who set this application on a smartphone. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage2Description1 {
+            get {
+                return ResourceManager.GetString("HelpPage2Description1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can also move from the home screen to check the number of recent contacts. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage2Description2 {
+            get {
+                return ResourceManager.GetString("HelpPage2Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can check the list of contact dates. We will also provide you with the appropriate contact information. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage2Description3 {
+            get {
+                return ResourceManager.GetString("HelpPage2Description3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   notification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage2Label1 {
+            get {
+                return ResourceManager.GetString("HelpPage2Label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Home に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage2Label2 {
+            get {
+                return ResourceManager.GetString("HelpPage2Label2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you contacted with a positive person に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage2Label3 {
+            get {
+                return ResourceManager.GetString("HelpPage2Label3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Contact confirmation method に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage2Title {
