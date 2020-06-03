@@ -1,5 +1,4 @@
-﻿using Rg.Plugins.Popup.Pages;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Covid19Radar.Views

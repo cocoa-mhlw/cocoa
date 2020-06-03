@@ -16,7 +16,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             AutomationId="LabelMainTutorial"
-            Command="{Binding Path=OnClickHelp}"
+            Command="{prism:NavigateTo 'HelpMenuPage'}"
             Order="Primary"
             Priority="1"
             Text="{x:Static resources:AppResources.MainTutorial}" />

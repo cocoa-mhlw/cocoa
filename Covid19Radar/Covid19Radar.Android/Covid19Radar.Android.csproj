@@ -112,9 +112,6 @@
     <PackageReference Include="Prism.Forms">
       <Version>7.2.0.1422</Version>
     </PackageReference>
-    <PackageReference Include="Prism.Plugin.Popups">
-      <Version>7.2.0.1046</Version>
-    </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
     </PackageReference>
