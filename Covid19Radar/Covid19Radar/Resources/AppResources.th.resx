@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>ติดต่อกับผู้ใช้แอปอื่น ๆ ภายใน 1 เมตรเป็นเวลา 15 นาทีหรือมากกว่าจะถูกบันทึกเป็น "ติดต่อ"</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>การบันทึกข้อมูลการติดต่อ</value>
+  </data>
 </root>

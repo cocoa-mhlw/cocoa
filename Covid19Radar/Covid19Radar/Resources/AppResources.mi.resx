@@ -347,4 +347,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Whakapā atu ki ētahi atu kaiwhakamahi taupānga i roto i 1 mita mō te 15 meneti, i te mea kua whakapūketetia rānei hei "hoapā".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Mōhiohio hoapā pūkete</value>
+  </data>
 </root>

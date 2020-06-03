@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Контакт са другим корисницима апликација у оквиру једног метра за 15 минута или више се снима као "Контакт".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Записивање информација о контакту</value>
+  </data>
 </root>
