@@ -453,6 +453,16 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">En aquest moment, el codi de contacte de la persona contactada es registra en l'aplicació. La informació de contacte no s'utilitzarà fins que no s'hagi registrat cap usuari positiu. L'Historial de contacte s'esborrarà després de 14 dies. * El codi de contacte canvia regularment.</target>
         </trans-unit>
+        <trans-unit id="HelpPage4ButtonText" translate="yes" xml:space="preserve">
+          <source>Go to app settings</source>
+          <target state="new">Go to app settings</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定へ</note>
+        </trans-unit>
+        <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
+          <source>From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history.</source>
+          <target state="new">From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</note>
+        </trans-unit>
       </group>
     </body>
   </file>
