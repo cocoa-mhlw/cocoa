@@ -429,6 +429,10 @@ Select 'Always Allow' to set up Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">If determined to be infected</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stop/delete recording</target>
+        </trans-unit>
       </group>
     </body>
   </file>

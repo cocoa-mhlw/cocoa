@@ -429,6 +429,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wenn festgestellt, infiziert zu sein</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stopp/Löschen der Aufzeichnung</target>
+        </trans-unit>
       </group>
     </body>
   </file>
