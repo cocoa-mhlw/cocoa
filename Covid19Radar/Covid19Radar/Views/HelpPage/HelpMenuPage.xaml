@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<popup:PopupPage
+<ContentPage
     x:Class="Covid19Radar.Views.HelpMenuPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:prism="http://prismlibrary.com"
     xmlns:template="clr-namespace:Covid19Radar.Templates"
     Title="使い方"
@@ -12,25 +11,27 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <StackLayout
-        Padding="10"
-        BackgroundColor="#CCCCCC"
-        Orientation="Vertical"
-        Spacing="20">
-        <ListView
-            ItemsSource="{Binding MenuItems}"
-            RowHeight="120"
-            SelectedItem="{Binding SelectedMenuItem}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <template:HelpMenuTemplate />
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-            <ListView.Behaviors>
-                <prism:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
-            </ListView.Behaviors>
-        </ListView>
-    </StackLayout>
-</popup:PopupPage>
+    <ScrollView>
+        <StackLayout
+            Padding="10"
+            BackgroundColor="#CCCCCC"
+            Orientation="Vertical"
+            Spacing="20">
+            <ListView
+                ItemsSource="{Binding MenuItems}"
+                RowHeight="120"
+                SelectedItem="{Binding SelectedMenuItem}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <template:HelpMenuTemplate />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <prism:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
+                </ListView.Behaviors>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
