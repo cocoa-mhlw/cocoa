@@ -493,6 +493,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   When a new coronavirus infection is confirmed by PCR に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage3Description1 {
+            get {
+                return ResourceManager.GetString("HelpPage3Description1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Public institutions such as public health centers will issue a &quot;processing number&quot; for registration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage3Description2 {
+            get {
+                return ResourceManager.GetString("HelpPage3Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Register the processing number using this application に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage3Description3 {
+            get {
+                return ResourceManager.GetString("HelpPage3Description3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You will receive a notification in the smartphone app of the person who contacts you within 14 days. (1m or less, 15 minutes or more) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage3Description4 {
+            get {
+                return ResourceManager.GetString("HelpPage3Description4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage3Description5 {
+            get {
+                return ResourceManager.GetString("HelpPage3Description5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To register the positive reaction of COVID19 and anonymous notification to others に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage3Description6 {
+            get {
+                return ResourceManager.GetString("HelpPage3Description6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   If determined to be infected に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage3Title {
