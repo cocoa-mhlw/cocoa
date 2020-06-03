@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="Covid19Radar.Views.ThankYouNotifyOtherPage"
+    x:Class="Covid19Radar.Views.NotContactPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    Title="ありがとうございます"
+    Title="過去14日間の接触"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -22,27 +22,27 @@
                 <Label
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultTitleLabel}"
-                    Text="新型コロナウイルス&#10;接触確認アプリ" />
+                    Text="陽性者との接触は&#10;確認されませんでした" />
                 <Label
                     HorizontalOptions="Center"
-                    Style="{StaticResource DefaultTitleLabel}"
-                    Text="陽性のご登録をいただき&#10;ありがとうございました" />
+                    Style="{StaticResource DefaultSubTitleLabel}"
+                    Text="引き続き「新しい生活様式」の実践を&#10;よろしくお願いいたします。" />
 
-                <Frame
-                    Padding="0,0,0,0"
-                    BackgroundColor="#FFF3DD"
-                    CornerRadius="10">
-                    <StackLayout Spacing="0">
-                        <Label Style="{StaticResource DefaultLabel}" Text="登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。" />
-                    </StackLayout>
-                </Frame>
+                <Label
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultSubTitleLabel}"
+                    Text="以下、仮画像、生活様式についてのピクトグラム表示" />
+
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="TutorialPage60.png" />
+                <ffimageloading:CachedImage Aspect="AspectFit" Source="TutorialPage60.png" />
+
             </StackLayout>
             <Grid Grid.Row="1">
                 <Button
-                    AutomationId="OnClickShareApp"
-                    Command="{Binding Path=OnClickShareApp}"
+                    AutomationId="OnClickGoBack"
+                    Command="{prism:GoBack}"
                     Style="{StaticResource DefaultButton}"
-                    Text="アプリを周りの人に知らせる" />
+                    Text="戻る" />
             </Grid>
         </Grid>
     </ScrollView>

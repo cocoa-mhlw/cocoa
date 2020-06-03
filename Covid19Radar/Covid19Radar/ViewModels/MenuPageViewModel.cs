@@ -67,6 +67,18 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(ThankYouNotifyOtherPage),
                 Title = nameof(ThankYouNotifyOtherPage)
             });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(NotContactPage),
+                Title = nameof(NotContactPage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(ContactedNotifyPage),
+                Title = nameof(ContactedNotifyPage)
+            });
 
             MenuItems.Add(new MainMenuModel()
             {
@@ -153,7 +165,7 @@ namespace Covid19Radar.ViewModels
                 Icon = "\uf0c0",
                 PageName = nameof(NotifyOtherPage),
                 Title = nameof(NotifyOtherPage)
-            });            
+            });
 
             NavigateCommand = new DelegateCommand(Navigate);
         }
