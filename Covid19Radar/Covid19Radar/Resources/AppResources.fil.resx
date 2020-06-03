@@ -338,4 +338,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Itigil/burahin ang pagrekord</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Kapag patakbuhin mo ang app na ito, bawat smartphone ay bumuo at magkakaroon ng isang contact code. Bilang karagdagan, ang app na ito ay walang anumang impormasyon na may kaugnayan sa personal na impormasyon tulad ng numero ng telepono at impormasyon sa lokasyon.</value>
+  </data>
 </root>

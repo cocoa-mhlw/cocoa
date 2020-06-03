@@ -338,4 +338,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Henti/Hapus rakaman</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Apabila anda menjalankan aplikasi ini, setiap telefon pintar akan menghasilkan dan mempunyai kod kenalan. Di samping itu, aplikasi ini tidak memperoleh sebarang maklumat yang berkaitan dengan maklumat peribadi seperti nombor telefon dan maklumat lokasi.</value>
+  </data>
 </root>

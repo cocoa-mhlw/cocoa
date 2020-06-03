@@ -338,4 +338,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Peata/Kustuta salvestus</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Kui käivitate selle rakenduse, iga nutitelefoni genereerib ja on kontakt kood. Lisaks, see rakendus ei omandada teavet, mis on seotud isikliku teabe, nagu telefoninumber ja asukohateabe.</value>
+  </data>
 </root>

@@ -338,4 +338,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Įrašymo sustabdymas / naikinimas</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Paleidus šią programą, kiekvienas išmanusis telefonas generuos ir turės kontaktinį kodą. Be to, ši programa neįsigyja jokios informacijos, susijusios su asmenine informacija, pvz., telefono numeriu ir vietos informacija.</value>
+  </data>
 </root>
