@@ -448,6 +448,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Go to app settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage4ButtonText {
+            get {
+                return ResourceManager.GetString("HelpPage4ButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage4Description {
+            get {
+                return ResourceManager.GetString("HelpPage4Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Stop/delete recording に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage4Title {
