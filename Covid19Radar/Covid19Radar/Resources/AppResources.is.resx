@@ -347,4 +347,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Samband við aðra notendur forrits innan 1 Meter í 15 mínútur eða meira er skráð sem "Contact".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Upplýsingar um skráningu tengiliða</value>
+  </data>
 </root>

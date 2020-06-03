@@ -445,6 +445,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuntatt ma ' utenti oħra tal-App fi ħdan miter 1 għal 15-il minuta jew aktar jiġi rreġistrat bħala "kuntatt".</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Irrekordjar tal-informazzjoni ta ' kuntatt</target>
+        </trans-unit>
       </group>
     </body>
   </file>
