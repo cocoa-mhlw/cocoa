@@ -76,6 +76,37 @@ namespace Covid19Radar.Api.DataAccess
             return items.Where(tek => tek.EndTimestamp >= sinceEpochSeconds).ToArray();
         }
 
+        public async Task<TemporaryExposureKeyExportModel[]> GetKeysAsync(ulong sinceEpochSeconds, string region)
+        {
+            _logger.LogInformation($"start {nameof(GetKeysAsync)}");
+
+            var oldest = (ulong)DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds();
+
+            // Only allow the last 14 days +
+            if (sinceEpochSeconds < oldest)
+                sinceEpochSeconds = oldest;
+
+            var items = await GetKeysAsyncCache.QueryWithCacheAsync(async () =>
+            {
+                var query = _db.TemporaryExposureKeyExport.GetItemLinqQueryable<TemporaryExposureKeyExportModel>(true)
+                    .Where(tek => !tek.Deleted)
+                    .ToFeedIterator();
+
+                var e = Enumerable.Empty<TemporaryExposureKeyExportModel>();
+                while (query.HasMoreResults)
+                {
+                    var r = await query.ReadNextAsync();
+                    e = e.Concat(r.Resource);
+                }
+
+                return e.ToArray();
+            });
+
+            return items
+                .Where(tek => tek.EndTimestamp >= sinceEpochSeconds)
+                .Where(tek => tek.Region == region)
+                .ToArray();
+        }
         public async Task<TemporaryExposureKeyExportModel[]> GetOutOfTimeKeysAsync()
         {
             _logger.LogInformation($"start {nameof(GetOutOfTimeKeysAsync)}");

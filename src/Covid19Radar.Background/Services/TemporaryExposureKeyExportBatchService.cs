@@ -1,6 +1,7 @@
 ﻿using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
-using Covid19Radar.Api.Protobuf;
+using Covid19Radar.Background.Extentions;
+using Covid19Radar.Background.Protobuf;
 using Google.Protobuf;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -73,6 +74,12 @@ namespace Covid19Radar.Background.Services
                             region,
                             sorted.ToArray());
                     }
+
+                    foreach (var key in kv)
+                    {
+                        key.Exported = true;
+                        await TekRepository.UpsertAsync(key);
+                    }
                 }
             }
             catch (Exception ex)
@@ -84,6 +91,7 @@ namespace Covid19Radar.Background.Services
 
         public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
         {
+            Logger.LogInformation($"start {nameof(CreateSignatureAsync)}");
             var s = new TEKSignature();
             s.BatchNum = batchNum;
             s.BatchSize = batchSize;
@@ -110,7 +118,7 @@ namespace Covid19Radar.Background.Services
                 exportModel.StartTimestamp = startTimestamp;
                 exportModel.EndTimestamp = endTimestamp;
                 exportModel.Region = region;
-                exportModel.SignatureInfos = new SignatureInfo[] { signatureInfo };
+                //exportModel.SignatureInfos = new SignatureInfo[] { signatureInfo };
 
                 var bin = new TemporaryExposureKeyExport();
                 bin.Keys.AddRange(exportKeys);

@@ -1,5 +1,4 @@
-﻿using Covid19Radar.Api.Protobuf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,8 +12,8 @@ namespace Covid19Radar.Api.Models
         public int BatchNum { get; set; }
         public int BatchSize { get; set; }
         public string Region { get; set; }
+        public bool Uploaded { get; set; }
         public bool Deleted { get; set; }
-        public SignatureInfo[] SignatureInfos { get; set; }
         public long TimestampSecondsSinceEpoch { get; set; }
     }
 }

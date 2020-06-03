@@ -60,6 +60,7 @@ namespace Covid19Radar.Api.DataStore
 #endif
 
             // get database
+            this.CosmosClient.ClientOptions.EnableTcpConnectionEndpointRediscovery = true;
             Database = this.CosmosClient.GetDatabase(DatabaseId);
         }
 
@@ -145,14 +146,13 @@ namespace Covid19Radar.Api.DataStore
             {
                 Id = "spIncrement",
                 Body = @"
-function increment(name, initialValue, incrementValue) {
+function increment(name, initialValue, incrementValue, _selfId) {
     function upsertCallback(err, resource, options) {
         if (err) throw err;
         var response = getContext().getResponse();
-        response.setBody({'value': resource.value});
+        response.setBody({'value': resource.value, '_self': resource._self});
     }
-    var isAccepted = __.readDocument(__.getAltLink() + '/docs/' + name, {},
-    function (err, resource, options) {
+    function readCallback(err, resource, options) {
         if (err && err.number == 404) {
             var body = {'id': name, 'PartitionKey': name, 'value': initialValue};
             if(!__.createDocument(__.getSelfLink(), body, {'disableAutomaticIdGeneration': true}, upsertCallback)) throw new Error('The createDocument was not accepted');
@@ -162,8 +162,12 @@ function increment(name, initialValue, incrementValue) {
         var body = resource;
         body.value += incrementValue;
         if(!__.replaceDocument(body._self, body, {'etag': body._etag }, upsertCallback)) throw new Error('The replaceDocument was not accepted');
-    });
-    if (!isAccepted) throw new Error('The filter was not accepted by the server.');
+    }
+    if (_selfId) {
+        if (!__.readDocument(_selfId, {}, readCallback)) throw new Error('The filter was not accepted by the server.');
+    } else {
+        if (!__.readDocument(__.getAltLink() + '/docs/' + name, {}, readCallback)) throw new Error('The filter was not accepted by the server.');
+    }
 }
 "
             });
