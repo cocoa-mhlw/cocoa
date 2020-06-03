@@ -429,6 +429,10 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">W przypadku stwierdzenia zakażenia</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zatrzymywać/usuwać nagrywanie</target>
+        </trans-unit>
       </group>
     </body>
   </file>

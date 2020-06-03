@@ -335,4 +335,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Jei nustatoma, kad jie yra užsikrėtę</value>
   </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Įrašymo sustabdymas / naikinimas</value>
+  </data>
 </root>

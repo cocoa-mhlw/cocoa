@@ -429,6 +429,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ja ir konstatēts, ka tas ir inficēts</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apturēt/dzēst ierakstīšanu</target>
+        </trans-unit>
       </group>
     </body>
   </file>
