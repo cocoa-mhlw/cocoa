@@ -437,6 +437,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Þegar þú keyrir þetta forrit mun hver Smartphone mynda og hafa tengiliðakóða. Að auki öðlast þessi App ekki neinar upplýsingar sem tengjast persónuupplýsingum eins og símanúmeri og staðsetningarupplýsingum.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Skilyrði sem skráð hafa verið</target>
+        </trans-unit>
       </group>
     </body>
   </file>

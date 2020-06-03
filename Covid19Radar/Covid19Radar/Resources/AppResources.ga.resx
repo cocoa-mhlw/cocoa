@@ -341,4 +341,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Nuair a ritheann tú an feidhmchlár seo, ginfidh gach fón cliste agus beidh cód teagmhála acu. Ina theannta sin, ní fhaigheann an feidhmchlár seo aon fhaisnéis a bhaineann le faisnéis phearsanta ar nós uimhir theileafóin agus faisnéis suímh.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Coinníollacha teagmhála taifeadta</value>
+  </data>
 </root>

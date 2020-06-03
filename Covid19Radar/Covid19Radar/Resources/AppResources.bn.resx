@@ -341,4 +341,7 @@
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>আপনি যখন এই অ্যাপটি চালাবেন, প্রতিটি স্মার্টফোনে একটি করে কনট্যাক্ট কোড তৈরি হবে । এছাড়া, এই অ্যাপটি টেলিফোন নম্বর ও লোকেশন ইনফরমেশন-এর মতো ব্যক্তিগত তথ্য সংক্রান্ত কোনও তথ্য অধিগ্রহণ করে না ।</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>পরিচিতির শর্তাবলী রেকর্ড করা হয়েছে</value>
+  </data>
 </root>

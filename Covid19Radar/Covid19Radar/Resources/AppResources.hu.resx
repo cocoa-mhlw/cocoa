@@ -341,4 +341,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Amikor futtatja ezt az alkalmazást, minden okostelefon létrehoz, és egy kapcsolatkódot. Ezen túlmenően, ez az alkalmazás nem szerez semmilyen információt kapcsolatos személyes adatokat, mint a telefonszám és a helyadatait.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>A rögzített érintkezés feltételei</value>
+  </data>
 </root>

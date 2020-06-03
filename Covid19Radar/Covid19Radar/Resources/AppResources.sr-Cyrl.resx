@@ -341,4 +341,7 @@
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Када покренете ову апликацију, сваки паметни телефон ће генерисати и имати кôд контакта. Поред тога, ова апликација не стиче никакве информације везане за личне информације као што су број телефона и информације о локацији.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Записани услови за контакт</value>
+  </data>
 </root>

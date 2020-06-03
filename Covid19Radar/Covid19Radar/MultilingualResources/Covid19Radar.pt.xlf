@@ -437,6 +437,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Quando você executa este aplicativo, cada smartphone irá gerar e ter um código de contato. Além disso, este aplicativo não adquire nenhuma informação relacionada a informações pessoais, como número de telefone e informações de localização.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Condições de contato registradas</target>
+        </trans-unit>
       </group>
     </body>
   </file>
