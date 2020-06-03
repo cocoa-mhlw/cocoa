@@ -413,6 +413,10 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Questa applicazione è così efficace che molte persone installarlo, quindi si prega di condividere l'applicazione con le persone intorno a te.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Come utilizzare</target>
+        </trans-unit>
       </group>
     </body>
   </file>

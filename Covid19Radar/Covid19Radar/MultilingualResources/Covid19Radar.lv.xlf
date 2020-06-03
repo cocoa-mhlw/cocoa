@@ -413,6 +413,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Šis pieteikums ir tik efektīva, ka daudzi cilvēki instalēt, tāpēc, lūdzu, dalīties ar pieteikumu ar cilvēkiem ap jums.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kā lietot</target>
+        </trans-unit>
       </group>
     </body>
   </file>

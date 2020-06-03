@@ -323,4 +323,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Šis pieteikums ir tik efektīva, ka daudzi cilvēki instalēt, tāpēc, lūdzu, dalīties ar pieteikumu ar cilvēkiem ap jums.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Kā lietot</value>
+  </data>
 </root>

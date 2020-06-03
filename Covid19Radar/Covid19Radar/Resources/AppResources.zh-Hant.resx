@@ -323,4 +323,7 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>此應用程式是如此有效,很多人安裝它,所以請與您周圍的人共用應用程式。</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>如何使用</value>
+  </data>
 </root>

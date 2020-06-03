@@ -323,4 +323,7 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ez az alkalmazás annyira hatékony, hogy sokan telepítik, ezért kérjük, ossza meg az alkalmazást az emberek körülötted.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Hogyan kell használni</value>
+  </data>
 </root>
