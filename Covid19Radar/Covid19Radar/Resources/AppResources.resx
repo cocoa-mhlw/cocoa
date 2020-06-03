@@ -467,7 +467,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
   </data>
   <data name="HelpPage2Description3" xml:space="preserve">
-    <value />
+    <value>You can check the list of contact dates. We will also provide you with the appropriate contact information.</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
   </data>
   <data name="HelpPage2Label1" xml:space="preserve">
     <value>notification</value>
