@@ -108,6 +108,12 @@ namespace Covid19Radar.ViewModels
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
+                PageName = nameof(HelpMenuPage),
+                Title = nameof(HelpMenuPage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
                 PageName = nameof(HelpPage1),
                 Title = nameof(HelpPage1)
             });
@@ -128,12 +134,6 @@ namespace Covid19Radar.ViewModels
                 Icon = "\uf0c0",
                 PageName = nameof(HelpPage4),
                 Title = nameof(HelpPage4)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(HelpPage5),
-                Title = nameof(HelpPage5)
             });
 #endif
 
