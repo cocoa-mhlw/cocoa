@@ -19,7 +19,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="通知" />
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage2Label1}" />
             </StackLayout>
             <StackLayout
                 Grid.Row="1"
@@ -42,18 +42,18 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="本アプリをスマートフォンに設定した人どうしの接触を記録します。" />
+                        Text="{x:Static resources:AppResources.HelpPage2Description1}" />
                 </Grid>
             </StackLayout>
             <StackLayout Grid.Row="2">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="ホーム画面" />
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage2Label2}" />
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage31.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="最近の接触件数の確認へはホーム画面からも移動することができます。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage2Description2}" />
             </StackLayout>
             <StackLayout Grid.Row="3">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="陽性者との接触があった場合" />
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage2Label3}" />
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage32.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage2Description3}" />
             </StackLayout>
         </Grid>
     </ScrollView>
