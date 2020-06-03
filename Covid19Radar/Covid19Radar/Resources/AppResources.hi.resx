@@ -323,4 +323,34 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>यह एप्लिकेशन इतना प्रभावी है कि कई लोग इसे स्थापित करते हैं, इसलिए कृपया अपने आस-पास के लोगों के साथ आवेदन साझा करें।</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>कैसे उपयोग करें</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>टर्मिनल पहचान</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>संपर्क पुष्टि विधि</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>यदि संक्रमित होने की ठान ली है</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>रिकॉर्डिंग बंद करें/हटाएं</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>जब आप इस ऐप को चलाएंगे, तो प्रत्येक स्मार्टफोन उत्पन्न करेगा और एक संपर्क कोड होगा। इसके अलावा, यह ऐप व्यक्तिगत जानकारी जैसे टेलीफोन नंबर और स्थान की जानकारी से संबंधित कोई जानकारी प्राप्त नहीं करता है।</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>दर्ज किए गए संपर्क की शर्तें</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 मिनट या उससे अधिक के लिए 1 मीटर के भीतर अन्य ऐप उपयोगकर्ताओं के साथ संपर्क "संपर्क" के रूप में दर्ज किया गया है।</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>संपर्क जानकारी रिकॉर्ड करना</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>इस समय आवेदन में संपर्क व्यक्ति का संपर्क कोड दर्ज है। संपर्क जानकारी का उपयोग तब तक नहीं किया जाएगा जब तक कि या तो उपयोगकर्ता सकारात्मक पंजीकृत न हो जाए। 14 दिन बाद संपर्क इतिहास मिट जाएगा। * संपर्क कोड नियमित रूप से बदलता है।</value>
+  </data>
 </root>
