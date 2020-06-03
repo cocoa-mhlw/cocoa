@@ -323,4 +323,19 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ова апликација је толико ефикасна да га многи људи инсталирају, тако да можете да поделите апликацију са људима око вас.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Како се користи</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Идентификација терминала</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Начин потврде контакта</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Ако је утврђено да је заражен</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Заустави /Избриши снимање</value>
+  </data>
 </root>

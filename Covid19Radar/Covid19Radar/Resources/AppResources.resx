@@ -428,4 +428,19 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Would you like to register positively later?</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>How to use</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminal identification</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Contact confirmation method</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>If determined to be infected</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Stop/delete recording</value>
+  </data>
 </root>

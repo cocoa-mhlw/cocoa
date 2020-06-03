@@ -323,4 +323,19 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>അനവധി ആളുകൾ ഇൻസ്റ്റാൾ ചെയ്യുന്നതിന് ഈ ആപ്ലിക്കേഷൻ വളരെ ഫലപ്രദമാണ്, അതിനാൽ നിങ്ങളുടെ ചുറ്റുമുള്ള ആളുകളോടൊപ്പം ആപ്ലിക്കേഷൻ പങ്കിടുക.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>ഉപയോഗിക്കേണ്ട വിധം</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>ടെര് മിനല് തിരിച്ചറിയല്</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>സമ്പർക്ക സ്ഥിരീകരണ രീതി</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>അണുബാധയുണ്ടാകുമെന്ന് നിർണ്ണയിച്ചാൽ</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>റെക്കോർഡിംഗ് നിർത്തുക/ഇല്ലാതാക്കുക</value>
+  </data>
 </root>

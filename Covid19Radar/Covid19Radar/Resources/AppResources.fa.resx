@@ -323,4 +323,19 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>این نرم افزار بسیار موثر است که بسیاری از مردم آن را نصب می کنند ، بنابراین لطفا برنامه را با افراد اطراف خود به اشتراک بگذارید.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>نحوه استفاده از</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>شناسایی ترمینال</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>تماس با روش تایید</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>اگر مصمم به آلوده</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>توقف/حذف ضبط</value>
+  </data>
 </root>
