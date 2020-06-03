@@ -239,6 +239,7 @@
         <Setter Property="BorderWidth" Value="4" />
         <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
         <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="CornerRadius" Value="30" />
         <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
@@ -258,6 +259,7 @@
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="BorderColor" Value="{StaticResource ButtonGrayedOut}" />
         <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="TextColor" Value="{StaticResource ButtonGrayedOut}" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
