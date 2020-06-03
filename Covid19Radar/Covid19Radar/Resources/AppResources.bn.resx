@@ -326,4 +326,7 @@
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>কীভাবে ব্যবহার করবেন</value>
   </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>টার্মিনাল শনাক্তকরণ</value>
+  </data>
 </root>

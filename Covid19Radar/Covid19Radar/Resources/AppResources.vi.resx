@@ -326,4 +326,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Cách sử dụng</value>
   </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Nhận dạng nhà ga</value>
+  </data>
 </root>

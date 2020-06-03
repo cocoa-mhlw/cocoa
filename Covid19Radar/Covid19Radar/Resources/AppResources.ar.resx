@@ -325,4 +325,7 @@
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>كيفية استخدام</value>
   </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>تعريف المحطة الطرفية</value>
+  </data>
 </root>

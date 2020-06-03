@@ -417,6 +417,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jinsi ya kutumia</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kitambulisho cha Temino</target>
+        </trans-unit>
       </group>
     </body>
   </file>

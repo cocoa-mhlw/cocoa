@@ -414,6 +414,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>How to use</source>
           <target state="translated">使い方</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">端末識別</target>
+        </trans-unit>
       </group>
     </body>
   </file>
