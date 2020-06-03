@@ -344,4 +344,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Geregistreerde contactvoorwaarden</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Contact met andere app-gebruikers binnen 1 meter gedurende 15 minuten of meer wordt geregistreerd als "contact".</value>
+  </data>
 </root>

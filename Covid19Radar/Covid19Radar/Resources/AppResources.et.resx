@@ -344,4 +344,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Registreeritud kontakttingimused</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt teiste app kasutajad jooksul 1 meeter 15 minutit või rohkem registreeritakse "kontakt".</value>
+  </data>
 </root>

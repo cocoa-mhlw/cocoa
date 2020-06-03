@@ -441,6 +441,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">תנאי ההתקשרות הוקלטו</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">יצירת קשר עם משתמשי יישומים אחרים בתוך מטר אחד במשך 15 דקות או יותר נרשם כ"איש קשר".</target>
+        </trans-unit>
       </group>
     </body>
   </file>

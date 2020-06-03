@@ -343,4 +343,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Kaydedilen iletişim koşulları</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 dakika veya daha uzun süre 1 metre içinde diğer uygulama kullanıcılarıile iletişim "iletişim" olarak kaydedilir.</value>
+  </data>
 </root>
