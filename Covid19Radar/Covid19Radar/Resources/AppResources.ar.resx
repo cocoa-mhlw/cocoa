@@ -346,4 +346,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>يتم تسجيل الاتصال مع مستخدمي التطبيق الآخرين في غضون متر واحد لمدة 15 دقيقة أو أكثر على أنه "جهة اتصال".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>تسجيل معلومات الاتصال</value>
+  </data>
 </root>

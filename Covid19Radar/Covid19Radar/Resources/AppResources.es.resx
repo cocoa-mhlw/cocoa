@@ -347,4 +347,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>El contacto con otros usuarios de la aplicación dentro de 1 metro durante 15 minutos o más se registra como "contacto".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Grabación de la información de contacto</value>
+  </data>
 </root>
