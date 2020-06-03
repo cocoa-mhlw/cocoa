@@ -341,4 +341,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>இந்த செயலியை இயக்கும் போது, ஒவ்வொரு ஸ்மார்ட்ஃபோனும் உருவாக்கி, ஒரு தொடர்பு குறியீட்டை கொண்டிருக்கும். மேலும், இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனிப்பட்ட தகவல்கள் தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>தொடர்பு நிலைகள் பதிவு</value>
+  </data>
 </root>

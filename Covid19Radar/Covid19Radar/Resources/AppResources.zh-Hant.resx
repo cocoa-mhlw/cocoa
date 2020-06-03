@@ -341,4 +341,7 @@
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>運行此應用時,每部智慧手機都將生成並具有聯繫人代碼。此外,此應用程式不獲取與個人資訊相關的任何資訊,如電話號碼和位置資訊。</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>記錄的接觸條件</value>
+  </data>
 </root>

@@ -437,6 +437,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ఈ యాప్ ను రన్ చేయగానే ప్రతి స్మార్ట్ ఫోన్ ను జనరేట్ చేసి కాంటాక్ట్ కోడ్ ను కలిగి ఉంటుంది. దీనికి అదనంగా, టెలిఫోన్ నెంబరు మరియు లొకేషన్ సమాచారం వంటి వ్యక్తిగత సమాచారానికి సంబంధించిన ఎలాంటి సమాచారాన్ని ఈ యాప్ పొందదు.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">కాంటాక్ట్ యొక్క కండిషన్ లు రికార్డ్ చేయబడ్డాయి</target>
+        </trans-unit>
       </group>
     </body>
   </file>

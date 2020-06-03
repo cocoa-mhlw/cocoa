@@ -27,7 +27,7 @@
                 <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
             </StackLayout>
             <StackLayout Grid.Row="2">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="記録される接触の条件" />
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Title}" />
             </StackLayout>
             <StackLayout Grid.Row="3">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage22.png" />

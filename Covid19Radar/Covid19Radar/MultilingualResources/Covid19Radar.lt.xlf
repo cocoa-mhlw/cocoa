@@ -437,6 +437,10 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Paleidus šią programą, kiekvienas išmanusis telefonas generuos ir turės kontaktinį kodą. Be to, ši programa neįsigyja jokios informacijos, susijusios su asmenine informacija, pvz., telefono numeriu ir vietos informacija.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Registruojamos sąlyčio sąlygos</target>
+        </trans-unit>
       </group>
     </body>
   </file>

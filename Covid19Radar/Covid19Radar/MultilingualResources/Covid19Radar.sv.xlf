@@ -442,6 +442,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">När du kör den här appen genererar och har varje smartphone en kontaktkod. Dessutom får denna app inte någon information relaterad till personlig information såsom telefonnummer och platsinformation.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Registrerade kontaktvillkor</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -437,6 +437,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nuair a ritheann tú an feidhmchlár seo, ginfidh gach fón cliste agus beidh cód teagmhála acu. Ina theannta sin, ní fhaigheann an feidhmchlár seo aon fhaisnéis a bhaineann le faisnéis phearsanta ar nós uimhir theileafóin agus faisnéis suímh.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Coinníollacha teagmhála taifeadta</target>
+        </trans-unit>
       </group>
     </body>
   </file>
