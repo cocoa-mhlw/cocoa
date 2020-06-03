@@ -418,6 +418,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Denna ansökan är så effektiv att många människor installerar det, så vänligen dela programmet med människor omkring dig.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Så här använder du</target>
+        </trans-unit>
       </group>
     </body>
   </file>

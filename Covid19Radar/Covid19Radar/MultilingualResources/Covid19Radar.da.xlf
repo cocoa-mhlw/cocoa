@@ -413,6 +413,10 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dette program er så effektiv, at mange mennesker installerer det, så kan du dele programmet med folk omkring dig.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sådan bruger du</target>
+        </trans-unit>
       </group>
     </body>
   </file>

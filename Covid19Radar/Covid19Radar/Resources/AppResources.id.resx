@@ -323,4 +323,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Aplikasi ini sangat efektif sehingga banyak orang yang menginstalnya, jadi silakan berbagi aplikasi dengan orang di sekitar Anda.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Cara menggunakan</value>
+  </data>
 </root>

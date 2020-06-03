@@ -428,4 +428,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Would you like to register positively later?</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>How to use</value>
+  </data>
 </root>

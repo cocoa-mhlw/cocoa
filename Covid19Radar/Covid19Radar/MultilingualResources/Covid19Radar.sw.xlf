@@ -413,6 +413,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Programu hii ni ya ufanisi sana kwamba watu wengi kufunga hiyo, hivyo tafadhali kushiriki maombi na watu walio karibu nawe.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jinsi ya kutumia</target>
+        </trans-unit>
       </group>
     </body>
   </file>

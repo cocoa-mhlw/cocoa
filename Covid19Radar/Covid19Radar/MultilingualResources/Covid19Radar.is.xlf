@@ -413,6 +413,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Þetta forrit er svo árangursríkt að margir setja það upp, svo vinsamlegast deila umsókn með fólki í kringum þig.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvernig á að nota</target>
+        </trans-unit>
       </group>
     </body>
   </file>

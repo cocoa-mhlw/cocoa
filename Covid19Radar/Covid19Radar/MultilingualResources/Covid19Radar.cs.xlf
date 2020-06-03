@@ -413,6 +413,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tato aplikace je tak efektivní, že mnoho lidí nainstalovat, tak prosím sdílet aplikaci s lidmi kolem vás.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jak používat</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -323,4 +323,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Diese Anwendung ist so effektiv, dass viele Menschen installieren, so teilen Sie bitte die Anwendung mit Menschen um Sie herum.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Wie zu verwenden</value>
+  </data>
 </root>

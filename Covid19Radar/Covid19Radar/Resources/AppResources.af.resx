@@ -323,4 +323,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Hierdie aansoek is so effektief dat baie mense dit installeer, so deel asseblief die aansoek met mense rondom jou.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Hoe om te gebruik</value>
+  </data>
 </root>
