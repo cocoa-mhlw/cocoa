@@ -429,6 +429,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kui otsustatakse nakatuda</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Peata/Kustuta salvestus</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -429,6 +429,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jos todetaan tartunnan saaneeksi</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tallennuksen pysäyttäminen/poistaminen</target>
+        </trans-unit>
       </group>
     </body>
   </file>

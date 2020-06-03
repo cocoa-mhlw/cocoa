@@ -429,6 +429,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nếu được xác định là bị nhiễm bệnh</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dừng/xóa ghi âm</target>
+        </trans-unit>
       </group>
     </body>
   </file>

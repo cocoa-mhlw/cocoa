@@ -426,6 +426,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Enfekte olduğu tespit edilirse</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kaydı durdurma/silme</target>
+        </trans-unit>
       </group>
     </body>
   </file>
