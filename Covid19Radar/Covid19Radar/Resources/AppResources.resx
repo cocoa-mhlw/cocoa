@@ -459,7 +459,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</value>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value />
+    <value>Go to app settings</value>
+    <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history.</value>
