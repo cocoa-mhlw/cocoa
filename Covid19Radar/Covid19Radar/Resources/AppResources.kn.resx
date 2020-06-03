@@ -329,4 +329,7 @@
   <data name="HelpPage1Title" xml:space="preserve">
     <value>ಟರ್ಮಿನಲ್ ಗುರುತಿಸುವಿಕೆ</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>ಸಂಪರ್ಕ ದೃಢೀಕರಣ ವಿಧಾನ</value>
+  </data>
 </root>

@@ -329,4 +329,7 @@
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifikacija terminala</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Način potrditve stika</value>
+  </data>
 </root>

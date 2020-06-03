@@ -421,6 +421,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Adnabod terfynell</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dull cadarnhau cyswllt</target>
+        </trans-unit>
       </group>
     </body>
   </file>

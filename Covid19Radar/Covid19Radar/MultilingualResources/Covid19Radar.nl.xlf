@@ -421,6 +421,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Terminalidentificatie</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bevestigingsmethode voor contactpersonen</target>
+        </trans-unit>
       </group>
     </body>
   </file>
