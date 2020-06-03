@@ -350,4 +350,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Zaznamenávanie kontaktných informácií</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>V tomto čase sa v aplikácii zaznamená kontaktný kód kontaktovanej osoby. Kontaktné údaje sa nepoužijú, kým niektorý z používateľov nezaregistruje kladné. História kontaktov sa vymaže po 14 dňoch. *Kód kontaktu sa pravidelne mení.</value>
+  </data>
 </root>

@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>การบันทึกข้อมูลการติดต่อ</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>รหัสผู้ติดต่อของผู้ติดต่อจะถูกบันทึกไว้ในใบสมัคร ข้อมูลการติดต่อจะไม่ถูกใช้จนกว่าผู้ใช้รายใดรายหนึ่งได้ลงทะเบียนเป็นบวก ประวัติการติดต่อจะถูกลบหลังจาก 14 วัน *รหัสติดต่อเปลี่ยนแปลงเป็นประจํา</value>
+  </data>
 </root>

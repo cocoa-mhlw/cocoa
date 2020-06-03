@@ -350,4 +350,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Merakam maklumat kenalan</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Pada masa ini, kod kenalan orang yang dihubungi direkodkan dalam aplikasi. Maklumat hubungan tidak akan digunakan sehingga sama ada pengguna telah mendaftar positif. Sejarah kenalan akan dipadamkan selepas 14 hari. * Kod kenalan berubah dengan kerap.</value>
+  </data>
 </root>

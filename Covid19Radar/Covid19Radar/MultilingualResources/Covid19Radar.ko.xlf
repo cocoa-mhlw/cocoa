@@ -448,6 +448,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">연락처 정보 기록</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">이때, 연락받은 사람의 연락처 코드가 신청서에 기록된다. 연락처 정보는 두 사용자가 긍정적으로 등록할 때까지 사용되지 않습니다. 연락처 기록은 14일 후에 지워집니다. *연락처 코드는 정기적으로 변경됩니다.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

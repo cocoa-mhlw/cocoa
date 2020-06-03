@@ -449,6 +449,10 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Merekam informasi kontak</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Saat ini, kode kontak dari orang yang dihubungi dicatat dalam aplikasi. Informasi kontak tidak akan digunakan sampai salah satu pengguna telah terdaftar positif. Riwayat kontak akan terhapus setelah 14 hari. * Kode kontak berubah secara teratur.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

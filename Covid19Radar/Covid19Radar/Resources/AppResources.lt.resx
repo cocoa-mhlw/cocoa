@@ -350,4 +350,7 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Kontaktinės informacijos įrašymas</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Šiuo metu prašyme įrašomas asmens, į kurį buvo sąlytis, kontaktinio asmens kontaktinio asmens kontaktinio asmens kontaktinis kodas. Kontaktinė informacija nebus naudojama, kol kuris nors vartotojas nebus užregistruotas teigiamas. Kontaktų retrospektyva bus ištrinta po 14 dienų. *Kontakto kodas reguliariai keičiasi.</value>
+  </data>
 </root>

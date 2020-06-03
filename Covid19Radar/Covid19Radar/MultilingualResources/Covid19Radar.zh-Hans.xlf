@@ -447,6 +447,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">记录联系信息</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">此时，联系人的联系人代码将记录在应用程序中。在任一用户注册为正之前，不会使用联系信息。联系历史记录将在 14 天后删除。*联系人代码会定期更改。</target>
+        </trans-unit>
       </group>
     </body>
   </file>

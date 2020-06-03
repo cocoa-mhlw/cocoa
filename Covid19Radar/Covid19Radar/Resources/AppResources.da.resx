@@ -350,4 +350,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Registrering af kontaktoplysninger</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>På nuværende tidspunkt registreres kontaktpersonens kontaktkode i programmet. Kontaktoplysninger vil ikke blive brugt, før nogen af brugerne har registreret positiv. Kontakthistorikken slettes efter 14 dage. *Kontaktkoden ændres regelmæssigt.</value>
+  </data>
 </root>

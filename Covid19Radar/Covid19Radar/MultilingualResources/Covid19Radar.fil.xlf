@@ -449,6 +449,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pagrerekord ng contact information</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sa panahong ito, ang contact code ng taong nakontak ay nakatala sa aplikasyon. Ang contact information ay hindi gagamitin hanggang sa nakarehistro nang positibo ang alinman sa user. Ang contact history ay mabubura pagkaraan ng 14 na araw. * Ang contact Code ay regular na nagbabago.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
