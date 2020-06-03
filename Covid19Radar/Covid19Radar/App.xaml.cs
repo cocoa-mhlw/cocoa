@@ -160,6 +160,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InqueryPage>();
             containerRegistry.RegisterForNavigation<ChatbotPage>();
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
+            containerRegistry.RegisterForNavigation<NotifyOtherPage>();
 
 
             // Services

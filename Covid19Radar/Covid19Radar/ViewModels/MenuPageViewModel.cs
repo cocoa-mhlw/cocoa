@@ -141,6 +141,13 @@ namespace Covid19Radar.ViewModels
                 Title = nameof(ChatbotPage)
             });
 
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(NotifyOtherPage),
+                Title = nameof(NotifyOtherPage)
+            });            
+
             NavigateCommand = new DelegateCommand(Navigate);
         }
 
