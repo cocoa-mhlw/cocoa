@@ -29,7 +29,6 @@ using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
 using Plugin.LocalNotification;
-using Prism.Plugin.Popups;
 
 /*
  * Our mission...is
@@ -61,7 +60,7 @@ namespace Covid19Radar
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
-            //Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
@@ -119,9 +118,6 @@ namespace Covid19Radar
         {
             // logger
             var logger = new AppCenterLogger();
-
-            containerRegistry.RegisterPopupNavigationService();
-            containerRegistry.RegisterPopupDialogService();
 
             containerRegistry.RegisterInstance<ILogger>(logger);
             containerRegistry.RegisterInstance<ILoggerFacade>(logger);
