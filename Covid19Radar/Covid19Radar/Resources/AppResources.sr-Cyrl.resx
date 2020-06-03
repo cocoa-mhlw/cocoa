@@ -329,4 +329,7 @@
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Идентификација терминала</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Начин потврде контакта</value>
+  </data>
 </root>

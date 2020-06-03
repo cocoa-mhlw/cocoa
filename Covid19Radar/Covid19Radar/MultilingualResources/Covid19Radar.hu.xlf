@@ -419,6 +419,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Terminál azonosítása</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kapcsolatmegerősítési módszer</target>
+        </trans-unit>
       </group>
     </body>
   </file>

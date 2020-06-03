@@ -329,4 +329,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Auðkenni afgreiðslustöðvar</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Staðfestingaraðferð tengiliðar</value>
+  </data>
 </root>

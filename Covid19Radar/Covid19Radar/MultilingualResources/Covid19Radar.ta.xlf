@@ -421,6 +421,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">முனைய அடையாளம் காணுதல்</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தொடர்பு உறுதிப்படுத்தல் முறை</target>
+        </trans-unit>
       </group>
     </body>
   </file>

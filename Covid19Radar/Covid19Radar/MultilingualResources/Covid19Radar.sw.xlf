@@ -421,6 +421,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kitambulisho cha Temino</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mbinu ya uthibitisho wa mawasiliano</target>
+        </trans-unit>
       </group>
     </body>
   </file>
