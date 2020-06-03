@@ -14,7 +14,6 @@
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
@@ -39,13 +38,9 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="PCR検査により新型コロナウィルスの感染が確認された場合。" />
+                        Text="PCR検査により新型コロナウィルスの感染が確認された場合。"
+                        VerticalTextAlignment="Center" />
                 </Grid>
-            </StackLayout>
-            <StackLayout
-                Grid.Row="1"
-                Margin="0,0,0,0"
-                Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.6*" />
@@ -58,24 +53,21 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
-                        Text="保健所等公的機関から登録用の「処理番号」が発行されます。" />
+                        Text="保健所等公的機関から登録用の「処理番号」が発行されます。"
+                        VerticalTextAlignment="Center" />
                     <ffimageloading:CachedImage
                         Grid.Row="1"
                         Grid.Column="1"
                         Aspect="AspectFit"
                         Source="HelpPage41.png" />
                 </Grid>
-            </StackLayout>
-            <StackLayout
-                Grid.Row="2"
-                Margin="0,0,0,0"
-                Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.4*" />
                         <ColumnDefinition Width="0.6*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <ffimageloading:CachedImage
@@ -87,18 +79,14 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="本アプリを用いて処理番号の登録を行います。" />
+                        Text="本アプリを用いて処理番号の登録を行います。"
+                        VerticalTextAlignment="Center" />
                     <ffimageloading:CachedImage
-                        Grid.Row="0"
-                        Grid.Column="1"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
                         Aspect="AspectFit"
                         Source="HelpPage43.png" />
                 </Grid>
-            </StackLayout>
-            <StackLayout
-                Grid.Row="3"
-                Margin="0,0,0,0"
-                Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.6*" />
@@ -111,18 +99,14 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
-                        Text="あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）" />
+                        Text="あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）"
+                        VerticalTextAlignment="Center" />
                     <ffimageloading:CachedImage
                         Grid.Row="1"
                         Grid.Column="1"
                         Aspect="AspectFit"
                         Source="HelpPage44.png" />
                 </Grid>
-            </StackLayout>
-            <StackLayout
-                Grid.Row="4"
-                Margin="0,0,0,0"
-                Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.4*" />
@@ -140,13 +124,14 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="通知される情報は端末のIDのみです。氏名など、個人特定につながる情報は通知されません。" />
+                        Text="通知される情報は端末のIDのみです。氏名など、個人特定につながる情報は通知されません。"
+                        VerticalTextAlignment="Center" />
                 </Grid>
             </StackLayout>
-            <Grid Grid.Row="5">
+            <Grid Grid.Row="1">
                 <Button
                     AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
+                    Command="{Binding Path=OnClickNotifyOtherPage}"
                     Style="{StaticResource DefaultButton}"
                     Text="陽性情報の登録と他者への匿名通知へ" />
             </Grid>
