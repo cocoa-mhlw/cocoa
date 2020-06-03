@@ -135,6 +135,25 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(HelpPage4),
                 Title = nameof(HelpPage4)
             });
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(ContactPage),
+                Title = nameof(ContactPage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(ChatbotPage),
+                Title = nameof(ChatbotPage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
+                PageName = nameof(TermsofservicePage),
+                Title = nameof(TermsofservicePage)
+            });
 #endif
 
             NavigateCommand = new DelegateCommand(Navigate);
