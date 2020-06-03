@@ -421,6 +421,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Identificació terminal</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mètode de confirmació de contacte</target>
+        </trans-unit>
       </group>
     </body>
   </file>

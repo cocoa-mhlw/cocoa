@@ -329,4 +329,7 @@
   <data name="HelpPage1Title" xml:space="preserve">
     <value>端子識別</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>聯絡人確認方法</value>
+  </data>
 </root>

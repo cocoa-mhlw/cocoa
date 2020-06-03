@@ -329,4 +329,7 @@
   <data name="HelpPage1Title" xml:space="preserve">
     <value>टर्मिनल ओळख</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>संपर्क पुष्टी पद्धत</value>
+  </data>
 </root>

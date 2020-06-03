@@ -329,4 +329,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identyfikacja terminala</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Metoda potwierdzenia kontaktu</value>
+  </data>
 </root>
