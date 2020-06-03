@@ -329,4 +329,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Termināla identifikācija</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Kontakta apstiprinājuma metode</value>
+  </data>
 </root>

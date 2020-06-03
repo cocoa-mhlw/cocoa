@@ -329,4 +329,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal identification</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Makipag-ugnayan sa confirmation paraan</value>
+  </data>
 </root>

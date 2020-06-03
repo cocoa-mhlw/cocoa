@@ -329,4 +329,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="HelpPage1Title" xml:space="preserve">
     <value>முனைய அடையாளம் காணுதல்</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>தொடர்பு உறுதிப்படுத்தல் முறை</value>
+  </data>
 </root>

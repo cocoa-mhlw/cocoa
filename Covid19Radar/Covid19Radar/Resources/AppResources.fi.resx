@@ -329,4 +329,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminaalin tunnistetiedot</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Yhteyden vahvistusmenetelmä</value>
+  </data>
 </root>

@@ -329,4 +329,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identification terminale</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Méthode de confirmation de contact</value>
+  </data>
 </root>

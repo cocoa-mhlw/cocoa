@@ -329,4 +329,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identificação do terminal</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Método de confirmação de contato</value>
+  </data>
 </root>

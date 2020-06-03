@@ -421,6 +421,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">టెర్మినల్ గుర్తింపు</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">సంప్రదింపు నిర్ధారణ పద్ధతి</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -434,4 +434,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal identification</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Contact confirmation method</value>
+  </data>
 </root>
