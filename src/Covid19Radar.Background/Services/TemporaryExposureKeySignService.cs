@@ -1,4 +1,4 @@
-﻿using Covid19Radar.Api.Protobuf;
+﻿using Covid19Radar.Background.Protobuf;
 using Microsoft.Azure.KeyVault;
 using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Extensions.Configuration;

@@ -1,6 +1,4 @@
 ﻿using Covid19Radar.Api.Common;
-using Covid19Radar.Api.Protobuf;
-using Google.Protobuf;
 using System;
 using System.Buffers.Text;
 using System.Collections.Generic;
@@ -20,18 +18,7 @@ namespace Covid19Radar.Api.Models
         public long GetRollingPeriodSeconds() => RollingPeriod * 10 * 60;
 
         public ulong Timestamp { get; set; }
-        public string ExportId { get; set; }
-
-        public TemporaryExposureKey ToKey()
-        {
-            return new TemporaryExposureKey()
-            {
-                KeyData = ByteString.CopyFrom(KeyData),
-                RollingStartIntervalNumber = RollingStartIntervalNumber,
-                RollingPeriod = RollingPeriod,
-                TransmissionRiskLevel = TransmissionRiskLevel
-            };
-        }
+        public bool Exported { get; set; }
     }
 
 }

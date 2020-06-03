@@ -47,17 +47,21 @@ namespace Covid19Radar.Services
 		public Task<Status> GetStatusAsync()
 			=> Task.FromResult(Preferences.Get("fake_enabled", true) ? Status.Active : Status.Disabled);
 
-		public Task<(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> info)> DetectExposuresAsync(IEnumerable<string> files)
+		public Task<(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getInfo)> DetectExposuresAsync(IEnumerable<string> files)
 		{
 			var summary = new ExposureDetectionSummary(10, 2, 5);
 
-			var info = new List<ExposureInfo>
+			Task<IEnumerable<ExposureInfo>> GetInfo()
 			{
-				new ExposureInfo (DateTime.UtcNow.AddDays(-10), TimeSpan.FromMinutes(15), 65, 5, RiskLevel.Medium),
-				new ExposureInfo (DateTime.UtcNow.AddDays(-11), TimeSpan.FromMinutes(5), 40, 3, RiskLevel.Low),
-			};
+				var info = new List<ExposureInfo>
+				{
+					new ExposureInfo (DateTime.UtcNow.AddDays(-10), TimeSpan.FromMinutes(15), 65, 5, RiskLevel.Medium),
+					new ExposureInfo (DateTime.UtcNow.AddDays(-11), TimeSpan.FromMinutes(5), 40, 3, RiskLevel.Low),
+				};
+				return Task.FromResult<IEnumerable<ExposureInfo>>(info);
+			}
 
-			return Task.FromResult((summary, (IEnumerable<ExposureInfo>)info));
+			return Task.FromResult<(ExposureDetectionSummary, Func<Task<IEnumerable<ExposureInfo>>>)>((summary, GetInfo));
 		}
 
 		static TemporaryExposureKey GenerateRandomKey(int daysAgo)
@@ -67,8 +71,8 @@ namespace Covid19Radar.Services
 
 			return new TemporaryExposureKey(
 				buffer,
-				new DateTimeOffset(DateTimeOffset.UtcNow.Date.AddDays(-1 * daysAgo), TimeSpan.Zero),
-				TimeSpan.FromMinutes(1440),
+				DateTimeOffset.UtcNow.AddDays(-1 * daysAgo),
+				TimeSpan.FromMinutes(random.Next(5, 120)),
 				(RiskLevel)random.Next(1, 8));
 		}
 	}
