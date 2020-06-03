@@ -437,6 +437,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wanneer u deze app uitvoert, genereert elke smartphone een contactcode en heeft deze een contactcode. Bovendien verwerft deze app geen informatie met betrekking tot persoonlijke informatie zoals telefoonnummer- en locatiegegevens.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geregistreerde contactvoorwaarden</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -435,6 +435,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Amikor futtatja ezt az alkalmazást, minden okostelefon létrehoz, és egy kapcsolatkódot. Ezen túlmenően, ez az alkalmazás nem szerez semmilyen információt kapcsolatos személyes adatokat, mint a telefonszám és a helyadatait.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">A rögzített érintkezés feltételei</target>
+        </trans-unit>
       </group>
     </body>
   </file>

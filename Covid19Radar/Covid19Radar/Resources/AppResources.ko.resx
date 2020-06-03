@@ -341,4 +341,7 @@
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>이 응용 프로그램을 실행하면, 각 스마트 폰이 생성하고 연락처 코드를 해야합니다. 또한,이 응용 프로그램은 전화 번호 및 위치 정보와 같은 개인 정보와 관련된 정보를 취득하지 않습니다.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>기록된 접촉 조건</value>
+  </data>
 </root>
