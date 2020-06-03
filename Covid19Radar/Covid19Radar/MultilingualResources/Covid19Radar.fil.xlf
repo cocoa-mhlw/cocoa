@@ -421,6 +421,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Terminal identification</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Makipag-ugnayan sa confirmation paraan</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -426,6 +426,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Identifiering av terminal</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Metod för kontaktbekräftelse</target>
+        </trans-unit>
       </group>
     </body>
   </file>

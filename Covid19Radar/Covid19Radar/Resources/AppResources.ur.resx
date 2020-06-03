@@ -329,4 +329,7 @@
   <data name="HelpPage1Title" xml:space="preserve">
     <value>ٹرمینل شناخت</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>رابطہ تصدیق طریقہ</value>
+  </data>
 </root>
