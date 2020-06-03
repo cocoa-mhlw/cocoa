@@ -41,6 +41,11 @@ namespace Covid19Radar.ViewModels
             userData = this.userDataService.Get();
         }
 
+        public Command OnClickHelp => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync(nameof(HelpMenuPage));
+        });
+
         public Command OnClickNotifyOther => new Command(async () =>
         {
             await NavigationService.NavigateAsync(nameof(NotifyOtherPage));
