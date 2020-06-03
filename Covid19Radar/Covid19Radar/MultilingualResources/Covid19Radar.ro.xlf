@@ -427,6 +427,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dacă este determinat să fie infectat</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Oprire/ștergere înregistrare</target>
+        </trans-unit>
       </group>
     </body>
   </file>

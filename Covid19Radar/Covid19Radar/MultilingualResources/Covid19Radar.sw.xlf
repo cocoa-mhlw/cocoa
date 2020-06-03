@@ -429,6 +429,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kama nia ya kuambukizwa</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Komesha/Futa kurekodi</target>
+        </trans-unit>
       </group>
     </body>
   </file>

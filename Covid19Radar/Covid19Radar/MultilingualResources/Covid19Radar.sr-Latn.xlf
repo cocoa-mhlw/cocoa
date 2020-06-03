@@ -429,6 +429,10 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ako je utvrđeno da je zaražen</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zaustavi/Izbriši snimanje</target>
+        </trans-unit>
       </group>
     </body>
   </file>

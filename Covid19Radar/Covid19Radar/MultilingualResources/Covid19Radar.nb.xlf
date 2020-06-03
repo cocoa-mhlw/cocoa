@@ -429,6 +429,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvis det er fastslått å være infisert</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stopp/slett opptak</target>
+        </trans-unit>
       </group>
     </body>
   </file>

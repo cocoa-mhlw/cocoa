@@ -428,6 +428,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">감염된 것으로 판명된 경우</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">녹화 중지/삭제</target>
+        </trans-unit>
       </group>
     </body>
   </file>

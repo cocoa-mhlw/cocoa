@@ -427,6 +427,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">S’il est déterminé à être infecté</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enregistrement stop/supprimer</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -428,6 +428,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Indien vasbeslote om besmet te wees</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stop/skrap opname</target>
+        </trans-unit>
       </group>
     </body>
   </file>

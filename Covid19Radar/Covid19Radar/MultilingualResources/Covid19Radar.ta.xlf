@@ -429,6 +429,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தொற்றுக்கு என தீர்மானித்தால்</target>
         </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">பதிவை நிறுத்து/நீக்கு</target>
+        </trans-unit>
       </group>
     </body>
   </file>
