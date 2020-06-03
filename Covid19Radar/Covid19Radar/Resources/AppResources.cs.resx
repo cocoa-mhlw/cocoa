@@ -323,4 +323,7 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Tato aplikace je tak efektivní, že mnoho lidí nainstalovat, tak prosím sdílet aplikaci s lidmi kolem vás.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Jak používat</value>
+  </data>
 </root>

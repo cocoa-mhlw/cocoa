@@ -413,6 +413,10 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ang application na ito ay kaya epektibo na ang maraming mga tao i-install ito, kaya mangyaring ibahagi ang application sa mga tao sa paligid mo.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Paano gamitin ang</target>
+        </trans-unit>
       </group>
     </body>
   </file>

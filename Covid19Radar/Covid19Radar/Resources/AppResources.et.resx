@@ -323,4 +323,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>See rakendus on nii tõhus, et paljud inimesed seda installida, nii et palun jagage taotluse inimestega ümber.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Kuidas kasutada</value>
+  </data>
 </root>

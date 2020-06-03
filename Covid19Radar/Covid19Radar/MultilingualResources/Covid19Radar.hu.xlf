@@ -411,6 +411,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ez az alkalmazás annyira hatékony, hogy sokan telepítik, ezért kérjük, ossza meg az alkalmazást az emberek körülötted.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hogyan kell használni</target>
+        </trans-unit>
       </group>
     </body>
   </file>

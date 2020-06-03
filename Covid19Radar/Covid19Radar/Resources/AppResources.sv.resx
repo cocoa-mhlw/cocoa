@@ -323,4 +323,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Denna ansökan är så effektiv att många människor installerar det, så vänligen dela programmet med människor omkring dig.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Så här använder du</value>
+  </data>
 </root>

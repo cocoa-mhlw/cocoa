@@ -323,4 +323,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>This application is so effective that many people install it, so please share the application with people around you.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>How to use</value>
+  </data>
 </root>
