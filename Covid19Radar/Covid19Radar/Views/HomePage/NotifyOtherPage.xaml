@@ -25,7 +25,6 @@
                 <Label Style="{StaticResource DefaultTitleLabelColor}" Text="新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。 &#10; 処理番号の取得方法" />
             </StackLayout>
             <StackLayout Grid.Row="1" Control.Background="#FFF3DD">
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="descriptionStep22.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。" />
             </StackLayout>
             <StackLayout Grid.Row="2">
