@@ -425,6 +425,10 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mbinu ya uthibitisho wa mawasiliano</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kama nia ya kuambukizwa</target>
+        </trans-unit>
       </group>
     </body>
   </file>

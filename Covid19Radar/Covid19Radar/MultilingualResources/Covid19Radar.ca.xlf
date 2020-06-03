@@ -425,6 +425,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mètode de confirmació de contacte</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si es determina que s'infecti</target>
+        </trans-unit>
       </group>
     </body>
   </file>

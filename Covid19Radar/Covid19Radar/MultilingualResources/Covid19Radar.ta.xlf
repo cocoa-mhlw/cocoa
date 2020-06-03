@@ -425,6 +425,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தொடர்பு உறுதிப்படுத்தல் முறை</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">தொற்றுக்கு என தீர்மானித்தால்</target>
+        </trans-unit>
       </group>
     </body>
   </file>

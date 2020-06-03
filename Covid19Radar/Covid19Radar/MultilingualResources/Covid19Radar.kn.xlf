@@ -425,6 +425,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸಂಪರ್ಕ ದೃಢೀಕರಣ ವಿಧಾನ</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸೋಂಕಿಗೆ ಒಳಗಾದ ನಿರ್ಧಾರವಾದರೆ</target>
+        </trans-unit>
       </group>
     </body>
   </file>
