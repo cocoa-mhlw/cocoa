@@ -172,8 +172,9 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
-          <source>Manual</source>
+          <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">मॅन्युअल</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
@@ -411,6 +412,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">हे अनुप्रयोग इतके प्रभावी आहे की अनेक लोक ते इन्स्टॉल करतात, त्यामुळे कृपया आपल्या आजूबाजूच्या लोकांना ते अनुप्रयोग सामायिक करा.</target>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">कसे वापरावे</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">टर्मिनल ओळख</target>
+        </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">संपर्क पुष्टी पद्धत</target>
+        </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">संसर्ग होण्याचा निश्चय केल्यास</target>
+        </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">रेकॉर्डिंग थांबवा /नष्ट करा</target>
         </trans-unit>
       </group>
     </body>

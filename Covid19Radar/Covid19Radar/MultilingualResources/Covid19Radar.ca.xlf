@@ -172,8 +172,9 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
-          <source>Manual</source>
+          <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Manual</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
@@ -411,6 +412,26 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Aquesta aplicació és tan eficaç que moltes persones l'instal·len, així que si us plau comparteixi l'aplicació amb gent al seu voltant.</target>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Com utilitzar</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Identificació terminal</target>
+        </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mètode de confirmació de contacte</target>
+        </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si es determina que s'infecti</target>
+        </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atura o suprimeix l'enregistrament</target>
         </trans-unit>
       </group>
     </body>

@@ -172,8 +172,9 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
-          <source>Manual</source>
+          <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">మాన్యువల్</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
@@ -411,6 +412,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ఈ అనువర్తనం చాలా ప్రభావవంతంగా ఉంది, చాలా మంది దీనిని ఇన్స్టాల్, కాబట్టి మీ చుట్టూ ఉన్న వ్యక్తులతో అప్లికేషన్ భాగస్వామ్యం చెయ్యండి.</target>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ఎలా ఉపయోగించాలి</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">టెర్మినల్ గుర్తింపు</target>
+        </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">సంప్రదింపు నిర్ధారణ పద్ధతి</target>
+        </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ఈ వ్యాధి సోకిందని నిర్ధారిస్తే</target>
+        </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">రికార్డింగ్ ఆపివేయడం/తొలగించడం</target>
         </trans-unit>
       </group>
     </body>
