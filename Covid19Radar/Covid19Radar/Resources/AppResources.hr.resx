@@ -323,4 +323,34 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ovaj program je toliko učinkovit da mnogi ljudi ga instalirati, pa vas molimo da podijelite aplikaciju s ljudima oko vas.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Kako koristiti</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Identifikacija terminala</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Način potvrde kontakta</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Ako se utvrdi da je zaražena</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Zaustavljanje/brisanje snimanja</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Kada pokrenete ovu aplikaciju, svaki smartphone će generirati i imati kontakt kod. Osim toga, ova aplikacija ne pribavlja nikakve informacije vezane uz osobne podatke kao što su telefonski broj i podaci o lokaciji.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Zabilježeni uvjeti kontaktiranja</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt s drugim korisnicima aplikacije u roku od 1 metra za 15 minuta ili više bilježi se kao "kontakt".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Snimanje podataka za kontakt</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>U ovom trenutku, šifra kontakta osobe s kontaktom zabilježena je u aplikaciji. Podaci za kontakt neće se koristiti dok se bilo koji korisnik ne registrira pozitivno. Povijest kontakata bit će izbrisana nakon 14 dana. *Kod kontakta se redovito mijenja.</value>
+  </data>
 </root>

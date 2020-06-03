@@ -172,8 +172,9 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
-          <source>Manual</source>
+          <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Manu-mano</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
@@ -411,6 +412,46 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ang application na ito ay kaya epektibo na ang maraming mga tao i-install ito, kaya mangyaring ibahagi ang application sa mga tao sa paligid mo.</target>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Paano gamitin ang</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Terminal identification</target>
+        </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Makipag-ugnayan sa confirmation paraan</target>
+        </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kung determinadong maging impeksyon</target>
+        </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Itigil/burahin ang pagrekord</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kapag patakbuhin mo ang app na ito, bawat smartphone ay bumuo at magkakaroon ng isang contact code. Bilang karagdagan, ang app na ito ay walang anumang impormasyon na may kaugnayan sa personal na impormasyon tulad ng numero ng telepono at impormasyon sa lokasyon.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mga kondisyon ng pagkontak na nakatala</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Makipag-ugnay sa iba pang mga gumagamit ng app sa loob ng 1 metro para sa 15 minuto o higit pa ay naitala bilang "contact".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pagrerekord ng contact information</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sa panahong ito, ang contact code ng taong nakontak ay nakatala sa aplikasyon. Ang contact information ay hindi gagamitin hanggang sa nakarehistro nang positibo ang alinman sa user. Ang contact history ay mabubura pagkaraan ng 14 na araw. * Ang contact Code ay regular na nagbabago.</target>
         </trans-unit>
       </group>
     </body>

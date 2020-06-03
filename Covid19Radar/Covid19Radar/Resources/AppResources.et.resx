@@ -323,4 +323,34 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>See rakendus on nii tõhus, et paljud inimesed seda installida, nii et palun jagage taotluse inimestega ümber.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Kuidas kasutada</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminali ID</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Kontakti kinnitamise meetod</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Kui otsustatakse nakatuda</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Peata/Kustuta salvestus</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Kui käivitate selle rakenduse, iga nutitelefoni genereerib ja on kontakt kood. Lisaks, see rakendus ei omandada teavet, mis on seotud isikliku teabe, nagu telefoninumber ja asukohateabe.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Registreeritud kontakttingimused</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt teiste app kasutajad jooksul 1 meeter 15 minutit või rohkem registreeritakse "kontakt".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Kontaktteabe salvestamine</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Sel ajal salvestatakse rakenduse kontaktisiku kood. Kontaktteavet ei kasutata enne, kui kumbki kasutaja on positiivse teabe registreerinud. Kontakti ajalugu kustutatakse 14 päeva pärast. * Kontaktkood muutub regulaarselt.</value>
+  </data>
 </root>
