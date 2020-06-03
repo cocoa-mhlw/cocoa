@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.ContactedNotifyPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    Title="過去14日間の接触"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout
+            Padding="10"
+            BackgroundColor="#CCCCCC"
+            Spacing="20">
+            <Frame
+                Padding="16"
+                BackgroundColor="#FFF3DD"
+                CornerRadius="10">
+                <StackLayout Spacing="0">
+                    <Image Grid.Row="0" Grid.Column="0">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FA-S"
+                                Glyph="&#xf06a;"
+                                Size="60"
+                                Color="#FFC252" />
+                        </Image.Source>
+                    </Image>
+                    <Label Style="{StaticResource DefaultTitleLabel}" Text="3件の陽性者との接触が&#10;確認されました" />
+                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="以下の選択ボタンで、現在の症状などを入力ください。ご入力の内容に応じて、PCR検査センター等への受信を案内します。" />
+
+                    <Button
+                        Margin="0,0,0,20"
+                        AutomationId="ButtonShareApp"
+                        Command="{Binding Path=OnClickByForm}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="現在の症状などを入力する" />
+
+                    <Button
+                        AutomationId="ButtonShareApp"
+                        Command="{Binding Path=OnClickByPhone}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="入力に変えて電話で報告相談する" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

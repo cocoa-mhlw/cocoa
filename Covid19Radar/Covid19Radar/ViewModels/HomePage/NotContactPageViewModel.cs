@@ -16,9 +16,9 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ThankYouNotifyOtherPageViewModel : ViewModelBase
+    public class NotContactPageViewModel : ViewModelBase
     {
-        public ThankYouNotifyOtherPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
+        public NotContactPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
         }
