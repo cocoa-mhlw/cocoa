@@ -338,4 +338,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Gravação de parada/exclusão</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Quando você executa este aplicativo, cada smartphone irá gerar e ter um código de contato. Além disso, este aplicativo não adquire nenhuma informação relacionada a informações pessoais, como número de telefone e informações de localização.</value>
+  </data>
 </root>

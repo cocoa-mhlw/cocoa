@@ -433,6 +433,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Stopp/slett opptak</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Når du kjører denne appen, vil hver smarttelefon generere og ha en kontaktkode. I tillegg innhenter ikke denne appen informasjon knyttet til personopplysninger som telefonnummer og stedsinformasjon.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -431,6 +431,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Oprire/ștergere înregistrare</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Când rulați această aplicație, fiecare smartphone va genera și au un cod de contact. În plus, această aplicație nu obține informații legate de informații personale, ar fi numărul de telefon și informațiile de locație.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

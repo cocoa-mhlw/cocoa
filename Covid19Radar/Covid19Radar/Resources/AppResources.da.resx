@@ -338,4 +338,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Stop/slet optagelse</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Når du kører denne app, vil hver smartphone generere og have en kontaktkode. Desuden får denne app ingen oplysninger relateret til personlige oplysninger såsom telefonnummer og placeringsoplysninger.</value>
+  </data>
 </root>

@@ -338,4 +338,7 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>หยุด/ลบการบันทึก</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>เมื่อคุณเรียกใช้ app นี้มาร์ทโฟนแต่ละจะสร้างและมีรหัสติดต่อ นอกจากนี้แอปนี้ไม่ได้รับข้อมูลใด ๆ ที่เกี่ยวข้องกับข้อมูลส่วนบุคคลเช่นหมายเลขโทรศัพท์และข้อมูลสถานที่</value>
+  </data>
 </root>

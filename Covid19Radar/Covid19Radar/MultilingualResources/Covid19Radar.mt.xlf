@@ -433,6 +433,10 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Waqqaf/Ħassar ir-Re ġistrazzjoni</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Meta tħaddem din l-applikazzjoni, kull smartphone se jiġġenera u jkollu kodiċi ta ' kuntatt. Barra minn hekk, din l-applikazzjoni ma takkwista l-ebda informazzjoni relatata ma ' informazzjoni personali bħal numru tat-telefon u informazzjoni dwar il-post.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
