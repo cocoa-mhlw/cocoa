@@ -437,6 +437,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Při spuštění této aplikace bude každý smartphone generovat a mít kontaktní kód. Kromě toho tato aplikace nezískává žádné informace týkající se osobních údajů, jako je telefonní číslo a informace o poloze.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zaznamenané podmínky kontaktu</target>
+        </trans-unit>
       </group>
     </body>
   </file>

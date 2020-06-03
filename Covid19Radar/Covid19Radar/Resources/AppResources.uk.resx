@@ -341,4 +341,7 @@
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Коли ви запускаєте цю програму, кожен смартфон буде генерувати і мати контактний код. Крім того, ця програма не набуває будь-якої інформації, пов'язаної з особистою інформацією, такою як номер телефону та інформацію про місцезнаходження.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Умови контакту, записаного</value>
+  </data>
 </root>

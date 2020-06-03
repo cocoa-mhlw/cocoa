@@ -437,6 +437,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Όταν εκτελείτε αυτήν την εφαρμογή, κάθε smartphone θα δημιουργήσει και θα έχει έναν κωδικό επαφής. Επιπλέον, αυτή η εφαρμογή δεν αποκτά πληροφορίες που σχετίζονται με προσωπικές πληροφορίες, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Καταγραφόμενες συνθήκες επαφής</target>
+        </trans-unit>
       </group>
     </body>
   </file>

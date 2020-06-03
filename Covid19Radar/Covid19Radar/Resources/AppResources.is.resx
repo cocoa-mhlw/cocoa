@@ -341,4 +341,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Þegar þú keyrir þetta forrit mun hver Smartphone mynda og hafa tengiliðakóða. Að auki öðlast þessi App ekki neinar upplýsingar sem tengjast persónuupplýsingum eins og símanúmeri og staðsetningarupplýsingum.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Skilyrði sem skráð hafa verið</value>
+  </data>
 </root>

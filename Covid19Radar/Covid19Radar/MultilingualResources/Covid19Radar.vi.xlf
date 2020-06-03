@@ -437,6 +437,10 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</target>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Khi bạn chạy ứng dụng này, mỗi điện thoại thông minh sẽ tạo ra và có một mã liên lạc. Ngoài ra, ứng dụng này không có được bất kỳ thông tin liên quan đến thông tin cá nhân như số điện thoại và thông tin vị trí.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Điều kiện liên lạc được ghi lại</target>
+        </trans-unit>
       </group>
     </body>
   </file>

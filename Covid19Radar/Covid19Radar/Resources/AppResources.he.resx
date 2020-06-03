@@ -341,4 +341,7 @@
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>כאשר אתה מפעיל יישום זה, כל טלפון חכם יפיק ובעלי קוד יצירת קשר. בנוסף, יישום זה אינו רוכש כל מידע הקשור למידע אישי כגון מספר טלפון ומידע מיקום.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>תנאי ההתקשרות הוקלטו</value>
+  </data>
 </root>
