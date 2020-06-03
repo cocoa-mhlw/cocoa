@@ -341,4 +341,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Quando si esegue questa applicazione, ogni smartphone genererà e avere un codice di contatto. Inoltre, questa applicazione non acquisisce alcuna informazione relativa alle informazioni personali come il numero di telefono e le informazioni sulla posizione.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Condizioni di contatto registrate</value>
+  </data>
 </root>

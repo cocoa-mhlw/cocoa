@@ -341,4 +341,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Când rulați această aplicație, fiecare smartphone va genera și au un cod de contact. În plus, această aplicație nu obține informații legate de informații personale, ar fi numărul de telefon și informațiile de locație.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Condiții de contact înregistrate</value>
+  </data>
 </root>

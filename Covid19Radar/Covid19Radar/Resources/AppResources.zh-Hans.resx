@@ -341,4 +341,7 @@
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>运行此应用时，每部智能手机都将生成并具有联系人代码。此外，此应用程序不获取与个人信息相关的任何信息，如电话号码和位置信息。</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>记录的接触条件</value>
+  </data>
 </root>

@@ -341,4 +341,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Wanneer u deze app uitvoert, genereert elke smartphone een contactcode en heeft deze een contactcode. Bovendien verwerft deze app geen informatie met betrekking tot persoonlijke informatie zoals telefoonnummer- en locatiegegevens.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Geregistreerde contactvoorwaarden</value>
+  </data>
 </root>

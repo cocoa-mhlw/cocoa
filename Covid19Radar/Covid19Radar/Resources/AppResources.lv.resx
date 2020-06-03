@@ -341,4 +341,7 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Palaižot šo lietotni, katrs viedtālrunis radīs un ir kontakta kods. Turklāt šī lietotne neiegādājas informāciju, kas saistīta ar personisko informāciju, piemēram, tālruņa numuru un atrašanās vietas informāciju.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Reģistrētie kontakta nosacījumi</value>
+  </data>
 </root>

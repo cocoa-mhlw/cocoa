@@ -341,4 +341,7 @@
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>जेव्हा तुम्ही हे अॅप चालवता, तेव्हा प्रत्येक स्मार्टफोन तयार होईल आणि एक कॉन्टॅक्ट कोड असेल. याखेरीज, या अॅपमध्ये टेलिफोन नंबर आणि लोकेशन माहिती सारख्या वैयक्तिक माहितीशी संबंधित कोणतीही माहिती प्राप्त होत नाही.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>संपर्काची स्थिती रेकॉर्ड</value>
+  </data>
 </root>
