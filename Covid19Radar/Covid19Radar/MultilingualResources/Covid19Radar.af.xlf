@@ -420,6 +420,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Terminale identifikasie</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontak bevestiging metode</target>
+        </trans-unit>
       </group>
     </body>
   </file>

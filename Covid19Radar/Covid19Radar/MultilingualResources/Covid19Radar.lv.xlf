@@ -421,6 +421,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Termināla identifikācija</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakta apstiprinājuma metode</target>
+        </trans-unit>
       </group>
     </body>
   </file>

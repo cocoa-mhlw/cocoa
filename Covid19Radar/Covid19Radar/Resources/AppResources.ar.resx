@@ -328,4 +328,7 @@
   <data name="HelpPage1Title" xml:space="preserve">
     <value>تعريف المحطة الطرفية</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>طريقة تأكيد الاتصال</value>
+  </data>
 </root>

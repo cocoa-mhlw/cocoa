@@ -329,4 +329,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identificazione del terminale</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Metodo di conferma del contatto</value>
+  </data>
 </root>

@@ -421,6 +421,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Auðkenni afgreiðslustöðvar</target>
         </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Staðfestingaraðferð tengiliðar</target>
+        </trans-unit>
       </group>
     </body>
   </file>

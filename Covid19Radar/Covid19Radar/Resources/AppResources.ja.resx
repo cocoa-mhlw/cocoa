@@ -327,6 +327,9 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>使い方</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>端末識別</value>
+    <value>端末の識別</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>接触の確認方法</value>
   </data>
 </root>

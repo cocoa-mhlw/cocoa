@@ -329,4 +329,7 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Pengenalan terminal</value>
   </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Kaedah pengesahan kenalan</value>
+  </data>
 </root>
