@@ -341,4 +341,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Lorsque vous exécutez cette application, chaque smartphone génère et dispose d’un code de contact. De plus, cette application n’acquiert aucune information relative à des renseignements personnels tels que le numéro de téléphone et les informations de localisation.</value>
   </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Conditions de contact enregistrées</value>
+  </data>
 </root>

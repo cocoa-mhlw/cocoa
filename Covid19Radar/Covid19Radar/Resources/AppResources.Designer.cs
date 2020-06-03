@@ -385,6 +385,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Conditions of contact recorded に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description2Title {
+            get {
+                return ResourceManager.GetString("HelpPage1Description2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Terminal identification に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Title {

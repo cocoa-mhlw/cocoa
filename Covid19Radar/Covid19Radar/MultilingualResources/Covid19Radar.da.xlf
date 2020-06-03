@@ -437,6 +437,10 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</target>
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Når du kører denne app, vil hver smartphone generere og have en kontaktkode. Desuden får denne app ingen oplysninger relateret til personlige oplysninger såsom telefonnummer og placeringsoplysninger.</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Registrerede kontaktbetingelser</target>
+        </trans-unit>
       </group>
     </body>
   </file>
