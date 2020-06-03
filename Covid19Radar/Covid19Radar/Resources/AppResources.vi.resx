@@ -323,4 +323,34 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ứng dụng này là như vậy có hiệu quả mà nhiều người cài đặt nó, vì vậy hãy chia sẻ các ứng dụng với những người xung quanh bạn.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Cách sử dụng</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Nhận dạng nhà ga</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Phương thức xác nhận liên lạc</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Nếu được xác định là bị nhiễm bệnh</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Dừng/xóa ghi âm</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Khi bạn chạy ứng dụng này, mỗi điện thoại thông minh sẽ tạo ra và có một mã liên lạc. Ngoài ra, ứng dụng này không có được bất kỳ thông tin liên quan đến thông tin cá nhân như số điện thoại và thông tin vị trí.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Điều kiện liên lạc được ghi lại</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Liên hệ với người dùng ứng dụng khác trong vòng 1 mét trong 15 phút trở lên được ghi lại là "liên hệ".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Ghi lại thông tin liên lạc</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Tại thời gian này, mã số liên lạc của người liên lạc được ghi lại trong ứng dụng. Thông tin liên hệ sẽ không được sử dụng cho đến khi một trong hai người dùng đã đăng ký tích cực. Lịch sử liên lạc sẽ bị xóa sau 14 ngày. * Mã liên lạc thay đổi thường xuyên.</value>
+  </data>
 </root>
