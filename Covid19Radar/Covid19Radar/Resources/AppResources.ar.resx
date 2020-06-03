@@ -322,4 +322,34 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>هذا التطبيق فعال جدا أن العديد من الناس تثبيته، لذا يرجى مشاركة التطبيق مع الناس من حولك.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>كيفية استخدام</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>تعريف المحطة الطرفية</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>طريقة تأكيد الاتصال</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>إذا تم تحديد الإصابة بالعدوى</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>إيقاف/حذف التسجيل</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>عند تشغيل هذا التطبيق، سيقوم كل هاتف ذكي بإنشاء رمز جهة اتصال ويكون له. بالإضافة إلى ذلك، لا يحصل هذا التطبيق على أي معلومات تتعلق بالمعلومات الشخصية مثل رقم الهاتف ومعلومات الموقع.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>شروط الاتصال المسجلة</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>يتم تسجيل الاتصال مع مستخدمي التطبيق الآخرين في غضون متر واحد لمدة 15 دقيقة أو أكثر على أنه "جهة اتصال".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>تسجيل معلومات الاتصال</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>في هذا الوقت، يتم تسجيل رمز الاتصال للشخص الذي تم الاتصال به في التطبيق. لن يتم استخدام معلومات الاتصال حتى يتم تسجيل أي من المستخدمين بشكل إيجابي. سيتم مسح سجل الاتصال بعد 14 يومًا. * يتغير رمز جهة الاتصال بانتظام.</value>
+  </data>
 </root>

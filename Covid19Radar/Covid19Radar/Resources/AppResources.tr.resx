@@ -322,4 +322,34 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Bu uygulama birçok kişi yüklemek çok etkili, bu yüzden çevrenizdeki insanlarla uygulama paylaşmak lütfen.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Nasıl kullanılır?</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminal tanımlama</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>İletişim onay yöntemi</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Enfekte olduğu tespit edilirse</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Kaydı durdurma/silme</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Bu uygulamayı çalıştırdığınızda, her akıllı telefon bir iletişim kodu oluşturur ve sahip olur. Ayrıca, bu uygulama telefon numarası ve konum bilgileri gibi kişisel bilgilerle ilgili herhangi bir bilgi edinmez.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Kaydedilen iletişim koşulları</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 dakika veya daha uzun süre 1 metre içinde diğer uygulama kullanıcılarıile iletişim "iletişim" olarak kaydedilir.</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>İletişim bilgilerini kaydetme</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Şu anda, ilgili kişinin iletişim kodu uygulamaya kaydedilir. Kişi bilgileri, her iki kullanıcı da pozitif kayıt olana kadar kullanılmaz. Temas geçmişi 14 gün sonra silinir. *Kişi kodu düzenli olarak değişir.</value>
+  </data>
 </root>

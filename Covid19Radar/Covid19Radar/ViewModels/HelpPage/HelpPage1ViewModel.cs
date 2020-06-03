@@ -11,7 +11,7 @@ namespace Covid19Radar.ViewModels
     {
         public HelpPage1ViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = Resources.AppResources.TitleHowItWorks;
+            Title = Resources.AppResources.HelpPage1Title;
         }
 
     }
