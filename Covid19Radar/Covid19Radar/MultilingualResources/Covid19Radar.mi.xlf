@@ -433,6 +433,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Whakamutua/mukua te tāhopu</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ina whakahaere koe i tēnei taupānga, ka waihanga waea atamai, ā, he waehere hoapā. Hei āpitihanga, kāore tēnei taupānga e whiwhi i ngā mōhiohio e hāngai ana ki ngā mōhiohio whaiaro pēnei i te tau waea me te mōhiohio tauwāhi.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

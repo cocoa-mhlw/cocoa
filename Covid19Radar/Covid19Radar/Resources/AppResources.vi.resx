@@ -338,4 +338,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Dừng/xóa ghi âm</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Khi bạn chạy ứng dụng này, mỗi điện thoại thông minh sẽ tạo ra và có một mã liên lạc. Ngoài ra, ứng dụng này không có được bất kỳ thông tin liên quan đến thông tin cá nhân như số điện thoại và thông tin vị trí.</value>
+  </data>
 </root>

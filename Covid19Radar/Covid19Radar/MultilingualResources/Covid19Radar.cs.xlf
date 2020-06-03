@@ -433,6 +433,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Zastavit/odstranit záznam</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Při spuštění této aplikace bude každý smartphone generovat a mít kontaktní kód. Kromě toho tato aplikace nezískává žádné informace týkající se osobních údajů, jako je telefonní číslo a informace o poloze.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

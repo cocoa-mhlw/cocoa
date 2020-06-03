@@ -338,4 +338,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Komesha/Futa kurekodi</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Wakati unapoendesha programu hii, kila smartphone itazalisha na kuwa na msimbo wa kuwasiliana. Kwa kuongezea, programu hii haina kupata maelezo yoyote yanayohusiana na maelezo ya kibinafsi kama vile namba ya simu na maelezo ya eneo.</value>
+  </data>
 </root>

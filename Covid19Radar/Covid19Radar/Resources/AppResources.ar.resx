@@ -337,4 +337,7 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>إيقاف/حذف التسجيل</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>عند تشغيل هذا التطبيق، سيقوم كل هاتف ذكي بإنشاء رمز جهة اتصال ويكون له. بالإضافة إلى ذلك، لا يحصل هذا التطبيق على أي معلومات تتعلق بالمعلومات الشخصية مثل رقم الهاتف ومعلومات الموقع.</value>
+  </data>
 </root>
