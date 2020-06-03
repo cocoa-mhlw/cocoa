@@ -22,14 +22,14 @@
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage50.png" />
             </StackLayout>
             <StackLayout Grid.Row="1">
-                <Label Style="{StaticResource DefaultLabel}" Text="アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage4Description}" />
             </StackLayout>
             <Grid Grid.Row="2">
                 <Button
                     AutomationId="OnClickSetting"
                     Command="{Binding Path=OnClickSetting}"
                     Style="{StaticResource DefaultButton}"
-                    Text="アプリの設定へ" />
+                    Text="{x:Static resources:AppResources.HelpPage4ButtonText}" />
             </Grid>
         </Grid>
     </ScrollView>
