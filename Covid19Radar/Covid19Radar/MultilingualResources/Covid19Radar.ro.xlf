@@ -447,6 +447,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Înregistrarea informațiilor de contact</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">În acest moment, codul de contact al persoanei contactate este înregistrat în aplicație. Informațiile de contact nu vor fi utilizate până când niciunul dintre utilizatori nu s-a înregistrat pozitiv. Istoricul contactelor va fi șters după 14 zile. *Codul de contact se modifică în mod regulat.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

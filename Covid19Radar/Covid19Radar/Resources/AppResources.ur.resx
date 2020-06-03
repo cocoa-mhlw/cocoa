@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>رابطے کی معلومات ریکارڈنگ</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>اس وقت ، رابطہ فرد کے رابطہ کوڈ کی درخواست میں ریکارڈ کیا جاتا ہے. رابطہ کی معلومات استعمال نہیں کی جائے گی جب تک کہ صارف نے مثبت طور پر رجسٹرڈ نہ کیا ہو ۔ رابطے کی تاریخ 14 دن کے بعد ختم ہو جائے گی. * رابطہ کوڈ باقاعدگی سے تبدیل ہوتا ہے.</value>
+  </data>
 </root>

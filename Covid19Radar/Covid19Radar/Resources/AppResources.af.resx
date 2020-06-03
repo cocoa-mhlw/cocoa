@@ -350,4 +350,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Neem kontakinligting op</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Op hierdie tydstip, die kontak-kode van die gekontak persoon is aangeteken in die aansoek. Kontakinligting sal nie gebruik word totdat óf gebruiker positief geregistreer het nie. Die kontakgeskiedenis sal na 14 dae uitgevee word. * Die kontakkode verander gereeld.</value>
+  </data>
 </root>

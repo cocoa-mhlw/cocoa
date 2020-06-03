@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>যোগাযোগ তথ্য রেকর্ড করা হচ্ছে</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>এ সময় যোগাযোগ করা ব্যক্তির যোগাযোগের কোড আবেদনপত্রে লিপিবদ্ধ করা হয় । যতক্ষণ না ব্যবহারকারী ধনাত্মক নিবন্ধীকৃত না হয় ততক্ষণ যোগাযোগ তথ্য ব্যবহার করা হবে না । ১৪ দিন পর যোগাযোগ ইতিহাস মুছে যাবে । * কনট্যাক্ট কোড নিয়মিত বদলায় ।</value>
+  </data>
 </root>

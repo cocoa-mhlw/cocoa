@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ದಾಖಲಿಸುವುದು</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>ಈ ವೇಳೆ ಸಂಪರ್ಕಿಸಿದ ವ್ಯಕ್ತಿಯ ಕಾಂಟ್ಯಾಕ್ಟ್ ಕೋಡ್ ಅರ್ಜಿಯಲ್ಲಿ ದಾಖಲಿಸಲಾಗುತ್ತದೆ. ಯಾವುದೇ ಬಳಕೆದಾರ ಧನಾತ್ಮಕ ನೋಂದಣಿ ಮಾಡುವವರೆಗೆ ಸಂಪರ್ಕ ಮಾಹಿತಿಯು ಬಳಕೆಯಾಗುವುದಿಲ್ಲ. 14 ದಿನಗಳ ಬಳಿಕ ಸಂಪರ್ಕ ಇತಿಹಾಸ ಎರವಾಗಲಿದೆ. * ಕಾಂಟ್ಯಾಕ್ಟ್ ಕೋಡ್ ನಿಯಮಿತವಾಗಿ ಬದಲಾಗುತ್ತದೆ.</value>
+  </data>
 </root>

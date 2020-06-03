@@ -350,4 +350,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Kontaktteabe salvestamine</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Sel ajal salvestatakse rakenduse kontaktisiku kood. Kontaktteavet ei kasutata enne, kui kumbki kasutaja on positiivse teabe registreerinud. Kontakti ajalugu kustutatakse 14 päeva pärast. * Kontaktkood muutub regulaarselt.</value>
+  </data>
 </root>

@@ -350,4 +350,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Upplýsingar um skráningu tengiliða</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Á þessum tíma er tengiliðakóði viðkomandi aðila skráður í umsóknina. Tengiliðaupplýsingar verða ekki notaðar fyrr en notandinn hefur skráð sig jákvætt. Tengslaferill verður þurrkast út eftir 14 daga. * Tengiliðskóðinn breytist reglulega.</value>
+  </data>
 </root>

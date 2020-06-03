@@ -403,6 +403,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description3Text {
+            get {
+                return ResourceManager.GetString("HelpPage1Description3Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recording contact information に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description3Title {

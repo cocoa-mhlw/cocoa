@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>הקלטת פרטי קשר</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>בשלב זה, קוד איש הקשר של האדם הנוצר מקשר נרשם ביישום. לא נעשה שימוש במידע ליצירת קשר עד שהמשתמש נרשם כחיובי. היסטוריית הקשר תימחק. לאחר 14 ימים * קוד איש הקשר משתנה באופן סדיר.</value>
+  </data>
 </root>

@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>संपर्क जानकारी रिकॉर्ड करना</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>इस समय आवेदन में संपर्क व्यक्ति का संपर्क कोड दर्ज है। संपर्क जानकारी का उपयोग तब तक नहीं किया जाएगा जब तक कि या तो उपयोगकर्ता सकारात्मक पंजीकृत न हो जाए। 14 दिन बाद संपर्क इतिहास मिट जाएगा। * संपर्क कोड नियमित रूप से बदलता है।</value>
+  </data>
 </root>

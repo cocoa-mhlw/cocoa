@@ -449,6 +449,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Registrere kontaktinformasjon</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontaktkoden til den kontaktede personen registreres for øyeblikket i programmet. Kontaktinformasjon vil ikke bli brukt før en av brukerne har registrert seg positivt. Kontaktloggen slettes etter 14 dager. *Kontaktkoden endres regelmessig.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

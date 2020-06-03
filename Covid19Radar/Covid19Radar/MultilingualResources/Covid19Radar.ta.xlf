@@ -449,6 +449,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தொடர்பு தகவலை பதிவுசெய்தல்</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">இந்த நேரத்தில், தொடர்பு கொண்ட நபரின் தொடர்பு குறியீடு, விண்ணப்பத்தில் பதிவு செய்யப்படுகிறது. பயனர் நேர்மறை பதிவு செய்யும் வரை தொடர்புத் தகவல் பயன்படுத்தப்படாது. 14 நாட்களுக்குப் பிறகு தொடர்பு வரலாறு அழித்து விடும். * தொடர்பு குறியீடு அவ்வப்போது மாறும்.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
