@@ -403,6 +403,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Recording contact information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description3Title {
+            get {
+                return ResourceManager.GetString("HelpPage1Description3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Terminal identification に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Title {

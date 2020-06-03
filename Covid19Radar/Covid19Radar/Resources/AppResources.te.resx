@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>1 మీటర్ లో 15 నిమిషాలు లేదా అంతకంటే ఎక్కువ ఉన్న ఇతర యాప్ యూజర్ లతో కాంటాక్ట్ "కాంటాక్ట్" వలే రికార్డ్ చేయబడింది.</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>సంప్రదింపు సమాచారాన్ని నమోదు చేయడం</value>
+  </data>
 </root>

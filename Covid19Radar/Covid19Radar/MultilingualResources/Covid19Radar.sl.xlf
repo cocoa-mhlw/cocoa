@@ -445,6 +445,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt z drugimi uporabniki aplikacije v 1 meter za 15 minut ali več se zabeleži kot "kontakt".</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Beleženje kontaktnih podatkov</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -445,6 +445,10 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</target>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt s ostatnými používateľmi aplikácie do 1 metra po dobu 15 minút alebo viac je zaznamenaný ako "kontakt".</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zaznamenávanie kontaktných informácií</target>
+        </trans-unit>
       </group>
     </body>
   </file>

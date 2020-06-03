@@ -347,4 +347,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Déantar teagmháil le húsáideoirí app eile laistigh de 1 mhéadar ar feadh 15 nóiméad nó níos mó a thaifeadadh mar "teagmháil".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Eolas teagmhála a thaifeadadh</value>
+  </data>
 </root>

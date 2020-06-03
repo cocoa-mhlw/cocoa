@@ -347,4 +347,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Il contatto con altri utenti dell'app entro 1 metro per 15 minuti o più viene registrato come "contatto".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Registrazione delle informazioni di contatto</value>
+  </data>
 </root>

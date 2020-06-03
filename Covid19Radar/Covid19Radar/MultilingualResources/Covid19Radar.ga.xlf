@@ -445,6 +445,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Déantar teagmháil le húsáideoirí app eile laistigh de 1 mhéadar ar feadh 15 nóiméad nó níos mó a thaifeadadh mar "teagmháil".</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eolas teagmhála a thaifeadadh</target>
+        </trans-unit>
       </group>
     </body>
   </file>

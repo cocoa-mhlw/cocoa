@@ -347,4 +347,7 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Kontak dengan pengguna aplikasi lain dalam 1 meter selama 15 menit atau lebih dicatat sebagai "kontak".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Merekam informasi kontak</value>
+  </data>
 </root>
