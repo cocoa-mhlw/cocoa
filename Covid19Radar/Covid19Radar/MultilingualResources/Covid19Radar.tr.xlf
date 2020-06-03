@@ -430,6 +430,26 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kaydı durdurma/silme</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bu uygulamayı çalıştırdığınızda, her akıllı telefon bir iletişim kodu oluşturur ve sahip olur. Ayrıca, bu uygulama telefon numarası ve konum bilgileri gibi kişisel bilgilerle ilgili herhangi bir bilgi edinmez.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kaydedilen iletişim koşulları</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">15 dakika veya daha uzun süre 1 metre içinde diğer uygulama kullanıcılarıile iletişim "iletişim" olarak kaydedilir.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">İletişim bilgilerini kaydetme</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Şu anda, ilgili kişinin iletişim kodu uygulamaya kaydedilir. Kişi bilgileri, her iki kullanıcı da pozitif kayıt olana kadar kullanılmaz. Temas geçmişi 14 gün sonra silinir. *Kişi kodu düzenli olarak değişir.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

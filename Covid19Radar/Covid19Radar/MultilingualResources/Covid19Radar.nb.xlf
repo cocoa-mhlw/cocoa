@@ -433,6 +433,26 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Stopp/slett opptak</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Når du kjører denne appen, vil hver smarttelefon generere og ha en kontaktkode. I tillegg innhenter ikke denne appen informasjon knyttet til personopplysninger som telefonnummer og stedsinformasjon.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontaktbetingelser registrert</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt med andre appbrukere innen 1 meter i 15 minutter eller mer registreres som "kontakt".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Registrere kontaktinformasjon</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontaktkoden til den kontaktede personen registreres for øyeblikket i programmet. Kontaktinformasjon vil ikke bli brukt før en av brukerne har registrert seg positivt. Kontaktloggen slettes etter 14 dager. *Kontaktkoden endres regelmessig.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

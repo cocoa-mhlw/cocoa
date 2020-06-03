@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>রেকর্ডিং বন্ধ/মুছে ফেলো</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>আপনি যখন এই অ্যাপটি চালাবেন, প্রতিটি স্মার্টফোনে একটি করে কনট্যাক্ট কোড তৈরি হবে । এছাড়া, এই অ্যাপটি টেলিফোন নম্বর ও লোকেশন ইনফরমেশন-এর মতো ব্যক্তিগত তথ্য সংক্রান্ত কোনও তথ্য অধিগ্রহণ করে না ।</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>পরিচিতির শর্তাবলী রেকর্ড করা হয়েছে</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 মিনিট বা তার বেশি সময় অন্তর 1 মিটারের মধ্যে অন্যান্য অ্যাপ্লিকেশন ব্যবহারকারীদের সাথে যোগাযোগ "যোগাযোগ" হিসাবে রেকর্ড করা হয় ।</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>যোগাযোগ তথ্য রেকর্ড করা হচ্ছে</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>এ সময় যোগাযোগ করা ব্যক্তির যোগাযোগের কোড আবেদনপত্রে লিপিবদ্ধ করা হয় । যতক্ষণ না ব্যবহারকারী ধনাত্মক নিবন্ধীকৃত না হয় ততক্ষণ যোগাযোগ তথ্য ব্যবহার করা হবে না । ১৪ দিন পর যোগাযোগ ইতিহাস মুছে যাবে । * কনট্যাক্ট কোড নিয়মিত বদলায় ।</value>
+  </data>
 </root>
