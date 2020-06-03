@@ -338,4 +338,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Waqqaf/Ħassar ir-Re ġistrazzjoni</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Meta tħaddem din l-applikazzjoni, kull smartphone se jiġġenera u jkollu kodiċi ta ' kuntatt. Barra minn hekk, din l-applikazzjoni ma takkwista l-ebda informazzjoni relatata ma ' informazzjoni personali bħal numru tat-telefon u informazzjoni dwar il-post.</value>
+  </data>
 </root>

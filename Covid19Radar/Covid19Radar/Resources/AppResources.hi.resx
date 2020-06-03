@@ -338,4 +338,7 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>रिकॉर्डिंग बंद करें/हटाएं</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>जब आप इस ऐप को चलाएंगे, तो प्रत्येक स्मार्टफोन उत्पन्न करेगा और एक संपर्क कोड होगा। इसके अलावा, यह ऐप व्यक्तिगत जानकारी जैसे टेलीफोन नंबर और स्थान की जानकारी से संबंधित कोई जानकारी प्राप्त नहीं करता है।</value>
+  </data>
 </root>

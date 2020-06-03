@@ -433,6 +433,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">停止/移除錄製</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">運行此應用時,每部智慧手機都將生成並具有聯繫人代碼。此外,此應用程式不獲取與個人資訊相關的任何資訊,如電話號碼和位置資訊。</target>
+        </trans-unit>
       </group>
     </body>
   </file>
