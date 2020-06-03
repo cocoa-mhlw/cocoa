@@ -453,6 +453,16 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">V tem času je kontaktna koda osebe, ki je stopila v stik, zabeležena v aplikaciji. Kontaktni podatki se ne bodo uporabljali, dokler se uporabnik ne registrira pozitivno. Zgodovina stikov bo izbrisana po 14 dneh. * Kontaktna koda se redno spreminja.</target>
         </trans-unit>
+        <trans-unit id="HelpPage4ButtonText" translate="yes" xml:space="preserve">
+          <source>Go to app settings</source>
+          <target state="new">Go to app settings</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定へ</note>
+        </trans-unit>
+        <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
+          <source>From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history.</source>
+          <target state="new">From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</note>
+        </trans-unit>
       </group>
     </body>
   </file>
