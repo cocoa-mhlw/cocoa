@@ -344,4 +344,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Condições de contato registradas</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>O contato com outros usuários do aplicativo dentro de 1 metro por 15 minutos ou mais é registrado como "contato".</value>
+  </data>
 </root>

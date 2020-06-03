@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>شرایط تماس ضبط شده</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>تماس با دیگر کاربران برنامه در عرض 1 متر برای 15 دقیقه یا بیشتر به عنوان "تماس" ثبت شده است.</value>
+  </data>
 </root>

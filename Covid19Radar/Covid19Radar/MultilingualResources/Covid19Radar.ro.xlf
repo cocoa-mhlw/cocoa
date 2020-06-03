@@ -439,6 +439,10 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</target>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Condiții de contact înregistrate</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contactul cu alți utilizatori ai aplicației în termen de 1 metru timp de 15 minute sau mai mult este înregistrat ca "contact".</target>
+        </trans-unit>
       </group>
     </body>
   </file>

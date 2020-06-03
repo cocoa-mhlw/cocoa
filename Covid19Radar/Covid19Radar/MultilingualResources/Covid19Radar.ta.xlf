@@ -441,6 +441,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தொடர்பு நிலைகள் பதிவு</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">1 மீட்டருடன் 15 நிமிடங்கள் அல்லது அதற்கும் மேற்பட்ட பயன்பாட்டைப் பயன்படுத்துவோரின் தொடர்பு "தொடர்பு" என பதியப்படும்.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

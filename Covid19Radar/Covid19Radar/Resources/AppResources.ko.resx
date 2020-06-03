@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>기록된 접촉 조건</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15분 이상 1미터 이내의 다른 앱 사용자와의 접촉은 "연락처"로 기록됩니다.</value>
+  </data>
 </root>

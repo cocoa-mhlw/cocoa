@@ -439,6 +439,10 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</target>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Conditions de contact enregistrées</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le contact avec d’autres utilisateurs d’applications dans un rayon de 1 mètre pendant 15 minutes ou plus est enregistré comme «contact».</target>
+        </trans-unit>
       </group>
     </body>
   </file>

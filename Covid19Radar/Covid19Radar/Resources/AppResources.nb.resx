@@ -344,4 +344,7 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Kontaktbetingelser registrert</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt med andre appbrukere innen 1 meter i 15 minutter eller mer registreres som "kontakt".</value>
+  </data>
 </root>

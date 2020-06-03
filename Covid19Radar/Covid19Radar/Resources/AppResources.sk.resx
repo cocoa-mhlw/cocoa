@@ -344,4 +344,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Zaznamenané podmienky kontaktu</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt s ostatnými používateľmi aplikácie do 1 metra po dobu 15 minút alebo viac je zaznamenaný ako "kontakt".</value>
+  </data>
 </root>

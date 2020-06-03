@@ -344,4 +344,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Il-kundizzjonijiet ta ' kuntatt irreġistrati</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kuntatt ma ' utenti oħra tal-App fi ħdan miter 1 għal 15-il minuta jew aktar jiġi rreġistrat bħala "kuntatt".</value>
+  </data>
 </root>
