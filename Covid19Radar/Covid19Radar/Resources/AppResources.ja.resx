@@ -353,4 +353,12 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</value>
   </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>アプリの設定へ</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+  </data>
 </root>
