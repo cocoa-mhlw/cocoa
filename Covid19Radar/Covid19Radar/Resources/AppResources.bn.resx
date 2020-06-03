@@ -323,4 +323,19 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>এই অ্যাপ্লিকেশন এতটাই কার্যকর যে অনেকেই এটি ইনস্টল করেন, তাই দয়া করে আপনার চারপাশের লোকেদের সাথে অ্যাপ্লিকেশন শেয়ার করুন.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>কীভাবে ব্যবহার করবেন</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>টার্মিনাল শনাক্তকরণ</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>যোগাযোগ নিশ্চিতকরণ পদ্ধতি</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>আক্রান্ত হতে বদ্ধপরিকর হলে</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>রেকর্ডিং বন্ধ/মুছে ফেলো</value>
+  </data>
 </root>

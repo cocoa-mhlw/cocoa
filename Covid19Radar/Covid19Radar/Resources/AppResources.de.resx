@@ -323,4 +323,19 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Diese Anwendung ist so effektiv, dass viele Menschen installieren, so teilen Sie bitte die Anwendung mit Menschen um Sie herum.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Wie zu verwenden</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminalidentifikation</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Kontaktbestätigungsmethode</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Wenn festgestellt, infiziert zu sein</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Stopp/Löschen der Aufzeichnung</value>
+  </data>
 </root>
