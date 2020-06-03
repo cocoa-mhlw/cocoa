@@ -326,4 +326,7 @@
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>कसे वापरावे</value>
   </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>टर्मिनल ओळख</value>
+  </data>
 </root>

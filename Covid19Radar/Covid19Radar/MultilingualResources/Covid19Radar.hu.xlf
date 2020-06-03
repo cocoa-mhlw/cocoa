@@ -415,6 +415,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hogyan kell használni</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Terminál azonosítása</target>
+        </trans-unit>
       </group>
     </body>
   </file>

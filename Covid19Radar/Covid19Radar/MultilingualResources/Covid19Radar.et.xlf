@@ -417,6 +417,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuidas kasutada</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Terminali ID</target>
+        </trans-unit>
       </group>
     </body>
   </file>

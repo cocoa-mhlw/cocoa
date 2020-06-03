@@ -415,6 +415,10 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Cara menggunakan</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pengenalan terminal</target>
+        </trans-unit>
       </group>
     </body>
   </file>

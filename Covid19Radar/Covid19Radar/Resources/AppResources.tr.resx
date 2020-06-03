@@ -325,4 +325,7 @@
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Nasıl kullanılır?</value>
   </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminal tanımlama</value>
+  </data>
 </root>
