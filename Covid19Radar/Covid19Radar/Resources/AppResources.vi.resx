@@ -350,4 +350,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Ghi lại thông tin liên lạc</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Tại thời gian này, mã số liên lạc của người liên lạc được ghi lại trong ứng dụng. Thông tin liên hệ sẽ không được sử dụng cho đến khi một trong hai người dùng đã đăng ký tích cực. Lịch sử liên lạc sẽ bị xóa sau 14 ngày. * Mã liên lạc thay đổi thường xuyên.</value>
+  </data>
 </root>

@@ -449,6 +449,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Eolas teagmhála a thaifeadadh</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ag an am seo, déantar cód teagmhála an duine i dteagmháil leis a thaifeadadh san iarratas. Ní úsáidfear faisnéis teagmhála go dtí go mbeidh ceachtar úsáideoir cláraithe dearfach. Scriosfar an stair teagmhála tar éis 14 lá. *Athraíonn an cód teagmhála go rialta.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

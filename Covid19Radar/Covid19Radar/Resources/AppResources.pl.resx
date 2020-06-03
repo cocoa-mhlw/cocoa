@@ -350,4 +350,7 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Rejestrowanie informacji kontaktowych</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>W tej chwili kod kontaktowy osoby kontaktowej jest rejestrowany w aplikacji. Dane kontaktowe nie będą używane, dopóki którykolwiek z użytkowników nie zarejestrował pozytywnego. Historia kontaktów zostanie wymazana po 14 dniach. *Kod kontaktowy zmienia się regularnie.</value>
+  </data>
 </root>

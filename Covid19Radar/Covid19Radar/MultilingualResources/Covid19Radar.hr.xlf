@@ -449,6 +449,10 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Snimanje podataka za kontakt</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U ovom trenutku, šifra kontakta osobe s kontaktom zabilježena je u aplikaciji. Podaci za kontakt neće se koristiti dok se bilo koji korisnik ne registrira pozitivno. Povijest kontakata bit će izbrisana nakon 14 dana. *Kod kontakta se redovito mijenja.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

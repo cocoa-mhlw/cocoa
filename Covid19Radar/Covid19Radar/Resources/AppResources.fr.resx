@@ -350,4 +350,7 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Enregistrement des coordonnées</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>À ce moment-là, le code de contact de la personne contactée est enregistré dans l’application. Les coordonnées ne seront pas utilisées tant que l’un ou l’autre utilisateur n’aura pas enregistré de positif. L’historique des contacts sera effacé après 14 jours. Le code de contact change régulièrement.</value>
+  </data>
 </root>

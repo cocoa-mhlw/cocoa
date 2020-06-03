@@ -350,4 +350,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Cofnodi gwybodaeth gyswllt</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Ar yr adeg hon, mae Cod cyswllt y person y cysylltwyd ag ef wedi'i gofnodi yn y cais. Ni chaiff manylion cyswllt eu defnyddio nes bod y naill ddefnyddiwr a'r llall wedi cofrestru'n gadarnhaol. Bydd y hanes cyswllt yn cael ei ddileu ar ôl diwrnodau 14. * Mae'r Cod cyswllt yn newid yn rheolaidd.</value>
+  </data>
 </root>
