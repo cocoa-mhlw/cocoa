@@ -361,4 +361,28 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</value>
     <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
   </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>本アプリをスマートフォンに設定した人どうしの接触を記録します。</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>最近の接触件数の確認へはホーム画面からも移動することができます。</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>通知</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>ホーム画面</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>陽性者との接触があった場合</value>
+    <comment>陽性者との接触があった場合</comment>
+  </data>
 </root>

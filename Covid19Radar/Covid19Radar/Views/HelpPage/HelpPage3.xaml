@@ -6,7 +6,8 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-        Title="{x:Static resources:AppResources.HelpPage3Title}"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{x:Static resources:AppResources.HelpPage3Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -38,7 +39,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                                  Text="{x:Static resources:AppResources.HelpPage3Description1}"
+                        Text="{x:Static resources:AppResources.HelpPage3Description1}"
                         VerticalTextAlignment="Center" />
                 </Grid>
                 <Grid ColumnSpacing="10" RowSpacing="0">
@@ -53,7 +54,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
-                          Text="{x:Static resources:AppResources.HelpPage3Description2}" 
+                        Text="{x:Static resources:AppResources.HelpPage3Description2}"
                         VerticalTextAlignment="Center" />
                     <ffimageloading:CachedImage
                         Grid.Row="1"
@@ -79,7 +80,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                           Text="{x:Static resources:AppResources.HelpPage3Description3}"
+                        Text="{x:Static resources:AppResources.HelpPage3Description3}"
                         VerticalTextAlignment="Center" />
                     <ffimageloading:CachedImage
                         Grid.Row="1"
@@ -99,7 +100,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
-                             Text="{x:Static resources:AppResources.HelpPage3Description4}"
+                        Text="{x:Static resources:AppResources.HelpPage3Description4}"
                         VerticalTextAlignment="Center" />
                     <ffimageloading:CachedImage
                         Grid.Row="1"
@@ -124,7 +125,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                               Text="{x:Static resources:AppResources.HelpPage3Description5}"
+                        Text="{x:Static resources:AppResources.HelpPage3Description5}"
                         VerticalTextAlignment="Center" />
                 </Grid>
             </StackLayout>
@@ -133,7 +134,7 @@
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNotifyOtherPage}"
                     Style="{StaticResource DefaultButton}"
-                          Text="{x:Static resources:AppResources.HelpPage3Description6}"  />
+                    Text="{x:Static resources:AppResources.HelpPage3Description6}" />
             </Grid>
         </Grid>
     </ScrollView>
