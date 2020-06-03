@@ -441,6 +441,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontaktbedingungen aufgezeichnet</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Der Kontakt mit anderen App-Nutzern innerhalb von 1 Meter für 15 Minuten oder mehr wird als "Kontakt" aufgezeichnet.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

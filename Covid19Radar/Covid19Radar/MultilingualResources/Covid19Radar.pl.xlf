@@ -441,6 +441,10 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</target>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Zarejestrowane warunki kontaktu</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt z innymi użytkownikami aplikacji w odległości 1 metra przez 15 minut lub dłużej jest rejestrowany jako "kontakt".</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>روابط کی ریکارڈ کردہ شرائط</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>دوسرے ایپ کے صارفین سے رابطہ کریں 1 میٹر کے اندر 15 منٹ یا اس سے زیادہ کے طور پر ریکارڈ کیا جاتا ہے "رابطہ".</value>
+  </data>
 </root>

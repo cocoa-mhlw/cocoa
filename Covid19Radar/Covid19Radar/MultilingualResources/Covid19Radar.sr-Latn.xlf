@@ -441,6 +441,10 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Zapisani uslovi za kontakt</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt sa drugim korisnicima aplikacija u okviru jednog metra za 15 minuta ili više se snima kao "Kontakt".</target>
+        </trans-unit>
       </group>
     </body>
   </file>

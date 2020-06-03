@@ -344,4 +344,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Điều kiện liên lạc được ghi lại</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Liên hệ với người dùng ứng dụng khác trong vòng 1 mét trong 15 phút trở lên được ghi lại là "liên hệ".</value>
+  </data>
 </root>

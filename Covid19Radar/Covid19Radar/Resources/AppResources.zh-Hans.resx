@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>记录的接触条件</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>1 米内的其他应用用户联系 15 分钟或更长时间将记录为"联系人"。</value>
+  </data>
 </root>

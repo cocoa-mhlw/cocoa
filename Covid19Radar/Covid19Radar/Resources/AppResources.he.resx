@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>תנאי ההתקשרות הוקלטו</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>יצירת קשר עם משתמשי יישומים אחרים בתוך מטר אחד במשך 15 דקות או יותר נרשם כ"איש קשר".</value>
+  </data>
 </root>

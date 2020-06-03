@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Καταγραφόμενες συνθήκες επαφής</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Η επαφή με άλλους χρήστες της εφαρμογής εντός 1 μέτρου για 15 λεπτά ή περισσότερο καταγράφεται ως "επαφή".</value>
+  </data>
 </root>

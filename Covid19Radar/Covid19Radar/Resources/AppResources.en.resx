@@ -344,4 +344,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Conditions of contact recorded</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</value>
+  </data>
 </root>

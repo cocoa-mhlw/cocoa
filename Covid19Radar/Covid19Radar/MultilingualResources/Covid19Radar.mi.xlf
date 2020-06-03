@@ -441,6 +441,10 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ngā whakaritenga o te hoapā kua whakapūketetia</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Whakapā atu ki ētahi atu kaiwhakamahi taupānga i roto i 1 mita mō te 15 meneti, i te mea kua whakapūketetia rānei hei "hoapā".</target>
+        </trans-unit>
       </group>
     </body>
   </file>

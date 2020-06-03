@@ -439,6 +439,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">A rögzített érintkezés feltételei</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">A többi alkalmazásfelhasználóval való kapcsolat 1 méteren belül 15 percen vagy annál több ideig "kapcsolattartóként" kerül rögzítésre.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

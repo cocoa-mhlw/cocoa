@@ -344,4 +344,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Condiții de contact înregistrate</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Contactul cu alți utilizatori ai aplicației în termen de 1 metru timp de 15 minute sau mai mult este înregistrat ca "contact".</value>
+  </data>
 </root>
