@@ -326,4 +326,7 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Hvernig á að nota</value>
   </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Auðkenni afgreiðslustöðvar</value>
+  </data>
 </root>

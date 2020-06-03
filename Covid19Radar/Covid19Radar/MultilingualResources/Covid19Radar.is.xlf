@@ -417,6 +417,10 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvernig á að nota</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Auðkenni afgreiðslustöðvar</target>
+        </trans-unit>
       </group>
     </body>
   </file>
