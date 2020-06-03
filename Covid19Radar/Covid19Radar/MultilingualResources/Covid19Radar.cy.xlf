@@ -493,6 +493,36 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <target state="new">If you contacted with a positive person</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触があった場合</note>
         </trans-unit>
+        <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
+          <source>When a new coronavirus infection is confirmed by PCR</source>
+          <target state="new">When a new coronavirus infection is confirmed by PCR</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">PCR検査により新型コロナウィルスの感染が確認された場合。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description2" translate="yes" xml:space="preserve">
+          <source>Public institutions such as public health centers will issue a "processing number" for registration</source>
+          <target state="new">Public institutions such as public health centers will issue a "processing number" for registration</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">保健所等公的機関から登録用の「処理番号」が発行されます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description3" translate="yes" xml:space="preserve">
+          <source>Register the processing number using this application</source>
+          <target state="new">Register the processing number using this application</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリを用いて処理番号の登録を行います。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description4" translate="yes" xml:space="preserve">
+          <source>You will receive a notification in the smartphone app of the person who contacts you within 14 days. (1m or less, 15 minutes or more)</source>
+          <target state="new">You will receive a notification in the smartphone app of the person who contacts you within 14 days. (1m or less, 15 minutes or more)</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
+          <source>Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified</source>
+          <target state="new">Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末のIDのみです。氏名など、個人特定につながる情報は通知されません。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
+          <source>To register the positive reaction of COVID19 and anonymous notification to others</source>
+          <target state="new">To register the positive reaction of COVID19 and anonymous notification to others</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録と他者への匿名通知へ</note>
+        </trans-unit>
       </group>
     </body>
   </file>
