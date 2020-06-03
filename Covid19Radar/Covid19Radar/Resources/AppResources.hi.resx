@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>दर्ज किए गए संपर्क की शर्तें</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 मिनट या उससे अधिक के लिए 1 मीटर के भीतर अन्य ऐप उपयोगकर्ताओं के साथ संपर्क "संपर्क" के रूप में दर्ज किया गया है।</value>
+  </data>
 </root>

@@ -446,6 +446,10 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Registrerade kontaktvillkor</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt med andra appanvändare inom 1 meter i 15 minuter eller mer registreras som "kontakt".</target>
+        </trans-unit>
       </group>
     </body>
   </file>

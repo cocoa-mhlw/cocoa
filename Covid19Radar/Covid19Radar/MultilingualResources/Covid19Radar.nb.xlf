@@ -441,6 +441,10 @@ Velg Tillat alltid for å konfigurere Bluetooth.</target>
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontaktbetingelser registrert</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt med andre appbrukere innen 1 meter i 15 minutter eller mer registreres som "kontakt".</target>
+        </trans-unit>
       </group>
     </body>
   </file>

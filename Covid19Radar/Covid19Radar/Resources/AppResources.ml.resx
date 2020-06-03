@@ -344,4 +344,7 @@
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>കോൺടാക്റ്റ് രേഖപ്പെടുത്തിയിരിക്കുന്ന നിബന്ധനകൾ</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 മിനിറ്റോ അതിലധികമോ 1 മീറ്ററിനുള്ളിൽ മറ്റ് ആപ്ലിക്കേഷൻ ഉപയോക്താക്കളുമായുള്ള സമ്പർക്കം "സമ്പർക്കം" എന്ന് രേഖപ്പെടുത്തുന്നു.</value>
+  </data>
 </root>

@@ -344,4 +344,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>தொடர்பு நிலைகள் பதிவு</value>
   </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>1 மீட்டருடன் 15 நிமிடங்கள் அல்லது அதற்கும் மேற்பட்ட பயன்பாட்டைப் பயன்படுத்துவோரின் தொடர்பு "தொடர்பு" என பதியப்படும்.</value>
+  </data>
 </root>

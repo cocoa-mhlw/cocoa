@@ -385,6 +385,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Contact with other app users within 1 meter for 15 minutes or more is recorded as &quot;contact&quot;. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description2Text {
+            get {
+                return ResourceManager.GetString("HelpPage1Description2Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Conditions of contact recorded に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description2Title {
