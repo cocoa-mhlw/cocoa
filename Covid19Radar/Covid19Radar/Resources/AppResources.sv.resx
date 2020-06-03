@@ -350,4 +350,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Registrera kontaktinformation</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Vid denna tidpunkt registreras kontaktkoden för den kontaktade personen i ansökan. Kontaktinformation kommer inte att användas förrän någon av användarna har registrerat sig positivt. Kontakthistoriken raderas efter 14 dagar. *Kontaktkoden ändras regelbundet.</value>
+  </data>
 </root>

@@ -447,6 +447,10 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Merakam maklumat kenalan</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pada masa ini, kod kenalan orang yang dihubungi direkodkan dalam aplikasi. Maklumat hubungan tidak akan digunakan sehingga sama ada pengguna telah mendaftar positif. Sejarah kenalan akan dipadamkan selepas 14 hari. * Kod kenalan berubah dengan kerap.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

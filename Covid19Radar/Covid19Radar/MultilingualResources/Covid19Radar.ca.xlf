@@ -449,6 +449,10 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Enregistrament de la informació de contacte</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">En aquest moment, el codi de contacte de la persona contactada es registra en l'aplicació. La informació de contacte no s'utilitzarà fins que no s'hagi registrat cap usuari positiu. L'Historial de contacte s'esborrarà després de 14 dies. * El codi de contacte canvia regularment.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

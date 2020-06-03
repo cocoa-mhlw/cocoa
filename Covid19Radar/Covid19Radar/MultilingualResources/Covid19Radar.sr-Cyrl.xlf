@@ -449,6 +449,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Записивање информација о контакту</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">У овом тренутку, у апликацији је записана Шифра контакта контактирани. Контакт информације неће бити коришћене док се било који корисник не региструје позитивно. Историја контакта ће бити избрисана после 14 дана. * Шифра контакта редовно мења.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

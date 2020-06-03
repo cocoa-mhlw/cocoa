@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Beleženje kontaktnih podatkov</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>V tem času je kontaktna koda osebe, ki je stopila v stik, zabeležena v aplikaciji. Kontaktni podatki se ne bodo uporabljali, dokler se uporabnik ne registrira pozitivno. Zgodovina stikov bo izbrisana po 14 dneh. * Kontaktna koda se redno spreminja.</value>
+  </data>
 </root>

@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>संपर्क माहिती रेकॉर्ड करणे</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>या वेळी, संपर्क झालेल्या व्यक्तीचा संपर्क कोड अर्जात नोंदवला जातो. जोपर्यंत कोणत्याही वापरकर्त्याने सकारात्मक नोंद केल्याशिवाय संपर्क माहिती वापरली जाणार नाही. संपर्क इतिहास १४ दिवसांनंतर पुसला जाईल. *संपर्क कोड नियमितपणे बदलतो.</value>
+  </data>
 </root>

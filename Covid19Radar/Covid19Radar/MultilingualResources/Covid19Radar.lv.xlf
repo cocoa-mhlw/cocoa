@@ -449,6 +449,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakta informācijas ierakstīšana</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Šajā laikā pieteikumā tiek ierakstīts kontaktpersonas kods, uz kuru kontaktpersona ir sazinājusies. Kontaktinformācija netiks izmantota, kamēr kāds lietotājs nav reģistrējis pozitīvu informāciju. Kontaktu vēsture tiks izdzēsta pēc 14 dienām. * Kontaktinformācija kods regulāri mainās.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>记录联系信息</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>此时，联系人的联系人代码将记录在应用程序中。在任一用户注册为正之前，不会使用联系信息。联系历史记录将在 14 天后删除。*联系人代码会定期更改。</value>
+  </data>
 </root>
