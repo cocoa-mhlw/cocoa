@@ -338,4 +338,19 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Stöðva/eyða upptöku</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Þegar þú keyrir þetta forrit mun hver Smartphone mynda og hafa tengiliðakóða. Að auki öðlast þessi App ekki neinar upplýsingar sem tengjast persónuupplýsingum eins og símanúmeri og staðsetningarupplýsingum.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Skilyrði sem skráð hafa verið</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Samband við aðra notendur forrits innan 1 Meter í 15 mínútur eða meira er skráð sem "Contact".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Upplýsingar um skráningu tengiliða</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Á þessum tíma er tengiliðakóði viðkomandi aðila skráður í umsóknina. Tengiliðaupplýsingar verða ekki notaðar fyrr en notandinn hefur skráð sig jákvætt. Tengslaferill verður þurrkast út eftir 14 daga. * Tengiliðskóðinn breytist reglulega.</value>
+  </data>
 </root>

@@ -337,4 +337,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>إيقاف/حذف التسجيل</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>عند تشغيل هذا التطبيق، سيقوم كل هاتف ذكي بإنشاء رمز جهة اتصال ويكون له. بالإضافة إلى ذلك، لا يحصل هذا التطبيق على أي معلومات تتعلق بالمعلومات الشخصية مثل رقم الهاتف ومعلومات الموقع.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>شروط الاتصال المسجلة</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>يتم تسجيل الاتصال مع مستخدمي التطبيق الآخرين في غضون متر واحد لمدة 15 دقيقة أو أكثر على أنه "جهة اتصال".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>تسجيل معلومات الاتصال</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>في هذا الوقت، يتم تسجيل رمز الاتصال للشخص الذي تم الاتصال به في التطبيق. لن يتم استخدام معلومات الاتصال حتى يتم تسجيل أي من المستخدمين بشكل إيجابي. سيتم مسح سجل الاتصال بعد 14 يومًا. * يتغير رمز جهة الاتصال بانتظام.</value>
+  </data>
 </root>

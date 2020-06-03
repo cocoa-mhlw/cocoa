@@ -376,6 +376,51 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description1Text {
+            get {
+                return ResourceManager.GetString("HelpPage1Description1Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Contact with other app users within 1 meter for 15 minutes or more is recorded as &quot;contact&quot;. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description2Text {
+            get {
+                return ResourceManager.GetString("HelpPage1Description2Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Conditions of contact recorded に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description2Title {
+            get {
+                return ResourceManager.GetString("HelpPage1Description2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description3Text {
+            get {
+                return ResourceManager.GetString("HelpPage1Description3Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recording contact information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Description3Title {
+            get {
+                return ResourceManager.GetString("HelpPage1Description3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Terminal identification に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Title {

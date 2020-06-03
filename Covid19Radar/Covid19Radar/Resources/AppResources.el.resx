@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Διακοπή/διαγραφή εγγραφής</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Όταν εκτελείτε αυτήν την εφαρμογή, κάθε smartphone θα δημιουργήσει και θα έχει έναν κωδικό επαφής. Επιπλέον, αυτή η εφαρμογή δεν αποκτά πληροφορίες που σχετίζονται με προσωπικές πληροφορίες, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Καταγραφόμενες συνθήκες επαφής</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Η επαφή με άλλους χρήστες της εφαρμογής εντός 1 μέτρου για 15 λεπτά ή περισσότερο καταγράφεται ως "επαφή".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Καταγραφή στοιχείων επαφής</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Προς το παρόν, ο κωδικός επικοινωνίας του ατόμου που έρχεται σε επαφή καταγράφεται στην αίτηση. Τα στοιχεία επικοινωνίας δεν θα χρησιμοποιηθούν μέχρι να καταχωρηθεί θετικά από οποιονδήποτε χρήστη. Το ιστορικό επαφών θα σβηστεί μετά από 14 ημέρες. *Ο κωδικός επαφής αλλάζει τακτικά.</value>
+  </data>
 </root>

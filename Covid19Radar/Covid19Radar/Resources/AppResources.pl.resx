@@ -338,4 +338,19 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Zatrzymywać/usuwać nagrywanie</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Po uruchomieniu tej aplikacji, każdy smartfon wygeneruje i ma kod kontaktowy. Ponadto ta aplikacja nie uzyskuje żadnych informacji związanych z danymi osobowymi, takimi jak numer telefonu i informacje o lokalizacji.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Zarejestrowane warunki kontaktu</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt z innymi użytkownikami aplikacji w odległości 1 metra przez 15 minut lub dłużej jest rejestrowany jako "kontakt".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Rejestrowanie informacji kontaktowych</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>W tej chwili kod kontaktowy osoby kontaktowej jest rejestrowany w aplikacji. Dane kontaktowe nie będą używane, dopóki którykolwiek z użytkowników nie zarejestrował pozytywnego. Historia kontaktów zostanie wymazana po 14 dniach. *Kod kontaktowy zmienia się regularnie.</value>
+  </data>
 </root>
