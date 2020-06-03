@@ -29,7 +29,6 @@ using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
 using Plugin.LocalNotification;
-using Prism.Plugin.Popups;
 
 /*
  * Our mission...is
@@ -61,7 +60,7 @@ namespace Covid19Radar
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
-            //Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
@@ -120,9 +119,6 @@ namespace Covid19Radar
             // logger
             var logger = new AppCenterLogger();
 
-            containerRegistry.RegisterPopupNavigationService();
-            containerRegistry.RegisterPopupDialogService();
-
             containerRegistry.RegisterInstance<ILogger>(logger);
             containerRegistry.RegisterInstance<ILoggerFacade>(logger);
             containerRegistry.RegisterSingleton<IMiniLogger, FFImageLoadingLogger>();
@@ -141,7 +137,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ContributorsPage>();
             containerRegistry.RegisterForNavigation<SetupCompletedPage>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
-            containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<ExposuresPage>();
             containerRegistry.RegisterForNavigation<UpdateInformationPage>();
             containerRegistry.RegisterForNavigation<SettingsPage>();
@@ -156,12 +151,20 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage6>();
 
             containerRegistry.RegisterForNavigation<HelpMenuPage>();
-            /*
             containerRegistry.RegisterForNavigation<HelpPage1>();
             containerRegistry.RegisterForNavigation<HelpPage2>();
             containerRegistry.RegisterForNavigation<HelpPage3>();
             containerRegistry.RegisterForNavigation<HelpPage4>();
-            */
+
+            containerRegistry.RegisterForNavigation<InqueryPage>();
+            containerRegistry.RegisterForNavigation<ChatbotPage>();
+            containerRegistry.RegisterForNavigation<TermsofservicePage>();
+            containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
+            containerRegistry.RegisterForNavigation<NotifyOtherPage>();
+            containerRegistry.RegisterForNavigation<NotContactPage>();
+            containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
+
+
             // Services
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
