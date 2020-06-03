@@ -347,4 +347,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Makipag-ugnay sa iba pang mga gumagamit ng app sa loob ng 1 metro para sa 15 minuto o higit pa ay naitala bilang "contact".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Pagrerekord ng contact information</value>
+  </data>
 </root>

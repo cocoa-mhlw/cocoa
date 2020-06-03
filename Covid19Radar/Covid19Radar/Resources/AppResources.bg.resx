@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Контакт с други потребители на приложението в рамките на 1 метър за 15 минути или повече се записва като "контакт".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Записване на информация за контакт</value>
+  </data>
 </root>

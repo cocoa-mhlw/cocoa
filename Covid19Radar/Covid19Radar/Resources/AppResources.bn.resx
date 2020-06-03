@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>15 মিনিট বা তার বেশি সময় অন্তর 1 মিটারের মধ্যে অন্যান্য অ্যাপ্লিকেশন ব্যবহারকারীদের সাথে যোগাযোগ "যোগাযোগ" হিসাবে রেকর্ড করা হয় ।</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>যোগাযোগ তথ্য রেকর্ড করা হচ্ছে</value>
+  </data>
 </root>

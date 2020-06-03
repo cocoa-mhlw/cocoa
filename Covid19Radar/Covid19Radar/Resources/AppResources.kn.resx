@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>15 ನಿಮಿಷಗಳು ಅಥವಾ ಅದಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಕಾಲ 1 ಮೀಟರ್ ನೊಳಗೆ ಇತರ ಆಪ್ ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು "ಸಂಪರ್ಕ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ.</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ದಾಖಲಿಸುವುದು</value>
+  </data>
 </root>

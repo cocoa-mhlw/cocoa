@@ -445,6 +445,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">O contato com outros usuários do aplicativo dentro de 1 metro por 15 minutos ou mais é registrado como "contato".</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Registrando informações de contato</target>
+        </trans-unit>
       </group>
     </body>
   </file>

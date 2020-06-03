@@ -442,6 +442,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="translated">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="translated">接触情報の記録</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Контакт з іншими користувачами додатка в межах 1 метра протягом 15 хвилин або більше записується як "контакт".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Запис контактної інформації</value>
+  </data>
 </root>

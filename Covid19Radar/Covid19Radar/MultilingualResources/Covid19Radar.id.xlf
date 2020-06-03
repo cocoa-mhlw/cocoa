@@ -445,6 +445,10 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontak dengan pengguna aplikasi lain dalam 1 meter selama 15 menit atau lebih dicatat sebagai "kontak".</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Merekam informasi kontak</target>
+        </trans-unit>
       </group>
     </body>
   </file>
