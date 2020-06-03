@@ -338,4 +338,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Zaustavljanje/brisanje snimanja</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Kada pokrenete ovu aplikaciju, svaki smartphone će generirati i imati kontakt kod. Osim toga, ova aplikacija ne pribavlja nikakve informacije vezane uz osobne podatke kao što su telefonski broj i podaci o lokaciji.</value>
+  </data>
 </root>

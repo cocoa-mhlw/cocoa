@@ -433,6 +433,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Спиране/изтриване на запис</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Когато стартирате това приложение, всеки смартфон ще генерира и да има код за контакт. В допълнение, това приложение не придобива никаква информация, свързана с лична информация, като например телефонен номер и информация за местоположението.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

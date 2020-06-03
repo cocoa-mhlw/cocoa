@@ -6,6 +6,7 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -23,7 +24,7 @@
             </StackLayout>
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage20.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
             </StackLayout>
             <StackLayout Grid.Row="2">
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="記録される接触の条件" />

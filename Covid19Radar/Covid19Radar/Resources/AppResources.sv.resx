@@ -338,4 +338,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Stoppa/ta bort inspelning</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>När du kör den här appen genererar och har varje smartphone en kontaktkod. Dessutom får denna app inte någon information relaterad till personlig information såsom telefonnummer och platsinformation.</value>
+  </data>
 </root>

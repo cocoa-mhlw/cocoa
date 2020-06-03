@@ -338,4 +338,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Atsaharo/fafao ny firaketana</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Rehefa mihazakazaka ity rafi-baovao ity ianao, dia nalaina ny smartphone ary hisy mari-pamantarana mifandray. Ankoatra izany, ity rafi-baovao ity dia tsy mahazo fampahalalana izay mifandray amin' ny fampahalalana manokana toy ny laharan' ny toerana sy ny fampahalalana.</value>
+  </data>
 </root>

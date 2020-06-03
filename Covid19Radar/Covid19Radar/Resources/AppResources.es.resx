@@ -338,4 +338,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Detener/eliminar grabación</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Al ejecutar esta aplicación, cada teléfono inteligente generará y tendrá un código de contacto. Además, esta aplicación no adquiere ninguna información relacionada con la información personal, como el número de teléfono y la información de ubicación.</value>
+  </data>
 </root>

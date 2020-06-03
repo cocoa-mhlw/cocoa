@@ -433,6 +433,10 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Apturēt/dzēst ierakstīšanu</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Palaižot šo lietotni, katrs viedtālrunis radīs un ir kontakta kods. Turklāt šī lietotne neiegādājas informāciju, kas saistīta ar personisko informāciju, piemēram, tālruņa numuru un atrašanās vietas informāciju.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
