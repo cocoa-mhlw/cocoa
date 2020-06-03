@@ -171,8 +171,9 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
-          <source>Manual</source>
+          <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">수동</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
@@ -410,6 +411,46 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">이 응용 프로그램은 많은 사람들이 그것을 설치너무 효과적이다, 그래서 당신의 주위에 사람들과 응용 프로그램을 공유하시기 바랍니다.</target>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">사용 방법</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">터미널 식별</target>
+        </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">연락처 확인 방법</target>
+        </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">감염된 것으로 판명된 경우</target>
+        </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">녹화 중지/삭제</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">이 응용 프로그램을 실행하면, 각 스마트 폰이 생성하고 연락처 코드를 해야합니다. 또한,이 응용 프로그램은 전화 번호 및 위치 정보와 같은 개인 정보와 관련된 정보를 취득하지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">기록된 접촉 조건</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">15분 이상 1미터 이내의 다른 앱 사용자와의 접촉은 "연락처"로 기록됩니다.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">연락처 정보 기록</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">이때, 연락받은 사람의 연락처 코드가 신청서에 기록된다. 연락처 정보는 두 사용자가 긍정적으로 등록할 때까지 사용되지 않습니다. 연락처 기록은 14일 후에 지워집니다. *연락처 코드는 정기적으로 변경됩니다.</target>
         </trans-unit>
       </group>
     </body>

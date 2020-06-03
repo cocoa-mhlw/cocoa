@@ -172,8 +172,9 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
-          <source>Manual</source>
+          <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">دستی</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
@@ -411,6 +412,46 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">یہ ایپلی کیشن بہت مؤثر ہے کہ بہت سے لوگوں کو اس کی تنصیب ہے ، لہذا براہ مہربانی آپ کے ارد گرد لوگوں کے ساتھ درخواست کا اشتراک کریں.</target>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">استعمال کرنے کا طریقہ</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ٹرمینل شناخت</target>
+        </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>Contact confirmation method</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">رابطہ تصدیق طریقہ</target>
+        </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">اگر متاثرہ ہونے کا تعین کیا جائے</target>
+        </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>Stop/delete recording</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ریکارڈنگ روکیں/حذف کریں</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">جب آپ اس اپلی کیشن کو چلاتے ہیں تو ، ہر اسمارٹ فون پیدا کرے گا اور رابطہ کوڈ ہے. اس کے علاوہ ، اس اپلی کیشن کو ذاتی معلومات جیسے ٹیلی فون نمبر اور مقام کی معلومات سے متعلق کوئی معلومات حاصل نہیں ہوتی ہے ۔</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">روابط کی ریکارڈ کردہ شرائط</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">دوسرے ایپ کے صارفین سے رابطہ کریں 1 میٹر کے اندر 15 منٹ یا اس سے زیادہ کے طور پر ریکارڈ کیا جاتا ہے "رابطہ".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">رابطے کی معلومات ریکارڈنگ</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">اس وقت ، رابطہ فرد کے رابطہ کوڈ کی درخواست میں ریکارڈ کیا جاتا ہے. رابطہ کی معلومات استعمال نہیں کی جائے گی جب تک کہ صارف نے مثبت طور پر رجسٹرڈ نہ کیا ہو ۔ رابطے کی تاریخ 14 دن کے بعد ختم ہو جائے گی. * رابطہ کوڈ باقاعدگی سے تبدیل ہوتا ہے.</target>
         </trans-unit>
       </group>
     </body>
