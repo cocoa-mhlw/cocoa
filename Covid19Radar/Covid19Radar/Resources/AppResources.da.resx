@@ -323,4 +323,34 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Dette program er så effektiv, at mange mennesker installerer det, så kan du dele programmet med folk omkring dig.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Sådan bruger du</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Identifikation af terminal</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Metode til bekræftelse af kontaktperson</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Hvis det konstateres, at de er smittet</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Stop/slet optagelse</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Når du kører denne app, vil hver smartphone generere og have en kontaktkode. Desuden får denne app ingen oplysninger relateret til personlige oplysninger såsom telefonnummer og placeringsoplysninger.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Registrerede kontaktbetingelser</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt med andre appbrugere inden for 1 meter i 15 minutter eller mere registreres som "kontakt".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Registrering af kontaktoplysninger</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>På nuværende tidspunkt registreres kontaktpersonens kontaktkode i programmet. Kontaktoplysninger vil ikke blive brugt, før nogen af brugerne har registreret positiv. Kontakthistorikken slettes efter 14 dage. *Kontaktkoden ændres regelmæssigt.</value>
+  </data>
 </root>

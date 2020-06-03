@@ -323,4 +323,34 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>This application is so effective that many people install it, so please share the application with people around you.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>How to use</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminal identification</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Contact confirmation method</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>If determined to be infected</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Stop/delete recording</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Conditions of contact recorded</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Recording contact information</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</value>
+  </data>
 </root>

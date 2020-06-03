@@ -323,4 +323,34 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Это приложение настолько эффективно, что многие люди устанавливают его, поэтому, пожалуйста, поделитесь приложением с людьми вокруг вас.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Как использовать</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Идентификация терминала</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Метод подтверждения контакта</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Если установлено, что инфицировано</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Остановка/удаление записи</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Когда вы запустите это приложение, каждый смартфон будет генерировать и иметь контактный код. Кроме того, это приложение не приобретает никакой информации, связанной с личной информацией, такой как номер телефона и информация о местоположении.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Условия контакта записаны</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Контакт с другими пользователями приложения в пределах 1 метра в течение 15 минут или более записывается как "контакт".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Запись контактной информации</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>В это время в приложении записывается контактный код контактного лица. Контактная информация не будет использоваться до тех пор, пока пользователь не зарегистрирует сяпотку. История контакта будет стерта через 14 дней. «Контактный код регулярно меняется.</value>
+  </data>
 </root>

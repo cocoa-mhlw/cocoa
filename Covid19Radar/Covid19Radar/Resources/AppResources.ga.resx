@@ -323,4 +323,34 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Tá an t-iarratas seo chomh héifeachtach sin go suiteálann go leor daoine é, mar sin roinn an t-iarratas le daoine timpeall ort.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Conas é a úsáid</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Sainaithint teirminéil</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Modh deimhnithe teagmhála</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Má chinntear a bheith ionfhabhtaithe</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Stop/scrios taifeadadh</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Nuair a ritheann tú an feidhmchlár seo, ginfidh gach fón cliste agus beidh cód teagmhála acu. Ina theannta sin, ní fhaigheann an feidhmchlár seo aon fhaisnéis a bhaineann le faisnéis phearsanta ar nós uimhir theileafóin agus faisnéis suímh.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Coinníollacha teagmhála taifeadta</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Déantar teagmháil le húsáideoirí app eile laistigh de 1 mhéadar ar feadh 15 nóiméad nó níos mó a thaifeadadh mar "teagmháil".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Eolas teagmhála a thaifeadadh</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Ag an am seo, déantar cód teagmhála an duine i dteagmháil leis a thaifeadadh san iarratas. Ní úsáidfear faisnéis teagmhála go dtí go mbeidh ceachtar úsáideoir cláraithe dearfach. Scriosfar an stair teagmhála tar éis 14 lá. *Athraíonn an cód teagmhála go rialta.</value>
+  </data>
 </root>

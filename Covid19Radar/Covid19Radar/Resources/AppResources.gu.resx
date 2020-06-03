@@ -323,4 +323,34 @@
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>આ એપ્લિકેશન એટલી અસરકારક છે કે ઘણા લોકો તેને ઇન્સ્ટોલ કરે છે, તેથી કૃપા કરીને તમારી આસપાસના લોકો સાથે એપ્લિકેશન ને શેર કરો.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>કેવી રીતે વાપરવું</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>ટર્મિનલ ઓળખ</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>સંપર્ક પુષ્ટિ પદ્દતિ</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>જો ચેપ લાગવાનું નક્કી થયેલ હોય</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>રેકોર્ડિંગ બંધ/કાઢી નાંખો</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>જ્યારે તમે આ એપ ચલાવો છો, ત્યારે દરેક સ્માર્ટફોન જનરેટ થશે અને એક કોન્ટેક્ટ કોડ હશે. આ ઉપરાંત, આ એપ ટેલિફોન નંબર અને સ્થાનની માહિતી જેવી વ્યક્તિગત માહિતી સાથે સંબંધિત કોઈ પણ માહિતી પ્રાપ્ત કરતી નથી.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>સંપર્કની શરતો રેકોર્ડ થયેલ છે</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>15 મિનિટ અથવા તેનાથી વધુ સમય માટે 1 મીટરની અંદર અન્ય એપ્લિકેશન વપરાશકર્તાઓ સાથે સંપર્ક ને "સંપર્ક" તરીકે નોંધવામાં આવે છે.</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>સંપર્ક જાણકારીને રેકોર્ડ કરી રહ્યા છીએ</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>આ સમયે, સંપર્ક કરનાર વ્યક્તિનો સંપર્ક કોડ એપ્લિકેશનમાં રેકોર્ડ કરવામાં આવે છે. જ્યાં સુધી કોઈ પણ વપરાશકર્તા પોઝિટિવ ન આવે ત્યાં સુધી સંપર્ક માહિતીનો ઉપયોગ નહીં થાય. સંપર્ક ઇતિહાસ 14 દિવસ પછી ભૂંસી નાખવામાં આવશે. *સંપર્ક કોડ નિયમિત પણે બદલાય છે.</value>
+  </data>
 </root>
