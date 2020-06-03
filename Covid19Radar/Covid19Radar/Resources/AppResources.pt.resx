@@ -350,4 +350,7 @@ Selecione 'Sempre Permita' para configurar bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Registrando informações de contato</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Neste momento, o código de contato da pessoa contatada é registrado no aplicativo. As informações de contato não serão usadas até que qualquer usuário tenha registrado positivo. O histórico de contatos será apagado após 14 dias. *O código de contato muda regularmente.</value>
+  </data>
 </root>

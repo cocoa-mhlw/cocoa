@@ -449,6 +449,10 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Záznam kontaktních informací</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">V tomto okamžiku je v aplikaci zaznamenán kontaktní kód oslovené osoby. Kontaktní informace nebudou použity, dokud se některý z uživatelů nezaregistruje pozitivně. Historie kontaktů bude vymazána po 14 dnech. *Kontaktní kód se pravidelně mění.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

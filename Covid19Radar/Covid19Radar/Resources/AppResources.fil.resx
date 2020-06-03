@@ -350,4 +350,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Pagrerekord ng contact information</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Sa panahong ito, ang contact code ng taong nakontak ay nakatala sa aplikasyon. Ang contact information ay hindi gagamitin hanggang sa nakarehistro nang positibo ang alinman sa user. Ang contact history ay mabubura pagkaraan ng 14 na araw. * Ang contact Code ay regular na nagbabago.</value>
+  </data>
 </root>

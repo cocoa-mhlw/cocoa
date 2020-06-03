@@ -350,4 +350,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Înregistrarea informațiilor de contact</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>În acest moment, codul de contact al persoanei contactate este înregistrat în aplicație. Informațiile de contact nu vor fi utilizate până când niciunul dintre utilizatori nu s-a înregistrat pozitiv. Istoricul contactelor va fi șters după 14 zile. *Codul de contact se modifică în mod regulat.</value>
+  </data>
 </root>

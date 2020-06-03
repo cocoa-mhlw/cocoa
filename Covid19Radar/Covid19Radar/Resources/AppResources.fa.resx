@@ -350,4 +350,7 @@
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>ضبط اطلاعات تماس</value>
   </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>در این زمان ، کد تماس فرد تماس گرفته شده در برنامه ثبت می شود. اطلاعات تماس استفاده نخواهد شد تا زمانی که کاربر ثبت نام مثبت است. سابقه تماس پس از 14 روز پاک می شود. * کد تماس به طور منظم تغییر میکند.</value>
+  </data>
 </root>
