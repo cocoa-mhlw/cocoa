@@ -338,4 +338,7 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>રેકોર્ડિંગ બંધ/કાઢી નાંખો</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>જ્યારે તમે આ એપ ચલાવો છો, ત્યારે દરેક સ્માર્ટફોન જનરેટ થશે અને એક કોન્ટેક્ટ કોડ હશે. આ ઉપરાંત, આ એપ ટેલિફોન નંબર અને સ્થાનની માહિતી જેવી વ્યક્તિગત માહિતી સાથે સંબંધિત કોઈ પણ માહિતી પ્રાપ્ત કરતી નથી.</value>
+  </data>
 </root>

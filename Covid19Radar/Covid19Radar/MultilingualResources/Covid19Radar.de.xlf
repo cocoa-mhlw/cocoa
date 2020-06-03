@@ -433,6 +433,10 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Stopp/Löschen der Aufzeichnung</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wenn Sie diese App ausführen, wird jedes Smartphone generieren und einen Kontaktcode haben. Darüber hinaus erfasst diese App keine Informationen zu persönlichen Informationen wie Telefonnummer und Standortinformationen.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

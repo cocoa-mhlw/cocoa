@@ -338,4 +338,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>記録の停止／削除</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</value>
+  </data>
 </root>

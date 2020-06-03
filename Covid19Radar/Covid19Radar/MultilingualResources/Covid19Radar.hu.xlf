@@ -431,6 +431,10 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Felvétel leállítása/törlése</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Amikor futtatja ezt az alkalmazást, minden okostelefon létrehoz, és egy kapcsolatkódot. Ezen túlmenően, ez az alkalmazás nem szerez semmilyen információt kapcsolatos személyes adatokat, mint a telefonszám és a helyadatait.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

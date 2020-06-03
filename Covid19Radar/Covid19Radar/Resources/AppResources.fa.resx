@@ -338,4 +338,7 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>توقف/حذف ضبط</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>هنگامی که این برنامه را اجرا می کنید ، هر گوشی هوشمند تولید می کند و یک کد تماس دارد. علاوه بر این ، این برنامه هیچ اطلاعاتی مربوط به اطلاعات شخصی مانند شماره تلفن و اطلاعات مکان را به دست نمی آورد.</value>
+  </data>
 </root>

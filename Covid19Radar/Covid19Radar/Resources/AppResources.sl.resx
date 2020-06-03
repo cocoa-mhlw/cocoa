@@ -338,4 +338,7 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Ustavitev/brisanje snemanja</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Ko zaženete to aplikacijo, bo vsak pametni telefon ustvaril in imel kontaktno kodo. Poleg tega ta aplikacija ne pridobi nobenih informacij, povezanih z osebnimi podatki, kot so telefonska številka in informacije o lokaciji.</value>
+  </data>
 </root>
