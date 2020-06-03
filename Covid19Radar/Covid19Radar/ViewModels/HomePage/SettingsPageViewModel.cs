@@ -57,6 +57,11 @@ namespace Covid19Radar.ViewModels
             await userDataService.SetAsync(_UserData);
         });
 
+        public Command OnClickLicenseAgreement => new Command(async () =>
+        {
+            await NavigationService.NavigateAsync(nameof(LicenseAgreementPage));
+        });
+
 
         public ICommand OnChangeNotificationState => new Command(async () =>
         {
