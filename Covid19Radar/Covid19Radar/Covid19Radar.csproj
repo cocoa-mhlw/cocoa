@@ -103,6 +103,15 @@
     <Compile Update="Views\HomePage\InqueryPage.xaml.cs">
       <DependentUpon>InqueryPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\HomePage\NotContactPage.xaml.cs">
+      <DependentUpon>NotContactPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomePage\ContactedNotifyPage.xaml.cs">
+      <DependentUpon>ContactedNotifyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomePage\ThankYouNotifyOtherPage.xaml.cs">
+      <DependentUpon>ThankYouNotifyOtherPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\HomePage\UpdateInformationPage.xaml.cs">
       <DependentUpon>UpdateInformationPage.xaml</DependentUpon>
     </Compile>
