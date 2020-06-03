@@ -45,13 +45,13 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf0c0",
                 PageName = nameof(TermsofservicePage),
-                Title = nameof(TermsofservicePage)
+                Title = "利用規約"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
-                PageName = nameof(ContactPage),
-                Title = nameof(ContactPage)
+                PageName = nameof(InqueryPage),
+                Title = "お問い合わせ"
             });
 
             MenuItems.Add(new MainMenuModel()
