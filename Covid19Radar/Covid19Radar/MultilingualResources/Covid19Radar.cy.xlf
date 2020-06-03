@@ -417,6 +417,10 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Sut i ddefnyddio</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Adnabod terfynell</target>
+        </trans-unit>
       </group>
     </body>
   </file>

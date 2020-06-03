@@ -326,4 +326,7 @@
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Как использовать</value>
   </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Идентификация терминала</value>
+  </data>
 </root>

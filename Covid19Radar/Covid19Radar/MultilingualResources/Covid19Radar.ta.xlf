@@ -417,6 +417,10 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">எப்படிப் பயன்படுத்துவது</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">முனைய அடையாளம் காணுதல்</target>
+        </trans-unit>
       </group>
     </body>
   </file>

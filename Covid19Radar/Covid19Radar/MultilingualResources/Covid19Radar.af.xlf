@@ -416,6 +416,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hoe om te gebruik</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Terminale identifikasie</target>
+        </trans-unit>
       </group>
     </body>
   </file>
