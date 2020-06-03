@@ -326,4 +326,7 @@
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Kako uporabljati</value>
   </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Identifikacija terminala</value>
+  </data>
 </root>

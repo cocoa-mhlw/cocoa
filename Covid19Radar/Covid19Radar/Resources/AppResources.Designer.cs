@@ -376,6 +376,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Terminal identification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1Title {
+            get {
+                return ResourceManager.GetString("HelpPage1Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Contact with positive testers in the last 14 days に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader1Title {

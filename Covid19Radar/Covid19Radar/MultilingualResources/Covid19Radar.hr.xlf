@@ -417,6 +417,10 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kako koristiti</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>Terminal identification</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Identifikacija terminala</target>
+        </trans-unit>
       </group>
     </body>
   </file>
