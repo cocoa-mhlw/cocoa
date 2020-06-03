@@ -413,6 +413,10 @@ Selecione 'Sempre Permita' para configurar bluetooth.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Este aplicativo é tão eficaz que muitas pessoas o instalam, então compartilhe o aplicativo com as pessoas ao seu redor.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Como usar</target>
+        </trans-unit>
       </group>
     </body>
   </file>

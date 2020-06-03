@@ -323,4 +323,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ovaj program je toliko učinkovit da mnogi ljudi ga instalirati, pa vas molimo da podijelite aplikaciju s ljudima oko vas.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Kako koristiti</value>
+  </data>
 </root>

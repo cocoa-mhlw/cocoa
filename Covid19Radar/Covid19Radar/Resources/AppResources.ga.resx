@@ -323,4 +323,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Tá an t-iarratas seo chomh héifeachtach sin go suiteálann go leor daoine é, mar sin roinn an t-iarratas le daoine timpeall ort.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Conas é a úsáid</value>
+  </data>
 </root>

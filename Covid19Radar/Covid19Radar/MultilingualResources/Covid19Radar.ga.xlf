@@ -413,6 +413,10 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tá an t-iarratas seo chomh héifeachtach sin go suiteálann go leor daoine é, mar sin roinn an t-iarratas le daoine timpeall ort.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Conas é a úsáid</target>
+        </trans-unit>
       </group>
     </body>
   </file>

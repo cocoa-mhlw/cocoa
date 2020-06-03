@@ -323,4 +323,7 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Questa applicazione è così efficace che molte persone installarlo, quindi si prega di condividere l'applicazione con le persone intorno a te.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Come utilizzare</value>
+  </data>
 </root>

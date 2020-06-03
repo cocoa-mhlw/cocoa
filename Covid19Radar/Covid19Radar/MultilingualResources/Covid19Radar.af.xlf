@@ -412,6 +412,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>This application is so effective that many people install it, so please share the application with people around you.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hierdie aansoek is so effektief dat baie mense dit installeer, so deel asseblief die aansoek met mense rondom jou.</target>
         </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>How to use</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hoe om te gebruik</target>
+        </trans-unit>
       </group>
     </body>
   </file>

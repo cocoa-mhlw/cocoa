@@ -323,4 +323,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Programu hii ni ya ufanisi sana kwamba watu wengi kufunga hiyo, hivyo tafadhali kushiriki maombi na watu walio karibu nawe.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Jinsi ya kutumia</value>
+  </data>
 </root>
