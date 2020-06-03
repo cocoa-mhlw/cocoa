@@ -433,6 +433,26 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Waqqaf/Ħassar ir-Re ġistrazzjoni</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Meta tħaddem din l-applikazzjoni, kull smartphone se jiġġenera u jkollu kodiċi ta ' kuntatt. Barra minn hekk, din l-applikazzjoni ma takkwista l-ebda informazzjoni relatata ma ' informazzjoni personali bħal numru tat-telefon u informazzjoni dwar il-post.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il-kundizzjonijiet ta ' kuntatt irreġistrati</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuntatt ma ' utenti oħra tal-App fi ħdan miter 1 għal 15-il minuta jew aktar jiġi rreġistrat bħala "kuntatt".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Irrekordjar tal-informazzjoni ta ' kuntatt</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">F ' dan iż-żmien, il-Kodi ċi ta ' kuntatt tal-persuna kkuntattjata huwa rreġistrat fl-applikazzjoni. L-informazzjoni ta ' kuntatt ma tintużax sakemm kwalunkwe utent ikun Irreġistra pożittiv. L-istorja tal-kuntatt se titħassar wara 14-il jum. * Il-Kodi ċi tal-kuntatt jinbidel regolarment.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -338,4 +338,19 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Interrompere/eliminare la registrazione</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Quando si esegue questa applicazione, ogni smartphone genererà e avere un codice di contatto. Inoltre, questa applicazione non acquisisce alcuna informazione relativa alle informazioni personali come il numero di telefono e le informazioni sulla posizione.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Condizioni di contatto registrate</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Il contatto con altri utenti dell'app entro 1 metro per 15 minuti o più viene registrato come "contatto".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Registrazione delle informazioni di contatto</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>A questo punto, il codice di contatto della persona contattata viene registrato nell'applicazione. Le informazioni di contatto non verranno utilizzate fino a quando nessuno dei due utenti non si è registrato positivo. La cronologia dei contatti verrà cancellata dopo 14 giorni. : il codice di contatto cambia regolarmente.</value>
+  </data>
 </root>

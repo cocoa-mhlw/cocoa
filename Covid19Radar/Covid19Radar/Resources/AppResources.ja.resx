@@ -338,4 +338,19 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>記録の停止／削除</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>記録される接触の条件</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>接触情報の記録</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</value>
+  </data>
 </root>

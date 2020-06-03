@@ -338,4 +338,19 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Enregistrement stop/supprimer</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>Lorsque vous exécutez cette application, chaque smartphone génère et dispose d’un code de contact. De plus, cette application n’acquiert aucune information relative à des renseignements personnels tels que le numéro de téléphone et les informations de localisation.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Conditions de contact enregistrées</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Le contact avec d’autres utilisateurs d’applications dans un rayon de 1 mètre pendant 15 minutes ou plus est enregistré comme «contact».</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Enregistrement des coordonnées</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>À ce moment-là, le code de contact de la personne contactée est enregistré dans l’application. Les coordonnées ne seront pas utilisées tant que l’un ou l’autre utilisateur n’aura pas enregistré de positif. L’historique des contacts sera effacé après 14 jours. Le code de contact change régulièrement.</value>
+  </data>
 </root>

@@ -433,6 +433,26 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Zaustavi/Izbriši snimanje</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kada pokrenete ovu aplikaciju, svaki pametni telefon će generisati i imati kôd kontakta. Pored toga, ova aplikacija ne stiče nikakve informacije vezane za lične informacije kao što su broj telefona i informacije o lokaciji.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zapisani uslovi za kontakt</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt sa drugim korisnicima aplikacija u okviru jednog metra za 15 minuta ili više se snima kao "Kontakt".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zapisivanje informacija o kontaktu</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U ovom trenutku, u aplikaciji je zapisana Šifra kontakta kontaktirani. Kontakt informacije neće biti korišćene dok se bilo koji korisnik ne registruje pozitivno. Istorija kontakta će biti izbrisana posle 14 dana. * Šifra kontakta redovno menja.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

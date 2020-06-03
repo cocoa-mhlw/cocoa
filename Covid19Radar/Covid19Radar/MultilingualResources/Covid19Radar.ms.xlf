@@ -431,6 +431,26 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</target>
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Henti/Hapus rakaman</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apabila anda menjalankan aplikasi ini, setiap telefon pintar akan menghasilkan dan mempunyai kod kenalan. Di samping itu, aplikasi ini tidak memperoleh sebarang maklumat yang berkaitan dengan maklumat peribadi seperti nombor telefon dan maklumat lokasi.</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>Conditions of contact recorded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Keadaan hubungan yang direkodkan</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hubungi dengan pengguna aplikasi lain dalam 1 meter selama 15 minit atau lebih direkodkan sebagai "kenalan".</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Merakam maklumat kenalan</target>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pada masa ini, kod kenalan orang yang dihubungi direkodkan dalam aplikasi. Maklumat hubungan tidak akan digunakan sehingga sama ada pengguna telah mendaftar positif. Sejarah kenalan akan dipadamkan selepas 14 hari. * Kod kenalan berubah dengan kerap.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

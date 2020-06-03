@@ -338,4 +338,19 @@
   <data name="HelpPage4Title" xml:space="preserve">
     <value>రికార్డింగ్ ఆపివేయడం/తొలగించడం</value>
   </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>ఈ యాప్ ను రన్ చేయగానే ప్రతి స్మార్ట్ ఫోన్ ను జనరేట్ చేసి కాంటాక్ట్ కోడ్ ను కలిగి ఉంటుంది. దీనికి అదనంగా, టెలిఫోన్ నెంబరు మరియు లొకేషన్ సమాచారం వంటి వ్యక్తిగత సమాచారానికి సంబంధించిన ఎలాంటి సమాచారాన్ని ఈ యాప్ పొందదు.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>కాంటాక్ట్ యొక్క కండిషన్ లు రికార్డ్ చేయబడ్డాయి</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>1 మీటర్ లో 15 నిమిషాలు లేదా అంతకంటే ఎక్కువ ఉన్న ఇతర యాప్ యూజర్ లతో కాంటాక్ట్ "కాంటాక్ట్" వలే రికార్డ్ చేయబడింది.</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>సంప్రదింపు సమాచారాన్ని నమోదు చేయడం</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>ఈ సమయంలో సంప్రదించిన వ్యక్తి కాంటాక్ట్ కోడ్ ను దరఖాస్తులో నమోదు చేస్తారు. యూజర్ పాజిటివ్ గా రిజిస్టర్ చేసుకునే వరకు కాంటాక్ట్ సమాచారం ఉపయోగించరాదు. 14 రోజుల తరువాత కాంటాక్ట్ హిస్టరీ తుడిచివేయబడుతుంది. * కాంటాక్ట్ కోడ్ ఎప్పటికప్పుడు మారిపోతుంది.</value>
+  </data>
 </root>
