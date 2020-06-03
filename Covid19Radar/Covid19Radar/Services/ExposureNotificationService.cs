@@ -51,7 +51,29 @@ namespace Covid19Radar.Services
 
             Status status = await ExposureNotification.GetStatusAsync();
             GetStatusMessage(status);
+
+
         }
+        /*
+        public async Task TestDownloadBatch()
+        {
+            long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
+            TemporaryExposureKeysResult tekResult = await httpDataService.GetTemporaryExposureKeys(sinceEpochSeconds);
+            Console.WriteLine("Fetch Exposure Key");
+
+            foreach (var keys in tekResult.Keys)
+            {
+                Console.WriteLine(keys.Url);
+            }
+
+        }
+
+        public bool GetOptInStatus()
+        {
+            return userData.IsOptined;
+        }
+                */
+
 
         /*
         public async Task SetOptinStatusAsync(bool flg)

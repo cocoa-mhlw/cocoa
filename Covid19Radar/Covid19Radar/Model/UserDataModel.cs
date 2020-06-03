@@ -60,20 +60,13 @@ namespace Covid19Radar.Model
             return JumpHash.JumpConsistentHash(JumpConsistentSeed, AppConstants.NumberOfGroup);
         }
 
-        // From Xamarin.EN LocalState Class
-        public static readonly Dictionary<string, ulong> DefaultServerBatchNumbers = new Dictionary<string, ulong> { { "ZA", 0 }, { "CA", 0 } };
-
         public bool IsOptined { get; set; } = false;
 
         public bool IsExposureNotificationEnabled { get; set; } = false;
 
         public bool IsNotificationEnabled { get; set; } = false;
         
-        //public long ServerLastTime { get; set; } = 0;
-
-        //public string Region { get; set; } = AppConstants.DefaultRegion;
-
-        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = new Dictionary<string, ulong>(DefaultServerBatchNumbers);
+        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
 
         public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
 
