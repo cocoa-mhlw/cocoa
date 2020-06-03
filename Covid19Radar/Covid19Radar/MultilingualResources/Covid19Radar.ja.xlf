@@ -170,8 +170,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
-          <source>Manual</source>
-          <target state="translated">マニュアル</target>
+          <source>How to use</source>
+          <target state="translated">使い方</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
