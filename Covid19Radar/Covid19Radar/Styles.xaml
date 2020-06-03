@@ -61,7 +61,7 @@
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
         <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryText}" />
-        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontSize" Value="Small" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="Opacity" Value="0.6" />
         <Style.Triggers>
