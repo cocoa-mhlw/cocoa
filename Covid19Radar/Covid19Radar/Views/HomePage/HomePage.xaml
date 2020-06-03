@@ -16,7 +16,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             AutomationId="LabelMainTutorial"
-            Command="{prism:NavigateTo HelpMenuPage}"
+            Command="{prism:NavigateTo 'HelpMenuPage'}"
             Order="Primary"
             Priority="1"
             Text="{x:Static resources:AppResources.MainTutorial}" />
@@ -28,187 +28,99 @@
             BackgroundColor="#CCCCCC"
             Spacing="20">
             <Frame Padding="16" CornerRadius="10">
-                <StackLayout Spacing="16">
-                    <Grid ColumnSpacing="10" RowSpacing="0">
+                <StackLayout Spacing="0">
+                    <Label
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource DefaultLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="2020年6月1日から" />
+                                <Span Text="X日間" />
+                                <Span Text="使用中" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button
+                        AutomationId="ButtonShareApp"
+                        Command="{Binding Path=OnClickExposures}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="陽性者との接触を確認する(14日間)" />
+
+                </StackLayout>
+            </Frame>
+            <Frame Padding="16" CornerRadius="10">
+                <StackLayout Spacing="0">
+                    <Label
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        Text="新型コロナウィルス陽性と診断されたら" />
+                    <Grid ColumnSpacing="15" RowSpacing="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.9*" />
-                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="0.8*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <Label
+                        <ffimageloading:CachedImage
                             Grid.Row="0"
                             Grid.Column="0"
-                            Style="{StaticResource HelpMenuLabel}"
-                            Text="どのようにして接触を記録していますか？" />
-                        <Image
+                            Aspect="AspectFit"
+                            Source="settings.png" />
+                        <Label
                             Grid.Row="0"
                             Grid.Column="1"
-                            HeightRequest="35"
-                            VerticalOptions="Center"
-                            WidthRequest="35">
-                            <Image.Source>
-                                <FontImageSource
-                                    FontFamily="FA-S"
-                                    Glyph="&#xf054;"
-                                    Size="35"
-                                    Color="#CCCCCC" />
-                            </Image.Source>
-                        </Image>
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{x:Static resources:AppResources.HomePageHeader2Description}"
+                            VerticalTextAlignment="Center" />
                     </Grid>
+
+                    <Button
+                        Command="{Binding Path=OnClickNotifyOther}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="陽性情報の登録" />
                 </StackLayout>
             </Frame>
             <Frame Padding="16" CornerRadius="10">
-                <StackLayout Spacing="16">
-                    <ffimageloading:CachedImage
-                        Margin="-16,-16,-16,0"
-                        Aspect="AspectFit"
-                        Source="TopMainImg.png" />
+                <StackLayout Spacing="0">
                     <Label
-                        FontSize="24"
-                        Text="Walk below the arches"
-                        TextColor="#000000" />
-                    <Label
-                        FontSize="14"
-                        Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
-                        TextColor="#CCCCCC" />
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
+                    <Grid ColumnSpacing="15" RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="0.8*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="FA-S"
+                                    Glyph="&#xf1e1;"
+                                    Size="30"
+                                    Color="#2196F3" />
+                            </Image.Source>
+                        </Image>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{x:Static resources:AppResources.HomePageHeader3Description}"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
                     <Button
-                        Command="{Binding Path=OnClickExposures}"
-                        HorizontalOptions="End"
+                        Command="{Binding Path=OnClickShareApp}"
                         Style="{StaticResource DefaultButton}"
-                        Text="Next" />
+                        Text="{x:Static resources:AppResources.ButtonShare}" />
                 </StackLayout>
             </Frame>
         </StackLayout>
 
-        <!--
-        <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <StackLayout Margin="0,0,0,0" Spacing="0">
-                    <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.HomePageHeader1Title}" />
-
-                <Grid HorizontalOptions="FillAndExpand">
-                    <Grid.RowDefinitions>
-                        <RowDefinition>
-                            <RowDefinition.Height>
-                                <OnPlatform x:TypeArguments="GridLength">
-                                    <On Platform="Android" Value="50" />
-                                    <On Platform="iOS" Value="40" />
-                                </OnPlatform>
-                            </RowDefinition.Height>
-                        </RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <Image Grid.Column="0" Style="{StaticResource CustomButtonInternalHeadImageStyle}">
-                        <Image.Source>
-                            <FontImageSource
-                                FontFamily="FA-S"
-                                Glyph="&#xf071;"
-                                Size="30"
-                                Color="#2196F3" />
-                        </Image.Source>
-                    </Image>
-
-                    <Button
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
-                        AutomationId="ButtonExposures"
-                        Command="{Binding Path=OnClickExposures}"
-                        Style="{StaticResource CustomButtonStyle}" />
-
-                    <Label
-                        Grid.Column="1"
-                        Grid.ColumnSpan="2"
-                        Style="{StaticResource CustomButtonInternalLabelStyle}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span
-                                    FontAttributes="Bold"
-                                    FontSize="Large"
-                                    Text="X件"
-                                    TextColor="Black" />
-                                <Span FontSize="Small" Text="の接触がありました" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Image Grid.Column="2" Style="{StaticResource CustomButtonInternalFootImageStyle}">
-                        <Image.Source>
-                            <FontImageSource
-                                FontFamily="FA-S"
-                                Glyph="&#xf105;"
-                                Size="40"
-                                Color="#2196F3" />
-                        </Image.Source>
-                    </Image>
-                </Grid>
-            </StackLayout>
-            <StackLayout Margin="0,0,0,0" Spacing="0">
-                <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.HomePageHeader2Title}" />
-                <Grid ColumnSpacing="10" RowSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <ffimageloading:CachedImage
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Aspect="AspectFit"
-                        Source="settings.png" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.HomePageHeader2Description}" />
-                </Grid>
-                <Button
-                    AutomationId="ButtonNotifyOther"
-                    Command="{Binding Path=OnClickNotifyOther}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.ButtonNotifyOtherPage}" />
-            </StackLayout>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <StackLayout Margin="0,0,0,0" Spacing="0">
-                <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
-                <Grid ColumnSpacing="10" RowSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.2*" />
-                        <ColumnDefinition Width="0.8*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Image Grid.Row="0" Grid.Column="0">
-                        <Image.Source>
-                            <FontImageSource
-                                FontFamily="FA-S"
-                                Glyph="&#xf1e1;"
-                                Size="30"
-                                Color="#2196F3" />
-                        </Image.Source>
-                    </Image>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.HomePageHeader3Description}" />
-                </Grid>
-                <Button
-                    AutomationId="ButtonShareApp"
-                    Command="{Binding Path=OnClickShareApp}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.ButtonShare}" />
-
-            </StackLayout>
-        </StackLayout>
-        -->
     </ScrollView>
 </ContentPage>
