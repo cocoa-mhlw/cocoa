@@ -444,6 +444,10 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontak met ander app gebruikers binne 1 meter vir 15 minute of meer is aangeteken as "kontak".</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Neem kontakinligting op</target>
+        </trans-unit>
       </group>
     </body>
   </file>

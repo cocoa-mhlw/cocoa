@@ -347,4 +347,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Kontak met ander app gebruikers binne 1 meter vir 15 minute of meer is aangeteken as "kontak".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Neem kontakinligting op</value>
+  </data>
 </root>

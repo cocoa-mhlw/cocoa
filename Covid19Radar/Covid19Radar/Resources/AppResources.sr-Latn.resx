@@ -347,4 +347,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Kontakt sa drugim korisnicima aplikacija u okviru jednog metra za 15 minuta ili više se snima kao "Kontakt".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Zapisivanje informacija o kontaktu</value>
+  </data>
 </root>

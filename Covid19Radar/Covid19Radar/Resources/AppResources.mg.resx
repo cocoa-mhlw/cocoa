@@ -347,4 +347,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Mifandraisa amin' ny fitaovana hafa mpampiasa ao amin' ny 1 metatra mandritra ny 15 minitra na mihoatra izany dia voarakitra ho toy ny "mifandray".</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Firaketana ny fanazavana mifandray</value>
+  </data>
 </root>

@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>15 मिनिटे किंवा त्यापेक्षा जास्त वेळ इतर अॅप वापरकर्त्याशी संपर्क "संपर्क" म्हणून नोंदला जातो.</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>संपर्क माहिती रेकॉर्ड करणे</value>
+  </data>
 </root>

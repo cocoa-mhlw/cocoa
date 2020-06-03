@@ -347,4 +347,7 @@
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>15 മിനിറ്റോ അതിലധികമോ 1 മീറ്ററിനുള്ളിൽ മറ്റ് ആപ്ലിക്കേഷൻ ഉപയോക്താക്കളുമായുള്ള സമ്പർക്കം "സമ്പർക്കം" എന്ന് രേഖപ്പെടുത്തുന്നു.</value>
   </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>സമ്പർക്ക വിവരങ്ങൾ രേഖപ്പെടുത്തൽ</value>
+  </data>
 </root>

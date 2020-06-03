@@ -445,6 +445,10 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Contact met andere app-gebruikers binnen 1 meter gedurende 15 minuten of meer wordt geregistreerd als "contact".</target>
         </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>Recording contact information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Contactgegevens opnemen</target>
+        </trans-unit>
       </group>
     </body>
   </file>
