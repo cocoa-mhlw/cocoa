@@ -323,4 +323,34 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Denna ansökan är så effektiv att många människor installerar det, så vänligen dela programmet med människor omkring dig.</value>
   </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>Så här använder du</value>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Identifiering av terminal</value>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>Metod för kontaktbekräftelse</value>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Om det bedöms vara infekterat</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Stoppa/ta bort inspelning</value>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>När du kör den här appen genererar och har varje smartphone en kontaktkod. Dessutom får denna app inte någon information relaterad till personlig information såsom telefonnummer och platsinformation.</value>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>Registrerade kontaktvillkor</value>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>Kontakt med andra appanvändare inom 1 meter i 15 minuter eller mer registreras som "kontakt".</value>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>Registrera kontaktinformation</value>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>Vid denna tidpunkt registreras kontaktkoden för den kontaktade personen i ansökan. Kontaktinformation kommer inte att användas förrän någon av användarna har registrerat sig positivt. Kontakthistoriken raderas efter 14 dagar. *Kontaktkoden ändras regelbundet.</value>
+  </data>
 </root>
