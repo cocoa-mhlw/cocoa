@@ -64,6 +64,13 @@ namespace Covid19Radar.ViewModels
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
+                PageName = nameof(ThankYouNotifyOtherPage),
+                Title = nameof(ThankYouNotifyOtherPage)
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf0c0",
                 PageName = nameof(DebugPage),
                 Title = nameof(DebugPage)
             });
