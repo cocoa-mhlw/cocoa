@@ -425,6 +425,10 @@ Bluetooth seadistamiseks valige suvand alati luba.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakti kinnitamise meetod</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kui otsustatakse nakatuda</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -425,6 +425,10 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Μέθοδος επιβεβαίωσης επαφής</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Εάν διαπιστωθεί ότι έχει μολυνθεί</target>
+        </trans-unit>
       </group>
     </body>
   </file>

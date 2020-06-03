@@ -332,4 +332,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Metodu ta ' konferma ta ' kuntatt</value>
   </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>Jekk ikun determinat li huwa infettat</value>
+  </data>
 </root>

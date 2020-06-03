@@ -425,6 +425,10 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Yhteyden vahvistusmenetelmä</target>
         </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>If determined to be infected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jos todetaan tartunnan saaneeksi</target>
+        </trans-unit>
       </group>
     </body>
   </file>
