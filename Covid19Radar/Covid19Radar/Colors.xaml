@@ -30,4 +30,7 @@
     <Color x:Key="ButtonBackground">#E8F7FF</Color>
     <Color x:Key="ButtonText">#000000</Color>
     <Color x:Key="ButtonGrayedOut">#A4A4A4</Color>
+
+    <Color x:Key="NavBarText">#000000</Color>
+    <Color x:Key="NavBarBackground">#FFFFFF</Color>
 </ResourceDictionary>

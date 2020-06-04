@@ -14,17 +14,17 @@
         <NavigationPage
             Title="Menu"
             AutomationId="MasterMenu"
+            BarBackgroundColor="#FFFFFF"
+            BarTextColor="Black"
             Icon="ic_hamburger.png">
 
             <x:Arguments>
-                <ContentPage Title="COVID-19Radar">
-
+                <ContentPage Title="メニュー" BackgroundColor="#FFFFFF">
                     <ListView
-                        BackgroundColor="#e8e8e8"
                         ItemsSource="{Binding MenuItems}"
                         RowHeight="60"
                         SelectedItem="{Binding SelectedMenuItem}"
-                        SeparatorColor="LightGray"
+                        SeparatorColor="#E0E0E0"
                         SeparatorVisibility="Default">
 
                         <ListView.ItemTemplate>
@@ -45,14 +45,14 @@
                                                     FontFamily="FA-S"
                                                     Glyph="{Binding Icon}"
                                                     Size="35"
-                                                    Color="#2196F3" />
+                                                    Color="#019AE8" />
                                             </Image.Source>
                                         </Image>
                                         <Label
                                             AutomationId="{Binding Title}"
                                             FontSize="Default"
                                             Text="{Binding Title}"
-                                            TextColor="Black"
+                                            TextColor="#019AE8"
                                             VerticalOptions="Center" />
                                     </StackLayout>
                                 </ViewCell>
