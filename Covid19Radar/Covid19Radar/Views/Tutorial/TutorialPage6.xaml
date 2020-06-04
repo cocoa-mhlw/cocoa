@@ -29,14 +29,14 @@
                 <StackLayout>
                     <Button
                         AutomationId="NextButton"
-                        Command="{Binding Path=OnClickNext}"
+                        Command="{prism:NavigateTo '/MenuPage/NavigationPage/HomePage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="ホーム画面へ" />
 
                     <Button
                         Margin="0,10,0,0"
                         AutomationId="NextButton"
-                        Command="{Binding Path=OnClickNext}"
+                        Command="{prism:NavigateTo '/MenuPage/NavigationPage/HelpMenuPage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="使い方を学ぶ" />
                 </StackLayout>
