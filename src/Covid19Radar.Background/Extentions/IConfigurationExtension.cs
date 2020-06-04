@@ -16,6 +16,7 @@ namespace Covid19Radar.Background
         public static string[] SupportRegions(this IConfiguration config) => config["SupportRegions"]?.Split(',') ?? new string[] {};
         public static string VerificationKeyId(this IConfiguration config) => config["VerificationKeyId"];
         public static string VerificationKeyVersion(this IConfiguration config) => config["VerificationKeyVersion"];
+        public static string VerificationKeySecret(this IConfiguration config) => config["VerificationKeySecret"];
 
     }
 }
