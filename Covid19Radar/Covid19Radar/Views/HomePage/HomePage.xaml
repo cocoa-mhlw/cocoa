@@ -12,7 +12,6 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-
     <ContentPage.ToolbarItems>
         <ToolbarItem
             AutomationId="LabelMainTutorial"
