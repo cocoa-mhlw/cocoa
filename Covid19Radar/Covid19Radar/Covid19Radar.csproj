@@ -201,5 +201,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MultilingualResources\" />
+    <Folder Include="Views\Tutorial\UnUsed\" />
   </ItemGroup>
 </Project>
