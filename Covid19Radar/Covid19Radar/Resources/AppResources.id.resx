@@ -325,32 +325,42 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Cara menggunakan</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifikasi terminal</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Metode konfirmasi kontak</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Jika bertekad untuk terinfeksi</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Berhenti/Hapus rekaman</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Ketika Anda menjalankan aplikasi ini, setiap smartphone akan menghasilkan dan memiliki kode kontak. Selain itu, aplikasi ini tidak memperoleh informasi yang terkait dengan informasi pribadi seperti nomor telepon dan informasi lokasi.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Kondisi kontak yang direkam</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Kontak dengan pengguna aplikasi lain dalam 1 meter selama 15 menit atau lebih dicatat sebagai "kontak".</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Merekam informasi kontak</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Saat ini, kode kontak dari orang yang dihubungi dicatat dalam aplikasi. Informasi kontak tidak akan digunakan sampai salah satu pengguna telah terdaftar positif. Riwayat kontak akan terhapus setelah 14 hari. * Kode kontak berubah secara teratur.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>
