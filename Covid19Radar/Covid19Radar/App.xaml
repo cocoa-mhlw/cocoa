@@ -8,7 +8,6 @@
     <Application.Resources>
         <ResourceDictionary>
             <Style TargetType="NavigationPage">
-                <Setter Property="HasNavigationBar" Value="True" />
                 <Setter Property="BarTextColor" Value="{StaticResource NavBarText}" />
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavBarBackground}" />
             </Style>
