@@ -325,32 +325,42 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Paano gamitin ang</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal identification</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Makipag-ugnayan sa confirmation paraan</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Kung determinadong maging impeksyon</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Itigil/burahin ang pagrekord</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Kapag patakbuhin mo ang app na ito, bawat smartphone ay bumuo at magkakaroon ng isang contact code. Bilang karagdagan, ang app na ito ay walang anumang impormasyon na may kaugnayan sa personal na impormasyon tulad ng numero ng telepono at impormasyon sa lokasyon.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Mga kondisyon ng pagkontak na nakatala</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Makipag-ugnay sa iba pang mga gumagamit ng app sa loob ng 1 metro para sa 15 minuto o higit pa ay naitala bilang "contact".</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Pagrerekord ng contact information</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Sa panahong ito, ang contact code ng taong nakontak ay nakatala sa aplikasyon. Ang contact information ay hindi gagamitin hanggang sa nakarehistro nang positibo ang alinman sa user. Ang contact history ay mabubura pagkaraan ng 14 na araw. * Ang contact Code ay regular na nagbabago.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>

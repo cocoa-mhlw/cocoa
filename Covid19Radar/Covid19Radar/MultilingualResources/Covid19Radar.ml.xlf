@@ -416,42 +416,52 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
           <source>How to use</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ഉപയോഗിക്കേണ്ട വിധം</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">使い方</note>
         </trans-unit>
         <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
           <source>Terminal identification</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ടെര് മിനല് തിരിച്ചറിയല്</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">端末の識別</note>
         </trans-unit>
         <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
           <source>Contact confirmation method</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">സമ്പർക്ക സ്ഥിരീകരണ രീതി</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の確認方法</note>
         </trans-unit>
         <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
           <source>If determined to be infected</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">അണുബാധയുണ്ടാകുമെന്ന് നിർണ്ണയിച്ചാൽ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
         </trans-unit>
         <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
           <source>Stop/delete recording</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">റെക്കോർഡിംഗ് നിർത്തുക/ഇല്ലാതാക്കുക</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">記録の停止／削除</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങൾ ഈ ആപ്ലിക്കേഷൻ പ്രവർത്തിപ്പിക്കുമ്പോൾ, ഓരോ സ്മാർട്ട് ഫോണും ജനറേറ്റ് ചെയ്യുകയും സമ്പർക്ക കോഡ് നടത്തുകയും ചെയ്യും. കൂടാതെ, ടെലിഫോൺ നമ്പറും ലൊക്കേഷൻ വിവരങ്ങളും പോലുള്ള വ്യക്തിഗത വിവരങ്ങളുമായി ബന്ധപ്പെട്ട വിവരങ്ങളൊന്നും ഈ ആപ്പ് നേടിയില്ല.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
           <source>Conditions of contact recorded</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">കോൺടാക്റ്റ് രേഖപ്പെടുത്തിയിരിക്കുന്ന നിബന്ധനകൾ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">記録される接触の条件</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">15 മിനിറ്റോ അതിലധികമോ 1 മീറ്ററിനുള്ളിൽ മറ്റ് ആപ്ലിക്കേഷൻ ഉപയോക്താക്കളുമായുള്ള സമ്പർക്കം "സമ്പർക്കം" എന്ന് രേഖപ്പെടുത്തുന്നു.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
           <source>Recording contact information</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">സമ്പർക്ക വിവരങ്ങൾ രേഖപ്പെടുത്തൽ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触情報の記録 </note>
         </trans-unit>
         <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
           <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ഈ സമയത്ത് ബന്ധപ്പെടേണ്ട ആളുടെ കോണ്ടാക്ട് കോഡ് ആപ്ലിക്കേഷനില് രേഖപ്പെടുത്തിയിട്ടുണ്ട്. ഒന്നുകിൽ ഉപയോക്താവ് പോസിറ്റീവ് ആയി രജിസ്റ്റർ ചെയ്യുന്നത് വരെ സമ്പർക്ക വിവരങ്ങൾ ഉപയോഗിക്കില്ല. സമ്പർക്ക ചരിത്രം 14 ദിവസത്തിനു ശേഷം അഴിയെണ്ണും. * കോൺടാക്റ്റ് കോഡ് പതിവായി മാറുന്നു.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</note>
         </trans-unit>
         <trans-unit id="HelpPage4ButtonText" translate="yes" xml:space="preserve">
           <source>Go to app settings</source>
@@ -516,7 +526,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
           <source>Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified</source>
           <target state="new">Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末のIDのみです。氏名など、個人特定につながる情報は通知されません。</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末の接触符号のみです。氏名など、個人特定につながる情報は通知されません。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
           <source>To register the positive reaction of COVID19 and anonymous notification to others</source>
