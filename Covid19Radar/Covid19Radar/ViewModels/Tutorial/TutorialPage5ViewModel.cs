@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Covid19Radar.Model;
 using Covid19Radar.Renderers;
+using Covid19Radar.Services;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -9,17 +10,27 @@ namespace Covid19Radar.ViewModels
 {
     public class TutorialPage5ViewModel : ViewModelBase
     {
-        public TutorialPage5ViewModel(INavigationService navigationService) : base(navigationService)
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
+        public TutorialPage5ViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = Resources.AppResources.TitleHowItWorks;
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
+
         }
 
         public Command OnClickEnable => new Command(async () =>
         {
+            userData.IsExposureNotificationEnabled = true;
+            await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
         });
         public Command OnClickDisable => new Command(async () =>
         {
+            userData.IsExposureNotificationEnabled = false;
+            await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
         });
 
