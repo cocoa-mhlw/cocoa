@@ -13,6 +13,7 @@ namespace Covid19Radar.Api.Models
         public string Platform { get; set; }
 
         public string[] AllowedRegions { get; set; }
+        public bool DeviceValidationEnabled { get; set; }
 
         // SafetyNet configuration
 
@@ -33,6 +34,7 @@ namespace Covid19Radar.Api.Models
         public string DeviceCheckTeamId { get; set; }
 
         public string DeviceCheckPrivateKey { get; set; }
+
 
         // Utils
         public static DevicePlatform ParsePlatform(string platform) =>
