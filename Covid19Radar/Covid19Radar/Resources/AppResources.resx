@@ -518,7 +518,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
     <value>Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified</value>
-    <comment>通知される情報は端末のIDのみです。氏名など、個人特定につながる情報は通知されません。</comment>
+    <comment>通知される情報は端末の接触符号のみです。氏名など、個人特定につながる情報は通知されません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
     <value>To register the positive reaction of COVID19 and anonymous notification to others</value>
