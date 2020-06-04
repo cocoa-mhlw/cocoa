@@ -20,7 +20,7 @@ namespace Covid19Radar.Droid.Services
     {
         public void closeApplication()
         {
-            var activity = (Activity)Forms.Context;
+            var activity = Xamarin.Essentials.Platform.CurrentActivity;
             activity.FinishAffinity();
         }
     }
