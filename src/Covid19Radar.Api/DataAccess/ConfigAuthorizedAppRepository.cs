@@ -18,6 +18,7 @@ namespace Covid19Radar.Api.DataAccess
             Android.Platform = "android";
             Android.AllowedRegions = config.SupportRegions();
             Android.PackageName = config.AndroidPackageName();
+            Android.DeviceValidationEnabled = config.AndroidDeviceValidationEnabled();
             iOS = new AuthorizedAppInformation();
             iOS.Platform = "ios";
             iOS.AllowedRegions = config.SupportRegions();
@@ -25,6 +26,7 @@ namespace Covid19Radar.Api.DataAccess
             iOS.DeviceCheckKeyId = config.iOSDeviceCheckKeyId();
             iOS.DeviceCheckTeamId = config.iOSDeviceCheckTeamId();
             iOS.DeviceCheckPrivateKey = config.iOSDeviceCheckPrivateKey();
+            iOS.DeviceValidationEnabled = config.iOSDeviceValidationEnabled();
         }
 
         public Task<AuthorizedAppInformation> GetAsync(string platform)
