@@ -73,7 +73,9 @@
 <MtouchFastDev>true</MtouchFastDev>
 <DeviceSpecificBuild>true</DeviceSpecificBuild>
 <DeviceSpecificBuild>true</DeviceSpecificBuild>
-<Commandlineparameters></Commandlineparameters>
+<IntermediateOutputPath></IntermediateOutputPath>
+<BuildIpa></BuildIpa>
+<CrashReportingDelay>-1</CrashReportingDelay>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DefineConstants></DefineConstants>
@@ -115,6 +117,8 @@
 <MtouchSdkVersion>13.5</MtouchSdkVersion>
 <MtouchUseLlvm>true</MtouchUseLlvm>
 <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+<MtouchNoSymbolStrip></MtouchNoSymbolStrip>
+<CrashReportingEnabled>false</CrashReportingEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -250,9 +254,6 @@
       <Version>3.2.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>3.2.2</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.AppCenter.Distribute">
       <Version>3.2.2</Version>
     </PackageReference>
     <PackageReference Include="Plugin.LocalNotification">
