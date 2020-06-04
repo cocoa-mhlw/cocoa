@@ -325,32 +325,42 @@
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>如何使用</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>端子识别</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>联系人确认方法</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>如果被确定为被感染</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>停止/删除录制</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>运行此应用时，每部智能手机都将生成并具有联系人代码。此外，此应用程序不获取与个人信息相关的任何信息，如电话号码和位置信息。</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>记录的接触条件</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>1 米内的其他应用用户联系 15 分钟或更长时间将记录为"联系人"。</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>记录联系信息</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>此时，联系人的联系人代码将记录在应用程序中。在任一用户注册为正之前，不会使用联系信息。联系历史记录将在 14 天后删除。*联系人代码会定期更改。</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>

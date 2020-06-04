@@ -324,32 +324,42 @@
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Nasıl kullanılır?</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal tanımlama</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>İletişim onay yöntemi</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Enfekte olduğu tespit edilirse</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Kaydı durdurma/silme</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Bu uygulamayı çalıştırdığınızda, her akıllı telefon bir iletişim kodu oluşturur ve sahip olur. Ayrıca, bu uygulama telefon numarası ve konum bilgileri gibi kişisel bilgilerle ilgili herhangi bir bilgi edinmez.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Kaydedilen iletişim koşulları</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>15 dakika veya daha uzun süre 1 metre içinde diğer uygulama kullanıcılarıile iletişim "iletişim" olarak kaydedilir.</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>İletişim bilgilerini kaydetme</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Şu anda, ilgili kişinin iletişim kodu uygulamaya kaydedilir. Kişi bilgileri, her iki kullanıcı da pozitif kayıt olana kadar kullanılmaz. Temas geçmişi 14 gün sonra silinir. *Kişi kodu düzenli olarak değişir.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>
