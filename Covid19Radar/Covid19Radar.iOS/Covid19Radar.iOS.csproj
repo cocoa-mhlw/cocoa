@@ -59,22 +59,24 @@
     <CodesignKey>Apple Development: Hirose Kazumi (B5NUWQDLW4)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchLink>None</MtouchLink>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <MtouchProfiling>true</MtouchProfiling>
     <CodesignProvision>Covid19radar</CodesignProvision>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
-    <MtouchSdkVersion>
-    </MtouchSdkVersion>
+    <MtouchSdkVersion>13.5</MtouchSdkVersion>
     <MtouchInterpreter>-all</MtouchInterpreter>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
 <MtouchI18n>cjk</MtouchI18n>
 <LangVersion>latest</LangVersion>
 <MtouchFastDev>true</MtouchFastDev>
+<DeviceSpecificBuild>true</DeviceSpecificBuild>
+<DeviceSpecificBuild>true</DeviceSpecificBuild>
+<Commandlineparameters></Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
+    <DefineConstants></DefineConstants>
     <DefineConstants></DefineConstants>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
@@ -91,8 +93,9 @@
 <MtouchI18n>cjk</MtouchI18n>
 <LangVersion>latest</LangVersion>
 <MtouchFastDev></MtouchFastDev>
-<DelaySign>false</DelaySign>
 <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+<MtouchUseLlvm>true</MtouchUseLlvm>
+<MtouchEnableSGenConc>true</MtouchEnableSGenConc>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -109,6 +112,9 @@
 <MtouchI18n>cjk</MtouchI18n>
 <LangVersion>latest</LangVersion>
 <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
+<MtouchSdkVersion>13.5</MtouchSdkVersion>
+<MtouchUseLlvm>true</MtouchUseLlvm>
+<MtouchEnableSGenConc>true</MtouchEnableSGenConc>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>none</DebugType>
@@ -127,7 +133,6 @@
 <MtouchDebug></MtouchDebug>
 <IpaMetadata></IpaMetadata>
 <MtouchLink></MtouchLink>
-<AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
 <NoWarn></NoWarn>
 <NoStdLib>false</NoStdLib>
 <PlatformTarget>anycpu</PlatformTarget>
@@ -239,7 +244,7 @@
       <Version>7.1.0.442</Version>
     </PackageReference>
     <PackageReference Include="Google.Protobuf">
-      <Version>3.12.2</Version>
+      <Version>3.12.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>3.2.2</Version>
@@ -277,9 +282,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.800</Version>
+      <Version>4.6.0.847</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
       <Version>1.0.0-beta2</Version>
