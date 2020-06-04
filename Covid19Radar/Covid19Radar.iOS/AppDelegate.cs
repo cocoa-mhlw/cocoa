@@ -6,8 +6,6 @@ using Covid19Radar.Model;
 using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Foundation;
-using Microsoft.AppCenter.Distribute;
-using Microsoft.AppCenter.Push;
 using ObjCRuntime;
 using Prism;
 using Prism.Ioc;
@@ -46,7 +44,6 @@ namespace Covid19Radar.iOS
             {
                 Logger = new Covid19Radar.Services.DebugLogger()
             });
-            Distribute.DontCheckForUpdatesInDebug();
 
             Plugin.LocalNotification.NotificationCenter.AskPermission();
 
