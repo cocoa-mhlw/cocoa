@@ -325,32 +325,42 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Sut i ddefnyddio</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Adnabod terfynell</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Dull cadarnhau cyswllt</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Os penderfynir ei fod wedi'i heintio</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Stopio/dileu recordiad</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Pan fyddwch yn rhedeg yr app hwn, bydd pob ffôn smart yn cynhyrchu ac yn cael Cod cyswllt. Yn ogystal, nid yw'r app hwn yn caffael unrhyw wybodaeth sy'n gysylltiedig â gwybodaeth bersonol fel rhif ffôn a gwybodaeth lleoliad.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Amodau cyswllt a gofnodir</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Cofnodir cysylltiad â defnyddwyr eraill yr apiau o fewn 1 meter am 15 munud neu fwy fel "Contact".</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Cofnodi gwybodaeth gyswllt</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Ar yr adeg hon, mae Cod cyswllt y person y cysylltwyd ag ef wedi'i gofnodi yn y cais. Ni chaiff manylion cyswllt eu defnyddio nes bod y naill ddefnyddiwr a'r llall wedi cofrestru'n gadarnhaol. Bydd y hanes cyswllt yn cael ei ddileu ar ôl diwrnodau 14. * Mae'r Cod cyswllt yn newid yn rheolaidd.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>

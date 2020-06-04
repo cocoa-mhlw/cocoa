@@ -413,42 +413,52 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
           <source>How to use</source>
           <target state="translated">使い方</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">使い方</note>
         </trans-unit>
         <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
           <source>Terminal identification</source>
           <target state="translated">端末の識別</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">端末の識別</note>
         </trans-unit>
         <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
           <source>Contact confirmation method</source>
           <target state="translated">接触の確認方法</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の確認方法</note>
         </trans-unit>
         <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
           <source>If determined to be infected</source>
           <target state="translated">感染していると判定されたら</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
         </trans-unit>
         <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
           <source>Stop/delete recording</source>
           <target state="translated">記録の停止／削除</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">記録の停止／削除</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
           <source>When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information.</source>
           <target state="translated">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
           <source>Conditions of contact recorded</source>
           <target state="translated">記録される接触の条件</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">記録される接触の条件</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
           <source>Contact with other app users within 1 meter for 15 minutes or more is recorded as "contact".</source>
           <target state="translated">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
           <source>Recording contact information</source>
           <target state="translated">接触情報の記録</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触情報の記録 </note>
         </trans-unit>
         <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
           <source>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</source>
           <target state="translated">このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</note>
         </trans-unit>
         <trans-unit id="HelpPage4ButtonText" translate="yes" xml:space="preserve">
           <source>Go to app settings</source>
@@ -492,32 +502,32 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
           <source>When a new coronavirus infection is confirmed by PCR</source>
-          <target state="new">When a new coronavirus infection is confirmed by PCR</target>
+          <target state="translated">When a new coronavirus infection is confirmed by PCR</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PCR検査により新型コロナウィルスの感染が確認された場合。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description2" translate="yes" xml:space="preserve">
           <source>Public institutions such as public health centers will issue a "processing number" for registration</source>
-          <target state="new">Public institutions such as public health centers will issue a "processing number" for registration</target>
+          <target state="translated">Public institutions such as public health centers will issue a "processing number" for registration</target>
           <note from="MultilingualBuild" annotates="source" priority="2">保健所等公的機関から登録用の「処理番号」が発行されます。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description3" translate="yes" xml:space="preserve">
           <source>Register the processing number using this application</source>
-          <target state="new">Register the processing number using this application</target>
+          <target state="translated">Register the processing number using this application</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを用いて処理番号の登録を行います。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description4" translate="yes" xml:space="preserve">
           <source>You will receive a notification in the smartphone app of the person who contacts you within 14 days. (1m or less, 15 minutes or more)</source>
-          <target state="new">You will receive a notification in the smartphone app of the person who contacts you within 14 days. (1m or less, 15 minutes or more)</target>
+          <target state="translated">You will receive a notification in the smartphone app of the person who contacts you within 14 days. (1m or less, 15 minutes or more)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
           <source>Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified</source>
-          <target state="new">Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末のIDのみです。氏名など、個人特定につながる情報は通知されません。</note>
+          <target state="translated">Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末の接触符号のみです。氏名など、個人特定につながる情報は通知されません。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
           <source>To register the positive reaction of COVID19 and anonymous notification to others</source>
-          <target state="new">To register the positive reaction of COVID19 and anonymous notification to others</target>
+          <target state="translated">To register the positive reaction of COVID19 and anonymous notification to others</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録と他者への匿名通知へ</note>
         </trans-unit>
       </group>
