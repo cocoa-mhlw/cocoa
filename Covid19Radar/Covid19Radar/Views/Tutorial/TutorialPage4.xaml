@@ -24,7 +24,12 @@
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="TutorialPage40.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。" />
-                <Label Style="{StaticResource DefaultLabel}" Text="技術的な詳細について" />
+                <Label Style="{StaticResource DefaultLabelColor}" Text="技術的な詳細について">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{prism:NavigateTo '/NavigationPage/HelpPage2'}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
             </StackLayout>
             <Grid Grid.Row="2">
                 <StackLayout>
