@@ -13,7 +13,7 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <Grid Style="{StaticResource DefaultGridLayout}">
+        <Grid Margin="0,0,0,0" Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
@@ -23,7 +23,14 @@
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="利用規約" />
             </StackLayout>
             <StackLayout Grid.Row="1">
-                <Label Style="{StaticResource DefaultLabel}" Text="※この部分はWebページの読み込み？" />
+                <ScrollView>
+                    <StackLayout>
+                        <WebView
+                            HeightRequest="9999"
+                            Source="{x:Static resources:AppResources.UrlPrivacyPolicy}"
+                            Style="{StaticResource DefaultWebView}" />
+                    </StackLayout>
+                </ScrollView>
             </StackLayout>
             <Grid Grid.Row="2">
                 <Button
