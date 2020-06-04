@@ -325,32 +325,42 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Kā lietot</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Termināla identifikācija</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Kontakta apstiprinājuma metode</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Ja ir konstatēts, ka tas ir inficēts</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Apturēt/dzēst ierakstīšanu</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Palaižot šo lietotni, katrs viedtālrunis radīs un ir kontakta kods. Turklāt šī lietotne neiegādājas informāciju, kas saistīta ar personisko informāciju, piemēram, tālruņa numuru un atrašanās vietas informāciju.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Reģistrētie kontakta nosacījumi</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Kontakts ar citiem lietotnes lietotājiem 1 metra robežās 15 minūtes vai ilgāk tiek ierakstīts kā "kontaktpersona".</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Kontakta informācijas ierakstīšana</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Šajā laikā pieteikumā tiek ierakstīts kontaktpersonas kods, uz kuru kontaktpersona ir sazinājusies. Kontaktinformācija netiks izmantota, kamēr kāds lietotājs nav reģistrējis pozitīvu informāciju. Kontaktu vēsture tiks izdzēsta pēc 14 dienām. * Kontaktinformācija kods regulāri mainās.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>

@@ -325,32 +325,42 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>எப்படிப் பயன்படுத்துவது</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>முனைய அடையாளம் காணுதல்</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>தொடர்பு உறுதிப்படுத்தல் முறை</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>தொற்றுக்கு என தீர்மானித்தால்</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>பதிவை நிறுத்து/நீக்கு</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>இந்த செயலியை இயக்கும் போது, ஒவ்வொரு ஸ்மார்ட்ஃபோனும் உருவாக்கி, ஒரு தொடர்பு குறியீட்டை கொண்டிருக்கும். மேலும், இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனிப்பட்ட தகவல்கள் தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>தொடர்பு நிலைகள் பதிவு</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>1 மீட்டருடன் 15 நிமிடங்கள் அல்லது அதற்கும் மேற்பட்ட பயன்பாட்டைப் பயன்படுத்துவோரின் தொடர்பு "தொடர்பு" என பதியப்படும்.</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>தொடர்பு தகவலை பதிவுசெய்தல்</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>இந்த நேரத்தில், தொடர்பு கொண்ட நபரின் தொடர்பு குறியீடு, விண்ணப்பத்தில் பதிவு செய்யப்படுகிறது. பயனர் நேர்மறை பதிவு செய்யும் வரை தொடர்புத் தகவல் பயன்படுத்தப்படாது. 14 நாட்களுக்குப் பிறகு தொடர்பு வரலாறு அழித்து விடும். * தொடர்பு குறியீடு அவ்வப்போது மாறும்.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>

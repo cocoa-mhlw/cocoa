@@ -325,32 +325,42 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Come utilizzare</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identificazione del terminale</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Metodo di conferma del contatto</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Se viene ritenuto infetto</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Interrompere/eliminare la registrazione</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Quando si esegue questa applicazione, ogni smartphone genererà e avere un codice di contatto. Inoltre, questa applicazione non acquisisce alcuna informazione relativa alle informazioni personali come il numero di telefono e le informazioni sulla posizione.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Condizioni di contatto registrate</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Il contatto con altri utenti dell'app entro 1 metro per 15 minuti o più viene registrato come "contatto".</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Registrazione delle informazioni di contatto</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>A questo punto, il codice di contatto della persona contattata viene registrato nell'applicazione. Le informazioni di contatto non verranno utilizzate fino a quando nessuno dei due utenti non si è registrato positivo. La cronologia dei contatti verrà cancellata dopo 14 giorni. : il codice di contatto cambia regolarmente.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>
