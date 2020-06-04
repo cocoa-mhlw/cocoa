@@ -325,32 +325,42 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Cara menggunakan</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Pengenalan terminal</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Kaedah pengesahan kenalan</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Jika ditentukan untuk dijangkiti</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Henti/Hapus rakaman</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Apabila anda menjalankan aplikasi ini, setiap telefon pintar akan menghasilkan dan mempunyai kod kenalan. Di samping itu, aplikasi ini tidak memperoleh sebarang maklumat yang berkaitan dengan maklumat peribadi seperti nombor telefon dan maklumat lokasi.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Keadaan hubungan yang direkodkan</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Hubungi dengan pengguna aplikasi lain dalam 1 meter selama 15 minit atau lebih direkodkan sebagai "kenalan".</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Merakam maklumat kenalan</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Pada masa ini, kod kenalan orang yang dihubungi direkodkan dalam aplikasi. Maklumat hubungan tidak akan digunakan sehingga sama ada pengguna telah mendaftar positif. Sejarah kenalan akan dipadamkan selepas 14 hari. * Kod kenalan berubah dengan kerap.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>
