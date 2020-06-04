@@ -88,12 +88,12 @@ namespace Covid19Radar
                 }
                 else
                 {
-                    result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
+                    result = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
                 }
             }
             else
             {
-                result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
+                result = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
             }
 
             if (!result.Success)

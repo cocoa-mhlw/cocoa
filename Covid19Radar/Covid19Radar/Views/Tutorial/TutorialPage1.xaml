@@ -86,7 +86,7 @@
             <Grid Grid.Row="2">
                 <Button
                     AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
+                    Command="{prism:NavigateTo 'TutorialPage2'}"
                     Style="{StaticResource DefaultButton}"
                     Text="次へ" />
             </Grid>
