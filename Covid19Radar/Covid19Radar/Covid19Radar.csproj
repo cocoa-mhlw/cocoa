@@ -133,16 +133,16 @@
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\DescriptionPage4.xaml.cs">
+    <Compile Update="Views\Tutorial\UnUsed\DescriptionPage4.xaml.cs">
       <DependentUpon>DescriptionPage4.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\DescriptionPage3.xaml.cs">
+    <Compile Update="Views\Tutorial\UnUsed\DescriptionPage3.xaml.cs">
       <DependentUpon>DescriptionPage3.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\DescriptionPage2.xaml.cs">
+    <Compile Update="Views\Tutorial\UnUsed\DescriptionPage2.xaml.cs">
       <DependentUpon>DescriptionPage2.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\DescriptionPage1.xaml.cs">
+    <Compile Update="Views\Tutorial\UnUsed\DescriptionPage1.xaml.cs">
       <DependentUpon>DescriptionPage1.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HelpPage\HelpMenuPage.xaml.cs">
@@ -160,13 +160,13 @@
     <Compile Update="Views\HelpPage\HelpPage4.xaml.cs">
       <DependentUpon>HelpPage4.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\InitSettingPage.xaml.cs">
+    <Compile Update="Views\Tutorial\UnUsed\InitSettingPage.xaml.cs">
       <DependentUpon>InitSettingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\PrivacyPolicyPage.xaml.cs">
+    <Compile Update="Views\Tutorial\UnUsed\PrivacyPolicyPage.xaml.cs">
       <DependentUpon>PrivacyPolicyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\StartTutorialPage.xaml.cs">
+    <Compile Update="Views\Tutorial\UnUsed\StartTutorialPage.xaml.cs">
       <DependentUpon>StartTutorialPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Resources\AppResources.Designer.cs">
@@ -195,12 +195,11 @@
     <EmbeddedResource Update="Views\HomePage\ExposuresPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Tutorial\SetupCompletedPage.xaml">
+    <EmbeddedResource Update="Views\Tutorial\UnUsed\SetupCompletedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MultilingualResources\" />
-    <Folder Include="Views\Tutorial\UnUsed\" />
   </ItemGroup>
 </Project>
