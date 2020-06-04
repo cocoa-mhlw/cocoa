@@ -22,19 +22,24 @@ using Covid19Radar.Api.DataAccess;
 using System.Security.Cryptography;
 using Covid19Radar.Api.Extensions;
 using System.Text.RegularExpressions;
+using Microsoft.Extensions.Logging;
 
 namespace Covid19Radar.Api.Services
 {
     public class DeviceValidationAppleService
     {
         const string UrlApple = "https://api.development.devicecheck.apple.com/v1/validate_device_token";
+        //const string UrlApple = "https://api.devicecheck.apple.com/v1/validate_device_token";
         private readonly HttpClient ClientApple;
+        private readonly ILogger<DeviceValidationService> Logger;
 
         public DeviceValidationAppleService(
             IConfiguration config,
-            IHttpClientFactory client)
+            IHttpClientFactory client,
+            ILogger<DeviceValidationService> logger)
         {
             ClientApple = client.CreateClient();
+            Logger = logger;
         }
 
         /// <summary>
@@ -63,7 +68,7 @@ namespace Covid19Radar.Api.Services
             var payload = new ApplePayload()
             {
                 DeviceToken = param.DeviceVerificationPayload,
-                Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
+                Timestamp = requestTime.ToUnixTimeMilliseconds()
             };
 
             var keysText = param.Keys
@@ -77,29 +82,46 @@ namespace Covid19Radar.Api.Services
                 payload.TransactionId = Convert.ToBase64String(sha.ComputeHash(value));
             }
 
+            Logger.LogInformation($"{nameof(Validation)} DeviceCheckKeyId:{app.DeviceCheckKeyId} DeviceCheckTeamId:{app.DeviceCheckTeamId} DeviceCheckPrivateKey:{app.DeviceCheckPrivateKey}");
+
             var jwt = GenerateClientSecretJWT(requestTime, app.DeviceCheckKeyId, app.DeviceCheckTeamId, app.DeviceCheckPrivateKey);
 
-            var content = new StringContent(JsonConvert.SerializeObject(payload));
+            var payloadJson = JsonConvert.SerializeObject(payload);
+            Logger.LogInformation($"{nameof(Validation)} payload:{payloadJson} ");
             var request = new HttpRequestMessage(HttpMethod.Post, UrlApple);
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", jwt);
-            var response = await ClientApple.SendAsync(request);
+            request.Content = new StringContent(payloadJson, Encoding.UTF8, "application/json");
+            try
+            {
+                var response = await ClientApple.SendAsync(request);
+                if (!response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    Logger.LogWarning($"POST {UrlApple} {response.StatusCode} {response.ReasonPhrase} {responseBody}");
+                }
 
-            //switch (response.StatusCode)
-            //{
-            //    // 200 OK:                  The transaction was successful
-            //    // 200 Bit State Not Found: The bit state wasn't found
-            //    case System.Net.HttpStatusCode.OK:
-            //        if (response.ReasonPhrase == "OK") return true;
+                //switch (response.StatusCode)
+                //{
+                //    // 200 OK:                  The transaction was successful
+                //    // 200 Bit State Not Found: The bit state wasn't found
+                //    case System.Net.HttpStatusCode.OK:
+                //        if (response.ReasonPhrase == "OK") return true;
 
-            //        break;
-            //    // 
-            //    default:
-            //        break;
-            //}
-            if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                return false;
+                //        break;
+                //    // 
+                //    default:
+                //        break;
+                //}
+                if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                    return false;
 
-            return true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, $"{nameof(Validation)}");
+                throw;
+            }
         }
 
         static string GenerateClientSecretJWT(DateTimeOffset requestTime, string keyId, string teamId, string p8FileContents)
@@ -113,7 +135,7 @@ namespace Covid19Radar.Api.Services
             var payload = new Dictionary<string, object>
             {
                 { "iss", teamId },
-                { "iat", requestTime.ToUnixTimeMilliseconds() }
+                { "iat", requestTime.ToUnixTimeSeconds() }
             };
 
             var secretKey = CleanP8Key(p8FileContents);
@@ -134,13 +156,13 @@ namespace Covid19Radar.Api.Services
             // Load the key text
             var key = CngKey.Import(Convert.FromBase64String(secretKey), CngKeyBlobFormat.Pkcs8PrivateBlob);
 
-            using var dsa = new ECDsaCng(key);
-            var unsignedJwt = Base64UrlEncode(Encoding.UTF8.GetBytes(headerStr))
-                                    + "." + Base64UrlEncode(Encoding.UTF8.GetBytes(payloadStr));
-
-            var signature = dsa.SignData(Encoding.UTF8.GetBytes(unsignedJwt), HashAlgorithmName.SHA256);
-
-            return unsignedJwt + "." + Base64UrlEncode(signature);
+            using (var dsa = new ECDsaCng(key))
+            {
+                var jwtHeader = Base64UrlEncode(Encoding.UTF8.GetBytes(headerStr));
+                var jwtPayload = Base64UrlEncode(Encoding.UTF8.GetBytes(payloadStr));
+                var signature = dsa.SignData(Encoding.UTF8.GetBytes($"{jwtHeader}.{jwtPayload}"), HashAlgorithmName.SHA256);
+                return $"{jwtHeader}.{jwtPayload}.{Base64UrlEncode(signature)}";
+            }
         }
 
         static string CleanP8Key(string p8Contents)
