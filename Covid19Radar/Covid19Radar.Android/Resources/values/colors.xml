@@ -4,4 +4,6 @@
   <color name="colorPrimary">#FFFFFF</color>
   <color name="colorPrimaryDark">#FFFFFF</color>
   <color name="colorAccent">#019AE8</color>
+  <color name="ListViewSelected">#019AE8</color>
+  <color name="ListViewHighlighted">#019AE8</color>
 </resources>

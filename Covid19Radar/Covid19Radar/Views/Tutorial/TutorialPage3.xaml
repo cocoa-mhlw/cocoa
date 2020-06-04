@@ -28,7 +28,7 @@
             <Grid Grid.Row="2">
                 <Button
                     AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
+                    Command="{prism:NavigateTo 'TutorialPage4'}"
                     Style="{StaticResource DefaultButton}"
                     Text="規約に同意して次へ" />
             </Grid>
