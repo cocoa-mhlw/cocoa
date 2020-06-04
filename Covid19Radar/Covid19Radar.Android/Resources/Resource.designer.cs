@@ -2721,190 +2721,6 @@ namespace Covid19Radar.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::Covid19Radar.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::Covid19Radar.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::Covid19Radar.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_dialog_actioned_on_disabled_toast = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_dialog_actioned_on_disabled_toast;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_download_progress_number_format = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_download_progress_number_format;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_downloading_error = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_downloading_error;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_downloading_mandatory_update = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_downloading_mandatory_update;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_downloading_update = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_downloading_update;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_install;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install_ready_message = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_install_ready_message;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install_ready_title = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_install_ready_title;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_notification_category = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_notification_category;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_unknown_sources_dialog_message = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_unknown_sources_dialog_message;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_unknown_sources_dialog_settings = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_unknown_sources_dialog_settings;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_download = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_dialog_download;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_message_mandatory = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_dialog_message_mandatory;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_message_optional = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_dialog_message_optional;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_postpone = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_dialog_postpone;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_title = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_dialog_title;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_view_release_notes = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_dialog_view_release_notes;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_ignore = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_failed_dialog_ignore;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_message = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_failed_dialog_message;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_reinstall = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_failed_dialog_reinstall;
-			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_title = global::Covid19Radar.Droid.Resource.String.appcenter_distribute_update_failed_dialog_title;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.alpha = global::Covid19Radar.Droid.Resource.Attribute.alpha;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.font = global::Covid19Radar.Droid.Resource.Attribute.font;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderAuthority = global::Covid19Radar.Droid.Resource.Attribute.fontProviderAuthority;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderCerts = global::Covid19Radar.Droid.Resource.Attribute.fontProviderCerts;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderFetchStrategy = global::Covid19Radar.Droid.Resource.Attribute.fontProviderFetchStrategy;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderFetchTimeout = global::Covid19Radar.Droid.Resource.Attribute.fontProviderFetchTimeout;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderPackage = global::Covid19Radar.Droid.Resource.Attribute.fontProviderPackage;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderQuery = global::Covid19Radar.Droid.Resource.Attribute.fontProviderQuery;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontStyle = global::Covid19Radar.Droid.Resource.Attribute.fontStyle;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontVariationSettings = global::Covid19Radar.Droid.Resource.Attribute.fontVariationSettings;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontWeight = global::Covid19Radar.Droid.Resource.Attribute.fontWeight;
-			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.ttcIndex = global::Covid19Radar.Droid.Resource.Attribute.ttcIndex;
-			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_action_color_filter = global::Covid19Radar.Droid.Resource.Color.notification_action_color_filter;
-			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_icon_bg_color = global::Covid19Radar.Droid.Resource.Color.notification_icon_bg_color;
-			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_material_background_media_default_color = global::Covid19Radar.Droid.Resource.Color.notification_material_background_media_default_color;
-			global::Microsoft.AppCenter.Push.Android.Resource.Color.primary_text_default_material_dark = global::Covid19Radar.Droid.Resource.Color.primary_text_default_material_dark;
-			global::Microsoft.AppCenter.Push.Android.Resource.Color.ripple_material_light = global::Covid19Radar.Droid.Resource.Color.ripple_material_light;
-			global::Microsoft.AppCenter.Push.Android.Resource.Color.secondary_text_default_material_dark = global::Covid19Radar.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::Microsoft.AppCenter.Push.Android.Resource.Color.secondary_text_default_material_light = global::Covid19Radar.Droid.Resource.Color.secondary_text_default_material_light;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_inset_vertical_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_inset_vertical_material;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_padding_vertical_material = global::Covid19Radar.Droid.Resource.Dimension.compat_button_padding_vertical_material;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_control_corner_material = global::Covid19Radar.Droid.Resource.Dimension.compat_control_corner_material;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_notification_large_icon_max_height = global::Covid19Radar.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_notification_large_icon_max_width = global::Covid19Radar.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_action_icon_size = global::Covid19Radar.Droid.Resource.Dimension.notification_action_icon_size;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_action_text_size = global::Covid19Radar.Droid.Resource.Dimension.notification_action_text_size;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_big_circle_margin = global::Covid19Radar.Droid.Resource.Dimension.notification_big_circle_margin;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_content_margin_start = global::Covid19Radar.Droid.Resource.Dimension.notification_content_margin_start;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_large_icon_height = global::Covid19Radar.Droid.Resource.Dimension.notification_large_icon_height;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_large_icon_width = global::Covid19Radar.Droid.Resource.Dimension.notification_large_icon_width;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_main_column_padding_top = global::Covid19Radar.Droid.Resource.Dimension.notification_main_column_padding_top;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_media_narrow_margin = global::Covid19Radar.Droid.Resource.Dimension.notification_media_narrow_margin;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_right_icon_size = global::Covid19Radar.Droid.Resource.Dimension.notification_right_icon_size;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_right_side_padding_top = global::Covid19Radar.Droid.Resource.Dimension.notification_right_side_padding_top;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_small_icon_background_padding = global::Covid19Radar.Droid.Resource.Dimension.notification_small_icon_background_padding;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_small_icon_size_as_large = global::Covid19Radar.Droid.Resource.Dimension.notification_small_icon_size_as_large;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_subtext_size = global::Covid19Radar.Droid.Resource.Dimension.notification_subtext_size;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_top_pad = global::Covid19Radar.Droid.Resource.Dimension.notification_top_pad;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_top_pad_large_text = global::Covid19Radar.Droid.Resource.Dimension.notification_top_pad_large_text;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.subtitle_corner_radius = global::Covid19Radar.Droid.Resource.Dimension.subtitle_corner_radius;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.subtitle_outline_width = global::Covid19Radar.Droid.Resource.Dimension.subtitle_outline_width;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.subtitle_shadow_offset = global::Covid19Radar.Droid.Resource.Dimension.subtitle_shadow_offset;
-			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.subtitle_shadow_radius = global::Covid19Radar.Droid.Resource.Dimension.subtitle_shadow_radius;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.ic_stat_notify_dot = global::Covid19Radar.Droid.Resource.Drawable.ic_stat_notify_dot;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_action_background = global::Covid19Radar.Droid.Resource.Drawable.notification_action_background;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_bg;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low_normal = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low_normal;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low_pressed = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_low_pressed;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_normal = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_normal;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_normal_pressed = global::Covid19Radar.Droid.Resource.Drawable.notification_bg_normal_pressed;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_icon_background = global::Covid19Radar.Droid.Resource.Drawable.notification_icon_background;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_template_icon_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_template_icon_low_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_template_icon_low_bg;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_tile_bg = global::Covid19Radar.Droid.Resource.Drawable.notification_tile_bg;
-			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::Covid19Radar.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.action0 = global::Covid19Radar.Droid.Resource.Id.action0;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_container = global::Covid19Radar.Droid.Resource.Id.action_container;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_divider = global::Covid19Radar.Droid.Resource.Id.action_divider;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_image = global::Covid19Radar.Droid.Resource.Id.action_image;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_text = global::Covid19Radar.Droid.Resource.Id.action_text;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.actions = global::Covid19Radar.Droid.Resource.Id.actions;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.async = global::Covid19Radar.Droid.Resource.Id.async;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.blocking = global::Covid19Radar.Droid.Resource.Id.blocking;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.cancel_action = global::Covid19Radar.Droid.Resource.Id.cancel_action;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.chronometer = global::Covid19Radar.Droid.Resource.Id.chronometer;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.end_padder = global::Covid19Radar.Droid.Resource.Id.end_padder;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.forever = global::Covid19Radar.Droid.Resource.Id.forever;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.icon = global::Covid19Radar.Droid.Resource.Id.icon;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.icon_group = global::Covid19Radar.Droid.Resource.Id.icon_group;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.info = global::Covid19Radar.Droid.Resource.Id.info;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.italic = global::Covid19Radar.Droid.Resource.Id.italic;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.line1 = global::Covid19Radar.Droid.Resource.Id.line1;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.line3 = global::Covid19Radar.Droid.Resource.Id.line3;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.media_actions = global::Covid19Radar.Droid.Resource.Id.media_actions;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.normal = global::Covid19Radar.Droid.Resource.Id.normal;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_background = global::Covid19Radar.Droid.Resource.Id.notification_background;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_main_column = global::Covid19Radar.Droid.Resource.Id.notification_main_column;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_main_column_container = global::Covid19Radar.Droid.Resource.Id.notification_main_column_container;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.right_icon = global::Covid19Radar.Droid.Resource.Id.right_icon;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.right_side = global::Covid19Radar.Droid.Resource.Id.right_side;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.status_bar_latest_event_content = global::Covid19Radar.Droid.Resource.Id.status_bar_latest_event_content;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.tag_transition_group = global::Covid19Radar.Droid.Resource.Id.tag_transition_group;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.tag_unhandled_key_event_manager = global::Covid19Radar.Droid.Resource.Id.tag_unhandled_key_event_manager;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.tag_unhandled_key_listeners = global::Covid19Radar.Droid.Resource.Id.tag_unhandled_key_listeners;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.text = global::Covid19Radar.Droid.Resource.Id.text;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.text2 = global::Covid19Radar.Droid.Resource.Id.text2;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.time = global::Covid19Radar.Droid.Resource.Id.time;
-			global::Microsoft.AppCenter.Push.Android.Resource.Id.title = global::Covid19Radar.Droid.Resource.Id.title;
-			global::Microsoft.AppCenter.Push.Android.Resource.Integer.cancel_button_image_alpha = global::Covid19Radar.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::Microsoft.AppCenter.Push.Android.Resource.Integer.google_play_services_version = global::Covid19Radar.Droid.Resource.Integer.google_play_services_version;
-			global::Microsoft.AppCenter.Push.Android.Resource.Integer.status_bar_notification_info_maxnum = global::Covid19Radar.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_action = global::Covid19Radar.Droid.Resource.Layout.notification_action;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_action_tombstone = global::Covid19Radar.Droid.Resource.Layout.notification_action_tombstone;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_media_action = global::Covid19Radar.Droid.Resource.Layout.notification_media_action;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_media_cancel_action = global::Covid19Radar.Droid.Resource.Layout.notification_media_cancel_action;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_custom;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_narrow = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_narrow_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_custom_big = global::Covid19Radar.Droid.Resource.Layout.notification_template_custom_big;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_icon_group = global::Covid19Radar.Droid.Resource.Layout.notification_template_icon_group;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_lines_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_lines_media;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_media = global::Covid19Radar.Droid.Resource.Layout.notification_template_media;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_media_custom = global::Covid19Radar.Droid.Resource.Layout.notification_template_media_custom;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_part_chronometer = global::Covid19Radar.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_part_time = global::Covid19Radar.Droid.Resource.Layout.notification_template_part_time;
-			global::Microsoft.AppCenter.Push.Android.Resource.String.common_google_play_services_unknown_issue = global::Covid19Radar.Droid.Resource.String.common_google_play_services_unknown_issue;
-			global::Microsoft.AppCenter.Push.Android.Resource.String.fcm_fallback_notification_channel_label = global::Covid19Radar.Droid.Resource.String.fcm_fallback_notification_channel_label;
-			global::Microsoft.AppCenter.Push.Android.Resource.String.library_name = global::Covid19Radar.Droid.Resource.String.library_name;
-			global::Microsoft.AppCenter.Push.Android.Resource.String.status_bar_notification_info_overflow = global::Covid19Radar.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Covid19Radar.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::Covid19Radar.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
-			global::Microsoft.AppCenter.Push.Android.Resource.Style.Widget_Compat_NotificationActionText = global::Covid19Radar.Droid.Resource.Style.Widget_Compat_NotificationActionText;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.ColorStateListItem = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.ColorStateListItem_alpha = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_alpha;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.ColorStateListItem_android_alpha = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.ColorStateListItem_android_color = global::Covid19Radar.Droid.Resource.Styleable.ColorStateListItem_android_color;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily = global::Covid19Radar.Droid.Resource.Styleable.FontFamily;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::Covid19Radar.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_font = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_font;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_font = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_font;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_ttcIndex = global::Covid19Radar.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_centerColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerColor;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_centerX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerX;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_centerY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_centerY;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_endColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endColor;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_endX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endX;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_endY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_endY;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_gradientRadius = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_startColor = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startColor;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_startX = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startX;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_startY = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_startY;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_tileMode = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_tileMode;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColor_android_type = global::Covid19Radar.Droid.Resource.Styleable.GradientColor_android_type;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_color = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem_android_color;
-			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_offset = global::Covid19Radar.Droid.Resource.Styleable.GradientColorItem_android_offset;
 			global::Plugin.LocalNotification.Resource.Attribute.alpha = global::Covid19Radar.Droid.Resource.Attribute.alpha;
 			global::Plugin.LocalNotification.Resource.Attribute.font = global::Covid19Radar.Droid.Resource.Attribute.font;
 			global::Plugin.LocalNotification.Resource.Attribute.fontProviderAuthority = global::Covid19Radar.Droid.Resource.Attribute.fontProviderAuthority;
@@ -20786,226 +20602,223 @@ namespace Covid19Radar.Droid
 			public const int ic_mtrl_chip_close_circle = 2131165516;
 			
 			// aapt resource value: 0x7F07014D
-			public const int ic_stat_notify_dot = 2131165517;
+			public const int ic_successstatus = 2131165517;
 			
 			// aapt resource value: 0x7F07014E
-			public const int ic_successstatus = 2131165518;
+			public const int ic_unchecked_checkbox = 2131165518;
 			
 			// aapt resource value: 0x7F07014F
-			public const int ic_unchecked_checkbox = 2131165519;
+			public const int ic_vol_mute = 2131165519;
 			
 			// aapt resource value: 0x7F070150
-			public const int ic_vol_mute = 2131165520;
+			public const int ic_vol_type_speaker_dark = 2131165520;
 			
 			// aapt resource value: 0x7F070151
-			public const int ic_vol_type_speaker_dark = 2131165521;
+			public const int ic_vol_type_speaker_group_dark = 2131165521;
 			
 			// aapt resource value: 0x7F070152
-			public const int ic_vol_type_speaker_group_dark = 2131165522;
+			public const int ic_vol_type_speaker_group_light = 2131165522;
 			
 			// aapt resource value: 0x7F070153
-			public const int ic_vol_type_speaker_group_light = 2131165523;
+			public const int ic_vol_type_speaker_light = 2131165523;
 			
 			// aapt resource value: 0x7F070154
-			public const int ic_vol_type_speaker_light = 2131165524;
+			public const int ic_vol_type_tv_dark = 2131165524;
 			
 			// aapt resource value: 0x7F070155
-			public const int ic_vol_type_tv_dark = 2131165525;
+			public const int ic_vol_type_tv_light = 2131165525;
 			
 			// aapt resource value: 0x7F070156
-			public const int ic_vol_type_tv_light = 2131165526;
+			public const int ic_vol_unmute = 2131165526;
 			
 			// aapt resource value: 0x7F070157
-			public const int ic_vol_unmute = 2131165527;
+			public const int Logo = 2131165527;
 			
 			// aapt resource value: 0x7F070158
-			public const int Logo = 2131165528;
+			public const int MaterialActivityIndicatorBackground = 2131165528;
 			
 			// aapt resource value: 0x7F070159
-			public const int MaterialActivityIndicatorBackground = 2131165529;
+			public const int MaterialProgressBar = 2131165529;
 			
 			// aapt resource value: 0x7F07015A
-			public const int MaterialProgressBar = 2131165530;
+			public const int Mhlwlogo = 2131165530;
 			
 			// aapt resource value: 0x7F07015B
-			public const int Mhlwlogo = 2131165531;
+			public const int mr_button_connected_dark = 2131165531;
 			
 			// aapt resource value: 0x7F07015C
-			public const int mr_button_connected_dark = 2131165532;
+			public const int mr_button_connected_light = 2131165532;
 			
 			// aapt resource value: 0x7F07015D
-			public const int mr_button_connected_light = 2131165533;
+			public const int mr_button_connecting_dark = 2131165533;
 			
 			// aapt resource value: 0x7F07015E
-			public const int mr_button_connecting_dark = 2131165534;
+			public const int mr_button_connecting_light = 2131165534;
 			
 			// aapt resource value: 0x7F07015F
-			public const int mr_button_connecting_light = 2131165535;
+			public const int mr_button_dark = 2131165535;
 			
 			// aapt resource value: 0x7F070160
-			public const int mr_button_dark = 2131165536;
+			public const int mr_button_dark_static = 2131165536;
 			
 			// aapt resource value: 0x7F070161
-			public const int mr_button_dark_static = 2131165537;
+			public const int mr_button_light = 2131165537;
 			
 			// aapt resource value: 0x7F070162
-			public const int mr_button_light = 2131165538;
+			public const int mr_button_light_static = 2131165538;
 			
 			// aapt resource value: 0x7F070163
-			public const int mr_button_light_static = 2131165539;
+			public const int mr_cast_checkbox = 2131165539;
 			
 			// aapt resource value: 0x7F070164
-			public const int mr_cast_checkbox = 2131165540;
+			public const int mr_cast_group_seekbar_track = 2131165540;
 			
 			// aapt resource value: 0x7F070165
-			public const int mr_cast_group_seekbar_track = 2131165541;
+			public const int mr_cast_mute_button = 2131165541;
 			
 			// aapt resource value: 0x7F070166
-			public const int mr_cast_mute_button = 2131165542;
+			public const int mr_cast_route_seekbar_track = 2131165542;
 			
 			// aapt resource value: 0x7F070167
-			public const int mr_cast_route_seekbar_track = 2131165543;
+			public const int mr_cast_stop = 2131165543;
 			
 			// aapt resource value: 0x7F070168
-			public const int mr_cast_stop = 2131165544;
+			public const int mr_cast_thumb = 2131165544;
 			
 			// aapt resource value: 0x7F070169
-			public const int mr_cast_thumb = 2131165545;
+			public const int mr_dialog_close_dark = 2131165545;
 			
 			// aapt resource value: 0x7F07016A
-			public const int mr_dialog_close_dark = 2131165546;
+			public const int mr_dialog_close_light = 2131165546;
 			
 			// aapt resource value: 0x7F07016B
-			public const int mr_dialog_close_light = 2131165547;
+			public const int mr_dialog_material_background_dark = 2131165547;
 			
 			// aapt resource value: 0x7F07016C
-			public const int mr_dialog_material_background_dark = 2131165548;
+			public const int mr_dialog_material_background_light = 2131165548;
 			
 			// aapt resource value: 0x7F07016D
-			public const int mr_dialog_material_background_light = 2131165549;
+			public const int mr_group_collapse = 2131165549;
 			
 			// aapt resource value: 0x7F07016E
-			public const int mr_group_collapse = 2131165550;
+			public const int mr_group_expand = 2131165550;
 			
 			// aapt resource value: 0x7F07016F
-			public const int mr_group_expand = 2131165551;
+			public const int mr_media_pause_dark = 2131165551;
 			
 			// aapt resource value: 0x7F070170
-			public const int mr_media_pause_dark = 2131165552;
+			public const int mr_media_pause_light = 2131165552;
 			
 			// aapt resource value: 0x7F070171
-			public const int mr_media_pause_light = 2131165553;
+			public const int mr_media_play_dark = 2131165553;
 			
 			// aapt resource value: 0x7F070172
-			public const int mr_media_play_dark = 2131165554;
+			public const int mr_media_play_light = 2131165554;
 			
 			// aapt resource value: 0x7F070173
-			public const int mr_media_play_light = 2131165555;
+			public const int mr_media_stop_dark = 2131165555;
 			
 			// aapt resource value: 0x7F070174
-			public const int mr_media_stop_dark = 2131165556;
+			public const int mr_media_stop_light = 2131165556;
 			
 			// aapt resource value: 0x7F070175
-			public const int mr_media_stop_light = 2131165557;
+			public const int mr_vol_type_audiotrack_dark = 2131165557;
 			
 			// aapt resource value: 0x7F070176
-			public const int mr_vol_type_audiotrack_dark = 2131165558;
+			public const int mr_vol_type_audiotrack_light = 2131165558;
 			
 			// aapt resource value: 0x7F070177
-			public const int mr_vol_type_audiotrack_light = 2131165559;
+			public const int mtrl_snackbar_background = 2131165559;
 			
 			// aapt resource value: 0x7F070178
-			public const int mtrl_snackbar_background = 2131165560;
+			public const int mtrl_tabs_default_indicator = 2131165560;
 			
 			// aapt resource value: 0x7F070179
-			public const int mtrl_tabs_default_indicator = 2131165561;
+			public const int navigation_empty_icon = 2131165561;
 			
 			// aapt resource value: 0x7F07017A
-			public const int navigation_empty_icon = 2131165562;
+			public const int notification_action_background = 2131165562;
 			
 			// aapt resource value: 0x7F07017B
-			public const int notification_action_background = 2131165563;
+			public const int notification_bg = 2131165563;
 			
 			// aapt resource value: 0x7F07017C
-			public const int notification_bg = 2131165564;
+			public const int notification_bg_low = 2131165564;
 			
 			// aapt resource value: 0x7F07017D
-			public const int notification_bg_low = 2131165565;
+			public const int notification_bg_low_normal = 2131165565;
 			
 			// aapt resource value: 0x7F07017E
-			public const int notification_bg_low_normal = 2131165566;
+			public const int notification_bg_low_pressed = 2131165566;
 			
 			// aapt resource value: 0x7F07017F
-			public const int notification_bg_low_pressed = 2131165567;
+			public const int notification_bg_normal = 2131165567;
 			
 			// aapt resource value: 0x7F070180
-			public const int notification_bg_normal = 2131165568;
+			public const int notification_bg_normal_pressed = 2131165568;
 			
 			// aapt resource value: 0x7F070181
-			public const int notification_bg_normal_pressed = 2131165569;
+			public const int notification_icon_background = 2131165569;
 			
 			// aapt resource value: 0x7F070182
-			public const int notification_icon_background = 2131165570;
+			public const int notification_template_icon_bg = 2131165570;
 			
 			// aapt resource value: 0x7F070183
-			public const int notification_template_icon_bg = 2131165571;
+			public const int notification_template_icon_low_bg = 2131165571;
 			
 			// aapt resource value: 0x7F070184
-			public const int notification_template_icon_low_bg = 2131165572;
+			public const int notification_tile_bg = 2131165572;
 			
 			// aapt resource value: 0x7F070185
-			public const int notification_tile_bg = 2131165573;
+			public const int Notify01 = 2131165573;
 			
 			// aapt resource value: 0x7F070186
-			public const int Notify01 = 2131165574;
+			public const int notify_panel_notification_icon_bg = 2131165574;
 			
 			// aapt resource value: 0x7F070187
-			public const int notify_panel_notification_icon_bg = 2131165575;
+			public const int roundedbg = 2131165575;
 			
 			// aapt resource value: 0x7F070188
-			public const int roundedbg = 2131165576;
+			public const int roundedbgdark = 2131165576;
 			
 			// aapt resource value: 0x7F070189
-			public const int roundedbgdark = 2131165577;
-			
-			// aapt resource value: 0x7F07018A
-			public const int settings = 2131165578;
-			
-			// aapt resource value: 0x7F07018C
-			public const int splashimg = 2131165580;
+			public const int settings = 2131165577;
 			
 			// aapt resource value: 0x7F07018B
-			public const int splash_screen = 2131165579;
+			public const int splashimg = 2131165579;
+			
+			// aapt resource value: 0x7F07018A
+			public const int splash_screen = 2131165578;
+			
+			// aapt resource value: 0x7F07018C
+			public const int tooltip_frame_dark = 2131165580;
 			
 			// aapt resource value: 0x7F07018D
-			public const int tooltip_frame_dark = 2131165581;
+			public const int tooltip_frame_light = 2131165581;
 			
 			// aapt resource value: 0x7F07018E
-			public const int tooltip_frame_light = 2131165582;
+			public const int TopMainImg = 2131165582;
 			
 			// aapt resource value: 0x7F07018F
-			public const int TopMainImg = 2131165583;
+			public const int TutorialPage10 = 2131165583;
 			
 			// aapt resource value: 0x7F070190
-			public const int TutorialPage10 = 2131165584;
+			public const int TutorialPage11 = 2131165584;
 			
 			// aapt resource value: 0x7F070191
-			public const int TutorialPage11 = 2131165585;
+			public const int TutorialPage12 = 2131165585;
 			
 			// aapt resource value: 0x7F070192
-			public const int TutorialPage12 = 2131165586;
+			public const int TutorialPage20 = 2131165586;
 			
 			// aapt resource value: 0x7F070193
-			public const int TutorialPage20 = 2131165587;
+			public const int TutorialPage40 = 2131165587;
 			
 			// aapt resource value: 0x7F070194
-			public const int TutorialPage40 = 2131165588;
+			public const int TutorialPage50 = 2131165588;
 			
 			// aapt resource value: 0x7F070195
-			public const int TutorialPage50 = 2131165589;
-			
-			// aapt resource value: 0x7F070196
-			public const int TutorialPage60 = 2131165590;
+			public const int TutorialPage60 = 2131165589;
 			
 			static Drawable()
 			{
@@ -22511,241 +22324,175 @@ namespace Covid19Radar.Droid
 			public const int appbar_scrolling_view_behavior = 2131558427;
 			
 			// aapt resource value: 0x7F0D001C
-			public const int appcenter_distribute_dialog_actioned_on_disabled_toast = 2131558428;
-			
-			// aapt resource value: 0x7F0D001E
-			public const int appcenter_distribute_downloading_error = 2131558430;
-			
-			// aapt resource value: 0x7F0D001F
-			public const int appcenter_distribute_downloading_mandatory_update = 2131558431;
-			
-			// aapt resource value: 0x7F0D0020
-			public const int appcenter_distribute_downloading_update = 2131558432;
+			public const int bottom_sheet_behavior = 2131558428;
 			
 			// aapt resource value: 0x7F0D001D
-			public const int appcenter_distribute_download_progress_number_format = 2131558429;
+			public const int character_counter_content_description = 2131558429;
+			
+			// aapt resource value: 0x7F0D001E
+			public const int character_counter_pattern = 2131558430;
+			
+			// aapt resource value: 0x7F0D001F
+			public const int common_google_play_services_enable_button = 2131558431;
+			
+			// aapt resource value: 0x7F0D0020
+			public const int common_google_play_services_enable_text = 2131558432;
 			
 			// aapt resource value: 0x7F0D0021
-			public const int appcenter_distribute_install = 2131558433;
+			public const int common_google_play_services_enable_title = 2131558433;
 			
 			// aapt resource value: 0x7F0D0022
-			public const int appcenter_distribute_install_ready_message = 2131558434;
+			public const int common_google_play_services_install_button = 2131558434;
 			
 			// aapt resource value: 0x7F0D0023
-			public const int appcenter_distribute_install_ready_title = 2131558435;
+			public const int common_google_play_services_install_text = 2131558435;
 			
 			// aapt resource value: 0x7F0D0024
-			public const int appcenter_distribute_notification_category = 2131558436;
+			public const int common_google_play_services_install_title = 2131558436;
 			
 			// aapt resource value: 0x7F0D0025
-			public const int appcenter_distribute_unknown_sources_dialog_message = 2131558437;
+			public const int common_google_play_services_notification_channel_name = 2131558437;
 			
 			// aapt resource value: 0x7F0D0026
-			public const int appcenter_distribute_unknown_sources_dialog_settings = 2131558438;
+			public const int common_google_play_services_notification_ticker = 2131558438;
 			
 			// aapt resource value: 0x7F0D0027
-			public const int appcenter_distribute_update_dialog_download = 2131558439;
+			public const int common_google_play_services_unknown_issue = 2131558439;
 			
 			// aapt resource value: 0x7F0D0028
-			public const int appcenter_distribute_update_dialog_message_mandatory = 2131558440;
+			public const int common_google_play_services_unsupported_text = 2131558440;
 			
 			// aapt resource value: 0x7F0D0029
-			public const int appcenter_distribute_update_dialog_message_optional = 2131558441;
+			public const int common_google_play_services_update_button = 2131558441;
 			
 			// aapt resource value: 0x7F0D002A
-			public const int appcenter_distribute_update_dialog_postpone = 2131558442;
+			public const int common_google_play_services_update_text = 2131558442;
 			
 			// aapt resource value: 0x7F0D002B
-			public const int appcenter_distribute_update_dialog_title = 2131558443;
+			public const int common_google_play_services_update_title = 2131558443;
 			
 			// aapt resource value: 0x7F0D002C
-			public const int appcenter_distribute_update_dialog_view_release_notes = 2131558444;
+			public const int common_google_play_services_updating_text = 2131558444;
 			
 			// aapt resource value: 0x7F0D002D
-			public const int appcenter_distribute_update_failed_dialog_ignore = 2131558445;
+			public const int common_google_play_services_wear_update_text = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int appcenter_distribute_update_failed_dialog_message = 2131558446;
+			public const int common_open_on_phone = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int appcenter_distribute_update_failed_dialog_reinstall = 2131558447;
+			public const int common_signin_button_text = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int appcenter_distribute_update_failed_dialog_title = 2131558448;
+			public const int common_signin_button_text_long = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int bottom_sheet_behavior = 2131558449;
+			public const int fab_transformation_scrim_behavior = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int character_counter_content_description = 2131558450;
+			public const int fab_transformation_sheet_behavior = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int character_counter_pattern = 2131558451;
+			public const int hide_bottom_view_on_scroll_behavior = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int common_google_play_services_enable_button = 2131558452;
+			public const int library_name = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int common_google_play_services_enable_text = 2131558453;
+			public const int mr_button_content_description = 2131558453;
 			
 			// aapt resource value: 0x7F0D0036
-			public const int common_google_play_services_enable_title = 2131558454;
+			public const int mr_cast_button_connected = 2131558454;
 			
 			// aapt resource value: 0x7F0D0037
-			public const int common_google_play_services_install_button = 2131558455;
+			public const int mr_cast_button_connecting = 2131558455;
 			
 			// aapt resource value: 0x7F0D0038
-			public const int common_google_play_services_install_text = 2131558456;
+			public const int mr_cast_button_disconnected = 2131558456;
 			
 			// aapt resource value: 0x7F0D0039
-			public const int common_google_play_services_install_title = 2131558457;
+			public const int mr_cast_dialog_title_view_placeholder = 2131558457;
 			
 			// aapt resource value: 0x7F0D003A
-			public const int common_google_play_services_notification_channel_name = 2131558458;
+			public const int mr_chooser_searching = 2131558458;
 			
 			// aapt resource value: 0x7F0D003B
-			public const int common_google_play_services_notification_ticker = 2131558459;
+			public const int mr_chooser_title = 2131558459;
 			
 			// aapt resource value: 0x7F0D003C
-			public const int common_google_play_services_unknown_issue = 2131558460;
+			public const int mr_controller_album_art = 2131558460;
 			
 			// aapt resource value: 0x7F0D003D
-			public const int common_google_play_services_unsupported_text = 2131558461;
+			public const int mr_controller_casting_screen = 2131558461;
 			
 			// aapt resource value: 0x7F0D003E
-			public const int common_google_play_services_update_button = 2131558462;
+			public const int mr_controller_close_description = 2131558462;
 			
 			// aapt resource value: 0x7F0D003F
-			public const int common_google_play_services_update_text = 2131558463;
+			public const int mr_controller_collapse_group = 2131558463;
 			
 			// aapt resource value: 0x7F0D0040
-			public const int common_google_play_services_update_title = 2131558464;
+			public const int mr_controller_disconnect = 2131558464;
 			
 			// aapt resource value: 0x7F0D0041
-			public const int common_google_play_services_updating_text = 2131558465;
+			public const int mr_controller_expand_group = 2131558465;
 			
 			// aapt resource value: 0x7F0D0042
-			public const int common_google_play_services_wear_update_text = 2131558466;
+			public const int mr_controller_no_info_available = 2131558466;
 			
 			// aapt resource value: 0x7F0D0043
-			public const int common_open_on_phone = 2131558467;
+			public const int mr_controller_no_media_selected = 2131558467;
 			
 			// aapt resource value: 0x7F0D0044
-			public const int common_signin_button_text = 2131558468;
+			public const int mr_controller_pause = 2131558468;
 			
 			// aapt resource value: 0x7F0D0045
-			public const int common_signin_button_text_long = 2131558469;
+			public const int mr_controller_play = 2131558469;
 			
 			// aapt resource value: 0x7F0D0046
-			public const int fab_transformation_scrim_behavior = 2131558470;
+			public const int mr_controller_stop = 2131558470;
 			
 			// aapt resource value: 0x7F0D0047
-			public const int fab_transformation_sheet_behavior = 2131558471;
+			public const int mr_controller_stop_casting = 2131558471;
 			
 			// aapt resource value: 0x7F0D0048
-			public const int fcm_fallback_notification_channel_label = 2131558472;
+			public const int mr_controller_volume_slider = 2131558472;
 			
 			// aapt resource value: 0x7F0D0049
-			public const int hide_bottom_view_on_scroll_behavior = 2131558473;
+			public const int mr_dialog_groupable_header = 2131558473;
 			
 			// aapt resource value: 0x7F0D004A
-			public const int library_name = 2131558474;
+			public const int mr_dialog_transferable_header = 2131558474;
 			
 			// aapt resource value: 0x7F0D004B
-			public const int mr_button_content_description = 2131558475;
+			public const int mr_system_route_name = 2131558475;
 			
 			// aapt resource value: 0x7F0D004C
-			public const int mr_cast_button_connected = 2131558476;
+			public const int mr_user_route_category_name = 2131558476;
 			
 			// aapt resource value: 0x7F0D004D
-			public const int mr_cast_button_connecting = 2131558477;
+			public const int mtrl_chip_close_icon_content_description = 2131558477;
 			
 			// aapt resource value: 0x7F0D004E
-			public const int mr_cast_button_disconnected = 2131558478;
+			public const int password_toggle_content_description = 2131558478;
 			
 			// aapt resource value: 0x7F0D004F
-			public const int mr_cast_dialog_title_view_placeholder = 2131558479;
+			public const int path_password_eye = 2131558479;
 			
 			// aapt resource value: 0x7F0D0050
-			public const int mr_chooser_searching = 2131558480;
+			public const int path_password_eye_mask_strike_through = 2131558480;
 			
 			// aapt resource value: 0x7F0D0051
-			public const int mr_chooser_title = 2131558481;
+			public const int path_password_eye_mask_visible = 2131558481;
 			
 			// aapt resource value: 0x7F0D0052
-			public const int mr_controller_album_art = 2131558482;
+			public const int path_password_strike_through = 2131558482;
 			
 			// aapt resource value: 0x7F0D0053
-			public const int mr_controller_casting_screen = 2131558483;
+			public const int search_menu_title = 2131558483;
 			
 			// aapt resource value: 0x7F0D0054
-			public const int mr_controller_close_description = 2131558484;
-			
-			// aapt resource value: 0x7F0D0055
-			public const int mr_controller_collapse_group = 2131558485;
-			
-			// aapt resource value: 0x7F0D0056
-			public const int mr_controller_disconnect = 2131558486;
-			
-			// aapt resource value: 0x7F0D0057
-			public const int mr_controller_expand_group = 2131558487;
-			
-			// aapt resource value: 0x7F0D0058
-			public const int mr_controller_no_info_available = 2131558488;
-			
-			// aapt resource value: 0x7F0D0059
-			public const int mr_controller_no_media_selected = 2131558489;
-			
-			// aapt resource value: 0x7F0D005A
-			public const int mr_controller_pause = 2131558490;
-			
-			// aapt resource value: 0x7F0D005B
-			public const int mr_controller_play = 2131558491;
-			
-			// aapt resource value: 0x7F0D005C
-			public const int mr_controller_stop = 2131558492;
-			
-			// aapt resource value: 0x7F0D005D
-			public const int mr_controller_stop_casting = 2131558493;
-			
-			// aapt resource value: 0x7F0D005E
-			public const int mr_controller_volume_slider = 2131558494;
-			
-			// aapt resource value: 0x7F0D005F
-			public const int mr_dialog_groupable_header = 2131558495;
-			
-			// aapt resource value: 0x7F0D0060
-			public const int mr_dialog_transferable_header = 2131558496;
-			
-			// aapt resource value: 0x7F0D0061
-			public const int mr_system_route_name = 2131558497;
-			
-			// aapt resource value: 0x7F0D0062
-			public const int mr_user_route_category_name = 2131558498;
-			
-			// aapt resource value: 0x7F0D0063
-			public const int mtrl_chip_close_icon_content_description = 2131558499;
-			
-			// aapt resource value: 0x7F0D0064
-			public const int password_toggle_content_description = 2131558500;
-			
-			// aapt resource value: 0x7F0D0065
-			public const int path_password_eye = 2131558501;
-			
-			// aapt resource value: 0x7F0D0066
-			public const int path_password_eye_mask_strike_through = 2131558502;
-			
-			// aapt resource value: 0x7F0D0067
-			public const int path_password_eye_mask_visible = 2131558503;
-			
-			// aapt resource value: 0x7F0D0068
-			public const int path_password_strike_through = 2131558504;
-			
-			// aapt resource value: 0x7F0D0069
-			public const int search_menu_title = 2131558505;
-			
-			// aapt resource value: 0x7F0D006A
-			public const int status_bar_notification_info_overflow = 2131558506;
+			public const int status_bar_notification_info_overflow = 2131558484;
 			
 			static String()
 			{
