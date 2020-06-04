@@ -3,7 +3,6 @@
     x:Class="Covid19Radar.Styles"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:Covid19Radar.Controls"
     xmlns:local="clr-namespace:Covid19Radar">
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
@@ -240,7 +239,7 @@
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="CornerRadius" Value="50" />
         <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
         <Style.Triggers>
             <Trigger TargetType="Button" Property="IsEnabled" Value="True">
@@ -262,7 +261,12 @@
         <Setter Property="TextColor" Value="{StaticResource ButtonGrayedOut}" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        <Setter Property="CornerRadius" Value="30" />
+        <Setter Property="CornerRadius">
+            <OnPlatform x:TypeArguments="x:Double">
+                <On Platform="Android" Value="30" />
+                <On Platform="iOS" Value="10" />
+            </OnPlatform>
+        </Setter>
         <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
     </Style>
 
