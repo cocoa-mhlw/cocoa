@@ -36,7 +36,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidKeyStore>false</AndroidKeyStore>
     <AndroidSigningKeyStore>C:\Users\kahiro\.android\Covid19Radar.jks</AndroidSigningKeyStore>
     <AndroidSigningStorePass>***REMOVED***</AndroidSigningStorePass>
@@ -58,9 +58,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
-    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidKeyStore>true</AndroidKeyStore>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <MandroidI18n>CJK</MandroidI18n>
+    <AotAssemblies>true</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
+    <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\Covid19Radar\Covid19Radar.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>***REMOVED***</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>Covid19Radar</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>***REMOVED***</AndroidSigningKeyPass>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -94,17 +106,11 @@
     <PackageReference Include="Microsoft.AppCenter.Crashes">
       <Version>3.2.2</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.AppCenter.Distribute">
-      <Version>3.2.2</Version>
-    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="Plugin.LocalNotification">
       <Version>5.0.4</Version>
-    </PackageReference>
-    <PackageReference Include="Prism.Autofac.Forms">
-      <Version>7.1.0.431</Version>
     </PackageReference>
     <PackageReference Include="Prism.Core">
       <Version>7.2.0.1422</Version>
@@ -114,6 +120,9 @@
     </PackageReference>
     <PackageReference Include="Prism.Forms">
       <Version>7.2.0.1422</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Plugin.Logging.AppCenter">
+      <Version>7.2.0.1114</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
@@ -133,15 +142,18 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Forms.Maps">
+      <Version>4.6.0.847</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.800</Version>
+      <Version>4.6.0.847</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification">
       <Version>18.0.2-eap.6</Version>

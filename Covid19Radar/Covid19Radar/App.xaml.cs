@@ -18,13 +18,11 @@ using Covid19Radar.Common;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using Microsoft.AppCenter.Distribute;
 using System.Net.Http;
 using Prism.Logging.AppCenter;
 using Prism.Logging;
 using System.Collections.Generic;
 using System.Text;
-using Microsoft.AppCenter.Push;
 using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
@@ -68,9 +66,7 @@ namespace Covid19Radar
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
-            Distribute.ReleaseAvailable = OnReleaseAvailable;
-            Push.PushNotificationReceived += OnPushNotificationReceived;
-            AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
+            AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes));
             Container.Resolve<ILogger>().Log("Started App Center");
 
             _ = InitializeBackgroundTasks();
@@ -198,70 +194,5 @@ namespace Covid19Radar
                 Container.Resolve<ILogger>().Report(e.Exception);
             };
         }
-
-        private void OnPushNotificationReceived(object sender, PushNotificationReceivedEventArgs e)
-        {
-            // Add the notification message and title to the message
-            var summary = $"Push notification received:" +
-                $"\n\tNotification title: {e.Title}" +
-                $"\n\tMessage: {e.Message}";
-
-            // If there is custom data associated with the notification,
-            // print the entries
-            if (e.CustomData != null)
-            {
-                summary += "\n\tCustom data:\n";
-                foreach (var key in e.CustomData.Keys)
-                {
-                    summary += $"\t\t{key} : {e.CustomData[key]}\n";
-                }
-            }
-
-            // Send the notification summary to debug output
-            System.Diagnostics.Debug.WriteLine(summary);
-            Container.Resolve<ILoggerFacade>().Log(summary, Category.Debug, Priority.None);
-        }
-
-        private bool OnReleaseAvailable(ReleaseDetails releaseDetails)
-        {
-            // Look at releaseDetails public properties to get version information, release notes text or release notes URL
-            string versionName = releaseDetails.ShortVersion;
-            string versionCodeOrBuildNumber = releaseDetails.Version;
-            string releaseNotes = releaseDetails.ReleaseNotes;
-            Uri releaseNotesUrl = releaseDetails.ReleaseNotesUrl;
-
-            // custom dialog
-            var title = "Version " + versionName + " available!";
-            Task answer;
-
-            // On mandatory update, user cannot postpone
-            if (releaseDetails.MandatoryUpdate)
-            {
-                answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install");
-            }
-            else
-            {
-                answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install", "Maybe tomorrow...");
-            }
-            answer.ContinueWith((task) =>
-            {
-                // If mandatory or if answer was positive
-                if (releaseDetails.MandatoryUpdate || (task as Task<bool>).Result)
-                {
-                    // Notify SDK that user selected update
-                    Distribute.NotifyUpdateAction(UpdateAction.Update);
-                }
-                else
-                {
-                    // Notify SDK that user selected postpone (for 1 day)
-                    // Note that this method call is ignored by the SDK if the update is mandatory
-                    Distribute.NotifyUpdateAction(UpdateAction.Postpone);
-                }
-            });
-
-            // Return true if you are using your own dialog, false otherwise
-            return true;
-        }
-
     }
 }
