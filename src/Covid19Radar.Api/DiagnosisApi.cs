@@ -61,7 +61,6 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Regions not supported.");
             }
 
-
             // validation
             var validationResult = await Validation.ValidateAsync(req, diagnosis);
             if (!validationResult.IsValid)
