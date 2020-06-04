@@ -9,14 +9,10 @@ namespace Covid19Radar.ViewModels
 {
     public class TutorialPage1ViewModel : ViewModelBase
     {
-        public TutorialPage1ViewModel(INavigationService navigationService) : base(navigationService)
+        public TutorialPage1ViewModel() : base()
         {
             Title = Resources.AppResources.TitleHowItWorks;
         }
 
-        public Command OnClickNext => new Command(async () =>
-        {
-            await NavigationService.NavigateAsync(nameof(TutorialPage2));
-        });
     }
 }
