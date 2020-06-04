@@ -325,32 +325,42 @@
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Kako uporabljati</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifikacija terminala</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Način potrditve stika</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Če se ugotovi, da je okužena</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Ustavitev/brisanje snemanja</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Ko zaženete to aplikacijo, bo vsak pametni telefon ustvaril in imel kontaktno kodo. Poleg tega ta aplikacija ne pridobi nobenih informacij, povezanih z osebnimi podatki, kot so telefonska številka in informacije o lokaciji.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Pogoji za stik, zabeleženi</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Kontakt z drugimi uporabniki aplikacije v 1 meter za 15 minut ali več se zabeleži kot "kontakt".</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Beleženje kontaktnih podatkov</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>V tem času je kontaktna koda osebe, ki je stopila v stik, zabeležena v aplikaciji. Kontaktni podatki se ne bodo uporabljali, dokler se uporabnik ne registrira pozitivno. Zgodovina stikov bo izbrisana po 14 dneh. * Kontaktna koda se redno spreminja.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>
