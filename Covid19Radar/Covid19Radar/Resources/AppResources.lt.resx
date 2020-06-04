@@ -325,32 +325,42 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Kaip naudotis</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminalo identifikavimas</value>
+    <comment>端末の識別</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Kontakto patvirtinimo metodas</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
     <value>Jei nustatoma, kad jie yra užsikrėtę</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
     <value>Įrašymo sustabdymas / naikinimas</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Paleidus šią programą, kiekvienas išmanusis telefonas generuos ir turės kontaktinį kodą. Be to, ši programa neįsigyja jokios informacijos, susijusios su asmenine informacija, pvz., telefono numeriu ir vietos informacija.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Registruojamos sąlyčio sąlygos</value>
+    <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>Kontaktas su kitais programos naudotojais per 1 metrą 15 minučių ar ilgiau įrašomas kaip "kontaktas".</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>Kontaktinės informacijos įrašymas</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Šiuo metu prašyme įrašomas asmens, į kurį buvo sąlytis, kontaktinio asmens kontaktinio asmens kontaktinio asmens kontaktinis kodas. Kontaktinė informacija nebus naudojama, kol kuris nors vartotojas nebus užregistruotas teigiamas. Kontaktų retrospektyva bus ištrinta po 14 dienų. *Kontakto kodas reguliariai keičiasi.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
 </root>
