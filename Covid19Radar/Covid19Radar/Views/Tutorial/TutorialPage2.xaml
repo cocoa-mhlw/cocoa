@@ -22,16 +22,18 @@
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="プライバシーについて" />
             </StackLayout>
             <StackLayout Grid.Row="1">
-                <ffimageloading:CachedImage Aspect="AspectFit" Scale="0.8" Source="TutorialPage20.png" />
+                <ffimageloading:CachedImage
+                    Aspect="AspectFit"
+                    Scale="0.8"
+                    Source="TutorialPage20.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。" />
-                <Label Style="{StaticResource DefaultLabel}" Text="接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。
-" />
+                <Label Style="{StaticResource DefaultLabel}" Text="接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。 " />
                 <Label Style="{StaticResource DefaultLabel}" Text="接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。" />
             </StackLayout>
             <Grid Grid.Row="2">
                 <Button
                     AutomationId="NextButton"
-                    Command="{Binding Path=OnClickNext}"
+                    Command="{prism:NavigateTo 'TutorialPage3'}"
                     Style="{StaticResource DefaultButton}"
                     Text="利用規約へ" />
             </Grid>
