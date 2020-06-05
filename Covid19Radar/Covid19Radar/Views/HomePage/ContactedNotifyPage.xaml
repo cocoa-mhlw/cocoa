@@ -14,8 +14,9 @@
     <ScrollView>
         <StackLayout
             Padding="10"
-            BackgroundColor="#CCCCCC"
-            Spacing="20">
+            BackgroundColor="#FFFFFF"
+            Spacing="20"
+            VerticalOptions="Center">
             <Frame
                 Padding="16"
                 BackgroundColor="#FFF3DD"
@@ -30,17 +31,42 @@
                                 Color="#FFC252" />
                         </Image.Source>
                     </Image>
-                    <Label Style="{StaticResource DefaultTitleLabel}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{Binding ExposureCount}" />
-                                <Span Text="件の陽性者との接触が" />
-                                <Span Text="確認されました" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Style="{StaticResource DefaultTitleLabel}" Text="陽性者との接触確認" />
+                    <Grid ColumnSpacing="10" RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="0.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalTextAlignment="End"
+                            Style="{StaticResource DefaultTitleLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding ExposureCount}" />
+                                    <Span Text="件" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Button
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            AutomationId="OnClickExposures"
+                            Command="{prism:NavigateTo 'ExposuresPage'}"
+                            HorizontalOptions="StartAndExpand"
+                            Scale="0.8"
+                            Style="{StaticResource DefaultButton}"
+                            Text="接触一覧" />
+                    </Grid>
 
-                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="以下の選択ボタンで、現在の症状などを入力ください。ご入力の内容に応じて、PCR検査センター等への受信を案内します。" />
+                    <Label
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        Text="以下の選択ボタンで、現在の症状などを入力ください。ご入力の内容に応じて、PCR検査センター等への受信を案内します。" />
 
                     <Button
                         Margin="0,0,0,20"
@@ -54,6 +80,11 @@
                         Command="{Binding Path=OnClickByPhone}"
                         Style="{StaticResource DefaultButton}"
                         Text="入力に変えて電話で報告相談する" />
+
+                    <Label
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        Text="受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。" />
                 </StackLayout>
             </Frame>
         </StackLayout>
