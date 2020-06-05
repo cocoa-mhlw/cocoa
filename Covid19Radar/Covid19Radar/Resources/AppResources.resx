@@ -338,7 +338,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
-    <value>Reset</value>
+    <value>Discontinued</value>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Enabling</value>

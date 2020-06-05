@@ -16,179 +16,182 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Grid
-                Grid.Row="0"
-                HorizontalOptions="FillAndExpand"
-                RowSpacing="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="0.5*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    VerticalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span
-                                FontFamily="NotoSansRegularFontFamily"
-                                FontSize="Small"
-                                Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationText}"
-                                TextColor="{StaticResource PrimaryText}" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span
-                                FontFamily="NotoSansRegularFontFamily"
-                                FontSize="Caption"
-                                Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationDescription}"
-                                TextColor="{StaticResource SecondaryText}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Switch
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    IsToggled="{Binding UserData.IsExposureNotificationEnabled, Mode=TwoWay}">
-                    <Switch.Behaviors>
-                        <Behavior:SwitchBehavior Command="{Binding OnChangeExposureNotificationState}" />
-                    </Switch.Behaviors>
-                </Switch>
-            </Grid>
+        <StackLayout
+            Padding="0"
+            BackgroundColor="{StaticResource Background}"
+            Spacing="0">
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Grid
-                Grid.Row="0"
-                HorizontalOptions="FillAndExpand"
-                RowSpacing="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="0.5*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    VerticalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span
-                                FontFamily="NotoSansRegularFontFamily"
-                                FontSize="Small"
-                                Text="{x:Static resources:AppResources.CloseContactNotificationText}"
-                                TextColor="{StaticResource PrimaryText}" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span
-                                FontFamily="NotoSansRegularFontFamily"
-                                FontSize="Caption"
-                                Text="{x:Static resources:AppResources.CloseContactNotificationDescription}"
-                                TextColor="{StaticResource SecondaryText}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Switch
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    IsToggled="{Binding UserData.IsNotificationEnabled, Mode=TwoWay}">
-                    <Switch.Behaviors>
-                        <Behavior:SwitchBehavior Command="{Binding OnChangeNotificationState}" />
-                    </Switch.Behaviors>
+            <Frame Padding="15" HasShadow="False">
+                <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="0.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Small"
+                                    Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationText}"
+                                    TextColor="{StaticResource PrimaryText}" />
+                                <Span Text="{x:Static System:Environment.NewLine}" />
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Caption"
+                                    Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationDescription}"
+                                    TextColor="{StaticResource SecondaryText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Switch
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        IsToggled="{Binding UserData.IsExposureNotificationEnabled, Mode=TwoWay}">
+                        <Switch.Behaviors>
+                            <Behavior:SwitchBehavior Command="{Binding OnChangeExposureNotificationState}" />
+                        </Switch.Behaviors>
+                    </Switch>
+                </Grid>
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="15" HasShadow="False">
+                <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="0.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Small"
+                                    Text="{x:Static resources:AppResources.CloseContactNotificationText}"
+                                    TextColor="{StaticResource PrimaryText}" />
+                                <Span Text="{x:Static System:Environment.NewLine}" />
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Caption"
+                                    Text="{x:Static resources:AppResources.CloseContactNotificationDescription}"
+                                    TextColor="{StaticResource SecondaryText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Switch
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        IsToggled="{Binding UserData.IsNotificationEnabled, Mode=TwoWay}">
+                        <Switch.Behaviors>
+                            <Behavior:SwitchBehavior Command="{Binding OnChangeNotificationState}" />
+                        </Switch.Behaviors>
 
-                </Switch>
-            </Grid>
+                    </Switch>
+                </Grid>
+            </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Grid
-                Grid.Row="0"
-                HorizontalOptions="FillAndExpand"
-                RowSpacing="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="0.5*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    VerticalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span
-                                FontFamily="NotoSansRegularFontFamily"
-                                FontSize="Small"
-                                Text="{x:Static resources:AppResources.DeleteDataText}"
-                                TextColor="{StaticResource PrimaryText}" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span
-                                FontFamily="NotoSansRegularFontFamily"
-                                FontSize="Caption"
-                                Text="{x:Static resources:AppResources.DeleteDataDescription}"
-                                TextColor="{StaticResource SecondaryText}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Command="{Binding OnChangeResetData}"
-                    Scale="0.8"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.ButtonReset}"
-                    VerticalOptions="Center" />
-            </Grid>
+            <Frame Padding="15" HasShadow="False">
+                <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="0.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Small"
+                                    Text="{x:Static resources:AppResources.DeleteDataText}"
+                                    TextColor="{StaticResource PrimaryText}" />
+                                <Span Text="{x:Static System:Environment.NewLine}" />
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Caption"
+                                    Text="{x:Static resources:AppResources.DeleteDataDescription}"
+                                    TextColor="{StaticResource SecondaryText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Button
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Command="{Binding OnChangeResetData}"
+                        Scale="0.8"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.ButtonReset}"
+                        VerticalOptions="Center" />
+                </Grid>
+            </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Grid
-                Grid.Row="0"
-                HorizontalOptions="FillAndExpand"
-                RowSpacing="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="0.5*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+            <Frame Padding="15" HasShadow="False">
+                <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="0.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span
-                                FontFamily="NotoSansRegularFontFamily"
-                                FontSize="Small"
-                                Text="{x:Static resources:AppResources.VersionText}"
-                                TextColor="{StaticResource PrimaryText}" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span
-                                FontFamily="NotoSansRegularFontFamily"
-                                FontSize="Caption"
-                                Text="{x:Static resources:AppResources.VersionDescription}"
-                                TextColor="{StaticResource SecondaryText}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                    <Label Grid.Row="0" Grid.Column="0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Small"
+                                    Text="{x:Static resources:AppResources.VersionText}"
+                                    TextColor="{StaticResource PrimaryText}" />
+                                <Span Text="{x:Static System:Environment.NewLine}" />
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Caption"
+                                    Text="{x:Static resources:AppResources.VersionDescription}"
+                                    TextColor="{StaticResource SecondaryText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{Binding AppVer}"
+                        VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="15" HasShadow="False">
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    HorizontalOptions="Center"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="{Binding AppVer}"
-                    VerticalOptions="Center" />
-            </Grid>
+                    HorizontalOptions="Start"
+                    Style="{StaticResource DefaultLabelSmallColor}"
+                    Text="ライセンス…"
+                    VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OnClickLicenseAgreement}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Label
-                HorizontalOptions="Start"
-                Style="{StaticResource DefaultLabelSmallColor}"
-                Text="ライセンス…"
-                VerticalOptions="Center">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnClickLicenseAgreement}" />
-                </Label.GestureRecognizers>
-            </Label>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
