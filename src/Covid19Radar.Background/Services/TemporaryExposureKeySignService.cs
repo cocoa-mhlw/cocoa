@@ -1,21 +1,21 @@
 ﻿using Covid19Radar.Background.Protobuf;
-using Microsoft.Azure.KeyVault;
-using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System;
 using System.IO;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeySignService : ITemporaryExposureKeySignService
     {
-        public readonly KeyVaultClient KeyVault;
         public readonly string TekExportKeyVaultKeyUrl;
         public readonly ILogger<TemporaryExposureKeySignService> Logger;
         public readonly string VerificationKeyId;
         public readonly string VerificationKeyVersion;
-        private Microsoft.Azure.KeyVault.Models.KeyBundle KeyVaultKey;
+        public readonly string VerificationKeySecret;
+        public readonly ECDsa VerificationKey;
 
         public TemporaryExposureKeySignService(
             IConfiguration config,
@@ -26,37 +26,23 @@ namespace Covid19Radar.Background.Services
             TekExportKeyVaultKeyUrl = config.TekExportKeyVaultKeyUrl();
             VerificationKeyId = config.VerificationKeyId();
             VerificationKeyVersion = config.VerificationKeyVersion();
-            AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
-            var credentialCallback = new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback);
-            KeyVault = new KeyVaultClient(credentialCallback);
+            VerificationKeySecret = config.VerificationKeySecret();
+
+            var key = CngKey.Import(Convert.FromBase64String(VerificationKeySecret), CngKeyBlobFormat.Pkcs8PrivateBlob);
+            VerificationKey = new ECDsaCng(key);
         }
 
-        private async Task InitializeAsync()
-        {
-            Logger.LogInformation($"start {nameof(InitializeAsync)}");
-            if (KeyVaultKey == null)
-            {
-                KeyVaultKey = await KeyVault.GetKeyAsync(TekExportKeyVaultKeyUrl);
-            }
-        }
 
         public async Task<byte[]> SignAsync(Stream source)
         {
             Logger.LogInformation($"start {nameof(SignAsync)}");
-            await InitializeAsync();
-            byte[] hash;
-            using (var sha = System.Security.Cryptography.SHA256.Create())
-            {
-                hash = sha.ComputeHash(source);
-            }
-            var result = await KeyVault.SignAsync(TekExportKeyVaultKeyUrl, Microsoft.Azure.KeyVault.Cryptography.Algorithms.Es256.AlgorithmName, hash);
-            return result.Result;
+
+            return VerificationKey.SignData(source, HashAlgorithmName.SHA256);
         }
 
         public async Task SetSignatureAsync(SignatureInfo info)
         {
             Logger.LogInformation($"start {nameof(SetSignatureAsync)}");
-            await InitializeAsync();
             info.VerificationKeyId = VerificationKeyId;
             info.VerificationKeyVersion = VerificationKeyVersion;
         }
