@@ -76,7 +76,7 @@
 <IntermediateOutputPath></IntermediateOutputPath>
 <BuildIpa></BuildIpa>
 <CrashReportingDelay>-1</CrashReportingDelay>
-<MtouchLink>SdkOnly</MtouchLink>
+<MtouchLink>None</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DefineConstants></DefineConstants>
@@ -144,9 +144,6 @@
 <PlatformTarget>anycpu</PlatformTarget>
 <WarningsNotAsErrors></WarningsNotAsErrors>
 <Nullable></Nullable>
-<CodesignResourceRules></CodesignResourceRules>
-<IOSDebuggerPort></IOSDebuggerPort>
-<MtouchI18n></MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
