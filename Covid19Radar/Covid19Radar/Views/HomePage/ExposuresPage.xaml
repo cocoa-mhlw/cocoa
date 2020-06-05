@@ -12,20 +12,43 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:system="clr-namespace:System;assembly=netstandard"
     xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
-    Title="{Binding Title}"
+    Title="過去14日間の接触一覧"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ContentPage.Content ItemsSource="{Binding ExposureInformation}" SelectionMode="None">
         <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <Label Style="{StaticResource DefaultTitleLabel}" Text="過去14日間の接触記録" />
-            <CollectionView ItemsSource="{Binding ExposureInformation}">
+            <Label Style="{StaticResource DefaultLabel}" Text="以下の日に陽性者との接触が確認されました。" />
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <CollectionView BackgroundColor="{StaticResource Background}" ItemsSource="{Binding ExposureInformation}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
+                        <Frame Padding="15" HasShadow="False">
+                            <Label VerticalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            FontFamily="NotoSansRegularFontFamily"
+                                            FontSize="Small"
+                                            Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationText}"
+                                            TextColor="{StaticResource PrimaryText}" />
+                                        <Span Text="{x:Static system:Environment.NewLine}" />
+                                        <Span
+                                            FontFamily="NotoSansRegularFontFamily"
+                                            FontSize="Caption"
+                                            Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationDescription}"
+                                            TextColor="{StaticResource SecondaryText}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                        <BoxView Style="{StaticResource DefaultLineStyle}" />
+
+                        <!--
                         <StackLayout HorizontalOptions="FillAndExpand">
                             <Frame Style="{StaticResource FrameCardViewStyle}">
                                 <StackLayout Style="{StaticResource DetailsStackLayout}">
@@ -85,7 +108,7 @@
                                     </StackLayout>
                                 </StackLayout>
                             </Frame>
-                        </StackLayout>
+                        </StackLayout>-->
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
                 <CollectionView.EmptyView>
