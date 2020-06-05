@@ -76,6 +76,7 @@
 <IntermediateOutputPath></IntermediateOutputPath>
 <BuildIpa></BuildIpa>
 <CrashReportingDelay>-1</CrashReportingDelay>
+<MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DefineConstants></DefineConstants>
@@ -86,11 +87,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
+    <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Development: Hirose Kazumi (B5NUWQDLW4)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>Covid19radar</CodesignProvision>
-    <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
+<MtouchLink>SdkOnly</MtouchLink>
 <MtouchLink>SdkOnly</MtouchLink>
 <MtouchI18n>cjk</MtouchI18n>
 <LangVersion>latest</LangVersion>
@@ -142,6 +144,9 @@
 <PlatformTarget>anycpu</PlatformTarget>
 <WarningsNotAsErrors></WarningsNotAsErrors>
 <Nullable></Nullable>
+<CodesignResourceRules></CodesignResourceRules>
+<IOSDebuggerPort></IOSDebuggerPort>
+<MtouchI18n></MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
