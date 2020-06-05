@@ -54,12 +54,6 @@ namespace Covid19Radar.ViewModels
                 Title = "利用規約"
             });
 #if DEBUG
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf2f1",
-                PageName = nameof(UpdateInformationPage),
-                Title = Resources.AppResources.TitleUpdateInformation
-            });
 
             MenuItems.Add(new MainMenuModel()
             {
