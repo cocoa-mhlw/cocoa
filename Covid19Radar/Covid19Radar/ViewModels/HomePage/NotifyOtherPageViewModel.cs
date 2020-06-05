@@ -25,6 +25,7 @@ namespace Covid19Radar.ViewModels
         public DateTime? MaxDate { get; } = DateTime.Today.AddMonths(1);
         public DateTime? MinDate { get; } = DateTime.Today.AddMonths(-1);
 
+
         private readonly UserDataService userDataService;
         private UserDataModel userData;
 
