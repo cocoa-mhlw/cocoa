@@ -79,7 +79,7 @@
                         AutomationId="ButtonShareApp"
                         Command="{Binding Path=OnClickByPhone}"
                         Style="{StaticResource DefaultButton}"
-                        Text="入力に変えて電話で報告相談する" />
+                        Text="入力に代えて電話で報告・相談する" />
 
                     <Label
                         HorizontalTextAlignment="Start"
