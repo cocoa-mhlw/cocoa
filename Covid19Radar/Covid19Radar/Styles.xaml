@@ -22,10 +22,10 @@
 
     <Style x:Key="DefaultGridLayout" TargetType="Grid">
         <Setter Property="VerticalOptions" Value="FillAndExpand" />
-        <Setter Property="ColumnSpacing" Value="30" />
-        <Setter Property="RowSpacing" Value="30" />
-        <Setter Property="Margin" Value="30,30,30,30" />
-        <Setter Property="Padding" Value="0,0,0,30" />
+        <Setter Property="ColumnSpacing" Value="0" />
+        <Setter Property="RowSpacing" Value="0" />
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Padding" Value="0,0,0,0" />
     </Style>
 
     <Style x:Key="DefaultFlexLayout" TargetType="FlexLayout">
@@ -33,14 +33,14 @@
         <Setter Property="Direction" Value="Column" />
         <Setter Property="JustifyContent" Value="SpaceAround" />
         <Setter Property="AlignContent" Value="Center" />
-        <Setter Property="Margin" Value="30" />
+        <Setter Property="Margin" Value="0,0,0,0" />
     </Style>
 
     <Style x:Key="DefaultStackLayout" TargetType="StackLayout">
-        <Setter Property="Margin" Value="30,30,30,30" />
-        <Setter Property="Spacing" Value="30" />
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Spacing" Value="0" />
         <Setter Property="VerticalOptions" Value="FillAndExpand" />
-        <Setter Property="Padding" Value="0,0,0,30" />
+        <Setter Property="Padding" Value="0,0,0,0" />
     </Style>
 
     <Style x:Key="DefaultLineStyle" TargetType="BoxView">
@@ -209,7 +209,7 @@
         <Setter Property="FontSize" Value="Header" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
-        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="Margin" Value="0,0,0,0" />
         <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
     </Style>
 
@@ -310,8 +310,8 @@
 
     <Style x:Key="FrameCardViewStyle" TargetType="Frame">
         <Setter Property="CornerRadius" Value="5" />
-        <Setter Property="Margin" Value="10" />
-        <Setter Property="Padding" Value="10" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="OutlineColor" Value="LightGray" />
         <Setter Property="BorderColor" Value="LightGray" />
@@ -319,7 +319,7 @@
     </Style>
 
     <Style x:Key="ItemsCardViewStackLayoutStyle" TargetType="StackLayout">
-        <Setter Property="Margin" Value="5" />
+        <Setter Property="Margin" Value="0" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
     </Style>
 
