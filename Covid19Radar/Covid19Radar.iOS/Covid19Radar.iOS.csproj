@@ -1037,5 +1037,32 @@
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage22%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SplashImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SplashImg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SplashImg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ja.lproj\SplashImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ja.lproj\SplashImg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ja.lproj\SplashImg%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Base.lproj\SplashImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Base.lproj\SplashImg%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Base.lproj\SplashImg%403x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
