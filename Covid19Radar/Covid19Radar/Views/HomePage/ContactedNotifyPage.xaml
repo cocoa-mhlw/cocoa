@@ -22,15 +22,8 @@
                 BackgroundColor="#FFF3DD"
                 CornerRadius="10">
                 <StackLayout Spacing="0">
-                    <Image>
-                        <Image.Source>
-                            <FontImageSource
-                                FontFamily="FA-S"
-                                Glyph="&#xf06a;"
-                                Size="60"
-                                Color="#FFC252" />
-                        </Image.Source>
-                    </Image>
+                    <ffimageloading:CachedImage Aspect="AspectFit" Source="InfoMark.png" />
+
                     <Label Style="{StaticResource DefaultTitleLabel}" Text="陽性者との接触確認" />
                     <Grid ColumnSpacing="10" RowSpacing="0">
                         <Grid.ColumnDefinitions>
