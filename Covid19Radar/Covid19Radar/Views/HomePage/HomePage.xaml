@@ -28,7 +28,7 @@
             Spacing="5">
             <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultLabel}">
+                    <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{Binding StartDate}" />
@@ -61,7 +61,7 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Aspect="AspectFit"
-                            Source="settings.png" />
+                            Source="HomePage10.png" />
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
@@ -87,15 +87,11 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <Image Grid.Row="0" Grid.Column="0">
-                            <Image.Source>
-                                <FontImageSource
-                                    FontFamily="FA-S"
-                                    Glyph="&#xf1e1;"
-                                    Size="30"
-                                    Color="#2196F3" />
-                            </Image.Source>
-                        </Image>
+                        <ffimageloading:CachedImage
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Aspect="AspectFit"
+                            Source="HomePage11.png" />
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
