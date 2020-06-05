@@ -18,9 +18,21 @@ namespace Covid19Radar.ViewModels
 {
     public class ContactedNotifyPageViewModel : ViewModelBase
     {
-        public ContactedNotifyPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
+        private string _exposureCount;
+        public string ExposureCount
+        {
+            get { return _exposureCount; }
+            set { SetProperty(ref _exposureCount, value); }
+        }
+
+        private readonly ExposureNotificationService exposureNotificationService;
+
+
+        public ContactedNotifyPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
+            this.exposureNotificationService = exposureNotificationService;
+            ExposureCount = exposureNotificationService.GetExposureCount().ToString();
         }
         public Command OnClickByForm => new Command(async () =>
         {
