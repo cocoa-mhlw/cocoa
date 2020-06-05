@@ -61,7 +61,7 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Aspect="AspectFit"
-                            Source="HomePage10.png" />
+                            Source="HOMEPage10.png" />
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
@@ -91,7 +91,7 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Aspect="AspectFit"
-                            Source="HomePage11.png" />
+                            Source="HOMEPage11.png" />
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
