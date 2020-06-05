@@ -102,7 +102,7 @@
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
       <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\InqueryPage.xaml.cs">
+    <Compile Update="Views\HelpPage\InqueryPage.xaml.cs">
       <DependentUpon>InqueryPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\NotContactPage.xaml.cs">
@@ -114,13 +114,13 @@
     <Compile Update="Views\HomePage\ThankYouNotifyOtherPage.xaml.cs">
       <DependentUpon>ThankYouNotifyOtherPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\UpdateInformationPage.xaml.cs">
+    <Compile Update="Views\HomePage\UnUsed\UpdateInformationPage.xaml.cs">
       <DependentUpon>UpdateInformationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\LicenseAgreementPage.xaml.cs">
+    <Compile Update="Views\Settings\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\ContributorsPage.xaml.cs">
+    <Compile Update="Views\HomePage\UnUsed\ContributorsPage.xaml.cs">
       <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\HomePage.xaml.cs">
