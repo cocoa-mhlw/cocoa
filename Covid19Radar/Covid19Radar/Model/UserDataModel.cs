@@ -65,7 +65,9 @@ namespace Covid19Radar.Model
         public bool IsExposureNotificationEnabled { get; set; } = false;
 
         public bool IsNotificationEnabled { get; set; } = false;
-        
+
+        public bool IsPositived { get; set; } = false;
+
         public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
 
         public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
