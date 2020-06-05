@@ -28,20 +28,18 @@
             Spacing="20">
             <Frame Padding="16" CornerRadius="10">
                 <StackLayout Spacing="0">
-                    <Label
-                        Grid.Column="1"
-                        Grid.ColumnSpan="2"
-                        Style="{StaticResource DefaultLabel}">
+                    <Label Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="2020年6月1日から" />
-                                <Span Text="X日間" />
+                                <Span Text="{Binding StartDate}" />
+                                <Span Text="から" />
+                                <Span Text="{Binding PastDate}" />
                                 <Span Text="使用中" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
                     <Button
-                        AutomationId="ButtonShareApp"
+                        AutomationId="ButtonExposures"
                         Command="{Binding Path=OnClickExposures}"
                         Style="{StaticResource DefaultButton}"
                         Text="陽性者との接触を確認する(14日間)" />
@@ -50,11 +48,7 @@
             </Frame>
             <Frame Padding="16" CornerRadius="10">
                 <StackLayout Spacing="0">
-                    <Label
-                        Grid.Column="1"
-                        Grid.ColumnSpan="2"
-                        Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="新型コロナウィルス陽性と診断されたら" />
+                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="新型コロナウィルス陽性と診断されたら" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.2*" />
@@ -84,11 +78,7 @@
             </Frame>
             <Frame Padding="16" CornerRadius="10">
                 <StackLayout Spacing="0">
-                    <Label
-                        Grid.Column="1"
-                        Grid.ColumnSpan="2"
-                        Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
+                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.2*" />
