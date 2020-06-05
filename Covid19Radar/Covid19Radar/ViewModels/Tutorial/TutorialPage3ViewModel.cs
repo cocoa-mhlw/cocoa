@@ -38,7 +38,7 @@ namespace Covid19Radar.ViewModels
             userData.IsOptined = true;
             await userDataService.SetAsync(userData);
             UserDialogs.Instance.HideLoading();
-            await NavigationService.NavigateAsync(nameof(DescriptionPage1));
+            await NavigationService.NavigateAsync(nameof(PrivacyPolicyPage));
         });
     }
 }
