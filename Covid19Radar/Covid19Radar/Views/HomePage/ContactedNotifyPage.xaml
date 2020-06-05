@@ -21,7 +21,7 @@
                 BackgroundColor="#FFF3DD"
                 CornerRadius="10">
                 <StackLayout Spacing="0">
-                    <Image Grid.Row="0" Grid.Column="0">
+                    <Image>
                         <Image.Source>
                             <FontImageSource
                                 FontFamily="FA-S"
@@ -30,7 +30,16 @@
                                 Color="#FFC252" />
                         </Image.Source>
                     </Image>
-                    <Label Style="{StaticResource DefaultTitleLabel}" Text="3件の陽性者との接触が&#10;確認されました" />
+                    <Label Style="{StaticResource DefaultTitleLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding ExposureCount}" />
+                                <Span Text="件の陽性者との接触が" />
+                                <Span Text="確認されました" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
                     <Label Style="{StaticResource DefaultSubTitleLabel}" Text="以下の選択ボタンで、現在の症状などを入力ください。ご入力の内容に応じて、PCR検査センター等への受信を案内します。" />
 
                     <Button

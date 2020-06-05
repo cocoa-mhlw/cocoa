@@ -37,4 +37,6 @@ using Xamarin.Forms;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 // Opt-in to using UIWebView instead of WkWebView.
-//[assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
+#if DEBUG
+[assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
+#endif
