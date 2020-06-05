@@ -36,6 +36,7 @@ namespace Covid19Radar.ViewModels
             userData = this.userDataService.Get();
         }
 
+        /*
         public Command OnClickAgree => new Command(async () =>
         {
 
@@ -61,6 +62,6 @@ namespace Covid19Radar.ViewModels
             Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
 
         });
-
+        */
     }
 }
