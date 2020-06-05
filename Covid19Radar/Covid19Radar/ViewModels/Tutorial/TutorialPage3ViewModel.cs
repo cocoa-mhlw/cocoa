@@ -15,6 +15,13 @@ namespace Covid19Radar.ViewModels
         private readonly UserDataService userDataService;
         private UserDataModel userData;
 
+        private string _url;
+        public string Url
+        {
+            get { return _url; }
+            set { SetProperty(ref _url, value); }
+        }
+
         public TutorialPage3ViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = AppResources.TitleConsentByUserPage;
