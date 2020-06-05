@@ -132,15 +132,18 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InitSettingPage>();
             */
             containerRegistry.RegisterForNavigation<HomePage>();
-            containerRegistry.RegisterForNavigation<ContributorsPage>();
-            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
-            containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
-            containerRegistry.RegisterForNavigation<ExposuresPage>();
-            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
+//            containerRegistry.RegisterForNavigation<ContributorsPage>();
+//            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
+
+//            containerRegistry.RegisterForNavigation<ExposuresPage>();
+//            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
+
+// Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
+            containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
             containerRegistry.RegisterForNavigation<DebugPage>();
 
-            // Norij Work View
+// tutorial
             containerRegistry.RegisterForNavigation<TutorialPage1>();
             containerRegistry.RegisterForNavigation<TutorialPage2>();
             containerRegistry.RegisterForNavigation<TutorialPage3>();
@@ -148,7 +151,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage4>();
             containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
-
+// Help
             containerRegistry.RegisterForNavigation<HelpMenuPage>();
             containerRegistry.RegisterForNavigation<HelpPage1>();
             containerRegistry.RegisterForNavigation<HelpPage2>();
