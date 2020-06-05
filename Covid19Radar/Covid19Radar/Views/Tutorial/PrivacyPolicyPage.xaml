@@ -28,32 +28,11 @@
                     Style="{StaticResource DefaultWebView}" />
             </StackLayout>
         </ScrollView>
-
-        <Grid
+        <Button
             Grid.Row="2"
-            ColumnSpacing="10"
-            RowSpacing="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*" />
-                <ColumnDefinition Width="0.5*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Button
-                Grid.Row="0"
-                Grid.Column="0"
-                AutomationId="ButtonNotAgree"
-                Command="{Binding Path=OnClickNotAgree}"
-                Style="{StaticResource DefaultButtonGrayedOut}"
-                Text="{x:Static resources:AppResources.ButtonNotAgree}" />
-            <Button
-                Grid.Row="0"
-                Grid.Column="1"
-                AutomationId="ButtonAgree"
-                Command="{Binding Path=OnClickAgree}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.ButtonAgree}" />
-        </Grid>
+            AutomationId="ButtonAgree"
+            Command="{prism:NavigateTo 'TutorialPage4'}"
+            Style="{StaticResource DefaultButton}"
+            Text="{x:Static resources:AppResources.ButtonAgree}" />
     </Grid>
 </ContentPage>
