@@ -7,6 +7,7 @@ using Prism.Navigation;
 using Prism.Navigation.Xaml;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,9 +52,13 @@ namespace Covid19Radar.Services
 
             Status status = await ExposureNotification.GetStatusAsync();
             GetStatusMessage(status);
-
-
         }
+
+        public int GetExposureCount()
+        {
+            return userData.ExposureInformation.Count();
+        }
+
         /*
         public async Task TestDownloadBatch()
         {

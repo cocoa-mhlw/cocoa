@@ -7,15 +7,57 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="お問い合わせ"
+    Title="本アプリに関するお問い合わせ"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <Grid Margin="0,0,0,0" Style="{StaticResource DefaultGridLayout}">
-        <StackLayout>
-            <WebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
+    <ScrollView>
+        <StackLayout
+            Padding="0"
+            BackgroundColor="{StaticResource Background}"
+            Spacing="0">
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="10" HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=OnClickEmail}" />
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <Label Style="{StaticResource DefaultLabelSmall}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    Text="***REMOVED***"
+                                    TextColor="{StaticResource Primary}"
+                                    TextDecorations="Underline" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="9:00～17:30（土・日・祝日・年末年始を除く）" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="10" HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=OnClickSite}" />
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <Label Style="{StaticResource DefaultLabelSmall}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="新型コロナウィルス感染症対策サイト" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span
+                                    Text="https://corona.go.jp"
+                                    TextColor="{StaticResource Primary}"
+                                    TextDecorations="Underline" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
         </StackLayout>
-    </Grid>
-
+    </ScrollView>
 </ContentPage>
