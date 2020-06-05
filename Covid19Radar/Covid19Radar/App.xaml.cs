@@ -132,13 +132,14 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InitSettingPage>();
             */
             containerRegistry.RegisterForNavigation<HomePage>();
-//            containerRegistry.RegisterForNavigation<ContributorsPage>();
-//            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
+            containerRegistry.RegisterForNavigation<ExposuresPage>();
 
-//            containerRegistry.RegisterForNavigation<ExposuresPage>();
-//            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
+            //            containerRegistry.RegisterForNavigation<ContributorsPage>();
+            //            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
 
-// Settings
+            //            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
+
+            // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
             containerRegistry.RegisterForNavigation<DebugPage>();
