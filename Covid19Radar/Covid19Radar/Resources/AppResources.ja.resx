@@ -240,7 +240,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
-    <value>リセット</value>
+    <value>使用中止</value>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>プライバシーポリシー</value>
