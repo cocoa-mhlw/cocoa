@@ -23,10 +23,10 @@
 
     <ScrollView>
         <StackLayout
-            Padding="10"
+            Padding="5"
             BackgroundColor="#CCCCCC"
-            Spacing="20">
-            <Frame Padding="16" CornerRadius="10">
+            Spacing="5">
+            <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
                     <Label Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
@@ -46,7 +46,7 @@
 
                 </StackLayout>
             </Frame>
-            <Frame Padding="16" CornerRadius="10">
+            <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
                     <Label Style="{StaticResource DefaultSubTitleLabel}" Text="新型コロナウィルス陽性と診断されたら" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
@@ -76,7 +76,7 @@
                         Text="陽性情報の登録" />
                 </StackLayout>
             </Frame>
-            <Frame Padding="16" CornerRadius="10">
+            <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
                     <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
