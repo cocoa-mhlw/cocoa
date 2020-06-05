@@ -7,7 +7,7 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="{Binding Title}"
+    Title="ホーム"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -102,7 +102,7 @@
                     <Button
                         Command="{Binding Path=OnClickShareApp}"
                         Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.ButtonShare}" />
+                        Text="アプリを周りの人に知らせる" />
                 </StackLayout>
             </Frame>
         </StackLayout>
