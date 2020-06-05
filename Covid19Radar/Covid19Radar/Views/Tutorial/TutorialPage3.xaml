@@ -25,7 +25,7 @@
             <StackLayout>
                 <WebView
                     HeightRequest="9999"
-                    Source="{x:Static resources:AppResources.UrlUserAgreement}"
+                    Source="{x:Static resources:AppResources.UrlPrivacyPolicy}"
                     Style="{StaticResource DefaultWebView}" />
             </StackLayout>
         </ScrollView>
