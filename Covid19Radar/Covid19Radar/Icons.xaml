@@ -45,4 +45,7 @@
     <x:String x:Key="IconCalender">&#xf073;</x:String>
     <x:String x:Key="IconClock">&#xf017;</x:String>
     <x:String x:Key="IconAlert">&#xf071;</x:String>
+    <x:String x:Key="IconCog">&#xf013;</x:String>
+    <x:String x:Key="IconEnvelope">&#xf0e0;</x:String>
+    <x:String x:Key="IconScroll">&#xf70e;</x:String>
 </ResourceDictionary>
