@@ -33,8 +33,7 @@
                                     <!--  Main design for our menu items  -->
                                     <StackLayout
                                         Padding="20,10,0,10"
-                                        Orientation="Horizontal"
-                                        Spacing="20"
+                                        Style="{StaticResource ImageLableStackLayout}"
                                         VerticalOptions="FillAndExpand">
                                         <Image
                                             AutomationId="{Binding Title}"
@@ -52,7 +51,7 @@
                                             AutomationId="{Binding Title}"
                                             FontSize="Default"
                                             Text="{Binding Title}"
-                                            TextColor="#019AE8"
+                                            TextColor="{StaticResource NavBarText}"
                                             VerticalOptions="Center" />
                                     </StackLayout>
                                 </ViewCell>
