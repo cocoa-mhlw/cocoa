@@ -23,7 +23,7 @@
 	<key>CFBundleName</key>
 	<string>Covid19Radar</string>
 	<key>CFBundleDisplayName</key>
-	<string>Covid19Radar</string>
+	<string>接触確認アプリ</string>
 	<key>CFBundleIdentifier</key>
 	<string>jp.go.mhlw.covid19radar</string>
 	<key>CFBundleVersion</key>
