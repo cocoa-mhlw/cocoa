@@ -31,7 +31,19 @@ namespace Covid19Radar.Api.DataAccess
             _keys = new PartitionKeyRotation(new string[] { "JumpConsistentSeed1",
                                                             "JumpConsistentSeed2",
                                                             "JumpConsistentSeed3",
-                                                            "JumpConsistentSeed4"});
+                                                            "JumpConsistentSeed4",
+                                                            "JumpConsistentSeed5",
+                                                            "JumpConsistentSeed6",
+                                                            "JumpConsistentSeed7",
+                                                            "JumpConsistentSeed8",
+                                                            "JumpConsistentSeed9",
+                                                            "JumpConsistentSeed10",
+                                                            "JumpConsistentSeed11",
+                                                            "JumpConsistentSeed12",
+                                                            "JumpConsistentSeed13",
+                                                            "JumpConsistentSeed14",
+                                                            "JumpConsistentSeed15",
+                                                            "JumpConsistentSeed16"});
         }
 
         public async Task<UserModel?> GetById(string id)
@@ -47,7 +59,8 @@ namespace Covid19Radar.Api.DataAccess
 
         public async Task Create(UserModel user)
         {
-            user.JumpConsistentSeed = await _sequence.GetNextAsync(_keys.Next(), 1);
+            var key = _keys.Next();
+            user.JumpConsistentSeed = await _sequence.GetNextAsync(key, key.InitialValue, _keys.Increment);
             var r = await _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
             _logger.LogInformation($"{nameof(Create)} RequestCharge:{r.RequestCharge}");
         }
