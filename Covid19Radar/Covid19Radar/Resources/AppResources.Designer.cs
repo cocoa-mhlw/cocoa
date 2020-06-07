@@ -376,6 +376,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   How can I know if there is contact? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageLabel2 {
+            get {
+                return ResourceManager.GetString("HelpMenuPageLabel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   How to use this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageTitle {
