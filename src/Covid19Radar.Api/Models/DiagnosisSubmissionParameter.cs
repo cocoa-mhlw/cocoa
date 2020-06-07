@@ -43,7 +43,7 @@ namespace Covid19Radar.Api.Models
 				return new TemporaryExposureKeyModel()
 				{
 					KeyData = Convert.FromBase64String(this.KeyData),
-					RollingPeriod = (int)this.RollingPeriod,
+					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
 					TransmissionRiskLevel = TransmissionRisk,
 					Timestamp = timestamp,
@@ -57,8 +57,8 @@ namespace Covid19Radar.Api.Models
 			public bool IsValid()
 			{
 				if (string.IsNullOrWhiteSpace(KeyData)) return false;
-				if (RollingPeriod != Constants.ActiveRollingPeriod) return false;
-				if (RollingStartNumber < (DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds() / 600)) return false;
+				if (RollingPeriod != 0 && RollingPeriod != Constants.ActiveRollingPeriod) return false;
+				if (RollingStartNumber != 0 && RollingStartNumber < (DateTimeOffset.UtcNow.AddDays(Constants.OutOfDateDays).ToUnixTimeSeconds() / 600)) return false;
 				return true;
 			}
 		}
