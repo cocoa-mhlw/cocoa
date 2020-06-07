@@ -58,7 +58,7 @@ namespace Covid19Radar
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            //Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
@@ -132,13 +132,14 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<InitSettingPage>();
             */
             containerRegistry.RegisterForNavigation<HomePage>();
-//            containerRegistry.RegisterForNavigation<ContributorsPage>();
-//            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
+            containerRegistry.RegisterForNavigation<ExposuresPage>();
 
-//            containerRegistry.RegisterForNavigation<ExposuresPage>();
-//            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
+            //            containerRegistry.RegisterForNavigation<ContributorsPage>();
+            //            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
 
-// Settings
+            //            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
+
+            // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
             containerRegistry.RegisterForNavigation<DebugPage>();

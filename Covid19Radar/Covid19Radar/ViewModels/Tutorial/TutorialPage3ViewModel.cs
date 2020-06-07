@@ -24,7 +24,6 @@ namespace Covid19Radar.ViewModels
 
         public TutorialPage3ViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
-            Title = AppResources.TitleConsentByUserPage;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
         }

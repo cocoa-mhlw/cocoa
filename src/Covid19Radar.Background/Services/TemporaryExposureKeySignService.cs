@@ -33,18 +33,19 @@ namespace Covid19Radar.Background.Services
         }
 
 
-        public async Task<byte[]> SignAsync(Stream source)
+        public Task<byte[]> SignAsync(Stream source)
         {
             Logger.LogInformation($"start {nameof(SignAsync)}");
 
-            return VerificationKey.SignData(source, HashAlgorithmName.SHA256);
+            return Task.FromResult(VerificationKey.SignData(source, HashAlgorithmName.SHA256));
         }
 
-        public async Task SetSignatureAsync(SignatureInfo info)
+        public Task SetSignatureAsync(SignatureInfo info)
         {
             Logger.LogInformation($"start {nameof(SetSignatureAsync)}");
             info.VerificationKeyId = VerificationKeyId;
             info.VerificationKeyVersion = VerificationKeyVersion;
+            return Task.CompletedTask;
         }
 
     }
