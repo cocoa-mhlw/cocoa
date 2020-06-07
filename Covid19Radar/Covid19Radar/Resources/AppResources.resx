@@ -574,4 +574,8 @@ support of "new lifestyle".</value>
     <value>I accept the terms and continue</value>
     <comment>規約に同意して次へ</comment>
   </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>Thank you for registering</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
 </root>

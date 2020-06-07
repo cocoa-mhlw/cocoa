@@ -469,4 +469,9 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>規約に同意して次へ</value>
     <comment>規約に同意して次へ</comment>
   </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>ご登録いただき
+ありがとうございました</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
 </root>
