@@ -1153,6 +1153,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Terms of service に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage3Title {
+            get {
+                return ResourceManager.GetString("TutorialPage3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   https://covid19radar.z11.web.core.windows.net/en/contributor.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlContributor {
