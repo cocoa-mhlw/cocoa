@@ -8,6 +8,7 @@
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
+    IconImageSource="ic_hamburger.png"
     Visual="Material">
     <MasterDetailPage.Master>
 

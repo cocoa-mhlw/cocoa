@@ -11,7 +11,6 @@ namespace Covid19Radar.ViewModels
     {
         public TutorialPage2ViewModel() : base()
         {
-            Title = Resources.AppResources.TitleHowItWorks;
         }
 
     }
