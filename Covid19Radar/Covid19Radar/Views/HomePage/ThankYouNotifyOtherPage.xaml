@@ -22,7 +22,7 @@
                 <Label
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultTitleLabel}"
-                    Text="新型コロナウイルス&#10;接触確認アプリ" />
+                    Text="{x:Static resources:AppResources.AppName}" />
                 <Label
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultTitleLabel}"
