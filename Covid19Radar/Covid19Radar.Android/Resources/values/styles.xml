@@ -13,6 +13,7 @@
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
     <item name="android:textAllCaps">false</item>
+    <item name="android:actionMenuTextColor">#000000</item>
     <item name="android:colorPressedHighlight">@color/ListViewSelected</item>
     <item name="android:colorLongPressedHighlight">@color/ListViewHighlighted</item>
     <item name="android:colorFocusedHighlight">@color/ListViewSelected</item>

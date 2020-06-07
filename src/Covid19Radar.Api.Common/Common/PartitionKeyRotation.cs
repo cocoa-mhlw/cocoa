@@ -14,7 +14,7 @@ namespace Covid19Radar.Api.Common
         private int Current = -1;
         public PartitionKeyRotation(string[] keys)
         {
-            Keys = keys.Select(_ => new KeyInformation(_)).ToArray();
+            Keys = keys.Select((_, i) => new KeyInformation(_, i + 1)).ToArray();
             Max = keys.Length;
             Current = RandomNumberGenerator.GetInt32(0, Max - 1);
         }
@@ -30,12 +30,15 @@ namespace Covid19Radar.Api.Common
             return nextKey;
         }
 
+        public int Increment => Keys.Length;
+
         public class KeyInformation
         {
             private string _Self;
-            public KeyInformation(string key)
+            public KeyInformation(string key, int initialValue)
             {
                 Key = key;
+                InitialValue = (ulong)initialValue;
             }
             public string Key { get; }
             public string Self { get => _Self; }
@@ -43,6 +46,7 @@ namespace Covid19Radar.Api.Common
             {
                 Interlocked.CompareExchange(ref _Self, self, null);
             }
+            public readonly ulong InitialValue;
         }
     }
 }
