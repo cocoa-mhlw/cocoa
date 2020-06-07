@@ -755,6 +755,16 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   No contact
+        ///with positives was confirmed に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotContactPageLabel1 {
+            get {
+                return ResourceManager.GetString("NotContactPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Contact for the last 14 days に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageTitle {
