@@ -582,4 +582,8 @@ support of "new lifestyle".</value>
     <value>To home screen</value>
     <comment>ホーム画面へ</comment>
   </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>Learn how to use this app</value>
+    <comment>使い方を学ぶ</comment>
+  </data>
 </root>
