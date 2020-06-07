@@ -1153,6 +1153,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   I accept the terms and continue に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage3ButtonText {
+            get {
+                return ResourceManager.GetString("TutorialPage3ButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Terms of service に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage3Title {
