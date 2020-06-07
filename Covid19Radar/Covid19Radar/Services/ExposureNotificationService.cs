@@ -35,12 +35,12 @@ namespace Covid19Radar.Services
             userData = userDataService.Get();
             userDataService.UserDataChanged += OnUserDataChanged;
             StartTimer();
-
         }
 
         private void StartTimer()
         {
-            _downloadTimer = new MinutesTimer(userData.GetJumpHashTimeDifference());
+            var test = 5;//userData.GetJumpHashTimeDifference();
+            _downloadTimer = new MinutesTimer(test);
             _downloadTimer.Start();
             _downloadTimer.TimeOutEvent += OnTimerInvoked;
         }
