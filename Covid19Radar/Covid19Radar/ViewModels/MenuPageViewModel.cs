@@ -36,24 +36,23 @@ namespace Covid19Radar.ViewModels
 
             MenuItems.Add(new MainMenuModel()
             {
-                Icon = "\uf4fe",
+                Icon = "\uf013",
                 PageName = nameof(SettingsPage),
                 Title = Resources.AppResources.SettingsPageTitle
             });
 
             MenuItems.Add(new MainMenuModel()
             {
-                Icon = "\uf0c0",
+                Icon = "\uf0e0",
                 PageName = nameof(InqueryPage),
                 Title = "お問い合わせ"
             });
             MenuItems.Add(new MainMenuModel()
             {
-                Icon = "\uf0c0",
+                Icon = "\uf70e",
                 PageName = nameof(TermsofservicePage),
                 Title = "利用規約"
             });
-#if DEBUG
 
             MenuItems.Add(new MainMenuModel()
             {
@@ -160,7 +159,6 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(NotifyOtherPage),
                 Title = nameof(NotifyOtherPage)
             });
-#endif
             NavigateCommand = new DelegateCommand(Navigate);
         }
 
