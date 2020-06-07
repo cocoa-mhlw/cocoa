@@ -755,6 +755,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Contact for the last 14 days に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotContactPageTitle {
+            get {
+                return ResourceManager.GetString("NotContactPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Please enter the Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageCodePlaceholder {
