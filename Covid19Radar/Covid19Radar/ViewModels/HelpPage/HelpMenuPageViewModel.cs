@@ -25,7 +25,7 @@ namespace Covid19Radar.ViewModels
 
         public HelpMenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = "使い方";// Resources.AppResources.HelpMenuPageTitle;
+            Title = Resources.AppResources.HelpMenuPageTitle;
             MenuItems = new ObservableCollection<MainMenuModel>();
             MenuItems.Add(new MainMenuModel()
             {
