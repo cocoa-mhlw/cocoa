@@ -43,7 +43,7 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage3),
-                Title = "新型コロナウィルスに感染していると判定されたら"//Resources.AppResources.HelpPage3Title
+                Title = Resources.AppResources.HelpMenuPageLabel3
             });
             MenuItems.Add(new MainMenuModel()
             {

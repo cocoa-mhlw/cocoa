@@ -385,6 +385,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   If it is determined that you are infected with the new coronavirus に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageLabel3 {
+            get {
+                return ResourceManager.GetString("HelpMenuPageLabel3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   How to use this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageTitle {
