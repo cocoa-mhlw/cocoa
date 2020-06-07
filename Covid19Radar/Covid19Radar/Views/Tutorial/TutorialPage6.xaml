@@ -7,7 +7,8 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    Title="新型コロナウィルス 接触確認アプリ"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{x:Static resources:AppResources.AppName}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -24,9 +25,7 @@
                 <Label Style="{StaticResource DefaultTitleLabel}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="新型コロナウィルス" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span Text="接触確認アプリ" />
+                            <Span Text="{x:Static resources:AppResources.AppName}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
