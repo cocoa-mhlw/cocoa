@@ -23,6 +23,8 @@ namespace Covid19Radar.Services
         public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
+        private MinutesTimer _downloadTimer;
+
         private UserDataModel userData;
 
         public ExposureNotificationService(INavigationService navigationService, UserDataService userDataService, HttpDataService httpDataService)
@@ -32,6 +34,22 @@ namespace Covid19Radar.Services
             this.userDataService = userDataService;
             userData = userDataService.Get();
             userDataService.UserDataChanged += OnUserDataChanged;
+            StartTimer();
+
+        }
+
+        private void StartTimer()
+        {
+            _downloadTimer = new MinutesTimer(userData.GetJumpHashTimeDifference());
+            _downloadTimer.Start();
+            _downloadTimer.TimeOutEvent += OnTimerInvoked;
+        }
+
+        private async void OnTimerInvoked(EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+            System.Diagnostics.Debug.WriteLine("TEST TIMER FETCH");
+            await FetchExposureKeyAsync();
         }
 
         private async void OnUserDataChanged(object sender, UserDataModel userData)
@@ -50,6 +68,11 @@ namespace Covid19Radar.Services
             }
 
             await UpdateStatusMessage();
+        }
+
+        public async Task FetchExposureKeyAsync()
+        {
+            await Xamarin.ExposureNotifications.ExposureNotification.UpdateKeysFromServer();
         }
 
         public int GetExposureCount()
@@ -81,8 +104,6 @@ namespace Covid19Radar.Services
                 await userDataService.SetAsync(userData);
                 return false;
             }
-
-            //            bool IsEnabled = await ExposureNotification.IsEnabledAsync();
 
             if (userData.IsOptined && userData.IsExposureNotificationEnabled && (ExposureNotificationStatus == Status.Unknown || ExposureNotificationStatus == Status.Active || ExposureNotificationStatus == Status.Disabled))
             {
