@@ -52,7 +52,7 @@
                         AutomationId="NextButton"
                         Command="{prism:NavigateTo '/MenuPage/NavigationPage/HelpMenuPage'}"
                         Style="{StaticResource DefaultButton}"
-                        Text="使い方を学ぶ" />
+                        Text="{x:Static resources:AppResources.TutorialPage6ButtonText2}" />
                 </StackLayout>
             </Grid>
         </Grid>
