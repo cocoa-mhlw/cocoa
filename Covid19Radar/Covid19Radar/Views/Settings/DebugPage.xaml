@@ -32,7 +32,7 @@
                             FontAttributes="Bold"
                             FontSize="Subtitle"
                             Style="{StaticResource DefaultLabelSmall}"
-                            Text="ExposureNotificationStatus" />
+                            Text="ステータスメッセージ" />
 
                         <Label
                             FontAttributes="Bold"
@@ -43,7 +43,7 @@
                             FontAttributes="Bold"
                             FontSize="Subtitle"
                             Style="{StaticResource DefaultLabelSmall}"
-                            Text="EnStatus" />
+                            Text="ENステータス" />
 
                         <Label
                             FontAttributes="Bold"
@@ -54,7 +54,7 @@
                             FontAttributes="Bold"
                             FontSize="Subtitle"
                             Style="{StaticResource DefaultLabelSmall}"
-                            Text="FlgLn" />
+                            Text="通知ステータス" />
 
                         <Label
                             FontAttributes="Bold"
@@ -65,7 +65,7 @@
                             FontAttributes="Bold"
                             FontSize="Subtitle"
                             Style="{StaticResource DefaultLabelSmall}"
-                            Text="FlgWl" />
+                            Text="利用規約承認状況" />
 
                         <Label
                             FontAttributes="Bold"
@@ -79,7 +79,7 @@
                         Command="{Binding ToggleWelcome}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
-                        Text="Reset Welcome State" />
+                        Text="利用規約リセット" />
 
                     <Button
                         Command="{Binding ResetEnabled}"
@@ -91,7 +91,7 @@
                         Command="{Binding ToggleEn}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
-                        Text="EnableEn" />
+                        Text="EN状態トグル" />
                 </StackLayout>
 
                 <StackLayout>
@@ -99,7 +99,7 @@
                         FontAttributes="Bold"
                         FontSize="Subtitle"
                         Style="{StaticResource DefaultLabelSmallColor}"
-                        Text="Notify Others" />
+                        Text="通知トグル" />
 
                     <Button
                         Command="{Binding ResetSelfDiagnosis}"

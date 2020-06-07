@@ -53,7 +53,6 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(TermsofservicePage),
                 Title = "利用規約"
             });
-#if DEBUG
 
             MenuItems.Add(new MainMenuModel()
             {
@@ -160,7 +159,6 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(NotifyOtherPage),
                 Title = nameof(NotifyOtherPage)
             });
-#endif
             NavigateCommand = new DelegateCommand(Navigate);
         }
 
