@@ -474,4 +474,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
 ありがとうございました</value>
     <comment>ご登録いただきありがとうございました</comment>
   </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>ホーム画面へ</value>
+    <comment>ホーム画面へ</comment>
+  </data>
 </root>
