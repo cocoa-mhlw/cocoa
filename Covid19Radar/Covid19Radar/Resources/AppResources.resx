@@ -554,4 +554,8 @@ with positives was confirmed</value>
 support of "new lifestyle".</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>Tell the people around you about the app</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
 </root>
