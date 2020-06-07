@@ -615,6 +615,46 @@ support of "new lifestyle".</target>
           <target state="translated">端末の識別</target>
           <note from="MultilingualBuild" annotates="source" priority="2">端末の識別</note>
         </trans-unit>
+        <trans-unit id="ContactedNotifyPageButton1" translate="yes" xml:space="preserve">
+          <source>List of exposure with positive people</source>
+          <target state="translated">陽性者との接触一覧</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触一覧</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
+          <source>Enter symptoms</source>
+          <target state="translated">症状を入力</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
+          <source>Call the Returnee and Exposure Center</source>
+          <target state="translated">帰国者・接触者センターに電話</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者センターに電話</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
+          <source>times</source>
+          <target state="translated">件</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">件</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
+          <source>Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider.</source>
+          <target state="translated">現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
+          <source>Please save a screenshot of this screen, as it may be required for medical examinations.</source>
+          <target state="translated">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
+          <source>Confirm exposure with positive people</source>
+          <target state="translated">陽性者との接触確認</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触確認</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageTitle" translate="yes" xml:space="preserve">
+          <source>Exposure for the last 14 days</source>
+          <target state="translated">過去14日間の接触</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
+        </trans-unit>
       </group>
     </body>
   </file>
