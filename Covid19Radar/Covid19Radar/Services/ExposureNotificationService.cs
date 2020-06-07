@@ -20,7 +20,6 @@ namespace Covid19Radar.Services
         private readonly HttpDataService httpDataService;
         private readonly UserDataService userDataService;
         private readonly INavigationService navigationService;
-        //private UserDataModel userData;
         public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
@@ -50,8 +49,7 @@ namespace Covid19Radar.Services
                 await StopExposureNotification();
             }
 
-            Status status = await ExposureNotification.GetStatusAsync();
-            GetStatusMessage(status);
+            await UpdateStatusMessage();
         }
 
         public int GetExposureCount()
@@ -59,59 +57,12 @@ namespace Covid19Radar.Services
             return userData.ExposureInformation.Count();
         }
 
-        /*
-        public async Task TestDownloadBatch()
+        public async Task<string> UpdateStatusMessage()
         {
-            long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
-            TemporaryExposureKeysResult tekResult = await httpDataService.GetTemporaryExposureKeys(sinceEpochSeconds);
-            Console.WriteLine("Fetch Exposure Key");
-
-            foreach (var keys in tekResult.Keys)
-            {
-                Console.WriteLine(keys.Url);
-            }
-
+            this.ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
+            return GetStatusMessage();
         }
 
-        public bool GetOptInStatus()
-        {
-            return userData.IsOptined;
-        }
-                */
-
-
-        /*
-        public async Task SetOptinStatusAsync(bool flg)
-        {
-            userData.IsOptined = flg;
-            await userDataService.SetAsync(userData);
-        }
-        public bool GetOptInStatus()
-        {
-            return userData.IsOptined;
-        }
-
-
-        public async Task SetExposureNotificationStatusAsync(bool flg)
-        {
-            userData.IsExposureNotificationEnabled = flg;
-            await userDataService.SetAsync(userData);
-        }
-        public bool GetExposureNotificationStatus()
-        {
-            return userData.IsExposureNotificationEnabled;
-        }
-
-        public async Task SetNotificationStatusAsync(bool flg)
-        {
-            userData.IsNotificationEnabled = flg;
-            await userDataService.SetAsync(userData);
-        }
-        public bool GetNotificationStatus()
-        {
-            return userData.IsNotificationEnabled;
-        }
-        */
         public async Task<bool> StartExposureNotification()
         {
             if (!userData.IsOptined)
@@ -120,12 +71,12 @@ namespace Covid19Radar.Services
                 await navigationService.NavigateAsync(nameof(PrivacyPolicyPage));
             }
 
-            Status status = await ExposureNotification.GetStatusAsync();
-            if (status == Status.BluetoothOff
-            //            || status == Status.Restricted
-            || status == Status.NotAuthorized)
+            ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
+            if (ExposureNotificationStatus == Status.BluetoothOff
+            //            || ExposureNotificationStatus == Status.Restricted
+            || ExposureNotificationStatus == Status.NotAuthorized)
             {
-                await UserDialogs.Instance.AlertAsync(GetStatusMessage(status));
+                await UserDialogs.Instance.AlertAsync(GetStatusMessage());
                 userData.IsExposureNotificationEnabled = false;
                 await userDataService.SetAsync(userData);
                 return false;
@@ -133,7 +84,7 @@ namespace Covid19Radar.Services
 
             //            bool IsEnabled = await ExposureNotification.IsEnabledAsync();
 
-            if (userData.IsOptined && userData.IsExposureNotificationEnabled && (status == Status.Unknown || status == Status.Active || status == Status.Disabled))
+            if (userData.IsOptined && userData.IsExposureNotificationEnabled && (ExposureNotificationStatus == Status.Unknown || ExposureNotificationStatus == Status.Active || ExposureNotificationStatus == Status.Disabled))
             {
                 try
                 {
@@ -156,11 +107,11 @@ namespace Covid19Radar.Services
             return true;
         }
 
-        public string GetStatusMessage(Status status)
+        public string GetStatusMessage()
         {
             var message = "";
 
-            switch (status)
+            switch (ExposureNotificationStatus)
             {
                 case Status.Unknown:
                     message = "Exposure Notification機能は非対応の状態です。";
