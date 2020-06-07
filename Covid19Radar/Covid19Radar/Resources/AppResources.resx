@@ -558,4 +558,8 @@ support of "new lifestyle".</value>
     <value>Tell the people around you about the app</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>Thank you for registering positive</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
 </root>

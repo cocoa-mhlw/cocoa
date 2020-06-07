@@ -453,4 +453,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>陽性のご登録をいただきありがとうございました</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
 </root>
