@@ -34,9 +34,7 @@
                 <Label Style="{StaticResource DefaultTitleLabel}" VerticalTextAlignment="Center">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="ご登録いただき" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span Text="ありがとうございました" />
+                            <Span Text="{x:Static resources:AppResources.TutorialPage6Label1}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
