@@ -755,6 +755,16 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Thank you for your continued
+        ///support of &quot;new lifestyle&quot;. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotContactPageDescription1 {
+            get {
+                return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   No contact
         ///with positives was confirmed に類似しているローカライズされた文字列を検索します。
         /// </summary>
