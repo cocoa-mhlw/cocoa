@@ -49,7 +49,7 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage4),
-                Title = "接触の記録を停止／情報を削除するには"//Resources.AppResources.HelpPage4Title
+                Title = Resources.AppResources.HelpMenuPageLabel4
             });
 
             NavigateCommand = new DelegateCommand(Navigate);

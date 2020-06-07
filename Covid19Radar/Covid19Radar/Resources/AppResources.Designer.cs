@@ -394,6 +394,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   To stop contact recording/delete information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageLabel4 {
+            get {
+                return ResourceManager.GetString("HelpMenuPageLabel4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   How to use this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageTitle {
