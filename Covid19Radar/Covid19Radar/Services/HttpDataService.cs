@@ -17,6 +17,7 @@ namespace Covid19Radar.Services
     public class HttpDataService
     {
         private readonly HttpClient httpClient;
+        private readonly HttpClient downloadClient;
         private string secret;
         public HttpDataService()
         {
@@ -25,6 +26,7 @@ namespace Covid19Radar.Services
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.Add("x-functions-key", AppConstants.ApiSecret);
             SetSecret();
+            this.downloadClient = new HttpClient();
         }
 
         private void SetSecret()
@@ -140,7 +142,7 @@ namespace Covid19Radar.Services
 
         private async Task<Stream> GetStreamAsync(string url,CancellationToken cancellationToken)
         {
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url, cancellationToken);
+            Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
             HttpResponseMessage result = await response;
             await result.Content.ReadAsStreamAsync();
 
