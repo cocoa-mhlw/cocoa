@@ -17,7 +17,6 @@
             BarBackgroundColor="#FFFFFF"
             BarTextColor="Black"
             Icon="ic_hamburger.png">
-
             <x:Arguments>
                 <ContentPage Title="メニュー" BackgroundColor="#FFFFFF">
                     <ListView
