@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns:template="clr-namespace:Covid19Radar.Templates"
     Title="{x:Static resources:AppResources.HelpMenuPageTitle}"
     ios:Page.UseSafeArea="true"
