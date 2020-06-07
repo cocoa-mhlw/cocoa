@@ -549,4 +549,9 @@ Select 'Always Allow' to set up Bluetooth.</value>
 with positives was confirmed</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>Thank you for your continued
+support of "new lifestyle".</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
 </root>
