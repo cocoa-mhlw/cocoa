@@ -7,6 +7,7 @@ namespace Covid19Radar.Api.Models
     public class TemporaryExposureKeyExportModel
     {
         public string id { get; set; }
+        public string PartitionKey { get; set; }
         public ulong StartTimestamp { get; set; }
         public ulong EndTimestamp { get; set; }
         public int BatchNum { get; set; }
