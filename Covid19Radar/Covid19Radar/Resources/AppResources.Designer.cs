@@ -232,6 +232,78 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   List of exposure with positive people に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ContactedNotifyPageButton1 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageButton1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enter symptoms に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ContactedNotifyPageButton2 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageButton2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Call the Returnee and Exposure Center に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ContactedNotifyPageButton3 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageButton3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   times に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ContactedNotifyPageCountText {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageCountText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ContactedNotifyPageDescription1 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please save a screenshot of this screen, as it may be required for medical examinations. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ContactedNotifyPageDescription2 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Confirm exposure with positive people に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ContactedNotifyPageMainText {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageMainText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Exposure for the last 14 days に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ContactedNotifyPageTitle {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Delete all data に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DeleteDataDescription {
@@ -457,7 +529,16 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Terminal identification に類似しているローカライズされた文字列を検索します。
+        ///   Device identification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage1MainTitle {
+            get {
+                return ResourceManager.GetString("HelpPage1MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   How this app records exposure に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Title {
             get {

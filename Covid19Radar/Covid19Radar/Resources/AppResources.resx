@@ -449,8 +449,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>新型コロナウィルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>Terminal identification</value>
-    <comment>端末の識別</comment>
+    <value>How this app records exposure</value>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Contact confirmation method</value>
@@ -585,5 +585,41 @@ support of "new lifestyle".</value>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
     <value>Learn how to use this app</value>
     <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>Device identification</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>List of exposure with positive people</value>
+    <comment>陽性者との接触一覧</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>Enter symptoms</value>
+    <comment>症状を入力</comment>
+  </data>
+  <data name="ContactedNotifyPageButton3" xml:space="preserve">
+    <value>Call the Returnee and Exposure Center</value>
+    <comment>帰国者・接触者センターに電話</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>times</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider.</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>Please save a screenshot of this screen, as it may be required for medical examinations.</value>
+    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>Confirm exposure with positive people</value>
+    <comment>陽性者との接触確認</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>Exposure for the last 14 days</value>
+    <comment>過去14日間の接触</comment>
   </data>
 </root>
