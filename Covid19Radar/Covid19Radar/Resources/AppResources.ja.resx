@@ -327,6 +327,22 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>使い方</value>
     <comment>使い方</comment>
   </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>どのようにして接触を記録していますか？</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>接触の有無はどのように知ることができますか？</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>新型コロナウィルスに感染していると判定されたら</value>
+    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>新型コロナウィルスに感染していると判定されたら</value>
+    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+  </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>端末の識別</value>
     <comment>端末の識別</comment>
@@ -418,5 +434,31 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="HelpPage3Description6" xml:space="preserve">
     <value>To register the positive reaction of COVID19 and anonymous notification to others</value>
     <comment>陽性情報の登録と他者への匿名通知へ</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>過去14日間の接触</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>陽性者との接触は
+確認されませんでした</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>引き続き「新しい生活様式」の実践を
+よろしくお願いいたします。</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>アプリを周りの人に知らせる</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>陽性のご登録をいただきありがとうございました</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
 </root>
