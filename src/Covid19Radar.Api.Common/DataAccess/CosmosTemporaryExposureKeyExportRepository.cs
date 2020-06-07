@@ -14,9 +14,7 @@ namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosTemporaryExposureKeyExportRepository : ITemporaryExposureKeyExportRepository
     {
-        const string SequenceName = "BatchNum";
         private readonly ICosmos _db;
-        private readonly ISequenceRepository _sequence;
         private readonly ILogger<CosmosTemporaryExposureKeyExportRepository> _logger;
         private readonly QueryCache<TemporaryExposureKeyExportModel[]> GetKeysAsyncCache;
 
@@ -26,19 +24,14 @@ namespace Covid19Radar.Api.DataAccess
             ILogger<CosmosTemporaryExposureKeyExportRepository> logger)
         {
             _db = db;
-            _sequence = sequence;
             _logger = logger;
             GetKeysAsyncCache = new QueryCache<TemporaryExposureKeyExportModel[]>(Constants.CacheTimeout);
         }
-        public async Task<TemporaryExposureKeyExportModel> CreateAsync()
+        public async Task<TemporaryExposureKeyExportModel> CreateAsync(TemporaryExposureKeyExportModel model)
         {
-            var pk = PartitionKey.None;
-            var newItem = new TemporaryExposureKeyExportModel();
-            var batchNum = (int)await _sequence.GetNextAsync(SequenceName, 1);
-            newItem.id = batchNum.ToString();
-            newItem.BatchNum = batchNum;
-            await _db.TemporaryExposureKeyExport.CreateItemAsync(newItem, pk);
-            return newItem;
+            var pk = new PartitionKey(model.Region);
+            var response = await _db.TemporaryExposureKeyExport.CreateItemAsync(model, pk);
+            return response.Resource;
         }
 
         public async Task<TemporaryExposureKeyExportModel> GetAsync(string id)
