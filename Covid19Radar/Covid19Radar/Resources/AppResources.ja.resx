@@ -331,6 +331,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>どのようにして接触を記録していますか？</value>
     <comment>どのようにして接触を記録していますか？</comment>
   </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>接触の有無はどのように知ることができますか？</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>端末の識別</value>
     <comment>端末の識別</comment>

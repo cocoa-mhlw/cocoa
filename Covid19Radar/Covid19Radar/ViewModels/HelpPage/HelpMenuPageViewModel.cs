@@ -37,7 +37,7 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage2),
-                Title = "接触の有無はどのように知ることができますか？"//Resources.AppResources.HelpPage2Title
+                Title = Resources.AppResources.HelpMenuPageLabel2
             });
             MenuItems.Add(new MainMenuModel()
             {
