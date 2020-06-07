@@ -439,4 +439,9 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>過去14日間の接触</value>
     <comment>過去14日間の接触</comment>
   </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>陽性者との接触は
+確認されませんでした</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
 </root>
