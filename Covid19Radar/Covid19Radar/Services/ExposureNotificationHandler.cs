@@ -147,7 +147,7 @@ namespace Covid19Radar.Services
                 var batchNumber = 0;
 
                 long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
-                TemporaryExposureKeysResult tekResult = await httpDataService.GetTemporaryExposureKeys(sinceEpochSeconds, cancellationToken);
+                TemporaryExposureKeysResult tekResult = await httpDataService.GetTemporaryExposureKeys(region , sinceEpochSeconds, cancellationToken);
                 Console.WriteLine("Fetch Exposure Key");
 
                 foreach (var key in tekResult.Keys)
@@ -161,7 +161,14 @@ namespace Covid19Radar.Services
                     Console.WriteLine(tmpFile);
                     Stream responseStream = await httpDataService.GetTemporaryExposureKey(key.Url, cancellationToken);
                     var fileStream = File.Create(tmpFile);
-                    await responseStream.CopyToAsync(fileStream, cancellationToken);
+                    try
+                    {
+                        await responseStream.CopyToAsync(fileStream, cancellationToken);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.ToString());
+                    }
                     downloadedFiles.Add(tmpFile);
                     batchNumber++;
                 }
