@@ -7,7 +7,8 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    Title="過去14日間の接触"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{x:Static resources:AppResources.NotContactPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -22,18 +23,14 @@
                 <Label HorizontalOptions="Center" Style="{StaticResource DefaultTitleLabel}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="陽性者との接触は" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span Text="確認されませんでした" />
+                            <Span Text="{x:Static resources:AppResources.NotContactPageLabel1}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
                 <Label HorizontalOptions="Center" Style="{StaticResource DefaultSubTitleLabel}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="引き続き「新しい生活様式」の実践を" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span Text="よろしくお願いいたします。" />
+                            <Span Text="{x:Static resources:AppResources.NotContactPageDescription1}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
@@ -46,7 +43,7 @@
                     AutomationId="OnClickGoBack"
                     Command="{prism:GoBack}"
                     Style="{StaticResource DefaultButton}"
-                    Text="戻る" />
+                    Text="{x:Static resources:AppResources.NotContactPageButtonText}" />
             </Grid>
         </Grid>
     </ScrollView>

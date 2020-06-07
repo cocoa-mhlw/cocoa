@@ -25,31 +25,31 @@ namespace Covid19Radar.ViewModels
 
         public HelpMenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = "使い方";// Resources.AppResources.HelpMenuPageTitle;
+            Title = Resources.AppResources.HelpMenuPageTitle;
             MenuItems = new ObservableCollection<MainMenuModel>();
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage1),
-                Title = "どのようにして接触を記録していますか？"//Resources.AppResources.HelpPage1Title
+                Title = Resources.AppResources.HelpMenuPageLabel1
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage2),
-                Title = "接触の有無はどのように知ることができますか？"//Resources.AppResources.HelpPage2Title
+                Title = Resources.AppResources.HelpMenuPageLabel2
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage3),
-                Title = "新型コロナウィルスに感染していると判定されたら"//Resources.AppResources.HelpPage3Title
+                Title = Resources.AppResources.HelpMenuPageLabel3
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage4),
-                Title = "接触の記録を停止／情報を削除するには"//Resources.AppResources.HelpPage4Title
+                Title = Resources.AppResources.HelpMenuPageLabel4
             });
 
             NavigateCommand = new DelegateCommand(Navigate);
