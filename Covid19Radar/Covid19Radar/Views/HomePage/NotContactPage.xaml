@@ -29,9 +29,7 @@
                 <Label HorizontalOptions="Center" Style="{StaticResource DefaultSubTitleLabel}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="引き続き「新しい生活様式」の実践を" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span Text="よろしくお願いいたします。" />
+                            <Span Text="{x:Static resources:AppResources.NotContactPageDescription1}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>

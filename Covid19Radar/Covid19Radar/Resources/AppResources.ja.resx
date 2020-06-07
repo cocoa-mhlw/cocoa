@@ -444,4 +444,9 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
 確認されませんでした</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>引き続き「新しい生活様式」の実践を
+よろしくお願いいたします。</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
 </root>
