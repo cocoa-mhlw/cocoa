@@ -164,6 +164,7 @@ namespace Covid19Radar.Services
                     try
                     {
                         await responseStream.CopyToAsync(fileStream, cancellationToken);
+                        fileStream.Flush();
                     }
                     catch (Exception ex)
                     {
