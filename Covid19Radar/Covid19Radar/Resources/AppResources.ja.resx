@@ -335,6 +335,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>接触の有無はどのように知ることができますか？</value>
     <comment>接触の有無はどのように知ることができますか？</comment>
   </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>新型コロナウィルスに感染していると判定されたら</value>
+    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+  </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>端末の識別</value>
     <comment>端末の識別</comment>
