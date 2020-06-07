@@ -10,7 +10,7 @@
     xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:system="clr-namespace:System;assembly=netstandard"
-    xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
+    xmlns:viewmodel="clr-namespa    ce:Covid19Radar.ViewModels"
     Title="過去14日間の接触一覧"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -28,6 +28,7 @@
                     <DataTemplate>
                         <Frame Padding="15" HasShadow="False">
                             <Label VerticalTextAlignment="Center">
+
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span
