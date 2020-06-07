@@ -570,4 +570,8 @@ support of "new lifestyle".</value>
     <value>Terms of service</value>
     <comment>利用規約</comment>
   </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>I accept the terms and continue</value>
+    <comment>規約に同意して次へ</comment>
+  </data>
 </root>
