@@ -562,4 +562,8 @@ support of "new lifestyle".</value>
     <value>Thank you for registering positive</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified.</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
 </root>
