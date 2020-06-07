@@ -9,7 +9,7 @@ using Covid19Radar.Model;
 
 namespace Covid19Radar.Model
 {
-    public class UserDataModel: IEquatable<UserDataModel>
+    public class UserDataModel : IEquatable<UserDataModel>
     {
 
         /// <summary>
@@ -78,6 +78,11 @@ namespace Covid19Radar.Model
 
         public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
         {
+            if (String.IsNullOrEmpty(diagnosisUid))
+            {
+                throw new ArgumentNullException();
+            }
+
             var existing = PositiveDiagnoses.Any(d => d.DiagnosisUid.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase));
             if (existing)
                 return;
