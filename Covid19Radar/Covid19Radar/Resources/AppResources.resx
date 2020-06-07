@@ -429,7 +429,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Would you like to register positively later?</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>How to use</value>
+    <value>How to use this app</value>
     <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
