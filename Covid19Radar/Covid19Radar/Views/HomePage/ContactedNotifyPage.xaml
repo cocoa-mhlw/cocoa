@@ -6,7 +6,7 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    Title="過去14日間の接触"
+    Title="{x:Static resources:AppResources.ContactedNotifyPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -24,7 +24,7 @@
                 <StackLayout Spacing="0">
                     <ffimageloading:CachedImage Aspect="AspectFit" Source="InfoMark.png" />
 
-                    <Label Style="{StaticResource DefaultTitleLabel}" Text="陽性者との接触確認" />
+                    <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
                     <Grid ColumnSpacing="10" RowSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.5*" />
@@ -41,7 +41,7 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="{Binding ExposureCount}" />
-                                    <Span Text="件" />
+                                    <Span Text="{x:Static resources:AppResources.ContactedNotifyPageCountText}" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
@@ -53,31 +53,31 @@
                             HorizontalOptions="StartAndExpand"
                             Scale="0.8"
                             Style="{StaticResource DefaultButton}"
-                            Text="接触一覧" />
+                            Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
                     </Grid>
 
                     <Label
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="以下の選択ボタンで、現在の症状などを入力ください。ご入力の内容に応じて、PCR検査センター等への受信を案内します。" />
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
 
                     <Button
                         Margin="0,0,0,20"
                         AutomationId="ButtonShareApp"
                         Command="{Binding Path=OnClickByForm}"
                         Style="{StaticResource DefaultButton}"
-                        Text="現在の症状などを入力する" />
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
 
                     <Button
                         AutomationId="ButtonShareApp"
                         Command="{Binding Path=OnClickByPhone}"
                         Style="{StaticResource DefaultButton}"
-                        Text="入力に代えて電話で報告・相談する" />
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageButton3}" />
 
                     <Label
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。" />
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
                 </StackLayout>
             </Frame>
         </StackLayout>
