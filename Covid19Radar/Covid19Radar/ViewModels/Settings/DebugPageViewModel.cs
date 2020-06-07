@@ -142,7 +142,7 @@ namespace Covid19Radar.ViewModels
             {
                 using (UserDialogs.Instance.Loading("Fetching..."))
                 {
-                    await Xamarin.ExposureNotifications.ExposureNotification.UpdateKeysFromServer();
+                    await exposureNotificationService.FetchExposureKeyAsync();
 
                     RaisePropertyChanged(nameof(CurrentBatchFileIndex));
                 }
