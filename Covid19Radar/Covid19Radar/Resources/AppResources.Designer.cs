@@ -755,6 +755,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Tell the people around you about the app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotContactPageButtonText {
+            get {
+                return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Thank you for your continued
         ///support of &quot;new lifestyle&quot;. に類似しているローカライズされた文字列を検索します。
         /// </summary>
