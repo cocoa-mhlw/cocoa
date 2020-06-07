@@ -367,7 +367,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   How to use に類似しているローカライズされた文字列を検索します。
+        ///   How to use this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageTitle {
             get {
