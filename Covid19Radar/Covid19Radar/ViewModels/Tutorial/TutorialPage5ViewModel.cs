@@ -15,7 +15,6 @@ namespace Covid19Radar.ViewModels
 
         public TutorialPage5ViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
-            Title = Resources.AppResources.TitleHowItWorks;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
 
@@ -23,13 +22,13 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickEnable => new Command(async () =>
         {
-            userData.IsExposureNotificationEnabled = true;
+            userData.IsNotificationEnabled = true;
             await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
         });
         public Command OnClickDisable => new Command(async () =>
         {
-            userData.IsExposureNotificationEnabled = false;
+            userData.IsNotificationEnabled = false;
             await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
         });
