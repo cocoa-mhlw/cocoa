@@ -436,6 +436,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>How do you record contact?</value>
     <comment>どのようにして接触を記録していますか？</comment>
   </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>How can I know if there is contact?</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal identification</value>
     <comment>端末の識別</comment>
