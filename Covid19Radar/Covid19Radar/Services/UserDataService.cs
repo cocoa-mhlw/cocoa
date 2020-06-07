@@ -26,83 +26,14 @@ namespace Covid19Radar.Services
     public class UserDataService
     {
         private readonly HttpDataService httpDataService;
-//        private readonly INavigationService navigationService;
-//        private MinutesTimer _downloadTimer;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
         public UserDataService(HttpDataService httpDataService, INavigationService navigationService)
         {
             this.httpDataService = httpDataService;
-//            this.navigationService = navigationService;
-
             current = Get();
-            /*
-            if (current != null)
-            {
-                // User does't have secret
-                if (!httpDataService.HasSecret())
-                {
-                    return;
-                }
-                StartTimer();
-            }
-*/
         }
-
-        /*
-        private void StartTimer()
-        {
-            _downloadTimer = new MinutesTimer(current.GetJumpHashTimeDifference());
-            _downloadTimer.Start();
-            _downloadTimer.TimeOutEvent += TimerDownload;
-        }
-
-
-        private async void TimerDownload(EventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-            if (!IsExistUserData) { return; }
-            UserDataModel downloadModel;
-            try
-            {
-                downloadModel = await httpDataService.GetUserAsync(current);
-                if (downloadModel == null) return;
-            }
-            catch (Exception ex)
-            {
-                Crashes.TrackError(ex);
-                return;
-            }
-            var hasNotification = downloadModel.LastNotificationTime != current.LastNotificationTime;
-
-            if (hasNotification)
-            {
-                // Pull Notification.
-                try
-                {
-                    var newModel = new UserDataModel()
-                    {
-                        UserUuid = current.UserUuid,
-                        LastNotificationTime = downloadModel.LastNotificationTime
-                    };
-                    var result = await httpDataService.GetNotificationPullAsync(newModel);
-                    foreach (var notify in result.Messages)
-                    {
-
-                        // TODO Positive Notify 
-                        // notificationService.ReceiveNotification(notify.Title, notify.Message);
-                    }
-                    await SetAsync(newModel);
-                }
-                catch (Exception ex)
-                {
-                    Crashes.TrackError(ex);
-                }
-            }
-
-        }
-        */
 
         public bool IsExistUserData { get => current != null; }
 
@@ -134,25 +65,11 @@ namespace Covid19Radar.Services
             {
                 return;
             }
-            /*
-            var isNull = current == null;
-            if (!isNull && string.IsNullOrWhiteSpace(userData.Secret))
-            {
-                userData.Secret = current.Secret;
-            }
-            */
             current = userData;
             Application.Current.Properties["UserData"] = Utils.SerializeToJson(current);
             await Application.Current.SavePropertiesAsync();
 
             UserDataChanged?.Invoke(this, current);
-            // only first time.
-            /*
-            if (isNull && userData != null)
-            {
-                StartTimer();
-            }
-            */
         }
     }
 
