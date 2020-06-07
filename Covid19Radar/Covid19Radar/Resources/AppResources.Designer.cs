@@ -1054,6 +1054,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ThankYouNotifyOtherPageDescription1 {
+            get {
+                return ResourceManager.GetString("ThankYouNotifyOtherPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Thank you for registering positive に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ThankYouNotifyOtherPageLabel1 {
