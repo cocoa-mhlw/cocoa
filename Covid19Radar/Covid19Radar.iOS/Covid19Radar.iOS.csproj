@@ -65,20 +65,19 @@
     <CodesignProvision>Covid19radar</CodesignProvision>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
     <MtouchSdkVersion>13.5</MtouchSdkVersion>
-    <MtouchInterpreter>-all</MtouchInterpreter>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchI18n>cjk</MtouchI18n>
     <LangVersion>latest</LangVersion>
-    <MtouchFastDev>true</MtouchFastDev>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <IntermediateOutputPath>
     </IntermediateOutputPath>
     <BuildIpa>
     </BuildIpa>
     <CrashReportingDelay>-1</CrashReportingDelay>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DefineConstants>
@@ -105,6 +104,7 @@
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
