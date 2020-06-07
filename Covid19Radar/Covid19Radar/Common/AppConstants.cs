@@ -16,9 +16,9 @@ namespace Covid19Radar.Common
         public static readonly string GooglePlayUrl = "https://play.google.com/store";
         //public static readonly string ApiBaseUrl = "http://192.168.1.2:7071/api";
 
-        public static readonly string ApiBaseUrl = "***REMOVED***/api";
+        public static readonly string ApiBaseUrl = "http://covid19radar-jpn-prod.trafficmanager.net/api";
         //        public static readonly string ApiSecret = "API_SECRET";
-        public static readonly string ApiSecret = "***REMOVED***";
+        public static readonly string ApiSecret = "qa4uj6Dzamn0W7nQBfStzqctargTjFD8vNq0S11rO5e4ThNYt6vBpg==";
 
         public static readonly int NumberOfGroup = 86400;
 
