@@ -540,4 +540,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>To register the positive reaction of COVID19 and anonymous notification to others</value>
     <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>Contact for the last 14 days</value>
+    <comment>過去14日間の接触</comment>
+  </data>
 </root>
