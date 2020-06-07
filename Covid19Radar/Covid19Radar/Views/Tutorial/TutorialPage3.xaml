@@ -34,7 +34,7 @@
                 AutomationId="NextButton"
                 Command="{Binding Path=OnClickAgree}"
                 Style="{StaticResource DefaultButton}"
-                Text="規約に同意して次へ" />
+                Text="{x:Static resources:AppResources.TutorialPage3ButtonText}" />
         </Grid>
     </Grid>
 </ContentPage>
