@@ -544,4 +544,9 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Contact for the last 14 days</value>
     <comment>過去14日間の接触</comment>
   </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>No contact
+with positives was confirmed</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
 </root>

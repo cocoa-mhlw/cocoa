@@ -22,9 +22,7 @@
                 <Label HorizontalOptions="Center" Style="{StaticResource DefaultTitleLabel}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="陽性者との接触は" />
-                            <Span Text="{x:Static System:Environment.NewLine}" />
-                            <Span Text="確認されませんでした" />
+                            <Span Text="{x:Static resources:AppResources.NotContactPageLabel1}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
