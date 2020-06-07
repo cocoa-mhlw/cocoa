@@ -1180,6 +1180,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Learn how to use this app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage6ButtonText2 {
+            get {
+                return ResourceManager.GetString("TutorialPage6ButtonText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Thank you for registering に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage6Label1 {
