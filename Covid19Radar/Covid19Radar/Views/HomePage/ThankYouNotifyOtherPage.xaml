@@ -33,7 +33,7 @@
                     BackgroundColor="#FFF3DD"
                     CornerRadius="10">
                     <StackLayout Spacing="0">
-                        <Label Style="{StaticResource DefaultLabel}" Text="登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。" />
+                        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.ThankYouNotifyOtherPageDescription1}" />
                     </StackLayout>
                 </Frame>
             </StackLayout>

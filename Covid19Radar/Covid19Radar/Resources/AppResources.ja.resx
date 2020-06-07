@@ -457,4 +457,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>陽性のご登録をいただきありがとうございました</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
 </root>
