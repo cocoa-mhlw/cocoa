@@ -449,8 +449,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>新型コロナウィルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>Terminal identification</value>
-    <comment>端末の識別</comment>
+    <value>How this app records exposure</value>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Contact confirmation method</value>
@@ -585,5 +585,9 @@ support of "new lifestyle".</value>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
     <value>Learn how to use this app</value>
     <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>Device identification</value>
+    <comment>端末の識別</comment>
   </data>
 </root>
