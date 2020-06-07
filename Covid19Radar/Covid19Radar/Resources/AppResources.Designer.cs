@@ -178,7 +178,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Reset に類似しているローカライズされた文字列を検索します。
+        ///   Discontinued に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonReset {
             get {
@@ -367,7 +367,43 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   How to use に類似しているローカライズされた文字列を検索します。
+        ///   How do you record contact? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageLabel1 {
+            get {
+                return ResourceManager.GetString("HelpMenuPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   How can I know if there is contact? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageLabel2 {
+            get {
+                return ResourceManager.GetString("HelpMenuPageLabel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If it is determined that you are infected with the new coronavirus に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageLabel3 {
+            get {
+                return ResourceManager.GetString("HelpMenuPageLabel3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To stop contact recording/delete information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageLabel4 {
+            get {
+                return ResourceManager.GetString("HelpMenuPageLabel4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   How to use this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageTitle {
             get {
@@ -719,6 +755,44 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Tell the people around you about the app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotContactPageButtonText {
+            get {
+                return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Thank you for your continued
+        ///support of &quot;new lifestyle&quot;. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotContactPageDescription1 {
+            get {
+                return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   No contact
+        ///with positives was confirmed に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotContactPageLabel1 {
+            get {
+                return ResourceManager.GetString("NotContactPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Contact for the last 14 days に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotContactPageTitle {
+            get {
+                return ResourceManager.GetString("NotContactPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Please enter the Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageCodePlaceholder {
@@ -980,6 +1054,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ThankYouNotifyOtherPageDescription1 {
+            get {
+                return ResourceManager.GetString("ThankYouNotifyOtherPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Thank you for registering positive に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ThankYouNotifyOtherPageLabel1 {
+            get {
+                return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Share a Positive Diagnosis に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitileSharePositiveDiagnosis {
@@ -1057,6 +1149,51 @@ namespace Covid19Radar.Resources {
         internal static string TitleUpdateInformation {
             get {
                 return ResourceManager.GetString("TitleUpdateInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   I accept the terms and continue に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage3ButtonText {
+            get {
+                return ResourceManager.GetString("TutorialPage3ButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Terms of service に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage3Title {
+            get {
+                return ResourceManager.GetString("TutorialPage3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To home screen に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage6ButtonText1 {
+            get {
+                return ResourceManager.GetString("TutorialPage6ButtonText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Learn how to use this app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage6ButtonText2 {
+            get {
+                return ResourceManager.GetString("TutorialPage6ButtonText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Thank you for registering に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage6Label1 {
+            get {
+                return ResourceManager.GetString("TutorialPage6Label1", resourceCulture);
             }
         }
         

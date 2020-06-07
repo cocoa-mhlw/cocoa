@@ -6,6 +6,7 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="ありがとうございます"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -22,18 +23,18 @@
                 <Label
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultTitleLabel}"
-                    Text="新型コロナウイルス&#10;接触確認アプリ" />
+                    Text="{x:Static resources:AppResources.AppName}" />
                 <Label
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultTitleLabel}"
-                    Text="陽性のご登録をいただき&#10;ありがとうございました" />
+                    Text="{x:Static resources:AppResources.ThankYouNotifyOtherPageLabel1}" />
 
                 <Frame
                     Padding="0,0,0,0"
                     BackgroundColor="#FFF3DD"
                     CornerRadius="10">
                     <StackLayout Spacing="0">
-                        <Label Style="{StaticResource DefaultLabel}" Text="登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。" />
+                        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.ThankYouNotifyOtherPageDescription1}" />
                     </StackLayout>
                 </Frame>
             </StackLayout>
@@ -42,7 +43,7 @@
                     AutomationId="OnClickShareApp"
                     Command="{Binding Path=OnClickShareApp}"
                     Style="{StaticResource DefaultButton}"
-                    Text="アプリを周りの人に知らせる" />
+                    Text="{x:Static resources:AppResources.NotContactPageButtonText}" />
             </Grid>
         </Grid>
     </ScrollView>
