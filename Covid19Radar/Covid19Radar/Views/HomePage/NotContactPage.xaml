@@ -42,7 +42,7 @@
                     AutomationId="OnClickGoBack"
                     Command="{prism:GoBack}"
                     Style="{StaticResource DefaultButton}"
-                    Text="戻る" />
+                    Text="{x:Static resources:AppResources.NotContactPageButtonText}" />
             </Grid>
         </Grid>
     </ScrollView>
