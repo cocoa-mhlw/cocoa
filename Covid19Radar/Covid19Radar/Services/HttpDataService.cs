@@ -80,9 +80,9 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task<TemporaryExposureKeysResult> GetTemporaryExposureKeys(long since, CancellationToken cancellationToken)
+        public async Task<TemporaryExposureKeysResult> GetTemporaryExposureKeys(string region, long since, CancellationToken cancellationToken)
         {
-            string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys?since={since}";
+            string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys/{region}?since={since}";
             var result = await GetAsync(url, cancellationToken);
             if (result != null)
             {
