@@ -449,4 +449,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
 よろしくお願いいたします。</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>アプリを周りの人に知らせる</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
 </root>
