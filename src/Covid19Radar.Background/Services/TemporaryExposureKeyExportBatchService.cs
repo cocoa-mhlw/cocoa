@@ -24,7 +24,9 @@ namespace Covid19Radar.Background.Services
         const string Header = "EK Export v1    ";
         const string ExportBinFileName = "export.bin";
         const string ExportSigFileName = "export.sig";
+        const string SequenceName = "BatchNum";
 
+        public readonly ISequenceRepository Sequence;
         public readonly ITemporaryExposureKeyRepository TekRepository;
         public readonly ITemporaryExposureKeyExportRepository TekExportRepository;
         public readonly ITemporaryExposureKeySignService SignService;
@@ -35,6 +37,7 @@ namespace Covid19Radar.Background.Services
 
         public TemporaryExposureKeyExportBatchService(
             IConfiguration config,
+            ISequenceRepository sequence,
             ITemporaryExposureKeyRepository tek,
             ITemporaryExposureKeyExportRepository tekExport,
             ITemporaryExposureKeySignService signService,
@@ -44,6 +47,7 @@ namespace Covid19Radar.Background.Services
         {
             Logger = logger;
             Logger.LogInformation($"{nameof(TemporaryExposureKeyExportBatchService)} constructor");
+            Sequence = sequence;
             TekRepository = tek;
             TekExportRepository = tekExport;
             SignService = signService;
@@ -64,6 +68,8 @@ namespace Covid19Radar.Background.Services
                     RollingPeriodSeconds = _.GetRollingPeriodSeconds()
                 }))
                 {
+                    var batchNum = (int)await Sequence.GetNextAsync(SequenceName, 1);
+
                     foreach (var region in Regions)
                     {
                         // Security considerations: Random Order TemporaryExposureKey
@@ -72,6 +78,7 @@ namespace Covid19Radar.Background.Services
                         await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
                             (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
                             region,
+                            batchNum,
                             sorted.ToArray());
                     }
 
@@ -100,7 +107,11 @@ namespace Covid19Radar.Background.Services
             return s;
         }
 
-        public async Task CreateAsync(ulong startTimestamp, ulong endTimestamp, string region, IEnumerable<TemporaryExposureKeyModel> keys)
+        public async Task CreateAsync(ulong startTimestamp,
+                                      ulong endTimestamp,
+                                      string region,
+                                      int batchNum,
+                                      IEnumerable<TemporaryExposureKeyModel> keys)
         {
             Logger.LogInformation($"start {nameof(CreateAsync)}");
             var current = keys;
@@ -113,12 +124,16 @@ namespace Covid19Radar.Background.Services
                 var signatureInfo = SignatureService.Create();
                 await SignService.SetSignatureAsync(signatureInfo);
 
-                var exportModel = await TekExportRepository.CreateAsync();
+                var exportModel = new TemporaryExposureKeyExportModel();
+                exportModel.id = batchNum.ToString();
+                exportModel.PartitionKey = region;
+                exportModel.BatchNum = batchNum;
+                exportModel.Region = region;
                 exportModel.BatchSize = exportKeyModels.Length;
                 exportModel.StartTimestamp = startTimestamp;
                 exportModel.EndTimestamp = endTimestamp;
-                exportModel.Region = region;
                 //exportModel.SignatureInfos = new SignatureInfo[] { signatureInfo };
+                exportModel = await TekExportRepository.CreateAsync(exportModel);
 
                 var bin = new TemporaryExposureKeyExport();
                 bin.Keys.AddRange(exportKeys);
