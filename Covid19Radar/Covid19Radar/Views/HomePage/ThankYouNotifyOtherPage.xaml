@@ -42,7 +42,7 @@
                     AutomationId="OnClickShareApp"
                     Command="{Binding Path=OnClickShareApp}"
                     Style="{StaticResource DefaultButton}"
-                    Text="アプリを周りの人に知らせる" />
+                    Text="{x:Static resources:AppResources.NotContactPageButtonText}" />
             </Grid>
         </Grid>
     </ScrollView>
