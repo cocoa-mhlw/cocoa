@@ -46,18 +46,21 @@ namespace Covid19Radar.Api
             [HttpTrigger(AuthorizationLevel.Function, "put", Route = "diagnosis")] HttpRequest req)
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            Logger.LogInformation($"{nameof(RunAsync)} request body {requestBody}");
             var diagnosis = JsonConvert.DeserializeObject<DiagnosisSubmissionParameter>(requestBody);
             var reqTime = DateTimeOffset.UtcNow;
 
             // payload valid
             if (!diagnosis.IsValid())
             {
+                Logger.LogInformation($"Invalid parameter");
                 return new BadRequestErrorMessageResult("Invalid parameter");
             }
 
             // validation support region
             if (!diagnosis.Regions.Any(_ => SupportRegions.Contains(_)))
             {
+                Logger.LogInformation($"Regions not supported.");
                 return new BadRequestErrorMessageResult("Regions not supported.");
             }
 
@@ -65,12 +68,14 @@ namespace Covid19Radar.Api
             var validationResult = await Validation.ValidateAsync(req, diagnosis);
             if (!validationResult.IsValid)
             {
+                Logger.LogInformation($"validation error.");
                 return validationResult.ErrorActionResult;
             }
 
             // validation device 
             if (false == await DeviceCheck.Validation(diagnosis, reqTime))
             {
+                Logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
             }
 
