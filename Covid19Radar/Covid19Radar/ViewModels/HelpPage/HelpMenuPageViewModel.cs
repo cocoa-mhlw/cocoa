@@ -31,25 +31,25 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage1),
-                Title = Resources.AppResources.HelpPage1Title
+                Title = Resources.AppResources.HelpMenuPageLabel1
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage2),
-                Title = Resources.AppResources.HelpPage2Title
+                Title = Resources.AppResources.HelpMenuPageLabel2
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage3),
-                Title = Resources.AppResources.HelpPage3Title
+                Title = Resources.AppResources.HelpMenuPageLabel3
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage4),
-                Title = Resources.AppResources.HelpPage4Title
+                Title = Resources.AppResources.HelpMenuPageLabel4
             });
 
             NavigateCommand = new DelegateCommand(Navigate);

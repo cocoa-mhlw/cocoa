@@ -3,10 +3,12 @@
     x:Class="Covid19Radar.Views.TutorialPage6"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:System="clr-namespace:System;assembly=netstandard"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    Title="新型コロナウィルス 接触確認アプリ"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{x:Static resources:AppResources.AppName}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -19,11 +21,23 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="新型コロナウィルス &#10; 接触確認アプリ" />
-            </StackLayout>
-            <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="TutorialPage60.png" />
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="ご登録いただき &#10; ありがとうございました" />
+                <Label Style="{StaticResource DefaultTitleLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AppName}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Row="1" VerticalOptions="CenterAndExpand">
+                <Label Style="{StaticResource DefaultTitleLabel}" VerticalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.TutorialPage6Label1}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
             <Grid Grid.Row="2">
                 <StackLayout>
@@ -31,14 +45,14 @@
                         AutomationId="NextButton"
                         Command="{prism:NavigateTo '/MenuPage/NavigationPage/HomePage'}"
                         Style="{StaticResource DefaultButton}"
-                        Text="ホーム画面へ" />
+                        Text="{x:Static resources:AppResources.TutorialPage6ButtonText1}" />
 
                     <Button
                         Margin="0,10,0,0"
                         AutomationId="NextButton"
                         Command="{prism:NavigateTo '/MenuPage/NavigationPage/HelpMenuPage'}"
                         Style="{StaticResource DefaultButton}"
-                        Text="使い方を学ぶ" />
+                        Text="{x:Static resources:AppResources.TutorialPage6ButtonText2}" />
                 </StackLayout>
             </Grid>
         </Grid>
