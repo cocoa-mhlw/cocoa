@@ -30,9 +30,10 @@ namespace Covid19Radar.ViewModels
             this.userDataService.UserDataChanged += _userDataChanged;
         }
 
-        private void _userDataChanged(object sender, UserDataModel e)
+        private async void _userDataChanged(object sender, UserDataModel e)
         {
             _UserData = this.userDataService.Get();
+            _ = await exposureNotificationService.UpdateStatusMessage();
             _EnMessage = this.exposureNotificationService.CurrentStatusMessage;
         }
 
@@ -92,6 +93,13 @@ namespace Covid19Radar.ViewModels
                 });
             });
 
+        public Command UpdateStatus => new Command(async () =>
+        {
+            _UserData = this.userDataService.Get();
+            _ = await exposureNotificationService.UpdateStatusMessage();
+            _EnMessage = this.exposureNotificationService.CurrentStatusMessage;
+        });
+
 
         public Command ToggleWelcome => new Command(async () =>
         {
@@ -134,7 +142,7 @@ namespace Covid19Radar.ViewModels
             {
                 using (UserDialogs.Instance.Loading("Fetching..."))
                 {
-                    await Xamarin.ExposureNotifications.ExposureNotification.UpdateKeysFromServer();
+                    await exposureNotificationService.FetchExposureKeyAsync();
 
                     RaisePropertyChanged(nameof(CurrentBatchFileIndex));
                 }

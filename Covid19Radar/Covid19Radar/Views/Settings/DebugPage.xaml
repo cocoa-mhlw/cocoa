@@ -88,6 +88,12 @@
                         Text="Reset Last Enabled State" />
 
                     <Button
+                        Command="{Binding UpdateStatus}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Update Status" />
+
+                    <Button
                         Command="{Binding ToggleEn}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
