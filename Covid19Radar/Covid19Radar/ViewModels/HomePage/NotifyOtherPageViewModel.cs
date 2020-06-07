@@ -20,10 +20,10 @@ namespace Covid19Radar.ViewModels
     {
         public bool IsEnabled { get; set; } = true;
         public string DiagnosisUid { get; set; }
-        public DateTime? DiagnosisTimestamp { get; set; } = DateTime.Now;
+//        public DateTime? DiagnosisTimestamp { get; set; } = DateTime.Now;
 
-        public DateTime? MaxDate { get; } = DateTime.Today.AddMonths(1);
-        public DateTime? MinDate { get; } = DateTime.Today.AddMonths(-1);
+//        public DateTime? MaxDate { get; } = DateTime.Today.AddMonths(1);
+//        public DateTime? MinDate { get; } = DateTime.Today.AddMonths(-1);
 
 
         private readonly UserDataService userDataService;
@@ -40,27 +40,28 @@ namespace Covid19Radar.ViewModels
         public Command OnClickRegister => (new Command(async () =>
         {
             // Verify  Check the parameters
+            /*
+        if (string.IsNullOrEmpty(DiagnosisUid))
+        {
+            // Check gov's positive api check here!!
 
-            if (string.IsNullOrEmpty(DiagnosisUid))
-            {
-                // Check gov's positive api check here!!
-
-                await UserDialogs.Instance.AlertAsync(
-                    Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDText,
-                    Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDTitle,
-                    Resources.AppResources.ButtonOk
-                );
-                return;
-            }
-            if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
-            {
-                await UserDialogs.Instance.AlertAsync(
-                    Resources.AppResources.NotifyOtherPageDialogInvalidTestDateText,
-                    Resources.AppResources.NotifyOtherPageDialogInvalidTestDateTitle,
-                    Resources.AppResources.ButtonOk
-                );
-                return;
-            }
+            await UserDialogs.Instance.AlertAsync(
+                Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDText,
+                Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDTitle,
+                Resources.AppResources.ButtonOk
+            );
+            return;
+        }
+        if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
+        {
+            await UserDialogs.Instance.AlertAsync(
+                Resources.AppResources.NotifyOtherPageDialogInvalidTestDateText,
+                Resources.AppResources.NotifyOtherPageDialogInvalidTestDateTitle,
+                Resources.AppResources.ButtonOk
+            );
+            return;
+        }
+            */
 
             // Submit the UID
             using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
@@ -83,12 +84,11 @@ namespace Covid19Radar.ViewModels
                 }
                 */
                 // Set the submitted UID
-                userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DiagnosisTimestamp.Value));
+                userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DateTime.Now));
                 await userDataService.SetAsync(userData);
 
                 // Submit our diagnosis
                 await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
-
                 dialog.Hide();
 
                 await UserDialogs.Instance.AlertAsync(
@@ -96,6 +96,7 @@ namespace Covid19Radar.ViewModels
                     Resources.AppResources.ButtonComplete,
                     Resources.AppResources.ButtonOk
                 );
+
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
             }
             catch (Exception ex)
