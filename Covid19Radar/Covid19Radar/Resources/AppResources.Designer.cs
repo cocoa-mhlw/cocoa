@@ -178,7 +178,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Reset に類似しているローカライズされた文字列を検索します。
+        ///   Discontinued に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonReset {
             get {
@@ -363,6 +363,15 @@ namespace Covid19Radar.Resources {
         internal static string ExposuresPageNoExposuresInfo {
             get {
                 return ResourceManager.GetString("ExposuresPageNoExposuresInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   How do you record contact? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpMenuPageLabel1 {
+            get {
+                return ResourceManager.GetString("HelpMenuPageLabel1", resourceCulture);
             }
         }
         
