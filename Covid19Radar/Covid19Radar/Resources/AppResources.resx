@@ -432,6 +432,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>How to use this app</value>
     <comment>使い方</comment>
   </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>How do you record contact?</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal identification</value>
     <comment>端末の識別</comment>

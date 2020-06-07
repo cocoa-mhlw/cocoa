@@ -31,7 +31,7 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage1),
-                Title = "どのようにして接触を記録していますか？"//Resources.AppResources.HelpPage1Title
+                Title = Resources.AppResources.HelpMenuPageLabel1
             });
             MenuItems.Add(new MainMenuModel()
             {
