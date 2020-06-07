@@ -1171,6 +1171,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Thank you for registering に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage6Label1 {
+            get {
+                return ResourceManager.GetString("TutorialPage6Label1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   https://covid19radar.z11.web.core.windows.net/en/contributor.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlContributor {
