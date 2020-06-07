@@ -45,7 +45,7 @@
                         AutomationId="NextButton"
                         Command="{prism:NavigateTo '/MenuPage/NavigationPage/HomePage'}"
                         Style="{StaticResource DefaultButton}"
-                        Text="ホーム画面へ" />
+                        Text="{x:Static resources:AppResources.TutorialPage6ButtonText1}" />
 
                     <Button
                         Margin="0,10,0,0"

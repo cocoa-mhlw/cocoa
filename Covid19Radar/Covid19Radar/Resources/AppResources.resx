@@ -578,4 +578,8 @@ support of "new lifestyle".</value>
     <value>Thank you for registering</value>
     <comment>ご登録いただきありがとうございました</comment>
   </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>To home screen</value>
+    <comment>ホーム画面へ</comment>
+  </data>
 </root>

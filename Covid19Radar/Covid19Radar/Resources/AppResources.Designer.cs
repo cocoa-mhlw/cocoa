@@ -1171,6 +1171,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   To home screen に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage6ButtonText1 {
+            get {
+                return ResourceManager.GetString("TutorialPage6ButtonText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Thank you for registering に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage6Label1 {
