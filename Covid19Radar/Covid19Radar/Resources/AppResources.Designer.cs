@@ -1054,6 +1054,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Thank you for registering positive に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ThankYouNotifyOtherPageLabel1 {
+            get {
+                return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Share a Positive Diagnosis に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitileSharePositiveDiagnosis {
