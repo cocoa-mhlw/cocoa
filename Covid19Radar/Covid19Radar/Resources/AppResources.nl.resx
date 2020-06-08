@@ -231,6 +231,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>De app delen</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Delen</value>
@@ -262,24 +263,6 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Versienummer van deze toepassing</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Draadloze communicatie op korte afstand</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Verzenden en ontvangen</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Melding van contactpersonen sluiten</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Toepassingsmeldingen op het moment van nauw contact</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Gegevens verwijderen</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Alle gegevens verwijderen</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Ongeldige diagnose-id</value>
@@ -329,7 +312,7 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminalidentificatie</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Bevestigingsmethode voor contactpersonen</value>

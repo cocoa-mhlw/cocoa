@@ -231,6 +231,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Delite aplikaciju</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Deli</value>
@@ -262,24 +263,6 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Broj verzije ove aplikacije</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Bežična komunikacija sa kratkim opsegom</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Slanje i primanje</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Zatvaranje obaveštenja o kontaktu</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Obaveštenja o aplikacijama u vreme bliskog kontakta</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Izbriši podatke</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Izbriši sve podatke</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Nevažeći ID dijagnostike</value>
@@ -329,7 +312,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifikacija terminala</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Način potvrde kontakta</value>

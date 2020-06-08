@@ -214,24 +214,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Application notifications at the time of close contact に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string CloseContactNotificationDescription {
-            get {
-                return ResourceManager.GetString("CloseContactNotificationDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Close Contact Notification に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string CloseContactNotificationText {
-            get {
-                return ResourceManager.GetString("CloseContactNotificationText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   List of exposure with positive people に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton1 {
@@ -300,24 +282,6 @@ namespace Covid19Radar.Resources {
         internal static string ContactedNotifyPageTitle {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Delete all data に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DeleteDataDescription {
-            get {
-                return ResourceManager.GetString("DeleteDataDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Delete data に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DeleteDataText {
-            get {
-                return ResourceManager.GetString("DeleteDataText", resourceCulture);
             }
         }
         
@@ -1126,6 +1090,42 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   License に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageButton1 {
+            get {
+                return ResourceManager.GetString("SettingsPageButton1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Send and receive に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDescription1 {
+            get {
+                return ResourceManager.GetString("SettingsPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Close Contact Notification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDescription2 {
+            get {
+                return ResourceManager.GetString("SettingsPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Delete all data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDescription3 {
+            get {
+                return ResourceManager.GetString("SettingsPageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   All settings and data have been deleted. Please restart the application. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageDialogResetCompletedText {
@@ -1149,6 +1149,33 @@ namespace Covid19Radar.Resources {
         internal static string SettingsPageDialogResetTitle {
             get {
                 return ResourceManager.GetString("SettingsPageDialogResetTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Short-range wireless communication に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageLabel1 {
+            get {
+                return ResourceManager.GetString("SettingsPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Application notifications at the time of close contact に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageLabel2 {
+            get {
+                return ResourceManager.GetString("SettingsPageLabel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Delete data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageLabel3 {
+            get {
+                return ResourceManager.GetString("SettingsPageLabel3", resourceCulture);
             }
         }
         
@@ -1239,24 +1266,6 @@ namespace Covid19Radar.Resources {
         internal static string SharePositiveEntryCodeText2 {
             get {
                 return ResourceManager.GetString("SharePositiveEntryCodeText2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Send and receive に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ShortRangeWirelessCommunicationDescription {
-            get {
-                return ResourceManager.GetString("ShortRangeWirelessCommunicationDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Short-range wireless communication に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ShortRangeWirelessCommunicationText {
-            get {
-                return ResourceManager.GetString("ShortRangeWirelessCommunicationText", resourceCulture);
             }
         }
         
