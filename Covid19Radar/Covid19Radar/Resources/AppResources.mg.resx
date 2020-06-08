@@ -231,6 +231,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Zarao ny Application</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Hizara</value>
@@ -262,24 +263,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Famoahana ny laharan' ity fampiharana ity</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Fifandraisana wireless</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Alefaso ary raiso</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Hidio ny Fampilazana</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Fampiharana ny fampilazana amin' ny fotoana manaraka.</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Fafao ireo tahirin</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Esory avokoa ny tahirin-kevitra rehetra</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Nahitana Aretina ID</value>
@@ -329,7 +312,7 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Mahafaty ny famantarana</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Mifandraisa amin' ny fomba fandraisana ho mpikambana</value>

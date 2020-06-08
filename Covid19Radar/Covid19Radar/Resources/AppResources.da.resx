@@ -231,6 +231,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Del appen</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Del</value>
@@ -262,24 +263,6 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Versionsnummeret på denne ansøgning</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Trådløs kommunikation med kort rækkevidde</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Send og modtag</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Meddelelse om lukning af kontaktperson</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Ansøgningsmeddelelser på tidspunktet for tæt kontakt</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Slet data</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Slet alle data</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Ugyldigt diagnose-id</value>
@@ -329,7 +312,7 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifikation af terminal</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Metode til bekræftelse af kontaktperson</value>

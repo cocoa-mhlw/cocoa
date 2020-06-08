@@ -230,6 +230,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Uygulamayı Paylaşın</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Paylaş</value>
@@ -261,24 +262,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Bu uygulamanın sürüm numarası</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Kısa menzilli kablosuz iletişim</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Gönderme ve alma</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>İletişim Bildirimini Kapat</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Yakın temas sırasında uygulama bildirimleri</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Verileri sil</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Tüm verileri silme</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Geçersiz Tanı Kimliği</value>
@@ -328,7 +311,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal tanımlama</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>İletişim onay yöntemi</value>

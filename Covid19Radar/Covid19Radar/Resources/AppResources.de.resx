@@ -231,6 +231,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>App teilen</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Freigeben</value>
@@ -262,24 +263,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Versionsnummer dieser Anwendung</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Drahtlose Kurzstreckenkommunikation</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Senden und empfangen</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Schließen der Kontaktbenachrichtigung</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Anwendungsmeldungen zum Zeitpunkt des engen Kontakts</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Daten löschen</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Löschen aller Daten</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Ungültige Diagnose-ID</value>
@@ -329,7 +312,7 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminalidentifikation</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Kontaktbestätigungsmethode</value>

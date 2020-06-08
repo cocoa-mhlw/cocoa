@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ایپ کا اشتراک کریں</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>حصہ داری کریں</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>اس ایپلی کیشن کا ورژن نمبر</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>مختصر رینج وائرلیس مواصلات</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>بھیجیں اور وصولیں</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>بند کریں رابطہ کی اطلاع</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>قریبی رابطے کے وقت درخواست کی اطلاعات</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>کوائف حذف کریں</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>تمام کوائف حذف کریں</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ناجائز تشخیص شناخت</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>ٹرمینل شناخت</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>رابطہ تصدیق طریقہ</value>
