@@ -653,6 +653,21 @@ support of "new lifestyle".</source>
           <target state="translated">過去14日間の接触</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
+        <trans-unit id="InqueryPageDescription1" translate="yes" xml:space="preserve">
+          <source>9:00 to 17:30 (excluding Saturdays, Sundays, holidays, year-end and New Year holidays)</source>
+          <target state="translated">9:00～17:30（土・日・祝日・年末年始を除く）</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
+          <source>New Coronavirus Infection Control Site</source>
+          <target state="translated">新型コロナウィルス感染症対策サイト</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
+          <source>Inquiries about this application</source>
+          <target state="translated">本アプリに関するお問い合わせ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリに関するお問い合わせ</note>
+        </trans-unit>
       </group>
     </body>
   </file>
