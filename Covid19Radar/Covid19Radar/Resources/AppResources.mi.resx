@@ -231,6 +231,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Tiria te Taupānga</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Tiri</value>
@@ -262,24 +263,6 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Tau putanga o tēnei taupānga</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Whakawhitiwhiti ahokore awhe-poto</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Tuku me te whiwhi</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Katia te Whakamōhiotanga Hoapā</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Ngā whakamōhiotanga taupānga i te wā kati hoapā</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Muku raraunga</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Mukua ngā raraunga katoa</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ID Tataritanga muhu</value>
@@ -329,7 +312,7 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Tāutunga kāpeka</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Tikanga whakaū hoapā</value>

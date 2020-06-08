@@ -231,6 +231,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Rhannu'r ap</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Rhannu</value>
@@ -262,24 +263,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Rhif fersiwn y rhaglen hon</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Cyfathrebu di-wifr amrediad byr</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Anfon a derbyn</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Hysbysiad cyswllt agos</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Hysbysiadau cais ar adeg cyswllt agos</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Dileu data</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Dileu'r holl ddata</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ID diagnosis annilys</value>
@@ -329,7 +312,7 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Adnabod terfynell</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Dull cadarnhau cyswllt</value>

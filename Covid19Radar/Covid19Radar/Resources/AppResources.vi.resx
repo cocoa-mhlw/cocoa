@@ -231,6 +231,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Chia sẻ ứng dụng</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Chia sẻ</value>
@@ -262,24 +263,6 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Số phiên bản của ứng dụng này</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Giao tiếp không dây tầm ngắn</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Gửi và nhận</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Đóng thông báo liên hệ</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Thông báo ứng dụng tại thời gian liên lạc gần</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Xóa dữ liệu</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Xóa tất cả dữ liệu</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ID chẩn đoán không hợp lệ</value>
@@ -329,7 +312,7 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Nhận dạng nhà ga</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Phương thức xác nhận liên lạc</value>
