@@ -231,6 +231,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Deel die program</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Deel</value>
@@ -262,24 +263,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Weergawe nommer van hierdie aansoek</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Kort-reeks draadlose kommunikasie</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Stuur en te ontvang</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Sluit Kontakkennisgewing</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Aansoek kennisgewings ten tyde van die noue kontak</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Skrap data</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Verwyder alle data</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Ongeldige diagnose-ID</value>
@@ -329,7 +312,7 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminale identifikasie</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Kontak bevestiging metode</value>

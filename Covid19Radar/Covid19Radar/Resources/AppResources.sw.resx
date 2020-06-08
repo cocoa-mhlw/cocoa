@@ -231,6 +231,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Gawiza programu</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Shiriki</value>
@@ -262,24 +263,6 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Namba ya toleo ya programu hii</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Mawasiliano ya Wireless ya masafa mafupi</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Tuma na pokea</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Funga taarifa ya mwasiliani</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Taarifa za maombi wakati wa kuwasiliana karibu</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Futa data</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Futa data zote</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Kitambulisho cha utambuzi batili</value>
@@ -329,7 +312,7 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Kitambulisho cha Temino</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Mbinu ya uthibitisho wa mawasiliano</value>
