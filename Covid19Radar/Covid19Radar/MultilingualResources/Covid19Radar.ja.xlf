@@ -668,6 +668,36 @@ support of "new lifestyle".</source>
           <target state="translated">本アプリに関するお問い合わせ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリに関するお問い合わせ</note>
         </trans-unit>
+        <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
+          <source>In use</source>
+          <target state="translated">使用中</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
+          <source>Confirm contact with positives (14 days)</source>
+          <target state="translated">陽性者との接触を確認する(14日間)</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
+          <source>If a new coronavirus is diagnosed positive</source>
+          <target state="translated">新型コロナウィルス陽性と診断されたら</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス陽性と診断されたら</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
+          <source>Registration of positive information</source>
+          <target state="translated">陽性情報の登録</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">
+          <source>Tell the people around you about the app</source>
+          <target state="translated">アプリを周りの人に知らせる</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
+        </trans-unit>
+        <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <target state="translated">ホーム</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
+        </trans-unit>
       </group>
     </body>
   </file>
