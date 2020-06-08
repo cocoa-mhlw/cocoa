@@ -1495,6 +1495,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   To enable に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Button1 {
+            get {
+                return ResourceManager.GetString("TutorialPage4Button1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Set later に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Button2 {
+            get {
+                return ResourceManager.GetString("TutorialPage4Button2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please enable Bluetooth on your smartphone in order to use exposure detection with this application. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Description {
+            get {
+                return ResourceManager.GetString("TutorialPage4Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   For more technical details に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Label {
+            get {
+                return ResourceManager.GetString("TutorialPage4Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To use exposure detection に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Title1 {
+            get {
+                return ResourceManager.GetString("TutorialPage4Title1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To use exposure detection に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Title2 {
+            get {
+                return ResourceManager.GetString("TutorialPage4Title2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   To use notifications に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage5Description1 {
