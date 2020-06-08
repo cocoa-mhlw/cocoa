@@ -54,7 +54,8 @@
                         </Frame>
                     </Frame>
                     <Frame
-                        Padding="0"
+                        Margin="0,20,0,15"
+                        Padding="10"
                         BackgroundColor="#FFF3DD"
                         CornerRadius="10">
                         <StackLayout Spacing="0">

@@ -19,39 +19,36 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <StackLayout Grid.Row="0">
+            <StackLayout Grid.Row="0" Margin="0,0,0,15">
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage2Label1}" />
-            </StackLayout>
-            <StackLayout
-                Grid.Row="1"
-                Margin="0,0,0,0"
-                Spacing="0">
-                <Grid ColumnSpacing="10" RowSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.4*" />
-                        <ColumnDefinition Width="0.6*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <ffimageloading:CachedImage
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Aspect="AspectFit"
-                        Source="HelpPage30.png" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.HelpPage2Description1}" />
+                <Grid Margin="0,0,0,0" Spacing="0">
+                    <Grid ColumnSpacing="10" RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ffimageloading:CachedImage
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Aspect="AspectFit"
+                            Source="HelpPage30.png" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.HelpPage2Description1}" />
+                    </Grid>
                 </Grid>
             </StackLayout>
-            <StackLayout Grid.Row="2">
+            <StackLayout Grid.Row="1">
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage2Label2}" />
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage31.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage2Description2}" />
             </StackLayout>
-            <StackLayout Grid.Row="3">
+            <StackLayout Grid.Row="2" Margin="0,0,0,10">
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage2Label3}" />
                 <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage32.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage2Description3}" />
