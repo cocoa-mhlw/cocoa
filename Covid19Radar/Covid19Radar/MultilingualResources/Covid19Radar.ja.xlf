@@ -733,6 +733,31 @@ support of "new lifestyle".</source>
           <target state="translated">プライバシーについて</target>
           <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
         </trans-unit>
+        <trans-unit id="TutorialPage5Description1" translate="yes" xml:space="preserve">
+          <source>To use notifications</source>
+          <target state="translated">通知をご利用いただくために</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description2" translate="yes" xml:space="preserve">
+          <source>Please enable push notifications in this application in order to use contact notifications in this application.</source>
+          <target state="translated">本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description3" translate="yes" xml:space="preserve">
+          <source>To enable</source>
+          <target state="translated">有効にする</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description4" translate="yes" xml:space="preserve">
+          <source>Set later</source>
+          <target state="translated">あとで設定する</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Title" translate="yes" xml:space="preserve">
+          <source>To use notifications</source>
+          <target state="translated">通知をご利用いただくために</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -579,4 +579,24 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>プライバシーについて</value>
     <comment>プライバシーについて</comment>
   </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>通知をご利用いただくために</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>有効にする</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>あとで設定する</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>通知をご利用いただくために</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
 </root>
