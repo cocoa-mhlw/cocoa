@@ -622,4 +622,16 @@ support of "new lifestyle".</value>
     <value>Exposure for the last 14 days</value>
     <comment>過去14日間の接触</comment>
   </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>9:00 to 17:30 (excluding Saturdays, Sundays, holidays, year-end and New Year holidays)</value>
+    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>New Coronavirus Infection Control Site</value>
+    <comment>新型コロナウィルス感染症対策サイト</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Inquiries about this application</value>
+    <comment>本アプリに関するお問い合わせ</comment>
+  </data>
 </root>
