@@ -4,8 +4,12 @@ using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using System.Linq;
+using Covid19Radar.Background.Models;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Background.Services
 {
@@ -15,6 +19,7 @@ namespace Covid19Radar.Background.Services
         const string batchRegionMetadataKey = "batch_region";
         const string fileNameSuffix = ".zip";
 
+        public readonly string TekExportKeyUrl;
         public readonly string TekExportBlobStorageConnectionString;
         public readonly string TekExportBlobStorageContainerPrefix;
         public readonly CloudStorageAccount StorageAccount;
@@ -27,6 +32,7 @@ namespace Covid19Radar.Background.Services
         {
             Logger = logger;
             Logger.LogInformation($"{nameof(TemporaryExposureKeyBlobService)} constructor");
+            TekExportKeyUrl = config.TekExportKeyUrl();
             TekExportBlobStorageConnectionString = config.TekExportBlobStorage();
             TekExportBlobStorageContainerPrefix = config.TekExportBlobStorageContainerPrefix();
             StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
@@ -76,6 +82,43 @@ namespace Covid19Radar.Background.Services
             await blockBlob.DeleteIfExistsAsync();
         }
 
+        public async Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models)
+        {
+            Logger.LogInformation($"start {nameof(WriteFilesJsonAsync)}");
+            var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
+            var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
+            await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
+
+            foreach (var grp in models.GroupBy(_ => _.Region))
+            {
+                // per region
+                var region = grp.Key;
+                var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{region}".ToLower());
+                // Filename is inferable as batch number
+                var exportFileName = "list.json";
+                //var blockBlob = cloudBlobContainer.GetBlockBlobReference(exportFileName);
+                var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
+
+                var files = grp.Select(_ => new TemporaryExposureKeyExportFileModel()
+                {
+                    Region = region,
+                    Created = _.TimestampSecondsSinceEpoch,
+                    Url = $"{TekExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{region}/{_.BatchNum}.zip"
+
+                }).ToArray();
+                using (var stream = new MemoryStream())
+                using (var writer = new StreamWriter(stream))
+                {
+                    var filesJson = JsonConvert.SerializeObject(files);
+                    await writer.WriteAsync(filesJson);
+                    await writer.FlushAsync();
+                    await stream.FlushAsync();
+                    stream.Position = 0;
+                    await blockBlob.UploadFromStreamAsync(stream);
+                }
+            }
+
+        }
 
     }
 }
