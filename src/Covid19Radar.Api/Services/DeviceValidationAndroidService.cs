@@ -22,6 +22,7 @@ using Covid19Radar.Api.DataAccess;
 using System.Security.Cryptography;
 using Covid19Radar.Api.Extensions;
 using System.Text.RegularExpressions;
+using Microsoft.Win32.SafeHandles;
 
 namespace Covid19Radar.Api.Services
 {
@@ -29,12 +30,14 @@ namespace Covid19Radar.Api.Services
     {
         const string UrlAndroid = "https://www.googleapis.com/androidcheck/v1/attestations/verify?key=";
         private readonly HttpClient ClientAndroid;
+        private readonly string AndroidSecret;
 
         public DeviceValidationAndroidService(
             IConfiguration config,
             IHttpClientFactory client)
         {
             ClientAndroid = client.CreateClient();
+            AndroidSecret = config.AndroidSafetyNetSecret();
         }
 
         /// <summary>
@@ -58,7 +61,7 @@ namespace Covid19Radar.Api.Services
         /// <returns>True when successful.</returns>
         public async Task<bool> Validation(DiagnosisSubmissionParameter param, byte[] expectedNonce, DateTimeOffset requestTime, AuthorizedAppInformation app)
         {
-            var claims = ParsePayload(param.DeviceVerificationPayload);
+            var claims = await ParsePayloadAsync(param.DeviceVerificationPayload);
 
             // Validate the nonce
             if (Convert.ToBase64String(claims.Nonce) != Convert.ToBase64String(expectedNonce))
@@ -102,7 +105,7 @@ namespace Covid19Radar.Api.Services
             return true;
         }
 
-        public static AndroidAttestationStatement ParsePayload(string signedAttestationStatement)
+        public async Task<AndroidAttestationStatement> ParsePayloadAsync(string signedAttestationStatement)
         {
             // First parse the token and get the embedded keys.
             JwtSecurityToken token;
@@ -113,6 +116,15 @@ namespace Covid19Radar.Api.Services
             catch (ArgumentException)
             {
                 // The token is not in a valid JWS format.
+                return null;
+            }
+            try
+            {
+                var response = await VerifyAsync(signedAttestationStatement);
+                if (!response.IsValidSignature) return null;
+            }
+            catch (Exception)
+            {
                 return null;
             }
 
@@ -149,6 +161,22 @@ namespace Covid19Radar.Api.Services
             // Parse and use the data JSON.
             var claimsDictionary = token.Claims.ToDictionary(x => x.Type, x => x.Value);
             return new AndroidAttestationStatement(claimsDictionary);
+        }
+
+        private async Task<AndroidResponse> VerifyAsync(string signedAttestationStatement)
+        {
+            var payload = new AndroidPayload()
+            {
+                SignedAttestation = signedAttestationStatement
+            };
+
+            var payloadJson = JsonConvert.SerializeObject(payload);
+
+            var client = new WebClient();
+            client.Headers[HttpRequestHeader.ContentType] = "application/json";
+            var response = await ClientAndroid.PostAsync($"{UrlAndroid}{AndroidSecret}", new StringContent(payloadJson, Encoding.UTF8, "application/json"));
+
+            return JsonConvert.DeserializeObject<AndroidResponse>(await response.Content.ReadAsStringAsync());
         }
 
         static string GetHostName(X509SecurityKey securityKey)
