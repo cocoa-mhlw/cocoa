@@ -15,7 +15,7 @@ namespace Covid19Radar.ViewModels
         private readonly ExposureNotificationService exposureNotificationService;
         private UserDataModel userData;
 
-        public TutorialPage4ViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService,exposureNotificationService)
+        public TutorialPage4ViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
@@ -24,17 +24,21 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickEnable => new Command(async () =>
         {
-            UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
-            userData.IsExposureNotificationEnabled = true;
-            await userDataService.SetAsync(userData);
-            await exposureNotificationService.StartExposureNotification();
+            await Device.InvokeOnMainThreadAsync(async () =>
+            {
+                userData.IsExposureNotificationEnabled = true;
+                await userDataService.SetAsync(userData);
+                await exposureNotificationService.StartExposureNotification();
+            });
             await NavigationService.NavigateAsync(nameof(TutorialPage5));
-            UserDialogs.Instance.HideLoading();
         });
         public Command OnClickDisable => new Command(async () =>
         {
-            userData.IsExposureNotificationEnabled = false;
-            await userDataService.SetAsync(userData);
+            await Device.InvokeOnMainThreadAsync(async () =>
+            {
+                userData.IsExposureNotificationEnabled = false;
+                await userDataService.SetAsync(userData);
+            });
             await NavigationService.NavigateAsync(nameof(TutorialPage5));
         });
     }
