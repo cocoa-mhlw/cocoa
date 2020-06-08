@@ -105,7 +105,7 @@
     <Style x:Key="DefaultSubTitleLabel" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
-        <Setter Property="FontSize" Value="Subtitle" />
+        <Setter Property="FontSize" Value="{x:OnPlatform Android=18, iOS=20}" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
     </Style>
