@@ -1324,6 +1324,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   About Privacy に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage2Description1 {
+            get {
+                return ResourceManager.GetString("TutorialPage2Description1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Personal information such as name and phone number, and GPS location information such as GPS will not be used and will not be recorded. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage2Description2 {
+            get {
+                return ResourceManager.GetString("TutorialPage2Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Contact records are encrypted, recorded only in your smartphone and are automatically deleted after 14 days. Government agencies and third parties do not use encrypted information to keep track of contact history. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage2Description3 {
+            get {
+                return ResourceManager.GetString("TutorialPage2Description3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can stop recording contact at any time. Please disable the settings in the app or delete the app. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage2Description4 {
+            get {
+                return ResourceManager.GetString("TutorialPage2Description4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To Terms of Use に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage2Description5 {
+            get {
+                return ResourceManager.GetString("TutorialPage2Description5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   About Privacy に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage2Title {
+            get {
+                return ResourceManager.GetString("TutorialPage2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   I accept the terms and continue に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage3ButtonText {

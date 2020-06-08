@@ -703,6 +703,36 @@ support of "new lifestyle".</source>
           <target state="translated">利用規約</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
+        <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
+          <source>About Privacy</source>
+          <target state="translated">プライバシーについて</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description2" translate="yes" xml:space="preserve">
+          <source>Personal information such as name and phone number, and GPS location information such as GPS will not be used and will not be recorded.</source>
+          <target state="translated">氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description3" translate="yes" xml:space="preserve">
+          <source>Contact records are encrypted, recorded only in your smartphone and are automatically deleted after 14 days. Government agencies and third parties do not use encrypted information to keep track of contact history.</source>
+          <target state="translated">接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description4" translate="yes" xml:space="preserve">
+          <source>You can stop recording contact at any time. Please disable the settings in the app or delete the app.</source>
+          <target state="translated">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description5" translate="yes" xml:space="preserve">
+          <source>To Terms of Use</source>
+          <target state="translated">利用規約へ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約へ</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Title" translate="yes" xml:space="preserve">
+          <source>About Privacy</source>
+          <target state="translated">プライバシーについて</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
+        </trans-unit>
       </group>
     </body>
   </file>
