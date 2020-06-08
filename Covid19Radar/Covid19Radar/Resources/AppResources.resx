@@ -361,6 +361,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Share the App</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>This application is so effective that many people install it, so please share the application with people around you.</value>
