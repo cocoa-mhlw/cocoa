@@ -551,4 +551,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>ホーム</value>
     <comment>ホーム</comment>
   </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>利用規約</value>
+    <comment>利用規約</comment>
+  </data>
 </root>
