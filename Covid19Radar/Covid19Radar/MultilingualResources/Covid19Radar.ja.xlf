@@ -813,6 +813,36 @@ support of "new lifestyle".</source>
           <target state="translated">このアプリでできること</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
         </trans-unit>
+        <trans-unit id="TutorialPage4Button1" translate="yes" xml:space="preserve">
+          <source>To enable</source>
+          <target state="translated">有効にする</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Button2" translate="yes" xml:space="preserve">
+          <source>Set later</source>
+          <target state="translated">あとで設定する</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
+          <source>Please enable Bluetooth on your smartphone in order to use exposure detection with this application.</source>
+          <target state="translated">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Label" translate="yes" xml:space="preserve">
+          <source>For more technical details</source>
+          <target state="translated">技術的な詳細について</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">技術的な詳細について</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Title1" translate="yes" xml:space="preserve">
+          <source>To use exposure detection</source>
+          <target state="translated">接触検知をご利用いただくために</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Title2" translate="yes" xml:space="preserve">
+          <source>To use exposure detection</source>
+          <target state="translated">接触検知をご利用いただくために</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用いただくために</note>
+        </trans-unit>
       </group>
     </body>
   </file>
