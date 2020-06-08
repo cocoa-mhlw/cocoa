@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ಆ್ಯಪ್ ಶೇರ್</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>ಹಂಚು</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>ಈ ಅಪ್ಲಿಕೇಶನ್ ನ ಆವೃತ್ತಿ ಸಂಖ್ಯೆ</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>ಕಿರು-ಶ್ರೇಣಿಯ ನಿಸ್ತಂತು ಸಂವಹನ</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>ಕಳುಹಿಸಿ ಮತ್ತು ಸ್ವೀಕರಿಸಲು</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>ನಿಕಟ ಸಂಪರ್ಕ ಅಧಿಸೂಚನೆ</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>ನಿಕಟ ಸಂಪರ್ಕದ ಸಮಯದಲ್ಲಿ ಅಪ್ಲಿಕೇಶನ್ ನೋಟಿಫಿಕೇಶನ್ ಗಳು</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>ದತ್ತಾಂಶವನ್ನು ಅಳಿಸಿ</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸು</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ಅಮಾನ್ಯಗೊಂಡ ರೋಗನಿರ್ಣಯ ID</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>ಟರ್ಮಿನಲ್ ಗುರುತಿಸುವಿಕೆ</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>ಸಂಪರ್ಕ ದೃಢೀಕರಣ ವಿಧಾನ</value>

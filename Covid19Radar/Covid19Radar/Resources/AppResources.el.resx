@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Κοινή χρήση της εφαρμογής</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Κοινή χρήση</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Αριθμός έκδοσης αυτής της εφαρμογής</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Ασύρματη επικοινωνία μικρής εμβέλειας</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Αποστολή και παραλαβή</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Ειδοποίηση κλεισίματος επαφής</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Ειδοποιήσεις αιτήσεων κατά τη στιγμή της στενής επαφής</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Διαγραφή δεδομένων</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Διαγραφή όλων των δεδομένων</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Το αναγνωριστικό διάγνωσης δεν είναι έγκυρο</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Αναγνώριση τερματικού</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Μέθοδος επιβεβαίωσης επαφής</value>

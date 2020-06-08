@@ -231,6 +231,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Dela appen</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Dela</value>
@@ -262,24 +263,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Versionsnummer för det här programmet</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Trådlös kommunikation på kort räckvidd</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Skicka och ta emot</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Stäng kontaktmeddelande</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Ansökan meddelanden vid tidpunkten för nära kontakt</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Ta bort data</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Ta bort alla data</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Ogiltigt diagnos-ID</value>
@@ -329,7 +312,7 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifiering av terminal</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Metod för kontaktbekräftelse</value>

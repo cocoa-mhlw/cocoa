@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>অ্যাপটি শেয়ার</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>শেয়ার করুন</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>এই অ্যাপ্লিকেশনের সংস্করণ সংখ্যা</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>স্বল্প পরিসরের বেতার যোগাযোগ</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>প্রেরণ এবং গ্রহণ করুন</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>যোগাযোগ বিজ্ঞপ্তি বন্ধ করুন</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>ঘনিষ্ঠ পরিচিতির সময় অ্যাপ্লিকেশন বিজ্ঞপ্তিসমূহ</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>ডাটা বিলোপ করুন</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>সকল উপাত্ত মুছে ফেলুন</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>অকার্যকর নির্ণয় ID</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>টার্মিনাল শনাক্তকরণ</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>যোগাযোগ নিশ্চিতকরণ পদ্ধতি</value>
