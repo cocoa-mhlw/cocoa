@@ -24,7 +24,7 @@
         <Setter Property="VerticalOptions" Value="FillAndExpand" />
         <Setter Property="ColumnSpacing" Value="0" />
         <Setter Property="RowSpacing" Value="0" />
-        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="20,0,20,10" />
         <Setter Property="Padding" Value="0,0,0,0" />
     </Style>
 
