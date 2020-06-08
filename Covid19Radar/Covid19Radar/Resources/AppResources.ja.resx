@@ -555,4 +555,28 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>利用規約</value>
     <comment>利用規約</comment>
   </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>プライバシーについて</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
+    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>利用規約へ</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>プライバシーについて</value>
+    <comment>プライバシーについて</comment>
+  </data>
 </root>
