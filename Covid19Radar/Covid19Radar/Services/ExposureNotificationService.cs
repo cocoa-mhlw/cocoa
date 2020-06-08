@@ -8,6 +8,7 @@ using Prism.Navigation.Xaml;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,21 @@ namespace Covid19Radar.Services
             System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
             await FetchExposureKeyAsync();
         }
+
+        public async Task GetExposureNotificationConfig()
+        {
+            string container = AppSettings.Instance.BlobStorageContainerName;
+            string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
+            HttpClient httpClient = new HttpClient();
+            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
+            HttpResponseMessage result = await response;
+            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                Application.Current.Properties["ExposureNotificationConfigration"] = await result.Content.ReadAsStringAsync();
+                await Application.Current.SavePropertiesAsync();
+            }
+        }
+
 
         private async void OnUserDataChanged(object sender, UserDataModel userData)
         {
