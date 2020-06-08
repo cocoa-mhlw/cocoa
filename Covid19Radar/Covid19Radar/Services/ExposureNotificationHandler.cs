@@ -20,32 +20,17 @@ namespace Covid19Radar.Services
     {
         private readonly HttpDataService httpDataService;
         private readonly UserDataService userDataService;
+        private readonly ExposureNotificationService exposureNotificationService;
         private UserDataModel userData;
-
-        public readonly Configuration configuration;
+        private readonly Configuration configuration;
 
         public ExposureNotificationHandler()
         {
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
             this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-
             userData = this.userDataService.Get();
-            configuration = userData.Configuration;
-            /*
-            configuration = new Configuration
-            {
-                MinimumRiskScore = 1,
-                AttenuationWeight = 50,
-                TransmissionWeight = 50,
-                DurationWeight = 50,
-                DaysSinceLastExposureWeight = 50,
-                TransmissionRiskScores = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                AttenuationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                DurationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                DurationAtAttenuationThresholds = new[] { 50, 70 }
-            };
-            */
+            this.exposureNotificationService = Xamarin.Forms.DependencyService.Resolve<ExposureNotificationService>();
+            configuration = exposureNotificationService.GetConfigration();
         }
 
         // this string should be localized
