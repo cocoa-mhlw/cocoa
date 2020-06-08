@@ -6,7 +6,8 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    Title="このアプリでできること"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{x:Static resources:AppResources.TutorialPage1Title1}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -19,7 +20,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="このアプリでできること" />
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.TutorialPage1Title2}" />
             </StackLayout>
             <StackLayout Grid.Row="1" Spacing="0">
                 <Grid ColumnSpacing="10" RowSpacing="0">
@@ -39,7 +40,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="本アプリをスマートフォンに設定した人どうしの接触を記録します。"
+                        Text="{x:Static resources:AppResources.TutorialPage1Description1}"
                         VerticalTextAlignment="Center" />
                 </Grid>
                 <Grid ColumnSpacing="10" RowSpacing="0">
@@ -59,7 +60,7 @@
                         Grid.Row="0"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
-                        Text="新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。"
+                        Text="{x:Static resources:AppResources.TutorialPage1Description2}"
                         VerticalTextAlignment="Center" />
                 </Grid>
                 <Grid ColumnSpacing="10" RowSpacing="0">
@@ -79,7 +80,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。"
+                        Text="{x:Static resources:AppResources.TutorialPage1Description3}"
                         VerticalTextAlignment="Center" />
                 </Grid>
             </StackLayout>
@@ -88,7 +89,7 @@
                     AutomationId="NextButton"
                     Command="{prism:NavigateTo 'TutorialPage2'}"
                     Style="{StaticResource DefaultButton}"
-                    Text="次へ" />
+                    Text="{x:Static resources:AppResources.TutorialPage1Button}" />
             </Grid>
         </Grid>
     </ScrollView>
