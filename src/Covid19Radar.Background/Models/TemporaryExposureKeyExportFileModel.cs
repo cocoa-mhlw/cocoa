@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Covid19Radar.Api.Models;
+using Covid19Radar.Background.Protobuf;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,6 +26,7 @@ namespace Covid19Radar.Background.Models
         /// created unix time secs
         /// </summary>
         [JsonProperty("created")]
-        public ulong Created { get; set; }
+        public long Created { get; set; }
+
     }
 }
