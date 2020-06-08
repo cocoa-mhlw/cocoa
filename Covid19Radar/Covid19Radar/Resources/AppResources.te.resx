@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>అనువర్తనాన్ని పంచుకోండి</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>భాగస్వామ్యం చేయి</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>ఈ అనువర్తనం యొక్క సంస్కరణ సంఖ్య</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>షార్ట్ రేంజ్ వైర్ లెస్ కమ్యూనికేషన్</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>పంపడం మరియు అందుకోవడం</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>సంప్రదింపు ప్రకటనను మూసివేయండి</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>క్లోజ్ కాంటాక్ట్ సమయంలో అప్లికేషన్ నోటిఫికేషన్ లు</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>డేటాను తొలగించు</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>మొత్తం డేటాని తొలగించు</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>చెల్లని నిర్ధారణ ID</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>టెర్మినల్ గుర్తింపు</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>సంప్రదింపు నిర్ధారణ పద్ధతి</value>

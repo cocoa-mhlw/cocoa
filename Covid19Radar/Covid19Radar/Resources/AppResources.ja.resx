@@ -210,10 +210,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>アプリの設定</value>
   </data>
-  <data name="SettingsPageButton1" xml:space="preserve">
-    <value>ライセンス…</value>
-    <comment>ライセンス…</comment>
-  </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>同意しない</value>
   </data>
@@ -234,7 +230,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>陽性と診断された場合</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>アプリの共有</value>
+    <value>本アプリを広めましょう</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>共有する</value>
@@ -266,24 +263,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>このアプリのバージョン番号</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>近距離無線通信</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>発信と受信をする</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>濃厚接触の通知</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>濃厚接触時のアプリ通知</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>データの削除</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>すべてのデータを削除</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>無効な処理番号</value>
@@ -674,5 +653,33 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="MenuPageTitle" xml:space="preserve">
     <value>メニュー</value>
     <comment>メニュー</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>ライセンス…</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="SettingsPageLabel1" xml:space="preserve">
+    <value>接触の検出</value>
+    <comment>接触の検出</comment>
+  </data>
+  <data name="SettingsPageDescription1" xml:space="preserve">
+    <value>Bloothによる接触の検知</value>
+    <comment>Bloothによる接触の検知</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>通知</value>
+    <comment>通知</comment>
+  </data>
+  <data name="SettingsPageDescription2" xml:space="preserve">
+    <value>陽性者との接触通知</value>
+    <comment>陽性者との接触通知</comment>
+  </data>
+  <data name="SettingsPageLabel3" xml:space="preserve">
+    <value>アプリの使用中止</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+  <data name="SettingsPageDescription3" xml:space="preserve">
+    <value>使用を中止して過去14日間の接触履歴を消去</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
   </data>
 </root>
