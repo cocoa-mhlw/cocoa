@@ -643,4 +643,28 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>このアプリでできること</value>
     <comment>このアプリでできること</comment>
   </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>有効にする</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>あとで設定する</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>技術的な詳細について</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>接触検知をご利用いただくために</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>接触検知をご利用いただくために</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
 </root>
