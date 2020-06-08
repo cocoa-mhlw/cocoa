@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>앱 공유</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>공유</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>이 응용 프로그램의 버전 번호</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>단거리 무선 통신</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>송신 및 수신</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>연락처 알림 닫기</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>가까운 연락 시 의 응용 프로그램 알림</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>데이터 삭제</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>모든 데이터 삭제</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>잘못된 진단 ID</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>터미널 식별</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>연락처 확인 방법</value>

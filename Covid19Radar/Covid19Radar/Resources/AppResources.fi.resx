@@ -231,6 +231,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Sovelluksen jakaminen</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Jaa</value>
@@ -262,24 +263,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Tämän sovelluksen versionumero</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Lyhyen kantaman langaton tiedonsiirto</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Lähetä ja vastaanota</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Sulje yhteystietoilmoitus</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Hakemusilmoitukset läheisen yhteydenpidon yhteydessä</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Poista tiedot</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Poista kaikki tiedot</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Virheellinen diagnoositunnus</value>
@@ -329,7 +312,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminaalin tunnistetiedot</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Yhteyden vahvistusmenetelmä</value>
