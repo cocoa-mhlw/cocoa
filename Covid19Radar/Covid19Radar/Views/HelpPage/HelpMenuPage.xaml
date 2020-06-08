@@ -16,7 +16,7 @@
         <StackLayout Padding="10" BackgroundColor="#cccccc">
             <ListView
                 ItemsSource="{Binding MenuItems}"
-                RowHeight="80"
+                HasUnevenRows="True"
                 SelectedItem="{Binding SelectedMenuItem}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
