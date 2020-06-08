@@ -658,4 +658,8 @@ support of "new lifestyle".</value>
     <value>Home</value>
     <comment>ホーム</comment>
   </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>Terms of service</value>
+    <comment>利用規約</comment>
+  </data>
 </root>
