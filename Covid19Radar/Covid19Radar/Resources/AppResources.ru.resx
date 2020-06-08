@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Поделиться приложением</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Общий доступ</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Номер версии этого приложения</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Беспроводная связь малой дальности</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Отправка и получение</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Уведомление о близком контакте</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Уведомления о применении на момент тесного контакта</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Удаление данных</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Удалить все данные</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Идентификатор недействительной диагностики</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Идентификация терминала</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Метод подтверждения контакта</value>

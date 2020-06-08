@@ -9,8 +9,8 @@
             <StackLayout Spacing="5">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.9*" />
-                        <ColumnDefinition Width="0.1*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />

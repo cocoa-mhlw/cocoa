@@ -5,8 +5,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:Behavior="clr-namespace:Covid19Radar.Behaviors"
     xmlns:System="clr-namespace:System;assembly=netstandard"
-    xmlns:ce="clr-namespace:Covid19Radar.Controls"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
@@ -16,6 +14,7 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
+        <!--
         <StackLayout
             Padding="0"
             BackgroundColor="{StaticResource Background}"
@@ -39,13 +38,13 @@
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Small"
-                                    Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationText}"
+                                    Text="{x:Static resources:AppResources.SettingsPageLabel1}"
                                     TextColor="{StaticResource PrimaryText}" />
                                 <Span Text="{x:Static System:Environment.NewLine}" />
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Caption"
-                                    Text="{x:Static resources:AppResources.ShortRangeWirelessCommunicationDescription}"
+                                    Text="{x:Static resources:AppResources.SettingsPageDescription1}"
                                     TextColor="{StaticResource SecondaryText}" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -79,13 +78,13 @@
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Small"
-                                    Text="{x:Static resources:AppResources.CloseContactNotificationText}"
+                                    Text="{x:Static resources:AppResources.SettingsPageLabel2}"
                                     TextColor="{StaticResource PrimaryText}" />
                                 <Span Text="{x:Static System:Environment.NewLine}" />
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Caption"
-                                    Text="{x:Static resources:AppResources.CloseContactNotificationDescription}"
+                                    Text="{x:Static resources:AppResources.SettingsPageDescription2}"
                                     TextColor="{StaticResource SecondaryText}" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -120,13 +119,13 @@
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Small"
-                                    Text="{x:Static resources:AppResources.DeleteDataText}"
+                                    Text="{x:Static resources:AppResources.SettingsPageLabel3}"
                                     TextColor="{StaticResource PrimaryText}" />
                                 <Span Text="{x:Static System:Environment.NewLine}" />
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Caption"
-                                    Text="{x:Static resources:AppResources.DeleteDataDescription}"
+                                    Text="{x:Static resources:AppResources.SettingsPageDescription3}"
                                     TextColor="{StaticResource SecondaryText}" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -158,7 +157,7 @@
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Small"
-                                    Text="{x:Static resources:AppResources.VersionText}"
+                                    Text="{x:Static resources:AppResources.VersionLabel}"
                                     TextColor="{StaticResource PrimaryText}" />
                                 <Span Text="{x:Static System:Environment.NewLine}" />
                                 <Span
@@ -186,11 +185,12 @@
                 <Label
                     HorizontalOptions="Start"
                     Style="{StaticResource DefaultLabelSmallColor}"
-                    Text="ライセンス…"
+                    Text="{x:Static resources:AppResources.SettingsPageButton1}"
                     VerticalOptions="Center" />
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
 
         </StackLayout>
+        -->
     </ScrollView>
 </ContentPage>
