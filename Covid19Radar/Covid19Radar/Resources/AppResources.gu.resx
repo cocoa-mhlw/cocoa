@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>એપ્લિકેશન ને વહેંચો</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>સહિયારું કરો</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>આ કાર્યક્રમની આવૃત્તિ સંખ્યા</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>ટૂંકા અંતરના વાયરલેસ સંદેશાવ્યવહાર</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>મોકલો અને મેળવો</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>સંપર્ક સૂચન બંધ કરો</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>સંપર્ક બંધ થાય ત્યારે કાર્યક્રમ સૂચનાઓ</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>માહિતી કાઢી નાંખો</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>બધી માહિતી કાઢી નાંખો</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>અયોગ્ય નિદાન ID</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>ટર્મિનલ ઓળખ</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>સંપર્ક પુષ્ટિ પદ્દતિ</value>

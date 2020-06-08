@@ -231,6 +231,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Zdieľanie aplikácie</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Zdieľať</value>
@@ -262,24 +263,6 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Číslo verzie tejto aplikácie</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Bezdrôtová komunikácia s krátkym dosahom</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Odosielanie a prijímanie</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Zavrieť upozornenie kontaktu</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Oznámenia o žiadostiach v čase úzkeho kontaktu</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Odstrániť údaje</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Odstrániť všetky údaje</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Neplatná identifikácia diagnózy</value>
@@ -329,7 +312,7 @@ Ak chcete nastaviť Bluetooth, vyberte možnosť vždy povoliť.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifikácia terminálu</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Spôsob potvrdenia kontaktu</value>
