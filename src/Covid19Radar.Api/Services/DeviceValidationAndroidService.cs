@@ -169,11 +169,7 @@ namespace Covid19Radar.Api.Services
             {
                 SignedAttestation = signedAttestationStatement
             };
-
             var payloadJson = JsonConvert.SerializeObject(payload);
-
-            var client = new WebClient();
-            client.Headers[HttpRequestHeader.ContentType] = "application/json";
             var response = await ClientAndroid.PostAsync($"{UrlAndroid}{AndroidSecret}", new StringContent(payloadJson, Encoding.UTF8, "application/json"));
 
             return JsonConvert.DeserializeObject<AndroidResponse>(await response.Content.ReadAsStringAsync());
