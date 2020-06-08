@@ -619,4 +619,28 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>陽性情報の登録</value>
     <comment>陽性情報の登録</comment>
   </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>次へ</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>本アプリをスマートフォンに設定した人どうしの接触を記録します。</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</value>
+    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>このアプリでできること</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>このアプリでできること</value>
+    <comment>このアプリでできること</comment>
+  </data>
 </root>
