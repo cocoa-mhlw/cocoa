@@ -186,7 +186,7 @@
                 <Label
                     HorizontalOptions="Start"
                     Style="{StaticResource DefaultLabelSmallColor}"
-                    Text="ライセンス…"
+                    Text="{x:Static resources:AppResources.SettingsPageButton1}"
                     VerticalOptions="Center" />
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
