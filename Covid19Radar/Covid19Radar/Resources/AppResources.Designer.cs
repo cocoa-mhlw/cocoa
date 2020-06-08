@@ -955,11 +955,38 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Register に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageButton {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Please enter the Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageCodePlaceholder {
             get {
                 return ResourceManager.GetString("NotifyOtherPageCodePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enter the processing number issued by the HER-SYS system. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDescription1 {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Notifications will be sent to those who have a history of exposuring you with this application in the last 14 days. Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDescription2 {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDescription2", resourceCulture);
             }
         }
         
@@ -1032,6 +1059,24 @@ namespace Covid19Radar.Resources {
         internal static string NotifyOtherPageDialogSubmittedText {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogSubmittedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   How to get the processing number に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageLabel {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Registration of positive information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageTitle {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageTitle", resourceCulture);
             }
         }
         
