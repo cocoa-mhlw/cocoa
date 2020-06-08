@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Skupna raba aplikacije</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Skupna raba</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Številka različice tega programa</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Brezžična komunikacija kratkega dosega</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Pošiljanje in prejemanje</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Zapri obvestilo o stiku</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Obvestila o aplikaciji v času tesnega stika</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Izbriši podatke</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Brisanje vseh podatkov</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Neveljaven ID za diagnostiko</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifikacija terminala</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Način potrditve stika</value>

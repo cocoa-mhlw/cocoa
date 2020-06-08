@@ -231,6 +231,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ixxerja l-App</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Ixxerja</value>
@@ -262,24 +263,6 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Numru tal-ver żjoni ta ' din l-applikazzjoni</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Komunikazzjoni mingħajr fili fuq medda qasira</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Tibgħat u tirċievi</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Notifika ta ' kuntatt mill-qrib</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Notifiki ta ' applikazzjoni fil-ħin ta ' kuntatt mill-qrib</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Tħassar data</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Ħassar id-data kollha</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ID ta ' dijanjożi invalida</value>
@@ -329,7 +312,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identifikazzjoni tat-terminal</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Metodu ta ' konferma ta ' kuntatt</value>
