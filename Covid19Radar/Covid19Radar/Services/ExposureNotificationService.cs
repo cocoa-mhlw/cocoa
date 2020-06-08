@@ -12,6 +12,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.ExposureNotifications;
+using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
@@ -24,7 +25,6 @@ namespace Covid19Radar.Services
         public Status ExposureNotificationStatus { get; set; }
 
         private MinutesTimer _downloadTimer;
-
         private UserDataModel userData;
 
         public ExposureNotificationService(INavigationService navigationService, UserDataService userDataService, HttpDataService httpDataService)
@@ -34,23 +34,64 @@ namespace Covid19Radar.Services
             this.userDataService = userDataService;
             userData = userDataService.Get();
             userDataService.UserDataChanged += OnUserDataChanged;
-            StartTimer();
+
+            //            StartTimer();
+        }
+        /*
+                private void StartTimer()
+                {
+                    var test = 3600;//userData.GetJumpHashTimeDifference();
+                    _downloadTimer = new MinutesTimer(test);
+                    _downloadTimer.Start();
+                    _downloadTimer.TimeOutEvent += OnTimerInvoked;
+                }
+
+                private async void OnTimerInvoked(EventArgs e)
+                {
+                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+                    System.Diagnostics.Debug.WriteLine("TEST TIMER FETCH");
+                    await FetchExposureKeyAsync();
+                }
+        */
+
+        public async void UpdateConfigration()
+        {
+            string configString = await httpDataService.GetExposureNotificationConfigration();
+            if (configString == null)
+            {
+                return;
+            }
+
+            Application.Current.Properties["ExposureNotificationConfigration"] = Utils.SerializeToJson(configString);
+            await Application.Current.SavePropertiesAsync();
         }
 
-        private void StartTimer()
+        public Configuration GetConfigration()
         {
-            var test = 5;//userData.GetJumpHashTimeDifference();
-            _downloadTimer = new MinutesTimer(test);
-            _downloadTimer.Start();
-            _downloadTimer.TimeOutEvent += OnTimerInvoked;
+            if (Application.Current.Properties.ContainsKey("ExposureNotificationConfigration"))
+            {
+                return Utils.DeserializeFromJson<Configuration>(Application.Current.Properties["ExposureNotificationConfigration"].ToString());
+            }
+            else
+            {
+                // Return Default
+                return new Configuration
+                {
+                    MinimumRiskScore = 1,
+                    AttenuationWeight = 50,
+                    TransmissionWeight = 50,
+                    DurationWeight = 50,
+                    DaysSinceLastExposureWeight = 50,
+                    TransmissionRiskScores = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                    AttenuationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                    DurationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                    DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                    DurationAtAttenuationThresholds = new[] { 50, 70 }
+                };
+            }
         }
 
-        private async void OnTimerInvoked(EventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-            System.Diagnostics.Debug.WriteLine("TEST TIMER FETCH");
-            await FetchExposureKeyAsync();
-        }
+
 
         private async void OnUserDataChanged(object sender, UserDataModel userData)
         {

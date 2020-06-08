@@ -60,19 +60,6 @@ namespace Covid19Radar.Model
             return JumpHash.JumpConsistentHash(JumpConsistentSeed, AppConstants.NumberOfGroup);
         }
 
-        public Configuration Configuration { get; set; } = new Configuration {
-            MinimumRiskScore = 1,
-            AttenuationWeight = 50,
-            TransmissionWeight = 50,
-            DurationWeight = 50,
-            DaysSinceLastExposureWeight = 50,
-            TransmissionRiskScores = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-            AttenuationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-            DurationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-            DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-            DurationAtAttenuationThresholds = new[] { 50, 70 }
-        };
-
         public bool IsOptined { get; set; } = false;
 
         public bool IsExposureNotificationEnabled { get; set; } = false;
