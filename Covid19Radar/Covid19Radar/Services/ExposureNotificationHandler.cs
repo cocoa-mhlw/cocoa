@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Newtonsoft.Json;
 using Plugin.LocalNotification;
@@ -30,6 +31,8 @@ namespace Covid19Radar.Services
 
             userData = this.userDataService.Get();
 
+            configuration = userData.Configuration;
+            /*
             configuration = new Configuration
             {
                 MinimumRiskScore = 1,
@@ -43,7 +46,8 @@ namespace Covid19Radar.Services
                 DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
                 DurationAtAttenuationThresholds = new[] { 50, 70 }
             };
-
+            */
+            Console.WriteLine(Utils.SerializeToJson(configuration));
         }
 
         // this string should be localized
@@ -136,7 +140,6 @@ namespace Covid19Radar.Services
             catch (Exception ex)
             {
                 // any expections, bail out and wait for the next time
-
                 // TODO: log the error on some server!
                 Console.WriteLine(ex);
             }
