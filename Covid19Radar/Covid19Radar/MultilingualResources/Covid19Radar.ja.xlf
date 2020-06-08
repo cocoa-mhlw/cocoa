@@ -758,6 +758,31 @@ support of "new lifestyle".</source>
           <target state="translated">通知をご利用いただくために</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageButton" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="translated">登録する</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録する</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription1" translate="yes" xml:space="preserve">
+          <source>Enter the processing number issued by the HER-SYS system.</source>
+          <target state="translated">新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
+          <source>Notifications will be sent to those who have a history of exposuring you with this application in the last 14 days. Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified.</source>
+          <target state="translated">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
+          <source>How to get the processing number</source>
+          <target state="translated">処理番号の取得方法</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号の取得方法</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageTitle" translate="yes" xml:space="preserve">
+          <source>Registration of positive information</source>
+          <target state="translated">陽性情報の登録</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
+        </trans-unit>
       </group>
     </body>
   </file>
