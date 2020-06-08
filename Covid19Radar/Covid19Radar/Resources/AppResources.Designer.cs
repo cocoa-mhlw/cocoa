@@ -1396,6 +1396,51 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   To use notifications に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage5Description1 {
+            get {
+                return ResourceManager.GetString("TutorialPage5Description1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please enable push notifications in this application in order to use contact notifications in this application. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage5Description2 {
+            get {
+                return ResourceManager.GetString("TutorialPage5Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To enable に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage5Description3 {
+            get {
+                return ResourceManager.GetString("TutorialPage5Description3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Set later に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage5Description4 {
+            get {
+                return ResourceManager.GetString("TutorialPage5Description4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To use notifications に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage5Title {
+            get {
+                return ResourceManager.GetString("TutorialPage5Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   To home screen に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage6ButtonText1 {
