@@ -653,6 +653,201 @@ support of "new lifestyle".</source>
           <target state="translated">過去14日間の接触</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
+        <trans-unit id="InqueryPageDescription1" translate="yes" xml:space="preserve">
+          <source>9:00 to 17:30 (excluding Saturdays, Sundays, holidays, year-end and New Year holidays)</source>
+          <target state="translated">9:00～17:30（土・日・祝日・年末年始を除く）</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
+          <source>New Coronavirus Infection Control Site</source>
+          <target state="translated">新型コロナウィルス感染症対策サイト</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
+          <source>Inquiries about this application</source>
+          <target state="translated">本アプリに関するお問い合わせ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリに関するお問い合わせ</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
+          <source>In use</source>
+          <target state="translated">使用中</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
+          <source>Confirm contact with positives (14 days)</source>
+          <target state="translated">陽性者との接触を確認する(14日間)</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
+          <source>If a new coronavirus is diagnosed positive</source>
+          <target state="translated">新型コロナウィルス陽性と診断されたら</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス陽性と診断されたら</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
+          <source>Registration of positive information</source>
+          <target state="translated">陽性情報の登録</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">
+          <source>Tell the people around you about the app</source>
+          <target state="translated">アプリを周りの人に知らせる</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
+        </trans-unit>
+        <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <target state="translated">ホーム</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
+        </trans-unit>
+        <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
+          <source>Terms of service</source>
+          <target state="translated">利用規約</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
+          <source>About Privacy</source>
+          <target state="translated">プライバシーについて</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description2" translate="yes" xml:space="preserve">
+          <source>Personal information such as name and phone number, and GPS location information such as GPS will not be used and will not be recorded.</source>
+          <target state="translated">氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description3" translate="yes" xml:space="preserve">
+          <source>Contact records are encrypted, recorded only in your smartphone and are automatically deleted after 14 days. Government agencies and third parties do not use encrypted information to keep track of contact history.</source>
+          <target state="translated">接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description4" translate="yes" xml:space="preserve">
+          <source>You can stop recording contact at any time. Please disable the settings in the app or delete the app.</source>
+          <target state="translated">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description5" translate="yes" xml:space="preserve">
+          <source>To Terms of Use</source>
+          <target state="translated">利用規約へ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約へ</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Title" translate="yes" xml:space="preserve">
+          <source>About Privacy</source>
+          <target state="translated">プライバシーについて</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description1" translate="yes" xml:space="preserve">
+          <source>To use notifications</source>
+          <target state="translated">通知をご利用いただくために</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description2" translate="yes" xml:space="preserve">
+          <source>Please enable push notifications in this application in order to use contact notifications in this application.</source>
+          <target state="translated">本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description3" translate="yes" xml:space="preserve">
+          <source>To enable</source>
+          <target state="translated">有効にする</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description4" translate="yes" xml:space="preserve">
+          <source>Set later</source>
+          <target state="translated">あとで設定する</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Title" translate="yes" xml:space="preserve">
+          <source>To use notifications</source>
+          <target state="translated">通知をご利用いただくために</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageButton" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="translated">登録する</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録する</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription1" translate="yes" xml:space="preserve">
+          <source>Enter the processing number issued by the HER-SYS system.</source>
+          <target state="translated">新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
+          <source>Notifications will be sent to those who have a history of exposuring you with this application in the last 14 days. Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified.</source>
+          <target state="translated">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
+          <source>How to get the processing number</source>
+          <target state="translated">処理番号の取得方法</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号の取得方法</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageTitle" translate="yes" xml:space="preserve">
+          <source>Registration of positive information</source>
+          <target state="translated">陽性情報の登録</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Button" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="translated">次へ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">次へ</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Description1" translate="yes" xml:space="preserve">
+          <source>Records the exposure between people who set this application on a smartphone.</source>
+          <target state="translated">本アプリをスマートフォンに設定した人どうしの接触を記録します。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリをスマートフォンに設定した人どうしの接触を記録します。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Description2" translate="yes" xml:space="preserve">
+          <source>If you are positive for the COVID-19, you can anonymously register in this application.</source>
+          <target state="translated">新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Description3" translate="yes" xml:space="preserve">
+          <source>If any of your recent exposures have been positively registered, we will notify you and notify you of the appropriate action.</source>
+          <target state="translated">最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Title1" translate="yes" xml:space="preserve">
+          <source>What you can do with this app</source>
+          <target state="translated">このアプリでできること</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Title2" translate="yes" xml:space="preserve">
+          <source>What you can do with this app</source>
+          <target state="translated">このアプリでできること</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Button1" translate="yes" xml:space="preserve">
+          <source>To enable</source>
+          <target state="translated">有効にする</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Button2" translate="yes" xml:space="preserve">
+          <source>Set later</source>
+          <target state="translated">あとで設定する</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
+          <source>Please enable Bluetooth on your smartphone in order to use exposure detection with this application.</source>
+          <target state="translated">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Label" translate="yes" xml:space="preserve">
+          <source>For more technical details</source>
+          <target state="translated">技術的な詳細について</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">技術的な詳細について</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Title1" translate="yes" xml:space="preserve">
+          <source>To use exposure detection</source>
+          <target state="translated">接触検知をご利用いただくために</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Title2" translate="yes" xml:space="preserve">
+          <source>To use exposure detection</source>
+          <target state="translated">接触検知をご利用いただくために</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="MenuPageTitle" translate="yes" xml:space="preserve">
+          <source>Menu</source>
+          <target state="translated">メニュー</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">メニュー</note>
+        </trans-unit>
       </group>
     </body>
   </file>
