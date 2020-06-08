@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>แชร์แอพ</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>แชร์</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>หมายเลขรุ่นของโปรแกรมประยุกต์นี้</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>การสื่อสารไร้สายระยะสั้น</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>ส่งและรับ</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>ปิดการแจ้งเตือนผู้ติดต่อ</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>การแจ้งเตือนแอปพลิเคชันในเวลาที่มีการติดต่อใกล้ชิด</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>ลบข้อมูล</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>ลบข้อมูลทั้งหมด</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>รหัสการวินิจฉัยไม่ถูกต้อง</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>รหัสเทอร์มินัล</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>วิธีการยืนยันผู้ติดต่อ</value>

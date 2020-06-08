@@ -231,6 +231,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Compartir l'aplicació</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Comparteix</value>
@@ -262,24 +263,6 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Número de versió d'aquesta aplicació</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Comunicació sense fils de curt abast</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Enviar i rebre</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Tanca la notificació de contacte</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Notificacions de l'aplicació en el moment del contacte estret</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Suprimeix les dades</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Suprimir totes les dades</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ID de diagnòstic no vàlid</value>
@@ -329,7 +312,7 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identificació terminal</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Mètode de confirmació de contacte</value>

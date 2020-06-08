@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>अॅप शेअर करा</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>सामायिक करा</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>या अनुप्रयोगाची आवृत्ती संख्या</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>अल्प पल्ल्याचे वायरलेस संवाद</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>पाठवा आणि प्राप्त करा</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>संपर्क सूचना बंद करा</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>जवळच्या संपर्काच्या वेळी अनुप्रयोग सूचना</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>डेटा हटवा</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>सर्व डेटा नष्ट करा</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>अवैध निदान ओळखपत्र</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>टर्मिनल ओळख</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>संपर्क पुष्टी पद्धत</value>
