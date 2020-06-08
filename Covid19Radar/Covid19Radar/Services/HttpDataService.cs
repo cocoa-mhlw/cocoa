@@ -83,19 +83,6 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task<string> GetExposureNotificationConfigration()
-        {
-            string container = AppSettings.Instance.BlobStorageContainerName;
-            string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
-            var result = await GetCdnAsync(url);
-            if (result != null)
-            {
-                return result;
-            }
-            return null;
-
-        }
-
         public async Task<TemporaryExposureKeysResult> GetTemporaryExposureKeys(string region, long since, CancellationToken cancellationToken)
         {
             string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys/{region}?since={since}";

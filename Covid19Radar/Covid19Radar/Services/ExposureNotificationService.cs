@@ -50,45 +50,6 @@ namespace Covid19Radar.Services
             await FetchExposureKeyAsync();
         }
 
-        public async void UpdateConfigration()
-        {
-            string configString = await httpDataService.GetExposureNotificationConfigration();
-            if (configString == null)
-            {
-                return;
-            }
-
-            Application.Current.Properties["ExposureNotificationConfigration"] = Utils.SerializeToJson(configString);
-            await Application.Current.SavePropertiesAsync();
-        }
-
-        public Configuration GetConfigration()
-        {
-            if (Application.Current.Properties.ContainsKey("ExposureNotificationConfigration"))
-            {
-                return Utils.DeserializeFromJson<Configuration>(Application.Current.Properties["ExposureNotificationConfigration"].ToString());
-            }
-            else
-            {
-                // Return Default
-                return new Configuration
-                {
-                    MinimumRiskScore = 1,
-                    AttenuationWeight = 50,
-                    TransmissionWeight = 50,
-                    DurationWeight = 50,
-                    DaysSinceLastExposureWeight = 50,
-                    TransmissionRiskScores = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                    AttenuationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                    DurationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                    DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                    DurationAtAttenuationThresholds = new[] { 50, 70 }
-                };
-            }
-        }
-
-
-
         private async void OnUserDataChanged(object sender, UserDataModel userData)
         {
             Console.WriteLine("User Data has Changed!!!");
