@@ -53,7 +53,8 @@ namespace Covid19Radar
         {
             InitializeComponent();
 
-            // Exposure Notification
+            // Get Exposure Notification Config
+            await GetExposureNotificationConfig();
 
 #if DEBUG
             // For debug mode, set the mock api provider to interact
@@ -70,9 +71,6 @@ namespace Covid19Radar
             Container.Resolve<ILogger>().Log("Started App Center");
 
             _ = InitializeBackgroundTasks();
-
-            ExposureNotificationService exposureNotificationService = Container.Resolve<ExposureNotificationService>();
-            exposureNotificationService.UpdateConfigration();
 
             INavigationResult result;
             // Check user data and skip tutorial
@@ -147,7 +145,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
             containerRegistry.RegisterForNavigation<DebugPage>();
 
-// tutorial
+            // tutorial
             containerRegistry.RegisterForNavigation<TutorialPage1>();
             containerRegistry.RegisterForNavigation<TutorialPage2>();
             containerRegistry.RegisterForNavigation<TutorialPage3>();
@@ -155,7 +153,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage4>();
             containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
-// Help
+            // Help
             containerRegistry.RegisterForNavigation<HelpMenuPage>();
             containerRegistry.RegisterForNavigation<HelpPage1>();
             containerRegistry.RegisterForNavigation<HelpPage2>();
@@ -189,7 +187,7 @@ namespace Covid19Radar
         async Task InitializeBackgroundTasks()
         {
             if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-            await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
+                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
 
         protected override void OnSleep()
@@ -204,5 +202,20 @@ namespace Covid19Radar
                 Container.Resolve<ILogger>().Report(e.Exception);
             };
         }
+
+        private async Task GetExposureNotificationConfig()
+        {
+            string container = AppSettings.Instance.BlobStorageContainerName;
+            string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
+            HttpClient httpClient = new HttpClient();
+            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
+            HttpResponseMessage result = await response;
+            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                Application.Current.Properties["ExposureNotificationConfigration"] = await result.Content.ReadAsStringAsync();
+                await Application.Current.SavePropertiesAsync();
+            }
+        }
+
     }
 }
