@@ -24,20 +24,14 @@
                 CornerRadius="10">
                 <StackLayout Spacing="0">
                     <ffimageloading:CachedImage Aspect="AspectFit" Source="InfoMark.png" />
-
                     <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
                     <Grid ColumnSpacing="10" RowSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.5*" />
-                            <ColumnDefinition Width="0.5*" />
-                        </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Label
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            HorizontalTextAlignment="End"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
                             Style="{StaticResource DefaultTitleLabel}">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -46,15 +40,6 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Button
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            AutomationId="OnClickExposures"
-                            Command="{prism:NavigateTo 'ExposuresPage'}"
-                            HorizontalOptions="StartAndExpand"
-                            Scale="0.8"
-                            Style="{StaticResource DefaultButton}"
-                            Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
                     </Grid>
 
                     <Label
@@ -81,6 +66,13 @@
                         Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
                 </StackLayout>
             </Frame>
+            <Grid Grid.Row="1">
+                <Button
+                    AutomationId="OnClickExposures"
+                    Command="{prism:NavigateTo 'ExposuresPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
+            </Grid>
         </StackLayout>
     </ScrollView>
 </ContentPage>

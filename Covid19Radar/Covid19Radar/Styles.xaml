@@ -24,7 +24,7 @@
         <Setter Property="VerticalOptions" Value="FillAndExpand" />
         <Setter Property="ColumnSpacing" Value="0" />
         <Setter Property="RowSpacing" Value="0" />
-        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="20,0,20,10" />
         <Setter Property="Padding" Value="0,0,0,0" />
     </Style>
 
@@ -105,7 +105,7 @@
     <Style x:Key="DefaultSubTitleLabel" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Center" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
-        <Setter Property="FontSize" Value="Subtitle" />
+        <Setter Property="FontSize" Value="{x:OnPlatform Android=18, iOS=20}" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
     </Style>
@@ -238,6 +238,7 @@
         <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="Padding" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="0,10,0,5" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
         <Setter Property="CornerRadius" Value="{x:OnPlatform Android=50, iOS=20}" />
         <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
