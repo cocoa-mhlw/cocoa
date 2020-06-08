@@ -17,6 +17,7 @@
             <ListView
                 ItemsSource="{Binding MenuItems}"
                 HasUnevenRows="True"
+                SeparatorVisibility="None"
                 SelectedItem="{Binding SelectedMenuItem}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
