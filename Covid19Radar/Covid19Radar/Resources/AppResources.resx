@@ -634,4 +634,28 @@ support of "new lifestyle".</value>
     <value>Inquiries about this application</value>
     <comment>本アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>In use</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>Confirm contact with positives (14 days)</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>If a new coronavirus is diagnosed positive</value>
+    <comment>新型コロナウィルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>Registration of positive information</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>Tell the people around you about the app</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Home</value>
+    <comment>ホーム</comment>
+  </data>
 </root>
