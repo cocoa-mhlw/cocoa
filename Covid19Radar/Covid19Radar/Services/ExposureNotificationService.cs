@@ -24,7 +24,7 @@ namespace Covid19Radar.Services
         public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
-        private MinutesTimer _downloadTimer;
+        private SecondsTimer _downloadTimer;
         private UserDataModel userData;
 
         public ExposureNotificationService(INavigationService navigationService, UserDataService userDataService, HttpDataService httpDataService)
@@ -35,24 +35,20 @@ namespace Covid19Radar.Services
             userData = userDataService.Get();
             userDataService.UserDataChanged += OnUserDataChanged;
 
-            //            StartTimer();
+            StartTimer();
         }
-        /*
-                private void StartTimer()
-                {
-                    var test = 3600;//userData.GetJumpHashTimeDifference();
-                    _downloadTimer = new MinutesTimer(test);
-                    _downloadTimer.Start();
-                    _downloadTimer.TimeOutEvent += OnTimerInvoked;
-                }
+        private void StartTimer()
+        {
+            _downloadTimer = new SecondsTimer(userData.GetJumpHashTime());
+            _downloadTimer.Start();
+            _downloadTimer.TimeOutEvent += OnTimerInvoked;
+        }
 
-                private async void OnTimerInvoked(EventArgs e)
-                {
-                    System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-                    System.Diagnostics.Debug.WriteLine("TEST TIMER FETCH");
-                    await FetchExposureKeyAsync();
-                }
-        */
+        private async void OnTimerInvoked(EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+            await FetchExposureKeyAsync();
+        }
 
         public async void UpdateConfigration()
         {
