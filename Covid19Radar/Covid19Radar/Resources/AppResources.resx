@@ -706,6 +706,10 @@ support of "new lifestyle".</value>
     <value>To use notifications</value>
     <comment>通知をご利用いただくために</comment>
   </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Menu</value>
+    <comment>メニュー</comment>
+  </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
     <value>Register</value>
     <comment>登録する</comment>
