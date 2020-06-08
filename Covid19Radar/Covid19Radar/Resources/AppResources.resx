@@ -726,4 +726,28 @@ support of "new lifestyle".</value>
     <value>Registration of positive information</value>
     <comment>陽性情報の登録</comment>
   </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Next</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>Records the exposure between people who set this application on a smartphone.</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>If you are positive for the COVID-19, you can anonymously register in this application.</value>
+    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>If any of your recent exposures have been positively registered, we will notify you and notify you of the appropriate action.</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>What you can do with this app</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>What you can do with this app</value>
+    <comment>このアプリでできること</comment>
+  </data>
 </root>
