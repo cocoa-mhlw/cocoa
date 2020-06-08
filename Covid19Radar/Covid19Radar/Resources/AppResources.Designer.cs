@@ -1369,6 +1369,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Next に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Button {
+            get {
+                return ResourceManager.GetString("TutorialPage1Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Records the exposure between people who set this application on a smartphone. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Description1 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Description1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you are positive for the COVID-19, you can anonymously register in this application. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Description2 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If any of your recent exposures have been positively registered, we will notify you and notify you of the appropriate action. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Description3 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Description3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   What you can do with this app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Title1 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Title1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   What you can do with this app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Title2 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Title2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   About Privacy に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage2Description1 {
