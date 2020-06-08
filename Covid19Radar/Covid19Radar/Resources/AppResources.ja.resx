@@ -527,4 +527,28 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>本アプリに関するお問い合わせ</value>
     <comment>本アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>使用中</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>陽性者との接触を確認する(14日間)</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>新型コロナウィルス陽性と診断されたら</value>
+    <comment>新型コロナウィルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>陽性情報の登録</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>アプリを周りの人に知らせる</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>ホーム</comment>
+  </data>
 </root>
