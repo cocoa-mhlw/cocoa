@@ -19,7 +19,7 @@
             BarTextColor="Black"
             Icon="ic_hamburger.png">
             <x:Arguments>
-                <ContentPage Title="メニュー" BackgroundColor="#FFFFFF">
+                <ContentPage Title="{x:Static resources:AppResources.MenuPageTitle}" BackgroundColor="#FFFFFF">
                     <ListView
                         ItemsSource="{Binding MenuItems}"
                         RowHeight="60"

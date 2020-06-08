@@ -917,6 +917,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Menu に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MenuPageTitle {
+            get {
+                return ResourceManager.GetString("MenuPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Tell the people around you about the app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageButtonText {
