@@ -7,7 +7,7 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="ホーム"
+    Title="{x:Static resources:AppResources.HomePageTitle1}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -34,7 +34,7 @@
                                 <Span Text="{Binding StartDate}" />
                                 <Span Text="から" />
                                 <Span Text="{Binding PastDate}" />
-                                <Span Text="使用中" />
+                                <Span Text="{x:Static resources:AppResources.HomePageDescription1}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -42,13 +42,13 @@
                         AutomationId="ButtonExposures"
                         Command="{Binding Path=OnClickExposures}"
                         Style="{StaticResource DefaultButton}"
-                        Text="陽性者との接触を確認する(14日間)" />
+                        Text="{x:Static resources:AppResources.HomePageDescription2}" />
 
                 </StackLayout>
             </Frame>
             <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="新型コロナウィルス陽性と診断されたら" />
+                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageDescription3}" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.2*" />
@@ -73,7 +73,7 @@
                     <Button
                         Command="{Binding Path=OnClickNotifyOther}"
                         Style="{StaticResource DefaultButton}"
-                        Text="陽性情報の登録" />
+                        Text="{x:Static resources:AppResources.HomePageDescription4}" />
                 </StackLayout>
             </Frame>
             <Frame Padding="10" CornerRadius="10">
@@ -102,7 +102,7 @@
                     <Button
                         Command="{Binding Path=OnClickShareApp}"
                         Style="{StaticResource DefaultButton}"
-                        Text="アプリを周りの人に知らせる" />
+                        Text="{x:Static resources:AppResources.HomePageDescription5}" />
                 </StackLayout>
             </Frame>
         </StackLayout>
