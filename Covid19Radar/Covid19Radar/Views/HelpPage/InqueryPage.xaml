@@ -7,7 +7,7 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="本アプリに関するお問い合わせ"
+    Title="{x:Static resources:AppResources.InqueryPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -31,7 +31,7 @@
                                     TextColor="{StaticResource Primary}"
                                     TextDecorations="Underline" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span Text="9:00～17:30（土・日・祝日・年末年始を除く）" />
+                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -46,7 +46,7 @@
                     <Label Style="{StaticResource DefaultLabelSmall}">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="新型コロナウィルス感染症対策サイト" />
+                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription2}" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
                                 <Span
                                     Text="https://corona.go.jp"
