@@ -51,8 +51,8 @@
                     <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageDescription3}" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.2*" />
-                            <ColumnDefinition Width="0.8*" />
+                            <ColumnDefinition Width="0.9*" />
+                            <ColumnDefinition Width="0.1*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
