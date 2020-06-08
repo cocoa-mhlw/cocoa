@@ -24,7 +24,7 @@
     <ScrollView>
         <StackLayout
             Padding="5"
-            BackgroundColor="#CCCCCC"
+            BackgroundColor="#EEEEEE"
             Spacing="5">
             <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
