@@ -35,7 +35,10 @@
                     </Label.FormattedText>
                 </Label>
 
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="Nocontact10.png" />
+                <ffimageloading:CachedImage
+                    Margin="0,10,0,0"
+                    Aspect="AspectFit"
+                    Source="Nocontact10.png" />
 
             </StackLayout>
             <Grid Grid.Row="1">
