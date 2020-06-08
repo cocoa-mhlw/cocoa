@@ -13,7 +13,7 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Padding="10" BackgroundColor="#cccccc">
+        <StackLayout Padding="2.5" BackgroundColor="#cccccc">
             <ListView
                 ItemsSource="{Binding MenuItems}"
                 HasUnevenRows="True"
