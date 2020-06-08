@@ -20,17 +20,14 @@ namespace Covid19Radar.Services
     {
         private readonly HttpDataService httpDataService;
         private readonly UserDataService userDataService;
-        private readonly ExposureNotificationService exposureNotificationService;
         private UserDataModel userData;
-        private readonly Configuration configuration;
+        private Configuration configuration;
 
         public ExposureNotificationHandler()
         {
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
             this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             userData = this.userDataService.Get();
-            this.exposureNotificationService = Xamarin.Forms.DependencyService.Resolve<ExposureNotificationService>();
-            configuration = exposureNotificationService.GetConfigration();
         }
 
         // this string should be localized
@@ -39,7 +36,31 @@ namespace Covid19Radar.Services
 
         // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
         public Task<Configuration> GetConfigurationAsync()
-            => Task.FromResult(configuration);
+        {
+            //=> Task.FromResult(configuration);
+            if (Application.Current.Properties.ContainsKey("ExposureNotificationConfigration"))
+            {
+                return Task.FromResult(Utils.DeserializeFromJson<Configuration>(Application.Current.Properties["ExposureNotificationConfigration"].ToString()));
+            }
+
+            configuration = new Configuration
+            {
+                MinimumRiskScore = 1,
+                AttenuationWeight = 50,
+                TransmissionWeight = 50,
+                DurationWeight = 50,
+                DaysSinceLastExposureWeight = 50,
+                TransmissionRiskScores = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                AttenuationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                DurationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                DurationAtAttenuationThresholds = new[] { 50, 70 }
+            };
+
+            return Task.FromResult(configuration);
+
+
+        }
 
         // this will be called when a potential exposure has been detected
         public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getExposureInfo)
@@ -133,7 +154,7 @@ namespace Covid19Radar.Services
                 var batchNumber = 0;
 
                 long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
-                TemporaryExposureKeysResult tekResult = await httpDataService.GetTemporaryExposureKeys(region , sinceEpochSeconds, cancellationToken);
+                TemporaryExposureKeysResult tekResult = await httpDataService.GetTemporaryExposureKeys(region, sinceEpochSeconds, cancellationToken);
                 Console.WriteLine("Fetch Exposure Key");
 
                 foreach (var key in tekResult.Keys)
