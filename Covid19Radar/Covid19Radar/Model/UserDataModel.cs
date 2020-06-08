@@ -55,9 +55,9 @@ namespace Covid19Radar.Model
             return UserUuid;
         }
 
-        public int GetJumpHashTimeDifference()
+        public int GetJumpHashTime()
         {
-            return JumpHash.JumpConsistentHash(JumpConsistentSeed, AppConstants.NumberOfGroup);
+            return JumpHash.JumpConsistentHash(JumpConsistentSeed, 86400);
         }
 
         public bool IsOptined { get; set; } = false;
