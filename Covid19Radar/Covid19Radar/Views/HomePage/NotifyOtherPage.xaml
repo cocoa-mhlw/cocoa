@@ -8,7 +8,7 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:system="clr-namespace:System;assembly=netstandard"
-    Title="陽性情報の登録"
+    Title="{x:Static resources:AppResources.NotifyOtherPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -20,11 +20,11 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <Label Style="{StaticResource DefaultLabel}" Text="新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageDescription1}" />
                 <Label
                     HorizontalOptions="Start"
                     Style="{StaticResource DefaultLabelColor}"
-                    Text="処理番号の取得方法" />
+                    Text="{x:Static resources:AppResources.NotifyOtherPageLabel}" />
                 <!--
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding OnClickLicenseAgreement}" />
@@ -58,7 +58,7 @@
                         BackgroundColor="#FFF3DD"
                         CornerRadius="10">
                         <StackLayout Spacing="0">
-                            <Label Style="{StaticResource DefaultLabel}" Text="登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。" />
+                            <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageDescription2}" />
                         </StackLayout>
                     </Frame>
                 </StackLayout>
@@ -69,7 +69,7 @@
                     Command="{Binding Path=OnClickRegister}"
                     IsEnabled="{Binding IsEnabled}"
                     Style="{StaticResource DefaultButton}"
-                    Text="登録する" />
+                    Text="{x:Static resources:AppResources.NotifyOtherPageButton}" />
             </Grid>
         </Grid>
     </ScrollView>
