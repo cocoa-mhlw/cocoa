@@ -13,10 +13,10 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Padding="10" BackgroundColor="#cccccc">
+        <StackLayout Padding="10" BackgroundColor="#EEEEEE">
             <ListView
                 ItemsSource="{Binding MenuItems}"
-                RowHeight="80"
+                RowHeight="90"
                 SelectedItem="{Binding SelectedMenuItem}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
