@@ -30,7 +30,6 @@ namespace Covid19Radar.Services
             this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
 
             userData = this.userDataService.Get();
-
             configuration = userData.Configuration;
             /*
             configuration = new Configuration
@@ -47,7 +46,6 @@ namespace Covid19Radar.Services
                 DurationAtAttenuationThresholds = new[] { 50, 70 }
             };
             */
-            Console.WriteLine(Utils.SerializeToJson(configuration));
         }
 
         // this string should be localized

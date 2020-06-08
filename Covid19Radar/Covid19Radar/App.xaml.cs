@@ -77,6 +77,9 @@ namespace Covid19Radar
 
             if (userDataService.IsExistUserData)
             {
+                // EN Config update
+                await userDataService.UpdateExposureNotificationConfigAsync();
+
                 var userData = userDataService.Get();
                 if (userData.IsOptined)
                 {
