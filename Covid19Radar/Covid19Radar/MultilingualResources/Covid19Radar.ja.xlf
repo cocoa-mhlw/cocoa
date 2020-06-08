@@ -288,7 +288,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
-          <target state="translated">アプリの共有</target>
+          <target state="translated">本アプリを広めましょう</target>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -847,6 +847,11 @@ support of "new lifestyle".</source>
           <source>Menu</source>
           <target state="translated">メニュー</target>
           <note from="MultilingualBuild" annotates="source" priority="2">メニュー</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageButton1" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <target state="new">License</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス…</note>
         </trans-unit>
       </group>
     </body>
