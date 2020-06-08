@@ -750,4 +750,28 @@ support of "new lifestyle".</value>
     <value>What you can do with this app</value>
     <comment>このアプリでできること</comment>
   </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>To enable</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>Set later</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>Please enable Bluetooth on your smartphone in order to use exposure detection with this application.</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>For more technical details</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>To use exposure detection</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>To use exposure detection</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
 </root>
