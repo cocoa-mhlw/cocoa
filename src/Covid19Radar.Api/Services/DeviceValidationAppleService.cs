@@ -128,7 +128,7 @@ namespace Covid19Radar.Api.Services
         {
             var headers = new Dictionary<string, object>
             {
-                { "alg", "ES256" },
+                //{ "alg", "ES256" },
                 { "kid", keyId }
             };
 
@@ -137,6 +137,9 @@ namespace Covid19Radar.Api.Services
                 { "iss", teamId },
                 { "iat", requestTime.ToUnixTimeSeconds() }
             };
+            var cngKey = CngKey.Import(Convert.FromBase64String(p8FileContents), CngKeyBlobFormat.Pkcs8PrivateBlob);
+            return Jose.JWT.Encode(payload, cngKey, Jose.JwsAlgorithm.ES256, headers);
+
 
             var secretKey = CleanP8Key(p8FileContents);
 
@@ -151,7 +154,6 @@ namespace Covid19Radar.Api.Services
                     payloadStr += $"\"{kvp.Key}\":\"{kvp.Value.ToString()}\",";
             }
             payloadStr = payloadStr.TrimEnd(',') + "}";
-
 
             // Load the key text
             var key = CngKey.Import(Convert.FromBase64String(secretKey), CngKeyBlobFormat.Pkcs8PrivateBlob);
