@@ -71,15 +71,15 @@ namespace Covid19Radar
 
             _ = InitializeBackgroundTasks();
 
+            ExposureNotificationService exposureNotificationService = Container.Resolve<ExposureNotificationService>();
+            exposureNotificationService.UpdateConfigration();
+
             INavigationResult result;
             // Check user data and skip tutorial
             UserDataService userDataService = Container.Resolve<UserDataService>();
 
             if (userDataService.IsExistUserData)
             {
-                // EN Config update
-                await userDataService.UpdateExposureNotificationConfigAsync();
-
                 var userData = userDataService.Get();
                 if (userData.IsOptined)
                 {
