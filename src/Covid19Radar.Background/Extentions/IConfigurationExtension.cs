@@ -8,6 +8,7 @@ namespace Covid19Radar.Background
         public static string CdnResourceGroupName(this IConfiguration config) => config["CdnResourceGroupName"];
         public static string CdnProfileName(this IConfiguration config) => config["CdnProfileName"];
         public static string CdnEndpointName(this IConfiguration config) => config["CdnEndpointName"];
+        public static string TekExportKeyUrl(this IConfiguration config) => config["TekExportKeyUrl"];
         public static string TekExportBlobStorage(this IConfiguration config) => config["TekExportBlobStorage"];
         public static string TekExportBlobStorageContainerPrefix(this IConfiguration config) => config["TekExportBlobStorageContainerPrefix"];
         public static string TekExportKeyVaultKeyUrl(this IConfiguration config) => config["TekExportKeyVaultKeyUrl"];
