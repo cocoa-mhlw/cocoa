@@ -23,7 +23,10 @@
                 <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.TutorialPage5Description1}" />
             </StackLayout>
             <StackLayout Grid.Row="1">
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="TutorialPage50.png" />
+                <ffimageloading:CachedImage
+                    Aspect="AspectFit"
+                    Scale="0.9"
+                    Source="TutorialPage50.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.TutorialPage5Description2}" />
             </StackLayout>
             <Grid Grid.Row="2">
