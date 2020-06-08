@@ -44,9 +44,28 @@ namespace Covid19Radar.Services
             {
                 return null;
             }
+            var configuration = await httpDataService.GetExposureNotificationConfigration();
+            if (configuration == null)
+            {
+                return null;
+            }
+            userData.Configuration = configuration;
             await SetAsync(userData);
             return userData;
         }
+
+        public async Task UpdateExposureNotificationConfigAsync()
+        {
+            var configuration = await httpDataService.GetExposureNotificationConfigration();
+            if (configuration == null)
+            {
+                return;
+            }
+            current.Configuration = configuration;
+            await SetAsync(current);
+            return;
+        }
+
 
         public UserDataModel Get()
         {
