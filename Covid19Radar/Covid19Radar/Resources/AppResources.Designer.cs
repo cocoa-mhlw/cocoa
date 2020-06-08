@@ -1126,6 +1126,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   License に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageButton1 {
+            get {
+                return ResourceManager.GetString("SettingsPageButton1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   All settings and data have been deleted. Please restart the application. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageDialogResetCompletedText {

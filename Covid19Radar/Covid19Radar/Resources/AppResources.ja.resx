@@ -210,6 +210,10 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>アプリの設定</value>
   </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>ライセンス…</value>
+    <comment>ライセンス…</comment>
+  </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>同意しない</value>
   </data>
