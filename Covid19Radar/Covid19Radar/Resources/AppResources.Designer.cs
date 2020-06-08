@@ -917,6 +917,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Menu に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MenuPageTitle {
+            get {
+                return ResourceManager.GetString("MenuPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Tell the people around you about the app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageButtonText {
@@ -955,11 +964,38 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Register に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageButton {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Please enter the Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageCodePlaceholder {
             get {
                 return ResourceManager.GetString("NotifyOtherPageCodePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enter the processing number issued by the HER-SYS system. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDescription1 {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Notifications will be sent to those who have a history of exposuring you with this application in the last 14 days. Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDescription2 {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDescription2", resourceCulture);
             }
         }
         
@@ -1032,6 +1068,24 @@ namespace Covid19Radar.Resources {
         internal static string NotifyOtherPageDialogSubmittedText {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogSubmittedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   How to get the processing number に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageLabel {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Registration of positive information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageTitle {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageTitle", resourceCulture);
             }
         }
         
@@ -1324,6 +1378,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Next に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Button {
+            get {
+                return ResourceManager.GetString("TutorialPage1Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Records the exposure between people who set this application on a smartphone. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Description1 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Description1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you are positive for the COVID-19, you can anonymously register in this application. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Description2 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Description2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If any of your recent exposures have been positively registered, we will notify you and notify you of the appropriate action. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Description3 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Description3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   What you can do with this app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Title1 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Title1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   What you can do with this app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage1Title2 {
+            get {
+                return ResourceManager.GetString("TutorialPage1Title2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   About Privacy に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage2Description1 {
@@ -1392,6 +1500,60 @@ namespace Covid19Radar.Resources {
         internal static string TutorialPage3Title {
             get {
                 return ResourceManager.GetString("TutorialPage3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To enable に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Button1 {
+            get {
+                return ResourceManager.GetString("TutorialPage4Button1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Set later に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Button2 {
+            get {
+                return ResourceManager.GetString("TutorialPage4Button2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please enable Bluetooth on your smartphone in order to use exposure detection with this application. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Description {
+            get {
+                return ResourceManager.GetString("TutorialPage4Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   For more technical details に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Label {
+            get {
+                return ResourceManager.GetString("TutorialPage4Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To use exposure detection に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Title1 {
+            get {
+                return ResourceManager.GetString("TutorialPage4Title1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   To use exposure detection に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TutorialPage4Title2 {
+            get {
+                return ResourceManager.GetString("TutorialPage4Title2", resourceCulture);
             }
         }
         
