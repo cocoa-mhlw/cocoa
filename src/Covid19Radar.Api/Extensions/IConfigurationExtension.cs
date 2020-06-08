@@ -9,6 +9,7 @@ namespace Covid19Radar.Api
         public static string TekExportBlobStorageContainerPrefix(this IConfiguration config) => config["TekExportBlobStorageContainerPrefix"];
         public static string[] SupportRegions(this IConfiguration config) => config["SupportRegions"].Split(',');
         public static string AndroidPackageName(this IConfiguration config) => config["AndroidPackageName"];
+        public static string AndroidSafetyNetSecret(this IConfiguration config) => config["AndroidSafetyNetSecret"];
         public static bool AndroidDeviceValidationEnabled(this IConfiguration config)
         {
             bool result;

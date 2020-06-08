@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>اشتراک گذاری برنامه</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>اشتراک‌گذاری</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>شماره نسخه این برنامه</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>ارتباط بی سیم کوتاه برد</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>ارسال و دریافت</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>بستن تماس با اعلان</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>اعلان های برنامه در زمان تماس نزدیک</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>حذف داده ها</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>حذف همه داده ها</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>شناسه تشخیص غیرمعتبر</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>شناسایی ترمینال</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>تماس با روش تایید</value>

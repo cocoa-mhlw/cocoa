@@ -29,7 +29,8 @@ namespace Covid19Radar.Api.DataAccess
         }
         public async Task<TemporaryExposureKeyExportModel> CreateAsync(TemporaryExposureKeyExportModel model)
         {
-            var pk = new PartitionKey(model.Region);
+            _logger.LogInformation($"start {nameof(CreateAsync)}");
+            var pk = new PartitionKey(model.PartitionKey);
             var response = await _db.TemporaryExposureKeyExport.CreateItemAsync(model, pk);
             return response.Resource;
         }

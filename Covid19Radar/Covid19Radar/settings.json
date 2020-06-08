@@ -1,7 +1,7 @@
 ﻿{
   "apiUrlBase": "https://exposurenotificationfunctions.azurewebsites.net/api/",
-  "blobStorageUrlBase": "https://exposurenotifications.blob.core.windows.net/",
   "supportedRegions": "440;441",
-  "blobStorageContainerNamePrefix": "region-",
-  "androidSafetyNetApiKey": "AIzaSyBEJ6CxooG3ZYtYtqW_6gAswRZr0GKbuJw"
+  "blobStorageContainerName": "c19r",
+  "androidSafetyNetApiKey": "***REMOVED***",
+  "cdnUrlBase": "***REMOVED***"
 }

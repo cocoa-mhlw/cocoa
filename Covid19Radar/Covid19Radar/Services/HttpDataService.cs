@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
+using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Services
 {
@@ -82,6 +83,19 @@ namespace Covid19Radar.Services
             }
         }
 
+        public async Task<Configuration> GetExposureNotificationConfigration()
+        {
+            string container = AppSettings.Instance.BlobStorageContainerName;
+            string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
+            var result = await GetCdnAsync(url);
+            if (result != null)
+            {
+                return Utils.DeserializeFromJson<Configuration>(result);
+            }
+            return null;
+
+        }
+
         public async Task<TemporaryExposureKeysResult> GetTemporaryExposureKeys(string region, long since, CancellationToken cancellationToken)
         {
             string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys/{region}?since={since}";
@@ -95,7 +109,7 @@ namespace Covid19Radar.Services
 
         public async Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
         {
-            return await GetStreamAsync(url,cancellationToken);
+            return await GetCdnStreamAsync(url,cancellationToken);
         }
 
 
@@ -138,9 +152,21 @@ namespace Covid19Radar.Services
             }
             return null;
         }
+        private async Task<string> GetCdnAsync(string url)
+        {
+            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
+            HttpResponseMessage result = await response;
+            await result.Content.ReadAsStringAsync();
+
+            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return await result.Content.ReadAsStringAsync();
+            }
+            return null;
+        }
 
 
-        private async Task<Stream> GetStreamAsync(string url,CancellationToken cancellationToken)
+        private async Task<Stream> GetCdnStreamAsync(string url,CancellationToken cancellationToken)
         {
             Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
             HttpResponseMessage result = await response;
