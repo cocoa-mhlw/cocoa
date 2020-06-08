@@ -231,6 +231,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Comhroinn an Feidhmchlár</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Comhroinn</value>
@@ -262,24 +263,6 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Uimhir leagan an fheidhmchláir seo</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Cumarsáid gan sreang gearr-raoin</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Seol agus faigh</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Dún An Fógra Teagmhála</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Fógraí iarratais tráth dlúththeagmhála</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Scrios sonraí</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Scrios na sonraí go léir</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Aitheantas Diagnóis neamhbhailí</value>
@@ -329,7 +312,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Sainaithint teirminéil</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Modh deimhnithe teagmhála</value>

@@ -231,6 +231,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Partajați aplicația</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Partajare</value>
@@ -262,24 +263,6 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Numărul de versiune al acestei aplicații</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Comunicare wireless cu rază scurtă de acțiune</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Trimiterea și primirea</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Închidere notificare persoană de contact</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Notificări de aplicații în momentul contactului apropiat</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Ștergere date</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Ștergerea tuturor datelor</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>ID diagnostic nevalid</value>
@@ -329,7 +312,7 @@ Selectați "Permiteți întotdeauna" să configurați Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Identificarea terminalului</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Metoda de confirmare a contactului</value>

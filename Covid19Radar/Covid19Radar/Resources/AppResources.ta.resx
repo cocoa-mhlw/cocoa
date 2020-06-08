@@ -231,6 +231,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>பயன்பாட்டை பகிரவும்</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>பகிர்</value>
@@ -262,24 +263,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>இந்த பயன்பாட்டின் பதிப்பு எண்</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>குறுகிய தூர கம்பியில்லா தகவல்தொடர்பு</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>அனுப்பு மற்றும் பெறு</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>தொடர்பு அறிவிப்பை மூடு</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>நெருங்கிய தொடர்பின் போது விண்ணப்ப அறிவிப்புகள்</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>தரவை நீக்கு</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>அனைத்து தரவையும் நீக்கு</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>செல்லுபடியாகாத நோயறிதல் ID</value>
@@ -329,7 +312,7 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>முனைய அடையாளம் காணுதல்</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>தொடர்பு உறுதிப்படுத்தல் முறை</value>

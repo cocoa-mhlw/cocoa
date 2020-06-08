@@ -231,6 +231,7 @@
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>分享應用程式</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>分享</value>
@@ -262,24 +263,6 @@
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>此應用程式的版本號</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>短距離無線通訊</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>傳送及接收</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>聯繫通知</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>密切接觸時的應用程式通知</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>刪除資料</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>移除所有資料</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>診斷識別碼無效</value>
@@ -329,7 +312,7 @@
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>端子識別</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>聯絡人確認方法</value>

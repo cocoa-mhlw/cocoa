@@ -289,6 +289,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Share the App</source>
           <target state="translated">本アプリを広めましょう</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリを広めましょう</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
@@ -330,30 +331,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
           <source>Version number of this application</source>
           <target state="translated">このアプリのバージョン番号</target>
-        </trans-unit>
-        <trans-unit id="ShortRangeWirelessCommunicationText" translate="yes" xml:space="preserve">
-          <source>Short-range wireless communication</source>
-          <target state="translated">近距離無線通信</target>
-        </trans-unit>
-        <trans-unit id="ShortRangeWirelessCommunicationDescription" translate="yes" xml:space="preserve">
-          <source>Send and receive</source>
-          <target state="translated">発信と受信をする</target>
-        </trans-unit>
-        <trans-unit id="CloseContactNotificationText" translate="yes" xml:space="preserve">
-          <source>Close Contact Notification</source>
-          <target state="translated">濃厚接触の通知</target>
-        </trans-unit>
-        <trans-unit id="CloseContactNotificationDescription" translate="yes" xml:space="preserve">
-          <source>Application notifications at the time of close contact</source>
-          <target state="translated">濃厚接触時のアプリ通知</target>
-        </trans-unit>
-        <trans-unit id="DeleteDataText" translate="yes" xml:space="preserve">
-          <source>Delete data</source>
-          <target state="translated">データの削除</target>
-        </trans-unit>
-        <trans-unit id="DeleteDataDescription" translate="yes" xml:space="preserve">
-          <source>Delete all data</source>
-          <target state="translated">すべてのデータを削除</target>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
           <source>Invalid Diagnosis ID</source>
@@ -850,8 +827,38 @@ support of "new lifestyle".</source>
         </trans-unit>
         <trans-unit id="SettingsPageButton1" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="new">License</target>
+          <target state="translated">ライセンス…</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ライセンス…</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageLabel1" translate="yes" xml:space="preserve">
+          <source>Short-range wireless communication</source>
+          <target state="translated">接触の検出</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の検出</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDescription1" translate="yes" xml:space="preserve">
+          <source>Send and receive</source>
+          <target state="translated">Bloothによる接触の検知</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Bloothによる接触の検知</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageLabel2" translate="yes" xml:space="preserve">
+          <source>Application notifications at the time of close contact</source>
+          <target state="translated">通知</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDescription2" translate="yes" xml:space="preserve">
+          <source>Close Contact Notification</source>
+          <target state="translated">陽性者との接触通知</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触通知</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageLabel3" translate="yes" xml:space="preserve">
+          <source>Delete data</source>
+          <target state="translated">アプリの使用中止</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの使用中止</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDescription3" translate="yes" xml:space="preserve">
+          <source>Delete all data</source>
+          <target state="translated">使用を中止して過去14日間の接触履歴を消去</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">使用を中止して過去14日間の接触履歴を消去</note>
         </trans-unit>
       </group>
     </body>
