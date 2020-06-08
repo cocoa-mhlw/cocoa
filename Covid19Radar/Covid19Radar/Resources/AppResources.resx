@@ -188,6 +188,10 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Settings</value>
   </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>License</value>
+    <comment>ライセンス…</comment>
+  </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
     <value>Update Information</value>
     <comment>Update Information Menu</comment>
