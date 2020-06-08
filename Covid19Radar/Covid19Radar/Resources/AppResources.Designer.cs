@@ -782,6 +782,33 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   9:00 to 17:30 (excluding Saturdays, Sundays, holidays, year-end and New Year holidays) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageDescription1 {
+            get {
+                return ResourceManager.GetString("InqueryPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   New Coronavirus Infection Control Site に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageDescription2 {
+            get {
+                return ResourceManager.GetString("InqueryPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inquiries about this application に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageTitle {
+            get {
+                return ResourceManager.GetString("InqueryPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Deleting に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LoadingTextDeleting {
