@@ -700,6 +700,51 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   In use に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageDescription1 {
+            get {
+                return ResourceManager.GetString("HomePageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Confirm contact with positives (14 days) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageDescription2 {
+            get {
+                return ResourceManager.GetString("HomePageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If a new coronavirus is diagnosed positive に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageDescription3 {
+            get {
+                return ResourceManager.GetString("HomePageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Registration of positive information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageDescription4 {
+            get {
+                return ResourceManager.GetString("HomePageDescription4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Tell the people around you about the app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageDescription5 {
+            get {
+                return ResourceManager.GetString("HomePageDescription5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Contact with positive testers in the last 14 days に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader1Title {
@@ -750,6 +795,15 @@ namespace Covid19Radar.Resources {
         internal static string HomePageTitle {
             get {
                 return ResourceManager.GetString("HomePageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Home に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageTitle1 {
+            get {
+                return ResourceManager.GetString("HomePageTitle1", resourceCulture);
             }
         }
         
