@@ -61,6 +61,7 @@ namespace Covid19Radar.Background.Services
             try
             {
                 Logger.LogInformation($"start {nameof(RunAsync)}");
+                var batchTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
                 var items = await TekRepository.GetNextAsync();
                 foreach (var kv in items.GroupBy(_ => new
                 {
@@ -79,6 +80,7 @@ namespace Covid19Radar.Background.Services
                             (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
                             region,
                             batchNum,
+                            batchTimestamp,
                             sorted.ToArray());
                     }
 
@@ -88,6 +90,10 @@ namespace Covid19Radar.Background.Services
                         await TekRepository.UpsertAsync(key);
                     }
                 }
+
+                // Write Export Files json
+                var models = await TekExportRepository.GetKeysAsync(0);
+                await BlobService.WriteFilesJsonAsync(models);
             }
             catch (Exception ex)
             {
@@ -111,6 +117,7 @@ namespace Covid19Radar.Background.Services
                                       ulong endTimestamp,
                                       string region,
                                       int batchNum,
+                                      long batchTimestamp,
                                       IEnumerable<TemporaryExposureKeyModel> keys)
         {
             Logger.LogInformation($"start {nameof(CreateAsync)}");
@@ -132,7 +139,7 @@ namespace Covid19Radar.Background.Services
                 exportModel.BatchSize = exportKeyModels.Length;
                 exportModel.StartTimestamp = startTimestamp;
                 exportModel.EndTimestamp = endTimestamp;
-                //exportModel.SignatureInfos = new SignatureInfo[] { signatureInfo };
+                exportModel.TimestampSecondsSinceEpoch = batchTimestamp;
                 exportModel = await TekExportRepository.CreateAsync(exportModel);
 
                 var bin = new TemporaryExposureKeyExport();
