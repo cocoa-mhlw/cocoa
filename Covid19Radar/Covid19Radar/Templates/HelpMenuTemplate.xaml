@@ -4,8 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <StackLayout BackgroundColor="#CCCCCC">
-        <Frame Padding="5" CornerRadius="10">
+    <StackLayout BackgroundColor="#CCCCCC" Padding="2.5">
+        <Frame Padding="10" CornerRadius="10">
             <StackLayout Spacing="5">
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>
