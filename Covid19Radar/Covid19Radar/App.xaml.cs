@@ -53,9 +53,6 @@ namespace Covid19Radar
         {
             InitializeComponent();
 
-            // Get Exposure Notification Config
-            await GetExposureNotificationConfig();
-
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
@@ -202,20 +199,5 @@ namespace Covid19Radar
                 Container.Resolve<ILogger>().Report(e.Exception);
             };
         }
-
-        private async Task GetExposureNotificationConfig()
-        {
-            string container = AppSettings.Instance.BlobStorageContainerName;
-            string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
-            HttpClient httpClient = new HttpClient();
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                Application.Current.Properties["ExposureNotificationConfigration"] = await result.Content.ReadAsStringAsync();
-                await Application.Current.SavePropertiesAsync();
-            }
-        }
-
     }
 }
