@@ -24,7 +24,7 @@
     <ScrollView>
         <StackLayout
             Padding="5"
-            BackgroundColor="#CCCCCC"
+            BackgroundColor="#EEEEEE"
             Spacing="5">
             <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
@@ -51,8 +51,8 @@
                     <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageDescription3}" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.9*" />
-                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="0.8*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
