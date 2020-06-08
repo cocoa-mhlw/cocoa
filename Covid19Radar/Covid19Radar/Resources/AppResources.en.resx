@@ -231,6 +231,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Share the App</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Share</value>
@@ -262,24 +263,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Version number of this application</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Short-range wireless communication</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Send and receive</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Close Contact Notification</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Application notifications at the time of close contact</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Delete data</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Delete all data</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Invalid Diagnosis ID</value>
@@ -329,7 +312,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal identification</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Contact confirmation method</value>

@@ -231,6 +231,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Rakenduse jagamine</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Anna ühiskasutusse</value>
@@ -262,24 +263,6 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Selle rakenduse versiooninumber</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Traadita side lühivalik</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Saada ja võta vastu</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Sule Kontaktteatis</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Rakenduse teatised tiheda kontakti ajal</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Kustuta andmed</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>Kustuta kõik andmed</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Diagnostika ID ei sobi</value>
@@ -329,7 +312,7 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminali ID</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Kontakti kinnitamise meetod</value>
