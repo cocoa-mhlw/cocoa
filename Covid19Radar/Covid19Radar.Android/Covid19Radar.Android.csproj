@@ -37,10 +37,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidKeyStore>false</AndroidKeyStore>
-    <AndroidSigningKeyStore>C:\Users\kahiro\.android\Covid19Radar.jks</AndroidSigningKeyStore>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\Covid19Radar\release.keystore</AndroidSigningKeyStore>
     <AndroidSigningStorePass>***REMOVED***</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>Covid19Radar</AndroidSigningKeyAlias>
+    <AndroidSigningKeyAlias>release</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>***REMOVED***</AndroidSigningKeyPass>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
@@ -66,9 +66,9 @@
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
-    <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\Covid19Radar\Covid19Radar.keystore</AndroidSigningKeyStore>
+    <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\release.keystore</AndroidSigningKeyStore>
     <AndroidSigningStorePass>***REMOVED***</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>Covid19Radar</AndroidSigningKeyAlias>
+    <AndroidSigningKeyAlias>release</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>***REMOVED***</AndroidSigningKeyPass>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidLinkSkip>
