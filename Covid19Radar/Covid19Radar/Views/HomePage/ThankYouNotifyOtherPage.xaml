@@ -30,7 +30,7 @@
                     Text="{x:Static resources:AppResources.ThankYouNotifyOtherPageLabel1}" />
 
                 <Frame
-                    Padding="0,0,0,0"
+                    Padding="10"
                     BackgroundColor="#FFF3DD"
                     CornerRadius="10">
                     <StackLayout Spacing="0">

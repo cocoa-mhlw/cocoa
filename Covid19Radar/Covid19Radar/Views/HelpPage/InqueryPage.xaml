@@ -14,7 +14,7 @@
     Visual="Material">
     <ScrollView>
         <StackLayout
-            Padding="0"
+            Padding="10"
             BackgroundColor="{StaticResource Background}"
             Spacing="0">
             <BoxView Style="{StaticResource DefaultLineStyle}" />
