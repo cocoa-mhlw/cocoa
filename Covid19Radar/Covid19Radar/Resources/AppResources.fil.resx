@@ -231,6 +231,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ibahagi ang app</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Ibahagi</value>
@@ -262,24 +263,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="VersionDescription" xml:space="preserve">
     <value>Numero ng bersiyon ng aplikasyong ito</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
-    <value>Maikling hanay ng wireless na komunikasyon</value>
-  </data>
-  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
-    <value>Magpadala at tumanggap</value>
-  </data>
-  <data name="CloseContactNotificationText" xml:space="preserve">
-    <value>Isara ang abiso ng kontak</value>
-  </data>
-  <data name="CloseContactNotificationDescription" xml:space="preserve">
-    <value>Mga notipikasyon ng aplikasyon sa oras ng pagtatapos ng kontak</value>
-  </data>
-  <data name="DeleteDataText" xml:space="preserve">
-    <value>Magtanggal ng datos</value>
-  </data>
-  <data name="DeleteDataDescription" xml:space="preserve">
-    <value>I-delete ang lahat ng data</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Imbalidong ID ng pagsusuri</value>
@@ -329,7 +312,7 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>Terminal identification</value>
-    <comment>端末の識別</comment>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Makipag-ugnayan sa confirmation paraan</value>
