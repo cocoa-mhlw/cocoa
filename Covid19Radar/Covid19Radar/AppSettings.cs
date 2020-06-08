@@ -24,19 +24,19 @@ namespace Covid19Radar
 			var j = JObject.Parse(json);
 
 			ApiUrlBase = j.Value<string>("apiUrlBase");
-			BlobStorageUrlBase = j.Value<string>("blobStorageUrlBase");
-			BlobStorageContainerNamePrefix = j.Value<string>("blobStorageContainerNamePrefix");
+			CdnUrlBase = j.Value<string>("cdnUrlBase");
+			BlobStorageContainerName = j.Value<string>("blobStorageContainerName");
 			SupportedRegions = j.Value<string>("supportedRegions").ToUpperInvariant().Split(';', ',', ':');
 			AndroidSafetyNetApiKey = j.Value<string>("androidSafetyNetApiKey");
 		}
 
 		public string ApiUrlBase { get; }
+		public string CdnUrlBase { get; }
 
-		public string BlobStorageUrlBase { get; }
 
 		public string[] SupportedRegions { get; }
 
-		public string BlobStorageContainerNamePrefix { get; }
+		public string BlobStorageContainerName { get; }
 
 		public string AndroidSafetyNetApiKey { get; }
 
