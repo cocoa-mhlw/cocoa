@@ -239,7 +239,8 @@
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="Margin" Value="0,10,0,5" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="WidthRequest" Value="{x:OnPlatform Android=350, iOS=350}" />
         <Setter Property="CornerRadius" Value="{x:OnPlatform Android=50, iOS=20}" />
         <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
         <Style.Triggers>
@@ -261,7 +262,8 @@
         <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="TextColor" Value="{StaticResource ButtonGrayedOut}" />
         <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="WidthRequest" Value="350" />
         <Setter Property="CornerRadius" Value="{x:OnPlatform Android=50, iOS=20}" />
         <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
     </Style>
