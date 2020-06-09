@@ -132,6 +132,9 @@
     <Compile Update="Views\ExceptionPage.xaml.cs">
       <DependentUpon>ExceptionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\HomePage\SubmitConsentPage.xaml.cs">
+      <DependentUpon>SubmitConsentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Tutorial\UnUsed\DescriptionPage4.xaml.cs">
       <DependentUpon>DescriptionPage4.xaml</DependentUpon>
     </Compile>
