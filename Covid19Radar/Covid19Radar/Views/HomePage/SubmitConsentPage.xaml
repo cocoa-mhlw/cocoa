@@ -7,7 +7,7 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="陽性登録への同意"
+    Title="{x:Static resources:AppResources.SubmitConsentPageTitle1}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -20,25 +20,25 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="陽性登録への同意" />
+                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageTitle2}" />
             </StackLayout>
             <StackLayout Grid.Row="1">
                 <ffimageloading:CachedImage
                     Aspect="AspectFit"
                     Scale="0.8"
                     Source="TutorialPage20.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。" />
-                <Label Style="{StaticResource DefaultLabel}" Text="あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。" />
-                <Label Style="{StaticResource DefaultLabel}" Text="管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。" />
-                <Label Style="{StaticResource DefaultLabel}" Text="処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。" />
-                <Label Style="{StaticResource DefaultLabel}" Text="14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription1}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription2}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription3}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription4}" />
+                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription5}" />
             </StackLayout>
             <Grid Grid.Row="2">
                 <Button
                     AutomationId="NextButton"
                     Command="{prism:NavigateTo 'NotifyOtherPage'}"
                     Style="{StaticResource DefaultButton}"
-                    Text="同意して陽性登録する" />
+                    Text="{x:Static resources:AppResources.SubmitConsentPageDescription6}" />
             </Grid>
         </Grid>
     </ScrollView>
