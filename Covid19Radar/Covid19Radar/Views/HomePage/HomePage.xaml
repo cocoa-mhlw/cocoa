@@ -71,7 +71,7 @@
                     </Grid>
 
                     <Button
-                        Command="{Binding Path=OnClickNotifyOther}"
+                        Command="{prism:NavigateTo 'SubmitConsent'}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription4}" />
                 </StackLayout>
