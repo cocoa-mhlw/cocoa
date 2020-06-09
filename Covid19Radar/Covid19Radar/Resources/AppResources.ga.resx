@@ -80,7 +80,7 @@
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
-    <comment>PrivacyPolicy</comment>
+    <comment>Policy</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -209,6 +209,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Socruithe</value>
+    <comment>アプリの設定</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Gan Aontú</value>
@@ -242,6 +243,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>athshocraigh</value>
+    <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Polasaí Príobháideachais</value>
@@ -257,12 +259,6 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Scriosadh gach socrú agus sonraí. Atosaigh an feidhmchlár, le do thoil.</value>
-  </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>Leagan</value>
-  </data>
-  <data name="VersionDescription" xml:space="preserve">
-    <value>Uimhir leagan an fheidhmchláir seo</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Aitheantas Diagnóis neamhbhailí</value>
@@ -302,9 +298,11 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Má tá tú dearfach leis an gCorona nua, le do thoil comhoibriú leis an gclárú dearfach chun na daoine timpeall ort a chosaint.</value>
+    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Tá an t-iarratas seo chomh héifeachtach sin go suiteálann go leor daoine é, mar sin roinn an t-iarratas le daoine timpeall ort.</value>
+    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Conas é a úsáid</value>
@@ -328,7 +326,7 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Nuair a ritheann tú an feidhmchlár seo, ginfidh gach fón cliste agus beidh cód teagmhála acu. Ina theannta sin, ní fhaigheann an feidhmchlár seo aon fhaisnéis a bhaineann le faisnéis phearsanta ar nós uimhir theileafóin agus faisnéis suímh.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Coinníollacha teagmhála taifeadta</value>
