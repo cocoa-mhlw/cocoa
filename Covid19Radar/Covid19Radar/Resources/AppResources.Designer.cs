@@ -1054,6 +1054,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Enter an 8-digit code に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageLabel2 {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageLabel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Register positive test result に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageTitle {

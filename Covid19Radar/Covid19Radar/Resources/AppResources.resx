@@ -798,4 +798,8 @@ support of "new lifestyle".</value>
     <value>~</value>
     <comment>から</comment>
   </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>Enter an 8-digit code</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
 </root>
