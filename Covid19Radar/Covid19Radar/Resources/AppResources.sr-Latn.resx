@@ -80,7 +80,7 @@
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
-    <comment>PrivacyPolicy</comment>
+    <comment>Policy</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -209,6 +209,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Postavke</value>
+    <comment>アプリの設定</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ne slažu se</value>
@@ -242,6 +243,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Poništi</value>
+    <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Smernice za privatnost</value>
@@ -257,12 +259,6 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Sve postavke i podaci su izbrisani. Ponovo pokrenite aplikaciju.</value>
-  </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>Verzija</value>
-  </data>
-  <data name="VersionDescription" xml:space="preserve">
-    <value>Broj verzije ove aplikacije</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Nevažeći ID dijagnostike</value>
@@ -302,9 +298,11 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ako ste pozitivni sa novom Corona, molimo vas da sarađujete sa pozitivnom registracijom kako biste zaštitili ljude oko sebe.</value>
+    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Ova aplikacija je toliko efikasna da ga mnogi ljudi instaliraju, tako da možete da podelite aplikaciju sa ljudima oko vas.</value>
+    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Kako se koristi</value>
@@ -328,7 +326,7 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Kada pokrenete ovu aplikaciju, svaki pametni telefon će generisati i imati kôd kontakta. Pored toga, ova aplikacija ne stiče nikakve informacije vezane za lične informacije kao što su broj telefona i informacije o lokaciji.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Zapisani uslovi za kontakt</value>
