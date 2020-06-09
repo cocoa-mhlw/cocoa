@@ -168,30 +168,46 @@ namespace Covid19Radar.Services
                 return (batchNumber, downloadedFiles);
             }
             Console.WriteLine("Fetch Exposure Key");
+
+            Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
+
             foreach (var tekItem in tekList)
             {
-                var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
+                long lastCreated = 0;
+                if (lastTekTimestamp.ContainsKey(region))
+                {
+                    lastCreated = lastTekTimestamp[region];
+                }
+                else
+                {
+                    lastTekTimestamp.Add(region, 0);
+                }
 
-                Console.WriteLine(tekItem.Url);
-                Console.WriteLine(tekItem.Region);
-                Console.WriteLine(tekItem.Created);
-                Console.WriteLine(tmpFile);
-                Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken);
-                var fileStream = File.Create(tmpFile);
-                try
+                if (tekItem.Created > lastCreated || lastCreated == 0)
                 {
-                    await responseStream.CopyToAsync(fileStream, cancellationToken);
-                    fileStream.Flush();
+                    var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
+                    Console.WriteLine(Utils.SerializeToJson(tekItem));
+                    Console.WriteLine(tmpFile);
+                    Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken);
+                    var fileStream = File.Create(tmpFile);
+                    try
+                    {
+                        await responseStream.CopyToAsync(fileStream, cancellationToken);
+                        fileStream.Flush();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.ToString());
+                    }
+                    lastTekTimestamp[region] = tekItem.Created;
+                    downloadedFiles.Add(tmpFile);
+                    batchNumber++;
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-                downloadedFiles.Add(tmpFile);
-                batchNumber++;
             }
             Console.WriteLine(batchNumber.ToString());
             Console.WriteLine(downloadedFiles.Count());
+            userData.LastProcessTekTimestamp = lastTekTimestamp;
+            await userDataService.SetAsync(userData);
             return (batchNumber, downloadedFiles);
         }
 
