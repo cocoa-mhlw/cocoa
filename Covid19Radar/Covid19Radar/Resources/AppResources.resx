@@ -362,7 +362,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Please help protect your family and friends by anonymously registering test results.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
-  </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ask your family and friends to help</value>
     <comment>本アプリを広めましょう</comment>
@@ -794,5 +793,9 @@ support of "new lifestyle".</value>
   <data name="TutorialPage4Title2" xml:space="preserve">
     <value>Turn on Bluetooth</value>
     <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>~</value>
+    <comment>から</comment>
   </data>
 </root>
