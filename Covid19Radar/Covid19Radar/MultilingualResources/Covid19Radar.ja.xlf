@@ -304,6 +304,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
           <source>Stop</source>
           <target state="translated">使用中止</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">使用中止</note>
         </trans-unit>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
@@ -383,11 +384,13 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Please help protect your family and friends by anonymously registering test results.</source>
-          <target state="translated">もし、新型コロナで陽性と診断された場合、あなたの周りの人を守るためにも、陽性登録へのご協力をお願いします。</target>
+          <target state="translated">周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>One more person using this app is one more step towards containing the spread of COVID-19.</source>
-          <target state="translated">本アプリケーションは多くの方がインストールするほどに効果を発揮するため、身の回りの方にアプリケーションを共有してください。</target>
+          <target state="translated">本アプリは多くの方にお使いいただくほど効果を発揮します。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリは多くの方にお使いいただくほど効果を発揮します。</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
           <source>How to use this app</source>
@@ -860,6 +863,16 @@ support of "new lifestyle".</source>
           <source>Stop using and delete encounter records</source>
           <target state="translated">使用を中止して過去14日間の接触履歴を消去</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用を中止して過去14日間の接触履歴を消去</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription0" translate="yes" xml:space="preserve">
+          <source>~</source>
+          <target state="translated">から</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">から</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageLabel2" translate="yes" xml:space="preserve">
+          <source>Enter an 8-digit code</source>
+          <target state="translated">8桁の処理番号を入力してください</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">8桁の処理番号を入力してください</note>
         </trans-unit>
       </group>
     </body>
