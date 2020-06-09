@@ -32,7 +32,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{Binding StartDate}" />
-                                <Span Text="から" />
+                                <Span Text="{x:Static resources:AppResources.HomePageDescription0}" />
                                 <Span Text="{Binding PastDate}" />
                                 <Span Text="{x:Static resources:AppResources.HomePageDescription1}" />
                             </FormattedString>
