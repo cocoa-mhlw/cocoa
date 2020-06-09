@@ -687,4 +687,12 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>使用を中止して過去14日間の接触履歴を消去</value>
     <comment>使用を中止して過去14日間の接触履歴を消去</comment>
   </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>から</value>
+    <comment>から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>8桁の処理番号を入力してください</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
 </root>
