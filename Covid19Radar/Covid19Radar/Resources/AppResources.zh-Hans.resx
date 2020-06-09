@@ -260,13 +260,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>所有设置和数据都已删除。请重新启动应用程序。</value>
   </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>版本</value>
-    <comment>バージョン</comment>
-  </data>
-  <data name="VersionDescription" xml:space="preserve">
-    <value>此应用程序的版本号</value>
-  </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>诊断 ID 无效</value>
   </data>

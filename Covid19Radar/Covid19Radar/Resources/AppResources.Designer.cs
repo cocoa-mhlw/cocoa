@@ -1297,6 +1297,78 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter &quot;management system&quot;). に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription1 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription2 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The management system will respond to the notification server as to whether the transaction number referred to was issued to you. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription3 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you reply that the transaction number was issued to you, other users&apos; terminals will be provided with the daily key recorded on your terminal. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription4 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription5 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Agree and register に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription6 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consent to positive registration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageTitle1 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageTitle1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consent to positive registration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageTitle2 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Terms of use に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TermsofservicePageTitle {
@@ -1680,15 +1752,6 @@ namespace Covid19Radar.Resources {
         internal static string UrlUpdate {
             get {
                 return ResourceManager.GetString("UrlUpdate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Version number of this application に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string VersionDescription {
-            get {
-                return ResourceManager.GetString("VersionDescription", resourceCulture);
             }
         }
         
