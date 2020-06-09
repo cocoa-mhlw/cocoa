@@ -260,13 +260,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>すべての設定とデータが削除されました。アプリケーションを再起動してください。</value>
   </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>バージョン</value>
-    <comment>バージョン</comment>
-  </data>
-  <data name="VersionDescription" xml:space="preserve">
-    <value>このアプリのバージョン番号</value>
-  </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>無効な処理番号</value>
   </data>
