@@ -68,6 +68,8 @@ namespace Covid19Radar.Model
 
         public bool IsPositived { get; set; } = false;
 
+        public Dictionary<string,long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
+
         public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
 
         public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
