@@ -47,8 +47,8 @@
                             <Entry
                                 CharacterSpacing="10"
                                 Keyboard="Numeric"
-                                MaxLength="10"
-                                Placeholder="10桁の処理番号"
+                                MaxLength="8"
+                                Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"
                                 Style="{StaticResource DefaultEntry}"
                                 Text="{Binding DiagnosisUid}" />
                         </Frame>
