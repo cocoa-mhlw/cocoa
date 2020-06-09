@@ -326,15 +326,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">すべての設定とデータが削除されました。アプリケーションを再起動してください。</target>
         </trans-unit>
-        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
-          <source>Version</source>
-          <target state="translated">バージョン</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
-        </trans-unit>
-        <trans-unit id="VersionDescription" translate="yes" xml:space="preserve">
-          <source>Version number of this application</source>
-          <target state="translated">このアプリのバージョン番号</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
           <source>Invalid Diagnosis ID</source>
           <target state="translated">無効な処理番号</target>
@@ -873,6 +864,51 @@ support of "new lifestyle".</source>
           <source>Enter an 8-digit code</source>
           <target state="translated">8桁の処理番号を入力してください</target>
           <note from="MultilingualBuild" annotates="source" priority="2">8桁の処理番号を入力してください</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
+          <source>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</source>
+          <target state="new">The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
+          <source>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</source>
+          <target state="new">When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
+          <source>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</source>
+          <target state="new">The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
+          <source>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</source>
+          <target state="new">If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
+          <source>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</source>
+          <target state="new">If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
+          <source>Agree and register</source>
+          <target state="new">Agree and register</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">同意して陽性登録する</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageTitle1" translate="yes" xml:space="preserve">
+          <source>Consent to positive registration</source>
+          <target state="new">Consent to positive registration</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageTitle2" translate="yes" xml:space="preserve">
+          <source>Consent to positive registration</source>
+          <target state="new">Consent to positive registration</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>Version</source>
+          <target state="new">Version</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
         </trans-unit>
       </group>
     </body>
