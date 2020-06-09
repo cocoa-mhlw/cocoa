@@ -15,11 +15,11 @@
     <ScrollView>
         <StackLayout Padding="10" BackgroundColor="#EEEEEE">
             <ListView
+                HasUnevenRows="True"
                 ItemsSource="{Binding MenuItems}"
                 RowHeight="90"
-                       HasUnevenRows="True"
-                SeparatorVisibility="None"
-                SelectedItem="{Binding SelectedMenuItem}">
+                SelectedItem="{Binding SelectedMenuItem}"
+                SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
