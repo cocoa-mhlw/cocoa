@@ -48,7 +48,7 @@ namespace Covid19Radar.Services
         private async void OnTimerInvoked(EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-            await FetchExposureKeyAsync();
+            //await FetchExposureKeyAsync();
         }
 
         public async Task GetExposureNotificationConfig()
