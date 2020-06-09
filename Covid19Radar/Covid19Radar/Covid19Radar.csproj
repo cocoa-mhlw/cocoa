@@ -203,5 +203,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MultilingualResources\" />
+    <Folder Include="Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Image\ic_hamburger.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
