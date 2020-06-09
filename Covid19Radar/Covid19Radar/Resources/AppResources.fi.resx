@@ -80,7 +80,7 @@
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
-    <comment>PrivacyPolicy</comment>
+    <comment>Policy</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -209,6 +209,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Asetukset</value>
+    <comment>アプリの設定</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ei samaa mieltä</value>
@@ -242,6 +243,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Nollaa</value>
+    <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>tietosuojakäytäntö</value>
@@ -257,12 +259,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Kaikki asetukset ja tiedot on poistettu. Käynnistä sovellus uudelleen.</value>
-  </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>Versio</value>
-  </data>
-  <data name="VersionDescription" xml:space="preserve">
-    <value>Tämän sovelluksen versionumero</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Virheellinen diagnoositunnus</value>
@@ -302,9 +298,11 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jos olet positiivinen uuden Corona, tee yhteistyötä positiivinen rekisteröinti suojella ihmisiä ympärilläsi.</value>
+    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Tämä sovellus on niin tehokas, että monet ihmiset asentavat sen, joten ole hyvä ja jaa sovellus ihmisten kanssa ympärilläsi.</value>
+    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Miten sitä käytetään</value>
@@ -328,7 +326,7 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Kun käytät tätä sovellusta, jokainen älypuhelin luo ja hänellä on yhteystietokoodi. Lisäksi tämä sovellus ei saa mitään henkilökohtaisiin tietoihin liittyviä tietoja, kuten puhelinnumeroa ja sijaintitietoja.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Tallennetut yhteydenotto-olosuhteet</value>
