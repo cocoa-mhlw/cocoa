@@ -54,16 +54,6 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        public Command OnClickHelp => new Command(async () =>
-        {
-            await NavigationService.NavigateAsync(nameof(HelpMenuPage), useModalNavigation: true);
-        });
-
-        public Command OnClickNotifyOther => new Command(async () =>
-        {
-            await NavigationService.NavigateAsync(nameof(NotifyOtherPage));
-        });
-
         public Command OnClickExposures => new Command(async () =>
         {
             var count = exposureNotificationService.GetExposureCount();
