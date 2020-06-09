@@ -396,9 +396,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Version</value>
     <comment>バージョン</comment>
   </data>
-  <data name="VersionDescription" xml:space="preserve">
-    <value>Version number of this application</value>
-  </data>
   <data name="SettingsPageLabel1" xml:space="preserve">
     <value>Encounter recording</value>
     <comment>接触の検出</comment>
