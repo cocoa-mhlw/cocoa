@@ -869,6 +869,11 @@ support of "new lifestyle".</source>
           <target state="translated">から</target>
           <note from="MultilingualBuild" annotates="source" priority="2">から</note>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageLabel2" translate="yes" xml:space="preserve">
+          <source>Enter an 8-digit code</source>
+          <target state="translated">8桁の処理番号を入力してください</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">8桁の処理番号を入力してください</note>
+        </trans-unit>
       </group>
     </body>
   </file>
