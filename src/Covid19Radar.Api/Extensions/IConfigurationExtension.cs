@@ -26,6 +26,10 @@ namespace Covid19Radar.Api
             if (bool.TryParse(config["iOSDeviceValidationEnabled"], out result)) return result;
             return false;
         }
-
+        public static string VerificationPayloadParameterName(this IConfiguration config) => config["VerificationPayloadParameterName"];
+        public static string VerificationPayloadApiSecret(this IConfiguration config) => config["VerificationPayloadApiSecret"];
+        public static string VerificationPayloadPfx(this IConfiguration config) => config["VerificationPayloadPfx"];
+        public static string VerificationPayloadUrl(this IConfiguration config) => config["VerificationPayloadUrl"];
     }
+    
 }
