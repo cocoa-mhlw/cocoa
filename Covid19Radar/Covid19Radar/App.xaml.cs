@@ -134,7 +134,6 @@ namespace Covid19Radar
 
             //            containerRegistry.RegisterForNavigation<ContributorsPage>();
             //            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
-
             //            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
 
             // Settings
@@ -164,6 +163,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotContactPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
+            containerRegistry.RegisterForNavigation<SubmitConsentPage>();
 
 
             // Services
