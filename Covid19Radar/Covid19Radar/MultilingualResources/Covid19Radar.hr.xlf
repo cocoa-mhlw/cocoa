@@ -536,7 +536,7 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</target>
         <trans-unit id="SettingsPageDescription1" translate="yes" xml:space="preserve">
           <source>Use of Bluetooth</source>
           <target state="new">Use of Bluetooth</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Bloothによる接触の検知</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Bluetoothによる接触の検知</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel2" translate="yes" xml:space="preserve">
           <source>Notifications</source>
