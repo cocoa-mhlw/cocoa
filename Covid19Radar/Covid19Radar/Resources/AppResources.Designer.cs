@@ -700,7 +700,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Registration of positive information に類似しているローカライズされた文字列を検索します。
+        ///   Register positive test result に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageDescription4 {
             get {
