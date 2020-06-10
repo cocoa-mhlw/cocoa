@@ -732,4 +732,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>過去14日間の接触一覧</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>以下の日に陽性者との接触が確認されました。</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
 </root>
