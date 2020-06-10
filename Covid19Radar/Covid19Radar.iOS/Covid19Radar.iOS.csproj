@@ -424,6 +424,7 @@
     <BundleResource Include="Resources\zh.lproj\TutorialPage60%401x.png" />
     <BundleResource Include="Resources\zh.lproj\TutorialPage60%402x.png" />
     <BundleResource Include="Resources\zh.lproj\TutorialPage60%403x.png" />
+    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
