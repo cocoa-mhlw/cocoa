@@ -28,25 +28,23 @@ namespace Covid19Radar.Background.Protobuf
         {
             byte[] descriptorData = global::System.Convert.FromBase64String(
                 string.Concat(
-                  "CipUZW1wb3JhcnlFeHBvc3VyZUtleUV4cG9ydEZpbGVGb3JtYXQucHJvdG8S",
-                  "D2dvb2dsZS5wcm90b2J1ZiLxAQoaVGVtcG9yYXJ5RXhwb3N1cmVLZXlFeHBv",
-                  "cnQSFwoPc3RhcnRfdGltZXN0YW1wGAEgASgGEhUKDWVuZF90aW1lc3RhbXAY",
-                  "AiABKAYSDgoGcmVnaW9uGAMgASgJEhEKCWJhdGNoX251bRgEIAEoBRISCgpi",
-                  "YXRjaF9zaXplGAUgASgFEjcKD3NpZ25hdHVyZV9pbmZvcxgGIAMoCzIeLmdv",
-                  "b2dsZS5wcm90b2J1Zi5TaWduYXR1cmVJbmZvEjMKBGtleXMYByADKAsyJS5n",
-                  "b29nbGUucHJvdG9idWYuVGVtcG9yYXJ5RXhwb3N1cmVLZXkimwEKDVNpZ25h",
-                  "dHVyZUluZm8SFQoNYXBwX2J1bmRsZV9pZBgBIAEoCRIXCg9hbmRyb2lkX3Bh",
-                  "Y2thZ2UYAiABKAkSIAoYdmVyaWZpY2F0aW9uX2tleV92ZXJzaW9uGAMgASgJ",
-                  "EhsKE3ZlcmlmaWNhdGlvbl9rZXlfaWQYBCABKAkSGwoTc2lnbmF0dXJlX2Fs",
-                  "Z29yaXRobRgFIAEoCSKNAQoUVGVtcG9yYXJ5RXhwb3N1cmVLZXkSEAoIa2V5",
-                  "X2RhdGEYASABKAwSHwoXdHJhbnNtaXNzaW9uX3Jpc2tfbGV2ZWwYAiABKAUS",
-                  "JQodcm9sbGluZ19zdGFydF9pbnRlcnZhbF9udW1iZXIYAyABKAUSGwoOcm9s",
-                  "bGluZ19wZXJpb2QYBCABKAU6AzE0NCJFChBURUtTaWduYXR1cmVMaXN0EjEK",
-                  "CnNpZ25hdHVyZXMYASADKAsyHS5nb29nbGUucHJvdG9idWYuVEVLU2lnbmF0",
-                  "dXJlIoABCgxURUtTaWduYXR1cmUSNgoOc2lnbmF0dXJlX2luZm8YASABKAsy",
-                  "Hi5nb29nbGUucHJvdG9idWYuU2lnbmF0dXJlSW5mbxIRCgliYXRjaF9udW0Y",
-                  "AiABKAUSEgoKYmF0Y2hfc2l6ZRgDIAEoBRIRCglzaWduYXR1cmUYBCABKAxC",
-                  "I6oCIENvdmlkMTlSYWRhci5CYWNrZ3JvdW5kLlByb3RvYnVm"));
+                  "CipUZW1wb3JhcnlFeHBvc3VyZUtleUV4cG9ydEZpbGVGb3JtYXQucHJvdG8i",
+                  "0QEKGlRlbXBvcmFyeUV4cG9zdXJlS2V5RXhwb3J0EhcKD3N0YXJ0X3RpbWVz",
+                  "dGFtcBgBIAEoBhIVCg1lbmRfdGltZXN0YW1wGAIgASgGEg4KBnJlZ2lvbhgD",
+                  "IAEoCRIRCgliYXRjaF9udW0YBCABKAUSEgoKYmF0Y2hfc2l6ZRgFIAEoBRIn",
+                  "Cg9zaWduYXR1cmVfaW5mb3MYBiADKAsyDi5TaWduYXR1cmVJbmZvEiMKBGtl",
+                  "eXMYByADKAsyFS5UZW1wb3JhcnlFeHBvc3VyZUtleSKbAQoNU2lnbmF0dXJl",
+                  "SW5mbxIVCg1hcHBfYnVuZGxlX2lkGAEgASgJEhcKD2FuZHJvaWRfcGFja2Fn",
+                  "ZRgCIAEoCRIgChh2ZXJpZmljYXRpb25fa2V5X3ZlcnNpb24YAyABKAkSGwoT",
+                  "dmVyaWZpY2F0aW9uX2tleV9pZBgEIAEoCRIbChNzaWduYXR1cmVfYWxnb3Jp",
+                  "dGhtGAUgASgJIo0BChRUZW1wb3JhcnlFeHBvc3VyZUtleRIQCghrZXlfZGF0",
+                  "YRgBIAEoDBIfChd0cmFuc21pc3Npb25fcmlza19sZXZlbBgCIAEoBRIlCh1y",
+                  "b2xsaW5nX3N0YXJ0X2ludGVydmFsX251bWJlchgDIAEoBRIbCg5yb2xsaW5n",
+                  "X3BlcmlvZBgEIAEoBToDMTQ0IjUKEFRFS1NpZ25hdHVyZUxpc3QSIQoKc2ln",
+                  "bmF0dXJlcxgBIAMoCzINLlRFS1NpZ25hdHVyZSJwCgxURUtTaWduYXR1cmUS",
+                  "JgoOc2lnbmF0dXJlX2luZm8YASABKAsyDi5TaWduYXR1cmVJbmZvEhEKCWJh",
+                  "dGNoX251bRgCIAEoBRISCgpiYXRjaF9zaXplGAMgASgFEhEKCXNpZ25hdHVy",
+                  "ZRgEIAEoDEIjqgIgQ292aWQxOVJhZGFyLkJhY2tncm91bmQuUHJvdG9idWY="));
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
                 new pbr::FileDescriptor[] { },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,7 +113,8 @@ namespace Covid19Radar.Background.Protobuf
 
         private ulong startTimestamp_;
         /// <summary>
-        /// Time window of keys in this batch based on arrival to server, in UTC seconds
+        /// Time window of keys in the file, based on arrival
+        /// at the server, in UTC seconds.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public ulong StartTimestamp
@@ -174,7 +173,7 @@ namespace Covid19Radar.Background.Protobuf
 
         private string region_;
         /// <summary>
-        /// Region for which these keys came from (e.g., country)
+        /// Region from which these keys came (for example, MCC).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Region
@@ -204,7 +203,8 @@ namespace Covid19Radar.Background.Protobuf
 
         private int batchNum_;
         /// <summary>
-        /// E.g., File 2 in batch size of 10. Ordinal, 1-based numbering.
+        /// Reserved for future use. Both batch_num and batch_size
+        /// must be set to a value of 1.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int BatchNum
@@ -263,7 +263,7 @@ namespace Covid19Radar.Background.Protobuf
             = pb::FieldCodec.ForMessage(50, global::Covid19Radar.Background.Protobuf.SignatureInfo.Parser);
         private readonly pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.SignatureInfo> signatureInfos_ = new pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.SignatureInfo>();
         /// <summary>
-        /// Information about associated signatures
+        /// Information about associated signatures.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.SignatureInfo> SignatureInfos
@@ -277,7 +277,7 @@ namespace Covid19Radar.Background.Protobuf
             = pb::FieldCodec.ForMessage(58, global::Covid19Radar.Background.Protobuf.TemporaryExposureKey.Parser);
         private readonly pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TemporaryExposureKey> keys_ = new pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TemporaryExposureKey>();
         /// <summary>
-        /// The TemporaryExposureKeys themselves
+        /// The temporary exposure keys themselves.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TemporaryExposureKey> Keys
@@ -539,7 +539,7 @@ namespace Covid19Radar.Background.Protobuf
 
         private string appBundleId_;
         /// <summary>
-        /// Apple App Store Application Bundle ID
+        /// App Store app bundle ID.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string AppBundleId
@@ -569,7 +569,7 @@ namespace Covid19Radar.Background.Protobuf
 
         private string androidPackage_;
         /// <summary>
-        /// Android App package name
+        /// Android app package name.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string AndroidPackage
@@ -599,7 +599,7 @@ namespace Covid19Radar.Background.Protobuf
 
         private string verificationKeyVersion_;
         /// <summary>
-        /// Key version for rollovers
+        /// Key version in case the EN server signing key is rotated.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string VerificationKeyVersion
@@ -629,8 +629,10 @@ namespace Covid19Radar.Background.Protobuf
 
         private string verificationKeyId_;
         /// <summary>
-        /// Additional identifying information
-        /// E.g., backend might serve app in different countries with different keys
+        /// Three-digit mobile country code (MCC) for validating the key file.
+        /// If a region has more than one MCC, the server can choose
+        /// which MCC to use. This value does not have to match the client's MCC, 
+        /// but must correspond to one of the supported MCCs for its region. 
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string VerificationKeyId
@@ -660,7 +662,8 @@ namespace Covid19Radar.Background.Protobuf
 
         private string signatureAlgorithm_;
         /// <summary>
-        /// E.g. ECDSA using a p-256 curve and SHA-256 as a hash function
+        /// All keys must be signed using the SHA-256 with ECDSA algorithm.
+        /// This field must contain the string "1.2.840.10045.4.3.2".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string SignatureAlgorithm
@@ -919,7 +922,7 @@ namespace Covid19Radar.Background.Protobuf
 
         private pb::ByteString keyData_;
         /// <summary>
-        /// Key of infected user
+        /// Temporary exposure key.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pb::ByteString KeyData
@@ -949,7 +952,7 @@ namespace Covid19Radar.Background.Protobuf
 
         private int transmissionRiskLevel_;
         /// <summary>
-        /// Varying risk associated with a key depending on diagnosis method
+        /// Varying risk associated with a key depending on the diagnosis method.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int TransmissionRiskLevel
@@ -980,7 +983,8 @@ namespace Covid19Radar.Background.Protobuf
 
         private int rollingStartIntervalNumber_;
         /// <summary>
-        /// The interval number since epoch for which a key starts
+        /// Number representing the beginning interval for temporary exposure
+        /// key validity (ENIntervalNumber).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int RollingStartIntervalNumber
@@ -1011,7 +1015,7 @@ namespace Covid19Radar.Background.Protobuf
 
         private int rollingPeriod_;
         /// <summary>
-        /// Increments of 10 minutes describing how long a key is valid
+        /// Number of intervals in a period.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int RollingPeriod
@@ -1245,6 +1249,9 @@ namespace Covid19Radar.Background.Protobuf
         private static readonly pb::FieldCodec<global::Covid19Radar.Background.Protobuf.TEKSignature> _repeated_signatures_codec
             = pb::FieldCodec.ForMessage(10, global::Covid19Radar.Background.Protobuf.TEKSignature.Parser);
         private readonly pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TEKSignature> signatures_ = new pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TEKSignature>();
+        /// <summary>
+        /// Information about associated signatures.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Covid19Radar.Background.Protobuf.TEKSignature> Signatures
         {
@@ -1377,7 +1384,7 @@ namespace Covid19Radar.Background.Protobuf
         public TEKSignature(TEKSignature other) : this()
         {
             _hasBits0 = other._hasBits0;
-            signatureInfo_ = other.HasSignatureInfo ? other.signatureInfo_.Clone() : null;
+            signatureInfo_ = other.signatureInfo_ != null ? other.signatureInfo_.Clone() : null;
             batchNum_ = other.batchNum_;
             batchSize_ = other.batchSize_;
             signature_ = other.signature_;
@@ -1394,7 +1401,8 @@ namespace Covid19Radar.Background.Protobuf
         public const int SignatureInfoFieldNumber = 1;
         private global::Covid19Radar.Background.Protobuf.SignatureInfo signatureInfo_;
         /// <summary>
-        /// Info about the signing key, version, algorithm, etc
+        /// Information to uniquely identify the public key associated 
+        /// with the EN server's signing key.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Covid19Radar.Background.Protobuf.SignatureInfo SignatureInfo
@@ -1405,18 +1413,6 @@ namespace Covid19Radar.Background.Protobuf
                 signatureInfo_ = value;
             }
         }
-        /// <summary>Gets whether the signature_info field is set</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool HasSignatureInfo
-        {
-            get { return signatureInfo_ != null; }
-        }
-        /// <summary>Clears the value of the signature_info field</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void ClearSignatureInfo()
-        {
-            signatureInfo_ = null;
-        }
 
         /// <summary>Field number for the "batch_num" field.</summary>
         public const int BatchNumFieldNumber = 2;
@@ -1424,8 +1420,8 @@ namespace Covid19Radar.Background.Protobuf
 
         private int batchNum_;
         /// <summary>
-        /// E.g., File 2 in batch size of 10. Ordinal, 1-based numbering.
-        /// E.g., Batch 2 of 10
+        /// Reserved for future use. Both batch_num and batch_size
+        /// must be set to a value of 1.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int BatchNum
@@ -1484,7 +1480,7 @@ namespace Covid19Radar.Background.Protobuf
 
         private pb::ByteString signature_;
         /// <summary>
-        /// Signature in X9.62 format (ASN.1 SEQUENCE of two INTEGER fields)
+        /// Signature in X9.62 format (ASN.1 SEQUENCE of two INTEGER fields).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pb::ByteString Signature
@@ -1536,7 +1532,7 @@ namespace Covid19Radar.Background.Protobuf
         public override int GetHashCode()
         {
             int hash = 1;
-            if (HasSignatureInfo) hash ^= SignatureInfo.GetHashCode();
+            if (signatureInfo_ != null) hash ^= SignatureInfo.GetHashCode();
             if (HasBatchNum) hash ^= BatchNum.GetHashCode();
             if (HasBatchSize) hash ^= BatchSize.GetHashCode();
             if (HasSignature) hash ^= Signature.GetHashCode();
@@ -1556,7 +1552,7 @@ namespace Covid19Radar.Background.Protobuf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output)
         {
-            if (HasSignatureInfo)
+            if (signatureInfo_ != null)
             {
                 output.WriteRawTag(10);
                 output.WriteMessage(SignatureInfo);
@@ -1586,7 +1582,7 @@ namespace Covid19Radar.Background.Protobuf
         public int CalculateSize()
         {
             int size = 0;
-            if (HasSignatureInfo)
+            if (signatureInfo_ != null)
             {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(SignatureInfo);
             }
@@ -1616,9 +1612,9 @@ namespace Covid19Radar.Background.Protobuf
             {
                 return;
             }
-            if (other.HasSignatureInfo)
+            if (other.signatureInfo_ != null)
             {
-                if (!HasSignatureInfo)
+                if (signatureInfo_ == null)
                 {
                     SignatureInfo = new global::Covid19Radar.Background.Protobuf.SignatureInfo();
                 }
@@ -1652,7 +1648,7 @@ namespace Covid19Radar.Background.Protobuf
                         break;
                     case 10:
                         {
-                            if (!HasSignatureInfo)
+                            if (signatureInfo_ == null)
                             {
                                 SignatureInfo = new global::Covid19Radar.Background.Protobuf.SignatureInfo();
                             }
