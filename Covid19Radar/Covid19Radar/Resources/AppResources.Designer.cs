@@ -214,7 +214,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   List of exposure with positive people に類似しているローカライズされた文字列を検索します。
+        ///   A list of close contacts with COVID-19 positive users に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton1 {
             get {
@@ -232,7 +232,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Call the Returnee and Exposure Center に類似しているローカライズされた文字列を検索します。
+        ///   Call COVID-19 Consultation Center に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton3 {
             get {
@@ -250,7 +250,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider. に類似しているローカライズされた文字列を検索します。
+        ///   If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageDescription1 {
             get {
@@ -259,7 +259,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please save a screenshot of this screen, as it may be required for medical examinations. に類似しているローカライズされた文字列を検索します。
+        ///   Please take a screenshot of this screen. You may be asked to provide it during diagnosis. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageDescription2 {
             get {
@@ -381,6 +381,15 @@ namespace Covid19Radar.Resources {
         internal static string DialogNetworkConnectionError {
             get {
                 return ResourceManager.GetString("DialogNetworkConnectionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Bluetooth is turned off.Please turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationServiceMessage4 {
+            get {
+                return ResourceManager.GetString("ExposureNotificationServiceMessage4", resourceCulture);
             }
         }
         
