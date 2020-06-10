@@ -614,7 +614,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
-          <source>Confirmed close contacts with COVID-19 positive users</source>
+          <source>Number of confirmed close contacts with COVID-19 positive users</source>
           <target state="translated">陽性者との接触確認</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触確認</note>
         </trans-unit>
