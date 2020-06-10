@@ -551,7 +551,7 @@ support of "new lifestyle".</value>
     <comment>新型コロナウィルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
-    <value>Registration of positive information</value>
+    <value>登录阳性信息</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
@@ -689,5 +689,41 @@ support of "new lifestyle".</value>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>请输入八位数字码</value>
     <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>Agree and register</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>Consent to positive registration</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>Consent to positive registration</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>版本</value>
+    <comment>バージョン</comment>
   </data>
 </root>

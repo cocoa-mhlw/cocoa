@@ -711,8 +711,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス陽性と診断されたら</note>
         </trans-unit>
         <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
-          <source>Registration of positive information</source>
-          <target state="new">Registration of positive information</target>
+          <source>Register positive test result</source>
+          <target state="new">Register positive test result</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
         </trans-unit>
         <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">

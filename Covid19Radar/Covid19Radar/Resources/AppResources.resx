@@ -660,7 +660,7 @@ support of "new lifestyle".</value>
     <comment>新型コロナウィルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
-    <value>Registration of positive information</value>
+    <value>Register positive test result</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
