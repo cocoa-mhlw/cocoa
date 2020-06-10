@@ -584,17 +584,13 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
         <trans-unit id="NotContactPageLabel1" translate="yes" xml:space="preserve">
-          <source>No contact
-with positives was confirmed</source>
-          <target state="new">No contact
-with positives was confirmed</target>
+          <source>No close contacts with COVID-19 positive users</source>
+          <target state="new">No close contacts with COVID-19 positive users</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触は確認されませんでした</note>
         </trans-unit>
         <trans-unit id="NotContactPageDescription1" translate="yes" xml:space="preserve">
-          <source>Thank you for your continued
-support of "new lifestyle".</source>
-          <target state="new">Thank you for your continued
-support of "new lifestyle".</target>
+          <source>Please keep practicing 'New Lifestyle' recommended by the government.</source>
+          <target state="new">Please keep practicing 'New Lifestyle' recommended by the government.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">引き続き「新しい生活様式」の実践をよろしくお願いいたします。</note>
         </trans-unit>
         <trans-unit id="NotContactPageButtonText" translate="yes" xml:space="preserve">
@@ -673,8 +669,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
-          <source>Confirm exposure with positive people</source>
-          <target state="new">Confirm exposure with positive people</target>
+          <source>Confirmed close contacts with COVID-19 positive users</source>
+          <target state="new">Confirmed close contacts with COVID-19 positive users</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触確認</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageTitle" translate="yes" xml:space="preserve">
@@ -936,6 +932,11 @@ support of "new lifestyle".</target>
           <source>Bluetooth is turned off.Please turn in Bluetooth.</source>
           <target state="new">Bluetooth is turned off.Please turn in Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
+          <source>A list of close contacts (past 14 days)</source>
+          <target state="new">A list of close contacts (past 14 days)</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
         </trans-unit>
       </group>
     </body>

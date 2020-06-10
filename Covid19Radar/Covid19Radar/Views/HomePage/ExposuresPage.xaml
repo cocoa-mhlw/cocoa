@@ -11,7 +11,7 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:system="clr-namespace:System;assembly=netstandard"
     xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
-    Title="過去14日間の接触一覧"
+    Title="{x:Static resources:AppResources.ExposuresPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
