@@ -9,10 +9,14 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:system="clr-namespace:System;assembly=netstandard"
     Title="{x:Static resources:AppResources.NotifyOtherPageTitle}"
+    xmlns:effects="clr-namespace:Covid19Radar.Effects"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentPage.Effects>
+        <effects:SetImageToPageTitleEffect />
+    </ContentPage.Effects>
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>

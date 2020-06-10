@@ -11,11 +11,15 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:system="clr-namespace:System;assembly=netstandard"
     xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
+    xmlns:effects="clr-namespace:Covid19Radar.Effects"
     Title="過去14日間の接触一覧"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentPage.Effects>
+        <effects:SetImageToPageTitleEffect />
+    </ContentPage.Effects>
     <StackLayout BackgroundColor="#FFFFFF" Style="{StaticResource DefaultStackLayout}">
         <Label Style="{StaticResource DefaultLabel}" Text="以下の日に陽性者との接触が確認されました。" />
         <BoxView Style="{StaticResource DefaultLineStyle}" />
