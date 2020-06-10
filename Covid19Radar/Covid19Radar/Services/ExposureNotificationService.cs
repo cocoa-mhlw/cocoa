@@ -8,10 +8,12 @@ using Prism.Navigation.Xaml;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.ExposureNotifications;
+using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
@@ -23,8 +25,7 @@ namespace Covid19Radar.Services
         public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
-        private MinutesTimer _downloadTimer;
-
+        private SecondsTimer _downloadTimer;
         private UserDataModel userData;
 
         public ExposureNotificationService(INavigationService navigationService, UserDataService userDataService, HttpDataService httpDataService)
@@ -34,13 +35,12 @@ namespace Covid19Radar.Services
             this.userDataService = userDataService;
             userData = userDataService.Get();
             userDataService.UserDataChanged += OnUserDataChanged;
+
             StartTimer();
         }
-
         private void StartTimer()
         {
-            var test = 5;//userData.GetJumpHashTimeDifference();
-            _downloadTimer = new MinutesTimer(test);
+            _downloadTimer = new SecondsTimer(userData.GetJumpHashTime());
             _downloadTimer.Start();
             _downloadTimer.TimeOutEvent += OnTimerInvoked;
         }
@@ -48,9 +48,23 @@ namespace Covid19Radar.Services
         private async void OnTimerInvoked(EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
-            System.Diagnostics.Debug.WriteLine("TEST TIMER FETCH");
-            await FetchExposureKeyAsync();
+            //await FetchExposureKeyAsync();
         }
+
+        public async Task GetExposureNotificationConfig()
+        {
+            string container = AppSettings.Instance.BlobStorageContainerName;
+            string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
+            HttpClient httpClient = new HttpClient();
+            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
+            HttpResponseMessage result = await response;
+            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                Application.Current.Properties["ExposureNotificationConfigration"] = await result.Content.ReadAsStringAsync();
+                await Application.Current.SavePropertiesAsync();
+            }
+        }
+
 
         private async void OnUserDataChanged(object sender, UserDataModel userData)
         {

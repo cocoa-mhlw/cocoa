@@ -83,28 +83,18 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task<Configuration> GetExposureNotificationConfigration()
+        public async Task<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
         {
+            //long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
+
             string container = AppSettings.Instance.BlobStorageContainerName;
-            string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
-            var result = await GetCdnAsync(url);
+            string url = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
+            var result = await GetCdnAsync(url, cancellationToken);
             if (result != null)
             {
-                return Utils.DeserializeFromJson<Configuration>(result);
+                return Utils.DeserializeFromJson<List<TemporaryExposureKeyExportFileModel>>(result);
             }
-            return null;
-
-        }
-
-        public async Task<TemporaryExposureKeysResult> GetTemporaryExposureKeys(string region, long since, CancellationToken cancellationToken)
-        {
-            string url = AppConstants.ApiBaseUrl + $"/TemporaryExposureKeys/{region}?since={since}";
-            var result = await GetAsync(url, cancellationToken);
-            if (result != null)
-            {
-                return Utils.DeserializeFromJson<TemporaryExposureKeysResult>(result);
-            }
-            return null;
+            return new List<TemporaryExposureKeyExportFileModel>();
         }
 
         public async Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
@@ -164,7 +154,31 @@ namespace Covid19Radar.Services
             }
             return null;
         }
+        private async Task<string> GetCdnAsync(string url, CancellationToken cancellationToken)
+        {
+            Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
+            HttpResponseMessage result = await response;
+            await result.Content.ReadAsStringAsync();
 
+            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return await result.Content.ReadAsStringAsync();
+            }
+            return null;
+        }
+
+        private async Task<Stream> GetCdnStreamAsync(string url)
+        {
+            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
+            HttpResponseMessage result = await response;
+            await result.Content.ReadAsStreamAsync();
+
+            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return await result.Content.ReadAsStreamAsync();
+            }
+            return null;
+        }
 
         private async Task<Stream> GetCdnStreamAsync(string url,CancellationToken cancellationToken)
         {

@@ -41,8 +41,9 @@ namespace Covid19Radar.ViewModels
             Title = AppResources.HomePageTitle;
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
-
+            _ = exposureNotificationService.GetExposureNotificationConfig();
             _ = exposureNotificationService.StartExposureNotification();
+            _ = exposureNotificationService.FetchExposureKeyAsync();
             userData = this.userDataService.Get();
             StartDate = userData.StartDateTime.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
 
@@ -53,16 +54,6 @@ namespace Covid19Radar.ViewModels
                 PastDate = "";
             }
         }
-
-        public Command OnClickHelp => new Command(async () =>
-        {
-            await NavigationService.NavigateAsync(nameof(HelpMenuPage), useModalNavigation: true);
-        });
-
-        public Command OnClickNotifyOther => new Command(async () =>
-        {
-            await NavigationService.NavigateAsync(nameof(NotifyOtherPage));
-        });
 
         public Command OnClickExposures => new Command(async () =>
         {

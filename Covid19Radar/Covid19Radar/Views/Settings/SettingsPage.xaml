@@ -14,7 +14,6 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <!--
         <StackLayout
             Padding="0"
             BackgroundColor="{StaticResource Background}"
@@ -157,13 +156,13 @@
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Small"
-                                    Text="{x:Static resources:AppResources.VersionLabel}"
+                                    Text="{x:Static resources:AppResources.VersionText}"
                                     TextColor="{StaticResource PrimaryText}" />
                                 <Span Text="{x:Static System:Environment.NewLine}" />
                                 <Span
                                     FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Caption"
-                                    Text="{x:Static resources:AppResources.VersionDescription}"
+                                    Text="1.0"
                                     TextColor="{StaticResource SecondaryText}" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -191,6 +190,5 @@
             <BoxView Style="{StaticResource DefaultLineStyle}" />
 
         </StackLayout>
-        -->
     </ScrollView>
 </ContentPage>

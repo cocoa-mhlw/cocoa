@@ -9,16 +9,14 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
-    IconImageSource="ic_hamburger.png"
     Visual="Material">
     <MasterDetailPage.Master>
 
         <NavigationPage
-            Title="Menu"
+            Title="{x:Static resources:AppResources.MenuPageTitle}"
             AutomationId="MasterMenu"
             BarBackgroundColor="#FFFFFF"
-            BarTextColor="Black"
-            Icon="ic_hamburger.png">
+            BarTextColor="Black">
             <x:Arguments>
                 <ContentPage Title="{x:Static resources:AppResources.MenuPageTitle}" BackgroundColor="#FFFFFF">
                     <ListView
@@ -44,7 +42,7 @@
                                                 <FontImageSource
                                                     FontFamily="FA-S"
                                                     Glyph="{Binding Icon}"
-                                                    Size="35"
+                                                    Size="30"
                                                     Color="#019AE8" />
                                             </Image.Source>
                                         </Image>
