@@ -61,7 +61,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   COVID-19Radar に類似しているローカライズされた文字列を検索します。
+        ///   COVID-19 Contact App に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string AppName {
             get {
@@ -178,7 +178,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Discontinued に類似しているローカライズされた文字列を検索します。
+        ///   Stop に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonReset {
             get {
@@ -214,7 +214,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   List of exposure with positive people に類似しているローカライズされた文字列を検索します。
+        ///   A list of close contacts with COVID-19 positive users に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton1 {
             get {
@@ -232,7 +232,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Call the Returnee and Exposure Center に類似しているローカライズされた文字列を検索します。
+        ///   Call COVID-19 Consultation Center に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton3 {
             get {
@@ -250,7 +250,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider. に類似しているローカライズされた文字列を検索します。
+        ///   If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageDescription1 {
             get {
@@ -259,7 +259,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please save a screenshot of this screen, as it may be required for medical examinations. に類似しているローカライズされた文字列を検索します。
+        ///   Please take a screenshot of this screen. You may be asked to provide it during diagnosis. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageDescription2 {
             get {
@@ -268,7 +268,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Confirm exposure with positive people に類似しているローカライズされた文字列を検索します。
+        ///   Number of confirmed close contacts with COVID-19 positive users に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageMainText {
             get {
@@ -277,7 +277,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Exposure for the last 14 days に類似しているローカライズされた文字列を検索します。
+        ///   Close contacts for the past 14 days に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageTitle {
             get {
@@ -349,7 +349,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Recording Close Contact に類似しているローカライズされた文字列を検索します。
+        ///   Recording close contact に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTitleTextStep2 {
             get {
@@ -385,6 +385,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Bluetooth is turned off.Please turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationServiceMessage4 {
+            get {
+                return ResourceManager.GetString("ExposureNotificationServiceMessage4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Dates when you were in close contact with COVID-19 positive users. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposuresPageLabel1 {
+            get {
+                return ResourceManager.GetString("ExposuresPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   No known exposures に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposuresPageNoExposures {
@@ -403,7 +421,16 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   How do you record contact? に類似しているローカライズされた文字列を検索します。
+        ///   A list of close contacts (past 14 days) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposuresPageTitle {
+            get {
+                return ResourceManager.GetString("ExposuresPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   What is a &apos;close contact&apos;? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageLabel1 {
             get {
@@ -412,7 +439,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   How can I know if there is contact? に類似しているローカライズされた文字列を検索します。
+        ///   How do I check number of close contacts? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageLabel2 {
             get {
@@ -421,7 +448,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If it is determined that you are infected with the new coronavirus に類似しているローカライズされた文字列を検索します。
+        ///   If you test positive for COVID-19 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageLabel3 {
             get {
@@ -430,7 +457,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To stop contact recording/delete information に類似しているローカライズされた文字列を検索します。
+        ///   How do I stop / delete close contact recording? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpMenuPageLabel4 {
             get {
@@ -448,7 +475,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   When you run this app, each smartphone will generate and have a contact code. In addition, this app does not acquire any information related to personal information such as telephone number and location information. に類似しているローカライズされた文字列を検索します。
+        ///   When you run this app, each smartphone will generate a random code. No personal information and no location information including GPS data is collected. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description1Text {
             get {
@@ -457,7 +484,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact with other app users within 1 meter for 15 minutes or more is recorded as &quot;contact&quot;. に類似しているローカライズされた文字列を検索します。
+        ///   If smartphones running this app are in close contact (within 1 meter for 15 minutes or more), this is recorded as a close contact. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description2Text {
             get {
@@ -466,7 +493,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Conditions of contact recorded に類似しているローカライズされた文字列を検索します。
+        ///   What is a close contact に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description2Title {
             get {
@@ -475,7 +502,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly. に類似しているローカライズされた文字列を検索します。
+        ///   Phones in close contact exchange their random codes. This information will not be used until either user registers positive test results with this app. The close contact history will be erased after 14 days. Note: The code changes regularly to protect your privacy. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description3Text {
             get {
@@ -484,7 +511,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Recording contact information に類似しているローカライズされた文字列を検索します。
+        ///   Recording close contact に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description3Title {
             get {
@@ -502,7 +529,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   How this app records exposure に類似しているローカライズされた文字列を検索します。
+        ///   What is a &apos;close contact&apos;? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Title {
             get {
@@ -511,7 +538,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Records the contact between people who set this application on a smartphone. に類似しているローカライズされた文字列を検索します。
+        ///   The app will notify you, if you were in close contact with COVID-19 positive user. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage2Description1 {
             get {
@@ -520,7 +547,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   You can also move from the home screen to check the number of recent contacts. に類似しているローカライズされた文字列を検索します。
+        ///   You can check the number of your close contacts from the home screen. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage2Description2 {
             get {
@@ -529,7 +556,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   You can check the list of contact dates. We will also provide you with the appropriate contact information. に類似しているローカライズされた文字列を検索します。
+        ///   You can check the list of close contact dates and receive guidance on what to do if you have symptoms of the disease. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage2Description3 {
             get {
@@ -538,7 +565,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   notification に類似しているローカライズされた文字列を検索します。
+        ///   Notification に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage2Label1 {
             get {
@@ -556,7 +583,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If you contacted with a positive person に類似しているローカライズされた文字列を検索します。
+        ///   If you had close contact with a COVID-19 positive user に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage2Label3 {
             get {
@@ -565,7 +592,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact confirmation method に類似しているローカライズされた文字列を検索します。
+        ///   Checking close contacts に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage2Title {
             get {
@@ -574,7 +601,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   When a new coronavirus infection is confirmed by PCR に類似しているローカライズされた文字列を検索します。
+        ///   If you tested positive に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage3Description1 {
             get {
@@ -583,7 +610,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Public institutions such as public health centers will issue a &quot;processing number&quot; for registration に類似しているローカライズされた文字列を検索します。
+        ///   Public health authorities will issue you a &quot;processing number&quot;. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage3Description2 {
             get {
@@ -592,7 +619,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Register the processing number using this application に類似しているローカライズされた文字列を検索します。
+        ///   Register by entering provided processing number into this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage3Description3 {
             get {
@@ -601,7 +628,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   You will receive a notification in the smartphone app of the person who contacts you within 14 days. (1m or less, 15 minutes or more) に類似しているローカライズされた文字列を検索します。
+        ///   Smartphones that were in close contact with your smartphone within the last 14 days will receive notifications. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage3Description4 {
             get {
@@ -610,7 +637,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Only the ID of the terminal is notified. No information, such as your name, that will identify you will be notified に類似しているローカライズされた文字列を検索します。
+        ///   Only randomly generated codes from device are used when sending notifications. No personal information is used. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage3Description5 {
             get {
@@ -619,7 +646,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To register the positive reaction of COVID19 and anonymous notification to others に類似しているローカライズされた文字列を検索します。
+        ///   Register here when tested positive に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage3Description6 {
             get {
@@ -628,7 +655,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If determined to be infected に類似しているローカライズされた文字列を検索します。
+        ///   When tested positive に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage3Title {
             get {
@@ -646,7 +673,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history. に類似しているローカライズされた文字列を検索します。
+        ///   From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage4Description {
             get {
@@ -655,7 +682,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Stop/delete recording に類似しているローカライズされた文字列を検索します。
+        ///   Stop / delete close contact history に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage4Title {
             get {
@@ -664,7 +691,16 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   In use に類似しているローカライズされた文字列を検索します。
+        ///   ~ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePageDescription0 {
+            get {
+                return ResourceManager.GetString("HomePageDescription0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   in use に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageDescription1 {
             get {
@@ -673,7 +709,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Confirm contact with positives (14 days) に類似しているローカライズされた文字列を検索します。
+        ///   Check close contacts (past 14 days) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageDescription2 {
             get {
@@ -682,7 +718,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If a new coronavirus is diagnosed positive に類似しているローカライズされた文字列を検索します。
+        ///   When tested positive for COVID-19 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageDescription3 {
             get {
@@ -691,7 +727,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Registration of positive information に類似しているローカライズされた文字列を検索します。
+        ///   Register positive test result に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageDescription4 {
             get {
@@ -700,7 +736,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Tell the people around you about the app に類似しているローカライズされた文字列を検索します。
+        ///   Share this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageDescription5 {
             get {
@@ -718,7 +754,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If you are positive with the new Corona, please cooperate with the positive registration to protect the people around you. に類似しているローカライズされた文字列を検索します。
+        ///   Help protect your family and friends by anonymously registering test results. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader2Description {
             get {
@@ -736,7 +772,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   This application is so effective that many people install it, so please share the application with people around you. に類似しているローカライズされた文字列を検索します。
+        ///   One more person using this app is one more step towards containing the spread of COVID-19. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader3Description {
             get {
@@ -745,7 +781,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Share the App に類似しているローカライズされた文字列を検索します。
+        ///   Ask your family and friends to participate に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader3Title {
             get {
@@ -800,7 +836,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   9:00 to 17:30 (excluding Saturdays, Sundays, holidays, year-end and New Year holidays) に類似しているローカライズされた文字列を検索します。
+        ///   9:00-17:30 (except weekends and holidays) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription1 {
             get {
@@ -809,7 +845,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   New Coronavirus Infection Control Site に類似しているローカライズされた文字列を検索します。
+        ///   COVID-19 Information and Resources website に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription2 {
             get {
@@ -818,7 +854,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Inquiries about this application に類似しているローカライズされた文字列を検索します。
+        ///   Contact and Technical Support に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageTitle {
             get {
@@ -890,7 +926,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Tell the people around you about the app に類似しているローカライズされた文字列を検索します。
+        ///   Share this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageButtonText {
             get {
@@ -899,8 +935,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Thank you for your continued
-        ///support of &quot;new lifestyle&quot;. に類似しているローカライズされた文字列を検索します。
+        ///   Please keep practicing &apos;New Lifestyle&apos; recommended by the government. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageDescription1 {
             get {
@@ -909,8 +944,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   No contact
-        ///with positives was confirmed に類似しているローカライズされた文字列を検索します。
+        ///   No close contacts with COVID-19 positive users に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageLabel1 {
             get {
@@ -919,7 +953,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact for the last 14 days に類似しているローカライズされた文字列を検索します。
+        ///   Close contacts for the past 14 days に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageTitle {
             get {
@@ -946,7 +980,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Enter the processing number issued by the HER-SYS system. に類似しているローカライズされた文字列を検索します。
+        ///   Please enter a process code issued to you by &quot;Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)&quot;. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDescription1 {
             get {
@@ -955,7 +989,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Notifications will be sent to those who have a history of exposuring you with this application in the last 14 days. Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified. に類似しているローカライズされた文字列を検索します。
+        ///   Users who were in close contact with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDescription2 {
             get {
@@ -1036,7 +1070,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   How to get the processing number に類似しているローカライズされた文字列を検索します。
+        ///   How to receive a process code に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageLabel {
             get {
@@ -1045,7 +1079,16 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Registration of positive information に類似しているローカライズされた文字列を検索します。
+        ///   Enter an 8-digit code に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageLabel2 {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageLabel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Register positive test result に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageTitle {
             get {
@@ -1099,7 +1142,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Send and receive に類似しているローカライズされた文字列を検索します。
+        ///   Use of Bluetooth に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageDescription1 {
             get {
@@ -1108,7 +1151,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Close Contact Notification に類似しているローカライズされた文字列を検索します。
+        ///   Close contact notifications に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageDescription2 {
             get {
@@ -1117,7 +1160,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Delete all data に類似しているローカライズされた文字列を検索します。
+        ///   Stop using and delete close contact records に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageDescription3 {
             get {
@@ -1153,7 +1196,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Short-range wireless communication に類似しているローカライズされた文字列を検索します。
+        ///   Close contact recording に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageLabel1 {
             get {
@@ -1162,7 +1205,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Application notifications at the time of close contact に類似しているローカライズされた文字列を検索します。
+        ///   Notifications に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageLabel2 {
             get {
@@ -1171,7 +1214,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Delete data に類似しているローカライズされた文字列を検索します。
+        ///   Stop using the app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageLabel3 {
             get {
@@ -1180,7 +1223,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Settings に類似しているローカライズされた文字列を検索します。
+        ///   App Settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageTitle {
             get {
@@ -1279,7 +1322,79 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Terms of service に類似しているローカライズされた文字列を検索します。
+        ///   The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter &quot;management system&quot;). に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription1 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription2 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The management system will respond to the notification server as to whether the transaction number referred to was issued to you. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription3 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you reply that the transaction number was issued to you, other users&apos; terminals will be provided with the daily key recorded on your terminal. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription4 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription5 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Agree and register に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageDescription6 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consent to positive registration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageTitle1 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageTitle1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consent to positive registration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SubmitConsentPageTitle2 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   License に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TermsofservicePageTitle {
             get {
@@ -1288,7 +1403,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Registration is anonymous and does not require registration of personally identifiable information such as name or contact information. In addition, the location information of the contact location will not be recorded or notified. に類似しているローカライズされた文字列を検索します。
+        ///   Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ThankYouNotifyOtherPageDescription1 {
             get {
@@ -1297,7 +1412,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Thank you for registering positive に類似しているローカライズされた文字列を検索します。
+        ///   Thank you for registering your test results! に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ThankYouNotifyOtherPageLabel1 {
             get {
@@ -1396,7 +1511,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Records the exposure between people who set this application on a smartphone. に類似しているローカライズされた文字列を検索します。
+        ///   The app recognizes close contacts between smartphones running this app. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage1Description1 {
             get {
@@ -1405,7 +1520,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If you are positive for the COVID-19, you can anonymously register in this application. に類似しているローカライズされた文字列を検索します。
+        ///   When tested positive for COVID-19, you can anonymously register the test result in this app. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage1Description2 {
             get {
@@ -1414,7 +1529,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If any of your recent exposures have been positively registered, we will notify you and notify you of the appropriate action. に類似しているローカライズされた文字列を検索します。
+        ///   If you have been in close contact with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage1Description3 {
             get {
@@ -1423,7 +1538,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   What you can do with this app に類似しているローカライズされた文字列を検索します。
+        ///   Protect yourself with the app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage1Title1 {
             get {
@@ -1432,7 +1547,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   What you can do with this app に類似しているローカライズされた文字列を検索します。
+        ///   Protect yourself with the app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage1Title2 {
             get {
@@ -1441,7 +1556,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   About Privacy に類似しているローカライズされた文字列を検索します。
+        ///   Your privacy is protected に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage2Description1 {
             get {
@@ -1450,7 +1565,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Personal information such as name and phone number, and GPS location information such as GPS will not be used and will not be recorded. に類似しているローカライズされた文字列を検索します。
+        ///   No personal information such as your name or phone number is collected. No geolocation data including GPS data is collected. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage2Description2 {
             get {
@@ -1459,7 +1574,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact records are encrypted, recorded only in your smartphone and are automatically deleted after 14 days. Government agencies and third parties do not use encrypted information to keep track of contact history. に類似しているローカライズされた文字列を検索します。
+        ///   All data is encrypted and saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage2Description3 {
             get {
@@ -1468,7 +1583,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   You can stop recording contact at any time. Please disable the settings in the app or delete the app. に類似しているローカライズされた文字列を検索します。
+        ///   You can stop recording close contacts with other users anytime by changing app settings or deleting the app. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage2Description4 {
             get {
@@ -1477,7 +1592,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To Terms of Use に類似しているローカライズされた文字列を検索します。
+        ///   Terms of use に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage2Description5 {
             get {
@@ -1486,7 +1601,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   About Privacy に類似しているローカライズされた文字列を検索します。
+        ///   TutorialPage2Description1 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage2Title {
             get {
@@ -1495,7 +1610,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   I accept the terms and continue に類似しているローカライズされた文字列を検索します。
+        ///   I accept the Terms of Use に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage3ButtonText {
             get {
@@ -1504,7 +1619,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Terms of service に類似しているローカライズされた文字列を検索します。
+        ///   Terms of use に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage3Title {
             get {
@@ -1513,7 +1628,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To enable に類似しているローカライズされた文字列を検索します。
+        ///   Turn on に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Button1 {
             get {
@@ -1522,7 +1637,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Set later に類似しているローカライズされた文字列を検索します。
+        ///   Set up later に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Button2 {
             get {
@@ -1531,7 +1646,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please enable Bluetooth on your smartphone in order to use exposure detection with this application. に類似しているローカライズされた文字列を検索します。
+        ///   Please turn on Bluetooth to start recording close contacts with other users. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Description {
             get {
@@ -1540,7 +1655,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   For more technical details に類似しているローカライズされた文字列を検索します。
+        ///   Find out more に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Label {
             get {
@@ -1549,7 +1664,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To use exposure detection に類似しているローカライズされた文字列を検索します。
+        ///   Turn on Bluetooth に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Title1 {
             get {
@@ -1558,7 +1673,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To use exposure detection に類似しているローカライズされた文字列を検索します。
+        ///   Turn on Bluetooth に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Title2 {
             get {
@@ -1567,7 +1682,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To use notifications に類似しているローカライズされた文字列を検索します。
+        ///   Turn on notifications に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage5Description1 {
             get {
@@ -1576,7 +1691,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please enable push notifications in this application in order to use contact notifications in this application. に類似しているローカライズされた文字列を検索します。
+        ///   Please turn on notifications to be notified when you had close contacts with COVID-19 positive users. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage5Description2 {
             get {
@@ -1585,7 +1700,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To enable に類似しているローカライズされた文字列を検索します。
+        ///   Turn on に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage5Description3 {
             get {
@@ -1594,7 +1709,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Set later に類似しているローカライズされた文字列を検索します。
+        ///   Set up later に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage5Description4 {
             get {
@@ -1612,7 +1727,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   To home screen に類似しているローカライズされた文字列を検索します。
+        ///   Home に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage6ButtonText1 {
             get {
@@ -1621,7 +1736,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Learn how to use this app に類似しているローカライズされた文字列を検索します。
+        ///   How to use this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage6ButtonText2 {
             get {
@@ -1630,7 +1745,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Thank you for registering に類似しているローカライズされた文字列を検索します。
+        ///   Setup complete. Thank you! に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage6Label1 {
             get {
@@ -1648,7 +1763,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radar.z11.web.core.windows.net/en/policy.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
             get {
@@ -1662,15 +1777,6 @@ namespace Covid19Radar.Resources {
         internal static string UrlUpdate {
             get {
                 return ResourceManager.GetString("UrlUpdate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Version number of this application に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string VersionDescription {
-            get {
-                return ResourceManager.GetString("VersionDescription", resourceCulture);
             }
         }
         

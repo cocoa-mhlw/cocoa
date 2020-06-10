@@ -23,16 +23,16 @@
 
     <ScrollView>
         <StackLayout
-            Padding="5"
+            Padding="10"
             BackgroundColor="#EEEEEE"
-            Spacing="5">
+            Spacing="10">
             <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
                     <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{Binding StartDate}" />
-                                <Span Text="から" />
+                                <Span Text="{x:Static resources:AppResources.HomePageDescription0}" />
                                 <Span Text="{Binding PastDate}" />
                                 <Span Text="{x:Static resources:AppResources.HomePageDescription1}" />
                             </FormattedString>
@@ -71,7 +71,7 @@
                     </Grid>
 
                     <Button
-                        Command="{Binding Path=OnClickNotifyOther}"
+                        Command="{prism:NavigateTo 'SubmitConsentPage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription4}" />
                 </StackLayout>

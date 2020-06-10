@@ -29,7 +29,7 @@ namespace Covid19Radar.Services
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
-        public UserDataService(HttpDataService httpDataService, INavigationService navigationService)
+        public UserDataService(HttpDataService httpDataService)
         {
             this.httpDataService = httpDataService;
             current = Get();
@@ -44,28 +44,9 @@ namespace Covid19Radar.Services
             {
                 return null;
             }
-            var configuration = await httpDataService.GetExposureNotificationConfigration();
-            if (configuration == null)
-            {
-                return null;
-            }
-            userData.Configuration = configuration;
             await SetAsync(userData);
             return userData;
         }
-
-        public async Task UpdateExposureNotificationConfigAsync()
-        {
-            var configuration = await httpDataService.GetExposureNotificationConfigration();
-            if (configuration == null)
-            {
-                return;
-            }
-            current.Configuration = configuration;
-            await SetAsync(current);
-            return;
-        }
-
 
         public UserDataModel Get()
         {
