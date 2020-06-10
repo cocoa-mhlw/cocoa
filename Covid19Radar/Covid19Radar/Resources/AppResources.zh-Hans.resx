@@ -725,7 +725,7 @@
     <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>没有打开蓝牙，请您打开蓝牙模式　Turn on　开启接受通知</value>
+    <value>没有打开蓝牙，请您打开蓝牙模式</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
