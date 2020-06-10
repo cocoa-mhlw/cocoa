@@ -3,39 +3,33 @@
     x:Class="Covid19Radar.Templates.HelpMenuTemplate"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-
-    <StackLayout BackgroundColor="#EEEEEE">
-        <Frame Padding="10,0,0,0" CornerRadius="10">
-            <StackLayout Spacing="5">
-                <Grid ColumnSpacing="10" RowSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Style="{StaticResource HelpMenuLabel}"
-                        Text="{Binding Title}" />
-                    <Image
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HeightRequest="35"
-                        VerticalOptions="Center"
-                        WidthRequest="35">
-                        <Image.Source>
-                            <FontImageSource
-                                FontFamily="FA-S"
-                                Glyph="{Binding Icon}"
-                                Size="35"
-                                Color="#CCCCCC" />
-                        </Image.Source>
-                    </Image>
-                </Grid>
-            </StackLayout>
-        </Frame>
+    <StackLayout>
+        <StackLayout
+            Padding="20,10,0,10"
+            Style="{StaticResource ImageLableStackLayout}"
+            VerticalOptions="FillAndExpand">
+            <Label
+                AutomationId="{Binding Title}"
+                FontSize="Default"
+                Text="{Binding Title}"
+                LineBreakMode="WordWrap"
+                MaxLines="2"
+                TextColor="{StaticResource NavBarText}"
+                VerticalOptions="Center" />
+            <Image
+                AutomationId="{Binding Title}"
+                HeightRequest="35"
+                VerticalOptions="Center"
+                HorizontalOptions="EndAndExpand"
+                WidthRequest="35">
+                <Image.Source>
+                    <FontImageSource
+                        FontFamily="FA-S"
+                        Glyph="{Binding Icon}"
+                        Size="30"
+                        Color="#019AE8" />
+                </Image.Source>
+            </Image>
+        </StackLayout>
     </StackLayout>
 </ContentView>

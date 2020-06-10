@@ -53,7 +53,7 @@
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID-19Radar</value>
+    <value>新型肺炎密切接触者查询APP</value>
     <comment>App Name</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
@@ -410,7 +410,7 @@
   </data>
   <data name="SettingsPageDescription1" xml:space="preserve">
     <value>基于蓝牙功能的接触者检测</value>
-    <comment>Bloothによる接触の検知</comment>
+    <comment>Bluetoothによる接触の検知</comment>
   </data>
   <data name="SettingsPageLabel2" xml:space="preserve">
     <value>通知</value>
@@ -445,17 +445,15 @@
     <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
-    <value>Contact for the last 14 days</value>
+    <value>查询过去14天内里的接触情况</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>No contact
-with positives was confirmed</value>
+    <value>您没有查出跟阳性患者的密切接触</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>Thank you for your continued
-support of "new lifestyle".</value>
+    <value>为了进一步地防范疫情的扩散，请遵循日本政府提倡的“新生活模式”。</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
@@ -495,15 +493,15 @@ support of "new lifestyle".</value>
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>List of exposure with positive people</value>
+    <value>和阳性患者的密切接触一览</value>
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Enter symptoms</value>
+    <value>输入症状</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Call the Returnee and Exposure Center</value>
+    <value>给“回国者•接触者咨询中心”打电话</value>
     <comment>帰国者・接触者センターに電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
@@ -511,19 +509,19 @@ support of "new lifestyle".</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider.</value>
+    <value>如果您有新冠病毒的一些症状，请填写表单或者向医疗机构电话咨询，我们会根据你提供的信息判断是否进行PCR检查。</value>
     <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Please save a screenshot of this screen, as it may be required for medical examinations.</value>
+    <value>请截取保存本页面，受诊的时候提供给医院</value>
     <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>Confirm exposure with positive people</value>
+    <value>查询跟阳性患者的密切接触情况</value>
     <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
-    <value>Exposure for the last 14 days</value>
+    <value>查询过去14天内里的接触情况</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="InqueryPageDescription1" xml:space="preserve">
@@ -551,20 +549,20 @@ support of "new lifestyle".</value>
     <comment>新型コロナウィルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
-    <value>Registration of positive information</value>
+    <value>登录阳性信息</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
-    <value>Share this app</value>
+    <value>分享此APP</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
-    <value>Home</value>
+    <value>主页</value>
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>使用条款</value>
-    <comment>利用規約</comment>
+    <comment>ライセンス</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
     <value>关于隐私保护</value>
@@ -599,7 +597,7 @@ support of "new lifestyle".</value>
     <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
   </data>
   <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>Turn on</value>
+    <value>开启</value>
     <comment>有効にする</comment>
   </data>
   <data name="TutorialPage5Description4" xml:space="preserve">
@@ -611,7 +609,7 @@ support of "new lifestyle".</value>
     <comment>通知をご利用いただくために</comment>
   </data>
   <data name="MenuPageTitle" xml:space="preserve">
-    <value>Menu</value>
+    <value>菜单</value>
     <comment>メニュー</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
@@ -689,5 +687,53 @@ support of "new lifestyle".</value>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>请输入八位数字码</value>
     <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>Agree and register</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>Consent to positive registration</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>Consent to positive registration</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>版本</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>没有打开蓝牙，请您打开蓝牙模式</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>过去14天内里的密切接触一览</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>以下日期查出您和阳性患者有密切接触以下日期查出您和阳性患者有密切接触</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
 </root>
