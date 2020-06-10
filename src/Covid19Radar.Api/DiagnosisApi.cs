@@ -22,6 +22,7 @@ namespace Covid19Radar.Api
         private readonly ITemporaryExposureKeyRepository TekRepository;
         private readonly IValidationUserService Validation;
         private readonly IDeviceValidationService DeviceCheck;
+        private readonly IVerificationService VerificationService;
         private readonly ILogger<DiagnosisApi> Logger;
         private readonly string[] SupportRegions;
 
@@ -31,6 +32,7 @@ namespace Covid19Radar.Api
             ITemporaryExposureKeyRepository tekRepository,
             IValidationUserService validation,
             IDeviceValidationService deviceCheck,
+            IVerificationService verificationService,
             ILogger<DiagnosisApi> logger)
         {
             DiagnosisRepository = diagnosisRepository;
@@ -39,6 +41,7 @@ namespace Covid19Radar.Api
             DeviceCheck = deviceCheck;
             Logger = logger;
             SupportRegions = config.SupportRegions();
+            VerificationService = verificationService;
         }
 
         [FunctionName(nameof(DiagnosisApi))]
@@ -79,16 +82,16 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Invalid Device");
             }
 
-            // TODO: validatetion VerificationPayload 4xx
-            if (false == true)
+            // validatetion VerificationPayload
+            if (!await VerificationService.Verification(diagnosis.VerificationPayload))
             {
                 return new ObjectResult("Bad VerificationPayload") { StatusCode = 406 };
             }
-            // TODO: validatetion VerificationPayload connnection error 5xx
-            if (false == true)
-            {
-                return new ObjectResult("Unable to communicate with center") { StatusCode = 503 };
-            }
+            //// TODO: validatetion VerificationPayload connnection error 5xx
+            //if (false == true)
+            //{
+            //    return new ObjectResult("Unable to communicate with center") { StatusCode = 503 };
+            //}
 
             var timestamp = DateTimeOffset.UtcNow;
             var keys = diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray();

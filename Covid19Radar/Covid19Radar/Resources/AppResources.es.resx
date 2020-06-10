@@ -80,7 +80,7 @@
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
-    <comment>PrivacyPolicy</comment>
+    <comment>Policy</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
@@ -209,6 +209,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Configuración</value>
+    <comment>アプリの設定</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>No está de acuerdo</value>
@@ -242,6 +243,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Restablecer</value>
+    <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Directiva de privacidad</value>
@@ -257,12 +259,6 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Se han eliminado todos los ajustes y datos. Reinicie la aplicación.</value>
-  </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>Versión</value>
-  </data>
-  <data name="VersionDescription" xml:space="preserve">
-    <value>Número de versión de esta aplicación</value>
   </data>
   <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
     <value>Identificador de diagnóstico no válido</value>
@@ -302,9 +298,11 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Si usted es positivo con la nueva Corona, por favor coopere con el registro positivo para proteger a las personas que lo rodean.</value>
+    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
     <value>Esta aplicación es tan eficaz que muchas personas lo instalan, así que por favor comparta la aplicación con las personas a su alrededor.</value>
+    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Cómo usar</value>
@@ -328,7 +326,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Al ejecutar esta aplicación, cada teléfono inteligente generará y tendrá un código de contacto. Además, esta aplicación no adquiere ninguna información relacionada con la información personal, como el número de teléfono y la información de ubicación.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。また本アプリは、電話場号・位置情報など、個人情報に関する情報は一切取得しません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Condiciones de contacto registradas</value>

@@ -21,17 +21,28 @@ namespace Covid19Radar.Services
         private readonly HttpDataService httpDataService;
         private readonly UserDataService userDataService;
         private UserDataModel userData;
-
-        public readonly Configuration configuration;
+        private Configuration configuration;
 
         public ExposureNotificationHandler()
         {
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
             this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-
             userData = this.userDataService.Get();
-            configuration = userData.Configuration;
-            /*
+        }
+
+        // this string should be localized
+        public string UserExplanation
+            => "We need to make use of the keys to keep you healthy.";
+
+        // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
+        public Task<Configuration> GetConfigurationAsync()
+        {
+            //=> Task.FromResult(configuration);
+            if (Application.Current.Properties.ContainsKey("ExposureNotificationConfigration"))
+            {
+                return Task.FromResult(Utils.DeserializeFromJson<Configuration>(Application.Current.Properties["ExposureNotificationConfigration"].ToString()));
+            }
+
             configuration = new Configuration
             {
                 MinimumRiskScore = 1,
@@ -45,16 +56,11 @@ namespace Covid19Radar.Services
                 DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
                 DurationAtAttenuationThresholds = new[] { 50, 70 }
             };
-            */
+
+            return Task.FromResult(configuration);
+
+
         }
-
-        // this string should be localized
-        public string UserExplanation
-            => "We need to make use of the keys to keep you healthy.";
-
-        // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
-        public Task<Configuration> GetConfigurationAsync()
-            => Task.FromResult(configuration);
 
         // this will be called when a potential exposure has been detected
         public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getExposureInfo)
@@ -96,43 +102,36 @@ namespace Covid19Radar.Services
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
                     // Find next directory to start checking
-                    var dirNumber = userData.ServerBatchNumbers[serverRegion] + 1;
+                    //var dirNumber = userData.ServerBatchNumbers[serverRegion] + 1;
+                    cancellationToken.ThrowIfCancellationRequested();
 
-                    // For all the directories
-                    while (true)
+                    var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion, cancellationToken);
+                    if (batchNumber == 0)
                     {
-                        cancellationToken.ThrowIfCancellationRequested();
+                        return;
+                    }
 
-                        // Download all the files for this directory
-                        var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion, dirNumber, cancellationToken);
-                        if (batchNumber == 0)
-                            break;
+                    if (downloadedFiles.Count > 0)
+                    {
+                        await submitBatches(downloadedFiles);
 
-                        // Process the current directory, if there were any files
-                        if (downloadedFiles.Count > 0)
+                        // delete all temporary files
+                        foreach (var file in downloadedFiles)
                         {
-                            await submitBatches(downloadedFiles);
-
-                            // delete all temporary files
-                            foreach (var file in downloadedFiles)
+                            try
                             {
-                                try
-                                {
-                                    File.Delete(file);
-                                }
-                                catch
-                                {
-                                    // no-op
-                                }
+                                File.Delete(file);
+                            }
+                            catch
+                            {
+                                // no-op
                             }
                         }
-
-                        // Update the preferences
-                        userData.ServerBatchNumbers[serverRegion] = dirNumber;
-                        await userDataService.SetAsync(userData);
-
-                        dirNumber++;
                     }
+
+                    //userData.ServerBatchNumbers[serverRegion] = dirNumber;
+                    //await userDataService.SetAsync(userData);
+                    //dirNumber++;
                 }
             }
             catch (Exception ex)
@@ -141,26 +140,55 @@ namespace Covid19Radar.Services
                 // TODO: log the error on some server!
                 Console.WriteLine(ex);
             }
+        }
 
-            async Task<(int, List<string>)> DownloadBatchAsync(string region, ulong dirNumber, CancellationToken cancellationToken)
+        private async Task<(int, List<string>)> DownloadBatchAsync(string region, CancellationToken cancellationToken)
+        {
+            var downloadedFiles = new List<string>();
+            var batchNumber = 0;
+            var tmpDir = Path.Combine(FileSystem.CacheDirectory, region);
+
+            try
             {
-                var downloadedFiles = new List<string>();
-                var batchNumber = 0;
-
-                long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
-                TemporaryExposureKeysResult tekResult = await httpDataService.GetTemporaryExposureKeys(region , sinceEpochSeconds, cancellationToken);
-                Console.WriteLine("Fetch Exposure Key");
-
-                foreach (var key in tekResult.Keys)
+                if (!Directory.Exists(tmpDir))
                 {
-                    // TODO 取得TimeStamp差分実装を行う
-                    cancellationToken.ThrowIfCancellationRequested();
-                    var tmpFile = Path.Combine(FileSystem.CacheDirectory, Guid.NewGuid().ToString() + ".zip");
+                    Directory.CreateDirectory(tmpDir);
+                }
+            }
+            catch
+            {
+                // catch error return batchnumber 0 / fileList 0
+                return (batchNumber, downloadedFiles);
+            }
 
-                    // Read the batch file stream into a temporary file
-                    Console.WriteLine(key.Url);
+            long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
+            List<TemporaryExposureKeyExportFileModel> tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
+            if (tekList.Count == 0)
+            {
+                return (batchNumber, downloadedFiles);
+            }
+            Console.WriteLine("Fetch Exposure Key");
+
+            Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
+
+            foreach (var tekItem in tekList)
+            {
+                long lastCreated = 0;
+                if (lastTekTimestamp.ContainsKey(region))
+                {
+                    lastCreated = lastTekTimestamp[region];
+                }
+                else
+                {
+                    lastTekTimestamp.Add(region, 0);
+                }
+
+                if (tekItem.Created > lastCreated || lastCreated == 0)
+                {
+                    var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
+                    Console.WriteLine(Utils.SerializeToJson(tekItem));
                     Console.WriteLine(tmpFile);
-                    Stream responseStream = await httpDataService.GetTemporaryExposureKey(key.Url, cancellationToken);
+                    Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken);
                     var fileStream = File.Create(tmpFile);
                     try
                     {
@@ -171,13 +199,16 @@ namespace Covid19Radar.Services
                     {
                         Console.WriteLine(ex.ToString());
                     }
+                    lastTekTimestamp[region] = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
                     batchNumber++;
                 }
-                Console.WriteLine(batchNumber.ToString());
-                Console.WriteLine(downloadedFiles.Count());
-                return (batchNumber, downloadedFiles);
             }
+            Console.WriteLine(batchNumber.ToString());
+            Console.WriteLine(downloadedFiles.Count());
+            userData.LastProcessTekTimestamp = lastTekTimestamp;
+            await userDataService.SetAsync(userData);
+            return (batchNumber, downloadedFiles);
         }
 
         // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
