@@ -86,8 +86,12 @@
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
                 <Setter Property="ColumnSpacing" Value="0" />
                 <Setter Property="RowSpacing" Value="0" />
-                <Setter Property="Margin" Value="20,0,20,10" />
+                <Setter Property="Margin" Value="20,20,20,10" />
                 <Setter Property="Padding" Value="0,0,0,0" />
+            </Style>
+
+            <Style x:Key="HelpPageGridLayout" BasedOn="DefaultGridLayout" TargetType="Grid">
+                <Setter Property="RowSpacing" Value="45" />
             </Style>
 
             <Style x:Key="DefaultFlexLayout" TargetType="FlexLayout">
