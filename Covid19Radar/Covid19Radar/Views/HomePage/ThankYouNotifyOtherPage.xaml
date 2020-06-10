@@ -7,15 +7,11 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    xmlns:effects="clr-namespace:Covid19Radar.Effects"
-    Title="ありがとうございます"
+    NavigationPage.TitleIconImageSource="HeaderLogo.jpg"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentPage.Effects>
-        <effects:SetImageToPageTitleEffect />
-    </ContentPage.Effects>
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
