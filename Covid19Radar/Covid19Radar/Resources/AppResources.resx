@@ -402,7 +402,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="SettingsPageDescription1" xml:space="preserve">
     <value>Use of Bluetooth</value>
-    <comment>Bloothによる接触の検知</comment>
+    <comment>Bluetoothによる接触の検知</comment>
   </data>
   <data name="SettingsPageLabel2" xml:space="preserve">
     <value>Notifications</value>
