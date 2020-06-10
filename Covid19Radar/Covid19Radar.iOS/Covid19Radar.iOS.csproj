@@ -30,8 +30,11 @@
     <CodesignKey>Apple Development: Hirose Kazumi (B5NUWQDLW4)</CodesignKey>
     <CodesignProvision>Covid19radar</CodesignProvision>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchSdkVersion>13.5</MtouchSdkVersion>
     <LangVersion>latest</LangVersion>
+    <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <OptimizePNGs>false</OptimizePNGs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -40,7 +43,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
     <CodesignProvision>VS: net.kzmx.Covid19Radar Development</CodesignProvision>
@@ -70,7 +73,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchI18n>cjk</MtouchI18n>
     <LangVersion>latest</LangVersion>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <IntermediateOutputPath>
     </IntermediateOutputPath>
@@ -477,7 +480,7 @@
       <Version>4.6.0.847</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
-      <Version>1.0.0-beta2</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.MaterialComponents">
       <Version>92.0.0</Version>
