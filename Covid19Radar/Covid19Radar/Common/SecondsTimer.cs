@@ -6,7 +6,7 @@ using Xamarin.Forms;
 namespace Covid19Radar.Common
 {
 
-    public class MinutesTimer
+    public class SecondsTimer
     {
         public delegate void TimeOutHandler(EventArgs e);
 
@@ -18,7 +18,7 @@ namespace Covid19Radar.Common
 
         private int _timeDiffernce;
 
-        public MinutesTimer(int timeDiffernce)
+        public SecondsTimer(int timeDiffernce)
         {
             _timeDiffernce = timeDiffernce;
             this._timerRunning = false;
@@ -54,11 +54,11 @@ namespace Covid19Radar.Common
 
         private void RegisterTimer(Func<bool> callback)
         {
-            this._startDateTime = DateTime.Now;
-            double spanSecond = 60 - this._startDateTime.Second+_timeDiffernce;
+            //this._startDateTime = DateTime.Now;
+            //double spanSecond = 60 - this._startDateTime.Second+_timeDiffernce;
 
             this._timerRunning = true;
-            Device.StartTimer(TimeSpan.FromSeconds(spanSecond), callback);
+            Device.StartTimer(TimeSpan.FromSeconds(_timeDiffernce), callback);
         }
     }
 }

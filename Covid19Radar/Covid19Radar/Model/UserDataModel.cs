@@ -55,23 +55,10 @@ namespace Covid19Radar.Model
             return UserUuid;
         }
 
-        public int GetJumpHashTimeDifference()
+        public int GetJumpHashTime()
         {
-            return JumpHash.JumpConsistentHash(JumpConsistentSeed, AppConstants.NumberOfGroup);
+            return JumpHash.JumpConsistentHash(JumpConsistentSeed, 86400);
         }
-
-        public Configuration Configuration { get; set; } = new Configuration {
-            MinimumRiskScore = 1,
-            AttenuationWeight = 50,
-            TransmissionWeight = 50,
-            DurationWeight = 50,
-            DaysSinceLastExposureWeight = 50,
-            TransmissionRiskScores = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-            AttenuationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-            DurationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-            DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-            DurationAtAttenuationThresholds = new[] { 50, 70 }
-        };
 
         public bool IsOptined { get; set; } = false;
 
@@ -80,6 +67,8 @@ namespace Covid19Radar.Model
         public bool IsNotificationEnabled { get; set; } = false;
 
         public bool IsPositived { get; set; } = false;
+
+        public Dictionary<string,long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
 
         public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
 

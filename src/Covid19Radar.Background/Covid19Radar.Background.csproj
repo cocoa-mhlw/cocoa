@@ -5,14 +5,14 @@
     <RootNamespace>Covid19Radar.Background</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.12.2" />
+    <PackageReference Include="Google.Protobuf" Version="3.12.3" />
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.9.1" />
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
     <PackageReference Include="Microsoft.Azure.Management.Cdn.Fluent" Version="1.33.0" />
     <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.5.0" />
-    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.1.6" />
+    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.1.7" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.7" />
-    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.4" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.7" />
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
