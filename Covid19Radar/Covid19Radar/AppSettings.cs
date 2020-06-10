@@ -23,6 +23,7 @@ namespace Covid19Radar
 			var json = sr.ReadToEnd();
 			var j = JObject.Parse(json);
 
+			LicenseUrl = j.Value<string>("licenseUrl");
 			ApiUrlBase = j.Value<string>("apiUrlBase");
 			CdnUrlBase = j.Value<string>("cdnUrlBase");
 			BlobStorageContainerName = j.Value<string>("blobStorageContainerName");
@@ -30,6 +31,7 @@ namespace Covid19Radar
 			AndroidSafetyNetApiKey = j.Value<string>("androidSafetyNetApiKey");
 		}
 
+		public string LicenseUrl { get; }
 		public string ApiUrlBase { get; }
 		public string CdnUrlBase { get; }
 

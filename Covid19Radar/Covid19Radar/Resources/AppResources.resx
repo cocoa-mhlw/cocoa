@@ -216,7 +216,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>License Agreement</value>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/policy.html</value>
+    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</value>
     <comment>Policy</comment>
   </data>
   <data name="UrlContributor" xml:space="preserve">
@@ -840,5 +840,9 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>Dates when you were in close contact with COVID-19 positive users.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</value>
+    <comment>Term of Use</comment>
   </data>
 </root>
