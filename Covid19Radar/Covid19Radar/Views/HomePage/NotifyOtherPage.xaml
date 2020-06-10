@@ -36,11 +36,12 @@
                         BackgroundColor="#CECECE"
                         CornerRadius="7"
                         HasShadow="False"
-                        HeightRequest="50"
+                        HeightRequest="{x:OnPlatform Android=90,
+                                                     iOS=0}"
                         HorizontalOptions="FillAndExpand">
                         <Frame
                             Margin="3"
-                            Padding="5"
+                            Padding="0"
                             BackgroundColor="White"
                             CornerRadius="5"
                             HasShadow="False">
