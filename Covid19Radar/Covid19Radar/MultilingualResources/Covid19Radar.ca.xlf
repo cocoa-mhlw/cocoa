@@ -669,8 +669,8 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
-          <source>Confirmed close contacts with COVID-19 positive users</source>
-          <target state="new">Confirmed close contacts with COVID-19 positive users</target>
+          <source>Number of confirmed close contacts with COVID-19 positive users</source>
+          <target state="new">Number of confirmed close contacts with COVID-19 positive users</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触確認</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageTitle" translate="yes" xml:space="preserve">
