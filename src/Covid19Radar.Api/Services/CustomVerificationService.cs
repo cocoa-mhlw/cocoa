@@ -1,7 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Net.Http.Headers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -52,7 +55,22 @@ namespace Covid19Radar.Api.Services
 ";
             var content = new StringContent(payload);
             var response = await Client.PostAsync(Url, content);
-            return response.IsSuccessStatusCode;
+            if (!response.IsSuccessStatusCode) return false;
+
+            var responseBody = JsonConvert.DeserializeObject<ResponseMock>(await response.Content.ReadAsStringAsync());
+            return responseBody.IsValid();
+        }
+
+        public class ResponseMock
+        {
+            [JsonProperty("result")]
+            public string Result { get; set; }
+            public bool IsValid()
+            {
+                if (string.IsNullOrWhiteSpace(Result)) return false;
+                if (Result.All(_ => _ == Result.First())) return false;
+                return true;
+            }
         }
     }
 }
