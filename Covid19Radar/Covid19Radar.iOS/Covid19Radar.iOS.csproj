@@ -495,7 +495,9 @@
       <Name>Covid19Radar</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\IconHamburger.png" />
+  </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\Logo%401x.png" />
   </ItemGroup>
@@ -1270,9 +1272,12 @@
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\ic_hamburger%402x.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\en.lproj\" />
-    <Folder Include="Resources\zh.lproj\" />
+    <BundleResource Include="Resources\IconHamburger%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\IconHamburger%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
