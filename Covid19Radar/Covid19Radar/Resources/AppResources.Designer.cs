@@ -1754,15 +1754,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/contributor.html に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string UrlContributor {
-            get {
-                return ResourceManager.GetString("UrlContributor", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
@@ -1777,15 +1768,6 @@ namespace Covid19Radar.Resources {
         internal static string UrlTermOfUse {
             get {
                 return ResourceManager.GetString("UrlTermOfUse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/update.html に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string UrlUpdate {
-            get {
-                return ResourceManager.GetString("UrlUpdate", resourceCulture);
             }
         }
         

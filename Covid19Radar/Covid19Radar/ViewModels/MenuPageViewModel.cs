@@ -171,11 +171,6 @@ namespace Covid19Radar.ViewModels
 
         async void Navigate()
         {
-            if (SelectedMenuItem.PageName == nameof(StartTutorialPage))
-            {
-                await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
-                return;
-            }
             await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
             return;
         }
