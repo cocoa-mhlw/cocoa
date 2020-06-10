@@ -53,6 +53,19 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(TermsofservicePage),
                 Title = Resources.AppResources.TermsofservicePageTitle
             });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(LicenseAgreementPage),
+                Title = Resources.AppResources.TitleLicenseAgreement
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(PrivacyPolicyPage),
+                Title = Resources.AppResources.PrivacyPolicyPageTitle
+            });
+
 #if DEBUG
             MenuItems.Add(new MainMenuModel()
             {
