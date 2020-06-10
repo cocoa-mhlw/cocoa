@@ -67,7 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="settings.json">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
@@ -96,9 +95,6 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.847" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Icons.xaml.cs">
-      <DependentUpon>Icons.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
       <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
@@ -176,21 +172,12 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <EmbeddedResource Update="Colors.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Fonts.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\AppResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Styles.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Templates\HelpMenuTemplate.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
