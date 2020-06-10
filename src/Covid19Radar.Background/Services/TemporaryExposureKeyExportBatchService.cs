@@ -157,8 +157,8 @@ namespace Covid19Radar.Background.Services
                 var sig = new TEKSignatureList();
 
                 using var binStream = new MemoryStream();
+                await binStream.WriteAsync(FixedHeader, 0, FixedHeaderWidth);
                 using var binStreamCoded = new CodedOutputStream(binStream);
-                binStreamCoded.WriteBytes(ByteString.CopyFrom(FixedHeader, 0, FixedHeaderWidth));
                 bin.WriteTo(binStreamCoded);
                 binStreamCoded.Flush();
                 await binStream.FlushAsync();
