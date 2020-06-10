@@ -4,12 +4,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Covid19Radar">
+
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
             <local:Colors />
             <local:Fonts />
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
+
     <Style TargetType="StackLayout">
         <Setter Property="Spacing" Value="0" />
     </Style>
@@ -24,7 +26,7 @@
         <Setter Property="VerticalOptions" Value="FillAndExpand" />
         <Setter Property="ColumnSpacing" Value="0" />
         <Setter Property="RowSpacing" Value="0" />
-        <Setter Property="Margin" Value="20,10,20,10" />
+        <Setter Property="Margin" Value="20,0,20,10" />
         <Setter Property="Padding" Value="0,0,0,0" />
     </Style>
 
@@ -37,7 +39,7 @@
     </Style>
 
     <Style x:Key="DefaultStackLayout" TargetType="StackLayout">
-        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="0,0,0,10" />
         <Setter Property="Spacing" Value="0" />
         <Setter Property="VerticalOptions" Value="FillAndExpand" />
         <Setter Property="Padding" Value="0,0,0,0" />
