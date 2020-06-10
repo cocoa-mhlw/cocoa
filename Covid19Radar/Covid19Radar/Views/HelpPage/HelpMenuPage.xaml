@@ -10,16 +10,17 @@
     Title="{x:Static resources:AppResources.HelpMenuPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
+    BackgroundColor="#FFFFFF"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Padding="10" BackgroundColor="#EEEEEE">
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
             <ListView
                 ItemsSource="{Binding MenuItems}"
-                RowHeight="90"
-                       HasUnevenRows="True"
-                SeparatorVisibility="None"
-                SelectedItem="{Binding SelectedMenuItem}">
+                HasUnevenRows="True"
+                SelectedItem="{Binding SelectedMenuItem}"
+                SeparatorColor="#E0E0E0"
+                SeparatorVisibility="Default">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

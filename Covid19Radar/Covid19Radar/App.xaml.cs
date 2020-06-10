@@ -53,8 +53,6 @@ namespace Covid19Radar
         {
             InitializeComponent();
 
-            // Exposure Notification
-
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
@@ -77,9 +75,6 @@ namespace Covid19Radar
 
             if (userDataService.IsExistUserData)
             {
-                // EN Config update
-                await userDataService.UpdateExposureNotificationConfigAsync();
-
                 var userData = userDataService.Get();
                 if (userData.IsOptined)
                 {
@@ -139,7 +134,6 @@ namespace Covid19Radar
 
             //            containerRegistry.RegisterForNavigation<ContributorsPage>();
             //            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
-
             //            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
 
             // Settings
@@ -147,7 +141,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
             containerRegistry.RegisterForNavigation<DebugPage>();
 
-// tutorial
+            // tutorial
             containerRegistry.RegisterForNavigation<TutorialPage1>();
             containerRegistry.RegisterForNavigation<TutorialPage2>();
             containerRegistry.RegisterForNavigation<TutorialPage3>();
@@ -155,7 +149,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage4>();
             containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
-// Help
+            // Help
             containerRegistry.RegisterForNavigation<HelpMenuPage>();
             containerRegistry.RegisterForNavigation<HelpPage1>();
             containerRegistry.RegisterForNavigation<HelpPage2>();
@@ -169,6 +163,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotContactPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
+            containerRegistry.RegisterForNavigation<SubmitConsentPage>();
 
 
             // Services
@@ -189,7 +184,7 @@ namespace Covid19Radar
         async Task InitializeBackgroundTasks()
         {
             if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-            await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
+                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
 
         protected override void OnSleep()

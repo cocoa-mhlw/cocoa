@@ -24,31 +24,30 @@
                 <Label
                     HorizontalOptions="Start"
                     Style="{StaticResource DefaultLabelColor}"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageLabel}" />
-                <!--
+                    Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OnClickLicenseAgreement}" />
+                        <TapGestureRecognizer Command="{prism:NavigateTo 'HelpPage3'}" />
                     </Label.GestureRecognizers>
-                -->
+                </Label>
                 <StackLayout Margin="0,10,0,0" Spacing="0">
                     <Frame
                         Padding="0"
                         BackgroundColor="#CECECE"
                         CornerRadius="7"
                         HasShadow="False"
-                        HeightRequest="50"
+                        HeightRequest="90"
                         HorizontalOptions="FillAndExpand">
                         <Frame
                             Margin="3"
-                            Padding="5"
+                            Padding="0"
                             BackgroundColor="White"
                             CornerRadius="5"
                             HasShadow="False">
                             <Entry
-                                CharacterSpacing="10"
+                                CharacterSpacing="5"
                                 Keyboard="Numeric"
-                                MaxLength="10"
-                                Placeholder="10桁の処理番号"
+                                MaxLength="8"
+                                Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"
                                 Style="{StaticResource DefaultEntry}"
                                 Text="{Binding DiagnosisUid}" />
                         </Frame>
