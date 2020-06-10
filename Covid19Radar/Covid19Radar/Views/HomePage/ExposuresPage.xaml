@@ -11,13 +11,13 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:system="clr-namespace:System;assembly=netstandard"
     xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
-    Title="過去14日間の接触一覧"
+    Title="{x:Static resources:AppResources.ExposuresPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <StackLayout BackgroundColor="#FFFFFF" Style="{StaticResource DefaultStackLayout}">
-        <Label Style="{StaticResource DefaultLabel}" Text="以下の日に陽性者との接触が確認されました。" />
+        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
         <BoxView Style="{StaticResource DefaultLineStyle}" />
         <CollectionView BackgroundColor="#FFFFFF" ItemsSource="{Binding Exposures}">
             <CollectionView.ItemsLayout>
