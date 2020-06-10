@@ -14,10 +14,10 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <StackLayout Padding="10">
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
             <ListView
                 ItemsSource="{Binding MenuItems}"
-                RowHeight="60"
+                HasUnevenRows="True"
                 SelectedItem="{Binding SelectedMenuItem}"
                 SeparatorColor="#E0E0E0"
                 SeparatorVisibility="Default">

@@ -23,9 +23,9 @@
 
     <ScrollView>
         <StackLayout
-            Padding="5"
+            Padding="10"
             BackgroundColor="#EEEEEE"
-            Spacing="5">
+            Spacing="10">
             <Frame Padding="10" CornerRadius="10">
                 <StackLayout Spacing="0">
                     <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
