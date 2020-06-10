@@ -394,6 +394,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Dates when you were in close contact with COVID-19 positive users. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposuresPageLabel1 {
+            get {
+                return ResourceManager.GetString("ExposuresPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   No known exposures に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposuresPageNoExposures {
@@ -944,7 +953,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact for the last 14 days に類似しているローカライズされた文字列を検索します。
+        ///   Close contacts for the past 14 days に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageTitle {
             get {

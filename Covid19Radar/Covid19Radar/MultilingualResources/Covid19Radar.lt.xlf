@@ -579,8 +579,8 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録を停止／情報を削除するには</note>
         </trans-unit>
         <trans-unit id="NotContactPageTitle" translate="yes" xml:space="preserve">
-          <source>Contact for the last 14 days</source>
-          <target state="new">Contact for the last 14 days</target>
+          <source>Close contacts for the past 14 days</source>
+          <target state="new">Close contacts for the past 14 days</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
         <trans-unit id="NotContactPageLabel1" translate="yes" xml:space="preserve">
@@ -937,6 +937,11 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>A list of close contacts (past 14 days)</source>
           <target state="new">A list of close contacts (past 14 days)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageLabel1" translate="yes" xml:space="preserve">
+          <source>Dates when you were in close contact with COVID-19 positive users.</source>
+          <target state="new">Dates when you were in close contact with COVID-19 positive users.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
         </trans-unit>
       </group>
     </body>

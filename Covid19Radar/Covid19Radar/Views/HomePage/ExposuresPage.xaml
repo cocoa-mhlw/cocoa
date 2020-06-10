@@ -17,7 +17,7 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <StackLayout BackgroundColor="#FFFFFF" Style="{StaticResource DefaultStackLayout}">
-        <Label Style="{StaticResource DefaultLabel}" Text="以下の日に陽性者との接触が確認されました。" />
+        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
         <BoxView Style="{StaticResource DefaultLineStyle}" />
         <CollectionView BackgroundColor="#FFFFFF" ItemsSource="{Binding Exposures}">
             <CollectionView.ItemsLayout>
