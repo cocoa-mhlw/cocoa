@@ -661,8 +661,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>接触の検出</comment>
   </data>
   <data name="SettingsPageDescription1" xml:space="preserve">
-    <value>Bloothによる接触の検知</value>
-    <comment>Bloothによる接触の検知</comment>
+    <value>Bluetoothによる接触の検知</value>
+    <comment>Bluetoothによる接触の検知</comment>
   </data>
   <data name="SettingsPageLabel2" xml:space="preserve">
     <value>通知</value>
