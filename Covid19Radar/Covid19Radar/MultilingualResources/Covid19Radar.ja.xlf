@@ -913,6 +913,11 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated">BluetoothがOffになっています。Bluetoothを有効にしてください。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
+        <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
+          <source>A list of close contacts (past 14 days)</source>
+          <target state="translated">過去14日間の接触一覧</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
+        </trans-unit>
       </group>
     </body>
   </file>

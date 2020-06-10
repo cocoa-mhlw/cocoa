@@ -449,13 +449,11 @@
     <comment>過去14日間の接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>No contact
-with positives was confirmed</value>
+    <value>您没有查出跟阳性患者的密切接触</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>Thank you for your continued
-support of "new lifestyle".</value>
+    <value>为了进一步地防范疫情的扩散，请遵循日本政府提倡的“新生活模式”。</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
@@ -495,15 +493,15 @@ support of "new lifestyle".</value>
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>A list of close contacts with COVID-19 positive users</value>
+    <value>和阳性患者的密切接触一览</value>
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Enter symptoms</value>
+    <value>输入症状</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Call COVID-19 Consultation Center</value>
+    <value>给“回国者•接触者咨询中心”打电话</value>
     <comment>帰国者・接触者センターに電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
@@ -511,15 +509,15 @@ support of "new lifestyle".</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</value>
+    <value>如果您有新冠病毒的一些症状，请填写表单或者向医疗机构电话咨询，我们会根据你提供的信息判断是否进行PCR检查。</value>
     <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</value>
+    <value>请截取保存本页面，受诊的时候提供给医院</value>
     <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>Confirm exposure with positive people</value>
+    <value>查询跟阳性患者的密切接触情况</value>
     <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
@@ -725,5 +723,13 @@ support of "new lifestyle".</value>
   <data name="VersionText" xml:space="preserve">
     <value>版本</value>
     <comment>バージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>没有打开蓝牙，请您打开蓝牙模式　Turn on　开启接受通知</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>过去14天内里的密切接触一览过去14天内里的密切接触一览</value>
+    <comment>過去14日間の接触一覧</comment>
   </data>
 </root>

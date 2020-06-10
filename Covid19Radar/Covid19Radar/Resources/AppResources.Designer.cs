@@ -268,7 +268,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Confirm exposure with positive people に類似しているローカライズされた文字列を検索します。
+        ///   Confirmed close contacts with COVID-19 positive users に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageMainText {
             get {
@@ -408,6 +408,15 @@ namespace Covid19Radar.Resources {
         internal static string ExposuresPageNoExposuresInfo {
             get {
                 return ResourceManager.GetString("ExposuresPageNoExposuresInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   A list of close contacts (past 14 days) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposuresPageTitle {
+            get {
+                return ResourceManager.GetString("ExposuresPageTitle", resourceCulture);
             }
         }
         
@@ -917,8 +926,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Thank you for your continued
-        ///support of &quot;new lifestyle&quot;. に類似しているローカライズされた文字列を検索します。
+        ///   Please keep practicing &apos;New Lifestyle&apos; recommended by the government. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageDescription1 {
             get {
@@ -927,8 +935,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   No contact
-        ///with positives was confirmed に類似しているローカライズされた文字列を検索します。
+        ///   No close contacts with COVID-19 positive users に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageLabel1 {
             get {
