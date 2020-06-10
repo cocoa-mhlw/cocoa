@@ -2,11 +2,13 @@
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.DotNet.PlatformAbstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,20 +28,29 @@ namespace Covid19Radar.Api.Tests
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
+            var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
             var diagnosisApi = new DiagnosisApi(config.Object,
                                                 diagnosisRepo.Object,
                                                 tekRepo.Object,
                                                 validation.Object,
                                                 deviceCheck.Object,
+                                                verification.Object,
                                                 logger);
         }
 
         [DataTestMethod]
-        [DataRow(true, true, "xxxxx", "UserUuid")]
-        [DataRow(false, true, "xxxxx", "UserUuid")]
-        [DataRow(false, true, "xxxxx", "UserUuid")]
-        public async Task RunAsyncMethod(bool isValid, bool isValidDevice, string verificationPayload, string userUuid)
+        [DataRow(true, true, "RegionX", "xxxxx", "ios", "UserUuid")]
+        [DataRow(true, true, "RegionX", "xxxxx", "", "UserUuid")]
+        [DataRow(false, false, "Region1", "xxxxx", "ios", "UserUuid")]
+        [DataRow(true, false, "Region1", "xxxxx", "ios", "UserUuid")]
+        [DataRow(true, true, "Region1", "xxxxx", "ios", "UserUuid")]
+        public async Task RunAsyncMethod(bool isValid,
+                                         bool isValidDevice,
+                                         string region,
+                                         string verificationPayload,
+                                         string platform,
+                                         string userUuid)
         {
             // preparation
             var config = new Mock<IConfiguration>();
@@ -59,20 +70,31 @@ namespace Covid19Radar.Api.Tests
             validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
             var deviceCheck = new Mock<IDeviceValidationService>();
             deviceCheck.Setup(_ => _.Validation(It.IsAny<DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
+            var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
             var diagnosisApi = new DiagnosisApi(config.Object,
                                                 diagnosisRepo.Object,
                                                 tekRepo.Object,
                                                 validation.Object,
                                                 deviceCheck.Object,
+                                                verification.Object,
                                                 logger);
             var context = new Mock<HttpContext>();
+            var keydata = new byte[16];
+            RandomNumberGenerator.Create().GetBytes(keydata);
+            var keyDataString = Convert.ToBase64String(keydata);
+            var startNumber = (uint)DateTimeOffset.UtcNow.ToUnixTimeSeconds() / 600;
             var bodyJson = new DiagnosisSubmissionParameter()
             {
                 VerificationPayload = verificationPayload,
+                Regions = new[] { region },
                 UserUuid = userUuid,
+                Platform = platform,
+                DeviceVerificationPayload = "DeviceVerificationPayload",
+                AppPackageName = "Covid19Radar",
                 Keys = new DiagnosisSubmissionParameter.Key[] {
-                    new DiagnosisSubmissionParameter.Key() { KeyData = "", RollingPeriod = 1, RollingStartNumber = 1 } }
+                    new DiagnosisSubmissionParameter.Key() { KeyData = keyDataString, RollingPeriod = 0, RollingStartNumber = startNumber },
+                    new DiagnosisSubmissionParameter.Key() { KeyData = keyDataString, RollingPeriod = 0, RollingStartNumber = startNumber } }
             };
             var bodyString = Newtonsoft.Json.JsonConvert.SerializeObject(bodyJson);
             using var stream = new System.IO.MemoryStream();

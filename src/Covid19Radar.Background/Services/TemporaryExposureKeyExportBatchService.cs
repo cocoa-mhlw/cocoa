@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Background.Services
@@ -19,12 +20,14 @@ namespace Covid19Radar.Background.Services
         /// <summary>
         /// The maximum number of keys in the TEKExport file
         /// </summary>
-        public const int MaxKeysPerFile = 25_000;
+        public const int MaxKeysPerFile = 250_000;
         const int FixedHeaderWidth = 16;
         const string Header = "EK Export v1    ";
         const string ExportBinFileName = "export.bin";
         const string ExportSigFileName = "export.sig";
         const string SequenceName = "BatchNum";
+
+        private readonly byte[] FixedHeader = Encoding.UTF8.GetBytes(Header);
 
         public readonly ISequenceRepository Sequence;
         public readonly ITemporaryExposureKeyRepository TekRepository;
@@ -154,8 +157,8 @@ namespace Covid19Radar.Background.Services
                 var sig = new TEKSignatureList();
 
                 using var binStream = new MemoryStream();
+                await binStream.WriteAsync(FixedHeader, 0, FixedHeaderWidth);
                 using var binStreamCoded = new CodedOutputStream(binStream);
-                binStreamCoded.WriteBytes(ByteString.CopyFromUtf8(Header));
                 bin.WriteTo(binStreamCoded);
                 binStreamCoded.Flush();
                 await binStream.FlushAsync();

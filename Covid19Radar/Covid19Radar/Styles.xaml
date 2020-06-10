@@ -4,12 +4,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Covid19Radar">
+
     <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>
             <local:Colors />
             <local:Fonts />
         </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
+
     <Style TargetType="StackLayout">
         <Setter Property="Spacing" Value="0" />
     </Style>
@@ -37,7 +39,7 @@
     </Style>
 
     <Style x:Key="DefaultStackLayout" TargetType="StackLayout">
-        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="0,0,0,10" />
         <Setter Property="Spacing" Value="0" />
         <Setter Property="VerticalOptions" Value="FillAndExpand" />
         <Setter Property="Padding" Value="0,0,0,0" />
@@ -59,8 +61,9 @@
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
         <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryText}" />
-        <Setter Property="FontSize" Value="Small" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="HeightRequest" Value="40" />
         <Setter Property="Opacity" Value="0.6" />
         <Style.Triggers>
             <Trigger TargetType="Entry" Property="IsFocused" Value="True">
@@ -239,7 +242,8 @@
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="Margin" Value="0,10,0,5" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="WidthRequest" Value="{x:OnPlatform Android=350, iOS=330}" />
         <Setter Property="CornerRadius" Value="{x:OnPlatform Android=50, iOS=20}" />
         <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
         <Style.Triggers>
@@ -261,7 +265,8 @@
         <Setter Property="Padding" Value="0,0,0,0" />
         <Setter Property="TextColor" Value="{StaticResource ButtonGrayedOut}" />
         <Setter Property="FontSize" Value="Medium" />
-        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="WidthRequest" Value="{x:OnPlatform Android=350, iOS=330}" />
         <Setter Property="CornerRadius" Value="{x:OnPlatform Android=50, iOS=20}" />
         <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
     </Style>
