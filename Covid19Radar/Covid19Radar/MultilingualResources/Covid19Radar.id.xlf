@@ -93,7 +93,7 @@
           <target state="translated">Perjanjian Lisensi</target>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/policy.html</source>
+          <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</source>
           <target state="needs-review-translation">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
@@ -942,6 +942,11 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <source>Dates when you were in close contact with COVID-19 positive users.</source>
           <target state="new">Dates when you were in close contact with COVID-19 positive users.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
+        </trans-unit>
+        <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</source>
+          <target state="new">https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
       </group>
     </body>
