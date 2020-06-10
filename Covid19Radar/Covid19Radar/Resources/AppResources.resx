@@ -833,4 +833,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>Bluetooth is turned off.Please turn in Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>A list of close contacts (past 14 days)</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
 </root>
