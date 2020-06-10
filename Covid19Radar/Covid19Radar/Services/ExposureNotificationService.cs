@@ -161,9 +161,6 @@ namespace Covid19Radar.Services
                     message = "BluetoothがOffになっています。Bluetoothを有効にしてください。";
                     break;
                 case Status.Restricted:
-                    message = "Exposure Notification機能が制限されています。制限を解除してください。";
-                    break;
-                case Status.NotAuthorized:
                     message = "Exposure Notification機能が承認されていません。承認してください。";
                     break;
                 default:
