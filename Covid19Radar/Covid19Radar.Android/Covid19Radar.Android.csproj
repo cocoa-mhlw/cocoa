@@ -1272,4 +1272,13 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_hamburger.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-en\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-ja\Strings.xml" />
+  </ItemGroup>
 </Project>
