@@ -26,8 +26,10 @@ namespace Covid19Radar.Droid
     {
         public static object dataLock = new object();
 
+        public static MainActivity Current { get; private set; }
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Current = this;
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             base.SetTheme(Resource.Style.MainTheme);
