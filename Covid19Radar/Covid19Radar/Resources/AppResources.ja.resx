@@ -53,7 +53,7 @@
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID-19Radar</value>
+    <value>新型コロナウィルス接触確認アプリ</value>
     <comment>App Name</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
@@ -397,7 +397,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
-    <value>To register the positive reaction of COVID19 and anonymous notification to others</value>
+    <value>陽性情報の登録と他者への匿名通知へ</value>
     <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
