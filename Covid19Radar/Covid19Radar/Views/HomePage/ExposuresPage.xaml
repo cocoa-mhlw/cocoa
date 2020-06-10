@@ -3,16 +3,21 @@
     x:Class="Covid19Radar.Views.ExposuresPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:model="clr-namespace:Xamarin.ExposureNotifications;assembly=Xamarin.ExposureNotification"
     xmlns:prism="http://prismlibrary.com"
+    xmlns:renderers="clr-namespace:Covid19Radar.Renderers"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
-    NavigationPage.TitleIconImageSource="HeaderLogo.png"
+    xmlns:system="clr-namespace:System;assembly=netstandard"
+    xmlns:viewmodel="clr-namespace:Covid19Radar.ViewModels"
+    Title="{x:Static resources:AppResources.ExposuresPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <StackLayout BackgroundColor="#FFFFFF" Style="{StaticResource DefaultStackLayout}">
-        <Label Style="{StaticResource DefaultLabel}" Text="以下の日に陽性者との接触が確認されました。" />
+        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
         <BoxView Style="{StaticResource DefaultLineStyle}" />
         <CollectionView BackgroundColor="#FFFFFF" ItemsSource="{Binding Exposures}">
             <CollectionView.ItemsLayout>
