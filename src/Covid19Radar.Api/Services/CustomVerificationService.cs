@@ -26,16 +26,23 @@ namespace Covid19Radar.Api.Services
             Config = config;
             Logger = logger;
             var cert = config.VerificationPayloadPfx();
-            Cert = new X509Certificate2(Convert.FromBase64String(cert));
-            Handler = new HttpClientHandler();
-            Handler.ClientCertificateOptions = ClientCertificateOption.Manual;
-            Handler.ClientCertificates.Add(Cert);
-            ApiSecret = config.VerificationPayloadApiSecret();
+            // option client certification
+            if (!string.IsNullOrWhiteSpace(cert))
+            {
+                Cert = new X509Certificate2(Convert.FromBase64String(cert));
+                Handler = new HttpClientHandler();
+                Handler.ClientCertificateOptions = ClientCertificateOption.Manual;
+                Handler.ClientCertificates.Add(Cert);
+            }
             Url = config.VerificationPayloadUrl();
             Client = new HttpClient(Handler);
             Client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-            Client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", ApiSecret);
             VerificationPayloadParameterName = config.VerificationPayloadParameterName();
+            // option api secret for api management
+            ApiSecret = config.VerificationPayloadApiSecret();
+            if (!string.IsNullOrWhiteSpace(ApiSecret)) {
+                Client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", ApiSecret);
+            }
         }
 
         public async Task<bool> Verification(string verificationPayload)
