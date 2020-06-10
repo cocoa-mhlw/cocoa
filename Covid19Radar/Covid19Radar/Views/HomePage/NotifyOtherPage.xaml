@@ -36,8 +36,7 @@
                         BackgroundColor="#CECECE"
                         CornerRadius="7"
                         HasShadow="False"
-                        HeightRequest="{x:OnPlatform Android=90,
-                                                     iOS=0}"
+                        HeightRequest="90"
                         HorizontalOptions="FillAndExpand">
                         <Frame
                             Margin="3"
@@ -46,7 +45,7 @@
                             CornerRadius="5"
                             HasShadow="False">
                             <Entry
-                                CharacterSpacing="10"
+                                CharacterSpacing="5"
                                 Keyboard="Numeric"
                                 MaxLength="8"
                                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"
