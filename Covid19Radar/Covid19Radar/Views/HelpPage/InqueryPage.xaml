@@ -17,7 +17,6 @@
             Padding="10"
             BackgroundColor="{StaticResource Background}"
             Spacing="0">
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
             <Frame Padding="10" HasShadow="False">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding Path=OnClickEmail}" />
