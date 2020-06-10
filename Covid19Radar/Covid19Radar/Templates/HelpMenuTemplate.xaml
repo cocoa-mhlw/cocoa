@@ -4,7 +4,33 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <StackLayout BackgroundColor="#EEEEEE">
+    <StackLayout>
+        <!--  Main design for our menu items  -->
+        <StackLayout
+            Padding="20,10,0,10"
+            Style="{StaticResource ImageLableStackLayout}"
+            VerticalOptions="FillAndExpand">
+            <Label
+                AutomationId="{Binding Title}"
+                FontSize="Default"
+                Text="{Binding Title}"
+                TextColor="{StaticResource NavBarText}"
+                VerticalOptions="Center" />
+            <Image
+                AutomationId="{Binding Title}"
+                HeightRequest="35"
+                HorizontalOptions="EndAndExpand"
+                WidthRequest="35">
+                <Image.Source>
+                    <FontImageSource
+                        FontFamily="FA-S"
+                        Glyph="{Binding Icon}"
+                        Size="30"
+                        Color="#019AE8" />
+                </Image.Source>
+            </Image>
+        </StackLayout>
+        <!--
         <Frame Padding="10,0,0,0" CornerRadius="10">
             <StackLayout Spacing="5">
                 <Grid ColumnSpacing="10" RowSpacing="0">
@@ -37,5 +63,6 @@
                 </Grid>
             </StackLayout>
         </Frame>
+        -->
     </StackLayout>
 </ContentView>
