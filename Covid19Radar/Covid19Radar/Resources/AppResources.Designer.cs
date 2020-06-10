@@ -268,7 +268,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Confirmed close contacts with COVID-19 positive users に類似しているローカライズされた文字列を検索します。
+        ///   Number of confirmed close contacts with COVID-19 positive users に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageMainText {
             get {

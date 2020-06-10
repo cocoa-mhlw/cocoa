@@ -626,7 +626,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>Confirmed close contacts with COVID-19 positive users</value>
+    <value>Number of confirmed close contacts with COVID-19 positive users</value>
     <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
