@@ -8,7 +8,7 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:system="clr-namespace:System;assembly=netstandard"
-    Title="{x:Static resources:AppResources.NotifyOtherPageTitle}"
+    NavigationPage.TitleIconImageSource="HeaderLogo.png"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
