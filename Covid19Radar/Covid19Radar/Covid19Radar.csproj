@@ -25,7 +25,11 @@
     <Compile Remove="Model\UnUsed\**" />
     <Compile Remove="Services\UnUsed\**" />
     <Compile Remove="Templates\UnUsed\**" />
+    <Compile Remove="ViewModels\HomePage\UnUsed\**" />
+    <Compile Remove="ViewModels\Tutorial\UnUsed\**" />
     <Compile Remove="ViewModels\UnUsed\**" />
+    <Compile Remove="Views\HomePage\UnUsed\**" />
+    <Compile Remove="Views\Tutorial\UnUsed\**" />
     <Compile Remove="Views\UnUsed\**" />
     <EmbeddedResource Remove="Behaviors\UnUsed\**" />
     <EmbeddedResource Remove="Controls\**" />
@@ -33,7 +37,11 @@
     <EmbeddedResource Remove="Model\UnUsed\**" />
     <EmbeddedResource Remove="Services\UnUsed\**" />
     <EmbeddedResource Remove="Templates\UnUsed\**" />
+    <EmbeddedResource Remove="ViewModels\HomePage\UnUsed\**" />
+    <EmbeddedResource Remove="ViewModels\Tutorial\UnUsed\**" />
     <EmbeddedResource Remove="ViewModels\UnUsed\**" />
+    <EmbeddedResource Remove="Views\HomePage\UnUsed\**" />
+    <EmbeddedResource Remove="Views\Tutorial\UnUsed\**" />
     <EmbeddedResource Remove="Views\UnUsed\**" />
     <None Remove="Behaviors\UnUsed\**" />
     <None Remove="Controls\**" />
@@ -41,7 +49,11 @@
     <None Remove="Model\UnUsed\**" />
     <None Remove="Services\UnUsed\**" />
     <None Remove="Templates\UnUsed\**" />
+    <None Remove="ViewModels\HomePage\UnUsed\**" />
+    <None Remove="ViewModels\Tutorial\UnUsed\**" />
     <None Remove="ViewModels\UnUsed\**" />
+    <None Remove="Views\HomePage\UnUsed\**" />
+    <None Remove="Views\Tutorial\UnUsed\**" />
     <None Remove="Views\UnUsed\**" />
   </ItemGroup>
 
@@ -110,14 +122,8 @@
     <Compile Update="Views\HomePage\ThankYouNotifyOtherPage.xaml.cs">
       <DependentUpon>ThankYouNotifyOtherPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\UnUsed\UpdateInformationPage.xaml.cs">
-      <DependentUpon>UpdateInformationPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\Settings\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\HomePage\UnUsed\ContributorsPage.xaml.cs">
-      <DependentUpon>ContributorsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -130,18 +136,6 @@
     </Compile>
     <Compile Update="Views\HomePage\SubmitConsentPage.xaml.cs">
       <DependentUpon>SubmitConsentPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Tutorial\UnUsed\DescriptionPage4.xaml.cs">
-      <DependentUpon>DescriptionPage4.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Tutorial\UnUsed\DescriptionPage3.xaml.cs">
-      <DependentUpon>DescriptionPage3.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Tutorial\UnUsed\DescriptionPage2.xaml.cs">
-      <DependentUpon>DescriptionPage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Tutorial\UnUsed\DescriptionPage1.xaml.cs">
-      <DependentUpon>DescriptionPage1.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HelpPage\HelpMenuPage.xaml.cs">
       <DependentUpon>HelpMenuPage.xaml</DependentUpon>
@@ -158,14 +152,8 @@
     <Compile Update="Views\HelpPage\HelpPage4.xaml.cs">
       <DependentUpon>HelpPage4.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Tutorial\UnUsed\InitSettingPage.xaml.cs">
-      <DependentUpon>InitSettingPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\Tutorial\PrivacyPolicyPage.xaml.cs">
       <DependentUpon>PrivacyPolicyPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Tutorial\UnUsed\StartTutorialPage.xaml.cs">
-      <DependentUpon>StartTutorialPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Resources\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
@@ -182,9 +170,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\HomePage\ExposuresPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Tutorial\UnUsed\SetupCompletedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
