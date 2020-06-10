@@ -670,8 +670,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>Terms of use</value>
-    <comment>利用規約</comment>
+    <value>License</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
     <value>Your privacy is protected</value>

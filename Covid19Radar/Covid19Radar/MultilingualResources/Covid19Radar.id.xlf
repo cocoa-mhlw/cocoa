@@ -724,9 +724,9 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
-          <source>Terms of use</source>
-          <target state="new">Terms of use</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
+          <source>License</source>
+          <target state="new">License</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
