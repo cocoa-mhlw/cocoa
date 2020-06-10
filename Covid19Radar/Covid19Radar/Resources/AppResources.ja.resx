@@ -79,16 +79,8 @@
     <value>使用許諾契約書</value>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/ja/privacypolicy.html</value>
+    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//ja/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="UrlContributor" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/ja/contributor.html</value>
-    <comment>Url Contributor</comment>
-  </data>
-  <data name="UrlUpdate" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/ja/update.html</value>
-    <comment>Update</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>アプリのインストール</value>
@@ -735,5 +727,9 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>以下の日に陽性者との接触が確認されました。</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/ja/termofuse.html</value>
+    <comment>Term of Use</comment>
   </data>
 </root>

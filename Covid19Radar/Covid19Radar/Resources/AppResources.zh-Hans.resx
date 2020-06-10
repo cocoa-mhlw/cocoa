@@ -79,16 +79,8 @@
     <value>授权协议</value>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hans/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="UrlContributor" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
-    <comment>Url Contributor</comment>
-  </data>
-  <data name="UrlUpdate" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
-    <comment>Update</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>安装应用</value>
@@ -735,5 +727,9 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>以下日期查出您和阳性患者有密切接触以下日期查出您和阳性患者有密切接触</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hans/termofuse.html</value>
+    <comment>Term of Use</comment>
   </data>
 </root>

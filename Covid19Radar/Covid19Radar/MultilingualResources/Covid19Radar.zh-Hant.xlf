@@ -93,19 +93,8 @@
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hant/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
-        </trans-unit>
-        <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/contributor.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Url Contributor</note>
-        </trans-unit>
-        <trans-unit id="UrlUpdate" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
           <source>Installing an App</source>
@@ -944,7 +933,7 @@ Select 'Always Allow' to set up Bluetooth.</source>
         </trans-unit>
         <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</source>
-          <target state="new">https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</target>
+          <target state="translated">https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hant/termofuse.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
       </group>
