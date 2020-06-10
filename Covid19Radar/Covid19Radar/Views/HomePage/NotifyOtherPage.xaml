@@ -24,12 +24,11 @@
                 <Label
                     HorizontalOptions="Start"
                     Style="{StaticResource DefaultLabelColor}"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageLabel}" />
-                <!--
+                    Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OnClickLicenseAgreement}" />
+                        <TapGestureRecognizer Command="{prism:NavigateTo 'HelpPage3'}" />
                     </Label.GestureRecognizers>
-                -->
+                </Label>
                 <StackLayout Margin="0,10,0,0" Spacing="0">
                     <Frame
                         Padding="0"
