@@ -1394,7 +1394,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Terms of use に類似しているローカライズされた文字列を検索します。
+        ///   License に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TermsofservicePageTitle {
             get {
