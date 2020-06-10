@@ -913,6 +913,11 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="translated">没有打开蓝牙，请您打开蓝牙模式　Turn on　开启接受通知</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
+        <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
+          <source>A list of close contacts (past 14 days)</source>
+          <target state="translated">过去14天内里的密切接触一览</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
+        </trans-unit>
       </group>
     </body>
   </file>
