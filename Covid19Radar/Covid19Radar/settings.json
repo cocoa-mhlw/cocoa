@@ -3,5 +3,6 @@
   "supportedRegions": "440;441",
   "blobStorageContainerName": "c19r",
   "androidSafetyNetApiKey": "***REMOVED***",
-  "cdnUrlBase": "***REMOVED***"
+  "cdnUrlBase": "***REMOVED***",
+  "licenseUrl": "https://covid19radarjpnbgprod.blob.core.windows.net/html/license.html"
 }

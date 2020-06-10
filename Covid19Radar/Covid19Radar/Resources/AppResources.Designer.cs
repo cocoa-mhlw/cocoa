@@ -1763,11 +1763,20 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/policy.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
             get {
                 return ResourceManager.GetString("UrlPrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlTermOfUse {
+            get {
+                return ResourceManager.GetString("UrlTermOfUse", resourceCulture);
             }
         }
         
