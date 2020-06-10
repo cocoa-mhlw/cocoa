@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Background.Services
@@ -25,6 +26,8 @@ namespace Covid19Radar.Background.Services
         const string ExportBinFileName = "export.bin";
         const string ExportSigFileName = "export.sig";
         const string SequenceName = "BatchNum";
+
+        private readonly byte[] FixedHeader = Encoding.UTF8.GetBytes(Header);
 
         public readonly ISequenceRepository Sequence;
         public readonly ITemporaryExposureKeyRepository TekRepository;
@@ -155,7 +158,7 @@ namespace Covid19Radar.Background.Services
 
                 using var binStream = new MemoryStream();
                 using var binStreamCoded = new CodedOutputStream(binStream);
-                binStreamCoded.WriteBytes(ByteString.CopyFromUtf8(Header));
+                binStreamCoded.WriteBytes(ByteString.CopyFrom(FixedHeader, 0, FixedHeaderWidth));
                 bin.WriteTo(binStreamCoded);
                 binStreamCoded.Flush();
                 await binStream.FlushAsync();
