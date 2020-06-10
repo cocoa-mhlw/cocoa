@@ -493,7 +493,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   What is an encounter に類似しているローカライズされた文字列を検索します。
+        ///   What is a close contact に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description2Title {
             get {
@@ -511,7 +511,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Recording encounter に類似しているローカライズされた文字列を検索します。
+        ///   Recording close contact に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage1Description3Title {
             get {
