@@ -555,11 +555,11 @@ support of "new lifestyle".</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
-    <value>Share this app</value>
+    <value>分享此APP</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
-    <value>Home</value>
+    <value>主页</value>
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
@@ -599,7 +599,7 @@ support of "new lifestyle".</value>
     <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
   </data>
   <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>Turn on</value>
+    <value>开启</value>
     <comment>有効にする</comment>
   </data>
   <data name="TutorialPage5Description4" xml:space="preserve">
@@ -611,7 +611,7 @@ support of "new lifestyle".</value>
     <comment>通知をご利用いただくために</comment>
   </data>
   <data name="MenuPageTitle" xml:space="preserve">
-    <value>Menu</value>
+    <value>菜单</value>
     <comment>メニュー</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
