@@ -62,8 +62,6 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <MandroidI18n>CJK</MandroidI18n>
     <AotAssemblies>true</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\release.keystore</AndroidSigningKeyStore>
@@ -71,8 +69,6 @@
     <AndroidSigningKeyAlias>release</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>***REMOVED***</AndroidSigningKeyPass>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
-    <AndroidLinkSkip>
-    </AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
