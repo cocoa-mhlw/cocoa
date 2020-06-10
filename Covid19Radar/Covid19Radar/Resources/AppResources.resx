@@ -558,13 +558,11 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>No contact
-with positives was confirmed</value>
+    <value>No close contacts with COVID-19 positive users</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>Thank you for your continued
-support of "new lifestyle".</value>
+    <value>Please keep practicing 'New Lifestyle' recommended by the government.</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
@@ -604,7 +602,7 @@ support of "new lifestyle".</value>
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>List of exposure with positive people</value>
+    <value>A list of close contacts with COVID-19 positive users</value>
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
@@ -612,7 +610,7 @@ support of "new lifestyle".</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Call the Returnee and Exposure Center</value>
+    <value>Call COVID-19 Consultation Center</value>
     <comment>帰国者・接触者センターに電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
@@ -620,15 +618,15 @@ support of "new lifestyle".</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider.</value>
+    <value>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</value>
     <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Please save a screenshot of this screen, as it may be required for medical examinations.</value>
+    <value>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</value>
     <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>Confirm exposure with positive people</value>
+    <value>Confirmed close contacts with COVID-19 positive users</value>
     <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
@@ -830,5 +828,9 @@ support of "new lifestyle".</value>
   <data name="SubmitConsentPageTitle2" xml:space="preserve">
     <value>Consent to positive registration</value>
     <comment>陽性登録への同意</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>Bluetooth is turned off.Please turn in Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
 </root>
