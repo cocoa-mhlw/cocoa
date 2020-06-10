@@ -79,7 +79,7 @@
     <value>使用許諾契約書</value>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//ja/privacypolicy.html</value>
+    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/ja/privacypolicy.html</value>
     <comment>Policy</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
