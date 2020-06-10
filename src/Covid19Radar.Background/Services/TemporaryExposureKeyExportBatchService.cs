@@ -20,7 +20,7 @@ namespace Covid19Radar.Background.Services
         /// <summary>
         /// The maximum number of keys in the TEKExport file
         /// </summary>
-        public const int MaxKeysPerFile = 25_000;
+        public const int MaxKeysPerFile = 250_000;
         const int FixedHeaderWidth = 16;
         const string Header = "EK Export v1    ";
         const string ExportBinFileName = "export.bin";
@@ -157,8 +157,8 @@ namespace Covid19Radar.Background.Services
                 var sig = new TEKSignatureList();
 
                 using var binStream = new MemoryStream();
+                await binStream.WriteAsync(FixedHeader, 0, FixedHeaderWidth);
                 using var binStreamCoded = new CodedOutputStream(binStream);
-                binStreamCoded.WriteBytes(ByteString.CopyFrom(FixedHeader, 0, FixedHeaderWidth));
                 bin.WriteTo(binStreamCoded);
                 binStreamCoded.Flush();
                 await binStream.FlushAsync();

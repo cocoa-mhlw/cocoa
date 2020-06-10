@@ -59,8 +59,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
-          <source>COVID-19Radar</source>
-          <target state="translated">COVID-19Radar</target>
+          <source>COVID-19 Contact App</source>
+          <target state="needs-review-translation">COVID-19Radar</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
         <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
@@ -113,7 +114,7 @@
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 title</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
-          <source>Recording Close Contact</source>
+          <source>Recording close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ir-Re ġistrazzjoni tal-kuntatt mill-qrib</target>
           <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
         </trans-unit>
@@ -262,8 +263,9 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Issottometti</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
-          <source>Settings</source>
+          <source>App Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Issettjar</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
         </trans-unit>
         <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
@@ -292,7 +294,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jekk irċevejt dijanjożi pożittiva</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
-          <source>Ask your family and friends to help</source>
+          <source>Ask your family and friends to participate</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ixxerja l-App</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを広めましょう</note>
@@ -380,7 +382,7 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuntatt ma ' testers pożittivi f ' dawn l-a ħħar 14-il jum</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
-          <source>Please help protect your family and friends by anonymously registering test results.</source>
+          <source>Help protect your family and friends by anonymously registering test results.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jekk inti pożittiv bil-corona l-ġdida, jekk jogħġbok tikkoopera mar-Re ġistrazzjoni pożittiva biex tipproteġi n-nies ta ' madwarek.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</note>
@@ -398,25 +400,25 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使い方</note>
         </trans-unit>
         <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
-          <source>What is an 'encounter'</source>
+          <source>What is a 'close contact'?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Identifikazzjoni tat-terminal</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録方法</note>
         </trans-unit>
         <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
-          <source>Checking encounters</source>
+          <source>Checking close contacts</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Metodu ta ' konferma ta ' kuntatt</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の確認方法</note>
         </trans-unit>
         <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
-          <source>If you tested positive</source>
+          <source>When tested positive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jekk ikun determinat li huwa infettat</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
         </trans-unit>
         <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
-          <source>Stop / delete encounter history</source>
+          <source>Stop / delete close contact history</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Waqqaf/Ħassar ir-Re ġistrazzjoni</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">記録の停止／削除</note>
@@ -428,25 +430,25 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
-          <source>What is an encounter</source>
+          <source>What is a close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Il-kundizzjonijiet ta ' kuntatt irreġistrati</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">記録される接触の条件</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
-          <source>If smartphones running this app are in close proximity (within 1 meter for 15 minutes or more), this is recorded as an encounter.</source>
+          <source>If smartphones running this app are in close contact (within 1 meter for 15 minutes or more), this is recorded as a close contact.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuntatt ma ' utenti oħra tal-App fi ħdan miter 1 għal 15-il minuta jew aktar jiġi rreġistrat bħala "kuntatt".</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
-          <source>Recording encounter</source>
+          <source>Recording close contact</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Irrekordjar tal-informazzjoni ta ' kuntatt</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">接触情報の記録 </note>
         </trans-unit>
         <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
-          <source>Phones in close proximity exchange their random codes. This information will not be used until either user registers positive test results with this app. The encounter history will be erased after 14 days. *The code changes regularly to protect your privacy.</source>
+          <source>Phones in close contact exchange their random codes. This information will not be used until either user registers positive test results with this app. The close contact history will be erased after 14 days. Note: The code changes regularly to protect your privacy.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">F ' dan iż-żmien, il-Kodi ċi ta ' kuntatt tal-persuna kkuntattjata huwa rreġistrat fl-applikazzjoni. L-informazzjoni ta ' kuntatt ma tintużax sakemm kwalunkwe utent ikun Irreġistra pożittiv. L-istorja tal-kuntatt se titħassar wara 14-il jum. * Il-Kodi ċi tal-kuntatt jinbidel regolarment.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</note>
@@ -457,23 +459,23 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定へ</note>
         </trans-unit>
         <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
-          <source>From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete encounter history.</source>
-          <target state="new">From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete encounter history.</target>
+          <source>From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history.</source>
+          <target state="new">From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
-          <source>The app will notify you, if you were in close proximity with COVID-19 positive app user.</source>
-          <target state="new">The app will notify you, if you were in close proximity with COVID-19 positive app user.</target>
+          <source>The app will notify you, if you were in close contact with COVID-19 positive user.</source>
+          <target state="new">The app will notify you, if you were in close contact with COVID-19 positive user.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description2" translate="yes" xml:space="preserve">
-          <source>You can check the number of your encounters from the home screen.</source>
-          <target state="new">You can check the number of your encounters from the home screen.</target>
+          <source>You can check the number of your close contacts from the home screen.</source>
+          <target state="new">You can check the number of your close contacts from the home screen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最近の接触件数の確認へはホーム画面からも移動することができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description3" translate="yes" xml:space="preserve">
-          <source>You can check the list of encounter dates and receive guidance on what to do if you have symptoms of the disease.</source>
-          <target state="new">You can check the list of encounter dates and receive guidance on what to do if you have symptoms of the disease.</target>
+          <source>You can check the list of close contact dates and receive guidance on what to do if you have symptoms of the disease.</source>
+          <target state="new">You can check the list of close contact dates and receive guidance on what to do if you have symptoms of the disease.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Label1" translate="yes" xml:space="preserve">
@@ -487,8 +489,8 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム画面</note>
         </trans-unit>
         <trans-unit id="HelpPage2Label3" translate="yes" xml:space="preserve">
-          <source>If you encountered COVID-19 positive app user</source>
-          <target state="new">If you encountered COVID-19 positive app user</target>
+          <source>If you had close contact with a COVID-19 positive user</source>
+          <target state="new">If you had close contact with a COVID-19 positive user</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触があった場合</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
@@ -507,18 +509,18 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを用いて処理番号の登録を行います。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description4" translate="yes" xml:space="preserve">
-          <source>Smartphones that were in close proximity with your smartphone within the last 14 days will receive notifications.</source>
-          <target state="new">Smartphones that were in close proximity with your smartphone within the last 14 days will receive notifications.</target>
+          <source>Smartphones that were in close contact with your smartphone within the last 14 days will receive notifications.</source>
+          <target state="new">Smartphones that were in close contact with your smartphone within the last 14 days will receive notifications.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
-          <source>Only random codes generated by your device are used when sending notifications. No personal information is used.</source>
-          <target state="new">Only random codes generated by your device are used when sending notifications. No personal information is used.</target>
+          <source>Only randomly generated codes from device are used when sending notifications. No personal information is used.</source>
+          <target state="new">Only randomly generated codes from device are used when sending notifications. No personal information is used.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
-          <source>Register here if you tested positive</source>
-          <target state="new">Register here if you tested positive</target>
+          <source>Register here when tested positive</source>
+          <target state="new">Register here when tested positive</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録と他者への匿名通知へ</note>
         </trans-unit>
         <trans-unit id="SettingsPageButton1" translate="yes" xml:space="preserve">
@@ -527,14 +529,14 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ライセンス…</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel1" translate="yes" xml:space="preserve">
-          <source>Encounter recording</source>
-          <target state="new">Encounter recording</target>
+          <source>Close contact recording</source>
+          <target state="new">Close contact recording</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の検出</note>
         </trans-unit>
         <trans-unit id="SettingsPageDescription1" translate="yes" xml:space="preserve">
           <source>Use of Bluetooth</source>
           <target state="new">Use of Bluetooth</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Bloothによる接触の検知</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Bluetoothによる接触の検知</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel2" translate="yes" xml:space="preserve">
           <source>Notifications</source>
@@ -542,8 +544,8 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
         </trans-unit>
         <trans-unit id="SettingsPageDescription2" translate="yes" xml:space="preserve">
-          <source>Encounter notifications</source>
-          <target state="new">Encounter notifications</target>
+          <source>Close contact notifications</source>
+          <target state="new">Close contact notifications</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触通知</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel3" translate="yes" xml:space="preserve">
@@ -552,18 +554,18 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの使用中止</note>
         </trans-unit>
         <trans-unit id="SettingsPageDescription3" translate="yes" xml:space="preserve">
-          <source>Stop using and delete encounter records</source>
-          <target state="new">Stop using and delete encounter records</target>
+          <source>Stop using and delete close contact records</source>
+          <target state="new">Stop using and delete close contact records</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用を中止して過去14日間の接触履歴を消去</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel1" translate="yes" xml:space="preserve">
-          <source>What is an 'encounter'</source>
-          <target state="new">What is an 'encounter'</target>
+          <source>What is a 'close contact'?</source>
+          <target state="new">What is a 'close contact'?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">どのようにして接触を記録していますか？</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel2" translate="yes" xml:space="preserve">
-          <source>How to check number of encounters</source>
-          <target state="new">How to check number of encounters</target>
+          <source>How do I check number of close contacts?</source>
+          <target state="new">How do I check number of close contacts?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の有無はどのように知ることができますか？</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel3" translate="yes" xml:space="preserve">
@@ -572,27 +574,23 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルスに感染していると判定されたら</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel4" translate="yes" xml:space="preserve">
-          <source>How to stop / delete encounter recording</source>
-          <target state="new">How to stop / delete encounter recording</target>
+          <source>How do I stop / delete close contact recording?</source>
+          <target state="new">How do I stop / delete close contact recording?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録を停止／情報を削除するには</note>
         </trans-unit>
         <trans-unit id="NotContactPageTitle" translate="yes" xml:space="preserve">
-          <source>Contact for the last 14 days</source>
-          <target state="new">Contact for the last 14 days</target>
+          <source>Close contacts for the past 14 days</source>
+          <target state="new">Close contacts for the past 14 days</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
         <trans-unit id="NotContactPageLabel1" translate="yes" xml:space="preserve">
-          <source>No contact
-with positives was confirmed</source>
-          <target state="new">No contact
-with positives was confirmed</target>
+          <source>No close contacts with COVID-19 positive users</source>
+          <target state="new">No close contacts with COVID-19 positive users</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触は確認されませんでした</note>
         </trans-unit>
         <trans-unit id="NotContactPageDescription1" translate="yes" xml:space="preserve">
-          <source>Thank you for your continued
-support of "new lifestyle".</source>
-          <target state="new">Thank you for your continued
-support of "new lifestyle".</target>
+          <source>Please keep practicing 'New Lifestyle' recommended by the government.</source>
+          <target state="new">Please keep practicing 'New Lifestyle' recommended by the government.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">引き続き「新しい生活様式」の実践をよろしくお願いいたします。</note>
         </trans-unit>
         <trans-unit id="NotContactPageButtonText" translate="yes" xml:space="preserve">
@@ -606,8 +604,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性のご登録をいただきありがとうございました</note>
         </trans-unit>
         <trans-unit id="ThankYouNotifyOtherPageDescription1" translate="yes" xml:space="preserve">
-          <source>Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of encounter is recorded.</source>
-          <target state="new">Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of encounter is recorded.</target>
+          <source>Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</source>
+          <target state="new">Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
         </trans-unit>
         <trans-unit id="TutorialPage3Title" translate="yes" xml:space="preserve">
@@ -641,8 +639,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">端末の識別</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton1" translate="yes" xml:space="preserve">
-          <source>List of exposure with positive people</source>
-          <target state="new">List of exposure with positive people</target>
+          <source>A list of close contacts with COVID-19 positive users</source>
+          <target state="new">A list of close contacts with COVID-19 positive users</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触一覧</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
@@ -651,8 +649,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
-          <source>Call the Returnee and Exposure Center</source>
-          <target state="new">Call the Returnee and Exposure Center</target>
+          <source>Call COVID-19 Consultation Center</source>
+          <target state="new">Call COVID-19 Consultation Center</target>
           <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者センターに電話</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
@@ -661,23 +659,23 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">件</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
-          <source>Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider.</source>
-          <target state="new">Please contact the government agency by filling out the form or by phone to inform them of your current symptoms. Depending on the nature of your condition, you will be advised to visit a PCR testing center or other health care provider.</target>
+          <source>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</source>
+          <target state="new">If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
-          <source>Please save a screenshot of this screen, as it may be required for medical examinations.</source>
-          <target state="new">Please save a screenshot of this screen, as it may be required for medical examinations.</target>
+          <source>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</source>
+          <target state="new">Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
-          <source>Confirm exposure with positive people</source>
-          <target state="new">Confirm exposure with positive people</target>
+          <source>Number of confirmed close contacts with COVID-19 positive users</source>
+          <target state="new">Number of confirmed close contacts with COVID-19 positive users</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触確認</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageTitle" translate="yes" xml:space="preserve">
-          <source>Exposure for the last 14 days</source>
-          <target state="new">Exposure for the last 14 days</target>
+          <source>Close contacts for the past 14 days</source>
+          <target state="new">Close contacts for the past 14 days</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription1" translate="yes" xml:space="preserve">
@@ -696,23 +694,23 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
-          <source>using the app</source>
-          <target state="new">using the app</target>
+          <source>in use</source>
+          <target state="new">in use</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
-          <source>Check encounters (past 14 days)</source>
-          <target state="new">Check encounters (past 14 days)</target>
+          <source>Check close contacts (past 14 days)</source>
+          <target state="new">Check close contacts (past 14 days)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
         </trans-unit>
         <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
-          <source>If you tested positive for COVID-19</source>
-          <target state="new">If you tested positive for COVID-19</target>
+          <source>When tested positive for COVID-19</source>
+          <target state="new">When tested positive for COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス陽性と診断されたら</note>
         </trans-unit>
         <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
-          <source>Registration of positive information</source>
-          <target state="new">Registration of positive information</target>
+          <source>Register positive test result</source>
+          <target state="new">Register positive test result</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
         </trans-unit>
         <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">
@@ -726,9 +724,9 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
-          <source>Terms of use</source>
-          <target state="new">Terms of use</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
+          <source>License</source>
+          <target state="new">License</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
@@ -746,8 +744,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description4" translate="yes" xml:space="preserve">
-          <source>You can stop recording encounters anytime by changing app settings or deleting the app.</source>
-          <target state="new">You can stop recording encounters anytime by changing app settings or deleting the app.</target>
+          <source>You can stop recording close contacts with other users anytime by changing app settings or deleting the app.</source>
+          <target state="new">You can stop recording close contacts with other users anytime by changing app settings or deleting the app.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description5" translate="yes" xml:space="preserve">
@@ -766,8 +764,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description2" translate="yes" xml:space="preserve">
-          <source>Please turn on notifications to receive encounter notifications.</source>
-          <target state="new">Please turn on notifications to receive encounter notifications.</target>
+          <source>Please turn on notifications to be notified when you had close contacts with COVID-19 positive users.</source>
+          <target state="new">Please turn on notifications to be notified when you had close contacts with COVID-19 positive users.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description3" translate="yes" xml:space="preserve">
@@ -801,8 +799,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
-          <source>Users who were in close proximity with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of encounter is recorded.</source>
-          <target state="new">Users who were in close proximity with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of encounter is recorded.</target>
+          <source>Users who were in close contact with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</source>
+          <target state="new">Users who were in close contact with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
@@ -821,18 +819,18 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">次へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description1" translate="yes" xml:space="preserve">
-          <source>The app recognizes encounters between smartphones running this app.</source>
-          <target state="new">The app recognizes encounters between smartphones running this app.</target>
+          <source>The app recognizes close contacts between smartphones running this app.</source>
+          <target state="new">The app recognizes close contacts between smartphones running this app.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリをスマートフォンに設定した人どうしの接触を記録します。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description2" translate="yes" xml:space="preserve">
-          <source>If you are positive for the COVID-19, you can anonymously register in this application.</source>
-          <target state="new">If you are positive for the COVID-19, you can anonymously register in this application.</target>
+          <source>When tested positive for COVID-19, you can anonymously register the test result in this app.</source>
+          <target state="new">When tested positive for COVID-19, you can anonymously register the test result in this app.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description3" translate="yes" xml:space="preserve">
-          <source>If you have been in close proximity with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</source>
-          <target state="new">If you have been in close proximity with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</target>
+          <source>If you have been in close contact with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</source>
+          <target state="new">If you have been in close contact with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Title1" translate="yes" xml:space="preserve">
@@ -856,8 +854,8 @@ support of "new lifestyle".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
-          <source>Please turn on Bluetooth to start recording encounters.</source>
-          <target state="new">Please turn on Bluetooth to start recording encounters.</target>
+          <source>Please turn on Bluetooth to start recording close contacts with other users.</source>
+          <target state="new">Please turn on Bluetooth to start recording close contacts with other users.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Label" translate="yes" xml:space="preserve">
@@ -929,6 +927,21 @@ support of "new lifestyle".</target>
           <source>Version</source>
           <target state="new">Version</target>
           <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
+          <source>Bluetooth is turned off.Please turn in Bluetooth.</source>
+          <target state="new">Bluetooth is turned off.Please turn in Bluetooth.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
+          <source>A list of close contacts (past 14 days)</source>
+          <target state="new">A list of close contacts (past 14 days)</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageLabel1" translate="yes" xml:space="preserve">
+          <source>Dates when you were in close contact with COVID-19 positive users.</source>
+          <target state="new">Dates when you were in close contact with COVID-19 positive users.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
         </trans-unit>
       </group>
     </body>

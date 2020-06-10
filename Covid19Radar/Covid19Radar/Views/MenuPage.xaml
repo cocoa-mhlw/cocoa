@@ -13,7 +13,7 @@
     <MasterDetailPage.Master>
 
         <NavigationPage
-            Title="Menu"
+            Title="{x:Static resources:AppResources.MenuPageTitle}"
             AutomationId="MasterMenu"
             BarBackgroundColor="#FFFFFF"
             BarTextColor="Black">
