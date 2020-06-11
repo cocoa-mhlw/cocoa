@@ -854,7 +854,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact and Technical Support に類似しているローカライズされた文字列を検索します。
+        ///   Support に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageTitle {
             get {
