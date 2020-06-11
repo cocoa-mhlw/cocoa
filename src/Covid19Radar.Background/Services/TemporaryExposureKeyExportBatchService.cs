@@ -158,11 +158,10 @@ namespace Covid19Radar.Background.Services
 
                 using var binStream = new MemoryStream();
                 await binStream.WriteAsync(FixedHeader, 0, FixedHeaderWidth);
-                using var binStreamCoded = new CodedOutputStream(binStream);
+                using var binStreamCoded = new CodedOutputStream(binStream, true);
                 bin.WriteTo(binStreamCoded);
                 binStreamCoded.Flush();
                 await binStream.FlushAsync();
-                binStream.Seek(0, SeekOrigin.Begin);
                 var signature = await CreateSignatureAsync(binStream, bin.BatchNum, bin.BatchSize);
                 signature.SignatureInfo = signatureInfo;
                 sig.Signatures.Add(signature);
