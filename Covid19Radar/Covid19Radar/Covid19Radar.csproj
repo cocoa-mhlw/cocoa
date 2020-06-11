@@ -58,6 +58,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\ISQLiteConnectionProvider.cs" />
+    <Compile Remove="Model\NotificationMessageModel.cs" />
+    <Compile Remove="Model\NotificationPullResult.cs" />
     <Compile Remove="ViewModels\HomePage\SharePositiveDiagnosisPageViewModel.cs" />
     <Compile Remove="Views\HomePage\SharePositiveDiagnosisPage.xaml.cs" />
   </ItemGroup>
