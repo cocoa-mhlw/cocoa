@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Resources;
 using Newtonsoft.Json;
 using Plugin.LocalNotification;
 using Xamarin.Essentials;
@@ -83,8 +84,8 @@ namespace Covid19Radar.Services
                 var notification = new NotificationRequest
                 {
                     NotificationId = 100,
-                    Title = "Possible COVID-19 Exposure",
-                    Description = "It is possible you have been exposed to someone who was a confirmed diagnosis of COVID-19.  Tap for more details."
+                    Title = AppResources.LocalNotificationTitle,
+                    Description = AppResources.LocalNotificationDescription
                 };
 
                 NotificationCenter.Current.Show(notification);
