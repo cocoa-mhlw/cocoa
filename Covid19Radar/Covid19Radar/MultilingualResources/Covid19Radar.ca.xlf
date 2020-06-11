@@ -89,24 +89,16 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
-          <source>License Agreement</source>
+          <source>License</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Contracte de llicència</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/policy.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
-        </trans-unit>
-        <trans-unit id="UrlContributor" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/contributor.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/contributor.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Url Contributor</note>
-        </trans-unit>
-        <trans-unit id="UrlUpdate" translate="yes" xml:space="preserve">
-          <source>https://covid19radar.z11.web.core.windows.net/en/update.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radar.z11.web.core.windows.net/en/update.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Update</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
           <source>Installing an App</source>
@@ -684,13 +676,13 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>COVID-19 Information and Resources website</source>
-          <target state="new">COVID-19 Information and Resources website</target>
+          <source>FAQ</source>
+          <target state="new">FAQ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
-          <source>Contact and Technical Support</source>
-          <target state="new">Contact and Technical Support</target>
+          <source>Support</source>
+          <target state="new">Support</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
@@ -724,9 +716,9 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
-          <source>License</source>
-          <target state="new">License</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
+          <source>Term of use</source>
+          <target state="new">Term of use</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
@@ -942,6 +934,19 @@ Seleccioneu "permet sempre" per configurar Bluetooth.</target>
           <source>Dates when you were in close contact with COVID-19 positive users.</source>
           <target state="new">Dates when you were in close contact with COVID-19 positive users.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
+        </trans-unit>
+        <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</source>
+          <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
+        </trans-unit>
+        <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</source>
+          <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</target>
+        </trans-unit>
+        <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
+          <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</target>
         </trans-unit>
       </group>
     </body>

@@ -77,18 +77,11 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>License Agreement</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="UrlContributor" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
-    <comment>Url Contributor</comment>
-  </data>
-  <data name="UrlUpdate" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
-    <comment>Update</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Installing an App</value>
@@ -343,5 +336,15 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>At this time, the contact code of the contacted person is recorded in the application. Contact information will not be used until either user has registered positive. The contact history will be erased after 14 days. *The contact code changes regularly.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
   </data>
 </root>

@@ -16,33 +16,26 @@
         <StackLayout
             Padding="10"
             BackgroundColor="#FFFFFF"
-            Spacing="20"
+            Spacing="10"
             VerticalOptions="Center">
             <Frame
                 Padding="16"
                 BackgroundColor="#FFF3DD"
                 CornerRadius="10">
-                <StackLayout Spacing="0">
-                    <ffimageloading:CachedImage Aspect="AspectFit" Source="InfoMark.png" />
-                    <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
-                    <Grid ColumnSpacing="10" RowSpacing="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Label
-                            FontSize="Large"
-                            HorizontalTextAlignment="Center"
-                            Style="{StaticResource DefaultTitleLabel}">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="{Binding ExposureCount}" />
-                                    <Span Text="{x:Static resources:AppResources.ContactedNotifyPageCountText}" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </Grid>
+                <StackLayout>
+                    <ffimageloading:CachedImage Margin="0,0,0,10" Aspect="AspectFit" Source="InfoMark.png" />
+                    <Label Margin="0,0,0,5" Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
+                    <Label FontSize="Large"                            Margin="0,0,0,5"                            HorizontalTextAlignment="Center"                             Style="{StaticResource DefaultTitleLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding ExposureCount}" />
+                                <Span Text="{x:Static resources:AppResources.ContactedNotifyPageCountText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
 
                     <Label
+                        Margin="0,0,0,15"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
@@ -55,6 +48,7 @@
                         Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
 
                     <Button
+                        Margin="0,0,0,20"
                         AutomationId="ButtonShareApp"
                         Command="{Binding Path=OnClickByPhone}"
                         Style="{StaticResource DefaultButton}"
@@ -66,13 +60,11 @@
                         Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
                 </StackLayout>
             </Frame>
-            <Grid Grid.Row="1">
-                <Button
+            <Button
                     AutomationId="OnClickExposures"
                     Command="{prism:NavigateTo 'ExposuresPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
-            </Grid>
         </StackLayout>
     </ScrollView>
 </ContentPage>

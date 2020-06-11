@@ -13,6 +13,7 @@ using Acr.UserDialogs;
 using Covid19Radar.Renderers;
 using Covid19Radar.Views;
 using Xamarin.Essentials;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.ViewModels
 {
@@ -36,12 +37,12 @@ namespace Covid19Radar.ViewModels
         }
         public Command OnClickByForm => new Command(async () =>
         {
-            var uri = "http://bing.com";
+            var uri = AppResources.UrlContactedForm;
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
         public Command OnClickByPhone => new Command(async () =>
         {
-            var uri = "http://bing.com";
+            var uri = AppResources.UrlContactedPhone;
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
 
