@@ -899,6 +899,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationDescription {
+            get {
+                return ResourceManager.GetString("LocalNotificationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Possible COVID-19 Exposure に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationTitle {
+            get {
+                return ResourceManager.GetString("LocalNotificationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Exposures に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MainExposures {
