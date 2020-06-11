@@ -927,6 +927,16 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
           <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot4.html</target>
         </trans-unit>
+        <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
+          <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
+          <target state="translated">新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
+          <source>Possible COVID-19 Exposure</source>
+          <target state="translated">新型コロナウイルス陽性登録者との接触の可能性</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
+        </trans-unit>
       </group>
     </body>
   </file>
