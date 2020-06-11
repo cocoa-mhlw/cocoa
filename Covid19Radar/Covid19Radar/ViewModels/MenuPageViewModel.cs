@@ -62,7 +62,7 @@ namespace Covid19Radar.ViewModels
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf70e",
-                PageName = nameof(PrivacyPolicyPage),
+                PageName = nameof(PrivacyPolicyPage2),
                 Title = Resources.AppResources.PrivacyPolicyPageTitle
             });
 
@@ -90,6 +90,19 @@ namespace Covid19Radar.ViewModels
                 Icon = "\uf0c0",
                 PageName = nameof(DebugPage),
                 Title = nameof(DebugPage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(PrivacyPolicyPage),
+                Title = nameof(PrivacyPolicyPage)
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(PrivacyPolicyPage2),
+                Title = nameof(PrivacyPolicyPage2)
             });
             MenuItems.Add(new MainMenuModel()
             {
