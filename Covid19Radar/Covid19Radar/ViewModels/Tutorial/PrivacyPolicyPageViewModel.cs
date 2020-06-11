@@ -29,7 +29,7 @@ namespace Covid19Radar.ViewModels
 
         public PrivacyPolicyPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
-            Title = AppResources.TitleConsentByUserPage;
+            Title = AppResources.PrivacyPolicyPageTitle;
             Url = Resources.AppResources.UrlPrivacyPolicy;
 
             this.userDataService = userDataService;
