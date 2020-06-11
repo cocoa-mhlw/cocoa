@@ -1,8 +1,14 @@
 ﻿{
-  "apiUrlBase": "https://exposurenotificationfunctions.azurewebsites.net/api/",
+  "appVersion": "Ver 1.0.0",
+  "apiSecret": "API_SECRET",
+  "apiUrlBase": "https://covid19radar-jpn-prod.trafficmanager.net/api",
   "supportedRegions": "440;441",
   "blobStorageContainerName": "c19r",
   "androidSafetyNetApiKey": "***REMOVED***_L9eew",
   "cdnUrlBase": "https://covid19radar-jpn-prod.azureedge.net/",
-  "licenseUrl": "https://covid19radarjpnprod.z11.web.core.windows.net/license.html"
+  "licenseUrl": "https://covid19radarjpnprod.z11.web.core.windows.net/license.html",
+  "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
+  "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
+  "appCenterTokensAndroid": "APPCENTER_ANDROID",
+  "appCenterTokensIOS": "APPCENTER_IOS"
 }
