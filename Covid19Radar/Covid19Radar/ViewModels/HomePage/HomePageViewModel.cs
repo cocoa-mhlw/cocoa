@@ -43,7 +43,7 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationService = exposureNotificationService;
             _ = exposureNotificationService.GetExposureNotificationConfig();
             _ = exposureNotificationService.StartExposureNotification();
-            _ = exposureNotificationService.FetchExposureKeyAsync();
+            //_ = exposureNotificationService.FetchExposureKeyAsync();
             userData = this.userDataService.Get();
             StartDate = userData.StartDateTime.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
 
