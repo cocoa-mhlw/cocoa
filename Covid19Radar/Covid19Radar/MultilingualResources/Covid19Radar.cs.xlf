@@ -681,8 +681,8 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
-          <source>Contact and Technical Support</source>
-          <target state="new">Contact and Technical Support</target>
+          <source>Support</source>
+          <target state="new">Support</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
