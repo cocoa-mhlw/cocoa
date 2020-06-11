@@ -25,11 +25,7 @@ namespace Covid19Radar.Background
             builder.Services.AddSingleton<ITemporaryExposureKeyDeleteBatchService, TemporaryExposureKeyDeleteBatchService>();
             builder.Services.AddSingleton<ITemporaryExposureKeySignatureInfoService, TemporaryExposureKeySignatureInfoService>();
             builder.Services.AddSingleton<ITemporaryExposureKeyBlobService, TemporaryExposureKeyBlobService>();
-#if DEBUG
-            builder.Services.AddSingleton<ITemporaryExposureKeySignService, TemporaryExposureKeySignServiceDebug>();
-#else
             builder.Services.AddSingleton<ITemporaryExposureKeySignService, TemporaryExposureKeySignService>();
-#endif
 
         }
     }
