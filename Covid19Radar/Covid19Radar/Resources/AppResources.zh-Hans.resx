@@ -76,7 +76,8 @@
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>授权协议</value>
+    <value>授权</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hans/privacypolicy.html</value>
@@ -521,7 +522,7 @@
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>防疫新型冠状病毒官方网站</value>
+    <value>FAQ</value>
     <comment>新型コロナウィルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -554,7 +555,7 @@
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>使用条款</value>
-    <comment>ライセンス</comment>
+    <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
     <value>关于隐私保护</value>
