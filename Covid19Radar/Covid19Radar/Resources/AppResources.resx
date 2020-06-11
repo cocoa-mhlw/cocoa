@@ -844,4 +844,12 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
   </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>Possible COVID-19 Exposure</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
 </root>
