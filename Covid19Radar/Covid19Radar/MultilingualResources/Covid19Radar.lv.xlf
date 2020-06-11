@@ -89,8 +89,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
-          <source>License Agreement</source>
+          <source>License</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Licences līgums</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</source>
@@ -674,13 +676,13 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>COVID-19 Information and Resources website</source>
-          <target state="new">COVID-19 Information and Resources website</target>
+          <source>FAQ</source>
+          <target state="new">FAQ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
-          <source>Contact and Technical Support</source>
-          <target state="new">Contact and Technical Support</target>
+          <source>Support</source>
+          <target state="new">Support</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
@@ -714,9 +716,9 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
-          <source>License</source>
-          <target state="new">License</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
+          <source>Term of use</source>
+          <target state="new">Term of use</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
