@@ -77,6 +77,7 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licenčna pogodba</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
