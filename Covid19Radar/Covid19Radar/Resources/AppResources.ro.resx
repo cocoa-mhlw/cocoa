@@ -77,18 +77,11 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Acord de licenţă</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="UrlContributor" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
-    <comment>Url Contributor</comment>
-  </data>
-  <data name="UrlUpdate" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
-    <comment>Update</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>Instalarea unei aplicații</value>
