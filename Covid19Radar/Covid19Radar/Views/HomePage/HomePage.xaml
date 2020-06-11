@@ -10,6 +10,7 @@
     Title="{x:Static resources:AppResources.HomePageTitle1}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
+    NavigationPage.TitleIconImageSource="HeaderLogo.png"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ContentPage.ToolbarItems>
@@ -26,7 +27,10 @@
             Padding="15"
             BackgroundColor="#EEEEEE"
             Spacing="15">
-            <Frame Padding="10" CornerRadius="10" HasShadow="False">
+            <Frame
+                Padding="10"
+                CornerRadius="10"
+                HasShadow="False">
                 <StackLayout Spacing="0">
                     <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
@@ -46,7 +50,10 @@
 
                 </StackLayout>
             </Frame>
-            <Frame Padding="10" CornerRadius="10" HasShadow="False">
+            <Frame
+                Padding="10"
+                CornerRadius="10"
+                HasShadow="False">
                 <StackLayout Spacing="0">
                     <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageDescription3}" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
@@ -76,7 +83,10 @@
                         Text="{x:Static resources:AppResources.HomePageDescription4}" />
                 </StackLayout>
             </Frame>
-            <Frame Padding="10" CornerRadius="10" HasShadow="False">
+            <Frame
+                Padding="10"
+                CornerRadius="10"
+                HasShadow="False">
                 <StackLayout Spacing="0">
                     <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
                     <Grid ColumnSpacing="15" RowSpacing="0">
