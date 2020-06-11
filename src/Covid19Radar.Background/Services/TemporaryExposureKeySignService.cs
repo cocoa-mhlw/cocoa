@@ -10,7 +10,6 @@ namespace Covid19Radar.Background.Services
 {
     public class TemporaryExposureKeySignService : ITemporaryExposureKeySignService
     {
-        public readonly string TekExportKeyVaultKeyUrl;
         public readonly ILogger<TemporaryExposureKeySignService> Logger;
         public readonly string VerificationKeyId;
         public readonly string VerificationKeyVersion;
@@ -23,7 +22,6 @@ namespace Covid19Radar.Background.Services
         {
             Logger = logger;
             Logger.LogInformation($"{nameof(TemporaryExposureKeySignService)} constructor");
-            TekExportKeyVaultKeyUrl = config.TekExportKeyVaultKeyUrl();
             VerificationKeyId = config.VerificationKeyId();
             VerificationKeyVersion = config.VerificationKeyVersion();
             VerificationKeySecret = config.VerificationKeySecret();
