@@ -119,6 +119,9 @@
     <Compile Update="Views\HomePage\ContactedNotifyPage.xaml.cs">
       <DependentUpon>ContactedNotifyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\HomePage\PrivacyPolicyPage2.xaml.cs">
+      <DependentUpon>PrivacyPolicyPage2.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\HomePage\ThankYouNotifyOtherPage.xaml.cs">
       <DependentUpon>ThankYouNotifyOtherPage.xaml</DependentUpon>
     </Compile>
