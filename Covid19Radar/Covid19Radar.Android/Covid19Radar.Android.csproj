@@ -51,28 +51,19 @@
     <AndroidPackageFormat>apk</AndroidPackageFormat>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>portable</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
-    <AndroidKeyStore>true</AndroidKeyStore>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
-    <MandroidI18n>CJK</MandroidI18n>
-    <AotAssemblies>true</AotAssemblies>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-    <AndroidPackageFormat>apk</AndroidPackageFormat>
-    <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\release.keystore</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>***REMOVED***</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>release</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>***REMOVED***</AndroidSigningKeyPass>
-    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
-    <EnableLLVM>true</EnableLLVM>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <MandroidI18n>CJK</MandroidI18n>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -154,9 +145,6 @@
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>4.6.0.847</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.6.0.847</Version>
     </PackageReference>
