@@ -58,6 +58,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\ISQLiteConnectionProvider.cs" />
+    <Compile Remove="Model\NotificationMessageModel.cs" />
+    <Compile Remove="Model\NotificationPullResult.cs" />
     <Compile Remove="ViewModels\HomePage\SharePositiveDiagnosisPageViewModel.cs" />
     <Compile Remove="Views\HomePage\SharePositiveDiagnosisPage.xaml.cs" />
   </ItemGroup>
@@ -97,7 +100,6 @@
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.ExposureNotification" Version="0.9.0-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
