@@ -89,8 +89,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
-          <source>License Agreement</source>
+          <source>License</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Fifanarahana avy amin' ny fahazoan</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</source>
@@ -714,9 +716,9 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
-          <source>License</source>
-          <target state="new">License</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
+          <source>Term of use</source>
+          <target state="new">Term of use</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
