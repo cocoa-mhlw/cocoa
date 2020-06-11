@@ -129,6 +129,7 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <!--
                     <Button
                         Grid.Row="0"
                         Grid.Column="1"
@@ -137,6 +138,7 @@
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.ButtonReset}"
                         VerticalOptions="Center" />
+                    -->
                 </Grid>
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
@@ -159,11 +161,6 @@
                                     Text="{x:Static resources:AppResources.VersionText}"
                                     TextColor="{StaticResource PrimaryText}" />
                                 <Span Text="{x:Static System:Environment.NewLine}" />
-                                <Span
-                                    FontFamily="NotoSansRegularFontFamily"
-                                    FontSize="Caption"
-                                    Text="1.0"
-                                    TextColor="{StaticResource SecondaryText}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
