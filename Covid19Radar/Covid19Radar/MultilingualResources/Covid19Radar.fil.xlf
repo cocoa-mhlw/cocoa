@@ -676,8 +676,8 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>COVID-19 Information and Resources website</source>
-          <target state="new">COVID-19 Information and Resources website</target>
+          <source>FAQ</source>
+          <target state="new">FAQ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
