@@ -845,7 +845,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   COVID-19 Information and Resources website に類似しているローカライズされた文字列を検索します。
+        ///   FAQ に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription2 {
             get {
