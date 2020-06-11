@@ -27,7 +27,10 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label Margin="0,20,0,0" HorizontalOptions="Center" Style="{StaticResource DefaultSubTitleLabel}">
+                <Label
+                    Margin="0,0,0,0"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultLabel}">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="{x:Static resources:AppResources.NotContactPageDescription1}" />
