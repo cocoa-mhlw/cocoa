@@ -67,24 +67,9 @@ namespace Covid19Radar.ViewModels
             return;
         });
 
-        public Command OnClickShareApp => new Command(async () =>
+        public Command OnClickShareApp => new Command( () =>
         {
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                await Share.RequestAsync(new ShareTextRequest
-                {
-                    Uri = AppConstants.AppStoreUrl,
-                    Title = AppConstants.AppName
-                });
-            }
-            else if (Device.RuntimePlatform == Device.Android)
-            {
-                await Share.RequestAsync(new ShareTextRequest
-                {
-                    Uri = AppConstants.GooglePlayUrl,
-                    Title = AppConstants.AppName
-                });
-            }
+            AppUtils.PopUpShare();
         });
     }
 }
