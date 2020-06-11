@@ -213,7 +213,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>License Agreement</value>
+    <value>License</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</value>
@@ -630,11 +631,11 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 Information and Resources website</value>
+    <value>FAQ</value>
     <comment>新型コロナウィルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
-    <value>Contact and Technical Support</value>
+    <value>Support</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
@@ -662,8 +663,8 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>License</value>
-    <comment>ライセンス</comment>
+    <value>Term of use</value>
+    <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
     <value>Your privacy is protected</value>
