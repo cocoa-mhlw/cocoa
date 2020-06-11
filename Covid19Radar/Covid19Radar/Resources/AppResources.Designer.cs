@@ -1754,7 +1754,25 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlContactedForm {
+            get {
+                return ResourceManager.GetString("UrlContactedForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlContactedPhone {
+            get {
+                return ResourceManager.GetString("UrlContactedPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
             get {
@@ -1763,7 +1781,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlTermOfUse {
             get {
