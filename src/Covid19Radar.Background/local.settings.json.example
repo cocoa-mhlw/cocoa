@@ -8,18 +8,17 @@
         "COSMOS_DATABASE_ID": "EXAMPLE",
         "COSMOS_AUTO_GENERATE": true,
         "COSMOS_CONNECTION": "AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
-        "SupportRegions": "Country1,Country2", //ISO 3166-1 alpha-2
+        "SupportRegions": "Region1,001", //ISO 3166-1 alpha-2 or Mobile country code
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
         "TekExportBlobStorageContainerPrefix": "c19r",
-        "ExportKeyUrl": "http://127.0.0.1:10000/",
-        "TekExportKeyVaultKeyUrl": "https://xxxxxx.vault.azure.net/keys/xxxxSignaturexxx/XXXXXXXXXXXXXXXXXXXXXXXXX",
+        "TekExportKeyUrl": "http://127.0.0.1:10000/",
         "CdnResourceGroupName": "Covid19RadarCdnResouseGroupName",
         "CdnProfileName": "Covid19RadarCdnProfile",
         "CdnEndpointName": "Covid19RadarCdnEndpointName",
-        "SigningKeyBase64String": "MIIBMTCB2AIBADBdMQswCQYDVQQGEwJKUDETMBEGA1UECAwKU29tZS1TdGF0ZTEhMB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRYwFAYDVQQDDA1jb3ZpZC0xOXJhZGFyMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFqFYT+4RzlXWZV0QhQ1G2iy5K4EzUTXmbZ/8Pj9pe7sNFz/H65xGC1DDHJKY7/ek5KxVQY/FLG/kOfHIik/3haAZMBcGCSqGSIb3DQEJBzEKDAhwYXNzd29yZDAKBggqhkjOPQQDAgNIADBFAiBiPjCFbWhN1TnYPM8ODmRuKHiCrdegqsFxDks6moFZUAIhALX3i+JJXWQTej3R8VHt9aKNBBQiFlOIQJ4oOalZhjI5",
         "AndroidPackageName": "AndroidPackageName",
         "iOSBundleId": "AppBundleId",
-        "VerificationKeyId": null,
-        "VerificationKeyVersion": null
+        "VerificationKeyId": "KeyId",
+        "VerificationKeyVersion": "V1",
+        "VerificationKeySecret": "MHcCAQEEIFdaIjZgfoIi+Tvck6OkJNrUL7BL3vLOeHAwno/mdh49oAoGCCqGSM49AwEHoUQDQgAEQwqCWDLkl+g+4bwTQgoRMbR7Z+Dz3wfNbAQhB2ja07q7UN7Bwa45HYJXkZlXqEQVb9c+SPuW4fDZnlMuQeIw+Q=="
     }
 }
