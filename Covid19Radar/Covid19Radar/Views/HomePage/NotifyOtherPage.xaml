@@ -20,10 +20,11 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageDescription1}" />
+                <Label Margin="0,0,0,5" Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageDescription1}" />
                 <Label
                     HorizontalOptions="Start"
                     Style="{StaticResource DefaultLabelColor}"
+                    Margin="0,0,0,20"
                     Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{prism:NavigateTo 'HelpPage3'}" />

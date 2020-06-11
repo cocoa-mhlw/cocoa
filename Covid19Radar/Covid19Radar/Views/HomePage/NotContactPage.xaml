@@ -27,7 +27,10 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label HorizontalOptions="Center" Style="{StaticResource DefaultSubTitleLabel}">
+                <Label
+                    Margin="0,0,0,0"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultLabel}">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="{x:Static resources:AppResources.NotContactPageDescription1}" />
@@ -36,15 +39,15 @@
                 </Label>
 
                 <ffimageloading:CachedImage
-                    Margin="0,10,0,0"
+                    Margin="0,20,0,0"
                     Aspect="AspectFit"
                     Source="Nocontact10.png" />
 
             </StackLayout>
             <Grid Grid.Row="1">
                 <Button
-                    AutomationId="OnClickGoBack"
-                    Command="{prism:GoBack}"
+                    AutomationId="OnClickShareApp"
+                    Command="{Binding Path=OnClickShareApp}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.NotContactPageButtonText}" />
             </Grid>

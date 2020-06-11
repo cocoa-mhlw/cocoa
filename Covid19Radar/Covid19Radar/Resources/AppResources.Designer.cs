@@ -845,7 +845,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   COVID-19 Information and Resources website に類似しているローカライズされた文字列を検索します。
+        ///   FAQ に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription2 {
             get {
@@ -854,7 +854,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact and Technical Support に類似しているローカライズされた文字列を検索します。
+        ///   Support に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageTitle {
             get {
@@ -1394,7 +1394,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   License に類似しているローカライズされた文字列を検索します。
+        ///   Term of use に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TermsofservicePageTitle {
             get {
@@ -1475,7 +1475,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   License Agreement に類似しているローカライズされた文字列を検索します。
+        ///   License に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleLicenseAgreement {
             get {
@@ -1754,16 +1754,25 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/contributor.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string UrlContributor {
+        internal static string UrlContactedForm {
             get {
-                return ResourceManager.GetString("UrlContributor", resourceCulture);
+                return ResourceManager.GetString("UrlContactedForm", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/policy.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlContactedPhone {
+            get {
+                return ResourceManager.GetString("UrlContactedPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
             get {
@@ -1772,11 +1781,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radar.z11.web.core.windows.net/en/update.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string UrlUpdate {
+        internal static string UrlTermOfUse {
             get {
-                return ResourceManager.GetString("UrlUpdate", resourceCulture);
+                return ResourceManager.GetString("UrlTermOfUse", resourceCulture);
             }
         }
         

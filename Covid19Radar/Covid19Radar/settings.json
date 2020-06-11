@@ -3,5 +3,6 @@
   "supportedRegions": "440;441",
   "blobStorageContainerName": "c19r",
   "androidSafetyNetApiKey": "***REMOVED***",
-  "cdnUrlBase": "***REMOVED***"
+  "cdnUrlBase": "***REMOVED***",
+  "licenseUrl": "***REMOVED***"
 }

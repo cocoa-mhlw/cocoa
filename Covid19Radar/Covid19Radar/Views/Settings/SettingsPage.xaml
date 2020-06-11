@@ -109,9 +109,56 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
+
                     <Label
                         Grid.Row="0"
                         Grid.Column="0"
+                        VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    FontFamily="NotoSansRegularFontFamily"
+                                    FontSize="Small"
+                                    Text="{x:Static resources:AppResources.VersionText}"
+                                    TextColor="{StaticResource PrimaryText}" />
+                                <Span Text="{x:Static System:Environment.NewLine}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="End"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{Binding AppVer}"
+                        VerticalTextAlignment="Center" />
+                </Grid>
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="15" HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{prism:NavigateTo 'LicenseAgreementPage'}" />
+                </Frame.GestureRecognizers>
+                <Label
+                    HorizontalOptions="End"
+                    Style="{StaticResource DefaultLabelSmallColor}"
+                    Text="{x:Static resources:AppResources.SettingsPageButton1}"
+                    VerticalOptions="Center" />
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="15" HasShadow="False">
+                <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="0.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="Start"
                         VerticalTextAlignment="Center">
                         <Label.FormattedText>
                             <FormattedString>
@@ -133,62 +180,13 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Command="{Binding OnChangeResetData}"
+                        HorizontalOptions="End"
                         Scale="0.8"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.ButtonReset}"
-                        VerticalOptions="Center" />
+                        VerticalOptions="Start" />
                 </Grid>
             </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="15" HasShadow="False">
-                <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="0.5*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-
-                    <Label Grid.Row="0" Grid.Column="0">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span
-                                    FontFamily="NotoSansRegularFontFamily"
-                                    FontSize="Small"
-                                    Text="{x:Static resources:AppResources.VersionText}"
-                                    TextColor="{StaticResource PrimaryText}" />
-                                <Span Text="{x:Static System:Environment.NewLine}" />
-                                <Span
-                                    FontFamily="NotoSansRegularFontFamily"
-                                    FontSize="Caption"
-                                    Text="1.0"
-                                    TextColor="{StaticResource SecondaryText}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource DefaultLabelSmall}"
-                        Text="{Binding AppVer}"
-                        VerticalOptions="Center" />
-                </Grid>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="15" HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnClickLicenseAgreement}" />
-                </Frame.GestureRecognizers>
-                <Label
-                    HorizontalOptions="Start"
-                    Style="{StaticResource DefaultLabelSmallColor}"
-                    Text="{x:Static resources:AppResources.SettingsPageButton1}"
-                    VerticalOptions="Center" />
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-
         </StackLayout>
     </ScrollView>
 </ContentPage>
