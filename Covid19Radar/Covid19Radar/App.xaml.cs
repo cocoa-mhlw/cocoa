@@ -56,7 +56,7 @@ namespace Covid19Radar
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            //Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
@@ -64,7 +64,7 @@ namespace Covid19Radar
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
-            AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start($"android={AppSettings.Instance.AppCenterTokensAndroid};ios={AppSettings.Instance.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes));
             Container.Resolve<ILogger>().Log("Started App Center");
 
             _ = InitializeBackgroundTasks();
