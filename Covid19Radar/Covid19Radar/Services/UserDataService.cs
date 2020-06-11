@@ -4,7 +4,6 @@ using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 using Plugin.LocalNotification;
 using Prism.Navigation;
-using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
