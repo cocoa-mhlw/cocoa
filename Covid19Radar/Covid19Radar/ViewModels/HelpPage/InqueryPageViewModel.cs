@@ -42,7 +42,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickSite => new Command(async () =>
         {
-            var uri = "https://corona.go.jp";
+            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/touch_qa_00009.html";
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
         public Command OnClickEmail => new Command(async () =>
