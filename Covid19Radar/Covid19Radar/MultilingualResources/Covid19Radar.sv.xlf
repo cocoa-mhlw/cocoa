@@ -98,7 +98,7 @@
           <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</source>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
@@ -941,9 +941,17 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
           <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
         </trans-unit>
         <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</source>
-          <target state="new">https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</source>
+          <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
+        </trans-unit>
+        <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</source>
+          <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</target>
+        </trans-unit>
+        <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
+          <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</target>
         </trans-unit>
       </group>
     </body>
