@@ -31,7 +31,7 @@ namespace Covid19Radar.ViewModels
         {
            
             // TODO Change Termof Service URL
-            Url = AppConstants.LicenseUrl;
+            Url = Resources.AppResources.UrlTermOfUse;
         }
 
     }

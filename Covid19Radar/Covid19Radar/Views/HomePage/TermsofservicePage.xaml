@@ -12,7 +12,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <Grid Margin="0,0,0,0" Style="{StaticResource DefaultGridLayout}">
+    <Grid Style="{StaticResource DefaultGridLayout}">
         <StackLayout>
             <WebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
         </StackLayout>
