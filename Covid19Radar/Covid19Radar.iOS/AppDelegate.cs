@@ -63,7 +63,7 @@ namespace Covid19Radar.iOS
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
+            
         }
     }
 

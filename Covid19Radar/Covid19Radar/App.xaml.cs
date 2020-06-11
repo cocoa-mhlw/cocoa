@@ -64,7 +64,7 @@ namespace Covid19Radar
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
-            AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start($"android={AppSettings.Instance.AppCenterTokensAndroid};ios={AppSettings.Instance.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes));
             Container.Resolve<ILogger>().Log("Started App Center");
 
             _ = InitializeBackgroundTasks();
