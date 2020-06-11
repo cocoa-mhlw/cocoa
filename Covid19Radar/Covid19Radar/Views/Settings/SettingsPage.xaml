@@ -179,7 +179,7 @@
             <BoxView Style="{StaticResource DefaultLineStyle}" />
             <Frame Padding="15" HasShadow="False">
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnClickLicenseAgreement}" />
+                    <TapGestureRecognizer Command="{prism:NavigateTo 'LicenseAgreementPage'}" />
                 </Frame.GestureRecognizers>
                 <Label
                     HorizontalOptions="Start"

@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickSetting => new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(SettingsPage));
+            await NavigationService.NavigateAsync(nameof(SettingsPage));
         });
     }
 }
