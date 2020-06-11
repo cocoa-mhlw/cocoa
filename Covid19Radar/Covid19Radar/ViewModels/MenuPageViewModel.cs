@@ -53,7 +53,20 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(TermsofservicePage),
                 Title = Resources.AppResources.TermsofservicePageTitle
             });
-#if DEBUG
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(PrivacyPolicyPage2),
+                Title = Resources.AppResources.PrivacyPolicyPageTitle
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(LicenseAgreementPage),
+                Title = Resources.AppResources.TitleLicenseAgreement
+            });
+
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
@@ -78,6 +91,19 @@ namespace Covid19Radar.ViewModels
                 Icon = "\uf0c0",
                 PageName = nameof(DebugPage),
                 Title = nameof(DebugPage)
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(PrivacyPolicyPage),
+                Title = nameof(PrivacyPolicyPage)
+            });
+
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(PrivacyPolicyPage2),
+                Title = nameof(PrivacyPolicyPage2)
             });
             MenuItems.Add(new MainMenuModel()
             {
@@ -165,17 +191,12 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(SubmitConsentPage),
                 Title = nameof(SubmitConsentPage)
             });
-#endif
+
             NavigateCommand = new DelegateCommand(Navigate);
         }
 
         async void Navigate()
         {
-            if (SelectedMenuItem.PageName == nameof(StartTutorialPage))
-            {
-                await NavigationService.NavigateAsync(nameof(StartTutorialPage), useModalNavigation: true);
-                return;
-            }
             await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
             return;
         }

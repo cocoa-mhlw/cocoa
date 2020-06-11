@@ -64,6 +64,13 @@
                     </ListView>
                 </ContentPage>
             </x:Arguments>
+            <NavigationPage.IconImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS">
+                        <FileImageSource File="IconHamburger.png" />
+                    </On>
+                </OnPlatform>
+            </NavigationPage.IconImageSource>
         </NavigationPage>
     </MasterDetailPage.Master>
 </MasterDetailPage>

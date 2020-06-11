@@ -30,8 +30,11 @@
     <CodesignKey>Apple Development: Hirose Kazumi (B5NUWQDLW4)</CodesignKey>
     <CodesignProvision>Covid19radar</CodesignProvision>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchSdkVersion>13.5</MtouchSdkVersion>
     <LangVersion>latest</LangVersion>
+    <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <OptimizePNGs>false</OptimizePNGs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -40,7 +43,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
     <CodesignProvision>VS: net.kzmx.Covid19Radar Development</CodesignProvision>
@@ -70,15 +73,16 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchI18n>cjk</MtouchI18n>
     <LangVersion>latest</LangVersion>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <IntermediateOutputPath>
     </IntermediateOutputPath>
     <BuildIpa>
     </BuildIpa>
     <CrashReportingDelay>-1</CrashReportingDelay>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>None</MtouchLink>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchInterpreter>-all</MtouchInterpreter>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DefineConstants>
@@ -477,7 +481,7 @@
       <Version>4.6.0.847</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
-      <Version>1.0.0-beta2</Version>
+      <Version>1.0.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.MaterialComponents">
       <Version>92.0.0</Version>
@@ -492,7 +496,9 @@
       <Name>Covid19Radar</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\IconHamburger.png" />
+  </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\Logo%401x.png" />
   </ItemGroup>
@@ -1267,9 +1273,12 @@
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\ic_hamburger%402x.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\en.lproj\" />
-    <Folder Include="Resources\zh.lproj\" />
+    <BundleResource Include="Resources\IconHamburger%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\IconHamburger%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

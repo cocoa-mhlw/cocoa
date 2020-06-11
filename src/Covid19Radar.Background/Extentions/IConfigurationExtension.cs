@@ -11,7 +11,6 @@ namespace Covid19Radar.Background
         public static string TekExportKeyUrl(this IConfiguration config) => config["TekExportKeyUrl"];
         public static string TekExportBlobStorage(this IConfiguration config) => config["TekExportBlobStorage"];
         public static string TekExportBlobStorageContainerPrefix(this IConfiguration config) => config["TekExportBlobStorageContainerPrefix"];
-        public static string TekExportKeyVaultKeyUrl(this IConfiguration config) => config["TekExportKeyVaultKeyUrl"];
         public static string iOSBundleId(this IConfiguration config) => config["iOSBundleId"];
         public static string AndroidPackageName(this IConfiguration config) => config["AndroidPackageName"];
         public static string[] SupportRegions(this IConfiguration config) => config["SupportRegions"]?.Split(',') ?? new string[] {};

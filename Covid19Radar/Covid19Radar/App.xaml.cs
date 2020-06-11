@@ -56,7 +56,7 @@ namespace Covid19Radar
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
-            //Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
@@ -117,24 +117,11 @@ namespace Covid19Radar
             containerRegistry.RegisterInstance<ILoggerFacade>(logger);
             containerRegistry.RegisterSingleton<IMiniLogger, FFImageLoadingLogger>();
 
-            // Viewmodel
+            // Base and Navigation
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MenuPage>();
-            /*
-            containerRegistry.RegisterForNavigation<StartTutorialPage>();
-            containerRegistry.RegisterForNavigation<DescriptionPage1>();
-            containerRegistry.RegisterForNavigation<DescriptionPage2>();
-            containerRegistry.RegisterForNavigation<DescriptionPage3>();
-            containerRegistry.RegisterForNavigation<DescriptionPage4>();
-            containerRegistry.RegisterForNavigation<PrivacyPolicyPage>();
-            containerRegistry.RegisterForNavigation<InitSettingPage>();
-            */
             containerRegistry.RegisterForNavigation<HomePage>();
-            containerRegistry.RegisterForNavigation<ExposuresPage>();
 
-            //            containerRegistry.RegisterForNavigation<ContributorsPage>();
-            //            containerRegistry.RegisterForNavigation<SetupCompletedPage>();
-            //            containerRegistry.RegisterForNavigation<UpdateInformationPage>();
 
             // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
@@ -156,6 +143,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<HelpPage3>();
             containerRegistry.RegisterForNavigation<HelpPage4>();
 
+            containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
             containerRegistry.RegisterForNavigation<InqueryPage>();
             containerRegistry.RegisterForNavigation<ChatbotPage>();
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
@@ -164,7 +152,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<NotContactPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
             containerRegistry.RegisterForNavigation<SubmitConsentPage>();
-
+            containerRegistry.RegisterForNavigation<ExposuresPage>();
 
             // Services
             containerRegistry.RegisterSingleton<UserDataService>();
