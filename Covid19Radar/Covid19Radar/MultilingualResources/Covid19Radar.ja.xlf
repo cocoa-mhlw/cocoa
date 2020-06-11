@@ -92,8 +92,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</source>
-          <target state="translated">https://covid19radarjpnbgprod.blob.core.windows.net/html/ja/privacypolicy.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</source>
+          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/ja/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
@@ -915,9 +915,17 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
         </trans-unit>
         <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</source>
-          <target state="translated">https://covid19radarjpnbgprod.blob.core.windows.net/html/ja/termofuse.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</source>
+          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/ja/termofuse.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
+        </trans-unit>
+        <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</source>
+          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/ja/index.html</target>
+        </trans-unit>
+        <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
+          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot4.html</target>
         </trans-unit>
       </group>
     </body>
