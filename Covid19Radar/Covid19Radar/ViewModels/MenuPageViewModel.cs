@@ -59,7 +59,7 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(PrivacyPolicyPage2),
                 Title = Resources.AppResources.PrivacyPolicyPageTitle
             });
-
+#if DEBUG
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf70e",
@@ -191,7 +191,7 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(SubmitConsentPage),
                 Title = nameof(SubmitConsentPage)
             });
-
+#endif
             NavigateCommand = new DelegateCommand(Navigate);
         }
 
