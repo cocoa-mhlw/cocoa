@@ -28,8 +28,12 @@ namespace Covid19Radar.Background.Services
             VerificationKeyVersion = config.VerificationKeyVersion();
             VerificationKeySecret = config.VerificationKeySecret();
 
-            var key = CngKey.Import(Convert.FromBase64String(VerificationKeySecret), CngKeyBlobFormat.Pkcs8PrivateBlob);
-            VerificationKey = new ECDsaCng(key);
+            //var key = CngKey.Import(Convert.FromBase64String(VerificationKeySecret), CngKeyBlobFormat.Pkcs8PrivateBlob);
+            //VerificationKey = new ECDsaCng(key);
+            var key = Convert.FromBase64String(VerificationKeySecret);
+            VerificationKey = ECDsa.Create();
+            int read;
+            VerificationKey.ImportECPrivateKey(key, out read);
         }
 
 
