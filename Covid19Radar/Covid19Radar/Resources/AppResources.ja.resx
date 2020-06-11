@@ -76,7 +76,8 @@
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>使用許諾契約書</value>
+    <value>ライセンス</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/ja/privacypolicy.html</value>
@@ -525,8 +526,8 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>ライセンス</value>
-    <comment>ライセンス</comment>
+    <value>利用規約</value>
+    <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
     <value>プライバシーについて</value>
