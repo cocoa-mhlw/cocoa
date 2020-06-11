@@ -69,6 +69,10 @@
     <AndroidSigningKeyAlias>release</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>***REMOVED***</AndroidSigningKeyPass>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <EnableLLVM>true</EnableLLVM>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
