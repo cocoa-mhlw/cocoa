@@ -18,13 +18,6 @@ namespace Covid19Radar.ViewModels
 {
     public class ChatbotPageViewModel : ViewModelBase
     {
-        private string _AppVersion;
-
-        public string AppVer
-        {
-            get { return _AppVersion; }
-            set { SetProperty(ref _AppVersion, value); }
-        }
         private UserDataModel _UserData;
         public UserDataModel UserData
         {
@@ -38,7 +31,6 @@ namespace Covid19Radar.ViewModels
         public ChatbotPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
-            AppVer = AppConstants.AppVersion;
             this.userDataService = userDataService;
             _UserData = this.userDataService.Get();
             this.exposureNotificationService = exposureNotificationService;
