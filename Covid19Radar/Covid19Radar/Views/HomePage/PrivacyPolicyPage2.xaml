@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="Covid19Radar.Views.PrivacyPolicyPage"
+    x:Class="Covid19Radar.Views.PrivacyPolicyPage2"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -11,9 +11,8 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <Grid Margin="0" Style="{StaticResource DefaultGridLayout}">
+    <Grid Style="{StaticResource DefaultGridLayout}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
@@ -28,11 +27,5 @@
                     Style="{StaticResource DefaultWebView}" />
             </StackLayout>
         </ScrollView>
-        <Button
-            Grid.Row="2"
-            AutomationId="ButtonAgree"
-            Command="{prism:NavigateTo 'TutorialPage4'}"
-            Style="{StaticResource DefaultButton}"
-            Text="{x:Static resources:AppResources.ButtonAgree}" />
     </Grid>
 </ContentPage>
