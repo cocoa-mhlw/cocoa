@@ -217,7 +217,7 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>Policy</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
@@ -835,7 +835,13 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/termofuse.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</value>
     <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
   </data>
 </root>
