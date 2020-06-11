@@ -76,7 +76,8 @@
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>授权协议</value>
+    <value>授权</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hans/privacypolicy.html</value>
@@ -554,7 +555,7 @@
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>使用条款</value>
-    <comment>ライセンス</comment>
+    <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
     <value>关于隐私保护</value>
