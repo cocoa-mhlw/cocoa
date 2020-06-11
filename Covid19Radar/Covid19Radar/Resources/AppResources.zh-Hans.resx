@@ -76,19 +76,12 @@
     <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>授权协议</value>
+    <value>授权</value>
+    <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="UrlContributor" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/contributor.html</value>
-    <comment>Url Contributor</comment>
-  </data>
-  <data name="UrlUpdate" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/en/update.html</value>
-    <comment>Update</comment>
   </data>
   <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
     <value>安装应用</value>
@@ -529,7 +522,7 @@
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>防疫新型冠状病毒官方网站</value>
+    <value>FAQ</value>
     <comment>新型コロナウィルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -562,7 +555,7 @@
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>使用条款</value>
-    <comment>ライセンス</comment>
+    <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
     <value>关于隐私保护</value>
@@ -735,5 +728,15 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>以下日期查出您和阳性患者有密切接触以下日期查出您和阳性患者有密切接触</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/termofuse.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot4.html</value>
   </data>
 </root>

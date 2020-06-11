@@ -7,7 +7,7 @@ namespace Covid19Radar.Background.Services
     public interface ITemporaryExposureKeySignService
     {
 
-        Task<byte[]> SignAsync(Stream source);
+        Task<byte[]> SignAsync(MemoryStream source);
 
         Task SetSignatureAsync(SignatureInfo info);
     }

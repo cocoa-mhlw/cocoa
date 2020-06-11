@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickNotifyOtherPage => new Command(async () =>
         {
-            await NavigationService.NavigateAsync(nameof(NotifyOtherPage));
+            await NavigationService.NavigateAsync(nameof(SubmitConsentPage));
         });
 
     }
