@@ -18,6 +18,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+		<string>bluetooth-le</string>
+		<string>telephony</string>
+	</array>
 	<key>MinimumOSVersion</key>
 	<string>13.5</string>
 	<key>CFBundleName</key>
@@ -45,6 +51,10 @@
 		<string>Icon-Small</string>
 		<string>Icon-Small@2x</string>
 		<string>Icon-Small@3x</string>
+	</array>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>jp.go.mhlw.covid19radar.exposure-notification</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>
