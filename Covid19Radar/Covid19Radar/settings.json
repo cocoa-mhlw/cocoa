@@ -1,11 +1,11 @@
-﻿{
+{
   "appVersion": "Ver 1.0.0",
   "apiSecret": "API_SECRET",
-  "apiUrlBase": "API_URL_BASE",
+  "apiUrlBase": "https://API_URL_BASE/api",
   "supportedRegions": "440;441",
   "blobStorageContainerName": "c19r",
   "androidSafetyNetApiKey": "ANDROID_SAFETYNETKEY",
-  "cdnUrlBase": "CDN_URL_BASE",
+  "cdnUrlBase": "https://CDN_URL_BASE/",
   "licenseUrl": "***REMOVED***",
   "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
   "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
