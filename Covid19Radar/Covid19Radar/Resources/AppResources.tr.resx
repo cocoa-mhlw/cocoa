@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ANA SAYFA</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisans Sözleşmesi</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tüm ayarlar ve veriler silindi. Lütfen başvuruyu yeniden başlatın.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Geçersiz Tanı Kimliği</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Lütfen geçerli bir Tanı Kimliği sağlayın</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Geçersiz Sınav Tarihi</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Lütfen geçerli bir Sınav Tarihi verin</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Kayıt için geri dön</value>

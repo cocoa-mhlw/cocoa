@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ГЛАВНАЯ</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Лицензионное соглашение</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Все настройки и данные были удалены. Пожалуйста, перезапустите приложение.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Идентификатор недействительной диагностики</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Пожалуйста, предоставьте действительный идентификатор диагноза</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Недействительной даты тестирования</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Пожалуйста, укажите действительный тест Дата</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Возвращение к регистрации</value>

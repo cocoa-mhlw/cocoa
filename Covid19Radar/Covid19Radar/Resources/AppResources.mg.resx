@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>TOKANTRANO</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Fifanarahana avy amin' ny fahazoan</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Voafafa ny toe-javatra sy ny tahirin-kevitra rehetra. Azafady averina velomina indray ny fanaovana fampiharana.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Nahitana Aretina ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Omeo FAMANTARANA Aretina misy feo ianao.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Daty nahitana-Pahaizana</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Omeo Daty misy Fitiliana ve ianao.</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Hiverina amin' ny fisoratana anarana</value>

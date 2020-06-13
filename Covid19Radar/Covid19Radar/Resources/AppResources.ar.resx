@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>الصفحة الرئيسية</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>اتفاقية الترخيص</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>تم حذف كافة الإعدادات والبيانات. الرجاء إعادة تشغيل التطبيق.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>معرف التشخيص غير الصالح</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>يرجى تقديم معرف تشخيص صالح</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>تاريخ اختبار غير صالح</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>يرجى تقديم تاريخ اختبار صالح</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>العودة إلى التسجيل</value>

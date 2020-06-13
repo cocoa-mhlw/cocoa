@@ -21,11 +21,6 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
-          <source>HOME</source>
-          <target state="translated">START</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License</source>
           <target state="needs-review-translation">Gebruiksvoorwaarden</target>
@@ -156,22 +151,6 @@
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle instellingen en gegevens zijn verwijderd. Start de aanvraag opnieuw.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ongeldige diagnose-id</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geef een geldig diagnose-id op</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ongeldige testdatum</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geef een geldige testdatum op</target>
         </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>

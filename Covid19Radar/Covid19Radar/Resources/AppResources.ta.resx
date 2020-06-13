@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>முகப்பு</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>உரிம ஒப்பந்தம்</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>அனைத்து அமைப்புகள் மற்றும் தரவு நீக்கப்பட்டுள்ளது. தயவுசெய்து பயன்பாட்டை மறுதொடக்கம் செய்யவும்.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>செல்லுபடியாகாத நோயறிதல் ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>செல்லுபடியாகாத தேர்வு தேதி</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>செல்லத்தக்க சோதனை தேதியை வழங்கவும்</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>பதிவுக்கான திருப்பம்</value>

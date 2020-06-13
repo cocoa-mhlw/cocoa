@@ -136,10 +136,6 @@
     <value>License</value>
     <comment>ライセンス…</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>HOME</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>License</value>
     <comment>ライセンス</comment>
@@ -268,18 +264,6 @@
   <data name="SettingsPageDescription3" xml:space="preserve">
     <value>Stop using and delete close contact records</value>
     <comment>使用を中止して過去14日間の接触履歴を消去</comment>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Invalid Diagnosis ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Please provide a valid Diagnosis ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Invalid Test Date</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Please provide a valid Test Date</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Return to registration</value>
