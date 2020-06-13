@@ -864,6 +864,14 @@
           <target state="translated">新型コロナウイルス陽性登録者との接触の可能性</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
         </trans-unit>
+        <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
+          <source>If you want to disable it, you can change it from the app settings</source>
+          <target state="translated">通知を無効にしたい場合は、アプリの設定から変更できます</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
+          <source>Notifications enabled</source>
+          <target state="translated">通知を有効にしました</target>
+        </trans-unit>
       </group>
     </body>
   </file>
