@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>సమాచారం నవీకరించు</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>హోమ్</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>మీరు వెళ్ళడానికి సిద్ధంగా ఉన్నారు</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>పూర్తి ఏర్పాటు</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>దోహదకారులు జాబితా</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>లైసెన్స్ అగ్రిమెంట్</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>ఒక అనువర్తనాన్ని వ్యవస్థాపించడం</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>సన్నిహిత సంప్రదింపు రికార్డింగ్</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>COVID-19 పాజిటివ్ అని నిర్ధారణ అయితే</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>ఈ యాప్ ఉపయోగించడానికి ఆవశ్యకతలు</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>స్థితి అమర్పులు</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>సరే</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>ప్రారంభించు</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>నోట్నౌ</value>
@@ -103,22 +65,6 @@
     <value>పాజిటివ్ కోవిడ్-19 రిజల్ట్ ను రిపోర్ట్ చేసిన ఎవరికైనా మీరు బహిర్గతం చేస్తే మీకు తెలియజేయబడుతుంది.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>దయచేసి డయగ్నాస్టిక్ ఐడెంటిఫైయర్ నమోదు చేయండి</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>పాజిటివ్ డయాగ్నసిస్ ని పంచుకోండి</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>మీరు అంటువ్యాధి కలిగి ఉండి, సంభావ్య ప్రభావానికి గురయ్యే సరైన వ్యక్తులకు తెలియజేయడంతో పరీక్షా తేదీ అనువర్తనానికి సాయపడుతుంది.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>బయటపడ్డ వారికి మాత్రమే నోటిఫికేషన్ అందుతుంది.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>మీ కోవిడ్-19 టెస్ట్ తో వచ్చిన ప్రత్యేక టెస్ట్ ఐడెంటిఫైయర్ మీ పాజిటివ్ టెస్ట్ ఫలితాన్ని వెరిఫై చేయడానికి విధిగా ఉపయోగించాలి.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>పూర్తయింది</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>దయచేసి డయగ్నాస్టిక్ ఐడెంటిఫైయర్ ఇవ్వండి</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>రోగ నిర్ధారణ నిర్ధారిణి అవసరం</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>రోగనిర్ధారణ సబ్మిట్ చేయడానికి ముందు దయచేసి ఎక్స్ పోజర్ నోటిఫికేషన్ లను ప్రారంభించండి.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>ప్రత్యక్షీకరణ ప్రకటనలు నిలిపివేయబడ్డాయి</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>రోగ నిర్ధారణ సమర్పించడం...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>నిర్ధారణ నిర్ధారించడం...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>సబ్మిట్ చేయాల్సిన ఈ సమయంలో మీ డయగ్నాస్టిక్ వెరిఫై చేయలేం.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>నిర్ధారణ విఫలమైంది</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>సమర్పించు</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>సెట్టింగ్‌లు</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>రద్దు చేయి</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>నోటిఫికేషన్లను మీరు ఆన్ చేయాలని అనుకుంటున్నారా?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>ఎనేబుల్</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>తొలగిస్తోంది</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>ఒకవేళ మీరు పాజిటివ్ డయాగ్నసిస్ అందుకుంటే</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>అనువర్తనాన్ని పంచుకోండి</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>అన్ని సెట్టింగ్ లు మరియు డేటా డిలీట్ చేయబడింది. దయచేసి అప్లికేషన్ ని రీస్టార్ట్ చేయండి.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>చెల్లని నిర్ధారణ ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>దయచేసి చెల్లుబాటు అయ్యే డయగ్నాస్టిక్ ఐడి ఇవ్వండి</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>చెల్లని పరీక్ష తేదీ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>దయచేసి చెల్లుబాటు అయ్యే టెస్ట్ తేదీని అందించండి</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>రిజిస్ట్రేషన్ కు రిటర్న్</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>మీరు తరువాత సానుకూలంగా రిజిస్టర్ చేసుకోవాలని అనుకుంటున్నారా?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>గత 14 రోజుల్లో సానుకూల ముష్కరులతో పరిచయం</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>మీరు కొత్త కరోనా తో సానుకూలంగా ఉంటే, దయచేసి మీ చుట్టూ ఉన్న వ్యక్తులను రక్షించడానికి అనుకూల నమోదులో సహకరించండి.</value>

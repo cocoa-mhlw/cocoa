@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Magsunod-sa-panahon ng impormasyon</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>HOME</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Ikaw ay handa nang pumunta</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>I-set up ang nakumpleto</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Nag-ambag ng listahan</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisensiya ng kasunduan</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Pag-install ng app</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Pagtala ng malapit na kontak</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Kung ikaw ay diagnosed na COVID-19 positibong</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Mga kailangang gamitin sa app na ito</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Status settings</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Paganahin</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Sa ngayon</value>
@@ -103,22 +65,6 @@
     <value>Ikaw ay aabisuhan kung ikaw ay napakita sa isang tao na iniulat ng isang positibong COVID na resulta.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Mangyaring ipasok ang diyagnosis identifier</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Ibahagi ang isang positibong pagsusuri</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Ang petsa ng pagsusuri ay tumutulong sa app na malaman kung kailan ka maaaring nakakahawa at abisuhan ang mga tamang tao ng potensyal na pagkakalantad.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Ang mga nalantad lamang ang tatanggap ng pabatid.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Ang natatanging pagsubok na identifier na dumating sa iyong COVID pagsubok ay dapat gamitin upang i-verify ang iyong positibong resulta ng pagsubok.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Pakisubukang muli sa ibang pagkakataon.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kumpleto</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Mangyaring magbigay ng isang diyagnosis identifier</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Pagsusuri ng diyagnosis kailangan</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Mangyaring magpagana ng mga notipikasyon ng pagkakalantad bago magsumite ng pagsusuri.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Hindi pinagana ang mga notipikasyon</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Nagsusumite ng pagsusuri ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Nagpapatunay ng pagsusuri ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Ang iyong pagsusuri ay hindi mapatunayan sa oras na ito na isusumite.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Nabigo ang Beripikasyon</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Isumite</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Mga Setting</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselahin</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Gusto mo bang magbukas ng mga notipikasyon?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Nagbibigay-kakayahang</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Nagtatanggal ng</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Kung nakatanggap ka ng isang positibong pagsusuri</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ibahagi ang app</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tinanggal na ang lahat ng setting at datos. Mangyaring muling-magsimula ng aplikasyon.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Imbalidong ID ng pagsusuri</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Mangyaring magbigay ng valid na pagsusuri na ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Imbalidong petsa ng pagsusuri</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Mangyaring magbigay ng balidong petsa ng pagsusuri</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Bumalik sa pagrerehistro</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Gusto mo bang magparehistro ng positibo mamaya?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Makipag-ugnay sa positibong tagasubok sa huling 14 na araw</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Kung ikaw ay positibo sa bagong Corona, mangyaring makipagtulungan sa positibong pagpaparehistro upang protektahan ang mga tao sa paligid mo.</value>

@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Nuashonraigh Faisnéis</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>BAILE</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Tá tú réidh le dul</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Cumraigh</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Liosta na rannpháirtithe</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Comhaontú Ceadúnais</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Feidhmchlár a shuiteáil</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Dlúththeagmháil a Thaifeadadh</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Má dhéantar diagnóisiú ar COVID-19 dearfach</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Ceanglais chun an feidhmchlár seo a úsáid</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Socruithe Stádais</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Cumasaigh</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
@@ -103,22 +65,6 @@
     <value>Cuirfear in iúl duit má bhí tú faoi lé duine a thuairiscigh toradh dearfach COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Iontráil an t-aitheantóir diagnóise, le do thoil</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Comhroinn Diagnóis Dhearfach</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Cuidíonn an dáta tástála leis an bhfeidhmchlár a fhios nuair a d'fhéadfadh tú a bheith tógálach agus fógra a thabhairt do na daoine cearta faoi nochtadh féideartha.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Ní bhfaighidh ach iad siúd a bhí nochta fógra.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Ní mór an t-aitheantóir tástála uathúil a tháinig le do thástáil COVID-19 a úsáid chun do thoradh dearfach tástála a fhíorú.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Bain triail eile as ar ball.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Críochnaigh</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Cuir Aitheantóir Diagnóise ar fáil</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Aitheantas Diagnóise ag teastáil</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Cumasaigh Fógraí Nochta sula gcuireann tú diagnóis isteach.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Fógraí Nochta faoi Mhíchumas</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnóis a chur isteach...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Diagnóis a fhíorú...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Ní féidir do dhiagnóis a fhíorú ag an am seo le cur isteach.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Theip ar fhíorú</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Cuir isteach</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Socruithe</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cealaigh</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>An bhfuil fonn ort fógraí a chasadh air?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Cumasú</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Ag scriosadh</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Má fuair tú diagnóis dhearfach</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Comhroinn an Feidhmchlár</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Scriosadh gach socrú agus sonraí. Atosaigh an feidhmchlár, le do thoil.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Aitheantas Diagnóis neamhbhailí</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Tabhair aitheantas diagnóise bailí le do thoil</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Dáta Tástála Neamhbhailí</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Tabhair Dáta Tástála bailí le do thoil</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Fill ar chlárú</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ar mhaith leat clárú go dearfach níos déanaí?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Teagmháil le tástálaithe dearfacha le 14 lá anuas</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Má tá tú dearfach leis an gCorona nua, le do thoil comhoibriú leis an gclárú dearfach chun na daoine timpeall ort a chosaint.</value>

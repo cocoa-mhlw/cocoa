@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Päivityksen tiedot</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>KOTI</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Olet valmis lähtemään.</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Määritä valmis</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Osallistujien luettelo</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Käyttöoikeussopimus</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Sovelluksen asentaminen</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Sulje yhteystiedon tallentaminen</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Jos sinulla on diagnosoitu COVID-19 positiivinen</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Tämän sovelluksen käyttöä koskevat vaatimukset</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Tila-asetukset</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK\n</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Ota käyttöön</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Ei nyt</value>
@@ -103,22 +65,6 @@
     <value>Saat ilmoituksen, jos olet altistunut jollekulle, joka ilmoitti positiivisesta COVID-19tuloksesta.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Anna diagnoositunnus</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Jaa positiivinen diagnoosi</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Testipäivämäärä auttaa sovellusta tietäen, milloin olet saattanut tarttua, ja ilmoittaa oikeille ihmisille mahdollisesta altistumisesta.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Vain altistuneet saavat ilmoituksen.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Covid-19 testin mukana toimitettua yksilöllistä testitunnistetta on käytettävä positiivisen testituloksen vahvistamiseen.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Yritä myöhemmin uudelleen.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Valmis</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Anna diagnoositunnus</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Diagnoosin tunniste vaaditaan</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Ota altistumisilmoitukset käyttöön ennen diagnoosin lähettämistä.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Altistumisilmoitukset poistettu käytöstä</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Lähetetään diagnoosia...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Tarkistetaan diagnoosia...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Diagnoosiaei voi tällä hetkellä vahvistaa.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Vahvistus epäonnistui</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Lähetä</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Asetukset</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Peruuta</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Haluatko ottaa ilmoitukset käyttöön?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Mahdollistaa</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Poistaminen</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Jos sait positiivisen diagnoosin</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Sovelluksen jakaminen</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Kaikki asetukset ja tiedot on poistettu. Käynnistä sovellus uudelleen.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Virheellinen diagnoositunnus</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Anna kelvollinen diagnoositunnus</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Virheellinen testipäivämäärä</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Anna kelvollinen testipäivämäärä</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Paluu rekisteröitymiseen</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Haluatko rekisteröityä positiivisesti myöhemmin?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kosketus positiivisiin testaajiin viimeisten 14 päivän aikana</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jos olet positiivinen uuden Corona, tee yhteistyötä positiivinen rekisteröinti suojella ihmisiä ympärilläsi.</value>

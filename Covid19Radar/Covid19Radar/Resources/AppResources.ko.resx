@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>업데이트 정보</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>홈</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>준비가 되었습니다.</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>완료된 설정</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>기고자 목록</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>사용권 계약</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>앱 설치</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>연락처 기록</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>COVID-19 양성 진단을 받은 경우</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>이 애플리케이션의 요구 사항</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>상태 설정</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>확인</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>사용</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
@@ -103,22 +65,6 @@
     <value>COVID-19 결과가 양성으로 보고 된 사람에게 노출된 경우 알림을 받게 됩니다.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>진단 식별자를 입력하십시오.</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>양성진단 공유</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>테스트 날짜는 앱이 언제 전염성이 있었는지 파악하고 적절한 사람들에게 잠재적 노출을 알리는 데 도움이 됩니다.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>노출된 사람만 알림을 받게 됩니다.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>COVID-19 테스트와 함께 사용된 고유 테스트 식별자를 사용하여 양성 검사 결과를 확인해야 합니다.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>나중에 다시 시도하세요.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>완료</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>진단 식별자를 제공하십시오.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>진단 식별자 필요</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>진단을 제출하기 전에 노출알림을 활성화 하십시오.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>노출알림 사용 안 함</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>진단 제출 중...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>진단 확인 중...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>현재 제출할 진단은 확인할 수 없습니다.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>인증 실패</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>전송</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>설정</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>취소</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>알림을 켜시겠습니까?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>사용하도록 설정 중</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>삭제 중</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>긍정적인 진단을 받은 경우</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>앱 공유</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>모든 설정및데이터가 삭제되었습니다. 응용 프로그램을 다시 시작하십시오.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>잘못된 진단 ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>유효한 진단 ID를 제공하십시오.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>잘못된 테스트 날짜</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>유효한 시험 날짜를 입력하십시오.</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>등록으로 돌아가기</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>나중에 긍정적으로 등록하시겠습니까?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>지난 14일 동안 양성 테스터와의 접촉</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>새로운 코로나에 긍정적 인 경우, 당신의 주위에 사람들을 보호하기 위해 긍정적 인 등록과 협력하시기 바랍니다.</value>

@@ -21,30 +21,6 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
-          <source>Update Information</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">புதுப்பித்தல் தகவல்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
-        </trans-unit>
-        <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
-          <source>HOME</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">முகப்பு</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
-        </trans-unit>
-        <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
-          <source>You're ready to go</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் செல்ல தயாராக இருக்கிறீர்கள்</target>
-        </trans-unit>
-        <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
-          <source>Set up Completed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">அமைவு முடிந்தது</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
-        </trans-unit>
-        <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
-          <source>Contributors List</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">பங்களிப்பாளர்கள் பட்டியல்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">உரிம ஒப்பந்தம்</target>
@@ -56,27 +32,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
-          <source>Installing an App</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ஒரு பயன்பாட்டை நிறுவுதல்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
-          <source>Recording close contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நெருங்கிய தொடர்பை பதிவுசெய்தல்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">உங்களுக்கு COVID-19 நேர்மறையாக கண்டறியப்பட்டால்</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
-          <source>Requirements to use this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">இந்த பயன்பாட்டை பயன்படுத்துவதற்கான தேவைகள்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
@@ -91,10 +46,6 @@
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">சரி</target>
-        </trans-unit>
-        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
-          <source>Enable</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">செயல்படுத்து</target>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
@@ -126,27 +77,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நேர்மறை குறியீடாகவும்-19 முடிவாகவும் அறிவிக்கப்பட்ட ஒருவரிடம் நீங்கள் வெளிப்படுத்தப்பட்டால் உங்களுக்கு அறிவிக்கப்படுவீர்கள்.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுசெய்து நோய் கண்டறிதல் அடையாளங்காட்டி உள்ளிடவும்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
-        </trans-unit>
-        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
-          <source>Share a Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
-          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">இந்தத் தேர்வு தேதி, நீங்கள் தொற்று நோய் உள்ளவரை மற்றும் சாத்தியமான வெளிப்பாடு சரியான மக்களுக்கு தெரியப்படுத்தும்போது, பயன்பாட்டை அறிய உதவுகிறது.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
-          <source>Only those who have been exposed will receive a notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">அம்பலத்திற்கு வந்தவர்கள் மட்டுமே அறிவிப்பைப் பெறுவார்கள்.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
-          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">உங்கள் கோவிட்-19 பரிசோதனையுடன் வந்த தனித்துவமான சோதனை அடையாளங்காட்டி உங்கள் நேர்மறை சோதனை முடிவை சரிபார்க்க பயன்படுத்தப்பட வேண்டும்.</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">பின்னர் மீண்டும் முயற்சிக்கவும்.</target>
@@ -163,41 +93,9 @@
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">முழுமை</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
-          <source>Please provide a Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுசெய்து ஒரு நோய் கண்டறியும் அடையாளங்காட்டியை வழங்கவும்</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
-          <source>Diagnosis Identifier Required</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நோய் கண்டறிதல் அடையாளங்காட்டி தேவை</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
-          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுசெய்து ஒரு பகுப்பாய்வு சமர்ப்பிக்கும் முன், வெளிப்பாடு அறிவிப்புகளை இயக்கவும்.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notifications Disabled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்புகள் முடக்கப்பட்டன</target>
-        </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நோய் கண்டறிதல்...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
-          <source>Verifying Diagnosis...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நோயை சரிபார்த்தல்...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
-          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">சமர்ப்பிக்க வேண்டிய நேரத்தில் உங்கள் நோயை உறுதிப்படுத்த முடியாது.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
-          <source>Verification Failed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">சரிபார்ப்பு தோல்வி</target>
-        </trans-unit>
-        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
-          <source>Submit</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">சமர்ப்பி</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
@@ -209,22 +107,9 @@
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ரத்துசெய்</target>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
-          <source>Do you want to turn on notifications?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">அறிவிப்புகளை இயக்க விரும்புகிறீர்களா?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
-        </trans-unit>
-        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
-          <source>Enabling</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">இயக்குவதால்</target>
-        </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">நீக்குகிறது</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -267,22 +152,6 @@
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">அனைத்து அமைப்புகள் மற்றும் தரவு நீக்கப்பட்டுள்ளது. தயவுசெய்து பயன்பாட்டை மறுதொடக்கம் செய்யவும்.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">செல்லுபடியாகாத நோயறிதல் ID</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">செல்லுபடியாகாத தேர்வு தேதி</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">செல்லத்தக்க சோதனை தேதியை வழங்கவும்</target>
-        </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">பதிவுக்கான திருப்பம்</target>
@@ -294,10 +163,6 @@
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் பின்னர் நேர்மறையாக பதிவு செய்ய விரும்புகிறீர்களா?</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
-          <source>Contact with positive testers in the last 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">கடந்த 14 நாட்களில் நேச்சுரல் டெஸ்டர்களுடனான தொடர்பு</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>

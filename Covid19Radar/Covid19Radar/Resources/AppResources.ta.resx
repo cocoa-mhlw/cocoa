@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>புதுப்பித்தல் தகவல்</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>முகப்பு</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>நீங்கள் செல்ல தயாராக இருக்கிறீர்கள்</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>அமைவு முடிந்தது</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>பங்களிப்பாளர்கள் பட்டியல்</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>உரிம ஒப்பந்தம்</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>ஒரு பயன்பாட்டை நிறுவுதல்</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>நெருங்கிய தொடர்பை பதிவுசெய்தல்</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>உங்களுக்கு COVID-19 நேர்மறையாக கண்டறியப்பட்டால்</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>இந்த பயன்பாட்டை பயன்படுத்துவதற்கான தேவைகள்</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>நிலை அமைப்புகள்</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>சரி</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>செயல்படுத்து</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>இப்போது இல்லை</value>
@@ -103,22 +65,6 @@
     <value>நேர்மறை குறியீடாகவும்-19 முடிவாகவும் அறிவிக்கப்பட்ட ஒருவரிடம் நீங்கள் வெளிப்படுத்தப்பட்டால் உங்களுக்கு அறிவிக்கப்படுவீர்கள்.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>தயவுசெய்து நோய் கண்டறிதல் அடையாளங்காட்டி உள்ளிடவும்</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>இந்தத் தேர்வு தேதி, நீங்கள் தொற்று நோய் உள்ளவரை மற்றும் சாத்தியமான வெளிப்பாடு சரியான மக்களுக்கு தெரியப்படுத்தும்போது, பயன்பாட்டை அறிய உதவுகிறது.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>அம்பலத்திற்கு வந்தவர்கள் மட்டுமே அறிவிப்பைப் பெறுவார்கள்.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>உங்கள் கோவிட்-19 பரிசோதனையுடன் வந்த தனித்துவமான சோதனை அடையாளங்காட்டி உங்கள் நேர்மறை சோதனை முடிவை சரிபார்க்க பயன்படுத்தப்பட வேண்டும்.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>பின்னர் மீண்டும் முயற்சிக்கவும்.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>முழுமை</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>தயவுசெய்து ஒரு நோய் கண்டறியும் அடையாளங்காட்டியை வழங்கவும்</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>நோய் கண்டறிதல் அடையாளங்காட்டி தேவை</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>தயவுசெய்து ஒரு பகுப்பாய்வு சமர்ப்பிக்கும் முன், வெளிப்பாடு அறிவிப்புகளை இயக்கவும்.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>வெளிப்பாடு அறிவிப்புகள் முடக்கப்பட்டன</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>நோய் கண்டறிதல்...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>நோயை சரிபார்த்தல்...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>சமர்ப்பிக்க வேண்டிய நேரத்தில் உங்கள் நோயை உறுதிப்படுத்த முடியாது.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>சரிபார்ப்பு தோல்வி</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>சமர்ப்பி</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>அமைப்புகள்</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>ரத்துசெய்</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>அறிவிப்புகளை இயக்க விரும்புகிறீர்களா?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>இயக்குவதால்</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>நீக்குகிறது</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>பயன்பாட்டை பகிரவும்</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>அனைத்து அமைப்புகள் மற்றும் தரவு நீக்கப்பட்டுள்ளது. தயவுசெய்து பயன்பாட்டை மறுதொடக்கம் செய்யவும்.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>செல்லுபடியாகாத நோயறிதல் ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>செல்லுபடியாகாத தேர்வு தேதி</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>செல்லத்தக்க சோதனை தேதியை வழங்கவும்</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>பதிவுக்கான திருப்பம்</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>நீங்கள் பின்னர் நேர்மறையாக பதிவு செய்ய விரும்புகிறீர்களா?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>கடந்த 14 நாட்களில் நேச்சுரல் டெஸ்டர்களுடனான தொடர்பு</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>புதிய கோரோனா உடன் நீங்கள் நேர்மறையாக இருந்தால், உங்களைச் சுற்றியுள்ள மக்களைப் பாதுகாக்க நேர்மறையான பதிவிற்கு ஒத்துழைக்கவும்.</value>
