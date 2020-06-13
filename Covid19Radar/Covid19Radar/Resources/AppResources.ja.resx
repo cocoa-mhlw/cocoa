@@ -690,4 +690,7 @@
     <value>新型コロナウイルス陽性登録者との接触の可能性</value>
     <comment>Possible COVID-19 Exposure</comment>
   </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>通知を無効にしたい場合は、アプリの設定から変更できます</value>
+  </data>
 </root>
