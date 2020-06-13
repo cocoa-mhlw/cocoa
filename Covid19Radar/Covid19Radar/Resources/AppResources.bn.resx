@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ঠিক আছে</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>সক্রিয় করুন</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>এখন</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>আপনি যদি কেউ ইতিবাচক COVID-19 ফলাফল রিপোর্ট প্রকাশ করা হয়েছে আপনি অবহিত করা হবে.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>অনুগ্রহ করে নির্ণয় শনাক্তকারী প্রবেশ করান</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>একটি ইতিবাচক নির্ণয় ভাগ করুন</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>পরীক্ষার তারিখ অ্যাপটি জানতে সাহায্য করে যখন আপনি সংক্রামক এবং সম্ভাব্য এক্সপোজার সঠিক ব্যক্তিদের অবহিত করতে পারেন ।</value>

@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>சரி</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>செயல்படுத்து</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>இப்போது இல்லை</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>நேர்மறை குறியீடாகவும்-19 முடிவாகவும் அறிவிக்கப்பட்ட ஒருவரிடம் நீங்கள் வெளிப்படுத்தப்பட்டால் உங்களுக்கு அறிவிக்கப்படுவீர்கள்.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>தயவுசெய்து நோய் கண்டறிதல் அடையாளங்காட்டி உள்ளிடவும்</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>இந்தத் தேர்வு தேதி, நீங்கள் தொற்று நோய் உள்ளவரை மற்றும் சாத்தியமான வெளிப்பாடு சரியான மக்களுக்கு தெரியப்படுத்தும்போது, பயன்பாட்டை அறிய உதவுகிறது.</value>

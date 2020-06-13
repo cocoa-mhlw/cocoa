@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>D'acord</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Habilita</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Se l'avisarà si ha estat exposat a algú que comunicava un resultat de COVID-19 positiu.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Si us plau, introduïu l'identificador de diagnòstic</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Compartir un diagnòstic positiu</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>La data de prova ajuda a l'aplicació a saber quan és possible que hagi estat contagiosa i notificar a la gent correcta de l'exposició potencial.</value>

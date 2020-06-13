@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>確定</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>啟用 </value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>現在不</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>如果您接觸過報告 COVID-19 陽性結果的人,您將收到通知。</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>請輸入診斷識別碼</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>分享陽性診斷</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>測試日期有助於應用程式知道何時您可能具有傳染性,並通知適當的人潛在的暴露。</value>

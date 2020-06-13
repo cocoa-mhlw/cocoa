@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>موافق</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>تمكين</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ليس الان</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>سيتم إعلامك إذا كنت قد تعرضت لشخص أبلغ عن إصابتة بفيروس كورونا المستجد.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>الرجاء إدخال هوية التشخيص</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>مشاركة التشخيص الإيجابي</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>يساعد تاريخ الاختبار التطبيق على معرفة متى كنت معديًا وإخطار الأشخاص المحتملين بالتعرض المحتمل.</value>
