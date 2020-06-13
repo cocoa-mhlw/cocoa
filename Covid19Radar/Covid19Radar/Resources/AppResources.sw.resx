@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Sawa</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Wezesha</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Dokezi sasa</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Utaarifiwa ikiwa umekuwa wazi kwa mtu ambaye aliripoti matokeo mazuri ya kuwa ID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Tafadhali ingiza Kitambulishi cha utambuzi</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Kushiriki utambuzi chanya</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Tarehe ya mtihani husaidia programu kujua wakati unaweza kuwa na kuambukiza na kuarifu watu sahihi wa mfiduo wa uwezo.</value>

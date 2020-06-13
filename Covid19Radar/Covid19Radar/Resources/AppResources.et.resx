@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Luba</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Mitte praegu.</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Teid teavitatakse, kui olete kokku puutunud kellegagi, kes teatas positiivsest COVID-19 tulemusest.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Palun sisestage diagnostika identifikaator</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Positiivse diagnoosi jagamine</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Testimiskuupäev aitab rakendusel teada, millal te olete olnud nakkav ja teavitama õiget inimest võimalikust kokkupuutest.</value>

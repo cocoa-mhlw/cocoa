@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ΟΚ</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Ενεργοποίηση</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Όχι τώρα</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Θα ειδοποιηθείτε εάν έχετε εκτεθεί σε κάποιον που ανέφερε θετικό αποτέλεσμα COVID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Πληκτρολογήστε το αναγνωριστικό διάγνωσης</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Μοιραστείτε μια θετική διάγνωση</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Η ημερομηνία δοκιμής βοηθά την εφαρμογή να γνωρίζει πότε μπορεί να ήσασταν μεταδοτική και να ενημερώνει τους κατάλληλους ανθρώπους για πιθανή έκθεση.</value>

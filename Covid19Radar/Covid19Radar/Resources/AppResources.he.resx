@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>אישור</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>הפוך לזמין</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>לא עכשיו</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>תקבל הודעה אם נחשפת למישהו שדיווח על תוצאת COVID-19 חיובית.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>אנא הכנס את מזהה האבחון</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>שיתוף אבחנה חיובית</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>תאריך הבדיקה מסייעת ליישום לדעת מתי ייתכן שהיית מדבקת ולהודיע לאנשים הנכונים על חשיפה פוטנציאלית.</value>

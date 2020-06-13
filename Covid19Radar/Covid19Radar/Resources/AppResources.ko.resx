@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>확인</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>사용</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>COVID-19 결과가 양성으로 보고 된 사람에게 노출된 경우 알림을 받게 됩니다.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>진단 식별자를 입력하십시오.</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>양성진단 공유</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>테스트 날짜는 앱이 언제 전염성이 있었는지 파악하고 적절한 사람들에게 잠재적 노출을 알리는 데 도움이 됩니다.</value>

@@ -52,10 +52,6 @@
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">확인</target>
         </trans-unit>
-        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
-          <source>Enable</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">사용</target>
-        </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">NotNow</target>
@@ -85,15 +81,6 @@
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
           <target state="translated">COVID-19 결과가 양성으로 보고 된 사람에게 노출된 경우 알림을 받게 됩니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">진단 식별자를 입력하십시오.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
-        </trans-unit>
-        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
-          <source>Share a Positive Diagnosis</source>
-          <target state="translated">양성진단 공유</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
           <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>

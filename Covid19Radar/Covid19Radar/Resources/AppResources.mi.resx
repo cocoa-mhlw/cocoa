@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ĀE</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Whakahohe</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Ka whakamōhiotia koe mēnā kua mārakerake koe ki tētahi hua o te COVID i te otinga.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Tāurutia koa te Kaitāutu Tataritanga</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Tiria he Tataritanga Tōrunga</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Ka āwhina te rā whakamātau i te taupānga ina mōhio koe, ka mītara koe, ka whakamōhio atu i te nuinga o ngā mārakerake.</value>
