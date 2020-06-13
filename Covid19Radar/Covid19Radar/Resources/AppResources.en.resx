@@ -12,19 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>How it works</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Next</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Protecting our loved ones from COVID-19</value>
-  </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Device Access</value>
     <comment>Device access page title</comment>
