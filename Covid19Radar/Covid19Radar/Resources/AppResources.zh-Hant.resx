@@ -23,25 +23,6 @@
     <value>COVID-19 Contact App</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>更新資訊</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>主頁</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>一切準備就緒</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>安裝完畢</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>貢獻者名單</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>授權協議</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hant/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>安裝應用程式</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>記錄緊密接觸</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>如果你被診斷為COVID-19陽性</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>應用程式需求</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>狀態設定</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>確定</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>啟用 </value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>現在不</value>
@@ -103,22 +65,6 @@
     <value>如果您接觸過報告 COVID-19 陽性結果的人,您將收到通知。</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>請輸入診斷識別碼</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>分享陽性診斷</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>測試日期有助於應用程式知道何時您可能具有傳染性,並通知適當的人潛在的暴露。</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>只有那些被曝光的人才會收到通知。</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>必須使用您的 COVID-19 檢測所附的唯一檢測識別碼來驗證您的陽性檢測結果。</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>請稍後再試一次。</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>完成</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>請提供診斷識別碼</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>需要診斷識別碼</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>請在提交診斷之前啟用曝光通知（Exposure Notifications）。</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>已關閉曝光通知</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>提交診斷...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>驗證診斷...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>此時無法驗證您的診斷結果。</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>驗證失敗</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>提交</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>設定</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>取消</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>是否要打開通知?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>啟用</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>刪除中</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>如果您收到陽性診斷</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>分享應用程式</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>所有設置和數據都已刪除。請重新啟動應用程式。</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>診斷識別碼無效</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>請提供合法的診斷代碼</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>不合法測試日期</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>請提供有效的考試日期</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>返回註冊</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>以後要積極註冊嗎?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>在過去 14 天內與陽性測試人員聯繫</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>如果您對新的 Corona 持樂觀態度,請配合積極的註冊,以保護您周圍的人。</value>

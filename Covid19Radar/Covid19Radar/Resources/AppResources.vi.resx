@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Cập nhật thông tin</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>TRANG CHỦ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Bạn đã sẵn sàng</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Thiết lập hoàn tất</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Danh sách người đóng góp</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Thoả thuận Cấp phép</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Đang cài đặt ứng dụng</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Đang ghi nhận tiếp xúc gần</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Nếu bạn xét nghiệm COVID-19 dương tính</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Các yêu cầu cần có để sử dụng ứng dụng này</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Cài đặt trạng thái</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Bật</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Không phải bây giờ</value>
@@ -103,22 +65,6 @@
     <value>Bạn sẽ được thông báo nếu bạn đã được tiếp xúc với một người báo cáo một kết quả COVID-19 dương tính.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Vui lòng nhập mã định danh chẩn đoán</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Chia sẻ một xét nghiệm Dương tính</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Ngày xét nghiệm giúp ứng dụng biết khi nào bạn có thể lây nhiễm và thông báo cho đúng người có tiềm năng tiếp xúc.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Chỉ những người đã được tiếp xúc sẽ nhận được một thông báo.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Mã định danh kiểm tra duy nhất đi kèm với xét nghiệm COVID-19 của bạn phải được sử dụng để xác minh kết quả xét nghiệm dương tính của bạn.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Hãy thử lại sau.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Hoàn tất</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Vui lòng cung cấp mã định danh xét nghiệm</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Yêu cầu nhập Mã định danh xét nghiệm</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Vui lòng bật thông báo phơi nhiễm trước khi gửi chẩn đoán.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Thông báo phơi nhiễm đã tắt</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Đệ trình chẩn đoán...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Xác minh chẩn đoán...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Chẩn đoán của bạn không thể được xác minh tại thời gian này để được đệ trình.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Xác minh thất bại</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Gửi</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Cài đặt</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Hủy bỏ</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Bạn có muốn bật thông báo không?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Cho phép</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Đang xóa</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Nếu bạn nhận được một chẩn đoán tích cực</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Chia sẻ ứng dụng</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tất cả các cài đặt và dữ liệu đã bị xóa. Hãy khởi động lại ứng dụng.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ID chẩn đoán không hợp lệ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Vui lòng cung cấp ID chẩn đoán hợp lệ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Ngày kiểm tra không hợp lệ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Vui lòng cung cấp ngày thi hợp lệ</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Quay trở lại đăng ký</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Bạn có muốn đăng ký tích cực sau này?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Liên hệ với người thử nghiệm tích cực trong 14 ngày qua</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Nếu bạn đang tích cực với Corona mới, xin vui lòng hợp tác với việc đăng ký tích cực để bảo vệ những người xung quanh bạn.</value>

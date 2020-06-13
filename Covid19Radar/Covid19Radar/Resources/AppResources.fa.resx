@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>بهنگام درآوری اطلاعات</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>صفحه اصلی</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>آماده رفتن هستید</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>راه اندازی کامل شد</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>فهرست شرکت کنندگان</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>توافقنامه مجوز</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>نصب یک برنامه</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>ضبط تماس نزدیک</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>اگر شما تشخیص داده COVID-19 مثبت</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>مورد نیاز برای استفاده از این برنامه</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>تنظیمات وضعیت</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>تأیید</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>فعال کردن</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
@@ -103,22 +65,6 @@
     <value>شما مطلع خواهید شد اگر شما در معرض کسی است که نتیجه مثبت COVID-19 گزارش شده است.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>لطفا شناسه تشخیص را وارد کنید</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>به اشتراک گذاشتن یک تشخیص مثبت</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>تاریخ تست به برنامه کمک می کند زمانی که ممکن است مسری داشته باشید و به افراد مناسب قرار گرفتن در معرض بالقوه اطلاع دهید.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>فقط کسانی که در معرض قرار گرفته اند ، اعلانی دریافت خواهند کرد.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>شناسه تست منحصر به فرد که با آزمون COVID-19 شما آمد باید برای تأیید نتیجه آزمون مثبت شما استفاده شود.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>لطفاً بعداً دوباره تلاش کنید.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>کامل</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>لطفا یک شناسه تشخیص ارائه دهید</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>شناسه تشخیص مورد نیاز</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>لطفاً قبل از ارسال یک تشخیص ، اعلان های نوردهی را فعال کنید.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>اعلان نوردهی غیرفعال شد</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>ارسال تشخیص...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>در حال تایید تشخیص...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>تشخیص شما نمی تواند در این زمان به تایید شود را مشاهده کنید.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>تأیید اعتبار انجام نشد</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>‏‏ارسال</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>تنظیمات</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>لغو</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>می خواهید اعلان ها را روشن کنید ؟</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>قادر می سازد</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>حذف</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>اگر شما تشخیص مثبت دریافت</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>اشتراک گذاری برنامه</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>همه تنظیمات و داده ها حذف شده اند. لطفاً برنامه را راه اندازی مجدد کنید.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>شناسه تشخیص غیرمعتبر</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>لطفا یک شناسه تشخیص معتبر ارائه دهید</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>تاریخ آزمون نامعتبر</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>لطفا یک تاریخ آزمون معتبر ارائه دهید</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>بازگشت به ثبت نام</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>آیا می خواهید به ثبت نام مثبت بعد ؟</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>تماس با آزمایشکنندگان مثبت در 14 روز گذشته</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>اگر شما با تاج جدید مثبت هستید ، لطفا با ثبت نام مثبت برای محافظت از مردم در اطراف خود همکاری کنید.</value>

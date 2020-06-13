@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Actualizare informaţii</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>PORNIRE</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Ești gata de plecare.</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Configurare terminată</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Lista colaboratorilor</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Acord de licenţă</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Instalarea unei aplicații</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Înregistrare a persoanei de contact de închidere</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Dacă sunteți diagnosticat COVID-19 pozitiv</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Cerințe pentru utilizarea acestei aplicații</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Setări stare</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Activare</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Nu acum.</value>
@@ -103,22 +65,6 @@
     <value>Veți fi notificat dacă ați fost expus la cineva care a raportat un rezultat pozitiv COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Introduceți identificatorul de diagnosticare</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Împărtășește un diagnostic pozitiv</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Data testului ajută aplicația să știe când este posibil să fi fost contagioasă și să notifice persoanele potrivite cu privire la expunerea potențială.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Numai cei care au fost expuși vor primi o notificare.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Identificatorul unic de test livrat împreună cu testul COVID-19 trebuie utilizat pentru a verifica rezultatul pozitiv al testului.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Vă rugăm să reîncercați mai târziu.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Terminat</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Vă rugăm să furnizați un identificator de diagnostic</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Identificator diagnostic necesar</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Activați Notificările de expunere înainte de a trimite un diagnostic.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Notificări de expunere dezactivate</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Trimiterea diagnosticului...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Se verifică diagnosticul...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Diagnosticul nu poate fi verificat în acest moment pentru a fi prezentat.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Verificarea nu a reușit</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Remitere</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Setări</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Anulare</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Activați notificările?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Permite</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>În curs de ştergere</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Dacă ați primit un diagnostic pozitiv</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Partajați aplicația</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Toate setările și datele au fost șterse. Reporniți aplicația.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ID diagnostic nevalid</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Vă rugăm să furnizați un id de diagnostic valabil</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Data nevalidă a testului</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Vă rugăm să furnizați o dată de testare validă</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Revenirea la înregistrare</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Doriți să vă înregistrați pozitiv mai târziu?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Contact cu testeri pozitivi în ultimele 14 zile</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Dacă sunteți pozitiv cu noul Corona, vă rugăm să coopereze cu înregistrarea pozitivă pentru a proteja oamenii din jurul tău.</value>
