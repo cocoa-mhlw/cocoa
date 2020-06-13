@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ΑΡΧΙΚΗ</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Άδεια Χρήσης</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Όλες οι ρυθμίσεις και τα δεδομένα έχουν διαγραφεί. Επανεκκινήστε την εφαρμογή.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Το αναγνωριστικό διάγνωσης δεν είναι έγκυρο</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Δώστε ένα έγκυρο αναγνωριστικό διάγνωσης</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Ημ/νία δοκιμής δεν είναι έγκυρη</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Παρακαλείσθε να δώσετε μια έγκυρη ημερομηνία δοκιμής</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Επιστροφή στην εγγραφή</value>
