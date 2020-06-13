@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Berikutnya</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Persyaratan Layanan</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Tidak perlu memasukkan informasi pribadi. Kami menggunakan ID unik yang dialokasikan untuk Anda saat memasang aplikasi.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontak dengan pengguna aplikasi lain selama lebih dari 30 menit secara keseluruhan, dalam radius yang lebih dekat dari 2m pada rerata tercatat sebagai "kontak dekat".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth harus dihidupkan untuk merekam kontak dekat. Silakan pergi ke halaman berikutnya untuk menyalakannya.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Mulai</value>
   </data>
@@ -273,18 +257,6 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Apakah Anda ingin mendaftar positif nanti?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Ketika Anda menjalankan aplikasi, itu akan menghasilkan dan menyimpan ID anonim pada setiap smartphone. Aplikasi ini tidak memperoleh informasi yang berkaitan dengan privasi seperti nomor telepon dan informasi lokasi.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Saat aplikasi berjalan, smartphone satu sama lain akan mencatat id anonim satu sama lain selama dua minggu terakhir. Catatan yang lebih lama dari 2 minggu akan dihapus dan setiap ID anonim akan diubah secara berkala untuk melindungi privasi.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Pengguna lain secara teratur mendapatkan daftar anonim id yang positif. Setelah akuisisi, rekaman kontak yang direkam pada ponsel cerdas akan dicocokkan. Jika hasil dari pertandingan adalah kontak berat, kami akan memberitahu smartphone Anda dan memberitahu Anda tentang tindakan yang diperlukan yang Anda ingin kami untuk bekerja sama dengan.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontak dengan penguji positif dalam 14 hari terakhir</value>

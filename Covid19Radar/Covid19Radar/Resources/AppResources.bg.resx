@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Напред</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Условия за услуги</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Няма нужда да въвеждате лични данни. Използваме уникален идентификационен номер, който ви е предоставен при инсталирането на приложение.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Контакт с друг потребител на приложение за повече от 30 мин общо, в радиус, по-близък от 2 m средно, се записва като "Затвори контакт".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>За да се запише близък контакт, трябва да се включи Bluetooth. Моля, преминете към следващата страница, за да я включите.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Начало</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Желаете ли да се регистрирате положително по-късно?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Когато стартирате приложението , то ще генерира и съхранява анонимен ИД на всеки смартфон. Това приложение не придобива никаква информация, свързана с поверителността, като например телефонен номер и информация за местоположението.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Докато приложението работи, смартфонът на другата страна ще записва анонимно идентификаторите на другия за последните две седмици. Записите, по-стари от 2 седмици, ще бъдат изтрити и всеки анонимен идентификационен номер ще се променя периодично, за да се защити поверителността.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Други потребители редовно получават списък на анонимни идентификатори на положителните. След придобиването записът на контакт, записан на смартфона, ще бъде съчетан. Ако резултатът от срещата е тежък контакт, ще ви уведомим за необходимите действия, с които искате да съдействаме.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Контакт с положителните тестери през последните 14 дни</value>

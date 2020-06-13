@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>הבא</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>תנאי השירות של Power BI</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>אין צורך להזין מידע אישי. אנו משתמשים במזהה ייחודי, המוקצה לך בעת התקנת יישום.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>איש קשר עם משתמש יישום אחר במשך יותר מ-30 דקות בסך הכל, ברדיוס הקרוב יותר מ-2 מ' נרשם כ"איש קשר סגור".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>יש לסובב את Bluetooth לצורך הקלטת קשר קרוב. נא עבור לדף הבא כדי להפעיל אותו.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>התחלה</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>האם ברצונך להירשם באופן חיובי מאוחר יותר?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>בעת הפעלת היישום, הוא יפיק ויאחסן מזהה אנונימי בכל טלפון חכם. יישום זה אינו רוכש כל מידע הקשור לפרטיות כגון מספר טלפון ומידע מיקום.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>בעוד היישום פועל, הטלפון החכם של השני יהיה להקליט את הזהויות האנונימיות של זה בשבועיים האחרונים. רשומות שגילן עולה על 2 שבועות יימחקו וכל מזהה אנונימי ישתנה מעת לעת כדי להגן על הפרטיות.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>משתמשים אחרים מקבלים בקביעות רשימה של מזהים אנונימיים של חיוביים. לאחר הרכישה, רשומת איש הקשר שנרשמה על הטלפון החכם יהיה מותאם. אם התוצאה של המשחק היא קשר כבד, נודיע לטלפון החכם שלך וליידע אותך על הפעולות הדרושות שאתה רוצה שנשתף פעולה עם.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>יצירת קשר עם בודקי חיוביות ב -14 הימים האחרונים</value>

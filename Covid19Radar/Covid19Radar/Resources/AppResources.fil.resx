@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Susunod</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Mga Tuntunin ng Serbisyo</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Hindi na kailangang input ng personal na impormasyon. Gumagamit kami ng bukod-tanging ID, na inilaan sa iyo kapag mag-instala ng app.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Ang isang contact na may isa pang app user para sa mas mahaba kaysa sa 30 min sa kabuuan, sa loob ng isang radius mas malapit sa 2m sa average ay naitala bilang "isara contact".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Kailangang naka-on ang Bluetooth sa record malapit sa contact. Magpunta lamang sa kasunod na pahina para buksan ito.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Simula</value>
   </data>
@@ -273,18 +257,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Gusto mo bang magparehistro ng positibo mamaya?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Kapag patakbuhin mo ang application, ito ay bumuo at mag-imbak ng isang hindi kilalang ID sa bawat smartphone. Ang aplikasyong ito ay walang anumang impormasyong may kaugnayan sa privacy tulad ng numero ng telepono at impormasyon sa lokasyon.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Habang tumatakbo ang aplikasyon, ang smartphone ng isat isa ay inirerekord ang mga hindi kilalang ID ng isa sa nakaraang dalawang linggo. Ang mga rekord na mas luma sa 2 linggo ay matatanggal at ang bawat ID na Anonymous ay papalitan sa pana-panahon upang protektahan ang privacy.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Regular na kumukuha ang ibang gumagamit ng listahan ng mga hindi kilalang ID ng mga positibo. Pagkatapos ng pagkuha ng mga talaan, ang contact record na nakatala sa smartphone ay dapat tumugma. Kung ang resulta ng tugma ay isang mabigat na contact, aabisuhan namin ang iyong smartphone at ipaalam sa iyo ang mga kinakailangang aksyon na nais mong makipagtulungan sa amin.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Makipag-ugnay sa positibong tagasubok sa huling 14 na araw</value>
