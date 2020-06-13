@@ -82,18 +82,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Bit ćete obaviješteni ako ste bili izloženi nekome tko je prijavio pozitivan rezultat COVID-19.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
-          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Datum testiranja pomaže aplikaciji da zna kada ste možda bili zarazni i obavijestite prave ljude o potencijalnoj izloženosti.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
-          <source>Only those who have been exposed will receive a notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Samo oni koji su bili izloženi primit će obavijest.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
-          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jedinstveni identifikator ispitivanja koji ste dobili uz covid-19 test mora se koristiti za provjeru pozitivnog rezultata testa.</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Pokušajte ponovno poslije.</target>
@@ -109,10 +97,6 @@
         <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Dovršeno</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
-          <source>Please provide a Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Navedite identifikator dijagnoze</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>

@@ -69,15 +69,6 @@
     <value>જો તમને કોઈ એવા વ્યક્તિ સાથે સંપર્ક થયો હોય કે જેણે હકારાત્મક COVID-19 પરિણામ ની જાણ કરી હોય તો તમને સૂચિત કરવામાં આવશે.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>ટેસ્ટની તારીખ એપ્લિકેશનને એ જાણવામાં મદદ કરે છે કે તમે ક્યારે ચેપી હોઅને સંભવિત સંપર્કના યોગ્ય લોકોને સૂચિત કરો.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>જે લોકો ને ખુલ્લા પાડવામાં આવ્યા છે તેમને જ સૂચના મળશે.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>તમારા COVID-19 ટેસ્ટ સાથે આવેલો અનન્ય ટેસ્ટ ઓળખનાર તમારા હકારાત્મક ટેસ્ટ પરિણામની ચકાસણી કરવા માટે ઉપયોગ થવો જ જોઇએ.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>પછીથી ફરી પ્રયાસ કરો.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>પૂર્ણ</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>કૃપા કરીને નિદાન ઓળખકર્તા ને પ્રદાન કરો</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>નિદાન ઓળખનાર જરૂરી</value>

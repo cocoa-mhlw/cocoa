@@ -69,15 +69,6 @@
     <value>如果您接觸過報告 COVID-19 陽性結果的人,您將收到通知。</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>測試日期有助於應用程式知道何時您可能具有傳染性,並通知適當的人潛在的暴露。</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>只有那些被曝光的人才會收到通知。</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>必須使用您的 COVID-19 檢測所附的唯一檢測識別碼來驗證您的陽性檢測結果。</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>請稍後再試一次。</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>完成</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>請提供診斷識別碼</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>需要診斷識別碼</value>

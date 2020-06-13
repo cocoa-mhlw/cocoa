@@ -82,18 +82,6 @@
           <target state="translated">Jy sal in kennis gestel word as jy blootgestel was aan iemand wat 'n positiewe COVID-19 resultaat berig.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
-          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="translated">Die toetsdatum help die program om te weet wanneer jy dalk aansteeklik was en om die regte mense van potensiële blootstelling in kennis stel.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
-          <source>Only those who have been exposed will receive a notification.</source>
-          <target state="translated">Slegs diegene wat blootgestel is, sal in kennis gestel word.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
-          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="translated">Die unieke toetsidentifiseerder wat saam met jou COVID-19 toets gekom het moet gebruik word om jou positiewe toetsuitslae te verifieer.</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="translated">Probeer asseblief weer later.</target>
@@ -109,10 +97,6 @@
         <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="translated">Voltooi</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
-          <source>Please provide a Diagnosis Identifier</source>
-          <target state="translated">Verskaf asseblief 'n Diagnose-Identifiseerder</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>

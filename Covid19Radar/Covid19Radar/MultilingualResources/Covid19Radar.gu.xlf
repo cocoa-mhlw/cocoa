@@ -82,18 +82,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">જો તમને કોઈ એવા વ્યક્તિ સાથે સંપર્ક થયો હોય કે જેણે હકારાત્મક COVID-19 પરિણામ ની જાણ કરી હોય તો તમને સૂચિત કરવામાં આવશે.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
-          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ટેસ્ટની તારીખ એપ્લિકેશનને એ જાણવામાં મદદ કરે છે કે તમે ક્યારે ચેપી હોઅને સંભવિત સંપર્કના યોગ્ય લોકોને સૂચિત કરો.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
-          <source>Only those who have been exposed will receive a notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">જે લોકો ને ખુલ્લા પાડવામાં આવ્યા છે તેમને જ સૂચના મળશે.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
-          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">તમારા COVID-19 ટેસ્ટ સાથે આવેલો અનન્ય ટેસ્ટ ઓળખનાર તમારા હકારાત્મક ટેસ્ટ પરિણામની ચકાસણી કરવા માટે ઉપયોગ થવો જ જોઇએ.</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">પછીથી ફરી પ્રયાસ કરો.</target>
@@ -109,10 +97,6 @@
         <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">પૂર્ણ</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
-          <source>Please provide a Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">કૃપા કરીને નિદાન ઓળખકર્તા ને પ્રદાન કરો</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
           <source>Diagnosis Identifier Required</source>

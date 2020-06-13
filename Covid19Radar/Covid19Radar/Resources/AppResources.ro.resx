@@ -69,15 +69,6 @@
     <value>Veți fi notificat dacă ați fost expus la cineva care a raportat un rezultat pozitiv COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Data testului ajută aplicația să știe când este posibil să fi fost contagioasă și să notifice persoanele potrivite cu privire la expunerea potențială.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Numai cei care au fost expuși vor primi o notificare.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Identificatorul unic de test livrat împreună cu testul COVID-19 trebuie utilizat pentru a verifica rezultatul pozitiv al testului.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Vă rugăm să reîncercați mai târziu.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Terminat</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Vă rugăm să furnizați un identificator de diagnostic</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identificator diagnostic necesar</value>

@@ -69,15 +69,6 @@
     <value>Utaarifiwa ikiwa umekuwa wazi kwa mtu ambaye aliripoti matokeo mazuri ya kuwa ID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Tarehe ya mtihani husaidia programu kujua wakati unaweza kuwa na kuambukiza na kuarifu watu sahihi wa mfiduo wa uwezo.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Hakika wale walio kuwa peke yao ni kufikisha ujumbe tu.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Kitambulisho cha mtihani wa kipekee ambacho huja na mtihani wako wa tamaa-19 lazima itumike ili kuthibitisha matokeo yako mazuri ya mtihani.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Tafadhali jaribu tena baadaye.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Imekamilika</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Tafadhali toa kitambulisho cha utambuzi</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Kitambulishi cha utambuzi kinahitajika</value>

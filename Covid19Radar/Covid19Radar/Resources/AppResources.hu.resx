@@ -69,15 +69,6 @@
     <value>Értesítést kap, ha olyan személynek volt kitéve, aki pozitív COVID-19 eredményt jelentett.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>A teszt dátuma segít az alkalmazásnak tudni, hogy mikor volt fertőző, és értesíti a megfelelő embereket a lehetséges expozícióról.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Csak azok kapnak értesítést, akik ki voltak téve a veszélynek.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>A COVID-19 teszthez tartozó egyedi tesztazonosítót kell használni a pozitív teszt eredményének ellenőrzéséhez.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Próbálkozzon később.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kész</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Kérjük, adja meg a diagnosztikai azonosítót</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnosztikai azonosító szükséges</value>
