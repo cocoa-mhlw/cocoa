@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Gerai</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Įgalinti</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Nedabar</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Jums bus pranešta, jei jums buvo veikiami asmens, kuris pranešė apie teigiamą COVID-19 rezultatą.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Įveskite diagnozės identifikatorių</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Pasidalinkite teigiama diagnoze</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Bandymo data padeda programėlei žinoti, kada galėjote būti užkrečiama, ir pranešti tinkamus žmones apie galimą poveikį.</value>

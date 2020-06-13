@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ОК</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Включить</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Не сейчас</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Вы будете уведомлены, если вы подверглись воздействию кого-то, кто сообщил положительный результат COVID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Пожалуйста, введите Идентификатор диагноза</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Поделитесь положительной диагностикой</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Дата тестирования помогает приложению узнать, когда вы, возможно, были заразны и уведомить нужных людей о потенциальной экспозиции.</value>

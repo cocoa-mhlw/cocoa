@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Bật</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Không phải bây giờ</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Bạn sẽ được thông báo nếu bạn đã được tiếp xúc với một người báo cáo một kết quả COVID-19 dương tính.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Vui lòng nhập mã định danh chẩn đoán</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Chia sẻ một xét nghiệm Dương tính</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Ngày xét nghiệm giúp ứng dụng biết khi nào bạn có thể lây nhiễm và thông báo cho đúng người có tiềm năng tiếp xúc.</value>

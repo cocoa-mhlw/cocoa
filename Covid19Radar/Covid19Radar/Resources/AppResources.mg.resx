@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Tsy maninona</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Fahafahana</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Ho hampahafantarina ianao raha toa ka niharan' ny olona iray izay nanao tatitra tsara COVID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Ampidiro ny Aretina i</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Mizara Aretina Tsara</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Ny daty fanandramana dia manampy ny rafibaovao hahafantatra ny fotoana mety mamindra sy ampandreneso ny olona marina tamin' ny hatsiaka.</value>
