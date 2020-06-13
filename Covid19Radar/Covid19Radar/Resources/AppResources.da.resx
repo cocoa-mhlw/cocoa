@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Næste</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Servicebetingelser</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Ingen grund til at indtaste personlige oplysninger. Vi bruger unikt id, der er tildelt dig, når du installerer en app.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>En kontakt med en anden appbruger i mere end 30 min i alt, inden for en radius tættere end 2m i gennemsnit registreres som "Luk kontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth skal være slået til for at optage tæt kontakt. Gå til næste side for at slå den til.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Startpunkt</value>
   </data>
@@ -273,18 +257,6 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vil du registrere dig positivt senere?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Når du kører programmet, vil det generere og gemme et anonymt id på hver smartphone. Denne applikation ikke erhverve nogen oplysninger i forbindelse med privatlivets fred, såsom telefonnummer og placering oplysninger.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Mens programmet kører, vil hinandens smartphone optage hinandens anonyme id'er for de sidste to uger. Poster, der er ældre end 2 uger, slettes, og hvert anonymt id ændres med jævne mellemrum for at beskytte privatlivets fred.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Andre brugere får jævnligt en liste over anonyme id'er med positive. Efter købet vil den kontaktpost, der er registreret på smartphonen, blive matchet. Hvis resultatet af kampen er en tung kontakt, vil vi underrette din smartphone og informere dig om de nødvendige handlinger, som du gerne vil have os til at samarbejde med.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt med positive testere inden for de seneste 14 dage</value>
