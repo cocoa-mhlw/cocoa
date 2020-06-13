@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ठीक</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>सक्षम करें</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>नॉटअब</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>यदि आप किसी ऐसे व्यक्ति के संपर्क में आए हैं जिसने सकारात्मक COVID-19 परिणाम की सूचना दी है तो आपको सूचित किया जाएगा।</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>कृपया निदान पहचानकर्ता दर्ज करें</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>एक सकारात्मक निदान साझा करें</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>परीक्षण की तारीख ऐप को यह जानने में मदद करती है कि आप कब संक्रामक हो सकते हैं और संभावित एक्सपोजर के सही लोगों को सूचित कर सकते हैं।</value>

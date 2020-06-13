@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>有効にする</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>あとで設定する</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>COVID-19陽性を報告した人と接触していた場合は、通知されます。</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>診断識別子を入力してください</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>陽性診断を共有する</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>テスト日は、あなたが伝染した可能性があるときにアプリを知り、潜在的な暴露を適切な人々に通知するのに役立ちます。</value>

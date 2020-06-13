@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Aktivera</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow (NotNow)</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Du kommer att meddelas om du har utsatts för någon som rapporterat ett positivt COVID-19 resultat.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Ange diagnosidentifieraren</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Dela en positiv diagnos</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Testdatumet hjälper appen att veta när du kan ha varit smittsam och meddela rätt personer om potentiell exponering.</value>

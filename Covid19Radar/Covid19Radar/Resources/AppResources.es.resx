@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Aceptar</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Habilitar</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Se le notificará si ha estado expuesto a alguien que reportó un resultado positivo de COVID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Introduzca el identificador de diagnóstico</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Compartir un diagnóstico positivo</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>La fecha de la prueba ayuda a la aplicación a saber cuándo puede haber sido contagioso y notificar a las personas adecuadas la exposición potencial.</value>

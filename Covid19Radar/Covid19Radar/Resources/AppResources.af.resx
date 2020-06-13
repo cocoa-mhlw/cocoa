@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Goed</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Aktiveer</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Nie Nou Nie</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Jy sal in kennis gestel word as jy blootgestel was aan iemand wat 'n positiewe COVID-19 resultaat berig.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Tik asseblief die Diagnose-Identifiseerder in</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Deel 'n Positiewe Diagnose</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Die toetsdatum help die program om te weet wanneer jy dalk aansteeklik was en om die regte mense van potensiële blootstelling in kennis stel.</value>

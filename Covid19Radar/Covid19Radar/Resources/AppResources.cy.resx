@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Iawn</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Galluogi</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Byddwch yn cael eich hysbysu os ydych wedi dod i gysylltiad â rhywun a gofnododd ganlyniad COVID-19 cadarnhaol.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Nodwch y Dynodwr diagnosis</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Rhannu diagnosis cadarnhaol</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Mae dyddiad y prawf yn helpu'r app i wybod pryd y gallech fod wedi bod yn heintus a rhoi gwybod i'r bobl gywir am amlygiad posibl.</value>

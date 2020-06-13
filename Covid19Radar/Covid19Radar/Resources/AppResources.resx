@@ -152,19 +152,12 @@
     <value>Status Settings</value>
     <comment>User Status Page Title</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Please enter the Diagnosis Identifier</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Please check your network connection.</value>
     <comment>Dialog message for Network connection error</comment>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Enable</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
@@ -188,9 +181,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Share a Positive Diagnosis</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</value>

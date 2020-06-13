@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>V redu</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Omogoči</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Ne zdaj</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Obveščeni boste, če ste bili izpostavljeni nekomu, ki je poročal o pozitivnem COVIDU-19 rezultatu.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Prosimo, vnesite identifikator diagnoze</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Delite pozitivno diagnozo</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Datum preskusa pomaga aplikaciji vedeti, kdaj ste morda bili nalezljivi in o tem obvestite prave ljudi potencialne izpostavljenosti.</value>

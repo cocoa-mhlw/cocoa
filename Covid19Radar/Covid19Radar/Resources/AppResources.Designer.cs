@@ -97,15 +97,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Enable に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonEnable {
-            get {
-                return ResourceManager.GetString("ButtonEnable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Failed に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonFailed {
@@ -871,15 +862,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please enter the Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageCodePlaceholder {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageCodePlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Please enter a process code issued to you by &quot;Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)&quot;. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDescription1 {
@@ -1299,15 +1281,6 @@ namespace Covid19Radar.Resources {
         internal static string ThankYouNotifyOtherPageLabel1 {
             get {
                 return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Share a Positive Diagnosis に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitileSharePositiveDiagnosis {
-            get {
-                return ResourceManager.GetString("TitileSharePositiveDiagnosis", resourceCulture);
             }
         }
         
