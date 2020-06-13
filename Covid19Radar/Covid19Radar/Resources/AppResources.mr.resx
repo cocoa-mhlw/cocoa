@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>साधन प्रवेश</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>सहमत</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>आता नाही</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>हे अॅप एक्स्पोजर नोटिफिकेशन / ब्लूटूथ संकेत ांचा वापर करते की तुम्ही दुस-या संपर्क शोधअॅप वापरकर्त्याजवळ आहात का हे निश्चित करण्यासाठी. 
-ब्लूटूथ सेट अप करण्यासाठी 'नेहमी परवानगी द्या' निवडा.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>एक्स्पोजर सूचना / ब्लूटूथ परवानगी द्या</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>एक्स्पोजर</value>
@@ -174,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>सेटिंग्ज</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>सहमत नाही</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>रद्द करा</value>
