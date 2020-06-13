@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>ಸಾಧನ ಪ್ರಾಪ್ತಿ</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>ಸಮ್ಮತಿಸಿ</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ನೋಟನೌ</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>ಈ ಆಪ್ ನೀವು ಮತ್ತೊಂದು ಕಾಂಟ್ಯಾಕ್ಟ್ ಟ್ರೇಸಿಂಗ್ ಆಪ್ ಬಳಕೆದಾರರ ಬಳಿ ಇದೆಯೇ ಎಂದು ನಿರ್ಧರಿಸಲು ಎಕ್ಸ್ ಪ್ಲೋರೇಷನ್/ಬ್ಲೂಟೂತ್ ಸಂಕೇತಗಳನ್ನು ಬಳಸುತ್ತದೆ. 
-ಬ್ಲೂಟೂತ್ ಅನ್ನು ಹೊಂದಿಸಲು ' ಯಾವಾಗಲೂ ಅನುಮತಿಸು ' ಆಯ್ಕೆಮಾಡಿ.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>ತೆರೆದುಕೊಳ್ಳುವಿಕೆ ಅಧಿಸೂಚನೆ/ಬ್ಲೂಟೂತ್ ಗೆ ಅವಕಾಶ</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>ಒಡ್ಡುವಿಕೆಗಳಲ್ಲಿ</value>
@@ -174,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>ಸೆಟ್ಟಿಂಗ್‌ಗಳು</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>ಒಪ್ಪುವುದಿಲ್ಲ</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>ರದ್ದುಮಾಡಿ</value>
