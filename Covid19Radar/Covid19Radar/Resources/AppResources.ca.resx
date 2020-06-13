@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>La presentació del diagnòstic...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Envia</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Configuració</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel·la</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Voleu activar les notificacions?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Permetent</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Suprimir</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Si has rebut un diagnòstic positiu</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Compartir l'aplicació</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>T'agradaria registrar-te positivament més endavant?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Contacti amb comprovadors positius en els últims 14 dies</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Si ets positiu amb la nova Corona, si us plau, col·labora amb el registre positiu per protegir les persones que t'envolten.</value>

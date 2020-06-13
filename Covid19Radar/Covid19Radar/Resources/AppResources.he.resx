@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>הגשת אבחון...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>שלח</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>הגדרות</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>ביטול</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>האם ברצונך להפעיל הודעות?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>פעלת</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>מחיקה</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>אם קיבלת אבחנה חיובית</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>שתף את האפליקציה</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>האם ברצונך להירשם באופן חיובי מאוחר יותר?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>יצירת קשר עם בודקי חיוביות ב -14 הימים האחרונים</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>אם אתה חיובי עם קורונה חדש, בבקשה לשתף פעולה עם הרישום החיובי כדי להגן על האנשים סביבך.</value>

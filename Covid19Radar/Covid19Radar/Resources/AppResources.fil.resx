@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Nagsusumite ng pagsusuri ...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Isumite</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Mga Setting</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselahin</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Gusto mo bang magbukas ng mga notipikasyon?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Nagbibigay-kakayahang</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Nagtatanggal ng</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Kung nakatanggap ka ng isang positibong pagsusuri</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ibahagi ang app</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Gusto mo bang magparehistro ng positibo mamaya?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Makipag-ugnay sa positibong tagasubok sa huling 14 na araw</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Kung ikaw ay positibo sa bagong Corona, mangyaring makipagtulungan sa positibong pagpaparehistro upang protektahan ang mga tao sa paligid mo.</value>

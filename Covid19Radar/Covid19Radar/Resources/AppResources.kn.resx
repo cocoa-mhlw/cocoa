@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>ಸಲ್ಲಿಸು</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>ಸೆಟ್ಟಿಂಗ್‌ಗಳು</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>ರದ್ದುಮಾಡಿ</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>ನೋಟಿಫಿಕೇಶನ್ ಗಳನ್ನು ಆನ್ ಮಾಡಬಯಸುವಿರಾ?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>ಅನುಕೂಲ</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>ಅಳಿಸುತ್ತಿದೆ</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>ಪಾಸಿಟಿವ್ ಡಯಾಗ್ನೋಸಿಸ್ ಪಡೆದರೆ</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ಆ್ಯಪ್ ಶೇರ್</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>ನೀವು ಮುಂದೆ ಸಕಾರಾತ್ಮಕವಾಗಿ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಲು ಇಷ್ಟಪಡುತ್ತೀರಾ?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ಧನಾತ್ಮಕ ಟೀಕಾಕಾರರೊಂದಿಗೆ ಸಂಪರ್ಕ</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>ನೀವು ಹೊಸ ಕರೋನದ ಜೊತೆ ಸಕಾರಾತ್ಮಕವಾಗಿದ್ದಲ್ಲಿ, ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರನ್ನು ರಕ್ಷಿಸಲು ಧನಾತ್ಮಕ ನೋಂದಣಿಗೆ ದಯವಿಟ್ಟು ಸಹಕರಿಸಿ.</value>
