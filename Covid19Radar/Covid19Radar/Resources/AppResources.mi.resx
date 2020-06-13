@@ -69,15 +69,6 @@
     <value>Ka whakamōhiotia koe mēnā kua mārakerake koe ki tētahi hua o te COVID i te otinga.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Ka āwhina te rā whakamātau i te taupānga ina mōhio koe, ka mītara koe, ka whakamōhio atu i te nuinga o ngā mārakerake.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Ko wai te tangata i mārakerake e whiwhi whakamōhiotanga ana.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Me whakamahi te kaitāutu whakamātau ahurei i haere me tō COVID whakamātau-ā-19 kia manatoko i tō hua whakamātau tōrunga.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Me ngana anō ā muri ake.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kua oti</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Hōmai koa he Kaitāutu Tataritanga</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Tataritanga Kaitāutu e Hiahiatia Ana</value>

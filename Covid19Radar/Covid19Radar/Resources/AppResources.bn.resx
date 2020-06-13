@@ -69,15 +69,6 @@
     <value>আপনি যদি কেউ ইতিবাচক COVID-19 ফলাফল রিপোর্ট প্রকাশ করা হয়েছে আপনি অবহিত করা হবে.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>পরীক্ষার তারিখ অ্যাপটি জানতে সাহায্য করে যখন আপনি সংক্রামক এবং সম্ভাব্য এক্সপোজার সঠিক ব্যক্তিদের অবহিত করতে পারেন ।</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>শুধু যাঁদের পর্দাফাঁস হয়েছে, তাঁরা নোটিফিকেশন পাবেন ।</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>অনন্য পরীক্ষা শনাক্তকারী যে আপনার COVID-19 পরীক্ষা সঙ্গে এসেছে আপনার ইতিবাচক পরীক্ষার ফলাফল যাচাই করতে ব্যবহার করতে হবে.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>অনুগ্রহ করে পরে আবার চেষ্টা করুন।</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>সম্পন্ন হয়েছে</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>অনুগ্রহ করে একটি নির্ণয় শনাক্তকারী প্রদান করুন</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>রোগ নির্ণয় শনাক্তকারী প্রয়োজন</value>

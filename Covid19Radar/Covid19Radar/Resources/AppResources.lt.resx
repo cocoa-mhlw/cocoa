@@ -69,15 +69,6 @@
     <value>Jums bus pranešta, jei jums buvo veikiami asmens, kuris pranešė apie teigiamą COVID-19 rezultatą.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Bandymo data padeda programėlei žinoti, kada galėjote būti užkrečiama, ir pranešti tinkamus žmones apie galimą poveikį.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Tik tie, kurie buvo veikiami, gaus pranešimą.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Norint patikrinti teigiamą testo rezultatą, turi būti naudojamas unikalus testo identifikatorius, pateiktas su COVID-19 testu.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Pamėginkite vėliau.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Atlikta</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Pateikite diagnozės identifikatorių</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Reikalingas diagnozės identifikatorius</value>

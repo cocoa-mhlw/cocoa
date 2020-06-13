@@ -69,15 +69,6 @@
     <value>תקבל הודעה אם נחשפת למישהו שדיווח על תוצאת COVID-19 חיובית.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>תאריך הבדיקה מסייעת ליישום לדעת מתי ייתכן שהיית מדבקת ולהודיע לאנשים הנכונים על חשיפה פוטנציאלית.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>רק אלה שנחשפו יקבלו הודעה.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>מזהה הבדיקה הייחודי שהגיע עם מבחן COVID-19 שלך חייב לשמש כדי לאמת את תוצאת הבדיקה החיובית שלך.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>נסה שוב מאוחר יותר.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>השלם</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>נא ספק מזהה אבחון</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>נדרש מזהה אבחון</value>
