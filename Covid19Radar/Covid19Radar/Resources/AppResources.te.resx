@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>పూర్తయింది</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>రోగ నిర్ధారణ నిర్ధారిణి అవసరం</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>రోగనిర్ధారణ సబ్మిట్ చేయడానికి ముందు దయచేసి ఎక్స్ పోజర్ నోటిఫికేషన్ లను ప్రారంభించండి.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>ప్రత్యక్షీకరణ ప్రకటనలు నిలిపివేయబడ్డాయి</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>రోగ నిర్ధారణ సమర్పించడం...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>నిర్ధారణ నిర్ధారించడం...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>సబ్మిట్ చేయాల్సిన ఈ సమయంలో మీ డయగ్నాస్టిక్ వెరిఫై చేయలేం.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>నిర్ధారణ విఫలమైంది</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>సమర్పించు</value>

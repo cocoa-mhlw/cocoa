@@ -98,33 +98,9 @@
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">पूर्ण</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
-          <source>Diagnosis Identifier Required</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">निदान ओळखकर्ता आवश्यक</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
-          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">कृपया निदान सादर करण्यापूर्वी एक्स्पोजर सूचना कार्यान्वीत करा.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notifications Disabled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">एक्सपोजर सूचना अकार्यान्वीत</target>
-        </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">निदान सबमिट करत आहे...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
-          <source>Verifying Diagnosis...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">निदान तपासणे...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
-          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">आपले निदान या वेळी सादर करण्यासाठी प्रमाणित करता येत नाही.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
-          <source>Verification Failed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">पुष्टीकरण अयशस्वी</target>
         </trans-unit>
         <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
           <source>Submit</source>

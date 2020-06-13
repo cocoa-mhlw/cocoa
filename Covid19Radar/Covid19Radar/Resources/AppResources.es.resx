@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Completado</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Identificador de diagnóstico requerido</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Habilite las notificaciones de exposición antes de enviar un diagnóstico.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Notificaciones de exposición desactivadas</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Enviando el Diagnóstico...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Comprobando el Diagnóstico...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Su diagnóstico no puede ser comprobado en este momento para ser enviado.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Error en la comprobación</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Enviar</value>

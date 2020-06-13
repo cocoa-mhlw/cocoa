@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Fenoy</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Aretina i Takiana</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Mba alefaso ny Fampilazana ny Hatsiaka alohan' ny fandefasana aretina.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Hatsiaka Fampilazana Sembana</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Fanekena ny Aretina ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Verifying Aretina ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Ny aretina dia tsy azo voamarina amin' ity fotoana ity mba ho alefa.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Verification Tsy Nahomby</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Hanoa</value>

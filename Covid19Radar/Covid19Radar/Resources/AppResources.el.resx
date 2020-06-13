@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Ολοκληρώθηκε</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Απαιτείται αναγνωριστικό διάγνωσης</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Ενεργοποιήστε τις Ειδοποιήσεις έκθεσης πριν υποβάλετε μια διάγνωση.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Ειδοποιήσεις έκθεσης απενεργοποιημένες</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Υποβολή διάγνωσης...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Επαλήθευση της διάγνωσης...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Η διάγνωσή σας δεν μπορεί να επαληθευτεί αυτή τη στιγμή για να υποβληθεί.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Η επαλήθευση απέτυχε</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Υποβολή</value>

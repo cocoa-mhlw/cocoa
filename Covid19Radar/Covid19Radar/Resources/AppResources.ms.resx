@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Selesai</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Pengecam diagnosis diperlukan</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Sila dayakan pemberitahuan pendedahan sebelum menyerahkan diagnosis.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Pemberitahuan pendedahan Dilumpuhkan</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Menghantar diagnosis...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Menentu sah diagnosis...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Diagnosis anda tidak boleh disahkan pada masa ini untuk dihantar.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Pengesahan Gagal</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Hantar</value>

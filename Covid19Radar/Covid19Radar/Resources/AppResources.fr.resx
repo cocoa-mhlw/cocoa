@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Terminé</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Identification de diagnostic requis</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Veuillez activer les notifications d’exposition avant de soumettre un diagnostic.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Notifications d’exposition désactivées</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Soumission du diagnostic...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Vérification du diagnostic...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Votre diagnostic ne peut pas être vérifié pour le moment.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Échec de la vérification</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Envoyer</value>

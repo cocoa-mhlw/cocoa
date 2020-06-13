@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Wedi gorffen</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Angen dynodydd diagnosis</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Galluogwch hysbysiadau amlygiad cyn cyflwyno diagnosis.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Hysbysiadau datguddio'r anabl</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Wrthi'n cyflwyno diagnosis ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Wrthi'n dilysu diagnosis ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Does dim modd gwirio'ch diagnosis ar hyn o bryd.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Heb lwyddo i ddilysu</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Cyflwyno</value>
