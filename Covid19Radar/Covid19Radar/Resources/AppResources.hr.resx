@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Slanje dijagnoze...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Pošalji</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Postavke</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Odustani</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Želite li uključiti obavijesti?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Omogućavanje</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Brisanje</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ako ste primili pozitivnu dijagnozu</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Dijeljenje aplikacije</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Želite li se kasnije pozitivno registrirati?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt s pozitivnim testers u posljednjih 14 dana</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ako ste pozitivni s novom Coronom, molimo vas da surađujete s pozitivnom registracijom kako biste zaštitili ljude oko sebe.</value>

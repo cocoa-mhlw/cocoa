@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Qed jissottometti d-dijanjo Żi...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Issottometti</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Issettjar</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Ikkanċella</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Tixtieq tixgħel in-notifiki?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Abilitanti</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Tħassir</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Jekk irċevejt dijanjożi pożittiva</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ixxerja l-App</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Tixtieq tirreġistra b ' mod pożittiv aktar tard?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kuntatt ma ' testers pożittivi f ' dawn l-a ħħar 14-il jum</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jekk inti pożittiv bil-corona l-ġdida, jekk jogħġbok tikkoopera mar-Re ġistrazzjoni pożittiva biex tipproteġi n-nies ta ' madwarek.</value>

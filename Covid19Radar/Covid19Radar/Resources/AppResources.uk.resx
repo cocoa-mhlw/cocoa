@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Подача діагнозу...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Надіслати</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Настройки</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Скасувати</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Увімкнути сповіщення?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Увімкнення</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Видалення</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Якщо ви отримали позитивний діагноз</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Поділіться додатком</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ви хотіли б зареєструвати позитивно пізніше?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Контакт з позитивними тестувальників за останні 14 днів</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Якщо ви позитивні з новою коронка, будь ласка, співпрацювати з позитивною реєстрацією, щоб захистити оточуючих Вас людей.</value>

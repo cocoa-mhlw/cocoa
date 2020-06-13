@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>निदान प्रस्तुत कर रहा है ...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>सबमिट करें</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>सेटिंग्स</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>रद्द करें</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>क्या आप सूचनाओं को चालू करना चाहते हैं?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>सक्षम</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>हटा रहा है</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>यदि आपको सकारात्मक निदान मिला</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ऐप साझा करें</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>क्या आप बाद में सकारात्मक पंजीकरण करना चाहेंगे?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>पिछले 14 दिनों में सकारात्मक परीक्षकों के साथ संपर्क करें</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>यदि आप नए कोरोना के साथ सकारात्मक हैं, तो कृपया अपने आसपास के लोगों की रक्षा के लिए सकारात्मक पंजीकरण के साथ सहयोग करें।</value>

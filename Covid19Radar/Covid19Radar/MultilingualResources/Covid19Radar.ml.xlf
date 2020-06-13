@@ -102,10 +102,6 @@
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">രോഗനിർണ്ണയം സമർപ്പിക്കുന്നത്...</target>
         </trans-unit>
-        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
-          <source>Submit</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">സമർപ്പിക്കുക</target>
-        </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ക്രമീകരണം</target>
@@ -116,22 +112,9 @@
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">റദ്ദാക്കുക</target>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
-          <source>Do you want to turn on notifications?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങള് ക്ക് നോട്ടിഫിക്കേഷന് തിരിയ്ക്കണോ?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
-        </trans-unit>
-        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
-          <source>Enabling</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">പ്രാപ്തമായ</target>
-        </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ഇല്ലാതാക്കുന്നു</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -201,10 +184,6 @@
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">പിന്നീട് പോസിറ്റീവായി രജിസ്റ്റർ ചെയ്യാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നു?</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
-          <source>Contact with positive testers in the last 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">കഴിഞ്ഞ 14 ദിവസത്തിനുള്ളിൽ പോസിറ്റീവ് ടെസ്റ്റേഴ്സ് ആയി ബന്ധപ്പെടുക</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>

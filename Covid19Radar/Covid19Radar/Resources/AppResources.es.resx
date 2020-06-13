@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Enviando el Diagnóstico...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Enviar</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Configuración</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>¿Desea activar las notificaciones?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Habilitar</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Eliminando</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Si recibió un diagnóstico positivo</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Compartir la aplicación</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>¿Desea registrarse positivamente más tarde?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Contacto con probadores positivos en los últimos 14 días</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Si usted es positivo con la nueva Corona, por favor coopere con el registro positivo para proteger a las personas que lo rodean.</value>

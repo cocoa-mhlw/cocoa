@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnozes iesniegšana...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Iesniegt</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Iestatījumi</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Atcelt</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Vai vēlaties ieslēgt paziņojumus?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Iespējo</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Dzēšana</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ja esat saņēmis pozitīvu diagnozi</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Kopīgojiet lietotni</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vai jūs vēlētos reģistrēties pozitīvi vēlāk?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakts ar pozitīviem testētājiem pēdējo 14 dienu laikā</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ja jums ir pozitīvs ar New Corona, lūdzu, sadarboties ar pozitīvu reģistrāciju, lai aizsargātu cilvēkus ap jums.</value>

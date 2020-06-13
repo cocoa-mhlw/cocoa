@@ -197,31 +197,15 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Submitting Diagnosis...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Submit</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
-  </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Do you want to turn on notifications?</value>
-    <comment>Confirmation dialog</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Stop</value>
     <comment>使用中止</comment>
   </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Enabling</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Contact with positive testers in the last 14 days</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>If you received a positive diagnosis</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Help protect your family and friends by anonymously registering test results.</value>

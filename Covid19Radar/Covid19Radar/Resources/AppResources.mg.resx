@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Fanekena ny Aretina ...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Hanoa</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Toe-javatra</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Manafoana</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Te-hitodika amin' ny fampilazana ve ianao?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Manampin'</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Raha nahazo aretina tsara ianao.</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Zarao ny Application</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Tianao ve ny hanao ny fisoratana anarana ao aoriana kely?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Miresaha amin' ny testers tsara amin' ny 14 andro farany.</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Raha tsara ianao miaraka amin' ilay Faribolam pahazavana vaovao dia aoka cooperate amin' ny fisoratana anarana tsara mba hiarovana ny olona manodidina anao.</value>

@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Predložitev diagnoze...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Pošlji</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Nastavitve</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Prekliči</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Ali želite vklopiti obvestila?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Omogoča</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Brisanje</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Če ste prejeli pozitivno diagnozo</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Skupna raba aplikacije</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Bi se radi kasneje registrirali?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt s pozitivnimi preskuševalci v zadnjih 14 dneh</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Če ste pozitivni z novim Corona, prosimo, sodelujte s pozitivno registracijo za zaščito ljudi okoli sebe.</value>
