@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ഹോം</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ലൈസൻസ് ഉടമ്പടി</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>എല്ലാ സജ്ജീകരണങ്ങളും ഡാറ്റയും ഇല്ലാതാക്കിയിട്ടുണ്ട്. ആപ്ലിക്കേഷൻ പുനരാരംഭിക്കുക.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>അസാധുവായ രോഗനിർണ്ണയ ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>സാധുതയുള്ള രോഗനിർണ്ണയ ഐഡി നൽകുക</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>അസാധുവായ പരിശോധനാ തീയതി</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>സാധുതയുള്ള പരിശോധനാ തീയതി നൽകുക</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>രജിസ്ട്രേഷന് തിരികെ നല് കൂ</value>

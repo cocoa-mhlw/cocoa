@@ -106,15 +106,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   HOME に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonHome {
-            get {
-                return ResourceManager.GetString("ButtonHome", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sharing positive information and anonymous notification to others に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonNotifyOtherPage {
@@ -840,42 +831,6 @@ namespace Covid19Radar.Resources {
         internal static string NotifyOtherPageDialogExceptionText {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogExceptionText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please provide a valid Diagnosis ID に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogInvalidDiagnosisIDText {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogInvalidDiagnosisIDText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Invalid Diagnosis ID に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogInvalidDiagnosisIDTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogInvalidDiagnosisIDTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please provide a valid Test Date に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogInvalidTestDateText {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogInvalidTestDateText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Invalid Test Date に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogInvalidTestDateTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogInvalidTestDateTitle", resourceCulture);
             }
         }
         
