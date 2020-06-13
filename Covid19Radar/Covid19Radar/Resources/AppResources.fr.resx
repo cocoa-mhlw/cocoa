@@ -23,24 +23,9 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Infos de mise à jour</value>
-    <comment>Update Information Menu</comment>
-  </data>
   <data name="ButtonHome" xml:space="preserve">
     <value>ACCUEIL</value>
     <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Vous êtes prêt à utiliser l'application</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Configuration terminée</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Liste des contributeurs</value>
-    <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Contrat de licence</value>
