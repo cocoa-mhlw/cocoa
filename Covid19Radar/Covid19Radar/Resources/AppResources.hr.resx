@@ -23,24 +23,9 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Ažurirajte informacije</value>
-    <comment>Update Information Menu</comment>
-  </data>
   <data name="ButtonHome" xml:space="preserve">
     <value>POLAZNO</value>
     <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Spreman si za polazak.</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Postavljanje dovršeno</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Popis suradnika</value>
-    <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licencni ugovor</value>
