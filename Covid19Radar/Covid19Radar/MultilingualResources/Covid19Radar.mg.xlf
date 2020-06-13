@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Manaraka</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ireo teny Fanompoana</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tsy mila fampidirana ny mombamomba azy manokana. Mampiasa FAMANTARANA miavaka isika, draharaha aminareo rehefa izao ny rafibaovao.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ny fifandraisana misy eo amin' ny rafi-baovao hafa mandritra ny 30 min-tena, ao anatin' ny radius akaiky kokoa noho ny 2m-antonontonony dia voarakitra ho toy ny "Manakaiky".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ny Bluetooth dia mila mifantoka amin' ny rakitsoratra akaiky. Mandehana azafady any amin' ny pejy manaraka mba hamadika izany.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Manomboka</target>
@@ -353,21 +333,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tianao ve ny hanao ny fisoratana anarana ao aoriana kely?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rehefa manao ny fampiharana ianao, dia nalaina izany ary tsy eo amin' ny smartphone tsirairay. Ity fampiharana ity dia tsy mahazo fampahalalana izay mifandray amin' ny tsiambaratelo toy ny hoe laharan' ny telefaonina sy ny toerana misy izany.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Raha toa ka mihazakazaka ny fampiharana dia smartphone ny tsy ny tsirairay avy amin' ireo IDs ny olona iray izay efa roa herinandro lasa. Ho voafafa ny rakitsoratra latsaky ny 2 herinandro ary tsy ny FAMANTARANA tsirairay dia hiova matetika mba hiarovana ny tsiambaratelo.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ny mpampiasa hafa dia ahitana ny lisitry ny tsy IDs ireo olona tsara. Aorian' ilay fahazoana dia ho manana volon ny teny hoe rakitsoratra voarakitra ao amin' ilay smartphone. Raha toa ka zava-mavesatra ny vokatry ny fampifandraisana, dia ampandreneso ny smartphone isika ary hampahafantatra anareo ireo fihetsika ilaina izay tianao cooperate.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

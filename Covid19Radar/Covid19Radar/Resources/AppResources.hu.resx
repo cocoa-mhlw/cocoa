@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Tovább</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Szolgáltatási feltételek</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Nem kell megadni a személyes adatokat. Egyedi azonosítót használunk, amelyet az alkalmazás telepítésekor osztanak ki.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Egy másik alkalmazásfelhasználóval való, összesen 30 min-nél hosszabb ideig, átlagosan 2 m-nél közelebbi sugarú körben tartott kapcsolat "Közeli kapcsolat" néven kerül rögzítésre.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>A szoros kapcsolat felvételéhez be kell kapcsolni a Bluetooth-t. Kérjük, lépjen a következő oldalra, hogy bekapcsolja.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Indítás</value>
   </data>
@@ -273,18 +257,6 @@ A Bluetooth beállításához válassza a "Mindig engedélyezett" lehetőséget.
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Szeretne később pozitívan regisztrálni?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Amikor futtatja az alkalmazást, létrehoz és tárol egy névtelen azonosítót minden okostelefonon. Ez az alkalmazás nem szerez semmilyen információt kapcsolatos adatvédelmi, mint a telefonszám és a helyadatait.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Amíg az alkalmazás fut, egymás okostelefonja rögzíti egymás névtelen azonosítóit az elmúlt két hétben. A 2 hétnél régebbi rekordok törlődnek, és minden névtelen azonosító rendszeres időközönként módosul a személyes adatok védelme érdekében.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Más felhasználók rendszeresen kap egy listát a névtelen azonosítók pozitív is. Az akvizíció után az okostelefonon rögzített kapcsolatfelvételi rekord egyeztetésre kerül. Ha a mérkőzés eredménye nehéz kapcsolat, értesíteni fogjuk az okostelefonját, és tájékoztatjuk Önt a szükséges lépésekről, amelyekkel együtt kíván működni.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Érintkezés pozitív tesztelőkkel az elmúlt 14 napban</value>

@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Далі</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Умови надання послуг</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Не потрібно вводити особисту інформацію. Ми використовуємо унікальний ІДЕНТИФІКАТОР, виділений для вас під час встановлення програми.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Контакт з іншим користувачем програми для більш ніж 30 хв в цілому, в радіусі ближче ніж 2 м в середньому записується як "тісний контакт".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Щоб записати тісний контакт, потрібно ввімкнути Bluetooth. Будь ласка, перейдіть на наступну сторінку, щоб увімкнути його.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Початок</target>
@@ -353,21 +333,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ви хотіли б зареєструвати позитивно пізніше?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Під час запуску програми він створить та зберігатиме анонімний ІДЕНТИФІКАТОР на кожному смартфоні. Ця програма не купує будь-яку інформацію, пов'язану з конфіденційністю, наприклад, номер телефону та інформацію про місцезнаходження.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">У той час як додаток працює, смартфон один одного буде записувати анонімні ідентифікатори один одного протягом останніх двох тижнів. Записи старше 2 тижнів будуть видалені, і кожен анонімний ІДЕНТИФІКАТОР буде періодично змінюватися для захисту конфіденційності.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Інші користувачі регулярно отримують Список анонімних ідентифікаторів позитивних. Після придбання, запис контактної особи, записаної на смартфоні, буде зіставлятися. Якщо результат матчу є важким контактом, ми повідомимо ваш смартфон і повідомимо вам про необхідні дії, які ви хотіли б з нами співпрацювати.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

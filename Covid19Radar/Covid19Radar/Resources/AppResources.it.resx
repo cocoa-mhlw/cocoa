@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Avanti</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Condizioni per l'utilizzo del servizio</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Non c'è bisogno di inserire informazioni personali. Stiamo utilizzando un ID univoco, che ti è stato assegnato durante l'installazione dell'app.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Un contatto con un altro utente dell'app per almeno 30 min in totale, entro un raggio minore di 2 m di media viene registrato come "Contatto ravvicinato".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Il Bluetooth deve essere attivato per registrare i contatti vicini . Vai alla pagina successiva per attivarlo.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Avvia</value>
   </data>
@@ -273,18 +257,6 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vuoi registrarti positivamente più tardi?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Quando si esegue l'applicazione , verrà generato e memorizzare un ID anonimo su ogni smartphone. Questa applicazione non acquisisce alcuna informazione relativa alla privacy come il numero di telefono e le informazioni sulla posizione.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Mentre l'applicazione è in esecuzione, lo smartphone l'altro registrerà gli ID anonimi l'uno dell'altro nelle ultime due settimane. I record più vecchi di 2 settimane verranno eliminati e ogni ID anonimo verrà modificato periodicamente per proteggere la privacy.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Altri utenti ricevono regolarmente un elenco di ID anonimi di quelli positivi. Dopo l'acquisizione, il record di contatto registrato sullo smartphone verrà abbinato. Se il risultato della partita è un contatto pesante, informeremo il tuo smartphone e ti informeremo delle azioni necessarie con cui vorresti che collaborassimo.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Contatto con tester positivi negli ultimi 14 giorni</value>

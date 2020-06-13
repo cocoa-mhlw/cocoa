@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Ar aghaidh</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Téarmaí Seirbhíse</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Ní gá faisnéis phearsanta a ionchur. Táimid ag baint úsáide as ID uathúil, leithdháilte ar tú nuair a shuiteáil app.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Taifeadtar teagmháil le húsáideoir feidhmchláir eile ar feadh níos mó ná 30 nóiméad san iomlán, laistigh de gha níos gaire ná 2m ar an meán mar "Dún Teagmháil".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Ní mór Bluetooth a iompú ar aghaidh chun dlúth-theagmháil a thaifeadadh. Téigh go dtí an chéad leathanach eile chun é a chasadh air.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Tosaigh</value>
   </data>
@@ -273,18 +257,6 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ar mhaith leat clárú go dearfach níos déanaí?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Nuair a ritheann tú an t-iarratas, ginfidh sé agus stórálfaidh sé aitheantas gan ainm ar gach fón cliste. Ní fhaigheann an t-iarratas seo aon fhaisnéis a bhaineann le príobháideachas ar nós uimhir theileafóin agus faisnéis suímh.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Cé go bhfuil an t-iarratas ag rith, déanfaidh fón póca a chéile aitheantais gan ainm a chéile a thaifeadadh le dhá sheachtain anuas. Scriosfar taifid níos sine ná 2 sheachtain agus athrófar gach ID gan ainm go tréimhsiúil chun príobháideacht a chosaint.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Faigheann úsáideoirí eile liosta de na hAithenais anaithnid de na cinn dhearfacha go rialta. Tar éis na héadála, déanfar an taifead teagmhála a thaifeadadh ar an bhfón cliste a mheaitseáil. Más teagmháil throm é toradh an chluiche, cuirfimid in iúl do do ghuthán cliste agus cuirfimid in iúl duit faoi na gníomhartha riachtanacha ar mhaith leat dúinn comhoibriú leo.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Teagmháil le tástálaithe dearfacha le 14 lá anuas</value>

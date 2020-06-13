@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Dalej</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Warunki świadczenia usługi</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Nie ma potrzeby wprowadzania danych osobowych. Używamy unikatowego identyfikatora, przydzielonego do Ciebie podczas instalowania aplikacji.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontakt z innym użytkownikiem aplikacji przez łącznie dłużej niż 30 minut, w promieniu bliższym niż 2 m średnio jest rejestrowany jako "Bliski kontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth musi być włączony, aby nagrać bliski kontakt. Przejdź do następnej strony, aby ją włączyć.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Uruchom</value>
   </data>
@@ -273,18 +257,6 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Czy chcesz zarejestrować się później pozytywnie?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Po uruchomieniu aplikacji wygeneruje i zapisze anonimowy identyfikator na każdym smartfonie. Ta aplikacja nie uzyskuje żadnych informacji związanych z prywatnością, takich jak numer telefonu i informacje o lokalizacji.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Gdy aplikacja jest uruchomiona, smartfon będzie nagrywał anonimowe identyfikatory siebie przez ostatnie dwa tygodnie. Rekordy starsze niż 2 tygodnie zostaną usunięte, a każdy anonimowy identyfikator będzie okresowo zmieniany w celu ochrony prywatności.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Inni użytkownicy regularnie otrzymują listę anonimowych identyfikatorów pozytywnych. Po przejęciu rekord kontaktu zapisany na smartfonie zostanie dopasowany. Jeśli wynik meczu jest ciężki kontakt, powiadomimy Twój smartfon i poinformujemy Cię o niezbędnych działaniach, z którymi chcesz, abyśmy współpracowali.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt z pozytywnymi testerami w ciągu ostatnich 14 dni</value>

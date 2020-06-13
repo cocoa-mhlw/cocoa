@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Panuku</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ngā Ture Ratonga</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Me tāuru te mōhiohio whaiaro. Kei te whakamahi mātou i te ID ahurei, tiritiri ki a koe ina tāuta koe i tētahi taupānga.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">He hoapā ki tētahi atu kaiwhakamahi taupānga kia roa ake i te 30 meneti i te tapeke, i roto i tētahi tarawhāiti iti ake i te 2m i te wawaenga e whakapūketetia ana hei "Kati Hoapā".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Me whakakā te Bluetooth hei pūkete kati i te hoapā. Haere koa ki te whārangi panuku hei whakakā.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Tīmata</target>
@@ -353,21 +333,6 @@ Tīpakohia te ' Whakaae Pūmau Tonu ' hei tatū i te Bluetooth.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Me rēhita tonu tika ā muri ake?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ina whakahaere koe i te taupānga, ka waihanga, ka penapena hoki i tētahi ID ingoamuna ki ia waea atamai. Kāore e whiwhi tēnei taupānga i ngā mōhiohio e pā ana ki te tūmataitinga pēnei i te tau waea me te mōhiohio tauwāhi.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">I te wā e haere ana te taupānga, ka taea e ētahi atu waea atamai te tāhopu i ngā Tautuhinga ingoamuna o ngā wiki e rua. Ka mukua ngā pūkete tawhito ake i te 2 wiki, ā, ka hurihia te ID ingoamuna hei pare i te tūmataitinga.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ka whiwhi ētahi atu kaiwhakamahi i tētahi rārangi o ngā Tt ingoamuna o ngā mea tōrunga. I muri i te tango, ka ōrite te pūkete hoapā i hopukina ki te waea atamai. Ki te kore te hua o te ōrite, ka whakamōhio atu ki tō waea atamai me te whakamōhio atu i a koe i ngā hohenga e hiahiatia ana e hiahia ana koe ki te whakahoahoa.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

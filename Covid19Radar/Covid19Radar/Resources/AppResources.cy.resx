@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Next</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Telerau Gwasanaeth</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Dim angen mewnbynnu gwybodaeth bersonol. Rydym yn defnyddio ID unigryw, a ddyrannwyd i chi wrth osod ap.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Mae cyswllt gyda defnyddiwr app arall am fwy na 30 munud i gyd, o fewn radiws sy'n agosach na 2m ar gyfartaledd yn cael ei gofnodi fel "cyswllt agos".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Mae angen i Bluetooth gael ei droi ymlaen i gofnodi cyswllt agos. Ewch i'r dudalen nesaf i'w roi ar waith.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Cychwyn</value>
   </data>
@@ -273,18 +257,6 @@ Dewiswch ' caniatáu bob tro ' i osod Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>A hoffech gofrestru'n gadarnhaol yn nes ymlaen?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Pan fyddwch yn rhedeg y cais, bydd yn cynhyrchu ac yn storio ID dienw ar bob ffôn smart. Nid yw'r cais hwn yn caffael unrhyw wybodaeth sy'n gysylltiedig â phreifatrwydd fel rhif ffôn a gwybodaeth lleoliad.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Tra bod y cais yn rhedeg, bydd ffôn smart ei gilydd yn cofnodi IDs dienw ei gilydd am y pythefnos blaenorol. Bydd cofnodion sy'n hŷn na 2 wythnos yn cael eu dileu a bydd pob ID dienw yn cael ei newid o bryd i'w gilydd i ddiogelu preifatrwydd.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Defnyddwyr eraill yn rheolaidd yn cael rhestr o IDs anhysbys o rai cadarnhaol. Ar ôl y caffaeliad, bydd y cofnod cyswllt a gofnodir ar y Smartphone yn cael ei baru. Os yw canlyniad y gêm yn gyswllt trwm, byddwn yn rhoi gwybod i'ch Smartphone ac yn eich hysbysu o'r camau gweithredu angenrheidiol yr hoffech i ni gydweithredu â nhw.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Cyswllt gyda profwyr positif yn y 14 diwrnod diwethaf</value>

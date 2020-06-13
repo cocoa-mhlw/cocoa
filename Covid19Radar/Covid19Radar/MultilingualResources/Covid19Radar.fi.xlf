@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Seuraava</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Palveluehdot</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Henkilökohtaisia tietoja ei tarvitse syöttää. Käytämme yksilöllistä tunnusta, joka on varattu sinulle sovelluksen asennuksen yhteydessä.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Yhteydenpito toiseen sovelluksen käyttäjään yli 30 minuutin ajan, joka on keskimäärin yli 2 metrin säteellä, tallennetaan "Sulje yhteystieto"-muodossa.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth on otettava käyttöön, jotta lähiyhteystieto voidaan tallentaa. Ota se käyttöön siirtymällä seuraavalle sivulle.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Alku</target>
@@ -353,21 +333,6 @@ Määritä Bluetooth valitsemalla Salli aina.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Haluatko rekisteröityä positiivisesti myöhemmin?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kun suoritat sovelluksen , se luo ja tallentaa anonyymin tunnuksen jokaiseen älypuhelimeen. Tämä sovellus ei saa mitään tietosuojaan liittyviä tietoja, kuten puhelinnumeroa ja sijaintitietoja.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kun sovellus on käynnissä, toistensa älypuhelin tallentaa toistensa anonyymit tunnukset kahden viime viikon ajalta. Yli 2 viikon ikäisiä tietueita poistetaan ja jokaista anonyymiä tunnusta muutetaan säännöllisesti yksityisyyden suojaamiseksi.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Muut käyttäjät saavat säännöllisesti luettelon positiivisista anonyymeistä tunnuksista. Hankinnan jälkeen älypuhelimeen tallennettu yhteyshenkilötietue täsmää. Jos ottelun tulos on raskas kontakti, ilmoitamme sinulle älypuhelimestasi ja ilmoitamme sinulle tarvittavista toimista, joiden kanssa haluat meidän yhteistyötä.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

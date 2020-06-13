@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Tālāk</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Pakalpojuma noteikumi</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Nav nepieciešams ievadīt personisku informāciju. Mēs izmantojam unikālo ID, kas jums tiek piešķirts, instalējot lietotni.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontaktu ar citu lietotnes lietotāju ilgāk nekā 30 minūtes kopā rādiusu, kas ir tuvāk par 2m, reģistrē kā "ciešu kontaktu".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Lai ierakstītu ciešu kontaktu, ir jābūt ieslēgtai Bluetooth. Lūdzu, pārejiet uz nākamo lapu, lai to ieslēgtu.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Sākums</value>
   </data>
@@ -273,18 +257,6 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vai jūs vēlētos reģistrēties pozitīvi vēlāk?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Palaižot programmu, tas radīs un uzglabā anonīmu ID katrā viedtālrunis. Šī lietojumprogramma neiegādājas informāciju, kas saistīta ar privātumu, piemēram, tālruņa numuru un atrašanās vietas informāciju.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Kamēr pieteikums darbojas, viens otra viedtālrunis reģistrēs viens otra anonīmu ID pēdējo divu nedēļu laikā. Ieraksti, kas ir vecāki par 2 nedēļām, tiks dzēsti, un katrs anonīmais ID tiks periodiski mainīts, lai aizsargātu privātumu.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Citi lietotāji regulāri saņemt sarakstu ar anonīmu ID pozitīvu ones. Pēc iegādes tiks saskaņots kontaktpersonas ieraksts, kas ir ierakstīts viedtālrunī. Ja spēles rezultāts ir smags kontakts, mēs paziņosim jūsu viedtālrunim un Informējam Jūs par nepieciešamajām darbībām, kuras jūs vēlētos sadarboties ar mums.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakts ar pozitīviem testētājiem pēdējo 14 dienu laikā</value>
