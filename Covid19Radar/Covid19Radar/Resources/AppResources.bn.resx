@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>পরবর্তী</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>পরিষেবার বিধিসমূহ</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>ব্যক্তিগত তথ্য ইনপুট করার প্রয়োজন নেই । আমরা একটি অ্যাপ্লিকেশন ইনস্টল করার সময় আপনার জন্য বরাদ্দ অনন্য ID ব্যবহার করছি.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>মোট 30 মিনিটের বেশি সময় ধরে অন্য অ্যাপ ব্যবহারকারীর সাথে যোগাযোগ করা হলে, গড়ে 2এম এর চেয়ে কাছাকাছি একটি ব্যাসার্ধের মধ্যে "ঘনিষ্ঠ যোগাযোগ" হিসাবে রেকর্ড করা হয় ।</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>ব্লু-টুথ বন্ধ করার জন্য চালু করা প্রয়োজন । অনুগ্রহ করে এটি চালু করার জন্য পরবর্তী পৃষ্ঠায় যান ।</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>শুরু</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>আপনি কি পরে ইতিবাচক নিবন্ধন করতে চান?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>যখন আপনি অ্যাপ্লিকেশন চালাবেন, এটি প্রতিটি স্মার্টফোনে একটি বেনামী আইডি জেনারেট এবং স্টোর করবে । এই প্রয়োগণটি ফোন নম্বর এবং অবস্থান তথ্যের মতো গোপনীয়তা সম্পর্কিত কোনো তথ্য অর্জন করে না ।</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>আবেদনপত্র চালাচালি হলেও একে অপরের স্মার্টফোন গত দুই সপ্তাহ ধরে একে অপরের বেনামী পরিচয়পত্র রেকর্ড করবে । ২ সপ্তাহের পুরোনো রেকর্ড মুছে ফেলা হবে এবং গোপনীয়তা রক্ষার জন্য প্রত্যেক বেনামী আইডি পর্যায়ক্রমে পরিবর্তিত হবে ।</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>অন্য ব্যবহারকারীরা নিয়মিত পজিটিভ জনের বেনামী পরিচয়পত্রের তালিকা পান । অধিগ্রহণের পর স্মার্টফোনে যে কনট্যাক্ট রেকর্ড রেকর্ড করা হবে, তা মিলবে । যদি ম্যাচের ফল ভারি যোগাযোগ হয়, তাহলে আমরা আপনার স্মার্টফোনকে অবহিত করব এবং প্রয়োজনীয় কাজগুলি জানাব যা আপনি আমাদের সাথে সহযোগিতা করতে চান ।</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>গত ১৪ দিনে পজিটিভ টেস্টারের সঙ্গে যোগাযোগ</value>

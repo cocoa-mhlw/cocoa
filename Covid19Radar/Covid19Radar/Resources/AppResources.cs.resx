@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Další</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Podmínky služby</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Není třeba zadávat osobní údaje. Používáme jedinečné ID, které vám bylo přiděleno při instalaci aplikace.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontakt s jiným uživatelem aplikace po dobu delší než 30 minut celkem, v okruhu blíže než 2 m v průměru je zaznamenán jako "Blízký kontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth je třeba zapnout, aby bylo možné zaznamenat blízký kontakt. Chcete-li ji zapnout, přejděte na další stránku.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Spustit</value>
   </data>
@@ -273,18 +257,6 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Chcete se později zaregistrovat pozitivně?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Při spuštění aplikace vygeneruje a uloží anonymní ID na každém smartphonu. Tato aplikace nezískává žádné informace týkající se ochrany osobních údajů, jako je telefonní číslo a informace o poloze.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Zatímco aplikace běží, smartphone si navzájem zaznamená anonymní IDS za poslední dva týdny. Záznamy starší než 2 týdny budou smazány a každé anonymní ID bude pravidelně měněn, aby bylo chráněno soukromí.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Ostatní uživatelé pravidelně získají seznam anonymních IDENTIÍ pozitivních. Po pořízení bude záznam kontaktu zaznamenaný na smartphonu spárován. Pokud je výsledkem zápasu těžký kontakt, upozorníme váš smartphone a informujeme vás o nezbytných akcích, se kterými byste chtěli, abychom spolupracovali.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt s pozitivními testery za posledních 14 dnů</value>

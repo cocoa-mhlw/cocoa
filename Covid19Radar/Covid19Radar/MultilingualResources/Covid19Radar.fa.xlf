@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">‏‏بعد</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">شرایط خدمات</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">بدون نیاز به ورودی اطلاعات شخصی. ما از شناسه منحصربه فرد استفاده می کنیم که هنگام نصب یک برنامه به شما اختصاص داده شده است.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">یک تماس با یک کاربر برنامه دیگر برای بیش از 30 دقیقه در مجموع ، در شعاع نزدیک تر از 2m به طور متوسط به عنوان "تماس نزدیک" ثبت می شود.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">بلوتوث باید برای ضبط تماس نزدیک روشن شود. لطفا به صفحه بعدی بروید تا آن را روشن کنید.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">شروع</target>
@@ -353,21 +333,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">آیا می خواهید به ثبت نام مثبت بعد ؟</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">هنگامی که برنامه را اجرا می کنید ، یک شناسه ناشناس را در هر گوشی هوشمند تولید و ذخیره می کند. این نرم افزار هیچ اطلاعاتی مربوط به حریم خصوصی مانند شماره تلفن و اطلاعات مکان را به دست نمی آورد.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">در حالی که برنامه در حال اجرا است ، گوشی های هوشمند یکدیگر یک شناسه ناشناس دیگر را برای دو هفته گذشته ضبط می کنند. سوابق قدیمی تر از 2 هفته حذف خواهد شد و هر شناسه ناشناس به صورت دوره ای برای محافظت از حریم خصوصی تغییر خواهد کرد.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">کاربران دیگر به طور منظم یک لیست از شناسه های ناشناس از آنهایی که مثبت دریافت کنید. پس از اکتساب ، رکورد تماس ضبط شده بر روی گوشی هوشمند همسان خواهد شد. اگر نتیجه مسابقه یک تماس سنگین باشد ، ما گوشی هوشمند شما را مطلع می کنیم و شما را از اقدامات لازم مطلع می کنیم که می خواهم با آنها همکاری کنیم.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

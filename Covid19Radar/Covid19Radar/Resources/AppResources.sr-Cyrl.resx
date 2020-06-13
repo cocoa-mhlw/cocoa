@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Даље</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Услови коришћења услуге</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Нема потребе за уносом личних информација. Користимо јединствени ИД који вам је додељен приликом инсталирања апликације.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Контакт са другим корисником апликације за дужи од 30 минута у збиру, у радијусу који је већи од 2 метра у просеку, записује се као "близак контакт".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Блуетоотх мора бити укључен да би се забележио затвори контакт. Идите на следећу страницу да бисте је укључили.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Почетак</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Желите ли касније да се региструјете?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Када покренете апликацију, она ће генерисати и ускладиштити анонимни ИД на сваком паметном телефону. Ова апликација не стиче никакве информације везане за приватност, као што су број телефона и информације о локацији.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Док је апликација покренута, смартпхоне уређај других телефона ће се у протекле две недеље снимати за анонимне ИД-ове. Записи старији од 2 недеље ће бити избрисани, а сваки анонимни ИД ће се повремено променити како би се заштитила приватност.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Други корисници редовно добијају листу анонимних идентификација позитивних. Након куповине, запис контакта снимљен на паметном телефону биће подударно. Ако је резултат утакмице тежак контакт, обавестићемо ваш паметни телефон и информисати вас о неопходним радњама са којима бисте желели да сарађујемо.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Контакт са позитивним тестерима у последњих 14 дана</value>

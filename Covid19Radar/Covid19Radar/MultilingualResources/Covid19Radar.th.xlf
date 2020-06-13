@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="translated">ถัดไป</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="translated">เงื่อนไขการใช้บริการ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="translated">ไม่จําเป็นต้องใส่ข้อมูลส่วนบุคคล เราจะใช้ ID พิเศษที่ไม่ซ้ํากัน ซึ่งจะถูกสร้างให้คุณระหว่างการติดตั้งแอพ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="translated">การพบปะกับผู้ใช้แอพคนอื่นนานกว่า 30 นาที ภายในรัศมีต่ำกว่า 2 เมตร จะถูกบันทึกเป็น "การติดต่อแบบใกล้ชิด"</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="translated">ต้องมีการเปิดตัวแจ้งเตือนบลูทูธเพื่อบันทึกการพบปะ โปรดไปที่หน้าถัดไป เพื่อเปิดการทำงาน</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="translated">เริ่ม</target>
@@ -353,21 +333,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">คุณต้องการลงทะเบียนในเชิงบวกในภายหลังหรือไม่</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">เมื่อคุณเรียกใช้โปรแกรมประยุกต์, มันจะสร้าง และจัดเก็บ ID ที่ไม่ระบุชื่อบนสมาร์ทโฟนแต่ละ. โปรแกรมนี้ไม่ได้รับข้อมูลใด ๆ ที่เกี่ยวข้องกับความเป็นส่วนตัวเช่นหมายเลขโทรศัพท์และข้อมูลสถานที่</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ในขณะที่แอปพลิเคชันกําลังทํางานอยู่ สมาร์ทโฟนของกันและกันจะบันทึกรหัสที่ไม่ระบุชื่อของกันและกันในช่วงสองสัปดาห์ที่ผ่านมา บันทึกที่เก่ากว่า 2 สัปดาห์จะถูกลบ และรหัสที่ไม่ระบุชื่อแต่ละรหัสจะถูกเปลี่ยนเป็นระยะเพื่อป้องกันความเป็นส่วนตัว</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ผู้ใช้รายอื่นเป็นประจําได้รับรายชื่อของ ID ที่ไม่ระบุชื่อของบวก หลังจากได้รับบันทึกการติดต่อที่บันทึกบนสมาร์ทโฟนจะถูกจับคู่ หากผลของการแข่งขันเป็นผู้ติดต่อที่หนักเราจะแจ้งให้มาร์ทโฟนของคุณและแจ้งให้คุณทราบถึงการกระทําที่จําเป็นที่คุณต้องการให้เราร่วมมือ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

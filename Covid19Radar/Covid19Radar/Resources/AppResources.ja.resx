@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>次</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>サービス条件</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>個人情報を入力する必要はありません。アプリをインストールするときに割り当てる一意の ID を使用しています。</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>平均2m未満の半径内に合計30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>濃厚接触を記録するには、Bluetooth/Exposure Notification を有効にする必要があります。次のページに移動して有効にしてください。</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>スタート</value>
   </data>
@@ -273,18 +257,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>後で陽性の登録をしますか？</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>アプリケーションを実行すると、各スマートフォンで匿名 ID が生成され、保存されます。このアプリケーションは、電話番号や位置情報など、プライバシーに関する情報を一切取得しません。</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>アプリケーションの実行中、お互いのスマートフォンは、過去2週間お互いの匿名IDを記録します。2 週間を経過したレコードは削除され、各匿名 ID はプライバシー保護のために定期的に変更されます。</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>他の利用者は定期的に陽性となった方の匿名ID一覧を取得しています。取得した後、スマートフォンに記録された接触記録と突合を行います。突合の結果、濃厚接触に該当する場合は、あなたのスマートフォンにお知らせします、ご協力いただきたい必要な行動についてご案内します。</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>過去14日間の陽性判定者との接触</value>

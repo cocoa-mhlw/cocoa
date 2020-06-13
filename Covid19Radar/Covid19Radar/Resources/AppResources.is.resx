@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Næsta</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Þjónustuskilmálar</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Engin þörf á að innskrá persónulegar upplýsingar. Við erum að nota einkvæmt AUÐKENNI, úthlutað til þín þegar þú setur upp forrit.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Tengiliður við annan forritanotanda í lengri tíma en 30 mín í heildina, innan radíus nær en 2m að meðaltali er skráð sem "náin snerting".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Kveikt þarf á Bluetooth til að skrá nána snertingu. Vinsamlegast farðu á næstu síðu til að kveikja á því.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Byrja</value>
   </data>
@@ -273,18 +257,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Á að skrá jákvætt síðar?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Þegar þú keyrir forritið mun það búa til og geyma nafnlaust AUÐKENNI á hverjum snjallsíma. Þetta forrit öðlast ekki neinar upplýsingar sem tengjast persónuvernd, svo sem upplýsingum um símanúmer og staðsetningu.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Þó að forritið sé í gangi mun hver snjallsíminn taka upp nafnlaus auðkenni hvers annars fyrir síðustu tvær vikurnar. Færslum sem eru eldri en 2 vikna verður eytt og hverju nafnlausu AUÐKENNI verður breytt reglulega til að vernda friðhelgi einkalífs.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Aðrir notendur fá reglulega lista yfir nafnlaus auðkenni jákvæðra sjálfur. Eftir kaupin verður tengiliðafærslu sem skráð er á snjallsíma jafnað. Ef afleiðing af passa er þungur snerting, munum við tilkynna snjallsímann þinn og upplýsa þig um nauðsynlegar aðgerðir sem þú vilt að við vinnum með.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Samband við jákvæða prófunartæki á síðustu 14 dögum</value>
