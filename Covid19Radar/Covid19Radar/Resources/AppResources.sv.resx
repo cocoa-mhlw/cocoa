@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Nästa post</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Användningsvillkor</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Du behöver inte ange personlig information. Vi använder ett unikt ID som tilldelas dig när du installerar app'en.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>En kontakt med en annan användare under längre tid än 30 minuter och inom en radie närmare än 2 m, registreras som "Stäng kontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth måste vara aktiverat för att uppfatta en kontakt. Gå till nästa sida för att slå på den.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Starta</value>
   </data>
@@ -273,18 +257,6 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vill du registrera dig positivt senare?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>När du kör programmet kommer det att generera och lagra ett anonymt ID på varje smartphone. Denna ansökan inte förvärva någon information om sekretess såsom telefonnummer och platsinformation.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Medan programmet körs kommer varandras smartphone att spela in varandras anonyma ID under de senaste två veckorna. Poster äldre än 2 veckor kommer att raderas och varje anonymt ID ändras regelbundet för att skydda sekretessen.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Andra användare får regelbundet en lista över anonyma ID:er av positiva. Efter förvärvet kommer kontaktposten som registrerats på smarttelefonen att matchas. Om resultatet av matchen är en tung kontakt kommer vi att meddela din smartphone och informera dig om de nödvändiga åtgärder som du vill att vi ska samarbeta med.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt med positiva testare under de senaste 14 dagarna</value>

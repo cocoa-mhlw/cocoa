@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="translated">İleri</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="translated">Hizmet Koşulları</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="translated">Kişisel bilgilerinizi girmenize gerek bulunmamaktadır. Bir uygulamayı yüklerken size tahsis edilmiş özel bir numara kullanıyoruz.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="translated">Başka bir uygulama kullanıcısıyla ortalama 2 m'den daha yakın ve toplamda 30 dakikadan daha uzun bir süre birarada bulunmak "Yakın Temas" olarak kaydedilir.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="translated">Yakın temasları kaydetmek için Bluetooth'unuzun açık durumda olması gerekir. Açmak için lütfen bir sonraki sayfaya ilerleyin.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="translated">Başlat</target>
@@ -350,21 +330,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Daha sonra olumlu kayıt yaptırmak ister misiniz?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uygulamayı çalıştırdığınızda, her akıllı telefonda anonim bir kimlik oluşturur ve saklar. Bu uygulama, telefon numarası ve konum bilgileri gibi gizlilikle ilgili herhangi bir bilgi edinmez.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uygulama çalışırken, birbirlerinin akıllı telefonu son iki hafta boyunca birbirlerinin anonim kimliklerini kaydedecek. 2 haftadan eski kayıtlar silinir ve gizliliği korumak için her anonim kimlik düzenli aralıklarla değiştirilir.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Diğer kullanıcılar düzenli olarak olumlu olanların anonim kimliklerinin bir listesini alırsınız. Satın alındıktan sonra akıllı telefona kaydedilen iletişim kaydı eşleşecektir. Maçın sonucu yoğun bir temas sayılsa, akıllı telefonunuzu bilgilendirecek ve işbirliği yapmamızı istediğiniz gerekli eylemleri size bildireceğiz.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

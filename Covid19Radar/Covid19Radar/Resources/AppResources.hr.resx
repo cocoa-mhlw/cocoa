@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Dalje</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Uvjeti pružanja usluge</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Nema potrebe za unososobnih podataka. Koristimo jedinstveni ID, koji vam je dodijeljen prilikom instalacije aplikacije.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontakt s drugim korisnikom aplikacije u ukupnom iznosu duljem od 30 min, u radijusu bližem od 2 m u prosjeku bilježi se kao "Zatvori kontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth treba uključiti da bi se snimio bliski kontakt. Idite na sljedeću stranicu da biste je uključili.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Početak</value>
   </data>
@@ -273,18 +257,6 @@ Odaberite "Uvijek dopusti" da biste postavili Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Želite li se kasnije pozitivno registrirati?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Kada pokrenete aplikaciju , generirat će i pohraniti anonimni ID na svaki pametni telefon. Ova aplikacija ne pribavlja nikakve informacije vezane uz privatnost kao što su telefonski broj i podaci o lokaciji.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Dok je aplikacija pokrenuta, pametni telefon jedni drugih snimat će anonimne isprave jednih drugih u posljednja dva tjedna. Zapisi stariji od 2 tjedna bit će izbrisani i svaki anonimni ID povremeno će se mijenjati radi zaštite privatnosti.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Drugi korisnici redovito dobiju popis anonimnih ID-ova pozitivnih. Nakon stjecanja, kontakt rekord snimljen na pametnom telefonu bit će usklađen. Ako je rezultat utakmice težak kontakt, obavijestit ćemo vaš pametni telefon i obavijestiti vas o potrebnim radnjama s kojima želite da surađujemo.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt s pozitivnim testers u posljednjih 14 dana</value>

@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Laman seterusnya</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Syarat Perkhidmatan</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Tidak perlu memasukkan maklumat peribadi. Kami menggunakan ID unik, yang diperuntukkan kepada anda semasa memasang aplikasi.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kenalan dengan pengguna aplikasi lain selama lebih dari 30 min secara keseluruhan, dalam radius lebih dekat dari 2m rata-rata dicatat sebagai "Kontak Rapat".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Pemberitahuan Bluetooth / Pendedahan perlu dihidupkan untuk merakam hubungan rapat. Sila pergi ke halaman seterusnya untuk menghidarkannya.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Mula</value>
   </data>
@@ -273,18 +257,6 @@ Pilih 'Sentiasa Benarkan' untuk menubuhkan Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Adakah anda mahu mendaftar secara positif kemudian?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Apabila anda menjalankan aplikasi, ia akan menjana dan menyimpan ID tanpa nama pada setiap telefon pintar. Permohonan ini tidak mendapat sebarang maklumat yang berkaitan dengan privasi seperti nombor telefon dan maklumat lokasi.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Walaupun permohonan itu berjalan, telefon pintar setiap satu lagi akan merekodkan ID tanpa nama setiap satu lagi untuk dua minggu yang lalu. Rekod yang lebih lama daripada 2 minggu akan dihapuskan dan setiap ID tanpa nama akan ditukar secara berkala untuk melindungi privasi.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Pengguna lain secara tetap mendapat senarai ID tanpa nama yang positif. Selepas pengambilalihan, rekod kenalan yang direkodkan pada telefon pintar akan dipadankan. Jika hasil padanan adalah kenalan berat, kami akan memaklumkan telefon pintar anda dan memaklumkan anda tentang tindakan yang perlu anda mahu kami bekerjasama dengan.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kenalan dengan penguji positif dalam 14 hari yang lalu</value>

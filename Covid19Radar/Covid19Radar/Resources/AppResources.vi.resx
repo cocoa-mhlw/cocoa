@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Tiếp theo</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Điều khoản Dịch vụ</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Không cần phải nhập thông tin cá nhân. Chúng tôi sử dụng một ID duy nhất, được tạo ra cho bạn khi cài đặt ứng dụng.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Một tiếp xúc với người dùng ứng dụng khác lâu hơn 30 phút, trong vòng bán kính gần hơn 2m (trung bình) được ghi nhận là "tiếp xúc gần".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Cần phải bật Bluetooth để ghi nhận lại các tiếp xúc gần. Vui lòng truy cập trang tiếp theo để bật.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Bắt đầu</value>
   </data>
@@ -273,18 +257,6 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Bạn có muốn đăng ký tích cực sau này?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Khi bạn chạy ứng dụng, nó sẽ tạo ra và lưu trữ một ID ẩn danh trên mỗi điện thoại thông minh. Ứng dụng này không có bất kỳ thông tin liên quan đến quyền riêng tư như số điện thoại và thông tin vị trí.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Trong khi ứng dụng đang chạy, điện thoại thông minh của nhau sẽ ghi lại ID ẩn danh của nhau trong hai tuần qua. Hồ sơ cũ hơn 2 tuần sẽ bị xóa và mỗi ID ẩn danh sẽ được thay đổi định kỳ để bảo vệ sự riêng tư.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Người dùng khác thường xuyên nhận được một danh sách các ID ẩn danh của những người tích cực. Sau khi mua lại, bản ghi người liên hệ ghi trên điện thoại thông minh sẽ được khớp. Nếu kết quả của trận đấu là một liên hệ nặng, chúng tôi sẽ thông báo cho điện thoại thông minh của bạn và thông báo cho bạn về những hành động cần thiết mà bạn muốn chúng tôi hợp tác.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Liên hệ với người thử nghiệm tích cực trong 14 ngày qua</value>

@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>अगला</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>सेवा की शर्तें</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>व्यक्तिगत जानकारी इनपुट करने की कोई आवश्यकता नहीं है। हम एक ऐप इंस्टॉल करते समय आपको आवंटित अद्वितीय आईडी का उपयोग कर रहे हैं।</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>औसतन 2m से अधिक त्रिज्या के भीतर कुल 30 मिनट से अधिक समय तक किसी अन्य ऐप उपयोगकर्ता के साथ संपर्क "क्लोज कॉन्टैक्ट" के रूप में दर्ज किया जाता है।</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>ब्लूटूथ को बंद संपर्क रिकॉर्ड करने के लिए चालू करने की आवश्यकता है। कृपया इसे चालू करने के लिए अगले पृष्ठ पर जाएं।</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>प्रारंभ करें</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>क्या आप बाद में सकारात्मक पंजीकरण करना चाहेंगे?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>जब आप आवेदन चलाते हैं, तो यह प्रत्येक स्मार्टफोन पर एक गुमनाम आईडी उत्पन्न और संग्रहीत करेगा। यह एप्लिकेशन गोपनीयता से संबंधित कोई भी जानकारी प्राप्त नहीं करता है जैसे फोन नंबर और स्थान की जानकारी।</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>जहां एप्लीकेशन चल रही है, वहीं एक-दूसरे का स्मार्टफोन पिछले दो हफ्तों से एक-दूसरे की गुमनाम आईडीएस रिकॉर्ड करेगा । 2 सप्ताह से पुराने रिकॉर्ड हटा दिए जाएंगे और गोपनीयता की रक्षा के लिए प्रत्येक गुमनाम आईडी को समय-समय पर बदला जाएगा।</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>अन्य उपयोगकर्ताओं को नियमित रूप से सकारात्मक लोगों की गुमनाम आईडीएस की सूची मिलती है। अधिग्रहण के बाद स्मार्टफोन पर दर्ज कॉन्टैक्ट रिकॉर्ड का मिलान किया जाएगा। यदि मैच का परिणाम भारी संपर्क है, तो हम आपके स्मार्टफोन को सूचित करेंगे और आपको आवश्यक कार्यों के बारे में सूचित करेंगे जिन्हें आप चाहते हैं कि हम सहयोग करें।</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>पिछले 14 दिनों में सकारात्मक परीक्षकों के साथ संपर्क करें</value>
