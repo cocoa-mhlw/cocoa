@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Laitteen käyttö</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Hyväksy</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Ei nyt</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Tämä sovellus käyttää Valotusilmoitus / Bluetooth-signaaleja määrittää, jos olet lähellä toisen yhteystiedon jäljitys sovelluksen käyttäjä. 
-Määritä Bluetooth valitsemalla Salli aina.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Salli valotuksen ilmoitus / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Vastuut</value>
@@ -174,9 +161,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Asetukset</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Ei samaa mieltä</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Peruuta</value>

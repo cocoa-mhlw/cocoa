@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Rochtain ar An Gléas</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Aontaím</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Úsáideann an feidhmchlár seo comharthaí Fógra Nochta / Bluetooth chun a chinneadh an bhfuil tú in aice le húsáideoir feidhmchlár rianaithe teagmhála eile. 
-Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Ceadaigh Fógra Nochta / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Risíochtaí</value>
@@ -174,9 +161,6 @@ Roghnaigh 'Ceadaigh i gcónaí' bluetooth a chur ar bun.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Socruithe</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Gan Aontú</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cealaigh</value>

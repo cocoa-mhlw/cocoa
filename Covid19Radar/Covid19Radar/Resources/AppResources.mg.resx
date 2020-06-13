@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Fitaovana Hahazoana ny</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Manaiky</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Ity rafi-baovao ity dia mampiasa ny Fampilazana/Bluetooth mampilaza mba hamantarana raha toa ianao ka eo akaikin' ny mpampiasa ny rafi-kafa. 
-Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Omeo Fampilazana/Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
@@ -174,9 +161,6 @@ Misafidiana ' Hamela Foana ' ny hanangana Bluetooth.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Toe-javatra</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Tsy Manaiky</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Manafoana</value>

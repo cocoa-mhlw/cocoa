@@ -6,11 +6,6 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-        <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
-          <source>Device Access</source>
-          <target state="translated">Akses perangkat</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
-        </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
           <target state="translated">Setuju</target>
@@ -104,18 +99,6 @@
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="translated">Tidak sekarang</target>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
-          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="translated">Aplikasi ini menggunakan ekspos notifikasi/sinyal bluetooth untuk menentukan apakah Anda berada di dekat pengguna aplikasi pelacakan kontak lain. 
-Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
-          <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="translated">Izinkan ekspos notifikasi/bluetooth</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -221,10 +204,6 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Pengaturan</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
-        </trans-unit>
-        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
-          <source>Not Agree</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tidak setuju</target>
         </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>

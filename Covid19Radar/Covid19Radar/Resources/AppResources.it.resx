@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Accesso al dispositivo</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Accetto</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Non ora</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Questa applicazione utilizza segnali di notifica di vicinanza/ Bluetooth per determinare se ci si trova vicino a un altro utente di tracciamento dei contatti. 
-Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Consenti notifica di esposizione / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Esposizioni</value>
@@ -174,9 +161,6 @@ Selezionare 'Consenti sempre' per configurare il Bluetooth.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>impostazioni</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Non sono d'accordo</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Annulla</value>
