@@ -20,29 +20,10 @@
           <target state="translated">新型肺炎密切接触者查询APP</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
-          <source>Update Information</source>
-          <target state="translated">更新资讯</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
-        </trans-unit>
         <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
           <source>HOME</source>
           <target state="translated">主页</target>
           <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
-        </trans-unit>
-        <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
-          <source>You're ready to go</source>
-          <target state="translated">一切准备就绪</target>
-        </trans-unit>
-        <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
-          <source>Set up Completed</source>
-          <target state="translated">安装完毕</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
-        </trans-unit>
-        <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
-          <source>Contributors List</source>
-          <target state="translated">贡献者名单</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
         </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License</source>
