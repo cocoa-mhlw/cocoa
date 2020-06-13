@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>מידע עדכון</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>דף הבית</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>. אתה מוכן ללכת</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>הגדר הושלמה</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>רשימת התורמים</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>הסכם רישיון</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>התקנת אפליקציה</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>הקלטת קשר סגור</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>אם אתה מאובחן COVID-19 חיובי</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>דרישות לשימוש באפליקציה זו</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>הגדרות סטטוס</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>אישור</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>הפוך לזמין</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>לא עכשיו</value>
@@ -103,22 +65,6 @@
     <value>תקבל הודעה אם נחשפת למישהו שדיווח על תוצאת COVID-19 חיובית.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>אנא הכנס את מזהה האבחון</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>שיתוף אבחנה חיובית</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>תאריך הבדיקה מסייעת ליישום לדעת מתי ייתכן שהיית מדבקת ולהודיע לאנשים הנכונים על חשיפה פוטנציאלית.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>רק אלה שנחשפו יקבלו הודעה.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>מזהה הבדיקה הייחודי שהגיע עם מבחן COVID-19 שלך חייב לשמש כדי לאמת את תוצאת הבדיקה החיובית שלך.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>נסה שוב מאוחר יותר.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>השלם</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>נא ספק מזהה אבחון</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>נדרש מזהה אבחון</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>אנא הפעל הודעות חשיפה לפני הגשת האבחון.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>הודעות חשיפה לא זמינות</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>הגשת אבחון...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>מוודא אבחון...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>לא ניתן לאמת את האבחנה שלך בשלב זה לשליחה.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>האימות נכשל</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>שלח</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>הגדרות</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>ביטול</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>האם ברצונך להפעיל הודעות?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>פעלת</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>מחיקה</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>אם קיבלת אבחנה חיובית</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>שתף את האפליקציה</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>כל ההגדרות והנתונים נמחקו. נא הפעל מחדש את היישום.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>מזהה אבחון לא חוקי</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>נא ספק מזהה אבחון חוקי</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>תאריך בדיקה לא חוקי</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>נא ספק תאריך בדיקה חוקי</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>חזור להרשמה</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>האם ברצונך להירשם באופן חיובי מאוחר יותר?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>יצירת קשר עם בודקי חיוביות ב -14 הימים האחרונים</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>אם אתה חיובי עם קורונה חדש, בבקשה לשתף פעולה עם הרישום החיובי כדי להגן על האנשים סביבך.</value>

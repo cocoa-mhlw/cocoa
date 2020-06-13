@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Aktualizovat informace</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>DOMŮ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Jste připraveni jít</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Nastavit dokončeno</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Seznam přispěvatelů</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licenční smlouva</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Instalace aplikace</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Záznam zavřít kontakt</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Pokud je vám diagnostikována diagnóza COVID-19 pozitivních</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Požadavky na používání této aplikace</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Nastavení stavu</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Povolit</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
@@ -103,22 +65,6 @@
     <value>Budete upozorněni, pokud jste byli vystaveni někomu, kdo hlásil pozitivní výsledek COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Zadejte identifikátor diagnózy.</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Sdílejte pozitivní diagnózu</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Testovací datum pomáhá aplikaci zjistit, kdy jste mohli být nakažliví, a informovat správné lidi o potenciální expozici.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Oznámení obdrží pouze ti, kteří byli vystaveni, a to pouze ti, kteří byli vystaveni, obdrží oznámení.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>K ověření pozitivního výsledku testu musí být použit jedinečný identifikátor testu, který byl dodaný s testem COVID-19.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Zkuste to prosím znovu později.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Dokončeno</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Uveďte identifikátor diagnózy.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Je vyžadován identifikátor diagnózy.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Před odesláním diagnózy povolte oznámení o expozici.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Oznámení o expozici zakázána</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Předkládání diagnózy...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Ověřování diagnózy...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Vaši diagnózu nelze v tuto chvíli ověřit, aby byla odeslána.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Ověření se nezdařilo</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Odeslat</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Nastavení</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Zrušit</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Chcete zapnout oznámení?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Aktivování</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Odstraňování</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Pokud jste obdržel(a) pozitivní diagnózu</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Sdílení aplikace</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Všechna nastavení a data byla odstraněna. Restartujte aplikaci.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Neplatné ID diagnózy</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Uveďte platné ID diagnózy.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Neplatné datum testu</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Uveďte platné datum testu.</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Návrat k registraci</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Chcete se později zaregistrovat pozitivně?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt s pozitivními testery za posledních 14 dnů</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Pokud jste s novou Coronou pozitivní, spolupracujte prosím s pozitivní registrací, abyste ochránili lidi kolem vás.</value>

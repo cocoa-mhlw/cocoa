@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>ಮಾಹಿತಿಯನ್ನು ಅಪ್ ಡೇಟ್ ಮಾಡಿ</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ಹೋಮ್</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>ನೀವು ಹೋಗಲು ತಯಾರಾಗಿದ್ದೀರಿ</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>ಸೆಟ್ ಪೂರ್ಣಗೊಳಿಸಿದ</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>ಕೊಡುಗೆ ಪಟ್ಟಿ</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ಪರವಾನಗಿ ಒಪ್ಪಂದ</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>ಒಂದು ಆಪ್ ಅನ್ನು ಇನ್ಸ್ಟಾಲ್ ಮಾಡುವುದು</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>ನಿಕಟ ಸಂಪರ್ಕವನ್ನು ದಾಖಲಿಸುವ</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>ನೀವು COVID-19 ಪಾಸಿಟಿವ್ ಅನ್ನು ಪತ್ತೆ ಮಾಡಿದಲ್ಲಿ</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>ಈ ಆಪ್ ಅನ್ನು ಬಳಸಲು ಅಗತ್ಯತೆಗಳು</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>ಸ್ಟೇಟಸ್ ಸೆಟ್ಟಿಂಗ್ಸ್</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ಸರಿ</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>ಸಕ್ರಿಯಗೊಳಿಸು</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ನೋಟನೌ</value>
@@ -103,22 +65,6 @@
     <value>ಸಕಾರಾತ್ಮಕ ಕೋವಿದ್-19 ಫಲಿತಾಂಶವನ್ನು ವರದಿ ಮಾಡಿದ ಯಾರಿಗಾದರೂ ನೀವು ಆಮಿಷ ಒಡ್ಡಿದ್ದರೆ ನಿಮಗೆ ಅಧಿಸೂಚನೆ ಹೊರಡಿಸಲಾಗುವುದು.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟು ರೋಗನಿರ್ಣಯದ ಗುರುತುಪತ್ರ ನಮೂದಿಸಿ</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>ಧನಾತ್ಮಕ ರೋಗನಿರ್ಣಯವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>ಪರೀಕ್ಷಾ ದಿನಾಂಕವು ನೀವು ಸಾಂಕ್ರಾಮಿಕವಾಗಿರಬಹುದು ಮತ್ತು ಸಂಭಾವ್ಯ ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಸರಿಯಾದ ಜನರಿಗೆ ಸೂಚಿಸಿದಾಗ ಆಪ್ ಗೆ ನೆರವಾಗುತ್ತದೆ.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>ಆಮಿಷ ಒಡ್ಡಿದವರು ಮಾತ್ರ ಅಧಿಸೂಚನೆ ಸ್ವೀಕರಿಸುತ್ತಾರೆ.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>ನಿಮ್ಮ ಕೋವಿಡ್-19 ಟೆಸ್ಟ್ ನೊಂದಿಗೆ ಬಂದ ವಿಶಿಷ್ಟವಾದ ಪರೀಕ್ಷಾ ಗುರುತುಪಟ್ಟಿಯು ನಿಮ್ಮ ಧನಾತ್ಮಕ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶವನ್ನು ಪರಿಶೀಲಿಸಲು ಬಳಸಿರಬೇಕು.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>ಪೂರ್ಣಗೊಳಿಸು</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟು ರೋಗನಿರ್ಣಯದ ಗುರುತುಪತ್ರ ಒದಗಿಸಿ</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>ರೋಗನಿರ್ಣಯ ಗುರುತುಪಟ್ಟಿ ಅಗತ್ಯ</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>ಒಂದು ರೋಗನಿರ್ಣಯವನ್ನು ಸಲ್ಲಿಸುವ ಮೊದಲು ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಅಧಿಸೂಚನೆಗಳನ್ನು ದಯವಿಟ್ಟು ಸಕ್ರಿಯಗೊಳಿಸಿ.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>ಬಹಿರ್ಮುಖತೆ ಅಧಿಸೂಚನೆಗಳು ಅಶಕ್ತcomment</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>ಪರಿಶೀಲನಾನಿರ್ಣಯ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>ಸಲ್ಲಿಸಲು ಈ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ರೋಗನಿರ್ಣಯವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>ಪರಿಶೀಲನೆ ವಿಫಲಗೊಂಡಿದೆ</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>ಸಲ್ಲಿಸು</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>ಸೆಟ್ಟಿಂಗ್‌ಗಳು</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>ರದ್ದುಮಾಡಿ</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>ನೋಟಿಫಿಕೇಶನ್ ಗಳನ್ನು ಆನ್ ಮಾಡಬಯಸುವಿರಾ?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>ಅನುಕೂಲ</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>ಅಳಿಸುತ್ತಿದೆ</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>ಪಾಸಿಟಿವ್ ಡಯಾಗ್ನೋಸಿಸ್ ಪಡೆದರೆ</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ಆ್ಯಪ್ ಶೇರ್</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>ಎಲ್ಲಾ ಸೆಟ್ಟಿಂಗ್ಸ್ ಮತ್ತು ಡಾಟಾ ಡಿಲೀಟ್ ಮಾಡಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಅರ್ಜಿಯನ್ನು ಪುನಃ ಆರಂಭಿಸಿ.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ಅಮಾನ್ಯಗೊಂಡ ರೋಗನಿರ್ಣಯ ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟು ಒಂದು ಮಾನ್ಯವಾದ ರೋಗನಿರ್ಣಯ ID ಯನ್ನು ಒದಗಿಸಿ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>ಅಮಾನ್ಯವಾದ ಪರೀಕ್ಷಾ ದಿನಾಂಕ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟು ಒಂದು ಸಿಂಧುವಾದ ಪರೀಕ್ಷಾ ದಿನಾಂಕವನ್ನು ಒದಗಿಸಿ</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>ನೋಂದಣಿಗೆ ತಿರುವು</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>ನೀವು ಮುಂದೆ ಸಕಾರಾತ್ಮಕವಾಗಿ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಲು ಇಷ್ಟಪಡುತ್ತೀರಾ?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ಧನಾತ್ಮಕ ಟೀಕಾಕಾರರೊಂದಿಗೆ ಸಂಪರ್ಕ</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>ನೀವು ಹೊಸ ಕರೋನದ ಜೊತೆ ಸಕಾರಾತ್ಮಕವಾಗಿದ್ದಲ್ಲಿ, ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರನ್ನು ರಕ್ಷಿಸಲು ಧನಾತ್ಮಕ ನೋಂದಣಿಗೆ ದಯವಿಟ್ಟು ಸಹಕರಿಸಿ.</value>

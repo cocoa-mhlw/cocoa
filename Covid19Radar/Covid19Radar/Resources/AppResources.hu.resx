@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Frissítés adatai</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>KEZDŐLAP</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Készen állsz az indulásra.</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Beállítás befejezve</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Közreműködők listája</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licencszerződés</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Alkalmazás telepítése</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Közeli kapcsolattartó rögzítése</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ha COVID-19 pozitív</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Az alkalmazás használatára vonatkozó követelmények</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Állapotbeállítások</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Engedélyezés</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow között</value>
@@ -103,22 +65,6 @@
     <value>Értesítést kap, ha olyan személynek volt kitéve, aki pozitív COVID-19 eredményt jelentett.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Adja meg a diagnosztikai azonosítót</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Ossza meg a pozitív diagnózis</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>A teszt dátuma segít az alkalmazásnak tudni, hogy mikor volt fertőző, és értesíti a megfelelő embereket a lehetséges expozícióról.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Csak azok kapnak értesítést, akik ki voltak téve a veszélynek.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>A COVID-19 teszthez tartozó egyedi tesztazonosítót kell használni a pozitív teszt eredményének ellenőrzéséhez.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Próbálkozzon később.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kész</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Kérjük, adja meg a diagnosztikai azonosítót</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Diagnosztikai azonosító szükséges</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Kérjük, a diagnózis benyújtása előtt engedélyezze az expozíciós értesítéseket.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Expozíciós értesítések letiltva</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>A diagnózis benyújtása...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Diagnosztika ellenőrzése...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>A diagnózist jelenleg nem lehet ellenőrizni.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Sikertelen ellenőrzés</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Küldés</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Beállítások</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Mégse</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Bekapcsolja az értesítéseket?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>engedélyezése</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Törlés folyamatban</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ha pozitív diagnózist kapott</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Az alkalmazás megosztása</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Minden beállítás és adat törölve lett. Indítsa újra az alkalmazást.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Érvénytelen diagnosztikai azonosító</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Kérjük, adjon meg érvényes diagnosztikai azonosítót</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Érvénytelen tesztdátum</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Kérjük, adjon meg érvényes tesztdátumot</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Visszatérés a regisztrációhoz</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Szeretne később pozitívan regisztrálni?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Érintkezés pozitív tesztelőkkel az elmúlt 14 napban</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ha pozitív az új Corona, kérjük, működjön együtt a pozitív regisztráció, hogy megvédje az emberek körülötted.</value>
