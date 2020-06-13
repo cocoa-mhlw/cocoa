@@ -117,22 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Allow Exposure Notification / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Device Access</value>
-    <comment>Device access page title</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Not Agree</value>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Agree</value>
   </data>

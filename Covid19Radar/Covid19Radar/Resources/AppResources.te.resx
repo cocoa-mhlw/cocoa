@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>పరికర ప్రాప్తి</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>అంగీకరించు</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>నోట్నౌ</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>మీరు మరో కాంటాక్ట్ ట్రేసింగ్ యాప్ యూజర్ కు దగ్గరల్లో ఉన్నారా లేదా అని తెలుసుకోవడం కొరకు ఈ యాప్ ఎక్స్ పోజర్ నోటిఫికేషన్/బ్లూటూత్ సిగ్నల్స్ ని ఉపయోగిస్తుంది. 
-బ్లూటూత్ సెటప్ చేయడం కొరకు ' ఎల్లప్పుడూ అనుమతించండి ' ఎంచుకోండి.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>ప్రత్యక్షీకరణ ప్రకటన/Bluetooth అనుమతించు</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>ప్రత్యక్షీకరణల</value>
@@ -174,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>సెట్టింగ్‌లు</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>ఒప్పుకోరు</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>రద్దు చేయి</value>

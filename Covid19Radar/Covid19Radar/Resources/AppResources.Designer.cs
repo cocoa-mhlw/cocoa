@@ -124,15 +124,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Not Agree に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNotAgree {
-            get {
-                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sharing positive information and anonymous notification to others に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonNotifyOtherPage {
@@ -741,25 +732,6 @@ namespace Covid19Radar.Resources {
         internal static string InitSettingPageDialogExposureNotificationTitle {
             get {
                 return ResourceManager.GetString("InitSettingPageDialogExposureNotificationTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Allow Exposure Notification / Bluetooth に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InitSettingPageTextExposureNotification {
-            get {
-                return ResourceManager.GetString("InitSettingPageTextExposureNotification", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-        ///Select &apos;Always Allow&apos; to set up Bluetooth. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InitSettingPageTextExposureNotificationDescription {
-            get {
-                return ResourceManager.GetString("InitSettingPageTextExposureNotificationDescription", resourceCulture);
             }
         }
         
@@ -1381,15 +1353,6 @@ namespace Covid19Radar.Resources {
         internal static string TitleContributorsPage {
             get {
                 return ResourceManager.GetString("TitleContributorsPage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Device Access に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleDeviceAccess {
-            get {
-                return ResourceManager.GetString("TitleDeviceAccess", resourceCulture);
             }
         }
         
