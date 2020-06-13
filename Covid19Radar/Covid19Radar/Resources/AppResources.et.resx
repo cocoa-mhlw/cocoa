@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Edasi</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Teenusetingimused</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Ei ole vaja sisestada isiklikku teavet. Me kasutame unikaalset ID-ga, mis on teile rakenduse installimisel eraldatud.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontakti teise rakenduse kasutajaga rohkem kui 30 min kokku, raadiuses lähemal kui 2 m keskmiselt registreeritakse "Close kontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Lähedise kontakti salvestamiseks peab Bluetooth olema sisse lülitatud. Palun järgmisele leheküljele, et see sisse lülitada.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>algus</value>
   </data>
@@ -273,18 +257,6 @@ Bluetooth seadistamiseks valige suvand alati luba.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Kas soovite hiljem positiivselt registreerida?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Kui käivitate rakenduse, see loob ja salvestab anonüümse ID iga nutitelefoni. See rakendus ei Hangi teavet privaatsuse kohta, nagu telefoninumber ja asukohateave.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Kui rakendus töötab, salvestab üksteise nutitelefon viimase kahe nädala jooksul üksteise anonüümsed ID-d. Vanemad kui 2 nädalat kirjed kustutatakse ja iga anonüümse ID muudetakse perioodiliselt, et kaitsta privaatsust.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Teised kasutajad saavad regulaarselt nimekirja anonüümsete ID-de positiivsetest. Pärast omandamist sobitatakse nutitelefoni salvestatud kontaktiloirje. Kui mängu tulemus on raske kontakt, teavitame teie nutitelefoni ja informeerime teid vajalikest toimingutest, millega soovite meiega koostööd teha.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Viimase 14 päeva jooksul positiivsete testijate kontakt</value>

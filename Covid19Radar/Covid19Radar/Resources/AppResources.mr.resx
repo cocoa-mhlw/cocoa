@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>पुढील</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>सेवा अटी</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>वैयक्तिक माहिती इनपुट करण्याची गरज नाही. अॅप इन्स्टॉल करताना आम्ही युनिक आयडी वापरत आहोत.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>एकूण ३० मि. पेक्षा जास्त काळ इतर अॅप वापरकर्त्याशी संपर्क साधा, सरासरी २० लाखांपेक्षा जास्त परिघात "क्लोज कॉन्टॅक्ट" म्हणून नोंदले जाते.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>जवळचे संपर्क रेकॉर्ड करण्यासाठी ब्लूटूथ चालू करणे आवश्यक आहे. कृपया ते चालू करण्यासाठी पुढच्या पानावर जा.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>प्रारंभ</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>नंतर तुम्हाला सकारात्मक नोंदणी करायची आहे का?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>जेव्हा तुम्ही अनुप्रयोग चालवता तेव्हा प्रत्येक स्मार्टफोनवर एक निनावी आयडी तयार करून साठवला जाईल. या अनुप्रयोगाला फोन नंबर आणि लोकेशन माहिती यांसारखी गोपनीयतेशी संबंधित कोणतीही माहिती प्राप्त होत नाही.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>अॅप्लिकेशन चालू असताना, एकमेकांच्या स्मार्टफोनमध्ये गेल्या दोन आठवड्यांपासून एकमेकांच्या निनावी आयडीरेकॉर्ड िंग ची नोंद केली जाईल. 2 आठवड्यांपेक्षा जुन्या नोंदी काढून टाकल्या जातील आणि प्रत्येक निनावी ओळखपत्र ात वेळोवेळी बदल करून गोपनीयता सुरक्षित ठेवण्यासाठी बदलकरण्यात येईल.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>इतर वापरकर्त्यांना नियमितपणे सकारात्मक माहितीच्या निनावी आयडची यादी मिळते. अधिग्रहणानंतर, स्मार्टफोनवर रेकॉर्ड केलेला संपर्क रेकॉर्ड जुळणार आहे. जर मॅचचा परिणाम जड संपर्क असेल तर आम्ही तुमच्या स्मार्टफोनला कळवू आणि तुम्हाला सहकार्य करण्यासाठी आवश्यक त्या कृतीची माहिती देऊ.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>गेल्या 14 दिवसांत सकारात्मक परीक्षकांशी संपर्क</value>

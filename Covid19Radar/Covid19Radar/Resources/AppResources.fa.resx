@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>‏‏بعد</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>شرایط خدمات</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>بدون نیاز به ورودی اطلاعات شخصی. ما از شناسه منحصربه فرد استفاده می کنیم که هنگام نصب یک برنامه به شما اختصاص داده شده است.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>یک تماس با یک کاربر برنامه دیگر برای بیش از 30 دقیقه در مجموع ، در شعاع نزدیک تر از 2m به طور متوسط به عنوان "تماس نزدیک" ثبت می شود.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>بلوتوث باید برای ضبط تماس نزدیک روشن شود. لطفا به صفحه بعدی بروید تا آن را روشن کنید.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>شروع</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>آیا می خواهید به ثبت نام مثبت بعد ؟</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>هنگامی که برنامه را اجرا می کنید ، یک شناسه ناشناس را در هر گوشی هوشمند تولید و ذخیره می کند. این نرم افزار هیچ اطلاعاتی مربوط به حریم خصوصی مانند شماره تلفن و اطلاعات مکان را به دست نمی آورد.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>در حالی که برنامه در حال اجرا است ، گوشی های هوشمند یکدیگر یک شناسه ناشناس دیگر را برای دو هفته گذشته ضبط می کنند. سوابق قدیمی تر از 2 هفته حذف خواهد شد و هر شناسه ناشناس به صورت دوره ای برای محافظت از حریم خصوصی تغییر خواهد کرد.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>کاربران دیگر به طور منظم یک لیست از شناسه های ناشناس از آنهایی که مثبت دریافت کنید. پس از اکتساب ، رکورد تماس ضبط شده بر روی گوشی هوشمند همسان خواهد شد. اگر نتیجه مسابقه یک تماس سنگین باشد ، ما گوشی هوشمند شما را مطلع می کنیم و شما را از اقدامات لازم مطلع می کنیم که می خواهم با آنها همکاری کنیم.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>تماس با آزمایشکنندگان مثبت در 14 روز گذشته</value>
