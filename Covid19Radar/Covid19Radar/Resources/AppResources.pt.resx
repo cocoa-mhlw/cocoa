@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Atualizar informações</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>PÁGINA INICIAL</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Você está pronto</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Configurar concluído</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Lista de contribuintes</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Contrato de Licença</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Instalando um aplicativo</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Gravação de contato próximo</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Se você for diagnosticado COVID-19 positivo</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Requisitos para usar este aplicativo</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Configurações de Status</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Habilitar</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Não Agora</value>
@@ -103,22 +65,6 @@
     <value>Você será notificado se tiver sido exposto a alguém que tenha relatado um resultado positivo do COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Digite o identificador de diagnóstico</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Compartilhe um Diagnóstico Positivo</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>A data do teste ajuda o aplicativo a saber quando você pode ter sido contagioso e notificar as pessoas certas de exposição potencial.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Apenas aqueles que foram expostos receberão uma notificação.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>O identificador de teste exclusivo que veio com o seu teste COVID-19 deve ser usado para verificar o resultado positivo do teste.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Tente novamente mais tarde.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Concluído</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Por favor, forneça um identificador de diagnóstico</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Identificador de diagnóstico necessário</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Ative as Notificações de Exposição antes de enviar um diagnóstico.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Notificações de exposição desativadas</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Submetendo diagnóstico...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Verificando diagnóstico...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Seu diagnóstico não pode ser verificado neste momento para ser submetido.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Falha na verificação</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Enviar</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Configurações</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Deseja ativar notificações?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Ativando</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Exclusão</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Se você recebeu um diagnóstico positivo</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Compartilhar o Aplicativo</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Todas as configurações e dados foram excluídos. Por favor, reinicie a aplicação.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ID de diagnóstico inválido</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Por favor, forneça um ID de diagnóstico válido</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Data do teste inválida</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Por favor, forneça uma data de teste válida</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Retorno ao registro</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Gostaria de se registrar positivamente mais tarde?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Contato com testadores positivos nos últimos 14 dias</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Se você for positivo com a nova Corona, por favor, coopere com o registro positivo para proteger as pessoas ao seu redor.</value>

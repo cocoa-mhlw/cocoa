@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>માહિતી સુધારો</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>હોમ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>તમે જવા માટે તૈયાર છો</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>સમાપ્ત થયેલ છે</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>ફાળો આપનાર યાદી</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>લાઇસન્સ કરાર</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>એપ્લિકેશન ને સ્થાપિત કરી રહ્યા છીએ</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>બંધ સંપર્કનું રેકોર્ડિંગ કરી રહ્યા છીએ</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>જો તમને COVID-19 પોઝિટિવ નું નિદાન થયું હોય</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>આ એપ્લિકેશનને વાપરવા ની જરૂરિયાતો</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>સ્થિતિ સુયોજનો</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ઠીક</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>સક્ષમ કરો</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>નોટહવે</value>
@@ -103,22 +65,6 @@
     <value>જો તમને કોઈ એવા વ્યક્તિ સાથે સંપર્ક થયો હોય કે જેણે હકારાત્મક COVID-19 પરિણામ ની જાણ કરી હોય તો તમને સૂચિત કરવામાં આવશે.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>કૃપા કરીને નિદાન ઓળખકર્તા દાખલ કરો</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>હકારાત્મક નિદાન વહેંચો</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>ટેસ્ટની તારીખ એપ્લિકેશનને એ જાણવામાં મદદ કરે છે કે તમે ક્યારે ચેપી હોઅને સંભવિત સંપર્કના યોગ્ય લોકોને સૂચિત કરો.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>જે લોકો ને ખુલ્લા પાડવામાં આવ્યા છે તેમને જ સૂચના મળશે.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>તમારા COVID-19 ટેસ્ટ સાથે આવેલો અનન્ય ટેસ્ટ ઓળખનાર તમારા હકારાત્મક ટેસ્ટ પરિણામની ચકાસણી કરવા માટે ઉપયોગ થવો જ જોઇએ.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>પછીથી ફરી પ્રયાસ કરો.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>પૂર્ણ</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>કૃપા કરીને નિદાન ઓળખકર્તા ને પ્રદાન કરો</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>નિદાન ઓળખનાર જરૂરી</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>નિદાન રજૂ કરતા પહેલા એક્સપોઝર સૂચનાઓ ને સક્રિય કરો.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>એક્સપોઝર સૂચનાઓ નિષ્ક્રિય</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>નિદાન રજૂ કરી રહ્યા છીએ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>નિદાનની ચકાસણી કરી રહ્યા છીએ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>તમારું નિદાન આ સમયે જમા કરાવવા માટે ચકાસી શકાતું નથી.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>વેરીફિકેશન નિષ્ફળ</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>સબમિટ કરો</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>સેટિંગ્સ</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>રદ કરો</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>શું તમે સૂચનાઓ ચાલુ કરવા માંગો છો?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>સક્રિય કરી રહ્યા છીએ</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>હટાવાઈ રહ્યું છે</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>જો તમને હકારાત્મક નિદાન થયું હોય</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>એપ્લિકેશન ને વહેંચો</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>બધા સુયોજનો અને માહિતી કાઢી નાખવામાં આવી છે. મહેરબાની કરીને કાર્યક્રમ ફરી શરૂ કરો.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>અયોગ્ય નિદાન ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>કૃપા કરીને માન્ય નિદાન ID પ્રદાન કરો</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>અયોગ્ય ચકાસણી તારીખ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>મહેરબાની કરીને યોગ્ય ચકાસણી તારીખ પૂરી પાડો</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>નોંધણી માં પાછા ફરો</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>શું તમે પછીથી હકારાત્મક નોંધણી કરવા માંગો છો?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>છેલ્લા 14 દિવસમાં પોઝિટિવ ટેસ્ટર્સ સાથે સંપર્ક</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>જો તમે નવા કોરોના સાથે હકારાત્મક હો, તો કૃપા કરીને તમારી આસપાસના લોકોની સુરક્ષા માટે હકારાત્મક નોંધણીમાં સહકાર આપો.</value>

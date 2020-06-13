@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Mōhiohio whakahōutanga</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>KĀINGA</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Kua rite koe ki te haere</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Kua Oti te tatū</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Rārangi kaihāpai</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Whakaaetanga raihana</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Kei te tāuta i tētahi Taupānga</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Hopu Hoapā Kati</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Mēnā he diagnosed COVID-19 tōrunga</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Ngā whakaritenga hei whakamahi i tēnei taupānga</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Ngā Tautuhinga tūnga</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ĀE</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Whakahohe</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
@@ -103,22 +65,6 @@
     <value>Ka whakamōhiotia koe mēnā kua mārakerake koe ki tētahi hua o te COVID i te otinga.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Tāurutia koa te Kaitāutu Tataritanga</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Tiria he Tataritanga Tōrunga</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Ka āwhina te rā whakamātau i te taupānga ina mōhio koe, ka mītara koe, ka whakamōhio atu i te nuinga o ngā mārakerake.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Ko wai te tangata i mārakerake e whiwhi whakamōhiotanga ana.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Me whakamahi te kaitāutu whakamātau ahurei i haere me tō COVID whakamātau-ā-19 kia manatoko i tō hua whakamātau tōrunga.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Me ngana anō ā muri ake.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kua oti</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Hōmai koa he Kaitāutu Tataritanga</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Tataritanga Kaitāutu e Hiahiatia Ana</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Whakahohe koa i Ngā Whakamōhiotanga Mārakerake i mua i te tuku tataritanga.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Kua Monokia Ngā Whakamōhiotanga mārakerake</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>I tuku Tataritanga...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Kei te manatoko Tataritanga...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Kāore e taea te manatoko i tō tataritanga i tēnei wā kia tukuna.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>I Rahua te Manatokonga</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Tāpae</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ngā Tautuhinga</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Whakakore</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Me whakakā i ngā whakamōhiotanga?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Whakahohe ana</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Muku Ana</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Mēnā i whiwhi koe i tētahi tataritanga tōrunga</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Tiria te Taupānga</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Kua mukua ngā tautuhinga me te raraunga katoa. Tīmata anō koa i te taupānga.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ID Tataritanga muhu</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Homai koa he ID Tataritanga whaimana</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Rā Whakamātau muhu</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Homai koa he Rā Whakamātau tika</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Hoki ki te rēhitatanga</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Me rēhita tonu tika ā muri ake?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Whakapā atu ki te testers tōrunga i roto i ngā rā 14 whakamutunga</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Mehemea kei runga koe i te Kurahauao hou, ka whakahoahoa koa ki te rēhitatanga tōrunga hei pare i te iwi.</value>

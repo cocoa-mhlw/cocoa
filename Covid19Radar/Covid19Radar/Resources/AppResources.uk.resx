@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Відомості про оновлення</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ОСНОВНЕ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Ви готові піти</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Настроювання завершено</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Список дописувачів</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Ліцензійна угода</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Встановлення програми</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Запис тісного контакту</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Якщо ви діагностовані COVID-19 позитивні</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Вимоги для використання цього додатка</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Параметри стану</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ОК</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Увімкнути</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
@@ -103,22 +65,6 @@
     <value>Ви будете повідомлені, якщо ви були схильні до тих, хто повідомив позитивний COVID-19 результат.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Будь ласка, введіть ідентифікатор діагностики</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Поділіться позитивним діагнозом</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Дата тесту допомагає програмі знати, коли ви, можливо, були заразні і повідомляти права людей потенційного впливу.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Тільки ті, хто був виставлений, отримають повідомлення.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Унікальний тестовий ідентифікатор, який постачався з вашим тестом COVID-19, повинен використовуватися для підтвердження позитивного результату тесту.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Спробуйте ще раз пізніше.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Завершено</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Будь ласка, надайте ідентифікатор діагностики</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Потрібний ідентифікатор діагностики</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Перш ніж надсилати діагноз, увімкніть сповіщення про експозицію.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Сповіщення про експозицію вимкнено</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Подача діагнозу...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Перевірка діагнозу...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Ваш діагноз не можна перевірити в цей час, щоб його було надіслано.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Не вдалося виконати перевірку</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Надіслати</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Настройки</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Скасувати</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Увімкнути сповіщення?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Увімкнення</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Видалення</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Якщо ви отримали позитивний діагноз</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Поділіться додатком</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Всі налаштування та дані були вилучені. Будь ласка, перезапустіть програму.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Неприпустимий код діагностики</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Будь ласка, надайте дійсний код діагностики</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Неприпустима дата перевірки</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Будь ласка, надайте правильну дату тесту</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Повернутися до реєстрації</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ви хотіли б зареєструвати позитивно пізніше?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Контакт з позитивними тестувальників за останні 14 днів</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Якщо ви позитивні з новою коронка, будь ласка, співпрацювати з позитивною реєстрацією, щоб захистити оточуючих Вас людей.</value>
