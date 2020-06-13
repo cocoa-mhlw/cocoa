@@ -35,22 +35,6 @@
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hant/privacypolicy.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>安裝應用程式</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>記錄緊密接觸</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>如果你被診斷為COVID-19陽性</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>應用程式需求</value>
-    <comment>How it works page step 4 title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>狀態設定</value>
     <comment>User Status Page Title</comment>
