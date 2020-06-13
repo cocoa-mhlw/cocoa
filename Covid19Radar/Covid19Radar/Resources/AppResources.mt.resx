@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>PAĠNA EWLENIJA</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Ftehim tal-li ċenzja</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>L-issettjar u d-data kollha tħassru. Irristartja l-applikazzjoni.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ID ta ' dijanjożi invalida</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Jekk jogħġbok ipprovdi ID ta ' dijanjożi valida</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Data tat-test invalida</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Jekk jogħġbok ipprovdi data tat-test valida</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Ritorn għar-reġistrazzjoni</value>
