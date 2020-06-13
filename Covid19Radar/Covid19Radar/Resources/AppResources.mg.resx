@@ -23,24 +23,9 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Fanavaozana ny Fampahalalana</value>
-    <comment>Update Information Menu</comment>
-  </data>
   <data name="ButtonHome" xml:space="preserve">
     <value>TOKANTRANO</value>
     <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Vonona ny handeha ianao</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Vita Tanteraka</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Votoatiny Lisitra</value>
-    <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Fifanarahana avy amin' ny fahazoan</value>

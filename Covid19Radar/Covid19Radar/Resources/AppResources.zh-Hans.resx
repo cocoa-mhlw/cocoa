@@ -23,24 +23,9 @@
     <value>新型肺炎密切接触者查询APP</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>更新资讯</value>
-    <comment>Update Information Menu</comment>
-  </data>
   <data name="ButtonHome" xml:space="preserve">
     <value>主页</value>
     <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>一切准备就绪</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>安装完毕</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>贡献者名单</value>
-    <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>授权</value>

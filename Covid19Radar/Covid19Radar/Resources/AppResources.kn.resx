@@ -23,24 +23,9 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>ಮಾಹಿತಿಯನ್ನು ಅಪ್ ಡೇಟ್ ಮಾಡಿ</value>
-    <comment>Update Information Menu</comment>
-  </data>
   <data name="ButtonHome" xml:space="preserve">
     <value>ಹೋಮ್</value>
     <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>ನೀವು ಹೋಗಲು ತಯಾರಾಗಿದ್ದೀರಿ</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>ಸೆಟ್ ಪೂರ್ಣಗೊಳಿಸಿದ</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>ಕೊಡುಗೆ ಪಟ್ಟಿ</value>
-    <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ಪರವಾನಗಿ ಒಪ್ಪಂದ</value>
