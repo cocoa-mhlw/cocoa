@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ตกลง</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>เปิดใช้งาน</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ไม่ใช่ตอนนี้</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>คุณจะได้รับแจ้งเตือน หากคุณเข้าใกล้กับคนที่มีรายงานว่ามีผลตรวจ COVID-19 เป็นบวก (ติดเชื้อ)</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>กรุณาใส่หมายเลข Id ระบุผลการวินิจฉัย</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>แชร์ผลการวินิจฉัยเป็นบวก (ติดเชื้อ)</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>วันที่ทดสอบจะช่วยให้แอพทราบว่า ช่วงไหนที่คุณอาจจะแพร่เชื้อไปแล้ว และแจ้งเตือนคนที่อาจตกเป็นกลุ่มเสี่ยง</value>

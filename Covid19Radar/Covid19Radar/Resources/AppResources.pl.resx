@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Włącz</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow (Nienow)</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Zostaniesz powiadomiony, jeśli byłeś narażony na działanie osoby, która zgłosiła pozytywny wynik COVID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Wprowadź identyfikator diagnostyczny</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Podziel się pozytywną diagnozą</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Data testu pomaga aplikacji wiedzieć, kiedy możesz być zaraźliwa i powiadomić odpowiednie osoby o potencjalnej ekspozycji.</value>

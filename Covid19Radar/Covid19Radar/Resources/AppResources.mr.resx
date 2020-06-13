@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ठीक</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>सक्षम करा</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>आता नाही</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>जर तुम्हाला एखाद्या सकारात्मक सीओव्हीआयडी-19 परिणामाची माहिती दिली असेल तर तुम्हाला सूचित केले जाईल.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>कृपया निदान ओळखकर्ता प्रविष्ट करा</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>सकारात्मक निदान शेअर करा</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>चाचणी दिनांक तुम्ही संसर्गजन्य केव्हा झाला असाल आणि संभाव्य संपर्कासंदर्भात योग्य लोकांना सूचित करण्यास मदत करतो.</value>

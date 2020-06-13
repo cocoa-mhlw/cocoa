@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Tamam</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Etkinleştir</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Olumlu bir COVID-19 sonucu bildiren birine maruz kaldıysanız size bildirilir.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Lütfen Tanı Tanımlayıcısını girin</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Olumlu Tanıyı Paylaşın</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Test tarihi, uygulamanın ne zaman bulaşıcı olabileceğinibilmenize ve doğru kişileri potansiyel maruz kalma hakkında bilgilendirmesine yardımcı olur.</value>

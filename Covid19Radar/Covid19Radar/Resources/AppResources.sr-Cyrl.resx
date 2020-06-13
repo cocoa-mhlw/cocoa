@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>У реду</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Омогући</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Не сада</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Бићете обавештени о томе да ли сте били изложени некоме ко је пријавио позитивне КОВИД-19 резултате.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Унесите идентификатор дијагностике</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Дељење позитивне дијагнозе</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Датум тестирања помаже апликацији да зна да сте заразили и да обавестите праве људе о потенцијалном изложености.</value>
