@@ -69,15 +69,6 @@
     <value>Jums tiks paziņots, ja jums ir saskāries ar kādu, kurš ziņoja pozitīvs COVID-19 rezultātu.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Testa datums palīdz lietotnei zināt, kad esat bijis lipīgs un informē pareizos cilvēkus par potenciālo iedarbību.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Paziņojumu saņems tikai tie, kas bijuši pakļauti iedarbībai.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Lai verificētu pozitīvo testa rezultātu, jāizmanto unikālais testa identifikators, kas ir komplektā ar COVID-19 testu.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Lūdzu, vēlāk mēģiniet vēlreiz.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Pabeigts</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Lūdzu, norādiet diagnozes identifikatoru</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Nepieciešamais diagnozes identifikators</value>

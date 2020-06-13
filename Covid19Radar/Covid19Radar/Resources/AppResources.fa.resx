@@ -69,15 +69,6 @@
     <value>شما مطلع خواهید شد اگر شما در معرض کسی است که نتیجه مثبت COVID-19 گزارش شده است.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>تاریخ تست به برنامه کمک می کند زمانی که ممکن است مسری داشته باشید و به افراد مناسب قرار گرفتن در معرض بالقوه اطلاع دهید.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>فقط کسانی که در معرض قرار گرفته اند ، اعلانی دریافت خواهند کرد.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>شناسه تست منحصر به فرد که با آزمون COVID-19 شما آمد باید برای تأیید نتیجه آزمون مثبت شما استفاده شود.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>لطفاً بعداً دوباره تلاش کنید.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>کامل</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>لطفا یک شناسه تشخیص ارائه دهید</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>شناسه تشخیص مورد نیاز</value>

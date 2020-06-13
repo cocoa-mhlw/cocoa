@@ -69,15 +69,6 @@
     <value>Ikaw ay aabisuhan kung ikaw ay napakita sa isang tao na iniulat ng isang positibong COVID na resulta.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Ang petsa ng pagsusuri ay tumutulong sa app na malaman kung kailan ka maaaring nakakahawa at abisuhan ang mga tamang tao ng potensyal na pagkakalantad.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Ang mga nalantad lamang ang tatanggap ng pabatid.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Ang natatanging pagsubok na identifier na dumating sa iyong COVID pagsubok ay dapat gamitin upang i-verify ang iyong positibong resulta ng pagsubok.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Pakisubukang muli sa ibang pagkakataon.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kumpleto</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Mangyaring magbigay ng isang diyagnosis identifier</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Pagsusuri ng diyagnosis kailangan</value>

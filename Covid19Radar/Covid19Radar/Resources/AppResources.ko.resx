@@ -69,15 +69,6 @@
     <value>COVID-19 결과가 양성으로 보고 된 사람에게 노출된 경우 알림을 받게 됩니다.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>테스트 날짜는 앱이 언제 전염성이 있었는지 파악하고 적절한 사람들에게 잠재적 노출을 알리는 데 도움이 됩니다.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>노출된 사람만 알림을 받게 됩니다.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>COVID-19 테스트와 함께 사용된 고유 테스트 식별자를 사용하여 양성 검사 결과를 확인해야 합니다.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>나중에 다시 시도하세요.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>완료</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>진단 식별자를 제공하십시오.</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>진단 식별자 필요</value>

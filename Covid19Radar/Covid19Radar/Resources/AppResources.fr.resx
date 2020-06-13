@@ -69,15 +69,6 @@
     <value>Vous serez notifié si vous avez été exposé à quelqu’un qui a déclaré un résultat positif au COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>La date de test aide l’application à savoir quand vous avez etez contagieux et à aviser les bonnes personnes d'une exposition potentielle.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Seuls ceux qui ont été exposés recevront une notification.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>L’identifiant de test unique reçu avec votre test COVID-19 doit être utilisé pour vérifier le résultat.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Veuillez réessayer ultérieurement.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Terminé</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Veuillez fournir un identifiant de diagnostic</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identification de diagnostic requis</value>

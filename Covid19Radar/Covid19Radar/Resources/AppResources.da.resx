@@ -69,15 +69,6 @@
     <value>Du får besked, hvis du har været udsat for en person, der har rapporteret et positivt COVID-19 resultat.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Testdatoen hjælper appen med at vide, hvornår du kan have været smitsom, og underrette de rette personer om potentiel eksponering.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Kun dem, der er blevet udsat, vil modtage en meddelelse.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Den entydige test-id, der fulgte med din COVID-19test, skal bruges til at bekræfte dit positive testresultat.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Prøv igen senere.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Fuldført</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Angiv et diagnose-id</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnose-id påkrævet</value>

@@ -69,15 +69,6 @@
     <value>Teid teavitatakse, kui olete kokku puutunud kellegagi, kes teatas positiivsest COVID-19 tulemusest.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Testimiskuupäev aitab rakendusel teada, millal te olete olnud nakkav ja teavitama õiget inimest võimalikust kokkupuutest.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Ainult neile, kes on kokku puutunud, saadetakse teade.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Positiivse testi tulemuse kinnitamiseks tuleb kasutada oma COVID-19 testiga kaasas olevat ainulaadset testimisidentifikaatorit.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Proovi hiljem uuesti.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Valmis</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Palun esitage diagnoosi tunnus</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnoosi identifikaator on nõutav</value>

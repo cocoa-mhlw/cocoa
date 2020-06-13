@@ -69,15 +69,6 @@
     <value>Θα ειδοποιηθείτε εάν έχετε εκτεθεί σε κάποιον που ανέφερε θετικό αποτέλεσμα COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Η ημερομηνία δοκιμής βοηθά την εφαρμογή να γνωρίζει πότε μπορεί να ήσασταν μεταδοτική και να ενημερώνει τους κατάλληλους ανθρώπους για πιθανή έκθεση.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Μόνο όσοι έχουν εκτεθεί θα λάβουν ειδοποίηση.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Το μοναδικό αναγνωριστικό δοκιμής που συνοδεύει τη δοκιμή COVID-19 πρέπει να χρησιμοποιηθεί για την επαλήθευση του θετικού αποτελέσματος της δοκιμής σας.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Δοκιμάστε ξανά αργότερα.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Ολοκληρώθηκε</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Δώστε ένα αναγνωριστικό διάγνωσης</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Απαιτείται αναγνωριστικό διάγνωσης</value>
