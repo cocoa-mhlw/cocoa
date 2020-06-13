@@ -12,19 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>તે કેવી રીતે કામ કરે છે</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>આગામી</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>પ્રારંભ</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>સીઓવીઆઈડી19થી આપણા પ્રિયજનોને સુરક્ષિત કરી રહ્યા છીએ</value>
-  </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>ઉપકરણ પ્રવેશ</value>
     <comment>Device access page title</comment>
