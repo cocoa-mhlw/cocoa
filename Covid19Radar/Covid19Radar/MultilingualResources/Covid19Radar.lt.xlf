@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Pirmyn</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Paslaugos teikimo sąlygos</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nereikia įvesti asmeninės informacijos. Diegiame programą, naudojame jums priskirtą unikalų ID.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontaktas su kitu programos naudotoju ilgiau nei 30 minučių iš viso, esant vidutiniškai didesniam nei 2 m spinduliui, įrašomas kaip "Uždaryti kontaktą".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">"Bluetooth" reikia įjungti, kad būtų įrašytas artimas kontaktas. Norėdami jį įjungti, eikite į kitą puslapį.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Pradžia</target>
@@ -353,21 +333,6 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ar norite užsiregistruoti teigiamai vėliau?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kai paleisite programą , ji sukurs ir išsaugos anoniminį ID kiekviename išmaniajame telefone. Ši programa neįsigyja jokios informacijos, susijusios su privatumu, pvz., telefono numerio ir vietos informacijos.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kol programa veikia, vienas kito išmanusis telefonas per pastarąsias dvi savaites įrašys vienas kito anoniminius ID. Senesni nei 2 savaičių įrašai bus panaikinti ir kiekvienas anoniminis ID bus periodiškai keičiamas siekiant apsaugoti privatumą.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kiti vartotojai reguliariai gauna anoniminių teigiamų iD sąrašą. Po įsigijimo išmaniajame telefone įrašytas kontakto įrašas bus suderintas. Jei rungtynių rezultatas yra sunkus kontaktas, mes informuosime jūsų išmanųjį telefoną ir informuosime jus apie būtinus veiksmus, su kuriais norėtumėte bendradarbiauti.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

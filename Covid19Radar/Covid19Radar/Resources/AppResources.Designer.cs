@@ -286,60 +286,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   No need to input personal information. We are using unique ID, allocated to you when installing an app. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep1Description1 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep1Description1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep1Description2 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep1Description2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as &quot;Close Contact&quot;. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep2Description1 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep2Description1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   While the application is running, each other&apos;s smartphone will record each other&apos;s anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep2Description2 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep2Description2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep3Description1 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep3Description1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep4Description {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep4Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Installing an App に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTitleTextStep1 {
@@ -1453,15 +1399,6 @@ namespace Covid19Radar.Resources {
         internal static string TitileUserStatusSettings {
             get {
                 return ResourceManager.GetString("TitileUserStatusSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Terms of Service に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleConsentByUserPage {
-            get {
-                return ResourceManager.GetString("TitleConsentByUserPage", resourceCulture);
             }
         }
         

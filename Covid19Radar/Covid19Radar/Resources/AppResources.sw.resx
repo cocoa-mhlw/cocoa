@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Ifuatayo</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Masharti ya Huduma</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Hakuna haja ya kuingiza maelezo ya kibinafsi. Tunatumia ID ya kipekee, zilizotengwa kwako wakati wa kufunga programu.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kuwasiliana na mtumiaji mwingine wa programu kwa muda mrefu zaidi ya 30 min kwa jumla, ndani ya eneo karibu zaidi ya 2m kwa wastani ni kumbukumbu kama "Funga mawasiliano".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth inahitaji kuwashwa ili kurekodi mawasiliano ya karibu. Tafadhali nenda kwenye ukurasa unaofuata ili kuigeuza.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Anza</value>
   </data>
@@ -273,18 +257,6 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ungependa kujisajili vizuri baadaye?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Wakati unapoendesha programu, itazalisha na kuhifadhi ID isiyojulikana kwenye kila smartphone. Programu tumizi hii haina kupata maelezo yoyote yanayohusiana na faragha kama vile namba ya simu na taarifa ya eneo.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Wakati programu hiyo inaendesha, smartphone ya kila mmoja itarekodi vitambulisho vya kila mmoja kwa wiki mbili zilizopita. Rekodi zaidi ya wiki za 2 zitafutwa na kila kitambulisho cha bila majina zitabadilishwa kwa vipindi ili kulinda faragha.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Watumiaji wengine hupata orodha ya vitambulisho vya wale chanya. Baada ya upatikanaji, rekodi ya kuwasiliana iliyoandikwa kwenye smartphone itaoana. Ikiwa matokeo ya mechi ni anwani nzito, tutaarifu smartphone yako na kukujulisha vitendo muhimu ambavyo ungependa sisi kushirikiana na.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Wasiliana na testers nzuri katika siku za mwisho za 14</value>

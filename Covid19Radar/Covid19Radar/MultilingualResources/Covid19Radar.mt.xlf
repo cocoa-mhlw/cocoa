@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Li jmiss</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Termini tas-Servizz</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">M ' hemmx bżonn li tiddaħħal informazzjoni personali. Qed nużaw ID unika, allokata lilek meta tkun qed tinstalla applikazzjoni.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kuntatt ma ' utent ieħor tal-applikazzjoni għal aktar minn 30 min b ' kollox, f ' raġġ eqreb minn 2m bħala medja jiġi rreġistrat bħala "kuntatt mill-qrib".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il-Bluetooth jeħtieġ li jinxtegħel biex jirreġistra kuntatt mill-qrib. Jekk jogħġbok Mur fil-Pa ġna li jmiss biex tixegħlu.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Ibda</target>
@@ -353,21 +333,6 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tixtieq tirreġistra b ' mod pożittiv aktar tard?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Meta tmexxi l-applikazzjoni, se tiġġenera u taħżen ID anonima fuq kull smartphone. Din l-applikazzjoni ma takkwista l-ebda informazzjoni relatata mal-privatezza bħal numru tat-telefon u informazzjoni dwar il-post.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Filwaqt li l-applikazzjoni qed taħdem, smartphone ta ' xulxin se jirreġistra IDs anonimi ta ' xulxin għall-aħħar ġimgħatejn. Rekords ta ' aktar minn ġimagħtejn se jitħassru u kull ID anonima tinbidel perjodikament biex tiġi protetta l-privatezza.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Utenti oħra regolarment jiksbu lista ta ' IDs anonimi ta ' dawk pożittivi. Wara l-akkwi żizzjoni, ir-rekord ta ' kuntatt irreġistrat fuq il-smartphone se jkun imqabbel. Jekk ir-ri żultat tal-log ħba huwa kuntatt tqil, aħna se tinnotifika smartphone tiegħek u ninfurmak dwar l-azzjonijiet meħtieġa li inti tixtieq minna biex jikkooperaw ma '.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

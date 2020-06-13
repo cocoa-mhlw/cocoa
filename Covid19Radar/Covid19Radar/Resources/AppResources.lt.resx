@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Pirmyn</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Paslaugos teikimo sąlygos</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Nereikia įvesti asmeninės informacijos. Diegiame programą, naudojame jums priskirtą unikalų ID.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontaktas su kitu programos naudotoju ilgiau nei 30 minučių iš viso, esant vidutiniškai didesniam nei 2 m spinduliui, įrašomas kaip "Uždaryti kontaktą".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>"Bluetooth" reikia įjungti, kad būtų įrašytas artimas kontaktas. Norėdami jį įjungti, eikite į kitą puslapį.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Pradžia</value>
   </data>
@@ -273,18 +257,6 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ar norite užsiregistruoti teigiamai vėliau?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Kai paleisite programą , ji sukurs ir išsaugos anoniminį ID kiekviename išmaniajame telefone. Ši programa neįsigyja jokios informacijos, susijusios su privatumu, pvz., telefono numerio ir vietos informacijos.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Kol programa veikia, vienas kito išmanusis telefonas per pastarąsias dvi savaites įrašys vienas kito anoniminius ID. Senesni nei 2 savaičių įrašai bus panaikinti ir kiekvienas anoniminis ID bus periodiškai keičiamas siekiant apsaugoti privatumą.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Kiti vartotojai reguliariai gauna anoniminių teigiamų iD sąrašą. Po įsigijimo išmaniajame telefone įrašytas kontakto įrašas bus suderintas. Jei rungtynių rezultatas yra sunkus kontaktas, mes informuosime jūsų išmanųjį telefoną ir informuosime jus apie būtinus veiksmus, su kuriais norėtumėte bendradarbiauti.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Sąlytis su testatojais, kurių tyrimo rezultatai teigiami per pastarąsias 14 dienų</value>
