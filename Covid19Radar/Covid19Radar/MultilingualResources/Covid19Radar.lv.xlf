@@ -6,11 +6,6 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-        <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
-          <source>Device Access</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Piekļuve ierīcei</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
-        </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Piekrītu</target>
@@ -104,18 +99,6 @@
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">NotNow</target>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
-          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Šī lietotne izmanto ekspozīcijas paziņojumu/Bluetooth signālus, lai noteiktu, vai esat tuvu citam kontaktpersonu izsekošanas programmas lietotājam. 
-Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
-          <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atļaut ekspozīcijas paziņojumu/Bluetooth</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -221,10 +204,6 @@ Atlasiet "vienmēr atļaut", lai iestatītu Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Iestatījumi</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
-        </trans-unit>
-        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
-          <source>Not Agree</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nepiekrītat</target>
         </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>

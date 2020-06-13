@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Adgang til enhed</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Acceptér</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow (NotNow)</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Denne app bruger Eksponering svarbesked / Bluetooth-signaler til at afgøre, om du er i nærheden af en anden kontakt sporing app bruger. 
-Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Tillad meddelelse om eksponering / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Engagementer</value>
@@ -174,9 +161,6 @@ Vælg 'Tillad altid' for at konfigurere Bluetooth.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Indstillinger</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Ikke enig</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Annuller</value>

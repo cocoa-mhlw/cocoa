@@ -12,10 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>دسترسی به دستگاه</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>موافق</value>
   </data>
@@ -86,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>این برنامه با استفاده از اعلان نوردهی/سیگنال های بلوتوث برای تعیین اینکه آیا شما در نزدیکی یک کاربر نرم افزار ردیابی تماس دیگری هستید. 
-برای راه اندازی بلوتوث "همیشه اجازه" را انتخاب کنید.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>اجازه قرار گرفتن در معرض اطلاع رسانی/بلوتوث</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>مواجهه</value>
@@ -174,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>تنظیمات</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>موافق نیستید</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>لغو</value>
