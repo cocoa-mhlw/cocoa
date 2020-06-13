@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Đệ trình chẩn đoán...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Gửi</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Cài đặt</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Hủy bỏ</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Bạn có muốn bật thông báo không?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Cho phép</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Đang xóa</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Nếu bạn nhận được một chẩn đoán tích cực</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Chia sẻ ứng dụng</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Bạn có muốn đăng ký tích cực sau này?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Liên hệ với người thử nghiệm tích cực trong 14 ngày qua</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Nếu bạn đang tích cực với Corona mới, xin vui lòng hợp tác với việc đăng ký tích cực để bảo vệ những người xung quanh bạn.</value>

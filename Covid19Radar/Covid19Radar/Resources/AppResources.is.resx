@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Senda inn greiningu...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Senda</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Stillingar</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Hætta við</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Viltu kveikja á tilkynningum?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>virkja</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Verið er að fella af skrá</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ef þú fékkst jákvæða greiningu</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Deildu forritinu</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Á að skrá jákvætt síðar?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Samband við jákvæða prófunartæki á síðustu 14 dögum</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ef þú ert jákvæður með nýja Corona skaltu hafa samstarf við jákvæða skráningu til að vernda fólkið í kringum þig.</value>

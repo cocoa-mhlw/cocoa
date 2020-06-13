@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Menghantar diagnosis...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Hantar</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Seting</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Batal</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Adakah awda mahu memasang pemberitahuan?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Membolehkan</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Memadamkan</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Jika anda menerima diagnosis yang positif</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Berkongsi apl</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Adakah anda mahu mendaftar secara positif kemudian?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kenalan dengan penguji positif dalam 14 hari yang lalu</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jika anda positif dengan Corona baru, sila bekerjasama dengan pendaftaran positif untuk melindungi orang di sekeliling anda.</value>

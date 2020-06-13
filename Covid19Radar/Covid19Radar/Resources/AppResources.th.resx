@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>กําลังส่งการวินิจฉัย...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>ส่ง</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>การตั้งค่า</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>ยกเลิก</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>คุณต้องการเปิดการแจ้งเตือนหรือไม่</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>กำลังเปิดใช้งาน</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>กำลังลบ</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>หากคุณได้รับการวินิจฉัยในเชิงบวก</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>แชร์แอพ</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>คุณต้องการลงทะเบียนในเชิงบวกในภายหลังหรือไม่</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>ติดต่อกับผู้ทดสอบในเชิงบวกในช่วง 14 วัน</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>หากคุณเป็นบวกกับ Corona ใหม่โปรดร่วมมือกับการลงทะเบียนในเชิงบวกเพื่อปกป้องคนรอบข้างคุณ</value>

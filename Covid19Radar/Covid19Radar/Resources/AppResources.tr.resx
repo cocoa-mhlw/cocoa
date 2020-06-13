@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Tanı Gönderme...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Gönder</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ayarlar</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>İptal</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Bildirimleri açmak istiyor musunuz?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Etkinleştirme</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Siliniyor</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Eğer pozitif tanı aldıysanız</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Uygulamayı Paylaşın</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Daha sonra olumlu kayıt yaptırmak ister misiniz?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Son 14 gün içinde pozitif test ile temas</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Eğer yeni Corona ile olumlu iseniz, çevrenizdeki insanları korumak için olumlu kayıt ile işbirliği lütfen.</value>

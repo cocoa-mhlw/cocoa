@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>진단 제출 중...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>전송</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>설정</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>취소</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>알림을 켜시겠습니까?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>사용하도록 설정 중</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>삭제 중</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>긍정적인 진단을 받은 경우</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>앱 공유</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>나중에 긍정적으로 등록하시겠습니까?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>지난 14일 동안 양성 테스터와의 접촉</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>새로운 코로나에 긍정적 인 경우, 당신의 주위에 사람들을 보호하기 위해 긍정적 인 등록과 협력하시기 바랍니다.</value>

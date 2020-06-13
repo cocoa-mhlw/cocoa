@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>రోగ నిర్ధారణ సమర్పించడం...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>సమర్పించు</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>సెట్టింగ్‌లు</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>రద్దు చేయి</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>నోటిఫికేషన్లను మీరు ఆన్ చేయాలని అనుకుంటున్నారా?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>ఎనేబుల్</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>తొలగిస్తోంది</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>ఒకవేళ మీరు పాజిటివ్ డయాగ్నసిస్ అందుకుంటే</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>అనువర్తనాన్ని పంచుకోండి</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>మీరు తరువాత సానుకూలంగా రిజిస్టర్ చేసుకోవాలని అనుకుంటున్నారా?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>గత 14 రోజుల్లో సానుకూల ముష్కరులతో పరిచయం</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>మీరు కొత్త కరోనా తో సానుకూలంగా ఉంటే, దయచేసి మీ చుట్టూ ఉన్న వ్యక్తులను రక్షించడానికి అనుకూల నమోదులో సహకరించండి.</value>
