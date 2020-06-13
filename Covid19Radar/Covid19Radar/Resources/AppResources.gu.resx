@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ઠીક</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>સક્ષમ કરો</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>નોટહવે</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>જો તમને કોઈ એવા વ્યક્તિ સાથે સંપર્ક થયો હોય કે જેણે હકારાત્મક COVID-19 પરિણામ ની જાણ કરી હોય તો તમને સૂચિત કરવામાં આવશે.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>કૃપા કરીને નિદાન ઓળખકર્તા દાખલ કરો</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>હકારાત્મક નિદાન વહેંચો</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>ટેસ્ટની તારીખ એપ્લિકેશનને એ જાણવામાં મદદ કરે છે કે તમે ક્યારે ચેપી હોઅને સંભવિત સંપર્કના યોગ્ય લોકોને સૂચિત કરો.</value>

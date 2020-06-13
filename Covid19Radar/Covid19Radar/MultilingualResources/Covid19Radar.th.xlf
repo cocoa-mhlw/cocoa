@@ -52,10 +52,6 @@
           <source>OK</source>
           <target state="translated">ตกลง</target>
         </trans-unit>
-        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
-          <source>Enable</source>
-          <target state="translated">เปิดใช้งาน</target>
-        </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="translated">ไม่ใช่ตอนนี้</target>
@@ -85,15 +81,6 @@
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
           <target state="translated">คุณจะได้รับแจ้งเตือน หากคุณเข้าใกล้กับคนที่มีรายงานว่ามีผลตรวจ COVID-19 เป็นบวก (ติดเชื้อ)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the Diagnosis Identifier</source>
-          <target state="translated">กรุณาใส่หมายเลข Id ระบุผลการวินิจฉัย</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
-        </trans-unit>
-        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
-          <source>Share a Positive Diagnosis</source>
-          <target state="translated">แชร์ผลการวินิจฉัยเป็นบวก (ติดเชื้อ)</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
           <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>

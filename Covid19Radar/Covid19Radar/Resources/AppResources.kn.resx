@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ಸರಿ</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>ಸಕ್ರಿಯಗೊಳಿಸು</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ನೋಟನೌ</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>ಸಕಾರಾತ್ಮಕ ಕೋವಿದ್-19 ಫಲಿತಾಂಶವನ್ನು ವರದಿ ಮಾಡಿದ ಯಾರಿಗಾದರೂ ನೀವು ಆಮಿಷ ಒಡ್ಡಿದ್ದರೆ ನಿಮಗೆ ಅಧಿಸೂಚನೆ ಹೊರಡಿಸಲಾಗುವುದು.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟು ರೋಗನಿರ್ಣಯದ ಗುರುತುಪತ್ರ ನಮೂದಿಸಿ</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>ಧನಾತ್ಮಕ ರೋಗನಿರ್ಣಯವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>ಪರೀಕ್ಷಾ ದಿನಾಂಕವು ನೀವು ಸಾಂಕ್ರಾಮಿಕವಾಗಿರಬಹುದು ಮತ್ತು ಸಂಭಾವ್ಯ ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಸರಿಯಾದ ಜನರಿಗೆ ಸೂಚಿಸಿದಾಗ ಆಪ್ ಗೆ ನೆರವಾಗುತ್ತದೆ.</value>

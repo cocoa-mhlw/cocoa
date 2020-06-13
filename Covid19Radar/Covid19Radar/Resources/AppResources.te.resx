@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>సరే</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>ప్రారంభించు</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>నోట్నౌ</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>పాజిటివ్ కోవిడ్-19 రిజల్ట్ ను రిపోర్ట్ చేసిన ఎవరికైనా మీరు బహిర్గతం చేస్తే మీకు తెలియజేయబడుతుంది.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>దయచేసి డయగ్నాస్టిక్ ఐడెంటిఫైయర్ నమోదు చేయండి</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>పాజిటివ్ డయాగ్నసిస్ ని పంచుకోండి</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>మీరు అంటువ్యాధి కలిగి ఉండి, సంభావ్య ప్రభావానికి గురయ్యే సరైన వ్యక్తులకు తెలియజేయడంతో పరీక్షా తేదీ అనువర్తనానికి సాయపడుతుంది.</value>

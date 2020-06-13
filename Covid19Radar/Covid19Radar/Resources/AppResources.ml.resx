@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ശരി</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>പ്രാപ്‌തമാക്കുക</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ഇപ്പോൾ നോട്ടൗട്ട്</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>പോസിറ്റീവ് കോവിഡ്-19 ഫലം റിപ്പോർട്ട് ചെയ്ത ഒരാളുമായി സമ്പർക്കമുണ്ടെങ്കിൽ നിങ്ങളെ അറിയിക്കും.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>രോഗനിർണ്ണയ ഐഡന്റിഫയർ നൽകുക</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>പോസിറ്റീവ് രോഗനിർണ്ണയം പങ്കിടുക</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>നിങ്ങൾക്ക് പകർച്ച ഉണ്ടായേക്കാവുന്ന സമയത്ത്, സംഭവ്യമായ സമ്പർക്കത്തിന്റെ വലത് ആളുകളെ വിവരമറിയിക്കാൻ കഴിഞ്ഞാൽ, ആപ്പ് അറിയാൻ ടെസ്റ്റ് തീയതി സഹായിക്കുന്നു.</value>

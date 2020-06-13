@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ٹھیک ہے</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>اہل بنائيں</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>نوٹناوو</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>آپ کو مطلع کیا جائے گا اگر آپ کسی ایسے شخص سے بے نقاب رہے ہیں جو کسی مثبت COVID کی اطلاع دی ہے-19 نتیجہ.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>تشخیص شناخت کار داخل کریں</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>ایک مثبت تشخیص کا اشتراک کریں</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>ٹیسٹ کی تاریخ ایپ کو جاننے میں مدد ملتی ہے جب آپ متعدی ہو سکتے ہیں اور ممکنہ نمائش کے صحیح لوگوں کو مطلع کرتے ہیں.</value>

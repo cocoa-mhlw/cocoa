@@ -46,9 +46,6 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Aktifkan</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Bukan sekarang</value>
   </data>
@@ -71,13 +68,6 @@
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>Anda akan dimaklumkan jika anda telah terdedah kepada seseorang yang melaporkan keputusan yang positif COVID-19.</value>
     <comment>exposures comment</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Sila masukkan pengecam diagnosis</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Kongsi diagnosis positif</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>Tarikh ujian membantu aplikasi tahu bila anda mungkin telah berjangkit dan memaklumkan orang yang betul mengenai kemungkinan pendedahan.</value>

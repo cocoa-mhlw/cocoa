@@ -52,10 +52,6 @@
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸರಿ</target>
         </trans-unit>
-        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
-          <source>Enable</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸಕ್ರಿಯಗೊಳಿಸು</target>
-        </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೋಟನೌ</target>
@@ -85,15 +81,6 @@
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸಕಾರಾತ್ಮಕ ಕೋವಿದ್-19 ಫಲಿತಾಂಶವನ್ನು ವರದಿ ಮಾಡಿದ ಯಾರಿಗಾದರೂ ನೀವು ಆಮಿಷ ಒಡ್ಡಿದ್ದರೆ ನಿಮಗೆ ಅಧಿಸೂಚನೆ ಹೊರಡಿಸಲಾಗುವುದು.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ದಯವಿಟ್ಟು ರೋಗನಿರ್ಣಯದ ಗುರುತುಪತ್ರ ನಮೂದಿಸಿ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
-        </trans-unit>
-        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
-          <source>Share a Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಧನಾತ್ಮಕ ರೋಗನಿರ್ಣಯವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
           <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
