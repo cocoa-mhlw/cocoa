@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">அடுத்து</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">சேவை விதிமுறைகள்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">தனிப்பட்ட தகவலை உள்ளிடுதல் தேவையில்லை. ஒரு பயன்பாட்டை நிறுவும்போது உங்களுக்கு ஒதுக்கப்பட்ட தனித்துவமான ID-ஐ நாங்கள் பயன்படுத்துகிறோம்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">மொத்த 30 நிமிடத்திற்கும் அதிகமாக உள்ள ஒரு பயன்பாட்டைப் பயன்படுத்துபவர், சராசரியாக 2m க்கு அருகில் உள்ள ஆரத்திற்குள், "நெருங்கிய தொடர்பு" என பதிவு செய்யப்படுகிறது.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நெருங்கிய தொடர்பை பதிவு செய்ய Bluetooth ஆன் செய்யப்பட வேண்டும். அதை அணைக்க அடுத்த பக்கத்திற்கு செல்லவும்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">தொடக்கம்</target>
@@ -353,21 +333,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் பின்னர் நேர்மறையாக பதிவு செய்ய விரும்புகிறீர்களா?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் பயன்பாட்டை இயக்கும் போது, அது ஒவ்வொரு ஸ்மார்ட்ஃபோனிலும் அநாமதேய ID உருவாக்கி சேமித்து வைக்கும். இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனியுரிமை தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">பயன்பாடு இயங்கும் போது, ஒவ்வொரு மற்ற ஸ்மார்ட்போன் கடந்த இரண்டு வாரங்களுக்கு ஒருவருக்கொருவர் அநாமதேய Idகளை பதிவு செய்யும். 2 வாரங்களுக்கு முன்பு உள்ள பதிவுகள் நீக்கப்படும் மற்றும் தனியுரிமை பாதுகாக்க ஒவ்வொரு பெயரிட ID அவ்வப்போது மாற்றப்படும்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">மற்ற பயனர்கள் தொடர்ந்து நேர்மறையர்களின் பெயரில்லாத Id களின் பட்டியலை பெறுவர். கையகப்படுத்துபின், ஸ்மார்ட்போன் தொடர்பாக பதிவு செய்துள்ள தொடர்பு பதிவுகள் பொருத்தமாக இருக்கும். போட்டியின் முடிவு பலத்த தொடர்பால், நாங்கள் உங்கள் ஸ்மார்ட்ஃபோனை தெரிவிப்போம், மேலும் எங்களுக்கு நீங்கள் ஒத்துழைக்க விரும்பும் அவசியமான நடவடிக்கைகளை தெரியப்படுத்துவோம்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

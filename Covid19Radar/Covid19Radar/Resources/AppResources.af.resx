@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Volgende</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Diensbepalings</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Geen behoefte om persoonlike inligting in te voer nie. Ons gebruik unieke ID wat aan jou toegeken is wanneer jy 'n program installeer.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>'n kontak met 'n ander prgram gebruiker vir langer as 30 min in totaal, binne 'n radius nader as 2m gemiddeld is aangeteken as "Noue Kontak".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth/Kennisgewing van blootstelling moet aangeskakel word om noue kontak aan te teken. Gaan asseblief na die volgende bladsy om dit aan te skakel.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Begin</value>
   </data>
@@ -273,18 +257,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Wil jy later positief registreer?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Wanneer jy die toepassing uitvoer, sal dit 'n anonieme ID op elke slimfoon genereer en stoor. Hierdie toepassing verkry nie enige inligting wat verband hou met privaatheid soos foonnommer en liggingsinligting nie.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Terwyl die aansoek loop, sal mekaar se slimfoon mekaar se anonieme ID's vir die afgelope twee weke opneem. Rekords ouer as 2 weke sal verwyder word en elke anonieme ID sal periodiek verander word om privaatheid te beskerm.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Ander gebruikers kry gereeld 'n lys van anonieme ID's van positiewe kinders. Na afloop van die verkryging sal die kontadrekord wat op die slimfoon aangeteken is, ooreenstem. As die resultaat van die wedstryd is 'n swaar kontak, sal ons u slimfoon in kennis stel en u inlig oor die nodige aksies wat u wil hê ons moet saamwerk.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontak met positiewe toetsers in die afgelope 14 dae</value>
