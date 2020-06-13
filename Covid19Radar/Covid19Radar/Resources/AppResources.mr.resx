@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>होम</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>परवाना करार</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>सर्व संयोजना आणि डेटा नष्ट करण्यात आले आहे. कृपया अनुप्रयोग पुन्हा सुरू करा.</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>अवैध निदान ओळखपत्र</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>कृपया वैध निदान ओळखपत्र प्रदान करा</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>अवैध चाचणी दिनांक</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>कृपया वैध चाचणी दिनांक प्रदान करा</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>नोंदणीकडे परत</value>

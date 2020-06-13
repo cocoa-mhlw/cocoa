@@ -23,10 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ابتدائی صفحہ</value>
-    <comment>HOME</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>لائسنس معاہدہ</value>
     <comment>ライセンス</comment>
@@ -123,18 +119,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>تمام سیٹنگیں اور کوائف حذف کر دیے گئے ہیں ۔ اپیلی کیشن پھر شروع کریں ۔</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ناجائز تشخیص شناخت</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>ایک جائز تشخیص شناخت مہیا کریں</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>ناجائز جانچ تاریخ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>ایک جائز جانچ تاریخ مہیا کریں</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>رجسٹریشن پر واپس جائیں</value>
