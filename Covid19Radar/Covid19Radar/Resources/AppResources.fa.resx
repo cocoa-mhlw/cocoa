@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>کامل</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>شناسه تشخیص مورد نیاز</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>لطفاً قبل از ارسال یک تشخیص ، اعلان های نوردهی را فعال کنید.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>اعلان نوردهی غیرفعال شد</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>ارسال تشخیص...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>در حال تایید تشخیص...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>تشخیص شما نمی تواند در این زمان به تایید شود را مشاهده کنید.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>تأیید اعتبار انجام نشد</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>‏‏ارسال</value>

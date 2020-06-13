@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kumpleto</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Pagsusuri ng diyagnosis kailangan</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Mangyaring magpagana ng mga notipikasyon ng pagkakalantad bago magsumite ng pagsusuri.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Hindi pinagana ang mga notipikasyon</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Nagsusumite ng pagsusuri ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Nagpapatunay ng pagsusuri ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Ang iyong pagsusuri ay hindi mapatunayan sa oras na ito na isusumite.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Nabigo ang Beripikasyon</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Isumite</value>

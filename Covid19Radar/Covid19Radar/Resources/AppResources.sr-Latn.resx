@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Dovršeno</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Potreban je identifikator dijagnostike</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Omogućite obaveštenja o ekspoziciji pre podnošenja dijagnoze.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Onemogućena obaveštenja o ekspozicije</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Podnošenje dijagnoze...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Potvrđivanje dijagnoze...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Vaša dijagnoza ne može biti proverena u ovom trenutku da bi bila prosleđena.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Verifikacija nije uspela</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Prosledi</value>

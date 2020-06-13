@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>முழுமை</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>நோய் கண்டறிதல் அடையாளங்காட்டி தேவை</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>தயவுசெய்து ஒரு பகுப்பாய்வு சமர்ப்பிக்கும் முன், வெளிப்பாடு அறிவிப்புகளை இயக்கவும்.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>வெளிப்பாடு அறிவிப்புகள் முடக்கப்பட்டன</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>நோய் கண்டறிதல்...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>நோயை சரிபார்த்தல்...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>சமர்ப்பிக்க வேண்டிய நேரத்தில் உங்கள் நோயை உறுதிப்படுத்த முடியாது.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>சரிபார்ப்பு தோல்வி</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>சமர்ப்பி</value>

@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>complet</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Identificador de diagnòstic requerit</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Activeu les notificacions d'exposició abans d'enviar un diagnòstic.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Notificacions d'exposició desactivades</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>La presentació del diagnòstic...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Verificant el diagnòstic...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>El seu diagnòstic no pot ser verificat en aquest moment per presentar-se.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Error de verificació</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>Envia</value>

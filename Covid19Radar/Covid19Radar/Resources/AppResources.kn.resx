@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>ಪೂರ್ಣಗೊಳಿಸು</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>ರೋಗನಿರ್ಣಯ ಗುರುತುಪಟ್ಟಿ ಅಗತ್ಯ</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>ಒಂದು ರೋಗನಿರ್ಣಯವನ್ನು ಸಲ್ಲಿಸುವ ಮೊದಲು ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಅಧಿಸೂಚನೆಗಳನ್ನು ದಯವಿಟ್ಟು ಸಕ್ರಿಯಗೊಳಿಸಿ.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>ಬಹಿರ್ಮುಖತೆ ಅಧಿಸೂಚನೆಗಳು ಅಶಕ್ತcomment</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>ಪರಿಶೀಲನಾನಿರ್ಣಯ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>ಸಲ್ಲಿಸಲು ಈ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ರೋಗನಿರ್ಣಯವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>ಪರಿಶೀಲನೆ ವಿಫಲಗೊಂಡಿದೆ</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>ಸಲ್ಲಿಸು</value>
