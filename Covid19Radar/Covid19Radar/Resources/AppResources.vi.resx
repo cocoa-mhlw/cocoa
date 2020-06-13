@@ -69,15 +69,6 @@
     <value>Bạn sẽ được thông báo nếu bạn đã được tiếp xúc với một người báo cáo một kết quả COVID-19 dương tính.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Ngày xét nghiệm giúp ứng dụng biết khi nào bạn có thể lây nhiễm và thông báo cho đúng người có tiềm năng tiếp xúc.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Chỉ những người đã được tiếp xúc sẽ nhận được một thông báo.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Mã định danh kiểm tra duy nhất đi kèm với xét nghiệm COVID-19 của bạn phải được sử dụng để xác minh kết quả xét nghiệm dương tính của bạn.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Hãy thử lại sau.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Hoàn tất</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Vui lòng cung cấp mã định danh xét nghiệm</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Yêu cầu nhập Mã định danh xét nghiệm</value>

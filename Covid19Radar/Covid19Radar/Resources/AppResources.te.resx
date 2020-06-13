@@ -69,15 +69,6 @@
     <value>పాజిటివ్ కోవిడ్-19 రిజల్ట్ ను రిపోర్ట్ చేసిన ఎవరికైనా మీరు బహిర్గతం చేస్తే మీకు తెలియజేయబడుతుంది.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>మీరు అంటువ్యాధి కలిగి ఉండి, సంభావ్య ప్రభావానికి గురయ్యే సరైన వ్యక్తులకు తెలియజేయడంతో పరీక్షా తేదీ అనువర్తనానికి సాయపడుతుంది.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>బయటపడ్డ వారికి మాత్రమే నోటిఫికేషన్ అందుతుంది.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>మీ కోవిడ్-19 టెస్ట్ తో వచ్చిన ప్రత్యేక టెస్ట్ ఐడెంటిఫైయర్ మీ పాజిటివ్ టెస్ట్ ఫలితాన్ని వెరిఫై చేయడానికి విధిగా ఉపయోగించాలి.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>పూర్తయింది</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>దయచేసి డయగ్నాస్టిక్ ఐడెంటిఫైయర్ ఇవ్వండి</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>రోగ నిర్ధారణ నిర్ధారిణి అవసరం</value>

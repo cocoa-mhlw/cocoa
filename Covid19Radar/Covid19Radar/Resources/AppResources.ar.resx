@@ -69,15 +69,6 @@
     <value>سيتم إعلامك إذا كنت قد تعرضت لشخص أبلغ عن إصابتة بفيروس كورونا المستجد.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>يساعد تاريخ الاختبار التطبيق على معرفة متى كنت معديًا وإخطار الأشخاص المحتملين بالتعرض المحتمل.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>فقط أولئك الذين تعرضوا سيتلقون إشعارًا.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>يجب استخدام معرّف الاختبار الفريد المرفق مع اختبار فيروس كورونا المستجد للتحقق من نتيجة الاختبار الإيجابية.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>يرجى إعادة المحاولة لاحقًا.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>مكتمل</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>يرجى تقديم معرف التشخيص</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>معرف التشخيص المطلوب</value>

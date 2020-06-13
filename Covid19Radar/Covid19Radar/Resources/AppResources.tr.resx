@@ -69,15 +69,6 @@
     <value>Olumlu bir COVID-19 sonucu bildiren birine maruz kaldıysanız size bildirilir.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Test tarihi, uygulamanın ne zaman bulaşıcı olabileceğinibilmenize ve doğru kişileri potansiyel maruz kalma hakkında bilgilendirmesine yardımcı olur.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Yalnızca maruz kalanlara bir bildirim gönderilir.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>COVID-19 testinizle birlikte gelen benzersiz test tanımlayıcısı pozitif test sonucunuzu doğrulamak için kullanılmalıdır.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Lütfen daha sonra yeniden deneyin.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Tamamlandı</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Lütfen bir Tanı Tanımlayıcısı sağlayın</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Tanı Tanımlayıcı Gerekli</value>

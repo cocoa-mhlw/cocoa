@@ -69,15 +69,6 @@
     <value>Ви будете повідомлені, якщо ви були схильні до тих, хто повідомив позитивний COVID-19 результат.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Дата тесту допомагає програмі знати, коли ви, можливо, були заразні і повідомляти права людей потенційного впливу.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Тільки ті, хто був виставлений, отримають повідомлення.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Унікальний тестовий ідентифікатор, який постачався з вашим тестом COVID-19, повинен використовуватися для підтвердження позитивного результату тесту.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Спробуйте ще раз пізніше.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Завершено</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Будь ласка, надайте ідентифікатор діагностики</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Потрібний ідентифікатор діагностики</value>

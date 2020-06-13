@@ -69,15 +69,6 @@
     <value>यदि आप किसी ऐसे व्यक्ति के संपर्क में आए हैं जिसने सकारात्मक COVID-19 परिणाम की सूचना दी है तो आपको सूचित किया जाएगा।</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>परीक्षण की तारीख ऐप को यह जानने में मदद करती है कि आप कब संक्रामक हो सकते हैं और संभावित एक्सपोजर के सही लोगों को सूचित कर सकते हैं।</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>केवल उजागर होने वालों को ही नोटिफिकेशन मिलेगा।</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>आपके COVID-19 परीक्षण के साथ आए अद्वितीय परीक्षण पहचानकर्ता का उपयोग आपके सकारात्मक परीक्षण परिणाम को सत्यापित करने के लिए किया जाना चाहिए।</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>कृपया बाद में पुन: प्रयास करें.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>पूर्ण करें</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>कृपया एक निदान पहचानकर्ता प्रदान करें</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>निदान पहचानकर्ता आवश्यक</value>

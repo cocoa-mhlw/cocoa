@@ -69,15 +69,6 @@
     <value>Cuirfear in iúl duit má bhí tú faoi lé duine a thuairiscigh toradh dearfach COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Cuidíonn an dáta tástála leis an bhfeidhmchlár a fhios nuair a d'fhéadfadh tú a bheith tógálach agus fógra a thabhairt do na daoine cearta faoi nochtadh féideartha.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Ní bhfaighidh ach iad siúd a bhí nochta fógra.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Ní mór an t-aitheantóir tástála uathúil a tháinig le do thástáil COVID-19 a úsáid chun do thoradh dearfach tástála a fhíorú.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Bain triail eile as ar ball.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Críochnaigh</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Cuir Aitheantóir Diagnóise ar fáil</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Aitheantas Diagnóise ag teastáil</value>

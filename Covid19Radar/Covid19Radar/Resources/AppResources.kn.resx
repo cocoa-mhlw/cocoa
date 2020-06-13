@@ -69,15 +69,6 @@
     <value>ಸಕಾರಾತ್ಮಕ ಕೋವಿದ್-19 ಫಲಿತಾಂಶವನ್ನು ವರದಿ ಮಾಡಿದ ಯಾರಿಗಾದರೂ ನೀವು ಆಮಿಷ ಒಡ್ಡಿದ್ದರೆ ನಿಮಗೆ ಅಧಿಸೂಚನೆ ಹೊರಡಿಸಲಾಗುವುದು.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>ಪರೀಕ್ಷಾ ದಿನಾಂಕವು ನೀವು ಸಾಂಕ್ರಾಮಿಕವಾಗಿರಬಹುದು ಮತ್ತು ಸಂಭಾವ್ಯ ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಸರಿಯಾದ ಜನರಿಗೆ ಸೂಚಿಸಿದಾಗ ಆಪ್ ಗೆ ನೆರವಾಗುತ್ತದೆ.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>ಆಮಿಷ ಒಡ್ಡಿದವರು ಮಾತ್ರ ಅಧಿಸೂಚನೆ ಸ್ವೀಕರಿಸುತ್ತಾರೆ.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>ನಿಮ್ಮ ಕೋವಿಡ್-19 ಟೆಸ್ಟ್ ನೊಂದಿಗೆ ಬಂದ ವಿಶಿಷ್ಟವಾದ ಪರೀಕ್ಷಾ ಗುರುತುಪಟ್ಟಿಯು ನಿಮ್ಮ ಧನಾತ್ಮಕ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶವನ್ನು ಪರಿಶೀಲಿಸಲು ಬಳಸಿರಬೇಕು.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>ಪೂರ್ಣಗೊಳಿಸು</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟು ರೋಗನಿರ್ಣಯದ ಗುರುತುಪತ್ರ ಒದಗಿಸಿ</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>ರೋಗನಿರ್ಣಯ ಗುರುತುಪಟ್ಟಿ ಅಗತ್ಯ</value>

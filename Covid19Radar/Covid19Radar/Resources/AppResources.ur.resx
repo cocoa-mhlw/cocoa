@@ -69,15 +69,6 @@
     <value>آپ کو مطلع کیا جائے گا اگر آپ کسی ایسے شخص سے بے نقاب رہے ہیں جو کسی مثبت COVID کی اطلاع دی ہے-19 نتیجہ.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>ٹیسٹ کی تاریخ ایپ کو جاننے میں مدد ملتی ہے جب آپ متعدی ہو سکتے ہیں اور ممکنہ نمائش کے صحیح لوگوں کو مطلع کرتے ہیں.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>صرف ان لوگوں کو جو بے نقاب کیا گیا ہے وہ ایک نوٹیفکیشن وصول کرے گا.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>آپ کے COVID کے ساتھ آئے کہ منفرد ٹیسٹ شناخت کنندہ-19 ٹیسٹ آپ کے مثبت ٹیسٹ کے نتائج کی تصدیق کرنے کے لئے استعمال کیا جانا چاہئے.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>برائے مہربانی بعد میں دوبارہ کوشش کریں۔</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>مکمل</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>تشخیص شناخت کار مہیا کریں</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>تشخیص شناخت کار مطلوب</value>

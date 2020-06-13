@@ -69,15 +69,6 @@
     <value>Вы будете уведомлены, если вы подверглись воздействию кого-то, кто сообщил положительный результат COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Дата тестирования помогает приложению узнать, когда вы, возможно, были заразны и уведомить нужных людей о потенциальной экспозиции.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Уведомления получат только те, кто подвергся воздействию.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Уникальный идентификатор теста, который пришел с вашим тестом COVID-19, должен быть использован для проверки положительного результата теста.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Повторите попытку позже.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Завершение</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Пожалуйста, предоставьте идентификационный диагноз</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Требуется идентификация диагноза</value>
