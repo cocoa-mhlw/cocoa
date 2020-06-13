@@ -35,22 +35,6 @@
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>ఒక అనువర్తనాన్ని వ్యవస్థాపించడం</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>సన్నిహిత సంప్రదింపు రికార్డింగ్</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>COVID-19 పాజిటివ్ అని నిర్ధారణ అయితే</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>ఈ యాప్ ఉపయోగించడానికి ఆవశ్యకతలు</value>
-    <comment>How it works page step 4 title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>స్థితి అమర్పులు</value>
     <comment>User Status Page Title</comment>
