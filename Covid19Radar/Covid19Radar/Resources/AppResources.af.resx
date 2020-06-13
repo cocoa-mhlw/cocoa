@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Hoe dit werk</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Volgende</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Begin</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Beskerm ons geliefdes teen COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Toestel Toegang</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Stem in</value>
   </data>
@@ -99,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Nie Nou Nie</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Hierdie program gebruik Blootstelling Kennisgewing / Bluetooth seine om te bepaal of jy naby 'n ander kontak opsporings program gebruiker is. 
-Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Laat Blootstellings Kennisgewing/Bluetooth toe</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Blootstellings</value>
@@ -187,9 +161,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Instellings</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Nie saamstem</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselleer</value>

@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>இது எப்படி வேலை செய்கிறது</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>அடுத்து</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>தொடக்கம்</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID-19 இருந்து எங்கள் அன்புக்குரியவர்களைப் பாதுகாத்தல்</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>சாதன அணுகல்</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>ஏற்பு</value>
   </data>
@@ -99,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>இப்போது இல்லை</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>இந்த செயலி எக்ஸ்போசர்/புளூடூத் சிக்னல்களைப் பயன்படுத்துகிறது. 
-Bluetooth அமைக்க ' எப்போதும் அனுமதிக்கவும் ' என்பதைத் தேர்ந்தெடுக்கவும்.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>வெளிப்பாடு அறிவிக்கை/புளூடூத் அனுமதி</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>அம்பலப்படுத்தல்</value>
@@ -187,9 +161,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>அமைப்புகள்</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>உடன்படவில்லை</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>ரத்துசெய்</value>
