@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Далі</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Умови надання послуг</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Не потрібно вводити особисту інформацію. Ми використовуємо унікальний ІДЕНТИФІКАТОР, виділений для вас під час встановлення програми.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Контакт з іншим користувачем програми для більш ніж 30 хв в цілому, в радіусі ближче ніж 2 м в середньому записується як "тісний контакт".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Щоб записати тісний контакт, потрібно ввімкнути Bluetooth. Будь ласка, перейдіть на наступну сторінку, щоб увімкнути його.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Початок</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ви хотіли б зареєструвати позитивно пізніше?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Під час запуску програми він створить та зберігатиме анонімний ІДЕНТИФІКАТОР на кожному смартфоні. Ця програма не купує будь-яку інформацію, пов'язану з конфіденційністю, наприклад, номер телефону та інформацію про місцезнаходження.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>У той час як додаток працює, смартфон один одного буде записувати анонімні ідентифікатори один одного протягом останніх двох тижнів. Записи старше 2 тижнів будуть видалені, і кожен анонімний ІДЕНТИФІКАТОР буде періодично змінюватися для захисту конфіденційності.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Інші користувачі регулярно отримують Список анонімних ідентифікаторів позитивних. Після придбання, запис контактної особи, записаної на смартфоні, буде зіставлятися. Якщо результат матчу є важким контактом, ми повідомимо ваш смартфон і повідомимо вам про необхідні дії, які ви хотіли б з нами співпрацювати.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Контакт з позитивними тестувальників за останні 14 днів</value>
