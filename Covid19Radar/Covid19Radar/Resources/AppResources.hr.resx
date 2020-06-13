@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Ažurirajte informacije</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>POLAZNO</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Spreman si za polazak.</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Postavljanje dovršeno</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Popis suradnika</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licencni ugovor</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Instaliranje aplikacije</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Snimanje bliskog kontakta</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ako vam se dijagnosticira COVID-19 pozitivna</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Zahtjevi za korištenje ove aplikacije</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Postavke statusa</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>U redu</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Omogući</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Ne sada</value>
@@ -103,22 +65,6 @@
     <value>Bit ćete obaviješteni ako ste bili izloženi nekome tko je prijavio pozitivan rezultat COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Unesite identifikator dijagnoze</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Podijelite pozitivnu dijagnozu</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Datum testiranja pomaže aplikaciji da zna kada ste možda bili zarazni i obavijestite prave ljude o potencijalnoj izloženosti.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Samo oni koji su bili izloženi primit će obavijest.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Jedinstveni identifikator ispitivanja koji ste dobili uz covid-19 test mora se koristiti za provjeru pozitivnog rezultata testa.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Pokušajte ponovno poslije.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Dovršeno</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Navedite identifikator dijagnoze</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Potreban identifikator dijagnoze</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Molimo omogućite obavijesti o izloženosti prije podnošenja dijagnoze.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Obavijesti o ekspoziciji onemogućene</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Slanje dijagnoze...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Provjera dijagnoze...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Vaša dijagnoza se ne može potvrditi u ovom trenutku da se pošalje.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Provjera valjanosti nije uspjela</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Pošalji</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Postavke</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Odustani</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Želite li uključiti obavijesti?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Omogućavanje</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Brisanje</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ako ste primili pozitivnu dijagnozu</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Dijeljenje aplikacije</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Sve postavke i podaci su izbrisani. Ponovno pokrenite aplikaciju.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ID dijagnoze nije valjan</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Navedite valjani ID dijagnoze</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Datum testiranja nije valjan</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Navedite valjani datum testiranja</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Povratak na registraciju</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Želite li se kasnije pozitivno registrirati?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt s pozitivnim testers u posljednjih 14 dana</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ako ste pozitivni s novom Coronom, molimo vas da surađujete s pozitivnom registracijom kako biste zaštitili ljude oko sebe.</value>

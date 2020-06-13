@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Värskendusteave</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>AVALEHT</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Sa oled valmis minema</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Valmis seadistamine</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Sisendandmete esitajate loend</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Litsentsileping</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Rakenduse installimine</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Sule kontakti salvestamine</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Kui teil on diagnoositud COVID-19 positiivne</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Nõuded selle rakenduse kasutamiseks</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Oleku sätted</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Luba</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Mitte praegu.</value>
@@ -103,22 +65,6 @@
     <value>Teid teavitatakse, kui olete kokku puutunud kellegagi, kes teatas positiivsest COVID-19 tulemusest.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Palun sisestage diagnostika identifikaator</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Positiivse diagnoosi jagamine</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Testimiskuupäev aitab rakendusel teada, millal te olete olnud nakkav ja teavitama õiget inimest võimalikust kokkupuutest.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Ainult neile, kes on kokku puutunud, saadetakse teade.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Positiivse testi tulemuse kinnitamiseks tuleb kasutada oma COVID-19 testiga kaasas olevat ainulaadset testimisidentifikaatorit.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Proovi hiljem uuesti.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Valmis</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Palun esitage diagnoosi tunnus</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Diagnoosi identifikaator on nõutav</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Palun lubage kokkupuute märguanded enne diagnoosi esitamist.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Kokkupuute teatised keelatud</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnoosi esitamine...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Diagnoosi kontrollimine...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Teie diagnoosi ei saa sel ajal kontrollida.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Kinnitamine nurjus</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Edasta</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Sätted</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Loobu</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Kas soovite märguanded sisse lülitada?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Võimaldab</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Kustutan</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Kui te saite positiivse diagnoosi</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Rakenduse jagamine</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Kõik sätted ja andmed on kustutatud. Palun taaskäivitage rakendus.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Diagnostika ID ei sobi</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Palun esitage kehtiv diagnoosi ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Sobimatu Testkuupäev</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Palun esitage kehtiv Katsekuupäev</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Tagasi registreerimiseks</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Kas soovite hiljem positiivselt registreerida?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Viimase 14 päeva jooksul positiivsete testijate kontakt</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Kui sa oled uue Corona suhtes positiivne, siis palun tee positiivse registreerimisega koostööd, et kaitsta inimesi enda ümber.</value>
