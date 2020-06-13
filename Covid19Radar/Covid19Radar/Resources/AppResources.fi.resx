@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Seuraava</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Palveluehdot</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Henkilökohtaisia tietoja ei tarvitse syöttää. Käytämme yksilöllistä tunnusta, joka on varattu sinulle sovelluksen asennuksen yhteydessä.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Yhteydenpito toiseen sovelluksen käyttäjään yli 30 minuutin ajan, joka on keskimäärin yli 2 metrin säteellä, tallennetaan "Sulje yhteystieto"-muodossa.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth on otettava käyttöön, jotta lähiyhteystieto voidaan tallentaa. Ota se käyttöön siirtymällä seuraavalle sivulle.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Alku</value>
   </data>
@@ -273,18 +257,6 @@ Määritä Bluetooth valitsemalla Salli aina.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Haluatko rekisteröityä positiivisesti myöhemmin?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Kun suoritat sovelluksen , se luo ja tallentaa anonyymin tunnuksen jokaiseen älypuhelimeen. Tämä sovellus ei saa mitään tietosuojaan liittyviä tietoja, kuten puhelinnumeroa ja sijaintitietoja.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Kun sovellus on käynnissä, toistensa älypuhelin tallentaa toistensa anonyymit tunnukset kahden viime viikon ajalta. Yli 2 viikon ikäisiä tietueita poistetaan ja jokaista anonyymiä tunnusta muutetaan säännöllisesti yksityisyyden suojaamiseksi.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Muut käyttäjät saavat säännöllisesti luettelon positiivisista anonyymeistä tunnuksista. Hankinnan jälkeen älypuhelimeen tallennettu yhteyshenkilötietue täsmää. Jos ottelun tulos on raskas kontakti, ilmoitamme sinulle älypuhelimestasi ja ilmoitamme sinulle tarvittavista toimista, joiden kanssa haluat meidän yhteistyötä.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kosketus positiivisiin testaajiin viimeisten 14 päivän aikana</value>

@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Επόμενο</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Όροι παροχής υπηρεσιών</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Δεν χρειάζεται να προσθέσετε προσωπικές πληροφορίες. Χρησιμοποιούμε μοναδικό αναγνωριστικό, το οποίο σας έχει εκχωρηθεί κατά την εγκατάσταση μιας εφαρμογής.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Μια επαφή με έναν άλλο χρήστη της εφαρμογής για περισσότερο από 30 λεπτά συνολικά, σε ακτίνα μικρότερη από 2 m κατά μέσο όρο καταγράφεται ως "Στενή επαφή".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Το Bluetooth πρέπει να ενεργοποιηθεί για την εγγραφή στενής επαφής. Παρακαλώ πηγαίνετε στην επόμενη σελίδα για να την ενεργοποιήσετε.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Έναρξη</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Θέλετε να εγγραφείτε θετικά αργότερα;</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Όταν εκτελείτε την εφαρμογή , θα δημιουργήσει και θα αποθηκεύσει ένα ανώνυμο αναγνωριστικό σε κάθε smartphone. Αυτή η εφαρμογή δεν αποκτά πληροφορίες σχετικά με το απόρρητο, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Ενώ η εφαρμογή εκτελείται, το smartphone του άλλου θα καταγράφει ανώνυμα αναγνωριστικά του άλλου για τις τελευταίες δύο εβδομάδες. Οι εγγραφές που είναι παλαιότερες από 2 εβδομάδες θα διαγράφονται και κάθε ανώνυμο αναγνωριστικό θα αλλάζει περιοδικά για την προστασία της ιδιωτικής ζωής.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Άλλοι χρήστες παίρνουν τακτικά έναν κατάλογο ανώνυμων ταυτοτήτων των θετικών. Μετά την απόκτηση, η καρτέλα επικοινωνίας που έχει καταγραφεί στο smartphone θα αντιστοιχιστεί. Εάν το αποτέλεσμα του αγώνα είναι μια βαριά επαφή, θα ενημερώσουμε το smartphone σας και θα σας ενημερώσουμε για τις απαραίτητες ενέργειες με τις οποίες θα θέλατε να συνεργαστούμε.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Επαφή με θετικούς δοκιμαστές τις τελευταίες 14 ημέρες</value>

@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>આગામી</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>સેવાની શરતો</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>અંગત માહિતી ને ઇનપુટ કરવાની જરૂર નથી. અમે યુનિક આઈડીનો ઉપયોગ કરી રહ્યા છીએ, જે એપ્લિકેશન ઇન્સ્ટોલ કરતી વખતે તમને ફાળવવામાં આવેલ છે.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>અન્ય એપ્લિકેશન વપરાશકર્તા સાથે નો સંપર્ક કુલ 30 મિનિટથી વધુ સમય માટે, સરેરાશ 2m થી વધુ ત્રિજ્યાની અંદર "ક્લોઝ કોન્ટેક્ટ" તરીકે નોંધવામાં આવે છે.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>નજીકનો સંપર્ક રેકોર્ડ કરવા માટે બ્લુટુથ ને ચાલુ કરવાની જરૂર છે. કૃપા કરીને તેને ચાલુ કરવા માટે આગળના પાના પર જાવ.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>પ્રારંભ</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>શું તમે પછીથી હકારાત્મક નોંધણી કરવા માંગો છો?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>જ્યારે તમે એપ્લિકેશન ચલાવો છો ત્યારે તે દરેક સ્માર્ટફોન પર એક અનામી આઇડી જનરેટ કરશે અને સંગ્રહ કરશે. આ એપ્લિકેશન ફોન નંબર અને સ્થાન ની માહિતી જેવી ગોપનીયતા સાથે સંબંધિત કોઈ પણ માહિતી પ્રાપ્ત કરતી નથી.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>એપ્લિકેશન ચાલી રહી છે ત્યારે એકબીજાનો સ્માર્ટફોન છેલ્લા બે અઠવાડિયાથી એકબીજાના અનામી આઈ.ડી.ની નોંધ કરશે. 2 અઠવાડિયાથી જૂના રેકોર્ડ્સ કાઢી નાખવામાં આવશે અને દરેક અનામી ઓળખપત્રને ગોપનીયતાની સુરક્ષા માટે સમયાંતરે બદલવામાં આવશે.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>અન્ય વપરાશકર્તાઓ ને નિયમિત પણે પોઝિટિવ આઇ.ડી.ની યાદી મળે છે. અધિગ્રહણ બાદ, સ્માર્ટફોન પર રેકોર્ડ કરવામાં આવેલા કોન્ટેક્ટ રેકોર્ડને મેચ કરવામાં આવશે. જો મેચનું પરિણામ ભારે સંપર્ક હોય, તો અમે તમારા સ્માર્ટફોનને સૂચિત કરીશું અને તમને જરૂરી પગલાં વિશે જણાવીશું કે જેનો તમે સહકાર આપવા માંગો છો.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>છેલ્લા 14 દિવસમાં પોઝિટિવ ટેસ્ટર્સ સાથે સંપર્ક</value>
