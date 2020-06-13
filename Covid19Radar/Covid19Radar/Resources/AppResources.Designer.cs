@@ -1114,24 +1114,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   The test date helps the app know when you may have been contagious and notify the right people of potential exposure. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagDateText {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagDateText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please provide a Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageDiagUidIsEmptyText {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageDiagUidIsEmptyText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Diagnosis Identifier Required に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SharePositiveDiagnosisPageDiagUidIsEmptyTitle {
@@ -1164,24 +1146,6 @@ namespace Covid19Radar.Resources {
         internal static string SharePositiveDiagnosisPageVerifyFailedDialogTitle {
             get {
                 return ResourceManager.GetString("SharePositiveDiagnosisPageVerifyFailedDialogTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Only those who have been exposed will receive a notification. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveEntryCodeText {
-            get {
-                return ResourceManager.GetString("SharePositiveEntryCodeText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   The unique test identifier that came with your COVID-19 test must be used to verify your positive test result. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveEntryCodeText2 {
-            get {
-                return ResourceManager.GetString("SharePositiveEntryCodeText2", resourceCulture);
             }
         }
         

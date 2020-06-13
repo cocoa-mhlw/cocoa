@@ -69,15 +69,6 @@
     <value>Budete upozornení, ak ste boli vystavení niekomu, kto hlásil pozitívny COVID-19 výsledok.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Dátum testovania pomáha aplikácii vedieť, kedy ste mohli byť nákazlivé a informovať správnych ľudí o potenciálnej expozícii.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Oznámenie bude dostávať len tí, ktorí boli vystavení.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Na overenie pozitívneho výsledku testu sa musí použiť jedinečný testovací identifikátor, ktorý bol dodaný s testom COVID-19.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Zopakujte akciu neskôr.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Dokončené</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Uveďte identifikátor diagnostiky</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Vyžaduje sa identifikátor diagnostiky</value>

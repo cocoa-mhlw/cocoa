@@ -69,15 +69,6 @@
     <value>Obveščeni boste, če ste bili izpostavljeni nekomu, ki je poročal o pozitivnem COVIDU-19 rezultatu.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Datum preskusa pomaga aplikaciji vedeti, kdaj ste morda bili nalezljivi in o tem obvestite prave ljudi potencialne izpostavljenosti.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Samo tisti, ki so bili izpostavljeni, bodo prejeli obvestilo.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Enolični preskusni identifikator, ki je priložen testu COVID-19, mora biti uporabljen za preverjanje pozitivnega rezultata testa.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Prosimo, poskusite znova kasneje.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Dokončano</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Prosimo, navedite identifikator diagnoze</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Zahtevana oznaka diagnoze</value>
