@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>તે કેવી રીતે કામ કરે છે</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>આગામી</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>પ્રારંભ</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>સીઓવીઆઈડી19થી આપણા પ્રિયજનોને સુરક્ષિત કરી રહ્યા છીએ</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>ઉપકરણ પ્રવેશ</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>સંમત</value>
   </data>
@@ -99,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>નોટહવે</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>આ એપ્લિકેશન એક્સપોઝર નોટિફિકેશન / બ્લુટુથ સિગ્નલનો ઉપયોગ કરે છે કે તમે અન્ય કોન્ટેક્ટ ટ્રેસિંગ એપ્લિકેશન વપરાશકર્તાની નજીક છો કે નહીં. 
-બ્લુટુથ ને સુયોજિત કરવા માટે 'હંમેશા પરવાનગી' પસંદ કરો.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>એક્સપોઝર સૂચના/ બ્લુટુથને પરવાનગી આપો</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>એક્સપોઝર્સ</value>
@@ -187,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>સેટિંગ્સ</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>સંમત નથી</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>રદ કરો</value>

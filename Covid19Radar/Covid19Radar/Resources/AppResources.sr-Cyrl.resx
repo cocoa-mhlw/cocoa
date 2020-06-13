@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Како функционише</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Даље</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Почетак</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Штитећи наше најмилијије од COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Приступ уређају</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Слажем се</value>
   </data>
@@ -99,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Не сада</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Ова апликација користи Обавијест о изложености/Блуетоотх сигналима да би утврдила да ли се налазите у близини неког другог корисника апликације "праћење контакта". 
-Изаберите опцију "увек дозволи" да подесите Блуетоотх.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Дозволи изложеност експозиције/Блуетоотх</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Јонизирајуће</value>
@@ -187,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Поставке</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Не слажу се</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Откажи</value>

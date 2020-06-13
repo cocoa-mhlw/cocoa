@@ -124,24 +124,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Next に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNext {
-            get {
-                return ResourceManager.GetString("ButtonNext", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Not Agree に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNotAgree {
-            get {
-                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sharing positive information and anonymous notification to others に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonNotifyOtherPage {
@@ -201,15 +183,6 @@ namespace Covid19Radar.Resources {
         internal static string ButtonShare {
             get {
                 return ResourceManager.GetString("ButtonShare", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Start に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonStart {
-            get {
-                return ResourceManager.GetString("ButtonStart", resourceCulture);
             }
         }
         
@@ -763,25 +736,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Allow Exposure Notification / Bluetooth に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InitSettingPageTextExposureNotification {
-            get {
-                return ResourceManager.GetString("InitSettingPageTextExposureNotification", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-        ///Select &apos;Always Allow&apos; to set up Bluetooth. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InitSettingPageTextExposureNotificationDescription {
-            get {
-                return ResourceManager.GetString("InitSettingPageTextExposureNotificationDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   9:00-17:30 (except weekends and holidays) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription1 {
@@ -1277,15 +1231,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Protecting our loved ones from COVID-19 に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string StartTutorialPageTextProtectingOurLovedOnes {
-            get {
-                return ResourceManager.GetString("StartTutorialPageTextProtectingOurLovedOnes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter &quot;management system&quot;). に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SubmitConsentPageDescription1 {
@@ -1408,24 +1353,6 @@ namespace Covid19Radar.Resources {
         internal static string TitleContributorsPage {
             get {
                 return ResourceManager.GetString("TitleContributorsPage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Device Access に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleDeviceAccess {
-            get {
-                return ResourceManager.GetString("TitleDeviceAccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   How it works に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleHowItWorks {
-            get {
-                return ResourceManager.GetString("TitleHowItWorks", resourceCulture);
             }
         }
         
