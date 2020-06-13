@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Podanie diagnózy...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Odoslať</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Nastavenia</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Zrušiť</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Chcete zapnúť upozornenia?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Zapína sa</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Odstraňujú sa</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ak ste dostali pozitívnu diagnózu</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Zdieľanie aplikácie</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Chcete sa neskôr zaregistrovať pozitívne?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt s pozitívnymi testery za posledných 14 dní</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ak ste pozitívni s novou Corona, prosím, spolupracovať s pozitívnou registráciou na ochranu ľudí okolo vás.</value>

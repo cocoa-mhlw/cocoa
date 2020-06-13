@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Kuwasilisha utambuzi ...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Wasilisha</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Mipangilio</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Katisha</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Unataka kuwasha taarifa?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Kuwezesha</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Futa</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Kama umepokea utambuzi mzuri</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Gawiza programu</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ungependa kujisajili vizuri baadaye?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Wasiliana na testers nzuri katika siku za mwisho za 14</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Kama wewe ni mzuri na Corona mpya, tafadhali Shirikiana na usajili chanya ili kuwalinda watu walio karibu nawe.</value>

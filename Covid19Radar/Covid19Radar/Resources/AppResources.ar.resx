@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تقديم التشخيص...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>إرسال</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>إعدادات</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>إلغاء الأمر</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>هل تريد تشغيل الإشعارات؟</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>تمكين</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>حذف</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>إذا تلقيت تشخيصًا إيجابيًا</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>مشاركة التطبيق</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>هل ترغب في التسجيل بشكل إيجابي في وقت لاحق؟</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>الاتصال مع المختبرين الإيجابيين في الأيام الـ 14 الماضية</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>إذا كنت إيجابيًا مع كورونا الجديدة ، يرجى التعاون مع التسجيل الإيجابي لحماية الأشخاص من حولك.</value>

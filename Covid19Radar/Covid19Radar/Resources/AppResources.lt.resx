@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Pateikti diagnozę...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Pateikti</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>parametrai</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Atšaukti</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Ar norite įjungti pranešimus?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Įgalinama</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Naikinimas</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Jeigu jums buvo diagnozuota teigiama diagnozė</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Programos bendrinimas</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ar norite užsiregistruoti teigiamai vėliau?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Sąlytis su testatojais, kurių tyrimo rezultatai teigiami per pastarąsias 14 dienų</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jei esate teigiamas su nauja Corona, prašome bendradarbiauti su teigiama registracija apsaugoti žmones aplink jus.</value>

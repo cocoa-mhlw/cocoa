@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Składanie diagnozy...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Prześlij</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ustawienia</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Anuluj</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Czy chcesz włączyć powiadomienia?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Włączanie</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Usuwanie</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Jeśli pacjent otrzymał pozytywną diagnozę</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Udostępnij aplikację</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Czy chcesz zarejestrować się później pozytywnie?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt z pozytywnymi testerami w ciągu ostatnich 14 dni</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jeśli jesteś pozytywnie nastawiony do nowej Korony, współpracuj z pozytywną rejestracją, aby chronić ludzi wokół ciebie.</value>

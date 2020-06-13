@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>提交診斷...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>提交</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>設定</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>取消</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>是否要打開通知?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>啟用</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>刪除中</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>如果您收到陽性診斷</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>分享應用程式</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>以後要積極註冊嗎?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>在過去 14 天內與陽性測試人員聯繫</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>如果您對新的 Corona 持樂觀態度,請配合積極的註冊,以保護您周圍的人。</value>
