@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>تازہ معلومات</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ابتدائی صفحہ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>آپ جانے کے لیے تیار ہیں</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>مکمل سیٹ اپ</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>فہرست شراکت</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>لائسنس معاہدہ</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>ایک ایپ انسٹال کرنا</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>بند رابطہ ریکارڈنگ</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>اگر آپ کو COVID-19 مثبت تشخیص کی جاتی ہے</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>اس ایپ کو استعمال کرنے کی شرائط</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>حالت سیٹنگیں</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ٹھیک ہے</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>اہل بنائيں</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>نوٹناوو</value>
@@ -103,22 +65,6 @@
     <value>آپ کو مطلع کیا جائے گا اگر آپ کسی ایسے شخص سے بے نقاب رہے ہیں جو کسی مثبت COVID کی اطلاع دی ہے-19 نتیجہ.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>تشخیص شناخت کار داخل کریں</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>ایک مثبت تشخیص کا اشتراک کریں</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>ٹیسٹ کی تاریخ ایپ کو جاننے میں مدد ملتی ہے جب آپ متعدی ہو سکتے ہیں اور ممکنہ نمائش کے صحیح لوگوں کو مطلع کرتے ہیں.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>صرف ان لوگوں کو جو بے نقاب کیا گیا ہے وہ ایک نوٹیفکیشن وصول کرے گا.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>آپ کے COVID کے ساتھ آئے کہ منفرد ٹیسٹ شناخت کنندہ-19 ٹیسٹ آپ کے مثبت ٹیسٹ کے نتائج کی تصدیق کرنے کے لئے استعمال کیا جانا چاہئے.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>برائے مہربانی بعد میں دوبارہ کوشش کریں۔</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>مکمل</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>تشخیص شناخت کار مہیا کریں</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>تشخیص شناخت کار مطلوب</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>تشخیص جمع کرنے سے قبل براہ کرم نمائش کی اطلاعات کو فعال کریں ۔</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>نمائش اطلاعات غیر فعال</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تشخیص جمع کر رہا ہے...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>تشخیص کی توثیق کررہا ہے...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>اس وقت پیش کرنے کے لیے آپ کی تشخیص کی توثیق نہیں کی جا سکتی ۔</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>توثیق ناکام ہوگئی ہے</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>‏‏جمع کریں</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>سیٹنگیں</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>منسوخ کریں</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>کیا آپ نوٹیفکیشنز کو آن کرنا چاہتے ہیں ؟</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>کو چالو کرنے</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>حذف کر رہا ہے</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ایپ کا اشتراک کریں</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>تمام سیٹنگیں اور کوائف حذف کر دیے گئے ہیں ۔ اپیلی کیشن پھر شروع کریں ۔</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ناجائز تشخیص شناخت</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>ایک جائز تشخیص شناخت مہیا کریں</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>ناجائز جانچ تاریخ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>ایک جائز جانچ تاریخ مہیا کریں</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>رجسٹریشن پر واپس جائیں</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>کیا آپ بعد میں مثبت طور پر رجسٹر کرنا چاہیں گے ؟</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>آخری 14 دنوں میں مثبت ٹیسٹرز کے ساتھ رابطہ کریں</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>اگر آپ نئے تاج کے ساتھ مثبت ہیں ، تو براہ کرم آپ کے ارد گرد لوگوں کی حفاظت کے لئے مثبت رجسٹریشن کے ساتھ تعاون کریں.</value>

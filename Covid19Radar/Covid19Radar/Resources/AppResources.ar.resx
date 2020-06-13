@@ -23,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>تحديث المعلومات</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>الصفحة الرئيسية</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>انت جاهز</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>اكتمل الإعداد</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>قائمة المشاركين</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>اتفاقية الترخيص</value>
     <comment>ライセンス</comment>
@@ -49,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>تثبيت التطبيق</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>تسجيل جهة اتصال قريبة</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>إذا تم تشخيصك كمريض إيجابي لفيروس كورونا المستجد</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>متطلبات استخدام هذا التطبيق</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>إعدادات الحالة</value>
@@ -76,9 +41,6 @@
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>موافق</value>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>تمكين</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ليس الان</value>
@@ -103,22 +65,6 @@
     <value>سيتم إعلامك إذا كنت قد تعرضت لشخص أبلغ عن إصابتة بفيروس كورونا المستجد.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>الرجاء إدخال هوية التشخيص</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>مشاركة التشخيص الإيجابي</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>يساعد تاريخ الاختبار التطبيق على معرفة متى كنت معديًا وإخطار الأشخاص المحتملين بالتعرض المحتمل.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>فقط أولئك الذين تعرضوا سيتلقون إشعارًا.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>يجب استخدام معرّف الاختبار الفريد المرفق مع اختبار فيروس كورونا المستجد للتحقق من نتيجة الاختبار الإيجابية.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>يرجى إعادة المحاولة لاحقًا.</value>
   </data>
@@ -131,32 +77,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>مكتمل</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>يرجى تقديم معرف التشخيص</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>معرف التشخيص المطلوب</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>يرجى تمكين إشعارات التعرض قبل تقديم التشخيص.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>تم تعطيل إشعارات التعرض</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تقديم التشخيص...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>التحقق من التشخيص...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>لا يمكن التحقق من تشخيصك في هذا الوقت ليتم إرساله.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>فشل التحقق</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>إرسال</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>إعدادات</value>
@@ -165,18 +87,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>إلغاء الأمر</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>هل تريد تشغيل الإشعارات؟</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>تمكين</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>حذف</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>إذا تلقيت تشخيصًا إيجابيًا</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>مشاركة التطبيق</value>
@@ -208,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>تم حذف كافة الإعدادات والبيانات. الرجاء إعادة تشغيل التطبيق.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>معرف التشخيص غير الصالح</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>يرجى تقديم معرف تشخيص صالح</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>تاريخ اختبار غير صالح</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>يرجى تقديم تاريخ اختبار صالح</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>العودة إلى التسجيل</value>
   </data>
@@ -228,9 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>هل ترغب في التسجيل بشكل إيجابي في وقت لاحق؟</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>الاتصال مع المختبرين الإيجابيين في الأيام الـ 14 الماضية</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>إذا كنت إيجابيًا مع كورونا الجديدة ، يرجى التعاون مع التسجيل الإيجابي لحماية الأشخاص من حولك.</value>
