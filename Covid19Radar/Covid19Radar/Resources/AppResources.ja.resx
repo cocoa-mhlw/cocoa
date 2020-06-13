@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>診断を提出します。</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>提出</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>アプリの設定</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>通知をオンにしますか？</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>有効にしています</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>削除しています</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>陽性と診断された場合</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>本アプリを広めましょう</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>後で陽性の登録をしますか？</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>過去14日間の陽性判定者との接触</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</value>

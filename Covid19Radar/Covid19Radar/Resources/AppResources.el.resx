@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Υποβολή διάγνωσης...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Υποβολή</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ρυθμίσεις</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Άκυρο</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Θέλετε να ενεργοποιήσετε τις ειδοποιήσεις;</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Ενεργοποίηση</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Διαγραφή σε εξέλιξη</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Εάν λάβατε θετική διάγνωση</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Κοινή χρήση της εφαρμογής</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Θέλετε να εγγραφείτε θετικά αργότερα;</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Επαφή με θετικούς δοκιμαστές τις τελευταίες 14 ημέρες</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Εάν είστε θετικοί με τη νέα Corona, παρακαλούμε συνεργαστείτε με τη θετική εγγραφή για να προστατεύσετε τους ανθρώπους γύρω σας.</value>

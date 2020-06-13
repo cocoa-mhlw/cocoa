@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Sende inn diagnose...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Send inn</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Innstillinger</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Avbryt</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Vil du slå på varsler?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Aktiverer</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Sletter</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Hvis du fikk en positiv diagnose</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Del appen</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vil du registrere deg positivt senere?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt med positive testere de siste 14 dagene</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Hvis du er positiv med den nye Corona, kan du samarbeide med den positive registreringen for å beskytte menneskene rundt deg.</value>

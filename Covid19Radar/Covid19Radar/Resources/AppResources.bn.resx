@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>নির্ণয়ের জমা দেওয়া হচ্ছে...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>জমা দিন</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>সেটিংস</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>বাতিল করুন</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>আপনি কি বিজ্ঞপ্তিগুলি চালু করতে চান?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>সক্রিয়</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>বিলোপ</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>যদি আপনি একটি ইতিবাচক নির্ণয় পান</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>অ্যাপটি শেয়ার</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>আপনি কি পরে ইতিবাচক নিবন্ধন করতে চান?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>গত ১৪ দিনে পজিটিভ টেস্টারের সঙ্গে যোগাযোগ</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>আপনি যদি নতুন করোনা দিয়ে ইতিবাচক হন, তাহলে আপনার চারপাশের জনগণকে সুরক্ষিত রাখতে দয়া করে ইতিবাচক নিবন্ধকে সহযোগিতা করুন ।</value>

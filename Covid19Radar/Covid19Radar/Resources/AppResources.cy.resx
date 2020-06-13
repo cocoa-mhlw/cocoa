@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Wrthi'n cyflwyno diagnosis ...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Cyflwyno</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Gosodiadau</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Canslo</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Ydych chi am roi hysbysiadau ar waith?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Galluogi</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Wrthi'n dileu</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Pe byddech yn cael diagnosis cadarnhaol</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Rhannu'r ap</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>A hoffech gofrestru'n gadarnhaol yn nes ymlaen?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Cyswllt gyda profwyr positif yn y 14 diwrnod diwethaf</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Os ydych yn gadarnhaol gyda'r Corona newydd, os gwelwch yn dda cydweithredu â'r cofrestru cadarnhaol i amddiffyn y bobl o'ch cwmpas.</value>

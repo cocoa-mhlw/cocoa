@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>正在提交诊断结果...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>提交</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>设置</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>取消</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>是否要打开通知？</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>正在启用</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>正在删除</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>如果您收到阳性诊断</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>分享此应用给家人和朋友</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>以后要积极注册吗？</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>在过去 14 天内与阳性测试人员联系</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>为确保您周围的人的健康，请登录感染情况（匿名）</value>
