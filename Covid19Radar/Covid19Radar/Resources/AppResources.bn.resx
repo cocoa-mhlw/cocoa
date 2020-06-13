@@ -35,22 +35,6 @@
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>একটি অ্যাপ্লিকেশন সংস্থাপন করা হচ্ছে</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>ঘনিষ্ঠ পরিচিতির রেকর্ডিং</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>COVID-19 পজিটিভ ধরা পড়লে</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>এই অ্যাপটি ব্যবহার করার প্রয়োজনীয়তা</value>
-    <comment>How it works page step 4 title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>স্থিতি সেটিংস</value>
     <comment>User Status Page Title</comment>
