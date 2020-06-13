@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>مكتمل</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>معرف التشخيص المطلوب</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>يرجى تمكين إشعارات التعرض قبل تقديم التشخيص.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>تم تعطيل إشعارات التعرض</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تقديم التشخيص...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>التحقق من التشخيص...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>لا يمكن التحقق من تشخيصك في هذا الوقت ليتم إرساله.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>فشل التحقق</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>إرسال</value>

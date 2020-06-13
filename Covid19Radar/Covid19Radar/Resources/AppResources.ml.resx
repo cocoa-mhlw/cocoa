@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>പൂർത്തിയാക്കുക</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>രോഗനിർണ്ണയ ഐഡന്റിഫയർ ആവശ്യമാണ്</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നതിന് മുമ്പ് എക്സ്പോണറി അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>എക്സ്പോണറി അറിയിപ്പുകൾ പ്രവർത്തനരഹിതമാക്കി</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നത്...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>രോഗനിർണ്ണയം...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>സമർപ്പിക്കേണ്ട സമയത്ത് നിങ്ങളുടെ രോഗനിർണ്ണയം പരിശോധിച്ചുറപ്പിക്കാൻ കഴിയില്ല.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>സ്ഥിരീകരണം പരാജയപ്പെട്ടു</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>സമർപ്പിക്കുക</value>
