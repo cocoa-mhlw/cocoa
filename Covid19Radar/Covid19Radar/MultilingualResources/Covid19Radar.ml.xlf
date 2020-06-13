@@ -38,27 +38,6 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
-          <source>Installing an App</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ഒരു ആപ് ഇന് സ്റ്റോള് ചെയ്യുന്നു</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
-          <source>Recording close contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">അടുത്ത വിലാസം രേഖപ്പെടുത്തുന്നത്</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങൾക്ക് COVID-19 പോസിറ്റീവ് ആണെന്ന് രോഗനിർണ്ണയം ചെയ്താൽ</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
-          <source>Requirements to use this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ഈ ആപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നതിനുള്ള ആവശ്യകതകൾ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
-        </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">സ്റ്റാറ്റസ് സജ്ജീകരണങ്ങള്</target>

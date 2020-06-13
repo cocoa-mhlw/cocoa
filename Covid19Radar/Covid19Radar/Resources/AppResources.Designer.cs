@@ -259,42 +259,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Installing an App に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTitleTextStep1 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTitleTextStep1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recording close contact に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTitleTextStep2 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTitleTextStep2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   If you are diagnosed COVID-19 positive に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTitleTextStep3 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTitleTextStep3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Requirements to use this app に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTitleTextStep4 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTitleTextStep4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Please check your network connection. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogNetworkConnectionError {
