@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Επόμενο</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Όροι παροχής υπηρεσιών</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Δεν χρειάζεται να προσθέσετε προσωπικές πληροφορίες. Χρησιμοποιούμε μοναδικό αναγνωριστικό, το οποίο σας έχει εκχωρηθεί κατά την εγκατάσταση μιας εφαρμογής.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Μια επαφή με έναν άλλο χρήστη της εφαρμογής για περισσότερο από 30 λεπτά συνολικά, σε ακτίνα μικρότερη από 2 m κατά μέσο όρο καταγράφεται ως "Στενή επαφή".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Το Bluetooth πρέπει να ενεργοποιηθεί για την εγγραφή στενής επαφής. Παρακαλώ πηγαίνετε στην επόμενη σελίδα για να την ενεργοποιήσετε.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Έναρξη</target>
@@ -353,21 +333,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Θέλετε να εγγραφείτε θετικά αργότερα;</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Όταν εκτελείτε την εφαρμογή , θα δημιουργήσει και θα αποθηκεύσει ένα ανώνυμο αναγνωριστικό σε κάθε smartphone. Αυτή η εφαρμογή δεν αποκτά πληροφορίες σχετικά με το απόρρητο, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ενώ η εφαρμογή εκτελείται, το smartphone του άλλου θα καταγράφει ανώνυμα αναγνωριστικά του άλλου για τις τελευταίες δύο εβδομάδες. Οι εγγραφές που είναι παλαιότερες από 2 εβδομάδες θα διαγράφονται και κάθε ανώνυμο αναγνωριστικό θα αλλάζει περιοδικά για την προστασία της ιδιωτικής ζωής.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Άλλοι χρήστες παίρνουν τακτικά έναν κατάλογο ανώνυμων ταυτοτήτων των θετικών. Μετά την απόκτηση, η καρτέλα επικοινωνίας που έχει καταγραφεί στο smartphone θα αντιστοιχιστεί. Εάν το αποτέλεσμα του αγώνα είναι μια βαριά επαφή, θα ενημερώσουμε το smartphone σας και θα σας ενημερώσουμε για τις απαραίτητες ενέργειες με τις οποίες θα θέλατε να συνεργαστούμε.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

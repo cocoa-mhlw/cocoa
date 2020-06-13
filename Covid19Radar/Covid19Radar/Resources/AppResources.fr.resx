@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Suivant</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Conditions d'utilisation</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Inutile de saisir des renseignements personnels. Nous utilisons un Identifiant unique qui vous est attribué lors de l’installation d’une application.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Un contact avec un autre utilisateur de l'application pendant plus de 30 minutes au total, dans un rayon inférieur à 2m en moyenne est enregistré comme "Contact rapproché".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth doit être activé pour enregistrer un contact rapproché. S’il vous plaît aller à la page suivante pour l'activer.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Démarrer</value>
   </data>
@@ -273,18 +257,6 @@ Sélectionnez 'Toujours autoriser' pour configurer Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Souhaitez-vous vous inscrire positivement plus tard?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Lorsque vous exécutez l’application, elle générera et stockera un IDENTIFIANT anonyme sur chaque smartphone. Cette application n’acquiert aucune information relative à la protection de la vie privée, comme le numéro de téléphone et les renseignements de localisation.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Pendant que l’application est en cours d’exécution, le smartphone de l’autre enregistrera les ids anonymes de l’autre pour les deux dernières semaines. Les enregistrements de plus de 2 semaines seront supprimés et chaque ID anonyme sera modifié périodiquement pour protéger la vie privée.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>D’autres utilisateurs reçoivent régulièrement une liste d’ID anonymes de cartes positives. Après l’acquisition, l’enregistrement de contact enregistré sur le smartphone sera égalé. Si le résultat du match est un contact lourd, nous vous informerons de vos informations sur les actions nécessaires avec lesquelles vous souhaitez que nous coopérions.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Contact avec des testeurs positifs au cours des 14 derniers jours</value>

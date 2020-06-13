@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Volgende</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Servicevoorwaarden</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Het is niet nodig om persoonlijke informatie in te voeren. We gebruiken een unieke ID, welke wordt toegekend tijdens het installeren van een app.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Een contact met een andere app-gebruiker langer dan 30 minuten totaal en binnen een straal van gemiddeld 2 meter, wordt geregistreerd als "Nabij Contact".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth/blootstellingnotificaties moeten ingeschakeld zijn om nabij contact te registreren. Ga naar de volgende pagina om dit in te schakelen.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Starten</value>
   </data>
@@ -273,18 +257,6 @@ Selecteer 'Altijd toestaan' om Bluetooth in te stellen.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Wilt u zich later positief registreren?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Wanneer u de applicatie uitvoert, genereert en slaat deze een anonieme ID op elke smartphone. Deze applicatie verwerft geen informatie met betrekking tot privacy, zoals telefoonnummer en locatiegegevens.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Terwijl de applicatie wordt uitgevoerd, zal elkaars smartphone elkaars anonieme id's van de afgelopen twee weken opnemen. Records ouder dan 2 weken worden verwijderd en elke anonieme ID wordt periodiek gewijzigd om de privacy te beschermen.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Andere gebruikers krijgen regelmatig een lijst van anonieme id's van positieve. Na de overname wordt het contactrecord dat op de smartphone is opgenomen, gematcht. Als het resultaat van de wedstrijd een zwaar contact is, zullen we uw smartphone op de hoogte stellen en u op de hoogte brengen van de noodzakelijke acties waarmee u wilt dat we samenwerken.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Contact met positieve testers in de afgelopen 14 dagen</value>

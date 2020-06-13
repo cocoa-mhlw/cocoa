@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Weiter</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Vertragsbedingungen</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Keine Notwendigkeit, persönliche Informationen einzugeben. Wir verwenden eine eindeutige ID, die Ihnen bei der Installation einer App zugewiesen wurde.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Ein Kontakt mit einem anderen App-Nutzer für mehr als 30 min insgesamt, in einem Radius näher als 2m im Durchschnitt wird als "Close Contact" aufgezeichnet.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth muss aktiviert sein, um engen Kontakt aufzuzeichnen. Gehen Sie zur nächsten Seite, um sie einzuschalten.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Starten</value>
   </data>
@@ -273,18 +257,6 @@ Wählen Sie 'Immer zulassen', um Bluetooth einzurichten.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Möchten Sie sich später positiv registrieren?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Wenn Sie die Anwendung ausführen, wird auf jedem Smartphone eine anonyme ID generiert und gespeichert. Diese Anwendung erfasst keine Informationen zum Datenschutz wie Telefonnummer und Standortinformationen.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Während die Anwendung läuft, zeichnet das Smartphone des anderen die anonymen IDs der anderen in den letzten zwei Wochen auf. Datensätze, die älter als 2 Wochen sind, werden gelöscht und jede anonyme ID wird regelmäßig geändert, um die Privatsphäre zu schützen.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Andere Benutzer erhalten regelmäßig eine Liste anonymer IDs positiver IDs. Nach der Erfassung wird der auf dem Smartphone aufgezeichnete Kontaktdatensatz abgeglichen. Wenn das Ergebnis des Spiels ein starker Kontakt ist, werden wir Ihr Smartphone benachrichtigen und Sie über die notwendigen Maßnahmen informieren, mit denen Wir zusammenarbeiten möchten.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Kontakt mit positiven Testern in den letzten 14 Tagen</value>
