@@ -12,19 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>ఎలా పనిచేస్తుంది</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>తదుపరి</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>ప్రారంభం</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID-19 నుండి మా ప్రియమైన వారిని రక్షించే</value>
-  </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>పరికర ప్రాప్తి</value>
     <comment>Device access page title</comment>
