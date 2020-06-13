@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>เสร็จสมบูรณ์</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>ต้องการหมายเลขไอดี หรือตัวระบุผลการวินิจฉัย</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>โปรดเปิดใช้งาน ตัวแจ้งเตือนการเปิดเผยตัวตน ก่อนที่จะส่งการวินิจฉัย</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>ตัวแจ้งเตือนการเปิดเผยตัวตนถูกปิดการทำงาน</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>กําลังส่งการวินิจฉัย...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>กําลังตรวจสอบการวินิจฉัย...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>ไม่สามารถตรวจสอบผลการวินิจฉัยของคุณได้ตอนนี้</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>การตรวจสอบล้มเหลว</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>ส่ง</value>

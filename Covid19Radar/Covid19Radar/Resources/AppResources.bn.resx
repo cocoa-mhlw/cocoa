@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>সম্পন্ন হয়েছে</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>রোগ নির্ণয় শনাক্তকারী প্রয়োজন</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>একটি নির্ণয়ের জমা দেওয়ার আগে অনুগ্রহ করে এক্সপোজার বিজ্ঞপ্তিসমূহ সক্রিয় করুন ।</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>এক্সপোজার বিজ্ঞপ্তিসমূহ অক্ষম</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>নির্ণয়ের জমা দেওয়া হচ্ছে...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>নির্ণয়ের যাচাই করা হচ্ছে...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>আপনার নির্ণয়ের এই সময়ে যাচাই করা যাবে না জমা দিতে.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>যাচাইকরণ ব্যর্থ হয়েছে</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>জমা দিন</value>

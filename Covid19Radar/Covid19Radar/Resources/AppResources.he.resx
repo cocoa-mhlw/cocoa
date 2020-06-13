@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>השלם</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>נדרש מזהה אבחון</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>אנא הפעל הודעות חשיפה לפני הגשת האבחון.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>הודעות חשיפה לא זמינות</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>הגשת אבחון...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>מוודא אבחון...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>לא ניתן לאמת את האבחנה שלך בשלב זה לשליחה.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>האימות נכשל</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>שלח</value>
