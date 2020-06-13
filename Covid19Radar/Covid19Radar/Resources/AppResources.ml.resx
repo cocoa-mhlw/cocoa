@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>എങ്ങനെ പ്രവർത്തിക്കുന്നു</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>അടുത്തത്</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>ആരംഭിക്കുക</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID-19 നിന്ന് ഞങ്ങളുടെ പ്രിയപ്പെട്ടവരെ സംരക്ഷിക്കുക</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>ഉപകരണ ആക്സസ്</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>അംഗീകരിക്കുക</value>
   </data>
@@ -99,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ഇപ്പോൾ നോട്ടൗട്ട്</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>നിങ്ങൾ മറ്റൊരു സമ്പർക്ക ട്രേസ് ആപ്ലിക്കേഷൻ ഉപയോക്താവിനു് സമീപമുണ്ടെങ്കിൽ നിർണ്ണയിക്കുന്നതിന് എക്സ്പോണറി അറിയിപ്പ്/ബ്ലൂടൂത്ത് സിഗ്നലുകളാണ് ഈ ആപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നത്. 
-ബ്ലൂടൂത്ത് സജ്ജീകരിക്കാൻ ' എല്ലായ്പ്പോഴും അനുവദിക്കുക ' തിരഞ്ഞെടുക്കുക.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>എക്സ്പോണറി അറിയിപ്പ്/ബ്ലൂടൂത്ത് അനുവദിക്കുക</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
@@ -187,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>ക്രമീകരണം</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>സമ്മതിച്ചില്ല</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>റദ്ദാക്കുക</value>

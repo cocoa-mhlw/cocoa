@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Paano ito gumagana</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Susunod</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Simula</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Pagprotekta sa ating mga mahal sa buhay mula sa COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Access ng aparato</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Sumasang-ayon</value>
   </data>
@@ -99,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Sa ngayon</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Ang app na ito ay gumagamit ng pagkakalantad notification/Bluetooth signal para malaman kung malapit ka sa ibang kontak na app na user. 
-Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Payagan ang pagkakalantad notification/Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposure</value>
@@ -187,9 +161,6 @@ Piliin ang ' laging payagan ' upang i-set up ang Bluetooth.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Mga Setting</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Hindi sumasang-ayon</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselahin</value>
