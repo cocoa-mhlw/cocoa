@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Nó hoạt động thế nào</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Tiếp theo</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Bắt đầu</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Bảo vệ những người thân yêu của chúng tôi tránh xa COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Truy cập thiết bị</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Đồng ý</value>
   </data>
@@ -99,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Không phải bây giờ</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Ứng dụng này sử dụng thông báo tiếp xúc gần / tín hiệu Bluetooth để xác định xem bạn đang tiếp xúc gần với người dùng ứng dụng tương ứng. 
-Chọn 'Always Allow' để thiết lập Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Cho phép thông báo tiếp xúc / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Tiếp xúc</value>
@@ -187,9 +161,6 @@ Chọn 'Always Allow' để thiết lập Bluetooth.</value>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Cài đặt</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Không đồng ý</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Hủy bỏ</value>

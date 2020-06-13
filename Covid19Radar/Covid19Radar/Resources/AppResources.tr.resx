@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Nasıl çalışır?</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>İleri</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Başlat</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Sevdiklerimizi COVID-19'dan korumak için</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Cihaz Erişimi</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Kabul Et</value>
   </data>
@@ -99,14 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Bu uygulama, başka bir kişi izleme uygulaması kullanıcısının yakınında olup olmadığınızı belirlemek için Pozlama Bildirimi / Bluetooth sinyallerini kullanır. Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Pozlama Bildirimine İzin Ver / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Pozlama</value>
@@ -186,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ayarlar</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Kabul Edilmedi</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>İptal</value>
