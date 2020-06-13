@@ -880,24 +880,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please enable Exposure Notifications before submitting a diagnosis. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogENDisabledText {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogENDisabledText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Exposure Notifications Disabled に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogENDisabledTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogENDisabledTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Please try again later. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDialogExceptionText {
@@ -1110,42 +1092,6 @@ namespace Covid19Radar.Resources {
         internal static string SettingsPageTitle {
             get {
                 return ResourceManager.GetString("SettingsPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Diagnosis Identifier Required に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageDiagUidIsEmptyTitle {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageDiagUidIsEmptyTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Verifying Diagnosis... に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageVerifyDialog {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageVerifyDialog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Your diagnosis cannot be verified at this time to be submitted. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageVerifyFailedDialogText {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageVerifyFailedDialogText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Verification Failed に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageVerifyFailedDialogTitle {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageVerifyFailedDialogTitle", resourceCulture);
             }
         }
         
