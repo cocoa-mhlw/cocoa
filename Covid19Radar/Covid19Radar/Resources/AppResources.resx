@@ -795,4 +795,10 @@
     <value>Possible COVID-19 Exposure</value>
     <comment>Possible COVID-19 Exposure</comment>
   </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>If you want to disable it, you can change it from the app settings</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>Notifications enabled</value>
+  </data>
 </root>
