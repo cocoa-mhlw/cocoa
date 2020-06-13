@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>पूर्ण करें</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>निदान पहचानकर्ता आवश्यक</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>निदान सबमिट करने से पहले एक्सपोजर नोटिफिकेशन को सक्षम करें।</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>एक्सपोजर नोटिफिकेशन अक्षम</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>निदान प्रस्तुत कर रहा है ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>निदान की पुष्टि...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>सबमिट किए जाने वाले इस समय आपके निदान को सत्यापित नहीं किया जा सकता है।</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>सत्यापन विफल हुआ</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>सबमिट करें</value>

@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>完成</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>需要診斷識別碼</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>請在提交診斷之前啟用曝光通知（Exposure Notifications）。</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>已關閉曝光通知</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>提交診斷...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>驗證診斷...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>此時無法驗證您的診斷結果。</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>驗證失敗</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>提交</value>

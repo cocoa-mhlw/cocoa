@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>પૂર્ણ</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>નિદાન ઓળખનાર જરૂરી</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>નિદાન રજૂ કરતા પહેલા એક્સપોઝર સૂચનાઓ ને સક્રિય કરો.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>એક્સપોઝર સૂચનાઓ નિષ્ક્રિય</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>નિદાન રજૂ કરી રહ્યા છીએ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>નિદાનની ચકાસણી કરી રહ્યા છીએ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>તમારું નિદાન આ સમયે જમા કરાવવા માટે ચકાસી શકાતું નથી.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>વેરીફિકેશન નિષ્ફળ</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>સબમિટ કરો</value>

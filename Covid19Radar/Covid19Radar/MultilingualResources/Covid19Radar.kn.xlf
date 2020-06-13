@@ -98,33 +98,9 @@
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ಪೂರ್ಣಗೊಳಿಸು</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
-          <source>Diagnosis Identifier Required</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ರೋಗನಿರ್ಣಯ ಗುರುತುಪಟ್ಟಿ ಅಗತ್ಯ</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
-          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಒಂದು ರೋಗನಿರ್ಣಯವನ್ನು ಸಲ್ಲಿಸುವ ಮೊದಲು ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಅಧಿಸೂಚನೆಗಳನ್ನು ದಯವಿಟ್ಟು ಸಕ್ರಿಯಗೊಳಿಸಿ.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notifications Disabled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಬಹಿರ್ಮುಖತೆ ಅಧಿಸೂಚನೆಗಳು ಅಶಕ್ತcomment</target>
-        </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
-          <source>Verifying Diagnosis...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಪರಿಶೀಲನಾನಿರ್ಣಯ...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
-          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸಲ್ಲಿಸಲು ಈ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ರೋಗನಿರ್ಣಯವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
-          <source>Verification Failed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಪರಿಶೀಲನೆ ವಿಫಲಗೊಂಡಿದೆ</target>
         </trans-unit>
         <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
           <source>Submit</source>

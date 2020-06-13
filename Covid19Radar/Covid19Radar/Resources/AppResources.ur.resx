@@ -81,26 +81,8 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>مکمل</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>تشخیص شناخت کار مطلوب</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>تشخیص جمع کرنے سے قبل براہ کرم نمائش کی اطلاعات کو فعال کریں ۔</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>نمائش اطلاعات غیر فعال</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تشخیص جمع کر رہا ہے...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>تشخیص کی توثیق کررہا ہے...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>اس وقت پیش کرنے کے لیے آپ کی تشخیص کی توثیق نہیں کی جا سکتی ۔</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>توثیق ناکام ہوگئی ہے</value>
   </data>
   <data name="ButtonPositiveSubmit" xml:space="preserve">
     <value>‏‏جمع کریں</value>
