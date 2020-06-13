@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Lähetetään diagnoosia...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Lähetä</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Asetukset</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Peruuta</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Haluatko ottaa ilmoitukset käyttöön?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Mahdollistaa</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Poistaminen</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Jos sait positiivisen diagnoosin</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Sovelluksen jakaminen</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Haluatko rekisteröityä positiivisesti myöhemmin?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kosketus positiivisiin testaajiin viimeisten 14 päivän aikana</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jos olet positiivinen uuden Corona, tee yhteistyötä positiivinen rekisteröinti suojella ihmisiä ympärilläsi.</value>

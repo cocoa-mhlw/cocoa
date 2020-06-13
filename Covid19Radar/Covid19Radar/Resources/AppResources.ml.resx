@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>രോഗനിർണ്ണയം സമർപ്പിക്കുന്നത്...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>സമർപ്പിക്കുക</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>ക്രമീകരണം</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>റദ്ദാക്കുക</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>നിങ്ങള് ക്ക് നോട്ടിഫിക്കേഷന് തിരിയ്ക്കണോ?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>പ്രാപ്തമായ</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>ഇല്ലാതാക്കുന്നു</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>നിങ്ങൾക്ക് അനുകൂലമായ രോഗനിർണ്ണയം ലഭിച്ചിട്ടുണ്ടെങ്കിൽ</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ആപ്പ് പങ്കിടുക</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>പിന്നീട് പോസിറ്റീവായി രജിസ്റ്റർ ചെയ്യാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നു?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>കഴിഞ്ഞ 14 ദിവസത്തിനുള്ളിൽ പോസിറ്റീവ് ടെസ്റ്റേഴ്സ് ആയി ബന്ധപ്പെടുക</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>പുതിയ കൊറോണ നിങ്ങൾക്ക് പോസിറ്റീവാണെങ്കിൽ, ചുറ്റുമുള്ള ആളുകളെ പരിരക്ഷിക്കുന്നതിന് പോസിറ്റീവ് രജിസ്ട്രേഷനുമായി സഹകരിക്കുക.</value>

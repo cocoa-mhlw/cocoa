@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تشخیص جمع کر رہا ہے...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>‏‏جمع کریں</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>سیٹنگیں</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>منسوخ کریں</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>کیا آپ نوٹیفکیشنز کو آن کرنا چاہتے ہیں ؟</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>کو چالو کرنے</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>حذف کر رہا ہے</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ایپ کا اشتراک کریں</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>کیا آپ بعد میں مثبت طور پر رجسٹر کرنا چاہیں گے ؟</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>آخری 14 دنوں میں مثبت ٹیسٹرز کے ساتھ رابطہ کریں</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>اگر آپ نئے تاج کے ساتھ مثبت ہیں ، تو براہ کرم آپ کے ارد گرد لوگوں کی حفاظت کے لئے مثبت رجسٹریشن کے ساتھ تعاون کریں.</value>

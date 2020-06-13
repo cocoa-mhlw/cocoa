@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Представление диагноза...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Отправить</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Параметры</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Вы хотите включить уведомления?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Включение</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Удаление</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Если вы получили положительный диагноз</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Поделиться приложением</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Хотите зарегистрироваться позже?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Контакт с положительными тестерами за последние 14 дней</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Если вы уверены в новом Corona, пожалуйста, сотрудничайте с положительной регистрации, чтобы защитить людей вокруг вас.</value>

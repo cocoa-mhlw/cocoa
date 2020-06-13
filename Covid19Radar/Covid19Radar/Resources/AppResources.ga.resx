@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnóis a chur isteach...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Cuir isteach</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Socruithe</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cealaigh</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>An bhfuil fonn ort fógraí a chasadh air?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Cumasú</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Ag scriosadh</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Má fuair tú diagnóis dhearfach</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Comhroinn an Feidhmchlár</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ar mhaith leat clárú go dearfach níos déanaí?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Teagmháil le tástálaithe dearfacha le 14 lá anuas</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Má tá tú dearfach leis an gCorona nua, le do thoil comhoibriú leis an gclárú dearfach chun na daoine timpeall ort a chosaint.</value>

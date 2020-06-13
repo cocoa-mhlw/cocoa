@@ -142,15 +142,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Submit に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonPositiveSubmit {
-            get {
-                return ResourceManager.GetString("ButtonPositiveSubmit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Stop に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonReset {
@@ -619,29 +610,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact with positive testers in the last 14 days に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HomePageHeader1Title {
-            get {
-                return ResourceManager.GetString("HomePageHeader1Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Help protect your family and friends by anonymously registering test results. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader2Description {
             get {
                 return ResourceManager.GetString("HomePageHeader2Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   If you received a positive diagnosis に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HomePageHeader2Title {
-            get {
-                return ResourceManager.GetString("HomePageHeader2Title", resourceCulture);
             }
         }
         
@@ -682,15 +655,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Do you want to turn on notifications? に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InitSettingPageDialogExposureNotificationTitle {
-            get {
-                return ResourceManager.GetString("InitSettingPageDialogExposureNotificationTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   9:00-17:30 (except weekends and holidays) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription1 {
@@ -723,15 +687,6 @@ namespace Covid19Radar.Resources {
         internal static string LoadingTextDeleting {
             get {
                 return ResourceManager.GetString("LoadingTextDeleting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Enabling に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string LoadingTextEnabling {
-            get {
-                return ResourceManager.GetString("LoadingTextEnabling", resourceCulture);
             }
         }
         

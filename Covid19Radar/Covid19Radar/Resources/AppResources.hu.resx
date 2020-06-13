@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>A diagnózis benyújtása...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Küldés</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Beállítások</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Mégse</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Bekapcsolja az értesítéseket?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>engedélyezése</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Törlés folyamatban</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ha pozitív diagnózist kapott</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Az alkalmazás megosztása</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Szeretne később pozitívan regisztrálni?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Érintkezés pozitív tesztelőkkel az elmúlt 14 napban</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ha pozitív az új Corona, kérjük, működjön együtt a pozitív regisztráció, hogy megvédje az emberek körülötted.</value>

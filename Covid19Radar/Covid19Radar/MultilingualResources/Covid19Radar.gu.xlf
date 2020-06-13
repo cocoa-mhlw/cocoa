@@ -102,10 +102,6 @@
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">નિદાન રજૂ કરી રહ્યા છીએ...</target>
         </trans-unit>
-        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
-          <source>Submit</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">સબમિટ કરો</target>
-        </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">સેટિંગ્સ</target>
@@ -116,22 +112,9 @@
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">રદ કરો</target>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
-          <source>Do you want to turn on notifications?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">શું તમે સૂચનાઓ ચાલુ કરવા માંગો છો?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
-        </trans-unit>
-        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
-          <source>Enabling</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">સક્રિય કરી રહ્યા છીએ</target>
-        </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">હટાવાઈ રહ્યું છે</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">જો તમને હકારાત્મક નિદાન થયું હોય</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -201,10 +184,6 @@
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">શું તમે પછીથી હકારાત્મક નોંધણી કરવા માંગો છો?</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
-          <source>Contact with positive testers in the last 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">છેલ્લા 14 દિવસમાં પોઝિટિવ ટેસ્ટર્સ સાથે સંપર્ક</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>

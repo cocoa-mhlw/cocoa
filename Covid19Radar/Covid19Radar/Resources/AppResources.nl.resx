@@ -84,9 +84,6 @@
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnose indienen...</value>
   </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Verzenden</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Instellingen</value>
     <comment>アプリの設定</comment>
@@ -94,18 +91,8 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Annuleren</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Wilt u meldingen inschakelen?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>inschakelen</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Verwijderen</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Als u een positieve diagnose kreeg</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>De app delen</value>
@@ -157,9 +144,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Wilt u zich later positief registreren?</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Contact met positieve testers in de afgelopen 14 dagen</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Als u positief bent met de nieuwe Corona, u samenwerken met de positieve registratie om de mensen om je heen te beschermen.</value>
