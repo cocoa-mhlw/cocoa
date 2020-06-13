@@ -12,23 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>यह कैसे काम करता है</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>अगला</value>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>प्रारंभ करें</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID-19 से हमारे प्रियजनों की रक्षा</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>डिवाइस एक्सेस</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>सहमत हूँ</value>
   </data>
@@ -99,15 +82,6 @@
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>नॉटअब</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>यह ऐप एक्सपोजर नोटिफिकेशन/ब्लूटूथ सिग्नल ्स का इस्तेमाल करता है ताकि यह तय किया जा सके कि आप किसी अन्य कॉन्टैक्ट ट्रेसिंग ऐप यूजर के पास हैं या नहीं । 
-ब्लूटूथ सेट अप करने के लिए 'हमेशा अनुमति दें' का चयन करें।</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>एक्सपोजर नोटिफिकेशन/ब्लूटूथ की अनुमति दें</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>जोखिम</value>
@@ -187,9 +161,6 @@
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>सेटिंग्स</value>
     <comment>アプリの設定</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>सहमत नहीं</value>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>रद्द करें</value>
