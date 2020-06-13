@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="translated">Volgende</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="translated">Diensbepalings</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="translated">Geen behoefte om persoonlike inligting in te voer nie. Ons gebruik unieke ID wat aan jou toegeken is wanneer jy 'n program installeer.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="translated">'n kontak met 'n ander prgram gebruiker vir langer as 30 min in totaal, binne 'n radius nader as 2m gemiddeld is aangeteken as "Noue Kontak".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="translated">Bluetooth/Kennisgewing van blootstelling moet aangeskakel word om noue kontak aan te teken. Gaan asseblief na die volgende bladsy om dit aan te skakel.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="translated">Begin</target>
@@ -352,21 +332,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wil jy later positief registreer?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wanneer jy die toepassing uitvoer, sal dit 'n anonieme ID op elke slimfoon genereer en stoor. Hierdie toepassing verkry nie enige inligting wat verband hou met privaatheid soos foonnommer en liggingsinligting nie.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Terwyl die aansoek loop, sal mekaar se slimfoon mekaar se anonieme ID's vir die afgelope twee weke opneem. Rekords ouer as 2 weke sal verwyder word en elke anonieme ID sal periodiek verander word om privaatheid te beskerm.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ander gebruikers kry gereeld 'n lys van anonieme ID's van positiewe kinders. Na afloop van die verkryging sal die kontadrekord wat op die slimfoon aangeteken is, ooreenstem. As die resultaat van die wedstryd is 'n swaar kontak, sal ons u slimfoon in kennis stel en u inlig oor die nodige aksies wat u wil hê ons moet saamwerk.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

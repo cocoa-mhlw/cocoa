@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>Siguiente</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Condiciones del servicio</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>No es necesario introducir información personal. Estamos usando un identificador único, asignado a usted al instalar una aplicación.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Un contacto con otro usuario de la aplicación durante más de 30 minutos en total, dentro de un radio inferior a 2m en promedio se registra como "Contacto cercano".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>La notificación Bluetooth debe estar activada para registrar el contacto cercano. Por favor, vaya a la página siguiente para activarla.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Inicio</value>
   </data>
@@ -273,18 +257,6 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>¿Desea registrarse positivamente más tarde?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Al ejecutar la aplicación, generará y almacenará un ID anónimo en cada smartphone. Esta aplicación no adquiere ninguna información relacionada con la privacidad, como el número de teléfono y la información de ubicación.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Mientras la aplicación se está ejecutando, el teléfono inteligente del otro registrará los ID anónimos del otro durante las últimas dos semanas. Los registros de más de 2 semanas se eliminarán y cada ID anónimo se cambiará periódicamente para proteger la privacidad.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Otros usuarios obtienen regularmente una lista de ID anónimos de los positivos. Después de la adquisición, el registro de contacto grabado en el teléfono inteligente será igualado. Si el resultado del partido es un contacto pesado, le notificaremos a su smartphone y le informaremos de las acciones necesarias con las que desea que cooperemos.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Contacto con probadores positivos en los últimos 14 días</value>

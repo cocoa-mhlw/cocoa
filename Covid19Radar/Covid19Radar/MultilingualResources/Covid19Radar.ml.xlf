@@ -15,26 +15,6 @@
           <source>Next</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">അടുത്തത്</target>
         </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">സേവന നിബന്ധനകൾ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">വ്യക്തിഗത വിവരങ്ങൾ ഇൻപുട്ട് ചെയ്യേണ്ട ആവശ്യമില്ല. ഒരു ആപ്ലിക്കേഷൻ ഇൻസ്റ്റാൾ ചെയ്യുമ്പോൾ നിങ്ങളെ നിയോഗിച്ചുകൊണ്ടുള്ള യുണീക്ക് ഐഡി ഞങ്ങൾ ഉപയോഗിക്കുന്നുണ്ട്.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ശരാശരി 30 മിനിറ്റ് ദൈർഘ്യമുള്ളതിനേക്കാൾ, മറ്റൊരു ആപ്ലിക്കേഷൻ ഉപയോക്താവുമായി ഒരു സമ്പർക്കം ശരാശരിയിൽ 2m-നേക്കാൾ കൂടുതൽ ചുറ്റളവിലുള്ള, "അടുത്ത സമ്പർക്കം" എന്ന് രേഖപ്പെടുത്തപ്പെടും.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">അടുത്ത സമ്പർക്കം രേഖപ്പെടുത്താൻ ബ്ലൂടൂത്ത് ഓണായി ചെയ്യേണ്ടതുണ്ട്. ഓണാക്കുക അടുത്ത പേജിലേക്ക് പോകുക.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ആരംഭിക്കുക</target>
@@ -353,21 +333,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">പിന്നീട് പോസിറ്റീവായി രജിസ്റ്റർ ചെയ്യാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നു?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങൾ ആപ്ലിക്കേഷൻ പ്രവർത്തിപ്പിക്കുമ്പോൾ, ഓരോ സ്മാർട്ട് ഫോണിലും ഒരു അജ്ഞാത ഐഡി ജനറേറ്റ് ചെയ്യുകയും സംഭരിക്കുകയും ചെയ്യും. ഫോൺ നമ്പർ, ലൊക്കേഷൻ വിവരങ്ങൾ എന്നിങ്ങനെയുള്ള സ്വകാര്യതയുമായി ബന്ധപ്പെട്ട വിവരങ്ങളൊന്നും ഈ അപേക്ഷയിൽ നേടിയില്ല.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ആപ്ലിക്കേഷൻ പ്രവർത്തിപ്പിക്കുമ്പോൾ ഓരോരുത്തരുടെയും സ്മാർട്ട് ഫോൺ കഴിഞ്ഞ രണ്ടാഴ്ചയായി ഓരോരുത്തരുടെയും അജ്ഞാത ഐഡികൾ രേഖപ്പെടുത്തും. 2 ആഴ്ചയിൽ കൂടുതൽ പ്രായമുള്ള രേഖകൾ ഇല്ലാതാക്കപ്പെടും, സ്വകാര്യത പരിരക്ഷിക്കുന്നതിന് ഓരോ അജ്ഞാത ID മാറ്റുകയും ചെയ്യും.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">മറ്റു ഉപയോക്താക്കൾക്കും പതിവായി പോസിറ്റീവ് ഉള്ള അജ്ഞാത ഐഡികളുടെ പട്ടിക ലഭിക്കുന്നു. ഏറ്റെടുക്കലിന് ശേഷം സ്മാര് ട്ട് ഫോണില് രേഖപ്പെടുത്തിയ കോണ്ടാക്ട് റെക്കോഡ് ഒത്തുചേരും. മത്സരത്തിന്റെ ഫലം കനത്ത സമ്പർക്കമാണെങ്കിൽ, ഞങ്ങൾ നിങ്ങളുടെ സ്മാർട്ട് ഫോണിനെ അറിയിക്കും, ഞങ്ങൾ സഹകരിക്കണമെന്ന് നിങ്ങൾ ആഗ്രഹിക്കുന്നു എന്ന് ആവശ്യമായ പ്രവൃത്തികൾ നിങ്ങളെ അറിയിക്കുകയും ചെയ്യും.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
         </trans-unit>
         <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
           <source>Contact with positive testers in the last 14 days</source>

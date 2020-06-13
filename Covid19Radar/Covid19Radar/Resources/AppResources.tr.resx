@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>İleri</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Hizmet Koşulları</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Kişisel bilgilerinizi girmenize gerek bulunmamaktadır. Bir uygulamayı yüklerken size tahsis edilmiş özel bir numara kullanıyoruz.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Başka bir uygulama kullanıcısıyla ortalama 2 m'den daha yakın ve toplamda 30 dakikadan daha uzun bir süre birarada bulunmak "Yakın Temas" olarak kaydedilir.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Yakın temasları kaydetmek için Bluetooth'unuzun açık durumda olması gerekir. Açmak için lütfen bir sonraki sayfaya ilerleyin.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Başlat</value>
   </data>
@@ -272,18 +256,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Daha sonra olumlu kayıt yaptırmak ister misiniz?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Uygulamayı çalıştırdığınızda, her akıllı telefonda anonim bir kimlik oluşturur ve saklar. Bu uygulama, telefon numarası ve konum bilgileri gibi gizlilikle ilgili herhangi bir bilgi edinmez.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Uygulama çalışırken, birbirlerinin akıllı telefonu son iki hafta boyunca birbirlerinin anonim kimliklerini kaydedecek. 2 haftadan eski kayıtlar silinir ve gizliliği korumak için her anonim kimlik düzenli aralıklarla değiştirilir.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Diğer kullanıcılar düzenli olarak olumlu olanların anonim kimliklerinin bir listesini alırsınız. Satın alındıktan sonra akıllı telefona kaydedilen iletişim kaydı eşleşecektir. Maçın sonucu yoğun bir temas sayılsa, akıllı telefonunuzu bilgilendirecek ve işbirliği yapmamızı istediğiniz gerekli eylemleri size bildireceğiz.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>Son 14 gün içinde pozitif test ile temas</value>

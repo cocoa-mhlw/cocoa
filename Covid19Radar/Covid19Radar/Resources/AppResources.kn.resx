@@ -19,22 +19,6 @@
   <data name="ButtonNext" xml:space="preserve">
     <value>ಮುಂದಿನ</value>
   </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>ಸೇವಾ ನಿಯಮಗಳು</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಇನ್ ಪುಟ್ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲ. ಆ್ಯಪ್ ಇನ್ ಸ್ಟಾಲ್ ಮಾಡುವಾಗ ನಿಮಗೆ ವಿತರಿಸುವ, ವಿಶಿಷ್ಟವಾದ ಐಡಿ ಬಳಸುತ್ತಿದ್ದೇವೆ.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>ಒಟ್ಟಾರೆ, ಸರಾಸರಿ 2ಮೀ ಗಿಂತ ಹತ್ತಿರದ ತ್ರಿಜ್ಯದೊಳಗೆ, ಒಟ್ಟು 30 min ಹೆಚ್ಚು ಕಾಲ ಮತ್ತೊಂದು ಆಪ್ ಬಳಕೆದಾರನೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು "ನಿಕಟ ಸಂಪರ್ಕ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>ನಿಕಟ ಸಂಪರ್ಕವನ್ನು ದಾಖಲಿಸಲು ಬ್ಲೂಟೂತ್ ಅನ್ನು ಆನ್ ಮಾಡಬೇಕಿದೆ. ಅದನ್ನು ತಿರುಗಿಸಲು ದಯವಿಟ್ಟು ಮುಂದಿನ ಪುಟಕ್ಕೆ ಹೋಗಿ.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>ಪ್ರಾರಂಭ</value>
   </data>
@@ -273,18 +257,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>ನೀವು ಮುಂದೆ ಸಕಾರಾತ್ಮಕವಾಗಿ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಲು ಇಷ್ಟಪಡುತ್ತೀರಾ?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ನೀವು ಓಡಿಸಿದಾಗ ಅದು ಪ್ರತಿ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ನಲ್ಲಿ ಅನಾಮಿಕ ಐಡಿಯನ್ನು ಉತ್ಪಾದಿಸಿ ಸ್ಟೋರ್ ಮಾಡುತ್ತದೆ. ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಮತ್ತು ಸ್ಥಳದ ಮಾಹಿತಿಯನ್ನಷ್ಟೇ ಗೌಪ್ಯತೆಗೆ ಸಂಬಂಧಿಸಿದ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ಈ ಅಪ್ಲಿಕೇಶನ್ ಪಡೆದುಕೊಳ್ಳುವುದಿಲ್ಲ.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>ಅಪ್ಲಿಕೇಶನ್ ಓಡುತ್ತಿರುವಾಗಲೇ ಪರಸ್ಪರರ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಕಳೆದ ಎರಡು ವಾರಗಳಿಂದ ಪರಸ್ಪರರ ಅನಾಮಧೇಯ ಐಡಿಗಳನ್ನು ರೆಕಾರ್ಡ್ ಮಾಡುತ್ತದೆ. 2 ವಾರಗಳಿಗಿಂತಲೂ ಹಳೆಯದಾದ ದಾಖಲೆಗಳನ್ನು ಡಿಲೀಟ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಗೌಪ್ಯತೆಯನ್ನು ರಕ್ಷಿಸಲು ಪ್ರತಿ ಅನಾಮಧೇಯ ಐಡಿಯನ್ನು ಕಾಲಕಾಲಕ್ಕೆ ಬದಲಾಯಿಸಲಾಗುವುದು.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>ಇತರ ಬಳಕೆದಾರರು ನಿಯಮಿತವಾಗಿ ಧನಾತ್ಮಕ ಪಾತ್ರಗಳಿಂದ ಅನಾಮಿಕ ಐಡಿಗಳನ್ನು ಪಟ್ಟಿ ಪಡೆಯುತ್ತಾರೆ. ಸ್ವಾಧೀನದ ನಂತರ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ನಲ್ಲಿ ರೆಕಾರ್ಡ್ ಆಗಿರುವ ಕಾಂಟ್ಯಾಕ್ಟ್ ರೆಕಾರ್ಡ್ ಮ್ಯಾಚ್ ಆಗುತ್ತದೆ. ಒಂದು ವೇಳೆ ಪಂದ್ಯದ ಫಲಿತಾಂಶವು ಭಾರಿ ಸಂಪರ್ಕವಾದರೆ, ನಾವು ನಿಮ್ಮ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಗೆ ಸೂಚಿಸುತ್ತೇವೆ ಮತ್ತು ನಿಮಗೆ ನಾವು ಸಹಕರಿಸಬೇಕಾದ ಅಗತ್ಯ ಕ್ರಮಗಳ ಬಗ್ಗೆ ಮಾಹಿತಿ ನೀಡುತ್ತೇವೆ.</value>
-    <comment>How it works page step 3 description</comment>
   </data>
   <data name="HomePageHeader1Title" xml:space="preserve">
     <value>ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ಧನಾತ್ಮಕ ಟೀಕಾಕಾರರೊಂದಿಗೆ ಸಂಪರ್ಕ</value>
