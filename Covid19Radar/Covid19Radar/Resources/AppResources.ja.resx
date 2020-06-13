@@ -23,24 +23,9 @@
     <value>新型コロナウィルス接触確認アプリ</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>更新情報</value>
-    <comment>Update Information Menu</comment>
-  </data>
   <data name="ButtonHome" xml:space="preserve">
     <value>ホームへ</value>
     <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>準備ができました</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>設定完了</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>貢献者リスト</value>
-    <comment>Contributors list page title</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ライセンス</value>
@@ -692,5 +677,8 @@
   </data>
   <data name="LocalNotificationPermittedDescription" xml:space="preserve">
     <value>通知を無効にしたい場合は、アプリの設定から変更できます</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>通知を有効にしました</value>
   </data>
 </root>

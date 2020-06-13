@@ -808,6 +808,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   If you want to disable it, you can change it from the app settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationPermittedDescription {
+            get {
+                return ResourceManager.GetString("LocalNotificationPermittedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Notifications enabled に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationPermittedTitle {
+            get {
+                return ResourceManager.GetString("LocalNotificationPermittedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Possible COVID-19 Exposure に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LocalNotificationTitle {
@@ -1150,15 +1168,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   You&apos;re ready to go に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SetupCompletedPageTextYoureReadyToGo {
-            get {
-                return ResourceManager.GetString("SetupCompletedPageTextYoureReadyToGo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   The test date helps the app know when you may have been contagious and notify the right people of potential exposure. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SharePositiveDiagDateText {
@@ -1348,38 +1357,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contributors List に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleContributorsPage {
-            get {
-                return ResourceManager.GetString("TitleContributorsPage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   License に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleLicenseAgreement {
             get {
                 return ResourceManager.GetString("TitleLicenseAgreement", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Set up Completed に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleSetupCompleted {
-            get {
-                return ResourceManager.GetString("TitleSetupCompleted", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Update Information に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleUpdateInformation {
-            get {
-                return ResourceManager.GetString("TitleUpdateInformation", resourceCulture);
             }
         }
         
