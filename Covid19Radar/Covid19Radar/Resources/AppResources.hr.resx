@@ -69,15 +69,6 @@
     <value>Bit ćete obaviješteni ako ste bili izloženi nekome tko je prijavio pozitivan rezultat COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Datum testiranja pomaže aplikaciji da zna kada ste možda bili zarazni i obavijestite prave ljude o potencijalnoj izloženosti.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Samo oni koji su bili izloženi primit će obavijest.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Jedinstveni identifikator ispitivanja koji ste dobili uz covid-19 test mora se koristiti za provjeru pozitivnog rezultata testa.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Pokušajte ponovno poslije.</value>
   </data>
@@ -89,9 +80,6 @@
   </data>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Dovršeno</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Navedite identifikator dijagnoze</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Potreban identifikator dijagnoze</value>
