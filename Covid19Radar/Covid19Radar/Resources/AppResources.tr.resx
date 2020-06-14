@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Nasıl çalışır?</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>İleri</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Hizmet Koşulları</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Kişisel bilgilerinizi girmenize gerek bulunmamaktadır. Bir uygulamayı yüklerken size tahsis edilmiş özel bir numara kullanıyoruz.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Başka bir uygulama kullanıcısıyla ortalama 2 m'den daha yakın ve toplamda 30 dakikadan daha uzun bir süre birarada bulunmak "Yakın Temas" olarak kaydedilir.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Yakın temasları kaydetmek için Bluetooth'unuzun açık durumda olması gerekir. Açmak için lütfen bir sonraki sayfaya ilerleyin.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Başlat</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Sevdiklerimizi COVID-19'dan korumak için</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Cihaz Erişimi</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Kabul Et</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Bilgileri Güncelle</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ANA SAYFA</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Başlamaya hazırsın</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Kurulum Tamamlandı</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Katkıda Bulunanlar</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisans Sözleşmesi</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Uygulama Yükleme</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Yakın Temas Kaydediliyor</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Size COVID-19 pozitif tanısı konulursa</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Uygulama gereksinimleri</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Durum Ayarları</value>
@@ -110,19 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Tamam</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Etkinleştir</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Bu uygulama, başka bir kişi izleme uygulaması kullanıcısının yakınında olup olmadığınızı belirlemek için Pozlama Bildirimi / Bluetooth sinyallerini kullanır. Bluetooth'u ayarlamak için 'Her Zaman İzin Ver'i seçin.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Pozlama Bildirimine İzin Ver / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Pozlama</value>
@@ -144,22 +65,6 @@
     <value>Olumlu bir COVID-19 sonucu bildiren birine maruz kaldıysanız size bildirilir.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Lütfen Tanı Tanımlayıcısını girin</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Olumlu Tanıyı Paylaşın</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Test tarihi, uygulamanın ne zaman bulaşıcı olabileceğinibilmenize ve doğru kişileri potansiyel maruz kalma hakkında bilgilendirmesine yardımcı olur.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Yalnızca maruz kalanlara bir bildirim gönderilir.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>COVID-19 testinizle birlikte gelen benzersiz test tanımlayıcısı pozitif test sonucunuzu doğrulamak için kullanılmalıdır.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Lütfen daha sonra yeniden deneyin.</value>
   </data>
@@ -172,55 +77,18 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Tamamlandı</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Lütfen bir Tanı Tanımlayıcısı sağlayın</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Tanı Tanımlayıcı Gerekli</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Lütfen bir tanı göndermeden önce Pozlama Bildirimleri'ni etkinleştirin.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Pozlama Bildirimleri Devre Dışı</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Tanı Gönderme...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Tanı doğrulama...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Tanınız şu anda doğrulanamıyor.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Doğrulama Başarısız Oldu</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Gönder</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ayarlar</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Kabul Edilmedi</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>İptal</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Bildirimleri açmak istiyor musunuz?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Etkinleştirme</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Siliniyor</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Eğer pozitif tanı aldıysanız</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Uygulamayı Paylaşın</value>
@@ -252,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tüm ayarlar ve veriler silindi. Lütfen başvuruyu yeniden başlatın.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Geçersiz Tanı Kimliği</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Lütfen geçerli bir Tanı Kimliği sağlayın</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Geçersiz Sınav Tarihi</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Lütfen geçerli bir Sınav Tarihi verin</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Kayıt için geri dön</value>
   </data>
@@ -272,21 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Daha sonra olumlu kayıt yaptırmak ister misiniz?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Uygulamayı çalıştırdığınızda, her akıllı telefonda anonim bir kimlik oluşturur ve saklar. Bu uygulama, telefon numarası ve konum bilgileri gibi gizlilikle ilgili herhangi bir bilgi edinmez.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Uygulama çalışırken, birbirlerinin akıllı telefonu son iki hafta boyunca birbirlerinin anonim kimliklerini kaydedecek. 2 haftadan eski kayıtlar silinir ve gizliliği korumak için her anonim kimlik düzenli aralıklarla değiştirilir.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Diğer kullanıcılar düzenli olarak olumlu olanların anonim kimliklerinin bir listesini alırsınız. Satın alındıktan sonra akıllı telefona kaydedilen iletişim kaydı eşleşecektir. Maçın sonucu yoğun bir temas sayılsa, akıllı telefonunuzu bilgilendirecek ve işbirliği yapmamızı istediğiniz gerekli eylemleri size bildireceğiz.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Son 14 gün içinde pozitif test ile temas</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Eğer yeni Corona ile olumlu iseniz, çevrenizdeki insanları korumak için olumlu kayıt ile işbirliği lütfen.</value>

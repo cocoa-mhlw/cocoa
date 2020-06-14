@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Hvernig það virkar</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Næsta</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Þjónustuskilmálar</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Engin þörf á að innskrá persónulegar upplýsingar. Við erum að nota einkvæmt AUÐKENNI, úthlutað til þín þegar þú setur upp forrit.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Tengiliður við annan forritanotanda í lengri tíma en 30 mín í heildina, innan radíus nær en 2m að meðaltali er skráð sem "náin snerting".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Kveikt þarf á Bluetooth til að skrá nána snertingu. Vinsamlegast farðu á næstu síðu til að kveikja á því.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Byrja</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Verndum ástvini okkar frá COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Aðgangur að búnaði</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Samþykkja</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Uppfæra upplýsingar</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>HEIM</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Þú ert tilbúinn að fara</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Setja upp lokið</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Framarar lista</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Leyfissamningur</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Setja upp forrit</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Skrá nána tengilið</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ef þú greinist COVID-19 jákvætt</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Skilyrði til að nota þetta forrit</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Stillingar stöðu</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Í lagi</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Gera virkt</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Ekki</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Þetta forrit notar tilkynningar um útsetningu/Bluetooth-merki til að ákvarða hvort þú sért nálægt öðru notandakenni tengiliðar. 
-Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Leyfa útsetningu tilkynninga/Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Stöður</value>
@@ -145,22 +65,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
     <value>Þú verður látinn vita ef þú hefur orðið fyrir einhverjum sem tilkynnti um jákvæða COVID-19 niðurstöðu.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Vinsamlegast sláðu inn auðkenni greiningar</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Deildu jákvæðri greiningu</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Prófunardagsetningin hjálpar forritinu að vita hvenær þú gætir hafa verið smitandi og látið rétta fólk af hugsanlegri útsetningu.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Aðeins þeir sem hafa orðið fyrir vilja fá tilkynningu.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Nota verður einkvæmt prófunarauðkenni sem fylgdi COVID-19 prófinu til að staðfesta jákvæða niðurstöðu prófana.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Reyndu aftur síðar.</value>
   </data>
@@ -173,55 +77,18 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Ljúka</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Vinsamlegast Gefðu upp auðkenni greiningar</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Kenni greiningar krafist</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Vinsamlegast virkjaðu tilkynningar um útsetningu áður en þú sendir greiningu.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Tilkynningar um útsetningu fatlaðra</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Senda inn greiningu...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Sannprófun greiningar...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Ekki er hægt að sannreyna greiningu á þessum tíma til að senda inn.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Sannprófun mistókst</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Senda</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Stillingar</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Ekki sammála</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Hætta við</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Viltu kveikja á tilkynningum?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>virkja</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Verið er að fella af skrá</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ef þú fékkst jákvæða greiningu</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Deildu forritinu</value>
@@ -253,18 +120,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Öllum stillingum og gögnum hefur verið eytt. Endurræsa þarf forritið.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Ógilt Greiningarkenni</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Vinsamlegast Gefðu upp gilt Greiningarkenni</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Ógild prófunardagsetning</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Vinsamlegast Gefðu upp gilda Prófunardagsetningu</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Skil á skráningu</value>
   </data>
@@ -273,21 +128,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Á að skrá jákvætt síðar?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Þegar þú keyrir forritið mun það búa til og geyma nafnlaust AUÐKENNI á hverjum snjallsíma. Þetta forrit öðlast ekki neinar upplýsingar sem tengjast persónuvernd, svo sem upplýsingum um símanúmer og staðsetningu.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Þó að forritið sé í gangi mun hver snjallsíminn taka upp nafnlaus auðkenni hvers annars fyrir síðustu tvær vikurnar. Færslum sem eru eldri en 2 vikna verður eytt og hverju nafnlausu AUÐKENNI verður breytt reglulega til að vernda friðhelgi einkalífs.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Aðrir notendur fá reglulega lista yfir nafnlaus auðkenni jákvæðra sjálfur. Eftir kaupin verður tengiliðafærslu sem skráð er á snjallsíma jafnað. Ef afleiðing af passa er þungur snerting, munum við tilkynna snjallsímann þinn og upplýsa þig um nauðsynlegar aðgerðir sem þú vilt að við vinnum með.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Samband við jákvæða prófunartæki á síðustu 14 dögum</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ef þú ert jákvæður með nýja Corona skaltu hafa samstarf við jákvæða skráningu til að vernda fólkið í kringum þig.</value>

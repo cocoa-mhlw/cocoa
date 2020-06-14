@@ -23,16 +23,25 @@ namespace Covid19Radar
 			var json = sr.ReadToEnd();
 			var j = JObject.Parse(json);
 
+			AppVersion = j.Value<string>("appVersion");
 			LicenseUrl = j.Value<string>("licenseUrl");
+			AppStoreUrl = j.Value<string>("appStoreUrl");
+			GooglePlayUrl = j.Value<string>("googlePlayUrl");
 			ApiUrlBase = j.Value<string>("apiUrlBase");
+			ApiSecret = j.Value<string>("apiSecret");
 			CdnUrlBase = j.Value<string>("cdnUrlBase");
 			BlobStorageContainerName = j.Value<string>("blobStorageContainerName");
 			SupportedRegions = j.Value<string>("supportedRegions").ToUpperInvariant().Split(';', ',', ':');
 			AndroidSafetyNetApiKey = j.Value<string>("androidSafetyNetApiKey");
+			AppCenterTokensAndroid = j.Value<string>("appCenterTokensAndroid");
+			AppCenterTokensIOS = j.Value<string>("appCenterTokensIOS");
 		}
-
+		public string AppVersion { get; }
 		public string LicenseUrl { get; }
 		public string ApiUrlBase { get; }
+		public string ApiSecret { get; }
+		public string AppStoreUrl { get; }
+		public string GooglePlayUrl { get; }
 		public string CdnUrlBase { get; }
 
 
@@ -41,6 +50,8 @@ namespace Covid19Radar
 		public string BlobStorageContainerName { get; }
 
 		public string AndroidSafetyNetApiKey { get; }
+		public string AppCenterTokensAndroid { get; }
+		public string AppCenterTokensIOS { get; }
 
 		internal Dictionary<string, ulong> GetDefaultDefaultBatch() =>
 			Instance.SupportedRegions.ToDictionary(r => r, r => (ulong)0);

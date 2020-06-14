@@ -6,49 +6,6 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-        <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
-          <source>How it works</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hvernig það virkar</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
-        </trans-unit>
-        <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
-          <source>Next</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Næsta</target>
-        </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Þjónustuskilmálar</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Engin þörf á að innskrá persónulegar upplýsingar. Við erum að nota einkvæmt AUÐKENNI, úthlutað til þín þegar þú setur upp forrit.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tengiliður við annan forritanotanda í lengri tíma en 30 mín í heildina, innan radíus nær en 2m að meðaltali er skráð sem "náin snerting".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kveikt þarf á Bluetooth til að skrá nána snertingu. Vinsamlegast farðu á næstu síðu til að kveikja á því.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
-        <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
-          <source>Start</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Byrja</target>
-        </trans-unit>
-        <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID-19</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verndum ástvini okkar frá COVID-19</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-        </trans-unit>
-        <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
-          <source>Device Access</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aðgangur að búnaði</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
-        </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Samþykkja</target>
@@ -64,30 +21,6 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
-          <source>Update Information</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Uppfæra upplýsingar</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
-        </trans-unit>
-        <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
-          <source>HOME</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">HEIM</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
-        </trans-unit>
-        <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
-          <source>You're ready to go</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Þú ert tilbúinn að fara</target>
-        </trans-unit>
-        <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
-          <source>Set up Completed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Setja upp lokið</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
-        </trans-unit>
-        <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
-          <source>Contributors List</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Framarar lista</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Leyfissamningur</target>
@@ -99,27 +32,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
-          <source>Installing an App</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Setja upp forrit</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
-          <source>Recording close contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Skrá nána tengilið</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ef þú greinist COVID-19 jákvætt</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
-          <source>Requirements to use this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Skilyrði til að nota þetta forrit</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
@@ -135,25 +47,9 @@
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Í lagi</target>
         </trans-unit>
-        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
-          <source>Enable</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Gera virkt</target>
-        </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ekki</target>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
-          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Þetta forrit notar tilkynningar um útsetningu/Bluetooth-merki til að ákvarða hvort þú sért nálægt öðru notandakenni tengiliðar. 
-Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
-          <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Leyfa útsetningu tilkynninga/Bluetooth</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -181,27 +77,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Þú verður látinn vita ef þú hefur orðið fyrir einhverjum sem tilkynnti um jákvæða COVID-19 niðurstöðu.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vinsamlegast sláðu inn auðkenni greiningar</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
-        </trans-unit>
-        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
-          <source>Share a Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deildu jákvæðri greiningu</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
-          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prófunardagsetningin hjálpar forritinu að vita hvenær þú gætir hafa verið smitandi og látið rétta fólk af hugsanlegri útsetningu.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
-          <source>Only those who have been exposed will receive a notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aðeins þeir sem hafa orðið fyrir vilja fá tilkynningu.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
-          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nota verður einkvæmt prófunarauðkenni sem fylgdi COVID-19 prófinu til að staðfesta jákvæða niðurstöðu prófana.</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Reyndu aftur síðar.</target>
@@ -218,41 +93,9 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Ljúka</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
-          <source>Please provide a Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vinsamlegast Gefðu upp auðkenni greiningar</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
-          <source>Diagnosis Identifier Required</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kenni greiningar krafist</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
-          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vinsamlegast virkjaðu tilkynningar um útsetningu áður en þú sendir greiningu.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notifications Disabled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tilkynningar um útsetningu fatlaðra</target>
-        </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Senda inn greiningu...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
-          <source>Verifying Diagnosis...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sannprófun greiningar...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
-          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ekki er hægt að sannreyna greiningu á þessum tíma til að senda inn.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
-          <source>Verification Failed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sannprófun mistókst</target>
-        </trans-unit>
-        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
-          <source>Submit</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Senda</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
@@ -260,30 +103,13 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
         </trans-unit>
-        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
-          <source>Not Agree</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ekki sammála</target>
-        </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Hætta við</target>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
-          <source>Do you want to turn on notifications?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Viltu kveikja á tilkynningum?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
-        </trans-unit>
-        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
-          <source>Enabling</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">virkja</target>
-        </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Verið er að fella af skrá</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ef þú fékkst jákvæða greiningu</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -326,22 +152,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Öllum stillingum og gögnum hefur verið eytt. Endurræsa þarf forritið.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ógilt Greiningarkenni</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vinsamlegast Gefðu upp gilt Greiningarkenni</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ógild prófunardagsetning</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vinsamlegast Gefðu upp gilda Prófunardagsetningu</target>
-        </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Skil á skráningu</target>
@@ -353,25 +163,6 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Á að skrá jákvætt síðar?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Þegar þú keyrir forritið mun það búa til og geyma nafnlaust AUÐKENNI á hverjum snjallsíma. Þetta forrit öðlast ekki neinar upplýsingar sem tengjast persónuvernd, svo sem upplýsingum um símanúmer og staðsetningu.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Þó að forritið sé í gangi mun hver snjallsíminn taka upp nafnlaus auðkenni hvers annars fyrir síðustu tvær vikurnar. Færslum sem eru eldri en 2 vikna verður eytt og hverju nafnlausu AUÐKENNI verður breytt reglulega til að vernda friðhelgi einkalífs.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aðrir notendur fá reglulega lista yfir nafnlaus auðkenni jákvæðra sjálfur. Eftir kaupin verður tengiliðafærslu sem skráð er á snjallsíma jafnað. Ef afleiðing af passa er þungur snerting, munum við tilkynna snjallsímann þinn og upplýsa þig um nauðsynlegar aðgerðir sem þú vilt að við vinnum með.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
-        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
-          <source>Contact with positive testers in the last 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Samband við jákvæða prófunartæki á síðustu 14 dögum</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
@@ -947,6 +738,24 @@ Veldu ' alltaf leyfa ' að setja upp Bluetooth.</target>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
           <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
+          <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
+          <target state="new">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
+          <source>Possible COVID-19 Exposure</source>
+          <target state="new">Possible COVID-19 Exposure</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
+          <source>If you want to disable it, you can change it from the app settings</source>
+          <target state="new">If you want to disable it, you can change it from the app settings</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
+          <source>Notifications enabled</source>
+          <target state="new">Notifications enabled</target>
         </trans-unit>
       </group>
     </body>

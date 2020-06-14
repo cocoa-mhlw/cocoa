@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>操作の流れ</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>次</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>サービス条件</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>個人情報を入力する必要はありません。アプリをインストールするときに割り当てる一意の ID を使用しています。</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>平均2m未満の半径内に合計30分以上の他のアプリユーザーとの接触は、「濃厚接触」として記録されます。</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>濃厚接触を記録するには、Bluetooth/Exposure Notification を有効にする必要があります。次のページに移動して有効にしてください。</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>スタート</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>大切な人をCOVID-19から一緒に守りましょう</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>デバイスアクセス</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>同意する</value>
   </data>
@@ -56,25 +23,6 @@
     <value>新型コロナウィルス接触確認アプリ</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>更新情報</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ホームへ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>準備ができました</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>設定完了</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>貢献者リスト</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ライセンス</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>アプリのインストール</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>濃厚接触の記録</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>COVID-19陽性と診断されたら？</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>このアプリを使用するための要件</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>ステータス設定</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>有効にする</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>あとで設定する</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>このアプリは、Exposure Notification と Bluetooth を使用して、他のアプリのユーザーの近くにいるかどうか判断します。
-Bluetooth を設定するには、[常に許可] を選択します。</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Exposure Notification と Bluetooth の許可</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposure</value>
@@ -145,22 +65,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
     <value>COVID-19陽性を報告した人と接触していた場合は、通知されます。</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>診断識別子を入力してください</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>陽性診断を共有する</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>テスト日は、あなたが伝染した可能性があるときにアプリを知り、潜在的な暴露を適切な人々に通知するのに役立ちます。</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>公開されたユーザーのみが通知を受け取ります。</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>COVID-19 テストに付属の一意のテスト ID を使用して、陽性のテスト結果を検証する必要があります。</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>後でもう一度試してください。</value>
   </data>
@@ -173,55 +77,18 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>完了しました</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>診断識別子を指定してください</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>診断識別子が必要です</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>診断を送信する前に Exposure Notifications を有効にしてください。</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Exposure Notifications 無効</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>診断を提出します。</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>診断を確認しています。</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>現時点では、診断を確認できません。</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>検証に失敗しました</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>提出</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>アプリの設定</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>同意しない</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>通知をオンにしますか？</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>有効にしています</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>削除しています</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>陽性と診断された場合</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>本アプリを広めましょう</value>
@@ -253,18 +120,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>すべての設定とデータが削除されました。アプリケーションを再起動してください。</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>無効な処理番号</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>有効な処理番号を入力してください</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>無効な検査日</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>有効な検査日を指定してください</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>登録に戻る</value>
   </data>
@@ -273,21 +128,6 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>後で陽性の登録をしますか？</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>アプリケーションを実行すると、各スマートフォンで匿名 ID が生成され、保存されます。このアプリケーションは、電話番号や位置情報など、プライバシーに関する情報を一切取得しません。</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>アプリケーションの実行中、お互いのスマートフォンは、過去2週間お互いの匿名IDを記録します。2 週間を経過したレコードは削除され、各匿名 ID はプライバシー保護のために定期的に変更されます。</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>他の利用者は定期的に陽性となった方の匿名ID一覧を取得しています。取得した後、スマートフォンに記録された接触記録と突合を行います。突合の結果、濃厚接触に該当する場合は、あなたのスマートフォンにお知らせします、ご協力いただきたい必要な行動についてご案内します。</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>過去14日間の陽性判定者との接触</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</value>
@@ -738,5 +578,19 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら。</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>新型コロナウイルス陽性登録者との接触の可能性</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>通知を無効にしたい場合は、アプリの設定から変更できます</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>通知を有効にしました</value>
   </data>
 </root>

@@ -6,49 +6,6 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-        <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
-          <source>How it works</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Jak to funguje</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
-        </trans-unit>
-        <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
-          <source>Next</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Další</target>
-        </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Podmínky služby</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Není třeba zadávat osobní údaje. Používáme jedinečné ID, které vám bylo přiděleno při instalaci aplikace.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt s jiným uživatelem aplikace po dobu delší než 30 minut celkem, v okruhu blíže než 2 m v průměru je zaznamenán jako "Blízký kontakt".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth je třeba zapnout, aby bylo možné zaznamenat blízký kontakt. Chcete-li ji zapnout, přejděte na další stránku.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
-        <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
-          <source>Start</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Spustit</target>
-        </trans-unit>
-        <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID-19</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ochrana našich blízkých před COVID-19</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-        </trans-unit>
-        <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
-          <source>Device Access</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Přístup k zařízení</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
-        </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Souhlasím</target>
@@ -64,30 +21,6 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
-          <source>Update Information</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aktualizovat informace</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
-        </trans-unit>
-        <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
-          <source>HOME</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">DOMŮ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
-        </trans-unit>
-        <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
-          <source>You're ready to go</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jste připraveni jít</target>
-        </trans-unit>
-        <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
-          <source>Set up Completed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nastavit dokončeno</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
-        </trans-unit>
-        <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
-          <source>Contributors List</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seznam přispěvatelů</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Licenční smlouva</target>
@@ -99,27 +32,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
-          <source>Installing an App</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Instalace aplikace</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
-          <source>Recording close contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Záznam zavřít kontakt</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pokud je vám diagnostikována diagnóza COVID-19 pozitivních</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
-          <source>Requirements to use this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Požadavky na používání této aplikace</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
@@ -135,25 +47,9 @@
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">OK</target>
         </trans-unit>
-        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
-          <source>Enable</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Povolit</target>
-        </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">NotNow</target>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
-          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tato aplikace používá oznámení expozice / Bluetooth signály k určení, zda jste v blízkosti jiného uživatele sledování kontaktů. 
-Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
-          <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Povolit oznámení o expozici / Bluetooth</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -181,27 +77,6 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Budete upozorněni, pokud jste byli vystaveni někomu, kdo hlásil pozitivní výsledek COVID-19.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zadejte identifikátor diagnózy.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
-        </trans-unit>
-        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
-          <source>Share a Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sdílejte pozitivní diagnózu</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
-          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Testovací datum pomáhá aplikaci zjistit, kdy jste mohli být nakažliví, a informovat správné lidi o potenciální expozici.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
-          <source>Only those who have been exposed will receive a notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Oznámení obdrží pouze ti, kteří byli vystaveni, a to pouze ti, kteří byli vystaveni, obdrží oznámení.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
-          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">K ověření pozitivního výsledku testu musí být použit jedinečný identifikátor testu, který byl dodaný s testem COVID-19.</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Zkuste to prosím znovu později.</target>
@@ -218,41 +93,9 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Dokončeno</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
-          <source>Please provide a Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uveďte identifikátor diagnózy.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
-          <source>Diagnosis Identifier Required</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Je vyžadován identifikátor diagnózy.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
-          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Před odesláním diagnózy povolte oznámení o expozici.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notifications Disabled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Oznámení o expozici zakázána</target>
-        </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Předkládání diagnózy...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
-          <source>Verifying Diagnosis...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ověřování diagnózy...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
-          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vaši diagnózu nelze v tuto chvíli ověřit, aby byla odeslána.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
-          <source>Verification Failed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ověření se nezdařilo</target>
-        </trans-unit>
-        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
-          <source>Submit</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Odeslat</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
@@ -260,30 +103,13 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
         </trans-unit>
-        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
-          <source>Not Agree</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nesouhlasím</target>
-        </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Zrušit</target>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
-          <source>Do you want to turn on notifications?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chcete zapnout oznámení?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
-        </trans-unit>
-        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
-          <source>Enabling</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aktivování</target>
-        </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Odstraňování</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pokud jste obdržel(a) pozitivní diagnózu</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -326,22 +152,6 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Všechna nastavení a data byla odstraněna. Restartujte aplikaci.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Neplatné ID diagnózy</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uveďte platné ID diagnózy.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Neplatné datum testu</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uveďte platné datum testu.</target>
-        </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Návrat k registraci</target>
@@ -353,25 +163,6 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Chcete se později zaregistrovat pozitivně?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Při spuštění aplikace vygeneruje a uloží anonymní ID na každém smartphonu. Tato aplikace nezískává žádné informace týkající se ochrany osobních údajů, jako je telefonní číslo a informace o poloze.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zatímco aplikace běží, smartphone si navzájem zaznamená anonymní IDS za poslední dva týdny. Záznamy starší než 2 týdny budou smazány a každé anonymní ID bude pravidelně měněn, aby bylo chráněno soukromí.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ostatní uživatelé pravidelně získají seznam anonymních IDENTIÍ pozitivních. Po pořízení bude záznam kontaktu zaznamenaný na smartphonu spárován. Pokud je výsledkem zápasu těžký kontakt, upozorníme váš smartphone a informujeme vás o nezbytných akcích, se kterými byste chtěli, abychom spolupracovali.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
-        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
-          <source>Contact with positive testers in the last 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontakt s pozitivními testery za posledních 14 dnů</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
@@ -947,6 +738,24 @@ Chcete-li nastavit bluetooth, vyberte možnost Vždy povolit.</target>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
           <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
+          <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
+          <target state="new">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
+          <source>Possible COVID-19 Exposure</source>
+          <target state="new">Possible COVID-19 Exposure</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
+          <source>If you want to disable it, you can change it from the app settings</source>
+          <target state="new">If you want to disable it, you can change it from the app settings</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
+          <source>Notifications enabled</source>
+          <target state="new">Notifications enabled</target>
         </trans-unit>
       </group>
     </body>

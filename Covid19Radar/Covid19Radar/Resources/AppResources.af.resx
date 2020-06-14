@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Hoe dit werk</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Volgende</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Diensbepalings</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Geen behoefte om persoonlike inligting in te voer nie. Ons gebruik unieke ID wat aan jou toegeken is wanneer jy 'n program installeer.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>'n kontak met 'n ander prgram gebruiker vir langer as 30 min in totaal, binne 'n radius nader as 2m gemiddeld is aangeteken as "Noue Kontak".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth/Kennisgewing van blootstelling moet aangeskakel word om noue kontak aan te teken. Gaan asseblief na die volgende bladsy om dit aan te skakel.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Begin</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Beskerm ons geliefdes teen COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Toestel Toegang</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Stem in</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Dateer Inligting Op</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>TUIS</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Jy is gereed om te gaan</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Opstel Voltooi</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Bydraers Lys</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisensie-Ooreenkoms</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Program Installeering</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Registreer Noue Kontak</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>As jy postief gediagnoseer word met COVID-19</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Vereistes om hierdie program te gebruik</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Status Stellings</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Goed</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Aktiveer</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Nie Nou Nie</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Hierdie program gebruik Blootstelling Kennisgewing / Bluetooth seine om te bepaal of jy naby 'n ander kontak opsporings program gebruiker is. 
-Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Laat Blootstellings Kennisgewing/Bluetooth toe</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Blootstellings</value>
@@ -145,22 +65,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
     <value>Jy sal in kennis gestel word as jy blootgestel was aan iemand wat 'n positiewe COVID-19 resultaat berig.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Tik asseblief die Diagnose-Identifiseerder in</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Deel 'n Positiewe Diagnose</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Die toetsdatum help die program om te weet wanneer jy dalk aansteeklik was en om die regte mense van potensiële blootstelling in kennis stel.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Slegs diegene wat blootgestel is, sal in kennis gestel word.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Die unieke toetsidentifiseerder wat saam met jou COVID-19 toets gekom het moet gebruik word om jou positiewe toetsuitslae te verifieer.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Probeer asseblief weer later.</value>
   </data>
@@ -173,55 +77,18 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Voltooi</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Verskaf asseblief 'n Diagnose-Identifiseerder</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Diagnose-Identifiseerder Vereis</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Ontsper asseblief Blootstellings Kennisgewings voordat 'n diagnose ingedien word.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Blootstellings Kennisgewings is versper</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Diagnose word ingedien...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Diagnose word geverifieer...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Jou diagnose kan nie gestuur word nie omdat dit op hierdie tydstip nie geverifieer kan word nie.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Verifikasie Het Misluk</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Dien In</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Instellings</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Nie saamstem</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Kanselleer</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Wil jy kennisgewings aanskakel?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Sodat</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Skrap tans</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>As jy 'n positiewe diagnose ontvang het</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Deel die program</value>
@@ -253,18 +120,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Alle instellings en data is geskrap. Herlaai asseblief die toepassing.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Ongeldige diagnose-ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Verskaf asseblief 'n geldige diagnose-ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Ongeldige Toetsdatum</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Verskaf asseblief 'n geldige Toetsdatum</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Terugkeer na registrasie</value>
   </data>
@@ -273,21 +128,6 @@ Kies 'Laat Altyd Toe' om Bluetooth op te stel.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Wil jy later positief registreer?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Wanneer jy die toepassing uitvoer, sal dit 'n anonieme ID op elke slimfoon genereer en stoor. Hierdie toepassing verkry nie enige inligting wat verband hou met privaatheid soos foonnommer en liggingsinligting nie.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Terwyl die aansoek loop, sal mekaar se slimfoon mekaar se anonieme ID's vir die afgelope twee weke opneem. Rekords ouer as 2 weke sal verwyder word en elke anonieme ID sal periodiek verander word om privaatheid te beskerm.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Ander gebruikers kry gereeld 'n lys van anonieme ID's van positiewe kinders. Na afloop van die verkryging sal die kontadrekord wat op die slimfoon aangeteken is, ooreenstem. As die resultaat van die wedstryd is 'n swaar kontak, sal ons u slimfoon in kennis stel en u inlig oor die nodige aksies wat u wil hê ons moet saamwerk.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontak met positiewe toetsers in die afgelope 14 dae</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>As jy positief is met die nuwe Corona, saamwerk asseblief met die positiewe registrasie om die mense rondom jou te beskerm.</value>

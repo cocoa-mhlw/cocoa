@@ -6,49 +6,6 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-        <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
-          <source>How it works</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kaip tai veikia</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
-        </trans-unit>
-        <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
-          <source>Next</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pirmyn</target>
-        </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Paslaugos teikimo sąlygos</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nereikia įvesti asmeninės informacijos. Diegiame programą, naudojame jums priskirtą unikalų ID.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kontaktas su kitu programos naudotoju ilgiau nei 30 minučių iš viso, esant vidutiniškai didesniam nei 2 m spinduliui, įrašomas kaip "Uždaryti kontaktą".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">"Bluetooth" reikia įjungti, kad būtų įrašytas artimas kontaktas. Norėdami jį įjungti, eikite į kitą puslapį.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
-        <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
-          <source>Start</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pradžia</target>
-        </trans-unit>
-        <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID-19</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Apsaugoti savo artimuosius nuo COVID-19</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-        </trans-unit>
-        <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
-          <source>Device Access</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prieiga prie įrenginio</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
-        </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Sutinku</target>
@@ -64,30 +21,6 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
-          <source>Update Information</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Naujinti informaciją</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
-        </trans-unit>
-        <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
-          <source>HOME</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">PAGRINDINIS PUSLAPIS</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
-        </trans-unit>
-        <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
-          <source>You're ready to go</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tu pasiruošęs eiti</target>
-        </trans-unit>
-        <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
-          <source>Set up Completed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nustatyti baigtą</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
-        </trans-unit>
-        <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
-          <source>Contributors List</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bendraautorių sąrašas</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Licencijos sutartis</target>
@@ -99,27 +32,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
-          <source>Installing an App</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Programos diegimas</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
-          <source>Recording close contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Įrašyti artimą kontaktą</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jeigu Jums diagnozuotas COVID-19 teigiamas</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
-          <source>Requirements to use this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Šios programos naudojimo reikalavimai</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
@@ -135,25 +47,9 @@
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Gerai</target>
         </trans-unit>
-        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
-          <source>Enable</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Įgalinti</target>
-        </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Nedabar</target>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
-          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ši programa naudoja Exposure Notification / Bluetooth signalus, siekiant nustatyti, ar esate šalia kito kontakto sekimo programos vartotojo. 
-Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
-          <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Leisti pranešimą apie ekspoziciją / "Bluetooth"</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -181,27 +77,6 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Jums bus pranešta, jei jums buvo veikiami asmens, kuris pranešė apie teigiamą COVID-19 rezultatą.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Įveskite diagnozės identifikatorių</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
-        </trans-unit>
-        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
-          <source>Share a Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pasidalinkite teigiama diagnoze</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
-          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bandymo data padeda programėlei žinoti, kada galėjote būti užkrečiama, ir pranešti tinkamus žmones apie galimą poveikį.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
-          <source>Only those who have been exposed will receive a notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tik tie, kurie buvo veikiami, gaus pranešimą.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
-          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Norint patikrinti teigiamą testo rezultatą, turi būti naudojamas unikalus testo identifikatorius, pateiktas su COVID-19 testu.</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Pamėginkite vėliau.</target>
@@ -218,41 +93,9 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Atlikta</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
-          <source>Please provide a Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pateikite diagnozės identifikatorių</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
-          <source>Diagnosis Identifier Required</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Reikalingas diagnozės identifikatorius</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
-          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prieš pateikdami diagnozę įjunkite pranešimus apie ekspoziciją.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notifications Disabled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pranešimai apie ekspoziciją išjungta</target>
-        </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pateikti diagnozę...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
-          <source>Verifying Diagnosis...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tikrinama diagnozė...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
-          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Šiuo metu jūsų diagnozės pateikti negalima.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
-          <source>Verification Failed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Patikrinti nepavyko</target>
-        </trans-unit>
-        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
-          <source>Submit</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pateikti</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
@@ -260,30 +103,13 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
         </trans-unit>
-        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
-          <source>Not Agree</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nesutinku</target>
-        </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Atšaukti</target>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
-          <source>Do you want to turn on notifications?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ar norite įjungti pranešimus?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
-        </trans-unit>
-        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
-          <source>Enabling</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Įgalinama</target>
-        </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Naikinimas</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jeigu jums buvo diagnozuota teigiama diagnozė</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -326,22 +152,6 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Visi parametrai ir duomenys buvo panaikinti. Paleiskite programą iš naujo.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Netinkamas diagnozės ID</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pateikite galiojantį diagnozės ID</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Netinkama bandymo data</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pateikite tinkamą bandymo datą</target>
-        </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Grįžti į registraciją</target>
@@ -353,25 +163,6 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ar norite užsiregistruoti teigiamai vėliau?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kai paleisite programą , ji sukurs ir išsaugos anoniminį ID kiekviename išmaniajame telefone. Ši programa neįsigyja jokios informacijos, susijusios su privatumu, pvz., telefono numerio ir vietos informacijos.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kol programa veikia, vienas kito išmanusis telefonas per pastarąsias dvi savaites įrašys vienas kito anoniminius ID. Senesni nei 2 savaičių įrašai bus panaikinti ir kiekvienas anoniminis ID bus periodiškai keičiamas siekiant apsaugoti privatumą.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kiti vartotojai reguliariai gauna anoniminių teigiamų iD sąrašą. Po įsigijimo išmaniajame telefone įrašytas kontakto įrašas bus suderintas. Jei rungtynių rezultatas yra sunkus kontaktas, mes informuosime jūsų išmanųjį telefoną ir informuosime jus apie būtinus veiksmus, su kuriais norėtumėte bendradarbiauti.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
-        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
-          <source>Contact with positive testers in the last 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sąlytis su testatojais, kurių tyrimo rezultatai teigiami per pastarąsias 14 dienų</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
@@ -947,6 +738,24 @@ Pasirinkite "Visada leisti", kad nustatytumėte "Bluetooth".</target>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
           <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
+          <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
+          <target state="new">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
+          <source>Possible COVID-19 Exposure</source>
+          <target state="new">Possible COVID-19 Exposure</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
+          <source>If you want to disable it, you can change it from the app settings</source>
+          <target state="new">If you want to disable it, you can change it from the app settings</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
+          <source>Notifications enabled</source>
+          <target state="new">Notifications enabled</target>
         </trans-unit>
       </group>
     </body>
