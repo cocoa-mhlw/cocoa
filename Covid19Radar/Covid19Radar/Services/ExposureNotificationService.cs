@@ -127,12 +127,18 @@ namespace Covid19Radar.Services
                         break;
                     }
                 }
+
+                Status ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
+                if (ExposureNotificationStatus == Status.BluetoothOff)
+                {
+                    await UserDialogs.Instance.AlertAsync(GetStatusMessage());
+                }
                 return true;
             }
             catch (Exception)
             {
-                userData.IsExposureNotificationEnabled = false;
-                await userDataService.SetAsync(userData);
+                //userData.IsExposureNotificationEnabled = false;
+                //await userDataService.SetAsync(userData);
                 return false;
             }
 
