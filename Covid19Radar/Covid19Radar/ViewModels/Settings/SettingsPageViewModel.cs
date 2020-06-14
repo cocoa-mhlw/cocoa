@@ -40,17 +40,9 @@ namespace Covid19Radar.ViewModels
             Title = AppResources.SettingsPageTitle;
             AppVer = AppSettings.Instance.AppVersion;
             this.userDataService = userDataService;
-            this.userDataService.UserDataChanged += _userDataChanged;
             _UserData = this.userDataService.Get();
             this.exposureNotificationService = exposureNotificationService;
         }
-
-        private void _userDataChanged(object sender, UserDataModel e)
-        {
-            _UserData = this.userDataService.Get();
-            RaisePropertyChanged();
-        }
-
 
         public ICommand OnChangeExposureNotificationState => new Command(async () =>
         {
