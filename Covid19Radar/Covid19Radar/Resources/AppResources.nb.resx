@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Slik fungerer det</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Neste</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Vilkår for bruk</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Du trenger ikke å legge inn personlig informasjon. Vi bruker unik ID, tildelt deg når du installerer en app.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>En kontakt med en annen appbruker i mer enn 30 minutter totalt, innenfor en radius nærmere enn 2 m i gjennomsnitt registreres som "Nærkontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth må være slått på for å registrere nær kontakt. Gå til neste side for å slå den på.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Begynn</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Beskytte våre kjære mot COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Tilgang til enheter</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Godtatt</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Oppdateringsinformasjon</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>HJEM</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Du er klar til å spille!</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Konfigurere Fullført</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Bidragsyterliste</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Lisensavtale</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Installere en app</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Kontakt for opptak</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Dersom du får diagnosen COVID-19 positiv</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Krav til å bruke denne appen</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Statusinnstillinger</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ok</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Aktiver</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow (andre er ikke noe av</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Denne appen bruker Eksponeringsvarsel / Bluetooth-signaler for å finne ut om du er i nærheten av en annen kontaktsporing app bruker. 
-Velg Tillat alltid for å konfigurere Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Tillat eksponeringsvarsling / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Eksponeringer</value>
@@ -145,22 +65,6 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
     <value>Du vil bli varslet hvis du har blitt utsatt for noen som rapporterte et positivt COVID-19 resultat.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Vennligst skriv inn diagnoseidentifikatoren</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Del en positiv diagnose</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Testdatoen hjelper appen med å vite når du kan ha vært smittsom og varsle de riktige personene om potensiell eksponering.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Bare de som har blitt utsatt, mottar et varsel.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Den unike testidentifikatoren som fulgte med COVID-19 testen, må brukes til å bekrefte det positive testresultatet.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Prøv igjen senere.</value>
   </data>
@@ -173,55 +77,18 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Fullført</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Vennligst oppgi en diagnoseidentifikator</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Diagnose identifikator kreves</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Aktiver eksponeringsvarsler før du sender inn en diagnose.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Eksponeringsvarsler deaktivert</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Sende inn diagnose...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Bekrefter diagnose...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Diagnosen din kan ikke verifiseres på dette tidspunktet for å bli sendt inn.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Bekreftelse mislyktes</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Send inn</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Innstillinger</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Ikke enig</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Avbryt</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Vil du slå på varsler?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Aktiverer</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Sletter</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Hvis du fikk en positiv diagnose</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Del appen</value>
@@ -253,18 +120,6 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Alle innstillinger og data er slettet. Start programmet på nytt.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Ugyldig diagnose-ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Vennligst oppgi en gyldig diagnose-ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Ugyldig testdato</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Oppgi en gyldig testdato</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Gå tilbake til registrering</value>
   </data>
@@ -273,21 +128,6 @@ Velg Tillat alltid for å konfigurere Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Vil du registrere deg positivt senere?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Når du kjører programmet, vil det generere og lagre en anonym ID på hver smarttelefon. Dette programmet innhenter ikke informasjon knyttet til personvern, for eksempel telefonnummer og stedsinformasjon.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Mens programmet kjører, vil hverandres smarttelefon ta opp hverandres anonyme ID-er de siste to ukene. Poster eldre enn 2 uker vil bli slettet, og hver anonym ID vil bli endret med jevne mellomrom for å beskytte personvernet.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Andre brukere får regelmessig en liste over anonyme ID-er med positive. Etter oppkjøpet vil kontaktoppføringen som er registrert på smarttelefonen, bli matchet. Hvis resultatet av kampen er en tung kontakt, vil vi varsle smarttelefonen din og informere deg om de nødvendige handlingene du ønsker at vi skal samarbeide med.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt med positive testere de siste 14 dagene</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Hvis du er positiv med den nye Corona, kan du samarbeide med den positive registreringen for å beskytte menneskene rundt deg.</value>

@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>ते कसे काम करते</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>पुढील</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>सेवा अटी</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>वैयक्तिक माहिती इनपुट करण्याची गरज नाही. अॅप इन्स्टॉल करताना आम्ही युनिक आयडी वापरत आहोत.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>एकूण ३० मि. पेक्षा जास्त काळ इतर अॅप वापरकर्त्याशी संपर्क साधा, सरासरी २० लाखांपेक्षा जास्त परिघात "क्लोज कॉन्टॅक्ट" म्हणून नोंदले जाते.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>जवळचे संपर्क रेकॉर्ड करण्यासाठी ब्लूटूथ चालू करणे आवश्यक आहे. कृपया ते चालू करण्यासाठी पुढच्या पानावर जा.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>प्रारंभ</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>आपल्या प्रिय जनांचे COVID-19 पासून संरक्षण करणे</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>साधन प्रवेश</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>सहमत</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>अद्ययावत माहिती</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>होम</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>तुम्ही जायला तयार आहात</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>पूर्ण करा</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>योगदानकर्त्यांच्या यादी</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>परवाना करार</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>अॅप प्रतिष्ठापीत करणे</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>जवळचे संपर्क रेकॉर्ड करत आहे</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>जर तुम्हाला COVID-19 पॉझिटिव निदान झाले तर</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>हे अॅप वापरण्याकरीता आवश्यकता</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>स्थिती संयोजना</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ठीक</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>सक्षम करा</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>आता नाही</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>हे अॅप एक्स्पोजर नोटिफिकेशन / ब्लूटूथ संकेत ांचा वापर करते की तुम्ही दुस-या संपर्क शोधअॅप वापरकर्त्याजवळ आहात का हे निश्चित करण्यासाठी. 
-ब्लूटूथ सेट अप करण्यासाठी 'नेहमी परवानगी द्या' निवडा.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>एक्स्पोजर सूचना / ब्लूटूथ परवानगी द्या</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>एक्स्पोजर</value>
@@ -145,22 +65,6 @@
     <value>जर तुम्हाला एखाद्या सकारात्मक सीओव्हीआयडी-19 परिणामाची माहिती दिली असेल तर तुम्हाला सूचित केले जाईल.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>कृपया निदान ओळखकर्ता प्रविष्ट करा</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>सकारात्मक निदान शेअर करा</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>चाचणी दिनांक तुम्ही संसर्गजन्य केव्हा झाला असाल आणि संभाव्य संपर्कासंदर्भात योग्य लोकांना सूचित करण्यास मदत करतो.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>ज्यांना उघडकीस आले आहे, त्यांनाच सूचना मिळेल.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>तुमच्या सीओव्हीआयडी-१९ चाचणीसह आलेल्या युनिक टेस्ट आयडेंटिफायरचा उपयोग आपल्या सकारात्मक चाचणीचा निकाल तपासण्यासाठी केला पाहिजे.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>कृपया नंतर पुन्हा प्रयत्न करा.</value>
   </data>
@@ -173,55 +77,18 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>पूर्ण</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>कृपया निदान ओळखकर्ता प्रदान करा</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>निदान ओळखकर्ता आवश्यक</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>कृपया निदान सादर करण्यापूर्वी एक्स्पोजर सूचना कार्यान्वीत करा.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>एक्सपोजर सूचना अकार्यान्वीत</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>निदान सबमिट करत आहे...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>निदान तपासणे...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>आपले निदान या वेळी सादर करण्यासाठी प्रमाणित करता येत नाही.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>पुष्टीकरण अयशस्वी</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>सबमिट करा</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>सेटिंग्ज</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>सहमत नाही</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>रद्द करा</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>तुम्हाला सूचना चालू करायची आहेत का?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>कार्यान्वीत करत आहे</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>हटवणे</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>जर तुम्हाला सकारात्मक निदान झाले तर</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>अॅप शेअर करा</value>
@@ -253,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>सर्व संयोजना आणि डेटा नष्ट करण्यात आले आहे. कृपया अनुप्रयोग पुन्हा सुरू करा.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>अवैध निदान ओळखपत्र</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>कृपया वैध निदान ओळखपत्र प्रदान करा</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>अवैध चाचणी दिनांक</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>कृपया वैध चाचणी दिनांक प्रदान करा</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>नोंदणीकडे परत</value>
   </data>
@@ -273,21 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>नंतर तुम्हाला सकारात्मक नोंदणी करायची आहे का?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>जेव्हा तुम्ही अनुप्रयोग चालवता तेव्हा प्रत्येक स्मार्टफोनवर एक निनावी आयडी तयार करून साठवला जाईल. या अनुप्रयोगाला फोन नंबर आणि लोकेशन माहिती यांसारखी गोपनीयतेशी संबंधित कोणतीही माहिती प्राप्त होत नाही.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>अॅप्लिकेशन चालू असताना, एकमेकांच्या स्मार्टफोनमध्ये गेल्या दोन आठवड्यांपासून एकमेकांच्या निनावी आयडीरेकॉर्ड िंग ची नोंद केली जाईल. 2 आठवड्यांपेक्षा जुन्या नोंदी काढून टाकल्या जातील आणि प्रत्येक निनावी ओळखपत्र ात वेळोवेळी बदल करून गोपनीयता सुरक्षित ठेवण्यासाठी बदलकरण्यात येईल.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>इतर वापरकर्त्यांना नियमितपणे सकारात्मक माहितीच्या निनावी आयडची यादी मिळते. अधिग्रहणानंतर, स्मार्टफोनवर रेकॉर्ड केलेला संपर्क रेकॉर्ड जुळणार आहे. जर मॅचचा परिणाम जड संपर्क असेल तर आम्ही तुमच्या स्मार्टफोनला कळवू आणि तुम्हाला सहकार्य करण्यासाठी आवश्यक त्या कृतीची माहिती देऊ.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>गेल्या 14 दिवसांत सकारात्मक परीक्षकांशी संपर्क</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>जर तुम्ही नवीन कोरोनाशी सकारात्मक असाल तर, तुमच्या आजूबाजूच्या लोकांचे संरक्षण करण्यासाठी कृपया सकारात्मक नोंदणीसह सहकार्य करा.</value>

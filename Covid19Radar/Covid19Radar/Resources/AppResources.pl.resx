@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Jak to działa</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Dalej</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Warunki świadczenia usługi</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Nie ma potrzeby wprowadzania danych osobowych. Używamy unikatowego identyfikatora, przydzielonego do Ciebie podczas instalowania aplikacji.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontakt z innym użytkownikiem aplikacji przez łącznie dłużej niż 30 minut, w promieniu bliższym niż 2 m średnio jest rejestrowany jako "Bliski kontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth musi być włączony, aby nagrać bliski kontakt. Przejdź do następnej strony, aby ją włączyć.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Uruchom</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Ochrona naszych bliskich przed COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Dostęp do urządzenia</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Zgadzam się</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Informacje o aktualizacji</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>STRONA GŁÓWNA</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Możesz zaczynać</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Konfigurowanie zakończone</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Lista współautorów</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Umowa licencyjna</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Instalowanie aplikacji</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Nagrywanie bliskiego kontaktu</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>W przypadku rozpoznania</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Wymagania dotyczące korzystania z tej aplikacji</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Ustawienia stanu</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Włącz</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow (Nienow)</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Ta aplikacja wykorzystuje powiadomienia ekspozycji / sygnały Bluetooth, aby ustalić, czy jesteś w pobliżu innego użytkownika aplikacji śledzenia kontaktu. 
-Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Zezwalaj na powiadomienie o ekspozycji / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Ekspozycji</value>
@@ -145,22 +65,6 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
     <value>Zostaniesz powiadomiony, jeśli byłeś narażony na działanie osoby, która zgłosiła pozytywny wynik COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Wprowadź identyfikator diagnostyczny</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Podziel się pozytywną diagnozą</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Data testu pomaga aplikacji wiedzieć, kiedy możesz być zaraźliwa i powiadomić odpowiednie osoby o potencjalnej ekspozycji.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Tylko ci, którzy zostali ujawnieni, otrzymają powiadomienie.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Unikatowy identyfikator testu, który został doszła do testu COVID-19, musi być użyty do zweryfikowania pozytywnego wyniku testu.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Próbuj ponownie później.</value>
   </data>
@@ -173,55 +77,18 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Wykonano</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Proszę podać identyfikator diagnostyczny</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Wymagany identyfikator diagnozy</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Przed przesłaniem diagnozy włącz powiadomienia o ekspozycji.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Powiadomienia o narażeniu wyłączone</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Składanie diagnozy...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Weryfikacja diagnozy...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Twoja diagnoza nie może być zweryfikowana w tej chwili, aby zostać przesłana.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Weryfikacja nie powiodła się</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Prześlij</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ustawienia</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Nie zgadzam się</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Anuluj</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Czy chcesz włączyć powiadomienia?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Włączanie</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Usuwanie</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Jeśli pacjent otrzymał pozytywną diagnozę</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Udostępnij aplikację</value>
@@ -253,18 +120,6 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Wszystkie ustawienia i dane zostały usunięte. Uruchom ponownie aplikację.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Nieprawidłowy identyfikator diagnozy</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Proszę podać ważny identyfikator diagnostyczny</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Nieprawidłowa data testu</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Podaj prawidłową datę testu</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Powrót do rejestracji</value>
   </data>
@@ -273,21 +128,6 @@ Wybierz opcję "Zawsze zezwalaj", aby skonfigurować Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Czy chcesz zarejestrować się później pozytywnie?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Po uruchomieniu aplikacji wygeneruje i zapisze anonimowy identyfikator na każdym smartfonie. Ta aplikacja nie uzyskuje żadnych informacji związanych z prywatnością, takich jak numer telefonu i informacje o lokalizacji.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Gdy aplikacja jest uruchomiona, smartfon będzie nagrywał anonimowe identyfikatory siebie przez ostatnie dwa tygodnie. Rekordy starsze niż 2 tygodnie zostaną usunięte, a każdy anonimowy identyfikator będzie okresowo zmieniany w celu ochrony prywatności.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Inni użytkownicy regularnie otrzymują listę anonimowych identyfikatorów pozytywnych. Po przejęciu rekord kontaktu zapisany na smartfonie zostanie dopasowany. Jeśli wynik meczu jest ciężki kontakt, powiadomimy Twój smartfon i poinformujemy Cię o niezbędnych działaniach, z którymi chcesz, abyśmy współpracowali.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt z pozytywnymi testerami w ciągu ostatnich 14 dni</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jeśli jesteś pozytywnie nastawiony do nowej Korony, współpracuj z pozytywną rejestracją, aby chronić ludzi wokół ciebie.</value>

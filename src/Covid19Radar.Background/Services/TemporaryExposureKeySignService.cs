@@ -28,8 +28,6 @@ namespace Covid19Radar.Background.Services
             VerificationKeyVersion = config.VerificationKeyVersion();
             VerificationKeySecret = config.VerificationKeySecret();
 
-            //var key = CngKey.Import(Convert.FromBase64String(VerificationKeySecret), CngKeyBlobFormat.Pkcs8PrivateBlob);
-            //VerificationKey = new ECDsaCng(key);
             var key = Convert.FromBase64String(VerificationKeySecret);
             VerificationKey = ECDsa.Create();
             int read;
@@ -38,16 +36,14 @@ namespace Covid19Radar.Background.Services
         }
 
 
-        public async Task<byte[]> SignAsync(MemoryStream source)
+        public Task<byte[]> SignAsync(MemoryStream source)
         {
             Logger.LogInformation($"start {nameof(SignAsync)}");
             var pos = source.Position;
             source.Position = 0;
-            var signature = VerificationKey.SignData(source, HashAlgorithmName.SHA256);
-            source.Position = 0;
             var signatureCert = VerificationKeyGenerator.SignData(source.ToArray(), HashAlgorithmName.SHA256);
             source.Position = pos;
-            return signatureCert;
+            return Task.FromResult(signatureCert);
 
         }
 

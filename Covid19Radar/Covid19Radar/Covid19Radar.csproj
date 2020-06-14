@@ -13,6 +13,10 @@
     <Copyright />
     <PackageProjectUrl></PackageProjectUrl>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
@@ -58,6 +62,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\ISQLiteConnectionProvider.cs" />
+    <Compile Remove="Model\NotificationMessageModel.cs" />
+    <Compile Remove="Model\NotificationPullResult.cs" />
     <Compile Remove="ViewModels\HomePage\SharePositiveDiagnosisPageViewModel.cs" />
     <Compile Remove="Views\HomePage\SharePositiveDiagnosisPage.xaml.cs" />
   </ItemGroup>
@@ -97,13 +104,11 @@
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.ExposureNotification" Version="0.9.0-preview" />
+    <PackageReference Include="Xamarin.ExposureNotification" Version="0.11.0-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
-    <PackageReference Include="Xamarin.Forms.Maps" Version="4.6.0.847" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.847" />
   </ItemGroup>
   <ItemGroup>
