@@ -146,5 +146,26 @@
 	<false/>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSExceptionDomains</key>
+    <dict>
+      <key>covid19radar-jpn-prod.trafficmanager.net</key>
+      <dict>
+        <key>NSIncludesSubdomains</key>
+        <true/>
+      </dict>
+      <key>covid19radar-jpn-prod.azureedge.net</key>
+      <dict>
+        <key>NSIncludesSubdomains</key>
+        <true/>
+      </dict>
+      <key>covid19radarjpnprod.z11.web.core.windows.net</key>
+      <dict>
+        <key>NSIncludesSubdomains</key>
+        <true/>
+      </dict>
+    </dict>   
+  </dict>
 </dict>
 </plist>
