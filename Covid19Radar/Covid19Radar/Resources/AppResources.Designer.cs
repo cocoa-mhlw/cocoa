@@ -908,6 +908,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   If you want to disable it, you can change it from the app settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationPermittedDescription {
+            get {
+                return ResourceManager.GetString("LocalNotificationPermittedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Notifications enabled に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationPermittedTitle {
+            get {
+                return ResourceManager.GetString("LocalNotificationPermittedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Possible COVID-19 Exposure に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LocalNotificationTitle {
