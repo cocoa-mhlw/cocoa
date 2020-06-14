@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Как это работает</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Следующий</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Условия предоставления услуг</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Нет необходимости ввода личной информации. Мы используем уникальный идентификатор, выделенный вам при установке приложения.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Контакт с другим пользователем приложения в общей сложности более 30 минут, в радиусе ближе, чем 2 м в среднем, регистрируется как "Близкий контакт".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth должен быть включен для записи близкого контакта. Пожалуйста, перейдите на следующую страницу, чтобы включить его.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Запустить</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Защита наших близких от COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Доступ к устройствам</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Принимаю</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Обновить сведения</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ГЛАВНАЯ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Всё готово</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Настройка завершена</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Список участников</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Лицензионное соглашение</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Установка приложения</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Запись близкого контакта</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Если у вас диагностирован COVID-19 положительный</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Требования к использованию этого приложения</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Параметры состояния</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ОК</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Включить</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Не сейчас</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Это приложение использует exposure Уведомление / Bluetooth сигналы, чтобы определить, если вы находитесь рядом с другим пользователем отслеживания контактов. 
-Выберите "Всегда разрешите" настроить Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Разрешить уведомление об экспозиции / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Экспозиций</value>
@@ -145,22 +65,6 @@
     <value>Вы будете уведомлены, если вы подверглись воздействию кого-то, кто сообщил положительный результат COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Пожалуйста, введите Идентификатор диагноза</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Поделитесь положительной диагностикой</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Дата тестирования помогает приложению узнать, когда вы, возможно, были заразны и уведомить нужных людей о потенциальной экспозиции.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Уведомления получат только те, кто подвергся воздействию.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Уникальный идентификатор теста, который пришел с вашим тестом COVID-19, должен быть использован для проверки положительного результата теста.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Повторите попытку позже.</value>
   </data>
@@ -173,55 +77,18 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Завершение</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Пожалуйста, предоставьте идентификационный диагноз</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Требуется идентификация диагноза</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Пожалуйста, включите уведомления об экспозиции перед отправкой диагноза.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Уведомления об экспозиции отключены</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Представление диагноза...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Проверка диагноза...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Ваш диагноз не может быть проверен в настоящее время для представления.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Проверка не пройдена</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Отправить</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Параметры</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Не согласен</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Вы хотите включить уведомления?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Включение</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Удаление</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Если вы получили положительный диагноз</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Поделиться приложением</value>
@@ -253,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Все настройки и данные были удалены. Пожалуйста, перезапустите приложение.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Идентификатор недействительной диагностики</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Пожалуйста, предоставьте действительный идентификатор диагноза</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Недействительной даты тестирования</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Пожалуйста, укажите действительный тест Дата</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Возвращение к регистрации</value>
   </data>
@@ -273,21 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Хотите зарегистрироваться позже?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>При запуске приложения, он будет генерировать и хранить анонимный ID на каждом смартфоне. Это приложение не получает никакой информации, связанной с конфиденциальностью, такой как номер телефона и информация о местоположении.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Пока приложение работает, смартфон друг друга будет записывать анонимные идентификации друг друга в течение последних двух недель. Записи старше 2 недель будут удалены, и каждый анонимный идентификатор будет периодически меняться для защиты конфиденциальности.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Другие пользователи регулярно получают список анонимных идентипов положительных. После приобретения контактная запись, записанная на смартфоне, будет сопоставлена. Если результатматча является тяжелым контактом, мы сообщим вашему смартфону и сообщим вам о необходимых действиях, с которыми Вы хотели бы, чтобы мы сотрудничали.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Контакт с положительными тестерами за последние 14 дней</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Если вы уверены в новом Corona, пожалуйста, сотрудничайте с положительной регистрации, чтобы защитить людей вокруг вас.</value>

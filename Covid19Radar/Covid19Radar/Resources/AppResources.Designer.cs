@@ -97,47 +97,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Enable に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonEnable {
-            get {
-                return ResourceManager.GetString("ButtonEnable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Failed に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonFailed {
             get {
                 return ResourceManager.GetString("ButtonFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   HOME に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonHome {
-            get {
-                return ResourceManager.GetString("ButtonHome", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Next に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNext {
-            get {
-                return ResourceManager.GetString("ButtonNext", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Not Agree に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNotAgree {
-            get {
-                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
             }
         }
         
@@ -169,15 +133,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Submit に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonPositiveSubmit {
-            get {
-                return ResourceManager.GetString("ButtonPositiveSubmit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Stop に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonReset {
@@ -201,15 +156,6 @@ namespace Covid19Radar.Resources {
         internal static string ButtonShare {
             get {
                 return ResourceManager.GetString("ButtonShare", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Start に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonStart {
-            get {
-                return ResourceManager.GetString("ButtonStart", resourceCulture);
             }
         }
         
@@ -282,96 +228,6 @@ namespace Covid19Radar.Resources {
         internal static string ContactedNotifyPageTitle {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   No need to input personal information. We are using unique ID, allocated to you when installing an app. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep1Description1 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep1Description1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep1Description2 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep1Description2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as &quot;Close Contact&quot;. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep2Description1 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep2Description1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   While the application is running, each other&apos;s smartphone will record each other&apos;s anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep2Description2 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep2Description2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep3Description1 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep3Description1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTextStep4Description {
-            get {
-                return ResourceManager.GetString("DescriptionPageTextStep4Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Installing an App に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTitleTextStep1 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTitleTextStep1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recording close contact に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTitleTextStep2 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTitleTextStep2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   If you are diagnosed COVID-19 positive に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTitleTextStep3 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTitleTextStep3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Requirements to use this app に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DescriptionPageTitleTextStep4 {
-            get {
-                return ResourceManager.GetString("DescriptionPageTitleTextStep4", resourceCulture);
             }
         }
         
@@ -745,29 +601,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Contact with positive testers in the last 14 days に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HomePageHeader1Title {
-            get {
-                return ResourceManager.GetString("HomePageHeader1Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Help protect your family and friends by anonymously registering test results. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader2Description {
             get {
                 return ResourceManager.GetString("HomePageHeader2Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   If you received a positive diagnosis に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HomePageHeader2Title {
-            get {
-                return ResourceManager.GetString("HomePageHeader2Title", resourceCulture);
             }
         }
         
@@ -808,34 +646,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Do you want to turn on notifications? に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InitSettingPageDialogExposureNotificationTitle {
-            get {
-                return ResourceManager.GetString("InitSettingPageDialogExposureNotificationTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Allow Exposure Notification / Bluetooth に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InitSettingPageTextExposureNotification {
-            get {
-                return ResourceManager.GetString("InitSettingPageTextExposureNotification", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-        ///Select &apos;Always Allow&apos; to set up Bluetooth. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InitSettingPageTextExposureNotificationDescription {
-            get {
-                return ResourceManager.GetString("InitSettingPageTextExposureNotificationDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   9:00-17:30 (except weekends and holidays) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription1 {
@@ -872,15 +682,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Enabling に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string LoadingTextEnabling {
-            get {
-                return ResourceManager.GetString("LoadingTextEnabling", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Waiting for register に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LoadingTextRegistering {
@@ -895,6 +696,42 @@ namespace Covid19Radar.Resources {
         internal static string LoadingTextSubmittingDiagnosis {
             get {
                 return ResourceManager.GetString("LoadingTextSubmittingDiagnosis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationDescription {
+            get {
+                return ResourceManager.GetString("LocalNotificationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you want to disable it, you can change it from the app settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationPermittedDescription {
+            get {
+                return ResourceManager.GetString("LocalNotificationPermittedDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Notifications enabled に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationPermittedTitle {
+            get {
+                return ResourceManager.GetString("LocalNotificationPermittedTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Possible COVID-19 Exposure に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LocalNotificationTitle {
+            get {
+                return ResourceManager.GetString("LocalNotificationTitle", resourceCulture);
             }
         }
         
@@ -971,15 +808,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please enter the Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageCodePlaceholder {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageCodePlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Please enter a process code issued to you by &quot;Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)&quot;. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDescription1 {
@@ -998,65 +826,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please enable Exposure Notifications before submitting a diagnosis. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogENDisabledText {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogENDisabledText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Exposure Notifications Disabled に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogENDisabledTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogENDisabledTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Please try again later. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDialogExceptionText {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogExceptionText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please provide a valid Diagnosis ID に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogInvalidDiagnosisIDText {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogInvalidDiagnosisIDText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Invalid Diagnosis ID に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogInvalidDiagnosisIDTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogInvalidDiagnosisIDTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please provide a valid Test Date に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogInvalidTestDateText {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogInvalidTestDateText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Invalid Test Date に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOtherPageDialogInvalidTestDateTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogInvalidTestDateTitle", resourceCulture);
             }
         }
         
@@ -1232,96 +1006,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   You&apos;re ready to go に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SetupCompletedPageTextYoureReadyToGo {
-            get {
-                return ResourceManager.GetString("SetupCompletedPageTextYoureReadyToGo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   The test date helps the app know when you may have been contagious and notify the right people of potential exposure. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagDateText {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagDateText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please provide a Diagnosis Identifier に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageDiagUidIsEmptyText {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageDiagUidIsEmptyText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Diagnosis Identifier Required に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageDiagUidIsEmptyTitle {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageDiagUidIsEmptyTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Verifying Diagnosis... に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageVerifyDialog {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageVerifyDialog", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Your diagnosis cannot be verified at this time to be submitted. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageVerifyFailedDialogText {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageVerifyFailedDialogText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Verification Failed に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveDiagnosisPageVerifyFailedDialogTitle {
-            get {
-                return ResourceManager.GetString("SharePositiveDiagnosisPageVerifyFailedDialogTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Only those who have been exposed will receive a notification. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveEntryCodeText {
-            get {
-                return ResourceManager.GetString("SharePositiveEntryCodeText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   The unique test identifier that came with your COVID-19 test must be used to verify your positive test result. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SharePositiveEntryCodeText2 {
-            get {
-                return ResourceManager.GetString("SharePositiveEntryCodeText2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Protecting our loved ones from COVID-19 に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string StartTutorialPageTextProtectingOurLovedOnes {
-            get {
-                return ResourceManager.GetString("StartTutorialPageTextProtectingOurLovedOnes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter &quot;management system&quot;). に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SubmitConsentPageDescription1 {
@@ -1421,15 +1105,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Share a Positive Diagnosis に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitileSharePositiveDiagnosis {
-            get {
-                return ResourceManager.GetString("TitileSharePositiveDiagnosis", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Status Settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitileUserStatusSettings {
@@ -1439,65 +1114,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Terms of Service に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleConsentByUserPage {
-            get {
-                return ResourceManager.GetString("TitleConsentByUserPage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Contributors List に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleContributorsPage {
-            get {
-                return ResourceManager.GetString("TitleContributorsPage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Device Access に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleDeviceAccess {
-            get {
-                return ResourceManager.GetString("TitleDeviceAccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   How it works に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleHowItWorks {
-            get {
-                return ResourceManager.GetString("TitleHowItWorks", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   License に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleLicenseAgreement {
             get {
                 return ResourceManager.GetString("TitleLicenseAgreement", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Set up Completed に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleSetupCompleted {
-            get {
-                return ResourceManager.GetString("TitleSetupCompleted", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Update Information に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleUpdateInformation {
-            get {
-                return ResourceManager.GetString("TitleUpdateInformation", resourceCulture);
             }
         }
         

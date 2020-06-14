@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>இது எப்படி வேலை செய்கிறது</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>அடுத்து</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>சேவை விதிமுறைகள்</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>தனிப்பட்ட தகவலை உள்ளிடுதல் தேவையில்லை. ஒரு பயன்பாட்டை நிறுவும்போது உங்களுக்கு ஒதுக்கப்பட்ட தனித்துவமான ID-ஐ நாங்கள் பயன்படுத்துகிறோம்.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>மொத்த 30 நிமிடத்திற்கும் அதிகமாக உள்ள ஒரு பயன்பாட்டைப் பயன்படுத்துபவர், சராசரியாக 2m க்கு அருகில் உள்ள ஆரத்திற்குள், "நெருங்கிய தொடர்பு" என பதிவு செய்யப்படுகிறது.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>நெருங்கிய தொடர்பை பதிவு செய்ய Bluetooth ஆன் செய்யப்பட வேண்டும். அதை அணைக்க அடுத்த பக்கத்திற்கு செல்லவும்.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>தொடக்கம்</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID-19 இருந்து எங்கள் அன்புக்குரியவர்களைப் பாதுகாத்தல்</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>சாதன அணுகல்</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>ஏற்பு</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>புதுப்பித்தல் தகவல்</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>முகப்பு</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>நீங்கள் செல்ல தயாராக இருக்கிறீர்கள்</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>அமைவு முடிந்தது</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>பங்களிப்பாளர்கள் பட்டியல்</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>உரிம ஒப்பந்தம்</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>ஒரு பயன்பாட்டை நிறுவுதல்</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>நெருங்கிய தொடர்பை பதிவுசெய்தல்</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>உங்களுக்கு COVID-19 நேர்மறையாக கண்டறியப்பட்டால்</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>இந்த பயன்பாட்டை பயன்படுத்துவதற்கான தேவைகள்</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>நிலை அமைப்புகள்</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>சரி</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>செயல்படுத்து</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>இப்போது இல்லை</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>இந்த செயலி எக்ஸ்போசர்/புளூடூத் சிக்னல்களைப் பயன்படுத்துகிறது. 
-Bluetooth அமைக்க ' எப்போதும் அனுமதிக்கவும் ' என்பதைத் தேர்ந்தெடுக்கவும்.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>வெளிப்பாடு அறிவிக்கை/புளூடூத் அனுமதி</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>அம்பலப்படுத்தல்</value>
@@ -145,22 +65,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
     <value>நேர்மறை குறியீடாகவும்-19 முடிவாகவும் அறிவிக்கப்பட்ட ஒருவரிடம் நீங்கள் வெளிப்படுத்தப்பட்டால் உங்களுக்கு அறிவிக்கப்படுவீர்கள்.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>தயவுசெய்து நோய் கண்டறிதல் அடையாளங்காட்டி உள்ளிடவும்</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>ஒரு நேர்மறையான நோயை பகிர்ந்துகொள்ளுங்கள்</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>இந்தத் தேர்வு தேதி, நீங்கள் தொற்று நோய் உள்ளவரை மற்றும் சாத்தியமான வெளிப்பாடு சரியான மக்களுக்கு தெரியப்படுத்தும்போது, பயன்பாட்டை அறிய உதவுகிறது.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>அம்பலத்திற்கு வந்தவர்கள் மட்டுமே அறிவிப்பைப் பெறுவார்கள்.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>உங்கள் கோவிட்-19 பரிசோதனையுடன் வந்த தனித்துவமான சோதனை அடையாளங்காட்டி உங்கள் நேர்மறை சோதனை முடிவை சரிபார்க்க பயன்படுத்தப்பட வேண்டும்.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>பின்னர் மீண்டும் முயற்சிக்கவும்.</value>
   </data>
@@ -173,55 +77,18 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="ButtonComplete" xml:space="preserve">
     <value>முழுமை</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>தயவுசெய்து ஒரு நோய் கண்டறியும் அடையாளங்காட்டியை வழங்கவும்</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>நோய் கண்டறிதல் அடையாளங்காட்டி தேவை</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>தயவுசெய்து ஒரு பகுப்பாய்வு சமர்ப்பிக்கும் முன், வெளிப்பாடு அறிவிப்புகளை இயக்கவும்.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>வெளிப்பாடு அறிவிப்புகள் முடக்கப்பட்டன</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>நோய் கண்டறிதல்...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>நோயை சரிபார்த்தல்...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>சமர்ப்பிக்க வேண்டிய நேரத்தில் உங்கள் நோயை உறுதிப்படுத்த முடியாது.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>சரிபார்ப்பு தோல்வி</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>சமர்ப்பி</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>அமைப்புகள்</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>உடன்படவில்லை</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>ரத்துசெய்</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>அறிவிப்புகளை இயக்க விரும்புகிறீர்களா?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>இயக்குவதால்</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>நீக்குகிறது</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>நீங்கள் ஒரு நேர்மறையான ஆய்வு கிடைத்தது என்றால்</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>பயன்பாட்டை பகிரவும்</value>
@@ -253,18 +120,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>அனைத்து அமைப்புகள் மற்றும் தரவு நீக்கப்பட்டுள்ளது. தயவுசெய்து பயன்பாட்டை மறுதொடக்கம் செய்யவும்.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>செல்லுபடியாகாத நோயறிதல் ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>தயவு செய்து சரியான நோய் கண்டறிதல் ID வழங்கவும்</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>செல்லுபடியாகாத தேர்வு தேதி</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>செல்லத்தக்க சோதனை தேதியை வழங்கவும்</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>பதிவுக்கான திருப்பம்</value>
   </data>
@@ -273,21 +128,6 @@ Bluetooth அமைக்க ' எப்போதும் அனுமதிக
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>நீங்கள் பின்னர் நேர்மறையாக பதிவு செய்ய விரும்புகிறீர்களா?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>நீங்கள் பயன்பாட்டை இயக்கும் போது, அது ஒவ்வொரு ஸ்மார்ட்ஃபோனிலும் அநாமதேய ID உருவாக்கி சேமித்து வைக்கும். இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனியுரிமை தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>பயன்பாடு இயங்கும் போது, ஒவ்வொரு மற்ற ஸ்மார்ட்போன் கடந்த இரண்டு வாரங்களுக்கு ஒருவருக்கொருவர் அநாமதேய Idகளை பதிவு செய்யும். 2 வாரங்களுக்கு முன்பு உள்ள பதிவுகள் நீக்கப்படும் மற்றும் தனியுரிமை பாதுகாக்க ஒவ்வொரு பெயரிட ID அவ்வப்போது மாற்றப்படும்.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>மற்ற பயனர்கள் தொடர்ந்து நேர்மறையர்களின் பெயரில்லாத Id களின் பட்டியலை பெறுவர். கையகப்படுத்துபின், ஸ்மார்ட்போன் தொடர்பாக பதிவு செய்துள்ள தொடர்பு பதிவுகள் பொருத்தமாக இருக்கும். போட்டியின் முடிவு பலத்த தொடர்பால், நாங்கள் உங்கள் ஸ்மார்ட்ஃபோனை தெரிவிப்போம், மேலும் எங்களுக்கு நீங்கள் ஒத்துழைக்க விரும்பும் அவசியமான நடவடிக்கைகளை தெரியப்படுத்துவோம்.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>கடந்த 14 நாட்களில் நேச்சுரல் டெஸ்டர்களுடனான தொடர்பு</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>புதிய கோரோனா உடன் நீங்கள் நேர்மறையாக இருந்தால், உங்களைச் சுற்றியுள்ள மக்களைப் பாதுகாக்க நேர்மறையான பதிவிற்கு ஒத்துழைக்கவும்.</value>
