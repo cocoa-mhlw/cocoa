@@ -34,6 +34,7 @@ namespace Covid19Radar.ViewModels
                 {
                     UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
                     await ExposureNotification.StartAsync();
+
                     while (true)
                     {
                         Thread.Sleep(1000);
@@ -45,6 +46,11 @@ namespace Covid19Radar.ViewModels
                             userData.IsExposureNotificationEnabled = true;
                             await userDataService.SetAsync(userData);
                             break;
+                        }else if (status == Status.BluetoothOff)
+                        {
+                            UserDialogs.Instance.HideLoading();
+                            await UserDialogs.Instance.AlertAsync(Resources.AppResources.TutorialPage4Description,Resources.AppResources.TutorialPage4Title1, Resources.AppResources.ButtonOk);
+                            return;
                         }
                     }
                     UserDialogs.Instance.HideLoading();
