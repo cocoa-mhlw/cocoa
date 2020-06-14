@@ -114,31 +114,37 @@ namespace Covid19Radar.Services
             try
             {
                 await ExposureNotification.StartAsync();
+                var count = 0;
                 while (true)
                 {
+
                     Thread.Sleep(1000);
                     await ExposureNotification.StartAsync();
 
                     Status status = await ExposureNotification.GetStatusAsync();
                     if (status == Status.Active)
                     {
-                        userData.IsExposureNotificationEnabled = true;
-                        await userDataService.SetAsync(userData);
-                        break;
+                        return true;
+                    }
+                    else if (status == Status.BluetoothOff)
+                    {
+                        await UserDialogs.Instance.AlertAsync(GetStatusMessage());
+                        return true;
+                    }
+                    else
+                    {
+                        if (count > 2)
+                        {
+                            throw new Exception();
+                        }
+                        count++;
                     }
                 }
-
-                Status ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
-                if (ExposureNotificationStatus == Status.BluetoothOff)
-                {
-                    await UserDialogs.Instance.AlertAsync(GetStatusMessage());
-                }
-                return true;
             }
             catch (Exception)
             {
-                //userData.IsExposureNotificationEnabled = false;
-                //await userDataService.SetAsync(userData);
+                userData.IsExposureNotificationEnabled = false;
+                await userDataService.SetAsync(userData);
                 return false;
             }
 
