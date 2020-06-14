@@ -45,7 +45,7 @@ namespace Covid19Radar.iOS
                 Logger = new Covid19Radar.Services.DebugLogger()
             });
 
-            Plugin.LocalNotification.NotificationCenter.AskPermission();
+            //Plugin.LocalNotification.NotificationCenter.AskPermission();
 
             LoadApplication(new App(new iOSInitializer()));
 
@@ -63,7 +63,7 @@ namespace Covid19Radar.iOS
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<ISQLiteConnectionProvider, SQLiteConnectionProvider>();
+            
         }
     }
 

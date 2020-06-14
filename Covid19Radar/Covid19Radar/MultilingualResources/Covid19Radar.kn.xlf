@@ -6,49 +6,6 @@
     </header>
     <body>
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
-        <trans-unit id="TitleHowItWorks" translate="yes" xml:space="preserve">
-          <source>How it works</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page title</note>
-        </trans-unit>
-        <trans-unit id="ButtonNext" translate="yes" xml:space="preserve">
-          <source>Next</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಮುಂದಿನ</target>
-        </trans-unit>
-        <trans-unit id="TitleConsentByUserPage" translate="yes" xml:space="preserve">
-          <source>Terms of Service</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸೇವಾ ನಿಯಮಗಳು</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Consent by user page</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description1" translate="yes" xml:space="preserve">
-          <source>No need to input personal information. We are using unique ID, allocated to you when installing an app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಇನ್ ಪುಟ್ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲ. ಆ್ಯಪ್ ಇನ್ ಸ್ಟಾಲ್ ಮಾಡುವಾಗ ನಿಮಗೆ ವಿತರಿಸುವ, ವಿಶಿಷ್ಟವಾದ ಐಡಿ ಬಳಸುತ್ತಿದ್ದೇವೆ.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description1" translate="yes" xml:space="preserve">
-          <source>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಒಟ್ಟಾರೆ, ಸರಾಸರಿ 2ಮೀ ಗಿಂತ ಹತ್ತಿರದ ತ್ರಿಜ್ಯದೊಳಗೆ, ಒಟ್ಟು 30 min ಹೆಚ್ಚು ಕಾಲ ಮತ್ತೊಂದು ಆಪ್ ಬಳಕೆದಾರನೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು "ನಿಕಟ ಸಂಪರ್ಕ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 1</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep4Description" translate="yes" xml:space="preserve">
-          <source>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ನಿಕಟ ಸಂಪರ್ಕವನ್ನು ದಾಖಲಿಸಲು ಬ್ಲೂಟೂತ್ ಅನ್ನು ಆನ್ ಮಾಡಬೇಕಿದೆ. ಅದನ್ನು ತಿರುಗಿಸಲು ದಯವಿಟ್ಟು ಮುಂದಿನ ಪುಟಕ್ಕೆ ಹೋಗಿ.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 description</note>
-        </trans-unit>
-        <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
-          <source>Start</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಪ್ರಾರಂಭ</target>
-        </trans-unit>
-        <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID-19</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 ನಿಂದ ನಮ್ಮ ಪ್ರೀತಿಪಾತ್ರರನ್ನು ರಕ್ಷಿಸುವುದು</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-        </trans-unit>
-        <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
-          <source>Device Access</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸಾಧನ ಪ್ರಾಪ್ತಿ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page title</note>
-        </trans-unit>
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸಮ್ಮತಿಸಿ</target>
@@ -64,30 +21,6 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
-        <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
-          <source>Update Information</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಮಾಹಿತಿಯನ್ನು ಅಪ್ ಡೇಟ್ ಮಾಡಿ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Update Information Menu</note>
-        </trans-unit>
-        <trans-unit id="ButtonHome" translate="yes" xml:space="preserve">
-          <source>HOME</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಹೋಮ್</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">HOME</note>
-        </trans-unit>
-        <trans-unit id="SetupCompletedPageTextYoureReadyToGo" translate="yes" xml:space="preserve">
-          <source>You're ready to go</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೀವು ಹೋಗಲು ತಯಾರಾಗಿದ್ದೀರಿ</target>
-        </trans-unit>
-        <trans-unit id="TitleSetupCompleted" translate="yes" xml:space="preserve">
-          <source>Set up Completed</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸೆಟ್ ಪೂರ್ಣಗೊಳಿಸಿದ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Set up Completed</note>
-        </trans-unit>
-        <trans-unit id="TitleContributorsPage" translate="yes" xml:space="preserve">
-          <source>Contributors List</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಕೊಡುಗೆ ಪಟ್ಟಿ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Contributors list page title</note>
-        </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಪರವಾನಗಿ ಒಪ್ಪಂದ</target>
@@ -99,27 +32,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep1" translate="yes" xml:space="preserve">
-          <source>Installing an App</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಒಂದು ಆಪ್ ಅನ್ನು ಇನ್ಸ್ಟಾಲ್ ಮಾಡುವುದು</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep2" translate="yes" xml:space="preserve">
-          <source>Recording close contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ನಿಕಟ ಸಂಪರ್ಕವನ್ನು ದಾಖಲಿಸುವ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep3" translate="yes" xml:space="preserve">
-          <source>If you are diagnosed COVID-19 positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೀವು COVID-19 ಪಾಸಿಟಿವ್ ಅನ್ನು ಪತ್ತೆ ಮಾಡಿದಲ್ಲಿ</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 title</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTitleTextStep4" translate="yes" xml:space="preserve">
-          <source>Requirements to use this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಈ ಆಪ್ ಅನ್ನು ಬಳಸಲು ಅಗತ್ಯತೆಗಳು</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 4 title</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
@@ -135,25 +47,9 @@
           <source>OK</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸರಿ</target>
         </trans-unit>
-        <trans-unit id="ButtonEnable" translate="yes" xml:space="preserve">
-          <source>Enable</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸಕ್ರಿಯಗೊಳಿಸು</target>
-        </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>NotNow</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೋಟನೌ</target>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotificationDescription" translate="yes" xml:space="preserve">
-          <source>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಈ ಆಪ್ ನೀವು ಮತ್ತೊಂದು ಕಾಂಟ್ಯಾಕ್ಟ್ ಟ್ರೇಸಿಂಗ್ ಆಪ್ ಬಳಕೆದಾರರ ಬಳಿ ಇದೆಯೇ ಎಂದು ನಿರ್ಧರಿಸಲು ಎಕ್ಸ್ ಪ್ಲೋರೇಷನ್/ಬ್ಲೂಟೂತ್ ಸಂಕೇತಗಳನ್ನು ಬಳಸುತ್ತದೆ. 
-ಬ್ಲೂಟೂತ್ ಅನ್ನು ಹೊಂದಿಸಲು ' ಯಾವಾಗಲೂ ಅನುಮತಿಸು ' ಆಯ್ಕೆಮಾಡಿ.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth description</note>
-        </trans-unit>
-        <trans-unit id="InitSettingPageTextExposureNotification" translate="yes" xml:space="preserve">
-          <source>Allow Exposure Notification / Bluetooth</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ತೆರೆದುಕೊಳ್ಳುವಿಕೆ ಅಧಿಸೂಚನೆ/ಬ್ಲೂಟೂತ್ ಗೆ ಅವಕಾಶ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Device access page Allow Exposure Notification / Bluetooth title</note>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -181,27 +77,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸಕಾರಾತ್ಮಕ ಕೋವಿದ್-19 ಫಲಿತಾಂಶವನ್ನು ವರದಿ ಮಾಡಿದ ಯಾರಿಗಾದರೂ ನೀವು ಆಮಿಷ ಒಡ್ಡಿದ್ದರೆ ನಿಮಗೆ ಅಧಿಸೂಚನೆ ಹೊರಡಿಸಲಾಗುವುದು.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageCodePlaceholder" translate="yes" xml:space="preserve">
-          <source>Please enter the Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ದಯವಿಟ್ಟು ರೋಗನಿರ್ಣಯದ ಗುರುತುಪತ್ರ ನಮೂದಿಸಿ</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Notify Other Page Code Input</note>
-        </trans-unit>
-        <trans-unit id="TitileSharePositiveDiagnosis" translate="yes" xml:space="preserve">
-          <source>Share a Positive Diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಧನಾತ್ಮಕ ರೋಗನಿರ್ಣಯವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagDateText" translate="yes" xml:space="preserve">
-          <source>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಪರೀಕ್ಷಾ ದಿನಾಂಕವು ನೀವು ಸಾಂಕ್ರಾಮಿಕವಾಗಿರಬಹುದು ಮತ್ತು ಸಂಭಾವ್ಯ ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಸರಿಯಾದ ಜನರಿಗೆ ಸೂಚಿಸಿದಾಗ ಆಪ್ ಗೆ ನೆರವಾಗುತ್ತದೆ.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText" translate="yes" xml:space="preserve">
-          <source>Only those who have been exposed will receive a notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಆಮಿಷ ಒಡ್ಡಿದವರು ಮಾತ್ರ ಅಧಿಸೂಚನೆ ಸ್ವೀಕರಿಸುತ್ತಾರೆ.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveEntryCodeText2" translate="yes" xml:space="preserve">
-          <source>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ನಿಮ್ಮ ಕೋವಿಡ್-19 ಟೆಸ್ಟ್ ನೊಂದಿಗೆ ಬಂದ ವಿಶಿಷ್ಟವಾದ ಪರೀಕ್ಷಾ ಗುರುತುಪಟ್ಟಿಯು ನಿಮ್ಮ ಧನಾತ್ಮಕ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶವನ್ನು ಪರಿಶೀಲಿಸಲು ಬಳಸಿರಬೇಕು.</target>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</target>
@@ -218,41 +93,9 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>Complete</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ಪೂರ್ಣಗೊಳಿಸು</target>
         </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyText" translate="yes" xml:space="preserve">
-          <source>Please provide a Diagnosis Identifier</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ದಯವಿಟ್ಟು ರೋಗನಿರ್ಣಯದ ಗುರುತುಪತ್ರ ಒದಗಿಸಿ</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" translate="yes" xml:space="preserve">
-          <source>Diagnosis Identifier Required</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ರೋಗನಿರ್ಣಯ ಗುರುತುಪಟ್ಟಿ ಅಗತ್ಯ</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledText" translate="yes" xml:space="preserve">
-          <source>Please enable Exposure Notifications before submitting a diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಒಂದು ರೋಗನಿರ್ಣಯವನ್ನು ಸಲ್ಲಿಸುವ ಮೊದಲು ತೆರೆದುಕೊಳ್ಳುವಿಕೆಯ ಅಧಿಸೂಚನೆಗಳನ್ನು ದಯವಿಟ್ಟು ಸಕ್ರಿಯಗೊಳಿಸಿ.</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogENDisabledTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notifications Disabled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಬಹಿರ್ಮುಖತೆ ಅಧಿಸೂಚನೆಗಳು ಅಶಕ್ತcomment</target>
-        </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyDialog" translate="yes" xml:space="preserve">
-          <source>Verifying Diagnosis...</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಪರಿಶೀಲನಾನಿರ್ಣಯ...</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
-          <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಸಲ್ಲಿಸಲು ಈ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ರೋಗನಿರ್ಣಯವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</target>
-        </trans-unit>
-        <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
-          <source>Verification Failed</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಪರಿಶೀಲನೆ ವಿಫಲಗೊಂಡಿದೆ</target>
-        </trans-unit>
-        <trans-unit id="ButtonPositiveSubmit" translate="yes" xml:space="preserve">
-          <source>Submit</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ಸಲ್ಲಿಸು</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
@@ -260,30 +103,13 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
         </trans-unit>
-        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
-          <source>Not Agree</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಒಪ್ಪುವುದಿಲ್ಲ</target>
-        </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ರದ್ದುಮಾಡಿ</target>
         </trans-unit>
-        <trans-unit id="InitSettingPageDialogExposureNotificationTitle" translate="yes" xml:space="preserve">
-          <source>Do you want to turn on notifications?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೋಟಿಫಿಕೇಶನ್ ಗಳನ್ನು ಆನ್ ಮಾಡಬಯಸುವಿರಾ?</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Confirmation dialog</note>
-        </trans-unit>
-        <trans-unit id="LoadingTextEnabling" translate="yes" xml:space="preserve">
-          <source>Enabling</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಅನುಕೂಲ</target>
-        </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">ಅಳಿಸುತ್ತಿದೆ</target>
-        </trans-unit>
-        <trans-unit id="HomePageHeader2Title" translate="yes" xml:space="preserve">
-          <source>If you received a positive diagnosis</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಪಾಸಿಟಿವ್ ಡಯಾಗ್ನೋಸಿಸ್ ಪಡೆದರೆ</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -326,22 +152,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ಎಲ್ಲಾ ಸೆಟ್ಟಿಂಗ್ಸ್ ಮತ್ತು ಡಾಟಾ ಡಿಲೀಟ್ ಮಾಡಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಅರ್ಜಿಯನ್ನು ಪುನಃ ಆರಂಭಿಸಿ.</target>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಅಮಾನ್ಯಗೊಂಡ ರೋಗನಿರ್ಣಯ ID</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidDiagnosisIDText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Diagnosis ID</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ದಯವಿಟ್ಟು ಒಂದು ಮಾನ್ಯವಾದ ರೋಗನಿರ್ಣಯ ID ಯನ್ನು ಒದಗಿಸಿ</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateTitle" translate="yes" xml:space="preserve">
-          <source>Invalid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಅಮಾನ್ಯವಾದ ಪರೀಕ್ಷಾ ದಿನಾಂಕ</target>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDialogInvalidTestDateText" translate="yes" xml:space="preserve">
-          <source>Please provide a valid Test Date</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ದಯವಿಟ್ಟು ಒಂದು ಸಿಂಧುವಾದ ಪರೀಕ್ಷಾ ದಿನಾಂಕವನ್ನು ಒದಗಿಸಿ</target>
-        </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೋಂದಣಿಗೆ ತಿರುವು</target>
@@ -353,25 +163,6 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೀವು ಮುಂದೆ ಸಕಾರಾತ್ಮಕವಾಗಿ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಲು ಇಷ್ಟಪಡುತ್ತೀರಾ?</target>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ನೀವು ಓಡಿಸಿದಾಗ ಅದು ಪ್ರತಿ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ನಲ್ಲಿ ಅನಾಮಿಕ ಐಡಿಯನ್ನು ಉತ್ಪಾದಿಸಿ ಸ್ಟೋರ್ ಮಾಡುತ್ತದೆ. ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಮತ್ತು ಸ್ಥಳದ ಮಾಹಿತಿಯನ್ನಷ್ಟೇ ಗೌಪ್ಯತೆಗೆ ಸಂಬಂಧಿಸಿದ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ಈ ಅಪ್ಲಿಕೇಶನ್ ಪಡೆದುಕೊಳ್ಳುವುದಿಲ್ಲ.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಅಪ್ಲಿಕೇಶನ್ ಓಡುತ್ತಿರುವಾಗಲೇ ಪರಸ್ಪರರ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಕಳೆದ ಎರಡು ವಾರಗಳಿಂದ ಪರಸ್ಪರರ ಅನಾಮಧೇಯ ಐಡಿಗಳನ್ನು ರೆಕಾರ್ಡ್ ಮಾಡುತ್ತದೆ. 2 ವಾರಗಳಿಗಿಂತಲೂ ಹಳೆಯದಾದ ದಾಖಲೆಗಳನ್ನು ಡಿಲೀಟ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಗೌಪ್ಯತೆಯನ್ನು ರಕ್ಷಿಸಲು ಪ್ರತಿ ಅನಾಮಧೇಯ ಐಡಿಯನ್ನು ಕಾಲಕಾಲಕ್ಕೆ ಬದಲಾಯಿಸಲಾಗುವುದು.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description 2</note>
-        </trans-unit>
-        <trans-unit id="DescriptionPageTextStep3Description1" translate="yes" xml:space="preserve">
-          <source>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಇತರ ಬಳಕೆದಾರರು ನಿಯಮಿತವಾಗಿ ಧನಾತ್ಮಕ ಪಾತ್ರಗಳಿಂದ ಅನಾಮಿಕ ಐಡಿಗಳನ್ನು ಪಟ್ಟಿ ಪಡೆಯುತ್ತಾರೆ. ಸ್ವಾಧೀನದ ನಂತರ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ನಲ್ಲಿ ರೆಕಾರ್ಡ್ ಆಗಿರುವ ಕಾಂಟ್ಯಾಕ್ಟ್ ರೆಕಾರ್ಡ್ ಮ್ಯಾಚ್ ಆಗುತ್ತದೆ. ಒಂದು ವೇಳೆ ಪಂದ್ಯದ ಫಲಿತಾಂಶವು ಭಾರಿ ಸಂಪರ್ಕವಾದರೆ, ನಾವು ನಿಮ್ಮ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಗೆ ಸೂಚಿಸುತ್ತೇವೆ ಮತ್ತು ನಿಮಗೆ ನಾವು ಸಹಕರಿಸಬೇಕಾದ ಅಗತ್ಯ ಕ್ರಮಗಳ ಬಗ್ಗೆ ಮಾಹಿತಿ ನೀಡುತ್ತೇವೆ.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 3 description</note>
-        </trans-unit>
-        <trans-unit id="HomePageHeader1Title" translate="yes" xml:space="preserve">
-          <source>Contact with positive testers in the last 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ಧನಾತ್ಮಕ ಟೀಕಾಕಾರರೊಂದಿಗೆ ಸಂಪರ್ಕ</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
@@ -947,6 +738,24 @@ Select 'Always Allow' to set up Bluetooth.</source>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
           <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
+          <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
+          <target state="new">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
+          <source>Possible COVID-19 Exposure</source>
+          <target state="new">Possible COVID-19 Exposure</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
+          <source>If you want to disable it, you can change it from the app settings</source>
+          <target state="new">If you want to disable it, you can change it from the app settings</target>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
+          <source>Notifications enabled</source>
+          <target state="new">Notifications enabled</target>
         </trans-unit>
       </group>
     </body>

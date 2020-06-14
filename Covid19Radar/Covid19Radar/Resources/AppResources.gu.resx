@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>તે કેવી રીતે કામ કરે છે</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>આગામી</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>સેવાની શરતો</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>અંગત માહિતી ને ઇનપુટ કરવાની જરૂર નથી. અમે યુનિક આઈડીનો ઉપયોગ કરી રહ્યા છીએ, જે એપ્લિકેશન ઇન્સ્ટોલ કરતી વખતે તમને ફાળવવામાં આવેલ છે.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>અન્ય એપ્લિકેશન વપરાશકર્તા સાથે નો સંપર્ક કુલ 30 મિનિટથી વધુ સમય માટે, સરેરાશ 2m થી વધુ ત્રિજ્યાની અંદર "ક્લોઝ કોન્ટેક્ટ" તરીકે નોંધવામાં આવે છે.</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>નજીકનો સંપર્ક રેકોર્ડ કરવા માટે બ્લુટુથ ને ચાલુ કરવાની જરૂર છે. કૃપા કરીને તેને ચાલુ કરવા માટે આગળના પાના પર જાવ.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>પ્રારંભ</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>સીઓવીઆઈડી19થી આપણા પ્રિયજનોને સુરક્ષિત કરી રહ્યા છીએ</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>ઉપકરણ પ્રવેશ</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>સંમત</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>માહિતી સુધારો</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>હોમ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>તમે જવા માટે તૈયાર છો</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>સમાપ્ત થયેલ છે</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>ફાળો આપનાર યાદી</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>લાઇસન્સ કરાર</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>એપ્લિકેશન ને સ્થાપિત કરી રહ્યા છીએ</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>બંધ સંપર્કનું રેકોર્ડિંગ કરી રહ્યા છીએ</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>જો તમને COVID-19 પોઝિટિવ નું નિદાન થયું હોય</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>આ એપ્લિકેશનને વાપરવા ની જરૂરિયાતો</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>સ્થિતિ સુયોજનો</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ઠીક</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>સક્ષમ કરો</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>નોટહવે</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>આ એપ્લિકેશન એક્સપોઝર નોટિફિકેશન / બ્લુટુથ સિગ્નલનો ઉપયોગ કરે છે કે તમે અન્ય કોન્ટેક્ટ ટ્રેસિંગ એપ્લિકેશન વપરાશકર્તાની નજીક છો કે નહીં. 
-બ્લુટુથ ને સુયોજિત કરવા માટે 'હંમેશા પરવાનગી' પસંદ કરો.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>એક્સપોઝર સૂચના/ બ્લુટુથને પરવાનગી આપો</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>એક્સપોઝર્સ</value>
@@ -145,22 +65,6 @@
     <value>જો તમને કોઈ એવા વ્યક્તિ સાથે સંપર્ક થયો હોય કે જેણે હકારાત્મક COVID-19 પરિણામ ની જાણ કરી હોય તો તમને સૂચિત કરવામાં આવશે.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>કૃપા કરીને નિદાન ઓળખકર્તા દાખલ કરો</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>હકારાત્મક નિદાન વહેંચો</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>ટેસ્ટની તારીખ એપ્લિકેશનને એ જાણવામાં મદદ કરે છે કે તમે ક્યારે ચેપી હોઅને સંભવિત સંપર્કના યોગ્ય લોકોને સૂચિત કરો.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>જે લોકો ને ખુલ્લા પાડવામાં આવ્યા છે તેમને જ સૂચના મળશે.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>તમારા COVID-19 ટેસ્ટ સાથે આવેલો અનન્ય ટેસ્ટ ઓળખનાર તમારા હકારાત્મક ટેસ્ટ પરિણામની ચકાસણી કરવા માટે ઉપયોગ થવો જ જોઇએ.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>પછીથી ફરી પ્રયાસ કરો.</value>
   </data>
@@ -173,55 +77,18 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>પૂર્ણ</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>કૃપા કરીને નિદાન ઓળખકર્તા ને પ્રદાન કરો</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>નિદાન ઓળખનાર જરૂરી</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>નિદાન રજૂ કરતા પહેલા એક્સપોઝર સૂચનાઓ ને સક્રિય કરો.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>એક્સપોઝર સૂચનાઓ નિષ્ક્રિય</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>નિદાન રજૂ કરી રહ્યા છીએ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>નિદાનની ચકાસણી કરી રહ્યા છીએ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>તમારું નિદાન આ સમયે જમા કરાવવા માટે ચકાસી શકાતું નથી.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>વેરીફિકેશન નિષ્ફળ</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>સબમિટ કરો</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>સેટિંગ્સ</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>સંમત નથી</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>રદ કરો</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>શું તમે સૂચનાઓ ચાલુ કરવા માંગો છો?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>સક્રિય કરી રહ્યા છીએ</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>હટાવાઈ રહ્યું છે</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>જો તમને હકારાત્મક નિદાન થયું હોય</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>એપ્લિકેશન ને વહેંચો</value>
@@ -253,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>બધા સુયોજનો અને માહિતી કાઢી નાખવામાં આવી છે. મહેરબાની કરીને કાર્યક્રમ ફરી શરૂ કરો.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>અયોગ્ય નિદાન ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>કૃપા કરીને માન્ય નિદાન ID પ્રદાન કરો</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>અયોગ્ય ચકાસણી તારીખ</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>મહેરબાની કરીને યોગ્ય ચકાસણી તારીખ પૂરી પાડો</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>નોંધણી માં પાછા ફરો</value>
   </data>
@@ -273,21 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>શું તમે પછીથી હકારાત્મક નોંધણી કરવા માંગો છો?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>જ્યારે તમે એપ્લિકેશન ચલાવો છો ત્યારે તે દરેક સ્માર્ટફોન પર એક અનામી આઇડી જનરેટ કરશે અને સંગ્રહ કરશે. આ એપ્લિકેશન ફોન નંબર અને સ્થાન ની માહિતી જેવી ગોપનીયતા સાથે સંબંધિત કોઈ પણ માહિતી પ્રાપ્ત કરતી નથી.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>એપ્લિકેશન ચાલી રહી છે ત્યારે એકબીજાનો સ્માર્ટફોન છેલ્લા બે અઠવાડિયાથી એકબીજાના અનામી આઈ.ડી.ની નોંધ કરશે. 2 અઠવાડિયાથી જૂના રેકોર્ડ્સ કાઢી નાખવામાં આવશે અને દરેક અનામી ઓળખપત્રને ગોપનીયતાની સુરક્ષા માટે સમયાંતરે બદલવામાં આવશે.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>અન્ય વપરાશકર્તાઓ ને નિયમિત પણે પોઝિટિવ આઇ.ડી.ની યાદી મળે છે. અધિગ્રહણ બાદ, સ્માર્ટફોન પર રેકોર્ડ કરવામાં આવેલા કોન્ટેક્ટ રેકોર્ડને મેચ કરવામાં આવશે. જો મેચનું પરિણામ ભારે સંપર્ક હોય, તો અમે તમારા સ્માર્ટફોનને સૂચિત કરીશું અને તમને જરૂરી પગલાં વિશે જણાવીશું કે જેનો તમે સહકાર આપવા માંગો છો.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>છેલ્લા 14 દિવસમાં પોઝિટિવ ટેસ્ટર્સ સાથે સંપર્ક</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>જો તમે નવા કોરોના સાથે હકારાત્મક હો, તો કૃપા કરીને તમારી આસપાસના લોકોની સુરક્ષા માટે હકારાત્મક નોંધણીમાં સહકાર આપો.</value>

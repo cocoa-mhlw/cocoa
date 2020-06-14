@@ -38,7 +38,7 @@ namespace Covid19Radar.ViewModels
         public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
-            AppVer = AppConstants.AppVersion;
+            AppVer = AppSettings.Instance.AppVersion;
             this.userDataService = userDataService;
             _UserData = this.userDataService.Get();
             this.exposureNotificationService = exposureNotificationService;

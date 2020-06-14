@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Jinsi inavyofanya kazi</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Ifuatayo</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Masharti ya Huduma</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Hakuna haja ya kuingiza maelezo ya kibinafsi. Tunatumia ID ya kipekee, zilizotengwa kwako wakati wa kufunga programu.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kuwasiliana na mtumiaji mwingine wa programu kwa muda mrefu zaidi ya 30 min kwa jumla, ndani ya eneo karibu zaidi ya 2m kwa wastani ni kumbukumbu kama "Funga mawasiliano".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth inahitaji kuwashwa ili kurekodi mawasiliano ya karibu. Tafadhali nenda kwenye ukurasa unaofuata ili kuigeuza.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Anza</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Kulinda wapendwa wetu kutoka COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Ufikivu wa kifaa</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Kubali</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Sasisha taarifa</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>NYUMBANI</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Uko tayari kwenda</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Sanidi kumekamilika</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Orodha ya wachangiaji</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Mkataba wa leseni</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Inasakinisha programu</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Kurekodi Funga mwasiliani</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Kama wewe ni kukutwa COVID-19 chanya</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Mahitaji ya kutumia programu hii</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Mipangilio ya hali</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Sawa</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Wezesha</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Dokezi sasa</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Programu hii inatumia taarifa ya ufichuzi/ishara ya Bluetooth ili kuamua kama uko karibu na mtumiaji mwingine wa programu ya kufuatilia. 
-Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Ruhusu taarifa ya ufichuzi/Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Mrundikano</value>
@@ -145,22 +65,6 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
     <value>Utaarifiwa ikiwa umekuwa wazi kwa mtu ambaye aliripoti matokeo mazuri ya kuwa ID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Tafadhali ingiza Kitambulishi cha utambuzi</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Kushiriki utambuzi chanya</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Tarehe ya mtihani husaidia programu kujua wakati unaweza kuwa na kuambukiza na kuarifu watu sahihi wa mfiduo wa uwezo.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Hakika wale walio kuwa peke yao ni kufikisha ujumbe tu.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Kitambulisho cha mtihani wa kipekee ambacho huja na mtihani wako wa tamaa-19 lazima itumike ili kuthibitisha matokeo yako mazuri ya mtihani.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Tafadhali jaribu tena baadaye.</value>
   </data>
@@ -173,55 +77,18 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Imekamilika</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Tafadhali toa kitambulisho cha utambuzi</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Kitambulishi cha utambuzi kinahitajika</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Tafadhali Wezesha taarifa za ufichuzi kabla ya kuwasilisha utambuzi.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Taarifa za ufichuzi zimelemazwa</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Kuwasilisha utambuzi ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Inathibitisha utambuzi ...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Utambuzi wako hauwezi kuyakinishwa wakati huu ili kuwasilishwa.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Uthibitishaji Haujafaulu</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Wasilisha</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Mipangilio</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Haikubaliana</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Katisha</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Unataka kuwasha taarifa?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Kuwezesha</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Futa</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Kama umepokea utambuzi mzuri</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Gawiza programu</value>
@@ -253,18 +120,6 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Mipangilio yote na data zimefutwa. Tafadhali anzisha upya programu tumizi.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Kitambulisho cha utambuzi batili</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Tafadhali toa kitambulisho cha utambuzi halali</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Tarehe batili ya jaribio</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Tafadhali toa tarehe halali ya mtihani</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Rudi kwenye usajili</value>
   </data>
@@ -273,21 +128,6 @@ Chagua ' daima Ruhusu ' kuanzisha Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Ungependa kujisajili vizuri baadaye?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Wakati unapoendesha programu, itazalisha na kuhifadhi ID isiyojulikana kwenye kila smartphone. Programu tumizi hii haina kupata maelezo yoyote yanayohusiana na faragha kama vile namba ya simu na taarifa ya eneo.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Wakati programu hiyo inaendesha, smartphone ya kila mmoja itarekodi vitambulisho vya kila mmoja kwa wiki mbili zilizopita. Rekodi zaidi ya wiki za 2 zitafutwa na kila kitambulisho cha bila majina zitabadilishwa kwa vipindi ili kulinda faragha.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Watumiaji wengine hupata orodha ya vitambulisho vya wale chanya. Baada ya upatikanaji, rekodi ya kuwasiliana iliyoandikwa kwenye smartphone itaoana. Ikiwa matokeo ya mechi ni anwani nzito, tutaarifu smartphone yako na kukujulisha vitendo muhimu ambavyo ungependa sisi kushirikiana na.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Wasiliana na testers nzuri katika siku za mwisho za 14</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Kama wewe ni mzuri na Corona mpya, tafadhali Shirikiana na usajili chanya ili kuwalinda watu walio karibu nawe.</value>
