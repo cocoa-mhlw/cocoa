@@ -24,7 +24,6 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickEnable => new Command(async () =>
         {
-            userData.IsNotificationEnabled = true;
             var notification = new NotificationRequest
             {
                 NotificationId = 100,
@@ -32,6 +31,7 @@ namespace Covid19Radar.ViewModels
                 Description = AppResources.LocalNotificationPermittedDescription
             };
             NotificationCenter.Current.Show(notification);
+            userData.IsNotificationEnabled = true;
             await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
         });
