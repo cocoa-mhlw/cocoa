@@ -750,4 +750,7 @@ Bluetooth を設定するには、[常に許可] を選択します。</value>
   <data name="LocalNotificationPermittedDescription" xml:space="preserve">
     <value>通知を無効にしたい場合は、アプリの設定から変更できます</value>
   </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>通知を有効にしました</value>
+  </data>
 </root>

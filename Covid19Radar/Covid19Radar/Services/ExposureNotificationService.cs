@@ -11,6 +11,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Security.Principal;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
@@ -102,12 +103,40 @@ namespace Covid19Radar.Services
 
         public async Task<bool> StartExposureNotification()
         {
+            /*
             if (!userData.IsOptined)
             {
                 await UserDialogs.Instance.AlertAsync("利用規約に同意する必要があります。同意ページへ遷移します。");
                 await navigationService.NavigateAsync(nameof(PrivacyPolicyPage));
             }
+            */
 
+            try
+            {
+                await ExposureNotification.StartAsync();
+                while (true)
+                {
+                    Thread.Sleep(1000);
+                    await ExposureNotification.StartAsync();
+
+                    Status status = await ExposureNotification.GetStatusAsync();
+                    if (status == Status.Active)
+                    {
+                        userData.IsExposureNotificationEnabled = true;
+                        await userDataService.SetAsync(userData);
+                        break;
+                    }
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                userData.IsExposureNotificationEnabled = false;
+                await userDataService.SetAsync(userData);
+                return false;
+            }
+
+            /*
             ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
             if (ExposureNotificationStatus == Status.BluetoothOff
             //            || ExposureNotificationStatus == Status.Restricted
@@ -134,6 +163,7 @@ namespace Covid19Radar.Services
                 }
             }
             return true;
+            */
         }
 
         public async Task<bool> StopExposureNotification()
