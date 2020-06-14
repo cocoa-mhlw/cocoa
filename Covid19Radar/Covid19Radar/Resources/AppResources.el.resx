@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Πώς λειτουργεί</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Επόμενο</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Όροι παροχής υπηρεσιών</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Δεν χρειάζεται να προσθέσετε προσωπικές πληροφορίες. Χρησιμοποιούμε μοναδικό αναγνωριστικό, το οποίο σας έχει εκχωρηθεί κατά την εγκατάσταση μιας εφαρμογής.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Μια επαφή με έναν άλλο χρήστη της εφαρμογής για περισσότερο από 30 λεπτά συνολικά, σε ακτίνα μικρότερη από 2 m κατά μέσο όρο καταγράφεται ως "Στενή επαφή".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Το Bluetooth πρέπει να ενεργοποιηθεί για την εγγραφή στενής επαφής. Παρακαλώ πηγαίνετε στην επόμενη σελίδα για να την ενεργοποιήσετε.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Έναρξη</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Προστατεύοντας τους αγαπημένους μας από το COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Πρόσβαση συσκευής</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Συμφωνώ</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Πληροφορίες ενημέρωσης</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>ΑΡΧΙΚΗ</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Είσαι έτοιμος να φύγεις.</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Ρύθμιση ολοκληρώθηκε</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Λίστα συνεισφερόντων</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Άδεια Χρήσης</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Εγκατάσταση εφαρμογής</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Εγγραφή στενής επαφής</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Εάν διαγνωστεί COVID-19 θετική</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Απαιτήσεις για τη χρήση αυτής της εφαρμογής</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Ρυθμίσεις κατάστασης</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ΟΚ</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Ενεργοποίηση</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Όχι τώρα</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Αυτή η εφαρμογή χρησιμοποιεί ειδοποιήσεις έκθεσης / σήματα Bluetooth για να προσδιορίσετε αν βρίσκεστε κοντά σε άλλο χρήστη της εφαρμογής εντοπισμού επαφών. 
-Επιλέξτε "Να επιτρέπεται πάντα" για να ρυθμίσετε το Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Να επιτρέπεται η ειδοποίηση έκθεσης / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Ανοίγματα</value>
@@ -145,22 +65,6 @@
     <value>Θα ειδοποιηθείτε εάν έχετε εκτεθεί σε κάποιον που ανέφερε θετικό αποτέλεσμα COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Πληκτρολογήστε το αναγνωριστικό διάγνωσης</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Μοιραστείτε μια θετική διάγνωση</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Η ημερομηνία δοκιμής βοηθά την εφαρμογή να γνωρίζει πότε μπορεί να ήσασταν μεταδοτική και να ενημερώνει τους κατάλληλους ανθρώπους για πιθανή έκθεση.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Μόνο όσοι έχουν εκτεθεί θα λάβουν ειδοποίηση.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Το μοναδικό αναγνωριστικό δοκιμής που συνοδεύει τη δοκιμή COVID-19 πρέπει να χρησιμοποιηθεί για την επαλήθευση του θετικού αποτελέσματος της δοκιμής σας.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Δοκιμάστε ξανά αργότερα.</value>
   </data>
@@ -173,55 +77,18 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Ολοκληρώθηκε</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Δώστε ένα αναγνωριστικό διάγνωσης</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Απαιτείται αναγνωριστικό διάγνωσης</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Ενεργοποιήστε τις Ειδοποιήσεις έκθεσης πριν υποβάλετε μια διάγνωση.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Ειδοποιήσεις έκθεσης απενεργοποιημένες</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Υποβολή διάγνωσης...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Επαλήθευση της διάγνωσης...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Η διάγνωσή σας δεν μπορεί να επαληθευτεί αυτή τη στιγμή για να υποβληθεί.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Η επαλήθευση απέτυχε</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Υποβολή</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ρυθμίσεις</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Δεν συμφωνώ</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Άκυρο</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Θέλετε να ενεργοποιήσετε τις ειδοποιήσεις;</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Ενεργοποίηση</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Διαγραφή σε εξέλιξη</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Εάν λάβατε θετική διάγνωση</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Κοινή χρήση της εφαρμογής</value>
@@ -253,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Όλες οι ρυθμίσεις και τα δεδομένα έχουν διαγραφεί. Επανεκκινήστε την εφαρμογή.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Το αναγνωριστικό διάγνωσης δεν είναι έγκυρο</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Δώστε ένα έγκυρο αναγνωριστικό διάγνωσης</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Ημ/νία δοκιμής δεν είναι έγκυρη</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Παρακαλείσθε να δώσετε μια έγκυρη ημερομηνία δοκιμής</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Επιστροφή στην εγγραφή</value>
   </data>
@@ -273,21 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Θέλετε να εγγραφείτε θετικά αργότερα;</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Όταν εκτελείτε την εφαρμογή , θα δημιουργήσει και θα αποθηκεύσει ένα ανώνυμο αναγνωριστικό σε κάθε smartphone. Αυτή η εφαρμογή δεν αποκτά πληροφορίες σχετικά με το απόρρητο, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Ενώ η εφαρμογή εκτελείται, το smartphone του άλλου θα καταγράφει ανώνυμα αναγνωριστικά του άλλου για τις τελευταίες δύο εβδομάδες. Οι εγγραφές που είναι παλαιότερες από 2 εβδομάδες θα διαγράφονται και κάθε ανώνυμο αναγνωριστικό θα αλλάζει περιοδικά για την προστασία της ιδιωτικής ζωής.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Άλλοι χρήστες παίρνουν τακτικά έναν κατάλογο ανώνυμων ταυτοτήτων των θετικών. Μετά την απόκτηση, η καρτέλα επικοινωνίας που έχει καταγραφεί στο smartphone θα αντιστοιχιστεί. Εάν το αποτέλεσμα του αγώνα είναι μια βαριά επαφή, θα ενημερώσουμε το smartphone σας και θα σας ενημερώσουμε για τις απαραίτητες ενέργειες με τις οποίες θα θέλατε να συνεργαστούμε.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Επαφή με θετικούς δοκιμαστές τις τελευταίες 14 ημέρες</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Εάν είστε θετικοί με τη νέα Corona, παρακαλούμε συνεργαστείτε με τη θετική εγγραφή για να προστατεύσετε τους ανθρώπους γύρω σας.</value>

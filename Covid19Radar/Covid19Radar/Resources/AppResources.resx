@@ -117,63 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>How it works</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Next</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Terms of Service</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>No need to input personal information. We are using unique ID, allocated to you when installing an app.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>When you run the application , it will generate and store an anonymous ID on each smartphone. This application does not acquire any information related to privacy such as phone number and location information.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>A contact with another app user for longer than 30 min in total, within a radius closer than 2m on average is recorded as "Close Contact".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>While the application is running, each other's smartphone will record each other's anonymous IDs for the past two weeks. Records older than 2 weeks will be deleted and each anonymous ID will be changed periodically to protect privacy.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Other users regularly get a list of anonymous IDs of positive ones. After the acquisition, the contact record recorded on the smartphone will be matched. If the result of the match is a heavy contact, we will notify your smartphone and inform you of the necessary actions that you would like us to cooperate with.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth/Exposure Notification needs to be turned on to record close contact. Please go to the next page to turn it on.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Protecting our loved ones from COVID-19</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>This app uses Exposure Notification / Bluetooth signals to determine if you are near another contact tracing app user. 
-Select 'Always Allow' to set up Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Allow Exposure Notification / Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Device Access</value>
-    <comment>Device access page title</comment>
-  </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Not Agree</value>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Agree</value>
   </data>
@@ -193,25 +136,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>License</value>
     <comment>ライセンス…</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Update Information</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>HOME</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>You're ready to go</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Set up Completed</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Contributors List</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>License</value>
     <comment>ライセンス</comment>
@@ -220,29 +144,9 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Installing an App</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Recording close contact</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>If you are diagnosed COVID-19 positive</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Requirements to use this app</value>
-    <comment>How it works page step 4 title</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Status Settings</value>
     <comment>User Status Page Title</comment>
-  </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Please enter the Diagnosis Identifier</value>
-    <comment>Notify Other Page Code Input</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
@@ -250,9 +154,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Please check your network connection.</value>
     <comment>Dialog message for Network connection error</comment>
-  </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Enable</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
@@ -277,18 +178,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Share a Positive Diagnosis</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>The test date helps the app know when you may have been contagious and notify the right people of potential exposure.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Only those who have been exposed will receive a notification.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>The unique test identifier that came with your COVID-19 test must be used to verify your positive test result.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Please try again later.</value>
   </data>
@@ -301,55 +190,18 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Complete</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Please provide a Diagnosis Identifier</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Diagnosis Identifier Required</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Please enable Exposure Notifications before submitting a diagnosis.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Exposure Notifications Disabled</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Submitting Diagnosis...</value>
   </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Verifying Diagnosis...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Your diagnosis cannot be verified at this time to be submitted.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Verification Failed</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Submit</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
-  </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Do you want to turn on notifications?</value>
-    <comment>Confirmation dialog</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Stop</value>
     <comment>使用中止</comment>
   </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Enabling</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Contact with positive testers in the last 14 days</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>If you received a positive diagnosis</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Help protect your family and friends by anonymously registering test results.</value>
@@ -412,18 +264,6 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="SettingsPageDescription3" xml:space="preserve">
     <value>Stop using and delete close contact records</value>
     <comment>使用を中止して過去14日間の接触履歴を消去</comment>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Invalid Diagnosis ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Please provide a valid Diagnosis ID</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Invalid Test Date</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Please provide a valid Test Date</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Return to registration</value>
@@ -843,5 +683,19 @@ Select 'Always Allow' to set up Bluetooth.</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>Possible COVID-19 Exposure</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>If you want to disable it, you can change it from the app settings</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>Notifications enabled</value>
   </data>
 </root>

@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Cara kerjanya</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Berikutnya</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Persyaratan Layanan</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Tidak perlu memasukkan informasi pribadi. Kami menggunakan ID unik yang dialokasikan untuk Anda saat memasang aplikasi.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontak dengan pengguna aplikasi lain selama lebih dari 30 menit secara keseluruhan, dalam radius yang lebih dekat dari 2m pada rerata tercatat sebagai "kontak dekat".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth harus dihidupkan untuk merekam kontak dekat. Silakan pergi ke halaman berikutnya untuk menyalakannya.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Mulai</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Melindungi orang yang kita cintai dari COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Akses perangkat</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Setuju</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Informasi pembaruan</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>BERANDA</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Anda siap untuk pergi</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Menyiapkan selesai</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Daftar kontributor</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Perjanjian Lisensi</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Memasang aplikasi</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Merekam kontak dekat</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Jika Anda didiagnosis positif COVID-19</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Persyaratan untuk menggunakan aplikasi ini</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Pengaturan status</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Aktifkan</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Tidak sekarang</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Aplikasi ini menggunakan ekspos notifikasi/sinyal bluetooth untuk menentukan apakah Anda berada di dekat pengguna aplikasi pelacakan kontak lain. 
-Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Izinkan ekspos notifikasi/bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Eksposur</value>
@@ -145,22 +65,6 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
     <value>Anda akan diberitahu jika Anda telah terpapar dengan seseorang yang telah melaporkan hasil COVID-19 yang positif.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Harap masukkan pengenal diagnosis</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Berbagi diagnosis positif</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Tanggal tes membantu aplikasi tahu kapan Anda mungkin telah tertular dan memberitahu orang yang tepat tetang kemungkinan paparan.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Hanya mereka yang telah terpapar akan menerima pemberitahuan.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Pengidentifikasi uji unik yang disertakan dengan tes COVID-19 Anda harus digunakan untuk memverifikasi hasil tes positif Anda.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Silakan coba lagi nanti.</value>
   </data>
@@ -173,55 +77,18 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Selesai</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Harap sediakan pengenal diagnosis</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Pengenal diagnosis diperlukan</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Silakan aktifkan ekspos notifikasi sebelum mengirimkan diagnosis.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Ekspos notifikasi dinonaktifkan</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Mengirimkan diagnosis...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Memverifikasi diagnosis...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Diagnosis Anda tidak dapat diverifikasi saat ini untuk diserahkan.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Verifikasi Gagal</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Kirim</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Pengaturan</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Tidak setuju</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Batal</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Apakah Anda ingin mengaktifkan Notifikasi?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Memungkinkan</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Menghapus</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Jika Anda menerima diagnosis positif</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Bagikan Aplikasi</value>
@@ -253,18 +120,6 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Semua pengaturan dan data telah dihapus. Silakan restart aplikasi.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>ID diagnosis tidak valid</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Harap berikan ID diagnosis yang valid</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Tanggal ujian tidak valid</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Harap berikan tanggal ujian yang valid</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Kembali ke pendaftaran</value>
   </data>
@@ -273,21 +128,6 @@ Pilih ' selalu Izinkan ' untuk mengatur Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Apakah Anda ingin mendaftar positif nanti?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Ketika Anda menjalankan aplikasi, itu akan menghasilkan dan menyimpan ID anonim pada setiap smartphone. Aplikasi ini tidak memperoleh informasi yang berkaitan dengan privasi seperti nomor telepon dan informasi lokasi.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Saat aplikasi berjalan, smartphone satu sama lain akan mencatat id anonim satu sama lain selama dua minggu terakhir. Catatan yang lebih lama dari 2 minggu akan dihapus dan setiap ID anonim akan diubah secara berkala untuk melindungi privasi.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Pengguna lain secara teratur mendapatkan daftar anonim id yang positif. Setelah akuisisi, rekaman kontak yang direkam pada ponsel cerdas akan dicocokkan. Jika hasil dari pertandingan adalah kontak berat, kami akan memberitahu smartphone Anda dan memberitahu Anda tentang tindakan yang diperlukan yang Anda ingin kami untuk bekerja sama dengan.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontak dengan penguji positif dalam 14 hari terakhir</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jika Anda positif dengan Corona baru, silakan bekerja sama dengan pendaftaran positif untuk melindungi orang di sekitar Anda.</value>

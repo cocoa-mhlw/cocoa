@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>Kako funkcioniše</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>Dalje</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>Uslovi korišćenja usluge</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>Nema potrebe za unosom ličnih informacija. Koristimo jedinstveni ID koji vam je dodeljen prilikom instaliranja aplikacije.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>Kontakt sa drugim korisnikom aplikacije za duži od 30 minuta u zbiru, u radijusu koji je veći od 2 metra u proseku, zapisuje se kao "blizak kontakt".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>Bluetooth mora biti uključen da bi se zabeležio zatvori kontakt. Idite na sledeću stranicu da biste je uključili.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>Početak</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>Štiteći naše najmilijije od COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>Pristup uređaju</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Slažem se</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>Informacije o ažuriranju</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>POČETAK</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>Spreman si da ideš</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>Konfigurisanje dovršeno</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>Lista saradnika</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Ugovor o licenci</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>Instaliranje aplikacije</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>Zapisivanje bliskih kontakata</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>Ako ste dijagnostikovana COVID-19 pozitivna</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>Zahtevi za korišćenje ove aplikacije</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Postavke statusa</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>U redu</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>Omogući</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Ne sada</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>Ova aplikacija koristi Obavijest o izloženosti/Bluetooth signalima da bi utvrdila da li se nalazite u blizini nekog drugog korisnika aplikacije "praćenje kontakta". 
-Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>Dozvoli izloženost ekspozicije/Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Jonizirajuće</value>
@@ -145,22 +65,6 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
     <value>Bićete obavešteni o tome da li ste bili izloženi nekome ko je prijavio pozitivne KOVID-19 rezultate.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>Unesite identifikator dijagnostike</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>Deljenje pozitivne dijagnoze</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>Datum testiranja pomaže aplikaciji da zna da ste zarazili i da obavestite prave ljude o potencijalnom izloženosti.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>Samo oni koji su bili izloženi dobiće obaveštenje.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>Jedinstveni identifikator testa koji ste dobili uz vaš KOVID-19 test mora da se koristi za verifikaciju pozitivnog rezultata testiranja.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Покушајте поново касније.</value>
   </data>
@@ -173,55 +77,18 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="ButtonComplete" xml:space="preserve">
     <value>Dovršeno</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>Navedite identifikator dijagnostike</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>Potreban je identifikator dijagnostike</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>Omogućite obaveštenja o ekspoziciji pre podnošenja dijagnoze.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>Onemogućena obaveštenja o ekspozicije</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Podnošenje dijagnoze...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>Potvrđivanje dijagnoze...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>Vaša dijagnoza ne može biti proverena u ovom trenutku da bi bila prosleđena.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>Verifikacija nije uspela</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>Prosledi</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Postavke</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>Ne slažu se</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Otkaži</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>Želite li da uključite obaveštenja?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>Omogućavanje</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Brisanje</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>Ako ste dobili pozitivnu dijagnozu</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Delite aplikaciju</value>
@@ -253,18 +120,6 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Sve postavke i podaci su izbrisani. Ponovo pokrenite aplikaciju.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>Nevažeći ID dijagnostike</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>Navedite važeći ID dijagnostike</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>Nevažeći datum testiranja</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>Unesite važeći datum testiranja</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Vrati se na registraciju</value>
   </data>
@@ -273,21 +128,6 @@ Izaberite opciju "uvek dozvoli" da podesite Bluetooth.</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Želite li kasnije da se registrujete?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>Kada pokrenete aplikaciju, ona će generisati i uskladištiti anonimni ID na svakom pametnom telefonu. Ova aplikacija ne stiče nikakve informacije vezane za privatnost, kao što su broj telefona i informacije o lokaciji.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>Dok je aplikacija pokrenuta, smartphone uređaj drugih telefona će se u protekle dve nedelje snimati za anonimne ID-ove. Zapisi stariji od 2 nedelje će biti izbrisani, a svaki anonimni ID će se povremeno promeniti kako bi se zaštitila privatnost.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>Drugi korisnici redovno dobijaju listu anonimnih identifikacija pozitivnih. Nakon kupovine, zapis kontakta snimljen na pametnom telefonu biće podudarno. Ako je rezultat utakmice težak kontakt, obavestićemo vaš pametni telefon i informisati vas o neophodnim radnjama sa kojima biste želeli da sarađujemo.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>Kontakt sa pozitivnim testerima u poslednjih 14 dana</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ako ste pozitivni sa novom Corona, molimo vas da sarađujete sa pozitivnom registracijom kako biste zaštitili ljude oko sebe.</value>
