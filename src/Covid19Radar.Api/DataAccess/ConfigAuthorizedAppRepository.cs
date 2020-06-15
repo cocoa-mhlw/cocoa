@@ -1,9 +1,5 @@
 ﻿using Covid19Radar.Api.Models;
-using Microsoft.DotNet.PlatformAbstractions;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.DataAccess
