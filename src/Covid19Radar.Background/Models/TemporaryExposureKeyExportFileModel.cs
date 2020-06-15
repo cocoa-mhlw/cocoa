@@ -1,9 +1,4 @@
-﻿using Covid19Radar.Api.Models;
-using Covid19Radar.Background.Protobuf;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
 
 namespace Covid19Radar.Background.Models
 {

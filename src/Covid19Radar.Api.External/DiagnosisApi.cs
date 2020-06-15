@@ -1,16 +1,10 @@
-using System;
-using System.IO;
-using System.Threading.Tasks;
+using Covid19Radar.Api.DataAccess;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Covid19Radar.Api.DataStore;
-using Covid19Radar.Api.Services;
-using Covid19Radar.Api.DataAccess;
-using Covid19Radar.Api.Models;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.External
 {

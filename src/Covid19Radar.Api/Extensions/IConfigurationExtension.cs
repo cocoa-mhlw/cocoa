@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System.Reflection.Metadata.Ecma335;
 
 namespace Covid19Radar.Api
 {
