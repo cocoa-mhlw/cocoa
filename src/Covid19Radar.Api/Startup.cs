@@ -1,13 +1,8 @@
 ﻿using Covid19Radar.Api.DataAccess;
-using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Services;
-using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System.IO;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Api.Startup))]
 

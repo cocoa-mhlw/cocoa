@@ -1,8 +1,4 @@
-﻿using Covid19Radar.Api.Common;
-using System;
-using System.Buffers.Text;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Covid19Radar.Api.Models
 {

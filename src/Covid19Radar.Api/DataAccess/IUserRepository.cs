@@ -1,7 +1,4 @@
 ﻿using Covid19Radar.Api.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 #nullable enable

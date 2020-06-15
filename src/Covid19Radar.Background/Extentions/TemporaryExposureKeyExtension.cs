@@ -1,9 +1,6 @@
 ﻿using Covid19Radar.Api.Models;
 using Covid19Radar.Background.Protobuf;
 using Google.Protobuf;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Covid19Radar.Background.Extentions
 {

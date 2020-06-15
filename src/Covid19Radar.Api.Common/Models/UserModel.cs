@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.Json.Serialization;
-using Covid19Radar.Api.Common;
-using Newtonsoft.Json.Converters;
-
-namespace Covid19Radar.Api.Models
+﻿namespace Covid19Radar.Api.Models
 {
     public class UserModel : IUser
     {

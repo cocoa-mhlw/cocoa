@@ -1,15 +1,15 @@
 ﻿using Covid19Radar.Api.Models;
+using Covid19Radar.Background.Models;
 using Covid19Radar.Background.Protobuf;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
 using System.Linq;
-using Covid19Radar.Background.Models;
-using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Background.Services
 {

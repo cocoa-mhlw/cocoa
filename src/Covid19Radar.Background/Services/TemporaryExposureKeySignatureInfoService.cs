@@ -1,11 +1,6 @@
 ﻿using Covid19Radar.Background.Protobuf;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
 namespace Covid19Radar.Background.Services
 {
