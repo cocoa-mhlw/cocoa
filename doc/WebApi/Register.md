@@ -13,17 +13,17 @@ At the time of first registration.
 ### Body:
 ```
 {
-  "UserUuid": "string", // [Generate by This Function] 
-  "Major": int,         // [0 .. 65536]
-  "Minor": int          // [0 .. 65536]
+  "userUuid": "string",      // [Generate by This Function] 
+  "secret": "string",        // [private secret key, require server request.] 
+  "jumpConsistentSeed": int  // [0 .. use seed of jumpConsistentHash in client app]
 }
 ```
 ### Example:
 ```
 {
-  "userUuid": "3c1be03028cc4a51a54142d0e5b738d0637224227348959150",
-  "major": "0",
-  "minor": "1"
+  "userUuid": "e117e8e4bab24306908fd4983bd6879a637277863263105317",
+  "secret": "e1NJzqTHtA7MDj5aYpLIFTx0WoJ1tHV5lvoz2naY5E.....",
+  "jumpConsistentSeed": 12345
 }
 ```
 
