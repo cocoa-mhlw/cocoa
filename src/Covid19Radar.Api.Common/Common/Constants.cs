@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Covid19Radar.Api.Common
+﻿namespace Covid19Radar.Api.Common
 {
     /// <summary>
     /// Constant values for the entire application

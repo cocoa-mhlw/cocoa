@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Covid19Radar.Api.Common
+﻿namespace Covid19Radar.Api.Common
 {
-	public enum RiskLevel
+    public enum RiskLevel
 	{
 		Invalid = 0,
 		Lowest = 1,
