@@ -19,7 +19,7 @@ This app uses Exposure Notification / Bluetooth LE to get the contact logs of ea
 ## Thank you for Your Contribute !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
 We welcome contributions and pull requests.
 Please check the contribution rules.
-[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
+[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTING.md)
 
 ## How to install the app for tester
 
