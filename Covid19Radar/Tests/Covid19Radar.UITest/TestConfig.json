@@ -2,7 +2,7 @@
   "Repl": false,
   "AndroidConfiguration": {
     "ApkName": null,
-    "AppPath": "C:\\Work\\Xamarin\\Android\\jp.go.mhlw.covid19radar.apk",
+    "AppPath": "C:\\Work\\Xamarin\\Android\\com.google.android.apps.exposurenotification.apk",
     "EnableScreenshots": true
   },
   "IosConfiguration": {
