@@ -48,7 +48,7 @@
                                 <Span Text="{x:Static resources:AppResources.InqueryPageDescription2}" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
                                 <Span
-                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/touch_qa_00009.html"
+                                    Text="https://corona.go.jp/"
                                     TextColor="{StaticResource Primary}"
                                     TextDecorations="Underline" />
                             </FormattedString>
