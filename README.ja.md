@@ -2,7 +2,7 @@
 
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
-私たちは現在、機械翻訳結果の確認レビュアーを募集しています。詳しくは [How to Transrate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSRATE_CONTRIBUTE.md) をご確認ください。
+私たちは現在、機械翻訳結果の確認レビュアーを募集しています。詳しくは [How to Translate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSLATE_CONTRIBUTE.md) をご確認ください。
 
 iOS Build status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
@@ -15,7 +15,7 @@ Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/ap
 ## Thank you for Your Contribute !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
 コントリビューションとプルリクエストをお待ちしています。
 コントリビューションルールについて、ご確認ください。
-[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
+[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTING.md)
 
 ## テスト用にアプリをインストールするには
 
