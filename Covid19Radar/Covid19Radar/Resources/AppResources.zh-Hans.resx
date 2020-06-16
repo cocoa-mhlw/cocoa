@@ -362,7 +362,7 @@
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>FAQ</value>
+    <value>COVID-19 Infomation and Resources</value>
     <comment>新型コロナウィルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -374,7 +374,7 @@
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>确认是否与阳性患者接触（14日以内）</value>
+    <value>确认是否与阳性患者接触</value>
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
@@ -578,6 +578,17 @@
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>Possible COVID-19 Exposure</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>If you want to disable it, you can change it from the app settings</value>
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>启用通知</value>
