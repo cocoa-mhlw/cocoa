@@ -439,11 +439,11 @@
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Enter symptoms</value>
+    <value>Fill in your symptoms</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Call COVID-19 Consultation Center</value>
+    <value>Tell your symptoms by phone Consultation Center</value>
     <comment>帰国者・接触者センターに電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
