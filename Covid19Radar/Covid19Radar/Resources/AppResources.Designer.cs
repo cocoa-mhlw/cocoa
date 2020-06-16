@@ -646,6 +646,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryMailBody {
+            get {
+                return ResourceManager.GetString("InqueryMailBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inquiries about contact confirmation app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryMailSubject {
+            get {
+                return ResourceManager.GetString("InqueryMailSubject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   9:00-17:30 (except weekends and holidays) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription1 {
@@ -655,7 +673,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   FAQ に類似しているローカライズされた文字列を検索します。
+        ///   COVID-19 Infomation and Resources に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription2 {
             get {

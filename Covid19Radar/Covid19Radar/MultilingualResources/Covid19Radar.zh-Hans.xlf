@@ -448,8 +448,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>FAQ</source>
-          <target state="translated">FAQ</target>
+          <source>COVID-19 Infomation and Resources</source>
+          <target state="needs-review-translation">COVID-19 Infomation and Resources</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
@@ -464,8 +464,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
           <source>Check close contacts</source>
-          <target state="needs-review-translation">确认是否与阳性患者接触（14日以内）</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">确认是否与阳性患者接触</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
         </trans-unit>
         <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
@@ -711,7 +710,6 @@
         <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
           <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</source>
           <target state="needs-review-translation">https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
         <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
@@ -724,17 +722,17 @@
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
-          <target state="new">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</target>
+          <target state="needs-review-translation">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
           <source>Possible COVID-19 Exposure</source>
-          <target state="new">Possible COVID-19 Exposure</target>
+          <target state="needs-review-translation">Possible COVID-19 Exposure</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
           <source>If you want to disable it, you can change it from the app settings</source>
-          <target state="new">If you want to disable it, you can change it from the app settings</target>
+          <target state="needs-review-translation">If you want to disable it, you can change it from the app settings</target>
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
           <source>Notifications enabled</source>
@@ -747,6 +745,16 @@
         <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
           <source>Q and A for user</source>
           <target state="translated">用户问答</target>
+        </trans-unit>
+        <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
+          <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
+          <target state="new">Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</note>
+        </trans-unit>
+        <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
+          <source>Inquiries about contact confirmation app</source>
+          <target state="new">Inquiries about contact confirmation app</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
       </group>
     </body>

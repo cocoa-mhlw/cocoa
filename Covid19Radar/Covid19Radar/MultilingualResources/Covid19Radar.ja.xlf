@@ -413,7 +413,7 @@
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>FAQ</source>
+          <source>COVID-19 Infomation and Resources</source>
           <target state="translated">新型コロナウィルス感染症対策サイト</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
@@ -745,6 +745,16 @@
         <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
           <source>Q and A for user</source>
           <target state="translated">利用者向けQ and A</target>
+        </trans-unit>
+        <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
+          <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
+          <target state="translated">お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</note>
+        </trans-unit>
+        <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
+          <source>Inquiries about contact confirmation app</source>
+          <target state="translated">接触確認アプリに関するお問い合わせ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
       </group>
     </body>
