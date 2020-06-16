@@ -481,8 +481,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
-          <source>Check close contacts (past 14 days)</source>
-          <target state="new">Check close contacts (past 14 days)</target>
+          <source>Check close contacts</source>
+          <target state="new">Check close contacts</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
         </trans-unit>
         <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">

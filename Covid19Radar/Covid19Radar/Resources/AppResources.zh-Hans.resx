@@ -562,7 +562,7 @@
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>过去14天内里的密切接触一览</value>
+    <value>密切接触一览</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
