@@ -1393,7 +1393,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
+        ///   https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
             get {
@@ -1402,7 +1402,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html に類似しているローカライズされた文字列を検索します。
+        ///   https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlTermOfUse {
             get {
