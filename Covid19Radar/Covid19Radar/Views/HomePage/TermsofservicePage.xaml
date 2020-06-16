@@ -13,7 +13,8 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <Grid Style="{StaticResource DefaultGridLayout}">
-        <views:NavigatePopoverWebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
-    </Grid>
+    <StackLayout Style="{StaticResource DefaultStackLayout}">
+        <views:NavigatePopoverWebView Source="{x:Static resources:AppResources.UrlTermOfUse}" Style="{StaticResource DefaultWebView}" />
+    </StackLayout>
+
 </ContentPage>
