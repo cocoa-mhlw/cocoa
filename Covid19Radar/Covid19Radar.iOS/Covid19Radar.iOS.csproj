@@ -1271,7 +1271,9 @@
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\ic_hamburger%402x.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\Logo%401x.png" />
+  </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\IconHamburger%402x.png" />
   </ItemGroup>
