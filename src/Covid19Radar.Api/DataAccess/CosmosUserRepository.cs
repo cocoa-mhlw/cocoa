@@ -1,12 +1,9 @@
-﻿using Covid19Radar.Api.DataStore;
+﻿using Covid19Radar.Api.Common;
+using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Models;
-using Covid19Radar.Api.Common;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 
 #nullable enable
