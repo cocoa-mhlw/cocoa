@@ -1,14 +1,11 @@
-﻿using Covid19Radar.Api.Models;
+﻿using Covid19Radar.Api.DataStore;
+using Covid19Radar.Api.Models;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using System.Linq;
-using Covid19Radar.Api.DataStore;
-using Microsoft.Azure.Cosmos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Cosmos;
+using Microsoft.Extensions.Logging;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Services
 {

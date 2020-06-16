@@ -1,13 +1,11 @@
 ﻿using Covid19Radar.Api.Common;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
-	public class DiagnosisSubmissionParameter : IUser, IPayload
+    public class DiagnosisSubmissionParameter : IUser, IPayload
 	{
 		[JsonProperty("userUuid")]
 		public string UserUuid { get; set; }
