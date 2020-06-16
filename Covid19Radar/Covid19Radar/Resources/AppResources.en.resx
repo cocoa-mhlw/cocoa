@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -182,7 +182,7 @@
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
