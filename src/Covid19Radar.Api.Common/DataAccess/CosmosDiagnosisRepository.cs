@@ -1,13 +1,9 @@
 ﻿using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
-using Microsoft.Azure.Cosmos.Linq;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.DataAccess

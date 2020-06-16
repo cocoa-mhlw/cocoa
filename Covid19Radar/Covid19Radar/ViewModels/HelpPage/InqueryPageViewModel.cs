@@ -54,8 +54,8 @@ namespace Covid19Radar.ViewModels
                 recipients.Add("***REMOVED***");
                 var message = new EmailMessage
                 {
-                    Subject = "お問い合わせ",
-                    Body = "濃厚接触可能性についてのお問い合わせ",
+                    Subject = "接触確認アプリに関するお問い合わせ",
+                    Body = "お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n",
                     To = recipients
                 };
                 await Email.ComposeAsync(message);
