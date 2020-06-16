@@ -60,7 +60,7 @@
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>How to use</source>
-          <target state="needs-review-translation">指南</target>
+          <target state="translated">指南</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
@@ -463,8 +463,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
-          <source>Check close contacts (past 14 days)</source>
-          <target state="translated">确认是否与阳性患者接触（14日以内）</target>
+          <source>Check close contacts</source>
+          <target state="needs-review-translation">确认是否与阳性患者接触（14日以内）</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
         </trans-unit>
         <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
@@ -699,7 +700,7 @@
         </trans-unit>
         <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
           <source>A list of close contacts (past 14 days)</source>
-          <target state="translated">过去14天内里的密切接触一览</target>
+          <target state="translated">密切接触一览</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
         </trans-unit>
         <trans-unit id="ExposuresPageLabel1" translate="yes" xml:space="preserve">
