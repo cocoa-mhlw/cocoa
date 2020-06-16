@@ -565,7 +565,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Check close contacts (past 14 days) に類似しているローカライズされた文字列を検索します。
+        ///   Check close contacts に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageDescription2 {
             get {

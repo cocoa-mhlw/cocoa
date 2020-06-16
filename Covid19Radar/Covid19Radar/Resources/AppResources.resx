@@ -483,7 +483,7 @@
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>Check close contacts (past 14 days)</value>
+    <value>Check close contacts</value>
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
