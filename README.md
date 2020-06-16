@@ -55,7 +55,7 @@ After the setup is complete, the contact log between the people who have install
 
 We use [Adobe XD](https://www.adobe.com/jp/products/xd.html) to create our designs.
 
-![Full screen view](img/design01.JPG)
+![Full screen view](img/design01.jpg)
 
 If you want to check your design files, install Adobe XD. (available for free).
 
