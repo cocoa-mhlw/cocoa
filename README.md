@@ -55,7 +55,7 @@ After the setup is complete, the contact log between the people who have install
 
 We use [Adobe XD](https://www.adobe.com/jp/products/xd.html) to create our designs.
 
-![Full screen view](img/design01.jpg)
+![Full screen view](img/design01.JPG)
 
 If you want to check your design files, install Adobe XD. (available for free).
 
@@ -63,7 +63,7 @@ If you want to check your design files, install Adobe XD. (available for free).
 
 You can check the screen transition by accessing the following URL.
 
-[Prototype mock（Sorry Japanese Only）](https://xd.adobe.com/view/e984f53a-5fc7-4764-4ddf-902860407fad-9fb5/)
+[Prototype mock（Sorry Japanese Only）](https://xd.adobe.com/view/8a430621-fe72-45a7-4acf-43fa7d73c181-fc72/grid)
 
 ## Licensing
 
