@@ -19,32 +19,29 @@ namespace Covid19Radar.ViewModels
 {
     public class InqueryPageViewModel : ViewModelBase
     {
-        private string _url;
-
-        public string Url
-        {
-            get { return _url; }
-            set { SetProperty(ref _url, value); }
-        }
-
-        private List<string> _inqueryItems;
-
-        public List<string> InqueryItems
-        {
-            get { return _inqueryItems; }
-            set { SetProperty(ref _inqueryItems, value); }
-        }
-
 
         public InqueryPageViewModel() : base()
         {
         }
 
-        public Command OnClickSite => new Command(async () =>
+        public Command OnClickSite1 => new Command(async () =>
         {
             var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/touch_qa_00009.html";
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
+
+        public Command OnClickSite2 => new Command(async () =>
+        {
+            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html";
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        });
+
+        public Command OnClickSite3 => new Command(async () =>
+        {
+            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html";
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        });
+
         public Command OnClickEmail => new Command(async () =>
         {
 
