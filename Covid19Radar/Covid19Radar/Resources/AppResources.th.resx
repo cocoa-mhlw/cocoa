@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>วิธีการทํางาน</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>ถัดไป</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>เงื่อนไขการใช้บริการ</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>ไม่จําเป็นต้องใส่ข้อมูลส่วนบุคคล เราจะใช้ ID พิเศษที่ไม่ซ้ํากัน ซึ่งจะถูกสร้างให้คุณระหว่างการติดตั้งแอพ</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>การพบปะกับผู้ใช้แอพคนอื่นนานกว่า 30 นาที ภายในรัศมีต่ำกว่า 2 เมตร จะถูกบันทึกเป็น "การติดต่อแบบใกล้ชิด"</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>ต้องมีการเปิดตัวแจ้งเตือนบลูทูธเพื่อบันทึกการพบปะ โปรดไปที่หน้าถัดไป เพื่อเปิดการทำงาน</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>เริ่ม</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>ปกป้องคนที่เรารักจาก COVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>การเข้าถึงอุปกรณ์</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>เห็นด้วย</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>ปรับปรุงข้อมูล</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>หน้าแรก</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>พร้อมที่จะใช้งานแล้ว</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>ตั้งค่าเสร็จสมบูรณ์</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>รายการผู้มีส่วนร่วม</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ข้อตกลงสิทธิ์การใช้งาน</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>กำลังติดตั้งแอพ</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>บันทึกการพบปะ</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>หากคุณได้รับการวินิจฉัยว่าติดเชื้อ COVID-19</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>ข้อกําหนดที่จำเป็นในการใช้แอพนี้</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>การตั้งค่าสถานะ</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ตกลง</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>เปิดใช้งาน</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ไม่ใช่ตอนนี้</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>แอพนี้ใช้ตัวแจ้งเตือนการเปิดเผยสถานะการติดต่อ / สัญญาณ Bluetooth เพื่อดูว่าคุณอยู่ใกล้กับผู้ใช้แอพติดตามคนอื่นหรือไม่ 
-เลือก 'อนุญาตเสมอ' เพื่อตั้งค่าบลูทูธ</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>อนุญาตการแจ้งเตือนการเปิดเผยสถานะการติดต่อ / บลูทูธ</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>การเปิดเผยสถานะการติดต่อ</value>
@@ -145,22 +65,6 @@
     <value>คุณจะได้รับแจ้งเตือน หากคุณเข้าใกล้กับคนที่มีรายงานว่ามีผลตรวจ COVID-19 เป็นบวก (ติดเชื้อ)</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>กรุณาใส่หมายเลข Id ระบุผลการวินิจฉัย</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>แชร์ผลการวินิจฉัยเป็นบวก (ติดเชื้อ)</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>วันที่ทดสอบจะช่วยให้แอพทราบว่า ช่วงไหนที่คุณอาจจะแพร่เชื้อไปแล้ว และแจ้งเตือนคนที่อาจตกเป็นกลุ่มเสี่ยง</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>เฉพาะผู้ที่เปิดเผยตัวตน และมีการติดต่อกันเท่านั้นที่จะได้รับการแจ้งเตือน</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>หมายเลขไอดี หรือตัวระบุผลการทดสอบการติดเชื้อ COVID-19 ของคุณ ต้องถูกใช้เพื่อยืนยันผลการทดสอบที่เป็นบวก (ติดเชื้อ) ของคุณเท่านั้น</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>โปรดลองอีกครั้งในภายหลัง</value>
   </data>
@@ -173,55 +77,18 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>เสร็จสมบูรณ์</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>โปรดกรอก หมายเลขไอดี หรือตัวระบุผลการวินิจฉัย</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>ต้องการหมายเลขไอดี หรือตัวระบุผลการวินิจฉัย</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>โปรดเปิดใช้งาน ตัวแจ้งเตือนการเปิดเผยตัวตน ก่อนที่จะส่งการวินิจฉัย</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>ตัวแจ้งเตือนการเปิดเผยตัวตนถูกปิดการทำงาน</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>กําลังส่งการวินิจฉัย...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>กําลังตรวจสอบการวินิจฉัย...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>ไม่สามารถตรวจสอบผลการวินิจฉัยของคุณได้ตอนนี้</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>การตรวจสอบล้มเหลว</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>ส่ง</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>การตั้งค่า</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>ไม่ยอมรับ</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>ยกเลิก</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>คุณต้องการเปิดการแจ้งเตือนหรือไม่</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>กำลังเปิดใช้งาน</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>กำลังลบ</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>หากคุณได้รับการวินิจฉัยในเชิงบวก</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>แชร์แอพ</value>
@@ -253,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>การตั้งค่าและข้อมูลทั้งหมดถูกลบแล้ว กรุณาเริ่มการทํางานของโปรแกรมประยุกต์</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>รหัสการวินิจฉัยไม่ถูกต้อง</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>โปรดระบุรหัสการวินิจฉัยที่ถูกต้อง</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>วันที่ทดสอบไม่ถูกต้อง</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>โปรดระบุวันสอบที่ถูกต้อง</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>กลับไปที่การลงทะเบียน</value>
   </data>
@@ -273,21 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>คุณต้องการลงทะเบียนในเชิงบวกในภายหลังหรือไม่</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>เมื่อคุณเรียกใช้โปรแกรมประยุกต์, มันจะสร้าง และจัดเก็บ ID ที่ไม่ระบุชื่อบนสมาร์ทโฟนแต่ละ. โปรแกรมนี้ไม่ได้รับข้อมูลใด ๆ ที่เกี่ยวข้องกับความเป็นส่วนตัวเช่นหมายเลขโทรศัพท์และข้อมูลสถานที่</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>ในขณะที่แอปพลิเคชันกําลังทํางานอยู่ สมาร์ทโฟนของกันและกันจะบันทึกรหัสที่ไม่ระบุชื่อของกันและกันในช่วงสองสัปดาห์ที่ผ่านมา บันทึกที่เก่ากว่า 2 สัปดาห์จะถูกลบ และรหัสที่ไม่ระบุชื่อแต่ละรหัสจะถูกเปลี่ยนเป็นระยะเพื่อป้องกันความเป็นส่วนตัว</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>ผู้ใช้รายอื่นเป็นประจําได้รับรายชื่อของ ID ที่ไม่ระบุชื่อของบวก หลังจากได้รับบันทึกการติดต่อที่บันทึกบนสมาร์ทโฟนจะถูกจับคู่ หากผลของการแข่งขันเป็นผู้ติดต่อที่หนักเราจะแจ้งให้มาร์ทโฟนของคุณและแจ้งให้คุณทราบถึงการกระทําที่จําเป็นที่คุณต้องการให้เราร่วมมือ</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>ติดต่อกับผู้ทดสอบในเชิงบวกในช่วง 14 วัน</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>หากคุณเป็นบวกกับ Corona ใหม่โปรดร่วมมือกับการลงทะเบียนในเชิงบวกเพื่อปกป้องคนรอบข้างคุณ</value>

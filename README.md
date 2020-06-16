@@ -2,11 +2,11 @@
 
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
-We are looking for translator reviewers, Please see [How to Translate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSRATE_CONTRIBUTE.md) page.
+We are looking for translator reviewers, Please see [How to Translate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSLATE_CONTRIBUTE.md) page.
 
-iOS Build status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
+iOS Build Master Branch status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
-Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
+Android Build Master Branch status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
 
 This app uses Exposure Notification / Bluetooth LE to get the contact logs of each other.  
 ![App Description](img/explanation_en.png)
@@ -14,7 +14,7 @@ This app uses Exposure Notification / Bluetooth LE to get the contact logs of ea
 ## Thank you for Your Contribute !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
 We welcome contributions and pull requests.
 Please check the contribution rules.
-[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
+[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTING.md)
 
 ## How to install the app for tester
 
@@ -63,7 +63,7 @@ If you want to check your design files, install Adobe XD. (available for free).
 
 You can check the screen transition by accessing the following URL.
 
-[Prototype mock（Sorry Japanese Only）](https://xd.adobe.com/view/e984f53a-5fc7-4764-4ddf-902860407fad-9fb5/)
+[Prototype mock（Sorry Japanese Only）](https://xd.adobe.com/view/8a430621-fe72-45a7-4acf-43fa7d73c181-fc72/grid)
 
 ## Licensing
 

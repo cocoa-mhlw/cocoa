@@ -56,6 +56,7 @@
 - Akira Kakkar (github actions)
 - M Reza Faisal (Indonesian Translation)
 - Mohamed BOUZIDI(github actions)
+- Yutaro Iino (Documentation)
 
 # Beta Testers
 - Nagahata Kenji

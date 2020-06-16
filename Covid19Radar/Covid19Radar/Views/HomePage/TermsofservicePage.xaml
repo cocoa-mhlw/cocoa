@@ -7,14 +7,14 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    xmlns:views="clr-namespace:Covid19Radar.Views"
     Title="{x:Static resources:AppResources.TermsofservicePageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <Grid Style="{StaticResource DefaultGridLayout}">
-        <StackLayout>
-            <WebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
-        </StackLayout>
-    </Grid>
+    <StackLayout Style="{StaticResource DefaultStackLayout}">
+        <views:NavigatePopoverWebView Source="{x:Static resources:AppResources.UrlTermOfUse}" Style="{StaticResource DefaultWebView}" />
+    </StackLayout>
+
 </ContentPage>

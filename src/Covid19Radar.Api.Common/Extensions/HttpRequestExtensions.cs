@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using Covid19Radar.Api.Common;
+﻿using Covid19Radar.Api.Common;
 using Covid19Radar.Api.Models;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Extensions
 {

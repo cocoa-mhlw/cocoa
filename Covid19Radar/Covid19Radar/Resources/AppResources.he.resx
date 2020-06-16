@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>איך זה עובד?</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>הבא</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>תנאי השירות של Power BI</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>אין צורך להזין מידע אישי. אנו משתמשים במזהה ייחודי, המוקצה לך בעת התקנת יישום.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>איש קשר עם משתמש יישום אחר במשך יותר מ-30 דקות בסך הכל, ברדיוס הקרוב יותר מ-2 מ' נרשם כ"איש קשר סגור".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>יש לסובב את Bluetooth לצורך הקלטת קשר קרוב. נא עבור לדף הבא כדי להפעיל אותו.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>התחלה</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>הגנה על אהוביו מCOVID-19</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>גישה להתקן</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>מסכים</value>
   </data>
@@ -56,25 +23,6 @@
     <value>COVID-19Radar</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>מידע עדכון</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>דף הבית</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>. אתה מוכן ללכת</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>הגדר הושלמה</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>רשימת התורמים</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>הסכם רישיון</value>
     <comment>ライセンス</comment>
@@ -82,22 +30,6 @@
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>התקנת אפליקציה</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>הקלטת קשר סגור</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>אם אתה מאובחן COVID-19 חיובי</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>דרישות לשימוש באפליקציה זו</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>הגדרות סטטוס</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>אישור</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>הפוך לזמין</value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>לא עכשיו</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>יישום זה משתמש בדיווחי חשיפה/שידורי Bluetooth כדי לקבוע אם אתה נמצא ליד משתמש אחר של יישום מעקב אחר אנשי קשר. 
-בחר ' אפשר תמיד ' כדי להגדיר את Bluetooth.</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>אפשר הודעות חשיפה/Bluetooth</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>חשיפות</value>
@@ -145,22 +65,6 @@
     <value>תקבל הודעה אם נחשפת למישהו שדיווח על תוצאת COVID-19 חיובית.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>אנא הכנס את מזהה האבחון</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>שיתוף אבחנה חיובית</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>תאריך הבדיקה מסייעת ליישום לדעת מתי ייתכן שהיית מדבקת ולהודיע לאנשים הנכונים על חשיפה פוטנציאלית.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>רק אלה שנחשפו יקבלו הודעה.</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>מזהה הבדיקה הייחודי שהגיע עם מבחן COVID-19 שלך חייב לשמש כדי לאמת את תוצאת הבדיקה החיובית שלך.</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>נסה שוב מאוחר יותר.</value>
   </data>
@@ -173,55 +77,18 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>השלם</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>נא ספק מזהה אבחון</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>נדרש מזהה אבחון</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>אנא הפעל הודעות חשיפה לפני הגשת האבחון.</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>הודעות חשיפה לא זמינות</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>הגשת אבחון...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>מוודא אבחון...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>לא ניתן לאמת את האבחנה שלך בשלב זה לשליחה.</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>האימות נכשל</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>שלח</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>הגדרות</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>לא מסכים</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>ביטול</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>האם ברצונך להפעיל הודעות?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>פעלת</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>מחיקה</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>אם קיבלת אבחנה חיובית</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>שתף את האפליקציה</value>
@@ -253,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>כל ההגדרות והנתונים נמחקו. נא הפעל מחדש את היישום.</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>מזהה אבחון לא חוקי</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>נא ספק מזהה אבחון חוקי</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>תאריך בדיקה לא חוקי</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>נא ספק תאריך בדיקה חוקי</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>חזור להרשמה</value>
   </data>
@@ -273,21 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>האם ברצונך להירשם באופן חיובי מאוחר יותר?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>בעת הפעלת היישום, הוא יפיק ויאחסן מזהה אנונימי בכל טלפון חכם. יישום זה אינו רוכש כל מידע הקשור לפרטיות כגון מספר טלפון ומידע מיקום.</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>בעוד היישום פועל, הטלפון החכם של השני יהיה להקליט את הזהויות האנונימיות של זה בשבועיים האחרונים. רשומות שגילן עולה על 2 שבועות יימחקו וכל מזהה אנונימי ישתנה מעת לעת כדי להגן על הפרטיות.</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>משתמשים אחרים מקבלים בקביעות רשימה של מזהים אנונימיים של חיוביים. לאחר הרכישה, רשומת איש הקשר שנרשמה על הטלפון החכם יהיה מותאם. אם התוצאה של המשחק היא קשר כבד, נודיע לטלפון החכם שלך וליידע אותך על הפעולות הדרושות שאתה רוצה שנשתף פעולה עם.</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>יצירת קשר עם בודקי חיוביות ב -14 הימים האחרונים</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>אם אתה חיובי עם קורונה חדש, בבקשה לשתף פעולה עם הרישום החיובי כדי להגן על האנשים סביבך.</value>

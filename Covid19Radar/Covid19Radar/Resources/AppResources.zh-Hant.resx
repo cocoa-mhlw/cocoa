@@ -12,39 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TitleHowItWorks" xml:space="preserve">
-    <value>運作原理</value>
-    <comment>How it works page title</comment>
-  </data>
-  <data name="ButtonNext" xml:space="preserve">
-    <value>下一頁</value>
-  </data>
-  <data name="TitleConsentByUserPage" xml:space="preserve">
-    <value>服務條款</value>
-    <comment>Consent by user page</comment>
-  </data>
-  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
-    <value>你毋須提供輸入個人資料. 在安裝應用程式時, 我們會為你分配唯一ID.</value>
-    <comment>How it works page step 1 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
-    <value>與其他本應用程式使用者接觸超過30分鐘, 平均距離少於2米時, 會被記錄為"緊密接觸".</value>
-    <comment>How it works page step 2 description 1</comment>
-  </data>
-  <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>需要啟動藍牙以記錄緊密接觸. 請到下一頁啟動藍芽.</value>
-    <comment>How it works page step 4 description</comment>
-  </data>
-  <data name="ButtonStart" xml:space="preserve">
-    <value>開始</value>
-  </data>
-  <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>從COVID-19手中保護我們身邊所愛</value>
-  </data>
-  <data name="TitleDeviceAccess" xml:space="preserve">
-    <value>裝置權限</value>
-    <comment>Device access page title</comment>
-  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>同意</value>
   </data>
@@ -56,48 +23,13 @@
     <value>COVID-19 Contact App</value>
     <comment>App Name</comment>
   </data>
-  <data name="TitleUpdateInformation" xml:space="preserve">
-    <value>更新資訊</value>
-    <comment>Update Information Menu</comment>
-  </data>
-  <data name="ButtonHome" xml:space="preserve">
-    <value>主頁</value>
-    <comment>HOME</comment>
-  </data>
-  <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
-    <value>一切準備就緒</value>
-  </data>
-  <data name="TitleSetupCompleted" xml:space="preserve">
-    <value>安裝完畢</value>
-    <comment>Set up Completed</comment>
-  </data>
-  <data name="TitleContributorsPage" xml:space="preserve">
-    <value>貢獻者名單</value>
-    <comment>Contributors list page title</comment>
-  </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>授權協議</value>
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hant/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html</value>
     <comment>Policy</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep1" xml:space="preserve">
-    <value>安裝應用程式</value>
-    <comment>How it works page step 1 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep2" xml:space="preserve">
-    <value>記錄緊密接觸</value>
-    <comment>How it works page step 2 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep3" xml:space="preserve">
-    <value>如果你被診斷為COVID-19陽性</value>
-    <comment>How it works page step 3 title</comment>
-  </data>
-  <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>應用程式需求</value>
-    <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>狀態設定</value>
@@ -110,20 +42,8 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>確定</value>
   </data>
-  <data name="ButtonEnable" xml:space="preserve">
-    <value>啟用 </value>
-  </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>現在不</value>
-  </data>
-  <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>這個程式使用曝光通知/藍牙信號來確定您是否靠近其他聯繫人跟蹤應用程式使用者。
-選擇「始終允許」以設置藍牙。</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
-  </data>
-  <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
-    <value>允許曝光通知/藍牙</value>
-    <comment>Device access page Allow Exposure Notification / Bluetooth title</comment>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>暴露</value>
@@ -145,22 +65,6 @@
     <value>如果您接觸過報告 COVID-19 陽性結果的人,您將收到通知。</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
-    <value>請輸入診斷識別碼</value>
-    <comment>Notify Other Page Code Input</comment>
-  </data>
-  <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>分享陽性診斷</value>
-  </data>
-  <data name="SharePositiveDiagDateText" xml:space="preserve">
-    <value>測試日期有助於應用程式知道何時您可能具有傳染性,並通知適當的人潛在的暴露。</value>
-  </data>
-  <data name="SharePositiveEntryCodeText" xml:space="preserve">
-    <value>只有那些被曝光的人才會收到通知。</value>
-  </data>
-  <data name="SharePositiveEntryCodeText2" xml:space="preserve">
-    <value>必須使用您的 COVID-19 檢測所附的唯一檢測識別碼來驗證您的陽性檢測結果。</value>
-  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>請稍後再試一次。</value>
   </data>
@@ -173,55 +77,18 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>完成</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
-    <value>請提供診斷識別碼</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
-    <value>需要診斷識別碼</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
-    <value>請在提交診斷之前啟用曝光通知（Exposure Notifications）。</value>
-  </data>
-  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
-    <value>已關閉曝光通知</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>提交診斷...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
-    <value>驗證診斷...</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogText" xml:space="preserve">
-    <value>此時無法驗證您的診斷結果。</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageVerifyFailedDialogTitle" xml:space="preserve">
-    <value>驗證失敗</value>
-  </data>
-  <data name="ButtonPositiveSubmit" xml:space="preserve">
-    <value>提交</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>設定</value>
     <comment>アプリの設定</comment>
   </data>
-  <data name="ButtonNotAgree" xml:space="preserve">
-    <value>不同意</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>取消</value>
   </data>
-  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
-    <value>是否要打開通知?</value>
-    <comment>Confirmation dialog</comment>
-  </data>
-  <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>啟用</value>
-  </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>刪除中</value>
-  </data>
-  <data name="HomePageHeader2Title" xml:space="preserve">
-    <value>如果您收到陽性診斷</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>分享應用程式</value>
@@ -253,18 +120,6 @@
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>所有設置和數據都已刪除。請重新啟動應用程式。</value>
   </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
-    <value>診斷識別碼無效</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
-    <value>請提供合法的診斷代碼</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
-    <value>不合法測試日期</value>
-  </data>
-  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
-    <value>請提供有效的考試日期</value>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>返回註冊</value>
   </data>
@@ -273,21 +128,6 @@
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>以後要積極註冊嗎?</value>
-  </data>
-  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>當您運行該應用程式時,它將在每個智慧手機上生成並存儲匿名 ID。此應用程式不獲取與隱私相關的任何資訊,如電話號碼和位置資訊。</value>
-    <comment>How it works page step 1 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>當應用程式運行時,彼此的智慧手機將記錄對方的匿名的代號在過去兩周。超過 2 週的記錄將被刪除,每個匿名 ID 將定期更改以保護隱私。</value>
-    <comment>How it works page step 2 description 2</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
-    <value>其他使用者定期獲得正數的匿名 ID 清單。收購後,智慧手機上記錄的接觸記錄將匹配。如果比賽結果是一個沉重的接觸,我們將通知您的智能手機,並通知您必要的行動,您希望我們合作。</value>
-    <comment>How it works page step 3 description</comment>
-  </data>
-  <data name="HomePageHeader1Title" xml:space="preserve">
-    <value>在過去 14 天內與陽性測試人員聯繫</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>如果您對新的 Corona 持樂觀態度,請配合積極的註冊,以保護您周圍的人。</value>
@@ -338,7 +178,7 @@
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html/zh-hant/termofuse.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html</value>
     <comment>Term of Use</comment>
   </data>
 </root>

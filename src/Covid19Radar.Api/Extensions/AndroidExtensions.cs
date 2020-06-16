@@ -1,5 +1,4 @@
 ﻿using Covid19Radar.Api.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -7,7 +6,7 @@ using System.Text;
 
 namespace Covid19Radar.Api.Extensions
 {
-	public static class AndroidExtensions
+    public static class AndroidExtensions
 	{
 		public static byte[] GetAndroidNonce(this DiagnosisSubmissionParameter submission)
 		{
