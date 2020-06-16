@@ -599,4 +599,12 @@
   <data name="InqueryPageDescription4" xml:space="preserve">
     <value>Q and A for user</value>
   </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>Inquiries about contact confirmation app</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
 </root>

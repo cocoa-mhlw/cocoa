@@ -169,7 +169,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Enter symptoms に類似しているローカライズされた文字列を検索します。
+        ///   Fill in your symptoms に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton2 {
             get {
@@ -178,7 +178,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Call COVID-19 Consultation Center に類似しているローカライズされた文字列を検索します。
+        ///   Tell your symptoms by phone Consultation Center に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton3 {
             get {
