@@ -6,12 +6,7 @@ We are looking for translator reviewers, Please see [How to Translate applicatio
 
 iOS Build Master Branch status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
-iOS Build Release Branch status 
-[![Build status](https://build.appcenter.ms/v0.1/apps/157fb5cc-788f-42e5-8bb4-965ea859c82f/branches/Release/badge)](https://appcenter.ms)
-
 Android Build Master Branch status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
-
-Android Build Release Branch status [![Build status](https://build.appcenter.ms/v0.1/apps/525e607a-5767-4ffe-95a9-5aa3e79b9d67/branches/Release/badge)](https://appcenter.ms)
 
 This app uses Exposure Notification / Bluetooth LE to get the contact logs of each other.  
 ![App Description](img/explanation_en.png)
