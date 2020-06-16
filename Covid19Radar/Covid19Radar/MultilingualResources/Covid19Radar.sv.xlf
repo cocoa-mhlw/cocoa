@@ -434,13 +434,13 @@
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触一覧</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
-          <source>Enter symptoms</source>
-          <target state="new">Enter symptoms</target>
+          <source>Fill in your symptoms</source>
+          <target state="new">Fill in your symptoms</target>
           <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
-          <source>Call COVID-19 Consultation Center</source>
-          <target state="new">Call COVID-19 Consultation Center</target>
+          <source>Tell your symptoms by phone Consultation Center</source>
+          <target state="new">Tell your symptoms by phone Consultation Center</target>
           <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者センターに電話</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">

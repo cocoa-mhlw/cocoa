@@ -210,7 +210,7 @@
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
-    <value>如果做PCR检测之后确诊为阳性</value>
+    <value>如果做检测之后确诊为阳性</value>
     <comment>PCR検査により新型コロナウィルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
@@ -330,11 +330,11 @@
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>输入症状</value>
+    <value>输入症状咨询</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>给“回国者•接触者咨询中心”打电话</value>
+    <value>打电话咨询</value>
     <comment>帰国者・接触者センターに電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
@@ -342,7 +342,7 @@
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>如果您有新冠病毒的一些症状，请填写表单或者向医疗机构电话咨询，我们会根据你提供的信息判断是否进行PCR检查。</value>
+    <value>如果您有新冠病毒的一些症状，请填写表单或者向回国者•接触者咨询中心构电话咨询，我们会根据你提供的信息判断是否进行检查。</value>
     <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
