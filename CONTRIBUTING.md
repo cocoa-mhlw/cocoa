@@ -3,7 +3,6 @@
 ## Bugfix, fix about current behavior
 
 - Create Issue, if do not exists your Issue.
-- Apply Label! (bug/nre features/doc/enhancement/question/ImprovingOperation/todo).
 - Create Branch (ex Bugfix/IssueNo , Feature/IssuNo)
 - Please keep the following in mind:
   - 1. Make it small
@@ -16,7 +15,6 @@
 ## Bugfix、現行の動作についての修正
 
 - Issue が存在していない場合は作成してください。
-- ラベルをつけてください。(bug/nre features/doc/enhancement/question/ImprovingOperation/todo)
 - Branch を作成してください。(例 Bugfix/IssueNo , Feature/IssuNo)
 - 以下を心がけてください
   - 1. 変更を小さくしてください
