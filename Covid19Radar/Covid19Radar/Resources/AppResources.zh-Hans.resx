@@ -579,4 +579,13 @@
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot4.html</value>
   </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>启用通知</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>有关该应用程序的信息</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>用户问答</value>
+  </data>
 </root>

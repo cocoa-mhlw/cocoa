@@ -58,7 +58,7 @@
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
-    <value>既知の露出はありません</value>
+    <value>既知の接触はありません</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
@@ -592,5 +592,11 @@
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>通知を有効にしました</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>接触確認アプリに関する情報</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>利用者向けQ and A</value>
   </data>
 </root>

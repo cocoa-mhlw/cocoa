@@ -698,4 +698,10 @@
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>Notifications enabled</value>
   </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>Information about the this app</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>Q and A for user</value>
+  </data>
 </root>
