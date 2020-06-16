@@ -56,7 +56,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 [Adobe XD](https://www.adobe.com/jp/products/xd.html)を利用してデザイン制作を行っています。
 
-![画面全体図](img/design01.JPG)
+![画面全体図](img/design01.jpg)
 
 デザインファイルを確認する場合は、Adobe XDをインストールしてください。（無料で利用可能）
 
