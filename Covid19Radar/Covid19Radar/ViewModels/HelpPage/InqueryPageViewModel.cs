@@ -26,7 +26,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickSite1 => new Command(async () =>
         {
-            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/touch_qa_00009.html";
+            var uri = "https://corona.go.jp/";
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
 
@@ -48,11 +48,11 @@ namespace Covid19Radar.ViewModels
             try
             {
                 List<string> recipients = new List<string>();
-                recipients.Add("***REMOVED***");
+                recipients.Add(AppSettings.Instance.SupportEmail);
                 var message = new EmailMessage
                 {
-                    Subject = "接触確認アプリに関するお問い合わせ",
-                    Body = "お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n",
+                    Subject = AppResources.InqueryMailSubject,
+                    Body = AppResources.InqueryMailBody,
                     To = recipients
                 };
                 await Email.ComposeAsync(message);
