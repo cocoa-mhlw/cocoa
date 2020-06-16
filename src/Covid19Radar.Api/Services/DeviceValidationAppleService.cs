@@ -1,28 +1,17 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Covid19Radar.Api.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Covid19Radar.Api.Models;
+using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.IO;
+using System.Net.Http;
 using System.Net.Http.Headers;
-using Microsoft.Extensions.Configuration;
-using System.IdentityModel.Tokens.Jwt;
-using System.Globalization;
-using System.Net;
-using System.Text.Json.Serialization;
-using Microsoft.IdentityModel.Tokens;
-using System.Security.Cryptography.X509Certificates;
-using System.Collections;
-using Covid19Radar.Api.DataAccess;
 using System.Security.Cryptography;
-using Covid19Radar.Api.Extensions;
+using System.Text;
 using System.Text.RegularExpressions;
-using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Services
 {
