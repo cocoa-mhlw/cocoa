@@ -664,6 +664,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Information about the this app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageDescription3 {
+            get {
+                return ResourceManager.GetString("InqueryPageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Q and A for user に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageDescription4 {
+            get {
+                return ResourceManager.GetString("InqueryPageDescription4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Support に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageTitle {
