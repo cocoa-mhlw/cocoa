@@ -56,7 +56,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 [Adobe XD](https://www.adobe.com/jp/products/xd.html)を利用してデザイン制作を行っています。
 
-![画面全体図](img/design01.jpg)
+![画面全体図](img/design01.JPG)
 
 デザインファイルを確認する場合は、Adobe XDをインストールしてください。（無料で利用可能）
 
@@ -64,7 +64,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 以下のURLにアクセスすると、画面遷移を確認いただけます。
 
-[プロトタイプ画面（日本語）](https://xd.adobe.com/view/e984f53a-5fc7-4764-4ddf-902860407fad-9fb5/)
+[プロトタイプ画面（日本語）](https://xd.adobe.com/view/8a430621-fe72-45a7-4acf-43fa7d73c181-fc72/grid)
 
 ## ライセンス
 
