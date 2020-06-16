@@ -764,6 +764,14 @@
           <source>Notifications enabled</source>
           <target state="new">Notifications enabled</target>
         </trans-unit>
+        <trans-unit id="InqueryPageDescription3" translate="yes" xml:space="preserve">
+          <source>Information about the this app</source>
+          <target state="new">Information about the this app</target>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
+          <source>Q and A for user</source>
+          <target state="new">Q and A for user</target>
+        </trans-unit>
       </group>
     </body>
   </file>
