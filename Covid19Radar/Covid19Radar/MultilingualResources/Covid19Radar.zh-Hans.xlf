@@ -738,7 +738,15 @@
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
           <source>Notifications enabled</source>
-          <target state="new">Notifications enabled</target>
+          <target state="translated">启用通知</target>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription3" translate="yes" xml:space="preserve">
+          <source>Information about the this app</source>
+          <target state="translated">有关该应用程序的信息</target>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
+          <source>Q and A for user</source>
+          <target state="translated">用户问答</target>
         </trans-unit>
       </group>
     </body>
