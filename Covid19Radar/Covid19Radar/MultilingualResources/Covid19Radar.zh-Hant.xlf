@@ -46,7 +46,7 @@
           <target state="translated">確定</target>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
-          <source>NotNow</source>
+          <source>Not Now</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">現在不</target>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
