@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_pp_00027.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -58,7 +58,7 @@
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
-    <value>既知の露出はありません</value>
+    <value>既知の接触はありません</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
@@ -210,7 +210,7 @@
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
-    <value>PCR検査により新型コロナウィルスの感染が確認された場合。</value>
+    <value>検査により新型コロナウィルスの感染が確認された場合。</value>
     <comment>PCR検査により新型コロナウィルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
@@ -302,11 +302,11 @@
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>症状を入力</value>
+    <value>症状を入力して相談</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>帰国者・接触者センターに電話</value>
+    <value>電話で症状を伝えて相談</value>
     <comment>帰国者・接触者センターに電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
@@ -314,7 +314,7 @@
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</value>
+    <value>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、帰国者・接触者相談センターを案内します。</value>
     <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
@@ -346,7 +346,7 @@
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>陽性者との接触を確認する(14日間)</value>
+    <value>陽性者との接触を確認する</value>
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
@@ -570,7 +570,7 @@
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/termofuse.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_rk_00028.html</value>
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
@@ -592,5 +592,19 @@
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>通知を有効にしました</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>接触確認アプリに関する情報</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>利用者向けQ and A</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>接触確認アプリに関するお問い合わせ</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
 </root>

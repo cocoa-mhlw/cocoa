@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -210,7 +210,7 @@
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
-    <value>如果做PCR检测之后确诊为阳性</value>
+    <value>如果做检测之后确诊为阳性</value>
     <comment>PCR検査により新型コロナウィルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
@@ -330,11 +330,11 @@
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>输入症状</value>
+    <value>输入症状咨询</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>给“回国者•接触者咨询中心”打电话</value>
+    <value>打电话咨询</value>
     <comment>帰国者・接触者センターに電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
@@ -342,7 +342,7 @@
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>如果您有新冠病毒的一些症状，请填写表单或者向医疗机构电话咨询，我们会根据你提供的信息判断是否进行PCR检查。</value>
+    <value>如果您有新冠病毒的一些症状，请填写表单或者向回国者•接触者咨询中心构电话咨询，我们会根据你提供的信息判断是否进行检查。</value>
     <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
@@ -362,7 +362,7 @@
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>FAQ</value>
+    <value>COVID-19 Infomation and Resources</value>
     <comment>新型コロナウィルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -374,7 +374,7 @@
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>确认是否与阳性患者接触（14日以内）</value>
+    <value>确认是否与阳性患者接触</value>
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
@@ -562,7 +562,7 @@
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>过去14天内里的密切接触一览</value>
+    <value>密切接触一览</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
@@ -570,7 +570,7 @@
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/termofuse.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html</value>
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
@@ -578,5 +578,25 @@
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>Possible COVID-19 Exposure</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>If you want to disable it, you can change it from the app settings</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>启用通知</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>有关该应用程序的信息</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>用户问答</value>
   </data>
 </root>
