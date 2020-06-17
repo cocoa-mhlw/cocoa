@@ -364,7 +364,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>If you tested positive</value>
-    <comment>PCR検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>Public health authorities will issue you a "processing number".</value>
@@ -444,7 +444,7 @@
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
     <value>Tell your symptoms by phone Consultation Center</value>
-    <comment>帰国者・接触者センターに電話</comment>
+    <comment>帰国者・接触者外来に電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>times</value>
@@ -452,7 +452,7 @@
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
     <value>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
     <value>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</value>

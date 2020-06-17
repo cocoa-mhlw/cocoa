@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>検査により新型コロナウィルスの感染が確認された場合。</value>
-    <comment>PCR検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>保健所等公的機関から登録用の「処理番号」が発行されます。</value>
@@ -307,15 +307,15 @@
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
     <value>電話で症状を伝えて相談</value>
-    <comment>帰国者・接触者センターに電話</comment>
+    <comment>帰国者・接触者外来に電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>件</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、帰国者・接触者相談センターを案内します。</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
+    <value>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
     <value>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</value>
