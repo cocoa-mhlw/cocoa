@@ -26,8 +26,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/privacypolicy.html</target>
+          <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</source>
+          <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
@@ -60,7 +60,7 @@
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>How to use</source>
-          <target state="needs-review-translation">指南</target>
+          <target state="translated">指南</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
@@ -259,7 +259,7 @@
         </trans-unit>
         <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
           <source>If you tested positive</source>
-          <target state="translated">如果做PCR检测之后确诊为阳性</target>
+          <target state="translated">如果做检测之后确诊为阳性</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PCR検査により新型コロナウィルスの感染が確認された場合。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description2" translate="yes" xml:space="preserve">
@@ -408,13 +408,13 @@
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触一覧</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
-          <source>Enter symptoms</source>
-          <target state="translated">输入症状</target>
+          <source>Fill in your symptoms</source>
+          <target state="translated">输入症状咨询</target>
           <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
-          <source>Call COVID-19 Consultation Center</source>
-          <target state="translated">给“回国者•接触者咨询中心”打电话</target>
+          <source>Tell your symptoms by phone Consultation Center</source>
+          <target state="translated">打电话咨询</target>
           <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者センターに電話</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
@@ -424,7 +424,7 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
           <source>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</source>
-          <target state="translated">如果您有新冠病毒的一些症状，请填写表单或者向医疗机构电话咨询，我们会根据你提供的信息判断是否进行PCR检查。</target>
+          <target state="translated">如果您有新冠病毒的一些症状，请填写表单或者向回国者•接触者咨询中心构电话咨询，我们会根据你提供的信息判断是否进行检查。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
@@ -448,8 +448,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>FAQ</source>
-          <target state="translated">FAQ</target>
+          <source>COVID-19 Infomation and Resources</source>
+          <target state="needs-review-translation">COVID-19 Infomation and Resources</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
@@ -463,8 +463,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
-          <source>Check close contacts (past 14 days)</source>
-          <target state="translated">确认是否与阳性患者接触（14日以内）</target>
+          <source>Check close contacts</source>
+          <target state="translated">确认是否与阳性患者接触</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
         </trans-unit>
         <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
@@ -699,7 +699,7 @@
         </trans-unit>
         <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
           <source>A list of close contacts (past 14 days)</source>
-          <target state="translated">过去14天内里的密切接触一览</target>
+          <target state="translated">密切接触一览</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
         </trans-unit>
         <trans-unit id="ExposuresPageLabel1" translate="yes" xml:space="preserve">
@@ -708,8 +708,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
         </trans-unit>
         <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/termofuse.html</target>
+          <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</source>
+          <target state="needs-review-translation">https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
         <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
@@ -722,21 +722,39 @@
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
-          <target state="new">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</target>
+          <target state="needs-review-translation">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
           <source>Possible COVID-19 Exposure</source>
-          <target state="new">Possible COVID-19 Exposure</target>
+          <target state="needs-review-translation">Possible COVID-19 Exposure</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
           <source>If you want to disable it, you can change it from the app settings</source>
-          <target state="new">If you want to disable it, you can change it from the app settings</target>
+          <target state="needs-review-translation">If you want to disable it, you can change it from the app settings</target>
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
           <source>Notifications enabled</source>
-          <target state="new">Notifications enabled</target>
+          <target state="translated">启用通知</target>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription3" translate="yes" xml:space="preserve">
+          <source>Information about the this app</source>
+          <target state="translated">有关该应用程序的信息</target>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
+          <source>Q and A for user</source>
+          <target state="translated">用户问答</target>
+        </trans-unit>
+        <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
+          <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
+          <target state="new">Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</note>
+        </trans-unit>
+        <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
+          <source>Inquiries about contact confirmation app</source>
+          <target state="new">Inquiries about contact confirmation app</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
       </group>
     </body>
