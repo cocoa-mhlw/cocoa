@@ -333,7 +333,7 @@
                 <Setter Property="TextColor" Value="{StaticResource ButtonGrayedOut}" />
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="WidthRequest" Value="{x:OnPlatform Android=350, iOS=330}" />
+                <Setter Property="WidthRequest" Value="{x:OnPlatform Android=300, iOS=310}" />
                 <Setter Property="CornerRadius" Value="{x:OnPlatform Android=50, iOS=20}" />
                 <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
             </Style>
