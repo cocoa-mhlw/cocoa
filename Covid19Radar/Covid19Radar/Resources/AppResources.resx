@@ -141,7 +141,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -439,11 +439,11 @@
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Enter symptoms</value>
+    <value>Fill in your symptoms</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Call COVID-19 Consultation Center</value>
+    <value>Tell your symptoms by phone Consultation Center</value>
     <comment>帰国者・接触者センターに電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
@@ -471,7 +471,7 @@
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>FAQ</value>
+    <value>COVID-19 Infomation and Resources</value>
     <comment>新型コロナウィルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -483,7 +483,7 @@
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>Check close contacts (past 14 days)</value>
+    <value>Check close contacts</value>
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
@@ -675,7 +675,7 @@
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
@@ -697,5 +697,19 @@
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>Notifications enabled</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>Information about the this app</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>Q and A for user</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>Inquiries about contact confirmation app</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
 </root>
