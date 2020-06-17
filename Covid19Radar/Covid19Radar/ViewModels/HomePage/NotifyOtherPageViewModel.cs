@@ -34,6 +34,9 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.TitileUserStatusSettings;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
+            
+            // Waiting HER-SYS Deployment
+            IsEnabled = false;
         }
 
 
