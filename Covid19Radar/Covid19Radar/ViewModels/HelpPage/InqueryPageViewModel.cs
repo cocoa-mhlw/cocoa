@@ -19,43 +19,40 @@ namespace Covid19Radar.ViewModels
 {
     public class InqueryPageViewModel : ViewModelBase
     {
-        private string _url;
-
-        public string Url
-        {
-            get { return _url; }
-            set { SetProperty(ref _url, value); }
-        }
-
-        private List<string> _inqueryItems;
-
-        public List<string> InqueryItems
-        {
-            get { return _inqueryItems; }
-            set { SetProperty(ref _inqueryItems, value); }
-        }
-
 
         public InqueryPageViewModel() : base()
         {
         }
 
-        public Command OnClickSite => new Command(async () =>
+        public Command OnClickSite1 => new Command(async () =>
         {
-            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/touch_qa_00009.html";
+            var uri = "https://corona.go.jp/";
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
+
+        public Command OnClickSite2 => new Command(async () =>
+        {
+            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html";
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        });
+
+        public Command OnClickSite3 => new Command(async () =>
+        {
+            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html";
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        });
+
         public Command OnClickEmail => new Command(async () =>
         {
 
             try
             {
                 List<string> recipients = new List<string>();
-                recipients.Add("***REMOVED***");
+                recipients.Add(AppSettings.Instance.SupportEmail);
                 var message = new EmailMessage
                 {
-                    Subject = "接触確認アプリに関するお問い合わせ",
-                    Body = "お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n",
+                    Subject = AppResources.InqueryMailSubject,
+                    Body = AppResources.InqueryMailBody,
                     To = recipients
                 };
                 await Email.ComposeAsync(message);

@@ -39,7 +39,7 @@
             <BoxView Style="{StaticResource DefaultLineStyle}" />
             <Frame Padding="10" HasShadow="False">
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickSite}" />
+                    <TapGestureRecognizer Command="{Binding Path=OnClickSite1}" />
                 </Frame.GestureRecognizers>
                 <StackLayout Spacing="0">
                     <Label Style="{StaticResource DefaultLabelSmall}">
@@ -48,7 +48,7 @@
                                 <Span Text="{x:Static resources:AppResources.InqueryPageDescription2}" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
                                 <Span
-                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/touch_qa_00009.html"
+                                    Text="https://corona.go.jp/"
                                     TextColor="{StaticResource Primary}"
                                     TextDecorations="Underline" />
                             </FormattedString>
@@ -57,6 +57,47 @@
                 </StackLayout>
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="10" HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=OnClickSite2}" />
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <Label Style="{StaticResource DefaultLabelSmall}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span
+                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html"
+                                    TextColor="{StaticResource Primary}"
+                                    TextDecorations="Underline" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="10" HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=OnClickSite3}" />
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="0">
+                    <Label Style="{StaticResource DefaultLabelSmall}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription4}" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span
+                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html"
+                                    TextColor="{StaticResource Primary}"
+                                    TextDecorations="Underline" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

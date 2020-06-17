@@ -18,20 +18,8 @@ namespace Covid19Radar.ViewModels
 {
     public class TermsofservicePageViewModel : ViewModelBase
     {
-
-        private string _url;
-
-        public string Url
-        {
-            get { return _url; }
-            set { SetProperty(ref _url, value); }
-        }
-
         public TermsofservicePageViewModel() : base()
         {
-           
-            // TODO Change Termof Service URL
-            Url = Resources.AppResources.UrlTermOfUse;
         }
 
     }

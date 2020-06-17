@@ -169,7 +169,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Enter symptoms に類似しているローカライズされた文字列を検索します。
+        ///   Fill in your symptoms に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton2 {
             get {
@@ -178,7 +178,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Call COVID-19 Consultation Center に類似しているローカライズされた文字列を検索します。
+        ///   Tell your symptoms by phone Consultation Center に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton3 {
             get {
@@ -565,7 +565,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Check close contacts (past 14 days) に類似しているローカライズされた文字列を検索します。
+        ///   Check close contacts に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageDescription2 {
             get {
@@ -646,6 +646,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryMailBody {
+            get {
+                return ResourceManager.GetString("InqueryMailBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inquiries about contact confirmation app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryMailSubject {
+            get {
+                return ResourceManager.GetString("InqueryMailSubject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   9:00-17:30 (except weekends and holidays) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription1 {
@@ -655,11 +673,29 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   FAQ に類似しているローカライズされた文字列を検索します。
+        ///   COVID-19 Infomation and Resources に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription2 {
             get {
                 return ResourceManager.GetString("InqueryPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Information about the this app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageDescription3 {
+            get {
+                return ResourceManager.GetString("InqueryPageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Q and A for user に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageDescription4 {
+            get {
+                return ResourceManager.GetString("InqueryPageDescription4", resourceCulture);
             }
         }
         
@@ -1393,7 +1429,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/privacypolicy.html に類似しているローカライズされた文字列を検索します。
+        ///   https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlPrivacyPolicy {
             get {
@@ -1402,7 +1438,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/termofuse.html に類似しているローカライズされた文字列を検索します。
+        ///   https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlTermOfUse {
             get {
