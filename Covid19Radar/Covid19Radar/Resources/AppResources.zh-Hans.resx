@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>如果做检测之后确诊为阳性</value>
-    <comment>PCR検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>保健所等官方机构给您开具“数字码”</value>
@@ -335,7 +335,7 @@
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
     <value>打电话咨询</value>
-    <comment>帰国者・接触者センターに電話</comment>
+    <comment>帰国者・接触者外来に電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>times</value>
@@ -343,7 +343,7 @@
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
     <value>如果您有新冠病毒的一些症状，请填写表单或者向回国者•接触者咨询中心构电话咨询，我们会根据你提供的信息判断是否进行检查。</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、行政機関にご連絡ください。内容に応じて、PCR検査センター等への受診を案内します。</comment>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
     <value>请截取保存本页面，受诊的时候提供给医院</value>
