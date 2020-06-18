@@ -13,6 +13,8 @@ using Acr.UserDialogs;
 using Covid19Radar.Renderers;
 using Covid19Radar.Views;
 using Xamarin.Essentials;
+using System.Collections;
+using System.ComponentModel;
 
 namespace Covid19Radar.ViewModels
 {
@@ -20,11 +22,6 @@ namespace Covid19Radar.ViewModels
     {
         public bool IsEnabled { get; set; } = true;
         public string DiagnosisUid { get; set; }
-//        public DateTime? DiagnosisTimestamp { get; set; } = DateTime.Now;
-
-//        public DateTime? MaxDate { get; } = DateTime.Today.AddMonths(1);
-//        public DateTime? MinDate { get; } = DateTime.Today.AddMonths(-1);
-
 
         private readonly UserDataService userDataService;
         private UserDataModel userData;
@@ -34,58 +31,44 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.TitileUserStatusSettings;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
-            
-            // Waiting HER-SYS Deployment
-            IsEnabled = false;
-        }
 
+        }
 
         public Command OnClickRegister => (new Command(async () =>
         {
-            // Verify  Check the parameters
-            /*
-        if (string.IsNullOrEmpty(DiagnosisUid))
-        {
-            // Check gov's positive api check here!!
+            if (string.IsNullOrEmpty(DiagnosisUid))
+            {
+                // Check gov's positive api check here!!
+                await UserDialogs.Instance.AlertAsync(
+                    Resources.AppResources.NotifyOtherPageDialogSubmittedText,
+                    Resources.AppResources.ButtonComplete,
+                    Resources.AppResources.ButtonOk
+                );
+                return;
+            }
 
-            await UserDialogs.Instance.AlertAsync(
-                Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDText,
-                Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDTitle,
-                Resources.AppResources.ButtonOk
-            );
-            return;
-        }
-        if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
-        {
-            await UserDialogs.Instance.AlertAsync(
-                Resources.AppResources.NotifyOtherPageDialogInvalidTestDateText,
-                Resources.AppResources.NotifyOtherPageDialogInvalidTestDateTitle,
-                Resources.AppResources.ButtonOk
-            );
-            return;
-        }
-            */
+
 
             // Submit the UID
             using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
             IsEnabled = false;
             try
             {
-                /*
+                // EN Enabled Check
                 var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
 
                 if (!enabled)
                 {
                     dialog.Hide();
-
                     await UserDialogs.Instance.AlertAsync(
-                        Resources.AppResources.NotifyOtherPageDialogENDisabledText,
-                        Resources.AppResources.NotifyOtherPageDialogENDisabledTitle,
+                        Resources.AppResources.NotifyOtherPageDialogSubmittedText,
+                        Resources.AppResources.ButtonComplete,
                         Resources.AppResources.ButtonOk
                     );
+                    await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
                     return;
                 }
-                */
+
                 // Set the submitted UID
                 userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DateTime.Now));
                 await userDataService.SetAsync(userData);

@@ -33,7 +33,7 @@ namespace Covid19Radar.Model
         /// <summary>
         /// StartDate
         /// </summary>
-        public DateTime StartDateTime { get; } = DateTime.UtcNow;
+        public DateTime StartDateTime { get; set; }
 
         /// <summary>
         /// Last notification date and time
