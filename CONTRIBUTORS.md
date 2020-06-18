@@ -57,6 +57,7 @@
 - M Reza Faisal (Indonesian Translation)
 - Mohamed BOUZIDI(github actions)
 - Yutaro Iino (Documentation)
+- Kohei Ikeda(Documentation)
 
 # Beta Testers
 - Nagahata Kenji
