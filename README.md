@@ -36,7 +36,7 @@ https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
 
 ## Development environment
 
-This application uses Xamarin Forms (iOS and Android) with C # and Prism (MVVM DryIoC).
+This application uses Xamarin Forms (iOS and Android) with C# and Prism (MVVM DryIoC).
 You can develop with Visual Studio for Windows or Visual Studio for Mac.
 
 https://visualstudio.microsoft.com/ja/xamarin/
