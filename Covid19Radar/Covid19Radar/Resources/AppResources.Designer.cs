@@ -115,7 +115,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   NotNow に類似しているローカライズされた文字列を検索します。
+        ///   Not Now に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonNotNow {
             get {
