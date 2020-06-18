@@ -45,7 +45,7 @@
           <target state="translated">确定</target>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
-          <source>NotNow</source>
+          <source>Not Now</source>
           <target state="translated">暂时不</target>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
