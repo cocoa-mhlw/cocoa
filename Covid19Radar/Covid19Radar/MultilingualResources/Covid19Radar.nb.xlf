@@ -48,7 +48,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ok</target>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
-          <source>NotNow</source>
+          <source>Not Now</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">NotNow (andre er ikke noe av</target>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
