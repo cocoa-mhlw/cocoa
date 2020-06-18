@@ -45,8 +45,8 @@
           <target state="translated" state-qualifier="mt-suggestion">OK</target>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
-          <source>NotNow</source>
-          <target state="translated" state-qualifier="mt-suggestion">NotNow</target>
+          <source>Not Now</source>
+          <target state="translated" state-qualifier="mt-suggestion">Not Now</target>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
