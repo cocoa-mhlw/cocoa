@@ -43,6 +43,7 @@ namespace Covid19Radar.Services
             {
                 return null;
             }
+            userData.StartDateTime = DateTime.UtcNow;
             await SetAsync(userData);
             return userData;
         }
