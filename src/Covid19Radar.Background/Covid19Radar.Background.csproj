@@ -14,7 +14,7 @@
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.7" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.4" />
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.7" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.6" />
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
     <PackageReference Include="System.Security.Cryptography.Cng" Version="4.7.0" />
     <PackageReference Include="System.Security.Cryptography.OpenSsl" Version="4.7.0" />
