@@ -159,7 +159,7 @@
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Meta tħaddem din l-applikazzjoni, kull smartphone se jiġġenera u jkollu kodiċi ta ' kuntatt. Barra minn hekk, din l-applikazzjoni ma takkwista l-ebda informazzjoni relatata ma ' informazzjoni personali bħal numru tat-telefon u informazzjoni dwar il-post.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Il-kundizzjonijiet ta ' kuntatt irreġistrati</value>
@@ -176,5 +176,435 @@
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>F ' dan iż-żmien, il-Kodi ċi ta ' kuntatt tal-persuna kkuntattjata huwa rreġistrat fl-applikazzjoni. L-informazzjoni ta ' kuntatt ma tintużax sakemm kwalunkwe utent ikun Irreġistra pożittiv. L-istorja tal-kuntatt se titħassar wara 14-il jum. * Il-Kodi ċi tal-kuntatt jinbidel regolarment.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>Mur fl-issettjar tal-applikazzjoni</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>Mill-issettjar tal-applikazzjoni, tista' tixgħel/ tiddiżattiva l-Bluetooth u n-notifiki, tieqaf tuża l-applikazzjoni u tħassar l-istorja tal-kuntatt mill-qrib.</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+  </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>L-applikazzjoni tinnotifikak, jekk kont f'kuntatt mill-qrib ma' utent pożittiv COVID-19.</value>
+    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>Tista' tiċċekkja n-numru tal-kuntatti mill-qrib tiegħek mill-iskrin tad-dar.</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>Tista ' tiċċekkja l- lista ta ' dati ta ' kuntatt mill- qrib u tirċievi gwida dwar x' għandek tagħmel jekk għandek sintomi tal- marda.</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Notifika</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Paġna Ewlenija</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>Jekk kellek kuntatt mill-qrib ma' utent pożittiv ta' COVID-19</value>
+    <comment>陽性者との接触があった場合</comment>
+  </data>
+  <data name="HelpPage3Description1" xml:space="preserve">
+    <value>Jekk ittestjat</value>
+    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+  </data>
+  <data name="HelpPage3Description2" xml:space="preserve">
+    <value>L-awtoritajiet tas-saħħa pubblika se joħorġuk "numru tal-ipproċessar".</value>
+    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+  </data>
+  <data name="HelpPage3Description3" xml:space="preserve">
+    <value>Irreġistra billi ddaħħal in-numru tal-ipproċessar ipprovdut f'din l-applikazzjoni</value>
+    <comment>本アプリを用いて処理番号の登録を行います。</comment>
+  </data>
+  <data name="HelpPage3Description4" xml:space="preserve">
+    <value>Smartphones li kienu f'kuntatt mill-qrib mal-smartphone tiegħek fl-aħħar 14-il jum jirċievu notifiki.</value>
+    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+  </data>
+  <data name="HelpPage3Description5" xml:space="preserve">
+    <value>Jintużaw biss kodiċijiet iġġenerati b'mod aleatorju mit-tagħmir meta jintbagħtu n-notifiki. Ma tintuża l-ebda informazzjoni personali.</value>
+    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
+    <value>Irreġistra hawn meta ttestjat pożittiv</value>
+    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Liċenzja</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="SettingsPageLabel1" xml:space="preserve">
+    <value>Agħlaq ir-reġistrazzjoni tal-kuntatt</value>
+    <comment>接触の検出</comment>
+  </data>
+  <data name="SettingsPageDescription1" xml:space="preserve">
+    <value>Użu ta 'Bluetooth</value>
+    <comment>Bluetoothによる接触の検知</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Notifiki</value>
+    <comment>通知</comment>
+  </data>
+  <data name="SettingsPageDescription2" xml:space="preserve">
+    <value>Agħlaq in-notifiki ta' kuntatt</value>
+    <comment>陽性者との接触通知</comment>
+  </data>
+  <data name="SettingsPageLabel3" xml:space="preserve">
+    <value>Waqqaf l-użu tal-applikazzjoni</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+  <data name="SettingsPageDescription3" xml:space="preserve">
+    <value>Waqqaf l-użu u ħassar rekords ta' kuntatt mill-qrib</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+  </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>X'inhu "kuntatt mill-qrib"?</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>Kif niċċekkja n-numru ta' kuntatti mill-qrib?</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>Jekk tittestja pożittiv għal COVID-19</value>
+    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>Kif nista' nieqaf / inħassar ir-reġistrazzjoni tal-kuntatt mill-qrib?</value>
+    <comment>接触の記録を停止／情報を削除するには</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>Kuntatti mill-qrib għal dawn l-aħħar 14-il jum</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>L-ebda kuntatt mill-qrib ma' utenti pożittivi ta' COVID-19</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>Jekk jogħġbok żomm il-prattika ta' "Stil ta' Ħajja Ġdid" rakkomandat mill-gvern.</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>Ixxerja din l-applikazzjoni</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>Grazzi talli tixrob ir-riżultati tat-test tiegħek!</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>Ir-reġistrazzjoni hija anonima. M'għandekx jkollha bżonn iddaħħal ismek jew kwalunkwe informazzjoni personali oħra. Ma ġiet irreġistrata l-ebda informazzjoni dwar il-post fejn jinsab il-kuntatt mill-qrib.</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Termini tal-użu</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>Naċċetta t-Termini ta 'Użu</value>
+    <comment>規約に同意して次へ</comment>
+  </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>Il-konfigurazzjoni lesta. grazzi!</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Paġna Ewlenija</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>Kif tuża din l-applikazzjoni</value>
+    <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>Identifikazzjoni tat-tagħmir</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>Lista ta' kuntatti mill-qrib ma' utenti pożittivi ta' COVID-19</value>
+    <comment>陽性者との接触一覧</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>Imla s-sintomi tiegħek</value>
+    <comment>症状を入力</comment>
+  </data>
+  <data name="ContactedNotifyPageButton3" xml:space="preserve">
+    <value>Għid lis-sintomi tiegħek miċ-Ċentru ta' Konsultazzjoni bit-telefon</value>
+    <comment>帰国者・接触者外来に電話</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>Darbiet</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>Jekk għandek sintomi COVID-19 possibbli, ikkuntattja organizzazzjonijiet tal-kura tas-saħħa bl-użu tal-formola hawn taħt jew bit-telefon. Skond is- sintomi, inti ser tingħata parir biex tagħmel test COVID- 19.</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>Jekk jogħġbok ħu screenshot ta 'dan l-iskrin. Tista' tintalab tipprovdiha waqt id-dijanjosi.</value>
+    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>Għadd ta' kuntatti mill-qrib ikkonfermati ma' utenti pożittivi ta' COVID-19</value>
+    <comment>陽性者との接触確認</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>Kuntatti mill-qrib għal dawn l-aħħar 14-il jum</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>9:00-17:30 (minbarra tmiem il-ġimgħa u vaganzi)</value>
+    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>COVID-19 Informazzjoni u Riżorsi</value>
+    <comment>新型コロナウィルス感染症対策サイト</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Appoġġ</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>waqt l-użu</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>Iċċekkja kuntatti mill-qrib</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>Meta ttestjat pożittiv għal COVID-19</value>
+    <comment>新型コロナウィルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>Irreġistra r-riżultat pożittiv tat-test</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>Ixxerja din l-applikazzjoni</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Paġna Ewlenija</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>Terminu tal-użu</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>Il-privatezza tiegħek hija protetta</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>Ma tinġabar l-ebda informazzjoni personali bħal ismek jew in-numru tat-telefown tiegħek. Ma tinġabar l-ebda dejta dwar il-ġeolokazzjoni inkluża d-dejta tal-GPS.</value>
+    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>Id-data kollha hija kriptata u ssejvjata lokalment fuq l-ismartphone tiegħek. Id-dejta kollha titħassar awtomatikament wara 14-il jum. Il-movimenti tiegħek mhumiex traċċati bl-ebda mod minn aġenziji tal-gvern jew partijiet terzi.</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>Tista' tieqaf tirreġistra kuntatti mill-qrib ma' utenti oħra fi kwalunkwe ħin billi tbiddel l-issettjar tal-applikazzjoni jew tħassar l-applikazzjoni.</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Termini tal-użu</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>TutorjaPage2Description1</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Ixgħel in-notifiki</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>Jekk jogħġbok ixgħel in-notifiki li għandhom jiġu nnotifikati meta kellek kuntatti mill-qrib ma' utenti pożittivi ta' COVID-19.</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Ixgħel</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>Ikkonfigura aktar tard</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>Biex tuża n-notifiki</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Menù</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Irreġistra</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
+    <value>Daħħal kodiċi tal-proċess maħruġ lilek minn "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</value>
+    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+  </data>
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
+    <value>L-utenti li kienu f'kuntatt mill-qrib miegħek fl-aħħar 14-il jum jiġu nnotifikati. Ir-reġistrazzjoni hija anonima. M'għandekx jkollha bżonn iddaħħal ismek jew kwalunkwe informazzjoni personali oħra. Ma ġiet irreġistrata l-ebda informazzjoni dwar il-post fejn jinsab il-kuntatt mill-qrib.</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
+    <value>Kif tirċievi kodiċi tal-proċess</value>
+    <comment>処理番号の取得方法</comment>
+  </data>
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
+    <value>Irreġistra r-riżultat pożittiv tat-test</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Li jmiss</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>L-app tirrikonoxxi kuntatti mill-qrib bejn smartphones li jmexxu din l-applikazzjoni.</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>Meta ttestjat pożittiv għal COVID-19, tista'tirreġistra b'mod anonimu r-riżultat tat-test f'din l-applikazzjoni.</value>
+    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>Jekk kont f'kuntatt mill-qrib ma' utent li ttestjajt pożittiv, l-applikazzjoni tinnotifikak b'infezzjoni potenzjali u tipprovdi gwida biex tipproteġi s-saħħa tiegħek.</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>Ipproteġi lilek innifsek bl-applikazzjoni</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>Ipproteġi lilek innifsek bl-applikazzjoni</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Ixgħel</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>Ikkonfigura aktar tard</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>Ixgħel bluetooth biex tibda tirreġistra kuntatti mill-qrib ma ' utenti oħra.</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Aktar tagħrif</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>Ixgħel bluetooth</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>Ixgħel bluetooth</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>~</value>
+    <comment>から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>Daħħal kodiċi bi 8 ċifri</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>In-numru tal-ipproċessar jiġi nnotifikat liċ-numru tal-mowbajl jew l-indirizz tal-posta elettronika tiegħek irreġistrat fis-sistema l-ġdida ta' informazzjoni u ġestjoni tal-mard infettiv tal-coronavirus (minn hawn 'il quddiem "sistema ta' ġestjoni").</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>Meta tidħol dan in-numru tal-ipproċessar fit-terminal, it-terminal jagħmel inkjesta permezz tas-server tan-notifika lis-sistema ta' ġestjoni dwar jekk in-numru tal-ipproċessar ikunx inħareġ lilek.</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>Is-sistema ta' ġestjoni se twieġeb għas-server tan-notifika dwar jekk in-numru tat-tranżazzjoni msemmi nħareġ lilek.</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>Jekk twieġeb li n-numru tat-tranżazzjoni nħareġ lilek, terminals ta' utenti oħra jiġu pprovduti biċ-ċavetta ta' kuljum irreġistrata fuq it-terminal tiegħek.</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>Jekk kont f'kuntatt miegħek fi żmien 14-il jum, tkun taf li seta' ġie kkuntattjat mingħajr ebda informazzjoni li tista' tidentifikak personalment.</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>Aqbel u reġistra</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>Kunsens għal reġistrazzjoni pożittiva</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>Kunsens għal reġistrazzjoni pożittiva</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Verżjoni</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>Bluetooth huwa mitfi. Jekk jogħġbok dawwar fil-Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>Lista ta' kuntatti mill-qrib (l-aħħar 14-il jum)</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>Dati meta kont f'kuntatt mill-qrib ma 'utenti pożittivi coVID-19.</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>Huwa possibbli li kont qrib ħafna ta 'utent li ttestja pożittiv għal COVID-19.  Taptap għal aktar dettalji.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>Espożizzjoni possibbli ta ' COVID- 19</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>Jekk tixtieq tiddiżattivah, tista' tbiddilha mill-issettjar tal-applikazzjoni</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>Notifiki attivati</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>Informazzjoni dwar din l-applikazzjoni</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>Q u A għall-utent</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>Isem: \r\n Kuntatt: \r\n Kontenut ta' inkjesta (Jekk jogħġbok agħżel kategorija minn dawn li ġejjin): 1. Kif taħdem l-applikazzjoni, 2. Settings tal-applikazzjoni, 3. Użu tal-applikazzjoni (notifika eċċ.) ), 4. Oħrajn \r\n Test ta' inkjesta: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>Mistoqsijiet dwar l-applikazzjoni tal-konferma tal-kuntatt</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
 </root>

@@ -756,6 +756,11 @@
           <target state="translated">对该接触情况应用进行咨询</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
+        <trans-unit id="HomePageDays" translate="yes" xml:space="preserve">
+          <source>Days</source>
+          <target state="new">Days</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Past X Days</note>
+        </trans-unit>
       </group>
     </body>
   </file>
