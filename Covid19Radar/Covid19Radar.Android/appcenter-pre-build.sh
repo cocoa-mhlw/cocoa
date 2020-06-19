@@ -4,6 +4,7 @@ echo "Arguments for updating:"
 
 APP_MANITEST_FILE=$BUILD_REPOSITORY_LOCALPATH/Covid19Radar/Covid19Radar.Android/Properties/AndroidManifest.xml
 sed -i '' "s/APP_PACKAGE_NAME/$APP_PACKAGE_NAME/g" $APP_MANITEST_FILE
+sed -i '' "s/android:debuggable=\"true\"//g" $APP_MANITEST_FILE
 cat $APP_MANITEST_FILE
 
 # Updating ids
