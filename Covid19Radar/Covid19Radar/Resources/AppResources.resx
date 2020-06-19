@@ -712,4 +712,8 @@
     <value>Inquiries about contact confirmation app</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePageDays" xml:space="preserve">
+    <value>Days</value>
+    <comment>X日表記</comment>
+  </data>
 </root>
