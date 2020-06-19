@@ -39,7 +39,7 @@
 ![Registory done](.attachments/iPhone-Registory-done-SS.png.png)
 
 ### 6. デバイスへのアクセス許可
-アプリが接触情報を取得・通知する為に、通知・Bluetooh、およびGPSへのアクセス許可をする必要があります。 
+アプリが接触情報を取得・通知する為に、通知・Bluetooth、およびGPSへのアクセス許可をする必要があります。 
 「許可」「OK」「Appの使用中は許可」をタップし、有効化します。  
 ![Enable Notify](./.attachments/iPhone-Enable-Notify-SS.png)
 ![Enable Bluetooth](.attachments/iPhone-Enalbe-Bluetooth-SS.png)
