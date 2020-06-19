@@ -222,95 +222,95 @@
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
-    <value>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</value>
+    <value>사용자와 14일 이내 접촉한 사람에게 알림이 뜹니다. (1미터 이내, 15분 이상)</value>
     <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
-    <value>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</value>
+    <value>상대방에게 알려지는 정보는 접촉 신호 뿐입니다. 그 외에 이름을 포함한 개인정보나 위치 정보가 전송될 일은 없습니다.</value>
     <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
-    <value>陽性情報の登録と他者への匿名通知へ</value>
+    <value>양성 판정을 등록하고 다른 사람에게 익명으로 알리기</value>
     <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
-    <value>どのようにして接触を記録していますか？</value>
+    <value>어떻게 해서 접촉을 기록하고 있는건가요?</value>
     <comment>どのようにして接触を記録していますか？</comment>
   </data>
   <data name="HelpMenuPageLabel2" xml:space="preserve">
-    <value>接触の有無はどのように知ることができますか？</value>
+    <value>접촉 유무는 어떻게 해서 알 수 있는건가요?</value>
     <comment>接触の有無はどのように知ることができますか？</comment>
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
-    <value>新型コロナウィルスに感染していると判定されたら</value>
+    <value>신형 코로나 바이러스에 감염되었다고 판단되면</value>
     <comment>新型コロナウィルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>接触の記録を停止／情報を削除するには</value>
+    <value>접촉 기록을 중지 / 정보를 삭제하기 위해서는</value>
     <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
-    <value>過去14日間の接触</value>
+    <value>과거 14일간의 접촉</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>陽性者との接触は確認されませんでした</value>
+    <value>양성 판정자와의 접촉이 확인되지 않았습니다.</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</value>
+    <value>계속해서 「새로운 생활양식」의 실천을 잘 부탁드립니다.</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
+    <value>이 앱을 주변 사람에게 알리기</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>陽性のご登録をいただきありがとうございました</value>
+    <value>양성 판정 등록을 해 주셔서 감사합니다</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
   <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
+    <value>등록은 익명으로 이루어지며, 이름이나 연락처 등 개인을 식별할 수 있는 정보를 등록할 필요는 없습니다. 또한, 접촉했던 장소의 위치정보가 기록되거나 알려지는 일도 없습니다.</value>
     <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
-    <value>利用規約</value>
+    <value>이용 약관</value>
     <comment>利用規約</comment>
   </data>
   <data name="TutorialPage3ButtonText" xml:space="preserve">
-    <value>規約に同意して次へ</value>
+    <value>약관에 동의하고 다음으로</value>
     <comment>規約に同意して次へ</comment>
   </data>
   <data name="TutorialPage6Label1" xml:space="preserve">
-    <value>ご登録いただきありがとうございました</value>
+    <value>등록해 주셔서 감사합니다.</value>
     <comment>ご登録いただきありがとうございました</comment>
   </data>
   <data name="TutorialPage6ButtonText1" xml:space="preserve">
-    <value>ホーム画面へ</value>
+    <value>홈 화면으로</value>
     <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>使い方を学ぶ</value>
+    <value>사용법 배우기</value>
     <comment>使い方を学ぶ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
-    <value>端末の識別</value>
+    <value>기기 식별</value>
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>陽性者との接触一覧</value>
+    <value>양성 판정자와의 접촉 목록</value>
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>症状を入力して相談</value>
+    <value>증상을 입력하고 상담받기</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>電話で症状を伝えて相談</value>
+    <value>전화로 증상을 알리고 상담받기</value>
     <comment>帰国者・接触者外来に電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
-    <value>件</value>
+    <value>건</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
@@ -318,7 +318,7 @@
     <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</value>
+    <value>검사 시 필요한 경우가 있으므로, 본 화면의 스크린 샷 저장을 부탁드립니다.</value>
     <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
@@ -330,7 +330,7 @@
     <comment>過去14日間の接触</comment>
   </data>
   <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00～17:30（土・日・祝日・年末年始を除く）</value>
+    <value>9:00～17:30（토・일・축일・연말연시를 제외하고）</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
@@ -342,83 +342,83 @@
     <comment>アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
-    <value>使用中</value>
+    <value>사용 중</value>
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>陽性者との接触を確認する</value>
+    <value>양성 판정자와 접촉 여부를 확인하기</value>
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
-    <value>新型コロナウィルス陽性と診断されたら</value>
+    <value>양성이라고 진단되었다면</value>
     <comment>新型コロナウィルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
-    <value>陽性情報の登録</value>
+    <value>양성 판정 정보 등록하기</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
+    <value>이 앱을 주변 사람에게 알리기</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
-    <value>ホーム</value>
+    <value>홈</value>
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>利用規約</value>
+    <value>이용 약관</value>
     <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
-    <value>プライバシーについて</value>
+    <value>프라이버시에 대해</value>
     <comment>プライバシーについて</comment>
   </data>
   <data name="TutorialPage2Description2" xml:space="preserve">
-    <value>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
+    <value>이름, 전화번호 등의 개인정보나 GPS 등의 스마트폰의 위치 정보를 사용하지 않으며, 기록하지 않습니다.</value>
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</value>
+    <value>접촉 기록은 암호화되어, 사용자의 스마트폰에만 기록되어, 14일 뒤에는 자동적으로 삭제됩니다. 행정기관이나 제 3자가 암호화 된 정보를 사용해 기록을 파악하는 것은 불가능합니다.</value>
     <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
-    <value>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</value>
+    <value>접촉의 기록은 언제든지 멈출 수 있습니다. 앱 네 설정에서 끄거나, 앱을 삭제해 주세요.</value>
     <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
   </data>
   <data name="TutorialPage2Description5" xml:space="preserve">
-    <value>利用規約へ</value>
+    <value>이용 약관으로</value>
     <comment>利用規約へ</comment>
   </data>
   <data name="TutorialPage2Title" xml:space="preserve">
-    <value>プライバシーについて</value>
+    <value>프라이버시에 대해</value>
     <comment>プライバシーについて</comment>
   </data>
   <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
+    <value>알림 기능을 사용하기 위해서</value>
     <comment>通知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</value>
+    <value>이 앱에서 접촉 기록의 알림을 받기 위해서 푸시 알림 기능을 켜 주세요.</value>
     <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
   </data>
   <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>有効にする</value>
+    <value>켜기</value>
     <comment>有効にする</comment>
   </data>
   <data name="TutorialPage5Description4" xml:space="preserve">
-    <value>あとで設定する</value>
+    <value>나중에 설정하기</value>
     <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage5Title" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
+    <value>알림 기능을 사용하기 위해서</value>
     <comment>通知をご利用いただくために</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
-    <value>登録する</value>
+    <value>등록하기</value>
     <comment>登録する</comment>
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</value>
+    <value>신형 코로나 바이러스 감염자 등 정보 파악・관리 지원 시스템 （HER-SYS）에서 발행된 처리 번호를 입력해 주세요.</value>
     <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
@@ -542,15 +542,15 @@
     <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>同意して陽性登録する</value>
+    <value>동의하고 양성 판정을 등록합니다.</value>
     <comment>同意して陽性登録する</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>陽性登録への同意</value>
+    <value>양성 판정 등록에 동의</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>陽性登録への同意</value>
+    <value>양성 판정 등록에 동의</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
@@ -558,15 +558,15 @@
     <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
+    <value>Bluetooth가 꺼져 있습니다. Bluetooth를 켜 주십시오.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>過去14日間の接触一覧</value>
+    <value>과거 14일간의 접촉 목록</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>以下の日に陽性者との接触が確認されました。</value>
+    <value>다음 날에 양성 판정자와의 접촉이 확인되었습니다.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
@@ -588,13 +588,13 @@
     <comment>Possible COVID-19 Exposure</comment>
   </data>
   <data name="LocalNotificationPermittedDescription" xml:space="preserve">
-    <value>通知を無効にしたい場合は、アプリの設定から変更できます</value>
+    <value>알림을 끄고 싶은 경우, 앱 설정에서 변경 가능합니다.</value>
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
-    <value>通知を有効にしました</value>
+    <value>알림을 켰습니다.</value>
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>接触確認アプリに関する情報</value>
+    <value>접촉 확인 앱에 관한 정보</value>
   </data>
   <data name="InqueryPageDescription4" xml:space="preserve">
     <value>利用者向けQ and A</value>
