@@ -428,112 +428,112 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
           <source>Fill in your symptoms</source>
-          <target state="new">Fill in your symptoms</target>
+          <target state="translated">Geben Sie Ihre Symptome an</target>
           <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
           <source>Tell your symptoms by phone Consultation Center</source>
-          <target state="new">Tell your symptoms by phone Consultation Center</target>
+          <target state="translated">Melden Sie Ihre Symptome telefonisch dem Beratungszentrum</target>
           <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者外来に電話</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="new">times</target>
+          <target state="translated">mal</target>
           <note from="MultilingualBuild" annotates="source" priority="2">件</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
           <source>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</source>
-          <target state="new">If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</target>
+          <target state="translated">Wenn Sie eventuelle COVID-19-Symptome verspüren, wenden Sie sich mit dem nachfolgenden Formular oder telefonisch an eine medizinische Einrichtung. Entsprechend den Symptomen wird Ihnen geraten, einen COVID-19-Test durchzuführen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
           <source>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</source>
-          <target state="new">Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</target>
+          <target state="translated">Bitte machen Sie einen Screenshot von diesem Bildschirm. Möglicherweise werden Sie während der Diagnose darum gebeten.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
           <source>Number of confirmed close contacts with COVID-19 positive users</source>
-          <target state="new">Number of confirmed close contacts with COVID-19 positive users</target>
+          <target state="translated">Anzahl der bestätigten engen Kontakte mit positiv an COVID-19 getesteten Personen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触確認</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageTitle" translate="yes" xml:space="preserve">
           <source>Close contacts for the past 14 days</source>
-          <target state="new">Close contacts for the past 14 days</target>
+          <target state="translated">Enge Kontakte in den vergangenen 14 Tagen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription1" translate="yes" xml:space="preserve">
           <source>9:00-17:30 (except weekends and holidays)</source>
-          <target state="new">9:00-17:30 (except weekends and holidays)</target>
+          <target state="translated">9:00-17:30 Uhr (außer an Wochenenden und Feiertagen)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
           <source>COVID-19 Infomation and Resources</source>
-          <target state="new">COVID-19 Infomation and Resources</target>
+          <target state="translated">COVID-19 Auskunft und Materialien</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
           <source>Support</source>
-          <target state="new">Support</target>
+          <target state="translated">Support</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
           <source>in use</source>
-          <target state="new">in use</target>
+          <target state="translated">im Gebrauch</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
           <source>Check close contacts</source>
-          <target state="new">Check close contacts</target>
+          <target state="translated">Enge Kontakte überprüfen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
         </trans-unit>
         <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
           <source>When tested positive for COVID-19</source>
-          <target state="new">When tested positive for COVID-19</target>
+          <target state="translated">Bei einem positiven Test auf COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス陽性と診断されたら</note>
         </trans-unit>
         <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
           <source>Register positive test result</source>
-          <target state="new">Register positive test result</target>
+          <target state="translated">Positives Testergebnis registrieren</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
         </trans-unit>
         <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">
           <source>Share this app</source>
-          <target state="new">Share this app</target>
+          <target state="translated">Diese App weiterempfehlen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
         </trans-unit>
         <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="new">Home</target>
+          <target state="translated">Startseite</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
           <source>Term of use</source>
-          <target state="new">Term of use</target>
+          <target state="translated">Nutzungsbestimmungen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
-          <target state="new">Your privacy is protected</target>
+          <target state="translated">Ihre Privatsphäre ist gesichert.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description2" translate="yes" xml:space="preserve">
           <source>No personal information such as your name or phone number is collected. No geolocation data including GPS data is collected.</source>
-          <target state="new">No personal information such as your name or phone number is collected. No geolocation data including GPS data is collected.</target>
+          <target state="translated">Es werden keine persönlichen Informationen wie Ihr Name oder Ihre Telefonnummer erfasst. Es werden keine Standortdaten einschließlich GPS-Daten erfasst.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description3" translate="yes" xml:space="preserve">
           <source>All data is encrypted and saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</source>
-          <target state="new">All data is encrypted and saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</target>
+          <target state="translated">Alle Daten werden verschlüsselt und lokal auf Ihrem Smartphone gespeichert. Alle Daten werden nach 14 Tagen automatisch gelöscht. Ihre Aktivitäten werden in keiner Weise von Regierungsbehörden oder Dritten aufgezeichnet.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description4" translate="yes" xml:space="preserve">
           <source>You can stop recording close contacts with other users anytime by changing app settings or deleting the app.</source>
-          <target state="new">You can stop recording close contacts with other users anytime by changing app settings or deleting the app.</target>
+          <target state="translated">Sie können die Aufzeichnung enger Kontaktaufnahmen mit anderen Benutzern jederzeit beenden, indem Sie die Einstellungen der App ändern oder die App löschen.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description5" translate="yes" xml:space="preserve">
           <source>Terms of use</source>
-          <target state="new">Terms of use</target>
+          <target state="translated">Nutzungsbestimmungen</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Title" translate="yes" xml:space="preserve">
@@ -543,7 +543,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage5Description1" translate="yes" xml:space="preserve">
           <source>Turn on notifications</source>
-          <target state="new">Turn on notifications</target>
+          <target state="translated">Benachrichtigungen aktivieren</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description2" translate="yes" xml:space="preserve">
