@@ -58,6 +58,7 @@
 - Mohamed BOUZIDI(github actions)
 - Yutaro Iino (Documentation)
 - Kohei Ikeda(Documentation)
+- Iyotetsuya (Traditional Chinese Translation)
 
 # Beta Testers
 - Nagahata Kenji
