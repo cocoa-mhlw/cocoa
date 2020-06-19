@@ -11,7 +11,7 @@ Android Build Master Branch status [![Android Build status](https://build.appcen
 This app uses Exposure Notification / Bluetooth LE to get the contact logs of each other.  
 ![App Description](img/explanation_en.png)
 
-## Thank you for Your Contribute !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
+## Thank you for Your Contribution !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
 We welcome contributions and pull requests.
 Please check the contribution rules.
 [Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTING.md)
