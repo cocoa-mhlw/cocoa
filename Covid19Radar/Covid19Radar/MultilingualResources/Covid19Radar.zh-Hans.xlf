@@ -324,12 +324,12 @@
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel1" translate="yes" xml:space="preserve">
           <source>What is a 'close contact'?</source>
-          <target state="translated">怎么记录密切接触</target>
+          <target state="translated">如何记录密切接触</target>
           <note from="MultilingualBuild" annotates="source" priority="2">どのようにして接触を記録していますか？</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel2" translate="yes" xml:space="preserve">
           <source>How do I check number of close contacts?</source>
-          <target state="translated">怎么知道是否有密切接触</target>
+          <target state="translated">如何获知是否有密切接触</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の有無はどのように知ることができますか？</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel3" translate="yes" xml:space="preserve">
@@ -369,7 +369,7 @@
         </trans-unit>
         <trans-unit id="ThankYouNotifyOtherPageDescription1" translate="yes" xml:space="preserve">
           <source>Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</source>
-          <target state="translated">您登录的时候不需要公开您的个人信息，不必输入您的姓名或任何其他个人信息。另外，不会记录并通知密切接触的地点信息。</target>
+          <target state="translated">本次注册为匿名注册，您不必输入姓名或任何其他个人信息。另外，该应用不会记录并通知密切接触的地点信息。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
         </trans-unit>
         <trans-unit id="TutorialPage3Title" translate="yes" xml:space="preserve">
@@ -384,7 +384,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage6Label1" translate="yes" xml:space="preserve">
           <source>Setup complete. Thank you!</source>
-          <target state="translated">恭喜你登录成功</target>
+          <target state="translated">感谢您的注册</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ご登録いただきありがとうございました</note>
         </trans-unit>
         <trans-unit id="TutorialPage6ButtonText1" translate="yes" xml:space="preserve">
@@ -394,7 +394,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage6ButtonText2" translate="yes" xml:space="preserve">
           <source>How to use this app</source>
-          <target state="translated">使用方法引导 （如何使用本APP）</target>
+          <target state="translated">使用方法引导（如何使用本APP）</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使い方を学ぶ</note>
         </trans-unit>
         <trans-unit id="HelpPage1MainTitle" translate="yes" xml:space="preserve">
@@ -409,12 +409,12 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
           <source>Fill in your symptoms</source>
-          <target state="translated">输入症状咨询</target>
+          <target state="translated">填写症状</target>
           <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
           <source>Tell your symptoms by phone Consultation Center</source>
-          <target state="translated">打电话咨询</target>
+          <target state="translated">致电咨询中心</target>
           <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者外来に電話</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
@@ -429,7 +429,7 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
           <source>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</source>
-          <target state="translated">请截取保存本页面，受诊的时候提供给医院</target>
+          <target state="translated">请截取保存本页面，并在受诊时提供给医院</target>
           <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
@@ -649,27 +649,27 @@
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
           <source>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</source>
-          <target state="translated">The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</target>
+          <target state="translated">处理号码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
           <source>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</source>
-          <target state="translated">When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</target>
+          <target state="translated">当您在设备中输入该处理号码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的处理号码。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
           <source>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</source>
-          <target state="translated">The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</target>
+          <target state="translated">管理系统将会答复通知服务器所核对的处理号码是否为向您发出的号码。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
           <source>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</source>
-          <target state="translated">If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</target>
+          <target state="translated">如能确认号码为向您发送的号码，则会向其他用户的设备上提供记录在您设备上的单日密钥。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
           <source>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</source>
-          <target state="translated">If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</target>
+          <target state="translated">在14天内与您有过接触的用户能够在无法确认您的个人信息的情况下获知与您可能有过接触。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
@@ -744,7 +744,7 @@
         </trans-unit>
         <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
           <source>Q and A for user</source>
-          <target state="translated">用户问答</target>
+          <target state="translated">用户常见问题</target>
         </trans-unit>
         <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
           <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
