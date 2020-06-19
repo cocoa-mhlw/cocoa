@@ -2,12 +2,12 @@
 
 ## Bugfix, fix about current behavior
 
-- Create Issue, if do not exists your Issue.
+- Create Issue, if an issue of the same kind does not yet existue.
 - Create Branch (ex Bugfix/IssueNo , Feature/IssuNo)
 - Please keep the following in mind:
   - Make it small
   - Do only one thing
-- Please make a Pull Request for master
+- Please make a Pull Request towards master
 - Please record your name in [CONTRIBUTORS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
 
 # How to Contribute Japanese
