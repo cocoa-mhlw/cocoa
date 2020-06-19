@@ -14,7 +14,7 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <Grid Style="{StaticResource DefaultGridLayout}">
+        <Grid Margin="20" Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
@@ -36,22 +36,19 @@
                     </Label.FormattedText>
                 </Label>
             </StackLayout>
-            <Grid Grid.Row="1">
-                <StackLayout>
-                    <Button
-                        AutomationId="NextButton"
-                        Command="{prism:NavigateTo '/MenuPage/NavigationPage/HomePage'}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.TutorialPage6ButtonText1}" />
-
-                    <Button
-                        Margin="0,10,0,0"
-                        AutomationId="NextButton"
-                        Command="{prism:NavigateTo '/MenuPage/NavigationPage/HelpMenuPage'}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.TutorialPage6ButtonText2}" />
-                </StackLayout>
-            </Grid>
+            <StackLayout Grid.Row="1" Margin="0,0,0,20">
+                <Button
+                    AutomationId="NextButton"
+                    Command="{prism:NavigateTo '/MenuPage/NavigationPage/HomePage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.TutorialPage6ButtonText1}" />
+                <Button
+                    Margin="0,10,0,0"
+                    AutomationId="NextButton"
+                    Command="{prism:NavigateTo '/MenuPage/NavigationPage/HelpMenuPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.TutorialPage6ButtonText2}" />
+            </StackLayout>
         </Grid>
     </ScrollView>
 </ContentPage>
