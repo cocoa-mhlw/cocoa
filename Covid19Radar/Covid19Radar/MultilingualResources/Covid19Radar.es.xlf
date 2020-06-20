@@ -49,7 +49,7 @@
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>Not Now</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Not Now</target>
+          <target state="translated">Ahora no</target>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -69,7 +69,7 @@
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
           <source>No known exposures</source>
-          <target state="translated">No se conocen exposiciones</target>
+          <target state="translated">No exposiciones conocidas</target>
           <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
@@ -105,11 +105,11 @@
         </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Cancelar</target>
+          <target state="translated">Cancelar</target>
         </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Eliminando</target>
+          <target state="translated">Eliminando</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -119,7 +119,7 @@
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Compartir</target>
+          <target state="translated">Compartir</target>
         </trans-unit>
         <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
           <source>Sharing positive information and anonymous notification to others</source>
@@ -134,7 +134,7 @@
         </trans-unit>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Directiva de privacidad</target>
+          <target state="translated">Póliza de Privacidad</target>
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
@@ -142,15 +142,15 @@
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
           <source>Do you really want to reset all the data?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">¿Realmente desea restablecer todos los datos?</target>
+          <target state="translated">¿Realmente desea restablecer todos los datos?</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eliminar todos los datos</target>
+          <target state="translated">Eliminar todos los datos</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Se han eliminado todos los ajustes y datos. Reinicie la aplicación.</target>
+          <target state="translated">Se han eliminado todos los ajustes y datos. Reinicie la aplicación.</target>
         </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
@@ -166,67 +166,67 @@
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si usted es positivo con la nueva Corona, por favor coopere con el registro positivo para proteger a las personas que lo rodean.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si usted dio positivo del COVID-19, por favor coopere y regístrese anónimamente para proteger a las personas que lo rodean.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>One more person using this app is one more step towards containing the spread of COVID-19.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Esta aplicación es tan eficaz que muchas personas lo instalan, así que por favor comparta la aplicación con las personas a su alrededor.</target>
+          <target state="translated">Esta aplicación es más eficaz mientras mas personas la usen, así que por favor comparta la aplicación con las personas a su alrededor.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリは多くの方にお使いいただくほど効果を発揮します。</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
           <source>How to use this app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cómo usar</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Manual</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">使い方</note>
         </trans-unit>
         <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
           <source>What is a 'close contact'?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Identificación de la terminal</target>
+          <target state="translated">Identificación del dispositivo</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録方法</note>
         </trans-unit>
         <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
           <source>Checking close contacts</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Método de confirmación de contacto</target>
+          <target state="translated">Método de checkeo de contacto</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の確認方法</note>
         </trans-unit>
         <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
           <source>When tested positive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si se determina que está infectado</target>
+          <target state="translated">Si se determina que está infectado</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
         </trans-unit>
         <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
           <source>Stop / delete close contact history</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Detener/eliminar grabación</target>
+          <target state="translated">Detener/eliminar grabación</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">記録の停止／削除</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
           <source>When you run this app, each smartphone will generate a random code. No personal information and no location information including GPS data is collected.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Al ejecutar esta aplicación, cada teléfono inteligente generará y tendrá un código de contacto. Además, esta aplicación no adquiere ninguna información relacionada con la información personal, como el número de teléfono y la información de ubicación.</target>
+          <target state="translated">Al ejecutar esta aplicación, cada teléfono inteligente generará y tendrá un código de contacto. Además, esta aplicación no adquiere ninguna información relacionada con la información personal, como el número de teléfono ni la información de ubicación.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
           <source>What is a close contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Condiciones de contacto registradas</target>
+          <target state="translated">Condiciones de contacto registradas</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">記録される接触の条件</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
           <source>If smartphones running this app are in close contact (within 1 meter for 15 minutes or more), this is recorded as a close contact.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">El contacto con otros usuarios de la aplicación dentro de 1 metro durante 15 minutos o más se registra como "contacto".</target>
+          <target state="translated">El contacto con otros usuarios de la aplicación dentro de 1 metro durante 15 minutos o más se registra como "contacto".</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
           <source>Recording close contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Grabación de la información de contacto</target>
+          <target state="translated">Registración de la información de contacto</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">接触情報の記録 </note>
         </trans-unit>
@@ -248,32 +248,32 @@
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
           <source>The app will notify you, if you were in close contact with COVID-19 positive user.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">La aplicación le notificará, si usted estaba en estrecho contacto con COVID-19 usuario positivo.</target>
+          <target state="translated">Esta applicación le notificará si estuvo en contacto con algún usuario que registró positivo en COVID-19.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description2" translate="yes" xml:space="preserve">
           <source>You can check the number of your close contacts from the home screen.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Puede comprobar el número de contactos cercanos desde la pantalla de inicio.</target>
+          <target state="translated">Puede comprobar el número de contactos cercanos desde la pantalla de inicio.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最近の接触件数の確認へはホーム画面からも移動することができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description3" translate="yes" xml:space="preserve">
           <source>You can check the list of close contact dates and receive guidance on what to do if you have symptoms of the disease.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Puedes consultar la lista de fechas de contacto cercanas y recibir orientación sobre qué hacer si tienes síntomas de la enfermedad.</target>
+          <target state="translated">Puede consultar la lista de fechas de contacto cercanas y recibir orientación sobre qué hacer si tiene síntomas de la enfermedad.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Label1" translate="yes" xml:space="preserve">
           <source>Notification</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Notificación</target>
+          <target state="translated">Notificaciones</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
         </trans-unit>
         <trans-unit id="HelpPage2Label2" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Inicio</target>
+          <target state="translated">Inicio</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム画面</note>
         </trans-unit>
         <trans-unit id="HelpPage2Label3" translate="yes" xml:space="preserve">
           <source>If you had close contact with a COVID-19 positive user</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si tuvo contacto cercano con un usuario positivo COVID-19</target>
+          <target state="translated">Si tuvo contacto cercano con un usuario positivo de COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触があった場合</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
@@ -293,7 +293,7 @@
         </trans-unit>
         <trans-unit id="HelpPage3Description4" translate="yes" xml:space="preserve">
           <source>Smartphones that were in close contact with your smartphone within the last 14 days will receive notifications.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Los teléfonos inteligentes que estuvieron en estrecho contacto con tu smartphone en los últimos 14 días recibirán notificaciones.</target>
+          <target state="translated">Los teléfonos inteligentes que estuvieron en estrecho contacto con tu teléfono inteligente en los últimos 14 días recibirán notificaciones.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
@@ -313,22 +313,22 @@
         </trans-unit>
         <trans-unit id="SettingsPageLabel1" translate="yes" xml:space="preserve">
           <source>Close contact recording</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cierre la grabación de contactos</target>
+          <target state="translated">Detección de contactos cercanos</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の検出</note>
         </trans-unit>
         <trans-unit id="SettingsPageDescription1" translate="yes" xml:space="preserve">
           <source>Use of Bluetooth</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uso de Bluetooth</target>
+          <target state="translated">Usa Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Bluetoothによる接触の検知</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel2" translate="yes" xml:space="preserve">
           <source>Notifications</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Notificaciones</target>
+          <target state="translated">Notificaciones</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
         </trans-unit>
         <trans-unit id="SettingsPageDescription2" translate="yes" xml:space="preserve">
           <source>Close contact notifications</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cerrar notificaciones de contacto</target>
+          <target state="translated">Notificaciones de contactos cercanos</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触通知</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel3" translate="yes" xml:space="preserve">
@@ -338,17 +338,17 @@
         </trans-unit>
         <trans-unit id="SettingsPageDescription3" translate="yes" xml:space="preserve">
           <source>Stop using and delete close contact records</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dejar de usar y eliminar registros de contacto cercanos</target>
+          <target state="translated">Dejar de usar y eliminar registros de contacto cercanos</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用を中止して過去14日間の接触履歴を消去</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel1" translate="yes" xml:space="preserve">
           <source>What is a 'close contact'?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">¿Qué es un "contacto cercano"?</target>
+          <target state="translated">¿Qué es un "contacto cercano"?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">どのようにして接触を記録していますか？</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel2" translate="yes" xml:space="preserve">
           <source>How do I check number of close contacts?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">¿Cómo compruebo el número de contactos cercanos?</target>
+          <target state="translated">¿Cómo compruebo el número de contactos cercanos?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の有無はどのように知ることができますか？</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel3" translate="yes" xml:space="preserve">
@@ -358,22 +358,22 @@
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel4" translate="yes" xml:space="preserve">
           <source>How do I stop / delete close contact recording?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">¿Cómo detengo / elimino la grabación de contactos cerrados?</target>
+          <target state="translated">¿Cómo detengo / elimino la grabación de contactos cercanos?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録を停止／情報を削除するには</note>
         </trans-unit>
         <trans-unit id="NotContactPageTitle" translate="yes" xml:space="preserve">
           <source>Close contacts for the past 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cerrar contactos de los últimos 14 días</target>
+          <target state="translated">Contactos cercanos de los ultimos 14 dias</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
         <trans-unit id="NotContactPageLabel1" translate="yes" xml:space="preserve">
           <source>No close contacts with COVID-19 positive users</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sin contactos estrechos con usuarios positivos de COVID-19</target>
+          <target state="translated">Ningun contacto cercano con usuarios positivos de COVID-19 fue encontrado</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触は確認されませんでした</note>
         </trans-unit>
         <trans-unit id="NotContactPageDescription1" translate="yes" xml:space="preserve">
           <source>Please keep practicing 'New Lifestyle' recommended by the government.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Por favor, siga practicando "Nuevo estilo de vida" recomendado por el gobierno.</target>
+          <target state="translated">Por favor, siga practicando "Nuevo estilo de vida" recomendado por el gobierno.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">引き続き「新しい生活様式」の実践をよろしくお願いいたします。</note>
         </trans-unit>
         <trans-unit id="NotContactPageButtonText" translate="yes" xml:space="preserve">
@@ -393,22 +393,22 @@
         </trans-unit>
         <trans-unit id="TutorialPage3Title" translate="yes" xml:space="preserve">
           <source>Terms of use</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Términos de uso</target>
+          <target state="translated">Términos de uso</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage3ButtonText" translate="yes" xml:space="preserve">
           <source>I accept the Terms of Use</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Acepto los Términos de uso</target>
+          <target state="translated">Acepto los términos de uso</target>
           <note from="MultilingualBuild" annotates="source" priority="2">規約に同意して次へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage6Label1" translate="yes" xml:space="preserve">
           <source>Setup complete. Thank you!</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Configuración completa. ¡Gracias!</target>
+          <target state="translated">Registración completa. ¡Gracias!</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ご登録いただきありがとうございました</note>
         </trans-unit>
         <trans-unit id="TutorialPage6ButtonText1" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Inicio</target>
+          <target state="translated">Inicio</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム画面へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage6ButtonText2" translate="yes" xml:space="preserve">
@@ -423,7 +423,7 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton1" translate="yes" xml:space="preserve">
           <source>A list of close contacts with COVID-19 positive users</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Una lista de contactos estrechos con usuarios positivos de COVID-19</target>
+          <target state="translated">Lista de contactos cercanos con usuarios positivos de COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触一覧</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
@@ -433,17 +433,17 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
           <source>Tell your symptoms by phone Consultation Center</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cométele sus síntomas por teléfono centro de consulta</target>
+          <target state="translated">Coméntele sus sintomas al Centro de Consultacion por teléfono</target>
           <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者外来に電話</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">veces</target>
+          <target state="translated">veces</target>
           <note from="MultilingualBuild" annotates="source" priority="2">件</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
           <source>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si tiene posibles síntomas de COVID-19, comuníquese con organizaciones de atención médica utilizando el siguiente formulario o por teléfono. Dependiendo de los síntomas, se le aconsejará que se realice una prueba COVID-19.</target>
+          <target state="translated">Si tiene sintomas probables de COVID-19, comuníquese con organizaciones de atención médica utilizando el siguiente formulario o por teléfono. Dependiendo de los síntomas, se le aconsejará que se realice una prueba COVID-19.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
@@ -458,7 +458,7 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageTitle" translate="yes" xml:space="preserve">
           <source>Close contacts for the past 14 days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cerrar contactos de los últimos 14 días</target>
+          <target state="translated">Contactos cercanos de los ultimos 14 dias</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
         <trans-unit id="InqueryPageDescription1" translate="yes" xml:space="preserve">
@@ -468,17 +468,17 @@
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
           <source>COVID-19 Information and Resources</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 Información y Recursos</target>
+          <target state="translated">Información y recursos de COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
           <source>Support</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Soporte</target>
+          <target state="translated">Soporte</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
           <source>in use</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">en uso</target>
+          <target state="translated">en uso</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
@@ -488,7 +488,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
           <source>When tested positive for COVID-19</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cuando se dio positivo para COVID-19</target>
+          <target state="translated">Si dió positivo en las pruebas de COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス陽性と診断されたら</note>
         </trans-unit>
         <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
@@ -503,17 +503,17 @@
         </trans-unit>
         <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Inicio</target>
+          <target state="translated">Inicio</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
           <source>Term of use</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Términos de uso</target>
+          <target state="translated">Términos de uso</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Su privacidad está protegida</target>
+          <target state="translated">Su privacidad está protegida</target>
           <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description2" translate="yes" xml:space="preserve">
@@ -553,42 +553,42 @@
         </trans-unit>
         <trans-unit id="TutorialPage5Description3" translate="yes" xml:space="preserve">
           <source>Turn on</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Activar</target>
+          <target state="translated">Activar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description4" translate="yes" xml:space="preserve">
           <source>Set up later</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Configurar más tarde</target>
+          <target state="translated">Configurar después</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Title" translate="yes" xml:space="preserve">
           <source>To use notifications</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Para usar notificaciones</target>
+          <target state="translated">Para usar las notificaciones</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
         </trans-unit>
         <trans-unit id="MenuPageTitle" translate="yes" xml:space="preserve">
           <source>Menu</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Menú</target>
+          <target state="translated">Menú</target>
           <note from="MultilingualBuild" annotates="source" priority="2">メニュー</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageButton" translate="yes" xml:space="preserve">
           <source>Register</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Registrar</target>
+          <target state="translated">Registrar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録する</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription1" translate="yes" xml:space="preserve">
           <source>Please enter a process code issued to you by "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Introduzca un código de proceso emitido por "Health Center Real-time Information sharing System on COVID-19 (HER-SYS)".</target>
+          <target state="translated">Introduzca un "Número de procesamiento" emitido por el "Systema de informacion en tiempo real del centro de salud acerca del COVID-19 (HER-SYS)".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
           <source>Users who were in close contact with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Los usuarios que estuvieron en estrecho contacto con usted en los últimos 14 días serán notificados. El registro es anónimo. No tiene que introducir su nombre ni ninguna otra información personal. No se registra información sobre la ubicación del contacto cercano.</target>
+          <target state="translated">Los usuarios que estuvieron en contacto cercano con usted en los últimos 14 días serán notificados. El registro es anónimo. No tiene que introducir su nombre ni ninguna otra información personal. No se registra información sobre la ubicación del contacto cercano.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
           <source>How to receive a process code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cómo recibir un código de proceso</target>
+          <target state="translated">Cómo recibir un número de procesamiento</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号の取得方法</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageTitle" translate="yes" xml:space="preserve">
@@ -598,47 +598,47 @@
         </trans-unit>
         <trans-unit id="TutorialPage1Button" translate="yes" xml:space="preserve">
           <source>Next</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sig&gt;</target>
+          <target state="translated">Siguiente</target>
           <note from="MultilingualBuild" annotates="source" priority="2">次へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description1" translate="yes" xml:space="preserve">
           <source>The app recognizes close contacts between smartphones running this app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">La aplicación reconoce contactos cercanos entre teléfonos inteligentes que ejecutan esta aplicación.</target>
+          <target state="translated">La aplicación reconoce contactos cercanos entre teléfonos inteligentes que ejecutan esta aplicación.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリをスマートフォンに設定した人どうしの接触を記録します。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description2" translate="yes" xml:space="preserve">
           <source>When tested positive for COVID-19, you can anonymously register the test result in this app.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cuando se prueba positivo para COVID-19, puede registrar de forma anónima el resultado de la prueba en esta aplicación.</target>
+          <target state="translated">Si dió positivo en pruebas del COVID-19, puede registrar de forma anónima el resultado de la prueba en esta aplicación.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description3" translate="yes" xml:space="preserve">
           <source>If you have been in close contact with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si ha estado en estrecho contacto con un usuario que dio positivo, la aplicación le notifica de posible infección y proporciona orientación para proteger su salud.</target>
+          <target state="translated">Si ha estado en contacto cercano con un usuario que dio positivo, la aplicación le notifica de posible infección y proporciona orientación para proteger su salud.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Title1" translate="yes" xml:space="preserve">
           <source>Protect yourself with the app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Protégete con la aplicación</target>
+          <target state="translated">Protégase con la aplicación</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Title2" translate="yes" xml:space="preserve">
           <source>Protect yourself with the app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Protégete con la aplicación</target>
+          <target state="translatedn">Protégas con la aplicación</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Button1" translate="yes" xml:space="preserve">
           <source>Turn on</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Activar</target>
+          <target state="translated">Activar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Button2" translate="yes" xml:space="preserve">
           <source>Set up later</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Configurar más tarde</target>
+          <target state="translated">Configurar más tarde</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
           <source>Please turn on Bluetooth to start recording close contacts with other users.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Por favor, active Bluetooth para comenzar a grabar contactos cercanos con otros usuarios.</target>
+          <target state="translated">Por favor, active Bluetooth para comenzar a grabar contactos cercanos con otros usuarios.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Label" translate="yes" xml:space="preserve">
@@ -663,37 +663,37 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel2" translate="yes" xml:space="preserve">
           <source>Enter an 8-digit code</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Introduzca un código de 8 dígitos</target>
+          <target state="translated">Introduzca número de procesamiento de 8 digitos</target>
           <note from="MultilingualBuild" annotates="source" priority="2">8桁の処理番号を入力してください</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
           <source>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">El número de tratamiento se notificará a su número de teléfono móvil o dirección de correo electrónico registrada en el nuevo sistema de información y gestión de enfermedades infecciosas coronavirus (en adelante"sistema de gestión").</target>
+          <target state="translated">El número de procesamiento se notificará a su número de teléfono móvil o dirección de correo electrónico registrada en el nuevo sistema de información y gestión de enfermedades infecciosas coronavirus (en adelante"sistema de gestión").</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
           <source>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Al introducir este número de tratamiento en el terminal, el terminal realizará una consulta a través del servidor de notificaciones al sistema de gestión sobre si se le ha emitido el número de tratamiento.</target>
+          <target state="translated">Al introducir este número de procesamiento en el terminal, el terminal realizará una consulta a través del servidor de notificaciones al sistema de gestión sobre si se le ha emitido el número de procesamiento.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
           <source>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">El sistema de administración responderá al servidor de notificaciones en cuanto a si se le emitió el número de transacción al que se hace referencia.</target>
+          <target state="translated">El sistema de gestión responderá al servidor de notificaciones en cuanto a si se le emitió el número de procesamiento al que se hace referencia.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
           <source>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si responde que el número de transacción se le ha emitido, se proporcionará a los terminales de otros usuarios la clave diaria registrada en su terminal.</target>
+          <target state="translated">Si responde que el número de procesamiento se le ha emitido, se proporcionará a los terminales de otros usuarios la clave diaria registrada en su terminal.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
           <source>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si ha estado en contacto con usted en un plazo de 14 días, sabrá que puede haber sido contactado sin ninguna información que pueda identificarle personalmente.</target>
+          <target state="translated">Las personas que en los últimos 14 dias han estado en contacto cercano con ustead pueden ser notificadas sin que ninguna información que pueda identificarle personalmente.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
           <source>Agree and register</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Acordar y registrarse</target>
+          <target state="translated">Aceptar y registrar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">同意して陽性登録する</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageTitle1" translate="yes" xml:space="preserve">
@@ -708,22 +708,22 @@
         </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
           <source>Version</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Versión</target>
+          <target state="translated">Versión</target>
           <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
           <source>Bluetooth is turned off.Please turn in Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth está desactivado. Por favor, gire en Bluetooth.</target>
+          <target state="translated">Bluetooth está desactivado. Por favor, active el Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
           <source>A list of close contacts (past 14 days)</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Una lista de contactos cercanos (pasados 14 días)</target>
+          <target state="translated">Lista de contactos cercanos (Últimos 14 dias)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
         </trans-unit>
         <trans-unit id="ExposuresPageLabel1" translate="yes" xml:space="preserve">
           <source>Dates when you were in close contact with COVID-19 positive users.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fechas en las que estaba en estrecho contacto con los usuarios positivos de COVID-19.</target>
+          <target state="translated">Fechas en las que estuvo en cercano contacto con los usuarios positivos de COVID-19.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
         </trans-unit>
         <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
@@ -741,17 +741,17 @@
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Es posible que haya estado muy cerca de un usuario que dio positivo para COVID-19.  Toque para obtener más detalles.</target>
+          <target state="translated">Es posible que haya estado muy cerca de un usuario que dio positivo para COVID-19. Toque para obtener más detalles.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
           <source>Possible COVID-19 Exposure</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Posible exposición COVID-19</target>
+          <target state="translated">Posible exposición al COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
           <source>If you want to disable it, you can change it from the app settings</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Si quieres desactivarlo, puedes cambiarlo desde la configuración de la aplicación</target>
+          <target state="translated">Si quiere desactivarlo, puede cambiarlo desde la configuración de la aplicación</target>
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
           <source>Notifications enabled</source>
@@ -763,16 +763,16 @@
         </trans-unit>
         <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
           <source>Q and A for user</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Q y A para el usuario</target>
+          <target state="translated">Preguntas y respuestas para el usuario</target>
         </trans-unit>
         <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
           <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nombre: .r.n Contacto: .r.n Contenido de la consulta (Seleccione una categoría de la siguiente): 1. Cómo funciona la aplicación, 2. Configuración de la aplicación, 3. Uso de la aplicación (notificación, etc.) ), 4. Otros n Texto de la investigación:</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">>Nombre: \r\n Contacto: \r\n Categoria de consulta(Seleccione una de las sgtes): 1. ¿Cómo funciona la applicación?, 2. Configuración de la aplicación, 3. Uso de la aplicación (notificaciones, etc.) ), 4. Otros \r\n Consulta: \r\n</target>
           <note from="MultilingualBuild" annotates="source" priority="2">お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</note>
         </trans-unit>
         <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
           <source>Inquiries about contact confirmation app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consultas sobre la aplicación de confirmación de contacto</target>
+          <target state="translated">Consultas sobre la aplicación de checkeo de contacto</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
