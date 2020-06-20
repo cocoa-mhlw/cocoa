@@ -37,6 +37,7 @@
                                 <Span Text="{Binding StartDate}" />
                                 <Span Text="{x:Static resources:AppResources.HomePageDescription0}" />
                                 <Span Text="{Binding PastDate}" />
+                                <Span Text="{x:Static resources:AppResources.HomePagePastDays}" />
                                 <Span Text="{x:Static resources:AppResources.HomePageDescription1}" />
                             </FormattedString>
                         </Label.FormattedText>
