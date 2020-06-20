@@ -188,6 +188,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">감염된 것으로 판명된 경우</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="Multiお願いできますでしょうか。 お願いできますでしょうか。 lingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
         </trans-unit>
         <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
           <source>Stop / delete close contact history</source>
@@ -197,7 +198,7 @@
         <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
           <source>When you run this app, each smartphone will generate a random code. No personal information and no location information including GPS data is collected.</source>
           <target state="translated">이 앱을 실행하면, 각 스마트폰에서 접촉 신호를 생성하고 대기합니다. 이름이나 전화번호같은 개인 정보나 GPS 등 스마트폰의 위치 정보는 사용하지 않으며, 기록 또한 하지 않습니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
           <source>What is a close contact</source>
@@ -357,8 +358,8 @@
         <trans-unit id="NotContactPageDescription1" translate="yes" xml:space="preserve">
           <source>Please keep practicing 'New Lifestyle' recommended by the government.</source>
           <target state="needs-review-translation">계속해서 「새로운 생활양식」의 실천을 잘 부탁드립니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">引き続き「新しい生活様式」の実践をよろしくお願いいたします。</note>
           <note from="MultilingualEditor" annotates="source" priority="4">너무 일본어스러움;</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">引き続き「新しい生活様式」の実践をよろしくお願いいたします。</note>
         </trans-unit>
         <trans-unit id="NotContactPageButtonText" translate="yes" xml:space="preserve">
           <source>Share this app</source>
