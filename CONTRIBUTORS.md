@@ -6,6 +6,7 @@
 - Takashi Takebayashi
 - Akihiko Kodama
 - Mizuki Kubota
+- Moe Sakuraba
 
 # COVID-19Radar Contributors
 - Kazumi Hirose (Organizer)
