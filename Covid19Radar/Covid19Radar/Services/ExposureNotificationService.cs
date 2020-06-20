@@ -180,7 +180,10 @@ namespace Covid19Radar.Services
 
         public async Task<bool> StopExposureNotification()
         {
-            await ExposureNotification.StopAsync();
+            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+            {
+                await ExposureNotification.StopAsync();
+            }
             return true;
         }
 
