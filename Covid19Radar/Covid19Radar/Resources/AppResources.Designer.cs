@@ -628,6 +628,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Days に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HomePagePastDays {
+            get {
+                return ResourceManager.GetString("HomePagePastDays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   HOME に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageTitle {
@@ -673,7 +682,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   COVID-19 Infomation and Resources に類似しているローカライズされた文字列を検索します。
+        ///   COVID-19 Information and Resources に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription2 {
             get {
