@@ -18,7 +18,7 @@ Please check the contribution rules.
 
 ## How to install the app for tester
 
-Please install the app for test from the below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
+Please install the app for the test from the below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
 
 ### Android
 
