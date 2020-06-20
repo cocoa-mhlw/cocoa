@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>COVID-19 நேர்மறையான பயனருடன் நீங்கள் நெருங்கிய தொடர்பில் இருந்தால், பயன்பாடு உங்களுக்கு த் தெரிவிக்கவேண்டும்.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>முகப்புத் திரையில் இருந்து உங்கள் நெருங்கிய தொடர்புகளின் எண்ணைநீங்கள் சரிபார்க்கலாம்.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>நீங்கள் நேர்மறை சோதனை என்றால்</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>பொது சுகாதார அதிகாரிகள் உங்களுக்கு ஒரு "செயலாக்க எண்" வழங்குவார்கள்.</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>COVID-19 க்கு நீங்கள் நேர்மறையாக இருந்தால்</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>நெருங்கிய தொடர்பு பதிவை நான் எப்படி நிறுத்த / நீக்க வேண்டும்?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 தகவல் மற்றும் வளங்கள்</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>ஆதரவு</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19 க்கு நேர்மறை யாக சோதிக்கப்படும் போது</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>நேர்மறை சோதனை முடிவை பதிவு செய்யவும்</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>COVID-19 க்கு நேர்மறை யாக சோதிக்கப்படும் போது, இந்த பயன்பாட்டில் சோதனை முடிவை அநாமதேயாக பதிவு செய்யலாம்.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>நீங்கள் நேர்மறை சோதனை செய்த ஒரு பயனருடன் நெருங்கிய தொடர்பில் இருந்தால், பயன்பாடு சாத்தியமான தொற்று பற்றி உங்களுக்கு த் தெரிவிக்கவும், உங்கள் உடல்நலத்தை பாதுகாக்க வழிகாட்டவும்.</value>

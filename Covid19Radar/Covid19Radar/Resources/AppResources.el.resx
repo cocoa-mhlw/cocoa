@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Η εφαρμογή θα σας ειδοποιήσει, αν ήσασταν σε στενή επαφή με covid-19 θετικό χρήστη.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>Μπορείτε να ελέγξετε τον αριθμό των στενών επαφών σας από την αρχική οθόνη.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>Εάν έχετε εξετάσει θετικές</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>Οι αρχές δημόσιας υγείας θα σας εκδώσουν έναν «αριθμό επεξεργασίας».</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>Εάν ελέγξετε θετικά για COVID-19</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>Πώς μπορώ να σταματήσω / να διαγράψω την εγγραφή στενής επαφής;</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 Πληροφορίες και Πόροι</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Υποστήριξη</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Όταν δοκιμαστεί θετικό για COVID-19</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>Καταχώρηση θετικού αποτελέσματος δοκιμής</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>Όταν δοκιμαστεί θετικά για COVID-19, μπορείτε να καταχωρήσετε ανώνυμα το αποτέλεσμα της δοκιμής σε αυτήν την εφαρμογή.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>Εάν έχετε έρθει σε στενή επαφή με ένα χρήστη που βρέθηκε θετικός, η εφαρμογή σάς ειδοποιεί για πιθανή μόλυνση και παρέχει οδηγίες για την προστασία της υγείας σας.</value>
