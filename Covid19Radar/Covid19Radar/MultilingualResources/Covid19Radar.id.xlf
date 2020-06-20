@@ -521,7 +521,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="TutorialPage2Title" translate="yes" xml:space="preserve">
           <source>TutorialPage2Description1</source>
-          <target state="new">TutorialPage2Description1</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">TutorialPage2Description1</target>
           <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description1" translate="yes" xml:space="preserve">
