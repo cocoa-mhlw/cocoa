@@ -607,4 +607,8 @@
     <value>연락처 확인 앱에 대한 문의</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>일</value>
+    <comment>X日間</comment>
+  </data>
 </root>

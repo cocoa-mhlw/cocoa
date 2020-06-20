@@ -607,4 +607,8 @@
     <value>Navrae oor kontakbevestiging-toepassing</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Dae</value>
+    <comment>X日間</comment>
+  </data>
 </root>
