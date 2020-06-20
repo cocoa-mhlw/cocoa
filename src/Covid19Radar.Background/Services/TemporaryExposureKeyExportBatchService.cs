@@ -137,9 +137,13 @@ namespace Covid19Radar.Background.Services
                 var exportModel = new TemporaryExposureKeyExportModel();
                 exportModel.id = batchNum.ToString();
                 exportModel.PartitionKey = region;
-                exportModel.BatchNum = batchNum;
+                // TODO: not support apple
+                //exportModel.BatchNum = batchNum;
+                exportModel.BatchNum = 1;
                 exportModel.Region = region;
-                exportModel.BatchSize = exportKeyModels.Length;
+                // TODO: not support apple
+                //exportModel.BatchSize = exportKeyModels.Length;
+                exportModel.BatchSize = 1;
                 exportModel.StartTimestamp = startTimestamp;
                 exportModel.EndTimestamp = endTimestamp;
                 exportModel.TimestampSecondsSinceEpoch = batchTimestamp;
