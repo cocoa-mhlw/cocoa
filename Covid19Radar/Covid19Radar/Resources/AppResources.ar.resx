@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>التطبيق سوف يخطر لك، إذا كنت على اتصال وثيق مع COVID-19 مستخدم إيجابي.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>يمكنك التحقق من عدد جهات الاتصال القريبة من الشاشة الرئيسية.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>إذا كنت اختبار إيجابي</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>ستصدر لك سلطات الصحة العامة "رقم معالجة".</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>إذا كنت اختبار إيجابي لCOVID-19</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>كيف يمكنني إيقاف / حذف تسجيل الاتصال الوثيق؟</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 المعلومات والموارد</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>الدعم</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>عندما اختبار إيجابية لCOVID-19</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>تسجيل نتيجة الاختبار الإيجابية</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>عندما اختبار إيجابية لCOVID-19، يمكنك تسجيل مجهول نتيجة الاختبار في هذا التطبيق.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>إذا كنت على اتصال وثيق مع مستخدم الذي ثبت إيجابية، التطبيق بإعلامك من العدوى المحتملة، ويقدم إرشادات لحماية صحتك.</value>
