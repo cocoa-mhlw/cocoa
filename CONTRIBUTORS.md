@@ -5,6 +5,8 @@
 - Yasuaki Matsuda
 - Takashi Takebayashi
 - Akihiko Kodama
+- Mizuki Kubota
+- Moe Sakuraba
 
 # COVID-19Radar Contributors
 - Kazumi Hirose (Organizer)
@@ -59,6 +61,7 @@
 - Yutaro Iino (Documentation)
 - Kohei Ikeda(Documentation)
 - Iyotetsuya (Traditional Chinese Translation)
+- Soichi Ikebe (Documentation)
 
 # Beta Testers
 - Nagahata Kenji
