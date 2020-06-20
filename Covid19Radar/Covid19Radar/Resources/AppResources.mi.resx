@@ -159,7 +159,7 @@
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Ina whakahaere koe i tēnei taupānga, ka waihanga waea atamai, ā, he waehere hoapā. Hei āpitihanga, kāore tēnei taupānga e whiwhi i ngā mōhiohio e hāngai ana ki ngā mōhiohio whaiaro pēnei i te tau waea me te mōhiohio tauwāhi.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Ngā whakaritenga o te hoapā kua whakapūketetia</value>
@@ -176,5 +176,435 @@
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>I tēnei wā, kua whakapūketetia te waehere hoapā o te tangata whakapā ki te taupānga. Kāore e whakamahia te mōhiohio hoapā kia noho tika te kaiwhakamahi. Ka mukua te hītori hoapā i muri i te 14 rā. * I te auau o ngā huringa waehere hoapā.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>Haere ki ngā tautuhinga taupānga</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>Mai i ngā tautuhinga taupānga, ka taea e koe te whakahohe/mono i te Bluetooth me ngā whakamōhiotanga, me mutu te whakamahi i te taupānga me te muku i te hītori hoapā.</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+  </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>Ka whakamōhio atu te taupānga ki a koe, mēnā kei te kati koe i te hoapā ki te COVID o te kaiwhakamahi tōrunga.</value>
+    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>Ka taea te taki i te tau o ō hoapā katia mai i te mata kāinga.</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>Ka taea e koe te taki i te rārangi o te katinga o ngā rā hoapā me te whiwhi ārahitanga i te mea e symptoms ana koe i te mate.</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Whakamōhiotanga</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Kāinga</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>Mēnā i kati koe i te hoapā ki tētahi kaiwhakamahi tōrunga-COVID</value>
+    <comment>陽性者との接触があった場合</comment>
+  </data>
+  <data name="HelpPage3Description1" xml:space="preserve">
+    <value>Mehemea ka whakamātautauhia koe i te tōrunga</value>
+    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+  </data>
+  <data name="HelpPage3Description2" xml:space="preserve">
+    <value>Ka raru te katoa o ngā mana hauora ki a koe i tētahi tau tukanga ".</value>
+    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+  </data>
+  <data name="HelpPage3Description3" xml:space="preserve">
+    <value>Rēhita mā te tāuru i te tau tukanga i tukua ki tēnei taupānga</value>
+    <comment>本アプリを用いて処理番号の登録を行います。</comment>
+  </data>
+  <data name="HelpPage3Description4" xml:space="preserve">
+    <value>Smartphones i katia te hoapā ki tō waea atamai i roto i ngā rā 14 whakamutunga ka whiwhi whakamōhiotanga.</value>
+    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+  </data>
+  <data name="HelpPage3Description5" xml:space="preserve">
+    <value>Tupurangitia anake ngā waehere e whakamahia ana mai i te pūrere ina tuku whakamōhiotanga. Kāore he mōhiohio whaiaro e whakamahia ana.</value>
+    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
+    <value>Rēhita inā whakamātautauhia tōrunga</value>
+    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Raihana</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="SettingsPageLabel1" xml:space="preserve">
+    <value>Katia te tāhopu hoapā</value>
+    <comment>接触の検出</comment>
+  </data>
+  <data name="SettingsPageDescription1" xml:space="preserve">
+    <value>Whakamahi i te Bluetooth</value>
+    <comment>Bluetoothによる接触の検知</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Ngā Whakamōhiotanga</value>
+    <comment>通知</comment>
+  </data>
+  <data name="SettingsPageDescription2" xml:space="preserve">
+    <value>Katia ngā whakamōhiotanga hoapā</value>
+    <comment>陽性者との接触通知</comment>
+  </data>
+  <data name="SettingsPageLabel3" xml:space="preserve">
+    <value>Whakamutua te whakamahi i te taupānga</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+  <data name="SettingsPageDescription3" xml:space="preserve">
+    <value>Kāti te whakamahi me te muku i te kati pūkete hoapā</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+  </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>He aha te ' kati hoapā '?</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>Me pēhea taku taki i ngā hoapā kati?</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>Ki te whakamātau koe i te tōrunga mō COVID 19</value>
+    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>Me pēhea taku whakamutu/muku i te katinga o te tāhopu hoapā?</value>
+    <comment>接触の記録を停止／情報を削除するには</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>Katia ngā hoapā mō ngā rā 14 i mua</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>Kaua e kati i ngā hoapā mā te COVID-a-19 kaiwhakamahi tōrunga</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>Puritia koa te parakitihitia Tauoranga Hōu e manakohia ana e te kāwanatanga.</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>Tiria tēnei taupānga</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>Kia ora koe mō te rēhita i ō hua whakamātau!</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>He ingoamuna te rēhitatanga. Kāore i a koe te tāuru i tō ingoa, i ētahi atu mōhiohio whaiaro rānei. Kāore he mōhiohio e pā ana ki te tauwāhi kati i hopukina.</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Ngā ture whakamahi</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>E whakaae ana ahau ki ngā Ture o te Whakamahi</value>
+    <comment>規約に同意して次へ</comment>
+  </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>Kua oti te tatūnga. Ngā mihi!</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Kāinga</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>Me pēhea te whakamahi i tēnei taupānga</value>
+    <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>Tāutunga pūrere</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>He rārangi o te katinga o ngā hoapā whai COVID-19</value>
+    <comment>陽性者との接触一覧</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>Whakakī i tō symptoms</value>
+    <comment>症状を入力</comment>
+  </data>
+  <data name="ContactedNotifyPageButton3" xml:space="preserve">
+    <value>Kōrerotia tō symptoms mā te Pokapū Runanga waea</value>
+    <comment>帰国者・接触者外来に電話</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>wā</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>Mēnā ka taea e koe te COVID symptoms, whakapā atu ki pūrere rongoā ngā whakahaere mā te puka i raro, mā te waea rānei. E ai ki te symptoms, ka tohutohu koe ki te tango i te whakamātau COVID.</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>Tangohia koa he topengamata o tēnei mata. Ka inoi pea koe ki te tuku i te tataritanga.</value>
+    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>Tau i whakaū katia ngā hoapā mā te COVID-a-19 kaiwhakamahi tōrunga</value>
+    <comment>陽性者との接触確認</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>Katia ngā hoapā mō ngā rā 14 i mua</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>9:00-17:30 (hāunga weekends me ngā hararei)</value>
+    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>COVID ngā Mōhiohio me ngā Rauemi</value>
+    <comment>新型コロナウィルス感染症対策サイト</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Tautoko</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>Kei te whakamahi:</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>Tirohia katia ngā hoapā</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>Ina whakamātautauhia tōrunga mō COVID-19</value>
+    <comment>新型コロナウィルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>Rēhita hua whakamātau tōrunga</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>Tiria tēnei taupānga</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Kāinga</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>Te kupu whakamahi</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>Kua parengia tō tūmataitinga</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>Kāore he mōhiohio whaiaro pēnei i te mea kua kohia tō ingoa, tau waea rānei. Kāore he raraunga papatauwāhi me ngā raraunga GPS e kohia ana.</value>
+    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>Kua whakamunatia ngā raraunga katoa, ā, kua tiaki paetata i tō waea atamai. Ka mukua aunoatia ngā raraunga katoa i muri i te 14 rā. E kore tō uaiti e aroturuki i te ara o te kāwanatanga mangai, i te nga rōpū tuatoru rānei.</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>Ka taea e koe te whakatū i te pūkete katia ngā hoapā ki ētahi atu kaiwhakamahi mā te huri i te tautuhinga taupānga, te muku rānei i te taupānga.</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Ngā ture whakamahi</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>TutorialPage2Description1</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Whakakāngia ngā whakamōhiotanga</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>Whakakāngia ngā whakamōhiotanga kia whakamōhiotia ina kati koe i ngā hoapā ki te COVID-a-19-ā-runga kaiwhakamahi tōrunga.</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Whakakā</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>Tatū ā muri ake</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>Hei whakamahi whakamōhiotanga</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Tahua</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Rēhita</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
+    <value>Tāuru koa i tētahi waehere tukanga kua tukua ki a koe mā te "Pūnaha Hauora-Tūturu-ngā Mōhiohio tiritahi i runga i te COVID-a-SYS)".</value>
+    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+  </data>
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
+    <value>Ko ngā kaiwhakamahi i katia i te hoapā i mua i te 14 o ngā rā ka whakamōhiotia atu. He ingoamuna te rēhitatanga. Kāore i a koe te tāuru i tō ingoa, i ētahi atu mōhiohio whaiaro rānei. Kāore he mōhiohio e pā ana ki te tauwāhi kati i hopukina.</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
+    <value>Me pēhea te whiwhi waehere tukanga</value>
+    <comment>処理番号の取得方法</comment>
+  </data>
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
+    <value>Rēhita hua whakamātau tōrunga</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Panuku</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>Ka āhuahuka a te taupānga katia ngā hoapā i waenga i smartphones whakahaere i tēnei taupānga.</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>Ina whakamātautauhia tōrunga mō te COVID-19, ka taea e koe te muna te rēhita i te hua whakamātau i tēnei taupānga.</value>
+    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>Mēnā kei te kati koe i te hoapā ki tētahi kaiwhakamahi e whakamātautauhia ake ana, ka whakamōhiotia te taupānga i te whakapokenga, ā, ka tuku ārahitanga hei pare i tō hauora.</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>Pare i a koe me te taupānga</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>Pare i a koe me te taupānga</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Whakakā</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>Tatū ā muri ake</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>Whakakāngia te Bluetooth hei tīmata i te hopu i ngā hoapā ki ētahi atu kaiwhakamahi.</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Rapu kōrero anō</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>Whakakā Bluetooth</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>Whakakā Bluetooth</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>~</value>
+    <comment>から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>Tāurua he waehere 8-mati</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>Ka whakamōhiotia te tau tukanga ki tō tau waea pūkoro, ki tō wāhitau ī-mēra rānei i te coronavirus urutā ngā mōhiohio mate me te whakahaere i te pūnaha whakahaere ".</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>Ina tāuru koe i tēnei tau tukanga ki te kāpeka, ka hangaia e te kāpeka he pakirehua mā te tūmau whakamōhiotanga ki te pūnaha whakahaere me te kore e tukuna te tau tukanga ki a koe.</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>Ka urupare te pūnaha whakahaere ki te tūmau whakamōhiotanga hei aha mēnā ka tukuna te tau tauwhitinga ki a koe.</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>Ki te whakautu koe kua tukuna te tau tauwhitinga ki a koe, ka tukuna atu ētahi atu kaiwhakamahi ' pātere me te kī rā e whakapūketetia ana i tō kāpeka.</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>Mēnā kei te whakapā atu koe ki a koe i roto i ngā rā 14, ka mōhio koe kua whakapā pea koe kāore he mōhiohio ka taea e koe te tohu whaiaro.</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>Whakaae me te rēhita</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>He whakaae ki te rēhitatanga tōrunga</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>He whakaae ki te rēhitatanga tōrunga</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Putanga</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>Kua weto te Bluetooth. Whakakā i te Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>He rārangi o ngā hoapā kati (ngā rā 14 i mua)</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>Ngā rā ina tata koe ki te kati i te hoapā me te COVID-a-19.</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>Tērā pea kei te kati koe i te tatanga ki tētahi kaiwhakamahi e whakamātautauhia tonu ana mo te COVID.  Pato mō ētahi atu taipitopito.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>Ka taea COVID-19 Mārakerake</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>Ki te hiahia koe ki te mono, ka taea e koe te huri mai i ngā tautuhinga taupānga</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>Ngā whakamōhiotanga i whakahohea</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>Mōhiohio mō tēnei taupānga</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>Q me Tētahi kaiwhakamahi</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>Ingoa: \r\n Hoapā: \r\n ngā Ihirangi o pakirehua (tīpakohia Koa tētahi kāwai mai i te mea e whai ake nei): 1. He Pēhea te mahi a te taupānga, 2. Whakamahia ngā tautuhinga taupānga, 3. Whakamahi i te taupānga (whakamōhiotanga.)), 4. \R\n ētahi kupu Pakirehua: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>Inquiries mō te taupānga whakaū hoapā</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
 </root>
