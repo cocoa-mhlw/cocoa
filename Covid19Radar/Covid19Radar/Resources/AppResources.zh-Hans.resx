@@ -159,7 +159,7 @@
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>使用此APP时，每个手机都会生成一个随机代码，不会收集个人信息和GPS位置信息。</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>记录密切接触的条件</value>
@@ -262,11 +262,11 @@
     <comment>使用を中止して過去14日間の接触履歴を消去</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
-    <value>怎么记录密切接触</value>
+    <value>如何记录密切接触</value>
     <comment>どのようにして接触を記録していますか？</comment>
   </data>
   <data name="HelpMenuPageLabel2" xml:space="preserve">
-    <value>怎么知道是否有密切接触</value>
+    <value>如何获知是否有密切接触</value>
     <comment>接触の有無はどのように知ることができますか？</comment>
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
@@ -298,7 +298,7 @@
     <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
   <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>您登录的时候不需要公开您的个人信息，不必输入您的姓名或任何其他个人信息。另外，不会记录并通知密切接触的地点信息。</value>
+    <value>本次注册为匿名注册，您不必输入姓名或任何其他个人信息。另外，该应用不会记录并通知密切接触的地点信息。</value>
     <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
@@ -310,7 +310,7 @@
     <comment>規約に同意して次へ</comment>
   </data>
   <data name="TutorialPage6Label1" xml:space="preserve">
-    <value>恭喜你登录成功</value>
+    <value>感谢您的注册</value>
     <comment>ご登録いただきありがとうございました</comment>
   </data>
   <data name="TutorialPage6ButtonText1" xml:space="preserve">
@@ -318,7 +318,7 @@
     <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>使用方法引导 （如何使用本APP）</value>
+    <value>使用方法引导（如何使用本APP）</value>
     <comment>使い方を学ぶ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
@@ -330,11 +330,11 @@
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>输入症状咨询</value>
+    <value>填写症状</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>打电话咨询</value>
+    <value>致电咨询中心</value>
     <comment>帰国者・接触者外来に電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
@@ -346,7 +346,7 @@
     <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>请截取保存本页面，受诊的时候提供给医院</value>
+    <value>请截取保存本页面，并在受诊时提供给医院</value>
     <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
@@ -522,35 +522,35 @@
     <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</value>
+    <value>处理号码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</value>
     <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</value>
+    <value>当您在设备中输入该处理号码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的处理号码。</value>
     <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
   </data>
   <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</value>
+    <value>管理系统将会答复通知服务器所核对的处理号码是否为向您发出的号码。</value>
     <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
   </data>
   <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</value>
+    <value>如能确认号码为向您发送的号码，则会向其他用户的设备上提供记录在您设备上的单日密钥。</value>
     <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</value>
+    <value>在14天内与您有过接触的用户能够在无法确认您的个人信息的情况下获知与您可能有过接触。</value>
     <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>Agree and register</value>
+    <value>同意并进行阳性登记</value>
     <comment>同意して陽性登録する</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>Consent to positive registration</value>
+    <value>同意进行阳性登记</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Consent to positive registration</value>
+    <value>同意进行阳性登记</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
@@ -558,15 +558,15 @@
     <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>没有打开蓝牙，请您打开蓝牙模式</value>
+    <value>蓝牙已关闭。请启用设备的蓝牙。</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>密切接触一览</value>
+    <value>密切接触一览（14天内）</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>以下日期查出您和阳性患者有密切接触以下日期查出您和阳性患者有密切接触</value>
+    <value>以下日期确认到您与阳性患者存在密切接触。</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
@@ -580,23 +580,31 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot4.html</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
-    <value>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</value>
+    <value>您有可能与潜在的 COVID-19 阳性患者有近距离接触。点击了解详情。</value>
     <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
   </data>
   <data name="LocalNotificationTitle" xml:space="preserve">
-    <value>Possible COVID-19 Exposure</value>
+    <value>可能的 COVID-19 暴露</value>
     <comment>Possible COVID-19 Exposure</comment>
   </data>
   <data name="LocalNotificationPermittedDescription" xml:space="preserve">
-    <value>If you want to disable it, you can change it from the app settings</value>
+    <value>如您想关闭，请在应用设置中进行变更</value>
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>启用通知</value>
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>有关该应用程序的信息</value>
+    <value>有关该应用的信息</value>
   </data>
   <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>用户问答</value>
+    <value>用户常见问题</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>姓名: \r\n 联系方式: \r\n 咨询内容（请在下列选项中选择）: 1. 应用的工作原理； 2. 应用的设定； 3. 应用的使用方法 （通知等）； 4. 其他 \r\n 咨询内容文本： \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>对该接触情况应用进行咨询</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
 </root>
