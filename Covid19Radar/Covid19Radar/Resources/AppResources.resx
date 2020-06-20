@@ -312,7 +312,7 @@
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>When you run this app, each smartphone will generate a random code. No personal information and no location information including GPS data is collected.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>What is a close contact</value>
@@ -711,5 +711,9 @@
   <data name="InqueryMailSubject" xml:space="preserve">
     <value>Inquiries about contact confirmation app</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDays" xml:space="preserve">
+    <value>Days</value>
+    <comment>Past X Days</comment>
   </data>
 </root>

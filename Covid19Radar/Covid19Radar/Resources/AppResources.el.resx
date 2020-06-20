@@ -159,7 +159,7 @@
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Όταν εκτελείτε αυτήν την εφαρμογή, κάθε smartphone θα δημιουργήσει και θα έχει έναν κωδικό επαφής. Επιπλέον, αυτή η εφαρμογή δεν αποκτά πληροφορίες που σχετίζονται με προσωπικές πληροφορίες, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Καταγραφόμενες συνθήκες επαφής</value>
@@ -176,5 +176,435 @@
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Προς το παρόν, ο κωδικός επικοινωνίας του ατόμου που έρχεται σε επαφή καταγράφεται στην αίτηση. Τα στοιχεία επικοινωνίας δεν θα χρησιμοποιηθούν μέχρι να καταχωρηθεί θετικά από οποιονδήποτε χρήστη. Το ιστορικό επαφών θα σβηστεί μετά από 14 ημέρες. *Ο κωδικός επαφής αλλάζει τακτικά.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>Μετάβαση στις ρυθμίσεις εφαρμογής</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>Από τις ρυθμίσεις της εφαρμογής, μπορείτε να ενεργοποιήσετε/απενεργοποιήσετε το Bluetooth και τις ειδοποιήσεις, να διακόψετε τη χρήση της εφαρμογής και να διαγράψετε το ιστορικό επαφών.</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+  </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>Η εφαρμογή θα σας ειδοποιήσει, αν ήσασταν σε στενή επαφή με covid-19 θετικό χρήστη.</value>
+    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>Μπορείτε να ελέγξετε τον αριθμό των στενών επαφών σας από την αρχική οθόνη.</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>Μπορείτε να ελέγξετε τη λίστα των ημερομηνιών στενής επαφής και να λάβετε οδηγίες σχετικά με το τι πρέπει να κάνετε εάν έχετε συμπτώματα της νόσου.</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Ειδοποίηση</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Οικία</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>Εάν είχατε στενή επαφή με θετικό χρήστη COVID-19</value>
+    <comment>陽性者との接触があった場合</comment>
+  </data>
+  <data name="HelpPage3Description1" xml:space="preserve">
+    <value>Εάν έχετε εξετάσει θετικές</value>
+    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+  </data>
+  <data name="HelpPage3Description2" xml:space="preserve">
+    <value>Οι αρχές δημόσιας υγείας θα σας εκδώσουν έναν «αριθμό επεξεργασίας».</value>
+    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+  </data>
+  <data name="HelpPage3Description3" xml:space="preserve">
+    <value>Εγγραφή εισάγοντας τον παρεχόμενο αριθμό επεξεργασίας σε αυτήν την εφαρμογή</value>
+    <comment>本アプリを用いて処理番号の登録を行います。</comment>
+  </data>
+  <data name="HelpPage3Description4" xml:space="preserve">
+    <value>Τα smartphone που ήταν σε στενή επαφή με το smartphone σας τις τελευταίες 14 ημέρες θα λαμβάνουν ειδοποιήσεις.</value>
+    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+  </data>
+  <data name="HelpPage3Description5" xml:space="preserve">
+    <value>Μόνο κωδικοί που δημιουργούνται τυχαία από τη συσκευή χρησιμοποιούνται κατά την αποστολή ειδοποιήσεων. Δεν χρησιμοποιούνται προσωπικές πληροφορίες.</value>
+    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
+    <value>Εγγραφείτε εδώ όταν δοκιμαστεί θετικά</value>
+    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Άδεια χρήσης</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="SettingsPageLabel1" xml:space="preserve">
+    <value>Κλείσιμο εγγραφής επαφής</value>
+    <comment>接触の検出</comment>
+  </data>
+  <data name="SettingsPageDescription1" xml:space="preserve">
+    <value>Χρήση Bluetooth</value>
+    <comment>Bluetoothによる接触の検知</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Ειδοποιήσεις</value>
+    <comment>通知</comment>
+  </data>
+  <data name="SettingsPageDescription2" xml:space="preserve">
+    <value>Κλείσιμο ειδοποιήσεων επαφών</value>
+    <comment>陽性者との接触通知</comment>
+  </data>
+  <data name="SettingsPageLabel3" xml:space="preserve">
+    <value>Διακοπή χρήσης της εφαρμογής</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+  <data name="SettingsPageDescription3" xml:space="preserve">
+    <value>Διακοπή χρήσης και διαγραφή στενών καρτελών επαφών</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+  </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>Τι είναι η "στενή επαφή";</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>Πώς μπορώ να ελέγξω τον αριθμό των στενών επαφών;</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>Εάν ελέγξετε θετικά για COVID-19</value>
+    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>Πώς μπορώ να σταματήσω / να διαγράψω την εγγραφή στενής επαφής;</value>
+    <comment>接触の記録を停止／情報を削除するには</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>Κλείσιμο επαφών για τις τελευταίες 14 ημέρες</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>Καμία στενή επαφή με τους θετικούς χρήστες COVID-19</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>Παρακαλούμε να συνεχίσετε να ασκεί «Νέο Τρόπο Ζωής» συνιστάται από την κυβέρνηση.</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>Κοινή χρήση αυτής της εφαρμογής</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>Σας ευχαριστούμε για την εγγραφή των αποτελεσμάτων των δοκιμών σας!</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>Η εγγραφή είναι ανώνυμη. Δεν χρειάζεται να εισαγάγετε το όνομά σας ή οποιαδήποτε άλλη προσωπική πληροφορία. Δεν καταγράφονται πληροφορίες σχετικά με τη θέση στενής επαφής.</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Όροι χρήσης</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>Αποδέχομαι τους Όρους Χρήσης</value>
+    <comment>規約に同意して次へ</comment>
+  </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>Η εγκατάσταση ολοκληρώθηκε. Ευχαριστούμε!</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Οικία</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>Τρόπος χρήσης αυτής της εφαρμογής</value>
+    <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>Αναγνώριση συσκευής</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>Μια λίστα στενών επαφών με θετικούς χρήστες COVID-19</value>
+    <comment>陽性者との接触一覧</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>Συμπληρώστε τα συμπτώματά σας</value>
+    <comment>症状を入力</comment>
+  </data>
+  <data name="ContactedNotifyPageButton3" xml:space="preserve">
+    <value>Ενημερώστε τα συμπτώματά σας μέσω τηλεφώνου Κέντρο Διαβούλευσης</value>
+    <comment>帰国者・接触者外来に電話</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>φορές</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>Εάν έχετε πιθανά συμπτώματα COVID-19, επικοινωνήστε με τους οργανισμούς υγειονομικής περίθαλψης χρησιμοποιώντας την παρακάτω φόρμα ή τηλεφωνικά. Ανάλογα με τα συμπτώματα, θα σας συμβουλεύσει να κάνετε μια δοκιμή COVID-19.</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>Τραβήξτε ένα στιγμιότυπο οθόνης αυτής της οθόνης. Μπορεί να σας ζητηθεί να το παράσχετε κατά τη διάρκεια της διάγνωσης.</value>
+    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>Αριθμός επιβεβαιωμένων στενών επαφών με θετικούς χρήστες COVID-19</value>
+    <comment>陽性者との接触確認</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>Κλείσιμο επαφών για τις τελευταίες 14 ημέρες</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>9:00-17:30 (εκτός Σαββατοκύριακου και αργιών)</value>
+    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>COVID-19 Πληροφορίες και Πόροι</value>
+    <comment>新型コロナウィルス感染症対策サイト</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Υποστήριξη</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>Σε χρήση</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>Έλεγχος στενών επαφών</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>Όταν δοκιμαστεί θετικό για COVID-19</value>
+    <comment>新型コロナウィルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>Καταχώρηση θετικού αποτελέσματος δοκιμής</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>Κοινή χρήση αυτής της εφαρμογής</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Οικία</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>Όρος χρήσης</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>Τα προσωπικά σας δεδομένα προστατεύονται</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>Δεν συλλέγονται προσωπικές πληροφορίες όπως το όνομα ή ο αριθμός τηλεφώνου σας. Δεν συλλέγονται δεδομένα γεωεντοπισμού, συμπεριλαμβανομένων των δεδομένων GPS.</value>
+    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>Όλα τα δεδομένα κρυπτογραφούνται και αποθηκεύονται τοπικά στο smartphone σας. Όλα τα δεδομένα διαγράφονται αυτόματα μετά από 14 ημέρες. Οι κινήσεις σας δεν παρακολουθούνται με κανένα τρόπο από κυβερνητικές υπηρεσίες ή τρίτους.</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>Μπορείτε να διακόψετε την εγγραφή στενών επαφών με άλλους χρήστες ανά πάσα στιγμή, αλλάζοντας τις ρυθμίσεις της εφαρμογής ή διαγράφοντας την εφαρμογή.</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Όροι χρήσης</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>Περιγραφή σελίδας εκμάθησης21</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Ενεργοποίηση ειδοποιήσεων</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>Ενεργοποιήστε τις ειδοποιήσεις για να ειδοποιείστε όταν είχατε στενές επαφές με θετικούς χρήστες COVID-19.</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Ενεργοποίηση</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>Ρύθμιση αργότερα</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>Για να χρησιμοποιήσετε ειδοποιήσεις</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Μενού</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Καταχώρηση</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
+    <value>Πληκτρολογήστε έναν κωδικό διαδικασίας που σας έχει εκδοθεί από το "Κέντρο Υγείας σε πραγματικό χρόνο σύστημα ανταλλαγής πληροφοριών στο COVID-19 (HER-SYS)".</value>
+    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+  </data>
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
+    <value>Οι χρήστες που ήταν σε στενή επαφή μαζί σας εντός των τελευταίων 14 ημερών θα ειδοποιηθούν. Η εγγραφή είναι ανώνυμη. Δεν χρειάζεται να εισαγάγετε το όνομά σας ή οποιαδήποτε άλλη προσωπική πληροφορία. Δεν καταγράφονται πληροφορίες σχετικά με τη θέση στενής επαφής.</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
+    <value>Τρόπος λήψης κωδικού διεργασίας</value>
+    <comment>処理番号の取得方法</comment>
+  </data>
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
+    <value>Καταχώρηση θετικού αποτελέσματος δοκιμής</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Επόμενo</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>Η εφαρμογή αναγνωρίζει στενές επαφές μεταξύ των smartphones που εκτελούν αυτήν την εφαρμογή.</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>Όταν δοκιμαστεί θετικά για COVID-19, μπορείτε να καταχωρήσετε ανώνυμα το αποτέλεσμα της δοκιμής σε αυτήν την εφαρμογή.</value>
+    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>Εάν έχετε έρθει σε στενή επαφή με ένα χρήστη που βρέθηκε θετικός, η εφαρμογή σάς ειδοποιεί για πιθανή μόλυνση και παρέχει οδηγίες για την προστασία της υγείας σας.</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>Προστατέψτε τον εαυτό σας με την εφαρμογή</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>Προστατέψτε τον εαυτό σας με την εφαρμογή</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Ενεργοποίηση</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>Ρύθμιση αργότερα</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>Ενεργοποιήστε το Bluetooth για να ξεκινήσετε την εγγραφή στενών επαφών με άλλους χρήστες.</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Μάθετε περισσότερα</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>Ενεργοποίηση Bluetooth</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>Ενεργοποίηση Bluetooth</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>~</value>
+    <comment>から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>Εισαγωγή οκταψήφιου κωδικού</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>Ο αριθμός επεξεργασίας θα κοινοποιηθεί στον αριθμό του κινητού σας τηλεφώνου ή στη διεύθυνση ηλεκτρονικού ταχυδρομείου που είναι καταχωρημένος στο νέο σύστημα πληροφοριών και διαχείρισης μολυσματικών ασθενειών coronavirus (εφεξής "σύστημα διαχείρισης").</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>Όταν εισαγάγετε αυτόν τον αριθμό επεξεργασίας στο τερματικό, το τερματικό θα κάνει μια έρευνα μέσω του διακομιστή ειδοποιήσεων στο σύστημα διαχείρισης για το αν ο αριθμός επεξεργασίας έχει εκδοθεί σε εσάς.</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>Το σύστημα διαχείρισης θα απαντήσει στο διακομιστή ειδοποιήσεων ως προς το αν ο αριθμός συναλλαγής που αναφέρεται εκδόθηκε σε εσάς.</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>Εάν απαντήσετε ότι ο αριθμός συναλλαγής σας έχει εκδοθεί, τα τερματικά άλλων χρηστών θα παρέχονται με το ημερήσιο κλειδί που καταγράφεται στο τερματικό σας.</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>Εάν έχετε έρθει σε επαφή μαζί σας εντός 14 ημερών, θα γνωρίζετε ότι μπορεί να έχετε επικοινωνήσει μαζί σας χωρίς καμία πληροφορία που μπορεί να σας αναγνωρίσει προσωπικά.</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>Αποδοχή και εγγραφή</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>Συγκατάθεση για θετική καταχώριση</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>Συγκατάθεση για θετική καταχώριση</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Έκδοση</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>Το Bluetooth είναι απενεργοποιημένο. Παρακαλώ παραδώστε το Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>Μια λίστα στενών επαφών (τελευταίες 14 ημέρες)</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>Ημερομηνίες κατά τις ημερομηνίες κατά τις οποία ήσασταν σε στενή επαφή με θετικούς χρήστες COVID-19.</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>Είναι πιθανό να ήσασταν κοντά σε ένα χρήστη που βρέθηκε θετικός για COVID-19.  Πατήστε για περισσότερες λεπτομέρειες.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>Πιθανή έκθεση covid-19</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>Αν θέλετε να το απενεργοποιήσετε, μπορείτε να το αλλάξετε από τις ρυθμίσεις της εφαρμογής</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>Ενεργοποιημένες ειδοποιήσεις</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>Πληροφορίες σχετικά με αυτήν την εφαρμογή</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>Ερωτήσεις και απαντήσεις για το χρήστη</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>Όνομα: \r\n Επικοινωνία: \r\n Περιεχόμενο έρευνας (Επιλέξτε μια κατηγορία από τα ακόλουθα): 1. Πώς λειτουργεί η εφαρμογή, 2. Ρυθμίσεις εφαρμογής, 3. Χρήση της εφαρμογής (ειδοποίηση κ.λπ.), 4. Άλλα \r\n Κείμενο έρευνας: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>Ερωτήσεις σχετικά με την εφαρμογή επιβεβαίωσης επαφών</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
 </root>
