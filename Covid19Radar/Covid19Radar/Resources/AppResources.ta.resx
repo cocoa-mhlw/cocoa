@@ -607,4 +607,8 @@
     <value>தொடர்பு உறுதிப்படுத்தல் பயன்பாட்டை ப்பற்றிய விசாரணைகள்</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>நாட்கள்</value>
+    <comment>X日間</comment>
+  </data>
 </root>
