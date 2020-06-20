@@ -760,7 +760,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="new">Days</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Hari</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
         </trans-unit>
       </group>
