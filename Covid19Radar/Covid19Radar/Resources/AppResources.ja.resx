@@ -607,4 +607,8 @@
     <value>接触確認アプリに関するお問い合わせ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePageDays" xml:space="preserve">
+    <value>日</value>
+    <comment>Past X Days</comment>
+  </data>
 </root>

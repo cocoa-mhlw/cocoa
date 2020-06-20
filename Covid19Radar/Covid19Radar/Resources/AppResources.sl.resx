@@ -607,4 +607,8 @@
     <value>Poizvedbe o aplikaciji za potrditev stika</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePageDays" xml:space="preserve">
+    <value>Dni</value>
+    <comment>Past X Days</comment>
+  </data>
 </root>
