@@ -159,7 +159,7 @@
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>இந்த செயலியை இயக்கும் போது, ஒவ்வொரு ஸ்மார்ட்ஃபோனும் உருவாக்கி, ஒரு தொடர்பு குறியீட்டை கொண்டிருக்கும். மேலும், இந்த செயலி தொலைபேசி எண் மற்றும் இருப்பிடத் தகவல் போன்ற தனிப்பட்ட தகவல்கள் தொடர்பான எந்தத் தகவலையும் பெறுவதில்லை.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>தொடர்பு நிலைகள் பதிவு</value>
@@ -176,5 +176,435 @@
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>இந்த நேரத்தில், தொடர்பு கொண்ட நபரின் தொடர்பு குறியீடு, விண்ணப்பத்தில் பதிவு செய்யப்படுகிறது. பயனர் நேர்மறை பதிவு செய்யும் வரை தொடர்புத் தகவல் பயன்படுத்தப்படாது. 14 நாட்களுக்குப் பிறகு தொடர்பு வரலாறு அழித்து விடும். * தொடர்பு குறியீடு அவ்வப்போது மாறும்.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>பயன்பாட்டு அமைப்புகளுக்குச் செல்லவும்</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>பயன்பாட்டு அமைப்புகளில் இருந்து, புளூடூத் மற்றும் அறிவிப்புகளை இயக்க/ முடக்கலாம், பயன்பாட்டைப் பயன்படுத்துவதை நிறுத்தலாம் மற்றும் நெருங்கிய தொடர்பு வரலாற்றை நீக்கலாம்.</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+  </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>COVID-19 நேர்மறையான பயனருடன் நீங்கள் நெருங்கிய தொடர்பில் இருந்தால், பயன்பாடு உங்களுக்கு த் தெரிவிக்கவேண்டும்.</value>
+    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>முகப்புத் திரையில் இருந்து உங்கள் நெருங்கிய தொடர்புகளின் எண்ணைநீங்கள் சரிபார்க்கலாம்.</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>நீங்கள் நெருங்கிய தொடர்பு தேதிகள் பட்டியலை சரிபார்த்து, நீங்கள் நோய் அறிகுறிகள் இருந்தால் என்ன செய்ய வேண்டும் என்று வழிகாட்டல் பெற முடியும்.</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>அறிவிப்பு</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>முகப்பு</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>COVID-19 நேர்மறையான பயனருடன் நீங்கள் நெருங்கிய தொடர்பு கொண்டிருந்தால்</value>
+    <comment>陽性者との接触があった場合</comment>
+  </data>
+  <data name="HelpPage3Description1" xml:space="preserve">
+    <value>நீங்கள் நேர்மறை சோதனை என்றால்</value>
+    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+  </data>
+  <data name="HelpPage3Description2" xml:space="preserve">
+    <value>பொது சுகாதார அதிகாரிகள் உங்களுக்கு ஒரு "செயலாக்க எண்" வழங்குவார்கள்.</value>
+    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+  </data>
+  <data name="HelpPage3Description3" xml:space="preserve">
+    <value>இந்த பயன்பாட்டில் வழங்கப்பட்ட செயலாக்க எண்ணை உள்ளிடுவதன் மூலம் பதிவு செய்யவும்</value>
+    <comment>本アプリを用いて処理番号の登録を行います。</comment>
+  </data>
+  <data name="HelpPage3Description4" xml:space="preserve">
+    <value>கடந்த 14 நாட்களுக்குள் உங்கள் ஸ்மார்ட்போனுடன் நெருங்கிய தொடர்பில் இருந்த ஸ்மார்ட்போன்கள் அறிவிப்புகளைப் பெறும்.</value>
+    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+  </data>
+  <data name="HelpPage3Description5" xml:space="preserve">
+    <value>அறிவிப்புகளை அனுப்பும் போது சாதனத்திலிருந்து தற்போக்காக உருவாக்கப்பட்ட குறியீடுகள் மட்டுமே பயன்படுத்தப்படுகின்றன. தனிப்பட்ட தகவல் எதுவும் பயன்படுத்தப்படவில்லை.</value>
+    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
+    <value>நேர்மறை சோதனை போது இங்கே பதிவு</value>
+    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>உரிமம்</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="SettingsPageLabel1" xml:space="preserve">
+    <value>தொடர்பு பதிவை மூடு</value>
+    <comment>接触の検出</comment>
+  </data>
+  <data name="SettingsPageDescription1" xml:space="preserve">
+    <value>ப்ளூடூத் பயன்பாடு</value>
+    <comment>Bluetoothによる接触の検知</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>அறிவிப்புகள்</value>
+    <comment>通知</comment>
+  </data>
+  <data name="SettingsPageDescription2" xml:space="preserve">
+    <value>தொடர்பு அறிவிப்புகளை மூடு</value>
+    <comment>陽性者との接触通知</comment>
+  </data>
+  <data name="SettingsPageLabel3" xml:space="preserve">
+    <value>பயன்பாட்டைப் பயன்படுத்துவதை நிறுத்தவும்</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+  <data name="SettingsPageDescription3" xml:space="preserve">
+    <value>நெருங்கிய தொடர்பு பதிவுகளை பயன்படுத்துவதை நிறுத்தி, நீக்கவும்</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+  </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>'நெருங்கிய தொடர்பு' என்றால் என்ன?</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>நெருங்கிய தொடர்புகளின் எண்ணிக்கையை நான் எவ்வாறு சரிபார்ப்பது?</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>COVID-19 க்கு நீங்கள் நேர்மறையாக இருந்தால்</value>
+    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>நெருங்கிய தொடர்பு பதிவை நான் எப்படி நிறுத்த / நீக்க வேண்டும்?</value>
+    <comment>接触の記録を停止／情報を削除するには</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>கடந்த 14 நாட்களுக்கு நெருங்கிய தொடர்புகள்</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>COVID-19 நேர்மறையான பயனர்களுடன் நெருக்கமான தொடர்புகள் இல்லை</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>அரசு பரிந்துரைக்கும் 'புதிய வாழ்க்கை முறை' பயிற்சி செய்யுங்கள்.</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>இந்தப் பயன்பாட்டைப் பகிர்</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>உங்கள் சோதனை முடிவுகளை பதிவு செய்ததற்கு நன்றி!</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>பதிவு அநாமதேயமானது. உங்கள் பெயர் அல்லது வேறு எந்த தனிப்பட்ட தகவலையும் நீங்கள் உள்ளிட வேண்டியதில்லை. நெருங்கிய தொடர்பு இடம் பற்றிய எந்த தகவலும் பதிவு செய்யப்படவில்லை.</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>பயன்பாட்டு விதிமுறைகள்</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>பயன்பாட்டு விதிமுறைகளை நான் ஏற்றுக்கொள்கிறேன்</value>
+    <comment>規約に同意して次へ</comment>
+  </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>அமைப்பு நிறைவடைந்தது. நன்றி!</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>முகப்பு</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>இந்த பயன்பாட்டை எவ்வாறு பயன்படுத்துவது</value>
+    <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>சாதன த்தை அடையாளம் காணுதல்</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>COVID-19 நேர்மறை பயனர்களுடன் நெருக்கமான தொடர்புகளின் பட்டியல்</value>
+    <comment>陽性者との接触一覧</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>உங்கள் அறிகுறிகளை நிரப்பவும்</value>
+    <comment>症状を入力</comment>
+  </data>
+  <data name="ContactedNotifyPageButton3" xml:space="preserve">
+    <value>தொலைபேசி ஆலோசனை மையம் மூலம் உங்கள் அறிகுறிகளைக் கூறுங்கள்</value>
+    <comment>帰国者・接触者外来に電話</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>வாழ்க்கை நிலைகள்</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>உங்களுக்கு சாத்தியமான COVID-19 அறிகுறிகள் இருந்தால், கீழே உள்ள படிவத்தைப் பயன்படுத்தி அல்லது தொலைபேசி மூலம் உடல்நலப் பராமரிப்பு நிறுவனங்களைத் தொடர்பு கொள்ளவும். அறிகுறிகளைப் பொறுத்து, COVID-19 பரிசோதனை யை மேற்கொள்ள ுமாறு அறிவுறுத்தப்படுவீர்கள்.</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>இந்தத் திரையின் ஸ்கிரீன்ஷாட்டை தயவுசெய்து எடுத்துக் கொள்ளுங்கள். நோய் கண்டறியும் போது அதை வழங்குமாறு உங்களிடம் கேட்கப்படலாம்.</value>
+    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>COVID-19 நேர்மறை பயனர்களுடன் உறுதிப்படுத்தப்பட்ட நெருக்கமான தொடர்புகளின் எண்ணிக்கை</value>
+    <comment>陽性者との接触確認</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>கடந்த 14 நாட்களுக்கு நெருங்கிய தொடர்புகள்</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>9:00-17:30 (வார இறுதி நாட்கள் மற்றும் விடுமுறை நாட்கள் தவிர)</value>
+    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>COVID-19 தகவல் மற்றும் வளங்கள்</value>
+    <comment>新型コロナウィルス感染症対策サイト</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>ஆதரவு</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>பயன்பாட்டில்</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>நெருங்கிய தொடர்புகளை சரிபார்க்கவும்</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>COVID-19 க்கு நேர்மறை யாக சோதிக்கப்படும் போது</value>
+    <comment>新型コロナウィルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>நேர்மறை சோதனை முடிவை பதிவு செய்யவும்</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>இந்தப் பயன்பாட்டைப் பகிர்</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>முகப்பு</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>பயன்பாட்டு கால</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>உங்கள் தனியுரிமை பாதுகாக்கப்பட்டுள்ளது</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>உங்கள் பெயர் அல்லது தொலைபேசி எண் போன்ற தனிப்பட்ட தகவல்கள் எதுவும் சேகரிக்கப்படவில்லை. ஜி.பி.எஸ் தரவு உள்ளிட்ட எந்த புவியியல் தரவுசேகரிக்கப்படவில்லை.</value>
+    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>அனைத்து தரவுகளும் குறியாக்கம் செய்யப்பட்டு உங்கள் ஸ்மார்ட்போனில் உள்நாட்டில் சேமிக்கப்படும். அனைத்து தரவும் 14 நாட்களுக்குப் பிறகு தானாகவே நீக்கப்படும். உங்கள் நகர்வுகள் அரசாங்க முகவரமைப்புகள் அல்லது மூன்றாம் தரப்பினரால் எந்த வகையிலும் கண்காணிக்கப்படுவதில்லை.</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>பயன்பாட்டு அமைப்புகளை மாற்றுவதன் மூலம் அல்லது பயன்பாட்டை நீக்குவதன் மூலம் மற்ற பயனர்களுடனான நெருக்கமான தொடர்புகளைப் பதிவுசெய்வதை நீங்கள் எப்போது வேண்டுமானாலும் நிறுத்தலாம்.</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>பயன்பாட்டு விதிமுறைகள்</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>டுடோரியல்பக்கம்2விளக்கம்1</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>அறிவிப்புகளை இயக்கவும்</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>COVID-19 நேர்மறையான பயனர்களுடன் நீங்கள் நெருங்கிய தொடர்புகளைக் கொண்டிருந்தபோது, அறிவிக்கவேண்டிய அறிவிப்புகளை இயக்கவும்.</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>தொடங்கு</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>பிறகு அமைக்கவும்</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>அறிவிப்புகளைப் பயன்படுத்த</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>மெனு</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>பதிவு செய்</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
+    <value>"HEAlth Center Real-time Information-sharing System on COVID-19 (HER-SYS)" மூலம் உங்களுக்கு வழங்கப்பட்ட செயல்முறைக் குறியீட்டை உள்ளிடவும்.</value>
+    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+  </data>
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
+    <value>கடந்த 14 நாட்களுக்குள் உங்களுடன் நெருங்கிய தொடர்பு கொண்டிருந்த பயனர்கள் அறிவிக்கப்படுவார்கள். பதிவு அநாமதேயமானது. உங்கள் பெயர் அல்லது வேறு எந்த தனிப்பட்ட தகவலையும் நீங்கள் உள்ளிட வேண்டியதில்லை. நெருங்கிய தொடர்பு இடம் பற்றிய எந்த தகவலும் பதிவு செய்யப்படவில்லை.</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
+    <value>ஒரு செயல்முறை குறியீட்டை எவ்வாறு பெறுவது</value>
+    <comment>処理番号の取得方法</comment>
+  </data>
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
+    <value>நேர்மறை சோதனை முடிவை பதிவு செய்யவும்</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>அடுத்து</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>இந்த பயன்பாட்டை இயங்கும் ஸ்மார்ட்போன்கள் இடையே நெருங்கிய தொடர்புகளை பயன்பாட்டை அங்கீகரிக்கிறது.</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>COVID-19 க்கு நேர்மறை யாக சோதிக்கப்படும் போது, இந்த பயன்பாட்டில் சோதனை முடிவை அநாமதேயாக பதிவு செய்யலாம்.</value>
+    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>நீங்கள் நேர்மறை சோதனை செய்த ஒரு பயனருடன் நெருங்கிய தொடர்பில் இருந்தால், பயன்பாடு சாத்தியமான தொற்று பற்றி உங்களுக்கு த் தெரிவிக்கவும், உங்கள் உடல்நலத்தை பாதுகாக்க வழிகாட்டவும்.</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>பயன்பாட்டின் மூலம் உங்களைப் பாதுகாத்துக் கொள்ளுங்கள்</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>பயன்பாட்டின் மூலம் உங்களைப் பாதுகாத்துக் கொள்ளுங்கள்</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>தொடங்கு</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>பிறகு அமைக்கவும்</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>மற்ற பயனர்களுடனான நெருங்கிய தொடர்புகளைப் பதிவு செய்யத் தொடங்க தயவுசெய்து Bluetooth -ஐ இயக்கவும்.</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>மேலும் கண்டறிக</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>புளூடூத்தை இயக்கு</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>புளூடூத்தை இயக்கு</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>~</value>
+    <comment>から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>8 இலக்க குறியீட்டை உள்ளிடவும்</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>புதிய கொரோனாவைரஸ் தொற்று நோய் தகவல் மற்றும் மேலாண்மை அமைப்பில் பதிவு செய்யப்பட்ட உங்கள் மொபைல் எண் அல்லது மின்னஞ்சல் முகவரிக்கு செயலாக்க எண் அறிவிக்கப்படும் (இனி "மேலாண்மை அமைப்பு").</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>நீங்கள் டெர்மினலில் இந்த செயலாக்க எண்ணை உள்ளிடும் போது, டெர்மினல் அறிவிப்பு சேவையகம் வழியாக மேலாண்மை அமைப்புக்கு ஒரு விசாரணை செய்யும் செயலாக்க எண் உங்களுக்கு வழங்கப்பட்டதா என்பதை.</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>உங்களுக்கு குறிப்பிடப்பட்ட பரிவர்த்தனை எண் உங்களுக்கு வழங்கப்பட்டதா என்பதை மேலாண்மை அமைப்பு அறிவிப்பு சேவையகத்திற்கு பதிலளிக்கும்.</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>பரிவர்த்தனை எண் உங்களுக்கு வழங்கப்பட்டதாக நீங்கள் பதிலளித்தால், மற்ற பயனர்களின் முனையங்கள் உங்கள் டெர்மினலில் பதிவு செய்யப்பட்ட தினசரி விசையுடன் வழங்கப்படும்.</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>14 நாட்களுக்குள் நீங்கள் உங்களைத் தொடர்பு கொண்டிருந்தால், உங்களைத் தனிப்பட்ட முறையில் அடையாளம் காணக்கூடிய எந்த த் தகவலும் இல்லாமல் நீங்கள் தொடர்பு கொள்ளப்படலாம் என்பதை நீங்கள் அறிவீர்கள்.</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>ஒப்புக்கொண்டு பதிவு செய்யுங்கள்</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>நேர்மறை பதிவு ஒப்புதல்</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>நேர்மறை பதிவு ஒப்புதல்</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>பதிப்பு</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>புளூடூத் அணைக்கப்பட்டுள்ளது. Bluetooth இல் திரும்புக.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>நெருங்கிய தொடர்புகளின் பட்டியல் (கடந்த 14 நாட்கள்)</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>COVID-19 நேர்மறை பயனர்களுடன் நீங்கள் நெருங்கிய தொடர்பில் இருந்த தேதிகள்.</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>COVID-19 க்கு நேர்மறையான சோதனை செய்த ஒரு பயனருக்கு நீங்கள் நெருக்கமாக இருந்திருக்கலாம்.  மேலும் விவரங்களுக்கு தட்டவும்.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>சாத்தியமான COVID-19 வெளிப்பாடு</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>நீங்கள் அதை முடக்க விரும்பினால், பயன்பாட்டு அமைப்புகளில் இருந்து அதை மாற்றலாம்</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>அறிவிப்புகள் செயலாக்கப்பட்டது</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>இந்த பயன்பாட்டை பற்றிய தகவல்</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>பயனருக்கு Q மற்றும் A</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>பெயர்: \r\n தொடர்பு: \r\n விசாரணையின் உள்ளடக்கம் (பின்வருவனவற்றில் இருந்து ஒரு வகையைத் தேர்ந்தெடுக்கவும்): 1. பயன்பாடு எவ்வாறு செயல்படுகிறது, 2. பயன்பாடு அமைப்புகள், 3. பயன்பாட்டைப் பயன்படுத்துதல் (அறிவிப்பு போன்றவை) ), 4. மற்றவர்கள் \r\n விசாரணை உரை: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>தொடர்பு உறுதிப்படுத்தல் பயன்பாட்டை ப்பற்றிய விசாரணைகள்</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
 </root>
