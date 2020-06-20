@@ -607,8 +607,4 @@
     <value>שאילתות אודות יישום אישור של איש קשר</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDays" xml:space="preserve">
-    <value>ימים</value>
-    <comment>Past X Days</comment>
-  </data>
 </root>

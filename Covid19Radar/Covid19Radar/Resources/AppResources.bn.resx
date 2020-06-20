@@ -607,8 +607,4 @@
     <value>কন্ট্যাক্ট কনফার্মেশন অ্যাপ সম্পর্কে অনুসন্ধান</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDays" xml:space="preserve">
-    <value>দিনগুলো</value>
-    <comment>Past X Days</comment>
-  </data>
 </root>
