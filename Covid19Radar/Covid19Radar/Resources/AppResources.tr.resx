@@ -607,4 +607,8 @@
     <value>İletişim onay uygulaması hakkında sorular</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>gün</value>
+    <comment>X日間</comment>
+  </data>
 </root>

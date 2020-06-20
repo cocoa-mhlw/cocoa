@@ -607,4 +607,8 @@
     <value>رابطہ تصدیق ایپ کے بارے میں انکوائری</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>ايام</value>
+    <comment>X日間</comment>
+  </data>
 </root>
