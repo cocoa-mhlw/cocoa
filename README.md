@@ -24,14 +24,14 @@ Please install the app for the test from the below link. Currently, it is not po
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
 
-Device configuration guide for tester:  
+Device configuration guide for a tester:  
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 
 ### iOS
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS/releases
 
-Device configuration guide for tester:  
+Device configuration guide for a tester:  
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
 
 ## Development environment
