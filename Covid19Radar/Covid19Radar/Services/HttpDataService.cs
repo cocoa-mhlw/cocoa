@@ -71,9 +71,8 @@ namespace Covid19Radar.Services
         }
 
         // Put /diagnosis - upload self diagnosys file
-        public async Task PutSelfExposureKeysAsync(SelfDiagnosisSubmission request)
+        public async Task PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
-            System.Console.WriteLine(Utils.SerializeToJson(request));
             var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/diagnosis";
             var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
             var result = await PutAsync(url, content);
