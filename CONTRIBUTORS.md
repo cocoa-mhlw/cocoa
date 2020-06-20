@@ -5,6 +5,7 @@
 - Yasuaki Matsuda
 - Takashi Takebayashi
 - Akihiko Kodama
+- Mizuki Kubota
 
 # COVID-19Radar Contributors
 - Kazumi Hirose (Organizer)
