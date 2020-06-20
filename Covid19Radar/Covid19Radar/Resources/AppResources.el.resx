@@ -607,4 +607,8 @@
     <value>Ερωτήσεις σχετικά με την εφαρμογή επιβεβαίωσης επαφών</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePageDays" xml:space="preserve">
+    <value>ΗΜΕΡΕΣ</value>
+    <comment>Past X Days</comment>
+  </data>
 </root>

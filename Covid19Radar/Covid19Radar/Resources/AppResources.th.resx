@@ -607,4 +607,8 @@
     <value>สอบถามเกี่ยวกับแอปการยืนยันผู้ติดต่อ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePageDays" xml:space="preserve">
+    <value>วัน</value>
+    <comment>Past X Days</comment>
+  </data>
 </root>
