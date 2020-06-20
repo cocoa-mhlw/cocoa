@@ -607,4 +607,8 @@
     <value>కాంటాక్ట్ ధృవీకరణ యాప్ గురించి విచారణలు</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePageDays" xml:space="preserve">
+    <value>రోజులు</value>
+    <comment>Past X Days</comment>
+  </data>
 </root>
