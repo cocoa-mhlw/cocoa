@@ -607,4 +607,8 @@
     <value>Mistoqsijiet dwar l-applikazzjoni tal-konferma tal-kuntatt</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Jiem</value>
+    <comment>X日間</comment>
+  </data>
 </root>
