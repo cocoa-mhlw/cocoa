@@ -607,8 +607,4 @@
     <value>संपर्क पुष्टी अॅपबद्दल चौकशी</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDays" xml:space="preserve">
-    <value>दिवस</value>
-    <comment>Past X Days</comment>
-  </data>
 </root>

@@ -607,8 +607,4 @@
     <value>Vragen over de contactbevestigingsapp</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDays" xml:space="preserve">
-    <value>DAGEN</value>
-    <comment>Past X Days</comment>
-  </data>
 </root>
