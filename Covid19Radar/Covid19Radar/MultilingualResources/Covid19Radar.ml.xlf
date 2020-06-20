@@ -775,11 +775,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">കോൺടാക്റ്റ് സ്ഥിരീകരണ ആപ്പിനെക്കുറിച്ചുള്ള അന്വേഷണങ്ങൾ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
-        <trans-unit id="HomePageDays" translate="yes" xml:space="preserve">
-          <source>Days</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">ദിവസം</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Past X Days</note>
-        </trans-unit>
       </group>
     </body>
   </file>
