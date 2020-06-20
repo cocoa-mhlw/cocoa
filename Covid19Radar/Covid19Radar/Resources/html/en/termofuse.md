@@ -54,7 +54,7 @@
 1. The Ministry of Health, Labour and Welfare can limit the use of the App in the event where the use of the App has increased drastically.
 
 ## (Prohibited Items and Rules to be Observed)
-Article 7:
+**Article 7**:
 1. App Users are prohibited from engaging in any of the following acts when using the App.
     1. Acts of using the App for anything other than its original and intended purpose.
     1. Acts of engaging in improper access, behavior which causes problems with servers, network systems, etc. of the App, operating the App improperly, or deliberately using defects in the App.
