@@ -775,11 +775,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Pitanja o aplikaciji "potvrda kontakta"</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
-        <trans-unit id="HomePageDays" translate="yes" xml:space="preserve">
-          <source>Days</source>
-          <target state="new">Days</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">X日表記</note>
-        </trans-unit>
       </group>
     </body>
   </file>
