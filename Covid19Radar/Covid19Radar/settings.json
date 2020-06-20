@@ -9,7 +9,5 @@
   "licenseUrl": "https://covid19radarjpnprod.z11.web.core.windows.net/license.html",
   "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
   "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
-  "appCenterTokensAndroid": "90e57bea-ce67-4b85-a161-c8316900d568",
-  "appCenterTokensIOS": "f27678a1-8ab5-4b67-aa5d-cc47af0544a2",
   "supportEmail": "appsupport@cov19.mhlw.go.jp"
 }
