@@ -37,10 +37,7 @@ namespace Covid19Radar.Droid
             Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
-            global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
-            {
-                Logger = new DebugLogger()
-            });
+            global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
             UserDialogs.Init(this);
 

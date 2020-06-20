@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.DataStore;
+using Microsoft.Azure.Cosmos;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
@@ -12,6 +15,7 @@ namespace Covid19Radar.Api.Services
     public class CustomVerificationService : IVerificationService
     {
         private readonly IConfiguration Config;
+        private readonly ICustomVerificationStatusRepository CustomVerification;
         private readonly ILogger<CustomVerificationService> Logger;
         private readonly X509Certificate2 Cert;
         private readonly string ApiSecret;
@@ -21,9 +25,11 @@ namespace Covid19Radar.Api.Services
         private readonly string VerificationPayloadParameterName;
 
         public CustomVerificationService(IConfiguration config,
+                                         ICustomVerificationStatusRepository customVerification,   
                                          ILogger<CustomVerificationService> logger)
         {
             Config = config;
+            CustomVerification = customVerification;
             Logger = logger;
             var cert = config.VerificationPayloadPfx();
             // option client certification
@@ -45,29 +51,30 @@ namespace Covid19Radar.Api.Services
             }
         }
 
-        public async Task<bool> Verification(string verificationPayload)
+        public async Task<int> VerificationAsync(string verificationPayload)
         {
-            var payload = $@"
-""{VerificationPayloadParameterName}"": ""{verificationPayload}"" 
-";
+            Logger.LogInformation($"start {nameof(VerificationAsync)}");
+            var payload = $@"{{
+""{VerificationPayloadParameterName}"": ""{verificationPayload}""
+}}";
             var content = new StringContent(payload);
             var response = await Client.PostAsync(Url, content);
-            if (!response.IsSuccessStatusCode) return false;
+            if (!response.IsSuccessStatusCode) return 503;
 
-            var responseBody = JsonConvert.DeserializeObject<ResponseMock>(await response.Content.ReadAsStringAsync());
-            return responseBody.IsValid();
+            var responseBody = JsonConvert.DeserializeObject<ResponseCustomVerification>(await response.Content.ReadAsStringAsync());
+            return await GetResultStatus(responseBody.Result);
         }
 
-        public class ResponseMock
+        public async Task<int> GetResultStatus(string responseResult)
+        {
+            var results = await CustomVerification.GetAsync();
+            return results.FirstOrDefault(_ => _.Result == responseResult)?.HttpStatusCode ?? 503;
+        }
+
+        public class ResponseCustomVerification
         {
             [JsonProperty("result")]
             public string Result { get; set; }
-            public bool IsValid()
-            {
-                if (string.IsNullOrWhiteSpace(Result)) return false;
-                if (Result.All(_ => _ == Result.First())) return false;
-                return true;
-            }
         }
     }
 }
