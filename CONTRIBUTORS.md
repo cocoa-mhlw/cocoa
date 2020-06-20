@@ -60,6 +60,7 @@
 - Yutaro Iino (Documentation)
 - Kohei Ikeda(Documentation)
 - Iyotetsuya (Traditional Chinese Translation)
+- Soichi Ikebe (Documentation)
 
 # Beta Testers
 - Nagahata Kenji
