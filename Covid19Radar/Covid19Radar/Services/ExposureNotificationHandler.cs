@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -223,6 +224,8 @@ namespace Covid19Radar.Services
             }
 
             var selfDiag = await CreateSubmissionAsync(temporaryExposureKeys, pendingDiagnosis);
+            
+            // HERSYS
             await httpDataService.PutSelfExposureKeysAsync(selfDiag);
             // Update pending status
             pendingDiagnosis.Shared = true;
@@ -230,28 +233,39 @@ namespace Covid19Radar.Services
         }
 
 
-        private async Task<SelfDiagnosisSubmission> CreateSubmissionAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys, PositiveDiagnosisState pendingDiagnosis)
+        private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys, PositiveDiagnosisState pendingDiagnosis)
         {
             // Create the network keys
-            var keys = temporaryExposureKeys.Select(k => new ExposureKey
+            var keys = temporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key
             {
                 KeyData = Convert.ToBase64String(k.Key),
-                RollingStart = (long)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
-                RollingDuration = (int)(k.RollingDuration.TotalMinutes / 10),
+                RollingStartNumber = (uint)(k.RollingStart -  DateTime.UnixEpoch).TotalMinutes /10,
+                RollingPeriod = (uint)(k.RollingDuration.TotalMinutes / 10),
                 TransmissionRisk = (int)k.TransmissionRiskLevel
             });
 
-            // Create the submission
-            var submission = new SelfDiagnosisSubmission(true)
+            foreach (var key in keys)
             {
-                SubmissionNumber = userData.PendingDiagnosis.DiagnosisUid,
-                AppPackageName = AppInfo.PackageName,
+                if (!key.IsValid())
+                {
+                    throw new InvalidDataException();
+                }
+            }
+
+            // Generate Padding
+            var padding = GetPadding();
+
+            // Create the submission
+            var submission = new DiagnosisSubmissionParameter()
+            {
                 UserUuid = userData.UserUuid,
-                DeviceVerificationPayload = null,
-                Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
-                Regions = AppSettings.Instance.SupportedRegions,
                 Keys = keys.ToArray(),
+                Regions = AppSettings.Instance.SupportedRegions,
+                Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
+                DeviceVerificationPayload = null,
+                AppPackageName = AppInfo.PackageName,
                 VerificationPayload = pendingDiagnosis.DiagnosisUid,
+                Padding = padding
             };
 
             // See if we can add the device verification
@@ -261,6 +275,19 @@ namespace Covid19Radar.Services
             }
             return submission;
 
+        }
+
+        private string GetPadding()
+        {
+            var random = new Random();
+            var size = random.Next(1024, 2048);
+
+            // Approximate the base64 blowup.
+            size = (int)(size * 0.75);
+
+            var padding = new byte[size];
+            random.NextBytes(padding);
+            return Convert.ToBase64String(padding);
         }
     }
 }
