@@ -607,8 +607,4 @@
     <value>Inquiries mō te taupānga whakaū hoapā</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDays" xml:space="preserve">
-    <value>Ngā rā</value>
-    <comment>Past X Days</comment>
-  </data>
 </root>
