@@ -649,17 +649,17 @@
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
           <source>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</source>
-          <target state="translated">处理号码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</target>
+          <target state="translated">数字码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
           <source>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</source>
-          <target state="translated">当您在设备中输入该处理号码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的处理号码。</target>
+          <target state="translated">当您在设备中输入该数字码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的数字码。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
           <source>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</source>
-          <target state="translated">管理系统将会答复通知服务器所核对的处理号码是否为向您发出的号码。</target>
+          <target state="translated">管理系统将会答复通知服务器所核对的数字码是否为向您发出的号码。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
