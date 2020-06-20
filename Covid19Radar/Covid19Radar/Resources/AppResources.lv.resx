@@ -607,4 +607,8 @@
     <value>Uzziņas par kontaktu apstiprinājuma lietotni</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Dienas</value>
+    <comment>X日間</comment>
+  </data>
 </root>
