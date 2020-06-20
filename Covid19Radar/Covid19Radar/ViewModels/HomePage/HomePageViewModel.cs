@@ -48,7 +48,11 @@ namespace Covid19Radar.ViewModels
 
             TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
             PastDate = timeSpan.Days.ToString("D");
-            if (PastDate == "0")
+            if (PastDate != "0")
+            {
+                PastDate = PastDate + AppResources.HomePagePastDays;
+            }
+            else
             {
                 PastDate = "";
             }
