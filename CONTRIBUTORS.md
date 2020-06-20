@@ -59,6 +59,7 @@
 - Yutaro Iino (Documentation)
 - Kohei Ikeda(Documentation)
 - Iyotetsuya (Traditional Chinese Translation)
+- Anharu (Xamarin)
 
 # Beta Testers
 - Nagahata Kenji
