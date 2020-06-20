@@ -17,6 +17,6 @@ namespace Covid19Radar.Services
 
     public interface IDeviceVerifier
     {
-        Task<string> VerifyAsync(SelfDiagnosisSubmission  submission);
+        Task<string> VerifyAsync(DiagnosisSubmissionParameter submission);
     }
 }
