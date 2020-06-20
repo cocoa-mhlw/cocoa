@@ -61,16 +61,16 @@ namespace Covid19Radar.Model
             return JumpHash.JumpConsistentHash(JumpConsistentSeed, 86400);
         }
 
-        public string GetLocalTimeString()
+        public string GetLocalDateString()
         {
             string cultureName = CultureInfo.CurrentUICulture.ToString();
             if(cultureName.Contains("ar"))
             {
-                return StartDateTime.ToLocalTime().ToString(new CultureInfo("ar-AE"));
+                return StartDateTime.ToLocalTime().ToString("D", new CultureInfo("ar-AE"));
             }
             else
             {
-                return StartDateTime.ToLocalTime().ToString();
+                return StartDateTime.ToLocalTime().ToString("D");
             }
         }
 
