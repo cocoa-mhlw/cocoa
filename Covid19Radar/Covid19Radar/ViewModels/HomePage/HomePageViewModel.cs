@@ -44,10 +44,10 @@ namespace Covid19Radar.ViewModels
             _ = exposureNotificationService.GetExposureNotificationConfig();
             _ = exposureNotificationService.StartExposureNotification();
             userData = this.userDataService.Get();
-            StartDate = userData.StartDateTime.ToLocalTime().ToString();
+            StartDate = userData.StartDateTime.ToLocalTime().ToString("D");
 
             TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
-            PastDate = timeSpan.Days.ToString() + AppResources.HomePageDays;
+            PastDate = timeSpan.Days.ToString("D");
             if (PastDate == "0")
             {
                 PastDate = "";
@@ -66,9 +66,9 @@ namespace Covid19Radar.ViewModels
             return;
         });
 
-        public Command OnClickShareApp => new Command( () =>
-        {
-            AppUtils.PopUpShare();
-        });
+        public Command OnClickShareApp => new Command(() =>
+       {
+           AppUtils.PopUpShare();
+       });
     }
 }
