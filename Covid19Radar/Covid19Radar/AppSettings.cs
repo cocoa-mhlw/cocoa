@@ -33,8 +33,6 @@ namespace Covid19Radar
             BlobStorageContainerName = j.Value<string>("blobStorageContainerName");
             SupportedRegions = j.Value<string>("supportedRegions").ToUpperInvariant().Split(';', ',', ':');
             AndroidSafetyNetApiKey = j.Value<string>("androidSafetyNetApiKey");
-            AppCenterTokensAndroid = j.Value<string>("appCenterTokensAndroid");
-            AppCenterTokensIOS = j.Value<string>("appCenterTokensIOS");
             SupportEmail = j.Value<string>("supportEmail");
 
         }
@@ -53,8 +51,6 @@ namespace Covid19Radar
         public string BlobStorageContainerName { get; }
 
         public string AndroidSafetyNetApiKey { get; }
-        public string AppCenterTokensAndroid { get; }
-        public string AppCenterTokensIOS { get; }
 
         internal Dictionary<string, ulong> GetDefaultDefaultBatch() =>
             Instance.SupportedRegions.ToDictionary(r => r, r => (ulong)0);
