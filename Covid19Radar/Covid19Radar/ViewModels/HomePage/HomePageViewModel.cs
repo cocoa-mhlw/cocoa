@@ -43,12 +43,11 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationService = exposureNotificationService;
             _ = exposureNotificationService.GetExposureNotificationConfig();
             _ = exposureNotificationService.StartExposureNotification();
-            //_ = exposureNotificationService.FetchExposureKeyAsync();
             userData = this.userDataService.Get();
-            StartDate = userData.StartDateTime.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
+            StartDate = userData.StartDateTime.ToLocalTime().ToString();
 
             TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
-            PastDate = timeSpan.Days.ToString("D", CultureInfo.CurrentCulture);
+            PastDate = timeSpan.Days.ToString();
             if (PastDate == "0")
             {
                 PastDate = "";
