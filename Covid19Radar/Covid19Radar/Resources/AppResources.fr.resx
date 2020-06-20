@@ -607,8 +607,4 @@
     <value>Demandes de renseignements sur l’application de confirmation de contact</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDays" xml:space="preserve">
-    <value>JOURS</value>
-    <comment>Past X Days</comment>
-  </data>
 </root>

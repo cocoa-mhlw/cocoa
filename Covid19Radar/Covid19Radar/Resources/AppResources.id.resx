@@ -609,8 +609,4 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <value>Pertanyaan tentang aplikasi ini.</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDays" xml:space="preserve">
-    <value>Hari</value>
-    <comment>Past X Days</comment>
-  </data>
 </root>

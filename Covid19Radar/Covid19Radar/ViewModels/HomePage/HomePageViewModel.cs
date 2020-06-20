@@ -47,7 +47,7 @@ namespace Covid19Radar.ViewModels
             StartDate = userData.StartDateTime.ToLocalTime().ToString("D");
 
             TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
-            PastDate = timeSpan.Days.ToString("D")+AppResources.HomePageDays;
+            PastDate = timeSpan.Days.ToString("D");
             if (PastDate == "0")
             {
                 PastDate = "";
@@ -66,9 +66,9 @@ namespace Covid19Radar.ViewModels
             return;
         });
 
-        public Command OnClickShareApp => new Command( () =>
-        {
-            AppUtils.PopUpShare();
-        });
+        public Command OnClickShareApp => new Command(() =>
+       {
+           AppUtils.PopUpShare();
+       });
     }
 }
