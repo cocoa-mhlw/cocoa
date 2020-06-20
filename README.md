@@ -18,7 +18,7 @@ Please check the contribution rules.
 
 ## How to install the app for tester
 
-Please install the app for test from below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
+Please install the app for test from the below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
 
 ### Android
 
@@ -43,7 +43,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 ![App settings](img/design00.png)
 
-Permission to use the following functions of the device is required. 
+Permission to use the following functions of the device is required.
 
 1. Exposure notification
 2. Bluetooth
