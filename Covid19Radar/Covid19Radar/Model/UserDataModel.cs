@@ -60,15 +60,15 @@ namespace Covid19Radar.Model
             return JumpHash.JumpConsistentHash(JumpConsistentSeed, 86400);
         }
 
-        public bool IsOptined { get; set; } = false;
+        public bool IsOptined { get; set; }
 
-        public bool IsExposureNotificationEnabled { get; set; } = false;
+        public bool IsExposureNotificationEnabled { get; set; }
 
-        public bool IsNotificationEnabled { get; set; } = false;
+        public bool IsNotificationEnabled { get; set; }
 
-        public bool IsPositived { get; set; } = false;
+        public bool IsPositived { get; set; }
 
-        public bool IsPolicyAccepted { get; set; } = false;
+        public bool IsPolicyAccepted { get; set; }
 
         public Dictionary<string,long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
 
