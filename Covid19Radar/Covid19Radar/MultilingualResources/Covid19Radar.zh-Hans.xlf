@@ -459,7 +459,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
           <source>in use</source>
-          <target state="translated">使用中</target>
+          <target state="translated">使用</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
@@ -639,7 +639,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription0" translate="yes" xml:space="preserve">
           <source>~</source>
-          <target state="translated">从</target>
+          <target state="translated">开始</target>
           <note from="MultilingualBuild" annotates="source" priority="2">から</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel2" translate="yes" xml:space="preserve">
