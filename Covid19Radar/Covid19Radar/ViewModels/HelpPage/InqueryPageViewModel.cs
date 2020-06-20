@@ -52,7 +52,7 @@ namespace Covid19Radar.ViewModels
                 var message = new EmailMessage
                 {
                     Subject = AppResources.InqueryMailSubject,
-                    Body = AppResources.InqueryMailBody,
+                    Body = AppResources.InqueryMailBody.Replace("\\r\\n", "\r\n"),
                     To = recipients
                 };
                 await Email.ComposeAsync(message);
