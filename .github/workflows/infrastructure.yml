@@ -1,5 +1,9 @@
 name: Infrastructure
-on: pull_request
+on:
+  pull_request:
+    paths:
+      - "infrastructure/**"
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
