@@ -17,8 +17,8 @@ namespace Covid19Radar.Api.Services
 {
     public class DeviceValidationAppleService
     {
-        const string UrlApple = "https://api.development.devicecheck.apple.com/v1/validate_device_token";
-        //const string UrlApple = "https://api.devicecheck.apple.com/v1/validate_device_token";
+        //const string UrlApple = "https://api.development.devicecheck.apple.com/v1/validate_device_token";
+        const string UrlApple = "https://api.devicecheck.apple.com/v1/validate_device_token";
         private readonly HttpClient ClientApple;
         private readonly ILogger<DeviceValidationService> Logger;
 
@@ -128,32 +128,6 @@ namespace Covid19Radar.Api.Services
             };
             var cngKey = CngKey.Import(Convert.FromBase64String(p8FileContents), CngKeyBlobFormat.Pkcs8PrivateBlob);
             return Jose.JWT.Encode(payload, cngKey, Jose.JwsAlgorithm.ES256, headers);
-
-
-            var secretKey = CleanP8Key(p8FileContents);
-
-            // Get our headers/payloads into a json string
-            var headerStr = "{" + string.Join(",", headers.Select(kvp => $"\"{kvp.Key}\":\"{kvp.Value.ToString()}\"")) + "}";
-            var payloadStr = "{";
-            foreach (var kvp in payload)
-            {
-                if (kvp.Value is int || kvp.Value is long || kvp.Value is double)
-                    payloadStr += $"\"{kvp.Key}\":{kvp.Value.ToString()},";
-                else
-                    payloadStr += $"\"{kvp.Key}\":\"{kvp.Value.ToString()}\",";
-            }
-            payloadStr = payloadStr.TrimEnd(',') + "}";
-
-            // Load the key text
-            var key = CngKey.Import(Convert.FromBase64String(secretKey), CngKeyBlobFormat.Pkcs8PrivateBlob);
-
-            using (var dsa = new ECDsaCng(key))
-            {
-                var jwtHeader = Base64UrlEncode(Encoding.UTF8.GetBytes(headerStr));
-                var jwtPayload = Base64UrlEncode(Encoding.UTF8.GetBytes(payloadStr));
-                var signature = dsa.SignData(Encoding.UTF8.GetBytes($"{jwtHeader}.{jwtPayload}"), HashAlgorithmName.SHA256);
-                return $"{jwtHeader}.{jwtPayload}.{Base64UrlEncode(signature)}";
-            }
         }
 
         static string CleanP8Key(string p8Contents)
