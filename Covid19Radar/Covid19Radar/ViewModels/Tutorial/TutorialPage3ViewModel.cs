@@ -37,7 +37,7 @@ namespace Covid19Radar.ViewModels
                 if (userData == null)
                 {
                     UserDialogs.Instance.HideLoading();
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, "通信に失敗しました。電波状況の良い場所でもう一度お試しください。", Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogNetworkConnectionErrorTitle, Resources.AppResources.ButtonOk);
                     return;
                 }
             }
