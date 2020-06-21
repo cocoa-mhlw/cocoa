@@ -43,7 +43,7 @@ namespace Covid19Radar.Services
 
         public UserDataModel Get()
         {
-            var storedUserData = SecureStorage.GetAsync("UserData").Result;
+            var storedUserData = SecureStorage.GetAsync(AppConstants.StorageKey.UserData).Result;
             if (storedUserData != null)
             {
                 return Utils.DeserializeFromJson<UserDataModel>(storedUserData);
@@ -59,7 +59,7 @@ namespace Covid19Radar.Services
             {
                 return;
             }
-            await SecureStorage.SetAsync("UserData", newdata);
+            await SecureStorage.SetAsync(AppConstants.StorageKey.UserData, newdata);
             current = Get();
 
             UserDataChanged?.Invoke(this, current);

@@ -31,7 +31,7 @@ namespace Covid19Radar.Services
 
         private void SetSecret()
         {
-            var storedSecret = SecureStorage.GetAsync("Secret").Result;
+            var storedSecret = SecureStorage.GetAsync(AppConstants.StorageKey.Secret).Result;
             if (storedSecret != null)
             {
                 secret = storedSecret;
@@ -59,7 +59,7 @@ namespace Covid19Radar.Services
                     userData.UserUuid = registerResult.UserUuid;
                     userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
                     userData.IsOptined = true;
-                    await SecureStorage.SetAsync("Secret", registerResult.Secret);
+                    await SecureStorage.SetAsync(AppConstants.StorageKey.Secret, registerResult.Secret);
                     SetSecret();
                     return userData;
                 }
