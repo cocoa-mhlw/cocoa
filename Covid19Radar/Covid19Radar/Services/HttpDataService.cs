@@ -98,7 +98,7 @@ namespace Covid19Radar.Services
 
         public async Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
         {
-            return await GetCdnStreamAsync(url,cancellationToken);
+            return await GetCdnStreamAsync(url, cancellationToken);
         }
 
 
@@ -180,7 +180,7 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        private async Task<Stream> GetCdnStreamAsync(string url,CancellationToken cancellationToken)
+        private async Task<Stream> GetCdnStreamAsync(string url, CancellationToken cancellationToken)
         {
             Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
             HttpResponseMessage result = await response;
@@ -207,6 +207,8 @@ namespace Covid19Radar.Services
 
         private async Task<string> PutAsync(string url, HttpContent body)
         {
+
+            // Error Result 
             var result = await httpClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
