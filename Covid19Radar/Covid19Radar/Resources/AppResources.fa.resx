@@ -611,4 +611,28 @@
     <value>روز</value>
     <comment>X日間</comment>
   </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>اعلان نوردهی فعال است.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>بلوتوث خاموش است. لطفاً بلوتوث را روشن کنید.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>اعلان نوردهی غیرفعال شده است. تنظیمات ترمینال را باز کنید و اعلان نوردهی را روشن کنید.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>شما باید با شرایط استفاده موافقت کنید.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>اعلان نوردهی محدود است. لطفا فعال.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>اعلان نوردهی پشتیبانی نمی شود. لطفا سیستم عامل را به آخرین نسخه به روز کنید. اگر شما هنوز هم مشکل دارید ، لطفا با ما تماس بگیرید در appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
 </root>

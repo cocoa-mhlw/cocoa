@@ -611,4 +611,28 @@
     <value>Дни</value>
     <comment>X日間</comment>
   </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Уведомяването за експонация е активно.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Bluetooth е изключен. Включете Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Уведомяването за експонация е забранено. Отворете настройките на терминала и включете "Уведомяване за експозицията".</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>Трябва да приемете условията за ползване.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Уведомяването за експозиция е ограничено. Моля, активирайте се.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Не се поддържа уведомяване за експозиция. Моля, актуализирайте операционната система до най-новата версия. Ако все още имате проблеми, моля, свържете се с нас на appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
 </root>

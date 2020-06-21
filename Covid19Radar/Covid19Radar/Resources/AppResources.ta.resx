@@ -611,4 +611,28 @@
     <value>நாட்கள்</value>
     <comment>X日間</comment>
   </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு செயலில் உள்ளது.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>புளூடூத் அணைக்கப்பட்டுள்ளது. தயவுசெய்து Bluetooth ஐ இயக்கவும்.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு முடக்கப்பட்டுள்ளது. டெர்மினல் அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையை இயக்கவும்.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>நீங்கள் பயன்பாட்டு விதிமுறைகளை ஏற்க வேண்டும்.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு கட்டுப்படுத்தப்பட்டுள்ளது. தயவு செய்து செயலில்.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு ஆதரிக்கப்படவில்லை. சமீபத்திய பதிப்பிற்கு OS ஐ புதுப்பிக்கவும். நீங்கள் இன்னும் பிரச்சினைகள் இருந்தால், appsupport@cov19.mhlw.go.jp எங்களை தொடர்பு கொள்ளவும்.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
 </root>
