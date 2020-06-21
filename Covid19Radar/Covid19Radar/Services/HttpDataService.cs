@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
+using System.Net;
 
 namespace Covid19Radar.Services
 {
@@ -67,22 +68,16 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        // Put /diagnosis - upload self diagnosys file
-        public async Task PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+        public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/diagnosis";
             var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
-            var result = await PutAsync(url, content);
-            if (result != null)
-            {
-                System.Console.WriteLine(Utils.SerializeToJson(result));
-            }
+            HttpStatusCode status = await PutAsync(url, content);
+            return status;
         }
 
         public async Task<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
         {
-            //long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
-
             string container = AppSettings.Instance.BlobStorageContainerName;
             string url = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
             var result = await GetCdnAsync(url, cancellationToken);
@@ -97,22 +92,6 @@ namespace Covid19Radar.Services
         {
             return await GetCdnStreamAsync(url, cancellationToken);
         }
-
-
-        // GET /api/notification/pull/{lastClientUpdateTime:datetime} - pull Notifications 
-        /*
-        public async Task<NotificationPullResult> GetNotificationPullAsync(UserDataModel user)
-        {
-            string url = AppSettings.Instance.ApiUrlBase
-                + $"/notification/pull/{user.LastNotificationTime.ToString("yyyy-MM-ddTHH:mm:ss")}";
-            var result = await GetAsync(url);
-            if (result != null)
-            {
-                return Utils.DeserializeFromJson<NotificationPullResult>(result);
-            }
-            return null;
-        }
-        */
 
         private async Task<string> GetAsync(string url)
         {
@@ -202,21 +181,11 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        private async Task<string> PutAsync(string url, HttpContent body)
+        private async Task<HttpStatusCode> PutAsync(string url, HttpContent body)
         {
-
-            // Error Result 
             var result = await httpClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            else if (result.StatusCode == System.Net.HttpStatusCode.BadRequest)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
+            return result.StatusCode;
         }
 
     }
