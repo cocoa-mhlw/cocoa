@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>COVID-19 ಸಕಾರಾತ್ಮಕ ಬಳಕೆದಾರನೊಂದಿಗೆ ನೀವು ನಿಕಟ ಸಂಪರ್ಕದಲ್ಲಿದ್ದರೆ, ಅಪ್ಲಿಕೇಶನ್ ನಿಮಗೆ ಮಾಹಿತಿ ಯನ್ನು ನೀಡಲಿದೆ.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>ಹೋಮ್ ಸ್ಕ್ರೀನ್ ನಿಂದ ನಿಮ್ಮ ನಿಕಟ ಸಂಪರ್ಕಗಳ ಸಂಖ್ಯೆಯನ್ನು ನೀವು ಪರಿಶೀಲಿಸಬಹುದು.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>ನೀವು ಧನಾತ್ಮಕ ಪರೀಕ್ಷೆಮಾಡಿದ್ದರೆ</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>ಸಾರ್ವಜನಿಕ ಆರೋಗ್ಯ ಅಧಿಕಾರಿಗಳು ನಿಮಗೆ "ಪ್ರೊಸೆಸಿಂಗ್ ನಂಬರ್" ಅನ್ನು ಬಿಡುಗಡೆ ಮಾಡುತ್ತಾರೆ.</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>COVID-19 ಗಾಗಿ ನೀವು ಧನಾತ್ಮಕವನ್ನು ಪರೀಕ್ಷಿಸಿದರೆ</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>ಕ್ಲೋಸ್ ಕಾಂಟ್ಯಾಕ್ಟ್ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ನಿಲ್ಲಿಸುವುದು ಹೇಗೆ / ಅಳಿಸುವುದು?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 ಮಾಹಿತಿ ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>ಬೆಂಬಲ</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19 ಗಾಗಿ ಧನಾತ್ಮಕವಾಗಿ ಪರೀಕ್ಷಿಸಿದಾಗ</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>ಧನಾತ್ಮಕ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶದಾಖಲಿಸಿ</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>COVID-19 ಗಾಗಿ ಧನಾತ್ಮಕವಾಗಿ ಪರೀಕ್ಷಿಸಿದಾಗ, ಈ ಅಪ್ಲಿಕೇಶನ್ ನಲ್ಲಿ ನೀವು ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶವನ್ನು ಅನಾಮಧೇಯವಾಗಿ ನೋಂದಾಯಿಸಬಹುದು.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>ನೀವು ಧನಾತ್ಮಕ ಪರೀಕ್ಷೆಮಾಡಿದ ಬಳಕೆದಾರರೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕದಲ್ಲಿದ್ದರೆ, ಸಂಭಾವ್ಯ ಸೋಂಕಿನ ಬಗ್ಗೆ ಅಪ್ಲಿಕೇಶನ್ ನಿಮಗೆ ಸೂಚನೆ ನೀಡುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಆರೋಗ್ಯವನ್ನು ರಕ್ಷಿಸಲು ಮಾರ್ಗದರ್ಶನವನ್ನು ಒದಗಿಸುತ್ತದೆ.</value>
