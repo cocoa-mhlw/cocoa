@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>�? ε�?αρμογή θα σα�? ειδο�?οιήσει, αν ήσασ�?αν σε σ�?ενή ε�?α�?ή με covid-19 θε�?ικ�? �?ρήσ�?η.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた�?�合�?�スマ�?�トフォンにプッシュ通知が届きます�??</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた�?�合�?�スマ�?�トフォンにプッシュ通知が届きます�??</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>Μ�?ορεί�?ε να ελέγξε�?ε �?ον αριθμ�? �?ων σ�?ενών ε�?α�?ών σα�? α�?�? �?ην α�?�?ική οθόνη.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>Εάν έ�?ε�?ε εξε�?άσει θε�?ικέ�?</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合�??</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合�??</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>Οι α�?�?έ�? δημόσια�? �?γεία�? θα σα�? εκδώσο�?ν έναν «αριθμ�? ε�?εξεργασίας».</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>Εάν ελέγξε�?ε θε�?ικά για COVID-19</value>
-    <comment>新型コロナウィルスに感染して�?ると判定された�?</comment>
+    <comment>新型コロナウイルスに感染して�?ると判定された�?</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>�?ώ�? μ�?ο�?�? να σ�?αμα�?ήσ�? / να διαγράψ�? �?ην εγγρα�?ή σ�?ενή�? ε�?α�?ή�?;</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 �?ληρο�?ορίε�? και �?όροι</value>
-    <comment>新型コロナウィルス感染�?対策サイ�?</comment>
+    <comment>新型コロナウイルス感染�?対策サイ�?</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Υ�?οσ�?ήριξη</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Ό�?αν δοκιμασ�?εί θε�?ικ�? για COVID-19</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>Κα�?α�?ώρηση θε�?ικο�? α�?ο�?ελέσμα�?ο�? δοκιμή�?</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>Ό�?αν δοκιμασ�?εί θε�?ικά για COVID-19, μ�?ορεί�?ε να κα�?α�?ωρήσε�?ε ανών�?μα �?ο α�?ο�?έλεσμα �?η�? δοκιμή�? σε α�?�?ήν �?ην ε�?αρμογή.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます�??</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます�??</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>Εάν έ�?ε�?ε έρθει σε σ�?ενή ε�?α�?ή με ένα �?ρήσ�?η �?ο�? βρέθηκε θε�?ικό�?, η ε�?αρμογή σά�? ειδο�?οιεί για �?ιθανή μόλ�?νση και �?αρέ�?ει οδηγίε�? για �?ην �?ροσ�?ασία �?η�? �?γεία�? σα�?.</value>
