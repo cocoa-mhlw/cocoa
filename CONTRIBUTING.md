@@ -15,7 +15,7 @@
 ## Bugfix、現行の動作についての修正
 
 - Issue が存在していない場合は作成してください。
-- Branch を作成してください。(例 Bugfix/IssueNo , Feature/IssuNo)
+- Branch を作成してください。(例 Bugfix/IssueNo , Feature/IssueNo)
 - 以下を心がけてください
   - 変更を小さくしてください
   - 1つのことだけを行ってください
