@@ -780,6 +780,36 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Ngā rā</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
         </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kei te hohe te Whakamōhiotanga mārakerake.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
+          <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kua weto te Bluetooth. Whakakā i te Bluetooth.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kua monokia te Whakamōhiotanga mārakerake. Whakatuwheratia ngā tautuhinga kāpeka ka whakakā i te Whakamōhiotanga Mārakerake.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
+          <source>You must agree to the terms of use.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Me whakaae koe ki ngā whakaritenga o te whakamahi.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is restricted. Please active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kua rāhuitia te Whakamōhiotanga mārakerake. Hohe koa.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能が承認されていません。承認してください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kāore te Whakamōhiotanga mārakerake i te tautokona. Whakahōu koa i te OS ki te putanga hou rawa. Mēnā kei te raruraru tonu koe, me whakapā atu ki a mātau i te appsupport@cov19.mhlw.go.jp.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</note>
+        </trans-unit>
       </group>
     </body>
   </file>

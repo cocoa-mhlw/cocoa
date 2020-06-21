@@ -611,4 +611,28 @@
     <value>दिवस</value>
     <comment>X日間</comment>
   </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>एक्स्पोजर सूचना सक्रिय आहे.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>ब्लूटूथ बंद आहे. कृपया ब्लूटूथ चालू करा.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>एक्सपोजर सूचना अकार्यान्वीत आहे. टर्मिनल संयोजना उघडा आणि एक्स्पोजर सूचना चालू करा.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>वापराच्या अटी मान्य करायला चला.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>एक्स्पोजर सूचना प्रतिबंधित आहे. कृपया सक्रिय व्हा.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>एक्स्पोजर सूचना समर्थीत नाही. कृपया ओएस अद्ययावत करा. जर तुम्हाला अजूनही समस्या असतील तर कृपया appsupport@cov19.mhlw.go.jp आमच्याशी संपर्क साधा.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
 </root>
