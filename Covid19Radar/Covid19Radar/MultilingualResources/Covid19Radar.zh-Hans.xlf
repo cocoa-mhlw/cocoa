@@ -117,7 +117,7 @@
         </trans-unit>
         <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
           <source>Sharing positive information and anonymous notification to others</source>
-          <target state="translated">登录感染信息，并向他人发送匿名通知</target>
+          <target state="translated">分享感染信息，并向他人发送匿名通知</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
@@ -159,12 +159,12 @@
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
-          <target state="translated">为确保您周围的人的健康，请登录感染情况（匿名）</target>
+          <target state="translated">为确保您周围的人的健康，请登记感染情况（匿名）</target>
           <note from="MultilingualBuild" annotates="source" priority="2">周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>One more person using this app is one more step towards containing the spread of COVID-19.</source>
-          <target state="translated">使用此应用的人越多，会发挥越大的作用</target>
+          <target state="translated">使用此应用的人越多，则效果越好。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリは多くの方にお使いいただくほど効果を発揮します。</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
@@ -214,32 +214,32 @@
         </trans-unit>
         <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
           <source>Phones in close contact exchange their random codes. This information will not be used until either user registers positive test results with this app. The close contact history will be erased after 14 days. Note: The code changes regularly to protect your privacy.</source>
-          <target state="translated">此时把接触方的随机代码记录到APP里，在任何用户向此APP登录阳性测试结果之前，不会使用此信息，14天后信息会自动删除。*为了保护您的隐私，代码会定期更改。</target>
+          <target state="translated">此时把接触方的随机代码记录到APP里，在任何用户向此APP登记阳性测试结果之前，不会使用此信息，14天后信息会自动删除。*为了保护您的隐私，代码会定期更改。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</note>
         </trans-unit>
         <trans-unit id="HelpPage4ButtonText" translate="yes" xml:space="preserve">
           <source>Go to app settings</source>
-          <target state="translated">去设置</target>
+          <target state="translated">前往设置</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定へ</note>
         </trans-unit>
         <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
           <source>From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history.</source>
-          <target state="translated">从“设置”，您可以设定蓝牙的开启/关闭，通知的开启/关闭，停止使用，删除记录</target>
+          <target state="translated">在“设置”中您可以设定蓝牙和通知的开启/关闭、停用应用和删除记录等。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
           <source>The app will notify you, if you were in close contact with COVID-19 positive user.</source>
-          <target state="translated">如果您接触的人中有人登录了阳性信息，APP会通知您。</target>
+          <target state="translated">如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description2" translate="yes" xml:space="preserve">
           <source>You can check the number of your close contacts from the home screen.</source>
-          <target state="translated">您可以从首页查看您的接触次数</target>
+          <target state="translated">您可以在首页查看您的接触次数。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最近の接触件数の確認へはホーム画面からも移動することができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description3" translate="yes" xml:space="preserve">
           <source>You can check the list of close contact dates and receive guidance on what to do if you have symptoms of the disease.</source>
-          <target state="translated">您可以获得有过接触日期的一览，如果您有症状可以得到联系方式。</target>
+          <target state="translated">您可以查看密切接触日期的一览。并可获得如有症状时的具体应对指南。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Label1" translate="yes" xml:space="preserve">
@@ -254,7 +254,7 @@
         </trans-unit>
         <trans-unit id="HelpPage2Label3" translate="yes" xml:space="preserve">
           <source>If you had close contact with a COVID-19 positive user</source>
-          <target state="translated">如果您与登录阳性的人有过密切接触</target>
+          <target state="translated">如果您与登记阳性的人有过密切接触</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触があった場合</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
@@ -264,27 +264,27 @@
         </trans-unit>
         <trans-unit id="HelpPage3Description2" translate="yes" xml:space="preserve">
           <source>Public health authorities will issue you a "processing number".</source>
-          <target state="translated">保健所等官方机构给您开具“数字码”</target>
+          <target state="translated">保健所等官方机构会给您开具“数字码”。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">保健所等公的機関から登録用の「処理番号」が発行されます。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description3" translate="yes" xml:space="preserve">
           <source>Register by entering provided processing number into this app</source>
-          <target state="translated">使用此APP登录您的数字码</target>
+          <target state="translated">使用该应用登记您的数字码。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを用いて処理番号の登録を行います。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description4" translate="yes" xml:space="preserve">
           <source>Smartphones that were in close contact with your smartphone within the last 14 days will receive notifications.</source>
-          <target state="translated">14天以内与您接触的人的手机会收到通知（在1米范围内持续15分钟以上的接触）。</target>
+          <target state="translated">14天以内与您有过接触的人的手机会收到通知（在1米范围内持续15分钟以上的接触）。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
           <source>Only randomly generated codes from device are used when sending notifications. No personal information is used.</source>
-          <target state="translated">通知只提供接触对方的随机代码，不会通知姓名等的个人信息和地点信息。</target>
+          <target state="translated">通知只提供接触对方的随机接触代码，不会显示姓名等的个人信息和地点信息。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
           <source>Register here when tested positive</source>
-          <target state="translated">如果确诊为阳性，请登录您的阳性信息并进行通知</target>
+          <target state="translated">如果确诊为阳性，请登记您的阳性信息并进行通知</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録と他者への匿名通知へ</note>
         </trans-unit>
         <trans-unit id="SettingsPageButton1" translate="yes" xml:space="preserve">
@@ -459,7 +459,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
           <source>in use</source>
-          <target state="translated">使用中</target>
+          <target state="translated">使用</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
         </trans-unit>
         <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
@@ -474,7 +474,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
           <source>Register positive test result</source>
-          <target state="translated">登录阳性信息</target>
+          <target state="translated">登记阳性信息</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
         </trans-unit>
         <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">
@@ -554,7 +554,7 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageButton" translate="yes" xml:space="preserve">
           <source>Register</source>
-          <target state="translated">登录</target>
+          <target state="translated">登记</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録する</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription1" translate="yes" xml:space="preserve">
@@ -564,7 +564,7 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
           <source>Users who were in close contact with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</source>
-          <target state="translated">给14天以内与您有密切接触的用户通知。您登录的时候不需要公开您的个人信息，不必输入您的姓名或任何其他个人信息。另外，不会记录并通知密切接触的地点信息。</target>
+          <target state="translated">给14天以内与您有密切接触的用户通知。您登记的时候不需要公开您的个人信息，不必输入您的姓名或任何其他个人信息。另外，不会记录并通知密切接触的地点信息。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
@@ -574,7 +574,7 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageTitle" translate="yes" xml:space="preserve">
           <source>Register positive test result</source>
-          <target state="translated">登录阳性信息</target>
+          <target state="translated">登记阳性信息</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Button" translate="yes" xml:space="preserve">
@@ -589,12 +589,12 @@
         </trans-unit>
         <trans-unit id="TutorialPage1Description2" translate="yes" xml:space="preserve">
           <source>When tested positive for COVID-19, you can anonymously register the test result in this app.</source>
-          <target state="translated">如果您确诊新型冠状病毒肺炎，您可以匿名登录信息</target>
+          <target state="translated">如果您确诊新型冠状病毒肺炎，您可以匿名登记信息</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description3" translate="yes" xml:space="preserve">
           <source>If you have been in close contact with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</source>
-          <target state="translated">如果您与登录阳性的人有过密切接触，本APP会通知你潜在的感染，并提供保护你健康的指导</target>
+          <target state="translated">如果您与登记阳性的人有过密切接触，本APP会通知你潜在的感染，并提供保护你健康的指导</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Title1" translate="yes" xml:space="preserve">
@@ -639,7 +639,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription0" translate="yes" xml:space="preserve">
           <source>~</source>
-          <target state="translated">从</target>
+          <target state="translated">开始</target>
           <note from="MultilingualBuild" annotates="source" priority="2">から</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel2" translate="yes" xml:space="preserve">
@@ -649,17 +649,17 @@
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
           <source>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</source>
-          <target state="translated">处理号码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</target>
+          <target state="translated">数字码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
           <source>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</source>
-          <target state="translated">当您在设备中输入该处理号码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的处理号码。</target>
+          <target state="translated">当您在设备中输入该数字码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的数字码。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
           <source>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</source>
-          <target state="translated">管理系统将会答复通知服务器所核对的处理号码是否为向您发出的号码。</target>
+          <target state="translated">管理系统将会答复通知服务器所核对的数字码是否为向您发出的号码。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
