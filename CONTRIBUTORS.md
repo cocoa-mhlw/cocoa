@@ -62,6 +62,7 @@
 - Yutaro Iino (Documentation)
 - Kohei Ikeda(Documentation)
 - Iyotetsuya (Traditional Chinese Translation)
+- Anharu (Xamarin)
 - Soichi Ikebe (Documentation)
 - Elisa Sakamoto (Italian Translation)
 
