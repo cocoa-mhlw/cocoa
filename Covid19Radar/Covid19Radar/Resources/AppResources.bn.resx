@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>অনুগ্রহ করে আপনার নেটওয়ার্ক কানেকশন চেক করুন.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ঠিক আছে</value>
@@ -634,5 +634,9 @@
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>এক্সপোজার প্রজ্ঞাপন সমর্থিত নয়। অনুগ্রহ করে সর্বশেষ সংস্করণে OS হালনাগাদ করুন। আপনার যদি এখনও কোন সমস্যা থাকে, অনুগ্রহ করে appsupport@cov19.mhlw.go.jp আমাদের সাথে যোগাযোগ করুন।</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>নেটওয়ার্ক সংযোগ ত্রুটি</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>
