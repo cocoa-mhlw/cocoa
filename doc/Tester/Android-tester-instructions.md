@@ -85,13 +85,13 @@ APKファイルのダウンロードが完了しましたら、インストー�
 ---
 ## アプリの利用方法
 以下のドキュメントを参照してください。  
-[COVID-19Radar(GitHub) - HOW_TO_USE for Android](https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/How-to-use/Android-how-to-use.ja.md)
+[COVID-19Radar(GitHub) - HOW_TO_USE for Android](doc/How-to-use/Android-how-to-use.ja.md)
 
 ---
 ## バグを発見した場合
 バグの報告、および新機能の追加の提案をされたい場合、GitHub上リポジトリにて、Issueの作成をお願いします。  
 詳細は、リポジトリ内の「HOW_TO_CONTRIBUTE」をご覧ください。  
-[COVID-19Radar(GitHub) - HOW_TO_CONTRIBUTE.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
+[COVID-19Radar(GitHub) - HOW_TO_CONTRIBUTE.md](HOW_TO_CONTRIBUTE.md)
 
 ## 相談をしたい場合
 チャットアプリケーション([Discord](https://discordapp.com/))にて、コントリビューター同士のコミュニケーションを行っております。  
