@@ -1,5 +1,8 @@
 # COVID-19Radar (Japanese)
 
+「接触確認アプリは、厚労省の公式バージョンの一つのみ存在します。  
+こちらのGithubは、厚労省の公式アプリのコードそのものではなく、公式アプリの元になっているオープンソースコードです。こちらのコードはコミュニティによってメンテナンスされており、issueやプルリクが公式アプリに反映されるとは限りません。」
+
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
 私たちは現在、機械翻訳結果の確認レビュアーを募集しています。詳しくは [How to Translate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSLATE_CONTRIBUTE.md) をご確認ください。
