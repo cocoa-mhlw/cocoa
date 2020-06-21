@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Vui lòng kiểm tra kết nối mạng của bạn.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
@@ -634,5 +634,9 @@
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Thông báo phơi sáng không được hỗ trợ. Vui lòng cập nhật hệ điều hành lên phiên bản mới nhất. Nếu bạn vẫn còn có vấn đề, xin vui lòng liên hệ với chúng tôi tại appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>Lỗi kết nối mạng</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>

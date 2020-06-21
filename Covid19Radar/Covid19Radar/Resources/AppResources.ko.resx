@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>네트워크 연결을 확인하십시오.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>확인</value>
@@ -634,5 +634,9 @@
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>노출 알림은 지원되지 않습니다. 최신 버전으로 OS를 업데이트하십시오. 그래도 문제가 있는 경우 appsupport@cov19.mhlw.go.jp 문의하시기 바랍니다.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>네트워크 연결 오류</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>
