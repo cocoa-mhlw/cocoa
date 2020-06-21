@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -606,5 +606,9 @@
   <data name="InqueryMailSubject" xml:space="preserve">
     <value>കോൺടാക്റ്റ് സ്ഥിരീകരണ ആപ്പിനെക്കുറിച്ചുള്ള അന്വേഷണങ്ങൾ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>ദിവസം</value>
+    <comment>X日間</comment>
   </data>
 </root>
