@@ -44,7 +44,7 @@ namespace Covid19Radar.ViewModels
             _ = exposureNotificationService.GetExposureNotificationConfig();
             _ = exposureNotificationService.StartExposureNotification();
             userData = this.userDataService.Get();
-            StartDate = userData.StartDateTime.ToLocalTime().ToString("D");
+            StartDate = userData.GetLocalDateString();
 
             TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
             PastDate = timeSpan.Days.ToString();
