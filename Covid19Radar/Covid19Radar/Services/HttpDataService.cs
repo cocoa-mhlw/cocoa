@@ -1,17 +1,14 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using System;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Services
 {
