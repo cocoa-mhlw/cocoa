@@ -19,14 +19,14 @@ namespace Covid19Radar.Services
     [Xamarin.Forms.Internals.Preserve] // Ensure this isn't linked out
     public class ExposureNotificationHandler : IExposureNotificationHandler
     {
-        private readonly HttpDataService httpDataService;
+        private readonly IHttpDataService httpDataService;
         private readonly UserDataService userDataService;
         private UserDataModel userData;
         private Configuration configuration;
 
         public ExposureNotificationHandler()
         {
-            this.httpDataService = Xamarin.Forms.DependencyService.Resolve<HttpDataService>();
+            this.httpDataService = Xamarin.Forms.DependencyService.Resolve<IHttpDataService>();
             this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             userData = this.userDataService.Get();
         }
