@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>COVID-19 പോസിറ്റീവ് ഉപയോക്താവുമായി നിങ്ങൾ അടുത്ത ബന്ധമുണ്ടെങ്കിൽ, ഈ ആപ്പ് നിങ്ങളെ അറിയിക്കും.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>ഹോം സ്ക്രീനിൽ നിന്ന് നിങ്ങളുടെ ക്ലോസ് സമ്പർക്കങ്ങളുടെ എണ്ണം നിങ്ങൾക്ക് പരിശോധിക്കാവുന്നതാണ്.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>നിങ്ങൾ പോസിറ്റീവ് ടെസ്റ്റ് ചെയ്തിട്ടുണ്ടെങ്കിൽ</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>പബ്ലിക് ഹെൽത്ത് അധികൃതർ നിങ്ങൾക്ക് ഒരു "പ്രോസസ്സിംഗ് നമ്പർ" നൽകും.</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>COVID-19-നായി നിങ്ങൾ പോസിറ്റീവ് ടെസ്റ്റ് ചെയ്യുകയാണെങ്കിൽ</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>ക്ലോസ് കോൺടാക്റ്റ് റെക്കോർഡിംഗ് ഞാൻ എങ്ങനെ യാണ് നിർത്തുക / ഇല്ലാതാക്കുക?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 വിവരവും വിഭവങ്ങളും</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>പിന്തുണ</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19-നായി പോസിറ്റീവ് ടെസ്റ്റ് ചെയ്യുമ്പോൾ</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>പോസിറ്റീവ് ടെസ്റ്റ് ഫലം രജിസ്റ്റർ ചെയ്യുക</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>COVID-19-നായി പോസിറ്റീവ് ടെസ്റ്റ് ചെയ്യുമ്പോൾ, ഈ ആപ്പിൽ നിങ്ങൾക്ക് അജ്ഞാതമായി ടെസ്റ്റ് ഫലം രജിസ്റ്റർ ചെയ്യാവുന്നതാണ്.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>പോസിറ്റീവ് ടെസ്റ്റ് ചെയ്ത ഒരു ഉപയോക്താവുമായി നിങ്ങൾ അടുത്ത സമ്പർക്കത്തിൽ ആണെങ്കിൽ, സംഭവ്യമായ അണുബാധയെ ആപ്പ് നിങ്ങളെ അറിയിക്കുകയും നിങ്ങളുടെ ആരോഗ്യം പരിരക്ഷിക്കുന്നതിനുള്ള മാർഗ്ഗനിർദ്ദേശങ്ങൾ നൽകുകയും ചെയ്യുന്നു.</value>

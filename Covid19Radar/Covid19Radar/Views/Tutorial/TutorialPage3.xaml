@@ -20,9 +20,13 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Margin="0,0,0,20" Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.TutorialPage3Title}" />
-        <views:NavigatePopoverWebView Grid.Row="1"
-            Source="{x:Static resources:AppResources.UrlTermOfUse}"
-            Style="{StaticResource DefaultWebView}" />
+        <StackLayout Grid.Row="1">
+            <ProgressBar  Progress="0.0" IsVisible="false" HorizontalOptions="FillAndExpand" x:Name="activity_indicator"  />
+            <views:NavigatePopoverWebView
+                Source="{x:Static resources:AppResources.UrlTermOfUse}"
+                Style="{StaticResource DefaultWebView}"
+                VerticalOptions="FillAndExpand" Navigating="OnNavigating" Navigated="OnNavigated" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
         <Button Grid.Row="2"
             AutomationId="NextButton"
             Command="{Binding Path=OnClickAgree}"

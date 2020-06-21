@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Aplikacija vas bo obvestila, če ste bili v tesnem stiku z COVID-19 pozitivnim uporabnikom.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>Število bližnjih stikov lahko preverite na začetnem zaslonu.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>Če ste testirali pozitivne</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>Javnozdravstveni organi vam bodo izdajali "številko obdelave".</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>Če ste test pozitiven za COVID-19</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>Kako zaustavim/izbrišem posnetek tesnega stika?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 informacije in viri</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Podpora</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Ko je test pozitiven za COVID-19</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>Registrirajte pozitivni rezultat preskusa</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>Ko je test pozitiven za COVID-19, lahko anonimno registrirate rezultat testa v tej aplikaciji.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>Če ste bili v tesnem stiku z uporabnikom, ki so pozitivno preskušali, vas aplikacija obvesti o morebitni okužbi in zagotavlja navodila za zaščito vašega zdravja.</value>
