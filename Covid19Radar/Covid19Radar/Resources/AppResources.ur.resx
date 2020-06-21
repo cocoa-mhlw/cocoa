@@ -639,4 +639,12 @@
     <value>نیٹ ورک کنکشن نقص</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>نمائش نوٹیفکیشن شروع کرنے کی غلطی</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>نمائش کی اطلاع آغاز نہیں ہو سکی ۔ ٹرمینل ترتیبات کھولیں ، نمائش کی اطلاع میں تبدیل کریں ، اور Bluetooth میں مڑیں ۔</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

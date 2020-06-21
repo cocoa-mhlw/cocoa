@@ -232,6 +232,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DialogExposureNotificationStartupError {
+            get {
+                return ResourceManager.GetString("DialogExposureNotificationStartupError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Exposure Notification startup error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DialogExposureNotificationStartupErrorTitle {
+            get {
+                return ResourceManager.GetString("DialogExposureNotificationStartupErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Please check your network connection. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogNetworkConnectionError {

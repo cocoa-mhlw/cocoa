@@ -639,4 +639,12 @@
     <value>Villa í Netsambandi</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Villa við ræsingu tilkynninga um útsetningu</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Ekki tókst að ræsa tilkynningu um útsetningu. Opnaðu stillingar fyrir flugstöðina, kveiktu í útsetningu og kveiktu á Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

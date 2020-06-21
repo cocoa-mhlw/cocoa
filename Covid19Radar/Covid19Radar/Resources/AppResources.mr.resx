@@ -639,4 +639,12 @@
     <value>संजाळ कनेक्शन त्रुटी</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>एक्सपोजर सूचना स्टार्टअप त्रुटी</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>एक्स्पोजर सूचना स्टार्टअप करू शकत नव्हती. टर्मिनल संयोजना उघडा, एक्स्पोजर सूचना मध्ये वळा आणि ब्लूटूथमध्ये वळा.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>
