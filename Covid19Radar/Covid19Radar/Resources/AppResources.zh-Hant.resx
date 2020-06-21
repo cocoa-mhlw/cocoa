@@ -639,4 +639,12 @@
     <value>網路連線錯誤</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>曝光通知啟動錯誤</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>暴露通知無法啟動。打開終端設置,打開曝光通知,然後打開藍牙。</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

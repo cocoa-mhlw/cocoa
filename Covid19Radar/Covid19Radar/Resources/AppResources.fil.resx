@@ -639,4 +639,12 @@
     <value>Mali sa koneksiyong network</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Pagbukas ng pabatid sa pagsisimula error</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Hindi puwedeng mabuksan ang pabatid sa pagkalantad. Magbukas ng mga seting ng terminal, magbukas ng abiso ng pagkakalantad, at magbukas ng Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

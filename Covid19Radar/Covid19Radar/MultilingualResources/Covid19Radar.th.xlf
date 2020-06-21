@@ -815,6 +815,16 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ข้อผิดพลาดในการเชื่อมต่อเครือข่าย</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification startup error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ข้อผิดพลาดการเริ่มต้นระบบการแจ้งเตือนการเปิดรับแสง</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">การแจ้งเตือนการเปิดรับแสงไม่สามารถเริ่มต้น เปิดการตั้งค่าเทอร์มินัล แล้วเปิดการแจ้งเตือนการเปิดรับแสง และเปิดบลูทูธ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
+        </trans-unit>
       </group>
     </body>
   </file>

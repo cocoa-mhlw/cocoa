@@ -639,4 +639,12 @@
     <value>Error de connexió de la xarxa</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Error d'inici de notificació de l'exposició</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>No es pot iniciar la notificació d'exposició. Obriu la configuració del terminal, activeu la notificació d'exposició i activeu Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>
