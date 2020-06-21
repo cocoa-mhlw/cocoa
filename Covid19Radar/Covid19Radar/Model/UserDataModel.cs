@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Xamarin.ExposureNotifications;
+using Covid19Radar.Model;
+using System.Globalization;
 
 namespace Covid19Radar.Model
 {
@@ -58,6 +60,19 @@ namespace Covid19Radar.Model
         public int GetJumpHashTime()
         {
             return JumpHash.JumpConsistentHash(JumpConsistentSeed, 86400);
+        }
+
+        public string GetLocalDateString()
+        {
+            string cultureName = CultureInfo.CurrentUICulture.ToString();
+            if(cultureName.Contains("ar"))
+            {
+                return StartDateTime.ToLocalTime().ToString("D", new CultureInfo("ar-AE"));
+            }
+            else
+            {
+                return StartDateTime.ToLocalTime().ToString("D");
+            }
         }
 
         public bool IsOptined { get; set; } = false;
