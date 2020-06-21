@@ -47,11 +47,7 @@ namespace Covid19Radar.ViewModels
             StartDate = userData.StartDateTime.ToLocalTime().ToString("D");
 
             TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
-            PastDate = timeSpan.Days.ToString("D");
-            if (PastDate == "0")
-            {
-                PastDate = "";
-            }
+            PastDate = timeSpan.Days.ToString();
         }
 
         public Command OnClickExposures => new Command(async () =>
