@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
+          <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
@@ -777,7 +777,7 @@
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="new">Days</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Dagar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
         </trans-unit>
       </group>
