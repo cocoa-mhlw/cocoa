@@ -647,4 +647,56 @@
     <value>�?�?ائش ک�? اط�?اع آغاز �?ہیں �?�? سک�? �? ٹر�?ی�?�? ترتیبات کھو�?یں �? �?�?ائش ک�? اط�?اع �?یں تبدی�? کریں �? اور Bluetooth �?یں �?ڑیں �?</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください�?</comment>
   </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>ع�?�? �?�?بر غ�?ط</value>
+    <comment>アプリで入力された処�?番号が違�?ま�?</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>رجسٹریش�? �?رکز س�? �?ہیں ج�? سکتا</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>کیا آپ �?ثبت �?ع�?و�?ات رجسٹر کر�?ا �?ا�?ت�? ہیں �?</value>
+    <comment>陽性�?報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>رجسٹر کریں</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>�?�?سوخ شد�?</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>رجسٹریش�? شروع �?و�?�? تک تھوڑ�? دیر ا�?تظار کریں</value>
+    <comment>登録開始までし�?�らくそ�?�ままでお�?ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>ا�?تظار رجسٹریش�?</value>
+    <comment>登録�?ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>کوئ�? ع�?�? کار�? �?�?بر داخ�? �?ہیں �?وا</value>
+    <comment>処�?番号が�?�力されて�?ません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>ع�?�? کار�? �?�?بر وضع �?شاب�? �?ہیں</value>
+    <comment>処�?番号のフォーマットが�?致して�?ません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>�?ثبت ریکار�? درج کر�?�? ک�? �?ئ�? �? ی�? ضرور�? ہ�? COVID س�? رابط�? کریں �?اگ ریکارڈ�?گ �? برا�? �?�?ربا�?�? اس�? ایپ�?یکیش�? یا OS ترتیبات س�? �?عا�? کریں.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする�?要があります�?�アプリかOSの設定から有効にしてください�?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>�?عا�? کریں COVID-19 رابط�? �?اگ�?گ</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>رجسٹریش�? ک�? تعداد اوپر�? حد تک پ�?�?�? گئ�? ہ�?. خروج اپی�?�? کیش�?</value>
+    <comment>登録回数上限になりました。アプリケーションを終�?しま�?</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>رجسٹریش�? �?قص</value>
+    <comment>登録エラー</comment>
+  </data>
 </root>

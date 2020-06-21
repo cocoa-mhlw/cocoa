@@ -8,6 +8,7 @@ using Covid19Radar.Views;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Covid19Radar.Common;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.ViewModels
 {
@@ -31,11 +32,11 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickRegister => (new Command(async () =>
         {
-            var result = await UserDialogs.Instance.ConfirmAsync("陽性情報を登録しますか", "登録", "はい", "いいえ");
+            var result = await UserDialogs.Instance.ConfirmAsync(AppResources.NotifyOtherPageDiag1Message, AppResources.NotifyOtherPageDiag1Title, AppResources.ButtonAgree, AppResources.ButtonCancel);
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "キャンセルしました",
+                    AppResources.NotifyOtherPageDiag2Message,
                     "",
                     Resources.AppResources.ButtonOk
                     );
@@ -48,8 +49,8 @@ namespace Covid19Radar.ViewModels
             if (errorCount >= AppConstants.MaxErrorCount)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    $"登録回数上限になりました。アプリケーションを終了します",
-                    "登録エラー",
+                    AppResources.NotifyOtherPageDiagAppClose,
+                    AppResources.NotifyOtherPageDiagErrorTitle,
                     Resources.AppResources.ButtonOk
                 );
                 UserDialogs.Instance.HideLoading();
@@ -61,8 +62,8 @@ namespace Covid19Radar.ViewModels
             {
                 var current = errorCount + 1;
                 var max = AppConstants.MaxErrorCount;
-                await UserDialogs.Instance.AlertAsync("登録開始までしばらくそのままでお待ちください",
-                    $"登録待ち {current}/{max}回目",
+                await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
+                    AppResources.NotifyOtherPageDiag3Title + "{current}/{max}",
                     Resources.AppResources.ButtonOk
                     );
                 Thread.Sleep(errorCount * 5000);
@@ -73,8 +74,8 @@ namespace Covid19Radar.ViewModels
             if (string.IsNullOrEmpty(DiagnosisUid))
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "処理番号が入力されていません",
-                    "登録エラー",
+                    AppResources.NotifyOtherPageDiag4Message,
+                    AppResources.NotifyOtherPageDiagErrorTitle,
                     Resources.AppResources.ButtonOk
                 );
                 errorCount++;
@@ -87,8 +88,8 @@ namespace Covid19Radar.ViewModels
             if (!regex.IsMatch(DiagnosisUid))
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "処理番号のフォーマットが一致していません",
-                    "登録エラー",
+                    AppResources.NotifyOtherPageDiag5Message,
+                    AppResources.NotifyOtherPageDiagErrorTitle,
                     Resources.AppResources.ButtonOk
                 );
                 errorCount++;
@@ -106,9 +107,9 @@ namespace Covid19Radar.ViewModels
                 if (!enabled)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        "陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。",
-                        "COVID-19接触のログ記録を有効にしてください",
-                        Resources.AppResources.ButtonOk
+                       AppResources.NotifyOtherPageDiag6Message,
+                       AppResources.NotifyOtherPageDiag6Title,
+                       Resources.AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
                     await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
