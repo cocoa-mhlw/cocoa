@@ -71,7 +71,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 ## ライセンス
 
-COVID-19Radar is licensed under the Mozilla Public License Version 2.0. See [LICENSE](./LICENSE.md) for the full license text.
+COVID-19Radar is licensed under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE.md) for the full license text.
 
 以下は、原作者の意図に応じた、このライセンスの追加項目です。
 MPLに加えて、このプロジェクトでは共著者の著作者人格権の行使を許可しません。
@@ -79,4 +79,4 @@ MPLに加えて、このプロジェクトでは共著者の著作者人格権�
 
 ## サードパーティーソフトウェアについて
 
-This file incorporates components from the projects listed [document](./COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
+This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
