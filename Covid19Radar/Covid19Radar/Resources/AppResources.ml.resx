@@ -611,4 +611,28 @@
     <value>ദിവസം</value>
     <comment>X日間</comment>
   </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>എക്സ്പോഷർ അറിയിപ്പ് സജീവമാണ്.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Bluetooth ഓഫാക്കി. Bluetooth ഓണാക്കുക.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>എക്സ്പോഷർ അറിയിപ്പ് പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു. ടെർമിനൽ സജ്ജീകരണങ്ങൾ തുറക്കുക, എക്സ്പോഷഅറിയിപ്പ് ഓണാക്കുക.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>ഉപയോഗ വ്യവസ്ഥകൾ നിങ്ങൾ അംഗീകരിക്കണം.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>എക്സ്പോഷർ അറിയിപ്പ് പരിമിതപ്പെടുത്തിയിരിക്കുന്നു. സജീവം.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>എക്സ്പോഷർ അറിയിപ്പ് പിന്തുണയ്ക്കുന്നില്ല. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് OS അപ് ഡേറ്റ് ചെയ്യുക. നിങ്ങൾക്ക് ഇപ്പോഴും പ്രശ്നങ്ങൾ ഉണ്ടെങ്കിൽ, ***REMOVED*** ഞങ്ങളെ ബന്ധപ്പെടുക.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
 </root>

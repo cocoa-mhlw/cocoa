@@ -611,4 +611,28 @@
     <value>દિવસ</value>
     <comment>X日間</comment>
   </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>એક્સપોઝર સૂચના સક્રિય છે.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>બ્લુટુથ બંધ છે. કૃપા કરીને બ્લુટૂથ ચાલુ કરો.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>એક્સપોઝર સૂચના નિષ્ક્રિય છે. ટર્મિનલ સેટિંગ્સ ખોલો અને એક્સપોઝર નોટિફિકેશન ચાલુ કરો.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>તમારે ઉપયોગની શરતો સાથે સંમત થવું જોઈએ.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>એક્સપોઝર નોટિફિકેશન મર્યાદિત છે. કૃપા કરીને સક્રિય રહો.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>એક્સપોઝર સૂચના આધારભૂત નથી. કૃપા કરીને ઓએસને નવીનતમ આવૃત્તિમાં અપડેટ કરો. જો તમને હજુ પણ સમસ્યા હોય તો કૃપા કરીને ***REMOVED*** પર અમારો સંપર્ક કરો.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
 </root>

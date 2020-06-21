@@ -611,4 +611,28 @@
     <value>ΗΜΕΡΕΣ</value>
     <comment>X日間</comment>
   </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Η ειδοποίηση έκθεσης είναι ενεργή.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Το Bluetooth είναι απενεργοποιημένο. Ενεργοποιήστε το Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Η ειδοποίηση έκθεσης είναι απενεργοποιημένη. Ανοίξτε τις ρυθμίσεις τερματικού και ενεργοποιήστε την Ειδοποίηση έκθεσης.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>Πρέπει να συμφωνήσετε με τους όρους χρήσης.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Η ειδοποίηση έκθεσης είναι περιορισμένη. Παρακαλώ ενεργή.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Η ειδοποίηση έκθεσης δεν υποστηρίζεται. Ενημερώστε το λειτουργικό σύστημα στην πιο πρόσφατη έκδοση. Αν εξακολουθείτε να αντιμετωπίζετε προβλήματα, παρακαλούμε επικοινωνήστε μαζί μας στο ***REMOVED***.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
 </root>
