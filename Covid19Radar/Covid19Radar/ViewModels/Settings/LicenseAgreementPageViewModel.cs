@@ -1,15 +1,4 @@
-﻿using Covid19Radar.Common;
-using Covid19Radar.Renderers;
-using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using Xamarin.Forms;
+﻿using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {
