@@ -1,11 +1,11 @@
-# COVID-19Radar (Japanese)
+# COVID-19Radar (Japanese)/([English](README.md))
 
 「接触確認アプリは、厚労省の公式バージョンの一つのみ存在します。  
 こちらのGithubは、厚労省の公式アプリのコードそのものではなく、公式アプリの元になっているオープンソースコードです。こちらのコードはコミュニティによってメンテナンスされており、issueやプルリクが公式アプリに反映されるとは限りません。」
 
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
-私たちは現在、機械翻訳結果の確認レビュアーを募集しています。詳しくは [How to Translate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSLATE_CONTRIBUTE.md) をご確認ください。
+私たちは現在、機械翻訳結果の確認レビュアーを募集しています。詳しくは [How to Translate application](HOW_TO_TRANSLATE_CONTRIBUTE.md) をご確認ください。
 
 iOS Build status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
@@ -15,10 +15,10 @@ Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/ap
 ![アプリの概念](img/explanation.png)
 
 
-## Thank you for Your Contribute !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
+## Thank you for Your Contribute !!! [Contributors List](CONTRIBUTORS.md)
 コントリビューションとプルリクエストをお待ちしています。
 コントリビューションルールについて、ご確認ください。
-[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTING.md)
+[Contribute Rule](CONTRIBUTING.md)
 
 ## テスト用にアプリをインストールするには
 
@@ -71,7 +71,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 ## ライセンス
 
-COVID-19Radar is licensed under the Mozilla Public License Version 2.0. See [LICENSE](./LICENSE.md) for the full license text.
+COVID-19Radar is licensed under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE.md) for the full license text.
 
 以下は、原作者の意図に応じた、このライセンスの追加項目です。
 MPLに加えて、このプロジェクトでは共著者の著作者人格権の行使を許可しません。
@@ -79,4 +79,4 @@ MPLに加えて、このプロジェクトでは共著者の著作者人格権�
 
 ## サードパーティーソフトウェアについて
 
-This file incorporates components from the projects listed [document](./COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
+This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
