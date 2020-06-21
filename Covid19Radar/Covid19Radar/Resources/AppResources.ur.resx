@@ -647,4 +647,56 @@
     <value>نمائش کی اطلاع آغاز نہیں ہو سکی ۔ ٹرمینل ترتیبات کھولیں ، نمائش کی اطلاع میں تبدیل کریں ، اور Bluetooth میں مڑیں ۔</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>عمل نمبر غلط</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>رجسٹریشن مرکز سے نہیں جڑ سکتا</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>کیا آپ مثبت معلومات رجسٹر کرنا چاہتے ہیں ؟</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>رجسٹر کریں</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>منسوخ شدہ</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>رجسٹریشن شروع ہونے تک تھوڑی دیر انتظار کریں</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>انتظار رجسٹریشن</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>کوئی عمل کاری نمبر داخل نہیں ہوا</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>عمل کاری نمبر وضع مشابہ نہیں</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>مثبت ریکارڈ درج کرنے کے لئے ، یہ ضروری ہے COVID سے رابطہ کریں لاگ ریکارڈنگ ، براہ مہربانی اسے ایپلیکیشن یا OS ترتیبات سے فعال کریں.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>فعال کریں COVID-19 رابطہ لاگنگ</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>رجسٹریشن کی تعداد اوپری حد تک پہنچ گئی ہے. خروج اپیلی کیشن</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>رجسٹریشن نقص</value>
+    <comment>登録エラー</comment>
+  </data>
 </root>

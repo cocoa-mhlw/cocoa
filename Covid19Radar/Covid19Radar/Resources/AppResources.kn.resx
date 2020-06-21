@@ -647,4 +647,56 @@
     <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆ ಯನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಟರ್ಮಿನಲ್ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ತೆರೆಯಿರಿ, ಎಕ್ಸ್ ಪೋಷರ್ ನೋಟಿಫಿಕೇಶನ್ ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ, ಮತ್ತು Bluetooth ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>ಪ್ರಕ್ರಿಯೆ ಸಂಖ್ಯೆ ತಪ್ಪಾಗಿದೆ</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>ನೋಂದಣಿ ಕೇಂದ್ರಕ್ಕೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>ನೀವು ಧನಾತ್ಮಕ ಮಾಹಿತಿಯನ್ನು ನೋಂದಾಯಿಸಲು ಬಯಸುವಿರಾ?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>ನೋಂದಾಯಿಸಿ</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>ನೋಂದಣಿ ಪ್ರಾರಂಭವಾಗುವವರೆಗೆ ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯ ಕಾಯಿರಿ</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>ನೋಂದಣಿಗಾಗಿ ಕಾಯುತ್ತಿದೆ</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>ಯಾವುದೇ ಸಂಸ್ಕರಣಾ ಸಂಖ್ಯೆ ನಮೂದಿಸಿಲ್ಲ</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>ಸಂಖ್ಯಸ್ವರೂಪವನ್ನು ಸಂಸ್ಕರಿಸುವುದು ಹೋಲಿಕೆಯಾಗುವುದಿಲ್ಲ</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>ಧನಾತ್ಮಕ ದಾಖಲೆಗಳನ್ನು ನೋಂದಾಯಿಸಲು, COVID-19 ಸಂಪರ್ಕ ಲಾಗ್ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸುವುದು ಅಗತ್ಯ, ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್ ಅಥವಾ OS ಸೆಟ್ಟಿಂಗ್ ಗಳಿಂದ ಅದನ್ನು ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸಿ.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>COVID-19 ಸಂಪರ್ಕ ಲಾಗಿಂಗ್ ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸು</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>ನೋಂದಣಿಗಳ ಸಂಖ್ಯೆ ಗರಿಷ್ಠ ಮಿತಿಯನ್ನು ತಲುಪಿದೆ. ಅಪ್ಲಿಕೇಶನ್ ನಿಂದ ನಿರ್ಗಮಿಸು</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>ನೋಂದಣಿ ದೋಷ</value>
+    <comment>登録エラー</comment>
+  </data>
 </root>
