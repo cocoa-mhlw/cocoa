@@ -16,7 +16,7 @@ sed -i '' "s/SUPPORT_EMAIL/$SUPPORT_EMAIL/g" $APP_CONSTANT_FILE
 cat $APP_CONSTANT_FILE
 echo "Updated id!"
 
-# Donwload Runtime
+# Download Runtime
 curl -L -O https://bosstoragemirror.blob.core.windows.net/wrench/jenkins/d16-6/29c4ea73109b377a71866c53a6d43033d5c5e90b/49/package/notarized/xamarin.ios-13.18.2.1.pkg
 curl -L -O https://bosstoragemirror.blob.core.windows.net/wrench/jenkins/d16-6/29c4ea73109b377a71866c53a6d43033d5c5e90b/49/package/notarized/xamarin.mac-6.18.2.1.pkg
 
