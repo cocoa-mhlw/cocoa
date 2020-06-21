@@ -12,7 +12,7 @@
         "CRYPTION_HASH": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
         "CRYPTION_KEY2": "2GH3X8zK8xeJBbwx18yxCB9T7t2xzqqVH9LzJ1cmchI=",
         "CRYPTION_IV2": "o4Pm6LJ+/q3UxwZArVLdkQ==",
-        "SupportRegions": "440;441", //ISO 3166-1 alpha-2 ... Mobile Network Code
+        "SupportRegions": "440,441", //ISO 3166-1 alpha-2 ... Mobile Network Code
         "TekExportBlobStorage": "UseDevelopmentStorage=true",
         "TekExportBlobStorageContainerPrefix": "C19R",
         "ExportKeyUrl": "http://127.0.0.1:10000/",
@@ -20,10 +20,12 @@
         "VerificationPayloadApiSecret": "", // api secret
         "VerificationPayloadPfx": "", // pfx base 64
         "VerificationPayloadUrl": "https://example.com/api/example",
-        "AndroidPackageName": null,
+        "AndroidPackageName": "Debug",
+        "AndroidDeviceValidationEnabled": false,
         "iOSBundleId": null,
         "iOSDeviceCheckKeyId": null,
         "iOSDeviceCheckPrivateKey": null,
-        "iOSDeviceCheckTeamId": null
+        "iOSDeviceCheckTeamId": null,
+        "iOSDeviceValidationEnabled": false
     }
 }

@@ -54,7 +54,7 @@
 1. The Ministry of Health, Labour and Welfare can limit the use of the App in the event where the use of the App has increased drastically.
 
 ## (Prohibited Items and Rules to be Observed)
-Article 7:
+**Article 7**:
 1. App Users are prohibited from engaging in any of the following acts when using the App.
     1. Acts of using the App for anything other than its original and intended purpose.
     1. Acts of engaging in improper access, behavior which causes problems with servers, network systems, etc. of the App, operating the App improperly, or deliberately using defects in the App.
@@ -97,10 +97,10 @@ Article 7:
 * Usage rights of the App cannot be sold, lent, or transferred to a third party, or provided as inheritance or collateral to a third party.
 
 ## (Contact Method)
-Article 13:
+**Article 13**:
 * App Users can contact the Ministry of Health, Labour and Welfare in regards to the App through the method(s) designated by the Ministry of Health, Labour and Welfare, which are listed in the App or on the Ministry of Health, Labour and Welfare’s website concerning COVID-19 measures.
 
 ## (Governing Law and Jurisdiction)
-Article 14:
+**Article 14**:
 1. These Terms and Conditions and all items pertaining to the use of the App are governed by the laws of Japan.
 1. The first instance of any disputes arising between the Ministry of Health, Labour and Welfare and an App User caused by or with regards to the use of the App shall be under the exclusive jurisdiction of the Tokyo District Court.
