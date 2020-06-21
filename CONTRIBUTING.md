@@ -8,7 +8,7 @@
   - Make it small
   - Do only one thing
 - Please make a Pull Request towards master
-- Please record your name in [CONTRIBUTORS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
+- Please record your name in [CONTRIBUTORS.md](CONTRIBUTORS.md)
 
 # How to Contribute Japanese
 
@@ -20,7 +20,7 @@
   - 変更を小さくしてください
   - 1つのことだけを行ってください
 - master への Pull Request をお願いします。
-- その際に [CONTRIBUTORS.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md) に記載をお願いします。
+- その際に [CONTRIBUTORS.md](CONTRIBUTORS.md) に記載をお願いします。
 
 ## 新しい機能追加、変更、動作改善などの提案
 
