@@ -72,6 +72,7 @@
 - Yuki Kawanishi
 - Satoshi Iguchi
 - Kimihiro Shirase
+- Yusuke Yamada (Xamarin)
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji
