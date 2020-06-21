@@ -17,7 +17,11 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Margin="0,0,0,20" Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.TutorialPage1Title2}" />
+        <Label
+            Grid.Row="0"
+            Margin="0,0,0,20"
+            Style="{StaticResource DefaultTitleLabel}"
+            Text="{x:Static resources:AppResources.TutorialPage1Title2}" />
         <ScrollView Grid.Row="1">
             <Grid>
                 <Grid.RowDefinitions>
@@ -34,16 +38,16 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <ffimageloading:CachedImage
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Aspect="AspectFit"
-                        Source="TutorialPage10.png" />
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Aspect="AspectFit"
+                            Source="TutorialPage10.png" />
                         <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.TutorialPage1Description1}"
-                        VerticalTextAlignment="Center" />
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.TutorialPage1Description1}"
+                            VerticalTextAlignment="Center" />
                     </Grid>
                     <Grid RowSpacing="0">
                         <Grid.ColumnDefinitions>
@@ -54,16 +58,16 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <ffimageloading:CachedImage
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Aspect="AspectFit"
-                        Source="TutorialPage11.png" />
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Aspect="AspectFit"
+                            Source="TutorialPage11.png" />
                         <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.TutorialPage1Description2}"
-                        VerticalTextAlignment="Center" />
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.TutorialPage1Description2}"
+                            VerticalTextAlignment="Center" />
                     </Grid>
                     <Grid RowSpacing="0">
                         <Grid.ColumnDefinitions>
@@ -74,19 +78,20 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <ffimageloading:CachedImage
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Aspect="AspectFit"
-                        Source="TutorialPage12.png" />
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Aspect="AspectFit"
+                            Source="TutorialPage12.png" />
                         <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.TutorialPage1Description3}"
-                        VerticalTextAlignment="Center" />
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.TutorialPage1Description3}"
+                            VerticalTextAlignment="Center" />
                     </Grid>
                 </StackLayout>
-                <Button Grid.Row="1"
+                <Button
+                    Grid.Row="1"
                     AutomationId="NextButton"
                     Command="{prism:NavigateTo 'TutorialPage2'}"
                     Style="{StaticResource DefaultButton}"
