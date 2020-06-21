@@ -637,7 +637,7 @@
           <note from="MultilingualBuild" annotates="source" priority="2">あとで設定す�?</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
-          <source>Please turn on Bluetooth to start recording close contacts with other users.</source>
+          <source>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">يرج�? تشغي�? ا�?ب�?وتوث �?بدء تسجي�? ج�?ات ا�?اتصا�? ا�?قريبة �?ع ا�?�?ستخد�?ي�? ا�?آخري�?.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用�?ただくために、スマ�?�トフォンのBluetooth通信を有効にしてください�?</note>
         </trans-unit>
@@ -647,12 +647,12 @@
           <note from="MultilingualBuild" annotates="source" priority="2">�?術的な詳細につ�?て</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Title1" translate="yes" xml:space="preserve">
-          <source>Turn on Bluetooth</source>
+          <source>To use Exposure Notifications</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">تشغي�? ا�?ب�?وتوث</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用�?ただくために</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Title2" translate="yes" xml:space="preserve">
-          <source>Turn on Bluetooth</source>
+          <source>To use Exposure Notifications</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">تشغي�? ا�?ب�?وتوث</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用�?ただくために</note>
         </trans-unit>
