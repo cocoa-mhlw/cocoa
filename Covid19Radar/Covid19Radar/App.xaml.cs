@@ -60,6 +60,9 @@ namespace Covid19Radar
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
+            // Migrate userData
+            await UserDataMigrationService.Migrate();
+
             INavigationResult result;
             // Check user data and skip tutorial
             UserDataService userDataService = Container.Resolve<UserDataService>();
