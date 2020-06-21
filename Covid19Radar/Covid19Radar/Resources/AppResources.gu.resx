@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>જો તમે COVID-19 પોઝિટિવ યુઝરના નજીકના સંપર્કમાં હોવ તો એપ્લિકેશન તમને સૂચિત કરશે.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>તમે તમારા નજીકના સંપર્કોની સંખ્યા હોમ સ્ક્રીન પરથી ચકાસી શકો છો.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>જો તમે હકારાત્મક પરીક્ષણ કર્યું હોય</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>જાહેર આરોગ્ય સત્તાવાળાઓ તમને "પ્રોસેસિંગ નંબર" જારી કરશે.</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>જો તમે COVID-19 માટે પોઝિટિવ ટેસ્ટ કરો</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>હું બંધ સંપર્ક રેકોર્ડિંગને કેવી રીતે અટકાવી શકું/ કાઢી શકું?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 માહિતી અને સંસાધનો</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>સમર્થન</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>જ્યારે COVID-19 માટે ટેસ્ટ કરવામાં આવે છે</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>હકારાત્મક પરીક્ષણ પરિણામ રજીસ્ટર કરો</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>જ્યારે COVID-19 માટે ટેસ્ટ પોઝિટિવ હોય, ત્યારે તમે આ એપમાં ટેસ્ટ પરિણામને અનામી રીતે રજિસ્ટર કરી શકો છો.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>જો તમે કોઈ વપરાશકર્તાના સંપર્કમાં હોવ, જેણે હકારાત્મક પરીક્ષણ કર્યું હોય, તો એપ્લિકેશન તમને સંભવિત ચેપ વિશે સૂચિત કરે છે અને તમારા સ્વાસ્થ્યની સુરક્ષા માટે માર્ગદર્શન પૂરું પાડે છે.</value>

@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>您可以在首页查看您的接触次数。</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>如果做检测之后确诊为阳性</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>保健所等官方机构会给您开具“数字码”。</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>如果确诊为新型冠状病毒感染为阳性</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>如何停止记录/删除密切接触记录</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 Information and Resources</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>帮助与反馈</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>确诊新型冠状病毒呈阳性</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>登记阳性信息</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>如果您确诊新型冠状病毒肺炎，您可以匿名登记信息</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>如果您与登记阳性的人有过密切接触，本APP会通知你潜在的感染，并提供保护你健康的指导</value>
