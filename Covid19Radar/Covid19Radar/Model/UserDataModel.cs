@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Xamarin.ExposureNotifications;
 using Covid19Radar.Model;
+using System.Threading;
 using System.Globalization;
 
 namespace Covid19Radar.Model
@@ -77,15 +78,15 @@ namespace Covid19Radar.Model
 
         public bool IsOptined { get; set; } = false;
 
-        public bool IsExposureNotificationEnabled { get; set; } = false;
+        public bool IsExposureNotificationEnabled { get; set; }
 
-        public bool IsNotificationEnabled { get; set; } = false;
+        public bool IsNotificationEnabled { get; set; }
 
-        public bool IsPositived { get; set; } = false;
+        public bool IsPositived { get; set; }
 
-        public bool IsPolicyAccepted { get; set; } = false;
+        public bool IsPolicyAccepted { get; set; }
 
-        public Dictionary<string,long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
+        public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
 
         public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
 
@@ -93,6 +94,7 @@ namespace Covid19Radar.Model
 
         public ExposureDetectionSummary ExposureSummary { get; set; }
 
+        // for mock
         public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
 
         public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
