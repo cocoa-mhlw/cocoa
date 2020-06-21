@@ -16,6 +16,7 @@ using Xamarin.Essentials;
 using System.Collections;
 using System.ComponentModel;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace Covid19Radar.ViewModels
 {
@@ -34,19 +35,17 @@ namespace Covid19Radar.ViewModels
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
             errorCount = 0;
-
         }
 
         public Command OnClickRegister => (new Command(async () =>
         {
             // Check helthcare authority positive api check here!!
-            Console.WriteLine(errorCount);
             using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
             dialog.Show();
-            if (errorCount > 3)
+            if (errorCount > AppConstants.MaxErrorCount)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "累計"+errorCount+"回のエラーが発生しました、アプリケーションを終了します",
+                    errorCount + "回のエラーが発生しました、アプリケーションを終了します",
                     "登録エラー",
                     Resources.AppResources.ButtonOk
                 );
@@ -55,6 +54,7 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
+            // Tarpit Sleep
             Thread.Sleep(errorCount * 5000);
 
             // Init Dialog
@@ -71,6 +71,19 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
+            Regex regex = new Regex(@"\b[0-9]{8}\b");
+            if (!regex.IsMatch(DiagnosisUid))
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    "処理番号のフォーマットが一致していません",
+                    "登録エラー",
+                    Resources.AppResources.ButtonOk
+                );
+                errorCount++;
+                await userDataService.SetAsync(userData);
+                dialog.Hide();
+                return;
+            }
 
             // Submit the UID
             IsEnabled = false;
