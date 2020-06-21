@@ -647,4 +647,56 @@
     <value>Valotuksen ilmoitus ei käynnistynyt. Avaa pääteasetukset, ota valotusilmoitus käyttöön ja ota Bluetooth käyttöön.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>Prosessin numero on virheellinen</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>Yhteyden muodostaminen rekisteröintikeskukseen ei onnistu</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>Haluatko rekisteröidä positiivisia tietoja?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Rekisteröi</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Peruutettu</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>Odota hetki, kunnes rekisteröinti alkaa</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>Odotetaan rekisteröintiä</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>Käsittelynumeroa ei ole syötetty</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>Lukumuotoilu ei vastaa</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>Jotta voidaan rekisteröidä positiivisia tietueita, on tarpeen ottaa käyttöön COVID-19-yhteystietolokin tallennus, ota se käyttöön sovelluksen tai käyttöjärjestelmän asetuksista.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>Ota COVID-19-yhteystietojen kirjaaminen käyttöön</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>Rekisteröintien määrä on saavuttanut ylärajan. Lopeta sovellus</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>Rekisteröintivirhe</value>
+    <comment>登録エラー</comment>
+  </data>
 </root>
