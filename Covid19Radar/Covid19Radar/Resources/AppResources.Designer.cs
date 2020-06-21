@@ -241,6 +241,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Network connection error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DialogNetworkConnectionErrorTitle {
+            get {
+                return ResourceManager.GetString("DialogNetworkConnectionErrorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Bluetooth is turned off.Please turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposureNotificationServiceMessage4 {
