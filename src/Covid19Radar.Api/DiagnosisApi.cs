@@ -75,6 +75,8 @@ namespace Covid19Radar.Api
                 return validationResult.ErrorActionResult;
             }
 
+            // TODO: Security Consider, additional validation for user uuid.
+
             // validation device 
             if (false == await DeviceCheck.Validation(diagnosis, reqTime))
             {
@@ -83,15 +85,11 @@ namespace Covid19Radar.Api
             }
 
             // validatetion VerificationPayload
-            if (!await VerificationService.Verification(diagnosis.VerificationPayload))
+            var verificationResult = await VerificationService.VerificationAsync(diagnosis.VerificationPayload);
+            if (verificationResult != 200)
             {
-                return new ObjectResult("Bad VerificationPayload") { StatusCode = 406 };
+                return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
             }
-            //// TODO: validatetion VerificationPayload connnection error 5xx
-            //if (false == true)
-            //{
-            //    return new ObjectResult("Unable to communicate with center") { StatusCode = 503 };
-            //}
 
             var timestamp = DateTimeOffset.UtcNow;
             var keys = diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray();

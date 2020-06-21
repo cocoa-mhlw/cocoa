@@ -68,7 +68,7 @@ namespace Covid19Radar.ViewModels
                 catch (Exception)
                 {
                     UserDialogs.Instance.HideLoading();
-                    await UserDialogs.Instance.AlertAsync("Exposure Notificationを起動できませんでした", "Error", Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogExposureNotificationStartupError, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
                     Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
                     return;
                 }

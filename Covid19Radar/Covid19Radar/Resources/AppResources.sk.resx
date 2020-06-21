@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Skontrolujte sieťové pripojenie.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
@@ -606,5 +606,45 @@
   <data name="InqueryMailSubject" xml:space="preserve">
     <value>Otázky týkajúce sa aplikácie na potvrdenie kontaktu</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Dni</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Upozornenie na expozíciu je aktívne.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Bluetooth je vypnuté. Zapnite rozhranie Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Upozornenie o expozícii je vypnuté. Otvorte nastavenia terminálu a zapnite možnosť Upozornenie na expozíciu.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>Musíte súhlasiť s podmienkami používania.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Oznámenie o expozícii je obmedzené. Prosím, aktívny.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Upozornenie o expozícii nie je podporované. Aktualizujte operačný systém na najnovšiu verziu. Ak máte stále problémy, kontaktujte nás na ***REMOVED***.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>Chyba sieťového pripojenia</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Chyba pri spustení upozornenia na expozíciu</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Upozornenie na expozíciu sa nepodarilo pri spustení. Otvorte nastavenia terminálu, zapnite oznámenie o expozícii a zapnite rozhranie Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 </root>
