@@ -498,7 +498,7 @@
     <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage4Description" xml:space="preserve">
-    <value>Please turn on Bluetooth to start recording close contacts with other users.</value>
+    <value>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
   <data name="TutorialPage4Label" xml:space="preserve">
@@ -506,11 +506,11 @@
     <comment>技術的な詳細について</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
-    <value>Turn on Bluetooth</value>
+    <value>To use Exposure Notifications</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage4Title2" xml:space="preserve">
-    <value>Turn on Bluetooth</value>
+    <value>To use Exposure Notifications</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
