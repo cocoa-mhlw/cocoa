@@ -639,4 +639,12 @@
     <value>Σ�?άλμα σύνδεση�? δικ�?ύο�?</value>
     <comment>通信に失敗しました�?</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Σ�?άλμα εκκίνηση�? ειδο�?οίηση�? έκθεση�?</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Δεν ή�?αν δ�?να�?ή η εκκίνηση �?η�? ειδο�?οίηση�? έκθεση�?. Ανοίξ�?ε �?ι�? �?�?θμίσει�? �?ερμα�?ικο�?, ενεργο�?οιήσ�?ε �?ην Ειδο�?οίηση έκθεση�? και ενεργο�?οιήσ�?ε �?ο Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください�?</comment>
+  </data>
 </root>

@@ -639,4 +639,12 @@
     <value>Chyba sieťového pripojenia</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Chyba pri spustení upozornenia na expozíciu</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Upozornenie na expozíciu sa nepodarilo pri spustení. Otvorte nastavenia terminálu, zapnite oznámenie o expozícii a zapnite rozhranie Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

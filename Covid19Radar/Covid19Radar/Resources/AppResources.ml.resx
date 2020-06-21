@@ -639,4 +639,12 @@
     <value>നെറ്റ് വർക്ക് കണക്ഷൻ പിശക്</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>എക്സ്പോഷര് അറിയിപ്പ് ആരംഭപിശക്</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>എക്സ്പോഷര് അറിയിപ്പ് തുടങ്ങുവാന് സാധ്യമായില്ല. ടെർമിനൽ സജ്ജീകരണങ്ങൾ തുറക്കുക, എക്സ്പോഷഅറിയിപ്പ് ഓണാക്കുക, Bluetooth-ൽ തിരിക്കുക.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

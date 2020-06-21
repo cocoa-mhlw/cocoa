@@ -815,6 +815,16 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">ನೆಟ್ವರ್ಕ್ ಸಂಪರ್ಕ ದೋಷ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification startup error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಎಕ್ಸ್ ಪೋಶರ್ ನೋಟಿಫಿಕೇಶನ್ ಪ್ರಾರಂಭದೋಷ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆ ಯನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಟರ್ಮಿನಲ್ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ತೆರೆಯಿರಿ, ಎಕ್ಸ್ ಪೋಷರ್ ನೋಟಿಫಿಕೇಶನ್ ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ, ಮತ್ತು Bluetooth ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
+        </trans-unit>
       </group>
     </body>
   </file>

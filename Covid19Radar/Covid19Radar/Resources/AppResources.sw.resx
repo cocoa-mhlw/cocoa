@@ -639,4 +639,12 @@
     <value>Kosa la muunganisho mtandao</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Kosa la uwashaji wa taarifa ya ufichuzi</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Taarifa ya ufichuzi haikuweza kuanza. Fungua mipangilio ya terminal, washa taarifa ya mfiduo, na uzime Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

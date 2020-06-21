@@ -639,4 +639,12 @@
     <value>Netzwerkverbindungsfehler</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Startfehler der Belichtungsbenachrichtigung</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Die Belichtungsbenachrichtigung konnte nicht gestartet werden. Öffnen Sie die Terminaleinstellungen, aktivieren Sie belichtungsbenachrichtigung und schalten Sie Bluetooth ein.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

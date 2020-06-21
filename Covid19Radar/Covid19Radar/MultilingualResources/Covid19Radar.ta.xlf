@@ -815,6 +815,16 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">பிணைய இணைப்பு பிழை</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification startup error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு தொடக்க பிழை</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிக்கையை தொடங்க முடியவில்லை. முனைய அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையில் திரும்பி, Bluetooth -இல் திருப்பு.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
+        </trans-unit>
       </group>
     </body>
   </file>

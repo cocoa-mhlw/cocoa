@@ -639,4 +639,12 @@
     <value>Hálózati kapcsolat hibája</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Expozíciós értesítés indítási hibája</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Az expozíciós értesítés nem tudott elindító. Nyissa meg a terminál beállításokat, kapcsolja be az Expozíciós értesítést, és kapcsolja be a Bluetooth funkciót.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>
