@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+?��<?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -13,10 +13,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ButtonAgree" xml:space="preserve">
-    <value>Погоджуюсь</value>
+    <value>Погоджую�?�?</value>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
-    <value>ОСНОВНЕ</value>
+    <value>ОСНОВН�?</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
@@ -24,7 +24,7 @@
     <comment>App Name</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>Ліцензійна угода</value>
+    <value>Лі�?ензійна угода</value>
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
@@ -32,15 +32,15 @@
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
-    <value>Параметри стану</value>
+    <value>Па�?амет�?и �?тан�?</value>
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
-    <value>Перевірте мережне підключення.</value>
+    <value>Пе�?еві�?те ме�?ежне підклю�?енн�?.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
-    <value>ОК</value>
+    <value>О�?</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Not Now</value>
@@ -54,19 +54,19 @@
     <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
-    <value>Вручну</value>
+    <value>В�?у�?н�?</value>
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
-    <value>Жодних відомих експозицій</value>
+    <value>Жодни�? відоми�? ек�?пози�?ій</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>Ви будете повідомлені, якщо ви були схильні до тих, хто повідомив позитивний COVID-19 результат.</value>
+    <value>Ви будете повідомлен�?, якщо ви були �?�?ильн�? до ти�?, �?то повідомив позитивний COVID-19 �?езульта�?.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Спробуйте ще раз пізніше.</value>
+    <value>Сп�?обуйте ще �?аз пізніше.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">
     <value>Помилка</value>
@@ -75,30 +75,30 @@
     <value>Діагноз подано</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
-    <value>Завершено</value>
+    <value>Заве�?шено</value>
   </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Подача діагнозу...</value>
+    <value>Пода�?а діагноз�?...</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>Настройки</value>
-    <comment>アプリの設定</comment>
+    <value>На�?т�?ойки</value>
+    <comment>アプリの設�?</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
-    <value>Скасувати</value>
+    <value>Ска�?увати</value>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
-    <value>Видалення</value>
+    <value>Видаленн�?</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Поділіться додатком</value>
-    <comment>本アプリを広めましょう</comment>
+    <value>Поділіть�?�? додатком</value>
+    <comment>本アプリを�?めましょ�?</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
-    <value>Поділитися</value>
+    <value>Поділити�?�?</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Обмін позитивною інформацією та анонімними сповіщеннями інших користувачів</value>
+    <value>Обмін позитивно�? ін�?о�?ма�?іє�? та анонімними �?повіщеннями інши�? ко�?и�?тува�?ів</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
@@ -106,328 +106,328 @@
     <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
-    <value>політика конфіденційності</value>
+    <value>політика кон�?іден�?ійно�?т�?</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
-    <value>Чекаю реєстрації</value>
+    <value>Чека�? �?еє�?т�?а�?і�?</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>Ви дійсно бажаєте скинути всі дані?</value>
+    <value>Ви дій�?но бажаєте �?кинути в�?�? дан�??</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>Видалити всі дані</value>
+    <value>Видалити в�?�? дан�?</value>
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
-    <value>Всі налаштування та дані були вилучені. Будь ласка, перезапустіть програму.</value>
+    <value>В�?�? налаштуванн�? та дан�? були вилу�?ен�?. Буд�? ла�?ка, пе�?езапу�?тіт�? п�?ог�?ам�?.</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Повернутися до реєстрації</value>
+    <value>Пове�?нути�?�? до �?еє�?т�?а�?і�?</value>
   </data>
   <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Позитивна Реєстрація</value>
+    <value>Позитивна �?еє�?т�?а�?і�?</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Ви хотіли б зареєструвати позитивно пізніше?</value>
+    <value>Ви �?отіли б за�?еє�?т�?увати позитивно пізніше?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
-    <value>Якщо ви позитивні з новою коронка, будь ласка, співпрацювати з позитивною реєстрацією, щоб захистити оточуючих Вас людей.</value>
-    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
+    <value>Якщо ви позитивн�? з ново�? ко�?онка, буд�? ла�?ка, �?півп�?а�?ювати з позитивно�? �?еє�?т�?а�?іє�?, щоб за�?и�?тити ото�?ую�?и�? Ва�? людей.</value>
+    <comment>周り�?�人達を守るために匿名での陽性登録へのご協力をお願い�?たします�??</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Ця програма є настільки ефективним, що багато людей встановити його, тому, будь ласка, поділіться додатком з оточувами навколо вас.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
+    <value>Ц�? п�?ог�?ама �? на�?тільки е�?ективним, що багато людей в�?тановити його, том�?, буд�? ла�?ка, поділіть�?�? додатком з ото�?увами навколо ва�?.</value>
+    <comment>本アプリは多くの方にお使�?�?ただくほど効果を発揮します�??</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>Як використовувати</value>
-    <comment>使い方</comment>
+    <value>Як вико�?и�?товувати</value>
+    <comment>使�?方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>Ідентифікація терміналу</value>
-    <comment>接触の記録方法</comment>
+    <value>�?денти�?іка�?і�? те�?мінал�?</value>
+    <comment>接触の記録方�?</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
-    <value>Спосіб підтвердження контакту</value>
-    <comment>接触の確認方法</comment>
+    <value>Спо�?іб підтве�?дженн�? контакт�?</value>
+    <comment>接触の確認方�?</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
-    <value>Якщо встановлено, що інфіковано</value>
-    <comment>感染していると判定されたら</comment>
+    <value>Якщо в�?тановлено, що ін�?іковано</value>
+    <comment>感染して�?ると判定された�?</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>Зупинення/видалення запису</value>
-    <comment>記録の停止／削除</comment>
+    <value>Зупиненн�?/видаленн�? запи�?�?</value>
+    <comment>記録の停止?��削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
-    <value>Коли ви запускаєте цю програму, кожен смартфон буде генерувати і мати контактний код. Крім того, ця програма не набуває будь-якої інформації, пов'язаної з особистою інформацією, такою як номер телефону та інформацію про місцезнаходження.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <value>Коли ви запу�?каєте �?�? п�?ог�?ам�?, кожен �?ма�?т�?он буде гене�?увати �? мати контактний код. К�?ім того, �?�? п�?ог�?ама не набува�? буд�?-яко�? ін�?о�?ма�?і�?, пов'язано�? з о�?оби�?то�? ін�?о�?ма�?іє�?, тако�? як номе�? теле�?он�? та ін�?о�?ма�?і�? п�?о мі�?�?езна�?одженн�?.</value>
+    <comment>アプリを実行した際に、各スマ�?�トフォンで接触符号を生成して持ちます�?�氏名・電話番号などの個人�?報やGPSなどスマ�?�トフォンの位置�?報を使�?ことはなく�?�記録されることもありません�?</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
-    <value>Умови контакту, записаного</value>
+    <value>Умови контакт�?, запи�?аного</value>
     <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
-    <value>Контакт з іншими користувачами додатка в межах 1 метра протягом 15 хвилин або більше записується як "контакт".</value>
-    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
+    <value>Контак�? з іншими ко�?и�?тува�?ами додатка в межа�? 1 мет�?а п�?отягом 15 �?вилин або більше запи�?уєть�?�? як "контак�?".</value>
+    <comment>1メートル以�?�?15�?以上�?�他�?�アプリユーザーとの接触は「接触」として記録されます�??</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
-    <value>Запис контактної інформації</value>
-    <comment>接触情報の記録 </comment>
+    <value>Запи�? контактно�? ін�?о�?ма�?і�?</value>
+    <comment>接触�?報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
-    <value>На даний момент код контактної особи, що контактував, записується в додаток. Контактна інформація не використовуватиметься, доки користувач не реєстрував позитивний результат. Історію контактів буде стерто через 14 днів. * Код контакту регулярно змінюється.</value>
-    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+    <value>На даний момен�? код контактно�? о�?оби, що контактував, запи�?уєть�?�? в додаток. Контактна ін�?о�?ма�?і�? не вико�?и�?товуватиметь�?�?, доки ко�?и�?тува�? не �?еє�?т�?ував позитивний �?езульта�?. �?�?то�?і�? контактів буде �?те�?то �?е�?ез 14 днів. * Код контакт�? �?егуля�?но змінюєть�?�?.</value>
+    <comment>こ�?�とき�?�接触した相手�?�接触符号の記録をアプリに行います�?�どちらかの利用�?が陽性の登録を行うまでは接触の�?報は利用されません。接触の履歴は14日後に消去されます�?? ※接触符号は定期�?に変わります�??</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>Перейти до настройок програми</value>
+    <value>Пе�?ейти до на�?т�?ойок п�?ог�?ами</value>
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
-    <value>З налаштувань програми, ви можете включити/відключити Bluetooth і сповіщення, припинити використання програми і видалити закрити історію контактів.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <value>�? налаштуван�? п�?ог�?ами, ви можете вклю�?ити/відклю�?ити Bluetooth �? �?повіщенн�?, п�?ипинити вико�?и�?танн�? п�?ог�?ами �? видалити зак�?ити і�?то�?і�? контактів.</value>
+    <comment>アプリの設定から�?�Bluetoothの有効?��無効�?通知の有効?��無効、アプリの使用中止と履歴の削除を行うことができます�??</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
-    <value>Додаток повідомить вас, якщо ви були в тісному контакті з COVID-19 позитивний користувач.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <value>Додаток повідомит�? ва�?, якщо ви були в ті�?ном�? контакт�? з COVID-19 позитивний ко�?и�?тува�?.</value>
+    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた�?�合�?�スマ�?�トフォンにプッシュ通知が届きます�??</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
-    <value>Ви можете перевірити кількість ваших близьких контактів з головного екрана.</value>
-    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+    <value>Ви можете пе�?еві�?ити кількі�?т�? ваши�? близьки�? контактів з головного ек�?ана.</value>
+    <comment>�?近�?�接触件数の確認へはホ�?��?画面からも移動することができます�??</comment>
   </data>
   <data name="HelpPage2Description3" xml:space="preserve">
-    <value>Ви можете перевірити список близьких дати контакту і отримати вказівки про те, що робити, якщо у вас є симптоми захворювання.</value>
-    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+    <value>Ви можете пе�?еві�?ити �?пи�?ок близьки�? дати контакт�? �? от�?имати вказівки п�?о те, що �?обити, якщо �? ва�? �? �?имптоми за�?во�?юванн�?.</value>
+    <comment>接触があった日付�?��?覧を確認できます�?�また適�?な連絡先をお知らせします�??</comment>
   </data>
   <data name="HelpPage2Label1" xml:space="preserve">
-    <value>Сповіщення</value>
+    <value>Сповіщенн�?</value>
     <comment>通知</comment>
   </data>
   <data name="HelpPage2Label2" xml:space="preserve">
-    <value>Основне</value>
-    <comment>ホーム画面</comment>
+    <value>О�?новне</value>
+    <comment>ホ�?��?画面</comment>
   </data>
   <data name="HelpPage2Label3" xml:space="preserve">
-    <value>Якщо у вас був тісний контакт з COVID-19 позитивний користувач</value>
-    <comment>陽性者との接触があった場合</comment>
+    <value>Якщо �? ва�? був ті�?ний контак�? з COVID-19 позитивний ко�?и�?тува�?</value>
+    <comment>陽性�?との接触があった�?��?</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
-    <value>Якщо ви тестували позитивні</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <value>Якщо ви те�?тували позитивн�?</value>
+    <comment>検査により新型コロナウィルスの感染が確認された場合�??</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
-    <value>Органи охорони здоров'я будуть видавати вас за "обробку номер".</value>
-    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+    <value>О�?гани о�?о�?они здо�?ов'�? будут�? видавати ва�? за "об�?обк�? номе�?".</value>
+    <comment>保健�?等�?��?機関から登録用の「�?��?番号」が発行されます�??</comment>
   </data>
   <data name="HelpPage3Description3" xml:space="preserve">
-    <value>Реєструйтеся, вказавши наданий номер обробки в цьому додатку</value>
-    <comment>本アプリを用いて処理番号の登録を行います。</comment>
+    <value>�?еє�?т�?уйте�?�?, вказавши наданий номе�? об�?обки в �?ьом�? додатк�?</value>
+    <comment>本アプリを用�?て処�?番号の登録を行います�??</comment>
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
-    <value>Смартфони, які були в тісному контакті з вашим смартфоном протягом останніх 14 днів, отримають сповіщення.</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+    <value>Сма�?т�?они, як�? були в ті�?ном�? контакт�? з вашим �?ма�?т�?оном п�?отягом о�?танні�? 14 днів, от�?имают�? �?повіщенн�?.</value>
+    <comment>あなたと14日以�?に接触した人のスマ�?�アプリに通知が届きます�?��?1m以�?�?15�?以上�?</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
-    <value>Під час надсилання сповіщень використовуються лише випадково згенеровані коди з пристрою. Особисті відомості не використовуються.</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+    <value>Під �?а�? над�?иланн�? �?повіщен�? вико�?и�?товують�?�? лише випадково згене�?ован�? коди з п�?и�?т�?о�?. О�?оби�?т�? відомо�?т�? не вико�?и�?товують�?�?.</value>
+    <comment>通知される情報は端末の接触符号のみです�?�それ以外�?�、氏名など個人�?報�?位置�?報が�?�られることはありません�?</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
-    <value>Зареєструйтеся тут, коли тестували позитивні</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+    <value>За�?еє�?т�?уйте�?�? ту�?, коли те�?тували позитивн�?</value>
+    <comment>陽性�?報の登録と他�??への匿名�?�知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
-    <value>Ліцензія</value>
+    <value>Лі�?ензі�?</value>
     <comment>ライセンス…</comment>
   </data>
   <data name="SettingsPageLabel1" xml:space="preserve">
-    <value>Закриття запису контактної особи</value>
-    <comment>接触の検出</comment>
+    <value>Зак�?итт�? запи�?�? контактно�? о�?оби</value>
+    <comment>接触の検�?�</comment>
   </data>
   <data name="SettingsPageDescription1" xml:space="preserve">
-    <value>Використання Bluetooth</value>
+    <value>Вико�?и�?танн�? Bluetooth</value>
     <comment>Bluetoothによる接触の検知</comment>
   </data>
   <data name="SettingsPageLabel2" xml:space="preserve">
-    <value>Сповіщення</value>
+    <value>Сповіщенн�?</value>
     <comment>通知</comment>
   </data>
   <data name="SettingsPageDescription2" xml:space="preserve">
-    <value>Як закрити сповіщення про контакт</value>
-    <comment>陽性者との接触通知</comment>
+    <value>Як зак�?ити �?повіщенн�? п�?о контак�?</value>
+    <comment>陽性�?との接触通知</comment>
   </data>
   <data name="SettingsPageLabel3" xml:space="preserve">
-    <value>Припиніть використання програми</value>
+    <value>П�?ипиніт�? вико�?и�?танн�? п�?ог�?ами</value>
     <comment>アプリの使用中止</comment>
   </data>
   <data name="SettingsPageDescription3" xml:space="preserve">
-    <value>Припинення використання та видалення записів близьких контактних осіб</value>
-    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+    <value>П�?ипиненн�? вико�?и�?танн�? та видаленн�? запи�?ів близьки�? контактни�? о�?іб</value>
+    <comment>使用を中止して過去14日間�?�接触履歴を消去</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
-    <value>Що таке "тісний контакт"?</value>
-    <comment>どのようにして接触を記録していますか？</comment>
+    <value>Що таке "ті�?ний контак�?"?</value>
+    <comment>どのようにして接触を記録して�?ますか?�?</comment>
   </data>
   <data name="HelpMenuPageLabel2" xml:space="preserve">
-    <value>Як перевірити кількість близьких контактів?</value>
-    <comment>接触の有無はどのように知ることができますか？</comment>
+    <value>Як пе�?еві�?ити кількі�?т�? близьки�? контактів?</value>
+    <comment>接触の有無はどのように知ることができますか?�?</comment>
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
-    <value>Якщо ви Тестуй позитивні для COVID-19</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <value>Якщо ви Те�?туй позитивн�? дл�? COVID-19</value>
+    <comment>新型コロナウィルスに感染して�?ると判定された�?</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>Як зупинити/видалити тісний контакт запис?</value>
-    <comment>接触の記録を停止／情報を削除するには</comment>
+    <value>Як зупинити/видалити ті�?ний контак�? запи�??</value>
+    <comment>接触の記録を停止?��情報を削除するには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
-    <value>Тісні контакти за останні 14 днів</value>
-    <comment>過去14日間の接触</comment>
+    <value>Ті�?н�? контакти за о�?танн�? 14 днів</value>
+    <comment>過去14日間�?�接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>Немає тісних контактів з COVID-19 позитивних користувачів</value>
-    <comment>陽性者との接触は確認されませんでした</comment>
+    <value>Нема�? ті�?ни�? контактів з COVID-19 позитивни�? ко�?и�?тува�?ів</value>
+    <comment>陽性�?との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>Будь ласка, продовжуйте практикувати "новий спосіб життя" рекомендований урядом.</value>
-    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+    <value>Буд�? ла�?ка, п�?одовжуйте п�?актикувати "новий �?по�?іб житт�?" �?екомендований у�?ядом.</value>
+    <comment>引き続き「新しい生活様式�?��?�実践をよろしくお願い�?たします�??</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>Надати спільний доступ до цієї програми</value>
-    <comment>アプリを周りの人に知らせる</comment>
+    <value>Надати �?пільний до�?туп до �?іє�? п�?ог�?ами</value>
+    <comment>アプリを周り�?�人に知らせ�?</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>Дякуємо за реєстрацію результатів тесту!</value>
-    <comment>陽性のご登録をいただきありがとうございました</comment>
+    <value>Дякуємо за �?еє�?т�?а�?і�? �?езультатів те�?т�?!</value>
+    <comment>陽性のご登録をいただきありがと�?ござ�?ました</comment>
   </data>
   <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>Реєстрація є анонімною. Вам не потрібно вводити своє ім'я або будь-яку іншу особисту інформацію. Інформація про місцезнаходження тісного контакту не записується.</value>
-    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+    <value>�?еє�?т�?а�?і�? �? анонімно�?. Вам не пот�?ібно вводити �?во�? ім'�? або буд�?-як�? інш�? о�?оби�?т�? ін�?о�?ма�?і�?. �?н�?о�?ма�?і�? п�?о мі�?�?езна�?одженн�? ті�?ного контакт�? не запи�?уєть�?�?.</value>
+    <comment>登録は匿名で行われ�?�氏名�?連絡先など個人が特定される�?報を登録する�?要�?�ありません。また�?�接触した場�?の位置�?報が記録�?通知されることもありません�?</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
-    <value>Умови використання</value>
-    <comment>利用規約</comment>
+    <value>Умови вико�?и�?танн�?</value>
+    <comment>利用規�?</comment>
   </data>
   <data name="TutorialPage3ButtonText" xml:space="preserve">
-    <value>Я приймаю умови використання</value>
-    <comment>規約に同意して次へ</comment>
+    <value>Я п�?ийма�? умови вико�?и�?танн�?</value>
+    <comment>規�?に同意して次へ</comment>
   </data>
   <data name="TutorialPage6Label1" xml:space="preserve">
-    <value>Інсталяцію завершено. Дякую!</value>
-    <comment>ご登録いただきありがとうございました</comment>
+    <value>�?н�?таля�?і�? заве�?шено. Дяку�?!</value>
+    <comment>ご登録�?ただきありがと�?ござ�?ました</comment>
   </data>
   <data name="TutorialPage6ButtonText1" xml:space="preserve">
-    <value>Основне</value>
-    <comment>ホーム画面へ</comment>
+    <value>О�?новне</value>
+    <comment>ホ�?��?画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>Як користуватися цим додатком</value>
-    <comment>使い方を学ぶ</comment>
+    <value>Як ко�?и�?тувати�?�? �?им додатком</value>
+    <comment>使�?方を学ぶ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
-    <value>Ідентифікація пристрою</value>
+    <value>�?денти�?іка�?і�? п�?и�?т�?о�?</value>
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>Список близьких контактів з COVID-19 позитивних користувачів</value>
-    <comment>陽性者との接触一覧</comment>
+    <value>Спи�?ок близьки�? контактів з COVID-19 позитивни�? ко�?и�?тува�?ів</value>
+    <comment>陽性�?との接触�?覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Заповнити ваші симптоми</value>
-    <comment>症状を入力</comment>
+    <value>Заповнити ваш�? �?имптоми</value>
+    <comment>�?状を�?��?</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Розкажіть свої симптоми по телефону консультаційний центр</value>
-    <comment>帰国者・接触者外来に電話</comment>
+    <value>�?озкажіт�? �?во�? �?имптоми по теле�?он�? кон�?ульта�?ійний �?ент�?</value>
+    <comment>帰国�?・接触�?外来に電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>помножити</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Якщо ви маєте можливість COVID-19 симптоми, зв'яжіться з медичними організаціями, використовуючи форму нижче або по телефону. Залежно від симптомів, вам буде запропоновано прийняти COVID-19 тест.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
+    <value>Якщо ви маєте можливі�?т�? COVID-19 �?имптоми, зв'яжіть�?�? з меди�?ними о�?ганіза�?іями, вико�?и�?товую�?и �?о�?м�? ниж�?е або по теле�?он�?. Залежно від �?имптомів, вам буде зап�?опоновано п�?ийняти COVID-19 те�?�?.</value>
+    <comment>現在の�?状などを�?��?�力フォー�?また�?�お電話にて、ご連絡ください。�??容に応じて、帰国�?・接触�?外来等への受診を案�??します�??</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Будь ласка, візьміть скріншот цього екрану. Вам може бути запропоновано надати його під час діагностики.</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+    <value>Буд�? ла�?ка, візьміт�? �?к�?іншо�? �?ього ек�?ан�?. Вам може бути зап�?опоновано надати його під �?а�? діагно�?тики.</value>
+    <comment>受診の際などに�?要となる�?�合があるため、本画面のスクリーンショ�?ト�?�保存をお願い�?たします�??</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>Кількість підтверджених близьких контактів з COVID-19 позитивними користувачами</value>
-    <comment>陽性者との接触確認</comment>
+    <value>Кількі�?т�? підтве�?джени�? близьки�? контактів з COVID-19 позитивними ко�?и�?тува�?ами</value>
+    <comment>陽性�?との接触確�?</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
-    <value>Тісні контакти за останні 14 днів</value>
-    <comment>過去14日間の接触</comment>
+    <value>Ті�?н�? контакти за о�?танн�? 14 днів</value>
+    <comment>過去14日間�?�接触</comment>
   </data>
   <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00-17:30 (крім вихідних та святкових днів)</value>
-    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+    <value>9:00-17:30 (к�?ім ви�?ідни�? та �?вяткови�? днів)</value>
+    <comment>9:00?�?17:30?��土・日・祝日・年末年始を除く�?</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 інформація та ресурси</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <value>COVID-19 ін�?о�?ма�?і�? та �?е�?у�?�?и</value>
+    <comment>新型コロナウィルス感染�?対策サイ�?</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
-    <value>Підтримка</value>
-    <comment>アプリに関するお問い合わせ</comment>
+    <value>Підт�?имка</value>
+    <comment>アプリに関するお問�?合わ�?</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
-    <value>у використанні</value>
+    <value>�? вико�?и�?танн�?</value>
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>Перевірте закрити контакти</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
+    <value>Пе�?еві�?те зак�?ити контакти</value>
+    <comment>陽性�?との接触を確認す�?(14日�?)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
-    <value>При випробуваних позитивних для COVID-19</value>
+    <value>П�?и вип�?обувани�? позитивни�? дл�? COVID-19</value>
     <comment>新型コロナウィルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
-    <value>Зареєструвати позитивний результат тесту</value>
-    <comment>陽性情報の登録</comment>
+    <value>За�?еє�?т�?увати позитивний �?езульта�? те�?т�?</value>
+    <comment>陽性�?報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
-    <value>Надати спільний доступ до цієї програми</value>
-    <comment>アプリを周りの人に知らせる</comment>
+    <value>Надати �?пільний до�?туп до �?іє�? п�?ог�?ами</value>
+    <comment>アプリを周り�?�人に知らせ�?</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
-    <value>Основне</value>
-    <comment>ホーム</comment>
+    <value>О�?новне</value>
+    <comment>ホ�?��?</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>Умови використання</value>
-    <comment>利用規約</comment>
+    <value>Умови вико�?и�?танн�?</value>
+    <comment>利用規�?</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
-    <value>Ваша конфіденційність захищена</value>
-    <comment>プライバシーについて</comment>
+    <value>Ваша кон�?іден�?ійні�?т�? за�?ищена</value>
+    <comment>プライバシーにつ�?て</comment>
   </data>
   <data name="TutorialPage2Description2" xml:space="preserve">
-    <value>Особисті відомості, такі як ім'я або номер телефону, не збираються. Дані геопозиціювання, включаючи дані GPS, не збираються.</value>
-    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <value>О�?оби�?т�? відомо�?т�?, так�? як ім'�? або номе�? теле�?он�?, не зби�?ають�?�?. Дан�? геопози�?іюванн�?, вклю�?аю�?и дан�? GPS, не зби�?ають�?�?.</value>
+    <comment>氏名・電話番号などの個人�?報�?、GPSなどスマ�?�トフォンの位置�?報を使�?ことはなく�?�記録されることもありません�?</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>Всі дані шифруються та зберігаються локально на вашому смартфоні. Всі дані автоматично видаляються через 14 днів. Ваші рухи не відстежуються жодним чином державними установами або третіми сторонами.</value>
-    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+    <value>В�?�? дан�? ши�?�?ують�?�? та збе�?ігають�?�? локально на вашом�? �?ма�?т�?он�?. В�?�? дан�? автомати�?но видаляють�?�? �?е�?ез 14 днів. Ваш�? �?у�?и не від�?тежують�?�? жодним �?ином де�?жавними у�?тановами або т�?етіми �?то�?онами.</value>
+    <comment>接触の記録は、暗号化され�?�あなた�?�スマ�?�トフォンの中にのみ記録され�?14日後に自動的に削除されます�?�行政機関�?第三�??が暗号化された�?報を利用して接触歴を把握することはありません�?</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
-    <value>Ви можете припинити запис близьких контактів з іншими користувачами в будь-який час, змінивши налаштування програми або видаливши додаток.</value>
-    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+    <value>Ви можете п�?ипинити запи�? близьки�? контактів з іншими ко�?и�?тува�?ами в буд�?-який �?а�?, змінивши налаштуванн�? п�?ог�?ами або видаливши додаток.</value>
+    <comment>接触の記録は�?つでも止めることができます�?�アプリ�?の設定を無効にするか�?�アプリを削除してください�?</comment>
   </data>
   <data name="TutorialPage2Description5" xml:space="preserve">
-    <value>Умови використання</value>
-    <comment>利用規約へ</comment>
+    <value>Умови вико�?и�?танн�?</value>
+    <comment>利用規�?へ</comment>
   </data>
   <data name="TutorialPage2Title" xml:space="preserve">
     <value>TutorialPage2Description1</value>
-    <comment>プライバシーについて</comment>
+    <comment>プライバシーにつ�?て</comment>
   </data>
   <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>Увімкнути сповіщення</value>
-    <comment>通知をご利用いただくために</comment>
+    <value>Увімкнути �?повіщенн�?</value>
+    <comment>通知をご利用�?ただくために</comment>
   </data>
   <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>Будь ласка, увімкніть сповіщення, які будуть сповіщені, коли ви мали тісні контакти з COVID-19 позитивними користувачами.</value>
-    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+    <value>Буд�? ла�?ка, увімкніт�? �?повіщенн�?, як�? будут�? �?повіщен�?, коли ви мали ті�?н�? контакти з COVID-19 позитивними ко�?и�?тува�?ами.</value>
+    <comment>本アプリで接触の通知をご利用�?ただくために、本アプリのプッシュ通知を有効にしてください�?</comment>
   </data>
   <data name="TutorialPage5Description3" xml:space="preserve">
     <value>Увімкнути</value>
@@ -435,59 +435,59 @@
   </data>
   <data name="TutorialPage5Description4" xml:space="preserve">
     <value>Налаштувати пізніше</value>
-    <comment>あとで設定する</comment>
+    <comment>あとで設定す�?</comment>
   </data>
   <data name="TutorialPage5Title" xml:space="preserve">
-    <value>Використання сповіщень</value>
-    <comment>通知をご利用いただくために</comment>
+    <value>Вико�?и�?танн�? �?повіщен�?</value>
+    <comment>通知をご利用�?ただくために</comment>
   </data>
   <data name="MenuPageTitle" xml:space="preserve">
-    <value>Меню</value>
+    <value>Мен�?</value>
     <comment>メニュー</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
-    <value>Реєстрація</value>
+    <value>�?еє�?т�?а�?і�?</value>
     <comment>登録する</comment>
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>Будь ласка, введіть код процесу, виданий вам "Центр охорони здоров'я в реальному часі-система обміну інформацією на COVID-19 (її-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <value>Буд�? ла�?ка, введіт�? код п�?о�?е�?�?, виданий вам "Цент�? о�?о�?они здо�?ов'�? в �?еальном�? �?а�?�?-�?и�?тема обмін�? ін�?о�?ма�?іє�? на COVID-19 (ї�?-SYS)".</value>
+    <comment>新型コロナウイルス感染�?�?等情報把握・管�?支援シス�?�??�?HER-SYS?��から発行された処�?番号を�?�力してください�?</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>Користувачі, які перебували в тісному контакті з вами протягом останніх 14 днів, будуть повідомлені. Реєстрація є анонімною. Вам не потрібно вводити своє ім'я або будь-яку іншу особисту інформацію. Інформація про місцезнаходження тісного контакту не записується.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+    <value>Ко�?и�?тува�?�?, як�? пе�?ебували в ті�?ном�? контакт�? з вами п�?отягом о�?танні�? 14 днів, будут�? повідомлен�?. �?еє�?т�?а�?і�? �? анонімно�?. Вам не пот�?ібно вводити �?во�? ім'�? або буд�?-як�? інш�? о�?оби�?т�? ін�?о�?ма�?і�?. �?н�?о�?ма�?і�? п�?о мі�?�?езна�?одженн�? ті�?ного контакт�? не запи�?уєть�?�?.</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます�?�登録は匿名で行われ�?�氏名�?連絡先など個人が特定される�?報を登録する�?要�?�ありません。また�?�接触した場�?の位置�?報が記録�?通知されることもありません�?</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
-    <value>Як отримати код процесу</value>
-    <comment>処理番号の取得方法</comment>
+    <value>Як от�?имати код п�?о�?е�?�?</value>
+    <comment>処�?番号の取得方�?</comment>
   </data>
   <data name="NotifyOtherPageTitle" xml:space="preserve">
-    <value>Зареєструвати позитивний результат тесту</value>
-    <comment>陽性情報の登録</comment>
+    <value>За�?еє�?т�?увати позитивний �?езульта�? те�?т�?</value>
+    <comment>陽性�?報の登録</comment>
   </data>
   <data name="TutorialPage1Button" xml:space="preserve">
-    <value>Далі</value>
+    <value>Дал�?</value>
     <comment>次へ</comment>
   </data>
   <data name="TutorialPage1Description1" xml:space="preserve">
-    <value>Програма розпізнає тісні контакти між смартфони, які працюють з цією програмою.</value>
-    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+    <value>П�?ог�?ама �?озпізна�? ті�?н�? контакти між �?ма�?т�?они, як�? п�?а�?юют�? з �?іє�? п�?ог�?амо�?.</value>
+    <comment>本アプリをスマ�?�トフォンに設定した人ど�?し�?�接触を記録します�??</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>Коли він перевіряв позитивний для COVID-19, ви можете анонімно зареєструвати результат тесту в цьому додатку.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <value>Коли він пе�?еві�?яв позитивний дл�? COVID-19, ви можете анонімно за�?еє�?т�?увати �?езульта�? те�?т�? в �?ьом�? додатк�?.</value>
+    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます�??</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>Якщо ви були в тісному контакті з користувачем, який випробував позитивний, додаток сповіщає вас про потенційну інфекцію і забезпечує керівництво для захисту вашого здоров'я.</value>
-    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+    <value>Якщо ви були в ті�?ном�? контакт�? з ко�?и�?тува�?ем, який вип�?обував позитивний, додаток �?повіща�? ва�? п�?о потен�?ійн�? ін�?ек�?і�? �? забезпе�?у�? ке�?івни�?тво дл�? за�?и�?т�? вашого здо�?ов'�?.</value>
+    <comment>�?近接触した人の中に陽性登録した人がいたら�?通知と適�?な行動をお知らせします�??</comment>
   </data>
   <data name="TutorialPage1Title1" xml:space="preserve">
-    <value>Захистіть себе за допомогою програми</value>
-    <comment>このアプリでできること</comment>
+    <value>За�?и�?тіт�? �?ебе за допомого�? п�?ог�?ами</value>
+    <comment>こ�?�アプリでできること</comment>
   </data>
   <data name="TutorialPage1Title2" xml:space="preserve">
-    <value>Захистіть себе за допомогою програми</value>
-    <comment>このアプリでできること</comment>
+    <value>За�?и�?тіт�? �?ебе за допомого�? п�?ог�?ами</value>
+    <comment>こ�?�アプリでできること</comment>
   </data>
   <data name="TutorialPage4Button1" xml:space="preserve">
     <value>Увімкнути</value>
@@ -495,79 +495,79 @@
   </data>
   <data name="TutorialPage4Button2" xml:space="preserve">
     <value>Налаштувати пізніше</value>
-    <comment>あとで設定する</comment>
+    <comment>あとで設定す�?</comment>
   </data>
   <data name="TutorialPage4Description" xml:space="preserve">
-    <value>Будь ласка, увімкніть Bluetooth, щоб почати запис близьких контактів з іншими користувачами.</value>
-    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+    <value>Буд�? ла�?ка, увімкніт�? Bluetooth, щоб по�?ати запи�? близьки�? контактів з іншими ко�?и�?тува�?ами.</value>
+    <comment>本アプリで接触検知をご利用�?ただくために、スマ�?�トフォンのBluetooth通信を有効にしてください�?</comment>
   </data>
   <data name="TutorialPage4Label" xml:space="preserve">
-    <value>Докладніші відомості</value>
-    <comment>技術的な詳細について</comment>
+    <value>Докладніш�? відомо�?т�?</value>
+    <comment>�?術的な詳細につ�?て</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
-    <value>Увімкнення Bluetooth</value>
-    <comment>接触検知をご利用いただくために</comment>
+    <value>Увімкненн�? Bluetooth</value>
+    <comment>接触検知をご利用�?ただくために</comment>
   </data>
   <data name="TutorialPage4Title2" xml:space="preserve">
-    <value>Увімкнення Bluetooth</value>
-    <comment>接触検知をご利用いただくために</comment>
+    <value>Увімкненн�? Bluetooth</value>
+    <comment>接触検知をご利用�?ただくために</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
     <value>~</value>
     <comment>から</comment>
   </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
-    <value>Введіть 8-значний код</value>
-    <comment>8桁の処理番号を入力してください</comment>
+    <value>Введіт�? 8-зна�?ний код</value>
+    <comment>8桁�?�処�?番号を�?�力してください</comment>
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>Номер обробки буде сповіщено на ваш номер мобільного телефону або адресу електронної пошти, зареєстрований у новій системі з інформацією про інфекційні хвороби та систему управління (далі «система управління»).</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+    <value>Номе�? об�?обки буде �?повіщено на ва�? номе�? мобільного теле�?он�? або ад�?е�?�? елект�?онно�? пошти, за�?еє�?т�?ований �? новій �?и�?тем�? з ін�?о�?ма�?іє�? п�?о ін�?ек�?ійн�? �?во�?оби та �?и�?тем�? уп�?авлінн�? (дал�? «�?и�?тема уп�?авління»).</value>
+    <comment>新型コロナウイルス感染�?等情報把握・管�?シス�?�??��以下�?�管�?シス�?�?」）に登録されたあなた�?�携帯電話番号又�?�メールアドレスに、�?��?番号が�?�知されます�??</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>Коли ви вводите цей номер обробки в термінал, термінал буде здійснювати запит через сервер сповіщень до системи управління, якщо номер обробки був виданий вам.</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+    <value>Коли ви вводите �?ей номе�? об�?обки в те�?мінал, те�?мінал буде здій�?нювати запи�? �?е�?ез �?е�?ве�? �?повіщен�? до �?и�?теми уп�?авлінн�?, якщо номе�? об�?обки був виданий вам.</value>
+    <comment>あなたがこ�?�処�?番号を端末に入力することにより、端末から通知サーバ�?�を経由して管�?シス�?�?に対し�?��?��?番号があなたに対して発行されたも�?�か否か�?�照会が行われます�??</comment>
   </data>
   <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>Система керування відповідатиме на сервер сповіщень про те, чи було видано номер транзакції.</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+    <value>Си�?тема ке�?уванн�? відповідатиме на �?е�?ве�? �?повіщен�? п�?о те, �?и було видано номе�? т�?анзак�?і�?.</value>
+    <comment>管�?シス�?�?は�?通知サーバ�?�に対し�?��?�会された処�?番号があなたに対して発行されたも�?�か否かにつ�?て回答します�??</comment>
   </data>
   <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>Якщо ви відповісте, що номер транзакції видано вам, термінали інших користувачів буде надано щоденний ключ, записаний на вашому терміналі.</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+    <value>Якщо ви відпові�?те, що номе�? т�?анзак�?і�? видано вам, те�?мінали інши�? ко�?и�?тува�?ів буде надано щоденний клю�?, запи�?аний на вашом�? те�?мінал�?.</value>
+    <comment>処�?番号があなたに対して発行されたも�?�である旨の回答が行われた場合�?�、他�?�利用�?の端末に、あなた�?�端末に記録された日次鍵が提供されます�??</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>Якщо ви були в контакті з вами протягом 14 днів, ви будете знати, що ви, можливо, зв'язався без будь-якої інформації, яка може ідентифікувати вас особисто.</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+    <value>Якщо ви були в контакт�? з вами п�?отягом 14 днів, ви будете знати, що ви, можливо, зв'язав�?�? без буд�?-яко�? ін�?о�?ма�?і�?, яка може іденти�?ікувати ва�? о�?оби�?то.</value>
+    <comment>14日以�?にあなたと接触の状態となったことのある方は、あなた�?�人を識別可能な�?報がな�?状態で、接触した可能性がある旨を知ることができます�??</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>Погодьтеся і реєструйтеся</value>
+    <value>Погодьте�?�? �? �?еє�?т�?уйте�?�?</value>
     <comment>同意して陽性登録する</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>Згода на позитивну реєстрацію</value>
+    <value>Згода на позитивн�? �?еє�?т�?а�?і�?</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Згода на позитивну реєстрацію</value>
+    <value>Згода на позитивн�? �?еє�?т�?а�?і�?</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
-    <value>Версія</value>
-    <comment>バージョン</comment>
+    <value>Ве�?�?і�?</value>
+    <comment>バ�?�ジョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Вимкнув Bluetooth. Будь ласка, увімкніть Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+    <value>Вимкнув Bluetooth. Буд�? ла�?ка, увімкніт�? Bluetooth.</value>
+    <comment>BluetoothがOffになって�?ます�??Bluetoothを有効にしてください�?</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>Список близьких контактів (за останні 14 днів)</value>
-    <comment>過去14日間の接触一覧</comment>
+    <value>Спи�?ок близьки�? контактів (за о�?танн�? 14 днів)</value>
+    <comment>過去14日間�?�接触�?覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>Дати, коли ви були в тісному контакті з COVID-19 позитивних користувачів.</value>
-    <comment>以下の日に陽性者との接触が確認されました。</comment>
+    <value>Дати, коли ви були в ті�?ном�? контакт�? з COVID-19 позитивни�? ко�?и�?тува�?ів.</value>
+    <comment>以下�?�日に陽性�?との接触が確認されました�?</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
@@ -580,35 +580,59 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
-    <value>Можливо, ви були в безпосередній близькості від користувача, який перевіряв позитивні для COVID-19.  Торкніться значка, щоб дізнатися більше.</value>
+    <value>Можливо, ви були в безпо�?е�?едній близько�?т�? від ко�?и�?тува�?а, який пе�?еві�?яв позитивн�? дл�? COVID-19.  То�?кніть�?�? зна�?ка, щоб дізнати�?�? більше.</value>
     <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
   </data>
   <data name="LocalNotificationTitle" xml:space="preserve">
-    <value>Можлива КОVID-19 експозиція</value>
+    <value>Можлива КОVID-19 ек�?пози�?і�?</value>
     <comment>Possible COVID-19 Exposure</comment>
   </data>
   <data name="LocalNotificationPermittedDescription" xml:space="preserve">
-    <value>Якщо ви хочете відключити його, ви можете змінити його в налаштуваннях програми</value>
+    <value>Якщо ви �?о�?ете відклю�?ити його, ви можете змінити його в налаштування�? п�?ог�?ами</value>
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
-    <value>Сповіщення ввімкнено</value>
+    <value>Сповіщенн�? ввімкнено</value>
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>Інформація про цю програму</value>
+    <value>�?н�?о�?ма�?і�? п�?о �?�? п�?ог�?ам�?</value>
   </data>
   <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>Q і для користувача</value>
+    <value>Q �? дл�? ко�?и�?тува�?а</value>
   </data>
   <data name="InqueryMailBody" xml:space="preserve">
-    <value>Ім'я: \r\n-контакт: \r\n-вміст запиту (будь ласка, виберіть категорію з наступного): 1. як працює додаток, 2. налаштування додатка, 3. використання програми (сповіщення тощо)), 4. Інші \ r\n текст запиту: \r\n</value>
-    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+    <value>�?м'�?: \r\n-контак�?: \r\n-вмі�?�? запит�? (буд�? ла�?ка, вибе�?іт�? катего�?і�? з на�?тупного): 1. як п�?а�?ю�? додаток, 2. налаштуванн�? додатка, 3. вико�?и�?танн�? п�?ог�?ами (�?повіщенн�? тощо)), 4. �?нш�? \ r\n тек�?�? запит�?: \r\n</value>
+    <comment>お名前：\r\nご�?�絡先：\r\nお問�?合わせ�??容(カ�?ゴリを次の中からお選びください)?�?1.アプリの仕�?み�?2.アプリの設定�?? 3.アプリの利用(通知など)�? 4.そ�?�他\r\nお問�?合わせ本�?��\r\n</comment>
   </data>
   <data name="InqueryMailSubject" xml:space="preserve">
-    <value>Запити щодо додатка підтвердження контакту</value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
+    <value>Запити щодо додатка підтве�?дженн�? контакт�?</value>
+    <comment>接触確認アプリに関するお問�?合わ�?</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>дн.</value>
-    <comment>X日間</comment>
+    <comment>X日�?</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Сповіщенн�? п�?о ек�?пози�?і�? активне.</value>
+    <comment>Exposure Notification機�?�は許諾の状態です�??</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Вимкнув Bluetooth. Буд�? ла�?ка, увімкніт�? Bluetooth.</value>
+    <comment>BluetoothがOffになって�?ます�??Bluetoothを有効にしてください�?</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Сповіщенн�? п�?о ек�?пози�?і�? вимкнено. Відк�?ийте па�?амет�?и те�?мінал�? та ввімкніт�? �?повіщенн�? п�?о ек�?пози�?і�?.</value>
+    <comment>Exposure Notification機�?�は無効の状態です�?�端末の設定を開いて、Exposure NotificationをONにしてください�?</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>Ви повинн�? погодити�?�? з умовами вико�?и�?танн�?.</value>
+    <comment>利用規�?に同意する�?要があります�??</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Сповіщенн�? п�?о ек�?пози�?і�? обмежено. Буд�? ла�?ка, активний.</value>
+    <comment>Exposure Notification機�?�が承認されて�?ません。承認してください�?</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Сповіщенн�? п�?о ек�?пози�?і�? не підт�?имуєть�?�?. Оновіт�? ОС до о�?танньо�? ве�?�?і�?. Якщо �? ва�? ще �? п�?облеми, буд�? ла�?ка, зв'яжіть�?�? з нами за ад�?е�?о�? ***REMOVED***.</value>
+    <comment>Exposure Notification機�?�は非対応�?�状態です�?�OSを最新版にア�?プデートしてください。それでも改�?しなければ、appsupport@cov19.mhlw.go.jpまでお問�?合わせく�?さい�?</comment>
   </data>
 </root>
