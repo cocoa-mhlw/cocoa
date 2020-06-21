@@ -19,6 +19,10 @@ namespace Covid19Radar.Common
         /// Active Rolling Period
         /// </summary>
         public const uint ActiveRollingPeriod = 144;
+        /// <summary>
+        /// Max Error Count
+        /// </summary>
+        public const int MaxErrorCount = 4;
 
     }
 }
