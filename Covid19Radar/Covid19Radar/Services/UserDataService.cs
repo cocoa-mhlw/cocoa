@@ -31,6 +31,11 @@ namespace Covid19Radar.Services
                 return null;
             }
             userData.StartDateTime = DateTime.UtcNow;
+            userData.IsExposureNotificationEnabled = false;
+            userData.IsNotificationEnabled = false;
+            userData.IsOptined = false;
+            userData.IsPolicyAccepted = false;
+            userData.IsPositived = false;
             await SetAsync(userData);
             return userData;
         }

@@ -7,21 +7,21 @@ namespace Covid19Radar.Model
 {
 	public static class AndroidExtensions
 	{
-		public static byte[] GetAndroidNonce(this SelfDiagnosisSubmission  submission)
+		public static byte[] GetAndroidNonce(this DiagnosisSubmissionParameter  submission)
 		{
 			var cleartext = GetAndroidNonceClearText(submission);
 			var nonce = GetSha256(cleartext);
 			return nonce;
 		}
 
-		static string GetAndroidNonceClearText(this SelfDiagnosisSubmission  submission) =>
+		static string GetAndroidNonceClearText(this DiagnosisSubmissionParameter submission) =>
 			string.Join("|", submission.AppPackageName, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
 
-		static string GetKeyString(IEnumerable<ExposureKey> keys) =>
+		static string GetKeyString(IEnumerable<DiagnosisSubmissionParameter.Key> keys) =>
 			string.Join(",", keys.OrderBy(k => k.KeyData).Select(k => GetKeyString(k)));
 
-		static string GetKeyString(ExposureKey k) =>
-			string.Join(".", k.KeyData, k.RollingStart, k.RollingDuration, k.TransmissionRisk);
+		static string GetKeyString(DiagnosisSubmissionParameter.Key k) =>
+			string.Join(".", k.KeyData, k.RollingStartNumber, k.RollingPeriod, k.TransmissionRisk);
 
 		static string GetRegionString(IEnumerable<string> regions) =>
 			string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));
