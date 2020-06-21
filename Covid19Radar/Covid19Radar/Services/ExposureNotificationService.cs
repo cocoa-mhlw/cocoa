@@ -180,7 +180,10 @@ namespace Covid19Radar.Services
 
         public async Task<bool> StopExposureNotification()
         {
-            await ExposureNotification.StopAsync();
+            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+            {
+                await ExposureNotification.StopAsync();
+            }
             return true;
         }
 
@@ -191,10 +194,10 @@ namespace Covid19Radar.Services
             switch (ExposureNotificationStatus)
             {
                 case Status.Unknown:
-                    message = "Exposure Notification機能は非対応の状態です。";
+                    message = "Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。";
                     break;
                 case Status.Disabled:
-                    message = "Exposure Notification機能は無効の状態です。";
+                    message = "Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。";
                     break;
                 case Status.Active:
                     message = "Exposure Notification機能は許諾の状態です。";

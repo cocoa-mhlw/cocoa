@@ -42,7 +42,3 @@ The Ministry of Health, Labour and Welfare may use the App to collect the follow
 
 ## (6) Inquiries Regarding Privacy
 Please contact the Ministry of Health, Labour and Welfare as specified in the App or on the Ministry of Health, Labour and Welfare’s [website](https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html) concerning COVID-19 measures for any questions, etc. regarding privacy in the use of the App.
-
-
-
-
