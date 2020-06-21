@@ -46,7 +46,7 @@
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>Not Now</source>
-          <target state="translated">暂时不</target>
+          <target state="translated">暂不</target>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -424,12 +424,12 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
           <source>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</source>
-          <target state="translated">如果您有新冠病毒的一些症状，请填写表单或者向回国者•接触者咨询中心构电话咨询，我们会根据你提供的信息判断是否进行检查。</target>
+          <target state="translated">如果您有新冠病毒的一些症状，请填写表单或者向回国者、接触者咨询中心构电话咨询，我们会根据你提供的信息判断是否进行检查。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
           <source>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</source>
-          <target state="translated">请截取保存本页面，并在受诊时提供给医院</target>
+          <target state="translated">请截图保存本页面，并在受诊时提供给医院</target>
           <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
@@ -449,7 +449,7 @@
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
           <source>COVID-19 Information and Resources</source>
-          <target state="needs-review-translation">COVID-19 Information and Resources</target>
+          <target state="translated">新型冠状病毒肺炎对策网站</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
@@ -489,7 +489,7 @@
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
           <source>Term of use</source>
-          <target state="needs-review-translation">使用条款</target>
+          <target state="translated">使用条款</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
@@ -763,47 +763,47 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
           <source>Exposure Notification is active.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">曝光通知处于活动状态。</target>
+          <target state="translated" state-qualifier="mt-suggestion">暴露通知已启用。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
           <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">蓝牙已关闭。请打开蓝牙。</target>
+          <target state="translated" state-qualifier="mt-suggestion">蓝牙已关闭。请打开蓝牙。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
           <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">曝光通知已禁用。打开终端设置并打开曝光通知。</target>
+          <target state="translated" state-qualifier="mt-suggestion">暴露通知已禁用。打开终端设置并打开暴露通知。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
           <source>You must agree to the terms of use.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">您必须同意使用条款。</target>
+          <target state="translated" state-qualifier="mt-suggestion">您必须同意使用条款。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
           <source>Exposure Notification is restricted. Please active.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">曝光通知受到限制。请活跃。</target>
+          <target state="translated" state-qualifier="mt-suggestion">暴露通知受到限制。请启用。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能が承認されていません。承認してください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
           <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">不支持曝光通知。请将操作系统更新到最新版本。如果您仍有问题，请在appsupport@cov19.mhlw.go.jp与我们联系。</target>
+          <target state="translated" state-qualifier="mt-suggestion">不支持暴露通知。请将操作系统更新到最新版本。如果您仍有问题，请在appsupport@cov19.mhlw.go.jp与我们联系。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
           <source>Network connection error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">网络连接错误</target>
+          <target state="translated" state-qualifier="mt-suggestion">网络连接错误</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notification startup error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">曝光通知启动错误</target>
+          <target state="translated" state-qualifier="mt-suggestion">暴露通知启动错误</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
           <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">暴露通知无法启动。打开终端设置，打开曝光通知，然后打开蓝牙。</target>
+          <target state="translated" state-qualifier="mt-suggestion">暴露通知无法启动。打开设置，开启暴露通知，然后打开蓝牙。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
       </group>
