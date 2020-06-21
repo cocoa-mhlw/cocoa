@@ -623,7 +623,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage1Title2" translate="yes" xml:space="preserve">
           <source>Protect yourself with the app</source>
-          <target state="translatedn">Protégas con la aplicación</target>
+          <target state="translated">Protégas con la aplicación</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Button1" translate="yes" xml:space="preserve">
