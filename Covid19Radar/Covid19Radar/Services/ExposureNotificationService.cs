@@ -194,19 +194,19 @@ namespace Covid19Radar.Services
             switch (ExposureNotificationStatus)
             {
                 case Status.Unknown:
-                    message = "Exposure Notification機能は非対応の状態です。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageUnknown;
                     break;
                 case Status.Disabled:
-                    message = "Exposure Notification機能は無効の状態です。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageDisabled;
                     break;
                 case Status.Active:
-                    message = "Exposure Notification機能は許諾の状態です。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageActive;
                     break;
                 case Status.BluetoothOff:
-                    message = "BluetoothがOffになっています。Bluetoothを有効にしてください。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff;
                     break;
                 case Status.Restricted:
-                    message = "Exposure Notification機能が承認されていません。承認してください。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
                     break;
                 default:
                     break;
@@ -214,7 +214,7 @@ namespace Covid19Radar.Services
 
             if (!userData.IsOptined)
             {
-                message.Append("/利用規約に同意する必要があります。");
+                message.Append(Resources.AppResources.ExposureNotificationStatusMessageIsOptined);
             }
 
             this.CurrentStatusMessage = message;
