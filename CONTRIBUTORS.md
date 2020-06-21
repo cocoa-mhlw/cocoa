@@ -65,6 +65,7 @@
 - Anharu (Xamarin)
 - Soichi Ikebe (Documentation)
 - Elisa Sakamoto (Italian Translation)
+- Leo Ando (Client Android)
 - Prastyo ([Indonesian Translation](https://github.com/Covid-19Radar/Covid19Radar/commits?author=jiprastyo))
 
 # Beta Testers
