@@ -133,7 +133,7 @@ namespace Covid19Radar.Services
             catch (Exception ex)
             {
                 // any expections, bail out and wait for the next time
-                Console.WriteLine(ex);
+                Debug.WriteLine(ex);
             }
         }
 
@@ -162,7 +162,7 @@ namespace Covid19Radar.Services
             {
                 return (batchNumber, downloadedFiles);
             }
-            Console.WriteLine("Fetch Exposure Key");
+            Debug.WriteLine("Fetch Exposure Key");
 
             Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
 
@@ -181,8 +181,8 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > lastCreated || lastCreated == 0)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-                    Console.WriteLine(Utils.SerializeToJson(tekItem));
-                    Console.WriteLine(tmpFile);
+                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
+                    Debug.WriteLine(tmpFile);
                     Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken);
                     var fileStream = File.Create(tmpFile);
                     try
@@ -192,15 +192,15 @@ namespace Covid19Radar.Services
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(ex.ToString());
+                        Debug.WriteLine(ex.ToString());
                     }
                     lastTekTimestamp[region] = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
                     batchNumber++;
                 }
             }
-            Console.WriteLine(batchNumber.ToString());
-            Console.WriteLine(downloadedFiles.Count());
+            Debug.WriteLine(batchNumber.ToString());
+            Debug.WriteLine(downloadedFiles.Count());
             userData.LastProcessTekTimestamp = lastTekTimestamp;
             await userDataService.SetAsync(userData);
             return (batchNumber, downloadedFiles);
