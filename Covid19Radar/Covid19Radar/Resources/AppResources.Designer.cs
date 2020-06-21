@@ -268,6 +268,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Process number incorrect に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationHandler1ErrorMessage {
+            get {
+                return ResourceManager.GetString("ExposureNotificationHandler1ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cannot connect to registration center に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationHandler2ErrorMessage {
+            get {
+                return ResourceManager.GetString("ExposureNotificationHandler2ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Bluetooth is turned off.Please turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposureNotificationServiceMessage4 {
@@ -948,6 +966,105 @@ namespace Covid19Radar.Resources {
         internal static string NotifyOtherPageDescription2 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Do you want to register positive information? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag1Message {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag1Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Register に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag1Title {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag1Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Canceled に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag2Message {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag2Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please wait for a while until registration starts に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag3Message {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag3Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Awaiting registration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag3Title {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   No processing number entered に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag4Message {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag4Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Processing number format does not match に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag5Message {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag5Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag6Message {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag6Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enable COVID-19 contact logging に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiag6Title {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiag6Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The number of registrations has reached the upper limit. Exit application に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiagAppClose {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiagAppClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Registration error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDiagErrorTitle {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiagErrorTitle", resourceCulture);
             }
         }
         

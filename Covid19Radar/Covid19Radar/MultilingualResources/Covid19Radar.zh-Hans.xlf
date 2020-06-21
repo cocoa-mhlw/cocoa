@@ -806,6 +806,71 @@
           <target state="translated" state-qualifier="mt-suggestion">暴露通知无法启动。打开设置，开启暴露通知，然后打开蓝牙。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
+        <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Process number incorrect</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">进程编号不正确</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリで入力された処理番号が違います</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Cannot connect to registration center</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">无法连接到注册中心</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
+          <source>Do you want to register positive information?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">是否要注册正面信息？</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録しますか?</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">注册</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
+          <source>Canceled</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">已取消</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
+          <source>Please wait for a while until registration starts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">请稍等片刻，直到注册开始</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
+          <source>Awaiting registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">等待登记</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
+          <source>No processing number entered</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">未输入处理编号</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
+          <source>Processing number format does not match</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">处理编号格式不匹配</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号のフォーマットが一致していません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
+          <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">为了注册正记录，有必要启用 COVID-19 联系人日志记录，请从应用程序或操作系统设置启用它。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
+          <source>Enable COVID-19 contact logging</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">启用 COVID-19 联系人日志记录</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
+          <source>The number of registrations has reached the upper limit. Exit application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">注册数量已达到上限。退出应用程序</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録回数上限になりました。アプリケーションを終了します</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
+          <source>Registration error</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">注册错误</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
+        </trans-unit>
       </group>
     </body>
   </file>

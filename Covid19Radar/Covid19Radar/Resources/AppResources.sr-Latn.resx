@@ -647,4 +647,56 @@
     <value>Obaveštenje o ekspoziciji nije moglo da se pokreće. Otvorite postavke terminala, uključite obaveštenje o ekspoziciji i uključite Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>Neispravan broj procesa</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>Nije moguće povezati se sa centrom za registraciju</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>Želite li da registrujete pozitivne informacije?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Registruj</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Otkazan</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>Sačekajte neko vreme dok se registracija ne pokrene</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>Čekam registraciju</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>Nije unet broj za obradu</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>Obrada formata broja se ne podudara</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>Da bi se registrovali pozitivni zapisi, potrebno je omogućiti "KOVID-19 zapisnik za evidenciju kontakta", omogućiti ga iz postavki aplikacije ili OS.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>Omogući KOVID-19 evidentiranje kontakata</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>Broj Registracija je dostigao gornju granicu. Izađi iz aplikacije</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>Greška u registraciji</value>
+    <comment>登録エラー</comment>
+  </data>
 </root>
