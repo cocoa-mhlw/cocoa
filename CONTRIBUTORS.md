@@ -61,6 +61,7 @@
 - Mohamed BOUZIDI(github actions)
 - Yutaro Iino (Documentation)
 - Kohei Ikeda(Documentation)
+- Daniel Kastl (German Translation)
 - Iyotetsuya (Traditional Chinese Translation)
 - Anharu (Xamarin)
 - Soichi Ikebe (Documentation)
