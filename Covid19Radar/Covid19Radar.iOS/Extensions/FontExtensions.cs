@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using UIKit;
 using Xamarin.Forms;
-using Xamarin.Forms.Core;
 using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.iOS.Extensions

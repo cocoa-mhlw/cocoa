@@ -1,17 +1,13 @@
 ﻿using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
-using Covid19Radar.Views;
 using ImTools;
 using Prism.Navigation;
-using Prism.Navigation.Xaml;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
-using System.Security.Principal;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.ExposureNotifications;
