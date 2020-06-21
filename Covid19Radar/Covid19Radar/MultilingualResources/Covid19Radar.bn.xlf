@@ -41,7 +41,7 @@
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">অনুগ্রহ করে আপনার নেটওয়ার্ক কানেকশন চেক করুন.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
@@ -809,6 +809,11 @@
           <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">এক্সপোজার প্রজ্ঞাপন সমর্থিত নয়। অনুগ্রহ করে সর্বশেষ সংস্করণে OS হালনাগাদ করুন। আপনার যদি এখনও কোন সমস্যা থাকে, অনুগ্রহ করে appsupport@cov19.mhlw.go.jp আমাদের সাথে যোগাযোগ করুন।</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
+          <source>Network connection error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">নেটওয়ার্ক সংযোগ ত্রুটি</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
       </group>
     </body>
