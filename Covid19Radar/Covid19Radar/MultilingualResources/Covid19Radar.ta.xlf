@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
+          <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
@@ -41,7 +41,7 @@
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுகூர்ந்து உங்கள் பிணைய இணைப்பை சரிபார்க்கவும்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
@@ -777,8 +777,53 @@
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="new">Days</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">நாட்கள்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு செயலில் உள்ளது.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
+          <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">புளூடூத் அணைக்கப்பட்டுள்ளது. தயவுசெய்து Bluetooth ஐ இயக்கவும்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு முடக்கப்பட்டுள்ளது. டெர்மினல் அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையை இயக்கவும்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
+          <source>You must agree to the terms of use.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் பயன்பாட்டு விதிமுறைகளை ஏற்க வேண்டும்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is restricted. Please active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு கட்டுப்படுத்தப்பட்டுள்ளது. தயவு செய்து செயலில்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能が承認されていません。承認してください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at ***REMOVED***.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு ஆதரிக்கப்படவில்லை. சமீபத்திய பதிப்பிற்கு OS ஐ புதுப்பிக்கவும். நீங்கள் இன்னும் பிரச்சினைகள் இருந்தால், ***REMOVED*** எங்களை தொடர்பு கொள்ளவும்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
+          <source>Network connection error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">பிணைய இணைப்பு பிழை</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification startup error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு தொடக்க பிழை</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிக்கையை தொடங்க முடியவில்லை. முனைய அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையில் திரும்பி, Bluetooth -இல் திருப்பு.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
       </group>
     </body>
