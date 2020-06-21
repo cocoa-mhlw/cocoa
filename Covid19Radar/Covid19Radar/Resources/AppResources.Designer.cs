@@ -1393,7 +1393,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Please turn on Bluetooth to start recording close contacts with other users. に類似しているローカライズされた文字列を検索します。
+        ///   Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Description {
             get {
@@ -1411,7 +1411,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Turn on Bluetooth に類似しているローカライズされた文字列を検索します。
+        ///   To use Exposure Notifications に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Title1 {
             get {
@@ -1420,7 +1420,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Turn on Bluetooth に類似しているローカライズされた文字列を検索します。
+        ///   To use Exposure Notifications に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TutorialPage4Title2 {
             get {
