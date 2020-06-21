@@ -24,11 +24,11 @@ namespace Covid19Radar.Services
     /// </summary>
     public class UserDataService
     {
-        private readonly HttpDataService httpDataService;
+        private readonly IHttpDataService httpDataService;
         private UserDataModel current;
         public event EventHandler<UserDataModel> UserDataChanged;
 
-        public UserDataService(HttpDataService httpDataService)
+        public UserDataService(IHttpDataService httpDataService)
         {
             this.httpDataService = httpDataService;
             current = Get();
