@@ -1,5 +1,8 @@
 # COVID-19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
 
+“There is only one version of contact confirming app in app stores - the official version by the Ministry of Health, Labor and Welfare. This Github contains code that became the base for the official app, but it is not the same as the code for the official app itself.
+This code is maintained by the community and there is no guarantee that issues or pull requests will be reflected in the official app."
+
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
 We are looking for translator reviewers, Please see [How to Translate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSLATE_CONTRIBUTE.md) page.
@@ -18,20 +21,20 @@ Please check the contribution rules.
 
 ## How to install the app for tester
 
-Please install the app for test from below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
+Please install the app for the test from the below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
 
 ### Android
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
 
-Device configuration guide for tester:  
+Device configuration guide for a tester:  
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 
 ### iOS
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS/releases
 
-Device configuration guide for tester:  
+Device configuration guide for a tester:  
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
 
 ## Development environment
@@ -43,7 +46,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 ![App settings](img/design00.png)
 
-Permission to use the following functions of the device is required. 
+Permission to use the following functions of the device is required.
 
 1. Exposure notification
 2. Bluetooth

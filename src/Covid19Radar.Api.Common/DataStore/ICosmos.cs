@@ -11,5 +11,6 @@ namespace Covid19Radar.Api.DataStore
         Container TemporaryExposureKeyExport { get; }
         Container Sequence { get; }
         Container AuthorizedApp { get; }
+        Container CustomVerificationStatus { get; }
     }
 }
