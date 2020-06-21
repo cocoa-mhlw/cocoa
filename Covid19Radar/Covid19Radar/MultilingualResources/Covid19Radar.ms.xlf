@@ -637,7 +637,7 @@
           <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
-          <source>Please turn on Bluetooth to start recording close contacts with other users.</source>
+          <source>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Sila hidupkan Bluetooth untuk mula merakam kenalan tutup dengan pengguna lain.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
         </trans-unit>
@@ -647,12 +647,12 @@
           <note from="MultilingualBuild" annotates="source" priority="2">技術的な詳細について</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Title1" translate="yes" xml:space="preserve">
-          <source>Turn on Bluetooth</source>
+          <source>To use Exposure Notifications</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hidupkan Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用いただくために</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Title2" translate="yes" xml:space="preserve">
-          <source>Turn on Bluetooth</source>
+          <source>To use Exposure Notifications</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hidupkan Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用いただくために</note>
         </trans-unit>
