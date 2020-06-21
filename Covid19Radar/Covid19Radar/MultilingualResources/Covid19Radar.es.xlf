@@ -623,7 +623,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage1Title2" translate="yes" xml:space="preserve">
           <source>Protect yourself with the app</source>
-          <target state="translatedn">Protégas con la aplicación</target>
+          <target state="translated">Protégas con la aplicación</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Button1" translate="yes" xml:space="preserve">
@@ -767,7 +767,7 @@
         </trans-unit>
         <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
           <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">>Nombre: \r\n Contacto: \r\n Categoria de consulta(Seleccione una de las sgtes): 1. ¿Cómo funciona la applicación?, 2. Configuración de la aplicación, 3. Uso de la aplicación (notificaciones, etc.) ), 4. Otros \r\n Consulta: \r\n</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">&gt;Nombre: \r\n Contacto: \r\n Categoria de consulta(Seleccione una de las sgtes): 1. ¿Cómo funciona la applicación?, 2. Configuración de la aplicación, 3. Uso de la aplicación (notificaciones, etc.) ), 4. Otros \r\n Consulta: \r\n</target>
           <note from="MultilingualBuild" annotates="source" priority="2">お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</note>
         </trans-unit>
         <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
