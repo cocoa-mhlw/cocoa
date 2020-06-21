@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
@@ -142,7 +142,7 @@ namespace Covid19Radar
             // Services
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
-            containerRegistry.RegisterSingleton<HttpDataService>();
+            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
         }
 
         protected override void OnStart()
