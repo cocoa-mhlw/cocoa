@@ -639,4 +639,12 @@
     <value>Feil ved nettverkstilkobling</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Oppstartsfeil for oppstart av eksponeringsvarsling</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Eksponeringsvarslingen kan ikke starte. Åpne terminalinnstillingene, slå inn Eksponeringsvarsling og slå inn Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

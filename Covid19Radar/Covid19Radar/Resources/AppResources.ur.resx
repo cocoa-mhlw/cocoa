@@ -639,4 +639,12 @@
     <value>�?یٹ ورک ک�?کش�? �?قص</value>
     <comment>通信に失敗しました�?</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>�?�?ائش �?وٹیفکیش�? شروع کر�?�? ک�? غ�?ط�?</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>�?�?ائش ک�? اط�?اع آغاز �?ہیں �?�? سک�? �? ٹر�?ی�?�? ترتیبات کھو�?یں �? �?�?ائش ک�? اط�?اع �?یں تبدی�? کریں �? اور Bluetooth �?یں �?ڑیں �?</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください�?</comment>
+  </data>
 </root>
