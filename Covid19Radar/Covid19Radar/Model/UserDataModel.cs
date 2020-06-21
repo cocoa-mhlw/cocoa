@@ -43,7 +43,9 @@ namespace Covid19Radar.Model
         public bool Equals(UserDataModel other)
         {
             return UserUuid == other?.UserUuid
-                && LastNotificationTime == other?.LastNotificationTime;
+                && LastNotificationTime == other?.LastNotificationTime
+                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled
+                && IsNotificationEnabled == other.IsNotificationEnabled;
         }
 
         /// <summary>
