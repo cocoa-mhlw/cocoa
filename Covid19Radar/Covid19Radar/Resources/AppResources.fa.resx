@@ -639,4 +639,12 @@
     <value>خطای اتصال شبکه</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>خطای راه اندازی اعلان نوردهی</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>اعلان نوردهی نتوانست راه اندازی شود. تنظیمات ترمینال را باز کنید ، اعلان نوردهی را روشن کنید و بلوتوث را روشن کنید.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

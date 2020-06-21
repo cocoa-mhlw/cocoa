@@ -815,6 +815,16 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">નેટવર્ક જોડાણ ભૂલ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification startup error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">એક્સપોઝર સૂચના શરૂઆત ભૂલ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">એક્સપોઝર સૂચના શરૂ કરી શકાતી નથી. ટર્મિનલ સેટિંગ્સ ખોલો, એક્સપોઝર નોટિફિકેશનમાં ફેરવો અને બ્લુટૂથમાં ફેરવો.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
+        </trans-unit>
       </group>
     </body>
   </file>

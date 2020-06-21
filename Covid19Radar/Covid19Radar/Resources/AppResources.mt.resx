@@ -639,4 +639,12 @@
     <value>Żball fil-konnessjoni tan-netwerk</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Żball fl-istartjar tan-Notifika ta' Espożizzjoni</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>In-Notifika ta' Espożizzjoni ma setgħetx tistartja. Iftaħ is-settings tat-terminal, dawwar fin-Notifika ta' Espożizzjoni, u dawwar bil-Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

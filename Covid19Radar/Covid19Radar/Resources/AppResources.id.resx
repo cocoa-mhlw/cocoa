@@ -641,4 +641,12 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <value>Kesalahan koneksi jaringan</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Error Pengaktifan pemberitahuan eksposur</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Pemberitahuan eksposur tidak bisa startup. Buka pengaturan terminal, Hidupkan pemberitahuan eksposur, dan nyalakan Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>

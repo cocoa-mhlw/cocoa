@@ -639,4 +639,12 @@
     <value>జాలిక అనుసంధాన దోషం</value>
     <comment>通信に失敗しました。</comment>
   </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>ప్రత్యక్షీకరణ ప్రకటన ప్రారంభ ప్రక్రియ దోషం</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>ప్రత్యక్షీకరణ ప్రకటన ప్రారంభం కాలేదు. టెర్మినల్ సెట్టింగ్ లను తెరవండి, ప్రత్యక్షీకరణ నోటిఫికేషన్ లో తిరగండి మరియు Bluetoothలో తిరగండి.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
 </root>
