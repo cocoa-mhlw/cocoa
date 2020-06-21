@@ -3,6 +3,7 @@
     x:Class="Covid19Radar.Views.NotifyOtherPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -53,7 +54,12 @@
                                 MaxLength="8"
                                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"
                                 Style="{StaticResource DefaultEntry}"
-                                Text="{Binding DiagnosisUid}" />
+                                Text="{Binding DiagnosisUid}">
+                                <Entry.Behaviors>
+                                    <behaviorPack:MaxLengthValidationBehavior MaxLength="8" />
+                                    <behaviorPack:NumberValidationBehavior />
+                                </Entry.Behaviors>
+                            </Entry>
                         </Frame>
                     </Frame>
                     <Frame
