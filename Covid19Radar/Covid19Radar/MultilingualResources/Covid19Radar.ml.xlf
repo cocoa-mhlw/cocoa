@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
+          <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
@@ -41,7 +41,7 @@
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">നിങ്ങളുടെ നെറ്റ് വർക്ക് കണക്ഷൻ പരിശോധിക്കുക.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
@@ -774,6 +774,56 @@
           <source>Inquiries about contact confirmation app</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">കോൺടാക്റ്റ് സ്ഥിരീകരണ ആപ്പിനെക്കുറിച്ചുള്ള അന്വേഷണങ്ങൾ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
+        </trans-unit>
+        <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
+          <source>Days</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ദിവസം</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">എക്സ്പോഷർ അറിയിപ്പ് സജീവമാണ്.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
+          <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth ഓഫാക്കി. Bluetooth ഓണാക്കുക.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">എക്സ്പോഷർ അറിയിപ്പ് പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു. ടെർമിനൽ സജ്ജീകരണങ്ങൾ തുറക്കുക, എക്സ്പോഷഅറിയിപ്പ് ഓണാക്കുക.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
+          <source>You must agree to the terms of use.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ഉപയോഗ വ്യവസ്ഥകൾ നിങ്ങൾ അംഗീകരിക്കണം.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is restricted. Please active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">എക്സ്പോഷർ അറിയിപ്പ് പരിമിതപ്പെടുത്തിയിരിക്കുന്നു. സജീവം.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能が承認されていません。承認してください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">എക്സ്പോഷർ അറിയിപ്പ് പിന്തുണയ്ക്കുന്നില്ല. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് OS അപ് ഡേറ്റ് ചെയ്യുക. നിങ്ങൾക്ക് ഇപ്പോഴും പ്രശ്നങ്ങൾ ഉണ്ടെങ്കിൽ, appsupport@cov19.mhlw.go.jp ഞങ്ങളെ ബന്ധപ്പെടുക.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
+          <source>Network connection error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">നെറ്റ് വർക്ക് കണക്ഷൻ പിശക്</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification startup error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">എക്സ്പോഷര് അറിയിപ്പ് ആരംഭപിശക്</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">എക്സ്പോഷര് അറിയിപ്പ് തുടങ്ങുവാന് സാധ്യമായില്ല. ടെർമിനൽ സജ്ജീകരണങ്ങൾ തുറക്കുക, എക്സ്പോഷഅറിയിപ്പ് ഓണാക്കുക, Bluetooth-ൽ തിരിക്കുക.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
       </group>
     </body>
