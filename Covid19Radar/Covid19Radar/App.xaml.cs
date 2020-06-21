@@ -15,11 +15,7 @@ using Prism.Navigation;
 using Covid19Radar.Services;
 using Prism.Services;
 using Covid19Radar.Common;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
 using System.Net.Http;
-using Prism.Logging.AppCenter;
 using Prism.Logging;
 using System.Collections.Generic;
 using System.Text;
@@ -63,10 +59,6 @@ namespace Covid19Radar
             // Local Notification tap event listener
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
-
-            AppCenter.Start($"android={AppSettings.Instance.AppCenterTokensAndroid};ios={AppSettings.Instance.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes));
-            Container.Resolve<ILogger>().Log("Started App Center");
-
             _ = InitializeBackgroundTasks();
 
             INavigationResult result;
@@ -110,13 +102,6 @@ namespace Covid19Radar
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // logger
-            var logger = new AppCenterLogger();
-
-            containerRegistry.RegisterInstance<ILogger>(logger);
-            containerRegistry.RegisterInstance<ILoggerFacade>(logger);
-            containerRegistry.RegisterSingleton<IMiniLogger, FFImageLoadingLogger>();
-
             // Base and Navigation
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MenuPage>();
@@ -162,7 +147,7 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
-            //ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
+            
         }
 
         protected override void OnResume()
@@ -184,7 +169,7 @@ namespace Covid19Radar
         {
             TaskScheduler.UnobservedTaskException += (sender, e) =>
             {
-                Container.Resolve<ILogger>().Report(e.Exception);
+                // maybe think local only logger
             };
         }
     }

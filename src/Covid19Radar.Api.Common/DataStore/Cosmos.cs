@@ -33,6 +33,7 @@ namespace Covid19Radar.Api.DataStore
         public Container TemporaryExposureKeyExport { get => Database.GetContainer("TemporaryExposureKeyExport"); }
         public Container Sequence { get => Database.GetContainer("Sequence"); }
         public Container AuthorizedApp { get => Database.GetContainer("AuthorizedApp"); }
+        public Container CustomVerificationStatus { get => Database.GetContainer("CustomVerificationStatus"); }
 
         /// <summary>
         /// DI Constructor
@@ -177,6 +178,16 @@ function increment(name, initialValue, incrementValue, _selfId) {
             catch { }
             var authorizedAppProperties = new ContainerProperties("AuthorizedApp", "/PartitionKey");
             var authorizedAppResult = await dbResult.Database.CreateContainerIfNotExistsAsync(authorizedAppProperties);
+
+            // Container CustomVerificationStatus
+            Logger.LogInformation("GenerateAsync Create AuthoCustomVerificationStatusrizedApp Container");
+            try
+            {
+                await dbResult.Database.GetContainer("CustomVerificationStatus").DeleteContainerAsync();
+            }
+            catch { }
+            var customVerificationStatusProperties = new ContainerProperties("CustomVerificationStatus", "/PartitionKey");
+            var customVerificationStatusResult = await dbResult.Database.CreateContainerIfNotExistsAsync(customVerificationStatusProperties);
 
         }
     }
