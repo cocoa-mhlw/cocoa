@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Covid19Radar.Services;
 using Covid19Radar.iOS.Services;
-using DeviceCheck;
-using Foundation;
-using UIKit;
 using Xamarin.Forms;
 using Covid19Radar.Model;
 
