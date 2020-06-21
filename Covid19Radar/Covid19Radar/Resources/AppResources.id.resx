@@ -32,7 +32,7 @@
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
-    <value>Pengaturan Status</value>
+    <value>Aplikasi Paparan COVID-19</value>
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
@@ -58,7 +58,7 @@
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
-    <value>Tak ada kontak jarak dekat yang teridentifikasi</value>
+    <value>Tak ada paparan/kontak jarak dekat dengan pengguna positif yang teridentifikasi</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
@@ -143,11 +143,11 @@
     <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>Apa yang dimaksud dengan "kontak jarak dekat"?</value>
+    <value>Apa yang dimaksud dengan 'kontak jarak dekat'?</value>
     <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
-    <value>Memeriksa kontak jarak dekat</value>
+    <value>Memeriksa paparan/kontak dalam jarak dekat</value>
     <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
@@ -155,7 +155,7 @@
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>Berhenti / hapus data kontak jarak dekat yang lalu</value>
+    <value>Berhenti / hapus data paparan/kontak jarak dekat yang lalu</value>
     <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
@@ -192,7 +192,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
-    <value>Anda bisa memeriksa jumlah kontak jarak dekat dari layar beranda.</value>
+    <value>Anda bisa memeriksa jumlah berapa kali berada dalam kontak jarak dekat dari layar beranda.</value>
     <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
   </data>
   <data name="HelpPage2Description3" xml:space="preserve">
@@ -480,7 +480,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>Jika anda pernah berada dalam jarak dekat dengan pengguna lain aplikasi ini yang teruji positif terinfeksi COVID-19, aplikasi akan mengirim notifikasi tentang potensi infeksi dan memberi petunjuk untuk melindungi kesehatan anda.</value>
+    <value>Jika anda pernah berada dalam jarak dekat dengan pengguna lain aplikasi ini yang teruji positif COVID-19, aplikasi akan mengirim notifikasi tentang potensi infeksi dan memberi petunjuk untuk melindungi kesehatan anda.</value>
     <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
   </data>
   <data name="TutorialPage1Title1" xml:space="preserve">
@@ -548,11 +548,11 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>同意して陽性登録する</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>Persetujuan bila terdaftar sebagai pengguna yang terinfeksi</value>
+    <value>Persetujuan bila terdaftar sebagai pengguna yang teruji positif COVID-19</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Persetujuan bila terdaftar sebagai pengguna yang terinfeksi</value>
+    <value>Persetujuan bila terdaftar sebagai pengguna yang terruji positif COVID-19</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
@@ -568,7 +568,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>Tanggal saat anda berada di dekat pengguna aplikasi yang terinfeksi COVID-19.</value>
+    <value>Tanggal saat anda berada di dekat pengguna aplikasi yang melaporkan teruji positif COVID-19.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
@@ -614,15 +614,16 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>X日間</comment>
   </data>
   <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Pemberitahuan eksposur aktif.</value>
+    <value>Notifikasi Paparan COVID-19 aktif.</value>
     <comment>Exposure Notification機能は許諾の状態です。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth dimatikan. Silakan aktifkan Bluetooth.</value>
+    <value>Bluetooth tidak aktif. Silahkan aktifkan Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Pemberitahuan eksposur dinonaktifkan. Buka pengaturan terminal dan nyalakan pemberitahuan eksposur.</value>
+    <value>Notifikasi Paparan COVID-19 dinonaktifkan. Buka menu pengaturan di perangkat dan aktifkan Notifikasi Paparan.
+</value>
     <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
@@ -630,23 +631,23 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>利用規約に同意する必要があります。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Pemberitahuan eksposur dibatasi. Silakan aktif.</value>
+    <value>Notifikasi Paparan bersifat terbatas. Mohon lebih proaktif dengan tak membatasi fungsi aplikasi.</value>
     <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Pemberitahuan eksposur tidak didukung. Perbarui OS ke versi terbaru. Jika Anda masih memiliki masalah, silahkan hubungi kami di appsupport@cov19.mhlw.go.jp.</value>
+    <value>Notifikasi Paparan tidak didukung. Perbarui sistem operasi perangkat anda ke versi terbaru. Jika masalah masih terjadi, silahkan hubungi kami di appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
-    <value>Kesalahan koneksi jaringan</value>
+    <value>Kesalahan di koneksi jaringan</value>
     <comment>通信に失敗しました。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Error Pengaktifan pemberitahuan eksposur</value>
+    <value>Kesalahan dalam pengaktifan Notifikasi Paparan</value>
     <comment>Exposure Notification起動エラー</comment>
   </data>
   <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Pemberitahuan eksposur tidak bisa startup. Buka pengaturan terminal, Hidupkan pemberitahuan eksposur, dan nyalakan Bluetooth.</value>
+    <value>Notifikasi Paparan tidak bisa diaktifkan. Buka menu pengaturan di perangkat, aktifkan Notifikasi Paparan, dan aktifkan Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 </root>
