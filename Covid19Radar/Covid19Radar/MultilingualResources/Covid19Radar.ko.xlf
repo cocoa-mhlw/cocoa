@@ -187,7 +187,7 @@
           <source>When tested positive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">감염된 것으로 판명된 경우</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-          <note from="Multiお願いできますでしょうか。 お願いできますでしょうか。 lingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
           <note from="MultilingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
         </trans-unit>
         <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
