@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Essentials;
-using Covid19Radar.Renderers;
 
 namespace Covid19Radar.Views
 {
