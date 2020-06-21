@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
@@ -101,8 +103,6 @@ namespace Covid19Radar.Services
             {
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
-                    // Find next directory to start checking
-                    //var dirNumber = userData.ServerBatchNumbers[serverRegion] + 1;
                     cancellationToken.ThrowIfCancellationRequested();
 
                     var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion, cancellationToken);
@@ -128,16 +128,11 @@ namespace Covid19Radar.Services
                             }
                         }
                     }
-
-                    //userData.ServerBatchNumbers[serverRegion] = dirNumber;
-                    //await userDataService.SetAsync(userData);
-                    //dirNumber++;
                 }
             }
             catch (Exception ex)
             {
                 // any expections, bail out and wait for the next time
-                // TODO: log the error on some server!
                 Console.WriteLine(ex);
             }
         }
@@ -222,9 +217,24 @@ namespace Covid19Radar.Services
             }
 
             var selfDiag = await CreateSubmissionAsync(temporaryExposureKeys, pendingDiagnosis);
-            
-            // HERSYS
-            await httpDataService.PutSelfExposureKeysAsync(selfDiag);
+
+            HttpStatusCode httpStatusCode = await httpDataService.PutSelfExposureKeysAsync(selfDiag);
+            if (httpStatusCode == HttpStatusCode.NotAcceptable)
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    "",
+                    "アプリで入力された処理番号が違います",
+                    Resources.AppResources.ButtonOk);
+                throw new InvalidOperationException();
+            }
+            else if (httpStatusCode == HttpStatusCode.ServiceUnavailable || httpStatusCode == HttpStatusCode.InternalServerError)
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    "",
+                    "センターに接続できません",
+                    Resources.AppResources.ButtonOk);
+                throw new InvalidOperationException();
+            }
             // Update pending status
             pendingDiagnosis.Shared = true;
             await userDataService.SetAsync(userData);
@@ -237,7 +247,7 @@ namespace Covid19Radar.Services
             var keys = temporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key
             {
                 KeyData = Convert.ToBase64String(k.Key),
-                RollingStartNumber = (uint)(k.RollingStart -  DateTime.UnixEpoch).TotalMinutes /10,
+                RollingStartNumber = (uint)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
                 RollingPeriod = (uint)(k.RollingDuration.TotalMinutes / 10),
                 TransmissionRisk = (int)k.TransmissionRiskLevel
             });
