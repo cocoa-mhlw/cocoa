@@ -65,6 +65,7 @@
 - Anharu (Xamarin)
 - Soichi Ikebe (Documentation)
 - Elisa Sakamoto (Italian Translation)
+- Leo Ando (Client Android)
 
 # Beta Testers
 - Nagahata Kenji
