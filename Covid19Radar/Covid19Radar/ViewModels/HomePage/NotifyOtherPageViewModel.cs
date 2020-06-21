@@ -12,6 +12,7 @@ namespace Covid19Radar.ViewModels
     {
         public bool IsEnabled { get; set; } = true;
         public string DiagnosisUid { get; set; }
+        private int errorCount { get; set; }
 
         private readonly UserDataService userDataService;
         private UserDataModel userData;
@@ -21,26 +22,58 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.TitileUserStatusSettings;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
-
+            errorCount = 0;
         }
 
         public Command OnClickRegister => (new Command(async () =>
         {
-            if (string.IsNullOrEmpty(DiagnosisUid))
+            // Check helthcare authority positive api check here!!
+            using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
+            dialog.Show();
+            if (errorCount > AppConstants.MaxErrorCount)
             {
-                // Check gov's positive api check here!!
                 await UserDialogs.Instance.AlertAsync(
-                    Resources.AppResources.NotifyOtherPageDialogSubmittedText,
-                    Resources.AppResources.ButtonComplete,
+                    errorCount + "回のエラーが発生しました、アプリケーションを終了します",
+                    "登録エラー",
                     Resources.AppResources.ButtonOk
                 );
+                dialog.Hide();
+                Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
                 return;
             }
 
+            // Tarpit Sleep
+            Thread.Sleep(errorCount * 5000);
 
+            // Init Dialog
+            if (string.IsNullOrEmpty(DiagnosisUid))
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    "処理番号が入力されていません",
+                    "登録エラー",
+                    Resources.AppResources.ButtonOk
+                );
+                errorCount++;
+                await userDataService.SetAsync(userData);
+                dialog.Hide();
+                return;
+            }
+
+            Regex regex = new Regex(@"\b[0-9]{8}\b");
+            if (!regex.IsMatch(DiagnosisUid))
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    "処理番号のフォーマットが一致していません",
+                    "登録エラー",
+                    Resources.AppResources.ButtonOk
+                );
+                errorCount++;
+                await userDataService.SetAsync(userData);
+                dialog.Hide();
+                return;
+            }
 
             // Submit the UID
-            using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
             IsEnabled = false;
             try
             {
@@ -90,8 +123,6 @@ namespace Covid19Radar.ViewModels
             {
                 IsEnabled = true;
             }
-
-
         }));
 
         public Command OnClickAfter => (new Command(async () =>

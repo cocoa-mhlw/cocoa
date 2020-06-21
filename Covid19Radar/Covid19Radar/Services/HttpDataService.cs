@@ -68,9 +68,8 @@ namespace Covid19Radar.Services
         }
 
         // Put /diagnosis - upload self diagnosys file
-        public async Task PutSelfExposureKeysAsync(SelfDiagnosisSubmission request)
+        public async Task PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
-            System.Console.WriteLine(Utils.SerializeToJson(request));
             var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/diagnosis";
             var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
             var result = await PutAsync(url, content);
@@ -96,7 +95,7 @@ namespace Covid19Radar.Services
 
         public async Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
         {
-            return await GetCdnStreamAsync(url,cancellationToken);
+            return await GetCdnStreamAsync(url, cancellationToken);
         }
 
 
@@ -178,7 +177,7 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        private async Task<Stream> GetCdnStreamAsync(string url,CancellationToken cancellationToken)
+        private async Task<Stream> GetCdnStreamAsync(string url, CancellationToken cancellationToken)
         {
             Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
             HttpResponseMessage result = await response;
@@ -205,6 +204,8 @@ namespace Covid19Radar.Services
 
         private async Task<string> PutAsync(string url, HttpContent body)
         {
+
+            // Error Result 
             var result = await httpClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
