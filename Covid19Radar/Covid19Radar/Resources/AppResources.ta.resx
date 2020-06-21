@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>தயவுகூர்ந்து உங்கள் பிணைய இணைப்பை சரிபார்க்கவும்.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>சரி</value>
@@ -634,5 +634,9 @@
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>வெளிப்பாடு அறிவிப்பு ஆதரிக்கப்படவில்லை. சமீபத்திய பதிப்பிற்கு OS ஐ புதுப்பிக்கவும். நீங்கள் இன்னும் பிரச்சினைகள் இருந்தால், ***REMOVED*** எங்களை தொடர்பு கொள்ளவும்.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>பிணைய இணைப்பு பிழை</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>

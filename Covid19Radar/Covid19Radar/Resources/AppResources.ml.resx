@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>നിങ്ങളുടെ നെറ്റ് വർക്ക് കണക്ഷൻ പരിശോധിക്കുക.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ശരി</value>
@@ -634,5 +634,9 @@
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>എക്സ്പോഷർ അറിയിപ്പ് പിന്തുണയ്ക്കുന്നില്ല. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് OS അപ് ഡേറ്റ് ചെയ്യുക. നിങ്ങൾക്ക് ഇപ്പോഴും പ്രശ്നങ്ങൾ ഉണ്ടെങ്കിൽ, ***REMOVED*** ഞങ്ങളെ ബന്ധപ്പെടുക.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>നെറ്റ് വർക്ക് കണക്ഷൻ പിശക്</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>

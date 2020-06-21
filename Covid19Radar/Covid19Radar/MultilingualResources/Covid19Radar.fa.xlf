@@ -41,7 +41,7 @@
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">لطفاً اتصال شبکه خود را بررسی کنید.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
@@ -809,6 +809,11 @@
           <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at ***REMOVED***.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">اعلان نوردهی پشتیبانی نمی شود. لطفا سیستم عامل را به آخرین نسخه به روز کنید. اگر شما هنوز هم مشکل دارید ، لطفا با ما تماس بگیرید در ***REMOVED***.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
+          <source>Network connection error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">خطای اتصال شبکه</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
       </group>
     </body>

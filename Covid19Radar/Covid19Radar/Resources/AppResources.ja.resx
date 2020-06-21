@@ -36,8 +36,8 @@
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
-    <value>ネットワーク接続を確認してください。</value>
-    <comment>Dialog message for Network connection error</comment>
+    <value>電波状況の良い場所でもう一度お試しください。</value>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
@@ -634,5 +634,9 @@
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>通信に失敗しました。</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>
