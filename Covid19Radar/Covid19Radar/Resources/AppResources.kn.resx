@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>ದಯವಿಟ್ಟು ನಿಮ್ಮ ನೆಟ್ ವರ್ಕ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ಸರಿ</value>
@@ -610,5 +610,41 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>ದಿನಗಳು</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆ ಸಕ್ರಿಯವಾಗಿದೆ.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>ಬ್ಲೂಟೂತ್ ಆಫ್ ಆಗಿದೆ. ದಯವಿಟ್ಟು Bluetooth ಆನ್ ಮಾಡಿ.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಟರ್ಮಿನಲ್ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ತೆರೆಯಿರಿ ಮತ್ತು ಎಕ್ಸ್ ಪೋಷರ್ ನೋಟಿಫಿಕೇಶನ್ ಅನ್ನು ಆನ್ ಮಾಡಿ.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>ನೀವು ಬಳಕೆಯ ನಿಬಂಧನೆಗಳನ್ನು ಒಪ್ಪಬೇಕು.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆಯನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಸಕ್ರಿಯರಾಗಿರಿ.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆಯನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ದಯವಿಟ್ಟು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ OS ಅನ್ನು ಅಪ್ ಡೇಟ್ ಮಾಡಿ. ನಿಮಗೆ ಇನ್ನೂ ಸಮಸ್ಯೆಗಳಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು ***REMOVED*** ಸಂಪರ್ಕಿಸಿ.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>ನೆಟ್ವರ್ಕ್ ಸಂಪರ್ಕ ದೋಷ</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ನೋಟಿಫಿಕೇಶನ್ ಪ್ರಾರಂಭದೋಷ</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆ ಯನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಟರ್ಮಿನಲ್ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ತೆರೆಯಿರಿ, ಎಕ್ಸ್ ಪೋಷರ್ ನೋಟಿಫಿಕೇಶನ್ ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ, ಮತ್ತು Bluetooth ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 </root>
