@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>اگر آپ COVID ک�? ساتھ قریب�? رابط�? �?یں تھ�? ت�? اپ�?�? کیش�? آپ ک�? �?ط�?ع کر�? گا-19 �?ثبت صار�?.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた�?�合�?�スマ�?�トフォンにプッシュ通知が届きます�??</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた�?�合�?�スマ�?�トフォンにプッシュ通知が届きます�??</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>آپ �?و�? اسکری�? س�? اپ�?�? قریب�? رابطوں ک�? تعداد �?یک کرسکت�? ہیں.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>اگر آپ �?�? �?ثبت تجرب�? کیا</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合�??</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合�??</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>عوا�?�? صحت ک�? ادار�? آپ ک�? "پروسیس�?گ �?�?بر" جار�? کریں گ�? �?</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>اگر آپ ک�? �?ئ�? �?ثبت جا�?�? پڑتا�?-19</value>
-    <comment>新型コロナウィルスに感染して�?ると判定された�?</comment>
+    <comment>新型コロナウイルスに感染して�?ると判定された�?</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>�?یں رابط�? ک�? ریکارڈ�?گ ک�? کیس�? روک/خارج کروں �?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 �?ع�?و�?ات اور وسائ�?</value>
-    <comment>新型コロナウィルス感染�?対策サイ�?</comment>
+    <comment>新型コロナウイルス感染�?対策サイ�?</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>�?عاو�?ت</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>--19 ک�? �?ئ�? ٹیسٹ ک�? �?ثبت جب</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>�?ثبت ٹیسٹ کا �?تیج�? رجسٹر کریں</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>COVID ک�? �?ئ�? �?ثبت تجرب�? کیا جب, آپ گ�?�?ا�? اس اپ�?�? کیش�? �?یں ٹیسٹ کا �?تیج�? رجسٹر کر سکت�? ہیں.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます�??</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます�??</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>اگر آپ کس�? ایس�? صار�? ک�? ساتھ قریب�? رابط�? �?یں ہیں ج�? �?ثبت تجرب�? کرت�? ہیں �? ت�? ایپ آپ ک�? �?�?ک�?�? ا�?فیکش�? کا �?ط�?ع کرتا ہ�? اور آپ ک�? صحت ک�? ح�?اظت ک�? �?ئ�? ر�?�?�?ائ�? �?را�?�? کرت�? ہ�? �?</value>
