@@ -27,7 +27,7 @@
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</source>
-          <target state="translated">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
+          <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
@@ -38,7 +38,7 @@
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="translated">Periksa koneksi jaringan anda.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
@@ -50,7 +50,7 @@
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="translated">Eksposur</target>
+          <target state="translated">Paparan</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
@@ -117,7 +117,7 @@
         </trans-unit>
         <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
           <source>Sharing positive information and anonymous notification to others</source>
-          <target state="translated">Berbagi informasi hasil uji positif dan pemberitahuan anonim ke pengguna lain</target>
+          <target state="translated">Berbagi informasi dan memberi notifikasi hasil uji positif secara anonim ke pengguna lain</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
@@ -165,7 +165,7 @@
         </trans-unit>
         <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
           <source>One more person using this app is one more step towards containing the spread of COVID-19.</source>
-          <target state="translated">Setiap tambahan satu pengguna yang memakai aplikasi ini, adalah satu langkah maju lebih dekat dengan penanggulangan penyebaran COVID-19.</target>
+          <target state="translated">Setiap tambahan satu pengguna yang memakai aplikasi ini, adalah satu langkah maju lebih dekat untuk meredam penyebaran COVID-19.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリは多くの方にお使いいただくほど効果を発揮します。</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
@@ -195,7 +195,7 @@
         </trans-unit>
         <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
           <source>When you run this app, each smartphone will generate a random code. No personal information and no location information including GPS data is collected.</source>
-          <target state="translated">Ketika aplikasi ini dijalankan, setiap perangkat akan menghasilkan kode acak. Tak ada informasi pribadi atau lokasi informasi termasuk data GPS yang kumpulkan.</target>
+          <target state="translated">Ketika aplikasi ini dijalankan, setiap perangkat akan menghasilkan kode acak. Tak ada informasi pribadi atau lokasi, termasuk data GPS, yang kumpulkan.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
@@ -346,7 +346,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="NotContactPageTitle" translate="yes" xml:space="preserve">
           <source>Close contacts for the past 14 days</source>
-          <target state="translated">Kontak jarak dekat dalam 14 hari terakhit</target>
+          <target state="translated">Kontak jarak dekat dalam 14 hari terakhir</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
         </trans-unit>
         <trans-unit id="NotContactPageLabel1" translate="yes" xml:space="preserve">
@@ -521,7 +521,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="TutorialPage2Title" translate="yes" xml:space="preserve">
           <source>TutorialPage2Description1</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">TutorialPage2Description1</target>
+          <target state="translated">TutorialPage2Description1</target>
           <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description1" translate="yes" xml:space="preserve">
@@ -671,7 +671,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
           <source>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</source>
-          <target state="translated">Jika anda pernah terpapar dengan pengguna positif COVID-19 dalam 14 hari terakhir, anda akan tahu bahwa anda pernah terpapar dengan tanpa menyebut informasi yang dapat mengidentifikasi anda.</target>
+          <target state="translated">Jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi yang positif COVID-19 dalam 14 hari terakhir, anda akan tahu bahwa anda pernah berdekatan dengannya dengan tanpa informasi yang dapat mengidentifikasi anda.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
@@ -738,15 +738,15 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
           <source>Notifications enabled</source>
-          <target state="translated">Notifikasi diaktifkan.</target>
+          <target state="translated">Notifikasi diaktifkan</target>
         </trans-unit>
         <trans-unit id="InqueryPageDescription3" translate="yes" xml:space="preserve">
           <source>Information about the this app</source>
-          <target state="translated">Informasi tentang aplikasi ini.</target>
+          <target state="translated">Informasi tentang aplikasi ini</target>
         </trans-unit>
         <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
           <source>Q and A for user</source>
-          <target state="translated">Untuk pengguna: Pertanyaan dan Jawaban</target>
+          <target state="translated">Tanya Jawab bagi pengguna</target>
         </trans-unit>
         <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
           <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
@@ -760,8 +760,53 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="new">Days</target>
+          <target state="translated">Hari</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pemberitahuan eksposur aktif.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
+          <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth dimatikan. Silakan aktifkan Bluetooth.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pemberitahuan eksposur dinonaktifkan. Buka pengaturan terminal dan nyalakan pemberitahuan eksposur.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
+          <source>You must agree to the terms of use.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anda harus menyetujui persyaratan penggunaan.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is restricted. Please active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pemberitahuan eksposur dibatasi. Silakan aktif.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能が承認されていません。承認してください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pemberitahuan eksposur tidak didukung. Perbarui OS ke versi terbaru. Jika Anda masih memiliki masalah, silahkan hubungi kami di appsupport@cov19.mhlw.go.jp.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
+          <source>Network connection error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kesalahan koneksi jaringan</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification startup error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Error Pengaktifan pemberitahuan eksposur</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pemberitahuan eksposur tidak bisa startup. Buka pengaturan terminal, Hidupkan pemberitahuan eksposur, dan nyalakan Bluetooth.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
       </group>
     </body>

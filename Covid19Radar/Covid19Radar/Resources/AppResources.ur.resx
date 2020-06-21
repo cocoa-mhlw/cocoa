@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>اپنے نیٹ ورک کنکشن کی پڑتال کریں ۔</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ٹھیک ہے</value>
@@ -606,5 +606,45 @@
   <data name="InqueryMailSubject" xml:space="preserve">
     <value>رابطہ تصدیق ایپ کے بارے میں انکوائری</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>ايام</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>نمائش کی اطلاع فعال ہے ۔</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Bluetooth آف ہے ۔ Bluetooth آن کریں ۔</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>نمائش کی اطلاع غیر فعال ہے ۔ ٹرمینل ترتیبات کھولیں اور نمائش کی اطلاع دیں ۔</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>آپ کو استعمال کی شرائط سے اتفاق کرنا ضروری ہے.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>نمائش کی اطلاع محدود ہے ۔ برائے مہربانی فعال.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>نمائش کی اطلاع کی تائید نہیں کی گئی ۔ براہ کرم تازہ ترین ورژن میں OS کو اپ ڈیٹ کریں. اگر اب بھی آپ کے مسائل ہیں ، تو براہ مہربانی ہم سے رابطہ کریں appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>نیٹ ورک کنکشن نقص</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>نمائش نوٹیفکیشن شروع کرنے کی غلطی</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>نمائش کی اطلاع آغاز نہیں ہو سکی ۔ ٹرمینل ترتیبات کھولیں ، نمائش کی اطلاع میں تبدیل کریں ، اور Bluetooth میں مڑیں ۔</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 </root>
