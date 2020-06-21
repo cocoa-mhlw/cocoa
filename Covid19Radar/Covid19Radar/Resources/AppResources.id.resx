@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -46,7 +46,7 @@
     <value>Jangan sekarang</value>
   </data>
   <data name="MainExposures" xml:space="preserve">
-    <value>Eksposur</value>
+    <value>Paparan</value>
     <comment>Tab Button</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
@@ -98,7 +98,7 @@
     <value>Bagikan</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Berbagi informasi hasil uji positif dan pemberitahuan anonim ke pengguna lain</value>
+    <value>Berbagi informasi dan memberi notifikasi hasil uji positif secara anonim ke pengguna lain</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
@@ -135,7 +135,7 @@
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Setiap tambahan satu pengguna yang memakai aplikasi ini, adalah satu langkah maju lebih dekat dengan penanggulangan penyebaran COVID-19.</value>
+    <value>Setiap tambahan satu pengguna yang memakai aplikasi ini, adalah satu langkah maju lebih dekat untuk meredam penyebaran COVID-19.</value>
     <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
@@ -159,7 +159,7 @@
     <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
-    <value>Ketika aplikasi ini dijalankan, setiap perangkat akan menghasilkan kode acak. Tak ada informasi pribadi atau lokasi informasi termasuk data GPS yang kumpulkan.</value>
+    <value>Ketika aplikasi ini dijalankan, setiap perangkat akan menghasilkan kode acak. Tak ada informasi pribadi atau lokasi, termasuk data GPS, yang kumpulkan.</value>
     <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
@@ -280,7 +280,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
-    <value>Kontak jarak dekat dalam 14 hari terakhit</value>
+    <value>Kontak jarak dekat dalam 14 hari terakhir</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
@@ -540,7 +540,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>Jika anda pernah terpapar dengan pengguna positif COVID-19 dalam 14 hari terakhir, anda akan tahu bahwa anda pernah terpapar dengan tanpa menyebut informasi yang dapat mengidentifikasi anda.</value>
+    <value>Jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi yang positif COVID-19 dalam 14 hari terakhir, anda akan tahu bahwa anda pernah berdekatan dengannya dengan tanpa informasi yang dapat mengidentifikasi anda.</value>
     <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
@@ -593,13 +593,13 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <value>Untuk menghentikan, lakukan pengubahan melalui menu Pengaturan dalam aplikasi</value>
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
-    <value>Notifikasi diaktifkan.</value>
+    <value>Notifikasi diaktifkan</value>
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>Informasi tentang aplikasi ini.</value>
+    <value>Informasi tentang aplikasi ini</value>
   </data>
   <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>Untuk pengguna: Pertanyaan dan Jawaban</value>
+    <value>Tanya Jawab bagi pengguna</value>
   </data>
   <data name="InqueryMailBody" xml:space="preserve">
     <value>Nama: \r\n Kontak: \r\n Isi pertanyaan  (Pilih dari salah satu kategori berikut): 1. Bagaimana cara aplikasi ini beroperaso, 2. Pengaturan aplikasi, 3. Penggunaan aplikasi (notifikasi dll.) ), 4. Lainnya \r\n Pertanyaan text: \r\n</value>
