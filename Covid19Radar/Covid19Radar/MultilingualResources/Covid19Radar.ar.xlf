@@ -825,6 +825,71 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">تعذر بدء تشغي�? إع�?ا�? ا�?تعرض. ا�?تح إعدادات ا�?�?حطة ا�?طر�?ية�? ث�? ق�? بتشغي�? "إع�?ا�? ا�?تعرض"�? ث�? ق�? بتشغي�? Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください�?</note>
         </trans-unit>
+        <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Process number incorrect</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">رق�? ا�?ع�?�?ية غير صحيح</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリで入力された処�?番号が違�?ま�?</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Cannot connect to registration center</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">�?ا ي�?�?�? ا�?اتصا�? ب�?ر�?ز ا�?تسجي�?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
+          <source>Do you want to register positive information?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">�?�? تريد تسجي�? �?ع�?و�?ات إيجابية�?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性�?報を登録しますか?</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">تسجي�?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
+          <source>Canceled</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ت�? ا�?إ�?غاء</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
+          <source>Please wait for a while until registration starts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">يرج�? ا�?ا�?تظار �?�?ترة حت�? يبدأ ا�?تسجي�?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録開始までし�?�らくそ�?�ままでお�?ちください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
+          <source>Awaiting registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">�?�? ا�?تظار ا�?تسجي�?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録�?ち</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
+          <source>No processing number entered</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">�?�? يت�? إدخا�? رق�? �?عا�?جة</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処�?番号が�?�力されて�?ません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
+          <source>Processing number format does not match</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ت�?سي�? رق�? ا�?�?عا�?جة غير �?تطاب�?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処�?番号のフォーマットが�?致して�?ません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
+          <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">�?�? أج�? تسجي�? سج�?ات إيجابية�? �?�?�? ا�?ضرور�? �?ت�?�?ي�? تسجي�? سج�? ا�?اتصا�? COVID-19�? يرج�? ت�?�?ي�?�? �?�? إعدادات ا�?تطبي�? أ�? �?ظا�? ا�?تشغي�?.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする�?要があります�?�アプリかOSの設定から有効にしてください�?</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
+          <source>Enable COVID-19 contact logging</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ت�?�?ي�? تسجي�? ا�?اتصا�? COVID-19</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
+          <source>The number of registrations has reached the upper limit. Exit application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">وص�? عدد ا�?تسجي�?ات إ�?�? ا�?حد ا�?أع�?�?. إ�?�?اء ا�?تطبي�?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録回数上限になりました。アプリケーションを終�?しま�?</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
+          <source>Registration error</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">خطأ �?�? ا�?تسجي�?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
+        </trans-unit>
       </group>
     </body>
   </file>
