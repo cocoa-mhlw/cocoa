@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Covid19Radar.Common
+﻿namespace Covid19Radar.Common
 {
     public static class JumpHash
     {
