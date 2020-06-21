@@ -190,7 +190,7 @@
         </trans-unit>
         <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
           <source>Checking close contacts</source>
-          <target state="translated"Come verificare i contatti</target>
+          <target state="translated">Come verificare i contatti</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の確認方法</note>
         </trans-unit>
@@ -824,6 +824,71 @@
           <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
           <target state="translated">Impossibile avviare la funzione "notifica di esposizione". Attiva la notifica di esposizione e il Bluetooth dalle impostazioni del dispositivo.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Process number incorrect</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Numero di processo errato</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリで入力された処理番号が違います</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Cannot connect to registration center</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impossibile connettersi al centro di registrazione</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
+          <source>Do you want to register positive information?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vuoi registrare informazioni positive?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録しますか?</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Registra</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
+          <source>Canceled</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annullato</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
+          <source>Please wait for a while until registration starts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attendere un po 'fino all'inizio della registrazione</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
+          <source>Awaiting registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">In attesa di registrazione</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
+          <source>No processing number entered</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nessun numero di elaborazione immesso</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
+          <source>Processing number format does not match</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il formato del numero di elaborazione non corrisponde</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号のフォーマットが一致していません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
+          <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Per registrare i record positivi, è necessario abilitare la registrazione del registro contatti COVID-19, abilitarla dalle impostazioni dell'applicazione o del sistema operativo.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
+          <source>Enable COVID-19 contact logging</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abilitare la registrazione dei contatti COVID-19</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
+          <source>The number of registrations has reached the upper limit. Exit application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Il numero di registrazioni ha raggiunto il limite massimo. Uscire dall'applicazione</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録回数上限になりました。アプリケーションを終了します</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
+          <source>Registration error</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Errore di registrazione</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
         </trans-unit>
       </group>
     </body>
