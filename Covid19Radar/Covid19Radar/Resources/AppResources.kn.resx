@@ -1,4 +1,4 @@
-?��<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -16,7 +16,7 @@
     <value>ಸಮ್ಮತಿಸಿ</value>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
-    <value>ಹೋಮ�?</value>
+    <value>ಹೋಮ್</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
@@ -32,21 +32,21 @@
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
-    <value>ಸ್ಟ�?ಟಸ�? ಸ�?ಟ್ಟಿಂಗ್ಸ�?</value>
+    <value>ಸ್ಟೇಟಸ್ ಸೆಟ್ಟಿಂಗ್ಸ್</value>
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟ�? ನಿಮ್ಮ ನ�?ಟ�? ವರ್ಕ�? ಸಂಪರ್ಕವನ್ನ�? ಪರಿಶ�?ಲಿಸಿ.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <value>ದಯವಿಟ್ಟು ನಿಮ್ಮ ನೆಟ್ ವರ್ಕ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ.</value>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ಸರಿ</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
-    <value>ನೋಟನ�?</value>
+    <value>ನೋಟನೌ</value>
   </data>
   <data name="MainExposures" xml:space="preserve">
-    <value>ಒಡ್ಡುವಿಕ�?ಗಳಲ್ಲಿ</value>
+    <value>ಒಡ್ಡುವಿಕೆಗಳಲ್ಲಿ</value>
     <comment>Tab Button</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
@@ -58,391 +58,391 @@
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
-    <value>ಯಾವುದ�? ಗೊತ್ತಾದ ಬಹಿಷ್ಕಾರ</value>
+    <value>ಯಾವುದೇ ಗೊತ್ತಾದ ಬಹಿಷ್ಕಾರ</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>ಸಕಾರಾತ್ಮ�? ಕೋವಿದ�?-19 ಫಲಿತಾಂಶವನ್ನ�? ವರದಿ ಮಾಡಿದ ಯಾರಿಗಾದರ�? ನ�?ವ�? �?ಮಿಷ ಒಡ್ಡಿದ್ದರ�? ನಿಮಗ�? �?ಧಿಸೂಚನ�? ಹೊರಡಿಸಲಾಗುವುದ�?.</value>
+    <value>ಸಕಾರಾತ್ಮಕ ಕೋವಿದ್-19 ಫಲಿತಾಂಶವನ್ನು ವರದಿ ಮಾಡಿದ ಯಾರಿಗಾದರೂ ನೀವು ಆಮಿಷ ಒಡ್ಡಿದ್ದರೆ ನಿಮಗೆ ಅಧಿಸೂಚನೆ ಹೊರಡಿಸಲಾಗುವುದು.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟ�? ನಂತರ ಮತ್ತ�? ಪ್ರಯತ್ನಿಸಿ.</value>
+    <value>ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">
-    <value>ವಿಫಲವಾಗಿದ�?</value>
+    <value>ವಿಫಲವಾಗಿದೆ</value>
   </data>
   <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>ನಾಪತ್ತ�? �?ರ್ಜಿ</value>
+    <value>ನಾಪತ್ತೆ ಅರ್ಜಿ</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
-    <value>ಪೂರ್ಣಗೊಳಿಸ�?</value>
+    <value>ಪೂರ್ಣಗೊಳಿಸು</value>
   </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದ�?....</value>
+    <value>ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>ಸ�?ಟ್ಟಿಂಗ್�?�ಗಳ�?</value>
-    <comment>アプリの設�?</comment>
+    <value>ಸೆಟ್ಟಿಂಗ್‌ಗಳು</value>
+    <comment>アプリの設定</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>ರದ್ದುಮಾಡಿ</value>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
-    <value>�?ಳಿಸುತ್ತಿದ�?</value>
+    <value>ಅಳಿಸುತ್ತಿದೆ</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>�?್ಯಪ�? ಶ�?ರ�?</value>
-    <comment>本アプリを�?めましょ�?</comment>
+    <value>ಆ್ಯಪ್ ಶೇರ್</value>
+    <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
-    <value>ಹಂಚ�?</value>
+    <value>ಹಂಚು</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>ಸಕಾರಾತ್ಮ�? ಮಾಹಿತಿ ಮತ್ತ�? �?ನಾಮಧ�?ಯ �?ಧಿಸೂಚನ�?ಯನ್ನ�? �?ತರರಿಗ�? ಹಂಚಿಕೊಳ್ಳುವುದ�?</value>
+    <value>ಸಕಾರಾತ್ಮಕ ಮಾಹಿತಿ ಮತ್ತು ಅನಾಮಧೇಯ ಅಧಿಸೂಚನೆಯನ್ನು ಇತರರಿಗೆ ಹಂಚಿಕೊಳ್ಳುವುದು</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
-    <value>ಮರುಹೊಂದಿಸ�?</value>
+    <value>ಮರುಹೊಂದಿಸು</value>
     <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
-    <value>ಗೌಪ್ಯತ�? ನ�?ತಿ</value>
+    <value>ಗೌಪ್ಯತೆ ನೀತಿ</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
-    <value>ರಿಜಿಸ್ಟರ�? ಗಾಗಿ ಕಾಯುತ್ತಿದ್ದಾರ�?</value>
+    <value>ರಿಜಿಸ್ಟರ್ ಗಾಗಿ ಕಾಯುತ್ತಿದ್ದಾರೆ</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>ನ�?ವ�? ನಿಜವಾಗಲ�? ಎಲ್ಲಾ ಡ�?ಟಾವನ್ನ�? ರ�?ಸ�?ಟ�? ಮಾಡಲ�? ಬಯಸುತ್ತಿದ್ದ�?ರಿ?</value>
+    <value>ನೀವು ನಿಜವಾಗಲೂ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ರೀಸೆಟ್ ಮಾಡಲು ಬಯಸುತ್ತಿದ್ದೀರಿ?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>ಎಲ್ಲಾ ಡ�?ಟಾವನ್ನ�? �?ಳಿಸ�?</value>
+    <value>ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸು</value>
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
-    <value>ಎಲ್ಲಾ ಸ�?ಟ್ಟಿಂಗ್ಸ�? ಮತ್ತ�? ಡಾಟಾ ಡಿಲ�?ಟ�? ಮಾಡಲಾಗಿದ�?. ದಯವಿಟ್ಟ�? �?ರ್ಜಿಯನ್ನ�? ಪುನ�? �?ರಂಭಿಸಿ.</value>
+    <value>ಎಲ್ಲಾ ಸೆಟ್ಟಿಂಗ್ಸ್ ಮತ್ತು ಡಾಟಾ ಡಿಲೀಟ್ ಮಾಡಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಅರ್ಜಿಯನ್ನು ಪುನಃ ಆರಂಭಿಸಿ.</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>ನೋಂದಣಿಗ�? ತಿರುವ�?</value>
+    <value>ನೋಂದಣಿಗೆ ತಿರುವು</value>
   </data>
   <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>ಧನಾತ್ಮ�? ನೋಂದಣಿ</value>
+    <value>ಧನಾತ್ಮಕ ನೋಂದಣಿ</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>ನ�?ವ�? ಮುಂದ�? ಸಕಾರಾತ್ಮಕವಾಗಿ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಲ�? �?ಷ್ಟಪಡುತ್ತ�?ರಾ?</value>
+    <value>ನೀವು ಮುಂದೆ ಸಕಾರಾತ್ಮಕವಾಗಿ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಲು ಇಷ್ಟಪಡುತ್ತೀರಾ?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
-    <value>ನ�?ವ�? ಹೊಸ ಕರೋನದ ಜೊತ�? ಸಕಾರಾತ್ಮಕವಾಗಿದ್ದಲ್ಲಿ, ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರನ್ನ�? ರಕ್ಷಿಸಲ�? ಧನಾತ್ಮ�? ನೋಂದಣಿಗ�? ದಯವಿಟ್ಟ�? ಸಹಕರಿಸಿ.</value>
-    <comment>周り�?�人達を守るために匿名での陽性登録へのご協力をお願い�?たします�??</comment>
+    <value>ನೀವು ಹೊಸ ಕರೋನದ ಜೊತೆ ಸಕಾರಾತ್ಮಕವಾಗಿದ್ದಲ್ಲಿ, ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರನ್ನು ರಕ್ಷಿಸಲು ಧನಾತ್ಮಕ ನೋಂದಣಿಗೆ ದಯವಿಟ್ಟು ಸಹಕರಿಸಿ.</value>
+    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>�? �?ಪ್ಲಿಕ�?ಶನ�? ಎಷ್ಟ�? ಪರಿಣಾಮಕಾರಿಯಾಗಿರುತ್ತದ�? ಎಂದರ�? �?ನ�?�? ಜನರ�? �?ದನ್ನ�? �?ನ್ಸ್ಟಾಲ�? ಮಾಡುತ್ತಾರ�?, �?ದ್ದರಿಂದ ದಯವಿಟ್ಟ�? ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರೊಂದಿಗ�? �?ಪ್ಲಿಕ�?ಶನ�? ಹಂಚಿಕೊಳ್ಳಿ.</value>
-    <comment>本アプリは多くの方にお使�?�?ただくほど効果を発揮します�??</comment>
+    <value>ಈ ಅಪ್ಲಿಕೇಶನ್ ಎಷ್ಟು ಪರಿಣಾಮಕಾರಿಯಾಗಿರುತ್ತದೆ ಎಂದರೆ ಅನೇಕ ಜನರು ಅದನ್ನು ಇನ್ಸ್ಟಾಲ್ ಮಾಡುತ್ತಾರೆ, ಆದ್ದರಿಂದ ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ.</value>
+    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>ಬಳಸುವುದ�? ಹ�?ಗ�?</value>
-    <comment>使�?方</comment>
+    <value>ಬಳಸುವುದು ಹೇಗೆ</value>
+    <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>ಟರ್ಮಿನಲ�? ಗುರುತಿಸುವಿಕ�?</value>
-    <comment>接触の記録方�?</comment>
+    <value>ಟರ್ಮಿನಲ್ ಗುರುತಿಸುವಿಕೆ</value>
+    <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
-    <value>ಸಂಪರ್�? ದ�?ಢ�?ಕರಣ ವಿಧಾನ</value>
-    <comment>接触の確認方�?</comment>
+    <value>ಸಂಪರ್ಕ ದೃಢೀಕರಣ ವಿಧಾನ</value>
+    <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
-    <value>ಸೋಂಕಿಗ�? ಒಳಗಾದ ನಿರ್ಧಾರವಾದರ�?</value>
-    <comment>感染して�?ると判定された�?</comment>
+    <value>ಸೋಂಕಿಗೆ ಒಳಗಾದ ನಿರ್ಧಾರವಾದರೆ</value>
+    <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>ರ�?ಕಾರ್ಡಿಂಗ�? �?ನ್ನ�? ನಿಲ್ಲಿಸಿ/�?ಳಿಸ�?</value>
-    <comment>記録の停止?��削除</comment>
+    <value>ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ನಿಲ್ಲಿಸಿ/ಅಳಿಸು</value>
+    <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
-    <value>�? �?ಪ�? �?ನ್ನ�? ರನ�? ಮಾಡಿದಾ�?, ಪ್ರತಿಯೊಂದ�? ಸ್ಮಾರ್ಟ�? ಫೋನ�? ಉತ್ಪಾದಿಸಲಿದ�? ಮತ್ತ�? ಕಾಂಟ್ಯಾಕ್ಟ�? ಕೋಡ�? �?ರುತ್ತದ�?. ಜೊತ�?ಗ�? ವೈಯಕ್ತಿ�? ಮಾಹಿತಿಗಳಾದ ದೂರವಾಣಿ ಸಂಖ್ಯ�? ಮತ್ತ�? ಸ್ಥಳದ ಮಾಹಿತಿಗ�? ಸಂಬಂಧಿಸಿದ ಯಾವುದ�? ಮಾಹಿತಿಯನ್ನ�? �? �?ಪ�? ಗಳ�? ಪಡ�?ದುಕೊಳ್ಳುವುದಿಲ್ಲ.</value>
-    <comment>アプリを実行した際に、各スマ�?�トフォンで接触符号を生成して持ちます�?�氏名・電話番号などの個人�?報やGPSなどスマ�?�トフォンの位置�?報を使�?ことはなく�?�記録されることもありません�?</comment>
+    <value>ಈ ಆಪ್ ಅನ್ನು ರನ್ ಮಾಡಿದಾಗ, ಪ್ರತಿಯೊಂದು ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಉತ್ಪಾದಿಸಲಿದೆ ಮತ್ತು ಕಾಂಟ್ಯಾಕ್ಟ್ ಕೋಡ್ ಇರುತ್ತದೆ. ಜೊತೆಗೆ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಗಳಾದ ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಮತ್ತು ಸ್ಥಳದ ಮಾಹಿತಿಗೂ ಸಂಬಂಧಿಸಿದ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ಈ ಆಪ್ ಗಳು ಪಡೆದುಕೊಳ್ಳುವುದಿಲ್ಲ.</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
-    <value>ಸಂಪರ್ಕದ ಪರಿಸ್ಥಿತಿಗಳ�? ದಾಖಲಾಗಿವ�?</value>
+    <value>ಸಂಪರ್ಕದ ಪರಿಸ್ಥಿತಿಗಳು ದಾಖಲಾಗಿವೆ</value>
     <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
-    <value>15 ನಿಮಿಷಗಳ�? �?ಥವಾ �?ದಕ್ಕಿಂತ ಹ�?ಚ್ಚಿನ ಕಾಲ 1 ಮ�?ಟರ�? ನೊಳಗ�? �?ತರ �?ಪ�? ಬಳಕ�?ದಾರರೊಂದಿಗ�? ಸಂಪರ್ಕವನ್ನ�? "ಸಂಪರ್�?" ಎಂದ�? ದಾಖಲಿಸಲಾಗುತ್ತದ�?.</value>
-    <comment>1メートル以�?�?15�?以上�?�他�?�アプリユーザーとの接触は「接触」として記録されます�??</comment>
+    <value>15 ನಿಮಿಷಗಳು ಅಥವಾ ಅದಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಕಾಲ 1 ಮೀಟರ್ ನೊಳಗೆ ಇತರ ಆಪ್ ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕವನ್ನು "ಸಂಪರ್ಕ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ.</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
-    <value>ಸಂಪರ್�? ಮಾಹಿತಿಯನ್ನ�? ದಾಖಲಿಸುವುದ�?</value>
-    <comment>接触�?報の記録 </comment>
+    <value>ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ದಾಖಲಿಸುವುದು</value>
+    <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
-    <value>�? ವ�?ಳ�? ಸಂಪರ್ಕಿಸಿದ ವ್ಯಕ್ತಿಯ ಕಾಂಟ್ಯಾಕ್ಟ�? ಕೋಡ�? �?ರ್ಜಿಯಲ್ಲಿ ದಾಖಲಿಸಲಾಗುತ್ತದ�?. ಯಾವುದ�? ಬಳಕ�?ದಾರ ಧನಾತ್ಮ�? ನೋಂದಣಿ ಮಾಡುವವರ�?ಗ�? ಸಂಪರ್�? ಮಾಹಿತಿಯ�? ಬಳಕ�?ಯಾಗುವುದಿಲ್ಲ. 14 ದಿನಗಳ ಬಳಿ�? ಸಂಪರ್�? �?ತಿಹಾಸ ಎರವಾಗಲಿದ�?. * ಕಾಂಟ್ಯಾಕ್ಟ�? ಕೋಡ�? ನಿಯಮಿತವಾಗಿ ಬದಲಾಗುತ್ತದ�?.</value>
-    <comment>こ�?�とき�?�接触した相手�?�接触符号の記録をアプリに行います�?�どちらかの利用�?が陽性の登録を行うまでは接触の�?報は利用されません。接触の履歴は14日後に消去されます�?? ※接触符号は定期�?に変わります�??</comment>
+    <value>ಈ ವೇಳೆ ಸಂಪರ್ಕಿಸಿದ ವ್ಯಕ್ತಿಯ ಕಾಂಟ್ಯಾಕ್ಟ್ ಕೋಡ್ ಅರ್ಜಿಯಲ್ಲಿ ದಾಖಲಿಸಲಾಗುತ್ತದೆ. ಯಾವುದೇ ಬಳಕೆದಾರ ಧನಾತ್ಮಕ ನೋಂದಣಿ ಮಾಡುವವರೆಗೆ ಸಂಪರ್ಕ ಮಾಹಿತಿಯು ಬಳಕೆಯಾಗುವುದಿಲ್ಲ. 14 ದಿನಗಳ ಬಳಿಕ ಸಂಪರ್ಕ ಇತಿಹಾಸ ಎರವಾಗಲಿದೆ. * ಕಾಂಟ್ಯಾಕ್ಟ್ ಕೋಡ್ ನಿಯಮಿತವಾಗಿ ಬದಲಾಗುತ್ತದೆ.</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>�?ಪ್ಲಿ ಸ�?ಟ್ಟಿಂಗ�? ಗಳಿಗ�? ಹೋಗಿ</value>
+    <value>ಅಪ್ಲಿ ಸೆಟ್ಟಿಂಗ್ ಗಳಿಗೆ ಹೋಗಿ</value>
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
-    <value>�?ಪ್ಲಿಕ�?ಶನ�? ಸ�?ಟ್ಟಿಂಗ�? ಗಳಿಂದ, ನ�?ವ�? Bluetooth ಮತ್ತ�? �?ಧಿಸೂಚನ�?ಗಳನ್ನ�? ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸಬಹುದ�?/ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬಹುದ�?, �?ಪ್ಲಿಕ�?ಶನ�? ಬಳಸುವುದನ್ನ�? ನಿಲ್ಲಿಸಬಹುದ�? ಮತ್ತ�? ಹತ್ತಿರದ ಸಂಪರ್�? �?ತಿಹಾಸವನ್ನ�? �?ಳಿಸಬಹುದ�?.</value>
-    <comment>アプリの設定から�?�Bluetoothの有効?��無効�?通知の有効?��無効、アプリの使用中止と履歴の削除を行うことができます�??</comment>
+    <value>ಅಪ್ಲಿಕೇಶನ್ ಸೆಟ್ಟಿಂಗ್ ಗಳಿಂದ, ನೀವು Bluetooth ಮತ್ತು ಅಧಿಸೂಚನೆಗಳನ್ನು ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸಬಹುದು/ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬಹುದು, ಅಪ್ಲಿಕೇಶನ್ ಬಳಸುವುದನ್ನು ನಿಲ್ಲಿಸಬಹುದು ಮತ್ತು ಹತ್ತಿರದ ಸಂಪರ್ಕ ಇತಿಹಾಸವನ್ನು ಅಳಿಸಬಹುದು.</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
-    <value>COVID-19 ಸಕಾರಾತ್ಮ�? ಬಳಕ�?ದಾರನೊಂದಿಗ�? ನ�?ವ�? ನಿಕ�? ಸಂಪರ್ಕದಲ್ಲಿದ್ದರ�?, �?ಪ್ಲಿಕ�?ಶನ�? ನಿಮಗ�? ಮಾಹಿತಿ ಯನ್ನ�? ನ�?ಡಲಿದ�?.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた�?�合�?�スマ�?�トフォンにプッシュ通知が届きます�??</comment>
+    <value>COVID-19 ಸಕಾರಾತ್ಮಕ ಬಳಕೆದಾರನೊಂದಿಗೆ ನೀವು ನಿಕಟ ಸಂಪರ್ಕದಲ್ಲಿದ್ದರೆ, ಅಪ್ಲಿಕೇಶನ್ ನಿಮಗೆ ಮಾಹಿತಿ ಯನ್ನು ನೀಡಲಿದೆ.</value>
+    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
-    <value>ಹೋಮ�? ಸ್ಕ್ರ�?ನ�? ನಿಂದ ನಿಮ್ಮ ನಿಕ�? ಸಂಪರ್ಕಗಳ ಸಂಖ್ಯ�?ಯನ್ನ�? ನ�?ವ�? ಪರಿಶ�?ಲಿಸಬಹುದ�?.</value>
-    <comment>�?近�?�接触件数の確認へはホ�?��?画面からも移動することができます�??</comment>
+    <value>ಹೋಮ್ ಸ್ಕ್ರೀನ್ ನಿಂದ ನಿಮ್ಮ ನಿಕಟ ಸಂಪರ್ಕಗಳ ಸಂಖ್ಯೆಯನ್ನು ನೀವು ಪರಿಶೀಲಿಸಬಹುದು.</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
   </data>
   <data name="HelpPage2Description3" xml:space="preserve">
-    <value>ನ�?ವ�? ಹತ್ತಿರದ ಸಂಪರ್�? ದಿನಾಂಕಗಳ ಪಟ್ಟಿಯನ್ನ�? ಪರಿಶ�?ಲಿಸಬಹುದ�? ಮತ್ತ�? ನಿಮಗ�? ರೋಗದ ಲಕ್ಷಣಗಳ�? �?ದ್ದರ�? ಏನ�? ಮಾಡಬ�?ಕ�? ಎಂಬುದರ ಬಗ್ಗ�? ಮಾರ್ಗದರ್ಶನ ವನ್ನ�? ಪಡ�?ಯಬಹುದ�?.</value>
-    <comment>接触があった日付�?��?覧を確認できます�?�また適�?な連絡先をお知らせします�??</comment>
+    <value>ನೀವು ಹತ್ತಿರದ ಸಂಪರ್ಕ ದಿನಾಂಕಗಳ ಪಟ್ಟಿಯನ್ನು ಪರಿಶೀಲಿಸಬಹುದು ಮತ್ತು ನಿಮಗೆ ರೋಗದ ಲಕ್ಷಣಗಳು ಇದ್ದರೆ ಏನು ಮಾಡಬೇಕು ಎಂಬುದರ ಬಗ್ಗೆ ಮಾರ್ಗದರ್ಶನ ವನ್ನು ಪಡೆಯಬಹುದು.</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
   </data>
   <data name="HelpPage2Label1" xml:space="preserve">
-    <value>�?ಧಿಸೂಚನ�?</value>
+    <value>ಅಧಿಸೂಚನೆ</value>
     <comment>通知</comment>
   </data>
   <data name="HelpPage2Label2" xml:space="preserve">
-    <value>ಹೋಮ�?</value>
-    <comment>ホ�?��?画面</comment>
+    <value>ಹೋಮ್</value>
+    <comment>ホーム画面</comment>
   </data>
   <data name="HelpPage2Label3" xml:space="preserve">
-    <value>COVID-19 ಧನಾತ್ಮ�? ಬಳಕ�?ದಾರನೊಂದಿಗ�? ನ�?ವ�? ನಿಕ�? ಸಂಪರ್ಕಹೊಂದಿದ್ದರ�?</value>
-    <comment>陽性�?との接触があった�?��?</comment>
+    <value>COVID-19 ಧನಾತ್ಮಕ ಬಳಕೆದಾರನೊಂದಿಗೆ ನೀವು ನಿಕಟ ಸಂಪರ್ಕಹೊಂದಿದ್ದರೆ</value>
+    <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
-    <value>ನ�?ವ�? ಧನಾತ್ಮ�? ಪರ�?ಕ್ಷ�?ಮಾಡಿದ್ದರ�?</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合�??</comment>
+    <value>ನೀವು ಧನಾತ್ಮಕ ಪರೀಕ್ಷೆಮಾಡಿದ್ದರೆ</value>
+    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
-    <value>ಸಾರ್ವಜನಿ�? �?ರೋಗ್ಯ �?ಧಿಕಾರಿಗಳ�? ನಿಮಗ�? "ಪ್ರೊಸ�?ಸಿಂಗ�? ನಂಬರ�?" �?ನ್ನ�? ಬಿಡುಗಡ�? ಮಾಡುತ್ತಾರ�?.</value>
-    <comment>保健�?等�?��?機関から登録用の「�?��?番号」が発行されます�??</comment>
+    <value>ಸಾರ್ವಜನಿಕ ಆರೋಗ್ಯ ಅಧಿಕಾರಿಗಳು ನಿಮಗೆ "ಪ್ರೊಸೆಸಿಂಗ್ ನಂಬರ್" ಅನ್ನು ಬಿಡುಗಡೆ ಮಾಡುತ್ತಾರೆ.</value>
+    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
   </data>
   <data name="HelpPage3Description3" xml:space="preserve">
-    <value>ಒದಗಿಸಲಾದ ಪ್ರೊಸ�?ಸಿಂಗ�? ಸಂಖ್ಯ�?ಯನ್ನ�? �? �?ಪ್ಲಿಕ�?ಶನ�? ನಲ್ಲಿ ನಮೂದಿಸುವ ಮೂಲ�? ನೋಂದಾಯಿಸಿ</value>
-    <comment>本アプリを用�?て処�?番号の登録を行います�??</comment>
+    <value>ಒದಗಿಸಲಾದ ಪ್ರೊಸೆಸಿಂಗ್ ಸಂಖ್ಯೆಯನ್ನು ಈ ಅಪ್ಲಿಕೇಶನ್ ನಲ್ಲಿ ನಮೂದಿಸುವ ಮೂಲಕ ನೋಂದಾಯಿಸಿ</value>
+    <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
-    <value>ಕಳ�?ದ 14 ದಿನಗಳಲ್ಲಿ ನಿಮ್ಮ ಸ್ಮಾರ್ಟ�? ಫೋನ�? ನೊಂದಿಗ�? ನಿಕ�? ಸಂಪರ್�? ದಲ್ಲಿರುವ ಸ್ಮಾರ್ಟ�? ಫೋನ�? ಗಳಿಗ�? ನೋಟಿಫಿಕ�?ಷನ�? ಗಳ�? ಬರುತ್ತವ�?.</value>
-    <comment>あなたと14日以�?に接触した人のスマ�?�アプリに通知が届きます�?��?1m以�?�?15�?以上�?</comment>
+    <value>ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ನಿಮ್ಮ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ನೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕ ದಲ್ಲಿರುವ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಗಳಿಗೆ ನೋಟಿಫಿಕೇಷನ್ ಗಳು ಬರುತ್ತವೆ.</value>
+    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
-    <value>�?ಧಿಸೂಚನ�?ಗಳನ್ನ�? ಕಳುಹಿಸುವಾ�? ಸಾಧನದಿಂದ ಯಾದ�?ಚ್ಛಿಕವಾಗಿ ರಚಿಸಿದ ಕೋಡ�? ಗಳನ್ನ�? ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದ�?. ಯಾವುದ�? ವೈಯಕ್ತಿ�? ಮಾಹಿತಿಯನ್ನ�? ಬಳಸುವುದಿಲ್ಲ.</value>
-    <comment>通知される情報は端末の接触符号のみです�?�それ以外�?�、氏名など個人�?報�?位置�?報が�?�られることはありません�?</comment>
+    <value>ಅಧಿಸೂಚನೆಗಳನ್ನು ಕಳುಹಿಸುವಾಗ ಸಾಧನದಿಂದ ಯಾದೃಚ್ಛಿಕವಾಗಿ ರಚಿಸಿದ ಕೋಡ್ ಗಳನ್ನು ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದೆ. ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಬಳಸುವುದಿಲ್ಲ.</value>
+    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
-    <value>ಧನಾತ್ಮ�? ವಾಗಿ ಪರ�?ಕ್ಷಿಸಿದಾ�? �?ಲ್ಲಿ ನೋಂದಾಯಿಸಿ</value>
-    <comment>陽性�?報の登録と他�??への匿名�?�知へ</comment>
+    <value>ಧನಾತ್ಮಕ ವಾಗಿ ಪರೀಕ್ಷಿಸಿದಾಗ ಇಲ್ಲಿ ನೋಂದಾಯಿಸಿ</value>
+    <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
     <value>ಪರವಾನಗಿ</value>
     <comment>ライセンス…</comment>
   </data>
   <data name="SettingsPageLabel1" xml:space="preserve">
-    <value>ಸಂಪರ್�? ರ�?ಕಾರ್ಡಿಂಗ�? �?ನ್ನ�? ಮುಚ್ಚ�?</value>
-    <comment>接触の検�?�</comment>
+    <value>ಸಂಪರ್ಕ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ಮುಚ್ಚು</value>
+    <comment>接触の検出</comment>
   </data>
   <data name="SettingsPageDescription1" xml:space="preserve">
-    <value>Bluetooth ಬಳಕ�?</value>
+    <value>Bluetooth ಬಳಕೆ</value>
     <comment>Bluetoothによる接触の検知</comment>
   </data>
   <data name="SettingsPageLabel2" xml:space="preserve">
-    <value>�?ಧಿಸೂಚನ�?ಗಳ�?</value>
+    <value>ಅಧಿಸೂಚನೆಗಳು</value>
     <comment>通知</comment>
   </data>
   <data name="SettingsPageDescription2" xml:space="preserve">
-    <value>ಸಂಪರ್�? �?ಧಿಸೂಚನ�?ಗಳನ್ನ�? ಮುಚ್ಚ�?</value>
-    <comment>陽性�?との接触通知</comment>
+    <value>ಸಂಪರ್ಕ ಅಧಿಸೂಚನೆಗಳನ್ನು ಮುಚ್ಚು</value>
+    <comment>陽性者との接触通知</comment>
   </data>
   <data name="SettingsPageLabel3" xml:space="preserve">
-    <value>�?ಪ್ಲಿಯನ್ನ�? ಬಳಸುವುದನ್ನ�? ನಿಲ್ಲಿಸಿ</value>
+    <value>ಅಪ್ಲಿಯನ್ನು ಬಳಸುವುದನ್ನು ನಿಲ್ಲಿಸಿ</value>
     <comment>アプリの使用中止</comment>
   </data>
   <data name="SettingsPageDescription3" xml:space="preserve">
-    <value>ನಿಕ�? ಸಂಪರ್�? ದಾಖಲ�?ಗಳನ್ನ�? ಬಳಸುವುದನ್ನ�? ನಿಲ್ಲಿಸಿ ಮತ್ತ�? �?ಳಿಸಿ</value>
-    <comment>使用を中止して過去14日間�?�接触履歴を消去</comment>
+    <value>ನಿಕಟ ಸಂಪರ್ಕ ದಾಖಲೆಗಳನ್ನು ಬಳಸುವುದನ್ನು ನಿಲ್ಲಿಸಿ ಮತ್ತು ಅಳಿಸಿ</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
-    <value>'ನಿಕ�? ಸಂಪರ್�?' ಎಂದರ�?ನ�??</value>
-    <comment>どのようにして接触を記録して�?ますか?�?</comment>
+    <value>'ನಿಕಟ ಸಂಪರ್ಕ' ಎಂದರೇನು?</value>
+    <comment>どのようにして接触を記録していますか？</comment>
   </data>
   <data name="HelpMenuPageLabel2" xml:space="preserve">
-    <value>ನಾನ�? ಹತ್ತಿರದ ಸಂಪರ್ಕಗಳ ಸಂಖ್ಯ�?ಯನ್ನ�? ಹ�?ಗ�? ಪರ�?ಕ್ಷಿಸಲಿ?</value>
-    <comment>接触の有無はどのように知ることができますか?�?</comment>
+    <value>ನಾನು ಹತ್ತಿರದ ಸಂಪರ್ಕಗಳ ಸಂಖ್ಯೆಯನ್ನು ಹೇಗೆ ಪರೀಕ್ಷಿಸಲಿ?</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
-    <value>COVID-19 ಗಾಗಿ ನ�?ವ�? ಧನಾತ್ಮಕವನ್ನ�? ಪರ�?ಕ್ಷಿಸಿದರ�?</value>
-    <comment>新型コロナウィルスに感染して�?ると判定された�?</comment>
+    <value>COVID-19 ಗಾಗಿ ನೀವು ಧನಾತ್ಮಕವನ್ನು ಪರೀಕ್ಷಿಸಿದರೆ</value>
+    <comment>新型コロナウィルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>ಕ್ಲೋಸ�? ಕಾಂಟ್ಯಾಕ್ಟ�? ರ�?ಕಾರ್ಡಿಂಗ�? �?ನ್ನ�? ನಿಲ್ಲಿಸುವುದ�? ಹ�?ಗ�? / �?ಳಿಸುವುದ�??</value>
-    <comment>接触の記録を停止?��情報を削除するには</comment>
+    <value>ಕ್ಲೋಸ್ ಕಾಂಟ್ಯಾಕ್ಟ್ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ನಿಲ್ಲಿಸುವುದು ಹೇಗೆ / ಅಳಿಸುವುದು?</value>
+    <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
-    <value>ಕಳ�?ದ 14 ದಿನಗಳಿಂದ ಸಂಪರ್ಕಗಳನ್ನ�? ಮುಚ್ಚ�?</value>
-    <comment>過去14日間�?�接触</comment>
+    <value>ಕಳೆದ 14 ದಿನಗಳಿಂದ ಸಂಪರ್ಕಗಳನ್ನು ಮುಚ್ಚು</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>COVID-19 ಧನಾತ್ಮ�? ಬಳಕ�?ದಾರರೊಂದಿಗ�? ಯಾವುದ�? ನಿಕ�? ಸಂಪರ್ಕಗಳಿಲ್ಲ</value>
-    <comment>陽性�?との接触は確認されませんでした</comment>
+    <value>COVID-19 ಧನಾತ್ಮಕ ಬಳಕೆದಾರರೊಂದಿಗೆ ಯಾವುದೇ ನಿಕಟ ಸಂಪರ್ಕಗಳಿಲ್ಲ</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>ಸರ್ಕಾರ ಶಿಫಾರಸ�? ಮಾಡಿರುವ 'ನ್ಯ�? ಲೈಫ�? ಸ್ಟೈಲ�? ' �?ಭ್ಯಾಸ ಮಾಡಿ.</value>
-    <comment>引き続き「新しい生活様式�?��?�実践をよろしくお願い�?たします�??</comment>
+    <value>ಸರ್ಕಾರ ಶಿಫಾರಸು ಮಾಡಿರುವ 'ನ್ಯೂ ಲೈಫ್ ಸ್ಟೈಲ್ ' ಅಭ್ಯಾಸ ಮಾಡಿ.</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>�? �?ಪ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ</value>
-    <comment>アプリを周り�?�人に知らせ�?</comment>
+    <value>ಈ ಅಪ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ</value>
+    <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>ನಿಮ್ಮ ಪರ�?ಕ್ಷಾ ಫಲಿತಾಂಶಗಳನ್ನ�? ನೋಂದಾಯಿಸಲ�? ಧನ್ಯವಾದಗಳ�?!</value>
-    <comment>陽性のご登録をいただきありがと�?ござ�?ました</comment>
+    <value>ನಿಮ್ಮ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶಗಳನ್ನು ನೋಂದಾಯಿಸಲು ಧನ್ಯವಾದಗಳು!</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
   <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>ನೋಂದಣಿ ಯ�? �?ನಾಮಧ�?ಯವಾಗಿದ�?. ನಿಮ್ಮ ಹ�?ಸರ�? �?ಥವಾ ಯಾವುದ�? ವೈಯಕ್ತಿ�? ಮಾಹಿತಿಯನ್ನ�? ನ�?ವ�? ನಮೂದಿಸುವ �?ಗತ್ಯವಿಲ್ಲ. ಹತ್ತಿರದ ಸಂಪರ್ಕದ ಸ್ಥಳದ ಬಗ್ಗ�? ಯಾವುದ�? ಮಾಹಿತಿಯನ್ನ�? ದಾಖಲಿಸುವುದಿಲ್ಲ.</value>
-    <comment>登録は匿名で行われ�?�氏名�?連絡先など個人が特定される�?報を登録する�?要�?�ありません。また�?�接触した場�?の位置�?報が記録�?通知されることもありません�?</comment>
+    <value>ನೋಂದಣಿ ಯು ಅನಾಮಧೇಯವಾಗಿದೆ. ನಿಮ್ಮ ಹೆಸರು ಅಥವಾ ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನೀವು ನಮೂದಿಸುವ ಅಗತ್ಯವಿಲ್ಲ. ಹತ್ತಿರದ ಸಂಪರ್ಕದ ಸ್ಥಳದ ಬಗ್ಗೆ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ದಾಖಲಿಸುವುದಿಲ್ಲ.</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
-    <value>ಬಳಕ�?ಯ ನಿಯಮಗಳ�?</value>
-    <comment>利用規�?</comment>
+    <value>ಬಳಕೆಯ ನಿಯಮಗಳು</value>
+    <comment>利用規約</comment>
   </data>
   <data name="TutorialPage3ButtonText" xml:space="preserve">
-    <value>ನಾನ�? ಬಳಕ�?ಯ ನಿಯಮಗಳನ್ನ�? ಸ್ವ�?ಕರಿಸುತ್ತ�?ನ�?</value>
-    <comment>規�?に同意して次へ</comment>
+    <value>ನಾನು ಬಳಕೆಯ ನಿಯಮಗಳನ್ನು ಸ್ವೀಕರಿಸುತ್ತೇನೆ</value>
+    <comment>規約に同意して次へ</comment>
   </data>
   <data name="TutorialPage6Label1" xml:space="preserve">
-    <value>ಸ�?ಟಪ�? ಪೂರ್ಣಗೊಂಡಿದ�?. ಧನ್ಯವಾದಗಳ�?!</value>
-    <comment>ご登録�?ただきありがと�?ござ�?ました</comment>
+    <value>ಸೆಟಪ್ ಪೂರ್ಣಗೊಂಡಿದೆ. ಧನ್ಯವಾದಗಳು!</value>
+    <comment>ご登録いただきありがとうございました</comment>
   </data>
   <data name="TutorialPage6ButtonText1" xml:space="preserve">
-    <value>ಹೋಮ�?</value>
-    <comment>ホ�?��?画面へ</comment>
+    <value>ಹೋಮ್</value>
+    <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>�? �?ಪ್ಲಿಯನ್ನ�? ಹ�?ಗ�? ಬಳಸುವುದ�?</value>
-    <comment>使�?方を学ぶ</comment>
+    <value>ಈ ಅಪ್ಲಿಯನ್ನು ಹೇಗೆ ಬಳಸುವುದು</value>
+    <comment>使い方を学ぶ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
-    <value>ಸಾಧನ ಗುರುತಿಸುವಿಕ�?</value>
+    <value>ಸಾಧನ ಗುರುತಿಸುವಿಕೆ</value>
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>COVID-19 ಧನಾತ್ಮ�? ಬಳಕ�?ದಾರರೊಂದಿಗ�? ನಿಕ�? ಸಂಪರ್ಕಗಳ ಪಟ್ಟಿ</value>
-    <comment>陽性�?との接触�?覧</comment>
+    <value>COVID-19 ಧನಾತ್ಮಕ ಬಳಕೆದಾರರೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕಗಳ ಪಟ್ಟಿ</value>
+    <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>ನಿಮ್ಮ ರೋಗಲಕ್ಷಣಗಳನ್ನ�? ಭರ್ತಿ ಮಾಡಿ</value>
-    <comment>�?状を�?��?</comment>
+    <value>ನಿಮ್ಮ ರೋಗಲಕ್ಷಣಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ</value>
+    <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>ಫೋನ�? ಕನ್ಸಲ್ಟ�?ಶನ�? ಸ�?ಂಟರ�? ಮೂಲ�? ನಿಮ್ಮ ರೋಗಲಕ್ಷಣಗಳನ್ನ�? ತಿಳಿಸಿ</value>
-    <comment>帰国�?・接触�?外来に電話</comment>
+    <value>ಫೋನ್ ಕನ್ಸಲ್ಟೇಶನ್ ಸೆಂಟರ್ ಮೂಲಕ ನಿಮ್ಮ ರೋಗಲಕ್ಷಣಗಳನ್ನು ತಿಳಿಸಿ</value>
+    <comment>帰国者・接触者外来に電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>ಸಮಯ</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>ನಿಮಗ�? ಸಂಭಾವ್ಯ COVID-19 ರೋಗಲಕ್ಷಣಗಳಿದ್ದರ�?, ಕ�?ಳಗಿನ ಫಾರ್ಮ�? �?ಥವಾ ದೂರವಾಣಿ ಮೂಲ�? ಹ�?ಲ್ತ�? ಕ�?ರ�? ಸಂಸ್ಥ�?ಗಳನ್ನ�? ಸಂಪರ್ಕಿಸಿ. ರೋಗಲಕ್ಷಣಗಳನ್ನ�? �?ವಲಂಬಿಸಿ, ನಿಮಗ�? COVID-19 ಪರ�?ಕ್ಷ�?ಯನ್ನ�? ತ�?ಗ�?ದುಕೊಳ್ಳಲ�? ಸಲಹ�? ನ�?ಡಲಾಗುತ್ತದ�?.</value>
-    <comment>現在の�?状などを�?��?�力フォー�?また�?�お電話にて、ご連絡ください。�??容に応じて、帰国�?・接触�?外来等への受診を案�??します�??</comment>
+    <value>ನಿಮಗೆ ಸಂಭಾವ್ಯ COVID-19 ರೋಗಲಕ್ಷಣಗಳಿದ್ದರೆ, ಕೆಳಗಿನ ಫಾರ್ಮ್ ಅಥವಾ ದೂರವಾಣಿ ಮೂಲಕ ಹೆಲ್ತ್ ಕೇರ್ ಸಂಸ್ಥೆಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ. ರೋಗಲಕ್ಷಣಗಳನ್ನು ಅವಲಂಬಿಸಿ, ನಿಮಗೆ COVID-19 ಪರೀಕ್ಷೆಯನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಸಲಹೆ ನೀಡಲಾಗುತ್ತದೆ.</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟ�? �? ಸ್ಕ್ರ�?ನ�? ನ ಸ್ಕ್ರ�?ನ�? ಶಾಟ�? ತ�?ಗ�?ದುಕೊಳ್ಳಿ. ರೋಗನಿರ್ಣಯದ ಸಮಯದಲ್ಲಿ �?ದನ್ನ�? ಒದಗಿಸುವಂತ�? ನಿಮ್ಮನ್ನ�? ಕ�?ಳಬಹುದ�?.</value>
-    <comment>受診の際などに�?要となる�?�合があるため、本画面のスクリーンショ�?ト�?�保存をお願い�?たします�??</comment>
+    <value>ದಯವಿಟ್ಟು ಈ ಸ್ಕ್ರೀನ್ ನ ಸ್ಕ್ರೀನ್ ಶಾಟ್ ತೆಗೆದುಕೊಳ್ಳಿ. ರೋಗನಿರ್ಣಯದ ಸಮಯದಲ್ಲಿ ಅದನ್ನು ಒದಗಿಸುವಂತೆ ನಿಮ್ಮನ್ನು ಕೇಳಬಹುದು.</value>
+    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>COVID-19 ಧನಾತ್ಮ�? ಬಳಕ�?ದಾರರೊಂದಿಗ�? ಖಚಿತವಾದ ನಿಕ�? ಸಂಪರ್ಕಗಳ ಸಂಖ್ಯ�?</value>
-    <comment>陽性�?との接触確�?</comment>
+    <value>COVID-19 ಧನಾತ್ಮಕ ಬಳಕೆದಾರರೊಂದಿಗೆ ಖಚಿತವಾದ ನಿಕಟ ಸಂಪರ್ಕಗಳ ಸಂಖ್ಯೆ</value>
+    <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
-    <value>ಕಳ�?ದ 14 ದಿನಗಳಿಂದ ಸಂಪರ್ಕಗಳನ್ನ�? ಮುಚ್ಚ�?</value>
-    <comment>過去14日間�?�接触</comment>
+    <value>ಕಳೆದ 14 ದಿನಗಳಿಂದ ಸಂಪರ್ಕಗಳನ್ನು ಮುಚ್ಚು</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00-17:30 (ವಾರಾಂತ್ಯಗಳ�? ಮತ್ತ�? ರಜಾದಿನಗಳನ್ನ�? ಹೊರತುಪಡಿಸಿ)</value>
-    <comment>9:00?�?17:30?��土・日・祝日・年末年始を除く�?</comment>
+    <value>9:00-17:30 (ವಾರಾಂತ್ಯಗಳು ಮತ್ತು ರಜಾದಿನಗಳನ್ನು ಹೊರತುಪಡಿಸಿ)</value>
+    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 ಮಾಹಿತಿ ಮತ್ತ�? ಸಂಪನ್ಮೂಲಗಳ�?</value>
-    <comment>新型コロナウィルス感染�?対策サイ�?</comment>
+    <value>COVID-19 ಮಾಹಿತಿ ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು</value>
+    <comment>新型コロナウィルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
-    <value>ಬ�?ಂಬಲ</value>
-    <comment>アプリに関するお問�?合わ�?</comment>
+    <value>ಬೆಂಬಲ</value>
+    <comment>アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
-    <value>ಬಳಕ�?ಯಲ್ಲಿದ�?</value>
+    <value>ಬಳಕೆಯಲ್ಲಿದೆ</value>
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>ನಿಕ�? ಸಂಪರ್ಕಗಳನ್ನ�? ಪರಿಶ�?ಲಿಸಿ</value>
-    <comment>陽性�?との接触を確認す�?(14日�?)</comment>
+    <value>ನಿಕಟ ಸಂಪರ್ಕಗಳನ್ನು ಪರಿಶೀಲಿಸಿ</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
-    <value>COVID-19 ಗಾಗಿ ಧನಾತ್ಮಕವಾಗಿ ಪರ�?ಕ್ಷಿಸಿದಾ�?</value>
+    <value>COVID-19 ಗಾಗಿ ಧನಾತ್ಮಕವಾಗಿ ಪರೀಕ್ಷಿಸಿದಾಗ</value>
     <comment>新型コロナウィルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
-    <value>ಧನಾತ್ಮ�? ಪರ�?ಕ್ಷಾ ಫಲಿತಾಂಶದಾಖಲಿಸಿ</value>
-    <comment>陽性�?報の登録</comment>
+    <value>ಧನಾತ್ಮಕ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶದಾಖಲಿಸಿ</value>
+    <comment>陽性情報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
-    <value>�? �?ಪ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ</value>
-    <comment>アプリを周り�?�人に知らせ�?</comment>
+    <value>ಈ ಅಪ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ</value>
+    <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
-    <value>ಹೋಮ�?</value>
-    <comment>ホ�?��?</comment>
+    <value>ಹೋಮ್</value>
+    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>ಬಳಕ�?ಯ �?ವಧಿ</value>
-    <comment>利用規�?</comment>
+    <value>ಬಳಕೆಯ ಅವಧಿ</value>
+    <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
-    <value>ನಿಮ್ಮ ಗೌಪ್ಯತ�?ಯನ್ನ�? ರಕ್ಷಿಸಲಾಗಿದ�?</value>
-    <comment>プライバシーにつ�?て</comment>
+    <value>ನಿಮ್ಮ ಗೌಪ್ಯತೆಯನ್ನು ರಕ್ಷಿಸಲಾಗಿದೆ</value>
+    <comment>プライバシーについて</comment>
   </data>
   <data name="TutorialPage2Description2" xml:space="preserve">
-    <value>ನಿಮ್ಮ ಹ�?ಸರ�? �?ಥವಾ ದೂರವಾಣಿ ಸಂಖ್ಯ�?ಯಂತಹ ಯಾವುದ�? ವೈಯಕ್ತಿ�? ಮಾಹಿತಿಯನ್ನ�? ಸಂಗ್ರಹಿಸಿರುವುದಿಲ್ಲ. ಜಿಪಿಎಸ�? ಸ�?ರಿದಂತ�? ಯಾವುದ�? ಭೂಪ್ರದ�?ಶದ ದತ್ತಾಂಶವನ್ನ�? ಸಂಗ್ರಹಿಸಲಾಗಿದ�?.</value>
-    <comment>氏名・電話番号などの個人�?報�?、GPSなどスマ�?�トフォンの位置�?報を使�?ことはなく�?�記録されることもありません�?</comment>
+    <value>ನಿಮ್ಮ ಹೆಸರು ಅಥವಾ ದೂರವಾಣಿ ಸಂಖ್ಯೆಯಂತಹ ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸಿರುವುದಿಲ್ಲ. ಜಿಪಿಎಸ್ ಸೇರಿದಂತೆ ಯಾವುದೇ ಭೂಪ್ರದೇಶದ ದತ್ತಾಂಶವನ್ನು ಸಂಗ್ರಹಿಸಲಾಗಿದೆ.</value>
+    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>ಎಲ್ಲಾ ಡ�?ಟಾವನ್ನ�? ನಿಮ್ಮ ಸ್ಮಾರ್ಟ�? ಫೋನ�? ನಲ್ಲಿ ಎನ�? ಕ್ರಿಪ್ಟ�? ಮಾಡಲಾಗುತ್ತದ�? ಮತ್ತ�? ಸ್ಥಳ�?ಯವಾಗಿ ಉಳಿಸಲಾಗುತ್ತದ�?. 14 ದಿನಗಳ ನಂತರ ಎಲ್ಲಾ ಡ�?ಟಾಸ್ವಯಂಚಾಲಿತವಾಗಿ �?ಳಿಸಲಾಗುತ್ತದ�?. ನಿಮ್ಮ ಚಲನವಲನಗಳನ್ನ�? ಸರ್ಕಾರಿ ಸಂಸ್ಥ�?ಗಳ�? �?ಥವಾ ಮೂರನ�? ಪಕ್ಷಗಳ�? ಯಾವುದ�? ರ�?ತಿಯಲ್ಲಿ ಟ್ರ್ಯಾಕ�? ಮಾಡಲಾಗುವುದಿಲ್ಲ.</value>
-    <comment>接触の記録は、暗号化され�?�あなた�?�スマ�?�トフォンの中にのみ記録され�?14日後に自動的に削除されます�?�行政機関�?第三�??が暗号化された�?報を利用して接触歴を把握することはありません�?</comment>
+    <value>ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನಿಮ್ಮ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ನಲ್ಲಿ ಎನ್ ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಸ್ಥಳೀಯವಾಗಿ ಉಳಿಸಲಾಗುತ್ತದೆ. 14 ದಿನಗಳ ನಂತರ ಎಲ್ಲಾ ಡೇಟಾಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ. ನಿಮ್ಮ ಚಲನವಲನಗಳನ್ನು ಸರ್ಕಾರಿ ಸಂಸ್ಥೆಗಳು ಅಥವಾ ಮೂರನೇ ಪಕ್ಷಗಳು ಯಾವುದೇ ರೀತಿಯಲ್ಲಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಲಾಗುವುದಿಲ್ಲ.</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
-    <value>�?ಪ್ಲಿ ಸ�?ಟ್ಟಿಂಗ�? ಗಳನ್ನ�? ಬದಲಿಸುವ �?ಥವಾ �?ಪ್ಲಿಕ�?ಶನ�? �?ನ್ನ�? �?ಳಿಸುವ ಮೂಲ�? ನ�?ವ�? ಯಾವುದ�? ಸಮಯದಲ್ಲಿ �?ತರ ಬಳಕ�?ದಾರರೊಂದಿಗ�? ನಿಕ�? ಸಂಪರ್ಕಗಳನ್ನ�? ರ�?ಕಾರ್ಡಿಂಗ�? ಮಾಡುವುದನ್ನ�? ನಿಲ್ಲಿಸಬಹುದ�?.</value>
-    <comment>接触の記録は�?つでも止めることができます�?�アプリ�?の設定を無効にするか�?�アプリを削除してください�?</comment>
+    <value>ಅಪ್ಲಿ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ಬದಲಿಸುವ ಅಥವಾ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಅಳಿಸುವ ಮೂಲಕ ನೀವು ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಇತರ ಬಳಕೆದಾರರೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕಗಳನ್ನು ರೆಕಾರ್ಡಿಂಗ್ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸಬಹುದು.</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
   </data>
   <data name="TutorialPage2Description5" xml:space="preserve">
-    <value>ಬಳಕ�?ಯ ನಿಯಮಗಳ�?</value>
-    <comment>利用規�?へ</comment>
+    <value>ಬಳಕೆಯ ನಿಯಮಗಳು</value>
+    <comment>利用規約へ</comment>
   </data>
   <data name="TutorialPage2Title" xml:space="preserve">
-    <value>ಟ್ಯುಟೋರಿಯಲ್Page2ವಿವರಣ�?1</value>
-    <comment>プライバシーにつ�?て</comment>
+    <value>ಟ್ಯುಟೋರಿಯಲ್Page2ವಿವರಣೆ1</value>
+    <comment>プライバシーについて</comment>
   </data>
   <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>�?ಧಿಸೂಚನ�?ಗಳನ್ನ�? �?ನ�? ಮಾಡಿ</value>
-    <comment>通知をご利用�?ただくために</comment>
+    <value>ಅಧಿಸೂಚನೆಗಳನ್ನು ಆನ್ ಮಾಡಿ</value>
+    <comment>通知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>COVID-19 ಸಕಾರಾತ್ಮ�? ಬಳಕ�?ದಾರರೊಂದಿಗ�? ನಿಕ�? ಸಂಪರ್ಕಗಳನ್ನ�? ಹೊಂದಿದ್ದಾ�? �?ಧಿಸೂಚನ�?ಗಳನ್ನ�? �?ನ�? ಮಾಡಿ.</value>
-    <comment>本アプリで接触の通知をご利用�?ただくために、本アプリのプッシュ通知を有効にしてください�?</comment>
+    <value>COVID-19 ಸಕಾರಾತ್ಮಕ ಬಳಕೆದಾರರೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕಗಳನ್ನು ಹೊಂದಿದ್ದಾಗ ಅಧಿಸೂಚನೆಗಳನ್ನು ಆನ್ ಮಾಡಿ.</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
   </data>
   <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>�?ನ�? ಮಾಡಿ</value>
+    <value>ಆನ್ ಮಾಡಿ</value>
     <comment>有効にする</comment>
   </data>
   <data name="TutorialPage5Description4" xml:space="preserve">
     <value>ನಂತರ ಹೊಂದಿಸಿ</value>
-    <comment>あとで設定す�?</comment>
+    <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage5Title" xml:space="preserve">
-    <value>�?ಧಿಸೂಚನ�?ಗಳನ್ನ�? ಬಳಸಲ�?</value>
-    <comment>通知をご利用�?ただくために</comment>
+    <value>ಅಧಿಸೂಚನೆಗಳನ್ನು ಬಳಸಲು</value>
+    <comment>通知をご利用いただくために</comment>
   </data>
   <data name="MenuPageTitle" xml:space="preserve">
-    <value>ಮ�?ನ�?</value>
+    <value>ಮೆನು</value>
     <comment>メニュー</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
@@ -450,124 +450,124 @@
     <comment>登録する</comment>
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>"�?ರೋಗ್ಯ ಕ�?ಂದ್ರ ರಿಯಲ�? ಟೈಮ�? �?ನ್ಫರ್ಮ�?ಷನ�?-ಶ�?ರಿಂಗ�? ಸಿಸ್ಟ�? �?ನ�? COVID-19 (HER-SYS) ಮೂಲ�? ನಿಮಗ�? ನ�?ಡಲಾದ ಒಂದ�? ಪ್ರಕ್ರಿಯ�? ಕೋಡ�? �?ನ್ನ�? ದಯವಿಟ್ಟ�? ನಮೂದಿಸಿ.</value>
-    <comment>新型コロナウイルス感染�?�?等情報把握・管�?支援シス�?�??�?HER-SYS?��から発行された処�?番号を�?�力してください�?</comment>
+    <value>"ಆರೋಗ್ಯ ಕೇಂದ್ರ ರಿಯಲ್ ಟೈಮ್ ಇನ್ಫರ್ಮೇಷನ್-ಶೇರಿಂಗ್ ಸಿಸ್ಟಂ ಆನ್ COVID-19 (HER-SYS) ಮೂಲಕ ನಿಮಗೆ ನೀಡಲಾದ ಒಂದು ಪ್ರಕ್ರಿಯೆ ಕೋಡ್ ಅನ್ನು ದಯವಿಟ್ಟು ನಮೂದಿಸಿ.</value>
+    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>ಕಳ�?ದ 14 ದಿನಗಳಲ್ಲಿ ನಿಮ್ಮೊಂದಿಗ�? ನಿಕ�? ಸಂಪರ್�? ಹೊಂದಿದ್ದ ಬಳಕ�?ದಾರರಿಗ�? ಸೂಚನ�? ನ�?ಡಲಾಗುವುದ�?. ನೋಂದಣಿ ಯ�? �?ನಾಮಧ�?ಯವಾಗಿದ�?. ನಿಮ್ಮ ಹ�?ಸರ�? �?ಥವಾ ಯಾವುದ�? ವೈಯಕ್ತಿ�? ಮಾಹಿತಿಯನ್ನ�? ನ�?ವ�? ನಮೂದಿಸುವ �?ಗತ್ಯವಿಲ್ಲ. ಹತ್ತಿರದ ಸಂಪರ್ಕದ ಸ್ಥಳದ ಬಗ್ಗ�? ಯಾವುದ�? ಮಾಹಿತಿಯನ್ನ�? ದಾಖಲಿಸುವುದಿಲ್ಲ.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます�?�登録は匿名で行われ�?�氏名�?連絡先など個人が特定される�?報を登録する�?要�?�ありません。また�?�接触した場�?の位置�?報が記録�?通知されることもありません�?</comment>
+    <value>ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ನಿಮ್ಮೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕ ಹೊಂದಿದ್ದ ಬಳಕೆದಾರರಿಗೆ ಸೂಚನೆ ನೀಡಲಾಗುವುದು. ನೋಂದಣಿ ಯು ಅನಾಮಧೇಯವಾಗಿದೆ. ನಿಮ್ಮ ಹೆಸರು ಅಥವಾ ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನೀವು ನಮೂದಿಸುವ ಅಗತ್ಯವಿಲ್ಲ. ಹತ್ತಿರದ ಸಂಪರ್ಕದ ಸ್ಥಳದ ಬಗ್ಗೆ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ದಾಖಲಿಸುವುದಿಲ್ಲ.</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
-    <value>ಪ್ರಕ್ರಿಯ�? ಕೋಡ�? �?ನ್ನ�? ಹ�?ಗ�? ಸ್ವ�?ಕರಿಸುವುದ�?</value>
-    <comment>処�?番号の取得方�?</comment>
+    <value>ಪ್ರಕ್ರಿಯೆ ಕೋಡ್ ಅನ್ನು ಹೇಗೆ ಸ್ವೀಕರಿಸುವುದು</value>
+    <comment>処理番号の取得方法</comment>
   </data>
   <data name="NotifyOtherPageTitle" xml:space="preserve">
-    <value>ಧನಾತ್ಮ�? ಪರ�?ಕ್ಷಾ ಫಲಿತಾಂಶದಾಖಲಿಸಿ</value>
-    <comment>陽性�?報の登録</comment>
+    <value>ಧನಾತ್ಮಕ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶದಾಖಲಿಸಿ</value>
+    <comment>陽性情報の登録</comment>
   </data>
   <data name="TutorialPage1Button" xml:space="preserve">
-    <value>ಮುಂದ�?</value>
+    <value>ಮುಂದೆ</value>
     <comment>次へ</comment>
   </data>
   <data name="TutorialPage1Description1" xml:space="preserve">
-    <value>�? �?ಪ�? �?ನ್ನ�? ಚಾಲನ�? ಯಲ್ಲಿರುವ ಸ್ಮಾರ್ಟ�? ಫೋನ�? ಗಳ ನಡುವಿನ ನಿಕ�? ಸಂಪರ್ಕಗಳನ್ನ�? �? �?್ಯಪ�? ಗುರುತಿಸುತ್ತದ�?.</value>
-    <comment>本アプリをスマ�?�トフォンに設定した人ど�?し�?�接触を記録します�??</comment>
+    <value>ಈ ಆಪ್ ಅನ್ನು ಚಾಲನೆ ಯಲ್ಲಿರುವ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಗಳ ನಡುವಿನ ನಿಕಟ ಸಂಪರ್ಕಗಳನ್ನು ಈ ಆ್ಯಪ್ ಗುರುತಿಸುತ್ತದೆ.</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>COVID-19 ಗಾಗಿ ಧನಾತ್ಮಕವಾಗಿ ಪರ�?ಕ್ಷಿಸಿದಾ�?, �? �?ಪ್ಲಿಕ�?ಶನ�? ನಲ್ಲಿ ನ�?ವ�? ಪರ�?ಕ್ಷಾ ಫಲಿತಾಂಶವನ್ನ�? �?ನಾಮಧ�?ಯವಾಗಿ ನೋಂದಾಯಿಸಬಹುದ�?.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます�??</comment>
+    <value>COVID-19 ಗಾಗಿ ಧನಾತ್ಮಕವಾಗಿ ಪರೀಕ್ಷಿಸಿದಾಗ, ಈ ಅಪ್ಲಿಕೇಶನ್ ನಲ್ಲಿ ನೀವು ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶವನ್ನು ಅನಾಮಧೇಯವಾಗಿ ನೋಂದಾಯಿಸಬಹುದು.</value>
+    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>ನ�?ವ�? ಧನಾತ್ಮ�? ಪರ�?ಕ್ಷ�?ಮಾಡಿದ ಬಳಕ�?ದಾರರೊಂದಿಗ�? ನಿಕ�? ಸಂಪರ್ಕದಲ್ಲಿದ್ದರ�?, ಸಂಭಾವ್ಯ ಸೋಂಕಿನ ಬಗ್ಗ�? �?ಪ್ಲಿಕ�?ಶನ�? ನಿಮಗ�? ಸೂಚನ�? ನ�?ಡುತ್ತದ�? ಮತ್ತ�? ನಿಮ್ಮ �?ರೋಗ್ಯವನ್ನ�? ರಕ್ಷಿಸಲ�? ಮಾರ್ಗದರ್ಶನವನ್ನ�? ಒದಗಿಸುತ್ತದ�?.</value>
-    <comment>�?近接触した人の中に陽性登録した人がいたら�?通知と適�?な行動をお知らせします�??</comment>
+    <value>ನೀವು ಧನಾತ್ಮಕ ಪರೀಕ್ಷೆಮಾಡಿದ ಬಳಕೆದಾರರೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕದಲ್ಲಿದ್ದರೆ, ಸಂಭಾವ್ಯ ಸೋಂಕಿನ ಬಗ್ಗೆ ಅಪ್ಲಿಕೇಶನ್ ನಿಮಗೆ ಸೂಚನೆ ನೀಡುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಆರೋಗ್ಯವನ್ನು ರಕ್ಷಿಸಲು ಮಾರ್ಗದರ್ಶನವನ್ನು ಒದಗಿಸುತ್ತದೆ.</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
   </data>
   <data name="TutorialPage1Title1" xml:space="preserve">
-    <value>�?ಪ್ಲಿಕ�?ಶನ�? ನೊಂದಿಗ�? ನಿಮ್ಮನ್ನ�? ನ�?ವ�? ರಕ್ಷಿಸಿಕೊಳ್ಳಿ</value>
-    <comment>こ�?�アプリでできること</comment>
+    <value>ಅಪ್ಲಿಕೇಶನ್ ನೊಂದಿಗೆ ನಿಮ್ಮನ್ನು ನೀವು ರಕ್ಷಿಸಿಕೊಳ್ಳಿ</value>
+    <comment>このアプリでできること</comment>
   </data>
   <data name="TutorialPage1Title2" xml:space="preserve">
-    <value>�?ಪ್ಲಿಕ�?ಶನ�? ನೊಂದಿಗ�? ನಿಮ್ಮನ್ನ�? ನ�?ವ�? ರಕ್ಷಿಸಿಕೊಳ್ಳಿ</value>
-    <comment>こ�?�アプリでできること</comment>
+    <value>ಅಪ್ಲಿಕೇಶನ್ ನೊಂದಿಗೆ ನಿಮ್ಮನ್ನು ನೀವು ರಕ್ಷಿಸಿಕೊಳ್ಳಿ</value>
+    <comment>このアプリでできること</comment>
   </data>
   <data name="TutorialPage4Button1" xml:space="preserve">
-    <value>�?ನ�? ಮಾಡಿ</value>
+    <value>ಆನ್ ಮಾಡಿ</value>
     <comment>有効にする</comment>
   </data>
   <data name="TutorialPage4Button2" xml:space="preserve">
     <value>ನಂತರ ಹೊಂದಿಸಿ</value>
-    <comment>あとで設定す�?</comment>
+    <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage4Description" xml:space="preserve">
-    <value>�?ತರ ಬಳಕ�?ದಾರರೊಂದಿಗ�? ನಿಕ�? ಸಂಪರ್ಕಗಳನ್ನ�? ದಾಖಲಿಸಲ�? ಪ್ರಾರಂಭಿಸಲ�? ದಯವಿಟ್ಟ�? Bluetooth �?ನ�? ಮಾಡಿ.</value>
-    <comment>本アプリで接触検知をご利用�?ただくために、スマ�?�トフォンのBluetooth通信を有効にしてください�?</comment>
+    <value>ಇತರ ಬಳಕೆದಾರರೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕಗಳನ್ನು ದಾಖಲಿಸಲು ಪ್ರಾರಂಭಿಸಲು ದಯವಿಟ್ಟು Bluetooth ಆನ್ ಮಾಡಿ.</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
   <data name="TutorialPage4Label" xml:space="preserve">
-    <value>ಮತ್ತಷ್ಟ�? ಹುಡುಕಿ</value>
-    <comment>�?術的な詳細につ�?て</comment>
+    <value>ಮತ್ತಷ್ಟು ಹುಡುಕಿ</value>
+    <comment>技術的な詳細について</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
-    <value>Bluetooth �?ನ�? ಮಾಡಿ</value>
-    <comment>接触検知をご利用�?ただくために</comment>
+    <value>Bluetooth ಆನ್ ಮಾಡಿ</value>
+    <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage4Title2" xml:space="preserve">
-    <value>Bluetooth �?ನ�? ಮಾಡಿ</value>
-    <comment>接触検知をご利用�?ただくために</comment>
+    <value>Bluetooth ಆನ್ ಮಾಡಿ</value>
+    <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
     <value>~</value>
     <comment>から</comment>
   </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
-    <value>8-�?ಂಕಿಯ ಕೋಡ�? ನಮೂದಿಸಿ</value>
-    <comment>8桁�?�処�?番号を�?�力してください</comment>
+    <value>8-ಅಂಕಿಯ ಕೋಡ್ ನಮೂದಿಸಿ</value>
+    <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>ಹೊಸ ಕೊರೊನಾವೈರಸ�? ಸಾಂಕ್ರಾಮಿ�? ರೋ�? ಮಾಹಿತಿ ಮತ್ತ�? ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥ�?ಯಲ್ಲಿ ನೋಂದಾಯಿತವಾದ ನಿಮ್ಮ ಮೊಬೈಲ�? ದೂರವಾಣಿ ಸಂಖ್ಯ�? �?ಥವಾ �?-ಮ�?ಲ�? ವಿಳಾಸಕ್ಕ�? ಸಂಸ್ಕರಣಾ ಸಂಖ್ಯ�?ಯನ್ನ�? ಸೂಚಿಸಲಾಗುತ್ತದ�? (�?ನ್ನ�? ಮುಂದ�? "ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥ�?").</value>
-    <comment>新型コロナウイルス感染�?等情報把握・管�?シス�?�??��以下�?�管�?シス�?�?」）に登録されたあなた�?�携帯電話番号又�?�メールアドレスに、�?��?番号が�?�知されます�??</comment>
+    <value>ಹೊಸ ಕೊರೊನಾವೈರಸ್ ಸಾಂಕ್ರಾಮಿಕ ರೋಗ ಮಾಹಿತಿ ಮತ್ತು ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ನೋಂದಾಯಿತವಾದ ನಿಮ್ಮ ಮೊಬೈಲ್ ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಅಥವಾ ಇ-ಮೇಲ್ ವಿಳಾಸಕ್ಕೆ ಸಂಸ್ಕರಣಾ ಸಂಖ್ಯೆಯನ್ನು ಸೂಚಿಸಲಾಗುತ್ತದೆ (ಇನ್ನು ಮುಂದೆ "ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ").</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>ನ�?ವ�? ಟರ್ಮಿನಲ�? ನಲ್ಲಿ �? ಪ್ರೊಸ�?ಸಿಂಗ�? ಸಂಖ್ಯ�?ಯನ್ನ�? ನಮೂದಿಸಿದಾ�?, ನಿಮಗ�? ಪ್ರೊಸ�?ಸಿಂಗ�? ನಂಬರ�? ನ�?ಡಲಾಗಿದ�?ಯ�? ಎಂದ�? ಟರ್ಮಿನಲ�? �?ಧಿಸೂಚನ�? ಸರ್ವರ�? ಮೂಲ�? ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥ�?ಗ�? ವಿಚಾರಣ�? ಯನ್ನ�? ಮಾಡುತ್ತದ�?.</value>
-    <comment>あなたがこ�?�処�?番号を端末に入力することにより、端末から通知サーバ�?�を経由して管�?シス�?�?に対し�?��?��?番号があなたに対して発行されたも�?�か否か�?�照会が行われます�??</comment>
+    <value>ನೀವು ಟರ್ಮಿನಲ್ ನಲ್ಲಿ ಈ ಪ್ರೊಸೆಸಿಂಗ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿದಾಗ, ನಿಮಗೆ ಪ್ರೊಸೆಸಿಂಗ್ ನಂಬರ್ ನೀಡಲಾಗಿದೆಯೇ ಎಂದು ಟರ್ಮಿನಲ್ ಅಧಿಸೂಚನೆ ಸರ್ವರ್ ಮೂಲಕ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆಗೆ ವಿಚಾರಣೆ ಯನ್ನು ಮಾಡುತ್ತದೆ.</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
   </data>
   <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>ನಿಮಗ�? ಉಲ್ಲ�?ಖಿಸಲಾದ ವ್ಯವಹಾರ ಸಂಖ್ಯ�?ಯನ್ನ�? ನಿಮಗ�? ನ�?ಡಲಾಗಿದ�?ಯ�? ಎಂದ�? ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥ�?ಯ�? �?ಧಿಸೂಚನ�? ಸರ್ವರ�? ಗ�? ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತದ�?.</value>
-    <comment>管�?シス�?�?は�?通知サーバ�?�に対し�?��?�会された処�?番号があなたに対して発行されたも�?�か否かにつ�?て回答します�??</comment>
+    <value>ನಿಮಗೆ ಉಲ್ಲೇಖಿಸಲಾದ ವ್ಯವಹಾರ ಸಂಖ್ಯೆಯನ್ನು ನಿಮಗೆ ನೀಡಲಾಗಿದೆಯೇ ಎಂದು ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆಯು ಅಧಿಸೂಚನೆ ಸರ್ವರ್ ಗೆ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತದೆ.</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
   </data>
   <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>ನಿಮಗ�? ಟ್ರಾನ್ಸಾಕ್ಷನ�? ನಂಬರ�? ನ�?ಡಲಾಗಿದ�? ಎಂದ�? ನ�?ವ�? ಉತ್ತರಿಸಿದರ�?, ನಿಮ್ಮ ಟರ್ಮಿನಲ�? ನಲ್ಲಿ ದಾಖಲಿಸಲಾದ ದೈನಂದಿನ ಕ�?ಲಿಯೊಂದಿಗ�? �?ತರ ಬಳಕ�?ದಾರರ ಟರ್ಮಿನಲ�? ಗಳನ್ನ�? ಒದಗಿಸಲಾಗುವುದ�?.</value>
-    <comment>処�?番号があなたに対して発行されたも�?�である旨の回答が行われた場合�?�、他�?�利用�?の端末に、あなた�?�端末に記録された日次鍵が提供されます�??</comment>
+    <value>ನಿಮಗೆ ಟ್ರಾನ್ಸಾಕ್ಷನ್ ನಂಬರ್ ನೀಡಲಾಗಿದೆ ಎಂದು ನೀವು ಉತ್ತರಿಸಿದರೆ, ನಿಮ್ಮ ಟರ್ಮಿನಲ್ ನಲ್ಲಿ ದಾಖಲಿಸಲಾದ ದೈನಂದಿನ ಕೀಲಿಯೊಂದಿಗೆ ಇತರ ಬಳಕೆದಾರರ ಟರ್ಮಿನಲ್ ಗಳನ್ನು ಒದಗಿಸಲಾಗುವುದು.</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>ನ�?ವ�? 14 ದಿನಗಳ ಒಳಗ�? ನಿಮ್ಮಸಂಪರ್ಕದಲ್ಲಿದ್ದರ�?, ನಿಮ್ಮನ್ನ�? ವೈಯಕ್ತಿಕವಾಗಿ ಗುರುತಿಸಬಹುದಾದ ಯಾವುದ�? ಮಾಹಿತಿ�?ಲ್ಲದ�? ನಿಮ್ಮನ್ನ�? ಸಂಪರ್ಕಿಸಬಹುದ�?ಂದ�? ನ�?ವ�? ತಿಳಿದಿರುತ್ತ�?ರಿ.</value>
-    <comment>14日以�?にあなたと接触の状態となったことのある方は、あなた�?�人を識別可能な�?報がな�?状態で、接触した可能性がある旨を知ることができます�??</comment>
+    <value>ನೀವು 14 ದಿನಗಳ ಒಳಗೆ ನಿಮ್ಮಸಂಪರ್ಕದಲ್ಲಿದ್ದರೆ, ನಿಮ್ಮನ್ನು ವೈಯಕ್ತಿಕವಾಗಿ ಗುರುತಿಸಬಹುದಾದ ಯಾವುದೇ ಮಾಹಿತಿಇಲ್ಲದೆ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಬಹುದೆಂದು ನೀವು ತಿಳಿದಿರುತ್ತೀರಿ.</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>ಒಪ್ಪ�? ಮತ್ತ�? ನೋಂದಾಯಿಸಿ</value>
+    <value>ಒಪ್ಪು ಮತ್ತು ನೋಂದಾಯಿಸಿ</value>
     <comment>同意して陽性登録する</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>ಸಕಾರಾತ್ಮ�? ನೋಂದಣಿಗ�? ಸಮ್ಮತಿ</value>
+    <value>ಸಕಾರಾತ್ಮಕ ನೋಂದಣಿಗೆ ಸಮ್ಮತಿ</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>ಸಕಾರಾತ್ಮ�? ನೋಂದಣಿಗ�? ಸಮ್ಮತಿ</value>
+    <value>ಸಕಾರಾತ್ಮಕ ನೋಂದಣಿಗೆ ಸಮ್ಮತಿ</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
-    <value>�?ವ�?ತ್ತಿ</value>
-    <comment>バ�?�ジョン</comment>
+    <value>ಆವೃತ್ತಿ</value>
+    <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>ಬ್ಲೂಟೂತ�? �?ಫ�? �?ಗಿದ�?. ದಯವಿಟ್ಟ�? Bluetooth ನಲ್ಲಿ ತಿರುಗಿ.</value>
-    <comment>BluetoothがOffになって�?ます�??Bluetoothを有効にしてください�?</comment>
+    <value>ಬ್ಲೂಟೂತ್ ಆಫ್ ಆಗಿದೆ. ದಯವಿಟ್ಟು Bluetooth ನಲ್ಲಿ ತಿರುಗಿ.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>ನಿಕ�? ಸಂಪರ್ಕಗಳ ಒಂದ�? ಪಟ್ಟಿ (ಕಳ�?ದ 14 ದಿನಗಳ�?)</value>
-    <comment>過去14日間�?�接触�?覧</comment>
+    <value>ನಿಕಟ ಸಂಪರ್ಕಗಳ ಒಂದು ಪಟ್ಟಿ (ಕಳೆದ 14 ದಿನಗಳು)</value>
+    <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>COVID-19 ಧನಾತ್ಮ�? ಬಳಕ�?ದಾರರೊಂದಿಗ�? ನ�?ವ�? ನಿಕ�? ಸಂಪರ್ಕದಲ್ಲಿದ್ದಾ�? ದಿನಾಂಕಗಳ�?.</value>
-    <comment>以下�?�日に陽性�?との接触が確認されました�?</comment>
+    <value>COVID-19 ಧನಾತ್ಮಕ ಬಳಕೆದಾರರೊಂದಿಗೆ ನೀವು ನಿಕಟ ಸಂಪರ್ಕದಲ್ಲಿದ್ದಾಗ ದಿನಾಂಕಗಳು.</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
@@ -580,59 +580,63 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
-    <value>COVID-19 ಗ�? ಧನಾತ್ಮ�? ಪರ�?ಕ್ಷ�? ಮಾಡಿದ ಬಳಕ�?ದಾರನಿಗ�? ನ�?ವ�? ಹತ್ತಿರವಾಗಿದ್ದ�?ರಿ.  ಹ�?ಚ್ಚಿನ ವಿವರಗಳಿಗ�? ಟ್ಯಾಪ�? ಮಾಡಿ.</value>
+    <value>COVID-19 ಗೆ ಧನಾತ್ಮಕ ಪರೀಕ್ಷೆ ಮಾಡಿದ ಬಳಕೆದಾರನಿಗೆ ನೀವು ಹತ್ತಿರವಾಗಿದ್ದೀರಿ.  ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗೆ ಟ್ಯಾಪ್ ಮಾಡಿ.</value>
     <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
   </data>
   <data name="LocalNotificationTitle" xml:space="preserve">
-    <value>ಸಂಭವನ�?ಯ COVID-19 ಎಕ್ಸ�? ಪೋಷರ�?</value>
+    <value>ಸಂಭವನೀಯ COVID-19 ಎಕ್ಸ್ ಪೋಷರ್</value>
     <comment>Possible COVID-19 Exposure</comment>
   </data>
   <data name="LocalNotificationPermittedDescription" xml:space="preserve">
-    <value>ನ�?ವ�? �?ದನ್ನ�? ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲ�? ಬಯಸಿದರ�?, ನ�?ವ�? �?ದನ್ನ�? �?ಪ್ಲಿಕ�?ಶನ�? ಸ�?ಟ್ಟಿಂಗ�? ಗಳಿಂದ ಬದಲಿಸಬಹುದ�?</value>
+    <value>ನೀವು ಅದನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ಬಯಸಿದರೆ, ನೀವು ಅದನ್ನು ಅಪ್ಲಿಕೇಶನ್ ಸೆಟ್ಟಿಂಗ್ ಗಳಿಂದ ಬದಲಿಸಬಹುದು</value>
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
-    <value>�?ಧಿಸೂಚನ�?ಗಳ�? ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸಲಾಗಿದ�?</value>
+    <value>ಅಧಿಸೂಚನೆಗಳು ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸಲಾಗಿದೆ</value>
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>�? �?ಪ್ಲಿಬಗ್ಗ�? ಮಾಹಿತಿ</value>
+    <value>ಈ ಅಪ್ಲಿಬಗ್ಗೆ ಮಾಹಿತಿ</value>
   </data>
   <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>ಬಳಕ�?ದಾರನಿಗ�? Q ಮತ್ತ�? A</value>
+    <value>ಬಳಕೆದಾರನಿಗೆ Q ಮತ್ತು A</value>
   </data>
   <data name="InqueryMailBody" xml:space="preserve">
-    <value>ಹ�?ಸರ�?: \r\n ಸಂಪರ್�?: \r\n ವಿಚಾರಣ�?ಯ ವಿಷಯ (ದಯವಿಟ್ಟ�? �? ಕ�?ಳಗಿನವುಗಳಿಂದ ಒಂದ�? ವರ್ಗವನ್ನ�? �?ಯ್ಕ�? ಮಾಡಿ): 1. �?ಪ್ಲಿ ಹ�?ಗ�? ಕ�?ಲಸ ಮಾಡುತ್ತದ�?, 2. �?ಪ್ಲಿಕ�?ಶನ�? ಸ�?ಟ್ಟಿಂಗ�? ಗಳ�?, 3. �?ಪ್ಲಿಕ�?ಶನ�? ಬಳಕ�? (�?ಧಿಸೂಚನ�? �?ತ್ಯಾದಿ) ), 4. �?ತರ \r\n ವಿಚಾರಣ�? ಪ�?್ಯ: \r\n</value>
-    <comment>お名前：\r\nご�?�絡先：\r\nお問�?合わせ�??容(カ�?ゴリを次の中からお選びください)?�?1.アプリの仕�?み�?2.アプリの設定�?? 3.アプリの利用(通知など)�? 4.そ�?�他\r\nお問�?合わせ本�?��\r\n</comment>
+    <value>ಹೆಸರು: \r\n ಸಂಪರ್ಕ: \r\n ವಿಚಾರಣೆಯ ವಿಷಯ (ದಯವಿಟ್ಟು ಈ ಕೆಳಗಿನವುಗಳಿಂದ ಒಂದು ವರ್ಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ): 1. ಅಪ್ಲಿ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ, 2. ಅಪ್ಲಿಕೇಶನ್ ಸೆಟ್ಟಿಂಗ್ ಗಳು, 3. ಅಪ್ಲಿಕೇಶನ್ ಬಳಕೆ (ಅಧಿಸೂಚನೆ ಇತ್ಯಾದಿ) ), 4. ಇತರ \r\n ವಿಚಾರಣೆ ಪಠ್ಯ: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
   </data>
   <data name="InqueryMailSubject" xml:space="preserve">
-    <value>ಸಂಪರ್�? ದ�?ಢ�?ಕರಣ �?ಪ್ಲಿಬಗ್ಗ�? ವಿಚಾರಣ�?ಗಳ�?</value>
-    <comment>接触確認アプリに関するお問�?合わ�?</comment>
+    <value>ಸಂಪರ್ಕ ದೃಢೀಕರಣ ಅಪ್ಲಿಬಗ್ಗೆ ವಿಚಾರಣೆಗಳು</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
-    <value>ದಿನಗಳ�?</value>
-    <comment>X日�?</comment>
+    <value>ದಿನಗಳು</value>
+    <comment>X日間</comment>
   </data>
   <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>ಎಕ್ಸ�? ಪೋಶರ�? �?ಧಿಸೂಚನ�? ಸಕ್ರಿಯವಾಗಿದ�?.</value>
-    <comment>Exposure Notification機�?�は許諾の状態です�??</comment>
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆ ಸಕ್ರಿಯವಾಗಿದೆ.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>ಬ್ಲೂಟೂತ�? �?ಫ�? �?ಗಿದ�?. ದಯವಿಟ್ಟ�? Bluetooth �?ನ�? ಮಾಡಿ.</value>
-    <comment>BluetoothがOffになって�?ます�??Bluetoothを有効にしてください�?</comment>
+    <value>ಬ್ಲೂಟೂತ್ ಆಫ್ ಆಗಿದೆ. ದಯವಿಟ್ಟು Bluetooth ಆನ್ ಮಾಡಿ.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>ಎಕ್ಸ�? ಪೋಶರ�? �?ಧಿಸೂಚನ�?ಯನ್ನ�? ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದ�?. ಟರ್ಮಿನಲ�? ಸ�?ಟ್ಟಿಂಗ�? ಗಳನ್ನ�? ತ�?ರ�?ಯಿರಿ ಮತ್ತ�? ಎಕ್ಸ�? ಪೋಷರ�? ನೋಟಿಫಿಕ�?ಶನ�? �?ನ್ನ�? �?ನ�? ಮಾಡಿ.</value>
-    <comment>Exposure Notification機�?�は無効の状態です�?�端末の設定を開いて、Exposure NotificationをONにしてください�?</comment>
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಟರ್ಮಿನಲ್ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ತೆರೆಯಿರಿ ಮತ್ತು ಎಕ್ಸ್ ಪೋಷರ್ ನೋಟಿಫಿಕೇಶನ್ ಅನ್ನು ಆನ್ ಮಾಡಿ.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
-    <value>ನ�?ವ�? ಬಳಕ�?ಯ ನಿಬಂಧನ�?ಗಳನ್ನ�? ಒಪ್ಪಬ�?ಕ�?.</value>
-    <comment>利用規�?に同意する�?要があります�??</comment>
+    <value>ನೀವು ಬಳಕೆಯ ನಿಬಂಧನೆಗಳನ್ನು ಒಪ್ಪಬೇಕು.</value>
+    <comment>利用規約に同意する必要があります。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>ಎಕ್ಸ�? ಪೋಷರ�? �?ಧಿಸೂಚನ�?ಯನ್ನ�? ನಿರ್ಬಂಧಿಸಲಾಗಿದ�?. ದಯವಿಟ್ಟ�? ಸಕ್ರಿಯರಾಗಿರಿ.</value>
-    <comment>Exposure Notification機�?�が承認されて�?ません。承認してください�?</comment>
+    <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆಯನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಸಕ್ರಿಯರಾಗಿರಿ.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>ಎಕ್ಸ�? ಪೋಶರ�? �?ಧಿಸೂಚನ�?ಯನ್ನ�? ಬ�?ಂಬಲಿಸುವುದಿಲ್ಲ. ದಯವಿಟ್ಟ�? �?ತ್ತ�?ಚಿನ �?ವ�?ತ್ತಿಗ�? OS �?ನ್ನ�? �?ಪ�? ಡ�?ಟ�? ಮಾಡಿ. ನಿಮಗ�? �?ನ್ನ�? ಸಮಸ್ಯ�?ಗಳಿದ್ದರ�?, ದಯವಿಟ್ಟ�? ನಮ್ಮನ್ನ�? ***REMOVED*** ಸಂಪರ್ಕಿಸಿ.</value>
-    <comment>Exposure Notification機�?�は非対応�?�状態です�?�OSを最新版にア�?プデートしてください。それでも改�?しなければ、appsupport@cov19.mhlw.go.jpまでお問�?合わせく�?さい�?</comment>
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆಯನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ದಯವಿಟ್ಟು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ OS ಅನ್ನು ಅಪ್ ಡೇಟ್ ಮಾಡಿ. ನಿಮಗೆ ಇನ್ನೂ ಸಮಸ್ಯೆಗಳಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು ***REMOVED*** ಸಂಪರ್ಕಿಸಿ.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>ನೆಟ್ವರ್ಕ್ ಸಂಪರ್ಕ ದೋಷ</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>

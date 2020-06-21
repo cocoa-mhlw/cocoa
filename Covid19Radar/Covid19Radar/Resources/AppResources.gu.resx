@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>મહેરબાની કરીને તમારું નેટવર્ક જોડાણ ચકાસો.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ઠીક</value>
@@ -634,5 +634,9 @@
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>એક્સપોઝર સૂચના આધારભૂત નથી. કૃપા કરીને ઓએસને નવીનતમ આવૃત્તિમાં અપડેટ કરો. જો તમને હજુ પણ સમસ્યા હોય તો કૃપા કરીને ***REMOVED*** પર અમારો સંપર્ક કરો.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>નેટવર્ક જોડાણ ભૂલ</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>

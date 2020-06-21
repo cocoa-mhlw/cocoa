@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Jereo azafady ny fifandraisan' ny tambazotra.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>Tsy maninona</value>
@@ -634,5 +634,9 @@
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Tsy notohanana ny Fampilazana hatsiaka. Mba hanavao azafady ny OS amin' ny endriny farany. Raha mbola manana olana ianao dia mba mifandraisa aminay ao amin' ny ***REMOVED***.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>Tsy fetezana ny fifandraisana</value>
+    <comment>通信に失敗しました。</comment>
   </data>
 </root>
