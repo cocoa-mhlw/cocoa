@@ -18,7 +18,9 @@
         /// <summary>
         /// Max Error Count
         /// </summary>
-        public const int MaxErrorCount = 4;
+        public const int MaxErrorCount = 3;
+
+        public const string positiveRegex = @"\b[0-9]{8}\b";
 
     }
 }

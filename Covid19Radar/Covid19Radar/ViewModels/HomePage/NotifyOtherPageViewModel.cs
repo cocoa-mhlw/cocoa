@@ -13,7 +13,7 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
-        public bool IsEnabled { get; set; } = true;
+        public bool IsEnabled { get; set; }
         public string DiagnosisUid { get; set; }
         private int errorCount { get; set; }
 
@@ -26,27 +26,48 @@ namespace Covid19Radar.ViewModels
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
             errorCount = 0;
+            IsEnabled = true;
         }
 
         public Command OnClickRegister => (new Command(async () =>
         {
-            // Check helthcare authority positive api check here!!
-            using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
-            dialog.Show();
-            if (errorCount > AppConstants.MaxErrorCount)
+            var result = await UserDialogs.Instance.ConfirmAsync("陽性情報を登録しますか", "登録", "はい", "いいえ");
+            if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    errorCount + "回のエラーが発生しました、アプリケーションを終了します",
+                    "キャンセルしました",
+                    "",
+                    Resources.AppResources.ButtonOk
+                    );
+                return;
+            }
+
+            UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
+
+            // Check helthcare authority positive api check here!!
+            if (errorCount >= AppConstants.MaxErrorCount)
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    $"登録回数上限になりました。アプリケーションを終了します",
                     "登録エラー",
                     Resources.AppResources.ButtonOk
                 );
-                dialog.Hide();
+                UserDialogs.Instance.HideLoading();
                 Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
                 return;
             }
 
-            // Tarpit Sleep
-            Thread.Sleep(errorCount * 5000);
+            if (errorCount > 0)
+            {
+                var current = errorCount + 1;
+                var max = AppConstants.MaxErrorCount;
+                await UserDialogs.Instance.AlertAsync("登録開始までしばらくそのままでお待ちください",
+                    $"登録待ち {current}/{max}回目",
+                    Resources.AppResources.ButtonOk
+                    );
+                Thread.Sleep(errorCount * 5000);
+            }
+
 
             // Init Dialog
             if (string.IsNullOrEmpty(DiagnosisUid))
@@ -58,11 +79,11 @@ namespace Covid19Radar.ViewModels
                 );
                 errorCount++;
                 await userDataService.SetAsync(userData);
-                dialog.Hide();
+                UserDialogs.Instance.HideLoading();
                 return;
             }
 
-            Regex regex = new Regex(@"\b[0-9]{8}\b");
+            Regex regex = new Regex(AppConstants.positiveRegex);
             if (!regex.IsMatch(DiagnosisUid))
             {
                 await UserDialogs.Instance.AlertAsync(
@@ -72,12 +93,11 @@ namespace Covid19Radar.ViewModels
                 );
                 errorCount++;
                 await userDataService.SetAsync(userData);
-                dialog.Hide();
+                UserDialogs.Instance.HideLoading();
                 return;
             }
 
             // Submit the UID
-            IsEnabled = false;
             try
             {
                 // EN Enabled Check
@@ -85,12 +105,12 @@ namespace Covid19Radar.ViewModels
 
                 if (!enabled)
                 {
-                    dialog.Hide();
                     await UserDialogs.Instance.AlertAsync(
-                        Resources.AppResources.NotifyOtherPageDialogSubmittedText,
-                        Resources.AppResources.ButtonComplete,
+                        "陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。",
+                        "COVID-19接触のログ記録を有効にしてください",
                         Resources.AppResources.ButtonOk
                     );
+                    UserDialogs.Instance.HideLoading();
                     await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
                     return;
                 }
@@ -101,21 +121,17 @@ namespace Covid19Radar.ViewModels
 
                 // Submit our diagnosis
                 await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
-                dialog.Hide();
-
+                UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(
                     Resources.AppResources.NotifyOtherPageDialogSubmittedText,
                     Resources.AppResources.ButtonComplete,
                     Resources.AppResources.ButtonOk
                 );
-
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-
-                dialog.Hide();
+                errorCount++;
                 UserDialogs.Instance.Alert(
                     Resources.AppResources.NotifyOtherPageDialogExceptionText,
                     Resources.AppResources.ButtonFailed,
@@ -124,23 +140,9 @@ namespace Covid19Radar.ViewModels
             }
             finally
             {
+                UserDialogs.Instance.HideLoading();
                 IsEnabled = true;
             }
-        }));
-
-        public Command OnClickAfter => (new Command(async () =>
-        {
-            var check = await UserDialogs.Instance.ConfirmAsync(
-                Resources.AppResources.PositiveRegistrationConfirmText,
-                Resources.AppResources.PositiveRegistrationText,
-                Resources.AppResources.ButtonNotNow,
-                Resources.AppResources.ButtonReturnToRegistration
-            );
-            if (check)
-            {
-                await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
-            }
-
         }));
     }
 }
