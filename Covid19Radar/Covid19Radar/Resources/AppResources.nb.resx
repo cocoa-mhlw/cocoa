@@ -611,4 +611,28 @@
     <value>Dager</value>
     <comment>X日間</comment>
   </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Eksponeringsvarsel er aktivt.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Bluetooth er slått av. Slå på Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Eksponeringsvarsel er deaktivert. Åpne terminalinnstillingene, og slå på Eksponeringsvarsling.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>Du må godta vilkårene for bruk.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Eksponeringsvarselet er begrenset. Vennligst aktiv.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Eksponeringsvarsel støttes ikke. Oppdater operativsystemet til den nyeste versjonen. Hvis du fortsatt har problemer, kan du kontakte oss på appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
 </root>

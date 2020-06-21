@@ -250,6 +250,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Exposure Notification is active. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationStatusMessageActive {
+            get {
+                return ResourceManager.GetString("ExposureNotificationStatusMessageActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Bluetooth is turned off. Please turn on Bluetooth. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationStatusMessageBluetoothOff {
+            get {
+                return ResourceManager.GetString("ExposureNotificationStatusMessageBluetoothOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationStatusMessageDisabled {
+            get {
+                return ResourceManager.GetString("ExposureNotificationStatusMessageDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You must agree to the terms of use. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationStatusMessageIsOptined {
+            get {
+                return ResourceManager.GetString("ExposureNotificationStatusMessageIsOptined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Exposure Notification is restricted. Please active. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationStatusMessageRestricted {
+            get {
+                return ResourceManager.GetString("ExposureNotificationStatusMessageRestricted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationStatusMessageUnknown {
+            get {
+                return ResourceManager.GetString("ExposureNotificationStatusMessageUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Dates when you were in close contact with COVID-19 positive users. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposuresPageLabel1 {
