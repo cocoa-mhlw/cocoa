@@ -4,6 +4,8 @@ using Covid19Radar.Model;
 using ImTools;
 using Prism.Navigation;
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
@@ -43,7 +45,7 @@ namespace Covid19Radar.Services
 
         private async void OnTimerInvoked(EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString(new CultureInfo("en-US")));
             //await FetchExposureKeyAsync();
         }
 
