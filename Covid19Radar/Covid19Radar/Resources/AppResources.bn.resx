@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>অনুগ্রহ করে আপনার নেটওয়ার্ক কানেকশন চেক করুন.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ঠিক আছে</value>
@@ -606,5 +606,45 @@
   <data name="InqueryMailSubject" xml:space="preserve">
     <value>কন্ট্যাক্ট কনফার্মেশন অ্যাপ সম্পর্কে অনুসন্ধান</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>দিনগুলো</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সক্রিয়।</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>ব্লুটুথ বন্ধ আছে। অনুগ্রহ করে ব্লুটুথ চালু করুন।</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন নিষ্ক্রিয়। টার্মিনাল সেটিংস খুলুন এবং এক্সপোজার প্রজ্ঞাপন চালু করুন।</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>আপনাকে অবশ্যই ব্যবহারের শর্তাবলীর সাথে একমত হতে হবে।</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সীমাবদ্ধ। অনুগ্রহ করে সক্রিয় করুন।</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সমর্থিত নয়। অনুগ্রহ করে সর্বশেষ সংস্করণে OS হালনাগাদ করুন। আপনার যদি এখনও কোন সমস্যা থাকে, অনুগ্রহ করে appsupport@cov19.mhlw.go.jp আমাদের সাথে যোগাযোগ করুন।</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>নেটওয়ার্ক সংযোগ ত্রুটি</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন স্টার্টআপ ত্রুটি</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন স্টার্টআপ করতে পারেনি. টার্মিনাল সেটিংস খুলুন, এক্সপোজার প্রজ্ঞাপনে চালু করুন, এবং ব্লুটুথে চালু করুন।</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 </root>
