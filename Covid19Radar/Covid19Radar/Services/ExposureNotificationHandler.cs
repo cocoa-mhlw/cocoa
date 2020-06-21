@@ -223,7 +223,7 @@ namespace Covid19Radar.Services
             {
                 await UserDialogs.Instance.AlertAsync(
                     "",
-                    "アプリで入力された処理番号が違います",
+                    AppResources.ExposureNotificationHandler1ErrorMessage,
                     Resources.AppResources.ButtonOk);
                 throw new InvalidOperationException();
             }
@@ -231,7 +231,7 @@ namespace Covid19Radar.Services
             {
                 await UserDialogs.Instance.AlertAsync(
                     "",
-                    "センターに接続できません",
+                    AppResources.ExposureNotificationHandler2ErrorMessage,
                     Resources.AppResources.ButtonOk);
                 throw new InvalidOperationException();
             }

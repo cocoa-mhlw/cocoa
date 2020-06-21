@@ -17,20 +17,22 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Margin="0,0,0,20" Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.TutorialPage2Description1}" />
+        <Label
+            Grid.Row="0"
+            Margin="0,0,0,20"
+            Style="{StaticResource DefaultTitleLabel}"
+            Text="{x:Static resources:AppResources.TutorialPage2Description1}" />
         <ScrollView Grid.Row="1">
-            <StackLayout
-                Margin="0,0,0,20"
-                Spacing="5">
+            <StackLayout Margin="0,0,0,20" Spacing="5">
                 <ffimageloading:CachedImage
-                Margin="0,0,0,20"
-                Aspect="AspectFit"
-                Scale="0.8"
-                Source="TutorialPage20.png" />
+                    Margin="0,0,0,20"
+                    Aspect="AspectFit"
+                    Scale="0.8"
+                    Source="TutorialPage20.png" />
                 <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.TutorialPage2Description2}" />
                 <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.TutorialPage2Description3}" />
                 <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.TutorialPage2Description4}" />
-                <Button 
+                <Button
                     Grid.Row="1"
                     AutomationId="NextButton"
                     Command="{prism:NavigateTo 'TutorialPage3'}"
