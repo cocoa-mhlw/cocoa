@@ -5,6 +5,9 @@ using Xamarin.Forms;
 using System;
 using Acr.UserDialogs;
 using Covid19Radar.Views;
+using System.Text.RegularExpressions;
+using System.Threading;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.ViewModels
 {
