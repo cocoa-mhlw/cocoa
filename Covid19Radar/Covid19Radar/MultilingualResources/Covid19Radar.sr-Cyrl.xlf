@@ -825,6 +825,71 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Обавештење о експозицији није могло да се покреће. Отворите поставке терминала, укључите обавештење о експозицији и укључите Блуетоотх.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
+        <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Process number incorrect</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Неисправан број процеса</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリで入力された処理番号が違います</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Cannot connect to registration center</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Није могуће повезати се са центром за регистрацију</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
+          <source>Do you want to register positive information?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Желите ли да региструјете позитивне информације?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録しますか?</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Регистрација</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
+          <source>Canceled</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Отказано</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
+          <source>Please wait for a while until registration starts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Сачекајте неко време док се регистрација не покрене</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
+          <source>Awaiting registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Чекам регистрацију</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
+          <source>No processing number entered</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Није унет број за обраду</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
+          <source>Processing number format does not match</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Обрада формата броја се не подудара</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号のフォーマットが一致していません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
+          <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Да би се регистровали позитивни записи, потребно је омогућити "КОВИД-19 записник за евиденцију контакта", омогућити га из поставки апликације или ОС.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
+          <source>Enable COVID-19 contact logging</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Омогући КОВИД-19 евидентирање контаката</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
+          <source>The number of registrations has reached the upper limit. Exit application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Број Регистрација је достигао горњу границу. Изађи из апликације</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録回数上限になりました。アプリケーションを終了します</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
+          <source>Registration error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Грешка у регистрацији</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
+        </trans-unit>
       </group>
     </body>
   </file>

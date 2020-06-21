@@ -825,6 +825,71 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">एक्स्पोजर सूचना स्टार्टअप करू शकत नव्हती. टर्मिनल संयोजना उघडा, एक्स्पोजर सूचना मध्ये वळा आणि ब्लूटूथमध्ये वळा.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
+        <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Process number incorrect</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">प्रक्रिया क्रमांक चुकीचा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリで入力された処理番号が違います</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
+          <source>Cannot connect to registration center</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">नोंदणी केंद्राशी कनेक्ट होऊ शकत नाही</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
+          <source>Do you want to register positive information?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">तुम्हाला सकारात्मक माहिती नोंदवायची आहे का?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録しますか?</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">नोंदणी करा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
+          <source>Canceled</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">रद्द केली</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
+          <source>Please wait for a while until registration starts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">नोंदणी सुरू होईपर्यंत कृपया थोडा वेळ थांबा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
+          <source>Awaiting registration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">नोंदणीची प्रतीक्षा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
+          <source>No processing number entered</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">प्रक्रिया क्रमांक प्रविष्ट केला नाही</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
+          <source>Processing number format does not match</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">प्रक्रिया संख्या स्वरूप जुळत नाही</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号のフォーマットが一致していません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
+          <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">सकारात्मक नोंदी नोंदवण्यासाठी, COVID-19 कॉन्टॅक्ट लॉग रेकॉर्डिंग कार्यान्वीत करणे, कृपया अनुप्रयोग किंवा ओएस संयोजनापासून कार्यान्वीत करणे आवश्यक आहे.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
+          <source>Enable COVID-19 contact logging</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 संपर्क लॉगिंग कार्यान्वीत करा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
+          <source>The number of registrations has reached the upper limit. Exit application</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">नोंदणीची संख्या वरच्या मर्यादेपर्यंत पोहोचली आहे. अनुप्रयोग बाहेर पडा</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録回数上限になりました。アプリケーションを終了します</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
+          <source>Registration error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">नोंदणी त्रुटी</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
+        </trans-unit>
       </group>
     </body>
   </file>
