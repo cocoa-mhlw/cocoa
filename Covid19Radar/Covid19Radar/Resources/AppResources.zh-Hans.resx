@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>请检查您的网络连接。</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>确定</value>
@@ -98,7 +98,7 @@
     <value>共享</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>登录感染信息，并向他人发送匿名通知</value>
+    <value>分享感染信息，并向他人发送匿名通知</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
@@ -130,11 +130,11 @@
     <value>以后要积极注册吗？</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
-    <value>为确保您周围的人的健康，请登录感染情况（匿名）</value>
+    <value>为确保您周围的人的健康，请登记感染情况（匿名）</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>使用此应用的人越多，会发挥越大的作用</value>
+    <value>使用此应用的人越多，则效果越好。</value>
     <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
@@ -174,27 +174,27 @@
     <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
-    <value>此时把接触方的随机代码记录到APP里，在任何用户向此APP登录阳性测试结果之前，不会使用此信息，14天后信息会自动删除。*为了保护您的隐私，代码会定期更改。</value>
+    <value>此时把接触方的随机代码记录到APP里，在任何用户向此APP登记阳性测试结果之前，不会使用此信息，14天后信息会自动删除。*为了保护您的隐私，代码会定期更改。</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>去设置</value>
+    <value>前往设置</value>
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
-    <value>从“设置”，您可以设定蓝牙的开启/关闭，通知的开启/关闭，停止使用，删除记录</value>
+    <value>在“设置”中您可以设定蓝牙和通知的开启/关闭、停用应用和删除记录等。</value>
     <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
-    <value>如果您接触的人中有人登录了阳性信息，APP会通知您。</value>
+    <value>如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</value>
     <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
-    <value>您可以从首页查看您的接触次数</value>
+    <value>您可以在首页查看您的接触次数。</value>
     <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
   </data>
   <data name="HelpPage2Description3" xml:space="preserve">
-    <value>您可以获得有过接触日期的一览，如果您有症状可以得到联系方式。</value>
+    <value>您可以查看密切接触日期的一览。并可获得如有症状时的具体应对指南。</value>
     <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
   </data>
   <data name="HelpPage2Label1" xml:space="preserve">
@@ -206,7 +206,7 @@
     <comment>ホーム画面</comment>
   </data>
   <data name="HelpPage2Label3" xml:space="preserve">
-    <value>如果您与登录阳性的人有过密切接触</value>
+    <value>如果您与登记阳性的人有过密切接触</value>
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
@@ -214,23 +214,23 @@
     <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
-    <value>保健所等官方机构给您开具“数字码”</value>
+    <value>保健所等官方机构会给您开具“数字码”。</value>
     <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
   </data>
   <data name="HelpPage3Description3" xml:space="preserve">
-    <value>使用此APP登录您的数字码</value>
+    <value>使用该应用登记您的数字码。</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
-    <value>14天以内与您接触的人的手机会收到通知（在1米范围内持续15分钟以上的接触）。</value>
+    <value>14天以内与您有过接触的人的手机会收到通知（在1米范围内持续15分钟以上的接触）。</value>
     <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
-    <value>通知只提供接触对方的随机代码，不会通知姓名等的个人信息和地点信息。</value>
+    <value>通知只提供接触对方的随机接触代码，不会显示姓名等的个人信息和地点信息。</value>
     <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
-    <value>如果确诊为阳性，请登录您的阳性信息并进行通知</value>
+    <value>如果确诊为阳性，请登记您的阳性信息并进行通知</value>
     <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
@@ -370,7 +370,7 @@
     <comment>アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
-    <value>使用中</value>
+    <value>使用</value>
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
@@ -382,7 +382,7 @@
     <comment>新型コロナウィルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
-    <value>登录阳性信息</value>
+    <value>登记阳性信息</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
@@ -446,7 +446,7 @@
     <comment>メニュー</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
-    <value>登录</value>
+    <value>登记</value>
     <comment>登録する</comment>
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
@@ -454,7 +454,7 @@
     <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>给14天以内与您有密切接触的用户通知。您登录的时候不需要公开您的个人信息，不必输入您的姓名或任何其他个人信息。另外，不会记录并通知密切接触的地点信息。</value>
+    <value>给14天以内与您有密切接触的用户通知。您登记的时候不需要公开您的个人信息，不必输入您的姓名或任何其他个人信息。另外，不会记录并通知密切接触的地点信息。</value>
     <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
@@ -462,7 +462,7 @@
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="NotifyOtherPageTitle" xml:space="preserve">
-    <value>登录阳性信息</value>
+    <value>登记阳性信息</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="TutorialPage1Button" xml:space="preserve">
@@ -474,11 +474,11 @@
     <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>如果您确诊新型冠状病毒肺炎，您可以匿名登录信息</value>
+    <value>如果您确诊新型冠状病毒肺炎，您可以匿名登记信息</value>
     <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>如果您与登录阳性的人有过密切接触，本APP会通知你潜在的感染，并提供保护你健康的指导</value>
+    <value>如果您与登记阳性的人有过密切接触，本APP会通知你潜在的感染，并提供保护你健康的指导</value>
     <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
   </data>
   <data name="TutorialPage1Title1" xml:space="preserve">
@@ -514,7 +514,7 @@
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
-    <value>从</value>
+    <value>开始</value>
     <comment>から</comment>
   </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
@@ -522,15 +522,15 @@
     <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>处理号码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</value>
+    <value>数字码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</value>
     <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>当您在设备中输入该处理号码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的处理号码。</value>
+    <value>当您在设备中输入该数字码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的数字码。</value>
     <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
   </data>
   <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>管理系统将会答复通知服务器所核对的处理号码是否为向您发出的号码。</value>
+    <value>管理系统将会答复通知服务器所核对的数字码是否为向您发出的号码。</value>
     <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
   </data>
   <data name="SubmitConsentPageDescription4" xml:space="preserve">
@@ -610,5 +610,41 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>天</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>曝光通知处于活动状态。</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>蓝牙已关闭。请打开蓝牙。</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>曝光通知已禁用。打开终端设置并打开曝光通知。</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>您必须同意使用条款。</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>曝光通知受到限制。请活跃。</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>不支持曝光通知。请将操作系统更新到最新版本。如果您仍有问题，请在***REMOVED***与我们联系。</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>网络连接错误</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>曝光通知启动错误</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>暴露通知无法启动。打开终端设置，打开曝光通知，然后打开蓝牙。</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 </root>
