@@ -49,7 +49,6 @@
                             HasShadow="False">
                             <Entry
                                 CharacterSpacing="5"
-                                IsEnabled="False"
                                 Keyboard="Numeric"
                                 MaxLength="8"
                                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"

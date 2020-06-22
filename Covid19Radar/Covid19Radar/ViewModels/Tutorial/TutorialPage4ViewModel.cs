@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
-using Covid19Radar.Renderers;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -68,7 +66,7 @@ namespace Covid19Radar.ViewModels
                 catch (Exception)
                 {
                     UserDialogs.Instance.HideLoading();
-                    await UserDialogs.Instance.AlertAsync("Exposure Notificationを起動できませんでした", "Error", Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogExposureNotificationStartupError, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
                     Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
                     return;
                 }

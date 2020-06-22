@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Windows.Input;
-using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
-using Covid19Radar.Renderers;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
 using Prism.Navigation;
-using Xamarin.Essentials;
-using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
-using System.Globalization;
 
 namespace Covid19Radar.ViewModels
 {
@@ -43,16 +35,11 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationService = exposureNotificationService;
             _ = exposureNotificationService.GetExposureNotificationConfig();
             _ = exposureNotificationService.StartExposureNotification();
-            //_ = exposureNotificationService.FetchExposureKeyAsync();
             userData = this.userDataService.Get();
-            StartDate = userData.StartDateTime.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
+            StartDate = userData.GetLocalDateString();
 
             TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
-            PastDate = timeSpan.Days.ToString("D", CultureInfo.CurrentCulture);
-            if (PastDate == "0")
-            {
-                PastDate = "";
-            }
+            PastDate = timeSpan.Days.ToString();
         }
 
         public Command OnClickExposures => new Command(async () =>
@@ -67,9 +54,9 @@ namespace Covid19Radar.ViewModels
             return;
         });
 
-        public Command OnClickShareApp => new Command( () =>
-        {
-            AppUtils.PopUpShare();
-        });
+        public Command OnClickShareApp => new Command(() =>
+       {
+           AppUtils.PopUpShare();
+       });
     }
 }

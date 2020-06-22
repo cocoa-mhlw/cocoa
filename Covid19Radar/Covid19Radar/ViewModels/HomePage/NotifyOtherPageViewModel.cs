@@ -1,30 +1,22 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Covid19Radar.Common;
-using Covid19Radar.Model;
+﻿using Covid19Radar.Model;
 using Covid19Radar.Services;
-using Prism.Ioc;
 using Prism.Navigation;
 using Xamarin.Forms;
 using System;
-using System.Windows.Input;
-using Prism.Navigation.Xaml;
 using Acr.UserDialogs;
-using Covid19Radar.Renderers;
 using Covid19Radar.Views;
-using Xamarin.Essentials;
+using System.Text.RegularExpressions;
+using System.Threading;
+using Covid19Radar.Common;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
-        public bool IsEnabled { get; set; } = true;
+        public bool IsEnabled { get; set; }
         public string DiagnosisUid { get; set; }
-//        public DateTime? DiagnosisTimestamp { get; set; } = DateTime.Now;
-
-//        public DateTime? MaxDate { get; } = DateTime.Today.AddMonths(1);
-//        public DateTime? MinDate { get; } = DateTime.Today.AddMonths(-1);
-
+        private int errorCount { get; set; }
 
         private readonly UserDataService userDataService;
         private UserDataModel userData;
@@ -34,79 +26,113 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.TitileUserStatusSettings;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
-            
-            // Waiting HER-SYS Deployment
-            IsEnabled = false;
+            errorCount = 0;
+            IsEnabled = true;
         }
-
 
         public Command OnClickRegister => (new Command(async () =>
         {
-            // Verify  Check the parameters
-            /*
-        if (string.IsNullOrEmpty(DiagnosisUid))
-        {
-            // Check gov's positive api check here!!
+            var result = await UserDialogs.Instance.ConfirmAsync(AppResources.NotifyOtherPageDiag1Message, AppResources.NotifyOtherPageDiag1Title, AppResources.ButtonAgree, AppResources.ButtonCancel);
+            if (!result)
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOtherPageDiag2Message,
+                    "",
+                    Resources.AppResources.ButtonOk
+                    );
+                return;
+            }
 
-            await UserDialogs.Instance.AlertAsync(
-                Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDText,
-                Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDTitle,
-                Resources.AppResources.ButtonOk
-            );
-            return;
-        }
-        if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
-        {
-            await UserDialogs.Instance.AlertAsync(
-                Resources.AppResources.NotifyOtherPageDialogInvalidTestDateText,
-                Resources.AppResources.NotifyOtherPageDialogInvalidTestDateTitle,
-                Resources.AppResources.ButtonOk
-            );
-            return;
-        }
-            */
+            UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
+
+            // Check helthcare authority positive api check here!!
+            if (errorCount >= AppConstants.MaxErrorCount)
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOtherPageDiagAppClose,
+                    AppResources.NotifyOtherPageDiagErrorTitle,
+                    Resources.AppResources.ButtonOk
+                );
+                UserDialogs.Instance.HideLoading();
+                Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
+                return;
+            }
+
+            if (errorCount > 0)
+            {
+                var current = errorCount + 1;
+                var max = AppConstants.MaxErrorCount;
+                await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
+                    AppResources.NotifyOtherPageDiag3Title + "{current}/{max}",
+                    Resources.AppResources.ButtonOk
+                    );
+                Thread.Sleep(errorCount * 5000);
+            }
+
+
+            // Init Dialog
+            if (string.IsNullOrEmpty(DiagnosisUid))
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOtherPageDiag4Message,
+                    AppResources.NotifyOtherPageDiagErrorTitle,
+                    Resources.AppResources.ButtonOk
+                );
+                errorCount++;
+                await userDataService.SetAsync(userData);
+                UserDialogs.Instance.HideLoading();
+                return;
+            }
+
+            Regex regex = new Regex(AppConstants.positiveRegex);
+            if (!regex.IsMatch(DiagnosisUid))
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOtherPageDiag5Message,
+                    AppResources.NotifyOtherPageDiagErrorTitle,
+                    Resources.AppResources.ButtonOk
+                );
+                errorCount++;
+                await userDataService.SetAsync(userData);
+                UserDialogs.Instance.HideLoading();
+                return;
+            }
 
             // Submit the UID
-            using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
-            IsEnabled = false;
             try
             {
-                /*
+                // EN Enabled Check
                 var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
 
                 if (!enabled)
                 {
-                    dialog.Hide();
-
                     await UserDialogs.Instance.AlertAsync(
-                        Resources.AppResources.NotifyOtherPageDialogENDisabledText,
-                        Resources.AppResources.NotifyOtherPageDialogENDisabledTitle,
-                        Resources.AppResources.ButtonOk
+                       AppResources.NotifyOtherPageDiag6Message,
+                       AppResources.NotifyOtherPageDiag6Title,
+                       Resources.AppResources.ButtonOk
                     );
+                    UserDialogs.Instance.HideLoading();
+                    await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
                     return;
                 }
-                */
+
                 // Set the submitted UID
                 userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DateTime.Now));
                 await userDataService.SetAsync(userData);
 
                 // Submit our diagnosis
                 await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
-                dialog.Hide();
-
+                UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(
                     Resources.AppResources.NotifyOtherPageDialogSubmittedText,
                     Resources.AppResources.ButtonComplete,
                     Resources.AppResources.ButtonOk
                 );
-
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-
-                dialog.Hide();
+                errorCount++;
                 UserDialogs.Instance.Alert(
                     Resources.AppResources.NotifyOtherPageDialogExceptionText,
                     Resources.AppResources.ButtonFailed,
@@ -115,25 +141,9 @@ namespace Covid19Radar.ViewModels
             }
             finally
             {
+                UserDialogs.Instance.HideLoading();
                 IsEnabled = true;
             }
-
-
-        }));
-
-        public Command OnClickAfter => (new Command(async () =>
-        {
-            var check = await UserDialogs.Instance.ConfirmAsync(
-                Resources.AppResources.PositiveRegistrationConfirmText,
-                Resources.AppResources.PositiveRegistrationText,
-                Resources.AppResources.ButtonNotNow,
-                Resources.AppResources.ButtonReturnToRegistration
-            );
-            if (check)
-            {
-                await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
-            }
-
         }));
     }
 }

@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>অনুগ্রহ করে আপনার নেটওয়ার্ক কানেকশন চেক করুন.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ঠিক আছে</value>
@@ -159,7 +159,7 @@
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>আপনি যখন এই অ্যাপটি চালাবেন, প্রতিটি স্মার্টফোনে একটি করে কনট্যাক্ট কোড তৈরি হবে । এছাড়া, এই অ্যাপটি টেলিফোন নম্বর ও লোকেশন ইনফরমেশন-এর মতো ব্যক্তিগত তথ্য সংক্রান্ত কোনও তথ্য অধিগ্রহণ করে না ।</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>পরিচিতির শর্তাবলী রেকর্ড করা হয়েছে</value>
@@ -176,5 +176,527 @@
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>এ সময় যোগাযোগ করা ব্যক্তির যোগাযোগের কোড আবেদনপত্রে লিপিবদ্ধ করা হয় । যতক্ষণ না ব্যবহারকারী ধনাত্মক নিবন্ধীকৃত না হয় ততক্ষণ যোগাযোগ তথ্য ব্যবহার করা হবে না । ১৪ দিন পর যোগাযোগ ইতিহাস মুছে যাবে । * কনট্যাক্ট কোড নিয়মিত বদলায় ।</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>অ্যাপ সেটিংসে যান</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>অ্যাপ সেটিংস থেকে, আপনি ব্লুটুথ এবং প্রজ্ঞাপন সক্রিয়/নিষ্ক্রিয় করতে পারেন, অ্যাপটি ব্যবহার বন্ধ করতে পারেন এবং ঘনিষ্ঠ যোগাযোগের ইতিহাস মুছে ফেলতে পারেন।</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+  </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>আপনি যদি COVID-19 পজিটিভ ব্যবহারকারীর সাথে ঘনিষ্ঠ যোগাযোগ রেখে থাকেন তাহলে অ্যাপটি আপনাকে অবহিত করবে।</value>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>আপনি হোম স্ক্রীন থেকে আপনার ঘনিষ্ঠ যোগাযোগের সংখ্যা পরীক্ষা করতে পারেন।</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>আপনি ঘনিষ্ঠ যোগাযোগের তারিখের তালিকা চেক করতে পারেন এবং আপনার যদি এই রোগের লক্ষণ থাকে তাহলে কি করতে হবে সে সম্পর্কে নির্দেশিকা পেতে পারেন।</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>বিজ্ঞপ্তি</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>হোম</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>যদি আপনি একটি COVID-19 ইতিবাচক ব্যবহারকারীর সাথে ঘনিষ্ঠ যোগাযোগ থাকে</value>
+    <comment>陽性者との接触があった場合</comment>
+  </data>
+  <data name="HelpPage3Description1" xml:space="preserve">
+    <value>আপনি যদি ইতিবাচক পরীক্ষা করেন</value>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
+  </data>
+  <data name="HelpPage3Description2" xml:space="preserve">
+    <value>জনস্বাস্থ্য কর্তৃপক্ষ আপনাকে একটি "প্রসেসিং নাম্বার" প্রদান করবে।</value>
+    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+  </data>
+  <data name="HelpPage3Description3" xml:space="preserve">
+    <value>এই অ্যাপে প্রদত্ত প্রক্রিয়াকরণ নম্বর প্রবেশ করে নিবন্ধন করুন</value>
+    <comment>本アプリを用いて処理番号の登録を行います。</comment>
+  </data>
+  <data name="HelpPage3Description4" xml:space="preserve">
+    <value>গত ১৪ দিনের মধ্যে আপনার স্মার্টফোনের সাথে ঘনিষ্ঠ যোগাযোগ থাকা স্মার্টফোনগুলি নোটিফিকেশন পাবে।</value>
+    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+  </data>
+  <data name="HelpPage3Description5" xml:space="preserve">
+    <value>প্রজ্ঞাপন প্রেরণের সময় শুধুমাত্র ডিভাইস থেকে এলোমেলোভাবে উত্পাদিত কোড ব্যবহার করা হয়। কোন ব্যক্তিগত তথ্য ব্যবহার করা হয় না।</value>
+    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
+    <value>যখন ইতিবাচক পরীক্ষা করা হবে তখন এখানে নিবন্ধন করুন</value>
+    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>লাইসেন্স</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="SettingsPageLabel1" xml:space="preserve">
+    <value>যোগাযোগ রেকর্ডিং বন্ধ করুন</value>
+    <comment>接触の検出</comment>
+  </data>
+  <data name="SettingsPageDescription1" xml:space="preserve">
+    <value>ব্লুটুথের ব্যবহার</value>
+    <comment>Bluetoothによる接触の検知</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>বিজ্ঞপ্তিসমূহ</value>
+    <comment>通知</comment>
+  </data>
+  <data name="SettingsPageDescription2" xml:space="preserve">
+    <value>যোগাযোগ বিজ্ঞপ্তিবন্ধ করুন</value>
+    <comment>陽性者との接触通知</comment>
+  </data>
+  <data name="SettingsPageLabel3" xml:space="preserve">
+    <value>অ্যাপটি ব্যবহার করা বন্ধ করুন</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+  <data name="SettingsPageDescription3" xml:space="preserve">
+    <value>বন্ধ যোগাযোগ রেকর্ড ব্যবহার এবং মুছে ফেলা বন্ধ করুন</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+  </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>'ঘনিষ্ঠ যোগাযোগ' কি?</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>আমি কিভাবে ঘনিষ্ঠ যোগাযোগের সংখ্যা চেক করব?</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>আপনি যদি COVID-19 এর জন্য ইতিবাচক পরীক্ষা করেন</value>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>আমি কিভাবে বন্ধ/ বন্ধ যোগাযোগ রেকর্ডিং মুছে ফেলব?</value>
+    <comment>接触の記録を停止／情報を削除するには</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>গত ১৪ দিন ধরে যোগাযোগ বন্ধ করুন</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>COVID-19 ইতিবাচক ব্যবহারকারীদের সাথে কোন ঘনিষ্ঠ যোগাযোগ নেই</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>দয়া করে সরকার কর্তৃক সুপারিশকৃত 'নতুন লাইফস্টাইল' অনুশীলন চালিয়ে যেতে থাকুন।</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>এই অ্যাপটি অংশীদারি করুন</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>পরীক্ষার ফলাফল নিবন্ধন করার জন্য ধন্যবাদ!</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>নিবন্ধন বেনামী। আপনাকে আপনার নাম বা অন্য কোন ব্যক্তিগত তথ্য প্রবেশ করতে হবে না। ঘনিষ্ঠ যোগাযোগের অবস্থান সম্পর্কে কোন তথ্য রেকর্ড করা হয়নি।</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>ব্যবহারের শর্তাবলী</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>আমি ব্যবহারের শর্তাবলী গ্রহণ করি</value>
+    <comment>規約に同意して次へ</comment>
+  </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>উপস্থাপনা সম্পন্ন হয়েছে। ধন্যবাদ!</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>হোম</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>কিভাবে এই অ্যাপটি ব্যবহার করতে হয়</value>
+    <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>ডিভাইস শনাক্তকরণ</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>COVID-19 ইতিবাচক ব্যবহারকারীদের সাথে ঘনিষ্ঠ যোগাযোগের একটি তালিকা</value>
+    <comment>陽性者との接触一覧</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>আপনার উপসর্গ পূরণ করুন</value>
+    <comment>症状を入力</comment>
+  </data>
+  <data name="ContactedNotifyPageButton3" xml:space="preserve">
+    <value>ফোন কনসালটেশন সেন্টারের মাধ্যমে আপনার লক্ষণগুলি বলুন</value>
+    <comment>帰国者・接触者外来に電話</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>টাইমস</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>আপনার যদি সম্ভাব্য COVID-19 উপসর্গ থাকে, তাহলে নিচের ফর্মটি বা ফোনের মাধ্যমে স্বাস্থ্যসেবা সংস্থাগুলির সাথে যোগাযোগ করুন। উপসর্গের উপর নির্ভর করে, আপনাকে COVID-19 পরীক্ষা করার পরামর্শ দেওয়া হবে।</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>অনুগ্রহ করে এই স্ক্রীনের একটি স্ক্রিনশট নিন। রোগ নির্ণয়ের সময় আপনাকে এটা দিতে বলা হতে পারে।</value>
+    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>COVID-19 ইতিবাচক ব্যবহারকারীদের সাথে নিশ্চিত ঘনিষ্ঠ যোগাযোগের সংখ্যা</value>
+    <comment>陽性者との接触確認</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>গত ১৪ দিন ধরে যোগাযোগ বন্ধ করুন</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>৯:০০-১৭:৩০ (ছুটির দিন এবং ছুটির দিন ব্যতীত)</value>
+    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>COVID-19 তথ্য ও সম্পদ</value>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>সহায়তা</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>ব্যবহার</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>বন্ধ পরিচিতি পরীক্ষা করুন</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>যখন COVID-19 এর জন্য ইতিবাচক পরীক্ষা করা হয়</value>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>ইতিবাচক পরীক্ষার ফলাফল নিবন্ধন করুন</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>এই অ্যাপটি অংশীদারি করুন</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>হোম</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>ব্যবহারের মেয়াদ</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>আপনার গোপনীয়তা সুরক্ষিত</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>আপনার নাম বা ফোন নম্বরের মতো কোন ব্যক্তিগত তথ্য সংগ্রহ করা হয়নি। জিপিএস ডাটা সহ কোন ভূ-অবস্থান তথ্য সংগ্রহ করা হয়নি।</value>
+    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>সকল ডেটা এনক্রিপ্ট করা আছে এবং আপনার স্মার্টফোনে স্থানীয়ভাবে সংরক্ষণ করা হয়েছে। ১৪ দিন পর সকল ডাটা স্বয়ংক্রিয়ভাবে মুছে ফেলা হয়। আপনার গতিবিধি কোনভাবেই সরকারী সংস্থা বা তৃতীয় পক্ষের দ্বারা ট্র্যাক করা হয় না।</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>আপনি অ্যাপ সেটিংস পরিবর্তন বা অ্যাপটি মুছে ফেলার মাধ্যমে যে কোন সময় অন্য ব্যবহারকারীদের সাথে ঘনিষ্ঠ যোগাযোগ রেকর্ড করা বন্ধ করতে পারেন।</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>ব্যবহারের শর্তাবলী</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>টিউটোরিয়ালপৃষ্ঠা2বিবরণ1</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>বিজ্ঞপ্তিগুলো চালু করুন</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>COVID-19 ইতিবাচক ব্যবহারকারীদের সাথে আপনার ঘনিষ্ঠ যোগাযোগ থাকলে অনুগ্রহ করে বিজ্ঞপ্তিগুলি চালু করুন।</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>চালু করুন</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>পরে সেট আপ করুন</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>প্রজ্ঞাপন ব্যবহার করতে</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>মেনু</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>নিবন্ধন করুন</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
+    <value>অনুগ্রহ করে "COVID-19 (HER-SYS) উপর "হেল্থ সেন্টার রিয়েল-টাইম তথ্য শেয়ারিং সিস্টেম" দ্বারা ইস্যু কৃত একটি প্রক্রিয়া কোড প্রবেশ করান।</value>
+    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+  </data>
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
+    <value>গত ১৪ দিনের মধ্যে আপনার সাথে ঘনিষ্ঠ যোগাযোগ থাকা ব্যবহারকারীদের অবহিত করা হবে। নিবন্ধন বেনামী। আপনাকে আপনার নাম বা অন্য কোন ব্যক্তিগত তথ্য প্রবেশ করতে হবে না। ঘনিষ্ঠ যোগাযোগের অবস্থান সম্পর্কে কোন তথ্য রেকর্ড করা হয়নি।</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
+    <value>কিভাবে একটি প্রক্রিয়া কোড গ্রহণ করতে হয়</value>
+    <comment>処理番号の取得方法</comment>
+  </data>
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
+    <value>ইতিবাচক পরীক্ষার ফলাফল নিবন্ধন করুন</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>পরবর্তি</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>অ্যাপটি এই অ্যাপটি চলমান স্মার্টফোনের মধ্যে ঘনিষ্ঠ যোগাযোগ শনাক্ত করে।</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>যখন COVID-19 এর জন্য ইতিবাচক পরীক্ষা করা হয়, আপনি বেনামে এই অ্যাপে পরীক্ষার ফলাফল নিবন্ধন করতে পারেন।</value>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>আপনি যদি ইতিবাচক পরীক্ষা করা কোন ব্যবহারকারীর সাথে ঘনিষ্ঠ যোগাযোগ রেখে থাকেন, অ্যাপটি আপনাকে সম্ভাব্য সংক্রমণের কথা জানিয়ে দেয় এবং আপনার স্বাস্থ্য রক্ষার জন্য নির্দেশিকা প্রদান করে।</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>অ্যাপটি রসাথে নিজেকে রক্ষা করুন</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>অ্যাপটি রসাথে নিজেকে রক্ষা করুন</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>চালু করুন</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>পরে সেট আপ করুন</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>অনুগ্রহ করে অন্য ব্যবহারকারীদের সাথে ঘনিষ্ঠ যোগাযোগ রেকর্ড করা শুরু করতে ব্লুটুথ চালু করুন.</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>আরও খুঁজে বের করুন</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>ব্লুটুথ চালু করুন</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>ব্লুটুথ চালু করুন</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>~</value>
+    <comment>から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>একটি 8-ডিজিটের কোড প্রবেশ করান</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>প্রক্রিয়াকরণ নম্বর নতুন করোনাভাইরাস সংক্রামক রোগ তথ্য এবং ব্যবস্থাপনা সিস্টেমে নিবন্ধিত আপনার মোবাইল ফোন নম্বর বা ই-মেইল ঠিকানায় অবহিত করা হবে (এর পরে "ম্যানেজমেন্ট সিস্টেম")।</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>যখন আপনি টার্মিনালে এই প্রক্রিয়াকরণ নম্বর প্রবেশ করান, টার্মিনাল টি প্রজ্ঞাপন সার্ভারের মাধ্যমে ব্যবস্থাপনা সিস্টেমে একটি তদন্ত করবে যে প্রক্রিয়াকরণ নম্বর আপনাকে ইস্যু করা হয়েছে কিনা।</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>আপনার কাছে উল্লিখিত লেনদেন নম্বর ইস্যু করা হয়েছে কিনা সে সম্পর্কে ব্যবস্থাপনা সিস্টেম প্রজ্ঞাপন সার্ভারে সাড়া দেবে।</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>আপনি যদি উত্তর দেন যে লেনদেন নম্বর আপনাকে ইস্যু করা হয়েছে, তাহলে অন্যান্য ব্যবহারকারীর টার্মিনাল আপনার টার্মিনালে রেকর্ড করা দৈনন্দিন কী সরবরাহ করা হবে।</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>আপনি যদি ১৪ দিনের মধ্যে আপনার সাথে যোগাযোগ করে থাকেন, তাহলে আপনি জানতে পারবেন যে আপনাকে ব্যক্তিগতভাবে শনাক্ত করতে পারে এমন কোন তথ্য ছাড়াই আপনার সাথে যোগাযোগ করা হতে পারে।</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>একমত এবং নিবন্ধন করুন</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>ইতিবাচক নিবন্ধনে সম্মতি</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>ইতিবাচক নিবন্ধনে সম্মতি</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>সংস্করণ</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>ব্লুটুথ বন্ধ আছে। অনুগ্রহ করে ব্লুটুথ চালু করুন।</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>ঘনিষ্ঠ যোগাযোগের একটি তালিকা (গত ১৪ দিন)</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>তারিখ যখন আপনি COVID-19 ইতিবাচক ব্যবহারকারীদের সাথে ঘনিষ্ঠ যোগাযোগ ছিল।</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>এটা সম্ভব যে আপনি একজন ব্যবহারকারীর কাছাকাছি ছিলেন যিনি COVID-19 এর জন্য ইতিবাচক পরীক্ষা করেছেন।  আরও বিস্তারিত জানার জন্য ট্যাপ করুন।</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>সম্ভাব্য COVID-19 এক্সপোজার</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>আপনি যদি এটি নিষ্ক্রিয় করতে চান, আপনি এটি অ্যাপ সেটিংস থেকে পরিবর্তন করতে পারেন</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>প্রজ্ঞাপনসক্রিয়</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>এই অ্যাপ সম্পর্কে তথ্য</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>ব্যবহারকারীর জন্য Q এবং A</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>নাম: \r\n যোগাযোগ: \r\n অনুসন্ধানের বিষয়বস্তু (অনুগ্রহ করে নিম্নলিখিত থেকে একটি শ্রেণী নির্বাচন করুন): 1. অ্যাপটি কিভাবে কাজ করে, 2. অ্যাপ সেটিংস, 3. অ্যাপ (প্রজ্ঞাপন ইত্যাদি) ব্যবহার, 4. অন্যান্য \r\n তদন্ত পাঠ্য: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>কন্ট্যাক্ট কনফার্মেশন অ্যাপ সম্পর্কে অনুসন্ধান</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>দিনগুলো</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সক্রিয়।</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>ব্লুটুথ বন্ধ আছে। অনুগ্রহ করে ব্লুটুথ চালু করুন।</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন নিষ্ক্রিয়। টার্মিনাল সেটিংস খুলুন এবং এক্সপোজার প্রজ্ঞাপন চালু করুন।</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>আপনাকে অবশ্যই ব্যবহারের শর্তাবলীর সাথে একমত হতে হবে।</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সীমাবদ্ধ। অনুগ্রহ করে সক্রিয় করুন।</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সমর্থিত নয়। অনুগ্রহ করে সর্বশেষ সংস্করণে OS হালনাগাদ করুন। আপনার যদি এখনও কোন সমস্যা থাকে, অনুগ্রহ করে ***REMOVED*** আমাদের সাথে যোগাযোগ করুন।</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>নেটওয়ার্ক সংযোগ ত্রুটি</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন স্টার্টআপ ত্রুটি</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন স্টার্টআপ করতে পারেনি. টার্মিনাল সেটিংস খুলুন, এক্সপোজার প্রজ্ঞাপনে চালু করুন, এবং ব্লুটুথে চালু করুন।</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>প্রক্রিয়া নম্বর ভুল</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>নিবন্ধন কেন্দ্রে সংযোগ করা যাচ্ছে না</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>আপনি কি ইতিবাচক তথ্য নিবন্ধন করতে চান?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>নিবন্ধন করুন</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>বাতিল করা হয়েছে</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>নিবন্ধন শুরু না হওয়া পর্যন্ত অনুগ্রহ করে কিছু সময়ের জন্য অপেক্ষা করুন</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>নিবন্ধনের অপেক্ষায়</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>কোনো প্রক্রিয়াকরণ নম্বর প্রবেশ করা হয়নি</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>প্রক্রিয়াকরণ সংখ্যা বিন্যাস মেলে না</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>ইতিবাচক রেকর্ড নিবন্ধন করতে, COVID-19 যোগাযোগ লগ রেকর্ডিং সক্রিয় করা প্রয়োজন, অনুগ্রহ করে এটি অ্যাপ্লিকেশন বা OS সেটিংস থেকে সক্রিয় করুন.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>COVID-19 যোগাযোগ লগিং সক্রিয় করুন</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>রেজিস্ট্রেশনের সংখ্যা সর্বোচ্চ সীমায় পৌঁছেছে। প্রয়োগণ প্রস্থান করুন</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>নিবন্ধন ত্রুটি</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

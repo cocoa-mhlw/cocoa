@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -37,13 +37,13 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Seiceáil do nasc líonra, le do thoil.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
-    <value>NotNow</value>
+    <value>Not Now</value>
   </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Risíochtaí</value>
@@ -159,7 +159,7 @@
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>Nuair a ritheann tú an feidhmchlár seo, ginfidh gach fón cliste agus beidh cód teagmhála acu. Ina theannta sin, ní fhaigheann an feidhmchlár seo aon fhaisnéis a bhaineann le faisnéis phearsanta ar nós uimhir theileafóin agus faisnéis suímh.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>Coinníollacha teagmhála taifeadta</value>
@@ -176,5 +176,527 @@
   <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>Ag an am seo, déantar cód teagmhála an duine i dteagmháil leis a thaifeadadh san iarratas. Ní úsáidfear faisnéis teagmhála go dtí go mbeidh ceachtar úsáideoir cláraithe dearfach. Scriosfar an stair teagmhála tar éis 14 lá. *Athraíonn an cód teagmhála go rialta.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>Téigh chuig socruithe feidhmchláir</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>Ó shocruithe feidhmchláir, is féidir leat Bluetooth agus fógraí a chumasú / a dhíchumasú, stop a chur leis an bhfeidhmchlár a úsáid agus stair dhlúththeagmhála a scriosadh.</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+  </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>Cuirfidh an feidhmchlár in iúl duit, má bhí tú i ndlúth-theagmháil le húsáideoir dearfach COVID-19.</value>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>Is féidir leat uimhir do dhlúththeagmhálaithe ón scáileán baile a sheiceáil.</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>Is féidir leat liosta na ndátaí teagmhála a sheiceáil agus treoir a fháil maidir le cad atá le déanamh má tá comharthaí an ghalair agat.</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Fógra</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Baile</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>Má bhí dlúth-theagmháil agat le húsáideoir dearfach COVID-19</value>
+    <comment>陽性者との接触があった場合</comment>
+  </data>
+  <data name="HelpPage3Description1" xml:space="preserve">
+    <value>Má thástáil tú dearfach</value>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
+  </data>
+  <data name="HelpPage3Description2" xml:space="preserve">
+    <value>Eiseoidh údaráis sláinte poiblí "uimhir phróiseála" duit.</value>
+    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+  </data>
+  <data name="HelpPage3Description3" xml:space="preserve">
+    <value>Cláraigh trí uimhir phróiseála a chur ar fáil san fheidhmchlár seo</value>
+    <comment>本アプリを用いて処理番号の登録を行います。</comment>
+  </data>
+  <data name="HelpPage3Description4" xml:space="preserve">
+    <value>Gheobhaidh fóin chliste a bhí i ndlúth-theagmháil le do ghuthán cliste laistigh de na laethanta 14 seo caite fógraí.</value>
+    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+  </data>
+  <data name="HelpPage3Description5" xml:space="preserve">
+    <value>Ní úsáidtear ach cóid a ghintear go randamach ón ngléas nuair a bhíonn fógraí á seoladh. Ní úsáidtear aon fhaisnéis phearsanta.</value>
+    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
+    <value>Cláraigh anseo nuair a dhéantar tástáil dhearfach</value>
+    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Ceadúnas</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="SettingsPageLabel1" xml:space="preserve">
+    <value>Dún taifeadadh teagmhála</value>
+    <comment>接触の検出</comment>
+  </data>
+  <data name="SettingsPageDescription1" xml:space="preserve">
+    <value>Úsáid Bluetooth</value>
+    <comment>Bluetoothによる接触の検知</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Fógraí</value>
+    <comment>通知</comment>
+  </data>
+  <data name="SettingsPageDescription2" xml:space="preserve">
+    <value>Dún fógraí teagmhála</value>
+    <comment>陽性者との接触通知</comment>
+  </data>
+  <data name="SettingsPageLabel3" xml:space="preserve">
+    <value>Stop ag baint úsáide as an bhfeidhmchlár</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+  <data name="SettingsPageDescription3" xml:space="preserve">
+    <value>Stop ag baint úsáide as agus scrios taifid teagmhála</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+  </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>Cad is 'dlúth-theagmháil' ann?</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>Conas is féidir liom seiceáil a dhéanamh ar líon na ndlúth-theagmhálacha?</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>Má thástáil tú dearfach do COVID-19</value>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>Conas is féidir liom taifeadadh dlúth teagmhála a stopadh / a scriosadh?</value>
+    <comment>接触の記録を停止／情報を削除するには</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>Dún teagmhálacha le 14 lá anuas</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>Níl aon dlúth-theagmhálacha le húsáideoirí dearfacha COVID-19</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>Coinnigh 'Stíl Mhaireachtála Nua' molta ag an rialtas.</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>Comhroinn an feidhmchlár seo</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>Go raibh maith agat as do thorthaí tástála a chlárú!</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>Tá clárú anaithnid. Ní gá duit d'ainm ná aon fhaisnéis phearsanta eile a iontráil. Ní thaifeadtar aon eolas maidir le suíomh dlúththeagmhála.</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Téarmaí úsáide</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>Glacaim leis na Téarmaí Úsáide</value>
+    <comment>規約に同意して次へ</comment>
+  </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>Cumraíocht críochnaithe. Go raibh maith agat!</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Baile</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>Conas an feidhmchlár seo a úsáid</value>
+    <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>Sainaithint an ghléis</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>Liosta de dhlúth-theagmhálacha le húsáideoirí dearfacha COVID-19</value>
+    <comment>陽性者との接触一覧</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>Líon isteach do chomharthaí</value>
+    <comment>症状を入力</comment>
+  </data>
+  <data name="ContactedNotifyPageButton3" xml:space="preserve">
+    <value>Abair le do chomharthaí ag Ionad Comhairliúcháin teileafóin</value>
+    <comment>帰国者・接触者外来に電話</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>amanna</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>Má tá comharthaí COVID-19 féideartha agat, déan teagmháil le heagraíochtaí cúram sláinte ag baint úsáide as an bhfoirm thíos nó ar an nguthán. Ag brath ar na hairíonna, molfar duit tástáil COVID-19 a dhéanamh.</value>
+    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>Glac scáileán den scáileán seo, le do thoil. Is féidir go n-iarrfar ort é a sholáthar le linn diagnóise.</value>
+    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>Líon na ndlúth-theagmhálacha deimhnithe le húsáideoirí dearfacha COVID-19</value>
+    <comment>陽性者との接触確認</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>Dún teagmhálacha le 14 lá anuas</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>9:00-17:30 (seachas deireadh seachtaine agus laethanta saoire)</value>
+    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>COVID-19 Eolas agus Acmhainní</value>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Tacaíocht</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>in úsáid</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>Seiceáil dlúththeagmhálacha</value>
+    <comment>陽性者との接触を確認する(14日間)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>Nuair a thástáiltear dearfach do COVID-19</value>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>Cláraigh toradh dearfach tástála</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>Comhroinn an feidhmchlár seo</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Baile</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>Téarma úsáide</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>Tá do phríobháideacht cosanta</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>Ní bhailítear aon fhaisnéis phearsanta ar nós d'ainm nó d'uimhir theileafóin. Ní bhailítear aon sonraí geosuireachta lena n-áirítear sonraí GPS.</value>
+    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>Déantar na sonraí go léir a chriptiú agus a shábháil go háitiúil ar do ghuthán cliste. Scriostar na sonraí go léir go huathoibríoch tar éis 14 lá. Ní rianaíonn gníomhaireachtaí rialtais ná tríú páirtithe do ghluaiseachtaí ar bhealach ar bith.</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>Is féidir leat stop a chur le dlúththeagmhálacha a thaifeadadh le húsáideoirí eile ag am ar bith trí shocruithe feidhmchláir a athrú nó an feidhmchlár a scriosadh.</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Téarmaí úsáide</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>TutorialPage2Description1</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Cas fógraí air</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>Cas fógraí ar aghaidh le cur in iúl nuair a bhí dlúth-theagmhálacha agat le húsáideoirí dearfacha COVID-19.</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Cas air</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>Socraigh níos déanaí</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>Chun fógraí a úsáid</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Roghchlár</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Cláraigh</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
+    <value>Cuir isteach cód próisis a d'eisigh "Ionad Sláinte Fíor-ama Córas comhroinnte faisnéise ar COVID-19 (HER-SYS)".</value>
+    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+  </data>
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
+    <value>Cuirfear in iúl d'úsáideoirí a bhí i ndlúth-theagmháil leat laistigh de na laethanta 14 seo caite. Tá clárú anaithnid. Ní gá duit d'ainm ná aon fhaisnéis phearsanta eile a iontráil. Ní thaifeadtar aon eolas maidir le suíomh dlúththeagmhála.</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
+    <value>Conas cód próisis a fháil</value>
+    <comment>処理番号の取得方法</comment>
+  </data>
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
+    <value>Cláraigh toradh dearfach tástála</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Ar aghaidh</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>Aithníonn an feidhmchlár dlúth-theagmhálacha idir fóin chliste ag rith an app seo.</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>Nuair a thástáiltear dearfach do COVID-19, is féidir leat toradh na tástála a chlárú gan ainm san fheidhmchlár seo.</value>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>Má bhí tú i ndlúth-theagmháil le húsáideoir a thástáil dearfach, cuireann an feidhmchlár in iúl duit faoi ionfhabhtú féideartha agus soláthraíonn sé treoir chun do shláinte a chosaint.</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>Cosain tú féin leis an bhfeidhmchlár</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>Cosain tú féin leis an bhfeidhmchlár</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Cas air</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>Socraigh níos déanaí</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>Cas ar Bluetooth chun tús a chur le dlúththeagmhálacha le húsáideoirí eile a thaifeadadh.</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Tuilleadh faisnéise</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>Cas ar Bluetooth</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>Cas ar Bluetooth</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>~</value>
+    <comment>から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>Iontráil cód 8-dhigit</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>Cuirfear an uimhir phróiseála in iúl do d'uimhir ghutháin phóca nó do sheoladh ríomhphoist atá cláraithe sa chóras nua faisnéise agus bainistíochta galar tógálach coronavirus (ina dhiaidh seo "córas bainistíochta").</value>
+    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>Nuair a chuireann tú an uimhir phróiseála seo isteach sa chríochfort, déanfaidh an críochfort fiosrúchán tríd an bhfreastalaí fógra chuig an gcóras bainistíochta maidir le cibé ar eisíodh an uimhir phróiseála duit.</value>
+    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>Freagróidh an córas bainistíochta don fhreastalaí fógra i dtaobh ar eisíodh uimhir an idirbhirt dá dtagraítear duit.</value>
+    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>Má thugann tú freagra gur eisíodh uimhir an idirbhirt chugat, cuirfear críochfort úsáideoirí eile ar fáil leis an eochair laethúil a taifeadadh ar do chríochfort.</value>
+    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>Má bhí tú i dteagmháil leat laistigh de 14 lá, beidh a fhios agat go mb'fhéidir go ndearnadh teagmháil leat gan aon fhaisnéis a d'fhéadfadh tú a aithint go pearsanta.</value>
+    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>Aontaigh agus cláraigh</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>Toiliú le clárú dearfach</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>Toiliú le clárú dearfach</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Leagan</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>Tá Bluetooth casta as. Cas i Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>Liosta de dhlúththeagmhálacha (14 lá anuas)</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>Dátaí nuair a bhí tú i ndlúth-theagmháil le húsáideoirí dearfacha COVID-19.</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>Is féidir go raibh tú gar d'úsáideoir a thástáil dearfach do COVID-19.  Tapáil le haghaidh tuilleadh sonraí.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>Nochtadh FÉIDEARTHA COVID-19</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>Más mian leat é a dhíchumasú, is féidir leat é a athrú ó shuíomhanna an fheidhmchláir</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>Fógraí cumasaithe</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>Eolas faoin bhfeidhmchlár seo</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>Q agus A don úsáideoir</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>Ainm: \r\n Teagmháil: \r\n Ábhar fiosrúcháin (Roghnaigh catagóir ón méid seo a leanas): 1. Conas a oibríonn an feidhmchlár, 2. Socruithe App, 3. Úsáid an fheidhmchláir (fógra etc.) ), 4. Téacs fiosrúcháin daoine eile \r\n: \r\n</value>
+    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>Fiosrúcháin faoi fheidhmchlár deimhnithe teagmhála</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Lá</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Tá Fógra Nochta gníomhach.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Tá Bluetooth casta as. Cas Bluetooth air, le do thoil.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Tá Fógra Nochta díchumasaithe. Oscail na socruithe teirminéil agus cas ar fhógra nochta.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>Ní mór duit aontú leis na téarmaí úsáide.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Tá srian ar Fhógra Nochta. Gníomhach, le do thoil.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Ní thacaítear le Fógra Nochta. Nuashonraigh an OS go dtí an leagan is déanaí. Má tá fadhbanna agat fós, téigh i dteagmháil linn ag ***REMOVED***.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>Earráid nasc líonra</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Earráid tosaithe Fógra Nochta</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Níorbh fhéidir le Fógra Nochta tosú. Oscail na socruithe teirminéil, cas i bhFógra Nochta, agus cas i Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>Uimhir an phróisis mícheart</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>Ní féidir ceangal leis an ionad clárúcháin</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>An bhfuil fonn ort faisnéis dhearfach a chlárú?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Cláraigh</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Cealaithe</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>Fan ar feadh tamaill go dtí go dtosaíonn an clárú</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>Ag feitheamh ar chlárú</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>Níor iontráladh aon uimhir phróiseála</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>Ní mheaitseálann formáid na huimhreach próiseála</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>Chun taifid dhearfacha a chlárú, is gá taifeadadh logála teagmhála COVID-19 a chumasú, le do thoil a chumasú ón iarratas nó ó shuíomhanna OS.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>Cumasaigh logáil teagmhála COVID-19</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>Tá an uasteorainn bainte amach ag líon na gclárúchán. Feidhmchlár scoir</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>Earráid chlárúcháin</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

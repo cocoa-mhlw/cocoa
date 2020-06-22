@@ -447,12 +447,6 @@
     <PackageReference Include="Google.Protobuf">
       <Version>3.12.3</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.AppCenter.Analytics">
-      <Version>3.2.2</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>3.2.2</Version>
-    </PackageReference>
     <PackageReference Include="Plugin.LocalNotification">
       <Version>5.0.4</Version>
     </PackageReference>
@@ -477,9 +471,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.847</Version>
+      <Version>4.7.0.968</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
       <Version>1.1.0-beta1</Version>

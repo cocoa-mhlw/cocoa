@@ -1,16 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Windows.Input;
-using Acr.UserDialogs;
-using Covid19Radar.Model;
-using Covid19Radar.Renderers;
+﻿using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
-using Covid19Radar.Views;
-using DryIoc;
-using Prism.Ioc;
 using Prism.Navigation;
-using Prism.Services;
-using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
@@ -47,7 +38,7 @@ namespace Covid19Radar.ViewModels
                 if (userData == null)
                 {
                     UserDialogs.Instance.HideLoading();
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, "Connection error", Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogNetworkConnectionErrorTitle, Resources.AppResources.ButtonOk);
                     return;
                 }
             }

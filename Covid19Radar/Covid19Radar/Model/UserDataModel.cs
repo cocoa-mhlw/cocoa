@@ -3,9 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using Xamarin.ExposureNotifications;
 using Covid19Radar.Model;
+using System.Threading;
+using System.Globalization;
 
 namespace Covid19Radar.Model
 {
@@ -33,7 +34,7 @@ namespace Covid19Radar.Model
         /// <summary>
         /// StartDate
         /// </summary>
-        public DateTime StartDateTime { get; } = DateTime.UtcNow;
+        public DateTime StartDateTime { get; set; }
 
         /// <summary>
         /// Last notification date and time
@@ -43,7 +44,9 @@ namespace Covid19Radar.Model
         public bool Equals(UserDataModel other)
         {
             return UserUuid == other?.UserUuid
-                && LastNotificationTime == other?.LastNotificationTime;
+                && LastNotificationTime == other?.LastNotificationTime
+                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled
+                && IsNotificationEnabled == other.IsNotificationEnabled;
         }
 
         /// <summary>
@@ -60,15 +63,30 @@ namespace Covid19Radar.Model
             return JumpHash.JumpConsistentHash(JumpConsistentSeed, 86400);
         }
 
+        public string GetLocalDateString()
+        {
+            string cultureName = CultureInfo.CurrentUICulture.ToString();
+            if(cultureName.Contains("ar"))
+            {
+                return StartDateTime.ToLocalTime().ToString("D", new CultureInfo("ar-AE"));
+            }
+            else
+            {
+                return StartDateTime.ToLocalTime().ToString("D");
+            }
+        }
+
         public bool IsOptined { get; set; } = false;
 
-        public bool IsExposureNotificationEnabled { get; set; } = false;
+        public bool IsExposureNotificationEnabled { get; set; }
 
-        public bool IsNotificationEnabled { get; set; } = false;
+        public bool IsNotificationEnabled { get; set; }
 
-        public bool IsPositived { get; set; } = false;
+        public bool IsPositived { get; set; }
 
-        public Dictionary<string,long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
+        public bool IsPolicyAccepted { get; set; }
+
+        public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
 
         public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
 
@@ -76,6 +94,7 @@ namespace Covid19Radar.Model
 
         public ExposureDetectionSummary ExposureSummary { get; set; }
 
+        // for mock
         public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
 
         public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)

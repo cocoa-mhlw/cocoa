@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+?��<?xml version="1.0" encoding="utf-8"?>
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -13,10 +13,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ButtonAgree" xml:space="preserve">
-    <value>Συμφωνώ</value>
+    <value>Σ�?μ�?ων�?</value>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
-    <value>ΑΡΧΙΚΗ</value>
+    <value>ΑΡΧΙΚ�?</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
@@ -24,29 +24,29 @@
     <comment>App Name</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>Άδεια Χρήσης</value>
+    <value>�?δεια Χρήση�?</value>
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</value>
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
-    <value>Ρυθμίσεις κατάστασης</value>
+    <value>Ρ�?θμίσει�? κα�?άσ�?αση�?</value>
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
-    <value>Ελέγξτε τη σύνδεση δικτύου.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <value>Ελέγξ�?ε �?η σύνδεση δικ�?ύο�?.</value>
+    <comment>電波状況�?�良�?場�?でもう�?度お試しく�?さい�?</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
-    <value>ΟΚ</value>
+    <value>Ο�?</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
-    <value>Όχι τώρα</value>
+    <value>Ό�?ι �?ώρα</value>
   </data>
   <data name="MainExposures" xml:space="preserve">
-    <value>Ανοίγματα</value>
+    <value>Ανοίγμα�?α</value>
     <comment>Tab Button</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
@@ -54,127 +54,649 @@
     <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
-    <value>Μη αυτόματη</value>
+    <value>Μη α�?�?όμα�?η</value>
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
-    <value>Δεν υπάρχουν γνωστά ανοίγματα</value>
+    <value>Δεν �?�?ά�?�?ο�?ν γνωσ�?ά ανοίγμα�?α</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>Θα ειδοποιηθείτε εάν έχετε εκτεθεί σε κάποιον που ανέφερε θετικό αποτέλεσμα COVID-19.</value>
+    <value>Θα ειδο�?οιηθεί�?ε εάν έ�?ε�?ε εκ�?εθεί σε κά�?οιον �?ο�? ανέ�?ερε θε�?ικ�? α�?ο�?έλεσμα COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Δοκιμάστε ξανά αργότερα.</value>
+    <value>Δοκιμάσ�?ε ξανά αργό�?ερα.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">
-    <value>Απέτυχε</value>
+    <value>Α�?έ�?�?�?ε</value>
   </data>
   <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Διάγνωση που υποβλήθηκε</value>
+    <value>Διάγνωση �?ο�? �?�?οβλήθηκε</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
-    <value>Ολοκληρώθηκε</value>
+    <value>Ολοκλη�?ώθηκε</value>
   </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Υποβολή διάγνωσης...</value>
+    <value>Υ�?οβολή διάγνωση�?...</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>Ρυθμίσεις</value>
-    <comment>アプリの設定</comment>
+    <value>Ρ�?θμίσει�?</value>
+    <comment>アプリの設�?</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
-    <value>Άκυρο</value>
+    <value>�?κ�?ρο</value>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
-    <value>Διαγραφή σε εξέλιξη</value>
+    <value>Διαγρα�?ή σε εξέλιξη</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Κοινή χρήση της εφαρμογής</value>
-    <comment>本アプリを広めましょう</comment>
+    <value>Κοινή �?ρήση �?η�? ε�?αρμογή�?</value>
+    <comment>本アプリを�?めましょ�?</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
-    <value>Κοινή χρήση</value>
+    <value>Κοινή �?ρήση</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Κοινή χρήση θετικών πληροφοριών και ανώνυμης ειδοποίησης σε άλλους</value>
+    <value>Κοινή �?ρήση θε�?ικών �?ληρο�?οριών και ανών�?μη�? ειδο�?οίηση�? σε άλλο�?�?</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
-    <value>Επαναφορά</value>
+    <value>Ε�?ανα�?ορά</value>
     <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
-    <value>Πολιτική προστασίας προσωπικών δεδομένων</value>
+    <value>�?ολι�?ική �?ροσ�?ασία�? �?ροσω�?ικών δεδομένων</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
-    <value>Αναμονή για εγγραφή</value>
+    <value>Αναμονή για εγγρα�?ή</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>Θέλετε πραγματικά να επαναφέρετε όλα τα δεδομένα;</value>
+    <value>Θέλε�?ε �?ραγμα�?ικά να ε�?ανα�?έρε�?ε όλα �?α δεδομένα;</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>Διαγραφή όλων των δεδομένων</value>
+    <value>Διαγρα�?ή όλων �?ων δεδομένων</value>
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
-    <value>Όλες οι ρυθμίσεις και τα δεδομένα έχουν διαγραφεί. Επανεκκινήστε την εφαρμογή.</value>
+    <value>Όλε�? οι �?�?θμίσει�? και �?α δεδομένα έ�?ο�?ν διαγρα�?εί. Ε�?ανεκκινήσ�?ε �?ην ε�?αρμογή.</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Επιστροφή στην εγγραφή</value>
+    <value>Ε�?ισ�?ρο�?ή σ�?ην εγγρα�?ή</value>
   </data>
   <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Θετική καταχώριση</value>
+    <value>Θε�?ική κα�?α�?ώριση</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Θέλετε να εγγραφείτε θετικά αργότερα;</value>
+    <value>Θέλε�?ε να εγγρα�?εί�?ε θε�?ικά αργό�?ερα;</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
-    <value>Εάν είστε θετικοί με τη νέα Corona, παρακαλούμε συνεργαστείτε με τη θετική εγγραφή για να προστατεύσετε τους ανθρώπους γύρω σας.</value>
-    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
+    <value>Εάν είσ�?ε θε�?ικοί με �?η νέα Corona, �?αρακαλούμε σ�?νεργασ�?εί�?ε με �?η θε�?ική εγγρα�?ή για να �?ροσ�?α�?εύσε�?ε �?ο�?�? ανθ�?ώ�?ο�?�? γύ�?�? σα�?.</value>
+    <comment>周り�?�人達を守るために匿名での陽性登録へのご協力をお願い�?たします�??</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Αυτή η εφαρμογή είναι τόσο αποτελεσματική που πολλοί άνθρωποι το εγκαταστήσετε, γι 'αυτό παρακαλώ μοιραστείτε την εφαρμογή με τους ανθρώπους γύρω σας.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
+    <value>Α�?�?ή η ε�?αρμογή είναι �?όσο α�?ο�?ελεσμα�?ική �?ο�? �?ολλοί άνθ�?ω�?οι �?ο εγκα�?ασ�?ήσε�?ε, γι 'α�?�?�? �?αρακαλ�? μοιρασ�?εί�?ε �?ην ε�?αρμογή με �?ο�?�? ανθ�?ώ�?ο�?�? γύ�?�? σα�?.</value>
+    <comment>本アプリは多くの方にお使�?�?ただくほど効果を発揮します�??</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>Πώς να χρησιμοποιήσετε</value>
-    <comment>使い方</comment>
+    <value>�?ώ�? να �?ρησιμο�?οιήσε�?ε</value>
+    <comment>使�?方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>Αναγνώριση τερματικού</value>
-    <comment>接触の記録方法</comment>
+    <value>Αναγνώριση �?ερμα�?ικο�?</value>
+    <comment>接触の記録方�?</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
-    <value>Μέθοδος επιβεβαίωσης επαφής</value>
-    <comment>接触の確認方法</comment>
+    <value>Μέθοδο�? ε�?ιβεβαίωση�? ε�?α�?ή�?</value>
+    <comment>接触の確認方�?</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
-    <value>Εάν διαπιστωθεί ότι έχει μολυνθεί</value>
-    <comment>感染していると判定されたら</comment>
+    <value>Εάν δια�?ισ�?ωθεί ό�?ι έ�?ει μολ�?νθεί</value>
+    <comment>感染して�?ると判定された�?</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>Διακοπή/διαγραφή εγγραφής</value>
-    <comment>記録の停止／削除</comment>
+    <value>Διακο�?ή/διαγρα�?ή εγγρα�?ή�?</value>
+    <comment>記録の停止?��削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
-    <value>Όταν εκτελείτε αυτήν την εφαρμογή, κάθε smartphone θα δημιουργήσει και θα έχει έναν κωδικό επαφής. Επιπλέον, αυτή η εφαρμογή δεν αποκτά πληροφορίες που σχετίζονται με προσωπικές πληροφορίες, όπως τον αριθμό τηλεφώνου και τις πληροφορίες τοποθεσίας.</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話場号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <value>Ό�?αν εκ�?ελεί�?ε α�?�?ήν �?ην ε�?αρμογή, κάθε smartphone θα δημιο�?ργήσει και θα έ�?ει έναν κωδικ�? ε�?α�?ή�?. Ε�?ι�?λέον, α�?�?ή η ε�?αρμογή δεν α�?οκ�?ά �?ληρο�?ορίε�? �?ο�? σ�?ε�?ίζον�?αι με �?ροσω�?ικέ�? �?ληρο�?ορίε�?, ό�?ω�? �?ον αριθμ�? �?ηλε�?ώνο�? και �?ι�? �?ληρο�?ορίε�? �?ο�?οθεσία�?.</value>
+    <comment>アプリを実行した際に、各スマ�?�トフォンで接触符号を生成して持ちます�?�氏名・電話番号などの個人�?報やGPSなどスマ�?�トフォンの位置�?報を使�?ことはなく�?�記録されることもありません�?</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
-    <value>Καταγραφόμενες συνθήκες επαφής</value>
+    <value>Κα�?αγρα�?όμενε�? σ�?νθήκε�? ε�?α�?ή�?</value>
     <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
-    <value>Η επαφή με άλλους χρήστες της εφαρμογής εντός 1 μέτρου για 15 λεπτά ή περισσότερο καταγράφεται ως "επαφή".</value>
-    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
+    <value>�? ε�?α�?ή με άλλο�?�? �?ρήσ�?ε�? �?η�? ε�?αρμογή�? εν�?ό�? 1 μέ�?ρο�? για 15 λε�?�?ά ή �?ερισσό�?ερο κα�?αγρά�?ε�?αι ω�? "ε�?α�?ή".</value>
+    <comment>1メートル以�?�?15�?以上�?�他�?�アプリユーザーとの接触は「接触」として記録されます�??</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
-    <value>Καταγραφή στοιχείων επαφής</value>
-    <comment>接触情報の記録 </comment>
+    <value>Κα�?αγρα�?ή σ�?οι�?είων ε�?α�?ή�?</value>
+    <comment>接触�?報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
-    <value>Προς το παρόν, ο κωδικός επικοινωνίας του ατόμου που έρχεται σε επαφή καταγράφεται στην αίτηση. Τα στοιχεία επικοινωνίας δεν θα χρησιμοποιηθούν μέχρι να καταχωρηθεί θετικά από οποιονδήποτε χρήστη. Το ιστορικό επαφών θα σβηστεί μετά από 14 ημέρες. *Ο κωδικός επαφής αλλάζει τακτικά.</value>
-    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+    <value>�?ρο�? �?ο �?α�?όν, ο κωδικό�? ε�?ικοινωνία�? �?ο�? α�?όμο�? �?ο�? έ�?�?ε�?αι σε ε�?α�?ή κα�?αγρά�?ε�?αι σ�?ην αί�?ηση. Τα σ�?οι�?εία ε�?ικοινωνία�? δεν θα �?ρησιμο�?οιηθούν μέ�?ρι να κα�?α�?ωρηθεί θε�?ικά α�?�? ο�?οιονδή�?ο�?ε �?ρήσ�?η. Το ισ�?ορικ�? ε�?α�?ών θα σβησ�?εί με�?ά α�?�? 14 ημέρε�?. *�? κωδικό�? ε�?α�?ή�? αλλάζει �?ακ�?ικά.</value>
+    <comment>こ�?�とき�?�接触した相手�?�接触符号の記録をアプリに行います�?�どちらかの利用�?が陽性の登録を行うまでは接触の�?報は利用されません。接触の履歴は14日後に消去されます�?? ※接触符号は定期�?に変わります�??</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>Με�?άβαση σ�?ι�? �?�?θμίσει�? ε�?αρμογή�?</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>Α�?�? �?ι�? �?�?θμίσει�? �?η�? ε�?αρμογή�?, μ�?ορεί�?ε να ενεργο�?οιήσε�?ε/α�?ενεργο�?οιήσε�?ε �?ο Bluetooth και �?ι�? ειδο�?οιήσει�?, να διακόψε�?ε �?η �?ρήση �?η�? ε�?αρμογή�? και να διαγράψε�?ε �?ο ισ�?ορικ�? ε�?α�?ών.</value>
+    <comment>アプリの設定から�?�Bluetoothの有効?��無効�?通知の有効?��無効、アプリの使用中止と履歴の削除を行うことができます�??</comment>
+  </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>�? ε�?αρμογή θα σα�? ειδο�?οιήσει, αν ήσασ�?αν σε σ�?ενή ε�?α�?ή με covid-19 θε�?ικ�? �?ρήσ�?η.</value>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた�?�合�?�スマ�?�トフォンにプッシュ通知が届きます�??</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>Μ�?ορεί�?ε να ελέγξε�?ε �?ον αριθμ�? �?ων σ�?ενών ε�?α�?ών σα�? α�?�? �?ην α�?�?ική οθόνη.</value>
+    <comment>�?近�?�接触件数の確認へはホ�?��?画面からも移動することができます�??</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>Μ�?ορεί�?ε να ελέγξε�?ε �?η λίσ�?α �?ων ημερομηνιών σ�?ενή�? ε�?α�?ή�? και να λάβε�?ε οδηγίε�? σ�?ε�?ικά με �?ο �?ι �?ρέ�?ει να κάνε�?ε εάν έ�?ε�?ε σ�?μ�?�?ώμα�?α �?η�? νόσο�?.</value>
+    <comment>接触があった日付�?��?覧を確認できます�?�また適�?な連絡先をお知らせします�??</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Ειδο�?οίηση</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Οικία</value>
+    <comment>ホ�?��?画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>Εάν εί�?α�?ε σ�?ενή ε�?α�?ή με θε�?ικ�? �?ρήσ�?η COVID-19</value>
+    <comment>陽性�?との接触があった�?��?</comment>
+  </data>
+  <data name="HelpPage3Description1" xml:space="preserve">
+    <value>Εάν έ�?ε�?ε εξε�?άσει θε�?ικέ�?</value>
+    <comment>検査により新型コロナウイルスの感染が確認された場合�??</comment>
+  </data>
+  <data name="HelpPage3Description2" xml:space="preserve">
+    <value>Οι α�?�?έ�? δημόσια�? �?γεία�? θα σα�? εκδώσο�?ν έναν «αριθμ�? ε�?εξεργασίας».</value>
+    <comment>保健�?等�?��?機関から登録用の「�?��?番号」が発行されます�??</comment>
+  </data>
+  <data name="HelpPage3Description3" xml:space="preserve">
+    <value>Εγγρα�?ή εισάγον�?α�? �?ον �?αρε�?όμενο αριθμ�? ε�?εξεργασία�? σε α�?�?ήν �?ην ε�?αρμογή</value>
+    <comment>本アプリを用�?て処�?番号の登録を行います�??</comment>
+  </data>
+  <data name="HelpPage3Description4" xml:space="preserve">
+    <value>Τα smartphone �?ο�? ή�?αν σε σ�?ενή ε�?α�?ή με �?ο smartphone σα�? �?ι�? �?ελε�?�?αίε�? 14 ημέρε�? θα λαμβάνο�?ν ειδο�?οιήσει�?.</value>
+    <comment>あなたと14日以�?に接触した人のスマ�?�アプリに通知が届きます�?��?1m以�?�?15�?以上�?</comment>
+  </data>
+  <data name="HelpPage3Description5" xml:space="preserve">
+    <value>Μόνο κωδικοί �?ο�? δημιο�?ργούν�?αι �?�?�?αία α�?�? �?η σ�?σκε�?ή �?ρησιμο�?οιούν�?αι κα�?ά �?ην α�?οσ�?ολή ειδο�?οιήσεων. Δεν �?ρησιμο�?οιούν�?αι �?ροσω�?ικέ�? �?ληρο�?ορίε�?.</value>
+    <comment>通知される情報は端末の接触符号のみです�?�それ以外�?�、氏名など個人�?報�?位置�?報が�?�られることはありません�?</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
+    <value>Εγγρα�?εί�?ε εδ�? ό�?αν δοκιμασ�?εί θε�?ικά</value>
+    <comment>陽性�?報の登録と他�??への匿名�?�知へ</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>�?δεια �?ρήση�?</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="SettingsPageLabel1" xml:space="preserve">
+    <value>Κλείσιμο εγγρα�?ή�? ε�?α�?ή�?</value>
+    <comment>接触の検�?�</comment>
+  </data>
+  <data name="SettingsPageDescription1" xml:space="preserve">
+    <value>Χρήση Bluetooth</value>
+    <comment>Bluetoothによる接触の検知</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Ειδο�?οιήσει�?</value>
+    <comment>通知</comment>
+  </data>
+  <data name="SettingsPageDescription2" xml:space="preserve">
+    <value>Κλείσιμο ειδο�?οιήσεων ε�?α�?ών</value>
+    <comment>陽性�?との接触通知</comment>
+  </data>
+  <data name="SettingsPageLabel3" xml:space="preserve">
+    <value>Διακο�?ή �?ρήση�? �?η�? ε�?αρμογή�?</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+  <data name="SettingsPageDescription3" xml:space="preserve">
+    <value>Διακο�?ή �?ρήση�? και διαγρα�?ή σ�?ενών κα�?�?ελών ε�?α�?ών</value>
+    <comment>使用を中止して過去14日間�?�接触履歴を消去</comment>
+  </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>Τι είναι η "σ�?ενή ε�?α�?ή";</value>
+    <comment>どのようにして接触を記録して�?ますか?�?</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>�?ώ�? μ�?ο�?�? να ελέγξ�? �?ον αριθμ�? �?ων σ�?ενών ε�?α�?ών;</value>
+    <comment>接触の有無はどのように知ることができますか?�?</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>Εάν ελέγξε�?ε θε�?ικά για COVID-19</value>
+    <comment>新型コロナウイルスに感染して�?ると判定された�?</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>�?ώ�? μ�?ο�?�? να σ�?αμα�?ήσ�? / να διαγράψ�? �?ην εγγρα�?ή σ�?ενή�? ε�?α�?ή�?;</value>
+    <comment>接触の記録を停止?��情報を削除するには</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>Κλείσιμο ε�?α�?ών για �?ι�? �?ελε�?�?αίε�? 14 ημέρε�?</value>
+    <comment>過去14日間�?�接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>Καμία σ�?ενή ε�?α�?ή με �?ο�?�? θε�?ικού�? �?ρήσ�?ε�? COVID-19</value>
+    <comment>陽性�?との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>�?αρακαλούμε να σ�?νε�?ίσε�?ε να ασκεί «Νέο Τ�?ό�?ο Ζωής» σ�?νισ�?ά�?αι α�?�? �?ην κ�?βέρνηση.</value>
+    <comment>引き続き「新しい生活様式�?��?�実践をよろしくお願い�?たします�??</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>Κοινή �?ρήση α�?�?ή�? �?η�? ε�?αρμογή�?</value>
+    <comment>アプリを周り�?�人に知らせ�?</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>Σα�? ε�?�?αρισ�?ούμε για �?ην εγγρα�?ή �?ων α�?ο�?ελεσμά�?ων �?ων δοκιμών σα�?!</value>
+    <comment>陽性のご登録をいただきありがと�?ござ�?ました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>�? εγγρα�?ή είναι ανών�?μη. Δεν �?ρειάζε�?αι να εισαγάγε�?ε �?ο όνομά σα�? ή ο�?οιαδή�?ο�?ε άλλη �?ροσω�?ική �?ληρο�?ορία. Δεν κα�?αγρά�?ον�?αι �?ληρο�?ορίε�? σ�?ε�?ικά με �?η θέση σ�?ενή�? ε�?α�?ή�?.</value>
+    <comment>登録は匿名で行われ�?�氏名�?連絡先など個人が特定される�?報を登録する�?要�?�ありません。また�?�接触した場�?の位置�?報が記録�?通知されることもありません�?</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Όροι �?ρήση�?</value>
+    <comment>利用規�?</comment>
+  </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>Α�?οδέ�?ομαι �?ο�?�? Όρο�?�? Χρήση�?</value>
+    <comment>規�?に同意して次へ</comment>
+  </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>�? εγκα�?άσ�?αση ολοκλη�?ώθηκε. Ε�?�?αρισ�?ούμε!</value>
+    <comment>ご登録�?ただきありがと�?ござ�?ました</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Οικία</value>
+    <comment>ホ�?��?画面へ</comment>
+  </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>Τ�?ό�?ο�? �?ρήση�? α�?�?ή�? �?η�? ε�?αρμογή�?</value>
+    <comment>使�?方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>Αναγνώριση σ�?σκε�?ή�?</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>Μια λίσ�?α σ�?ενών ε�?α�?ών με θε�?ικού�? �?ρήσ�?ε�? COVID-19</value>
+    <comment>陽性�?との接触�?覧</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>Σ�?μ�?λη�?ώσ�?ε �?α σ�?μ�?�?ώμα�?ά σα�?</value>
+    <comment>�?状を�?��?</comment>
+  </data>
+  <data name="ContactedNotifyPageButton3" xml:space="preserve">
+    <value>Ενημε�?ώσ�?ε �?α σ�?μ�?�?ώμα�?ά σα�? μέσ�? �?ηλε�?ώνο�? Κέν�?ρο Διαβούλε�?ση�?</value>
+    <comment>帰国�?・接触�?外来に電話</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>�?ορέ�?</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>Εάν έ�?ε�?ε �?ιθανά σ�?μ�?�?ώμα�?α COVID-19, ε�?ικοινωνήσ�?ε με �?ο�?�? οργανισμού�? �?γειονομική�? �?ερίθαλψη�? �?ρησιμο�?οιών�?α�? �?ην �?αρακά�?�? �?όρμα ή �?ηλε�?ωνικά. Ανάλογα με �?α σ�?μ�?�?ώμα�?α, θα σα�? σ�?μβο�?λεύσει να κάνε�?ε μια δοκιμή COVID-19.</value>
+    <comment>現在の�?状などを�?��?�力フォー�?また�?�お電話にて、ご連絡ください。�??容に応じて、帰国�?・接触�?外来等への受診を案�??します�??</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>Τραβήξ�?ε ένα σ�?ιγμιό�?�?�?ο οθόνη�? α�?�?ή�? �?η�? οθόνη�?. Μ�?ορεί να σα�? ζη�?ηθεί να �?ο �?αράσ�?ε�?ε κα�?ά �?η διάρκεια �?η�? διάγνωση�?.</value>
+    <comment>受診の際などに�?要となる�?�合があるため、本画面のスクリーンショ�?ト�?�保存をお願い�?たします�??</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>Αριθμό�? ε�?ιβεβαιωμένων σ�?ενών ε�?α�?ών με θε�?ικού�? �?ρήσ�?ε�? COVID-19</value>
+    <comment>陽性�?との接触確�?</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>Κλείσιμο ε�?α�?ών για �?ι�? �?ελε�?�?αίε�? 14 ημέρε�?</value>
+    <comment>過去14日間�?�接触</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>9:00-17:30 (εκ�?ό�? Σαββα�?οκύριακο�? και αργιών)</value>
+    <comment>9:00?�?17:30?��土・日・祝日・年末年始を除く�?</comment>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>COVID-19 �?ληρο�?ορίε�? και �?όροι</value>
+    <comment>新型コロナウイルス感染�?対策サイ�?</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Υ�?οσ�?ήριξη</value>
+    <comment>アプリに関するお問�?合わ�?</comment>
+  </data>
+  <data name="HomePageDescription1" xml:space="preserve">
+    <value>Σε �?ρήση</value>
+    <comment>使用中</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>Έλεγ�?ο�? σ�?ενών ε�?α�?ών</value>
+    <comment>陽性�?との接触を確認す�?(14日�?)</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>Ό�?αν δοκιμασ�?εί θε�?ικ�? για COVID-19</value>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>Κα�?α�?ώρηση θε�?ικο�? α�?ο�?ελέσμα�?ο�? δοκιμή�?</value>
+    <comment>陽性�?報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>Κοινή �?ρήση α�?�?ή�? �?η�? ε�?αρμογή�?</value>
+    <comment>アプリを周り�?�人に知らせ�?</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Οικία</value>
+    <comment>ホ�?��?</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>Όρο�? �?ρήση�?</value>
+    <comment>利用規�?</comment>
+  </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>Τα �?ροσω�?ικά σα�? δεδομένα �?ροσ�?α�?εύον�?αι</value>
+    <comment>プライバシーにつ�?て</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>Δεν σ�?λλέγον�?αι �?ροσω�?ικέ�? �?ληρο�?ορίε�? ό�?ω�? �?ο όνομα ή ο αριθμό�? �?ηλε�?ώνο�? σα�?. Δεν σ�?λλέγον�?αι δεδομένα γεωεν�?ο�?ισμο�?, σ�?μ�?εριλαμβανομένων �?ων δεδομένων GPS.</value>
+    <comment>氏名・電話番号などの個人�?報�?、GPSなどスマ�?�トフォンの位置�?報を使�?ことはなく�?�記録されることもありません�?</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>Όλα �?α δεδομένα κ�?�?�?�?ογρα�?ούν�?αι και α�?οθηκεύον�?αι �?ο�?ικά σ�?ο smartphone σα�?. Όλα �?α δεδομένα διαγρά�?ον�?αι α�?�?όμα�?α με�?ά α�?�? 14 ημέρε�?. Οι κινήσει�? σα�? δεν �?αρακολο�?θούν�?αι με κανένα �?�?ό�?ο α�?�? κ�?βερνη�?ικέ�? �?�?ηρεσίε�? ή �?ρί�?ο�?�?.</value>
+    <comment>接触の記録は、暗号化され�?�あなた�?�スマ�?�トフォンの中にのみ記録され�?14日後に自動的に削除されます�?�行政機関�?第三�??が暗号化された�?報を利用して接触歴を把握することはありません�?</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>Μ�?ορεί�?ε να διακόψε�?ε �?ην εγγρα�?ή σ�?ενών ε�?α�?ών με άλλο�?�? �?ρήσ�?ε�? ανά �?άσα σ�?ιγμή, αλλάζον�?α�? �?ι�? �?�?θμίσει�? �?η�? ε�?αρμογή�? ή διαγρά�?ον�?α�? �?ην ε�?αρμογή.</value>
+    <comment>接触の記録は�?つでも止めることができます�?�アプリ�?の設定を無効にするか�?�アプリを削除してください�?</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Όροι �?ρήση�?</value>
+    <comment>利用規�?へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>�?εριγρα�?ή σελίδα�? εκμάθηση�?21</value>
+    <comment>プライバシーにつ�?て</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Ενεργο�?οίηση ειδο�?οιήσεων</value>
+    <comment>通知をご利用�?ただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>Ενεργο�?οιήσ�?ε �?ι�? ειδο�?οιήσει�? για να ειδο�?οιείσ�?ε ό�?αν εί�?α�?ε σ�?ενέ�? ε�?α�?έ�? με θε�?ικού�? �?ρήσ�?ε�? COVID-19.</value>
+    <comment>本アプリで接触の通知をご利用�?ただくために、本アプリのプッシュ通知を有効にしてください�?</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Ενεργο�?οίηση</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>Ρύθμιση αργό�?ερα</value>
+    <comment>あとで設定す�?</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>Για να �?ρησιμο�?οιήσε�?ε ειδο�?οιήσει�?</value>
+    <comment>通知をご利用�?ただくために</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Μενο�?</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Κα�?α�?ώρηση</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
+    <value>�?ληκ�?ρολογήσ�?ε έναν κωδικ�? διαδικασία�? �?ο�? σα�? έ�?ει εκδοθεί α�?�? �?ο "Κέν�?ρο Υγεία�? σε �?ραγμα�?ικ�? �?�?όνο σύσ�?ημα αν�?αλλαγή�? �?ληρο�?οριών σ�?ο COVID-19 (HER-SYS)".</value>
+    <comment>新型コロナウイルス感染�?�?等情報把握・管�?支援シス�?�??�?HER-SYS?��から発行された処�?番号を�?�力してください�?</comment>
+  </data>
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
+    <value>Οι �?ρήσ�?ε�? �?ο�? ή�?αν σε σ�?ενή ε�?α�?ή μαζί σα�? εν�?ό�? �?ων �?ελε�?�?αίων 14 ημε�?ών θα ειδο�?οιηθούν. �? εγγρα�?ή είναι ανών�?μη. Δεν �?ρειάζε�?αι να εισαγάγε�?ε �?ο όνομά σα�? ή ο�?οιαδή�?ο�?ε άλλη �?ροσω�?ική �?ληρο�?ορία. Δεν κα�?αγρά�?ον�?αι �?ληρο�?ορίε�? σ�?ε�?ικά με �?η θέση σ�?ενή�? ε�?α�?ή�?.</value>
+    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます�?�登録は匿名で行われ�?�氏名�?連絡先など個人が特定される�?報を登録する�?要�?�ありません。また�?�接触した場�?の位置�?報が記録�?通知されることもありません�?</comment>
+  </data>
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
+    <value>Τ�?ό�?ο�? λήψη�? κωδικο�? διεργασία�?</value>
+    <comment>処�?番号の取得方�?</comment>
+  </data>
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
+    <value>Κα�?α�?ώρηση θε�?ικο�? α�?ο�?ελέσμα�?ο�? δοκιμή�?</value>
+    <comment>陽性�?報の登録</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Ε�?όμενo</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>�? ε�?αρμογή αναγνωρίζει σ�?ενέ�? ε�?α�?έ�? με�?αξ�? �?ων smartphones �?ο�? εκ�?ελούν α�?�?ήν �?ην ε�?αρμογή.</value>
+    <comment>本アプリをスマ�?�トフォンに設定した人ど�?し�?�接触を記録します�??</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>Ό�?αν δοκιμασ�?εί θε�?ικά για COVID-19, μ�?ορεί�?ε να κα�?α�?ωρήσε�?ε ανών�?μα �?ο α�?ο�?έλεσμα �?η�? δοκιμή�? σε α�?�?ήν �?ην ε�?αρμογή.</value>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます�??</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>Εάν έ�?ε�?ε έρθει σε σ�?ενή ε�?α�?ή με ένα �?ρήσ�?η �?ο�? βρέθηκε θε�?ικό�?, η ε�?αρμογή σά�? ειδο�?οιεί για �?ιθανή μόλ�?νση και �?αρέ�?ει οδηγίε�? για �?ην �?ροσ�?ασία �?η�? �?γεία�? σα�?.</value>
+    <comment>�?近接触した人の中に陽性登録した人がいたら�?通知と適�?な行動をお知らせします�??</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>�?ροσ�?α�?έψ�?ε �?ον εα�?�?�? σα�? με �?ην ε�?αρμογή</value>
+    <comment>こ�?�アプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>�?ροσ�?α�?έψ�?ε �?ον εα�?�?�? σα�? με �?ην ε�?αρμογή</value>
+    <comment>こ�?�アプリでできること</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Ενεργο�?οίηση</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>Ρύθμιση αργό�?ερα</value>
+    <comment>あとで設定す�?</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>Ενεργο�?οιήσ�?ε �?ο Bluetooth για να ξεκινήσε�?ε �?ην εγγρα�?ή σ�?ενών ε�?α�?ών με άλλο�?�? �?ρήσ�?ε�?.</value>
+    <comment>本アプリで接触検知をご利用�?ただくために、スマ�?�トフォンのBluetooth通信を有効にしてください�?</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Μάθε�?ε �?ερισσό�?ερα</value>
+    <comment>�?術的な詳細につ�?て</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>Ενεργο�?οίηση Bluetooth</value>
+    <comment>接触検知をご利用�?ただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>Ενεργο�?οίηση Bluetooth</value>
+    <comment>接触検知をご利用�?ただくために</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>~</value>
+    <comment>から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>Εισαγωγή οκ�?αψή�?ιο�? κωδικο�?</value>
+    <comment>8桁�?�処�?番号を�?�力してください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>�? αριθμό�? ε�?εξεργασία�? θα κοινο�?οιηθεί σ�?ον αριθμ�? �?ο�? κινη�?ο�? σα�? �?ηλε�?ώνο�? ή σ�?η διεύθ�?νση ηλεκ�?ρονικο�? �?α�?�?δρομείο�? �?ο�? είναι κα�?α�?ωρημένο�? σ�?ο νέο σύσ�?ημα �?ληρο�?οριών και δια�?είριση�? μολ�?σμα�?ικών ασθενειών coronavirus (ε�?εξή�? "σύσ�?ημα δια�?είριση�?").</value>
+    <comment>新型コロナウイルス感染�?等情報把握・管�?シス�?�??��以下�?�管�?シス�?�?」）に登録されたあなた�?�携帯電話番号又�?�メールアドレスに、�?��?番号が�?�知されます�??</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>Ό�?αν εισαγάγε�?ε α�?�?όν �?ον αριθμ�? ε�?εξεργασία�? σ�?ο �?ερμα�?ικ�?, �?ο �?ερμα�?ικ�? θα κάνει μια έρε�?να μέσ�? �?ο�? διακομισ�?ή ειδο�?οιήσεων σ�?ο σύσ�?ημα δια�?είριση�? για �?ο αν ο αριθμό�? ε�?εξεργασία�? έ�?ει εκδοθεί σε εσά�?.</value>
+    <comment>あなたがこ�?�処�?番号を端末に入力することにより、端末から通知サーバ�?�を経由して管�?シス�?�?に対し�?��?��?番号があなたに対して発行されたも�?�か否か�?�照会が行われます�??</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>Το σύσ�?ημα δια�?είριση�? θα α�?αν�?ήσει σ�?ο διακομισ�?ή ειδο�?οιήσεων ω�? �?ρο�? �?ο αν ο αριθμό�? σ�?ναλλαγή�? �?ο�? ανα�?έρε�?αι εκδόθηκε σε εσά�?.</value>
+    <comment>管�?シス�?�?は�?通知サーバ�?�に対し�?��?�会された処�?番号があなたに対して発行されたも�?�か否かにつ�?て回答します�??</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>Εάν α�?αν�?ήσε�?ε ό�?ι ο αριθμό�? σ�?ναλλαγή�? σα�? έ�?ει εκδοθεί, �?α �?ερμα�?ικά άλλων �?ρησ�?ών θα �?αρέ�?ον�?αι με �?ο ημερήσιο κλειδί �?ο�? κα�?αγρά�?ε�?αι σ�?ο �?ερμα�?ικ�? σα�?.</value>
+    <comment>処�?番号があなたに対して発行されたも�?�である旨の回答が行われた場合�?�、他�?�利用�?の端末に、あなた�?�端末に記録された日次鍵が提供されます�??</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>Εάν έ�?ε�?ε έρθει σε ε�?α�?ή μαζί σα�? εν�?ό�? 14 ημε�?ών, θα γνωρίζε�?ε ό�?ι μ�?ορεί να έ�?ε�?ε ε�?ικοινωνήσει μαζί σα�? �?ωρί�? καμία �?ληρο�?ορία �?ο�? μ�?ορεί να σα�? αναγνωρίσει �?ροσω�?ικά.</value>
+    <comment>14日以�?にあなたと接触の状態となったことのある方は、あなた�?�人を識別可能な�?報がな�?状態で、接触した可能性がある旨を知ることができます�??</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>Α�?οδο�?ή και εγγρα�?ή</value>
+    <comment>同意して陽性登録する</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>Σ�?γκα�?άθεση για θε�?ική κα�?α�?ώριση</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitle2" xml:space="preserve">
+    <value>Σ�?γκα�?άθεση για θε�?ική κα�?α�?ώριση</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Έκδοση</value>
+    <comment>バ�?�ジョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>Το Bluetooth είναι α�?ενεργο�?οιημένο. �?αρακαλ�? �?αραδώσ�?ε �?ο Bluetooth.</value>
+    <comment>BluetoothがOffになって�?ます�??Bluetoothを有効にしてください�?</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>Μια λίσ�?α σ�?ενών ε�?α�?ών (�?ελε�?�?αίε�? 14 ημέρε�?)</value>
+    <comment>過去14日間�?�接触�?覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>Ημερομηνίε�? κα�?ά �?ι�? ημερομηνίε�? κα�?ά �?ι�? ο�?οία ήσασ�?αν σε σ�?ενή ε�?α�?ή με θε�?ικού�? �?ρήσ�?ε�? COVID-19.</value>
+    <comment>以下�?�日に陽性�?との接触が確認されました�?</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>Είναι �?ιθαν�? να ήσασ�?αν κον�?ά σε ένα �?ρήσ�?η �?ο�? βρέθηκε θε�?ικό�? για COVID-19.  �?α�?ήσ�?ε για �?ερισσό�?ερε�? λε�?�?ομέρειε�?.</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>�?ιθανή έκθεση covid-19</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>Αν θέλε�?ε να �?ο α�?ενεργο�?οιήσε�?ε, μ�?ορεί�?ε να �?ο αλλάξε�?ε α�?�? �?ι�? �?�?θμίσει�? �?η�? ε�?αρμογή�?</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>Ενεργο�?οιημένε�? ειδο�?οιήσει�?</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>�?ληρο�?ορίε�? σ�?ε�?ικά με α�?�?ήν �?ην ε�?αρμογή</value>
+  </data>
+  <data name="InqueryPageDescription4" xml:space="preserve">
+    <value>Ε�?ω�?ήσει�? και α�?αν�?ήσει�? για �?ο �?ρήσ�?η</value>
+  </data>
+  <data name="InqueryMailBody" xml:space="preserve">
+    <value>Όνομα: \r\n Ε�?ικοινωνία: \r\n �?εριε�?όμενο έρε�?να�? (Ε�?ιλέξ�?ε μια κα�?ηγορία α�?�? �?α ακόλο�?θα): 1. �?ώ�? λει�?ο�?ργεί η ε�?αρμογή, 2. Ρ�?θμίσει�? ε�?αρμογή�?, 3. Χρήση �?η�? ε�?αρμογή�? (ειδο�?οίηση κ.λ�?.), 4. �?λλα \r\n Κείμενο έρε�?να�?: \r\n</value>
+    <comment>お名前：\r\nご�?�絡先：\r\nお問�?合わせ�??容(カ�?ゴリを次の中からお選びください)?�?1.アプリの仕�?み�?2.アプリの設定�?? 3.アプリの利用(通知など)�? 4.そ�?�他\r\nお問�?合わせ本�?��\r\n</comment>
+  </data>
+  <data name="InqueryMailSubject" xml:space="preserve">
+    <value>Ε�?ω�?ήσει�? σ�?ε�?ικά με �?ην ε�?αρμογή ε�?ιβεβαίωση�? ε�?α�?ών</value>
+    <comment>接触確認アプリに関するお問�?合わ�?</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>ΗΜΕΡΕΣ</value>
+    <comment>X日�?</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>�? ειδο�?οίηση έκθεση�? είναι ενεργή.</value>
+    <comment>Exposure Notification機�?�は許諾の状態です�??</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Το Bluetooth είναι α�?ενεργο�?οιημένο. Ενεργο�?οιήσ�?ε �?ο Bluetooth.</value>
+    <comment>BluetoothがOffになって�?ます�??Bluetoothを有効にしてください�?</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>�? ειδο�?οίηση έκθεση�? είναι α�?ενεργο�?οιημένη. Ανοίξ�?ε �?ι�? �?�?θμίσει�? �?ερμα�?ικο�? και ενεργο�?οιήσ�?ε �?ην Ειδο�?οίηση έκθεση�?.</value>
+    <comment>Exposure Notification機�?�は無効の状態です�?�端末の設定を開いて、Exposure NotificationをONにしてください�?</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>�?ρέ�?ει να σ�?μ�?ωνήσε�?ε με �?ο�?�? όρο�?�? �?ρήση�?.</value>
+    <comment>利用規�?に同意する�?要があります�??</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>�? ειδο�?οίηση έκθεση�? είναι �?εριορισμένη. �?αρακαλ�? ενεργή.</value>
+    <comment>Exposure Notification機�?�が承認されて�?ません。承認してください�?</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>�? ειδο�?οίηση έκθεση�? δεν �?�?οσ�?ηρίζε�?αι. Ενημε�?ώσ�?ε �?ο λει�?ο�?ργικ�? σύσ�?ημα σ�?ην �?ιο �?�?όσ�?α�?η έκδοση. Αν εξακολο�?θεί�?ε να αν�?ιμε�?ω�?ίζε�?ε �?ροβλήμα�?α, �?αρακαλούμε ε�?ικοινωνήσ�?ε μαζί μα�? σ�?ο ***REMOVED***.</value>
+    <comment>Exposure Notification機�?�は非対応�?�状態です�?�OSを最新版にア�?プデートしてください。それでも改�?しなければ、appsupport@cov19.mhlw.go.jpまでお問�?合わせく�?さい�?</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>Σ�?άλμα σύνδεση�? δικ�?ύο�?</value>
+    <comment>通信に失敗しました�?</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Σ�?άλμα εκκίνηση�? ειδο�?οίηση�? έκθεση�?</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Δεν ή�?αν δ�?να�?ή η εκκίνηση �?η�? ειδο�?οίηση�? έκθεση�?. Ανοίξ�?ε �?ι�? �?�?θμίσει�? �?ερμα�?ικο�?, ενεργο�?οιήσ�?ε �?ην Ειδο�?οίηση έκθεση�? και ενεργο�?οιήσ�?ε �?ο Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください�?</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>�? αριθμό�? διεργασία�? είναι εσ�?αλμένο�?</value>
+    <comment>アプリで入力された処�?番号が違�?ま�?</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>Δεν είναι δ�?να�?ή η σύνδεση με �?ο κέν�?ρο δήλωση�?</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>Θέλε�?ε να κα�?α�?ωρήσε�?ε θε�?ικέ�? �?ληρο�?ορίε�?;</value>
+    <comment>陽性�?報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Κα�?α�?ώρηση</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Ακ�?�?ωμένο</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>�?εριμένε�?ε λίγο μέ�?ρι να ξεκινήσει η εγγρα�?ή</value>
+    <comment>登録開始までし�?�らくそ�?�ままでお�?ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>Αναμονή εγγρα�?ή�?</value>
+    <comment>登録�?ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>Δεν έ�?ει εισα�?θεί αριθμό�? ε�?εξεργασία�?</value>
+    <comment>処�?番号が�?�力されて�?ません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>�? ε�?εξεργασία �?η�? μο�?�?ή�? αριθμο�? δεν σ�?μ�?ωνεί</value>
+    <comment>処�?番号のフォーマットが�?致して�?ません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>Για να κα�?α�?ωρήσε�?ε θε�?ικά α�?�?εία, είναι α�?αραί�?η�?ο να ενεργο�?οιήσε�?ε �?ην κα�?αγρα�?ή �?ο�? α�?�?είο�? κα�?αγρα�?ή�? ε�?α�?ών COVID-19, ενεργο�?οιήσ�?ε �?ο α�?�? �?ην ε�?αρμογή ή �?ι�? �?�?θμίσει�? λει�?ο�?ργικο�? σ�?σ�?ήμα�?ο�?.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする�?要があります�?�アプリかOSの設定から有効にしてください�?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>Ενεργο�?οίηση κα�?αγρα�?ή�? ε�?α�?ών COVID-19</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>�? αριθμό�? �?ων εγγρα�?ών έ�?ει �?�?άσει σ�?ο ανώ�?α�?ο όριο. Έξοδο�? α�?�? �?ην ε�?αρμογή</value>
+    <comment>登録回数上限になりました。アプリケーションを終�?しま�?</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>Σ�?άλμα εγγρα�?ή�?</value>
+    <comment>登録エラー</comment>
   </data>
 </root>
