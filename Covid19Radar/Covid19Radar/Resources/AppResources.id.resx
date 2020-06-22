@@ -632,7 +632,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>Notifikasi Paparan bersifat terbatas. Mohon lebih proaktif dengan tak membatasi fungsi aplikasi.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Notifikasi Paparan tidak didukung. Perbarui sistem operasi perangkat anda ke versi terbaru. Jika masalah masih terjadi, silahkan hubungi kami di appsupport@cov19.mhlw.go.jp.</value>
