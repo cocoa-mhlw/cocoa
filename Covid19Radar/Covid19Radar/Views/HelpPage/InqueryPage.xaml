@@ -39,26 +39,6 @@
             <BoxView Style="{StaticResource DefaultLineStyle}" />
             <Frame Padding="10" HasShadow="False">
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickSite1}" />
-                </Frame.GestureRecognizers>
-                <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultLabelSmall}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription2}" />
-                                <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span
-                                    Text="https://corona.go.jp/"
-                                    TextColor="{StaticResource Primary}"
-                                    TextDecorations="Underline" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding Path=OnClickSite2}" />
                 </Frame.GestureRecognizers>
                 <StackLayout Spacing="0">
