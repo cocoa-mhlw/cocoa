@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>Obvestilo o izpostavljenosti je omejeno. Prosim, aktivno.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Obvestilo o izpostavljenosti ni podprto. Prosimo, posodobite OS na najnovejšo različico. Če imate še vedno težave, nam pišite na appsupport@cov19.mhlw.go.jp.</value>
