@@ -30,7 +30,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>接触確認アプリ</string>
 	<key>CFBundleIdentifier</key>
-	<string>jp.go.mhlw.covid19radar</string>
+	<string>APP_PACKAGE_NAME</string>
 	<key>CFBundleVersion</key>
 	<string>1.1</string>
 	<key>CFBundleIconFiles</key>
@@ -53,7 +53,7 @@
 	</array>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>jp.go.mhlw.covid19radar.exposure-notification</string>
+		<string>APP_PACKAGE_NAME.exposure-notification</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>
@@ -74,7 +74,7 @@
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.0</string>
+	<string>APP_VERSION</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcons.appiconset</string>
 	<key>UIStatusBarStyle</key>
