@@ -378,5 +378,6 @@ Temporary Items
 local.settings.json
 settings.json
 
+
 # Tools config file
 /Tools/UpdateUserStatusTool/UpdateUserStatusTool/App.config
