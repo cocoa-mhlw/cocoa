@@ -63,7 +63,7 @@ namespace Covid19Radar.ViewModels
                 var current = errorCount + 1;
                 var max = AppConstants.MaxErrorCount;
                 await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
-                    AppResources.NotifyOtherPageDiag3Title + "{current}/{max}",
+                    AppResources.NotifyOtherPageDiag3Title + $"{current}/{max}",
                     Resources.AppResources.ButtonOk
                     );
                 Thread.Sleep(errorCount * 5000);

@@ -12,6 +12,7 @@
 - Yasuaki Matsuda (Server side / Azure Functions)
 - Takashi Takebayashi (Multilingual localization)
 - Akihiko Kodama (UI/UX Design Adviser)
+- Atsushi Kuramochi (Xamarin / Program Debug)
 - Ben Ishiyama-Levy (Xamarin / [Xamariners](https://xamariners.com/))
 - Udara Alwis (Xamarin / [Xamariners](https://xamariners.com/))
 - Pedro Costa (Xamarin / [Xamariners](https://xamariners.com/))
