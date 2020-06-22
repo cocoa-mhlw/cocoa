@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>অনুগ্রহ করে আপনার নেটওয়ার্ক কানেকশন চেক করুন.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ঠিক আছে</value>
@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>আপনি যদি COVID-19 পজিটিভ ব্যবহারকারীর সাথে ঘনিষ্ঠ যোগাযোগ রেখে থাকেন তাহলে অ্যাপটি আপনাকে অবহিত করবে।</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>আপনি হোম স্ক্রীন থেকে আপনার ঘনিষ্ঠ যোগাযোগের সংখ্যা পরীক্ষা করতে পারেন।</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>আপনি যদি ইতিবাচক পরীক্ষা করেন</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>জনস্বাস্থ্য কর্তৃপক্ষ আপনাকে একটি "প্রসেসিং নাম্বার" প্রদান করবে।</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>আপনি যদি COVID-19 এর জন্য ইতিবাচক পরীক্ষা করেন</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>আমি কিভাবে বন্ধ/ বন্ধ যোগাযোগ রেকর্ডিং মুছে ফেলব?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 তথ্য ও সম্পদ</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>সহায়তা</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>যখন COVID-19 এর জন্য ইতিবাচক পরীক্ষা করা হয়</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>ইতিবাচক পরীক্ষার ফলাফল নিবন্ধন করুন</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>যখন COVID-19 এর জন্য ইতিবাচক পরীক্ষা করা হয়, আপনি বেনামে এই অ্যাপে পরীক্ষার ফলাফল নিবন্ধন করতে পারেন।</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>আপনি যদি ইতিবাচক পরীক্ষা করা কোন ব্যবহারকারীর সাথে ঘনিষ্ঠ যোগাযোগ রেখে থাকেন, অ্যাপটি আপনাকে সম্ভাব্য সংক্রমণের কথা জানিয়ে দেয় এবং আপনার স্বাস্থ্য রক্ষার জন্য নির্দেশিকা প্রদান করে।</value>
@@ -610,5 +610,93 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>দিনগুলো</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সক্রিয়।</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>ব্লুটুথ বন্ধ আছে। অনুগ্রহ করে ব্লুটুথ চালু করুন।</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন নিষ্ক্রিয়। টার্মিনাল সেটিংস খুলুন এবং এক্সপোজার প্রজ্ঞাপন চালু করুন।</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>আপনাকে অবশ্যই ব্যবহারের শর্তাবলীর সাথে একমত হতে হবে।</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সীমাবদ্ধ। অনুগ্রহ করে সক্রিয় করুন।</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন সমর্থিত নয়। অনুগ্রহ করে সর্বশেষ সংস্করণে OS হালনাগাদ করুন। আপনার যদি এখনও কোন সমস্যা থাকে, অনুগ্রহ করে appsupport@cov19.mhlw.go.jp আমাদের সাথে যোগাযোগ করুন।</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>নেটওয়ার্ক সংযোগ ত্রুটি</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন স্টার্টআপ ত্রুটি</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>এক্সপোজার প্রজ্ঞাপন স্টার্টআপ করতে পারেনি. টার্মিনাল সেটিংস খুলুন, এক্সপোজার প্রজ্ঞাপনে চালু করুন, এবং ব্লুটুথে চালু করুন।</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>প্রক্রিয়া নম্বর ভুল</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>নিবন্ধন কেন্দ্রে সংযোগ করা যাচ্ছে না</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>আপনি কি ইতিবাচক তথ্য নিবন্ধন করতে চান?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>নিবন্ধন করুন</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>বাতিল করা হয়েছে</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>নিবন্ধন শুরু না হওয়া পর্যন্ত অনুগ্রহ করে কিছু সময়ের জন্য অপেক্ষা করুন</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>নিবন্ধনের অপেক্ষায়</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>কোনো প্রক্রিয়াকরণ নম্বর প্রবেশ করা হয়নি</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>প্রক্রিয়াকরণ সংখ্যা বিন্যাস মেলে না</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>ইতিবাচক রেকর্ড নিবন্ধন করতে, COVID-19 যোগাযোগ লগ রেকর্ডিং সক্রিয় করা প্রয়োজন, অনুগ্রহ করে এটি অ্যাপ্লিকেশন বা OS সেটিংস থেকে সক্রিয় করুন.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>COVID-19 যোগাযোগ লগিং সক্রিয় করুন</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>রেজিস্ট্রেশনের সংখ্যা সর্বোচ্চ সীমায় পৌঁছেছে। প্রয়োগণ প্রস্থান করুন</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>নিবন্ধন ত্রুটি</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

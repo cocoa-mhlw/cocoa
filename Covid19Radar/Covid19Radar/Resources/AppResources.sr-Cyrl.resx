@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Проверите везу са мрежом.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>У реду</value>
@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Апликација ће вас обавестити ако сте били блиски контакт са ЦОВИД-19 позитивним корисником.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>Број блиских контаката можете да проверите на екрану "почетак".</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>Ако сте тестирали позитивне</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>Јавне здравствене власти ће вам издати "број за прераду".</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>Ако је позитиван тест за КОВИД-19</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>Како да спречим/избришем затварање контакта?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>КОВИД -19 информације и ресурси</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Подршка</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Када је позитивно тестиран за КОВИД-19</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>Региструј позитиван резултат теста</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>Када је тест позитиван за КОВИД-19, можете анонимно регистровати резултате теста у овој апликацији.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>Ако сте у блиској контакту са корисником који је био позитиван тестиран, апликација вас обавештава о потенцијалној зарази и обезбеђује смернице за заштиту вашег здравља.</value>
@@ -610,5 +610,93 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>Дани</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Обавештење о експозицији је активно.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Блуетоотх је искључен. Укључите Блуетоотх.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Обавештење о експозицији је онемогућено. Отворите поставке терминала и укључите обавештење о експозиције.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>Морате да се слажете са условима коришћења.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Обавештење о експозицији је ограничено. Ацтиве.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Обавештење о експозицији није подржано. Ажурирајте ОС на најновију верзију. Ако и даље имате проблема, контактирајте нас на appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>Грешка у мрежној вези</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Грешка при покретању обавештења о експозицији</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Обавештење о експозицији није могло да се покреће. Отворите поставке терминала, укључите обавештење о експозицији и укључите Блуетоотх.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>Неисправан број процеса</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>Није могуће повезати се са центром за регистрацију</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>Желите ли да региструјете позитивне информације?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Регистрација</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Отказано</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>Сачекајте неко време док се регистрација не покрене</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>Чекам регистрацију</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>Није унет број за обраду</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>Обрада формата броја се не подудара</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>Да би се регистровали позитивни записи, потребно је омогућити "КОВИД-19 записник за евиденцију контакта", омогућити га из поставки апликације или ОС.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>Омогући КОВИД-19 евидентирање контаката</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>Број Регистрација је достигао горњу границу. Изађи из апликације</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>Грешка у регистрацији</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

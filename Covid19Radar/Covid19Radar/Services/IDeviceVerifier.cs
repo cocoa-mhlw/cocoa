@@ -1,7 +1,4 @@
 ﻿using Covid19Radar.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
@@ -17,6 +14,6 @@ namespace Covid19Radar.Services
 
     public interface IDeviceVerifier
     {
-        Task<string> VerifyAsync(SelfDiagnosisSubmission  submission);
+        Task<string> VerifyAsync(DiagnosisSubmissionParameter submission);
     }
 }
