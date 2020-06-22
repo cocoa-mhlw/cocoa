@@ -74,7 +74,7 @@
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>1.1.0</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcons.appiconset</string>
 	<key>UIStatusBarStyle</key>
@@ -146,26 +146,26 @@
 	<false/>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
-  <key>NSAppTransportSecurity</key>
-  <dict>
-    <key>NSExceptionDomains</key>
-    <dict>
-      <key>covid19radar-jpn-prod.trafficmanager.net</key>
-      <dict>
-        <key>NSIncludesSubdomains</key>
-        <true/>
-      </dict>
-      <key>covid19radar-jpn-prod.azureedge.net</key>
-      <dict>
-        <key>NSIncludesSubdomains</key>
-        <true/>
-      </dict>
-      <key>covid19radarjpnprod.z11.web.core.windows.net</key>
-      <dict>
-        <key>NSIncludesSubdomains</key>
-        <true/>
-      </dict>
-    </dict>   
-  </dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>covid19radar-jpn-prod.trafficmanager.net</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>covid19radar-jpn-prod.azureedge.net</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>covid19radarjpnprod.z11.web.core.windows.net</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>
