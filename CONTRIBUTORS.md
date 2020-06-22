@@ -34,7 +34,7 @@
 - Yuya Yoshida (Public Relations and Activity)
 - Nori Suzuki (Public Relations and Activity)
 - Rie Moriguchi (Public Relations and Activity)
-- Michiyo Hano (Public Relations and Activity)
+- Michiyo Hano (Public Relations and Documentation)
 - Ryota Nakamura (Beta Testers communication lead)
 - Takafumi Ochiai (Privacy policy development / Domestic and foreign law expert lawyer)
 - Jurika Morita (Privacy policy development / Domestic and foreign law expert lawyer)
@@ -70,8 +70,10 @@
 - Mizuki Kubota
 - Moe Sakuraba
 - Yuki Kawanishi
+- Satoshi Iguchi
+- Kimihiro Shirase
 
-# Beta Testers
+# Original Covid19Radar Beta Testers
 - Nagahata Kenji
 - Takahiro Soda
 - もくだいさん
