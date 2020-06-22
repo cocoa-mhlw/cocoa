@@ -340,7 +340,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at ***REMOVED***. に類似しているローカライズされた文字列を検索します。
+        ///   Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposureNotificationStatusMessageUnknown {
             get {
