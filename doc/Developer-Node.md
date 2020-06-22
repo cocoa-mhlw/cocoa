@@ -5,7 +5,7 @@
 - 現在、xamarin.exposurenotificationのNUGET版は、バックグラウンド動作でExceptionが出ます。直接プロジェクトを参照しています。
 - Linker動作の変更が必要です。
 
-![image.png](./.attachments/image-fa94e249-2692-499a-9386-6ec08dec8e5e.png)
+![image.png](.attachments/image-fa94e249-2692-499a-9386-6ec08dec8e5e.png)
 
 ## iOS
 
@@ -14,7 +14,7 @@
 -　SDKバージョンは13.5以上（最新のXcodeを入れてください）
 - Linker動作の変更が必要です。
 
-![image.png](./.attachments/image-b9670ee1-20cc-4588-9671-901fbaa433cb.png)
+![image.png](.attachments/image-b9670ee1-20cc-4588-9671-901fbaa433cb.png)
 
 ### BGTask Issue
 
@@ -35,6 +35,6 @@ Linkerの動作変更と以下のオプションの追加が必要です。
 --optimize=experimental-xforms-product-type
 ```
 
-![image.png](./.attachments/image-35068853-c6ed-4fbc-96d6-b4e30c906fa0.png)
+![image.png](.attachments/image-35068853-c6ed-4fbc-96d6-b4e30c906fa0.png)
 
 

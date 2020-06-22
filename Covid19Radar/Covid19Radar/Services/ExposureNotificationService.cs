@@ -1,16 +1,13 @@
 ﻿using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
-using Covid19Radar.Views;
 using ImTools;
 using Prism.Navigation;
-using Prism.Navigation.Xaml;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
-using System.Security.Principal;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.ExposureNotifications;
@@ -48,7 +45,7 @@ namespace Covid19Radar.Services
 
         private async void OnTimerInvoked(EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString());
+            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString(new CultureInfo("en-US")));
             //await FetchExposureKeyAsync();
         }
 
@@ -194,19 +191,19 @@ namespace Covid19Radar.Services
             switch (ExposureNotificationStatus)
             {
                 case Status.Unknown:
-                    message = "Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageUnknown;
                     break;
                 case Status.Disabled:
-                    message = "Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageDisabled;
                     break;
                 case Status.Active:
-                    message = "Exposure Notification機能は許諾の状態です。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageActive;
                     break;
                 case Status.BluetoothOff:
-                    message = "BluetoothがOffになっています。Bluetoothを有効にしてください。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff;
                     break;
                 case Status.Restricted:
-                    message = "Exposure Notification機能が承認されていません。承認してください。";
+                    message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
                     break;
                 default:
                     break;
@@ -214,7 +211,7 @@ namespace Covid19Radar.Services
 
             if (!userData.IsOptined)
             {
-                message.Append("/利用規約に同意する必要があります。");
+                message.Append(Resources.AppResources.ExposureNotificationStatusMessageIsOptined);
             }
 
             this.CurrentStatusMessage = message;

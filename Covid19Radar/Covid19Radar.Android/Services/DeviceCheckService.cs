@@ -22,7 +22,7 @@ namespace Covid19Radar.Droid.Services
     public class DeviceCheckService : IDeviceVerifier
     {
 
-        public Task<string> VerifyAsync(SelfDiagnosisSubmission  submission)
+        public Task<string> VerifyAsync(DiagnosisSubmissionParameter submission)
         {
             var nonce = submission.GetAndroidNonce();
             return GetSafetyNetAttestationAsync(nonce);

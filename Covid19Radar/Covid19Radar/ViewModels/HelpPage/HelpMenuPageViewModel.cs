@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using Covid19Radar.Model;
-using Covid19Radar.Renderers;
 using Covid19Radar.Views;
 using Prism.Commands;
 using Prism.Navigation;
-using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
@@ -58,6 +54,7 @@ namespace Covid19Radar.ViewModels
         async void Navigate()
         {
             await NavigationService.NavigateAsync(SelectedMenuItem.PageName);
+            SelectedMenuItem = null;
             return;
         }
     }
