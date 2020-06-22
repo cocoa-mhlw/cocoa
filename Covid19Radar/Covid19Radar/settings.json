@@ -1,5 +1,5 @@
 {
-  "appVersion": "Ver 1.0.0",
+  "appVersion": "VERSION",
   "apiSecret": "API_SECRET",
   "apiUrlBase": "https://API_URL_BASE/api",
   "supportedRegions": "440;441",
