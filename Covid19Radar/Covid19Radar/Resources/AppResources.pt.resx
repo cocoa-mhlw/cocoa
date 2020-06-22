@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>A notificação de exposição é restrita. Por favor, ativo.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>A notificação de exposição não é suportada. Atualize o SO para a versão mais recente. Se você ainda tiver problemas, entre em contato conosco em ***REMOVED***.</value>

@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>ప్రత్యక్షీకరణ నోటిఫికేషన్ పరిమితం చేయబడింది. దయచేసి యాక్టివ్ గా ఉండండి.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>ప్రత్యక్షీకరణ నోటిఫికేషన్ మద్దతు ఇవ్వదు. దయచేసి OSని తాజా వెర్షన్ కు అప్ డేట్ చేయండి. ఒకవేళ మీకు ఇంకా సమస్యలు ఉన్నట్లయితే, ***REMOVED*** వద్ద దయచేసి మమ్మల్ని సంప్రదించండి.</value>

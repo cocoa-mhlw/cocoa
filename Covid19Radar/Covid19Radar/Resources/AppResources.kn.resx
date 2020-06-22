@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆಯನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಸಕ್ರಿಯರಾಗಿರಿ.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆಯನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ದಯವಿಟ್ಟು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ OS ಅನ್ನು ಅಪ್ ಡೇಟ್ ಮಾಡಿ. ನಿಮಗೆ ಇನ್ನೂ ಸಮಸ್ಯೆಗಳಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು ***REMOVED*** ಸಂಪರ್ಕಿಸಿ.</value>

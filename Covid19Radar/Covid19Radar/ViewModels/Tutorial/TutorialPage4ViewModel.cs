@@ -25,61 +25,8 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickEnable => new Command(async () =>
         {
-            // Platform Split
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                try
-                {
-                    UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
-                    await ExposureNotification.StartAsync();
-
-                    var count = 0;
-                    while (true)
-                    {
-                        Thread.Sleep(1000);
-                        await ExposureNotification.StartAsync();
-
-                        Status status = await ExposureNotification.GetStatusAsync();
-                        if (status == Status.Active)
-                        {
-                            userData.IsExposureNotificationEnabled = true;
-                            await userDataService.SetAsync(userData);
-                            break;
-                        }
-                        else if (status == Status.BluetoothOff)
-                        {
-                            UserDialogs.Instance.HideLoading();
-                            await UserDialogs.Instance.AlertAsync(Resources.AppResources.TutorialPage4Description, Resources.AppResources.TutorialPage4Title1, Resources.AppResources.ButtonOk);
-                            return;
-                        }
-                        else
-                        {
-                            if (count > 2)
-                            {
-                                throw new Exception();
-                            }
-                            count++;
-                        }
-                    }
-                    UserDialogs.Instance.HideLoading();
-                }
-                catch (Exception)
-                {
-                    UserDialogs.Instance.HideLoading();
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogExposureNotificationStartupError, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
-                    Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
-                    return;
-                }
-            }
-            else if (Device.RuntimePlatform == Device.Android)
-            {
-                userData.IsExposureNotificationEnabled = true;
-                await userDataService.SetAsync(userData);
-                await exposureNotificationService.StartExposureNotification();
-            }
-
+            await ExposureNotificationService.StartExposureNotification();
             await NavigationService.NavigateAsync(nameof(TutorialPage5));
-
         });
         public Command OnClickDisable => new Command(async () =>
         {

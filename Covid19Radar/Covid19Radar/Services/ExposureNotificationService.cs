@@ -31,9 +31,9 @@ namespace Covid19Radar.Services
             this.httpDataService = httpDataService;
             this.navigationService = navigationService;
             this.userDataService = userDataService;
+            _ = this.GetExposureNotificationConfig();
             userData = userDataService.Get();
             userDataService.UserDataChanged += OnUserDataChanged;
-
             StartTimer();
         }
         private void StartTimer()
@@ -69,16 +69,6 @@ namespace Covid19Radar.Services
             Console.WriteLine("User Data has Changed!!!");
             this.userData = userDataService.Get();
             Console.WriteLine(Utils.SerializeToJson(userData));
-
-            if (userData.IsExposureNotificationEnabled)
-            {
-                await StartExposureNotification();
-            }
-            else
-            {
-                await StopExposureNotification();
-            }
-
             await UpdateStatusMessage();
         }
 
@@ -98,90 +88,63 @@ namespace Covid19Radar.Services
             return GetStatusMessage();
         }
 
+        private async Task DisabledAsync()
+        {
+            userData.IsExposureNotificationEnabled = false;
+            await userDataService.SetAsync(userData);
+            await UpdateStatusMessage();
+        }
+
+        private async Task EnabledAsync()
+        {
+            userData.IsExposureNotificationEnabled = true;
+            await userDataService.SetAsync(userData);
+            await UpdateStatusMessage();
+        }
+
+
         public async Task<bool> StartExposureNotification()
         {
-            /*
-            if (!userData.IsOptined)
-            {
-                await UserDialogs.Instance.AlertAsync("利用規約に同意する必要があります。同意ページへ遷移します。");
-                await navigationService.NavigateAsync(nameof(PrivacyPolicyPage));
-            }
-            */
-
             try
             {
-                await ExposureNotification.StartAsync();
-                var count = 0;
-                while (true)
+                var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+                if (!enabled)
                 {
-
-                    Thread.Sleep(1000);
-                    await ExposureNotification.StartAsync();
-
-                    Status status = await ExposureNotification.GetStatusAsync();
-                    if (status == Status.Active)
-                    {
-                        return true;
-                    }
-                    else if (status == Status.BluetoothOff)
-                    {
-                        await UserDialogs.Instance.AlertAsync(GetStatusMessage());
-                        return true;
-                    }
-                    else
-                    {
-                        if (count > 2)
-                        {
-                            throw new Exception();
-                        }
-                        count++;
-                    }
+                    await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
                 }
+                await EnabledAsync();
+                return true;
             }
             catch (Exception)
             {
-                userData.IsExposureNotificationEnabled = false;
-                await userDataService.SetAsync(userData);
+                await DisabledAsync();
                 return false;
             }
-
-            /*
-            ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
-            if (ExposureNotificationStatus == Status.BluetoothOff
-            //            || ExposureNotificationStatus == Status.Restricted
-            || ExposureNotificationStatus == Status.NotAuthorized)
+            finally
             {
-                await UserDialogs.Instance.AlertAsync(GetStatusMessage());
-                userData.IsExposureNotificationEnabled = false;
-                await userDataService.SetAsync(userData);
-                return false;
-            }
 
-            if (userData.IsOptined && userData.IsExposureNotificationEnabled && (ExposureNotificationStatus == Status.Unknown || ExposureNotificationStatus == Status.Active || ExposureNotificationStatus == Status.Disabled))
-            {
-                try
-                {
-                    await ExposureNotification.StartAsync();
-
-                }
-                catch (Exception)
-                {
-                    userData.IsExposureNotificationEnabled = false;
-                    await userDataService.SetAsync(userData);
-                    return false;
-                }
             }
-            return true;
-            */
         }
 
         public async Task<bool> StopExposureNotification()
         {
-            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+            try
             {
-                await ExposureNotification.StopAsync();
+                var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+                if (enabled) {
+                    await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
+                }
+                return true;
             }
-            return true;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error disabling notifications: {ex}");
+                return false;
+            }
+            finally
+            {
+                await DisabledAsync();
+            }
         }
 
         public string GetStatusMessage()
@@ -191,18 +154,24 @@ namespace Covid19Radar.Services
             switch (ExposureNotificationStatus)
             {
                 case Status.Unknown:
+                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageUnknown, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageUnknown;
                     break;
                 case Status.Disabled:
+                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageDisabled, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageDisabled;
                     break;
                 case Status.Active:
                     message = Resources.AppResources.ExposureNotificationStatusMessageActive;
                     break;
                 case Status.BluetoothOff:
+                    // call out settings in each os
+                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff;
                     break;
                 case Status.Restricted:
+                    // call out settings in each os
+                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
                     break;
                 default:
