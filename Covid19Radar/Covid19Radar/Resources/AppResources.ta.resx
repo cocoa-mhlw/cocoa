@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>தயவுகூர்ந்து உங்கள் பிணைய இணைப்பை சரிபார்க்கவும்.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>சரி</value>
@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>COVID-19 நேர்மறையான பயனருடன் நீங்கள் நெருங்கிய தொடர்பில் இருந்தால், பயன்பாடு உங்களுக்கு த் தெரிவிக்கவேண்டும்.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>முகப்புத் திரையில் இருந்து உங்கள் நெருங்கிய தொடர்புகளின் எண்ணைநீங்கள் சரிபார்க்கலாம்.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>நீங்கள் நேர்மறை சோதனை என்றால்</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>பொது சுகாதார அதிகாரிகள் உங்களுக்கு ஒரு "செயலாக்க எண்" வழங்குவார்கள்.</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>COVID-19 க்கு நீங்கள் நேர்மறையாக இருந்தால்</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>நெருங்கிய தொடர்பு பதிவை நான் எப்படி நிறுத்த / நீக்க வேண்டும்?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 தகவல் மற்றும் வளங்கள்</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>ஆதரவு</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19 க்கு நேர்மறை யாக சோதிக்கப்படும் போது</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>நேர்மறை சோதனை முடிவை பதிவு செய்யவும்</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>COVID-19 க்கு நேர்மறை யாக சோதிக்கப்படும் போது, இந்த பயன்பாட்டில் சோதனை முடிவை அநாமதேயாக பதிவு செய்யலாம்.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>நீங்கள் நேர்மறை சோதனை செய்த ஒரு பயனருடன் நெருங்கிய தொடர்பில் இருந்தால், பயன்பாடு சாத்தியமான தொற்று பற்றி உங்களுக்கு த் தெரிவிக்கவும், உங்கள் உடல்நலத்தை பாதுகாக்க வழிகாட்டவும்.</value>
@@ -610,5 +610,93 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>நாட்கள்</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு செயலில் உள்ளது.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>புளூடூத் அணைக்கப்பட்டுள்ளது. தயவுசெய்து Bluetooth ஐ இயக்கவும்.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு முடக்கப்பட்டுள்ளது. டெர்மினல் அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையை இயக்கவும்.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>நீங்கள் பயன்பாட்டு விதிமுறைகளை ஏற்க வேண்டும்.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு கட்டுப்படுத்தப்பட்டுள்ளது. தயவு செய்து செயலில்.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு ஆதரிக்கப்படவில்லை. சமீபத்திய பதிப்பிற்கு OS ஐ புதுப்பிக்கவும். நீங்கள் இன்னும் பிரச்சினைகள் இருந்தால், appsupport@cov19.mhlw.go.jp எங்களை தொடர்பு கொள்ளவும்.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>பிணைய இணைப்பு பிழை</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிப்பு தொடக்க பிழை</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>வெளிப்பாடு அறிவிக்கையை தொடங்க முடியவில்லை. முனைய அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையில் திரும்பி, Bluetooth -இல் திருப்பு.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>செயல்முறை எண் தவறானது</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>பதிவு மையத்துடன் இணைக்க முடியவில்லை</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>நேர்மறையான தகவலை ப்பதிவு செய்ய விரும்புகிறீர்களா?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>பதிவு செய்</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>ரத்துசெய்யப்பட்டது</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>பதிவு தொடங்கும் வரை சிறிது நேரம் காத்திருக்கவும்</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>பதிவுக்காக காத்திருக்கிறது</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>செயலாக்க எண் எதுவும் உள்ளிடப்படவில்லை</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>செயலாக்க எண் வடிவமைப்பு பொருந்தவில்லை</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>நேர்மறையான பதிவுகளை பதிவு செய்ய, COVID-19 தொடர்பு பதிவு பதிவை செயல்படுத்த வேண்டும், தயவுசெய்து பயன்பாடு அல்லது OS அமைப்புகளில் இருந்து அதை இயக்கவும்.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>COVID-19 தொடர்பு பதிவெடுத்தலை செயல்படுத்து</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>பதிவுகளின் எண்ணிக்கை உச்ச வரம்பை எட்டியுள்ளது. பயன்பாட்டை விட்டு வெளியேறு</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>பதிவு பிழை</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

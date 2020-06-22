@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.Services;
-using Foundation;
-using UIKit;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(CloseApplication))]

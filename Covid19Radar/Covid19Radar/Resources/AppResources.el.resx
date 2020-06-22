@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Ελέγξτε τη σύνδεση δικτύου.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ΟΚ</value>
@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Η εφαρμογή θα σας ειδοποιήσει, αν ήσασταν σε στενή επαφή με covid-19 θετικό χρήστη.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>Μπορείτε να ελέγξετε τον αριθμό των στενών επαφών σας από την αρχική οθόνη.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>Εάν έχετε εξετάσει θετικές</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>Οι αρχές δημόσιας υγείας θα σας εκδώσουν έναν «αριθμό επεξεργασίας».</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>Εάν ελέγξετε θετικά για COVID-19</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>Πώς μπορώ να σταματήσω / να διαγράψω την εγγραφή στενής επαφής;</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 Πληροφορίες και Πόροι</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Υποστήριξη</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Όταν δοκιμαστεί θετικό για COVID-19</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>Καταχώρηση θετικού αποτελέσματος δοκιμής</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>Όταν δοκιμαστεί θετικά για COVID-19, μπορείτε να καταχωρήσετε ανώνυμα το αποτέλεσμα της δοκιμής σε αυτήν την εφαρμογή.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>Εάν έχετε έρθει σε στενή επαφή με ένα χρήστη που βρέθηκε θετικός, η εφαρμογή σάς ειδοποιεί για πιθανή μόλυνση και παρέχει οδηγίες για την προστασία της υγείας σας.</value>
@@ -610,5 +610,93 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>ΗΜΕΡΕΣ</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Η ειδοποίηση έκθεσης είναι ενεργή.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Το Bluetooth είναι απενεργοποιημένο. Ενεργοποιήστε το Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Η ειδοποίηση έκθεσης είναι απενεργοποιημένη. Ανοίξτε τις ρυθμίσεις τερματικού και ενεργοποιήστε την Ειδοποίηση έκθεσης.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>Πρέπει να συμφωνήσετε με τους όρους χρήσης.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Η ειδοποίηση έκθεσης είναι περιορισμένη. Παρακαλώ ενεργή.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Η ειδοποίηση έκθεσης δεν υποστηρίζεται. Ενημερώστε το λειτουργικό σύστημα στην πιο πρόσφατη έκδοση. Αν εξακολουθείτε να αντιμετωπίζετε προβλήματα, παρακαλούμε επικοινωνήστε μαζί μας στο appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>Σφάλμα σύνδεσης δικτύου</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Σφάλμα εκκίνησης ειδοποίησης έκθεσης</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Δεν ήταν δυνατή η εκκίνηση της ειδοποίησης έκθεσης. Ανοίξτε τις ρυθμίσεις τερματικού, ενεργοποιήστε την Ειδοποίηση έκθεσης και ενεργοποιήστε το Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>Ο αριθμός διεργασίας είναι εσφαλμένος</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>Δεν είναι δυνατή η σύνδεση με το κέντρο δήλωσης</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>Θέλετε να καταχωρήσετε θετικές πληροφορίες;</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Καταχώρηση</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Ακυρωμένο</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>Περιμένετε λίγο μέχρι να ξεκινήσει η εγγραφή</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>Αναμονή εγγραφής</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>Δεν έχει εισαχθεί αριθμός επεξεργασίας</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>Η επεξεργασία της μορφής αριθμού δεν συμφωνεί</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>Για να καταχωρήσετε θετικά αρχεία, είναι απαραίτητο να ενεργοποιήσετε την καταγραφή του αρχείου καταγραφής επαφών COVID-19, ενεργοποιήστε το από την εφαρμογή ή τις ρυθμίσεις λειτουργικού συστήματος.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>Ενεργοποίηση καταγραφής επαφών COVID-19</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>Ο αριθμός των εγγραφών έχει φτάσει στο ανώτατο όριο. Έξοδος από την εφαρμογή</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>Σφάλμα εγγραφής</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

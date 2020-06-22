@@ -153,7 +153,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Please check your network connection.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Not Now</value>
@@ -288,7 +288,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>If you test positive for COVID-19</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>How do I stop / delete close contact recording?</value>
@@ -332,7 +332,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>The app will notify you, if you were in close contact with COVID-19 positive user.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>You can check the number of your close contacts from the home screen.</value>
@@ -364,7 +364,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>If you tested positive</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>Public health authorities will issue you a "processing number".</value>
@@ -472,7 +472,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 Information and Resources</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Support</value>
@@ -488,7 +488,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>When tested positive for COVID-19</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>Register positive test result</value>
@@ -584,7 +584,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>When tested positive for COVID-19, you can anonymously register the test result in this app.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>If you have been in close contact with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</value>
@@ -607,7 +607,7 @@
     <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage4Description" xml:space="preserve">
-    <value>Please turn on Bluetooth to start recording close contacts with other users.</value>
+    <value>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
   <data name="TutorialPage4Label" xml:space="preserve">
@@ -615,11 +615,11 @@
     <comment>技術的な詳細について</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
-    <value>Turn on Bluetooth</value>
+    <value>To use Exposure Notifications</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage4Title2" xml:space="preserve">
-    <value>Turn on Bluetooth</value>
+    <value>To use Exposure Notifications</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
@@ -715,5 +715,93 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>Days</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Exposure Notification is active.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>Bluetooth is turned off. Please turn on Bluetooth.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>You must agree to the terms of use.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Exposure Notification is restricted. Please active.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>Network connection error</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Exposure Notification startup error</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>Process number incorrect</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>Cannot connect to registration center</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>Do you want to register positive information?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Register</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Canceled</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>Please wait for a while until registration starts</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>Awaiting registration</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>No processing number entered</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>Processing number format does not match</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>Enable COVID-19 contact logging</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>The number of registrations has reached the upper limit. Exit application</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>Registration error</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

@@ -1,8 +1,11 @@
-# COVID-19Radar (English)/([Japanese](https://github.com/Covid-19Radar/Covid19Radar/blob/master/README.ja.md))
+# COVID-19Radar (English)/([Japanese](README.ja.md))
+
+“There is only one version of contact confirming app in app stores - the official version by the Ministry of Health, Labor and Welfare. This Github contains code that became the base for the official app, but it is not the same as the code for the official app itself.
+This code is maintained by the community and there is no guarantee that issues or pull requests will be reflected in the official app."
 
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
 
-We are looking for translator reviewers, Please see [How to Translate application](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_TRANSLATE_CONTRIBUTE.md) page.
+We are looking for translator reviewers, Please see [How to Translate application](HOW_TO_TRANSLATE_CONTRIBUTE.md) page.
 
 iOS Build Master Branch status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
@@ -11,10 +14,10 @@ Android Build Master Branch status [![Android Build status](https://build.appcen
 This app uses Exposure Notification / Bluetooth LE to get the contact logs of each other.  
 ![App Description](img/explanation_en.png)
 
-## Thank you for Your Contribution !!! [Contributors List](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTORS.md)
+## Thank you for Your Contribution !!! [Contributors List](CONTRIBUTORS.md)
 We welcome contributions and pull requests.
 Please check the contribution rules.
-[Contribute Rule](https://github.com/Covid-19Radar/Covid19Radar/blob/master/CONTRIBUTING.md)
+[Contribute Rule](CONTRIBUTING.md)
 
 ## How to install the app for tester
 
@@ -68,7 +71,7 @@ You can check the screen transition by accessing the following URL.
 ## Licensing
 
 COVID-19Radar is licensed under the Mozilla Public License Version 2.0. See
-[LICENSE](./LICENSE.md) for the full license text.
+[LICENSE](LICENSE.md) for the full license text.
 
 The following are additional items in this license depending on the intention of the original author.
 In Addition to MPL, this project not permit exercise of moral rights of co-authors.
@@ -76,4 +79,4 @@ Dispute or litigation by each author is not allowed.
 
 ## About 3rd Party Software
 
-This file incorporates components from the projects listed [document](./COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
+This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
