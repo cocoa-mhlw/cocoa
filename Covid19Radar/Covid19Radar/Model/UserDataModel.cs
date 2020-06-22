@@ -65,8 +65,13 @@ namespace Covid19Radar.Model
 
         public string GetLocalDateString()
         {
+            if (StartDateTime == DateTime.MinValue)
+            {
+                StartDateTime = DateTime.UtcNow;
+            }
+
             string cultureName = CultureInfo.CurrentUICulture.ToString();
-            if(cultureName.Contains("ar"))
+            if (cultureName.Contains("ar"))
             {
                 return StartDateTime.ToLocalTime().ToString("D", new CultureInfo("ar-AE"));
             }
@@ -78,13 +83,13 @@ namespace Covid19Radar.Model
 
         public bool IsOptined { get; set; } = false;
 
-        public bool IsExposureNotificationEnabled { get; set; }
+        public bool IsExposureNotificationEnabled { get; set; } = false;
 
-        public bool IsNotificationEnabled { get; set; }
+        public bool IsNotificationEnabled { get; set; } = false;
 
-        public bool IsPositived { get; set; }
+        public bool IsPositived { get; set; } = false;
 
-        public bool IsPolicyAccepted { get; set; }
+        public bool IsPolicyAccepted { get; set; } = false;
 
         public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
 

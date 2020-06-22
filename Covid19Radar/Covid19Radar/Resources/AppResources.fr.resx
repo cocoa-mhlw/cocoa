@@ -629,11 +629,11 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>La notification d’exposition est restreinte. S’il vous plaît actif.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>La notification d’exposition n’est pas prise en charge. Veuillez mettre à jour le système d’exploitation vers la dernière version. Si vous avez encore des problèmes, s’il vous plaît contactez-nous à ***REMOVED***.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+    <value>La notification d’exposition n’est pas prise en charge. Veuillez mettre à jour le système d’exploitation vers la dernière version. Si vous avez encore des problèmes, s’il vous plaît contactez-nous à appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Erreur de connexion réseau</value>

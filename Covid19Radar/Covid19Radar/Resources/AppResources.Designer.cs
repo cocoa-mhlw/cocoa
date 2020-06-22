@@ -331,7 +331,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Exposure Notification is restricted. Please active. に類似しているローカライズされた文字列を検索します。
+        ///   COVID-19 Contact notification feature not approved. Please approve from each OS or re-approve after reinstalling the application. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposureNotificationStatusMessageRestricted {
             get {
@@ -340,7 +340,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at ***REMOVED***. に類似しているローカライズされた文字列を検索します。
+        ///   Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposureNotificationStatusMessageUnknown {
             get {

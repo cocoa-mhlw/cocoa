@@ -801,14 +801,15 @@
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
-          <source>Exposure Notification is restricted. Please active.</source>
+          <source>COVID-19 Contact notification feature not approved. Please approve from each OS or re-approve after reinstalling the application.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Altistumisilmoitus on rajoitettu. Ole hyvä ja aktiivinen.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能が承認されていません。承認してください。</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
-          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at ***REMOVED***.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Altistumisilmoitusta ei tueta. Päivitä käyttöjärjestelmä uusimpaan versioon. Jos sinulla on edelleen ongelmia, ota meihin yhteyttä ***REMOVED***.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</note>
+          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Altistumisilmoitusta ei tueta. Päivitä käyttöjärjestelmä uusimpaan versioon. Jos sinulla on edelleen ongelmia, ota meihin yhteyttä appsupport@cov19.mhlw.go.jp.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
           <source>Network connection error</source>
