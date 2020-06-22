@@ -21,7 +21,8 @@
                 HasUnevenRows="True"
                 SelectedItem="{Binding SelectedMenuItem}"
                 SeparatorColor="#E0E0E0"
-                SeparatorVisibility="Default">
+                SeparatorVisibility="Default"
+                Footer="">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
