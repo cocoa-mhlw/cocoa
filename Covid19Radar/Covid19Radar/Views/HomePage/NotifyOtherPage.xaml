@@ -7,6 +7,7 @@
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    xmlns:common="clr-namespace:Covid19Radar.Common"
     xmlns:system="clr-namespace:System;assembly=netstandard"
     Title="{x:Static resources:AppResources.NotifyOtherPageTitle}"
     ios:Page.UseSafeArea="true"
@@ -50,7 +51,7 @@
                             <Entry
                                 CharacterSpacing="5"
                                 Keyboard="Numeric"
-                                MaxLength="8"
+                                MaxLength="{x:Static common:AppConstants.MaxDiagnosisUidCount}"
                                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"
                                 Style="{StaticResource DefaultEntry}"
                                 Text="{Binding DiagnosisUid}" />
