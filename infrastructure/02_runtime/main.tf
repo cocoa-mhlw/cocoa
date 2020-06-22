@@ -7,15 +7,15 @@ resource "azurerm_resource_group" "prod" {
 # Create a cosmos db account and create a database
 
 resource "random_string" "prod" {
-  length = 3 
-  special = false
-  lower = true
+  length    = 3
+  special   = false
+  lower     = true
   min_lower = 3
-  
+
   keepers = {
     rg = "${azurerm_resource_group.prod.id}"
   }
-} 
+}
 resource "azurerm_cosmosdb_account" "prod" {
   name                = "${var.cosmos_db_name_prefix}-${random_string.prod.result}"
   location            = azurerm_resource_group.prod.location
@@ -32,17 +32,17 @@ resource "azurerm_cosmosdb_account" "prod" {
     max_staleness_prefix    = var.cosmos_db_max_staleness_prefix
   }
 
- # Enable this if you want Geo Location.
- # geo_location {
- #   location          = var.failover_location
- #   failover_priority = 1
- # }
+  # Enable this if you want Geo Location.
+  # geo_location {
+  #   location          = var.failover_location
+  #   failover_priority = 1
+  # }
 
   geo_location {
     location          = azurerm_resource_group.prod.location
     failover_priority = 0 # Should be one if you want to enable this.
   }
-    depends_on = [azurerm_resource_group.prod]
+  depends_on = [azurerm_resource_group.prod]
 }
 
 resource "azurerm_cosmosdb_sql_database" "prod" {
@@ -50,7 +50,7 @@ resource "azurerm_cosmosdb_sql_database" "prod" {
   resource_group_name = azurerm_cosmosdb_account.prod.resource_group_name
   account_name        = azurerm_cosmosdb_account.prod.name
   throughput          = var.cosmos_db_database_throughput
-  depends_on = [azurerm_cosmosdb_account.prod]
+  depends_on          = [azurerm_cosmosdb_account.prod]
 }
 
 # Create a Notification Hub
@@ -84,8 +84,8 @@ resource "azurerm_notification_hub_authorization_rule" "prod" {
 # Create a FunctionApp
 resource "random_string" "sa" {
   length  = 8
-  lower = true
-  upper = false
+  lower   = true
+  upper   = false
   special = false
 }
 
@@ -100,7 +100,7 @@ resource "azurerm_storage_account" "prod" {
 
 resource "azurerm_app_service_plan" "prod" {
   name                = "${var.function_app_name_prefix}plan"
-  location            =  azurerm_resource_group.prod.location
+  location            = azurerm_resource_group.prod.location
   resource_group_name = azurerm_resource_group.prod.name
   kind                = "FunctionApp"
 
@@ -128,10 +128,10 @@ resource "azurerm_function_app" "prod" {
   version                   = "~3"
 
   app_settings = {
-    FUNCTIONS_WORKER_RUNTIME = "dotnet"
+    FUNCTIONS_WORKER_RUNTIME       = "dotnet"
     APPINSIGHTS_INSTRUMENTATIONKEY = azurerm_application_insights.prod.instrumentation_key
-    COSMOS_DB_MASTER_KEY = azurerm_cosmosdb_account.prod.primary_readonly_master_key
-    NOTIFICATION_HUB_PRIMARY_KEY = azurerm_notification_hub_authorization_rule.prod.primary_access_key
+    COSMOS_DB_MASTER_KEY           = azurerm_cosmosdb_account.prod.primary_readonly_master_key
+    NOTIFICATION_HUB_PRIMARY_KEY   = azurerm_notification_hub_authorization_rule.prod.primary_access_key
   }
 
   depends_on = [azurerm_storage_account.prod, azurerm_app_service_plan.prod, azurerm_application_insights.prod, azurerm_cosmosdb_account.prod, azurerm_notification_hub_authorization_rule.prod]
