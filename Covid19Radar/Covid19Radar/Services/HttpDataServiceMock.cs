@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -42,10 +43,12 @@ namespace Covid19Radar.Services
             return userData;
         }
 
-        Task IHttpDataService.PutSelfExposureKeysAsync(SelfDiagnosisSubmission request)
+        Task<HttpStatusCode> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
-            return Task.Factory.StartNew(() => {
+            return Task.Factory.StartNew<HttpStatusCode>(() =>
+            {
                 Debug.WriteLine("HttpDataServiceMock::PutSelfExposureKeysAsync called");
+                return HttpStatusCode.OK;
             });
         }
     }
