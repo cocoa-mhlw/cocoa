@@ -1,13 +1,15 @@
 {
   "appVersion": "Ver 1.0.0",
-  "apiSecret": "br0fwPknc3H1etBskuueOFV9UywQyedT2Bv8n6DE2Tx1vHCczliafw==",
-  "apiUrlBase": "https://covid19radar.azurefd.net/api",
+  "apiSecret": "API_SECRET",
+  "apiUrlBase": "https://API_URL_BASE/api",
   "supportedRegions": "440;441",
   "blobStorageContainerName": "c19r",
-  "androidSafetyNetApiKey": "AIzaSyDU-HjfMDUcF-rVrdGW4fJS1RAvK_L9eew",
-  "cdnUrlBase": "https://covid19radar-jpn-prod.azureedge.net/",
+  "androidSafetyNetApiKey": "ANDROID_SAFETYNETKEY",
+  "cdnUrlBase": "https://CDN_URL_BASE/",
   "licenseUrl": "https://covid19radarjpnprod.z11.web.core.windows.net/license.html",
   "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
   "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
-  "supportEmail": "appsupport@cov19.mhlw.go.jp"
+  "appCenterTokensAndroid": "APPCENTER_ANDROID",
+  "appCenterTokensIOS": "APPCENTER_IOS",
+  "supportEmail": "SUPPORT_EMAIL"
 }
