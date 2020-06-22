@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>Tilkynning um útsetningu er takmörkuð. Vinsamlegast virkjið.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Tilkynning um útsetningu er ekki studd. Vinsamlegast uppfærðu OS í nýjustu útgáfunni. Ef þú ert enn í vandræðum, vinsamlegast hafðu samband við okkur á appsupport@cov19.mhlw.go.jp.</value>
