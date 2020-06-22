@@ -5,7 +5,6 @@ echo "Arguments for updating:"
 APP_PLIST_FILE=$BUILD_REPOSITORY_LOCALPATH/Covid19Radar/Covid19Radar.iOS/Info.plist
 sed -i '' "s/APP_PACKAGE_NAME/$APP_PACKAGE_NAME/g" $APP_PLIST_FILE
 sed -i '' "s/APP_VERSION/$APP_VERSION/g" $APP_PLIST_FILE
-sed -i '' "s/android:debuggable=\"true\"//g" $APP_PLIST_FILE
 cat $APP_PLIST_FILE
 
 
