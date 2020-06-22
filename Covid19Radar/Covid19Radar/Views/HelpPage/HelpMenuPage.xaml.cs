@@ -10,5 +10,10 @@ namespace Covid19Radar.Views
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            list_view.SelectedItem = null;
+        }
     }
 }
