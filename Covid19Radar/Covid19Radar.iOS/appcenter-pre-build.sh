@@ -2,11 +2,18 @@
 
 echo "Arguments for updating:"
 
+APP_PLIST_FILE=$BUILD_REPOSITORY_LOCALPATH/Covid19Radar/Covid19Radar.iOS/Info.plist
+sed -i '' "s/APP_PACKAGE_NAME/$APP_PACKAGE_NAME/g" $APP_PLIST_FILE
+sed -i '' "s/APP_VERSION/$APP_VERSION/g" $APP_PLIST_FILE
+sed -i '' "s/android:debuggable=\"true\"//g" $APP_PLIST_FILE
+cat $APP_PLIST_FILE
+
+
 # Updating ids
 
 APP_CONSTANT_FILE=$BUILD_REPOSITORY_LOCALPATH/Covid19Radar/Covid19Radar/settings.json
 
-sed -i '' "s/VERSION/$VERSION/g" $APP_CONSTANT_FILE
+sed -i '' "s/APP_VERSION/$APP_VERSION/g" $APP_CONSTANT_FILE
 sed -i '' "s/API_SECRET/$API_SECRET/g" $APP_CONSTANT_FILE
 sed -i '' "s/API_URL_BASE/$API_URL_BASE/g" $APP_CONSTANT_FILE
 sed -i '' "s/ANDROID_SAFETYNETKEY/$ANDROID_SAFETYNETKEY/g" $APP_CONSTANT_FILE

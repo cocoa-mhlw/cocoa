@@ -1,5 +1,5 @@
 {
-  "appVersion": "VERSION",
+  "appVersion": "APP_VERSION",
   "apiSecret": "API_SECRET",
   "apiUrlBase": "https://API_URL_BASE/api",
   "supportedRegions": "440;441",
@@ -9,7 +9,5 @@
   "licenseUrl": "https://covid19radarjpnprod.z11.web.core.windows.net/license.html",
   "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
   "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
-  "appCenterTokensAndroid": "APPCENTER_ANDROID",
-  "appCenterTokensIOS": "APPCENTER_IOS",
   "supportEmail": "SUPPORT_EMAIL"
 }
