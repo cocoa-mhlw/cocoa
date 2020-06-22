@@ -807,9 +807,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
-          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at ***REMOVED***.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Не се поддържа уведомяване за експозиция. Моля, актуализирайте операционната система до най-новата версия. Ако все още имате проблеми, моля, свържете се с нас на ***REMOVED***.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</note>
+          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Не се поддържа уведомяване за експозиция. Моля, актуализирайте операционната система до най-новата версия. Ако все още имате проблеми, моля, свържете се с нас на appsupport@cov19.mhlw.go.jp.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
           <source>Network connection error</source>

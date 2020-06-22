@@ -632,8 +632,8 @@
     <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Blootstellingsmelding wordt niet ondersteund. Werk het besturingssysteem bij naar de nieuwste versie. Als je nog steeds problemen hebt, neem dan contact met ons op ***REMOVED***.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+    <value>Blootstellingsmelding wordt niet ondersteund. Werk het besturingssysteem bij naar de nieuwste versie. Als je nog steeds problemen hebt, neem dan contact met ons op appsupport@cov19.mhlw.go.jp.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Netwerkverbindingsfout</value>

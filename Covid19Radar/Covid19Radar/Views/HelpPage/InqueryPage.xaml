@@ -26,7 +26,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span
-                                    Text="***REMOVED***"
+                                    Text="appsupport@cov19.mhlw.go.jp"
                                     TextColor="{StaticResource Primary}"
                                     TextDecorations="Underline" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />

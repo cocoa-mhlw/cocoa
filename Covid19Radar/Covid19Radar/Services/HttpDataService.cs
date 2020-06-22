@@ -13,7 +13,7 @@ using System.Net;
 
 namespace Covid19Radar.Services
 {
-    public class HttpDataService
+    public class HttpDataService: IHttpDataService
     {
         private readonly HttpClient httpClient;
         private readonly HttpClient downloadClient;
