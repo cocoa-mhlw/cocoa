@@ -17,7 +17,7 @@ namespace Covid19Radar.Services
 {
     public class ExposureNotificationService
     {
-        private readonly HttpDataService httpDataService;
+        private readonly IHttpDataService httpDataService;
         private readonly UserDataService userDataService;
         private readonly INavigationService navigationService;
         public string CurrentStatusMessage { get; set; } = "初期状態";
@@ -26,7 +26,7 @@ namespace Covid19Radar.Services
         private SecondsTimer _downloadTimer;
         private UserDataModel userData;
 
-        public ExposureNotificationService(INavigationService navigationService, UserDataService userDataService, HttpDataService httpDataService)
+        public ExposureNotificationService(INavigationService navigationService, UserDataService userDataService, IHttpDataService httpDataService)
         {
             this.httpDataService = httpDataService;
             this.navigationService = navigationService;
