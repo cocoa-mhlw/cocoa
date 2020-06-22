@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>กรุณาตรวจสอบการเชื่อมต่อเครือข่ายของคุณ</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ตกลง</value>
@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>แอปจะแจ้งให้คุณทราบหากคุณอยู่ในการติดต่อใกล้ชิดกับผู้ใช้ในเชิงบวก COVID-19</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>คุณสามารถตรวจสอบหมายเลขของผู้ติดต่อใกล้ของคุณจากหน้าจอหลัก</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>หากคุณทดสอบในเชิงบวก</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>เจ้าหน้าที่สาธารณสุขจะออกคุณ "หมายเลขการประมวลผล"</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>หากคุณทดสอบในเชิงบวกสําหรับ COVID-19</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>ฉันจะหยุด / ลบการบันทึกการติดต่อใกล้ได้อย่างไร</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>ข้อมูลและทรัพยากร COVID-19</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>การสนับสนุน</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>เมื่อทดสอบในเชิงบวกสําหรับ COVID-19</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>ลงทะเบียนผลการทดสอบในเชิงบวก</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>เมื่อทดสอบในเชิงบวกสําหรับ COVID-19 คุณสามารถลงทะเบียนผลการทดสอบในแอปนี้โดยไม่ระบุชื่อ</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>หากคุณได้รับการติดต่ออย่างใกล้ชิดกับผู้ใช้ที่ทดสอบในเชิงบวก app จะแจ้งให้คุณทราบถึงการติดเชื้อที่อาจเกิดขึ้นและให้คําแนะนําเพื่อปกป้องสุขภาพของคุณ</value>
@@ -610,5 +610,93 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>วัน</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>การแจ้งเตือนการเปิดรับแสงทํางานอยู่</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>บลูทูธถูกปิดอยู่ กรุณาเปิดบลูทูธ</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>การแจ้งเตือนการเปิดรับแสงถูกปิดใช้งาน เปิดการตั้งค่าเทอร์มินัลและเปิดการแจ้งเตือนการเปิดรับแสง</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>คุณต้องยอมรับเงื่อนไขการใช้งาน</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>การแจ้งเตือนการเปิดรับแสงจะถูกจํากัด กรุณาใช้งาน</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>การแจ้งเตือนค่าแสงไม่ได้รับการสนับสนุน โปรดอัปเดตระบบปฏิบัติการเป็นเวอร์ชันล่าสุด หากคุณยังคงมีปัญหาโปรดติดต่อเราได้ที่***REMOVED***</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>ข้อผิดพลาดในการเชื่อมต่อเครือข่าย</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>ข้อผิดพลาดการเริ่มต้นระบบการแจ้งเตือนการเปิดรับแสง</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>การแจ้งเตือนการเปิดรับแสงไม่สามารถเริ่มต้น เปิดการตั้งค่าเทอร์มินัล แล้วเปิดการแจ้งเตือนการเปิดรับแสง และเปิดบลูทูธ</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>หมายเลขกระบวนการไม่ถูกต้อง</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>ไม่สามารถเชื่อมต่อกับศูนย์การลงทะเบียน</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>คุณต้องการลงทะเบียนข้อมูลเชิงบวกหรือไม่?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>ลงทะเบียน</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>ถูกยกเลิก</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>กรุณารอสักพักจนกว่าการลงทะเบียนจะเริ่มต้น</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>กําลังรอการลงทะเบียน</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>ไม่มีหมายเลขการประมวลผลที่ป้อน</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>รูปแบบตัวเลขการประมวลผลไม่ตรงกัน</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>ในการลงทะเบียนระเบียนบวกมีความจําเป็นต้องเปิดใช้งานการบันทึกบันทึกการติดต่อ COVID-19 โปรดเปิดใช้งานได้จากการตั้งค่าแอปพลิเคชันหรือระบบปฏิบัติการ</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>เปิดใช้งานการบันทึกผู้ติดต่อ COVID-19</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>จํานวนการลงทะเบียนถึงขีดจํากัดสูงสุดแล้ว ออกจากโปรแกรมประยุกต์</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>ข้อผิดพลาดในการลงทะเบียน</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

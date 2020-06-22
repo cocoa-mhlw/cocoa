@@ -37,7 +37,7 @@
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>ದಯವಿಟ್ಟು ನಿಮ್ಮ ನೆಟ್ ವರ್ಕ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ.</value>
-    <comment>Dialog message for Network connection error</comment>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>ಸರಿ</value>
@@ -187,7 +187,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>COVID-19 ಸಕಾರಾತ್ಮಕ ಬಳಕೆದಾರನೊಂದಿಗೆ ನೀವು ನಿಕಟ ಸಂಪರ್ಕದಲ್ಲಿದ್ದರೆ, ಅಪ್ಲಿಕೇಶನ್ ನಿಮಗೆ ಮಾಹಿತಿ ಯನ್ನು ನೀಡಲಿದೆ.</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>ಹೋಮ್ ಸ್ಕ್ರೀನ್ ನಿಂದ ನಿಮ್ಮ ನಿಕಟ ಸಂಪರ್ಕಗಳ ಸಂಖ್ಯೆಯನ್ನು ನೀವು ಪರಿಶೀಲಿಸಬಹುದು.</value>
@@ -211,7 +211,7 @@
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>ನೀವು ಧನಾತ್ಮಕ ಪರೀಕ್ಷೆಮಾಡಿದ್ದರೆ</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>ಸಾರ್ವಜನಿಕ ಆರೋಗ್ಯ ಅಧಿಕಾರಿಗಳು ನಿಮಗೆ "ಪ್ರೊಸೆಸಿಂಗ್ ನಂಬರ್" ಅನ್ನು ಬಿಡುಗಡೆ ಮಾಡುತ್ತಾರೆ.</value>
@@ -271,7 +271,7 @@
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>COVID-19 ಗಾಗಿ ನೀವು ಧನಾತ್ಮಕವನ್ನು ಪರೀಕ್ಷಿಸಿದರೆ</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>ಕ್ಲೋಸ್ ಕಾಂಟ್ಯಾಕ್ಟ್ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ನಿಲ್ಲಿಸುವುದು ಹೇಗೆ / ಅಳಿಸುವುದು?</value>
@@ -363,7 +363,7 @@
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 ಮಾಹಿತಿ ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>ಬೆಂಬಲ</value>
@@ -379,7 +379,7 @@
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19 ಗಾಗಿ ಧನಾತ್ಮಕವಾಗಿ ಪರೀಕ್ಷಿಸಿದಾಗ</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>ಧನಾತ್ಮಕ ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶದಾಖಲಿಸಿ</value>
@@ -475,7 +475,7 @@
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
     <value>COVID-19 ಗಾಗಿ ಧನಾತ್ಮಕವಾಗಿ ಪರೀಕ್ಷಿಸಿದಾಗ, ಈ ಅಪ್ಲಿಕೇಶನ್ ನಲ್ಲಿ ನೀವು ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶವನ್ನು ಅನಾಮಧೇಯವಾಗಿ ನೋಂದಾಯಿಸಬಹುದು.</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>ನೀವು ಧನಾತ್ಮಕ ಪರೀಕ್ಷೆಮಾಡಿದ ಬಳಕೆದಾರರೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕದಲ್ಲಿದ್ದರೆ, ಸಂಭಾವ್ಯ ಸೋಂಕಿನ ಬಗ್ಗೆ ಅಪ್ಲಿಕೇಶನ್ ನಿಮಗೆ ಸೂಚನೆ ನೀಡುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಆರೋಗ್ಯವನ್ನು ರಕ್ಷಿಸಲು ಮಾರ್ಗದರ್ಶನವನ್ನು ಒದಗಿಸುತ್ತದೆ.</value>
@@ -610,5 +610,93 @@
   <data name="HomePagePastDays" xml:space="preserve">
     <value>ದಿನಗಳು</value>
     <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆ ಸಕ್ರಿಯವಾಗಿದೆ.</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>ಬ್ಲೂಟೂತ್ ಆಫ್ ಆಗಿದೆ. ದಯವಿಟ್ಟು Bluetooth ಆನ್ ಮಾಡಿ.</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಟರ್ಮಿನಲ್ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ತೆರೆಯಿರಿ ಮತ್ತು ಎಕ್ಸ್ ಪೋಷರ್ ನೋಟಿಫಿಕೇಶನ್ ಅನ್ನು ಆನ್ ಮಾಡಿ.</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>ನೀವು ಬಳಕೆಯ ನಿಬಂಧನೆಗಳನ್ನು ಒಪ್ಪಬೇಕು.</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆಯನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಸಕ್ರಿಯರಾಗಿರಿ.</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆಯನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ದಯವಿಟ್ಟು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ OS ಅನ್ನು ಅಪ್ ಡೇಟ್ ಮಾಡಿ. ನಿಮಗೆ ಇನ್ನೂ ಸಮಸ್ಯೆಗಳಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು ***REMOVED*** ಸಂಪರ್ಕಿಸಿ.</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、***REMOVED***までお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>ನೆಟ್ವರ್ಕ್ ಸಂಪರ್ಕ ದೋಷ</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಶರ್ ನೋಟಿಫಿಕೇಶನ್ ಪ್ರಾರಂಭದೋಷ</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆ ಯನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಟರ್ಮಿನಲ್ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ತೆರೆಯಿರಿ, ಎಕ್ಸ್ ಪೋಷರ್ ನೋಟಿಫಿಕೇಶನ್ ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ, ಮತ್ತು Bluetooth ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ.</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>ಪ್ರಕ್ರಿಯೆ ಸಂಖ್ಯೆ ತಪ್ಪಾಗಿದೆ</value>
+    <comment>アプリで入力された処理番号が違います</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>ನೋಂದಣಿ ಕೇಂದ್ರಕ್ಕೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>ನೀವು ಧನಾತ್ಮಕ ಮಾಹಿತಿಯನ್ನು ನೋಂದಾಯಿಸಲು ಬಯಸುವಿರಾ?</value>
+    <comment>陽性情報を登録しますか?</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>ನೋಂದಾಯಿಸಿ</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</value>
+    <comment>キャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>ನೋಂದಣಿ ಪ್ರಾರಂಭವಾಗುವವರೆಗೆ ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯ ಕಾಯಿರಿ</value>
+    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>ನೋಂದಣಿಗಾಗಿ ಕಾಯುತ್ತಿದೆ</value>
+    <comment>登録待ち</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+    <value>ಯಾವುದೇ ಸಂಸ್ಕರಣಾ ಸಂಖ್ಯೆ ನಮೂದಿಸಿಲ್ಲ</value>
+    <comment>処理番号が入力されていません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>ಸಂಖ್ಯಸ್ವರೂಪವನ್ನು ಸಂಸ್ಕರಿಸುವುದು ಹೋಲಿಕೆಯಾಗುವುದಿಲ್ಲ</value>
+    <comment>処理番号のフォーマットが一致していません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+    <value>ಧನಾತ್ಮಕ ದಾಖಲೆಗಳನ್ನು ನೋಂದಾಯಿಸಲು, COVID-19 ಸಂಪರ್ಕ ಲಾಗ್ ರೆಕಾರ್ಡಿಂಗ್ ಅನ್ನು ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸುವುದು ಅಗತ್ಯ, ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್ ಅಥವಾ OS ಸೆಟ್ಟಿಂಗ್ ಗಳಿಂದ ಅದನ್ನು ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸಿ.</value>
+    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+    <value>COVID-19 ಸಂಪರ್ಕ ಲಾಗಿಂಗ್ ಕ್ರಿಯಾತ್ಮಕಗೊಳಿಸು</value>
+    <comment>COVID-19接触のログ記録を有効にしてください</comment>
+  </data>
+  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>ನೋಂದಣಿಗಳ ಸಂಖ್ಯೆ ಗರಿಷ್ಠ ಮಿತಿಯನ್ನು ತಲುಪಿದೆ. ಅಪ್ಲಿಕೇಶನ್ ನಿಂದ ನಿರ್ಗಮಿಸು</value>
+    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  </data>
+  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
+    <value>ನೋಂದಣಿ ದೋಷ</value>
+    <comment>登録エラー</comment>
   </data>
 </root>

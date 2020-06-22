@@ -1,8 +1,6 @@
 ﻿using FFImageLoading.Helpers;
 using Prism.Logging;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using static System.Diagnostics.Debug;
 
 namespace Covid19Radar.Services
