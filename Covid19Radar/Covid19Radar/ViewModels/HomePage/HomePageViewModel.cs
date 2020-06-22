@@ -33,7 +33,6 @@ namespace Covid19Radar.ViewModels
             Title = AppResources.HomePageTitle;
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
-            _ = exposureNotificationService.GetExposureNotificationConfig();
             _ = exposureNotificationService.StartExposureNotification();
             userData = this.userDataService.Get();
             StartDate = userData.GetLocalDateString();

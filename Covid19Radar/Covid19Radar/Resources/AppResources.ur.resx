@@ -629,11 +629,11 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>�?�?ائش ک�? اط�?اع �?حدود ہ�? �? برائ�? �?�?ربا�?�? �?عا�?.</value>
-    <comment>Exposure Notification機�?�が承認されて�?ません。承認してください�?</comment>
+    <comment>COVID-19接触通知機�?�が承認されて�?ません。各OSから承認するか、また�?�アプリの再インスト�?�ル後に、�?�承認してください�?</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>�?�?ائش ک�? اط�?اع ک�? تائید �?ہیں ک�? گئ�? �? برا�? کر�? تاز�? تری�? ورژ�? �?یں OS ک�? اپ ڈیٹ کریں. اگر اب بھ�? آپ ک�? �?سائ�? ہیں �? ت�? برا�? �?�?ربا�?�? �?�? س�? رابط�? کریں ***REMOVED***.</value>
-    <comment>Exposure Notification機�?�は非対応�?�状態です�?�OSを最新版にア�?プデートしてください。それでも改�?しなければ、***REMOVED***までお問�?合わせく�?さい�?</comment>
+    <comment>Exposure Notification機�?�は非対応�?�状態です�?�OSを最新版にア�?プデートしてください。それでも改�?しなければ、appsupport@cov19.mhlw.go.jpまでお問�?合わせく�?さい�?</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>�?یٹ ورک ک�?کش�? �?قص</value>

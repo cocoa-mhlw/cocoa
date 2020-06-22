@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>La funzione "notifica di esposizione" è disattivata. Si prega di attivarla.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>La funzione "notifica di esposizione" non è supportata. Aggiorna il sistema operativo alla versione più recente. Se hai ancora problemi, contattaci a ***REMOVED***.</value>

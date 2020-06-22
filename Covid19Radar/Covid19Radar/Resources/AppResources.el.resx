@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>�? ειδο�?οίηση έκθεση�? είναι �?εριορισμένη. �?αρακαλ�? ενεργή.</value>
-    <comment>Exposure Notification機�?�が承認されて�?ません。承認してください�?</comment>
+    <comment>COVID-19接触通知機�?�が承認されて�?ません。各OSから承認するか、また�?�アプリの再インスト�?�ル後に、�?�承認してください�?</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>�? ειδο�?οίηση έκθεση�? δεν �?�?οσ�?ηρίζε�?αι. Ενημε�?ώσ�?ε �?ο λει�?ο�?ργικ�? σύσ�?ημα σ�?ην �?ιο �?�?όσ�?α�?η έκδοση. Αν εξακολο�?θεί�?ε να αν�?ιμε�?ω�?ίζε�?ε �?ροβλήμα�?α, �?αρακαλούμε ε�?ικοινωνήσ�?ε μαζί μα�? σ�?ο ***REMOVED***.</value>
