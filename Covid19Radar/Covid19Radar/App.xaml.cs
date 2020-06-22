@@ -59,7 +59,6 @@ namespace Covid19Radar
             // Local Notification tap event listener
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
-            _ = InitializeBackgroundTasks();
 
             INavigationResult result;
             // Check user data and skip tutorial
@@ -93,6 +92,7 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
+
         }
 
         protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -147,23 +147,22 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
-            
         }
 
         protected override void OnResume()
         {
         }
 
-        async Task InitializeBackgroundTasks()
+        /*
+         public async Task InitializeBackgroundTasks()
         {
             if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
-
+        */
         protected override void OnSleep()
         {
         }
-
 
         private void LogUnobservedTaskExceptions()
         {

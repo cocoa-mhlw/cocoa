@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>एक्सपोजर नोटिफिकेशन प्रतिबंधित है। कृपया सक्रिय करें।</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>एक्सपोजर अधिसूचना का समर्थन नहीं किया जाता है। ओएस को नवीनतम संस्करण में अपडेट करें। यदि आपको अभी भी समस्या है, तो कृपया हमसे appsupport@cov19.mhlw.go.jp पर संपर्क करें।</value>

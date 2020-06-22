@@ -629,7 +629,7 @@
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
     <value>Pranešimas apie ekspoziciją yra ribojamas. Prašome aktyvūs.</value>
-    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Pranešimas apie ekspoziciją nepalaikomas. Atnaujinkite OS į naujausią versiją. Jei vis dar turite problemų, prašome susisiekti su mumis appsupport@cov19.mhlw.go.jp.</value>

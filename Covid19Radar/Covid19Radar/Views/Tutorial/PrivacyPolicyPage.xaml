@@ -18,14 +18,19 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Margin="0,0,0,20" Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.PrivacyPolicyPageTitle}" />
-        <views:NavigatePopoverWebView Grid.Row="1"
+        <Label
+            Grid.Row="0"
+            Margin="0,0,0,20"
+            Style="{StaticResource DefaultTitleLabel}"
+            Text="{x:Static resources:AppResources.PrivacyPolicyPageTitle}" />
+        <views:NavigatePopoverWebView
+            Grid.Row="1"
             Source="{x:Static resources:AppResources.UrlPrivacyPolicy}"
             Style="{StaticResource DefaultWebView}" />
         <Button
             Grid.Row="2"
             AutomationId="ButtonAgree"
-            Command="{prism:NavigateTo 'TutorialPage4'}"
+            Command="{Binding Path=OnClickAgree}"
             Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.ButtonAgree}" />
     </Grid>
