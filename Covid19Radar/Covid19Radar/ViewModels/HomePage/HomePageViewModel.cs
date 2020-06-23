@@ -4,7 +4,6 @@ using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
-using ImTools;
 using Prism.Navigation;
 using Xamarin.Forms;
 
