@@ -39,7 +39,14 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnChangeExposureNotificationState => new Command(async () =>
         {
-            await userDataService.SetAsync(_UserData);
+            if (UserData.IsExposureNotificationEnabled)
+            {
+                await exposureNotificationService.StartExposureNotification();
+            }
+            else
+            {
+                await exposureNotificationService.StopExposureNotification();
+            }
         });
 
         public ICommand OnChangeNotificationState => new Command(async () =>

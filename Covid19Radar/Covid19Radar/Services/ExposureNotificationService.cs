@@ -154,11 +154,11 @@ namespace Covid19Radar.Services
             switch (ExposureNotificationStatus)
             {
                 case Status.Unknown:
-                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageUnknown, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
+                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageUnknown, "", Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageUnknown;
                     break;
                 case Status.Disabled:
-                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageDisabled, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
+                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageDisabled, "", Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageDisabled;
                     break;
                 case Status.Active:
@@ -166,12 +166,12 @@ namespace Covid19Radar.Services
                     break;
                 case Status.BluetoothOff:
                     // call out settings in each os
-                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
+                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff, "", Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff;
                     break;
                 case Status.Restricted:
                     // call out settings in each os
-                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
+                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, "", Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
                     break;
                 default:
