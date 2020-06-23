@@ -108,7 +108,7 @@ namespace Covid19Radar.Services
                     var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion, cancellationToken);
                     if (batchNumber == 0)
                     {
-                        return;
+                        continue;
                     }
 
                     if (downloadedFiles.Count > 0)
@@ -183,16 +183,19 @@ namespace Covid19Radar.Services
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
                     Console.WriteLine(Utils.SerializeToJson(tekItem));
                     Console.WriteLine(tmpFile);
-                    Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken);
-                    var fileStream = File.Create(tmpFile);
-                    try
+
+                    using (Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken))
+                    using (var fileStream = File.Create(tmpFile))
                     {
-                        await responseStream.CopyToAsync(fileStream, cancellationToken);
-                        fileStream.Flush();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.ToString());
+                        try
+                        {
+                            await responseStream.CopyToAsync(fileStream, cancellationToken);
+                            fileStream.Flush();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.ToString());
+                        }
                     }
                     lastTekTimestamp[region] = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
