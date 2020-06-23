@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Covid19Radar.Model;
 using Covid19Radar.Views;
+using System.Diagnostics;
+using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.ViewModels
 {
@@ -27,33 +29,43 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf965",
                 PageName = nameof(HomePage),
-                Title = Resources.AppResources.HomePageTitle
+                Title = Resources.AppResources.HomePageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf013",
                 PageName = nameof(SettingsPage),
-                Title = Resources.AppResources.SettingsPageTitle
+                Title = Resources.AppResources.SettingsPageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
             });
 
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0e0",
                 PageName = nameof(InqueryPage),
-                Title = Resources.AppResources.InqueryPageTitle
+                Title = Resources.AppResources.InqueryPageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf70e",
                 PageName = nameof(TermsofservicePage),
-                Title = Resources.AppResources.TermsofservicePageTitle
+                Title = Resources.AppResources.TermsofservicePageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf70e",
                 PageName = nameof(PrivacyPolicyPage2),
-                Title = Resources.AppResources.PrivacyPolicyPageTitle
+                Title = Resources.AppResources.PrivacyPolicyPageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
             });
             /*
 #if DEBUG
@@ -195,8 +207,20 @@ namespace Covid19Radar.ViewModels
 
         async void Navigate()
         {
+            ClearSelectedItem();
+            SelectedMenuItem.IconColor = "#FFF";
+            SelectedMenuItem.TextColor = "#FFF";
             await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
             return;
+        }
+
+        private void ClearSelectedItem()
+        {
+            MenuItems.ForEach(item =>
+            {
+                item.IconColor = "#019AE8";
+                item.TextColor = "#000";
+            });
         }
 
     }

@@ -44,14 +44,14 @@
                                                     FontFamily="FA-S"
                                                     Glyph="{Binding Icon}"
                                                     Size="30"
-                                                    Color="#019AE8" />
+                                                    Color="{Binding IconColor}" />
                                             </Image.Source>
                                         </Image>
                                         <Label
                                             AutomationId="{Binding Title}"
                                             FontSize="Default"
                                             Text="{Binding Title}"
-                                            TextColor="{StaticResource NavBarText}"
+                                            TextColor="{Binding TextColor}"
                                             VerticalOptions="Center" />
                                     </StackLayout>
                                 </ViewCell>
