@@ -4,6 +4,7 @@ using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
+using ImTools;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -33,12 +34,26 @@ namespace Covid19Radar.ViewModels
             Title = AppResources.HomePageTitle;
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
-            _ = exposureNotificationService.StartExposureNotification();
+
             userData = this.userDataService.Get();
             StartDate = userData.GetLocalDateString();
 
             TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
             PastDate = timeSpan.Days.ToString();
+        }
+
+        public override async void Initialize(INavigationParameters parameters)
+        {
+            try
+            {
+                await exposureNotificationService.StartExposureNotification();
+                await exposureNotificationService.FetchExposureKeyAsync();
+                base.Initialize(parameters);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public Command OnClickExposures => new Command(async () =>
