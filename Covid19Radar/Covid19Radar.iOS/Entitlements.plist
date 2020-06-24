@@ -4,6 +4,6 @@
 <dict>
 	<key>com.apple.developer.exposure-notification</key>
 	<true/>
-  <true/>
+  ENTITLEMENTS_PLIST_VALUE
 </dict>
 </plist>
