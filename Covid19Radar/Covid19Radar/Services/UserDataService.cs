@@ -52,12 +52,6 @@ namespace Covid19Radar.Services
 
         public async Task SetAsync(UserDataModel userData)
         {
-#if DEBUG
-            if (userData.LastProcessTekTimestamp.ContainsKey("440"))
-            {
-                userData.LastProcessTekTimestamp["440"] = 0;
-            }
-#endif
             var newdata = Utils.SerializeToJson(userData);
             var currentdata = Utils.SerializeToJson(current);
             if (currentdata.Equals(newdata))
