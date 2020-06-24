@@ -97,7 +97,7 @@ namespace Covid19Radar.Model
 
         public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
 
-        public ExposureDetectionSummary ExposureSummary { get; set; }
+        public UserExposureSummary ExposureSummary { get; set; }
 
         // for mock
         public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
