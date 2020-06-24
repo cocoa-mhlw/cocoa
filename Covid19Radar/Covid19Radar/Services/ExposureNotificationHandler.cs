@@ -269,6 +269,11 @@ namespace Covid19Radar.Services
                 }
             }
 
+            if (keys.ToArray() == null)
+            {
+                throw new InvalidDataException();
+            }
+
             // Generate Padding
             var padding = GetPadding();
 
