@@ -35,7 +35,7 @@ namespace Covid19Radar.Services
 
         // this string should be localized
         public string UserExplanation
-            => AppResources.LocalNotificationDescription;//"We need to make use of the keys to keep you healthy.";
+            => AppResources.LocalNotificationDescription;
 
         // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
         public Task<Configuration> GetConfigurationAsync()
@@ -79,9 +79,7 @@ namespace Covid19Radar.Services
             {
                 foreach (var exposure in exposureInfo)
                 {
-                    Covid19Radar.Model.RiskLevel test = (Covid19Radar.Model.RiskLevel)exposure.TransmissionRiskLevel;
-
-                    UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.RiskLevel)exposure.TransmissionRiskLevel);
+                    UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                     userData.ExposureInformation.Add(exposure);
                 }
             });

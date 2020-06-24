@@ -7,7 +7,7 @@ namespace Covid19Radar.Model
 {
     public class UserExposureInfo
     {
-        public UserExposureInfo(DateTime timestamp, TimeSpan duration, int attenuationValue, int totalRiskScore, RiskLevel riskLevel)
+        public UserExposureInfo(DateTime timestamp, TimeSpan duration, int attenuationValue, int totalRiskScore, UserRiskLevel riskLevel)
         {
             Timestamp = timestamp;
             Duration = duration;
@@ -26,9 +26,9 @@ namespace Covid19Radar.Model
 
         public int TotalRiskScore { get; }
 
-        public RiskLevel TransmissionRiskLevel { get; }
+        public UserRiskLevel TransmissionRiskLevel { get; }
     }
-    public enum RiskLevel
+    public enum UserRiskLevel
     {
         Invalid = 0,
         Lowest = 1,
