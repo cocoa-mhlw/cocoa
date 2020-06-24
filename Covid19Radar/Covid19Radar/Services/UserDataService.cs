@@ -57,8 +57,8 @@ namespace Covid19Radar.Services
             {
                 return;
             }
-            current = userData;
-            Application.Current.Properties["UserData"] = Utils.SerializeToJson(current);
+            Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
+            current = Get();
             await Application.Current.SavePropertiesAsync();
 
             UserDataChanged?.Invoke(this, current);
