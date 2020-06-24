@@ -76,11 +76,7 @@ namespace Covid19Radar.ViewModels
             {
                 await Device.InvokeOnMainThreadAsync(async () =>
                 {
-                    _UserData.ExposureInformation.Add(
-                        new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, Xamarin.ExposureNotifications.RiskLevel.High));
-                    _UserData.ExposureInformation.Add(
-                        new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(10), 40, 3, Xamarin.ExposureNotifications.RiskLevel.Low));
-
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, UserRiskLevel.High));
                     await userDataService.SetAsync(_UserData);
 
                 });

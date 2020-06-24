@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -34,7 +35,7 @@ namespace Covid19Radar.Services
 
         // this string should be localized
         public string UserExplanation
-            => "We need to make use of the keys to keep you healthy.";
+            => AppResources.LocalNotificationDescription;
 
         // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
         public Task<Configuration> GetConfigurationAsync()
@@ -67,18 +68,23 @@ namespace Covid19Radar.Services
         // this will be called when a potential exposure has been detected
         public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getExposureInfo)
         {
-            userData.ExposureSummary = summary;
 
+            UserExposureSummary userExposureSummary = new UserExposureSummary(summary.DaysSinceLastExposure, summary.MatchedKeyCount, summary.HighestRiskScore, summary.AttenuationDurations, summary.SummationRiskScore);
+            userData.ExposureSummary = userExposureSummary;
             var exposureInfo = await getExposureInfo();
 
             // Add these on main thread in case the UI is visible so it can update
+
             await Device.InvokeOnMainThreadAsync(() =>
             {
-                foreach (var i in exposureInfo)
-                    userData.ExposureInformation.Add(i);
+                foreach (var exposure in exposureInfo)
+                {
+                    UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
+                    userData.ExposureInformation.Add(userExposureInfo);
+                }
             });
-
             await userDataService.SetAsync(userData);
+
             // If Enabled Local Notifications
             if (userData.IsNotificationEnabled)
             {

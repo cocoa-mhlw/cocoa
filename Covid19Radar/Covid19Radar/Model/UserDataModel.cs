@@ -95,9 +95,9 @@ namespace Covid19Radar.Model
 
         public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
 
-        public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
+        public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
 
-        public ExposureDetectionSummary ExposureSummary { get; set; }
+        public UserExposureSummary ExposureSummary { get; set; }
 
         // for mock
         public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
