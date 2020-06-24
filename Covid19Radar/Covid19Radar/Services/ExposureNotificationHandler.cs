@@ -80,7 +80,7 @@ namespace Covid19Radar.Services
                 foreach (var exposure in exposureInfo)
                 {
                     UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
-                    userData.ExposureInformation.Add(exposure);
+                    userData.ExposureInformation.Add(userExposureInfo);
                 }
             });
             await userDataService.SetAsync(userData);

@@ -55,7 +55,7 @@ namespace Covid19Radar.Services
 #if DEBUG
             if (userData.LastProcessTekTimestamp.ContainsKey("440"))
             {
-                userData.LastProcessTekTimestamp["440"]=0;
+                userData.LastProcessTekTimestamp["440"] = 0;
             }
 #endif
             var newdata = Utils.SerializeToJson(userData);
