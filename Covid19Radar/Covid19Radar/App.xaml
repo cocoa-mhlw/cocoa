@@ -129,7 +129,7 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryText}" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontSize" Value="Default" />
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="Opacity" Value="0.6" />
                 <Style.Triggers>
