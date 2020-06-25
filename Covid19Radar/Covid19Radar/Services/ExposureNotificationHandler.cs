@@ -31,6 +31,7 @@ namespace Covid19Radar.Services
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<IHttpDataService>();
             this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             userData = this.userDataService.Get();
+            userDataService.UserDataChanged += (s, e) => userData = userDataService.Get();
         }
 
         // this string should be localized
