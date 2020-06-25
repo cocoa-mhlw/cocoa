@@ -23,9 +23,19 @@
                 BackgroundColor="#FFF3DD"
                 CornerRadius="10">
                 <StackLayout>
-                    <ffimageloading:CachedImage Margin="0,0,0,10" Aspect="AspectFit" Source="InfoMark.png" />
-                    <Label Margin="0,0,0,5" Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
-                    <Label FontSize="Large"                            Margin="0,0,0,5"                            HorizontalTextAlignment="Center"                             Style="{StaticResource DefaultTitleLabel}">
+                    <ffimageloading:CachedImage
+                        Margin="0,0,0,10"
+                        Aspect="AspectFit"
+                        Source="InfoMark.png" />
+                    <Label
+                        Margin="0,0,0,5"
+                        Style="{StaticResource DefaultTitleLabel}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
+                    <Label
+                        Margin="0,0,0,5"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource DefaultTitleLabel}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{Binding ExposureCount}" />
@@ -33,12 +43,6 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-
-                    <Label
-                        Margin="0,0,0,15"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
 
                     <Button
                         Margin="0,0,0,20"
@@ -55,16 +59,22 @@
                         Text="{x:Static resources:AppResources.ContactedNotifyPageButton3}" />
 
                     <Label
+                        Margin="0,0,0,15"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
+
+                    <Label
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
                 </StackLayout>
             </Frame>
             <Button
-                    AutomationId="OnClickExposures"
-                    Command="{prism:NavigateTo 'ExposuresPage'}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
+                AutomationId="OnClickExposures"
+                Command="{prism:NavigateTo 'ExposuresPage'}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
