@@ -40,7 +40,7 @@ namespace Covid19Radar.Api.Services
             };
             symmetric2 = Aes.Create();
             symmetric2.Mode = CipherMode.CBC;
-            symmetric2.Padding = PaddingMode.ISO10126;
+            symmetric2.Padding = PaddingMode.None;
             symmetric2.KeySize = 256;
             symmetric2.Key = config.CryptionKey2();
             symmetric2.IV = config.CryptionIV2();
