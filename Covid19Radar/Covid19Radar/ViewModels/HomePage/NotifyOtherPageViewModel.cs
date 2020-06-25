@@ -113,7 +113,7 @@ namespace Covid19Radar.ViewModels
                        Resources.AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
-                    await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
+                    await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
                     return;
                 }
 
@@ -129,7 +129,7 @@ namespace Covid19Radar.ViewModels
                     Resources.AppResources.ButtonComplete,
                     Resources.AppResources.ButtonOk
                 );
-                await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
+                await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
             catch (Exception ex)
             {
