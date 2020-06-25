@@ -276,7 +276,7 @@ namespace Covid19Radar.Services
             }
 
             // Generate Padding
-            var padding = "";// GetPadding();
+            var padding = GetPadding();
 
             // Create the submission
             var submission = new DiagnosisSubmissionParameter()
