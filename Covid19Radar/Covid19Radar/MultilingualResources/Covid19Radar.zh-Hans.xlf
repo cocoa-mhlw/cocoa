@@ -224,7 +224,7 @@
         </trans-unit>
         <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
           <source>From app settings, you can stop using the app and delete user data.</source>
-          <target state="translated">在應用程序設置中，您可以停止使用該應用程序並刪除用戶數據。</target>
+          <target state="translated">您可以在应用设置中选择停止使用该应用并删除用户数据。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
