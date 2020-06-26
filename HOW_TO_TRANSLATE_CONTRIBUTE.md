@@ -40,7 +40,7 @@ Otherwise, it may be overwritten by machine translation.
 | Covid19Radar.am.xlf | Amharic |
 | Covid19Radar.ar.xlf | Arabic |
 | Covid19Radar.hy.xlf | Armenian |
-| Covid19Radar.az.xlf | Azerbaijani |
+| Covid19Radar.az-Cyrl.xlf | Azerbaijani |
 | Covid19Radar.bn.xlf | Bangla |
 | Covid19Radar.eu.xlf | Basque |
 | Covid19Radar.be.xlf | Belarusian |
