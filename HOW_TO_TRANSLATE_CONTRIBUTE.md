@@ -44,7 +44,7 @@ Otherwise, it may be overwritten by machine translation.
 | Covid19Radar.bn.xlf | Bangla |
 | Covid19Radar.eu.xlf | Basque |
 | Covid19Radar.be.xlf | Belarusian |
-| Covid19Radar.bs.xlf | Bosnian |
+| Covid19Radar.bs-Cyrl.xlf | Bosnian |
 | Covid19Radar.bg.xlf | Bulgarian |
 | Covid19Radar.ca.xlf | Catalan	|
 | Covid19Radar.ceb.xlf | Cebuano |
@@ -68,7 +68,7 @@ Otherwise, it may be overwritten by machine translation.
 | Covid19Radar.el.xlf | Greek |
 | Covid19Radar.gu.xlf | Gujarati |
 | Covid19Radar.ht.xlf | Haitian Creole |
-| Covid19Radar.ha.xlf | Hausa |
+| Covid19Radar.ha-Latn.xlf | Hausa |
 | Covid19Radar.haw.xlf | Hawaiian |
 | Covid19Radar.he.xlf | Hebrew |
 | Covid19Radar.hi.xlf | Hindi |
@@ -80,14 +80,14 @@ Otherwise, it may be overwritten by machine translation.
 | Covid19Radar.ga.xlf | Irish |
 | Covid19Radar.it.xlf | Italian |
 | Covid19Radar.ja.xlf | Japanese |
-| Covid19Radar.jv.xlf | Javanese |
+| Covid19Radar.jv-Latn.xlf | Javanese |
 | Covid19Radar.kn.xlf | Kannada |
 | Covid19Radar.kk.xlf | Kazakh |
 | Covid19Radar.km.xlf | Khmer |
 | Covid19Radar.rw.xlf | Kinyarwanda |
 | Covid19Radar.sw.xlf | Kiswahili |
 | Covid19Radar.ko.xlf | Korean |
-| Covid19Radar.ku.xlf | Kurdish |
+| Covid19Radar.ku-Arab.xlf | Kurdish |
 | Covid19Radar.ky.xlf | Kyrgyz |
 | Covid19Radar.lo.xlf | Lao |
 | Covid19Radar.la.xlf | Latin |
@@ -101,7 +101,7 @@ Otherwise, it may be overwritten by machine translation.
 | Covid19Radar.mt.xlf | Maltese |
 | Covid19Radar.mi.xlf | Maori |
 | Covid19Radar.mr.xlf | Marathi |
-| Covid19Radar.mn.xlf | Mongolian |
+| Covid19Radar.mn-Cyrl.xlf | Mongolian |
 | Covid19Radar.my.xlf | Myanmar (Burmese) |
 | Covid19Radar.nb.xlf | Norwegian Bokmål |
 | Covid19Radar.ny.xlf | Nyanja (Chichewa) |
@@ -110,7 +110,7 @@ Otherwise, it may be overwritten by machine translation.
 | Covid19Radar.fa.xlf | Persian |
 | Covid19Radar.pl.xlf | Polish |
 | Covid19Radar.pt.xlf | Portuguese |
-| Covid19Radar.pa.xlf | Punjabi |
+| Covid19Radar.pa-Guru.xlf | Punjabi |
 | Covid19Radar.ro.xlf | Romanian |
 | Covid19Radar.ru.xlf | Russian |
 | Covid19Radar.sm.xlf | Samoan |
@@ -131,14 +131,14 @@ Otherwise, it may be overwritten by machine translation.
 | Covid19Radar.ta.xlf | Tamil |
 | Covid19Radar.te.xlf | Telugu |
 | Covid19Radar.th.xlf | Thai |
-| Covid19Radar.tg.xlf | Tajik |
+| Covid19Radar.tg-Cyrl.xlf | Tajik |
 | Covid19Radar.tt.xlf | Tatar |
 | Covid19Radar.tr.xlf | Turkish |
 | Covid19Radar.tk.xlf | Turkmen |
 | Covid19Radar.uk.xlf | Ukrainian |
 | Covid19Radar.ur.xlf | Urdu |
 | Covid19Radar.ug.xlf | Uyghur |
-| Covid19Radar.uz.xlf | Uzbek |
+| Covid19Radar.uz-Cyrl.xlf | Uzbek |
 | Covid19Radar.vi.xlf | Vietnamese |
 | Covid19Radar.cy.xlf | Welsh |
 | Covid19Radar.xh.xlf | Xhosa |
