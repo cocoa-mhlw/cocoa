@@ -11,7 +11,7 @@ using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
-using Plugin.LocalNotification;
+//using Plugin.LocalNotification;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
@@ -87,17 +87,17 @@ namespace Covid19Radar.Services
             await userDataService.SetAsync(userData);
 
             // If Enabled Local Notifications
-            if (userData.IsNotificationEnabled)
-            {
-                var notification = new NotificationRequest
-                {
-                    NotificationId = 100,
-                    Title = AppResources.LocalNotificationTitle,
-                    Description = AppResources.LocalNotificationDescription
-                };
+            //if (userData.IsNotificationEnabled)
+            //{
+            //    var notification = new NotificationRequest
+            //    {
+            //        NotificationId = 100,
+            //        Title = AppResources.LocalNotificationTitle,
+            //        Description = AppResources.LocalNotificationDescription
+            //    };
 
-                NotificationCenter.Current.Show(notification);
-            }
+            //    NotificationCenter.Current.Show(notification);
+            //}
         }
 
         // this will be called when they keys need to be collected from the server

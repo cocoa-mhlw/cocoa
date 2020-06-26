@@ -45,8 +45,8 @@ namespace Covid19Radar.Model
         {
             return UserUuid == other?.UserUuid
                 && LastNotificationTime == other?.LastNotificationTime
-                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled
-                && IsNotificationEnabled == other.IsNotificationEnabled;
+                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled;
+                //&& IsNotificationEnabled == other.IsNotificationEnabled;
         }
 
         /// <summary>
