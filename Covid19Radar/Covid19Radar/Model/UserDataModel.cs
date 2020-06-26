@@ -93,7 +93,7 @@ namespace Covid19Radar.Model
 
         public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
 
-        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
+        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultBatch();
 
         public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
 
