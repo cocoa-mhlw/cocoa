@@ -474,9 +474,6 @@
     <PackageReference Include="Google.Protobuf">
       <Version>3.12.3</Version>
     </PackageReference>
-    <PackageReference Include="Plugin.LocalNotification">
-      <Version>5.0.4</Version>
-    </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
       <Version>7.1.0.431</Version>
     </PackageReference>

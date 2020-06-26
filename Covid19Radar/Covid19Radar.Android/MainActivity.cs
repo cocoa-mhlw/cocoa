@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Acr.UserDialogs;
 using Covid19Radar.Renderers;
-using Plugin.LocalNotification;
+//using Plugin.LocalNotification;
 
 namespace Covid19Radar.Droid
 {
@@ -41,9 +41,9 @@ namespace Covid19Radar.Droid
 
             UserDialogs.Init(this);
 
-            NotificationCenter.CreateNotificationChannel();
+            //NotificationCenter.CreateNotificationChannel();
             LoadApplication(new App(new AndroidInitializer()));
-            NotificationCenter.NotifyNotificationTapped(base.Intent);
+            //NotificationCenter.NotifyNotificationTapped(base.Intent);
         }
 
 
@@ -84,12 +84,12 @@ namespace Covid19Radar.Droid
             Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
         }
 
-        protected override void OnNewIntent(Intent intent)
-        {
-            NotificationCenter.NotifyNotificationTapped(intent);
+        //protected override void OnNewIntent(Intent intent)
+        //{
+        //    NotificationCenter.NotifyNotificationTapped(intent);
 
-            base.OnNewIntent(intent);
-        }
+        //    base.OnNewIntent(intent);
+        //}
 
     }
 }

@@ -185,7 +185,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Dari menu pengaturan di dalam aplikasi, anda bisa mengaktifkan/menonaktifkan Bluetooth dan notifikasi, berhenti menggunakan aplikasi ini, dan menghapus rekaman data kontak jarak dekat yang lalu.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Aplikasi ini akan memberitahu anda, jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi ini yang teruji positif COVID-19.</value>

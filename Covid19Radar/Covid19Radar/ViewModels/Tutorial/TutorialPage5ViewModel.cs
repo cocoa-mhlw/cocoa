@@ -2,7 +2,7 @@
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
-using Plugin.LocalNotification;
+//using Plugin.LocalNotification;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -22,13 +22,13 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickEnable => new Command(async () =>
         {
-            var notification = new NotificationRequest
-            {
-                NotificationId = 100,
-                Title = AppResources.LocalNotificationPermittedTitle,
-                Description = AppResources.LocalNotificationPermittedDescription
-            };
-            NotificationCenter.Current.Show(notification);
+            //var notification = new NotificationRequest
+            //{
+            //    NotificationId = 100,
+            //    Title = AppResources.LocalNotificationPermittedTitle,
+            //    Description = AppResources.LocalNotificationPermittedDescription
+            //};
+            //NotificationCenter.Current.Show(notification);
             userData.IsNotificationEnabled = true;
             await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(TutorialPage6));

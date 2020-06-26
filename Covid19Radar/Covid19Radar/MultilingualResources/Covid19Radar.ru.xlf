@@ -242,9 +242,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定へ</note>
         </trans-unit>
         <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
-          <source>From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history.</source>
+          <source>From app settings, you can stop using the app and delete user data.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Из настроек приложения можно включить/отключить Bluetooth и уведомления, прекратить использование приложения и удалить историю контактов.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
           <source>The app will notify you, if you were in close contact with COVID-19 positive user.</source>
