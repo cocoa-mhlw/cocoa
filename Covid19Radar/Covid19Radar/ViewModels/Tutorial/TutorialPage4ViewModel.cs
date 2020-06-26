@@ -26,13 +26,13 @@ namespace Covid19Radar.ViewModels
         public Command OnClickEnable => new Command(async () =>
         {
             await ExposureNotificationService.StartExposureNotification();
-            await NavigationService.NavigateAsync(nameof(TutorialPage5));
+            await NavigationService.NavigateAsync(nameof(TutorialPage6));
         });
         public Command OnClickDisable => new Command(async () =>
         {
             userData.IsExposureNotificationEnabled = false;
             await userDataService.SetAsync(userData);
-            await NavigationService.NavigateAsync(nameof(TutorialPage5));
+            await NavigationService.NavigateAsync(nameof(TutorialPage6));
         });
     }
 }
