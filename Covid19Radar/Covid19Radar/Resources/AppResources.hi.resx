@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>ऐप सेटिंग्स से, आप ब्लूटूथ और सूचनाओं को सक्षम/अक्षम कर सकते हैं, ऐप का उपयोग बंद कर सकते हैं और क्लोज कॉन्टैक्ट हिस्ट्री को हटा सकते हैं ।</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>यदि आप COVID-19 सकारात्मक उपयोगकर्ता के साथ निकट संपर्क में थे, तो ऐप आपको सूचित करेगा।</value>

@@ -628,7 +628,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history. に類似しているローカライズされた文字列を検索します。
+        ///   From app settings, you can stop using the app and delete user data. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HelpPage4Description {
             get {

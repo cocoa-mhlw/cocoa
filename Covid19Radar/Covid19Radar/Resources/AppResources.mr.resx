@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>अॅप सेटिंग्जमधून, आपण ब्लूटूथ आणि नोटिफिकेशन्स कार्यान्वीत करू शकता/ अकार्यान्वीत करू शकता, अॅपचा वापर बंद करू शकता आणि संपर्क इतिहास नष्ट करू शकता.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>जर तुम्ही COVID-19 पॉझिटिव वापरकर्त्याच्या जवळ असाल तर अॅप आपल्याला सूचित करेल.</value>

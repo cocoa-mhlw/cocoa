@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Mula sa mga setting ng app, maaari mong paganahin/huwag paganahin ang mga Bluetooth at notification, ihinto ang paggamit ng app at tanggalin ang isara ang kasaysayan ng pagkontak.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Ang app ay magbigay-alam sa iyo, kung ikaw ay sa malapit na contact na may COVID-19 positibong gumagamit.</value>

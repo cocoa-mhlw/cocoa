@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Din setările aplicației, puteți activa/dezactiva Bluetooth și notificări, nu mai utilizați aplicația și ștergeți istoricul persoanelor de contact apropiate.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Aplicația vă va notifica, dacă ați fost în contact strâns cu utilizatorul pozitiv COVID-19.</value>
