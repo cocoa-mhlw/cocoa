@@ -72,6 +72,8 @@
 - Yuki Kawanishi
 - Satoshi Iguchi
 - Kimihiro Shirase
+- Tassana Thaveeteeratham (Thai Translation)
+- Kotaro Sakamoto
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji

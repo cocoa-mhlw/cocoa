@@ -1,6 +1,7 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -57,11 +58,18 @@ namespace Covid19Radar.Services
             {
                 return;
             }
-            current = userData;
-            Application.Current.Properties["UserData"] = Utils.SerializeToJson(current);
+            Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
+            current = Get();
             await Application.Current.SavePropertiesAsync();
 
             UserDataChanged?.Invoke(this, current);
+        }
+
+        public async Task ResetAllDataAsync()
+        {
+            Application.Current.Properties.Remove("UserData");
+            current = null;
+            await Application.Current.SavePropertiesAsync();
         }
     }
 

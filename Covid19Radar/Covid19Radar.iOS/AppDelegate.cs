@@ -42,10 +42,10 @@ namespace Covid19Radar.iOS
             return base.FinishedLaunching(app, options);
         }
 
-        public override void WillEnterForeground(UIApplication uiApplication)
-        {
-            Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
-        }
+        //public override void WillEnterForeground(UIApplication uiApplication)
+        //{
+        //    Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
+        //}
     }
 
     public class iOSInitializer : IPlatformInitializer

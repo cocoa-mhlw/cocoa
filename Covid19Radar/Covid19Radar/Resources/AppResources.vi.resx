@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Từ cài đặt ứng dụng, bạn có thể bật/tắt Bluetooth và thông báo, ngừng sử dụng ứng dụng và xóa lịch sử Liên hệ gần.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Các ứng dụng sẽ thông báo cho bạn, nếu bạn đã liên lạc gần gũi với COVID-19 tích cực sử dụng.</value>

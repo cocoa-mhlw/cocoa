@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>O osodiadau app, gallwch chi alluogi/analluogi Bluetooth a hysbysiadau, rhoi'r gorau i ddefnyddio'r app a dileu hanes cyswllt agos.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Bydd yr app yn rhoi gwybod i chi, os oeddech mewn cysylltiad agos â defnyddiwr ' COVID-19 Positive '.</value>

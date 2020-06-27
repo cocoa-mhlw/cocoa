@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>من إعدادات التطبيق، يمكنك تمكين/ تعطيل البلوتوث والإخطارات، والتوقف عن استخدام التطبيق وحذف سجل الاتصال الوثيق.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>التطبيق سوف يخطر لك، إذا كنت على اتصال وثيق مع COVID-19 مستخدم إيجابي.</value>
