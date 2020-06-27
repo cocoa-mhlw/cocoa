@@ -49,7 +49,7 @@
                                                         <OnPlatform x:TypeArguments="BindingBase">
                                                             <OnPlatform.Platforms>
                                                                 <On Platform="Android" Value="{Binding IconColor}" />
-                                                                <On Platform="iOS" Value="#019AE8" />
+                                                                <On Platform="iOS" Value="{Binding Source=#019AE8}" />
                                                             </OnPlatform.Platforms>
                                                         </OnPlatform>
                                                     </FontImageSource.Color>
@@ -65,7 +65,7 @@
                                                 <OnPlatform x:TypeArguments="BindingBase">
                                                     <OnPlatform.Platforms>
                                                         <On Platform="Android" Value="{Binding TextColor}" />
-                                                        <On Platform="iOS" Value="{StaticResource NavBarText}" />
+                                                        <On Platform="iOS" Value="{Binding Source={StaticResource NavBarText}}" />
                                                     </OnPlatform.Platforms>
                                                 </OnPlatform>
                                             </Label.TextColor>                                                                                        
