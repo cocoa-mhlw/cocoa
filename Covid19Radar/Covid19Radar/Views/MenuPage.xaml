@@ -44,15 +44,32 @@
                                                     FontFamily="FA-S"
                                                     Glyph="{Binding Icon}"
                                                     Size="30"
-                                                    Color="{Binding IconColor}" />
+                                                    Color="#019AE8">
+                                                    <FontImageSource.Color>
+                                                        <OnPlatform x:TypeArguments="BindingBase">
+                                                            <OnPlatform.Platforms>
+                                                                <On Platform="Android" Value="{Binding IconColor}" />
+                                                                <On Platform="iOS" Value="#019AE8" />
+                                                            </OnPlatform.Platforms>
+                                                        </OnPlatform>
+                                                    </FontImageSource.Color>
+                                                </FontImageSource>
                                             </Image.Source>
                                         </Image>
                                         <Label
+                                            VerticalOptions="Center"
                                             AutomationId="{Binding Title}"
                                             FontSize="Default"
-                                            Text="{Binding Title}"
-                                            TextColor="{Binding TextColor}"
-                                            VerticalOptions="Center" />
+                                            Text="{Binding Title}">
+                                            <Label.TextColor>
+                                                <OnPlatform x:TypeArguments="BindingBase">
+                                                    <OnPlatform.Platforms>
+                                                        <On Platform="Android" Value="{Binding TextColor}" />
+                                                        <On Platform="iOS" Value="{StaticResource NavBarText}" />
+                                                    </OnPlatform.Platforms>
+                                                </OnPlatform>
+                                            </Label.TextColor>                                                                                        
+                                        </Label>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>

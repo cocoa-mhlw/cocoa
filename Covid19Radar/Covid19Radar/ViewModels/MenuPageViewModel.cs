@@ -217,7 +217,7 @@ namespace Covid19Radar.ViewModels
         private void ClearSelectedItem()
         {
             MenuItems.ForEach(item =>
-            {
+            {                
                 item.IconColor = "#019AE8";
                 item.TextColor = "#000";
             });

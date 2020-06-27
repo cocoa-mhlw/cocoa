@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace Covid19Radar.Model
 {
