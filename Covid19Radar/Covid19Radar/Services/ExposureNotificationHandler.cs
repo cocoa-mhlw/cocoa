@@ -75,11 +75,12 @@ namespace Covid19Radar.Services
             var exposureInfo = await getExposureInfo();
 
             // Add these on main thread in case the UI is visible so it can update
-
             await Device.InvokeOnMainThreadAsync(() =>
             {
                 foreach (var exposure in exposureInfo)
                 {
+                    Console.WriteLine($"COCOA found exposure {exposure.Timestamp}");
+
                     UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                     userData.ExposureInformation.Add(userExposureInfo);
                 }
@@ -120,6 +121,7 @@ namespace Covid19Radar.Services
 
                     if (downloadedFiles.Count > 0)
                     {
+                        Console.WriteLine("COCOA Submit Batches");
                         await submitBatches(downloadedFiles);
 
                         // delete all temporary files
@@ -169,7 +171,7 @@ namespace Covid19Radar.Services
             {
                 return (batchNumber, downloadedFiles);
             }
-            Console.WriteLine("Fetch Exposure Key");
+            Console.WriteLine("COCOA Fetch Exposure Key");
 
             Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
 
@@ -206,11 +208,13 @@ namespace Covid19Radar.Services
                     }
                     lastTekTimestamp[region] = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
+                    Console.WriteLine($"COCOA FETCH DIAGKEY {tmpFile}");
                     batchNumber++;
                 }
             }
-            Console.WriteLine(batchNumber.ToString());
-            Console.WriteLine(downloadedFiles.Count());
+            Console.WriteLine($"COCOA batchnumber {batchNumber}");
+            Console.WriteLine($"COCOA downloadfiles {downloadedFiles.Count()}");
+
             userData.LastProcessTekTimestamp = lastTekTimestamp;
             await userDataService.SetAsync(userData);
             return (batchNumber, downloadedFiles);
