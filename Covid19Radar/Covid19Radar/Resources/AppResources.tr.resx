@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Uygulama ayarlarından Bluetooth ve bildirimleri etkinleştirebilir/devre dışı bırakabilir, uygulamayı kullanmayı bırakabilir ve yakın iletişim geçmişini silebilirsiniz.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>CoVID-19 pozitif kullanıcı ile yakın temas halinde iseniz uygulama, sizi bilgilendirecektir.</value>

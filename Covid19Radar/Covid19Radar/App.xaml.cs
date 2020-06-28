@@ -22,7 +22,7 @@ using System.Text;
 using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
-using Plugin.LocalNotification;
+//using Plugin.LocalNotification;
 
 /*
  * Our mission...is
@@ -57,8 +57,11 @@ namespace Covid19Radar
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
             // Local Notification tap event listener
-            NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
+            //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
+
+            // Migrate userData
+            await UserDataMigrationService.Migrate();
 
             INavigationResult result;
             // Check user data and skip tutorial
@@ -95,10 +98,10 @@ namespace Covid19Radar
 
         }
 
-        protected void OnNotificationTapped(NotificationTappedEventArgs e)
-        {
-            NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-        }
+        //protected void OnNotificationTapped(NotificationTappedEventArgs e)
+        //{
+        //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+        //}
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {

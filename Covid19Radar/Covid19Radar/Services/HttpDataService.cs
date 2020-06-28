@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Net;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.Services
 {
@@ -30,9 +31,10 @@ namespace Covid19Radar.Services
 
         private void SetSecret()
         {
-            if (Application.Current.Properties.ContainsKey("Secret"))
+            var storedSecret = SecureStorage.GetAsync(AppConstants.StorageKey.Secret).Result;
+            if (storedSecret != null)
             {
-                secret = Application.Current.Properties["Secret"] as string;
+                secret = storedSecret;
             }
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", secret);
         }
@@ -57,8 +59,7 @@ namespace Covid19Radar.Services
                     userData.UserUuid = registerResult.UserUuid;
                     userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
                     userData.IsOptined = true;
-                    Application.Current.Properties["Secret"] = registerResult.Secret;
-                    await Application.Current.SavePropertiesAsync();
+                    await SecureStorage.SetAsync(AppConstants.StorageKey.Secret, registerResult.Secret);
                     SetSecret();
                     return userData;
                 }

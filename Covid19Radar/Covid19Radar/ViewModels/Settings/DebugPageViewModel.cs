@@ -26,7 +26,7 @@ namespace Covid19Radar.ViewModels
         private async void _userDataChanged(object sender, UserDataModel e)
         {
             _UserData = this.userDataService.Get();
-            _ = await exposureNotificationService.UpdateStatusMessage();
+            _ = await exposureNotificationService.UpdateStatusMessageAsync();
             _EnMessage = this.exposureNotificationService.CurrentStatusMessage;
         }
 
@@ -76,11 +76,7 @@ namespace Covid19Radar.ViewModels
             {
                 await Device.InvokeOnMainThreadAsync(async () =>
                 {
-                    _UserData.ExposureInformation.Add(
-                        new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, Xamarin.ExposureNotifications.RiskLevel.High));
-                    _UserData.ExposureInformation.Add(
-                        new Xamarin.ExposureNotifications.ExposureInfo(DateTime.Now.AddDays(-3), TimeSpan.FromMinutes(10), 40, 3, Xamarin.ExposureNotifications.RiskLevel.Low));
-
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, UserRiskLevel.High));
                     await userDataService.SetAsync(_UserData);
 
                 });
@@ -89,7 +85,7 @@ namespace Covid19Radar.ViewModels
         public Command UpdateStatus => new Command(async () =>
         {
             _UserData = this.userDataService.Get();
-            _ = await exposureNotificationService.UpdateStatusMessage();
+            _ = await exposureNotificationService.UpdateStatusMessageAsync();
             _EnMessage = this.exposureNotificationService.CurrentStatusMessage;
         });
 
@@ -124,7 +120,7 @@ namespace Covid19Radar.ViewModels
         public Command ResetBatchFileIndex
             => new Command(async () =>
             {
-                _UserData.ServerBatchNumbers = AppSettings.Instance.GetDefaultDefaultBatch();
+                _UserData.ServerBatchNumbers = AppSettings.Instance.GetDefaultBatch();
                 await userDataService.SetAsync(_UserData);
                 RaisePropertyChanged(nameof(CurrentBatchFileIndex));
                 await UserDialogs.Instance.AlertAsync("Reset Batch file index!");

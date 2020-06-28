@@ -22,7 +22,7 @@
                     <ListView
                         ItemsSource="{Binding MenuItems}"
                         RowHeight="60"
-                        SelectedItem="{Binding SelectedMenuItem}"
+                        SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}"
                         SeparatorColor="#E0E0E0"
                         SeparatorVisibility="Default"
                         Footer="">
@@ -44,15 +44,32 @@
                                                     FontFamily="FA-S"
                                                     Glyph="{Binding Icon}"
                                                     Size="30"
-                                                    Color="#019AE8" />
+                                                    Color="#019AE8">
+                                                    <FontImageSource.Color>
+                                                        <OnPlatform x:TypeArguments="BindingBase">
+                                                            <OnPlatform.Platforms>
+                                                                <On Platform="Android" Value="{Binding IconColor}" />
+                                                                <On Platform="iOS" Value="{Binding Source=#019AE8}" />
+                                                            </OnPlatform.Platforms>
+                                                        </OnPlatform>
+                                                    </FontImageSource.Color>
+                                                </FontImageSource>
                                             </Image.Source>
                                         </Image>
                                         <Label
+                                            VerticalOptions="Center"
                                             AutomationId="{Binding Title}"
                                             FontSize="Default"
-                                            Text="{Binding Title}"
-                                            TextColor="{StaticResource NavBarText}"
-                                            VerticalOptions="Center" />
+                                            Text="{Binding Title}">
+                                            <Label.TextColor>
+                                                <OnPlatform x:TypeArguments="BindingBase">
+                                                    <OnPlatform.Platforms>
+                                                        <On Platform="Android" Value="{Binding TextColor}" />
+                                                        <On Platform="iOS" Value="{Binding Source={StaticResource NavBarText}}" />
+                                                    </OnPlatform.Platforms>
+                                                </OnPlatform>
+                                            </Label.TextColor>                                                                                        
+                                        </Label>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>

@@ -15,8 +15,22 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
-        public bool IsEnabled { get; set; }
-        public string DiagnosisUid { get; set; }
+        private string _diagnosisUid;
+        public string DiagnosisUid
+        {
+            get { return _diagnosisUid; }
+            set
+            {
+                SetProperty(ref _diagnosisUid, value);
+                IsEnabled = DiagnosisUid.Length == AppConstants.MaxDiagnosisUidCount;   // validate
+            }
+        }
+        private bool _isEnabled;
+        public bool IsEnabled
+        {
+            get { return _isEnabled; }
+            set { SetProperty(ref _isEnabled, value); }
+        }
         private int errorCount { get; set; }
 
         private readonly UserDataService userDataService;
@@ -28,7 +42,7 @@ namespace Covid19Radar.ViewModels
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
             errorCount = 0;
-            IsEnabled = true;
+            DiagnosisUid = "";
         }
 
         public Command OnClickRegister => (new Command(async () =>
@@ -72,7 +86,7 @@ namespace Covid19Radar.ViewModels
 
 
             // Init Dialog
-            if (string.IsNullOrEmpty(DiagnosisUid))
+            if (string.IsNullOrEmpty(_diagnosisUid))
             {
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag4Message,
@@ -86,7 +100,7 @@ namespace Covid19Radar.ViewModels
             }
 
             Regex regex = new Regex(AppConstants.positiveRegex);
-            if (!regex.IsMatch(DiagnosisUid))
+            if (!regex.IsMatch(_diagnosisUid))
             {
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag5Message,
@@ -113,12 +127,12 @@ namespace Covid19Radar.ViewModels
                        Resources.AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
-                    await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
+                    await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
                     return;
                 }
 
                 // Set the submitted UID
-                userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DateTime.Now));
+                userData.AddDiagnosis(_diagnosisUid, new DateTimeOffset(DateTime.Now));
                 await userDataService.SetAsync(userData);
 
                 // Submit our diagnosis
@@ -129,7 +143,7 @@ namespace Covid19Radar.ViewModels
                     Resources.AppResources.ButtonComplete,
                     Resources.AppResources.ButtonOk
                 );
-                await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
+                await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
             catch (Exception ex)
             {
@@ -143,7 +157,6 @@ namespace Covid19Radar.ViewModels
             finally
             {
                 UserDialogs.Instance.HideLoading();
-                IsEnabled = true;
             }
         }));
     }

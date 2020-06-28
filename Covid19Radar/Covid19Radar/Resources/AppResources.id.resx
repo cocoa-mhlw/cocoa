@@ -58,7 +58,7 @@
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
-    <value>Tak ada paparan/kontak jarak dekat dengan pengguna positif yang teridentifikasi</value>
+    <value>Tak ada paparan/kontak jarak dekat yang teridentifikasi</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
@@ -91,14 +91,14 @@
     <value>Menghapus</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Bagikan aplikasi ke keluarga atau teman</value>
+    <value>Ajak keluarga dan teman untuk berpartisipasi</value>
     <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Bagikan</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Berbagi informasi dan memberi notifikasi hasil uji positif secara anonim ke pengguna lain</value>
+    <value>Berbagi informasi hasil uji positif dan memberi notifikasi secara anonim ke pengguna lain</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
@@ -109,7 +109,7 @@
     <value>Kebijakan Privasi</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
-    <value>Menunggu pendaftaran</value>
+    <value>Menunggu untuk mendaftar</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>Apakah anda benar-benar ingin me-reset semua data?</value>
@@ -155,11 +155,11 @@
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>Berhenti / hapus data paparan/kontak jarak dekat yang lalu</value>
+    <value>Berhenti / hapus data riwayat paparan/kontak jarak dekat</value>
     <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
-    <value>Ketika aplikasi ini dijalankan, setiap perangkat akan menghasilkan kode acak. Tak ada informasi pribadi atau lokasi, termasuk data GPS, yang kumpulkan.</value>
+    <value>Ketika aplikasi ini dijalankan, setiap perangkat akan menghasilkan kode acak. Tak ada informasi pribadi dan lokasi, termasuk data GPS, yang kumpulkan.</value>
     <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
@@ -167,7 +167,7 @@
     <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
-    <value>Berada dalam jarak dekat dengan pengguna lain aplikasi ini (dalam jarak 1 meter selama 15 menit atau lebih) dicatat sebagai "kontak jarak dekat".</value>
+    <value>Jika perangkat yang terpasang aplikasi ini berada dalam jarak dekat (dalam jarak 1 meter selama 15 menit atau lebih), maka akan dicatat sebagai "kontak jarak dekat".</value>
     <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
@@ -175,8 +175,7 @@
     <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
-    <value>Perangkat dalam jarak dekat saling bertukar kode acak masing-masing. Informasi ini tidak akan digunakan sampai salah satu pengguna perangkat tersebut mendaftarkan hasil tes positif COVID-19 ke dalam aplikasi ini. Rekaman data kontak jarak dekat akan dihapus setelah 14 hari. 
-Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.</value>
+    <value>Perangkat dalam jarak dekat saling bertukar kode acak masing-masing. Informasi ini tidak akan digunakan sampai salah satu pengguna perangkat tersebut mendaftarkan hasil tes positif COVID-19 di dalam aplikasi ini. Riwayat kontak jarak dekat akan dihapus setelah 14 hari. Catatan: kode akan berubah secara berkala untuk melindungi privasi anda.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
@@ -184,15 +183,15 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
-    <value>Dari menu pengaturan di dalam aplikasi, anda bisa mengaktifkan/menonaktifkan Bluetooth dan notifikasi, berhenti menggunakan aplikasi ini, dan menghapus rekaman data kontak jarak dekat yang lalu.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <value>Dari menu pengaturan di dalam aplikasi, anda bisa berhenti menggunakan aplikasi ini dan menghapus data pengguna.</value>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Aplikasi ini akan memberitahu anda, jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi ini yang teruji positif COVID-19.</value>
     <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
-    <value>Anda bisa memeriksa jumlah berapa kali berada dalam kontak jarak dekat dari layar beranda.</value>
+    <value>Anda bisa memeriksa berapa kali berada dalam kontak jarak dekat dari layar beranda.</value>
     <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
   </data>
   <data name="HelpPage2Description3" xml:space="preserve">
@@ -208,7 +207,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>ホーム画面</comment>
   </data>
   <data name="HelpPage2Label3" xml:space="preserve">
-    <value>Jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi ini yang teruji positif COVID-19</value>
+    <value>Jika anda pernah mengalami berada dalam jarak dekat dengan pengguna aplikasi ini yang teruji positif COVID-19</value>
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
@@ -228,7 +227,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
-    <value>Hanya memberikan kode perangkat yang dihasilkan secara acak untuk mengirimkan notifikasi. Tidak ada informasi pribadi yang digunakan.</value>
+    <value>Hanya kode acak perangkat yang digunakan untuk mengirimkan notifikasi. Tidak ada informasi pribadi yang digunakan.</value>
     <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
@@ -244,7 +243,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>接触の検出</comment>
   </data>
   <data name="SettingsPageDescription1" xml:space="preserve">
-    <value>Menggunakan Bluetooth</value>
+    <value>Penggunaan Bluetooth</value>
     <comment>Bluetoothによる接触の検知</comment>
   </data>
   <data name="SettingsPageLabel2" xml:space="preserve">
@@ -260,7 +259,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>アプリの使用中止</comment>
   </data>
   <data name="SettingsPageDescription3" xml:space="preserve">
-    <value>Berhenti menggunakan dan menghapus rekaman kontak jarak dekat</value>
+    <value>Berhenti menggunakan dan menghapus riwayat kontak jarak dekat</value>
     <comment>使用を中止して過去14日間の接触履歴を消去</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
@@ -288,7 +287,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>Mohon selalu menerapkan 'Pola kewajaran hidup baru' yang disarankan oleh pemerintah.</value>
+    <value>Mohon selalu menerapkan 'Pola hidup wajar baru' yang disarankan oleh pemerintah.</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
@@ -296,7 +295,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>Terimakasih karena telah mendaftarkan hasil tes anda!</value>
+    <value>Terimakasih telah mendaftarkan hasil tes anda!</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
   <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
@@ -332,7 +331,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Isi gejala-gejala yang anda alami</value>
+    <value>Isi dengan gejala-gejala yang anda alami</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
@@ -344,11 +343,11 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Jika anda mempunyai gejala-gejala terinfeksi COVID-19, hubungi institusi kesehatan dengan menggunakan telepon atau berkas di bawah ini. Berdasarkan gejala yang anda alami, anda disarankan untuk melakukan tes COVID-19.</value>
+    <value>Jika anda mempunyai gejala-gejala terinfeksi COVID-19, hubungi institusi kesehatan dengan menggunakan berkas di bawah ini atau telepon. Berdasarkan gejala yang anda alami, anda akan disarankan untuk melakukan tes COVID-19.</value>
     <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Mohon ambil tangkapan gambar dari layar ini. Anda mungkin akan diminta selama proses diagnosa.</value>
+    <value>Mohon ambil tangkapan gambar dari layar ini. Anda mungkin akan diminta menunjukkannya selama proses diagnosa.</value>
     <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
@@ -364,7 +363,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>Informasi dan sumber untuk COVID-19</value>
+    <value>Informasi dan Sumber-sumber untuk COVID-19</value>
     <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -408,11 +407,11 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>Semua data dienkripsi dan disimpan dalam perangkat anda. Semua data akan dihapus secara otomatis setelah 14 hari. Pergerakan anda tidak akan dilacak dengan cara apapun oleh lembaga pemerintah atau pihak ketiga.</value>
+    <value>Semua data dienkripsi dan disimpan dalam perangkat anda. Semua data akan dihapus secara otomatis setelah 14 hari. Pergerakan anda tidak akan dilacak dengan cara apapun oleh lembaga-lembaga pemerintah atau pihak ketiga.</value>
     <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
-    <value>Anda bisa menghentikan perekaman kontak jarak dekat dengan pengguna lain setiap saat, dengan mengganti pengaturan dalam aplikasi, atau menghapus aplikasi.</value>
+    <value>Anda bisa menghentikan perekaman kontak jarak dekat dengan pengguna lain setiap saat, dengan mengganti pengaturan dalam aplikasi atau menghapus aplikasi.</value>
     <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
   </data>
   <data name="TutorialPage2Description5" xml:space="preserve">
@@ -472,7 +471,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>次へ</comment>
   </data>
   <data name="TutorialPage1Description1" xml:space="preserve">
-    <value>Aplikasi ini mendeteksi kontak jarak dekat dengan perangkat lain yang menjalankan aplikasi ini di dalamnya.</value>
+    <value>Aplikasi ini mendeteksi kontak jarak dekat dengan perangkat lain yang menjalankan aplikasi ini.</value>
     <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
@@ -500,7 +499,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage4Description" xml:space="preserve">
-    <value>Mohon aktifkan Bluetooth untuk mulai merekam keberadaan jarak dekat dari sesama pengguna aplikasi yang lain.</value>
+    <value>Mohon aktifkan fungsi Notifikasi Paparan dan Bluetooth untuk mulai merekam kontak jarak dekat dengan sesama pengguna aplikasi yang lain.</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
   <data name="TutorialPage4Label" xml:space="preserve">
@@ -508,11 +507,11 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>技術的な詳細について</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
-    <value>Aktifkan Bluetooth</value>
+    <value>Menggunakan Notifikasi Paparan</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage4Title2" xml:space="preserve">
-    <value>Aktifkan Bluetooth</value>
+    <value>Menggunakan Notifikasi Paparan</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
@@ -524,23 +523,23 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>Nomor kode proses akan diberitahukan ke nomor telepon atau e-mail yang terdaftar di sistem informasi dan tata kelola penyebaran coronavirus baru(selanjutnya akan disebut sebagai sistem manajemen).</value>
+    <value>Nomor kode proses akan diberitahukan ke nomor telepon atau e-mail anda yang terdaftar di sistem tata kelola dan informasi penyakit menular coronavirus baru(selanjutnya akan disebut sebagai "sistem manajemen").</value>
     <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>Ketika nomor kode proses ini dimasukkan ke dalam perangkat, perangkat akan berhubungan dengan sistem manajemen untuk mengkonfirmasi apakah nomor kode telah dikirimkan kepada anda.</value>
+    <value>Ketika nomor kode proses ini dimasukkan ke dalam perangkat, perangkat akan berhubungan dengan sistem manajemen melalui server notifikasi untuk mengkonfirmasi apakah nomor kode proses telah dihasilkan untuk anda.</value>
     <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
   </data>
   <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>Sistem manajemen akan merespon server notifikasi untuk mengkonfirmasi apakah nomor kode transaksi telah dikirimkan kepada anda.</value>
+    <value>Sistem manajemen akan merespon server notifikasi untuk mengkonfirmasi apakah nomor kode transaksi terkait dikirimkan untuk anda.</value>
     <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
   </data>
   <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>Jika anda mengkonfirmasi bahwa nomor kode telah dikirimkan kepada anda, perangkat dari pengguna aplikasi yang lain dapat menyimpan kode kunci harian yang berada dalam perangkat anda.</value>
+    <value>Jika anda mengkonfirmasi bahwa nomor kode telah dikeluarkan untuk anda, perangkat dari pengguna aplikasi yang lain akan diberi kode kunci harian yang ada dalam perangkat anda.</value>
     <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>Jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi yang positif COVID-19 dalam 14 hari terakhir, anda akan tahu bahwa anda pernah berdekatan dengannya dengan tanpa informasi yang dapat mengidentifikasi anda.</value>
+    <value>Jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi yang positif COVID-19 dalam 14 hari terakhir, anda akan tahu bahwa anda pernah berdekatan dengannya tanpa informasi yang dapat mengidentifikasi anda.</value>
     <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
@@ -552,7 +551,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>陽性登録への同意</comment>
   </data>
   <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Persetujuan bila terdaftar sebagai pengguna yang terruji positif COVID-19</value>
+    <value>Persetujuan bila terdaftar sebagai pengguna yang teruji positif COVID-19</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
@@ -560,11 +559,11 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth tidak aktif. Silahkan aktifkan Bluetooth.</value>
+    <value>Bluetooth tidak aktif. Silakan aktifkan Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>Daftar sesama pengguna aplikasi yang pernah berada dalam jarak dekat (selama 14 hari terakhir)</value>
+    <value>Daftar kontak jarak dekat (dalam 14 hari terakhir)</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
@@ -582,7 +581,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
-    <value>Terdapat kemungkinan anda pernah berada dalam jarak dekat dengan sesama pengguna aplikasi yang telah teruji positif COVID-19.  Ketuk bagian ini untuk informasi lanjutan.</value>
+    <value>Ada kemungkinan anda pernah berada dalam jarak dekat dengan sesama pengguna aplikasi yang telah teruji positif COVID-19.  Ketuk bagian ini untuk informasi lanjutan.</value>
     <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
   </data>
   <data name="LocalNotificationTitle" xml:space="preserve">
@@ -590,7 +589,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>Possible COVID-19 Exposure</comment>
   </data>
   <data name="LocalNotificationPermittedDescription" xml:space="preserve">
-    <value>Untuk menghentikan, lakukan pengubahan melalui menu Pengaturan dalam aplikasi</value>
+    <value>Untuk menghentikannya, lakukan pengubahan melalui menu Pengaturan di dalam aplikasi</value>
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>Notifikasi diaktifkan</value>
@@ -602,11 +601,11 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <value>Tanya Jawab bagi pengguna</value>
   </data>
   <data name="InqueryMailBody" xml:space="preserve">
-    <value>Nama: \r\n Kontak: \r\n Isi pertanyaan  (Pilih dari salah satu kategori berikut): 1. Bagaimana cara aplikasi ini beroperaso, 2. Pengaturan aplikasi, 3. Penggunaan aplikasi (notifikasi dll.) ), 4. Lainnya \r\n Pertanyaan text: \r\n</value>
+    <value>Nama: \r\n Kontak: \r\n Isi pertanyaan (Pilih dari salah satu kategori berikut): 1. Bagaimana cara aplikasi ini beroperasi, 2. Pengaturan aplikasi, 3. Penggunaan aplikasi (notifikasi, dll.) ), 4. Lainnya \r\n teks pertanyaan: \r\n</value>
     <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
   </data>
   <data name="InqueryMailSubject" xml:space="preserve">
-    <value>Pertanyaan tentang aplikasi ini.</value>
+    <value>Pertanyaan tentang aplikasi konfirmasi paparan</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
@@ -622,7 +621,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Notifikasi Paparan COVID-19 dinonaktifkan. Buka menu pengaturan di perangkat dan aktifkan Notifikasi Paparan.
+    <value>Notifikasi Paparan COVID-19 dinonaktifkan. Buka menu pengaturan perangkat dan aktifkan Notifikasi Paparan.
 </value>
     <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
   </data>
@@ -631,11 +630,11 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>利用規約に同意する必要があります。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Notifikasi Paparan bersifat terbatas. Mohon lebih proaktif dengan tak membatasi fungsi aplikasi.</value>
+    <value>Fungsi notifikasi kontak jarak dekat dari aplikasi Paparan COVID-19 tak diizinkan pengguna. Mohon perbolehkan fungsi tersebut dari menu pengaturan perangkat, atau beri izin ulang setelah instal ulang aplikasi.</value>
     <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Notifikasi Paparan tidak didukung. Perbarui sistem operasi perangkat anda ke versi terbaru. Jika masalah masih terjadi, silahkan hubungi kami di appsupport@cov19.mhlw.go.jp.</value>
+    <value>Notifikasi Paparan tidak didukung. Perbarui sistem operasi perangkat anda ke versi terbaru. Jika masalah masih terjadi, silakan hubungi kami di appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
@@ -643,35 +642,37 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>通信に失敗しました。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Kesalahan dalam pengaktifan Notifikasi Paparan</value>
+    <value>Error saat menghidupkan Notifikasi Paparan</value>
     <comment>Exposure Notification起動エラー</comment>
   </data>
   <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Notifikasi Paparan tidak bisa diaktifkan. Buka menu pengaturan di perangkat, aktifkan Notifikasi Paparan, dan aktifkan Bluetooth.</value>
+    <value>Notifikasi Paparan tidak bisa dihidupkan. Buka menu pengaturan di perangkat, aktifkan Notifikasi Paparan, dan aktifkan Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>Proses nomor salah</value>
+    <value>Kode nomor proses tak sesuai</value>
     <comment>アプリで入力された処理番号が違います</comment>
   </data>
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
-    <value>Tidak dapat menyambung ke pusat pendaftaran</value>
+    <value>Tidak bisa tersambung ke pusat pendaftaran</value>
     <comment>センターに接続できません</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
-    <value>Apakah Anda ingin mendaftarkan informasi positif?</value>
+    <value>Apakah anda ingin mendaftarkan hasil tes positif?</value>
     <comment>陽性情報を登録しますか?</comment>
   </data>
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
-    <value>Daftar</value>
+    <value>Daftar
+</value>
     <comment>登録</comment>
   </data>
   <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Dibatalkan</value>
+    <value>Dibatalkan
+</value>
     <comment>キャンセルしました</comment>
   </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
-    <value>Mohon tunggu sebentar hingga pendaftaran dimulai</value>
+    <value>Mohon tunggu sebentar sampai pendaftaran dimulai</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
   </data>
   <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
@@ -679,27 +680,27 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <comment>登録待ち</comment>
   </data>
   <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
-    <value>Tidak ada nomor pemrosesan yang dimasukkan</value>
+    <value>Tak ada nomor kode proses yang dimasukkan</value>
     <comment>処理番号が入力されていません</comment>
   </data>
   <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
-    <value>Format nomor pemrosesan tidak cocok</value>
+    <value>Format nomor kode proses tidak sesuai</value>
     <comment>処理番号のフォーマットが一致していません</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>Dalam rangka untuk mendaftarkan catatan positif, perlu untuk mengaktifkan rekaman log kontak COVID-19, silakan mengaktifkannya dari pengaturan aplikasi atau OS.</value>
+    <value>Untuk mendaftarkan hasil tes positif, perekaman riwayat kontak jarak dekat perlu diaktifkan. Silakan mengaktifkannya dari menu pengaturan di dalam aplikasi atau sistem operasi perangkat.</value>
     <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
-    <value>Aktifkan COVID-19 kontak Logging</value>
+    <value>Aktifkan perekaman kontak jarak dekat COVID-19</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>Jumlah pendaftaran telah mencapai batas atas. Aplikasi keluar</value>
+    <value>Jumlah pendaftaran telah mencapai batas maksimal yang diperbolehkan. Keluar dari aplikasi.</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
   </data>
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Kesalahan pendaftaran</value>
+    <value>Error saat pendaftaran</value>
     <comment>登録エラー</comment>
   </data>
 </root>

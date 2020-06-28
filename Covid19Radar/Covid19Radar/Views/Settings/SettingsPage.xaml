@@ -19,7 +19,7 @@
             BackgroundColor="{StaticResource Background}"
             Spacing="0">
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="15" HasShadow="False">
+            <!--<Frame Padding="15" HasShadow="False">
                 <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -99,7 +99,7 @@
                     </Switch>
                 </Grid>
             </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <BoxView Style="{StaticResource DefaultLineStyle}" />-->
             <Frame Padding="15" HasShadow="False">
                 <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
                     <Grid.ColumnDefinitions>

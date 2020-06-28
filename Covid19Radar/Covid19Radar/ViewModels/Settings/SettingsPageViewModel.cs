@@ -39,7 +39,14 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnChangeExposureNotificationState => new Command(async () =>
         {
-            await userDataService.SetAsync(_UserData);
+            if (UserData.IsExposureNotificationEnabled)
+            {
+                await exposureNotificationService.StartExposureNotification();
+            }
+            else
+            {
+                await exposureNotificationService.StopExposureNotification();
+            }
         });
 
         public ICommand OnChangeNotificationState => new Command(async () =>
@@ -65,8 +72,7 @@ namespace Covid19Radar.ViewModels
                 }
 
                 // Reset All Data and Optout
-                UserDataModel userData = new UserDataModel();
-                await userDataService.SetAsync(userData);
+                await userDataService.ResetAllDataAsync();
 
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(Resources.AppResources.SettingsPageDialogResetCompletedText);

@@ -55,6 +55,8 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 設定完了後、本アプリをインストールしている人同士の接触ログを自動で記録します。
 
+開発環境の構築については、[こちらのドキュメント](doc/Developer.md)を参照してください。
+
 # デザインについて
 
 [Adobe XD](https://www.adobe.com/jp/products/xd.html)を利用してデザイン制作を行っています。
