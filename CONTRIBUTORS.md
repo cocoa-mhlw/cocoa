@@ -72,6 +72,7 @@
 - Yuki Kawanishi
 - Satoshi Iguchi
 - Kimihiro Shirase
+- Yusuke Yamada (Xamarin)
 - Tassana Thaveeteeratham (Thai Translation)
 - Kotaro Sakamoto
 - Koichi Yokota (Documentation)
