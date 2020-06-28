@@ -13,10 +13,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ButtonAgree" xml:space="preserve">
-    <value>Samþykkja</value>
+    <value>Slaナセem se</value>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
-    <value>HEIM</value>
+    <value>DOM</value>
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
@@ -24,7 +24,7 @@
     <comment>App Name</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
-    <value>Leyfissamningur</value>
+    <value>Licenca</value>
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
@@ -32,21 +32,21 @@
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
-    <value>Stillingar stöðu</value>
+    <value>Postavke statusa</value>
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
-    <value>Athuga þarf nettenginguna.</value>
+    <value>Provjerite mreナセnu vezu.</value>
     <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
-    <value>Í lagi</value>
+    <value>uredu</value>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
-    <value>Ekki</value>
+    <value>Ne sada</value>
   </data>
   <data name="MainExposures" xml:space="preserve">
-    <value>Stöður</value>
+    <value>Izlaganja</value>
     <comment>Tab Button</comment>
   </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
@@ -54,367 +54,367 @@
     <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
-    <value>Handvirkt</value>
+    <value>Kako koristiti</value>
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
-    <value>Engin þekkt útsetning</value>
+    <value>Nema poznatih izloženosti</value>
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>Þú verður látinn vita ef þú hefur orðið fyrir einhverjum sem tilkynnti um jákvæða COVID-19 niðurstöðu.</value>
+    <value>Bićete obaviješteni ako ste bili izloženi nekome ko je prijavio pozitivan rezultat COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Reyndu aftur síðar.</value>
+    <value>Pokušajte ponovo kasnije.</value>
   </data>
   <data name="ButtonFailed" xml:space="preserve">
-    <value>Mistókst</value>
+    <value>Nije uspjelo</value>
   </data>
   <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Greining lögð</value>
+    <value>Dijagnoza predata</value>
   </data>
   <data name="ButtonComplete" xml:space="preserve">
-    <value>Ljúka</value>
+    <value>Kompletna</value>
   </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Senda inn greiningu...</value>
+    <value>Slanje dijagnoze ...</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>Stillingar</value>
+    <value>Postavke aplikacije</value>
     <comment>アプリの設定</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
-    <value>Hætta við</value>
+    <value>Otkaži</value>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
-    <value>Verið er að fella af skrá</value>
+    <value>Brisanje</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Deildu forritinu</value>
+    <value>Zatražite od porodice i prijatelja da učestvuju</value>
     <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
-    <value>Deila</value>
+    <value>Podijeli</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Miðlun jákvæðra upplýsinga og nafnlaus tilkynning til annarra</value>
+    <value>Dijeljenje pozitivnih informacija i anonimnih obavijesti drugima</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
-    <value>Endurstilla</value>
+    <value>Stani</value>
     <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
-    <value>persónuverndarstefna</value>
+    <value>Politika privatnosti</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
-    <value>Beðið eftir skráningu</value>
+    <value>Čeka se registracija</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>Viltu virkilega Endurstilla öll gögnin?</value>
+    <value>Želite li zaista resetirati sve podatke?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>Eyða öllum gögnum</value>
+    <value>Izbrišite sve podatke</value>
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
-    <value>Öllum stillingum og gögnum hefur verið eytt. Endurræsa þarf forritið.</value>
+    <value>Izbrisane su sve postavke i podaci. Ponovo pokrenite aplikaciju.</value>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Skil á skráningu</value>
+    <value>Povratak na registraciju</value>
   </data>
   <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Jákvæð skráning</value>
+    <value>Pozitivna registracija</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Á að skrá jákvætt síðar?</value>
+    <value>Želite li se kasnije pozitivno registrirati?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
-    <value>Ef þú ert jákvæður með nýja Corona skaltu hafa samstarf við jákvæða skráningu til að vernda fólkið í kringum þig.</value>
+    <value>Pomozite da zaštitite svoju porodicu i prijatelje anonimnim prijavljivanjem rezultata ispitivanja.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Þetta forrit er svo árangursríkt að margir setja það upp, svo vinsamlegast deila umsókn með fólki í kringum þig.</value>
+    <value>Još jedna osoba koja koristi ovu aplikaciju je još jedan korak ka obuzdavanju širenja COVID-19.</value>
     <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>Hvernig á að nota</value>
+    <value>Kako se koristi ova aplikacija</value>
     <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>Auðkenni afgreiðslustöðvar</value>
+    <value>Šta je 'bliski kontakt'?</value>
     <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
-    <value>Staðfestingaraðferð tengiliðar</value>
+    <value>Provjera bliskih kontakata</value>
     <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
-    <value>Ef ákveðið er að smitast</value>
+    <value>Kada je pozitivno testiran</value>
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>Stöðva/eyða upptöku</value>
+    <value>Zaustavljanje / brisanje bliske povijesti kontakata</value>
     <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
-    <value>Þegar þú keyrir þetta forrit mun hver Smartphone mynda og hafa tengiliðakóða. Að auki öðlast þessi App ekki neinar upplýsingar sem tengjast persónuupplýsingum eins og símanúmeri og staðsetningarupplýsingum.</value>
+    <value>Kada pokrenete ovu aplikaciju, svaki će pametni telefon generirati slučajni kod. Ne prikupljaju se lični podaci i podaci o lokaciji uključujući GPS podatke.</value>
     <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
-    <value>Skilyrði sem skráð hafa verið</value>
+    <value>Što je blizak kontakt</value>
     <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
-    <value>Samband við aðra notendur forrits innan 1 Meter í 15 mínútur eða meira er skráð sem "Contact".</value>
+    <value>Ako su pametni telefoni koji pokreću ovu aplikaciju u bliskom kontaktu (unutar 1 metra na 15 minuta ili više), to se bilježi kao bliski kontakt.</value>
     <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
-    <value>Upplýsingar um skráningu tengiliða</value>
+    <value>Snimanje bliskog kontakta</value>
     <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
-    <value>Á þessum tíma er tengiliðakóði viðkomandi aðila skráður í umsóknina. Tengiliðaupplýsingar verða ekki notaðar fyrr en notandinn hefur skráð sig jákvætt. Tengslaferill verður þurrkast út eftir 14 daga. * Tengiliðskóðinn breytist reglulega.</value>
+    <value>Telefoni u bliskom kontaktu razmjenjuju svoje slučajne kodove. Te se informacije neće koristiti dok nijedan korisnik ne registrira pozitivne rezultate ispitivanja s ovom aplikacijom. Istorija bliskih kontakata biće izbrisana nakon 14 dana. Napomena: Kôd se redovno mijenja kako bi zaštitio vašu privatnost.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>Fara í App stillingar</value>
+    <value>Idite na postavke aplikacije</value>
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
-    <value>Frá App stillingum er hægt að kveikja/slökkva á Bluetooth og tilkynningum, hætta að nota forritið og eyða loka tengiliðasögu.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <value>Iz postavki aplikacije možete omogućiti / onemogućiti Bluetooth i obavijesti, prestati koristiti aplikaciju i izbrisati blisku povijest kontakata.</value>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
-    <value>The app mun tilkynna þér, ef þú varst í nánu sambandi við COVID-19 jákvæður notandi.</value>
+    <value>Aplikacija će vas obavijestiti ako ste bili u bliskom kontaktu sa pozitivnim korisnikom COVID-19.</value>
     <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
-    <value>Þú getur athugað númerið á nánum tengiliðum þínum á heimaskjánum.</value>
+    <value>Možete pregledati broj svojih bliskih kontakata sa početnog zaslona.</value>
     <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
   </data>
   <data name="HelpPage2Description3" xml:space="preserve">
-    <value>Þú getur athugað lista yfir nána tengiliðadagsetningar og fengið ráðgjöf um hvað á að gera ef þú hefur einkenni sjúkdómsins.</value>
+    <value>Možete provjeriti popis bliskih datuma kontakta i dobiti smjernice šta raditi ako imate simptome bolesti.</value>
     <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
   </data>
   <data name="HelpPage2Label1" xml:space="preserve">
-    <value>Tilkynning</value>
+    <value>Obavijest</value>
     <comment>通知</comment>
   </data>
   <data name="HelpPage2Label2" xml:space="preserve">
-    <value>Heim</value>
+    <value>Dom</value>
     <comment>ホーム画面</comment>
   </data>
   <data name="HelpPage2Label3" xml:space="preserve">
-    <value>Ef þú hefðir náið samband við COVID-19 jákvæður notandi</value>
+    <value>Ako ste imali bliski kontakt sa pozitivnim korisnikom COVID-19</value>
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
-    <value>Ef þú prófaðir jákvætt</value>
+    <value>Ako ste testirali pozitivno</value>
     <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
-    <value>Almenn Heilbrigðisyfirvöld munu gefa út "úrvinnslunúmer".</value>
+    <value>Tijela za javno zdravstvo izdati će vam "broj za obradu".</value>
     <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
   </data>
   <data name="HelpPage3Description3" xml:space="preserve">
-    <value>Skráðu þig með því að slá inn vinnslunúmer í þetta forrit</value>
+    <value>Registrirajte se unosom navedenog broja za obradu u ovu aplikaciju</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
-    <value>Snjallsímar sem voru í nánu sambandi við snjallsímann þinn á síðustu 14 dögum munu fá tilkynningar.</value>
+    <value>Pametni telefoni koji su bili u bliskom kontaktu sa vašim pametnim telefonom u posljednjih 14 dana dobit će obavijesti.</value>
     <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
-    <value>Aðeins eru notaðir handahófi kóðar úr tækinu þegar tilkynningar eru sendar. Engar persónulegar upplýsingar eru notaðar.</value>
+    <value>Pri slanju obavijesti koriste se samo nasumično generirani kodovi s uređaja. Ne koriste se lični podaci.</value>
     <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
-    <value>Skráið ykkur hér þegar prófað er jákvætt</value>
+    <value>Registrirajte se ovdje kada ste pozitivno testirani</value>
     <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
-    <value>Leyfi</value>
+    <value>Licenca</value>
     <comment>ライセンス…</comment>
   </data>
   <data name="SettingsPageLabel1" xml:space="preserve">
-    <value>Loka tengiliðupptöku</value>
+    <value>Snimanje kontakta izbliza</value>
     <comment>接触の検出</comment>
   </data>
   <data name="SettingsPageDescription1" xml:space="preserve">
-    <value>Notkun á Bluetooth</value>
+    <value>Upotreba Bluetooth-a</value>
     <comment>Bluetoothによる接触の検知</comment>
   </data>
   <data name="SettingsPageLabel2" xml:space="preserve">
-    <value>Tilkynningar</value>
+    <value>Obavijesti</value>
     <comment>通知</comment>
   </data>
   <data name="SettingsPageDescription2" xml:space="preserve">
-    <value>Tilkynningar um lokun tengiliðar</value>
+    <value>Obavijesti o zatvaranju kontakta</value>
     <comment>陽性者との接触通知</comment>
   </data>
   <data name="SettingsPageLabel3" xml:space="preserve">
-    <value>Hætta að nota appið</value>
+    <value>Prestanite koristiti aplikaciju</value>
     <comment>アプリの使用中止</comment>
   </data>
   <data name="SettingsPageDescription3" xml:space="preserve">
-    <value>Hætta að nota og eyða nánum tengiliðarfærslum</value>
+    <value>Prestanite koristiti i brisati zapise o bliskim kontaktima</value>
     <comment>使用を中止して過去14日間の接触履歴を消去</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
-    <value>Hvað er ' náin snerting '?</value>
+    <value>Šta je 'bliski kontakt'?</value>
     <comment>どのようにして接触を記録していますか？</comment>
   </data>
   <data name="HelpMenuPageLabel2" xml:space="preserve">
-    <value>Hvernig athuga ég fjölda náinna tengiliða?</value>
+    <value>Kako mogu provjeriti broj bliskih kontakata?</value>
     <comment>接触の有無はどのように知ることができますか？</comment>
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
-    <value>Ef þú prófir jákvætt fyrir COVID-19</value>
+    <value>Ako ste pozitivni na COVID-19</value>
     <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>Hvernig stoppa ég/eyða loka tengiliðupptöku?</value>
+    <value>Kako mogu zaustaviti / izbrisati snimanje iz bliskog kontakta?</value>
     <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
-    <value>Loka tengiliðum síðastliðna 14 daga</value>
+    <value>Zatvorite kontakte u proteklih 14 dana</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>Engir nánir Tengiliðir við COVID-19 Jákvæðir notendur</value>
+    <value>Nema bliskih kontakata sa COVID-19 pozitivnim korisnicima</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>Vinsamlegast Haltu áfram að æfa nýja lífsstíl sem mælt er með af stjórnvöldum.</value>
+    <value>Molimo nastavite prakticirati „Novi stil života“ koji preporučuje vlada.</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>Deila þessu forriti</value>
+    <value>Podijelite ovu aplikaciju</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>Kærar þakkir fyrir að skrá niðurstöður prófsins!</value>
+    <value>Hvala što ste prijavili rezultate testa!</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
   <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>Skráning er nafnlaus. Ekki þarf að slá inn nafn þitt eða aðrar persónulegar upplýsingar. Engar upplýsingar varðandi staðsetningu náins tengiliðs eru skráðar.</value>
+    <value>Registracija je anonimna. Ne morate unositi svoje ime ili bilo koje druge lične podatke. Nema podataka o lokaciji bliskog kontakta.</value>
     <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
-    <value>Notkunarskilmálar</value>
+    <value>Pravila korištenja</value>
     <comment>利用規約</comment>
   </data>
   <data name="TutorialPage3ButtonText" xml:space="preserve">
-    <value>Ég samþykki notkunarskilmála</value>
+    <value>Prihvatam Uslove korišćenja</value>
     <comment>規約に同意して次へ</comment>
   </data>
   <data name="TutorialPage6Label1" xml:space="preserve">
-    <value>Uppsetningu lokið. Þakka þér!</value>
+    <value>Postavljanje je dovršeno. Hvala ti!</value>
     <comment>ご登録いただきありがとうございました</comment>
   </data>
   <data name="TutorialPage6ButtonText1" xml:space="preserve">
-    <value>Heim</value>
+    <value>Dom</value>
     <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>Hvernig á að nota þetta App</value>
+    <value>Kako se koristi ova aplikacija</value>
     <comment>使い方を学ぶ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
-    <value>Auðkenni tækis</value>
+    <value>Identifikacija uređaja</value>
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>Listi yfir nána tengiliði með COVID-19 Jákvæðir notendur</value>
+    <value>Lista bliskih kontakata sa COVID-19 pozitivnim korisnicima</value>
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Fylltu á einkennin</value>
+    <value>Popunite svoje simptome</value>
     <comment>症状を入力</comment>
   </data>
   <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Segðu frá einkennum þínum í síma Samrunamiðstöð</value>
+    <value>Recite svoje simptome telefonskim konsultativnim centrom</value>
     <comment>帰国者・接触者外来に電話</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
-    <value>Sinnum</value>
+    <value>puta</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Ef þú ert mögulega með COVID-19 einkenni, skaltu hafa samband við heilbrigðisstarfsfólk með því að nota formið hér að neðan eða í síma. Það fer eftir einkennum, þér verður ráðlagt að taka COVID-19 próf.</value>
+    <value>Ako imate moguće simptome COVID-19, obratite se zdravstvenim organizacijama koristeći obrazac niže ili telefonom. Ovisno o simptomima, bit će vam savjetovano da napravite test COVID-19.</value>
     <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Vinsamlegast Taktu skjámynd af þessum skjá. Þú gætir verið beðinn um að veita það við greiningu.</value>
+    <value>Molimo vas da snimite snimku ekrana. Možda će biti zatraženo da ga dostavite tokom dijagnoze.</value>
     <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>Fjöldi staðfestra náinna tengiliða með COVID-19 Jákvæðir notendur</value>
+    <value>Broj potvrđenih bliskih kontakata sa COVID-19 pozitivnim korisnicima</value>
     <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
-    <value>Loka tengiliðum síðastliðna 14 daga</value>
+    <value>Zatvorite kontakte u proteklih 14 dana</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00-17:30 (nema helgar og helgidaga)</value>
+    <value>9: 00-17: 30 (osim vikenda i praznika)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 upplýsingar og úrræði</value>
+    <value>COVID-19 Informacije i resursi</value>
     <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
-    <value>Stuðningur</value>
+    <value>Podrška</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
-    <value>í notkun</value>
+    <value>u upotrebi</value>
     <comment>使用中</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>Athuga nána tengiliði</value>
+    <value>Provjerite bliske kontakte</value>
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
-    <value>Þegar prófað var jákvætt fyrir COVID-19</value>
+    <value>Kada je pozitivan na COVID-19</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
-    <value>Skrá jákvæða niðurstöðu prófana</value>
+    <value>Registrirajte pozitivan rezultat testa</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="HomePageDescription5" xml:space="preserve">
-    <value>Deila þessu forriti</value>
+    <value>Podijelite ovu aplikaciju</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
-    <value>Heim</value>
+    <value>Dom</value>
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>Hugtakanotkun</value>
+    <value>Termin upotrebe</value>
     <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
-    <value>Persónuvernd er varin</value>
+    <value>Vaša privatnost je zaštićena</value>
     <comment>プライバシーについて</comment>
   </data>
   <data name="TutorialPage2Description2" xml:space="preserve">
-    <value>Engar persónulegar upplýsingar eins og nafn þitt eða símanúmer er safnað. Engin Geolocation gögn, þ. mt GPS gögn er safnað.</value>
+    <value>Ne prikupljaju se lični podaci poput vašeg imena ili telefonskog broja. Ne prikupljaju se podaci o geolokaciji, uključujući GPS podatke.</value>
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>Öll gögn eru dulkóðuð og vistuð staðbundið á snjallsímanum þínum. Öllum gögnum er sjálfkrafa eytt eftir 14 daga. Hreyfingar þínar eru ekki raktar á neinn hátt af ríkisstofnunum eða þriðja aðila.</value>
+    <value>Svi se podaci šifriraju i pohranjuju lokalno na vašem pametnom telefonu. Svi se podaci automatski brišu nakon 14 dana. Vladine agencije ili treće strane ni na koji način ne prate vaše pokrete.</value>
     <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
-    <value>Þú getur hætt að skrá nána tengiliði við aðra notendur hvenær sem er með því að breyta forritastillingum eða eyða forritinu.</value>
+    <value>Možete zaustaviti snimanje bliskih kontakata s drugim korisnicima bilo kada promjenom postavki aplikacije ili brisanjem aplikacije.</value>
     <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
   </data>
   <data name="TutorialPage2Description5" xml:space="preserve">
-    <value>Notkunarskilmálar</value>
+    <value>Pravila korištenja</value>
     <comment>利用規約へ</comment>
   </data>
   <data name="TutorialPage2Title" xml:space="preserve">
@@ -422,95 +422,95 @@
     <comment>プライバシーについて</comment>
   </data>
   <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>Kveikja á tilkynningum</value>
+    <value>Uključite obavijesti</value>
     <comment>通知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>Vinsamlegast Kveiktu á tilkynningum til að fá tilkynningu þegar þú hefðir náin samskipti við COVID-19 jákvæða notendur.</value>
+    <value>Uključite obavijesti da biste bili obaviješteni kada ste imali bliske kontakte sa pozitivnim korisnicima COVID-19.</value>
     <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
   </data>
   <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>Kveikja</value>
+    <value>Uključi</value>
     <comment>有効にする</comment>
   </data>
   <data name="TutorialPage5Description4" xml:space="preserve">
-    <value>Setja upp síðar</value>
+    <value>Postavite kasnije</value>
     <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage5Title" xml:space="preserve">
-    <value>Til að nota tilkynningar</value>
+    <value>Da biste koristili obavijesti</value>
     <comment>通知をご利用いただくために</comment>
   </data>
   <data name="MenuPageTitle" xml:space="preserve">
-    <value>valmynd</value>
+    <value>Meni</value>
     <comment>メニュー</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
-    <value>Skrá</value>
+    <value>Registrirajte se</value>
     <comment>登録する</comment>
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>Vinsamlegast sláðu inn vinnslukóða sem gefinn er út til þín með því að "Health Center upplýsingar um rauntíma upplýsinga-hlutdeild kerfi á COVID-19 (HER-SYS)".</value>
+    <value>Unesite procesni kôd koji vam je izdao "Zdravstveni centar sistem razmjene informacija u stvarnom vremenu na COVID-19 (HER-SYS)".</value>
     <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>Notendur sem voru í nánum samskiptum við þig innan síðastliðinna 14 daga verða látnir vita. Skráning er nafnlaus. Ekki þarf að slá inn nafn þitt eða aðrar persónulegar upplýsingar. Engar upplýsingar varðandi staðsetningu náins tengiliðs eru skráðar.</value>
+    <value>Korisnici koji su bili u bliskom kontaktu s vama u posljednjih 14 dana bit će obaviješteni. Registracija je anonimna. Ne morate unositi svoje ime ili bilo koje druge lične podatke. Nema podataka o lokaciji bliskog kontakta.</value>
     <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
-    <value>Hvernig á að taka á móti ferliskóða</value>
+    <value>Kako primiti procesni kod</value>
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="NotifyOtherPageTitle" xml:space="preserve">
-    <value>Skrá jákvæða niðurstöðu prófana</value>
+    <value>Registrirajte pozitivan rezultat testa</value>
     <comment>陽性情報の登録</comment>
   </data>
   <data name="TutorialPage1Button" xml:space="preserve">
-    <value>Næsta</value>
+    <value>Sljedeći</value>
     <comment>次へ</comment>
   </data>
   <data name="TutorialPage1Description1" xml:space="preserve">
-    <value>Forritið viðurkennir að loka tengiliðum milli smartphones sem keyra þetta forrit.</value>
+    <value>Aplikacija prepoznaje bliske kontakte između pametnih telefona koji pokreću ovu aplikaciju.</value>
     <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>Þegar það er prófað jákvætt fyrir COVID-19, getur þú nafnlaust skráð niðurstöður prófana í þessu forriti.</value>
+    <value>Ako se pozitivno testira na COVID-19, možete anonimno registrirati rezultat testa u ovoj aplikaciji.</value>
     <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>Ef þú hefur verið í nánu sambandi við notanda sem prófaði jákvæða, tilkynnir forritið um hugsanlega sýkingu og veitir ráðgjöf til að vernda heilsuna.</value>
+    <value>Ako ste bili u bliskom kontaktu s korisnikom koji je testirao pozitivno, aplikacija vas obavještava o potencijalnoj infekciji i daje smjernice za zaštitu vašeg zdravlja.</value>
     <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
   </data>
   <data name="TutorialPage1Title1" xml:space="preserve">
-    <value>Verndaðu þig með forritinu</value>
+    <value>Zaštitite se aplikacijom</value>
     <comment>このアプリでできること</comment>
   </data>
   <data name="TutorialPage1Title2" xml:space="preserve">
-    <value>Verndaðu þig með forritinu</value>
+    <value>Zaštitite se aplikacijom</value>
     <comment>このアプリでできること</comment>
   </data>
   <data name="TutorialPage4Button1" xml:space="preserve">
-    <value>Kveikja</value>
+    <value>Uključi</value>
     <comment>有効にする</comment>
   </data>
   <data name="TutorialPage4Button2" xml:space="preserve">
-    <value>Setja upp síðar</value>
+    <value>Postavite kasnije</value>
     <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage4Description" xml:space="preserve">
-    <value>Vinsamlegast Kveiktu á Bluetooth til að byrja að skrá loka tengiliði við aðra notendur.</value>
+    <value>Uključite funkciju Obavijesti o izloženosti i Bluetooth da biste započeli snimanje bliskih kontakata s drugim korisnicima.</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
   <data name="TutorialPage4Label" xml:space="preserve">
-    <value>Frekari upplýsingar</value>
+    <value>Saznati više</value>
     <comment>技術的な詳細について</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
-    <value>Kveikja á Bluetooth</value>
+    <value>Za upotrebu obavijesti o izloženosti</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage4Title2" xml:space="preserve">
-    <value>Kveikja á Bluetooth</value>
+    <value>Za upotrebu obavijesti o izloženosti</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
@@ -518,55 +518,55 @@
     <comment>から</comment>
   </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
-    <value>Sláðu inn 8 stafa kóða</value>
+    <value>Unesite 8-znamenkasti kôd</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>Vinnslunúmerið verður tilkynnt til farsímanúmerið þitt eða tölvupóstfang skráð í nýju coronavirus smitsjúkdómalæknum upplýsingar og stjórnkerfi (hér eftir "Management System").</value>
+    <value>Broj za obradu bit će obaviješten o vašem broju mobilnog telefona ili e-mail adresi registriranoj u novom sustavu za upravljanje i zaraznim bolestima coronavirusa (u daljnjem tekstu: „sustav upravljanja“).</value>
     <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>Þegar þú slærð inn þetta vinnslunúmer inn í flugstöðina mun Flugstöðin gera fyrirspurn í gegnum tilkynningarþjóninn til umsjónarkerfisins um það hvort vinnslunúmerið hafi verið gefið út til þín.</value>
+    <value>Kada unesete ovaj broj obrade u terminal, terminal će izvršiti upit putem poslužitelja za obavijesti na sustav upravljanja o tome da li vam je obrađeni broj izdan.</value>
     <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
   </data>
   <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>Umsjónarkerfið bregst við tilkynningarþjóninum um það hvort færslugúmerið sem vísað var í hafi verið gefið út til þín.</value>
+    <value>Sustav upravljanja odgovorit će na poslužitelj obavijesti o tome je li vam poslani broj transakcije izdan.</value>
     <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
   </data>
   <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>Ef þú svarar því að færslunúmerið hafi verið sent til þín verða aðrar stöðvar notanda veittar með daglegan lykil skráðan á afgreiðslustöð þinni.</value>
+    <value>Ako odgovorite da vam je broj transakcije izdat, terminalima drugih korisnika bit će dodijeljen dnevni ključ zabilježen na vašem terminalu.</value>
     <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>Ef þú hefur verið í sambandi við þig innan 14 daga, munt þú vita að þú gætir hafa haft samband án þess að upplýsingar sem geta auðkenna þig persónulega.</value>
+    <value>Ako ste bili u kontaktu s vama u roku od 14 dana, znat ćete da ste možda kontaktirani bez ikakvih podataka koji vas mogu osobno identificirati.</value>
     <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>Samþykkja og skrá</value>
+    <value>Pristanite i registrujte se</value>
     <comment>同意して陽性登録する</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>Samþykki til jákvæðrar skráningar</value>
+    <value>Pristanak na pozitivnu registraciju</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Samþykki til jákvæðrar skráningar</value>
+    <value>Pristanak na pozitivnu registraciju</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
-    <value>Útgáfa</value>
+    <value>Verzija</value>
     <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Slökkt er á Bluetooth. Vinsamlegast Kveikið í Bluetooth.</value>
+    <value>Bluetooth je isključen. Uključite Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>Listi yfir nána tengiliði (síðastliðna 14 daga)</value>
+    <value>Lista bliskih kontakata (zadnjih 14 dana)</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>Dagsetningar þegar þú varst í nánu sambandi við COVID-19 jákvæða notendur.</value>
+    <value>Datum kada ste bili u bliskom kontaktu sa pozitivnim korisnicima COVID-19.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
@@ -574,129 +574,129 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/hr/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/hr/chatbot4.html</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
-    <value>Það er mögulegt að þú hafir verið í nálægð við notanda sem prófaði jákvætt fyrir COVID-19.  Pikkaðu á frekari upplýsingar.</value>
+    <value>Moguće je da ste bili u neposrednoj blizini s korisnikom koji je pozitivno testirao COVID-19. Dodirnite za više detalja.</value>
     <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
   </data>
   <data name="LocalNotificationTitle" xml:space="preserve">
-    <value>Hugsanleg COVID-19 útsetning</value>
+    <value>Moguća izloženost COVID-19</value>
     <comment>Possible COVID-19 Exposure</comment>
   </data>
   <data name="LocalNotificationPermittedDescription" xml:space="preserve">
-    <value>Ef þú vilt gera það óvirkt geturðu breytt því úr App Settings</value>
+    <value>Ako ga želite onemogućiti, možete to promijeniti iz postavki aplikacije</value>
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
-    <value>Tilkynningar virkjaðar</value>
+    <value>Obavijesti su omogućene</value>
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>Upplýsingar um þetta App</value>
+    <value>Informacije o ovoj aplikaciji</value>
   </data>
   <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>Q og A fyrir notanda</value>
+    <value>Q i A za korisnika</value>
   </data>
   <data name="InqueryMailBody" xml:space="preserve">
-    <value>Nafn: \r \ n Tengiliður: \r\n efni fyrirspurnarinnar (vinsamlegast Veldu flokk úr eftirfarandi): 1. hvernig App virkar, 2. app stillingar, 3. notkun appsins (tilkynning o. fl.)), 4. Aðrir \r\n Fyrirspurnartexti: \r\n</value>
+    <value>Naziv: \ r \ n Kontakt: \ r \ n Sadržaj upita (Molimo odaberite sljedeću kategoriju): 1. Kako aplikacija radi, 2. Postavke aplikacije, 3. Korištenje aplikacije (obavijest itd.)), 4. Ostali \ r \ n Tekst upita: \ r \ n</value>
     <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
   </data>
   <data name="InqueryMailSubject" xml:space="preserve">
-    <value>Fyrirspurnir um staðfestingarforrit tengiliðar</value>
+    <value>Pitanja o aplikaciji za potvrdu kontakata</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
-    <value>Dagar</value>
+    <value>Dani</value>
     <comment>X日間</comment>
   </data>
   <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Tilkynning um útsetningu er virk.</value>
+    <value>Obavijest o izloženosti je aktivna.</value>
     <comment>Exposure Notification機能は許諾の状態です。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Slökkt er á Bluetooth. Kveikja þarf á Bluetooth.</value>
+    <value>Bluetooth je isključen. Uključite Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Tilkynning um útsetningu er óvirk. Opnaðu stillingar fyrir flugstöðina og kveiktu á tilkynningum um útsetningu.</value>
+    <value>Obavijest o izloženosti onemogućena je. Otvorite postavke terminala i uključite Obavijest o izloženosti.</value>
     <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
-    <value>Þú verður að samþykkja notkunarskilmála.</value>
+    <value>Morate pristati na uvjete korištenja.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Tilkynning um útsetningu er takmörkuð. Vinsamlegast virkjið.</value>
+    <value>COVID-19 Značajka obavijesti o kontaktu nije odobrena. Odobrite iz svakog OS-a ili ga ponovo odobrite nakon ponovne instalacije aplikacije.</value>
     <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Tilkynning um útsetningu er ekki studd. Vinsamlegast uppfærðu OS í nýjustu útgáfunni. Ef þú ert enn í vandræðum, vinsamlegast hafðu samband við okkur á appsupport@cov19.mhlw.go.jp.</value>
+    <value>Obavijest o izloženosti nije podržana. Ažurirajte OS na najnoviju verziju. Ako i dalje imate problema, obratite nam se na appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
-    <value>Villa í Netsambandi</value>
+    <value>Pogreška mrežne veze</value>
     <comment>通信に失敗しました。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Villa við ræsingu tilkynninga um útsetningu</value>
+    <value>Pogreška pri pokretanju obavijesti o izloženosti</value>
     <comment>Exposure Notification起動エラー</comment>
   </data>
   <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Ekki tókst að ræsa tilkynningu um útsetningu. Opnaðu stillingar fyrir flugstöðina, kveiktu í útsetningu og kveiktu á Bluetooth.</value>
+    <value>Obavijest o izloženosti nije se mogla pokrenuti. Otvorite postavke terminala, uključite Upozorenje o izloženosti i uključite Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>Númer vinnslu rangt</value>
+    <value>Broj procesa netačan</value>
     <comment>アプリで入力された処理番号が違います</comment>
   </data>
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
-    <value>Ekki er hægt að tengjast skráningarstöð</value>
+    <value>Ne mogu se povezati s registracijskim centrom</value>
     <comment>センターに接続できません</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
-    <value>Á að skrá jákvæðar upplýsingar?</value>
+    <value>Želite li registrirati pozitivne podatke?</value>
     <comment>陽性情報を登録しますか?</comment>
   </data>
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
-    <value>Skrá</value>
+    <value>Registrirajte se</value>
     <comment>登録</comment>
   </data>
   <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Hætt við</value>
+    <value>Otkazano</value>
     <comment>キャンセルしました</comment>
   </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
-    <value>Bíða þarf í smá stund þar til skráning hefst</value>
+    <value>Pričekajte neko vrijeme dok ne krene registracija</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
   </data>
   <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
-    <value>Bíður skráningar</value>
+    <value>Čeka se registracija</value>
     <comment>登録待ち</comment>
   </data>
   <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
-    <value>Ekkert vinnslunúmer fært inn</value>
+    <value>Broj obrade nije unesen</value>
     <comment>処理番号が入力されていません</comment>
   </data>
   <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
-    <value>Vinnsla númerasniðs passar ekki</value>
+    <value>Format broja obrade se ne podudara</value>
     <comment>処理番号のフォーマットが一致していません</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>Til þess að skrá jákvæðar færslur er nauðsynlegt að gera COVID-19 tengiliðakladdskráningu virka með því að virkja það úr forritinu eða OS stillingum.</value>
+    <value>Da bi se zabilježili pozitivni zapisi, potrebno je omogućiti snimanje dnevnika kontakata COVID-19, omogućite ga putem postavki ili postavki OS-a.</value>
     <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
-    <value>Virkja COVID-19 tengslaskráningu</value>
+    <value>Omogućite evidenciju kontakata COVID-19</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>Fjöldi skráninga hefur náð efri mörkum. Hætta í forriti</value>
+    <value>Broj registracija dosegao je gornju granicu. Izlaz iz aplikacije</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
   </data>
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Villa í skráningu</value>
+    <value>Greška u registraciji</value>
     <comment>登録エラー</comment>
   </data>
 </root>

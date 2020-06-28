@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -10,7 +11,7 @@ using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
-using Plugin.LocalNotification;
+//using Plugin.LocalNotification;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
@@ -30,11 +31,12 @@ namespace Covid19Radar.Services
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<IHttpDataService>();
             this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             userData = this.userDataService.Get();
+            userDataService.UserDataChanged += (s, e) => userData = userDataService.Get();
         }
 
         // this string should be localized
         public string UserExplanation
-            => "We need to make use of the keys to keep you healthy.";
+            => AppResources.LocalNotificationDescription;
 
         // this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
         public Task<Configuration> GetConfigurationAsync()
@@ -67,30 +69,36 @@ namespace Covid19Radar.Services
         // this will be called when a potential exposure has been detected
         public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getExposureInfo)
         {
-            userData.ExposureSummary = summary;
 
+            UserExposureSummary userExposureSummary = new UserExposureSummary(summary.DaysSinceLastExposure, summary.MatchedKeyCount, summary.HighestRiskScore, summary.AttenuationDurations, summary.SummationRiskScore);
+            userData.ExposureSummary = userExposureSummary;
             var exposureInfo = await getExposureInfo();
 
             // Add these on main thread in case the UI is visible so it can update
             await Device.InvokeOnMainThreadAsync(() =>
             {
-                foreach (var i in exposureInfo)
-                    userData.ExposureInformation.Add(i);
-            });
-
-            await userDataService.SetAsync(userData);
-            // If Enabled Local Notifications
-            if (userData.IsNotificationEnabled)
-            {
-                var notification = new NotificationRequest
+                foreach (var exposure in exposureInfo)
                 {
-                    NotificationId = 100,
-                    Title = AppResources.LocalNotificationTitle,
-                    Description = AppResources.LocalNotificationDescription
-                };
+                    Console.WriteLine($"COCOA found exposure {exposure.Timestamp}");
 
-                NotificationCenter.Current.Show(notification);
-            }
+                    UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
+                    userData.ExposureInformation.Add(userExposureInfo);
+                }
+            });
+            await userDataService.SetAsync(userData);
+
+            // If Enabled Local Notifications
+            //if (userData.IsNotificationEnabled)
+            //{
+            //    var notification = new NotificationRequest
+            //    {
+            //        NotificationId = 100,
+            //        Title = AppResources.LocalNotificationTitle,
+            //        Description = AppResources.LocalNotificationDescription
+            //    };
+
+            //    NotificationCenter.Current.Show(notification);
+            //}
         }
 
         // this will be called when they keys need to be collected from the server
@@ -113,6 +121,7 @@ namespace Covid19Radar.Services
 
                     if (downloadedFiles.Count > 0)
                     {
+                        Console.WriteLine("COCOA Submit Batches");
                         await submitBatches(downloadedFiles);
 
                         // delete all temporary files
@@ -162,7 +171,7 @@ namespace Covid19Radar.Services
             {
                 return (batchNumber, downloadedFiles);
             }
-            Console.WriteLine("Fetch Exposure Key");
+            Console.WriteLine("COCOA Fetch Exposure Key");
 
             Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
 
@@ -199,11 +208,13 @@ namespace Covid19Radar.Services
                     }
                     lastTekTimestamp[region] = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
+                    Console.WriteLine($"COCOA FETCH DIAGKEY {tmpFile}");
                     batchNumber++;
                 }
             }
-            Console.WriteLine(batchNumber.ToString());
-            Console.WriteLine(downloadedFiles.Count());
+            Console.WriteLine($"COCOA batchnumber {batchNumber}");
+            Console.WriteLine($"COCOA downloadfiles {downloadedFiles.Count()}");
+
             userData.LastProcessTekTimestamp = lastTekTimestamp;
             await userDataService.SetAsync(userData);
             return (batchNumber, downloadedFiles);
@@ -261,6 +272,11 @@ namespace Covid19Radar.Services
                 {
                     throw new InvalidDataException();
                 }
+            }
+
+            if (keys.ToArray() == null)
+            {
+                throw new InvalidDataException();
             }
 
             // Generate Padding

@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>앱 설정에서, Bluetooth와 알림의 사용 여부, 앱 사용 중지와 내역 삭제를 할 수 있습니다.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>접촉한 사람 중 신형 코로나 바이러스 양성 판정 등록된 사람이 있는 경우, 스마트폰으로 알림이 옵니다.</value>

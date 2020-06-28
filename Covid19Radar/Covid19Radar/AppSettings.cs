@@ -52,7 +52,7 @@ namespace Covid19Radar
 
         public string AndroidSafetyNetApiKey { get; }
 
-        internal Dictionary<string, ulong> GetDefaultDefaultBatch() =>
+        internal Dictionary<string, ulong> GetDefaultBatch() =>
             Instance.SupportedRegions.ToDictionary(r => r, r => (ulong)0);
     }
 }

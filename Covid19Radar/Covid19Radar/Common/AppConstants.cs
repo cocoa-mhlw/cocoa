@@ -19,6 +19,10 @@
         /// Max Error Count
         /// </summary>
         public const int MaxErrorCount = 3;
+        /// <summary>
+        /// Max diagnosis UID Count
+        /// </summary>
+        public const int MaxDiagnosisUidCount = 8;
 
         public const string positiveRegex = @"\b[0-9]{8}\b";
 

@@ -1,6 +1,7 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -63,6 +64,13 @@ namespace Covid19Radar.Services
             current = Get();
 
             UserDataChanged?.Invoke(this, current);
+        }
+
+        public async Task ResetAllDataAsync()
+        {
+            Application.Current.Properties.Remove("UserData");
+            current = null;
+            await Application.Current.SavePropertiesAsync();
         }
     }
 

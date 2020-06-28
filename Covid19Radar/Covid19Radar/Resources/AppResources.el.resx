@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Από τις ρυθμίσεις της εφαρμογής, μπορείτε να ενεργοποιήσετε/απενεργοποιήσετε το Bluetooth και τις ειδοποιήσεις, να διακόψετε τη χρήση της εφαρμογής και να διαγράψετε το ιστορικό επαφών.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Η εφαρμογή θα σας ειδοποιήσει, αν ήσασταν σε στενή επαφή με covid-19 θετικό χρήστη.</value>

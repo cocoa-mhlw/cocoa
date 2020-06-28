@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Az alkalmazásbeállításokból engedélyezheti/letilthatja a Bluetooth-t és az értesítéseket, leállíthatja az alkalmazás használatát, és törölheti a közeli kapcsolattartási előzményeket.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Az alkalmazás értesíti Önt, ha szoros kapcsolatban állt a COVID-19 pozitív felhasználóval.</value>

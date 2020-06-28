@@ -37,7 +37,7 @@ namespace Covid19Radar.ViewModels
             userData = this.userDataService.Get();
             StartDate = userData.GetLocalDateString();
 
-            TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
+            TimeSpan timeSpan = DateTime.UtcNow - userData.StartDateTime;
             PastDate = timeSpan.Days.ToString();
         }
 
