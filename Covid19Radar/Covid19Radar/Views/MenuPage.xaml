@@ -22,7 +22,7 @@
                     <ListView
                         ItemsSource="{Binding MenuItems}"
                         RowHeight="60"
-                        SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}"
+                        SelectedItem="{Binding SelectedMenuItem}"
                         SeparatorColor="#E0E0E0"
                         SeparatorVisibility="Default"
                         Footer="">
