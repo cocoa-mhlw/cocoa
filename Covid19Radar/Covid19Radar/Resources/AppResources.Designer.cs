@@ -1627,7 +1627,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/phone.json に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlContactedPhone {
             get {

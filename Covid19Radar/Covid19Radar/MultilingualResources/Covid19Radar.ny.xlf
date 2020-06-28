@@ -736,7 +736,7 @@
           <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedPhone">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
           <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web:</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="LocalNotificationDescription">

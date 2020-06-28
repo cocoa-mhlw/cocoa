@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら。</value>

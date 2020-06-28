@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>Huwa possibbli li kont qrib ħafna ta 'utent li ttestja pożittiv għal COVID-19.  Taptap għal aktar dettalji.</value>

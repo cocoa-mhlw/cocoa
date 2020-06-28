@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>Tas ir iespējams, jums ir bijis tuvu lietotājam, kurš testē pozitīvu COVID-19.  Pieskarieties, lai iegūtu plašāku informāciju.</value>
