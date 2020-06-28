@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>এটা সম্ভব যে আপনি একজন ব্যবহারকারীর কাছাকাছি ছিলেন যিনি COVID-19 এর জন্য ইতিবাচক পরীক্ষা করেছেন।  আরও বিস্তারিত জানার জন্য ট্যাপ করুন।</value>

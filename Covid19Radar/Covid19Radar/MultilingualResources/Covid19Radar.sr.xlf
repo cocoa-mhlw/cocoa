@@ -736,7 +736,7 @@
           <target state-qualifier="mt-suggestion" state="needs-review-translation">хттпс://цовид19радарјпнпрод.з11.веб.цоре.виндовс.нет/ен/индек.хтмл</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedPhone">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
           <target state-qualifier="mt-suggestion" state="needs-review-translation">хттпс://цовид19радарјпнпрод.з11.веб.цоре.виндовс.нет/ен/цхатбот4.хтмл</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="LocalNotificationDescription">
