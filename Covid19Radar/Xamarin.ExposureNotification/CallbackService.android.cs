@@ -33,7 +33,7 @@ namespace Xamarin.ExposureNotifications
 
 		protected override async void OnHandleWork(Intent workIntent)
 		{
-			Console.WriteLine($"COCOA {nameof(ExposureNotificationCallbackService)}");
+			Debug.WriteLine($"COCOA {nameof(ExposureNotificationCallbackService)}");
 			var token = workIntent.GetStringExtra(ExposureNotificationClient.ExtraToken);
 
 			var summary = await ExposureNotification.PlatformGetExposureSummaryAsync(token);
@@ -44,7 +44,7 @@ namespace Xamarin.ExposureNotifications
 			}
 
 			// Invoke the custom implementation handler code with the summary info
-			Console.WriteLine($"COCOA {nameof(ExposureNotificationCallbackService)}{summary?.MatchedKeyCount} Matched Key Count");
+			Debug.WriteLine($"COCOA {nameof(ExposureNotificationCallbackService)}{summary?.MatchedKeyCount} Matched Key Count");
 
 			if (summary?.MatchedKeyCount > 0)
 			{
