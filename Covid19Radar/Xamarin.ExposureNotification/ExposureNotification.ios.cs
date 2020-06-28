@@ -116,11 +116,11 @@ namespace Xamarin.ExposureNotifications
 					}
 					catch (OperationCanceledException)
 					{
-						Console.WriteLine($"[Xamarin.ExposureNotifications] Background task took too long to complete.");
+						Debug.WriteLine($"[Xamarin.ExposureNotifications] Background task took too long to complete.");
 					}
 					catch (Exception ex)
 					{
-						Console.WriteLine($"[Xamarin.ExposureNotifications] There was an error running the background task: {ex}");
+						Debug.WriteLine($"[Xamarin.ExposureNotifications] There was an error running the background task: {ex}");
 						task.SetTaskCompleted(false);
 					}
 
@@ -150,7 +150,7 @@ namespace Xamarin.ExposureNotifications
 				}
 				catch (Exception ex)
 				{
-					Console.WriteLine($"[Xamarin.ExposureNotifications] There was an error submitting the background task: {ex}");
+					Debug.WriteLine($"[Xamarin.ExposureNotifications] There was an error submitting the background task: {ex}");
 				}
 			}
 		}

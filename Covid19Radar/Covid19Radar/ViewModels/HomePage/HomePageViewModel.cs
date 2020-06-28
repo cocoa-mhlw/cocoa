@@ -51,7 +51,7 @@ namespace Covid19Radar.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Debug.WriteLine(ex.ToString());
             }
         }
 

@@ -137,7 +137,7 @@ namespace Covid19Radar.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error disabling notifications: {ex}");
+                Debug.WriteLine($"Error disabling notifications: {ex}");
                 return false;
             }
             finally
