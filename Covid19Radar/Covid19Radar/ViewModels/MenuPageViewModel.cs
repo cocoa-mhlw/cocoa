@@ -211,7 +211,6 @@ namespace Covid19Radar.ViewModels
             SelectedMenuItem.IconColor = "#FFF";
             SelectedMenuItem.TextColor = "#FFF";
             await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
-            SelectedMenuItem = null;
             return;
         }
 
