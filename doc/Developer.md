@@ -41,7 +41,7 @@ On the macOS
 
 More info
 
-- See [Client Side Project Note](Developer-Node.md).
+- See [Client Side Project Note](Developer-Note.md).
 
 # iOS
 
@@ -69,7 +69,7 @@ More info
 
 - Use Exposure Notification API. Thus, provisioning profile required `com.apple.developer.exposure-notification entitlement`.
   - If you haven't the entitlement, removing it in `Entitlements.plist`.
-- See [Client Side Project Note](Developer-Node.md).
+- See [Client Side Project Note](Developer-Note.md).
 
 # Server
 
@@ -93,7 +93,7 @@ More info
 
 # References
 
-- [Client Side Project Note](Developer-Node.md)
+- [Client Side Project Note](Developer-Note.md)
 - [Installing Xamarin in Visual Studio 2019](https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows)
 - [Use the Azure Cosmos Emulator for local development and testing](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
 
