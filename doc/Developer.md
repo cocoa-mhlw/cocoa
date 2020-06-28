@@ -4,7 +4,7 @@ This document describe how to set up the development environment.
 
 # Android
 
-**Requirments**
+**Requirements**
 
 On the Windows
 
@@ -45,7 +45,7 @@ More info
 
 # iOS
 
-**Requirments**
+**Requirements**
 
 On the Windows
 
