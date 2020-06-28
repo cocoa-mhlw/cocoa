@@ -8,6 +8,7 @@ using System.Net.Http;
 using System;
 using ImTools;
 using Acr.UserDialogs;
+using System.Diagnostics;
 
 namespace Covid19Radar.ViewModels
 {
@@ -44,12 +45,12 @@ namespace Covid19Radar.ViewModels
                 {
                     var json = await client.GetStringAsync(uri);
                     var phoneNumber = JObject.Parse(json).Value<string>("phone");
-                    Console.WriteLine($"Contacted phone call number = {phoneNumber}");
+                    Debug.WriteLine($"Contacted phone call number = {phoneNumber}");
                     PhoneDialer.Open(phoneNumber);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                    Debug.WriteLine(ex.ToString());
                 }
                 finally
                 {

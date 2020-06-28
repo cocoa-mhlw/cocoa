@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
@@ -51,7 +52,7 @@ namespace Covid19Radar.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Debug.WriteLine(ex.ToString());
             }
         }
 

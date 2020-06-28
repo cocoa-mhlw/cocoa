@@ -723,7 +723,7 @@
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
-          <target state="translated">新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら。</target>
+          <target state="translated">新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら</target>
           <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">

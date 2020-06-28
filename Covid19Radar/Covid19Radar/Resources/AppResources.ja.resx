@@ -580,7 +580,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
-    <value>新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら。</value>
+    <value>新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら</value>
     <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
   </data>
   <data name="LocalNotificationTitle" xml:space="preserve">
