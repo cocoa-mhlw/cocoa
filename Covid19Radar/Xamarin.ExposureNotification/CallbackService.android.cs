@@ -27,7 +27,7 @@ namespace Xamarin.ExposureNotifications
             }
             else if(action == "com.google.android.gms.exposurenotification.ACTION_EXPOSURE_NOT_FOUND")
             {
-                Console.WriteLine($"COCOA {nameof(ExposureNotificationCallbackBroadcastReceiver)} ACTION_EXPOSURE_NOT_FOUND.");
+                Console.WriteLine($"C19R {nameof(ExposureNotificationCallbackBroadcastReceiver)} ACTION_EXPOSURE_NOT_FOUND.");
             }
         }
     }
@@ -44,7 +44,7 @@ namespace Xamarin.ExposureNotifications
 
         protected override async void OnHandleWork(Intent workIntent)
         {
-            Console.WriteLine($"COCOA {nameof(ExposureNotificationCallbackService)}");
+            Console.WriteLine($"C19R {nameof(ExposureNotificationCallbackService)}");
             var token = workIntent.GetStringExtra(ExposureNotificationClient.ExtraToken);
 
             var summary = await ExposureNotification.PlatformGetExposureSummaryAsync(token);
@@ -55,7 +55,7 @@ namespace Xamarin.ExposureNotifications
             }
 
             // Invoke the custom implementation handler code with the summary info
-            Console.WriteLine($"COCOA {nameof(ExposureNotificationCallbackService)}{summary?.MatchedKeyCount} Matched Key Count");
+            Console.WriteLine($"C19R {nameof(ExposureNotificationCallbackService)}{summary?.MatchedKeyCount} Matched Key Count");
 
             if (summary?.MatchedKeyCount > 0)
             {

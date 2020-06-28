@@ -79,7 +79,7 @@ namespace Covid19Radar.Services
             {
                 foreach (var exposure in exposureInfo)
                 {
-                    Console.WriteLine($"COCOA found exposure {exposure.Timestamp}");
+                    Debug.WriteLine($"C19R found exposure {exposure.Timestamp}");
 
                     UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                     userData.ExposureInformation.Add(userExposureInfo);
@@ -121,7 +121,7 @@ namespace Covid19Radar.Services
 
                     if (downloadedFiles.Count > 0)
                     {
-                        Console.WriteLine("COCOA Submit Batches");
+                        Debug.WriteLine("C19R Submit Batches");
                         await submitBatches(downloadedFiles);
 
                         // delete all temporary files
@@ -171,7 +171,7 @@ namespace Covid19Radar.Services
             {
                 return (batchNumber, downloadedFiles);
             }
-            Console.WriteLine("COCOA Fetch Exposure Key");
+            Debug.WriteLine("C19R Fetch Exposure Key");
 
             Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
 
@@ -190,8 +190,8 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > lastCreated || lastCreated == 0)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-                    Console.WriteLine(Utils.SerializeToJson(tekItem));
-                    Console.WriteLine(tmpFile);
+                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
+                    Debug.WriteLine(tmpFile);
 
                     using (Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken))
                     using (var fileStream = File.Create(tmpFile))
@@ -203,17 +203,17 @@ namespace Covid19Radar.Services
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine(ex.ToString());
+                            Debug.WriteLine(ex.ToString());
                         }
                     }
                     lastTekTimestamp[region] = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
-                    Console.WriteLine($"COCOA FETCH DIAGKEY {tmpFile}");
+                    Debug.WriteLine($"C19R FETCH DIAGKEY {tmpFile}");
                     batchNumber++;
                 }
             }
-            Console.WriteLine($"COCOA batchnumber {batchNumber}");
-            Console.WriteLine($"COCOA downloadfiles {downloadedFiles.Count()}");
+            Debug.WriteLine($"C19R batchnumber {batchNumber}");
+            Debug.WriteLine($"C19R downloadfiles {downloadedFiles.Count()}");
             userData.LastProcessTekTimestamp = lastTekTimestamp;
             await userDataService.SetAsync(userData);
             return (batchNumber, downloadedFiles);
@@ -268,14 +268,14 @@ namespace Covid19Radar.Services
 
             var beforeKey = Utils.SerializeToJson(temporaryExposureKeys.ToList());
             var afterKey = Utils.SerializeToJson(keys.ToList());
-            Console.WriteLine($"COCOA {beforeKey}");
-            Console.WriteLine($"COCOA {afterKey}");
+            Debug.WriteLine($"C19R {beforeKey}");
+            Debug.WriteLine($"C19R {afterKey}");
 
             foreach (var key in keys)
             {
                 if (!key.IsValid())
                 {
-                    Console.WriteLine($"COCOA Invalid Key Expcetion");
+                    Debug.WriteLine($"C19R Invalid Key Expcetion");
                     throw new InvalidDataException();
                 }
             }
