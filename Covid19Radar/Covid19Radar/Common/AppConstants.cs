@@ -26,10 +26,5 @@
 
         public const string positiveRegex = @"\b[0-9]{8}\b";
 
-        public static class StorageKey
-        {
-            public const string Secret = "Secret";
-            public const string UserData = "UserData";
-        }
     }
 }
