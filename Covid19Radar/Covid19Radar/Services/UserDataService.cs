@@ -3,7 +3,6 @@ using Covid19Radar.Model;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.Services
@@ -44,10 +43,9 @@ namespace Covid19Radar.Services
 
         public UserDataModel Get()
         {
-            var storedUserData = SecureStorage.GetAsync(AppConstants.StorageKey.UserData).Result;
-            if (storedUserData != null)
+            if (Application.Current.Properties.ContainsKey("UserData"))
             {
-                return Utils.DeserializeFromJson<UserDataModel>(storedUserData);
+                return Utils.DeserializeFromJson<UserDataModel>(Application.Current.Properties["UserData"].ToString());
             }
             return null;
         }
@@ -60,8 +58,9 @@ namespace Covid19Radar.Services
             {
                 return;
             }
-            await SecureStorage.SetAsync(AppConstants.StorageKey.UserData, newdata);
+            Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
             current = Get();
+            await Application.Current.SavePropertiesAsync();
 
             UserDataChanged?.Invoke(this, current);
         }
