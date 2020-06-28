@@ -171,7 +171,7 @@ namespace Covid19Radar.Services
             {
                 return (batchNumber, downloadedFiles);
             }
-            Debug.WriteLine("COCOA Fetch Exposure Key");
+            Console.WriteLine("COCOA Fetch Exposure Key");
 
             Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
 
@@ -190,8 +190,8 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > lastCreated || lastCreated == 0)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
-                    Debug.WriteLine(tmpFile);
+                    Console.WriteLine(Utils.SerializeToJson(tekItem));
+                    Console.WriteLine(tmpFile);
 
                     using (Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken))
                     using (var fileStream = File.Create(tmpFile))
@@ -212,8 +212,8 @@ namespace Covid19Radar.Services
                     batchNumber++;
                 }
             }
-            Debug.WriteLine($"COCOA batchnumber {batchNumber}");
-            Debug.WriteLine($"COCOA downloadfiles {downloadedFiles.Count()}");
+            Console.WriteLine($"COCOA batchnumber {batchNumber}");
+            Console.WriteLine($"COCOA downloadfiles {downloadedFiles.Count()}");
             userData.LastProcessTekTimestamp = lastTekTimestamp;
             await userDataService.SetAsync(userData);
             return (batchNumber, downloadedFiles);
@@ -257,6 +257,7 @@ namespace Covid19Radar.Services
         private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys, PositiveDiagnosisState pendingDiagnosis)
         {
             // Create the network keys
+
             var keys = temporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key
             {
                 KeyData = Convert.ToBase64String(k.Key),
@@ -265,10 +266,16 @@ namespace Covid19Radar.Services
                 TransmissionRisk = (int)k.TransmissionRiskLevel
             });
 
+            var beforeKey = Utils.SerializeToJson(temporaryExposureKeys.ToList());
+            var afterKey = Utils.SerializeToJson(keys.ToList());
+            Console.WriteLine($"COCOA {beforeKey}");
+            Console.WriteLine($"COCOA {afterKey}");
+
             foreach (var key in keys)
             {
                 if (!key.IsValid())
                 {
+                    Console.WriteLine($"COCOA Invalid Key Expcetion");
                     throw new InvalidDataException();
                 }
             }

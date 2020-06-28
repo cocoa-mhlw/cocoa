@@ -79,7 +79,8 @@
     <CrashReportingDelay>-1</CrashReportingDelay>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchInterpreter>-all</MtouchInterpreter>
+    <MtouchInterpreter>
+    </MtouchInterpreter>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
@@ -510,6 +511,10 @@
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{554EE1AB-B447-480C-90E5-C4F040891DE6}</Project>
       <Name>Covid19Radar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj">
+      <Project>{58e47288-fe26-4402-97a1-ede546f1d849}</Project>
+      <Name>Xamarin.ExposureNotification</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
