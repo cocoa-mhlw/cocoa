@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>COVID-19 க்கு நேர்மறையான சோதனை செய்த ஒரு பயனருக்கு நீங்கள் நெருக்கமாக இருந்திருக்கலாம்.  மேலும் விவரங்களுக்கு தட்டவும்.</value>
