@@ -8,6 +8,7 @@ using System.Net.Http;
 using System;
 using ImTools;
 using Acr.UserDialogs;
+using System.Diagnostics;
 
 namespace Covid19Radar.ViewModels
 {
