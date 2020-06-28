@@ -736,8 +736,8 @@
           <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/uz/index.html</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedPhone">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
-          <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/uz/chatbot4.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
+          <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="LocalNotificationDescription">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19. Tap for more details.</source>

@@ -224,7 +224,7 @@
         </trans-unit>
         <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
           <source>From app settings, you can stop using the app and delete user data.</source>
-          <target state="translated">在應用程序設置中，您可以停止使用該應用程序並刪除用戶數據。</target>
+          <target state="translated">您可以在应用设置中选择停止使用该应用并删除用户数据。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
@@ -717,8 +717,9 @@
           <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/index.html</target>
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot4.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
+          <target state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>

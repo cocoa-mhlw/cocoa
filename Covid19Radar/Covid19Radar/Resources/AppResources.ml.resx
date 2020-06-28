@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>COVID-19-നായി പോസിറ്റീവ് ടെസ്റ്റ് ചെയ്ത ഒരു ഉപയോക്താവിനോട് നിങ്ങൾ അടുത്താണ് എന്ന് സാധ്യതയുണ്ട്.  കൂടുതൽ വിവരങ്ങൾക്ക് ടാപ്പുചെയ്യുക.</value>

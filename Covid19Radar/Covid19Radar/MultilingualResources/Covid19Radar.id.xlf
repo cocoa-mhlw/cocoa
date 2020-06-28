@@ -65,7 +65,7 @@
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
           <source>No known exposures</source>
-          <target state="translated">Tak ada paparan/kontak jarak dekat dengan pengguna positif yang teridentifikasi</target>
+          <target state="translated">Tak ada paparan/kontak jarak dekat yang teridentifikasi</target>
           <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
@@ -108,7 +108,7 @@
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
-          <target state="translated">Bagikan aplikasi ke keluarga atau teman</target>
+          <target state="translated">Ajak keluarga dan teman untuk berpartisipasi</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを広めましょう</note>
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
@@ -117,7 +117,7 @@
         </trans-unit>
         <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
           <source>Sharing positive information and anonymous notification to others</source>
-          <target state="translated">Berbagi informasi dan memberi notifikasi hasil uji positif secara anonim ke pengguna lain</target>
+          <target state="translated">Berbagi informasi hasil uji positif dan memberi notifikasi secara anonim ke pengguna lain</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
@@ -131,7 +131,7 @@
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
-          <target state="translated">Menunggu pendaftaran</target>
+          <target state="translated">Menunggu untuk mendaftar</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
           <source>Do you really want to reset all the data?</source>
@@ -190,12 +190,12 @@
         </trans-unit>
         <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
           <source>Stop / delete close contact history</source>
-          <target state="translated">Berhenti / hapus data paparan/kontak jarak dekat yang lalu</target>
+          <target state="translated">Berhenti / hapus data riwayat paparan/kontak jarak dekat</target>
           <note from="MultilingualBuild" annotates="source" priority="2">記録の停止／削除</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
           <source>When you run this app, each smartphone will generate a random code. No personal information and no location information including GPS data is collected.</source>
-          <target state="translated">Ketika aplikasi ini dijalankan, setiap perangkat akan menghasilkan kode acak. Tak ada informasi pribadi atau lokasi, termasuk data GPS, yang kumpulkan.</target>
+          <target state="translated">Ketika aplikasi ini dijalankan, setiap perangkat akan menghasilkan kode acak. Tak ada informasi pribadi dan lokasi, termasuk data GPS, yang kumpulkan.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
@@ -205,7 +205,7 @@
         </trans-unit>
         <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
           <source>If smartphones running this app are in close contact (within 1 meter for 15 minutes or more), this is recorded as a close contact.</source>
-          <target state="translated">Berada dalam jarak dekat dengan pengguna lain aplikasi ini (dalam jarak 1 meter selama 15 menit atau lebih) dicatat sebagai "kontak jarak dekat".</target>
+          <target state="translated">Jika perangkat yang terpasang aplikasi ini berada dalam jarak dekat (dalam jarak 1 meter selama 15 menit atau lebih), maka akan dicatat sebagai "kontak jarak dekat".</target>
           <note from="MultilingualBuild" annotates="source" priority="2">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</note>
         </trans-unit>
         <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
@@ -215,8 +215,7 @@
         </trans-unit>
         <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
           <source>Phones in close contact exchange their random codes. This information will not be used until either user registers positive test results with this app. The close contact history will be erased after 14 days. Note: The code changes regularly to protect your privacy.</source>
-          <target state="translated">Perangkat dalam jarak dekat saling bertukar kode acak masing-masing. Informasi ini tidak akan digunakan sampai salah satu pengguna perangkat tersebut mendaftarkan hasil tes positif COVID-19 ke dalam aplikasi ini. Rekaman data kontak jarak dekat akan dihapus setelah 14 hari. 
-Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.</target>
+          <target state="translated">Perangkat dalam jarak dekat saling bertukar kode acak masing-masing. Informasi ini tidak akan digunakan sampai salah satu pengguna perangkat tersebut mendaftarkan hasil tes positif COVID-19 di dalam aplikasi ini. Riwayat kontak jarak dekat akan dihapus setelah 14 hari. Catatan: kode akan berubah secara berkala untuk melindungi privasi anda.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</note>
         </trans-unit>
         <trans-unit id="HelpPage4ButtonText" translate="yes" xml:space="preserve">
@@ -226,8 +225,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
           <source>From app settings, you can stop using the app and delete user data.</source>
-          <target state="needs-review-translation">Dari menu pengaturan di dalam aplikasi, anda bisa mengaktifkan/menonaktifkan Bluetooth dan notifikasi, berhenti menggunakan aplikasi ini, dan menghapus rekaman data kontak jarak dekat yang lalu.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">Dari menu pengaturan di dalam aplikasi, anda bisa berhenti menggunakan aplikasi ini dan menghapus data pengguna.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
@@ -237,7 +235,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="HelpPage2Description2" translate="yes" xml:space="preserve">
           <source>You can check the number of your close contacts from the home screen.</source>
-          <target state="translated">Anda bisa memeriksa jumlah berapa kali berada dalam kontak jarak dekat dari layar beranda.</target>
+          <target state="translated">Anda bisa memeriksa berapa kali berada dalam kontak jarak dekat dari layar beranda.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最近の接触件数の確認へはホーム画面からも移動することができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description3" translate="yes" xml:space="preserve">
@@ -257,7 +255,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="HelpPage2Label3" translate="yes" xml:space="preserve">
           <source>If you had close contact with a COVID-19 positive user</source>
-          <target state="translated">Jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi ini yang teruji positif COVID-19</target>
+          <target state="translated">Jika anda pernah mengalami berada dalam jarak dekat dengan pengguna aplikasi ini yang teruji positif COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触があった場合</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
@@ -282,7 +280,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
           <source>Only randomly generated codes from device are used when sending notifications. No personal information is used.</source>
-          <target state="translated">Hanya memberikan kode perangkat yang dihasilkan secara acak untuk mengirimkan notifikasi. Tidak ada informasi pribadi yang digunakan.</target>
+          <target state="translated">Hanya kode acak perangkat yang digunakan untuk mengirimkan notifikasi. Tidak ada informasi pribadi yang digunakan.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
@@ -302,7 +300,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="SettingsPageDescription1" translate="yes" xml:space="preserve">
           <source>Use of Bluetooth</source>
-          <target state="translated">Menggunakan Bluetooth</target>
+          <target state="translated">Penggunaan Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Bluetoothによる接触の検知</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel2" translate="yes" xml:space="preserve">
@@ -322,7 +320,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="SettingsPageDescription3" translate="yes" xml:space="preserve">
           <source>Stop using and delete close contact records</source>
-          <target state="translated">Berhenti menggunakan dan menghapus rekaman kontak jarak dekat</target>
+          <target state="translated">Berhenti menggunakan dan menghapus riwayat kontak jarak dekat</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用を中止して過去14日間の接触履歴を消去</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel1" translate="yes" xml:space="preserve">
@@ -357,7 +355,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="NotContactPageDescription1" translate="yes" xml:space="preserve">
           <source>Please keep practicing 'New Lifestyle' recommended by the government.</source>
-          <target state="translated">Mohon selalu menerapkan 'Pola kewajaran hidup baru' yang disarankan oleh pemerintah.</target>
+          <target state="translated">Mohon selalu menerapkan 'Pola hidup wajar baru' yang disarankan oleh pemerintah.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">引き続き「新しい生活様式」の実践をよろしくお願いいたします。</note>
         </trans-unit>
         <trans-unit id="NotContactPageButtonText" translate="yes" xml:space="preserve">
@@ -367,7 +365,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="ThankYouNotifyOtherPageLabel1" translate="yes" xml:space="preserve">
           <source>Thank you for registering your test results!</source>
-          <target state="translated">Terimakasih karena telah mendaftarkan hasil tes anda!</target>
+          <target state="translated">Terimakasih telah mendaftarkan hasil tes anda!</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性のご登録をいただきありがとうございました</note>
         </trans-unit>
         <trans-unit id="ThankYouNotifyOtherPageDescription1" translate="yes" xml:space="preserve">
@@ -412,7 +410,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
           <source>Fill in your symptoms</source>
-          <target state="translated">Isi gejala-gejala yang anda alami</target>
+          <target state="translated">Isi dengan gejala-gejala yang anda alami</target>
           <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
@@ -427,12 +425,12 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
           <source>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</source>
-          <target state="translated">Jika anda mempunyai gejala-gejala terinfeksi COVID-19, hubungi institusi kesehatan dengan menggunakan telepon atau berkas di bawah ini. Berdasarkan gejala yang anda alami, anda disarankan untuk melakukan tes COVID-19.</target>
+          <target state="translated">Jika anda mempunyai gejala-gejala terinfeksi COVID-19, hubungi institusi kesehatan dengan menggunakan berkas di bawah ini atau telepon. Berdasarkan gejala yang anda alami, anda akan disarankan untuk melakukan tes COVID-19.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
           <source>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</source>
-          <target state="translated">Mohon ambil tangkapan gambar dari layar ini. Anda mungkin akan diminta selama proses diagnosa.</target>
+          <target state="translated">Mohon ambil tangkapan gambar dari layar ini. Anda mungkin akan diminta menunjukkannya selama proses diagnosa.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
@@ -452,7 +450,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
           <source>COVID-19 Information and Resources</source>
-          <target state="translated">Informasi dan sumber untuk COVID-19</target>
+          <target state="translated">Informasi dan Sumber-sumber untuk COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
@@ -507,12 +505,12 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="TutorialPage2Description3" translate="yes" xml:space="preserve">
           <source>All data is encrypted and saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</source>
-          <target state="translated">Semua data dienkripsi dan disimpan dalam perangkat anda. Semua data akan dihapus secara otomatis setelah 14 hari. Pergerakan anda tidak akan dilacak dengan cara apapun oleh lembaga pemerintah atau pihak ketiga.</target>
+          <target state="translated">Semua data dienkripsi dan disimpan dalam perangkat anda. Semua data akan dihapus secara otomatis setelah 14 hari. Pergerakan anda tidak akan dilacak dengan cara apapun oleh lembaga-lembaga pemerintah atau pihak ketiga.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description4" translate="yes" xml:space="preserve">
           <source>You can stop recording close contacts with other users anytime by changing app settings or deleting the app.</source>
-          <target state="translated">Anda bisa menghentikan perekaman kontak jarak dekat dengan pengguna lain setiap saat, dengan mengganti pengaturan dalam aplikasi, atau menghapus aplikasi.</target>
+          <target state="translated">Anda bisa menghentikan perekaman kontak jarak dekat dengan pengguna lain setiap saat, dengan mengganti pengaturan dalam aplikasi atau menghapus aplikasi.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description5" translate="yes" xml:space="preserve">
@@ -587,7 +585,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="TutorialPage1Description1" translate="yes" xml:space="preserve">
           <source>The app recognizes close contacts between smartphones running this app.</source>
-          <target state="translated">Aplikasi ini mendeteksi kontak jarak dekat dengan perangkat lain yang menjalankan aplikasi ini di dalamnya.</target>
+          <target state="translated">Aplikasi ini mendeteksi kontak jarak dekat dengan perangkat lain yang menjalankan aplikasi ini.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリをスマートフォンに設定した人どうしの接触を記録します。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description2" translate="yes" xml:space="preserve">
@@ -622,7 +620,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
           <source>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</source>
-          <target state="translated">Mohon aktifkan fungsi Notifikasi Paparan dan Bluetooth untuk mulai merekam kontak jarak dekat dari sesama pengguna aplikasi yang lain.</target>
+          <target state="translated">Mohon aktifkan fungsi Notifikasi Paparan dan Bluetooth untuk mulai merekam kontak jarak dekat dengan sesama pengguna aplikasi yang lain.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Label" translate="yes" xml:space="preserve">
@@ -652,27 +650,27 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
           <source>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</source>
-          <target state="translated">Nomor kode proses akan diberitahukan ke nomor telepon atau e-mail yang terdaftar di sistem informasi dan tata kelola penyebaran coronavirus baru(selanjutnya akan disebut sebagai sistem manajemen).</target>
+          <target state="translated">Nomor kode proses akan diberitahukan ke nomor telepon atau e-mail anda yang terdaftar di sistem tata kelola dan informasi penyakit menular coronavirus baru(selanjutnya akan disebut sebagai "sistem manajemen").</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
           <source>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</source>
-          <target state="translated">Ketika nomor kode proses ini dimasukkan ke dalam perangkat, perangkat akan berhubungan dengan sistem manajemen untuk mengkonfirmasi apakah nomor kode telah dikirimkan kepada anda.</target>
+          <target state="translated">Ketika nomor kode proses ini dimasukkan ke dalam perangkat, perangkat akan berhubungan dengan sistem manajemen melalui server notifikasi untuk mengkonfirmasi apakah nomor kode proses telah dihasilkan untuk anda.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
           <source>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</source>
-          <target state="translated">Sistem manajemen akan merespon server notifikasi untuk mengkonfirmasi apakah nomor kode transaksi telah dikirimkan kepada anda.</target>
+          <target state="translated">Sistem manajemen akan merespon server notifikasi untuk mengkonfirmasi apakah nomor kode transaksi terkait dikirimkan untuk anda.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
           <source>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</source>
-          <target state="translated">Jika anda mengkonfirmasi bahwa nomor kode telah dikirimkan kepada anda, perangkat dari pengguna aplikasi yang lain dapat menyimpan kode kunci harian yang berada dalam perangkat anda.</target>
+          <target state="translated">Jika anda mengkonfirmasi bahwa nomor kode telah dikeluarkan untuk anda, perangkat dari pengguna aplikasi yang lain akan diberi kode kunci harian yang ada dalam perangkat anda.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
           <source>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</source>
-          <target state="translated">Jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi yang positif COVID-19 dalam 14 hari terakhir, anda akan tahu bahwa anda pernah berdekatan dengannya dengan tanpa informasi yang dapat mengidentifikasi anda.</target>
+          <target state="translated">Jika anda pernah berada dalam jarak dekat dengan pengguna aplikasi yang positif COVID-19 dalam 14 hari terakhir, anda akan tahu bahwa anda pernah berdekatan dengannya tanpa informasi yang dapat mengidentifikasi anda.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
@@ -687,7 +685,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="SubmitConsentPageTitle2" translate="yes" xml:space="preserve">
           <source>Consent to positive registration</source>
-          <target state="translated">Persetujuan bila terdaftar sebagai pengguna yang terruji positif COVID-19</target>
+          <target state="translated">Persetujuan bila terdaftar sebagai pengguna yang teruji positif COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
         </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
@@ -720,8 +718,9 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
           <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</target>
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
+          <target state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
@@ -735,7 +734,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
           <source>If you want to disable it, you can change it from the app settings</source>
-          <target state="translated">Untuk menghentikan, lakukan pengubahan melalui menu Pengaturan dalam aplikasi</target>
+          <target state="translated">Untuk menghentikannya, lakukan pengubahan melalui menu Pengaturan di dalam aplikasi</target>
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
           <source>Notifications enabled</source>
@@ -751,12 +750,12 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
           <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
-          <target state="translated">Nama: \r\n Kontak: \r\n Isi pertanyaan  (Pilih dari salah satu kategori berikut): 1. Bagaimana cara aplikasi ini beroperaso, 2. Pengaturan aplikasi, 3. Penggunaan aplikasi (notifikasi dll.) ), 4. Lainnya \r\n Pertanyaan text: \r\n</target>
+          <target state="translated">Nama: \r\n Kontak: \r\n Isi pertanyaan (Pilih dari salah satu kategori berikut): 1. Bagaimana cara aplikasi ini beroperasi, 2. Pengaturan aplikasi, 3. Penggunaan aplikasi (notifikasi, dll.) ), 4. Lainnya \r\n teks pertanyaan: \r\n</target>
           <note from="MultilingualBuild" annotates="source" priority="2">お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</note>
         </trans-unit>
         <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
           <source>Inquiries about contact confirmation app</source>
-          <target state="translated">Pertanyaan tentang aplikasi ini.</target>
+          <target state="translated">Pertanyaan tentang aplikasi konfirmasi paparan</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
@@ -776,7 +775,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
           <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
-          <target state="translated">Notifikasi Paparan COVID-19 dinonaktifkan. Buka menu pengaturan di perangkat dan aktifkan Notifikasi Paparan.
+          <target state="translated">Notifikasi Paparan COVID-19 dinonaktifkan. Buka menu pengaturan perangkat dan aktifkan Notifikasi Paparan.
 </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
         </trans-unit>
@@ -787,7 +786,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
           <source>COVID-19 Contact notification feature not approved. Please approve from each OS or re-approve after reinstalling the application.</source>
-          <target state="translated">Fungsi notifikasi kontak jarak dekat dari aplikasi Paparan COVID-19 tak diizinkan pengguna. Mohon perbolehkan fungsi tersebut dari menu pengaturan perangkat, atau beri izin ulang setelah install ulang aplikasi.</target>
+          <target state="translated">Fungsi notifikasi kontak jarak dekat dari aplikasi Paparan COVID-19 tak diizinkan pengguna. Mohon perbolehkan fungsi tersebut dari menu pengaturan perangkat, atau beri izin ulang setelah instal ulang aplikasi.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
@@ -817,7 +816,7 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
           <source>Cannot connect to registration center</source>
-          <target state="translated">Tidak tersambung ke pusat pendaftaran</target>
+          <target state="translated">Tidak bisa tersambung ke pusat pendaftaran</target>
           <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
@@ -859,12 +858,12 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
           <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
-          <target state="translated">Untuk mendaftarkan hasil tes positif, perekaman riwayat kontak jarak dekat perlu diaktifkan. Silakan mengaktifkannya dari menu pengaturan di aplikasi atau sistem operasi perangkat.</target>
+          <target state="translated">Untuk mendaftarkan hasil tes positif, perekaman riwayat kontak jarak dekat perlu diaktifkan. Silakan mengaktifkannya dari menu pengaturan di dalam aplikasi atau sistem operasi perangkat.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
           <source>Enable COVID-19 contact logging</source>
-          <target state="translated">Aktifkan pencatatan kontak jarak dekat COVID-19</target>
+          <target state="translated">Aktifkan perekaman kontak jarak dekat COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
