@@ -9,37 +9,33 @@ using Microsoft.AspNetCore.Http;
 
 namespace Covid19Radar.Api.Services
 {
-    class ValidationServerService : IValidationServerService
+    public class ValidationServerService : IValidationServerService
     {
         private readonly ILogger<ValidationServerService> Logger;
         private readonly IConfiguration Config;
+        private readonly bool AzureFrontDoorRestrictionEnabled;
+        private readonly string AzureFrontDoorId;
 
 
         public ValidationServerService(IConfiguration config, ILogger<ValidationServerService> logger)
         {
             Logger = logger;
             Config = config;
+            AzureFrontDoorRestrictionEnabled = Config.AzureFrontDoorRestrictionEnabled();
+            AzureFrontDoorId = Config.AzureFrontDoorId();
         }
 
         public IValidationServerService.ValidateResult Validate(HttpRequest req)
         {
             var fdidHeaderValue = req.Headers["X-Azure-FDID"].ToString();
-            if (Config.AzureFrontDoorRestrictionEnabled())
+            if (AzureFrontDoorRestrictionEnabled)
             {
-                if (fdidHeaderValue != Config.AzureFrontDoorId())
+                if (fdidHeaderValue != AzureFrontDoorId)
                 {
-                    return new IValidationServerService.ValidateResult()
-                    {
-                        IsValid = false,
-                        ErrorActionResult = new StatusCodeResult(418)
-                    };
+                    return IValidationServerService.ValidateResult.InvalidAzureFrontDoorId;
                 }
             }
-            return new IValidationServerService.ValidateResult()
-            {
-                IsValid = true,
-                ErrorActionResult = null
-            };
+            return IValidationServerService.ValidateResult.Success;
         }
     }
 }

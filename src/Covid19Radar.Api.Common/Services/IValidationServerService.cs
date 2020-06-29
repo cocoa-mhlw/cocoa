@@ -11,6 +11,16 @@ namespace Covid19Radar.Api.Services
 
         public class ValidateResult
         {
+            public static readonly ValidateResult Success = new ValidateResult()
+            {
+                IsValid = true,
+                ErrorActionResult = null
+            };
+            public static readonly ValidateResult InvalidAzureFrontDoorId = new ValidateResult()
+            {
+                IsValid = false,
+                ErrorActionResult = new StatusCodeResult(418)
+            };
             public static readonly ValidateResult Error = new ValidateResult()
             {
                 IsValid = false,
