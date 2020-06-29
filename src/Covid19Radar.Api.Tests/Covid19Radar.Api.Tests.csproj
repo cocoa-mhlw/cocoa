@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -7,6 +7,12 @@
     <Platforms>AnyCPU</Platforms>
     <_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
@@ -26,10 +32,6 @@
     <ProjectReference Include="..\Covid19Radar.Api.External\Covid19Radar.Api.External.csproj" />
     <ProjectReference Include="..\Covid19Radar.Api\Covid19Radar.Api.csproj" />
     <ProjectReference Include="..\Covid19Radar.Background\Covid19Radar.Background.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
