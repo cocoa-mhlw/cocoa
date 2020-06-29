@@ -16,17 +16,20 @@ namespace Covid19Radar.Api
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly IValidationUserService Validation;
         private readonly ILogger<OptOutApi> Logger;
+        private readonly IValidationServerService ValidationServerService;
 
         public OptOutApi(
             IUserRepository userRepository,
             IDiagnosisRepository diagnosisRepository,
             IValidationUserService validation,
+            IValidationServerService validationServerService,
             ILogger<OptOutApi> logger)
         {
             UserRepository = userRepository;
             DiagnosisRepository = diagnosisRepository;
             Validation = validation;
             Logger = logger;
+            ValidationServerService = validationServerService;
         }
 
         [FunctionName(nameof(OptOutApi))]
@@ -35,6 +38,13 @@ namespace Covid19Radar.Api
             string userUuid)
         {
             Logger.LogInformation($"{nameof(OptOutApi)} processed a request.");
+
+            // Check Valid Route
+            IValidationServerService.ValidateResult validateResult = ValidationServerService.Validate(req);
+            if (!validateResult.IsValid)
+            {
+                return validateResult.ErrorActionResult;
+            }
 
             var user = new UserParameter() { UserUuid = userUuid };
 
