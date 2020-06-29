@@ -23,8 +23,9 @@ namespace Covid19Radar.Api.Tests
             // preparation
             var config = new Mock<IConfiguration>();
             var tekExportRepo = new Mock<ITemporaryExposureKeyExportRepository>();
+            var validationServer = new Mock<IValidationServerService>();
             var logger = new Mock.LoggerMock<TemporaryExposureKeysApi>();
-            var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, logger);
+            var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, validationServer.Object, logger);
         }
 
         [DataTestMethod]
@@ -38,6 +39,7 @@ namespace Covid19Radar.Api.Tests
             // preparation
             var config = new Mock<IConfiguration>();
             var tekExportRepo = new Mock<ITemporaryExposureKeyExportRepository>();
+            var validationServer = new Mock<IValidationServerService>();
             var resultModels = new List<TemporaryExposureKeyExportModel>();
             for (var i = 0; i < 50; i++)
             {
@@ -46,7 +48,7 @@ namespace Covid19Radar.Api.Tests
             tekExportRepo.Setup(_ => _.GetKeysAsync(It.IsAny<ulong>()))
                 .ReturnsAsync(resultModels.ToArray());
             var logger = new Mock.LoggerMock<TemporaryExposureKeysApi>();
-            var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, logger);
+            var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, validationServer.Object, logger);
             var context = new Mock<HttpContext>();
             var q = new Mock<IQueryCollection>();
             q.SetupGet(_ => _["since"]).Returns(since);
@@ -63,9 +65,10 @@ namespace Covid19Radar.Api.Tests
             var config = new Mock<IConfiguration>();
             var tekExportRepo = new Mock<ITemporaryExposureKeyExportRepository>();
             var resultModels = new List<TemporaryExposureKeyExportModel>();
+            var validationServer = new Mock<IValidationServerService>();
             tekExportRepo.Setup(_ => _.GetKeysAsync(It.IsAny<ulong>())).ReturnsAsync(resultModels.ToArray());
             var logger = new Mock.LoggerMock<TemporaryExposureKeysApi>();
-            var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, logger);
+            var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, validationServer.Object, logger);
             var context = new Mock<HttpContext>();
             context.Setup(_ => _.Request.Query).Returns<IQueryCollection>(null);
             // action

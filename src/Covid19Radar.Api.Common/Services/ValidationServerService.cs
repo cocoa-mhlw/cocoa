@@ -27,13 +27,13 @@ namespace Covid19Radar.Api.Services
 
         public IValidationServerService.ValidateResult Validate(HttpRequest req)
         {
-            if (!req.Headers.ContainsKey("X-Azure-FDID"))
-            {
-                return IValidationServerService.ValidateResult.InvalidAzureFrontDoorId;
-            }
-            var fdidHeaderValue = req.Headers["X-Azure-FDID"].ToString();
             if (AzureFrontDoorRestrictionEnabled)
             {
+                if (!req.Headers.ContainsKey("X-Azure-FDID"))
+                {
+                    return IValidationServerService.ValidateResult.InvalidAzureFrontDoorId;
+                }
+                var fdidHeaderValue = req.Headers["X-Azure-FDID"].ToString();
                 if (fdidHeaderValue != AzureFrontDoorId)
                 {
                     return IValidationServerService.ValidateResult.InvalidAzureFrontDoorId;

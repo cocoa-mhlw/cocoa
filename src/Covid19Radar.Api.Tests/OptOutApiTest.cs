@@ -23,8 +23,9 @@ namespace Covid19Radar.Api.Tests
             var userRepo = new Mock<IUserRepository>();
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var validation = new Mock<IValidationUserService>();
+            var validationServer = new Mock<IValidationServerService>();
             var logger = new Mock.LoggerMock<OptOutApi>();
-            var optOutApi = new OptOutApi(userRepo.Object, diagnosisRepo.Object, validation.Object, logger);
+            var optOutApi = new OptOutApi(userRepo.Object, diagnosisRepo.Object, validation.Object, validationServer.Object, logger);
         }
 
         [DataTestMethod]
@@ -36,13 +37,14 @@ namespace Covid19Radar.Api.Tests
             var userRepo = new Mock<IUserRepository>();
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var validation = new Mock<IValidationUserService>();
+            var validationServer = new Mock<IValidationServerService>();
             var validationResult = new IValidationUserService.ValidateResult()
             {
                 IsValid = isValid
             };
             validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
             var logger = new Mock.LoggerMock<OptOutApi>();
-            var optOutApi = new OptOutApi(userRepo.Object, diagnosisRepo.Object, validation.Object, logger);
+            var optOutApi = new OptOutApi(userRepo.Object, diagnosisRepo.Object, validation.Object, validationServer.Object, logger);
             var context = new Mock<HttpContext>();
             // action
             await optOutApi.RunAsync(context.Object.Request, userUuid);
