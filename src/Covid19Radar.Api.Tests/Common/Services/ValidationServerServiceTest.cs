@@ -35,7 +35,27 @@ namespace Covid19Radar.Api.Tests.Common.Services
             var instance = new ValidationServerService(config.Object, logger.Object);
         }
 
-
+        [DataTestMethod]
+        [DataRow(true, new string[] { }, "")]
+        [DataRow(true, new string[] { "" }, "")]
+        [DataRow(true, new string[] { "1" }, "1")]
+        [DataRow(false, new string[] { "1", "2", "3" }, "123")]
+        [DataRow(false, new string[] { "1" }, "2")]
+        public void ValidateMethod(bool expected, string[] headerValues, string frontDoorId)
+        {
+            // preparation
+            var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
+            var logger = new Mock<ILogger<ValidationServerService>>();
+            var req = new Mock<HttpRequest>();
+            config.Setup(_ => _["AzureFrontDoorRestrictionEnabled"]).Returns("true");
+            config.Setup(_ => _["AzureFrontDoorId"]).Returns(frontDoorId);
+            req.Setup(_ => _.Headers["X-Azure-FDID"]).Returns(new StringValues(headerValues));
+            var instance = new ValidationServerService(config.Object, logger.Object);
+            // action
+            var result = instance.Validate(req.Object);
+            // assert
+            Assert.AreEqual(expected, result.IsValid);
+        }
 
     }
 }
