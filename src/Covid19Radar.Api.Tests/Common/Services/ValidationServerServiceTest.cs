@@ -36,20 +36,33 @@ namespace Covid19Radar.Api.Tests.Common.Services
         }
 
         [DataTestMethod]
-        [DataRow(true, new string[] { }, "")]
-        [DataRow(true, new string[] { "" }, "")]
-        [DataRow(true, new string[] { "1" }, "1")]
-        [DataRow(false, new string[] { "1", "2", "3" }, "123")]
-        [DataRow(false, new string[] { "1" }, "2")]
-        public void ValidateMethod(bool expected, string[] headerValues, string frontDoorId)
+        [DataRow(true, "false", null, "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(false, "true", null, "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "false", "", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(false, "true", "", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "false", "1", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(false, "true", "1", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "false", "0", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(false, "true", "0", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "false", "-1", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(false, "true", "-1", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "false", "a", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(false, "true", "a", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "false", "b", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(false, "true", "b", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "false", "a038d2f8-b9c9-11ea-b3de-0242ac130004", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(false, "true", "a038d2f8-b9c9-11ea-b3de-0242ac130004", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "false", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        [DataRow(true, "true", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5", "3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5")]
+        public void ValidateMethod(bool expected, string checkEnabled, string incomingHeaderValue, string frontDoorId)
         {
             // preparation
             var config = new Mock<Microsoft.Extensions.Configuration.IConfiguration>();
             var logger = new Mock<ILogger<ValidationServerService>>();
             var req = new Mock<HttpRequest>();
-            config.Setup(_ => _["AzureFrontDoorRestrictionEnabled"]).Returns("true");
+            config.Setup(_ => _["AzureFrontDoorRestrictionEnabled"]).Returns(checkEnabled);
             config.Setup(_ => _["AzureFrontDoorId"]).Returns(frontDoorId);
-            req.Setup(_ => _.Headers["X-Azure-FDID"]).Returns(new StringValues(headerValues));
+            req.Setup(_ => _.Headers["X-Azure-FDID"]).Returns(new StringValues(incomingHeaderValue));
             var instance = new ValidationServerService(config.Object, logger.Object);
             // action
             var result = instance.Validate(req.Object);
