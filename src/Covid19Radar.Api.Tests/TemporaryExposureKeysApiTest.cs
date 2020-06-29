@@ -40,6 +40,8 @@ namespace Covid19Radar.Api.Tests
             var config = new Mock<IConfiguration>();
             var tekExportRepo = new Mock<ITemporaryExposureKeyExportRepository>();
             var validationServer = new Mock<IValidationServerService>();
+            validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
+
             var resultModels = new List<TemporaryExposureKeyExportModel>();
             for (var i = 0; i < 50; i++)
             {
@@ -66,6 +68,8 @@ namespace Covid19Radar.Api.Tests
             var tekExportRepo = new Mock<ITemporaryExposureKeyExportRepository>();
             var resultModels = new List<TemporaryExposureKeyExportModel>();
             var validationServer = new Mock<IValidationServerService>();
+            validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
+
             tekExportRepo.Setup(_ => _.GetKeysAsync(It.IsAny<ulong>())).ReturnsAsync(resultModels.ToArray());
             var logger = new Mock.LoggerMock<TemporaryExposureKeysApi>();
             var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, validationServer.Object, logger);

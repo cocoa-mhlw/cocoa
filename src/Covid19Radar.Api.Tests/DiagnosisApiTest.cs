@@ -66,6 +66,8 @@ namespace Covid19Radar.Api.Tests
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
             var validationServer = new Mock<IValidationServerService>();
+            validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
+
             var validationResult = new IValidationUserService.ValidateResult()
             {
                 IsValid = isValid

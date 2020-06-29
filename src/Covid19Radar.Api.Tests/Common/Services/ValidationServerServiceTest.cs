@@ -7,6 +7,7 @@ using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Documents.SystemFunctions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Primitives;
@@ -14,6 +15,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Threading;
@@ -62,7 +64,8 @@ namespace Covid19Radar.Api.Tests.Common.Services
             var req = new Mock<HttpRequest>();
             config.Setup(_ => _["AzureFrontDoorRestrictionEnabled"]).Returns(checkEnabled);
             config.Setup(_ => _["AzureFrontDoorId"]).Returns(frontDoorId);
-            req.Setup(_ => _.Headers["X-Azure-FDID"]).Returns(new StringValues(incomingHeaderValue));
+            req.Setup(_ => _.Headers["X-Azure-FDID"]).Returns(incomingHeaderValue);
+            req.Setup(_ => _.Headers.ContainsKey("X-Azure-FDID")).Returns(true);
             var instance = new ValidationServerService(config.Object, logger.Object);
             // action
             var result = instance.Validate(req.Object);
