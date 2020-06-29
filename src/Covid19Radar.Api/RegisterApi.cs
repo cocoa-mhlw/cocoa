@@ -18,15 +18,18 @@ namespace Covid19Radar.Api
         private readonly ICryptionService Cryption;
         private readonly ILogger<RegisterApi> Logger;
         private readonly IUserRepository UserRepository;
+        private readonly IValidationServerService ValidationServerService;
 
         public RegisterApi(
             IUserRepository userRepository,
             ICryptionService cryption,
+            IValidationServerService validationServerService,
             ILogger<RegisterApi> logger)
         {
             Cryption = cryption;
             Logger = logger;
             UserRepository = userRepository;
+            ValidationServerService = validationServerService;
         }
 
         [FunctionName(nameof(RegisterApi))]
@@ -34,6 +37,13 @@ namespace Covid19Radar.Api
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "register")] HttpRequest req)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
+
+            // Check Valid Route
+            IValidationServerService.ValidateResult validateResult = ValidationServerService.Validate(req);
+            if (!validateResult.IsValid)
+            {
+                return validateResult.ErrorActionResult;
+            }
 
             // UserUuid
             var userUuid = Guid.NewGuid().ToString("N")

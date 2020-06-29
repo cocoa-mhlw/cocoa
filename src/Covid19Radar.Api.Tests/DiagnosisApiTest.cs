@@ -27,6 +27,7 @@ namespace Covid19Radar.Api.Tests
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
+            var validationServer = new Mock<IValidationServerService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
             var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
@@ -36,6 +37,7 @@ namespace Covid19Radar.Api.Tests
                                                 validation.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
+                                                validationServer.Object,
                                                 logger);
         }
 
@@ -63,6 +65,9 @@ namespace Covid19Radar.Api.Tests
                 .ReturnsAsync(new DiagnosisModel());
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validation = new Mock<IValidationUserService>();
+            var validationServer = new Mock<IValidationServerService>();
+            validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
+
             var validationResult = new IValidationUserService.ValidateResult()
             {
                 IsValid = isValid
@@ -78,6 +83,7 @@ namespace Covid19Radar.Api.Tests
                                                 validation.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
+                                                validationServer.Object,
                                                 logger);
             var context = new Mock<HttpContext>();
             var keydata = new byte[16];

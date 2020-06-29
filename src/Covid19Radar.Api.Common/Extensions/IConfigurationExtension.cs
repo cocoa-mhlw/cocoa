@@ -5,6 +5,14 @@ namespace Covid19Radar.Api
 {
     public static class IConfigurationExtension
     {
+        public static string AzureFrontDoorId(this IConfiguration config) => config["AzureFrontDoorId"];
+        public static bool AzureFrontDoorRestrictionEnabled(this IConfiguration config)
+        {
+            bool result;
+            if (bool.TryParse(config["AzureFrontDoorRestrictionEnabled"], out result)) return result;
+            return false;
+        }
+
         public static string CosmosEndpointUri(this IConfiguration config) => config["COSMOS_ENDPOINT_URI"];
         public static string CosmosPrimaryKey(this IConfiguration config) => config["COSMOS_PRIMARY_KEY"];
         public static string CosmosDatabaseId(this IConfiguration config) => config["COSMOS_DATABASE_ID"];
