@@ -5,11 +5,11 @@ This document describe how to set up the development environment.
 # Android
 
 **Requirments**
-
 On the Windows
+This project is developed using Xamarin Forms, so you need to have Xamarin installed.
 
 - Windows 10
-- Visual Studio 2019
+- [Visual Studio 2019](https://visualstudio.microsoft.com/en/vs/community/)
   - Xamarin.Android
   - [Multilingual App Toolkit v4.0](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
   - (Option) Hyper-V
@@ -49,7 +49,10 @@ More info
 
 On the Windows
 
-- At writing, i didn't get the build method. Thus, I won't pen it.
+- macOS Catalina v10.15.5
+- Xcode v11.5
+You can remote build from windows with mac.However, if you have a Mac, it's better to build it there.
+[Installing Xamarin.iOS on Windows](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/windows/)connecting-to-mac/
 
 On the macOS
 
