@@ -7,6 +7,8 @@ Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Rad
 
 We are looking for translator reviewers, Please see [How to Translate application](HOW_TO_TRANSLATE_CONTRIBUTE.md) page.
 
+If you use it for your own country, you may want to refer to the following. Please see [HOW_TO_USE_YOUR_COUNTRY](docs/HOW_TO_USE_YOUR_COUNTRY.md) page.
+
 iOS Build Master Branch status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
 
 Android Build Master Branch status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
