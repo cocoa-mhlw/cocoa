@@ -155,3 +155,8 @@ Please refer to the following XAML code.
     Source="TutorialPage10.png" />
 
 ```
+
+## Server Side Architecture / Automation CI,CD
+
+see this doc
+https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/SERVER_SIDE_ARCHITECTURE.md
