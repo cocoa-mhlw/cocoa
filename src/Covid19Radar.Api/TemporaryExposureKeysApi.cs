@@ -1,5 +1,6 @@
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
+using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -18,10 +19,12 @@ namespace Covid19Radar.Api
         private readonly ILogger<TemporaryExposureKeysApi> Logger;
         private readonly string ExportKeyUrl;
         private readonly string TekExportBlobStorageContainerPrefix;
+        private readonly IValidationServerService ValidationServerService;
 
         public TemporaryExposureKeysApi(
             IConfiguration config,
             ITemporaryExposureKeyExportRepository tekExportRepository,
+            IValidationServerService validationServerService,
             ILogger<TemporaryExposureKeysApi> logger
             )
         {
@@ -29,12 +32,20 @@ namespace Covid19Radar.Api
             TekExport = tekExportRepository;
             ExportKeyUrl = config.ExportKeyUrl();
             TekExportBlobStorageContainerPrefix = config.TekExportBlobStorageContainerPrefix();
+            ValidationServerService = validationServerService;
         }
 
         [FunctionName(nameof(TemporaryExposureKeysApi))]
         public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys")] HttpRequest req)
         {
+            // Check Valid Route
+            IValidationServerService.ValidateResult validateResult = ValidationServerService.Validate(req);
+            if (!validateResult.IsValid)
+            {
+                return validateResult.ErrorActionResult;
+            }
+
             if (!long.TryParse(req.Query?["since"], out var sinceEpochSeconds))
                 sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
 
@@ -54,6 +65,13 @@ namespace Covid19Radar.Api
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys/{region}")] HttpRequest req,
             string region)
         {
+            // Check Valid Route
+            IValidationServerService.ValidateResult validateResult = ValidationServerService.Validate(req);
+            if (!validateResult.IsValid)
+            {
+                return validateResult.ErrorActionResult;
+            }
+
             if (!long.TryParse(req.Query?["since"], out var sinceEpochSeconds))
                 sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
 

@@ -25,6 +25,7 @@ namespace Covid19Radar.Api
         private readonly IVerificationService VerificationService;
         private readonly ILogger<DiagnosisApi> Logger;
         private readonly string[] SupportRegions;
+        private readonly IValidationServerService ValidationServerService;
 
         public DiagnosisApi(
             IConfiguration config,
@@ -33,6 +34,7 @@ namespace Covid19Radar.Api
             IValidationUserService validation,
             IDeviceValidationService deviceCheck,
             IVerificationService verificationService,
+            IValidationServerService validationServerService,
             ILogger<DiagnosisApi> logger)
         {
             DiagnosisRepository = diagnosisRepository;
@@ -42,6 +44,7 @@ namespace Covid19Radar.Api
             Logger = logger;
             SupportRegions = config.SupportRegions();
             VerificationService = verificationService;
+            ValidationServerService = validationServerService;
         }
 
         [FunctionName(nameof(DiagnosisApi))]
@@ -50,6 +53,14 @@ namespace Covid19Radar.Api
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             Logger.LogInformation($"{nameof(RunAsync)} request body {requestBody}");
+
+            // Check Valid Route
+            IValidationServerService.ValidateResult validateResult = ValidationServerService.Validate(req);
+            if (!validateResult.IsValid)
+            {
+                return validateResult.ErrorActionResult;
+            }
+
             var diagnosis = JsonConvert.DeserializeObject<DiagnosisSubmissionParameter>(requestBody);
             var reqTime = DateTimeOffset.UtcNow;
 
