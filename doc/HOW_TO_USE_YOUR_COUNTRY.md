@@ -26,7 +26,7 @@ https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/Developer.md
 
 # Build 1st time in simurator / emurator
 
-1. Clone from Git Hub and Open Covid19Radar Folder
+1. Clone from GitHub and Open Covid19Radar Folder
 2. Open Covid19Radar.sln
 ![Folder](images/folder.png)
 
