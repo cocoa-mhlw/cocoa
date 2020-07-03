@@ -98,7 +98,7 @@ https://github.com/Azure/Azure-Functions
 
 More info
 
-- [Easy step by step for functions development](./step-by-step-for-functions-development.md)
+- [Easy step by step for functions development](HOW_TO_BUILD_SERVER_SIDE.md)
 - [Infrastructure デプロイメントスクリプト](../infrastructure/Readme.md)
 
 # References

@@ -31,3 +31,5 @@ any thing.
 ```
 
 ## 4. build and Debug
+
+Ctrl + Alt + B / F5 Key
