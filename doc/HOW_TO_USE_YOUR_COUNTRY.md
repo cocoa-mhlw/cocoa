@@ -22,7 +22,7 @@ For more information, please contact Google and Apple through public health auth
 # Prepare Development Environment
 
 Requirements, prepare IDE, see below
-https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/Developer.md
+https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/HOT_TO_CREATE_DEV_ENV.md
 
 # Build 1st time in simurator / emurator
 
