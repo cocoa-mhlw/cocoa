@@ -81,7 +81,8 @@ namespace Covid19Radar.ViewModels
                     + AppResources.NotifyOtherPageDiag3Message;
                 UserDialogs.Instance.ShowLoading(message);
                 await Task.Delay(errorCount * 5000);
-            } else
+            }
+            else
             {
                 UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
             }
