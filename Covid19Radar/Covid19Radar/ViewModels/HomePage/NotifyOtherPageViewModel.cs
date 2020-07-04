@@ -58,8 +58,6 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
-            UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
-
             // Check helthcare authority positive api check here!!
             if (errorCount >= AppConstants.MaxErrorCount)
             {
@@ -77,13 +75,16 @@ namespace Covid19Radar.ViewModels
             {
                 var current = errorCount + 1;
                 var max = AppConstants.MaxErrorCount;
-                await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
-                    AppResources.NotifyOtherPageDiag3Title + $"{current}/{max}",
-                    Resources.AppResources.ButtonOk
-                    );
+                
+                string message = AppResources.NotifyOtherPageDiag3Title
+                    + $"({current}/{max})\n\n"
+                    + AppResources.NotifyOtherPageDiag3Message;
+                UserDialogs.Instance.ShowLoading(message);
                 await Task.Delay(errorCount * 5000);
+            } else
+            {
+                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
             }
-
 
             // Init Dialog
             if (string.IsNullOrEmpty(_diagnosisUid))
