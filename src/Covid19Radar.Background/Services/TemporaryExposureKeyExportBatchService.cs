@@ -73,7 +73,7 @@ namespace Covid19Radar.Background.Services
                 }))
                 {
                     var batchNum = (int)await Sequence.GetNextAsync(SequenceName, 1);
-
+                    batchTimestamp++;
                     foreach (var region in Regions)
                     {
                         // Security considerations: Random Order TemporaryExposureKey
