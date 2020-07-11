@@ -1069,6 +1069,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   The contact record corresponding to the submission could not be confirmed. No need to submit. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFound {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   No applicable contact に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Please try again later. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotifyOtherPageDialogExceptionText {

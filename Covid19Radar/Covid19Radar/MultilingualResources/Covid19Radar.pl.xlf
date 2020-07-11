@@ -893,6 +893,16 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Błąd rejestracji</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
         </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
+          <source>The contact record corresponding to the submission could not be confirmed. No need to submit.</source>
+          <target state="new">The contact record corresponding to the submission could not be confirmed. No need to submit.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" translate="yes" xml:space="preserve">
+          <source>No applicable contact</source>
+          <target state="new">No applicable contact</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
+        </trans-unit>
       </group>
     </body>
   </file>

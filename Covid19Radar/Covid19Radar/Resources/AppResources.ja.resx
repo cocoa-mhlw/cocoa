@@ -699,4 +699,12 @@
     <value>登録エラー</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>該当接触なし</value>
+    <comment>該当接触なし</comment>
+  </data>
 </root>
