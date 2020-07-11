@@ -129,9 +129,9 @@
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
           <source>Stop</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Restaurar</target>
-		  <note from="translator">Stop is not the same as reset, the id of the trans-unit is ButtonReset the source is Stop and the translation "Restaurar" means reset. Is this correct?</note>
+          <note from="translator" priority="2">Stop is not the same as reset, the id of the trans-unit is ButtonReset the source is Stop and the translation "Restaurar" means reset. Is this correct?</note>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
-		  <note from="MultilingualBuild" annotates="source" priority="2">使用中止</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">使用中止</note>
         </trans-unit>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
@@ -204,7 +204,7 @@
         <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
           <source>Stop / delete close contact history</source>
           <target state="translated">Restaurar / Excluir histórico de contatos próximos</target>
-		  <note from="translator">Again the stop here im translating as reset because above was the same</note>
+          <note from="translator" priority="2">Again the stop here im translating as reset because above was the same</note>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">記録の停止／削除</note>
         </trans-unit>
@@ -642,8 +642,8 @@
         <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
           <source>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</source>
           <target state="translated">Por favor, ligue as funções de Notificação de Exposição e o Bluetooth para começar a gravar contatos próximos com outros usuários.</target>
-          <note from="translator"></note>
-		  <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
+          <note from="translator" priority="2"></note>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Label" translate="yes" xml:space="preserve">
           <source>Find out more</source>
@@ -693,8 +693,8 @@
         <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
           <source>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Se você esteve em contato com você dentro de 14 dias, você saberá que você pode ter sido contatado sem qualquer informação que possa identificá-lo pessoalmente.</target>
-          <note from="translator">This is wrong - "If you have been in contact with you"</note>
-		  <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
+          <note from="translator" priority="2">This is wrong - "If you have been in contact with you"</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
           <source>Agree and register</source>
@@ -719,7 +719,7 @@
         <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
           <source>Bluetooth is turned off.Please turn in Bluetooth.</source>
           <target state="translated">O Bluetooth está desligado. Por favor, ligue Bluetooth.</target>
-		  <note from="translator">Turn in?</note>
+          <note from="translator" priority="2">Turn in?</note>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
@@ -831,8 +831,8 @@
         <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
           <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
           <target state="translated">A notificação de exposição não pôde ser inicialização. Abra as configurações do terminal, ative a Notificação de Exposição e ligue o Bluetooth.</target>
-          <note from="translator">Turn in again</note>
-		  <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
+          <note from="translator" priority="2">Turn in again</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
           <source>Process number incorrect</source>

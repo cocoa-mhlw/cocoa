@@ -32,7 +32,7 @@
     <comment>Policy</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
-    <value>Paramètres du status</value>
+    <value>Paramètres d’état</value>
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
@@ -54,7 +54,7 @@
     <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
-    <value>Guide d'utilisation</value>
+    <value>Guide d’utilisation</value>
     <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageNoExposures" xml:space="preserve">
@@ -62,7 +62,7 @@
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>Vous serez notifié si vous avez été exposé à quelqu’un qui a déclaré un résultat positif au COVID-19.</value>
+    <value>Vous serez notifié si vous avez été exposé à une personne ayant été déclarée positive au COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
@@ -91,28 +91,28 @@
     <value>Suppression en cours</value>
   </data>
   <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Partager l'application</value>
+    <value>Partager l’application</value>
     <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Partager</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>S'enregistrer comme testé positif et notifier anonymement les autres</value>
+    <value>S’enregistrer comme déclaré positif et notifier anonymement les autres</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
-    <value>Réinitialiser</value>
+    <value>Interrompre</value>
     <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Politique de confidentialité</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
-    <value>En attente d'enregistrement</value>
+    <value>En attente d’enregistrement</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>Voulez-vous vraiment réinitialiser toutes les données ?</value>
+    <value>Voulez-vous vraiment réinitialiser toutes les données ?</value>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>Supprimer toutes les données</value>
@@ -127,22 +127,22 @@
     <value>Enregistrement positif</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Souhaitez-vous vous inscrire comme testé positif plus tard ?</value>
+    <value>Souhaitez-vous vous inscrire comme déclaré positif plus tard ?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
-    <value>Afin de protéger les gens autour de vous, merci de bien vouloir coopérer en vous enregistrant anonymement si vous êtes testé positif au COVID-19.</value>
+    <value>Afin de protéger les gens autour de vous, merci de bien vouloir coopérer en vous enregistrant anonymement si vous êtes déclaré positif au COVID-19.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>L'efficacité de cette application s'accroît avec le nombre d'utilisateurs actifs. Merci de bien vouloir partager l’application avec les gens autour de vous.</value>
+    <value>L’efficacité de cette application s’accroit avec le nombre d’utilisateurs actifs. Merci de bien vouloir partager l’application avec les gens autour de vous.</value>
     <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>Manuel d'utilisation</value>
+    <value>Guide d’utilisation</value>
     <comment>使い方</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
-    <value>Qu'est-ce qu'un «contact rapproché» ?</value>
+    <value>Qu’est-ce qu’un « contact rapproché » ?</value>
     <comment>接触の記録方法</comment>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
@@ -150,11 +150,11 @@
     <comment>接触の確認方法</comment>
   </data>
   <data name="HelpPage3Title" xml:space="preserve">
-    <value>Si vous êtes testé positif</value>
+    <value>Si vous êtes déclaré positif</value>
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>Arrêter / supprimer l'enregistrement des contacts</value>
+    <value>Arrêter/supprimer l’enregistrement des contacts</value>
     <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
@@ -162,11 +162,11 @@
     <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
-    <value>Qu'est-ce qu'un contact rapproché</value>
+    <value>Qu’est-ce qu’un contact rapproché</value>
     <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
-    <value>Deux utilisateurs de cette application se trouvant dans un rayon de 1 mètre pendant 15 minutes ou plus est enregistré comme «contact rapproché».</value>
+    <value>Deux utilisateurs de cette application se trouvant dans un rayon d’un mètre pendant 15 minutes ou plus sont enregistrés comme « contact rapproché ».</value>
     <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
@@ -174,7 +174,7 @@
     <comment>接触情報の記録 </comment>
   </data>
   <data name="HelpPage1Description3Text" xml:space="preserve">
-    <value>Les téléphones en contact rapproché échangent leurs codes aléatoire. Ces informations ne seront pas utilisées tant qu'aucun des utilisateurs ne s'enregistre comme testé positif. L’historique des contacts sera effacé après 14 jours. N.B.: Le code change régulièrement pour protéger votre confidentialité.</value>
+    <value>Les téléphones en contact rapproché échangent leurs codes aléatoires. Ces informations ne seront pas utilisées tant qu’aucun des utilisateurs ne s’enregistre comme déclaré positif. L’historique des contacts sera effacé après 14 jours. N.B. : Le code change régulièrement pour protéger votre confidentialité.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
@@ -206,7 +206,7 @@
     <comment>ホーム画面</comment>
   </data>
   <data name="HelpPage2Label3" xml:space="preserve">
-    <value>Si vous avez eu un contact rapproché avec un utilisateur positif au COVID-19</value>
+    <value>Si vous avez eu un contact rapproché avec un utilisateur déclaré positif au COVID-19</value>
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
@@ -214,7 +214,7 @@
     <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
-    <value>Les autorités de santé publique vous délivreront un « numéro de traitement ».</value>
+    <value>Les autorités de santé publique vous délivreront un « numéro de traitement ».</value>
     <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
   </data>
   <data name="HelpPage3Description3" xml:space="preserve">
@@ -222,7 +222,7 @@
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
-    <value>Les smartphones qui ont été en contact rapproché avec votre smartphone au cours des 14 derniers jours recevront des notifications.</value>
+    <value>Les smartphones qui ont été en contact rapproché avec votre smartphone au cours des 14 derniers jours recevront une notification.</value>
     <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
@@ -230,7 +230,7 @@
     <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
-    <value>Enregistrez-vous ici lorsque testé positif</value>
+    <value>Enregistrez-vous ici lorsque vous êtes déclaré positif</value>
     <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
@@ -238,7 +238,7 @@
     <comment>ライセンス…</comment>
   </data>
   <data name="SettingsPageLabel1" xml:space="preserve">
-    <value>Enregistrement de contact rapproché</value>
+    <value>Enregistrement des contacts rapprochés</value>
     <comment>接触の検出</comment>
   </data>
   <data name="SettingsPageDescription1" xml:space="preserve">
@@ -250,7 +250,7 @@
     <comment>通知</comment>
   </data>
   <data name="SettingsPageDescription2" xml:space="preserve">
-    <value>Notifications de contact rapproché</value>
+    <value>Notifications de contacts rapprochés</value>
     <comment>陽性者との接触通知</comment>
   </data>
   <data name="SettingsPageLabel3" xml:space="preserve">
@@ -258,35 +258,35 @@
     <comment>アプリの使用中止</comment>
   </data>
   <data name="SettingsPageDescription3" xml:space="preserve">
-    <value>Arrêter d’utiliser et supprimer l'historique des contacts rapprochés</value>
+    <value>Arrêter d’utiliser et supprimer l’historique des contacts rapprochés</value>
     <comment>使用を中止して過去14日間の接触履歴を消去</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
-    <value>Qu’est-ce qu’un « contact rapproché » ?</value>
+    <value>Qu’est-ce qu’un « contact rapproché » ?</value>
     <comment>どのようにして接触を記録していますか？</comment>
   </data>
   <data name="HelpMenuPageLabel2" xml:space="preserve">
-    <value>Comment vérifier le nombre de contacts rapprochés ?</value>
+    <value>Comment vérifier le nombre de contacts rapprochés ?</value>
     <comment>接触の有無はどのように知ることができますか？</comment>
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
-    <value>Si vous êtes testé positif au COVID-19</value>
+    <value>Si vous êtes déclaré positif au COVID-19</value>
     <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>Comment puis-je arrêter/supprimer l’enregistrement des contacts rapprochés ?</value>
+    <value>Comment puis-je arrêter/supprimer l’enregistrement des contacts rapprochés ?</value>
     <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
-    <value>Contacts rapprochés depuis 14 jours</value>
+    <value>Contacts rapprochés depuis 14 jours</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>Pas de contacts rapprochés avec des utilisateurs positifs au COVID-19</value>
+    <value>Aucun contact rapproché avec des utilisateurs déclarés positifs au COVID-19</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
   <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>S’il vous plaît continuez à pratiquer les mesures « Nouveau mode de vie » recommandées par le gouvernement.</value>
+    <value>Veuillez continuer à pratiquer les mesures du « Nouveau mode de vie » recommandées par le gouvernement.</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
@@ -294,7 +294,7 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>Merci d’avoir enregistré vos résultats de test !</value>
+    <value>Merci d’avoir enregistré vos résultats de test !</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
   <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
@@ -310,7 +310,7 @@
     <comment>規約に同意して次へ</comment>
   </data>
   <data name="TutorialPage6Label1" xml:space="preserve">
-    <value>Configuration terminée. Merci !</value>
+    <value>Configuration terminée. Merci !</value>
     <comment>ご登録いただきありがとうございました</comment>
   </data>
   <data name="TutorialPage6ButtonText1" xml:space="preserve">
@@ -354,15 +354,15 @@
     <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
-    <value>Contacts rapprochés depuis 14 jours</value>
+    <value>Contacts rapprochés depuis 14 jours</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00-17:30 (sauf les week-ends et les jours fériés)</value>
+    <value>9 h - 17 h 30 (sauf weekends et jours fériés)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 Information et ressources</value>
+    <value>Information et ressources COVID-19</value>
     <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -378,7 +378,7 @@
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
-    <value>Si vous êtes testé positif au COVID-19</value>
+    <value>Si vous êtes déclaré positif au COVID-19</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
@@ -394,7 +394,7 @@
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>Conditions d'utilisation</value>
+    <value>Conditions d’utilisation</value>
     <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
@@ -406,7 +406,7 @@
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>Toutes les données sont cryptées et enregistrées localement sur votre smartphone. Toutes les données sont automatiquement supprimées après 14 jours. Vos mouvements ne sont suivis d’aucune façon par des organismes gouvernementaux ou des tiers.</value>
+    <value>Toutes les données sont cryptées et enregistrées localement sur votre smartphone. Toutes les données sont automatiquement supprimées après 14 jours. Vos mouvements ne sont suivis d’aucune façon par des organismes gouvernementaux ou des tiers.</value>
     <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
@@ -446,15 +446,15 @@
     <comment>メニュー</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
-    <value>S'enregistrer</value>
+    <value>S’enregistrer</value>
     <comment>登録する</comment>
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>Veuillez entrer le code de processus qui vous est délivré par le « Health Center Real-time Information-sharing System on COVID-19 (HER-SYS) ».</value>
+    <value>Veuillez entrer le code de processus qui vous est délivré par le « Health Center Real-time Information-sharing System on COVID-19 (HER-SYS) ».</value>
     <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>Les utilisateurs qui ont été en contact rapproché avec vous au cours des 14 derniers jours seront avisés. L’inscription est anonyme. Vous n’avez pas à entrer votre nom ou toute autre information personnelle. Aucune information concernant l’emplacement du contact rapproché n’est enregistrée.</value>
+    <value>Les utilisateurs qui ont été en contact rapproché avec vous au cours des 14 derniers jours seront avisés. L’inscription est anonyme. Vous n’avez pas à entrer votre nom ou toute autre information personnelle. Aucune information concernant l’emplacement du contact rapproché n’est enregistrée.</value>
     <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
@@ -470,15 +470,15 @@
     <comment>次へ</comment>
   </data>
   <data name="TutorialPage1Description1" xml:space="preserve">
-    <value>L’application reconnaît les contacts rapprochés entre les smartphones exécutant cette application.</value>
+    <value>L’application reconnait les contacts rapprochés entre les smartphones exécutant cette application.</value>
     <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>Lorsque vous avez été testé positif au COVID-19, vous pouvez enregistrer anonymement le résultat du test dans cette application.</value>
+    <value>Lorsque vous avez été déclaré positif au COVID-19, vous pouvez enregistrer anonymement le résultat du test dans cette application.</value>
     <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>Si vous avez été en contact rapproché avec un utilisateur qui a été testé positif, l’application vous informe d’une infection potentielle et vous fournit des conseils pour protéger votre santé.</value>
+    <value>Si vous avez été en contact rapproché avec un utilisateur qui a été déclaré positif, l’application vous informe d’une infection potentielle et vous fournit des conseils pour protéger votre santé.</value>
     <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
   </data>
   <data name="TutorialPage1Title1" xml:space="preserve">
@@ -506,23 +506,23 @@
     <comment>技術的な詳細について</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
-    <value>Pour recevoir des Notifications d'exposition</value>
+    <value>Pour recevoir des Notifications d’exposition</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="TutorialPage4Title2" xml:space="preserve">
-    <value>Pour recevoir des Notifications d'exposition</value>
+    <value>Pour recevoir des Notifications d’exposition</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
+    <value> ~</value>
     <comment>から</comment>
   </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
-    <value>Entrez un code à 8 chiffres</value>
+    <value>Entrez un code à 8 chiffres</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>Le numéro de traitement sera notifié à votre numéro de téléphone mobile ou à votre adresse e-mail enregistrée dans le nouveau système d’information et de gestion des maladies infectieuses du coronavirus (ci-après « système de gestion »).</value>
+    <value>Le numéro de traitement sera notifié à votre numéro de téléphone mobile ou à votre adresse e-mail enregistrée dans le nouveau système d’information et de gestion des maladies infectieuses du coronavirus (ci-après « système de gestion »).</value>
     <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
@@ -538,7 +538,7 @@
     <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>Si vous avez été en contact rapproché avec un autre utilisateur ces derniers 14 jours, vous saurez que vous avez peut-être été contacté sans utiliser des informations qui peuvent vous identifier personnellement.</value>
+    <value>Si vous avez été en contact rapproché avec un autre utilisateur ces 14 derniers jours, vous saurez que vous avez peut-être été contacté sans utiliser des informations qui peuvent vous identifier personnellement.</value>
     <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
@@ -558,11 +558,11 @@
     <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Le Bluetooth est désactivé. S’il vous plaît activez le Bluetooth.</value>
+    <value>Le Bluetooth est désactivé. Veuillez activer le Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>Une liste de contacts rapprochés (au cours des 14 derniers jours)</value>
+    <value>Une liste de contacts rapprochés (au cours des 14 derniers jours)</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
@@ -580,7 +580,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
-    <value>Il est possible que vous ayez été à proximité d’un utilisateur qui a été testé positif au COVID-19.  Appuyez pour plus de détails.</value>
+    <value>Il est possible que vous ayez été à proximité d’un utilisateur qui a été déclaré positif au COVID-19. Appuyez pour plus de détails.</value>
     <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
   </data>
   <data name="LocalNotificationTitle" xml:space="preserve">
@@ -597,10 +597,10 @@
     <value>Informations sur cette application</value>
   </data>
   <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>Q and A pour l’utilisateur</value>
+    <value>FAQ pour l’utilisateur</value>
   </data>
   <data name="InqueryMailBody" xml:space="preserve">
-    <value>Nom : \r\n Contact : \r\n Contenu de l’enquête (Veuillez sélectionner une catégorie parmi les éléments suivants : 1. Fonctionnement de l’application, 2. Paramètres de l’application, 3. Utilisation de l’application (notification, etc.) ), 4. Autres \r\n Texte de l’enquête : \r\n</value>
+    <value>Nom : \r\n Contact : \r\n Contenu de l’enquête (Veuillez sélectionner une catégorie parmi les éléments suivants : 1. Fonctionnement de l’application, 2. Paramètres de l’application, 3. Utilisation de l’application (notification, etc.)), 4. Autres \r\n Texte de l’enquête : \r\n</value>
     <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
   </data>
   <data name="InqueryMailSubject" xml:space="preserve">
@@ -608,7 +608,7 @@
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
-    <value>Jours</value>
+    <value>jours</value>
     <comment>X日間</comment>
   </data>
   <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
@@ -628,11 +628,11 @@
     <comment>利用規約に同意する必要があります。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>La fonction Notification d’exposition au COVID-19 n'est pas approuvée. Veuillez l'approuver via les paramètres du système d'exploitation, ou en réinstallant cette application.</value>
+    <value>La fonction Notification d’exposition au COVID-19 n’est pas approuvée. Veuillez l’approuver via les paramètres du système d’exploitation, ou en réinstallant cette application.</value>
     <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>La Notification d’exposition n’est pas prise en charge. Veuillez mettre à jour le système d’exploitation vers la dernière version. Si vous avez encore des problèmes, s’il vous plaît contactez-nous à appsupport@cov19.mhlw.go.jp.</value>
+    <value>La Notification d’exposition n’est pas prise en charge. Veuillez mettre à jour le système d’exploitation vers la dernière version. Si vous avez encore des problèmes, veuillez nous contacter à appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
@@ -656,11 +656,11 @@
     <comment>センターに接続できません</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
-    <value>Voulez-vous enregistrer comme étant testé positif ?</value>
+    <value>Voulez-vous enregistrer comme étant déclaré positif ?</value>
     <comment>陽性情報を登録しますか?</comment>
   </data>
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
-    <value>S'enregistrer</value>
+    <value>S’enregistrer</value>
     <comment>登録</comment>
   </data>
   <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
@@ -684,7 +684,7 @@
     <comment>処理番号のフォーマットが一致していません</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>Afin de s’enregistrer comme testé positif, il est nécessaire d’activer l’enregistrement du journal de contact rapproché COVID-19, veuillez l’activer à partir des paramètres de l’application ou du système d’exploitation.</value>
+    <value>Afin de s’enregistrer comme déclaré positif, il est nécessaire d’activer l’enregistrement du journal de contact rapproché COVID-19, veuillez l’activer à partir des paramètres de l’application ou du système d’exploitation.</value>
     <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
@@ -692,11 +692,11 @@
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>Le nombre d’enregistrements a atteint la limite maximale. Sortie de l'application.</value>
+    <value>Le nombre d’enregistrements a atteint la limite maximale. Sortie de l’application.</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
   </data>
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Erreur d'inscription</value>
+    <value>Erreur d’inscription</value>
     <comment>登録エラー</comment>
   </data>
 </root>
