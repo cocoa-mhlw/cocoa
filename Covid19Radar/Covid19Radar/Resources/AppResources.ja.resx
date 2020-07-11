@@ -707,4 +707,15 @@
     <value>該当接触なし</value>
     <comment>該当接触なし</comment>
   </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>新しいバージョンのアプリが利用可能です。最新バージョンにアップデートしてください。</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>最新バージョンに更新</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

@@ -879,13 +879,27 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
           <source>The contact record corresponding to the submission could not be confirmed. No need to submit.</source>
-          <target state="new">The contact record corresponding to the submission could not be confirmed. No need to submit.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">제출에 해당하는 연락처 레코드를 확인할 수 없습니다. 제출할 필요가 없습니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" translate="yes" xml:space="preserve">
           <source>No applicable contact</source>
-          <target state="new">No applicable contact</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">해당 연락처 없음</target>
           <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
+        </trans-unit>
+        <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
+          <source>A new version of the app is available. Please update to the latest version.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">새 버전의 앱을 사용할 수 있습니다. 최신 버전으로 업데이트하십시오.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
+          <source>Update to latest version</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">최신 버전으로 업데이트</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
         </trans-unit>
       </group>
     </body>

@@ -12,4 +12,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>ରାଜି</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>ମୂଳ</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>ଆପ୍ଲିକେସନ୍ ସେଟିଂସ୍</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>ଲାଇସେନ୍ସ</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>ଲାଇସେନ୍ସ</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>ଠିକ୍</value>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>ବର୍ତ୍ତମାନ ନୁହେଁ</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>ଦୟାକରି ପରେ ପୁନଃ ଚେଷ୍ଟା କରନ୍ତୁ.</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>ବିଫଳ ହେଲା</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>ସମ୍ପୂର୍ଣ୍ଣ</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>ବାତିଲ୍</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>ସ୍ଥଗିତ</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>ବିଲୋପ କରୁଛନ୍ତି</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>ଅଂଶୀଦାର</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>ଗୋପନୀୟ ନୀତି</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>ସଂସ୍କରଣ</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକ</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>ବିଜ୍ଞପ୍ତି</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>ମୂଳ</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>ମୂଳ</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>ସମର୍ଥନ</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>ମୂଳ</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>ବିଜ୍ଞପ୍ତିଗୁଡିକ ଟର୍ନ୍ ଅନ୍ କରନ୍ତୁ</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>ଟର୍ନ୍ ଅନ୍</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>ମେନୁ</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>ପଞ୍ଜିକରଣ</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>ପରବର୍ତ୍ତୀ</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>ଟର୍ନ୍ ଅନ୍</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>ଅଧିକ ସନ୍ଧାନ କରନ୍ତୁ</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>ଦିନଗୁଡ଼ିକ</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>ପଞ୍ଜିକରଣ</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>ବାତିଲ୍‌ ହୋଇଛି</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

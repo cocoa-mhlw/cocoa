@@ -12,4 +12,127 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>Kwenyere</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>EBE MBATA</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Mwube Ngwa</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Ìwuikikere</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>Ìwuikikere</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>DỊ MMA</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>Biko nwaa ọzọ ma emechaa.</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>A gaghị n'ihụ</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>Mmecha</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Kagbuo</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>kwụsị</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Na-ehichapụ</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Kèrịta</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Iwu Nzuzo</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Àgbà</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Amamọkwa</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Nziọkwà</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Be</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Usoro ojiji</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Be</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Nkwado</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Be</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Usoro ojiji</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Gbanwuo nziọkwà gasị</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Gbanye</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Menù</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Debanye</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Osote</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Gbanye</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Chọ̀pụ̀takwuo īhe ndị̀ ọ̀zọ</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Ụbọchi gasị</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Debanye</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Akagburu</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

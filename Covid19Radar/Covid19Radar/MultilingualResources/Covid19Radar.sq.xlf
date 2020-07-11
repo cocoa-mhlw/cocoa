@@ -8,11 +8,11 @@
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" datatype="resx">
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
-          <target state="new">Agree</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pranoj</target>
         </trans-unit>
         <trans-unit id="HomePageTitle" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="new">HOME</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">SHTËPIA</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
@@ -22,17 +22,17 @@
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
-          <target state="new">App Settings</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Parametrat e aplikacionit</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
         </trans-unit>
         <trans-unit id="SettingsPageButton1" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="new">License</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Licenca</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ライセンス…</note>
         </trans-unit>
         <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
           <source>License</source>
-          <target state="new">License</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Licenca</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
@@ -47,16 +47,16 @@
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Në rregull</target>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
-          <target state="new">Please check your network connection.</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Kontrollo lidhjen tënde të rrjetit.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>Not Now</source>
-          <target state="new">Not Now</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Jo tani</target>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
@@ -85,11 +85,11 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
-          <target state="new">Please try again later.</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Provo sërish më vonë.</target>
         </trans-unit>
         <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
-          <target state="new">Failed</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Dështoi</target>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
@@ -97,7 +97,7 @@
         </trans-unit>
         <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
-          <target state="new">Complete</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Përfundo</target>
         </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
@@ -105,16 +105,16 @@
         </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="new">Cancel</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Anulo</target>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
           <source>Stop</source>
-          <target state="new">Stop</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ndalo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用中止</note>
         </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
-          <target state="new">Deleting</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Duke fshirë...</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
@@ -133,7 +133,7 @@
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
-          <target state="new">Share</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bashkëndaj</target>
         </trans-unit>
         <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
           <source>Sharing positive information and anonymous notification to others</source>
@@ -142,7 +142,7 @@
         </trans-unit>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
-          <target state="new">Privacy Policy</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Politika e privatësisë</target>
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
@@ -162,7 +162,7 @@
         </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
           <source>Version</source>
-          <target state="new">Version</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Versioni</target>
           <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel1" translate="yes" xml:space="preserve">
@@ -177,7 +177,7 @@
         </trans-unit>
         <trans-unit id="SettingsPageLabel2" translate="yes" xml:space="preserve">
           <source>Notifications</source>
-          <target state="new">Notifications</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Njoftimet</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
         </trans-unit>
         <trans-unit id="SettingsPageDescription2" translate="yes" xml:space="preserve">
@@ -294,12 +294,12 @@
         </trans-unit>
         <trans-unit id="HelpPage2Label1" translate="yes" xml:space="preserve">
           <source>Notification</source>
-          <target state="new">Notification</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Njoftim</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
         </trans-unit>
         <trans-unit id="HelpPage2Label2" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="new">Home</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Baza</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム画面</note>
         </trans-unit>
         <trans-unit id="HelpPage2Label3" translate="yes" xml:space="preserve">
@@ -364,7 +364,7 @@
         </trans-unit>
         <trans-unit id="NotContactPageButtonText" translate="yes" xml:space="preserve">
           <source>Share this app</source>
-          <target state="new">Share this app</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bashkëndaj këtë aplikacion</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
         </trans-unit>
         <trans-unit id="ThankYouNotifyOtherPageLabel1" translate="yes" xml:space="preserve">
@@ -379,7 +379,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage3Title" translate="yes" xml:space="preserve">
           <source>Terms of use</source>
-          <target state="new">Terms of use</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Kushtet e përdorimit</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage3ButtonText" translate="yes" xml:space="preserve">
@@ -394,7 +394,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage6ButtonText1" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="new">Home</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Baza</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム画面へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage6ButtonText2" translate="yes" xml:space="preserve">
@@ -424,7 +424,7 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="new">times</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">%@ herë</target>
           <note from="MultilingualBuild" annotates="source" priority="2">件</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
@@ -459,7 +459,7 @@
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
           <source>Support</source>
-          <target state="new">Support</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Mbështetja</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
@@ -484,12 +484,12 @@
         </trans-unit>
         <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">
           <source>Share this app</source>
-          <target state="new">Share this app</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bashkëndaj këtë aplikacion</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
         </trans-unit>
         <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
           <source>Home</source>
-          <target state="new">Home</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Baza</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
@@ -519,7 +519,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage2Description5" translate="yes" xml:space="preserve">
           <source>Terms of use</source>
-          <target state="new">Terms of use</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Kushtet e përdorimit</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Title" translate="yes" xml:space="preserve">
@@ -529,7 +529,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage5Description1" translate="yes" xml:space="preserve">
           <source>Turn on notifications</source>
-          <target state="new">Turn on notifications</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aktivizo njoftimet</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description2" translate="yes" xml:space="preserve">
@@ -539,12 +539,12 @@
         </trans-unit>
         <trans-unit id="TutorialPage5Description3" translate="yes" xml:space="preserve">
           <source>Turn on</source>
-          <target state="new">Turn on</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aktivizo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description4" translate="yes" xml:space="preserve">
           <source>Set up later</source>
-          <target state="new">Set up later</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Parametrizo më vonë</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Title" translate="yes" xml:space="preserve">
@@ -554,12 +554,12 @@
         </trans-unit>
         <trans-unit id="MenuPageTitle" translate="yes" xml:space="preserve">
           <source>Menu</source>
-          <target state="new">Menu</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Menuja</target>
           <note from="MultilingualBuild" annotates="source" priority="2">メニュー</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageButton" translate="yes" xml:space="preserve">
           <source>Register</source>
-          <target state="new">Register</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Regjistro</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録する</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription1" translate="yes" xml:space="preserve">
@@ -584,7 +584,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage1Button" translate="yes" xml:space="preserve">
           <source>Next</source>
-          <target state="new">Next</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tjetër</target>
           <note from="MultilingualBuild" annotates="source" priority="2">次へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description1" translate="yes" xml:space="preserve">
@@ -614,12 +614,12 @@
         </trans-unit>
         <trans-unit id="TutorialPage4Button1" translate="yes" xml:space="preserve">
           <source>Turn on</source>
-          <target state="new">Turn on</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aktivizo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Button2" translate="yes" xml:space="preserve">
           <source>Set up later</source>
-          <target state="new">Set up later</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Parametrizo më vonë</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
@@ -629,7 +629,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage4Label" translate="yes" xml:space="preserve">
           <source>Find out more</source>
-          <target state="new">Find out more</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Mëso më shumë</target>
           <note from="MultilingualBuild" annotates="source" priority="2">技術的な詳細について</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Title1" translate="yes" xml:space="preserve">
@@ -758,7 +758,7 @@
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="new">Days</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ditë</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
@@ -823,12 +823,12 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
           <source>Register</source>
-          <target state="new">Register</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Regjistro</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
           <source>Canceled</source>
-          <target state="new">Canceled</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">U anulua</target>
           <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
@@ -880,6 +880,20 @@
           <source>No applicable contact</source>
           <target state="new">No applicable contact</target>
           <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
+        </trans-unit>
+        <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</source>
+          <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
+          <source>A new version of the app is available. Please update to the latest version.</source>
+          <target state="new">A new version of the app is available. Please update to the latest version.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
+          <source>Update to latest version</source>
+          <target state="new">Update to latest version</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
         </trans-unit>
       </group>
     </body>

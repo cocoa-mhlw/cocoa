@@ -12,4 +12,154 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>យល់ព្រម</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>គេហ</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>ការកំណត់កម្មវិធីនានា</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>អាជ្ញាបណ្ណ</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>អាជ្ញាបណ្ណ</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>យល់ព្រម</value>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>សូមពិនិត្យមើលការតភ្ជាប់បណ្តាញរបស់អ្នក។</value>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>មិនមែនឥឡូវ</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>បានបរាជ័យ</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>បញ្ចប់</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>បោះបង់</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>បញ្ឈប់</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>កំពុង​លុប</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>ចែករំលែក</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>គោលការណ៍ឯកជនភាព</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>កំណែ</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>ការជូនដំណឹង</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>ការជូនដំណឹង</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>គេហ</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>ចែករំលែកកម្មវិធីនេះ</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>លក្ខខណ្ឌ​ប្រើប្រាស់</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>គេហ</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>%@ ដង</value>
+    <comment>件</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>គាំទ្រ</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>ចែករំលែកកម្មវិធីនេះ</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>គេហ</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>លក្ខខណ្ឌ​ប្រើប្រាស់</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>បើកការជូនដំណឹង</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>បើក</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>ដំឡើងនៅពេលក្រោយ</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>ម៉ឺនុយ</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>ចុះឈ្មោះ</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>បន្ទាប់</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>បើក</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>ដំឡើងនៅពេលក្រោយ</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>ស្វែងយល់បន្ថែម</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>ថ្ងៃ</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>ចុះឈ្មោះ</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>បានបោះបង់</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

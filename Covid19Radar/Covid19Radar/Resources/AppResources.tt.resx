@@ -12,4 +12,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>Риза</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>ТӨП</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Кушымта параметрлары</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Лицензия</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>Лицензия</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>Хуп</value>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Хәзер түгел</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>Омтылышны соңрак кабатлагыз.</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>Хата</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>Тәмам</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Баш тарту</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Туктату</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Бетерелә</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Уртаклашу</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Хосусыйлык Сәясәте</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Версия</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Искәртүләр</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Белдерү</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Төп</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Куллану шартлары</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Төп</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Ярдәм</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Төп</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Куллану шартлары</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Белдерүләрне кабызу</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Кабызу</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Сайлак</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Теркәлү</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Киләсе</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Кабызу</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Күбрәк табыгыз</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Көн</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Теркәлү</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Баш тартылган</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

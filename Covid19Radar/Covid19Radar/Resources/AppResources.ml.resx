@@ -699,4 +699,23 @@
     <value>രജിസ്ട്രേഷൻ പിശക്</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>സമർപ്പിക്കുന്നതിന് ബന്ധപ്പെട്ട സമ്പർക്ക രേഖ സ്ഥിരീകരിക്കുവാൻ സാധ്യമായില്ല. സമർപ്പിക്കേണ്ട ആവശ്യമില്ല.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>ബാധകമായ വിലാസം ലഭ്യമല്ല</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>ആപ്പിന്റെ പുതിയ പതിപ്പ് ലഭ്യമാണ്. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ് ഡേറ്റ് ചെയ്യുക.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ് ഡേറ്റ് ചെയ്യുക</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

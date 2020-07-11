@@ -12,4 +12,142 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>Vuma</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>IKHAYA</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Amasethingi we-app</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Ilayisensi</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>Ilayisensi</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>KULUNGILE</value>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Sicela uhlole uxhumano lwakho lwenethiwekhi.</value>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Hhayi Manje</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>Sicela uzame futhi ngokuhamba kwesikhathi.</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>Ihlulekile</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>Kuphothuliwe</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Khansela</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Misa</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Iyasusa...</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Yabelana</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Inqubomgomo Yobumfihlo</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Isibuyekezo</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Izaziso</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Isaziso</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Ekhaya</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Imigomo yokusebenzisa</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Ekhaya</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Ukusekela</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Ekhaya</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Imigomo yokusebenzisa</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Vula izaziso</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Vula</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>Setha ngokuhamba kwesikhathi</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Imenyu</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Bhalisa</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Okulandelayo</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Vula</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>Setha ngokuhamba kwesikhathi</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Thola okwengeziwe</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Izinsuku</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Bhalisa</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Kukhanseliwe</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

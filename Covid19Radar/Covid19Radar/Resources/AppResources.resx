@@ -812,4 +812,15 @@
     <value>No applicable contact</value>
     <comment>該当接触なし</comment>
   </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>A new version of the app is available. Please update to the latest version.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>Update to latest version</value>
+    <comment>最新版への更新</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
 </root>

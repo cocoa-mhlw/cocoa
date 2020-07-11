@@ -699,4 +699,23 @@
     <value>पंजीकरण त्रुटि</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>प्रस्तुत करने के अनुरूप संपर्क रिकॉर्ड की पुष्टि नहीं की जा सकी । सबमिट करने की जरूरत नहीं है।</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>कोई लागू संपर्क नहीं</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>ऐप का एक नया संस्करण उपलब्ध है। कृपया नवीनतम संस्करण के लिए अद्यतन करें।</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>नवीनतम संस्करण के लिए अद्यतन करें</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

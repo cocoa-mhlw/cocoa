@@ -12,4 +12,127 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>Gbà</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>Ojúlé</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Àwọn Ààtò Ìfilọ́lẹ̀</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Ìwé àṣẹ</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>Ìwé àṣẹ</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>Ó DÁA</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kansíi láìpẹ́.</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>Ti kùnà</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>Parí</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Pa rẹ́</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Dúró</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Ń ṣèpajẹ</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Ṣàpínlò</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Ìlànà Ìpamọ́</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Ẹ̀yà</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Àwọn Ìfitónilétí</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Ìfitónilétí</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Ilé</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Ìfẹnukò ìlò</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Ilé</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Àtìlẹ́yìn</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Ilé</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Ìfẹnukò ìlò</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Tan àwọn ìfitónilétí</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Tàn án</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Mẹ́nù</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Forúkọsílẹ̀</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Tókàn</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Tàn án</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Ṣàwárí díẹ̀ síi</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>àwọn ọjọ́</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Forúkọsílẹ̀</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Ti paá rẹ́</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

@@ -699,4 +699,23 @@
     <value>નોંધણી ભૂલ</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>રજૂઆતને અનુરૂપ સંપર્ક રેકોર્ડની પુષ્ટિ થઈ શકી નથી. સબમિટ કરવાની જરૂર નથી.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>લાગુ સંપર્ક નથી</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>એપ્લિકેશનનું નવું વર્ઝન ઉપલબ્ધ છે. કૃપા કરીને નવીનતમ આવૃત્તિમાં સુધારો.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>નવીનતમ આવૃત્તિમાં સુધારો</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

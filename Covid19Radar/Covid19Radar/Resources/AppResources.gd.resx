@@ -12,4 +12,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>Aontaich</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>DHACHAIGH</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Roghainnean na h-aplacaid</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Ceadachas</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>Ceadachas</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>Ceart ma-thà</value>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Chan ann an-dràsta</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>Feuch ris a-rithist an ceann greis.</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>Air fàilligeadh</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>Coileanta</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Sguir dheth</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Stad</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Ga sguabadh às...</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Co-roinn</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Am poileasaidh prìobhaideachd</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Tionndadh</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Brathan</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Brath</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Dachaigh</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Teirmichean a' chleachdaidh</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Dachaigh</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>taic</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Dachaigh</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Teirmichean a' chleachdaidh</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Cuir na brathan air</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Cuir air</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>clàr-taice</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Clàraich</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Air adhart</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Cuir air</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Faigh barrachd fiosrachaidh</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Làithean</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Clàraich</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Sguireadh dheth</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

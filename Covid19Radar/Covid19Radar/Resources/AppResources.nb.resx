@@ -699,4 +699,23 @@
     <value>Registreringsfeil</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>Kontaktoppføringen som tilsvarer innsendingen, kan ikke bekreftes. Du trenger ikke å sende inn.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>Ingen gjeldende kontakt</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>En ny versjon av appen er tilgjengelig. Vennligst oppdater til den nyeste versjonen.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>Oppdater til nyeste versjon</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

@@ -12,4 +12,162 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>INICIO</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>Configuración da aplicación</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>Licenza</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>Licenza</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>Comproba a conexión de rede.</value>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>Agora non</value>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>Téntao de novo máis tarde.</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>Completo</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>Parar</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>Eliminando...</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>Compartir</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>Política de privacidade</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versión</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Notificacións</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>Notificación</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>Inicio</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>Ir á configuración das aplicacións</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>Compartir esta aplicación</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>Condicións de uso</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>Inicio</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>%@ veces</value>
+    <comment>件</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>Asistencia</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>Compartir esta aplicación</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>Inicio</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>Termos de uso</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>Condicións de uso</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>Activar notificacións</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>Activar</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>Configurar máis tarde</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>Menú</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>Rexistrar</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>Seguinte</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>Activar</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>Configurar máis tarde</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>Descubrir máis</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>Días</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>Rexistrar</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>Cancelado</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

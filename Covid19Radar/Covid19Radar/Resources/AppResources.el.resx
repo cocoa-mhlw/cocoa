@@ -699,4 +699,23 @@
     <value>Σφάλμα εγγραφής</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>Δεν ήταν δυνατή η επιβεβαίωση της καρτέλας επαφής που αντιστοιχεί στην υποβολή. Δεν χρειάζεται να υποταχθείς.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>Καμία ισχύουσα επαφή</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>Μια νέα έκδοση της εφαρμογής είναι διαθέσιμη. Κάντε ενημέρωση στην πιο πρόσφατη έκδοση.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>Ενημέρωση στην πιο πρόσφατη έκδοση</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

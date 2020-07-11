@@ -12,4 +12,158 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
+    <value>እስማማለው</value>
+  </data>
+  <data name="HomePageTitle" xml:space="preserve">
+    <value>መነሻ</value>
+    <comment>Home Title</comment>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>የመተግበሪያ ቅንጅቶች</value>
+    <comment>アプリの設定</comment>
+  </data>
+  <data name="SettingsPageButton1" xml:space="preserve">
+    <value>ፈቃድ</value>
+    <comment>ライセンス…</comment>
+  </data>
+  <data name="TitleLicenseAgreement" xml:space="preserve">
+    <value>ፈቃድ</value>
+    <comment>ライセンス</comment>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>እሺ</value>
+  </data>
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
+    <value>እባክዎ የአውታረ መረብ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ</value>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
+  </data>
+  <data name="ButtonNotNow" xml:space="preserve">
+    <value>አሁን አይደለም</value>
+  </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://microsoft.com</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>እባክዎን ቆይተው እንደገና ይሞክሩ።</value>
+  </data>
+  <data name="ButtonFailed" xml:space="preserve">
+    <value>አልተሳካም</value>
+  </data>
+  <data name="ButtonComplete" xml:space="preserve">
+    <value>አጠናቅ</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>ሰርዝ</value>
+  </data>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>አቁም</value>
+    <comment>使用中止</comment>
+  </data>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>በመሰረዝ ላይ...</value>
+  </data>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>አጋራ</value>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>የግላዊነት ፖሊሲ</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>እትም</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="SettingsPageLabel2" xml:space="preserve">
+    <value>ማሳወቂያዎች</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>ማሳወቂያ</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>መነሻ</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>ይህ መተግበሪያ ያጋሩ</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>የአጠቃቀም ውሎች</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>መነሻ</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>%@ ጊዜ</value>
+    <comment>件</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>ድጋፍ</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>ይህ መተግበሪያ ያጋሩ</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>መነሻ</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>የአጠቃቀም ውሎች</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>ማሳወቂያዎችን አብራ</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>አጥፋ</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>በኋላ አዋቅር</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>ምናሌ</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>ይመዝገቡ</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>ቀጣይ</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>አጥፋ</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>በኋላ አዋቅር</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>ተጨማሪ ይወቁ</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>ቀናት</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>ይመዝገቡ</value>
+    <comment>登録</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
+    <value>ተሰርዟል</value>
+    <comment>キャンセルしました</comment>
+  </data>
 </root>

@@ -699,4 +699,23 @@
     <value>Hapa rēhitatanga</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>Kāore i taea te whakaū i te pūkete hoapā e ōrite ana ki te tukunga. Kāore e hiahiatia te tuku.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>Kāore he hoapā hāngai</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>Kei te wātea tētahi putanga hōu o te taupānga. Whakahōu koa ki te putanga hou rawa.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>Whakahōu ki te putanga hōu rawa</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

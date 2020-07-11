@@ -895,13 +895,27 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
           <source>The contact record corresponding to the submission could not be confirmed. No need to submit.</source>
-          <target state="new">The contact record corresponding to the submission could not be confirmed. No need to submit.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Záznam kontaktu odpovídající podání nemohl být potvrzen. Není třeba se podrobovat.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" translate="yes" xml:space="preserve">
           <source>No applicable contact</source>
-          <target state="new">No applicable contact</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Žádný použitelný kontakt</target>
           <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
+        </trans-unit>
+        <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
+          <source>A new version of the app is available. Please update to the latest version.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">K dispozici je nová verze aplikace. Aktualizujte na nejnovější verzi.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
+          <source>Update to latest version</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aktualizace na nejnovější verzi</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
         </trans-unit>
       </group>
     </body>

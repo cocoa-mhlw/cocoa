@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net.Http;
+using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
+using Newtonsoft.Json.Linq;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -44,6 +48,8 @@ namespace Covid19Radar.ViewModels
 
         public override async void Initialize(INavigationParameters parameters)
         {
+            // Check Version
+            AppUtils.CheckVersion();
             try
             {
                 await exposureNotificationService.StartExposureNotification();

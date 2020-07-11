@@ -699,4 +699,23 @@
     <value>Eroare de înregistrare</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>Înregistrarea de contact corespunzătoare trimiterii nu a putut fi confirmată. Nu e nevoie să te supui.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>Nicio persoană de contact aplicabilă</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>Este disponibilă o nouă versiune a aplicației. Vă rugăm să actualizați la cea mai recentă versiune.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>Actualizare la cea mai recentă versiune</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

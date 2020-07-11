@@ -882,6 +882,20 @@
           <target state="translated">該当接触なし</target>
           <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
         </trans-unit>
+        <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
+          <source>A new version of the app is available. Please update to the latest version.</source>
+          <target state="translated" state-qualifier="mt-suggestion">新しいバージョンのアプリが利用可能です。最新バージョンにアップデートしてください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
+          <source>Update to latest version</source>
+          <target state="translated" state-qualifier="mt-suggestion">最新バージョンに更新</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
+        </trans-unit>
       </group>
     </body>
   </file>

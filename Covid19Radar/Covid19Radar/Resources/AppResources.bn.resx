@@ -699,4 +699,23 @@
     <value>নিবন্ধন ত্রুটি</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>জমা দেওয়ার সাথে সামঞ্জস্যপূর্ণ যোগাযোগ রেকর্ড নিশ্চিত করা যায়নি। জমা দেওয়ার দরকার নেই।</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>কোন প্রযোজ্য যোগাযোগ নেই</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>অ্যাপটির একটি নতুন সংস্করণ উপলভ্য। অনুগ্রহ করে সর্বশেষ সংস্করণে হালনাগাদ করুন।</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>সর্বশেষ সংস্করণে হালনাগাদ করুন</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>

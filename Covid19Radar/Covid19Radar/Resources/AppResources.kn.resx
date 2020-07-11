@@ -699,4 +699,23 @@
     <value>ನೋಂದಣಿ ದೋಷ</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>ಸಲ್ಲಿಕೆಯ ಸಂಬಂಧವಾದ ಸಂಪರ್ಕ ದಾಖಲೆಯನ್ನು ದೃಢೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಸಲ್ಲಿಸಬೇಕಾದ ಅಗತ್ಯವಿಲ್ಲ.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>ಯಾವುದೇ ಅನ್ವಯವಾಗುವ ಸಂಪರ್ಕವಿಲ್ಲ</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>ಆ್ಯಪ್ ನ ಹೊಸ ಆವೃತ್ತಿ ಲಭ್ಯವಿದೆ. ದಯವಿಟ್ಟು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸಿ.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸು</value>
+    <comment>最新版への更新</comment>
+  </data>
 </root>
