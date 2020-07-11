@@ -383,8 +383,8 @@
 
             <Style x:Key="FrameCardViewStyle" TargetType="Frame">
                 <Setter Property="CornerRadius" Value="5" />
-                <Setter Property="Margin" Value="0" />
-                <Setter Property="Padding" Value="0" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Padding" Value="10" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="OutlineColor" Value="LightGray" />
                 <Setter Property="BorderColor" Value="LightGray" />
