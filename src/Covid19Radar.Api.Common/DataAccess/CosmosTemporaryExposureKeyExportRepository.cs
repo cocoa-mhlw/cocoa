@@ -71,7 +71,7 @@ namespace Covid19Radar.Api.DataAccess
         {
             _logger.LogInformation($"start {nameof(GetKeysAsync)}");
 
-            var oldest = (int)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
+            var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
             // Only allow the last 14 days +
             if (sinceEpochSeconds < oldest)
                 sinceEpochSeconds = oldest;
