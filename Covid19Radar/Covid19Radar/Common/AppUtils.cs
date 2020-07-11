@@ -50,10 +50,10 @@ namespace Covid19Radar.Common
                     var json = await client.GetStringAsync(uri);
                     var versionString = JObject.Parse(json).Value<string>("version");
 
-                    await UserDialogs.Instance.AlertAsync(AppResources.AppUtilsGetNewVersionDescription, AppResources.AppUtilsGetNewVersionTitle, Resources.AppResources.ButtonOk);
-
                     if (versionString != AppInfo.VersionString)
                     {
+                        await UserDialogs.Instance.AlertAsync(AppResources.AppUtilsGetNewVersionDescription, AppResources.AppUtilsGetNewVersionTitle, Resources.AppResources.ButtonOk);
+
                         if (Device.RuntimePlatform == Device.iOS)
                         {
                             await Browser.OpenAsync(AppSettings.Instance.AppStoreUrl, BrowserLaunchMode.External);
