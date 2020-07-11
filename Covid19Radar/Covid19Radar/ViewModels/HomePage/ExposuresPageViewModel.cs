@@ -28,7 +28,7 @@ namespace Covid19Radar.ViewModels
             foreach (var en in userData.ExposureInformation.GroupBy(eni => eni.Timestamp))
             {
                 var ens = new ExposureSummary();
-                ens.ExposureDate = en.Key.ToString("D", CultureInfo.CurrentCulture);
+                ens.ExposureDate =  en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
                 ens.ExposureCount = en.Count().ToString();
                 _exposures.Add(ens);
             }

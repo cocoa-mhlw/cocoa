@@ -76,7 +76,20 @@ namespace Covid19Radar.ViewModels
             {
                 await Device.InvokeOnMainThreadAsync(async () =>
                 {
-                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.Now.AddDays(-7), TimeSpan.FromMinutes(30), 70, 6, UserRiskLevel.High));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-14), TimeSpan.FromMinutes(5), 10, 6, UserRiskLevel.Lowest));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-13), TimeSpan.FromMinutes(10), 20, 6, UserRiskLevel.Low));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-12), TimeSpan.FromMinutes(15), 50, 6, UserRiskLevel.Medium));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-11), TimeSpan.FromMinutes(20), 50, 6, UserRiskLevel.MediumLow));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-10), TimeSpan.FromMinutes(30), 50, 6, UserRiskLevel.MediumHigh));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-9), TimeSpan.FromMinutes(35), 70, 6, UserRiskLevel.High));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-8), TimeSpan.FromMinutes(40), 70, 6, UserRiskLevel.Highest));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-7), TimeSpan.FromMinutes(45), 80, 6, UserRiskLevel.VeryHigh));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-6), TimeSpan.FromMinutes(50), 80, 6, UserRiskLevel.VeryHigh));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-5), TimeSpan.FromMinutes(55), 70, 6, UserRiskLevel.MediumHigh));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-4), TimeSpan.FromMinutes(0), 70, 6, UserRiskLevel.Medium));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-3), TimeSpan.FromMinutes(5), 70, 6, UserRiskLevel.MediumLow));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-2), TimeSpan.FromMinutes(3), 30, 6, UserRiskLevel.Low));
+                    _UserData.ExposureInformation.Add(new UserExposureInfo(DateTime.UtcNow.AddDays(-1), TimeSpan.FromMinutes(20), 70, 6, UserRiskLevel.MediumHigh));
                     await userDataService.SetAsync(_UserData);
 
                 });
