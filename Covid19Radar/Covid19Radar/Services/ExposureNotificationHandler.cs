@@ -165,7 +165,7 @@ namespace Covid19Radar.Services
                 return (batchNumber, downloadedFiles);
             }
 
-            long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
+            //long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
             List<TemporaryExposureKeyExportFileModel> tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
             if (tekList.Count == 0)
             {
@@ -271,16 +271,7 @@ namespace Covid19Radar.Services
             Debug.WriteLine($"C19R {beforeKey}");
             Debug.WriteLine($"C19R {afterKey}");
 
-            foreach (var key in keys)
-            {
-                if (!key.IsValid())
-                {
-                    Debug.WriteLine($"C19R Invalid Key Expcetion");
-                    throw new InvalidDataException();
-                }
-            }
-
-            if (keys.ToArray() == null)
+            if (keys.Count() == 0)
             {
                 throw new InvalidDataException();
             }

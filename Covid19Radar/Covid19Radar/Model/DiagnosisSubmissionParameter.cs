@@ -44,6 +44,7 @@ namespace Covid19Radar.Model
             /// Validation
             /// </summary>
             /// <returns>true if valid</returns>
+            /*
             public bool IsValid()
             {
                 if (string.IsNullOrWhiteSpace(KeyData)) return false;
@@ -51,23 +52,7 @@ namespace Covid19Radar.Model
                 if (RollingStartNumber != 0 && RollingStartNumber < (DateTimeOffset.UtcNow.AddDays(AppConstants.OutOfDateDays).ToUnixTimeSeconds() / 600)) return false;
                 return true;
             }
-        }
-
-        /// <summary>
-        /// Validation
-        /// </summary>
-        /// <returns>true if valid</returns>
-        public bool IsValid()
-        {
-            if (string.IsNullOrWhiteSpace(VerificationPayload)) return false;
-            if (string.IsNullOrWhiteSpace(UserUuid)) return false;
-            if ((Regions?.Length ?? 0) == 0) return false;
-            if (string.IsNullOrWhiteSpace(Platform)) return false;
-            if (string.IsNullOrWhiteSpace(DeviceVerificationPayload)) return false;
-            if (string.IsNullOrWhiteSpace(AppPackageName)) return false;
-            if (Keys.Any(_ => !_.IsValid())) return false;
-            return true;
+            */
         }
     }
-
 }
