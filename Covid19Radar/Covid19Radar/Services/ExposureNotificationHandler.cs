@@ -222,14 +222,14 @@ namespace Covid19Radar.Services
         // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
         public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
         {
-            var pendingDiagnosis = userData.PendingDiagnosis;
+            var latestDiagnosis = userData.LatestDiagnosis;
 
-            if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
+            if (latestDiagnosis == null || string.IsNullOrEmpty(latestDiagnosis.DiagnosisUid))
             {
                 throw new InvalidOperationException();
             }
 
-            var selfDiag = await CreateSubmissionAsync(temporaryExposureKeys, pendingDiagnosis);
+            var selfDiag = await CreateSubmissionAsync(temporaryExposureKeys, latestDiagnosis);
 
             HttpStatusCode httpStatusCode = await httpDataService.PutSelfExposureKeysAsync(selfDiag);
             if (httpStatusCode == HttpStatusCode.NotAcceptable)
@@ -256,8 +256,6 @@ namespace Covid19Radar.Services
                     Resources.AppResources.ButtonOk);
                 throw new InvalidOperationException();
             }
-            // Update pending status
-            pendingDiagnosis.Shared = true;
             await userDataService.SetAsync(userData);
         }
 

@@ -8,6 +8,5 @@ namespace Covid19Radar.Model
 
 		public DateTimeOffset DiagnosisDate { get; set; }
 
-		public bool Shared { get; set; }
 	}
 }

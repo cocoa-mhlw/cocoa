@@ -114,7 +114,7 @@ namespace Covid19Radar.Model
                 return;
 
             // Remove ones that were not submitted as the new one is better
-            PositiveDiagnoses.RemoveAll(d => !d.Shared);
+            PositiveDiagnoses.Clear();
 
             PositiveDiagnoses.Add(new PositiveDiagnosisState
             {
@@ -128,13 +128,6 @@ namespace Covid19Radar.Model
 
         public PositiveDiagnosisState LatestDiagnosis
             => PositiveDiagnoses
-                .Where(d => d.Shared)
-                .OrderByDescending(p => p.DiagnosisDate)
-                .FirstOrDefault();
-
-        public PositiveDiagnosisState PendingDiagnosis
-            => PositiveDiagnoses
-                .Where(d => !d.Shared)
                 .OrderByDescending(p => p.DiagnosisDate)
                 .FirstOrDefault();
 
