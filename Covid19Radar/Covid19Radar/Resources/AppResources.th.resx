@@ -718,4 +718,8 @@
     <value>อัปเดตเป็นเวอร์ชันล่าสุด</value>
     <comment>最新版への更新</comment>
   </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>มีปัญหากับข้อมูลเรกคอร์ดผู้ติดต่อ</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
 </root>

@@ -718,4 +718,8 @@
     <value>Aġġorna għall-aħħar verżjoni</value>
     <comment>最新版への更新</comment>
   </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>Hemm problema bid-dejta tar-rekords ta' kuntatt</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
 </root>

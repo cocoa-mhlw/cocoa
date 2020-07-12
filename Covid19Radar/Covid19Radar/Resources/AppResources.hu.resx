@@ -718,4 +718,8 @@
     <value>Frissítés a legújabb verzióra</value>
     <comment>最新版への更新</comment>
   </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>Probléma van a kapcsolattartó rekordadataival</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
 </root>

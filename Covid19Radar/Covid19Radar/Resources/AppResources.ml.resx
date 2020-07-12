@@ -718,4 +718,8 @@
     <value>ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ് ഡേറ്റ് ചെയ്യുക</value>
     <comment>最新版への更新</comment>
   </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>കോൺടാക്റ്റ് റെക്കോർഡ് ഡാറ്റയുമായി ബന്ധപ്പെട്ട് ഒരു പ്രശ്നമുണ്ട്</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
 </root>

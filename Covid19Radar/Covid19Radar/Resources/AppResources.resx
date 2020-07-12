@@ -823,4 +823,8 @@
   <data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
   </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>There is a problem with the contact record data</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
 </root>

@@ -718,4 +718,8 @@
     <value>সর্বশেষ সংস্করণে হালনাগাদ করুন</value>
     <comment>最新版への更新</comment>
   </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>যোগাযোগ রেকর্ড উপাত্তে একটি সমস্যা আছে</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
 </root>

@@ -718,4 +718,8 @@
     <value>Atjaunināt uz jaunāko versiju</value>
     <comment>最新版への更新</comment>
   </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>Radusies problēma ar kontaktpersonas ieraksta datiem</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
 </root>

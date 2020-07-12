@@ -718,4 +718,8 @@
     <value>التحديث إلى أحدث إصدار</value>
     <comment>最新版への更新</comment>
   </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>هناك مشكلة في بيانات سجل جهة الاتصال</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
 </root>

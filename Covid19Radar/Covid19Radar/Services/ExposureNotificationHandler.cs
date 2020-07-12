@@ -248,6 +248,14 @@ namespace Covid19Radar.Services
                     Resources.AppResources.ButtonOk);
                 throw new InvalidOperationException();
             }
+            else if (httpStatusCode == HttpStatusCode.BadRequest)
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    "",
+                    AppResources.ExposureNotificationHandler3ErrorMessage,
+                    Resources.AppResources.ButtonOk);
+                throw new InvalidOperationException();
+            }
             // Update pending status
             pendingDiagnosis.Shared = true;
             await userDataService.SetAsync(userData);
@@ -257,8 +265,7 @@ namespace Covid19Radar.Services
         private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys, PositiveDiagnosisState pendingDiagnosis)
         {
             // Create the network keys
-
-            var keys = temporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key
+            var keys = temporaryExposureKeys.Where(k => k.RollingStart > DateTimeOffset.UtcNow.Date.AddDays(AppConstants.OutOfDateDays)).Select(k => new DiagnosisSubmissionParameter.Key
             {
                 KeyData = Convert.ToBase64String(k.Key),
                 RollingStartNumber = (uint)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,

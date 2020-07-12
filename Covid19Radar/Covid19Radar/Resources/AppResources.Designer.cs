@@ -304,6 +304,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   There is a problem with the contact record data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureNotificationHandler3ErrorMessage {
+            get {
+                return ResourceManager.GetString("ExposureNotificationHandler3ErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Bluetooth is turned off.Please turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposureNotificationServiceMessage4 {

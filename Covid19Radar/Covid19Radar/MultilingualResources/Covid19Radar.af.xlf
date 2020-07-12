@@ -917,6 +917,11 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Werk by jongste weergawe</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
         </trans-unit>
+        <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
+          <source>There is a problem with the contact record data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Daar is 'n probleem met die kontakrekorddata</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
+        </trans-unit>
       </group>
     </body>
   </file>
