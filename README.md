@@ -1,84 +1,23 @@
-# COVID-19Radar (English)/([Japanese](README.ja.md))
+# COVID-19 Contact-Confirming Application COCOA (English)/([Japanese](README.ja.md))
 
-“There is only one version of contact confirming app in app stores - the official version by the Ministry of Health, Labor and Welfare. This GitHub contains code that became the base for the official app, but it is not the same as the code for the official app itself.
-This code is maintained by the community and there is no guarantee that issues or pull requests will be reflected in the official app."
+This is the official repository for the COVID-19 Contact-Confirming Application(COCOA).  
+COCOA has been developed from [Project Covid19Radar](https://github.com/Covid-19Radar).
 
-We are looking for translator reviewers, Please see [How to Translate application](HOW_TO_TRANSLATE_CONTRIBUTE.md) page.
+For information on how to install COCOA, instructions, and updates, please visit the MHLW [COCOA website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html).
 
-If you use it for your own country, you may want to refer to the following. Please see [HOW_TO_USE_YOUR_COUNTRY](doc/HOW_TO_USE_YOUR_COUNTRY.md) page and  [SERVER_SIDE_ARCHITECTURE](doc/SERVER_SIDE_ARCHITECTURE.md) page
+## Q&A for COCOA Users
 
-iOS Build Master Branch status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
+If you have any questions about how to use COCOA, please check the MHLW [Q&A website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html).
 
-Android Build Master Branch status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
+## Regarding requests for COCOA
 
-This app uses Exposure Notification / Bluetooth LE to get the contact logs of each other.  
-![App Description](img/explanation_en.png)
+You can find the email address in the [Q&A Website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html), so please contact us from there.  
+For PullRequest and Issues, please be aware that it may take some time to respond.
 
-## Thank you for Your Contribution !!! [Contributors List](CONTRIBUTORS.md)
-We welcome contributions and pull requests.
-Please check the contribution rules.
-[Contribute Rule](CONTRIBUTING.md)
+## License.
 
-## How to install the app for tester
+COCOA is licensed under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE.md) for the full license text.
 
-Please install the app for the test from the below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
-
-### Android
-
-https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
-
-Device configuration guide for a tester:  
-https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
-
-### iOS
-
-https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS/releases
-
-Device configuration guide for a tester:  
-https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
-
-## Development environment
-
-This application uses Xamarin Forms (iOS and Android) with C# and Prism (MVVM DryIoC).
-You can develop with Visual Studio for Windows or Visual Studio for Mac.
-
-https://visualstudio.microsoft.com/ja/xamarin/
-
-![App settings](img/design00.png)
-
-Permission to use the following functions of the device is required.
-
-1. Exposure notification
-2. Bluetooth
-3. Local Notification
-
-After the setup is complete, the contact log between the people who have installed this app is automatically recorded.
-
-For more information on setting up a development environment, please refer to [this document](doc/Developer.md).
-
-# About the design
-
-We use [Adobe XD](https://www.adobe.com/jp/products/xd.html) to create our designs.
-
-![Full screen view](img/design01.jpg)
-
-If you want to check your design files, install Adobe XD. (available for free).
-
-## App Prototypes
-
-You can check the screen transition by accessing the following URL.
-
-[Prototype mock (Japanese version only)](https://xd.adobe.com/view/8a430621-fe72-45a7-4acf-43fa7d73c181-fc72/grid)
-
-## Licensing
-
-COVID-19Radar is licensed under the Mozilla Public License Version 2.0. See
-[LICENSE](LICENSE.md) for the full license text.
-
-The following are additional items in this license depending on the intention of the original author.
-In Addition to MPL, this project not permit exercise of moral rights of co-authors.
-Dispute or litigation by each author is not allowed.
-
-## About 3rd Party Software
+## About Third Party Software.
 
 This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
