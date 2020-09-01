@@ -40,7 +40,7 @@
     1. The App User will not copy, modify, edit, distribute, etc. the App, and will not reverse-engineer the app.
     1. The App User will not sell, lend, or transfer the App to a third party, or use the App as collateral, for commercial purposes or otherwise.
     1. The App User will not delete or change copyright notices or trademark notices displayed by parties designated by the Ministry of Health, Labour and Welfare.
-    1. Notwithstanding the previous two paragraphs, provisions governing the use of open source content shall have priority for items for which it is necessary to adhere to said provisions. Information regarding open source content can be found at [https://github.com/Covid-19Radar/Covid19Radar](https://github.com/Covid-19Radar/Covid19Radar).
+    1. Notwithstanding the previous two paragraphs, provisions governing the use of open source content shall have priority for items for which it is necessary to adhere to said provisions. Information regarding open source content can be found at [https://github.com/cocoa-mhlw/cocoa](https://github.com/cocoa-mhlw/cocoa).
 
 ## (Usage Time, Stopping Usage, etc.)
 **Article 6**:
