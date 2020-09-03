@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Covid19Radar.Resources;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace Covid19Radar.ViewModels
 {
@@ -33,6 +34,19 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickEmail => new Command(async () =>
         {
+            // Device Model (ex.SMG-950U, iPhone10,6)
+            var device = DeviceInfo.Model;
+
+            // Manufacture (ex.Samsung)
+            var manufacturer = DeviceInfo.Manufacturer;
+
+            // OS ver (ex. 7.0)
+            var version = DeviceInfo.VersionString;
+
+            // Platform (ex. Android)
+            var platform = DeviceInfo.Platform;
+
+            var device_info = "DEVICE_INFO : " + AppSettings.Instance.AppVersion + "," + device + "(" + manufacturer + ")," + platform + "," + version;
 
             try
             {
@@ -41,7 +55,7 @@ namespace Covid19Radar.ViewModels
                 var message = new EmailMessage
                 {
                     Subject = AppResources.InqueryMailSubject,
-                    Body = AppResources.InqueryMailBody.Replace("\\r\\n", "\r\n"),
+                    Body = device_info + "\r\n" + AppResources.InqueryMailBody.Replace("\\r\\n", "\r\n"),
                     To = recipients
                 };
                 await Email.ComposeAsync(message);
