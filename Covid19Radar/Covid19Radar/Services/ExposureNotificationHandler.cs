@@ -54,10 +54,10 @@ namespace Covid19Radar.Services
                 TransmissionWeight = 50,
                 DurationWeight = 50,
                 DaysSinceLastExposureWeight = 50,
-                TransmissionRiskScores = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                AttenuationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                DurationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
-                DaysSinceLastExposureScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
+                TransmissionRiskScores = new int[] { 7, 7, 7, 7, 7, 7, 7, 7 },
+                AttenuationScores = new[] { 0, 0, 0, 0, 1, 1, 1, 1 },
+                DurationScores = new[] { 0, 0, 0, 0, 1, 1, 1, 1 },
+                DaysSinceLastExposureScores = new[] { 1, 1, 1, 1, 1, 1, 1, 1 },
                 DurationAtAttenuationThresholds = new[] { 50, 70 }
             };
 

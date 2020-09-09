@@ -167,5 +167,9 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>ENDeveloperRegion</key>
+	<string>JP</string>
+	<key>ENAPIVersion</key>
+	<integer>1</integer>
 </dict>
 </plist>
