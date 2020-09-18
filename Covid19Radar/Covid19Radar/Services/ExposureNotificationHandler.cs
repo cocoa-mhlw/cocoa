@@ -49,13 +49,13 @@ namespace Covid19Radar.Services
 
             configuration = new Configuration
             {
-                MinimumRiskScore = 1,
+                MinimumRiskScore = 21,
                 AttenuationWeight = 50,
                 TransmissionWeight = 50,
                 DurationWeight = 50,
                 DaysSinceLastExposureWeight = 50,
                 TransmissionRiskScores = new int[] { 7, 7, 7, 7, 7, 7, 7, 7 },
-                AttenuationScores = new[] { 0, 0, 0, 0, 1, 1, 1, 1 },
+                AttenuationScores = new[] { 1, 2, 3, 4, 5, 6, 7, 8 },
                 DurationScores = new[] { 0, 0, 0, 0, 1, 1, 1, 1 },
                 DaysSinceLastExposureScores = new[] { 1, 1, 1, 1, 1, 1, 1, 1 },
                 DurationAtAttenuationThresholds = new[] { 50, 70 }
@@ -72,19 +72,26 @@ namespace Covid19Radar.Services
 
             UserExposureSummary userExposureSummary = new UserExposureSummary(summary.DaysSinceLastExposure, summary.MatchedKeyCount, summary.HighestRiskScore, summary.AttenuationDurations, summary.SummationRiskScore);
             userData.ExposureSummary = userExposureSummary;
-            var exposureInfo = await getExposureInfo();
 
-            // Add these on main thread in case the UI is visible so it can update
-            await Device.InvokeOnMainThreadAsync(() =>
+            var config = await GetConfigurationAsync();
+
+            if (userData.ExposureSummary.HighestRiskScore >= config.MinimumRiskScore)
             {
-                foreach (var exposure in exposureInfo)
-                {
-                    Debug.WriteLine($"C19R found exposure {exposure.Timestamp}");
+                var exposureInfo = await getExposureInfo();
 
-                    UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
-                    userData.ExposureInformation.Add(userExposureInfo);
-                }
-            });
+                // Add these on main thread in case the UI is visible so it can update
+                await Device.InvokeOnMainThreadAsync(() =>
+                {
+                    foreach (var exposure in exposureInfo)
+                    {
+                        Debug.WriteLine($"C19R found exposure {exposure.Timestamp}");
+
+                        UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
+                        userData.ExposureInformation.Add(userExposureInfo);
+                    }
+                });
+            }
+
             await userDataService.SetAsync(userData);
 
             // If Enabled Local Notifications
