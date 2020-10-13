@@ -43,7 +43,7 @@ namespace Covid19Radar.Api.DataAccess
         {
             _logger.LogInformation($"start {nameof(GetKeysAsync)}");
 
-            var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
+            var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds();
             // Only allow the last 14 days +
             if (sinceEpochSeconds < oldest)
                 sinceEpochSeconds = oldest;
@@ -71,7 +71,7 @@ namespace Covid19Radar.Api.DataAccess
         {
             _logger.LogInformation($"start {nameof(GetKeysAsync)}");
 
-            var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
+            var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds();
             // Only allow the last 14 days +
             if (sinceEpochSeconds < oldest)
                 sinceEpochSeconds = oldest;
@@ -100,7 +100,7 @@ namespace Covid19Radar.Api.DataAccess
         public async Task<TemporaryExposureKeyExportModel[]> GetOutOfTimeKeysAsync()
         {
             _logger.LogInformation($"start {nameof(GetOutOfTimeKeysAsync)}");
-            var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
+            var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds();
 
             var query = _db.TemporaryExposureKeyExport.GetItemLinqQueryable<TemporaryExposureKeyExportModel>(true)
                 .Where(tek => !tek.Deleted)

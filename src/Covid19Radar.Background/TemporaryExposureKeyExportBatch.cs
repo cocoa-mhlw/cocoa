@@ -22,7 +22,7 @@ namespace Covid19Radar.Background
         /// <param name="log">logger</param>
         /// <returns></returns>
         [FunctionName("TemporaryExposureKeyExportBatch")]
-        public async Task Run([TimerTrigger("0 0 */1 * * *")] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 0 15 * * *")] TimerInfo myTimer, ILogger log)
         //public async Task Run([TimerTrigger("0 0 0 * * *")] TimerInfo myTimer, ILogger log)
         //public async Task Run([TimerTrigger("0 * * * * *")]TimerInfo myTimer, ILogger log)
         {
