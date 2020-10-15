@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Api.DataAccess;
+﻿using Covid19Radar.Api.Common;
+using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Background.Extentions;
 using Covid19Radar.Background.Protobuf;
@@ -69,7 +70,6 @@ namespace Covid19Radar.Background.Services
                 foreach (var kv in items.GroupBy(_ => new
                 {
                     RollingStartUnixTimeSeconds = _.GetRollingStartUnixTimeSeconds(),
-                    RollingPeriodSeconds = _.GetRollingPeriodSeconds()
                 }))
                 {
                     var batchNum = (int)await Sequence.GetNextAsync(SequenceName, 1);
@@ -79,7 +79,7 @@ namespace Covid19Radar.Background.Services
                         var sorted = kv
                             .OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
                         await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
-                            (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
+                            (ulong)(kv.Key.RollingStartUnixTimeSeconds + Constants.ActiveRollingPeriod * 10 * 60),
                             region,
                             batchNum,
                             sorted.ToArray());

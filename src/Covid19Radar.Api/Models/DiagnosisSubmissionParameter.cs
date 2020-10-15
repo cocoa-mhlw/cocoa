@@ -55,9 +55,10 @@ namespace Covid19Radar.Api.Models
 			public bool IsValid()
 			{
 				if (string.IsNullOrWhiteSpace(KeyData)) return false;
-				if (RollingPeriod != 0 && RollingPeriod != Constants.ActiveRollingPeriod) return false;
+				if (RollingPeriod != 0 && RollingPeriod > Constants.ActiveRollingPeriod) return false;
+				var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds() / 600;
 				var oldest = new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
-				if (RollingStartNumber != 0 && RollingStartNumber < oldest) return false;
+				if (RollingStartNumber != 0 && (RollingStartNumber < oldest || RollingStartNumber > now)) return false;
 				return true;
 			}
 		}
