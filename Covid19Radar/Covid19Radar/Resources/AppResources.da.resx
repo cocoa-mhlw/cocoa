@@ -329,25 +329,9 @@
     <value>En liste over nære kontakter med COVID-19 positive brugere</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Udfyld dine symptomer</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Fortæl dine symptomer via telefon Consultation Center</value>
-    <comment>帰国者・接触者外来に電話</comment>
-  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>gange</value>
     <comment>件</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Hvis du har mulige COVID-19 symptomer, skal du kontakte sundhedsorganisationer ved hjælp af nedenstående formular eller telefonisk. Afhængigt af symptomerne, vil du blive rådet til at tage en COVID-19 test.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Tag venligst et skærmbillede af denne skærm. Du kan blive bedt om at give det under diagnosen.</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>Antal bekræftede tætte kontakter med COVID-19 positive brugere</value>
@@ -574,7 +558,7 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

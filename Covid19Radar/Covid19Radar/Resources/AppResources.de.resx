@@ -329,25 +329,9 @@
     <value>Eine Liste der engen Kontakte mit positiv getesteten COVID-19-Benutzern</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Geben Sie Ihre Symptome an</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Melden Sie Ihre Symptome telefonisch dem Beratungszentrum</value>
-    <comment>帰国者・接触者外来に電話</comment>
-  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>mal</value>
     <comment>件</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Wenn Sie eventuelle COVID-19-Symptome verspüren, wenden Sie sich mit dem nachfolgenden Formular oder telefonisch an eine medizinische Einrichtung. Entsprechend den Symptomen wird Ihnen geraten, einen COVID-19-Test durchzuführen.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Bitte machen Sie einen Screenshot von diesem Bildschirm. Möglicherweise werden Sie während der Diagnose darum gebeten.</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>Anzahl der bestätigten engen Kontakte mit positiv an COVID-19 getesteten Personen</value>
@@ -574,7 +558,7 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

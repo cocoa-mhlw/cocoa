@@ -16,8 +16,7 @@
         <StackLayout
             Padding="10"
             BackgroundColor="#FFFFFF"
-            Spacing="10"
-            VerticalOptions="Center">
+            Spacing="10">
             <Frame
                 Padding="16"
                 BackgroundColor="#FFF3DD"
@@ -43,31 +42,17 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-
                     <Button
                         Margin="0,0,0,20"
                         AutomationId="ButtonShareApp"
                         Command="{Binding Path=OnClickByForm}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
-
-                    <Button
-                        Margin="0,0,0,20"
-                        AutomationId="ButtonShareApp"
-                        Command="{Binding Path=OnClickByPhone}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageButton3}" />
-
                     <Label
-                        Margin="0,0,0,15"
+                        Margin="0"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
-
-                    <Label
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
                 </StackLayout>
             </Frame>
             <Button

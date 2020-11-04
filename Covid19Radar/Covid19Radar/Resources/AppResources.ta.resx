@@ -329,25 +329,9 @@
     <value>COVID-19 நேர்மறை பயனர்களுடன் நெருக்கமான தொடர்புகளின் பட்டியல்</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>உங்கள் அறிகுறிகளை நிரப்பவும்</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>தொலைபேசி ஆலோசனை மையம் மூலம் உங்கள் அறிகுறிகளைக் கூறுங்கள்</value>
-    <comment>帰国者・接触者外来に電話</comment>
-  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>வாழ்க்கை நிலைகள்</value>
     <comment>件</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>உங்களுக்கு சாத்தியமான COVID-19 அறிகுறிகள் இருந்தால், கீழே உள்ள படிவத்தைப் பயன்படுத்தி அல்லது தொலைபேசி மூலம் உடல்நலப் பராமரிப்பு நிறுவனங்களைத் தொடர்பு கொள்ளவும். அறிகுறிகளைப் பொறுத்து, COVID-19 பரிசோதனை யை மேற்கொள்ள ுமாறு அறிவுறுத்தப்படுவீர்கள்.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>இந்தத் திரையின் ஸ்கிரீன்ஷாட்டை தயவுசெய்து எடுத்துக் கொள்ளுங்கள். நோய் கண்டறியும் போது அதை வழங்குமாறு உங்களிடம் கேட்கப்படலாம்.</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>COVID-19 நேர்மறை பயனர்களுடன் உறுதிப்படுத்தப்பட்ட நெருக்கமான தொடர்புகளின் எண்ணிக்கை</value>
@@ -574,7 +558,7 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

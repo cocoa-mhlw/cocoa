@@ -329,25 +329,9 @@
     <value>Isang listahan ng mga malapit na contact na may COVID-19 positibong mga gumagamit</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Punan ang iyong mga sintomas</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Sabihin ang iyong mga sintomas sa pamamagitan ng phone konsultasyon center</value>
-    <comment>帰国者・接触者外来に電話</comment>
-  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>panahon</value>
     <comment>件</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Kung mayroon kang mga posibleng COVID sintomas, kontakin ang mga organisasyong healthcare gamit ang form sa ibaba o sa pamamagitan ng telepono. Depende sa mga sintomas, ikaw ay ipinapayo na kumuha ng isang COVID-19 na pagsubok.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Mangyaring kumuha ng screenshot ng iskrin na ito. Maaaring hilingin sa iyo na ibigay ito sa panahon ng pagsusuri.</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>Bilang ng mga nakumpirma na isara ang mga contact na may COVID-19 positibong mga gumagamit</value>
@@ -574,7 +558,7 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

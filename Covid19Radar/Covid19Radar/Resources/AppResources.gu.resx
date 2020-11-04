@@ -329,25 +329,9 @@
     <value>COVID-19 હકારાત્મક વપરાશકર્તાઓ સાથે નજીકના સંપર્કોની યાદી</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>તમારા ં લક્ષણો ભરો</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>ફોન કન્સલ્ટેશન સેન્ટર દ્વારા તમારા ં લક્ષણો જણાવો</value>
-    <comment>帰国者・接触者外来に電話</comment>
-  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>સમય</value>
     <comment>件</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>જો તમને સીઓવીઆઈડી-19નાં સંભવિત લક્ષણો હોય, તો નીચે અથવા ફોન દ્વારા ફોર્મનો ઉપયોગ કરીને આરોગ્ય સંભાળ સંસ્થાઓનો સંપર્ક કરો. લક્ષણોને આધારે, તમને COVID-19 ટેસ્ટ લેવાની સલાહ આપવામાં આવશે.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>કૃપા કરીને આ સ્ક્રીનનો સ્ક્રીનશોટ લો. નિદાન દરમિયાન તમને તે આપવાનું કહેવામાં આવી શકે છે.</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>COVID-19 હકારાત્મક વપરાશકર્તાઓ સાથે ખાતરી થયેલ નજીકસંપર્કોની સંખ્યા</value>
@@ -574,7 +558,7 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

@@ -732,8 +732,8 @@
           <note priority="2" annotates="source" from="MultilingualBuild">Term of Use</note>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedForm">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</source>
-          <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</source>
+          <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedPhone">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>

@@ -427,30 +427,10 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">'N lys van noue kontakte met COVID-19 positiewe gebruikers</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触一覧</note>
         </trans-unit>
-        <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
-          <source>Fill in your symptoms</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vul jou simptome in</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
-        </trans-unit>
-        <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
-          <source>Tell your symptoms by phone Consultation Center</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vertel jou simptome per telefoon Konsultasiesentrum</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者外来に電話</note>
-        </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
           <source>times</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Keer</target>
           <note from="MultilingualBuild" annotates="source" priority="2">件</note>
-        </trans-unit>
-        <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
-          <source>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">As jy moontlik COVID-19 simptome, kontak gesondheidsorg organisasies met behulp van die vorm hieronder of per telefoon. Afhangende van die simptome, sal jy aangeraai word om 'n COVID te neem-19 toets.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</note>
-        </trans-unit>
-        <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
-          <source>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Neem asseblief 'n kiekie van hierdie skerm. Jy kan gevra word om dit tydens diagnose te voorsien.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
           <source>Number of confirmed close contacts with COVID-19 positive users</source>
@@ -733,8 +713,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
         <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</target>
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
@@ -921,6 +901,21 @@
           <source>There is a problem with the contact record data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Daar is 'n probleem met die kontakrekorddata</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
+          <source>Find COVID-19 Consultation Centers</source>
+          <target state="new">Find COVID-19 Consultation Centers</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">検査等の相談先を探す</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
+          <source>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
+please follow the app. guidance and check the Consultation Centers List to receive a consultation.
+・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</source>
+          <target state="new">・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
+please follow the app. guidance and check the Consultation Centers List to receive a consultation.
+・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</note>
         </trans-unit>
       </group>
     </body>

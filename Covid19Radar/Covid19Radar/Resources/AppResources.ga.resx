@@ -329,25 +329,9 @@
     <value>Liosta de dhlúth-theagmhálacha le húsáideoirí dearfacha COVID-19</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>Líon isteach do chomharthaí</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Abair le do chomharthaí ag Ionad Comhairliúcháin teileafóin</value>
-    <comment>帰国者・接触者外来に電話</comment>
-  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>amanna</value>
     <comment>件</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>Má tá comharthaí COVID-19 féideartha agat, déan teagmháil le heagraíochtaí cúram sláinte ag baint úsáide as an bhfoirm thíos nó ar an nguthán. Ag brath ar na hairíonna, molfar duit tástáil COVID-19 a dhéanamh.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Glac scáileán den scáileán seo, le do thoil. Is féidir go n-iarrfar ort é a sholáthar le linn diagnóise.</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>Líon na ndlúth-theagmhálacha deimhnithe le húsáideoirí dearfacha COVID-19</value>
@@ -574,7 +558,7 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

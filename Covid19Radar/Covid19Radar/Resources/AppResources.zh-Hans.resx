@@ -329,25 +329,9 @@
     <value>和阳性患者的密切接触一览</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageButton2" xml:space="preserve">
-    <value>填写症状</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>致电咨询中心</value>
-    <comment>帰国者・接触者外来に電話</comment>
-  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>times</value>
     <comment>件</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>如果您有新冠病毒的一些症状，请填写表单或者向回国者、接触者咨询中心构电话咨询，我们会根据你提供的信息判断是否进行检查。</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>请截图保存本页面，并在受诊时提供给医院</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>查询跟阳性患者的密切接触情况</value>
@@ -574,7 +558,7 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/index.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot2.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -721,5 +705,15 @@
   <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
     <value>联系人记录数据有问题</value>
     <comment>接触記録データに問題があります</comment>
+  </data>
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
+    <value>寻找咨询中心</value>
+    <comment>検査等の相談先を探す</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
+    <value>・如果您有发烧，既往病状等症状，或者与经检测COVID-19呈阳性的人接触过，如果你想进行检查方面咨询，请按照本应用的指导，查看咨询中心列表以进行咨询。
+・请保存以下“感染者的接触一览”的屏幕截图，身体检查时可能需要</value>
+    <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
   </data>
 </root>

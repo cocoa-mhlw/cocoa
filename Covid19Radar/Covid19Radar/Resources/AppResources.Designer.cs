@@ -187,20 +187,11 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Fill in your symptoms に類似しているローカライズされた文字列を検索します。
+        ///   Find COVID-19 Consultation Centers に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageButton2 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageButton2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Tell your symptoms by phone Consultation Center に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ContactedNotifyPageButton3 {
-            get {
-                return ResourceManager.GetString("ContactedNotifyPageButton3", resourceCulture);
             }
         }
         
@@ -214,20 +205,13 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test. に類似しているローカライズされた文字列を検索します。
+        ///   ・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
+        ///please follow the app. guidance and check the Consultation Centers List to receive a consultation.
+        ///・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ContactedNotifyPageDescription1 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageDescription1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please take a screenshot of this screen. You may be asked to provide it during diagnosis. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ContactedNotifyPageDescription2 {
-            get {
-                return ResourceManager.GetString("ContactedNotifyPageDescription2", resourceCulture);
             }
         }
         
@@ -1663,7 +1647,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html に類似しているローカライズされた文字列を検索します。
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string UrlContactedForm {
             get {

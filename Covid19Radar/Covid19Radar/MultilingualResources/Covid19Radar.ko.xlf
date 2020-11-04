@@ -411,30 +411,10 @@
           <target state="translated">양성 판정자와의 접촉 목록</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触一覧</note>
         </trans-unit>
-        <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
-          <source>Fill in your symptoms</source>
-          <target state="translated">증상을 입력하고 상담받기</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
-        </trans-unit>
-        <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
-          <source>Tell your symptoms by phone Consultation Center</source>
-          <target state="translated">전화로 증상을 알리고 상담받기</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者外来に電話</note>
-        </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
           <source>times</source>
           <target state="translated">건</target>
           <note from="MultilingualBuild" annotates="source" priority="2">件</note>
-        </trans-unit>
-        <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
-          <source>If you have possible COVID-19 symptoms, contact healthcare organizations using the form below or by phone. Depending on the symptoms, you will be advised to take a COVID-19 test.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 증상이 있는 경우 아래 또는 전화로 양식을 사용하여 의료 기관에 문의하십시오. 증상에 따라 COVID-19 검사를 받는 것이 좋습니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</note>
-        </trans-unit>
-        <trans-unit id="ContactedNotifyPageDescription2" translate="yes" xml:space="preserve">
-          <source>Please take a screenshot of this screen. You may be asked to provide it during diagnosis.</source>
-          <target state="translated">검사 시 필요한 경우가 있으므로, 본 화면의 스크린 샷 저장을 부탁드립니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
           <source>Number of confirmed close contacts with COVID-19 positive users</source>
@@ -717,8 +697,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
         <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</target>
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
@@ -905,6 +885,21 @@
           <source>There is a problem with the contact record data</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">연락처 레코드 데이터에 문제가 있습니다.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
+          <source>Find COVID-19 Consultation Centers</source>
+          <target state="new">Find COVID-19 Consultation Centers</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">検査等の相談先を探す</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
+          <source>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
+please follow the app. guidance and check the Consultation Centers List to receive a consultation.
+・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</source>
+          <target state="new">・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
+please follow the app. guidance and check the Consultation Centers List to receive a consultation.
+・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</note>
         </trans-unit>
       </group>
     </body>
