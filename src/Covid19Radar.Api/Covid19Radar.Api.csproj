@@ -7,8 +7,9 @@
     <_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
     <PackageReference Include="jose-jwt" Version="2.5.0" />
-    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.9.1" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.15.0" />
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.2" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.4" />
@@ -29,6 +30,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Properties\ServiceDependencies\covid19radar-jpn-dev - Zip 配置\" />
   </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties host_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

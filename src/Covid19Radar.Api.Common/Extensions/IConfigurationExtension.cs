@@ -23,6 +23,7 @@ namespace Covid19Radar.Api
         public static string CryptionHash(this IConfiguration config) => config["CRYPTION_HASH"];
         public static byte[] CryptionKey2(this IConfiguration config) => Convert.FromBase64String(config["CRYPTION_KEY2"]);
         public static byte[] CryptionIV2(this IConfiguration config) => Convert.FromBase64String(config["CRYPTION_IV2"]);
+        public static string InquiryLogApiKey(this IConfiguration config) => config["InquiryLogApiKey"];
 
     }
 }

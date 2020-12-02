@@ -19,6 +19,7 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
             builder.Services.AddSingleton<IValidationUserService, ValidationUserService>();
             builder.Services.AddSingleton<IValidationServerService, ValidationServerService>();
+            builder.Services.AddSingleton<IValidationInquiryLogService, ValidationInquiryLogService>();
             builder.Services.AddSingleton<IAuthorizedAppRepository, ConfigAuthorizedAppRepository>();
             builder.Services.AddSingleton<IUserRepository, CosmosUserRepository>();
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
@@ -28,6 +29,7 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<IVerificationService, CustomVerificationService>();
             builder.Services.AddSingleton<ICustomVerificationStatusRepository, CustomVerificationStatusRepository>();
             builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
+            builder.Services.AddSingleton<IInquiryLogBlobService, InquiryLogBlobService>();
         }
     }
 }

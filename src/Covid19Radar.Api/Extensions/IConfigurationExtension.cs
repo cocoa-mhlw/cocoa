@@ -5,7 +5,12 @@ namespace Covid19Radar.Api
     public static class IConfigurationExtension
     {
         public static string ExportKeyUrl(this IConfiguration config) => config["ExportKeyUrl"];
+        public static string TekExportBlobStorage(this IConfiguration config) => config["TekExportBlobStorage"];
         public static string TekExportBlobStorageContainerPrefix(this IConfiguration config) => config["TekExportBlobStorageContainerPrefix"];
+        public static string InquiryLogBlobUrl(this IConfiguration config) => config["InquiryLogBlobUrl"];
+        public static string InquiryLogBlobAccountName(this IConfiguration config) => config["InquiryLogBlobAccountName"];
+        public static string InquiryLogBlobAccountKey(this IConfiguration config) => config["InquiryLogBlobAccountKey"];
+        public static string InquiryLogBlobStorageContainerPrefix(this IConfiguration config) => config["InquiryLogBlobStorageContainerPrefix"];
         public static string[] SupportRegions(this IConfiguration config) => config["SupportRegions"].Split(',');
         public static string AndroidPackageName(this IConfiguration config) => config["AndroidPackageName"];
         public static string AndroidSafetyNetSecret(this IConfiguration config) => config["AndroidSafetyNetSecret"];
