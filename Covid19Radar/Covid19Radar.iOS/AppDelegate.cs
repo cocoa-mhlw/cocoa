@@ -1,4 +1,6 @@
-﻿using Foundation;
+﻿using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.Services.Logs;
+using Foundation;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -25,6 +27,8 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            NSUrlCache.SharedCache.RemoveAllCachedResponses();
+
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
 
@@ -52,7 +56,8 @@ namespace Covid19Radar.iOS
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+            // Services
+            containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceIos>();
         }
     }
 

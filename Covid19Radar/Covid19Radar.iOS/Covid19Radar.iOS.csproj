@@ -274,6 +274,9 @@
     <Compile Include="Extensions\AlignmentExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\FormattedStringExtensions.cs" />
+    <Compile Include="Services\Logs\LogFileServiceIos.cs" />
+    <Compile Include="Services\Logs\LogPathServiceIos.cs" />
+    <Compile Include="Services\Logs\LogPeriodicDeleteServiceIos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -460,12 +463,28 @@
     <BundleResource Include="Resources\zh.lproj\TutorialPage60%402x.png" />
     <BundleResource Include="Resources\zh.lproj\TutorialPage60%403x.png" />
     <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\en.lproj\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\en.lproj\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\en.lproj\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\zh.lproj\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\zh.lproj\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\zh.lproj\privacypolicy_img01.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
@@ -1309,6 +1328,9 @@
     <EmbeddedResource Include="NotoSansCJKjp-Medium.otf" />
     <EmbeddedResource Include="NotoSansCJKjp-Regular.otf" />
     <EmbeddedResource Include="Roboto-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Logs\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>

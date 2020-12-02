@@ -270,6 +270,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Process number incorrect に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposureNotificationHandler1ErrorMessage {
@@ -392,6 +401,33 @@ namespace Covid19Radar.Resources {
         internal static string ExposuresPageTitle {
             get {
                 return ResourceManager.GetString("ExposuresPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Failed to get the Operating information. Please try again. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FailedMessageToGetOperatingInformation {
+            get {
+                return ResourceManager.GetString("FailedMessageToGetOperatingInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Failed to save the Operating information file. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FailedMessageToSaveOperatingInformation {
+            get {
+                return ResourceManager.GetString("FailedMessageToSaveOperatingInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Failed to send operationing information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FailedMessageToSendOperatingInformation {
+            get {
+                return ResourceManager.GetString("FailedMessageToSendOperatingInformation", resourceCulture);
             }
         }
         
@@ -765,25 +801,34 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n に類似しているローカライズされた文字列を検索します。
+        ///   FAQ に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string InqueryMailBody {
+        internal static string InqueryPageButton1 {
             get {
-                return ResourceManager.GetString("InqueryMailBody", resourceCulture);
+                return ResourceManager.GetString("InqueryPageButton1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Inquiries about contact confirmation app に類似しているローカライズされた文字列を検索します。
+        ///   Inquiry に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string InqueryMailSubject {
+        internal static string InqueryPageButton2 {
             get {
-                return ResourceManager.GetString("InqueryMailSubject", resourceCulture);
+                return ResourceManager.GetString("InqueryPageButton2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   9:00-17:30 (except weekends and holidays) に類似しているローカライズされた文字列を検索します。
+        ///   Send Operating information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageButton3 {
+            get {
+                return ResourceManager.GetString("InqueryPageButton3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Help us improve the app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription1 {
             get {
@@ -792,7 +837,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   COVID-19 Information and Resources に類似しているローカライズされた文字列を検索します。
+        ///   After making an inquiry, please share with us the operating information to help us improve the COCOA app. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageDescription2 {
             get {
@@ -810,20 +855,29 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Q and A for user に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InqueryPageDescription4 {
-            get {
-                return ResourceManager.GetString("InqueryPageDescription4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Support に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryPageTitle {
             get {
                 return ResourceManager.GetString("InqueryPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Content of inquiry：\r\n\r\n\r\n\r\n※You do not need to enter personal information such as your name and phone number.\r\n に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InquiryMailBody {
+            get {
+                return ResourceManager.GetString("InquiryMailBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Inquiries about contact information app に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InquiryMailSubject {
+            get {
+                return ResourceManager.GetString("InquiryMailSubject", resourceCulture);
             }
         }
         
@@ -1179,6 +1233,258 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Processing に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Processing {
+            get {
+                return ResourceManager.GetString("Processing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Agree に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ReAgreeCheckButton {
+            get {
+                return ResourceManager.GetString("ReAgreeCheckButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Privacy Policy Revision に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ReAgreePrivacyPolicyPageTitle {
+            get {
+                return ResourceManager.GetString("ReAgreePrivacyPolicyPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Confirm Privacy Policy に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ReAgreePrivacyPolicyTextLink {
+            get {
+                return ResourceManager.GetString("ReAgreePrivacyPolicyTextLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Confirm Terms of Use に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ReAgreeTermsOfServiceTextLink {
+            get {
+                return ResourceManager.GetString("ReAgreeTermsOfServiceTextLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Revision of Terms of Use に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ReAgreeTermsOfServiceTitle {
+            get {
+                return ResourceManager.GetString("ReAgreeTermsOfServiceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save completed に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SaveCompleted {
+            get {
+                return ResourceManager.GetString("SaveCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Saving に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Saving {
+            get {
+                return ResourceManager.GetString("Saving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Operating information ID： に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendIdMailBody1 {
+            get {
+                return ResourceManager.GetString("SendIdMailBody1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   \r\n\r\n\r\n※ You do not need to enter personal information such as your name and phone number.\r\n\r\n※ Please send this email as it is without erasing or modifying the operating information ID\r\n に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendIdMailBody2 {
+            get {
+                return ResourceManager.GetString("SendIdMailBody2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   COCOA： Operating information ID に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendIdMailSubject {
+            get {
+                return ResourceManager.GetString("SendIdMailSubject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sending に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Sending {
+            get {
+                return ResourceManager.GetString("Sending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sending error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendingError {
+            get {
+                return ResourceManager.GetString("SendingError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Send Operating information ID に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogCompletePageButton1 {
+            get {
+                return ResourceManager.GetString("SendLogCompletePageButton1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Exit and Return to Home page に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogCompletePageButton2 {
+            get {
+                return ResourceManager.GetString("SendLogCompletePageButton2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please send the operating information ID by e-mail following on from sending operating information. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogCompletePageDescription1 {
+            get {
+                return ResourceManager.GetString("SendLogCompletePageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   We can link the content of the inquiry you made by e-mail in advance and the operating information you send us and then utilize it to improve solution guidance and COCOA. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogCompletePageDescription2 {
+            get {
+                return ResourceManager.GetString("SendLogCompletePageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Approve and Send information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageButton1 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageButton1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please help us to improve COCOA by sending operating information. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageDescription1 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Information that will be sent: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageDescription2 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   COCOA operating information and usage environment information (COCOA version, OS, OS version and device model) useful in investigations into the causes of malfunctions に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageDescription3 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Information that will not be sent: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageDescription4 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageDescription4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Information that can identify individuals (e.g., telephone numbers and e-mail addresses) and location information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageDescription5 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageDescription5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ・After you have sent us operating information, you can make an inquiry by e-mail about the content of the malfunction together with the operating information ID (the ID assigned to the information sent the most recently) by proceeding to [Send Operating Information ID by E-mail]. In this case, we will link the information you send us with your inquiry to utilize it in improving COCOA. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageDescription6 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageDescription6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ・ The information you send us will only be handled by the Ministry of Health, Labour and Welfare and parties subcontracted to maintain and operate COCOA by the Ministry of Health, Labour and Welfare. Furthermore, this information will only be used to improve COCOA. We will promptly delete it after completing the investigation into the malfunction information. We will not provide this information to third parties without the consent of the user. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageDescription7 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageDescription7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ・ You can check the information contained in the operating information by tapping [Check Operating Information]. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageDescription8 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageDescription8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   View Operating information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageTextLink1 {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageTextLink1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   About Operating information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SendLogConfirmationPageTitle {
+            get {
+                return ResourceManager.GetString("SendLogConfirmationPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   License に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageButton1 {
@@ -1346,6 +1652,35 @@ namespace Covid19Radar.Resources {
         internal static string SubmitConsentPageTitle2 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Please check the following folder from the OS &quot;Settings&quot; → &quot;Storage&quot; → &quot;Files&quot; or by using a file management application.
+        ///Storage : に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SuccessMessageToSaveOperatingInformationForAndroid {
+            get {
+                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   
+        ///※The part preceding &quot;/Android&quot; , such as &quot;Internal Storage”, may differ depending on your environment. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SuccessMessageToSaveOperatingInformationForAndroid2 {
+            get {
+                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The Operating information file was saved successfully. You can view it「On My iPhone」 from Files app. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SuccessMessageToSaveOperatingInformationForIOS {
+            get {
+                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForIOS", resourceCulture);
             }
         }
         
@@ -1679,6 +2014,15 @@ namespace Covid19Radar.Resources {
         internal static string UrlTermOfUse {
             get {
                 return ResourceManager.GetString("UrlTermOfUse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://covid19radarjpnprod.z11.web.core.windows.net/en/terms_update.json に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UrlTermsUpdate {
+            get {
+                return ResourceManager.GetString("UrlTermsUpdate", resourceCulture);
             }
         }
         

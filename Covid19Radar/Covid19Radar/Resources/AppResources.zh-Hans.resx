@@ -341,14 +341,6 @@
     <value>查询过去14天内里的接触情况</value>
     <comment>過去14日間の接触</comment>
   </data>
-  <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00～17:30（节假日除外）</value>
-    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
-  </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>新型冠状病毒肺炎对策网站</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>帮助与反馈</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -557,9 +549,6 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html</value>
     <comment>Term of Use</comment>
   </data>
-  <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot2.html</value>
-  </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
@@ -579,17 +568,7 @@
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
     <value>有关该应用的信息</value>
-  </data>
-  <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>用户常见问题</value>
-  </data>
-  <data name="InqueryMailBody" xml:space="preserve">
-    <value>姓名: \r\n 联系方式: \r\n 咨询内容（请在下列选项中选择）: 1. 应用的工作原理； 2. 应用的设定； 3. 应用的使用方法 （通知等）； 4. 其他 \r\n 咨询内容文本： \r\n</value>
-    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
-  </data>
-  <data name="InqueryMailSubject" xml:space="preserve">
-    <value>对该接触情况应用进行咨询</value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
+    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>天</value>
@@ -715,5 +694,186 @@
 ・请保存以下“感染者的接触一览”的屏幕截图，身体检查时可能需要</value>
     <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
 ・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
+  </data>
+  <data name="ReAgreeCheckButton" xml:space="preserve">
+    <value>同意</value>
+    <comment>確認しました</comment>
+  </data>
+  <data name="ReAgreePrivacyPolicyPageTitle" xml:space="preserve">
+    <value>隐私政策的修订</value>
+    <comment>プライバシーポリシーの改定</comment>
+  </data>
+  <data name="ReAgreePrivacyPolicyTextLink" xml:space="preserve">
+    <value>阅读隐私政策</value>
+    <comment>プライバシーポリシーを確認する</comment>
+  </data>
+  <data name="ReAgreeTermsOfServiceTextLink" xml:space="preserve">
+    <value>查看利用规约</value>
+    <comment>利用規約を確認する</comment>
+  </data>
+  <data name="ReAgreeTermsOfServiceTitle" xml:space="preserve">
+    <value>利用规约修订</value>
+    <comment>利用規約の改定</comment>
+  </data>
+  <data name="UrlTermsUpdate" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/terms_update.json</value>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>提交反馈后，请与我们分享运行信息，以帮助我们改进COCOA</value>
+    <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
+  </data>
+  <data name="InqueryPageButton1" xml:space="preserve">
+    <value>帮助</value>
+    <comment>よくある質問</comment>
+  </data>
+  <data name="InqueryPageButton2" xml:space="preserve">
+    <value>反馈</value>
+    <comment>メールでお問い合わせ</comment>
+  </data>
+  <data name="InqueryPageButton3" xml:space="preserve">
+    <value>上传运行信息</value>
+    <comment>動作情報を送信</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>请帮助我们改进应用。</value>
+    <comment>アプリの改善にご協力ください</comment>
+  </data>
+  <data name="SendLogConfirmationPageButton1" xml:space="preserve">
+    <value>同意并提交运行信息</value>
+    <comment>同意して送信する</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription1" xml:space="preserve">
+    <value>关于传送APP运行信息
+向COCOA的运营方传送APP运行信息，从而协助COCOA进行改善。</value>
+    <comment>動作情報の送信により、COCOAの改善にご協力をお願いします。</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription2" xml:space="preserve">
+    <value>被传送的信息：</value>
+    <comment>送信される情報</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription3" xml:space="preserve">
+    <value>用于协助调查故障原因的COCOA APP运行信息以及系统运行环境信息（包括COCOA APP的版本、何种OS、OS的版本、设备机种）</value>
+    <comment>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription4" xml:space="preserve">
+    <value>不会被传送的信息：</value>
+    <comment>送信されない情報</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription5" xml:space="preserve">
+    <value>电话号码、电子邮件等可识别个人身份的信息以及定位信息</value>
+    <comment>電話番号やメールアドレスなどの個人識別可能な情報や位置情報</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription6" xml:space="preserve">
+    <value>・完成信息传送之后，将前往[通过电子邮件发送APP运行信息ID]界面，可通过APP运行信息ID（为刚刚传送的信息所设置的ID），向运营方发送邮件，咨询您的故障内容。此种情况下，所传送的信息将与所咨询的内容产生关联，用于改善COCOA APP。</value>
+    <comment>・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription7" xml:space="preserve">
+    <value>・关于所传送的信息，仅限厚生劳动省以及受厚生劳动省委托维护运营COCOA APP的业务员办，仅用于改善COCOA APP的目的，完成对故障情况的调查之后，运营方将立即删除该信息。未经使用者同意，绝不会将该信息提供给第三方。</value>
+    <comment>・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription8" xml:space="preserve">
+    <value>・点击[确认即将发送的APP运行信息]，即可确认信息的具体内容。</value>
+    <comment>・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</comment>
+  </data>
+  <data name="SendLogConfirmationPageTextLink1" xml:space="preserve">
+    <value>查看用户日志</value>
+    <comment>動作情報を確認する</comment>
+  </data>
+  <data name="SendLogConfirmationPageTitle" xml:space="preserve">
+    <value>关于运行信息</value>
+    <comment>動作情報の送信について</comment>
+  </data>
+  <data name="SendLogCompletePageButton1" xml:space="preserve">
+    <value>提交运行信息ID</value>
+    <comment>メールで動作情報IDを送信する</comment>
+  </data>
+  <data name="SendLogCompletePageButton2" xml:space="preserve">
+    <value>返回主页</value>
+    <comment>終了してホームに戻る</comment>
+  </data>
+  <data name="SendLogCompletePageDescription1" xml:space="preserve">
+    <value>APP运行信息已经成功发送，
+接下来请您通过电子邮件发送您的APP运行信息ID</value>
+    <comment>動作情報を送信しました
+続いてメールで動作情報IDを送信してください</comment>
+  </data>
+  <data name="SendLogCompletePageDescription2" xml:space="preserve">
+    <value>您所传送的信息将与邮件咨询的内容相关联，活用于今后的解决方案或者改善COCOA APP。
+</value>
+    <comment>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>失败</value>
+    <comment>エラー</comment>
+  </data>
+  <data name="FailedMessageToGetOperatingInformation" xml:space="preserve">
+    <value>无法获取操作信息。 请再试一次。</value>
+    <comment>動作情報の取得に失敗しました。もう一度やり直してください。</comment>
+  </data>
+  <data name="FailedMessageToSaveOperatingInformation" xml:space="preserve">
+    <value>保存操作信息确认文件失败。</value>
+    <comment>動作情報の確認用ファイルの保存に失敗しました。</comment>
+  </data>
+  <data name="FailedMessageToSendOperatingInformation" xml:space="preserve">
+    <value>无法发送操作信息。</value>
+    <comment>動作情報の送信に失敗しました</comment>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>处理中</value>
+    <comment>処理中</comment>
+  </data>
+  <data name="SaveCompleted" xml:space="preserve">
+    <value>已保存</value>
+    <comment>保存完了</comment>
+  </data>
+  <data name="Saving" xml:space="preserve">
+    <value>保存中</value>
+    <comment>保存中</comment>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>发送中</value>
+    <comment>送信中</comment>
+  </data>
+  <data name="SendingError" xml:space="preserve">
+    <value>发送失败</value>
+    <comment>送信エラー</comment>
+  </data>
+  <data name="SuccessMessageToSaveOperatingInformationForAndroid" xml:space="preserve">
+    <value>请使用操作系统的“设置”→“存储”→“文件”或文件管理应用程序查看以下文件夹。
+保存位置：</value>
+    <comment>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
+保存場所：</comment>
+  </data>
+  <data name="SuccessMessageToSaveOperatingInformationForIOS" xml:space="preserve">
+    <value>操作信息确认文件已保存。 您可以从文件应用的「我的iPhone」中查看它。</value>
+    <comment>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</comment>
+  </data>
+  <data name="InquiryMailBody" xml:space="preserve">
+    <value>意见反馈正文：\r\n\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n</value>
+    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
+  </data>
+  <data name="InquiryMailSubject" xml:space="preserve">
+    <value>Cocoa的意见反馈​</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="SendIdMailBody1" xml:space="preserve">
+    <value>操作信息ID：</value>
+    <comment>動作情報ID：</comment>
+  </data>
+  <data name="SendIdMailBody2" xml:space="preserve">
+    <value>\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n\r\n※请不要删除或修改操作信息ID，直接发送此电子邮件。\r\n</value>
+    <comment>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</comment>
+  </data>
+  <data name="SendIdMailSubject" xml:space="preserve">
+    <value>COCOA:操作信息ID</value>
+    <comment>COCOA 動作情報IDの送信</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot2.html</value>
+  </data>
+  <data name="SuccessMessageToSaveOperatingInformationForAndroid2" xml:space="preserve">
+    <value>
+*对于“ / Android”之前的部分，根据您的环境而异，例如“内部存储”等不同表示。</value>
+    <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
   </data>
 </root>

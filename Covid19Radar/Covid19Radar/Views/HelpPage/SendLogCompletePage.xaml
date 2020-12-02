@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    x:Class="Covid19Radar.Views.SendLogCompletePage"
+    ios:Page.UseSafeArea="true"
+    Style="{StaticResource DefaultPageStyle}"
+    Title=""
+    Visual="Material">
+    <ContentPage.Content>
+        <Grid
+            Margin="0"
+            Padding="0"
+            BackgroundColor="{StaticResource Background}"
+            Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Margin="20"
+                Padding="0"
+                Style="{StaticResource DefaultTitleLabel}"
+                Text="{x:Static resources:AppResources.SendLogCompletePageDescription1}" />
+            <ScrollView
+                Margin="0"
+                Padding="0"
+                Grid.Row="1">
+                <Grid
+                    Margin="0"
+                    Padding="20"
+                    Style="{StaticResource DefaultGridLayout}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SendLogCompletePageDescription2}" />
+                    <Button
+                        Grid.Row="1"
+                        Command="{Binding Path=OnClickSendMailCommand}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.SendLogCompletePageButton1}" />
+                    <Button
+                        Grid.Row="2"
+                        Command="{Binding Path=OnClickHomeCommand}"
+                        Style="{StaticResource DefaultButtonGrayedOut}"
+                        Text="{x:Static resources:AppResources.SendLogCompletePageButton2}" />
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

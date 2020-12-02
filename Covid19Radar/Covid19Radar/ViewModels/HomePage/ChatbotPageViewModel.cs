@@ -3,6 +3,7 @@ using Acr.UserDialogs;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
@@ -11,6 +12,7 @@ namespace Covid19Radar.ViewModels
 {
     public class ChatbotPageViewModel : ViewModelBase
     {
+        private readonly ILoggerService loggerService;
         private UserDataModel _UserData;
         public UserDataModel UserData
         {
@@ -21,9 +23,10 @@ namespace Covid19Radar.ViewModels
         private readonly ExposureNotificationService exposureNotificationService;
 
         private readonly UserDataService userDataService;
-        public ChatbotPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
+        public ChatbotPageViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
+            this.loggerService = loggerService;
             this.userDataService = userDataService;
             _UserData = this.userDataService.Get();
             this.exposureNotificationService = exposureNotificationService;
@@ -39,17 +42,27 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnChangeExposureNotificationState => new Command(async () =>
         {
+            loggerService.StartMethod();
+
             await userDataService.SetAsync(_UserData);
+
+            loggerService.EndMethod();
         });
 
 
         public ICommand OnChangeNotificationState => new Command(async () =>
         {
+            loggerService.StartMethod();
+
             await userDataService.SetAsync(_UserData);
+
+            loggerService.EndMethod();
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
+            loggerService.StartMethod();
+
             var check = await UserDialogs.Instance.ConfirmAsync(
                 Resources.AppResources.SettingsPageDialogResetText,
                 Resources.AppResources.SettingsPageDialogResetTitle,
@@ -75,8 +88,12 @@ namespace Covid19Radar.ViewModels
 
                 // Application close
                 Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
+
+                loggerService.EndMethod();
                 return;
             }
+
+            loggerService.EndMethod();
         });
     }
 }

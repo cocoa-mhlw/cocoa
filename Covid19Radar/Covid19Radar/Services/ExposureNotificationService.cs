@@ -1,6 +1,7 @@
 ﻿using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Services.Logs;
 using ImTools;
 using Prism.Navigation;
 using System;
@@ -19,6 +20,7 @@ namespace Covid19Radar.Services
     public class ExposureNotificationService
     {
         private readonly IHttpDataService httpDataService;
+        private readonly ILoggerService loggerService;
         private readonly UserDataService userDataService;
         private readonly INavigationService navigationService;
         public string CurrentStatusMessage { get; set; } = "初期状態";
@@ -27,10 +29,11 @@ namespace Covid19Radar.Services
         private SecondsTimer _downloadTimer;
         private UserDataModel userData;
 
-        public ExposureNotificationService(INavigationService navigationService, UserDataService userDataService, IHttpDataService httpDataService)
+        public ExposureNotificationService(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, IHttpDataService httpDataService)
         {
             this.httpDataService = httpDataService;
             this.navigationService = navigationService;
+            this.loggerService = loggerService;
             this.userDataService = userDataService;
             _ = this.GetExposureNotificationConfig();
             userData = userDataService.Get();
@@ -52,6 +55,8 @@ namespace Covid19Radar.Services
 
         public async Task GetExposureNotificationConfig()
         {
+            loggerService.StartMethod();
+
             string container = AppSettings.Instance.BlobStorageContainerName;
             string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
             HttpClient httpClient = new HttpClient();
@@ -59,9 +64,16 @@ namespace Covid19Radar.Services
             HttpResponseMessage result = await response;
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
             {
+                loggerService.Info("Success to download configuration");
                 Application.Current.Properties["ExposureNotificationConfigration"] = await result.Content.ReadAsStringAsync();
                 await Application.Current.SavePropertiesAsync();
             }
+            else
+            {
+                loggerService.Error("Fail to download configuration");
+            }
+
+            loggerService.EndMethod();
         }
 
 
@@ -75,17 +87,27 @@ namespace Covid19Radar.Services
 
         public async Task FetchExposureKeyAsync()
         {
+            loggerService.StartMethod();
+
             await Xamarin.ExposureNotifications.ExposureNotification.UpdateKeysFromServer();
+
+            loggerService.EndMethod();
         }
 
         public int GetExposureCount()
         {
+            loggerService.StartMethod();
+            loggerService.EndMethod();
             return userData.ExposureInformation.Count();
         }
 
         public async Task<string> UpdateStatusMessageAsync()
         {
+            loggerService.StartMethod();
+
             this.ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
+
+            loggerService.EndMethod();
             return await GetStatusMessageAsync();
         }
 
@@ -104,6 +126,7 @@ namespace Covid19Radar.Services
 
         public async Task<bool> StartExposureNotification()
         {
+            loggerService.StartMethod();
             try
             {
                 var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
@@ -112,11 +135,16 @@ namespace Covid19Radar.Services
                     await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
                 }
                 await EnabledAsync();
+
+                loggerService.EndMethod();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 await DisabledAsync();
+
+                loggerService.Exception("Error enabling notifications.", ex);
+                loggerService.EndMethod();
                 return false;
             }
             finally
@@ -127,17 +155,22 @@ namespace Covid19Radar.Services
 
         public async Task<bool> StopExposureNotification()
         {
+            loggerService.StartMethod();
             try
             {
                 var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
-                if (enabled) {
+                if (enabled)
+                {
                     await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
                 }
+
+                loggerService.EndMethod();
                 return true;
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error disabling notifications: {ex}");
+                loggerService.Exception("Error disabling notifications.", ex);
+                loggerService.EndMethod();
                 return false;
             }
             finally
@@ -183,7 +216,6 @@ namespace Covid19Radar.Services
             }
 
             this.CurrentStatusMessage = message;
-            Debug.WriteLine(message);
             return message;
         }
 

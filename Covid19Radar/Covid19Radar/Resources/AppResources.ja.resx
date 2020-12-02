@@ -313,14 +313,6 @@
     <value>過去14日間の接触</value>
     <comment>過去14日間の接触</comment>
   </data>
-  <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00～17:30（土・日・祝日・年末年始を除く）</value>
-    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
-  </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>新型コロナウイルス感染症対策サイト</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>アプリに関するお問い合わせ</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -557,9 +549,6 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_rk_00028.html</value>
     <comment>Term of Use</comment>
   </data>
-  <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot2.html</value>
-  </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
@@ -579,17 +568,7 @@
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
     <value>接触確認アプリに関する情報</value>
-  </data>
-  <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>利用者向けQ and A</value>
-  </data>
-  <data name="InqueryMailBody" xml:space="preserve">
-    <value>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</value>
-    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
-  </data>
-  <data name="InqueryMailSubject" xml:space="preserve">
-    <value>接触確認アプリに関するお問い合わせ</value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
+    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>日間</value>
@@ -715,5 +694,184 @@
 ・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</value>
     <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
 ・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
+  </data>
+  <data name="ReAgreeCheckButton" xml:space="preserve">
+    <value>確認しました</value>
+    <comment>確認しました</comment>
+  </data>
+  <data name="ReAgreePrivacyPolicyPageTitle" xml:space="preserve">
+    <value>プライバシーポリシーの改定</value>
+    <comment>プライバシーポリシーの改定</comment>
+  </data>
+  <data name="ReAgreePrivacyPolicyTextLink" xml:space="preserve">
+    <value>プライバシーポリシーを確認する</value>
+    <comment>プライバシーポリシーを確認する</comment>
+  </data>
+  <data name="ReAgreeTermsOfServiceTextLink" xml:space="preserve">
+    <value>利用規約を確認する</value>
+    <comment>利用規約を確認する</comment>
+  </data>
+  <data name="ReAgreeTermsOfServiceTitle" xml:space="preserve">
+    <value>利用規約の改定</value>
+    <comment>利用規約の改定</comment>
+  </data>
+  <data name="UrlTermsUpdate" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/terms_update.json</value>
+  </data>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</value>
+    <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
+  </data>
+  <data name="InqueryPageButton1" xml:space="preserve">
+    <value>よくある質問</value>
+    <comment>よくある質問</comment>
+  </data>
+  <data name="InqueryPageButton2" xml:space="preserve">
+    <value>メールでお問い合わせ</value>
+    <comment>メールでお問い合わせ</comment>
+  </data>
+  <data name="InqueryPageButton3" xml:space="preserve">
+    <value>動作情報を送信</value>
+    <comment>動作情報を送信</comment>
+  </data>
+  <data name="InqueryPageDescription1" xml:space="preserve">
+    <value>アプリの改善にご協力ください</value>
+    <comment>アプリの改善にご協力ください</comment>
+  </data>
+  <data name="SendLogConfirmationPageButton1" xml:space="preserve">
+    <value>同意して送信する</value>
+    <comment>同意して送信する</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription1" xml:space="preserve">
+    <value>動作情報の送信により、COCOAの改善にご協力をお願いします。</value>
+    <comment>動作情報の送信により、COCOAの改善にご協力をお願いします。</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription2" xml:space="preserve">
+    <value>送信される情報</value>
+    <comment>送信される情報</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription3" xml:space="preserve">
+    <value>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</value>
+    <comment>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription4" xml:space="preserve">
+    <value>送信されない情報</value>
+    <comment>送信されない情報</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription5" xml:space="preserve">
+    <value>電話番号やメールアドレスなどの個人識別可能な情報や位置情報</value>
+    <comment>電話番号やメールアドレスなどの個人識別可能な情報や位置情報</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription6" xml:space="preserve">
+    <value>・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</value>
+    <comment>・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription7" xml:space="preserve">
+    <value>・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</value>
+    <comment>・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</comment>
+  </data>
+  <data name="SendLogConfirmationPageDescription8" xml:space="preserve">
+    <value>・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</value>
+    <comment>・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</comment>
+  </data>
+  <data name="SendLogConfirmationPageTextLink1" xml:space="preserve">
+    <value>動作情報を確認する</value>
+    <comment>動作情報を確認する</comment>
+  </data>
+  <data name="SendLogConfirmationPageTitle" xml:space="preserve">
+    <value>動作情報の送信について</value>
+    <comment>動作情報の送信について</comment>
+  </data>
+  <data name="SendLogCompletePageButton1" xml:space="preserve">
+    <value>メールで動作情報IDを送信する</value>
+    <comment>メールで動作情報IDを送信する</comment>
+  </data>
+  <data name="SendLogCompletePageButton2" xml:space="preserve">
+    <value>終了してホームに戻る</value>
+    <comment>終了してホームに戻る</comment>
+  </data>
+  <data name="SendLogCompletePageDescription1" xml:space="preserve">
+    <value>動作情報を送信しました
+続いてメールで動作情報IDを送信してください</value>
+    <comment>動作情報を送信しました
+続いてメールで動作情報IDを送信してください</comment>
+  </data>
+  <data name="SendLogCompletePageDescription2" xml:space="preserve">
+    <value>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</value>
+    <comment>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>エラー</value>
+    <comment>エラー</comment>
+  </data>
+  <data name="FailedMessageToGetOperatingInformation" xml:space="preserve">
+    <value>動作情報の取得に失敗しました。もう一度やり直してください。</value>
+    <comment>動作情報の取得に失敗しました。もう一度やり直してください。</comment>
+  </data>
+  <data name="FailedMessageToSaveOperatingInformation" xml:space="preserve">
+    <value>動作情報の確認用ファイルの保存に失敗しました。</value>
+    <comment>動作情報の確認用ファイルの保存に失敗しました。</comment>
+  </data>
+  <data name="FailedMessageToSendOperatingInformation" xml:space="preserve">
+    <value>動作情報の送信に失敗しました</value>
+    <comment>動作情報の送信に失敗しました</comment>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>処理中</value>
+    <comment>処理中</comment>
+  </data>
+  <data name="SaveCompleted" xml:space="preserve">
+    <value>保存完了</value>
+    <comment>保存完了</comment>
+  </data>
+  <data name="Saving" xml:space="preserve">
+    <value>保存中</value>
+    <comment>保存中</comment>
+  </data>
+  <data name="Sending" xml:space="preserve">
+    <value>送信中</value>
+    <comment>送信中</comment>
+  </data>
+  <data name="SendingError" xml:space="preserve">
+    <value>送信エラー</value>
+    <comment>送信エラー</comment>
+  </data>
+  <data name="SuccessMessageToSaveOperatingInformationForAndroid" xml:space="preserve">
+    <value>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
+保存場所：</value>
+    <comment>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
+保存場所：</comment>
+  </data>
+  <data name="SuccessMessageToSaveOperatingInformationForIOS" xml:space="preserve">
+    <value>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</value>
+    <comment>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</comment>
+  </data>
+  <data name="InquiryMailBody" xml:space="preserve">
+    <value>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</value>
+    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
+  </data>
+  <data name="InquiryMailSubject" xml:space="preserve">
+    <value>接触確認アプリに関するお問い合わせ</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="SendIdMailBody1" xml:space="preserve">
+    <value>動作情報ID：</value>
+    <comment>動作情報ID：</comment>
+  </data>
+  <data name="SendIdMailBody2" xml:space="preserve">
+    <value>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</value>
+    <comment>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</comment>
+  </data>
+  <data name="SendIdMailSubject" xml:space="preserve">
+    <value>COCOA 動作情報IDの送信</value>
+    <comment>COCOA 動作情報IDの送信</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot2.html</value>
+  </data>
+  <data name="SuccessMessageToSaveOperatingInformationForAndroid2" xml:space="preserve">
+    <value>
+※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</value>
+    <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
   </data>
 </root>

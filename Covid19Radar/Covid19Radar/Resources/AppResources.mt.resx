@@ -341,14 +341,6 @@
     <value>Kuntatti mill-qrib għal dawn l-aħħar 14-il jum</value>
     <comment>過去14日間の接触</comment>
   </data>
-  <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00-17:30 (minbarra tmiem il-ġimgħa u vaganzi)</value>
-    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
-  </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 Informazzjoni u Riżorsi</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Appoġġ</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -557,9 +549,6 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
     <comment>Term of Use</comment>
   </data>
-  <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
-  </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
@@ -579,17 +568,7 @@
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
     <value>Informazzjoni dwar din l-applikazzjoni</value>
-  </data>
-  <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>Q u A għall-utent</value>
-  </data>
-  <data name="InqueryMailBody" xml:space="preserve">
-    <value>Isem: \r\n Kuntatt: \r\n Kontenut ta' inkjesta (Jekk jogħġbok agħżel kategorija minn dawn li ġejjin): 1. Kif taħdem l-applikazzjoni, 2. Settings tal-applikazzjoni, 3. Użu tal-applikazzjoni (notifika eċċ.) ), 4. Oħrajn \r\n Test ta' inkjesta: \r\n</value>
-    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
-  </data>
-  <data name="InqueryMailSubject" xml:space="preserve">
-    <value>Mistoqsijiet dwar l-applikazzjoni tal-konferma tal-kuntatt</value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
+    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>Jiem</value>

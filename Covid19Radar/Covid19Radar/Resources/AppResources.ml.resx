@@ -341,14 +341,6 @@
     <value>കഴിഞ്ഞ 14 ദിവസത്തേക്ക് സമ്പർക്കങ്ങൾ അടയ്ക്കുക</value>
     <comment>過去14日間の接触</comment>
   </data>
-  <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00-17:30 (വാരാന്ത്യങ്ങളും അവധിദിവസങ്ങളും ഒഴികെ)</value>
-    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
-  </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 വിവരവും വിഭവങ്ങളും</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>പിന്തുണ</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -557,9 +549,6 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
     <comment>Term of Use</comment>
   </data>
-  <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
-  </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
@@ -579,17 +568,7 @@
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
     <value>ഈ ആപ്ലിക്കേഷനെ കുറിച്ചുള്ള വിവരങ്ങൾ</value>
-  </data>
-  <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>ഉപയോക്താവിനായി Q ഉം Aയും</value>
-  </data>
-  <data name="InqueryMailBody" xml:space="preserve">
-    <value>പേര്: \r\n വിലാസം: \r\n അന്വേഷണഉള്ളടക്കം (ഇനിപ്പറയുന്നവിഭാഗത്തിൽ നിന്ന് ഒരു വിഭാഗം തിരഞ്ഞെടുക്കുക): 1. ആപ്പ് എങ്ങനെ പ്രവർത്തിക്കുന്നു, 2. ആപ്പ് സജ്ജീകരണങ്ങൾ, 3. ആപ്ലിക്കേഷൻ ഉപയോഗം (അറിയിപ്പ് മുതലായവ) 4. മറ്റുള്ളവ \r\n അന്വേഷണ പദാവലി: \r\n</value>
-    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
-  </data>
-  <data name="InqueryMailSubject" xml:space="preserve">
-    <value>കോൺടാക്റ്റ് സ്ഥിരീകരണ ആപ്പിനെക്കുറിച്ചുള്ള അന്വേഷണങ്ങൾ</value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
+    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>ദിവസം</value>

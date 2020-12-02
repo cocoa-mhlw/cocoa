@@ -18,5 +18,7 @@ namespace Covid19Radar.Services
         Task<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken);
 
         Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken);
+
+        Task<ApiResponse<LogStorageSas>> GetLogStorageSas();
     }
 }

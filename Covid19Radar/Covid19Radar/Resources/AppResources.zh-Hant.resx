@@ -341,14 +341,6 @@
     <value>過去14天的接觸</value>
     <comment>過去14日間の接触</comment>
   </data>
-  <data name="InqueryPageDescription1" xml:space="preserve">
-    <value>9:00~17:30 (週末與國定假日除外)</value>
-    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
-  </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 相關資源</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>建議與回饋</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -557,9 +549,6 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html</value>
     <comment>Term of Use</comment>
   </data>
-  <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot2.html</value>
-  </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
@@ -579,17 +568,7 @@
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
     <value>關於此 App 的資訊</value>
-  </data>
-  <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>使用者常見問題</value>
-  </data>
-  <data name="InqueryMailBody" xml:space="preserve">
-    <value>姓名： \r\n 連絡方式: \r\n 詢問內容（請從下面選擇一個分類）：1. App 的運作方式， 2. App 設定, 3. App 的使用（如：通知））, 4. 其它 \r\n 本文： \r\n</value>
-    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
-  </data>
-  <data name="InqueryMailSubject" xml:space="preserve">
-    <value>詢問關於此 App </value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
+    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>天</value>

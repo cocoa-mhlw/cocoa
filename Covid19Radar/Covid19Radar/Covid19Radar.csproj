@@ -115,6 +115,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.967" />
     <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.967" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
@@ -189,6 +190,7 @@
   <ItemGroup>
     <Folder Include="MultilingualResources\" />
     <Folder Include="Image\" />
+    <Folder Include="Services\Logs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />

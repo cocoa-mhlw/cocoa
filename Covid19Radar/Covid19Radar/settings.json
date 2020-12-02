@@ -1,6 +1,7 @@
 {
   "appVersion": "APP_VERSION",
   "apiSecret": "API_SECRET",
+  "apiKey": "API_KEY",
   "apiUrlBase": "https://API_URL_BASE/api",
   "supportedRegions": "440",
   "blobStorageContainerName": "c19r",
@@ -9,5 +10,8 @@
   "licenseUrl": "https://covid19radarjpnprod.z11.web.core.windows.net/license.html",
   "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
   "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
-  "supportEmail": "SUPPORT_EMAIL"
+  "supportEmail": "SUPPORT_EMAIL",
+  "logStorageEndpoint": "https://LOG_STORAGE_URL_BASE/",
+  "logStorageContainerName": "LOG_STORAGE_CONTAINER_NAME",
+  "logStorageAccountName": "LOG_STORAGE_ACCOUNT_NAME"
 }

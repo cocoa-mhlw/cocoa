@@ -10,8 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using Covid19Radar.Common;
-using Covid19Radar.Droid.Services;
-using Covid19Radar.Services;
+using Covid19Radar.Droid.Services.Logs;
+using Covid19Radar.Services.Logs;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Acr.UserDialogs;
@@ -59,7 +59,8 @@ namespace Covid19Radar.Droid
         {
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
-                
+                // Services
+                containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
             }
         }
 

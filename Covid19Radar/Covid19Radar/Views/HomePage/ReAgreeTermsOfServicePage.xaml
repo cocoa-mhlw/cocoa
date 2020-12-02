@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Covid19Radar.Views.ReAgreeTermsOfServicePage"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:prism="http://prismlibrary.com"
+             ios:Page.UseSafeArea="true"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Style="{StaticResource DefaultPageStyle}"
+             Visual="Material"
+             Title="{x:Static resources:AppResources.ReAgreeTermsOfServiceTitle}">
+    <Grid Style="{StaticResource DefaultGridLayout}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               Margin="0,0,0,20"
+               Style="{StaticResource DefaultTitleLabel}"
+               Text="{x:Static resources:AppResources.ReAgreeTermsOfServiceTitle}" />
+        <ScrollView Grid.Row="1">
+            <StackLayout Margin="0,0,0,20" Spacing="20">
+                <ffimageloading:CachedImage Aspect="AspectFit"
+                                            Source="privacypolicy_img01.png" />
+                <Label Style="{StaticResource DefaultLabel}"
+                       Text="{Binding UpdateText}" />
+                <Label Style="{StaticResource DefaultLabelColor}"
+                       HorizontalOptions="CenterAndExpand"
+                       Text="{x:Static resources:AppResources.ReAgreeTermsOfServiceTextLink}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Path=OpenWebView}" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Button Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.ReAgreeCheckButton}"
+                        Command="{Binding Path=OnClickReAgreeCommand}" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

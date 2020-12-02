@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Covid19Radar.Views.SendLogConfirmationPage"
+    ios:Page.UseSafeArea="true"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Style="{StaticResource DefaultPageStyle}"
+    Title="{x:Static resources:AppResources.SendLogConfirmationPageTitle}"
+    Visual="Material">
+    <ContentPage.Content>
+        <ScrollView
+            Margin="0"
+            Padding="0">
+            <StackLayout
+            BackgroundColor="{StaticResource Background}"
+            Padding="20"
+            Spacing="20">
+                <Label Style="{StaticResource DefaultLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription1}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span
+                            FontAttributes="Bold"
+                            Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription2}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription3}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span
+                            FontAttributes="Bold"
+                            Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription4}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription5}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Style="{StaticResource DefaultLabelSmall}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription6}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription7}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription8}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Frame HasShadow="False" Padding="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Path=OnClickConfirmLogCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label
+                    HorizontalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}"
+                    TextColor="{StaticResource Primary}" />
+                </Frame>
+                <Button
+                Command="{Binding Path=OnClickSendLogCommand}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.SendLogConfirmationPageButton1}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

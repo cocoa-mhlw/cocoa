@@ -2,8 +2,7 @@
 <ContentPage
     x:Class="Covid19Radar.Views.InqueryPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
@@ -18,28 +17,45 @@
             BackgroundColor="{StaticResource Background}"
             Spacing="0">
             <Frame Padding="10" HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickEmail}" />
-                </Frame.GestureRecognizers>
-                <StackLayout Spacing="0">
+                <Button
+                    Command="{Binding Path=OnClickQuestionCommand}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.InqueryPageButton1}" />
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="10" HasShadow="False">
+                <StackLayout Spacing="10">
+                    <Button
+                        Command="{Binding Path=OnClickEmailCommand}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.InqueryPageButton2}" />
+                </StackLayout>
+            </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="10" HasShadow="False">
+                <StackLayout Spacing="10">
                     <Label Style="{StaticResource DefaultLabelSmall}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span
-                                    Text="appsupport@cov19.mhlw.go.jp"
-                                    TextColor="{StaticResource Primary}"
-                                    TextDecorations="Underline" />
+                                    FontAttributes="Bold"
+                                    FontSize="Small"
+                                    Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
+                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription2}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <Button
+                        Command="{Binding Path=OnClickSendLogCommand}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.InqueryPageButton3}" />
                 </StackLayout>
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
             <Frame Padding="10" HasShadow="False">
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickSite2}" />
+                    <TapGestureRecognizer Command="{Binding Path=OnClickAboutAppCommand}" />
                 </Frame.GestureRecognizers>
                 <StackLayout Spacing="0">
                     <Label Style="{StaticResource DefaultLabelSmall}">
@@ -57,27 +73,6 @@
                 </StackLayout>
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickSite3}" />
-                </Frame.GestureRecognizers>
-                <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultLabelSmall}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription4}" />
-                                <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span
-                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html"
-                                    TextColor="{StaticResource Primary}"
-                                    TextDecorations="Underline" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-
         </StackLayout>
     </ScrollView>
 </ContentPage>
