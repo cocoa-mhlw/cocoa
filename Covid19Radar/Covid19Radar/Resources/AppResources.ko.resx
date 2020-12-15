@@ -27,10 +27,6 @@
     <value>사용권 계약</value>
     <comment>ライセンス</comment>
   </data>
-  <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
-    <comment>Policy</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>상태 설정</value>
     <comment>User Status Page Title</comment>
@@ -220,18 +216,6 @@
   <data name="HelpPage3Description3" xml:space="preserve">
     <value>본 앱을 사용하여 처리 신호의 등록을 진행합니다</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
-  </data>
-  <data name="HelpPage3Description4" xml:space="preserve">
-    <value>사용자와 14일 이내 접촉한 사람에게 알림이 뜹니다. (1미터 이내, 15분 이상)</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
-  </data>
-  <data name="HelpPage3Description5" xml:space="preserve">
-    <value>상대방에게 알려지는 정보는 접촉 신호 뿐입니다. 그 외에 이름을 포함한 개인정보나 위치 정보가 전송될 일은 없습니다.</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
-  </data>
-  <data name="HelpPage3Description6" xml:space="preserve">
-    <value>양성 판정을 등록하고 다른 사람에게 익명으로 알리기</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
     <value>라이선스</value>
@@ -425,14 +409,6 @@
     <value>등록하기</value>
     <comment>登録する</comment>
   </data>
-  <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>신형 코로나 바이러스 감염자 등 정보 파악・관리 지원 시스템 （HER-SYS）에서 발행된 처리 번호를 입력해 주세요.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
-  </data>
-  <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>지난 14일 이내에 귀하와 긴밀하게 연락한 사용자에게 알림이 전송됩니다. 등록은 익명으로 입니다. 당신은 당신의 이름이나 다른 개인 정보를 입력 할 필요가 없습니다. 가까운 접촉 위치에 관한 정보는 기록되지 않습니다.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
-  </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>프로세스 코드를 받는 방법</value>
     <comment>処理番号の取得方法</comment>
@@ -497,30 +473,6 @@
     <value>8자리 코드 입력</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
-  <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>처리 번호는 새로운 코로나바이러스 전염병 정보 및 관리 시스템(이하 "관리 시스템")에 등록된 휴대폰 번호 또는 이메일 주소로 통보됩니다.</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>단말터미널에 이 처리 번호를 입력하면 단말기는 알림 서버를 통해 관리 시스템에 처리 번호가 발급되었는지 여부를 문의합니다.</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>관리 시스템은 참조된 트랜잭션 번호가 사용자에게 발급되었는지 여부에 대해 알림 서버에 응답합니다.</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>거래 번호가 발급되었다고 회신하면 다른 사용자의 단말기에 터미널에 기록된 일일 키가 제공됩니다.</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>14일 이내에 귀하와 연락을 취한 경우, 귀하를 개인적으로 식별할 수 있는 정보 없이 연락을 받았을 수 있음을 알게 될 것입니다.</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>동의하고 양성 판정을 등록합니다.</value>
-    <comment>同意して陽性登録する</comment>
-  </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>양성 판정 등록에 동의</value>
     <comment>陽性登録への同意</comment>
@@ -544,10 +496,6 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>다음 날짜에 양성 판정자와의 접촉이 확인되었습니다.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
-  </data>
-  <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
-    <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

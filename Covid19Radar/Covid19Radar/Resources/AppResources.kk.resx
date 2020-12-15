@@ -35,10 +35,6 @@
     <value>Лицензия</value>
     <comment>ライセンス</comment>
   </data>
-  <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
-    <comment>Policy</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Күй параметрлері</value>
     <comment>User Status Page Title</comment>
@@ -269,18 +265,6 @@
     <value>Осы қосымшаға ұсынылған өңдеу нөмірін енгізу арқылы тіркеу</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
-  <data name="HelpPage3Description4" xml:space="preserve">
-    <value>Смартфоныңызбен тығыз байланыста болған смартфондар соңғы 14 күн ішінде хабарландырулар алады.</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
-  </data>
-  <data name="HelpPage3Description5" xml:space="preserve">
-    <value>Хабарламаларды жіберу кезінде құрылғыдан кездейсоқ жасалған кодтар пайдаланылады. Жеке мәліметтер пайдаланылмайды.</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
-  </data>
-  <data name="HelpPage3Description6" xml:space="preserve">
-    <value>Тестілеуден оң нәтиже бергенде осында тіркелу</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
-  </data>
   <data name="NotContactPageTitle" xml:space="preserve">
     <value>Соңғы 14 күндегі контактілерді жабу</value>
     <comment>過去14日間の接触</comment>
@@ -429,14 +413,6 @@
     <value>Тіркеу</value>
     <comment>登録する</comment>
   </data>
-  <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>Сізге «Денсаулық орталығы» АҚ COVID-19 (HER-SYS)) бойынша нақты уақыттағы ақпарат алмасу жүйесі» берген процесс кодын енгізіңіз.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
-  </data>
-  <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>Сізбен соңғы 14 күн ішінде тығыз байланыста болған пайдаланушыларға хабарланады. Тіркеу анонимді болып табылады. Атыңызды немесе басқа да жеке ақпаратты енгізудің қажеті жоқ. Жақын байланыс орнына қатысты ешқандай ақпарат жазылмайды.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
-  </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>Технологиялық процестің кодын алу тәртібі</value>
     <comment>処理番号の取得方法</comment>
@@ -501,30 +477,6 @@
     <value>8 таңбалы кодты енгізу</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
-  <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>Өңдеу нөмірі ұялы телефон ның нөміріне немесе жаңа коронавирустық инфекциялық аурулар туралы ақпараттық-басқару жүйесінде (бұдан әрі «басқару жүйесі» ) тіркелген электрондық пошта мекенжайына хабарланады.</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>Терминалға осы өңдеу нөмірін енгізгенде, терминал сізге өңдеу нөмірі берілген-берілмегеніне қарай басқару жүйесіне хабарландыру сервері арқылы анықтама жасайды.</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>Басқару жүйесі хабарландыру серверіне сізге берілген транзакция нөмірі берілген-берілуге қатысты жауап береді.</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>Транзакция нөмірі сізге берілгеніне жауап берсеңіз, басқа пайдаланушылардың терминалдары терминалда жазылған күнделікті кілтпен қамтамасыз етіледі.</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>Егер сізбен 14 күн ішінде байланыста болсаңыз, сізге жеке сәйкестендіруге болатын қандай да бір ақпаратсыз хабарласуыңыз мүмкін екенін білесіз.</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>Келiсу және тiркеу</value>
-    <comment>同意して陽性登録する</comment>
-  </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>Оң тiркеуге келiсiм</value>
     <comment>陽性登録への同意</comment>
@@ -544,10 +496,6 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>COVID-19 оң пайдаланушыларымен тығыз байланыста болған күндер.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
-  </data>
-  <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
-    <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

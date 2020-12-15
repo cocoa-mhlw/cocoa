@@ -81,11 +81,6 @@
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HelpPage3Description3}"
                         VerticalTextAlignment="Center" />
-                    <ffimageloading:CachedImage
-                        Grid.Row="1"
-                        Grid.ColumnSpan="2"
-                        Aspect="AspectFit"
-                        Source="HelpPage43.png" />
                 </Grid>
                 <Grid ColumnSpacing="10" RowSpacing="0">
                     <Grid.ColumnDefinitions>

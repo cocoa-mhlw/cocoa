@@ -17,7 +17,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposureCount, value); }
         }
 
-        public ContactedNotifyPageViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
+        public ContactedNotifyPageViewModel(INavigationService navigationService, ILoggerService loggerService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
         {
             Title = AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;

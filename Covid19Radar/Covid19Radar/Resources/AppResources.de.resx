@@ -27,10 +27,6 @@
     <value>Lizenz</value>
     <comment>ライセンス</comment>
   </data>
-  <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
-    <comment>Policy</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Statuseinstellungen</value>
     <comment>User Status Page Title</comment>
@@ -220,18 +216,6 @@
   <data name="HelpPage3Description3" xml:space="preserve">
     <value>Registrieren Sie sich, indem Sie die angegebene Bearbeitungsnummer in diese Anwendung eingeben.</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
-  </data>
-  <data name="HelpPage3Description4" xml:space="preserve">
-    <value>Smartphones, die innerhalb der letzten 14 Tage in engem Kontakt mit Ihrem Smartphone standen, erhalten Benachrichtigungen.</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
-  </data>
-  <data name="HelpPage3Description5" xml:space="preserve">
-    <value>Beim Versand von Benachrichtigungen werden nur zufällig von dem Gerät generierte Codes genutzt. Es werden keine persönlichen Informationen verwendet.</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
-  </data>
-  <data name="HelpPage3Description6" xml:space="preserve">
-    <value>Bei positivem Test hier registrieren</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
     <value>Lizenz</value>
@@ -425,14 +409,6 @@
     <value>Registrieren</value>
     <comment>登録する</comment>
   </data>
-  <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>Bitte geben Sie den Transaktionscode ein, den Sie vom "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)" erhalten haben.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
-  </data>
-  <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>Benutzer, die innerhalb der letzten 14 Tage in engem Kontakt mit Ihnen standen, werden benachrichtigt. Die Registrierung erfolgt anonym. Sie müssen weder Ihren Namen noch andere persönliche Informationen angeben. Es werden keine Informationen über den Standort des direkten Kontakts gespeichert.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
-  </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>Wie Sie einen Transaktionscode erhaltena</value>
     <comment>処理番号の取得方法</comment>
@@ -497,30 +473,6 @@
     <value>Geben Sie einen 8-stelligen Zahlencode ein</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
-  <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>Die Bearbeitungsnummer wird an Ihre Mobiltelefonnummer oder E-Mail-Adresse geschickt, die beim neuen Informations- und Managementsystem für Coronaviren-Infektionskrankheiten (im Folgenden "Managementsystem") registriert ist.</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>Wenn Sie diese Nummer in das Gerät eingeben, fragt das Gerät über den Benachrichtigungsserver beim Managementsystem nach, ob die Nummer an Sie vergeben wurde oder nicht.</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>Das Managementsystem meldet dem Benachrichtigungsserver, ob die angeforderte Bearbeitungsnummer an Sie vergeben wurde oder nicht.</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>Wenn die Antwort lautet, dass Ihnen die Bearbeitungsnummer erteilt wurde, werden die Daten, die täglich auf Ihrem Gerät aufgezeichnet wurden, den Geräten der anderen Benutzer zur Verfügung gestellt.</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>Personen, die innerhalb der letzten 14 Tage mit Ihnen in Kontakt waren, werden darüber informiert, dass sie möglicherweise mit Ihnen in Berührung gekommen sind, jedoch ohne personenbezogene Daten über Sie zu übermitteln.</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>Zustimmen und anmelden</value>
-    <comment>同意して陽性登録する</comment>
-  </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>Einverständnis zur Registrierung eines positiven Tests</value>
     <comment>陽性登録への同意</comment>
@@ -544,10 +496,6 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>Zeitpunkte, an denen Sie in engem Kontakt mit positiven auf COVID-19 getesteten Benutzern standen.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
-  </data>
-  <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
-    <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

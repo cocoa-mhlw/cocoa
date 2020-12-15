@@ -10,7 +10,7 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService loggerService;
 
-        public NotContactPageViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService) : base(navigationService, userDataService)
+        public NotContactPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService) : base(navigationService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;

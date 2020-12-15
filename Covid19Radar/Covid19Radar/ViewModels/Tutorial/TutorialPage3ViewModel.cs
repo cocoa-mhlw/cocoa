@@ -12,7 +12,7 @@ namespace Covid19Radar.ViewModels
     public class TutorialPage3ViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private UserDataModel userData;
         private ITermsUpdateService termsUpdateService;
 
@@ -23,7 +23,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public TutorialPage3ViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, ITermsUpdateService termsUpdateService) : base(navigationService, userDataService)
+        public TutorialPage3ViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ITermsUpdateService termsUpdateService) : base(navigationService)
         {
             this.loggerService = loggerService;
             this.userDataService = userDataService;

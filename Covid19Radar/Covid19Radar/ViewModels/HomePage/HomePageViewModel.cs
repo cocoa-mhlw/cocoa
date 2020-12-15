@@ -18,7 +18,7 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private readonly ExposureNotificationService exposureNotificationService;
         private UserDataModel userData;
         private string _startDate;
@@ -35,7 +35,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _pastDate, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
+        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
         {
             Title = AppResources.HomePageTitle;
             this.loggerService = loggerService;

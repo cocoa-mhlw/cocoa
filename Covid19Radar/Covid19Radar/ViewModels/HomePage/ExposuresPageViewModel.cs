@@ -9,7 +9,7 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase
     {
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private UserDataModel userData;
         public ObservableCollection<ExposureSummary> _exposures;
         public ObservableCollection<ExposureSummary> Exposures
@@ -18,7 +18,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposures, value); }
         }
 
-        public ExposuresPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
+        public ExposuresPageViewModel(INavigationService navigationService, IUserDataService userDataService) : base(navigationService)
         {
             Title = Resources.AppResources.MainExposures;
             this.userDataService = userDataService;
@@ -28,7 +28,7 @@ namespace Covid19Radar.ViewModels
             foreach (var en in userData.ExposureInformation.GroupBy(eni => eni.Timestamp))
             {
                 var ens = new ExposureSummary();
-                ens.ExposureDate =  en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
+                ens.ExposureDate = en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
                 ens.ExposureCount = en.Count().ToString();
                 _exposures.Add(ens);
             }

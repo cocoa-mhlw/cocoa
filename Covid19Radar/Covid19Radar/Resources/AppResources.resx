@@ -140,10 +140,6 @@
     <value>License</value>
     <comment>ライセンス</comment>
   </data>
-  <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
-    <comment>Policy</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Status Settings</value>
     <comment>User Status Page Title</comment>
@@ -374,18 +370,6 @@
     <value>Register by entering provided processing number into this app</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
-  <data name="HelpPage3Description4" xml:space="preserve">
-    <value>Smartphones that were in close contact with your smartphone within the last 14 days will receive notifications.</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
-  </data>
-  <data name="HelpPage3Description5" xml:space="preserve">
-    <value>Only randomly generated codes from device are used when sending notifications. No personal information is used.</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
-  </data>
-  <data name="HelpPage3Description6" xml:space="preserve">
-    <value>Register here when tested positive</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
-  </data>
   <data name="NotContactPageTitle" xml:space="preserve">
     <value>Close contacts for the past 14 days</value>
     <comment>過去14日間の接触</comment>
@@ -534,13 +518,13 @@
     <value>Register</value>
     <comment>登録する</comment>
   </data>
-  <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>Please enter a process code issued to you by "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+  <data name="NotifyOtherPageDescription3" xml:space="preserve">
+    <value>Please enter below the process code that you have received by SMS or email</value>
+    <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
   </data>
-  <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>Users who were in close contact with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  <data name="NotifyOtherPageDescription5" xml:space="preserve">
+    <value>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will be notified.</value>
+    <comment>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>How to receive a process code</value>
@@ -606,27 +590,7 @@
     <value>Enter an 8-digit code</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
-  <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+  <data name="SubmitConsentPageButton" xml:space="preserve">
     <value>Agree and register</value>
     <comment>同意して陽性登録する</comment>
   </data>
@@ -649,10 +613,6 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>Dates when you were in close contact with COVID-19 positive users.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
-  </data>
-  <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
-    <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -978,5 +938,99 @@ Storage :</value>
     <value>
 ※The part preceding "/Android" , such as "Internal Storage”, may differ depending on your environment.</value>
     <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
+  </data>
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
+    <value>Do you have any of the following symptoms？</value>
+    <comment>次のような症状がありますか？</comment>
+  </data>
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
+    <value>Fever, cough, difficulty breathing, sense of fatigue, sore throat, runny nose, nasal congestion, headache, joint・muscle pain, diarrhea, nausea・vomiting</value>
+    <comment>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</comment>
+  </data>
+  <data name="NotifyOtherPageDescription4" xml:space="preserve">
+    <value>After you register the process code</value>
+    <comment>登録すると</comment>
+  </data>
+  <data name="NotifyOtherPageDescription6" xml:space="preserve">
+    <value>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
+＊No record of where the close contact happened will be disclosed</value>
+    <comment>※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
+※接触した場所がどこなのか記録されたり、他の人に知られることもありません</comment>
+  </data>
+  <data name="NotifyOtherPageNoSymptomsDescription1" xml:space="preserve">
+    <value>Please enter the date you were tested for COVID-19</value>
+    <comment>直近の新型コロナウイルス感染症の検査を受けた日を入力してください。</comment>
+  </data>
+  <data name="NotifyOtherPageRadioButtonNo" xml:space="preserve">
+    <value>No</value>
+    <comment>ない</comment>
+  </data>
+  <data name="NotifyOtherPageRadioButtonYes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>ある</comment>
+  </data>
+  <data name="NotifyOtherPageWithSymptomsDescription1" xml:space="preserve">
+    <value>Please enter the first day symptoms started. (Enter the earliest date you can remember. This information will not be disclosed)</value>
+    <comment>症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</comment>
+  </data>
+  <data name="HelpPage3Description4" xml:space="preserve">
+    <value>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will receive a notification.</value>
+    <comment>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</comment>
+  </data>
+  <data name="HelpPage3Description5" xml:space="preserve">
+    <value>The only information included in the notification will be a randomly generated code. No personal information will be disclosed.</value>
+    <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+  </data>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>Please read before continue the positive registration</value>
+    <comment>陽性登録の前にお読みください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription10" xml:space="preserve">
+    <value>If the processing number is correct, people who have come in close contact (within 1 meter for 15 minutes or more) with you 2 or more days before the day the symptoms started or the day you were tested, will be notified. None of your personal information will be known to the person who has received the notification</value>
+    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  </data>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>・When you complete the registration, people who have come in close contact with you will receive a notification.</value>
+    <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
+  </data>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>・ None of your personal information will be known to the person who has received the notification</value>
+    <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  </data>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>・ To avoid the spread of the infection, please cooperate with the registration process</value>
+    <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
+  </data>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>For more details please read below</value>
+    <comment>詳しくは以下をお読みください</comment>
+  </data>
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
+    <value>The mobile phone number or email address you gave to health center or medical institution (※) will be registered in the New Coronavirus Infectious Disease Information and Management System (hereinafter “management system”)</value>
+    <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
+  </data>
+  <data name="SubmitConsentPageDescription7" xml:space="preserve">
+    <value>(※)　It is the contact information that you gave during the visit if tested positive to COVID-19</value>
+    <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
+  </data>
+  <data name="SubmitConsentPageDescription8" xml:space="preserve">
+    <value>When you apply at the health center for positive registration with COCOA, the management system will notify the mobile phone number or email address with a processing number.</value>
+    <comment>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</comment>
+  </data>
+  <data name="SubmitConsentPageDescription9" xml:space="preserve">
+    <value>After you have entered the processing number into COCOA, your mobile phone will query the management system to confirm the validity of that number</value>
+    <comment>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
+    <value>Register positive result</value>
+    <comment>陽性情報を登録</comment>
+  </data>
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/cocoa/privacypolicy_english.html</value>
+    <comment>プライバシーポリシーURL</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/cocoa/kiyaku_english.html</value>
+    <comment>利用規約URL</comment>
   </data>
 </root>

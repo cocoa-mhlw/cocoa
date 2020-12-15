@@ -9,7 +9,6 @@ namespace Covid19Radar.ViewModels
 
         // Navigation
         protected INavigationService NavigationService { get; private set; }
-        protected UserDataService UserDataService { get; private set; }
         protected ExposureNotificationService ExposureNotificationService { get; private set; }
 
         // PageTite
@@ -30,16 +29,9 @@ namespace Covid19Radar.ViewModels
             NavigationService = navigationService;
         }
 
-        public ViewModelBase(INavigationService navigationService, UserDataService userDataService)
+        public ViewModelBase(INavigationService navigationService, ExposureNotificationService exposureNotificationService)
         {
             NavigationService = navigationService;
-            UserDataService = userDataService;
-        }
-
-        public ViewModelBase(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService)
-        {
-            NavigationService = navigationService;
-            UserDataService = userDataService;
             ExposureNotificationService = exposureNotificationService;
         }
 

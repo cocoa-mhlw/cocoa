@@ -192,6 +192,7 @@
     <Compile Include="Services\Logs\LogFileServiceAndroid.cs" />
     <Compile Include="Services\Logs\LogPathServiceAndroid.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteServiceAndroid.cs" />
+    <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
@@ -239,6 +240,30 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxhdpi\privacypolicy_img01.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-en-xxhdpi\arrow_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-en-xhdpi\arrow_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-ja-xhdpi\arrow_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-ja-xxhdpi\arrow_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\arrow_icon.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

@@ -11,7 +11,7 @@ namespace Covid19Radar.ViewModels
 {
     public class PrivacyPolicyPageViewModel : ViewModelBase
     {
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private readonly ILoggerService loggerService;
         private readonly ITermsUpdateService termsUpdateService;
 
@@ -25,7 +25,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public PrivacyPolicyPageViewModel(INavigationService navigationService, UserDataService userDataService, ILoggerService loggerService, ITermsUpdateService termsUpdateService) : base(navigationService, userDataService)
+        public PrivacyPolicyPageViewModel(INavigationService navigationService, IUserDataService userDataService, ILoggerService loggerService, ITermsUpdateService termsUpdateService) : base(navigationService)
         {
             Title = AppResources.PrivacyPolicyPageTitle;
             Url = Resources.AppResources.UrlPrivacyPolicy;

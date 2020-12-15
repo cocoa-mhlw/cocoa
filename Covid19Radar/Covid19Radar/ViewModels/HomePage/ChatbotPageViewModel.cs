@@ -22,8 +22,8 @@ namespace Covid19Radar.ViewModels
 
         private readonly ExposureNotificationService exposureNotificationService;
 
-        private readonly UserDataService userDataService;
-        public ChatbotPageViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
+        private readonly IUserDataService userDataService;
+        public ChatbotPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
             this.loggerService = loggerService;

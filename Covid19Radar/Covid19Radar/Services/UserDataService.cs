@@ -8,10 +8,22 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
+    public interface IUserDataService
+    {
+        event EventHandler<UserDataModel> UserDataChanged;
+
+        bool IsExistUserData { get; }
+
+        Task<UserDataModel> RegisterUserAsync();
+        UserDataModel Get();
+        Task SetAsync(UserDataModel userData);
+        Task ResetAllDataAsync();
+    }
+
     /// <summary>
     /// This service registers, retrieves, stores, and automatically updates user data.
     /// </summary>
-    public class UserDataService
+    public class UserDataService : IUserDataService
     {
         private readonly ILoggerService loggerService;
         private readonly IHttpDataService httpDataService;

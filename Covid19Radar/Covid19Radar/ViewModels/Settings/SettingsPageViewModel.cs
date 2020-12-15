@@ -30,9 +30,9 @@ namespace Covid19Radar.ViewModels
 
         private readonly ExposureNotificationService exposureNotificationService;
 
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private readonly ILogFileService logFileService;
-        public SettingsPageViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, ExposureNotificationService exposureNotificationService, ILogFileService logFileService) : base(navigationService, userDataService, exposureNotificationService)
+        public SettingsPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService, ILogFileService logFileService) : base(navigationService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppInfo.VersionString;// AppSettings.Instance.AppVersion;

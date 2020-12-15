@@ -10,10 +10,10 @@ namespace Covid19Radar.ViewModels
 {
     public class DebugPageViewModel : ViewModelBase
     {
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private readonly ExposureNotificationService exposureNotificationService;
 
-        public DebugPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
+        public DebugPageViewModel(INavigationService navigationService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
         {
             Title = "Debug";
             this.userDataService = userDataService;

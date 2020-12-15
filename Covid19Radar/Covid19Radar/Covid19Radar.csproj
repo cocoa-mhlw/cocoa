@@ -118,6 +118,9 @@
     <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\CustomDatePicker.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
       <DependentUpon>BeaconItemTemplate .xaml</DependentUpon>
     </Compile>
@@ -191,6 +194,7 @@
     <Folder Include="MultilingualResources\" />
     <Folder Include="Image\" />
     <Folder Include="Services\Logs\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />

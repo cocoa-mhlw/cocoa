@@ -56,7 +56,7 @@ namespace Covid19Radar
 
             INavigationResult result;
             // Check user data and skip tutorial
-            UserDataService userDataService = Container.Resolve<UserDataService>();
+            IUserDataService userDataService = Container.Resolve<IUserDataService>();
 
             if (userDataService.IsExistUserData)
             {
@@ -155,10 +155,11 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteService>();
             containerRegistry.RegisterSingleton<ILogUploadService, LogUploadService>();
             containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
-            containerRegistry.RegisterSingleton<UserDataService>();
+            containerRegistry.RegisterSingleton<IUserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
             containerRegistry.RegisterSingleton<ITermsUpdateService, TermsUpdateService>();
             containerRegistry.RegisterSingleton<IApplicationPropertyService, ApplicationPropertyService>();
+            containerRegistry.RegisterSingleton<IHttpClientService, HttpClientService>();
 #if USE_MOCK
             containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
             containerRegistry.RegisterSingleton<IStorageService, StorageServiceMock>();

@@ -25,11 +25,6 @@
           <target state="translated">授权</target>
           <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
         </trans-unit>
-        <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
-          <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</source>
-          <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
-        </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
           <target state="translated">状态设置</target>
@@ -272,21 +267,6 @@
           <target state="translated">使用该应用登记您的数字码。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを用いて処理番号の登録を行います。</note>
         </trans-unit>
-        <trans-unit id="HelpPage3Description4" translate="yes" xml:space="preserve">
-          <source>Smartphones that were in close contact with your smartphone within the last 14 days will receive notifications.</source>
-          <target state="translated">14天以内与您有过接触的人的手机会收到通知（在1米范围内持续15分钟以上的接触）。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</note>
-        </trans-unit>
-        <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
-          <source>Only randomly generated codes from device are used when sending notifications. No personal information is used.</source>
-          <target state="translated">通知只提供接触对方的随机接触代码，不会显示姓名等的个人信息和地点信息。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</note>
-        </trans-unit>
-        <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
-          <source>Register here when tested positive</source>
-          <target state="translated">如果确诊为阳性，请登记您的阳性信息并进行通知</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録と他者への匿名通知へ</note>
-        </trans-unit>
         <trans-unit id="SettingsPageButton1" translate="yes" xml:space="preserve">
           <source>License</source>
           <target state="translated">授权</target>
@@ -527,16 +507,6 @@
           <target state="translated">登记</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録する</note>
         </trans-unit>
-        <trans-unit id="NotifyOtherPageDescription1" translate="yes" xml:space="preserve">
-          <source>Please enter a process code issued to you by "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</source>
-          <target state="translated">请输入新型冠状病毒感染肺炎防疫专利信息共享平台（HER-SYS）开具的数字码</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</note>
-        </trans-unit>
-        <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
-          <source>Users who were in close contact with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</source>
-          <target state="translated">给14天以内与您有密切接触的用户通知。您登记的时候不需要公开您的个人信息，不必输入您的姓名或任何其他个人信息。另外，不会记录并通知密切接触的地点信息。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
-        </trans-unit>
         <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
           <source>How to receive a process code</source>
           <target state="translated">如何获得数字码</target>
@@ -617,36 +587,6 @@
           <target state="translated">请输入八位数字码</target>
           <note from="MultilingualBuild" annotates="source" priority="2">8桁の処理番号を入力してください</note>
         </trans-unit>
-        <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
-          <source>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</source>
-          <target state="translated">数字码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</note>
-        </trans-unit>
-        <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
-          <source>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</source>
-          <target state="translated">当您在设备中输入该数字码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的数字码。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</note>
-        </trans-unit>
-        <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
-          <source>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</source>
-          <target state="translated">管理系统将会答复通知服务器所核对的数字码是否为向您发出的号码。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</note>
-        </trans-unit>
-        <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
-          <source>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</source>
-          <target state="translated">如能确认号码为向您发送的号码，则会向其他用户的设备上提供记录在您设备上的单日密钥。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</note>
-        </trans-unit>
-        <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
-          <source>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</source>
-          <target state="translated">在14天内与您有过接触的用户能够在无法确认您的个人信息的情况下获知与您可能有过接触。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
-        </trans-unit>
-        <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
-          <source>Agree and register</source>
-          <target state="translated">同意并进行阳性登记</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">同意して陽性登録する</note>
-        </trans-unit>
         <trans-unit id="SubmitConsentPageTitle1" translate="yes" xml:space="preserve">
           <source>Consent to positive registration</source>
           <target state="translated">同意进行阳性登记</target>
@@ -676,11 +616,6 @@
           <source>Dates when you were in close contact with COVID-19 positive users.</source>
           <target state="translated">以下日期确认到您与阳性患者存在密切接触。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
-        </trans-unit>
-        <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
-          <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</source>
-          <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
@@ -1095,6 +1030,139 @@ Storage :</source>
           <target state="translated">
 *对于“ / Android”之前的部分，根据您的环境而异，例如“内部存储”等不同表示。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription3" translate="yes" xml:space="preserve">
+          <source>Please enter below the process code that you have received by SMS or email</source>
+          <target state="translated">请输入通过短信或电子邮件收到的处理号码</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">SMSまたはメールで届いた処理番号を入力してください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription5" translate="yes" xml:space="preserve">
+          <source>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will be notified.</source>
+          <target state="translated">在您症状开始或接受检查后的两天以内与您接触过的人将得到通知</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription1" translate="yes" xml:space="preserve">
+          <source>Do you have any of the following symptoms？</source>
+          <target state="translated">您有下面的症状吗？</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">次のような症状がありますか？</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
+          <source>Fever, cough, difficulty breathing, sense of fatigue, sore throat, runny nose, nasal congestion, headache, joint・muscle pain, diarrhea, nausea・vomiting</source>
+          <target state="translated">发烧，咳嗽，呼吸困难，全身无力，喉咙痛，流鼻水，鼻子堵塞，头疼，关节痛，肌肉疼，腹泻，恶心，呕吐等</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription4" translate="yes" xml:space="preserve">
+          <source>After you register the process code</source>
+          <target state="translated">登录后</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録すると</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription6" translate="yes" xml:space="preserve">
+          <source>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
+＊No record of where the close contact happened will be disclosed</source>
+          <target state="translated">＊注册完全是匿名的，不会透露姓名或联系方法等个人信息
+＊不会记录接触发生地的信息，也不会透露给他人</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
+※接触した場所がどこなのか記録されたり、他の人に知られることもありません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageNoSymptomsDescription1" translate="yes" xml:space="preserve">
+          <source>Please enter the date you were tested for COVID-19</source>
+          <target state="translated">请输入最近接受新冠病毒检查的日期。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">直近の新型コロナウイルス感染症の検査を受けた日を入力してください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageRadioButtonNo" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="translated">没有</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ない</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageRadioButtonYes" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="translated">有</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">ある</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageWithSymptomsDescription1" translate="yes" xml:space="preserve">
+          <source>Please enter the first day symptoms started. (Enter the earliest date you can remember. This information will not be disclosed)</source>
+          <target state="translated">请输入症状开始的日期。（请输入您记得的最早的日期。输入的日期谁都无法看到）</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description4" translate="yes" xml:space="preserve">
+          <source>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will receive a notification.</source>
+          <target state="translated">在您症状开始或接受检查后的两天以内与您接触过的人将得到通知</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
+          <source>The only information included in the notification will be a randomly generated code. No personal information will be disclosed.</source>
+          <target state="translated">通知中只包含随机符号。 不会发送姓名，位置信息等任何个人信息。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageButton" translate="yes" xml:space="preserve">
+          <source>Agree and register</source>
+          <target state="translated">同意并进行阳性登记</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">同意して陽性登録する</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
+          <source>Please read before continue the positive registration</source>
+          <target state="translated">请在注册阳性之前阅览</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録の前にお読みください</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription10" translate="yes" xml:space="preserve">
+          <source>If the processing number is correct, people who have come in close contact (within 1 meter for 15 minutes or more) with you 2 or more days before the day the symptoms started or the day you were tested, will be notified. None of your personal information will be known to the person who has received the notification</source>
+          <target state="translated">如果处理号码是正确的，在您症状开始或接受检查后的两天以内与您接触过的人（ 通常指1米以内彼此靠近15分钟以上的COCOA使用者 ）将得到通知。接受通知者不会知道可以识别您的信息。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
+          <source>・When you complete the registration, people who have come in close contact with you will receive a notification.</source>
+          <target state="translated">・注册阳性后，与您接触过的人将得到通知</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">・陽性登録すると、あなたと接触した人に通知が届きます</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
+          <source>・ None of your personal information will be known to the person who has received the notification</source>
+          <target state="translated">・接受通知者不会知道可以识别您的信息</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
+          <source>・ To avoid the spread of the infection, please cooperate with the registration process</source>
+          <target state="translated">・为了预防感染扩大，请协助我们注册</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">・感染拡大防止のため、登録にご協力をお願いします</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
+          <source>For more details please read below</source>
+          <target state="translated">详细请阅读以下</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">詳しくは以下をお読みください</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
+          <source>The mobile phone number or email address you gave to health center or medical institution (※) will be registered in the New Coronavirus Infectious Disease Information and Management System (hereinafter “management system”)</source>
+          <target state="translated">您分享(※)给保健所或者医疗机构的手机号码和邮箱地址将被注册到「新型冠状病毒感染症等信息掌握・管理支援系统」这个全国性质的系统（下面称呼为「管理系统」）</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription7" translate="yes" xml:space="preserve">
+          <source>(※)　It is the contact information that you gave during the visit if tested positive to COVID-19</source>
+          <target state="translated">(※)作为新冠检测阳性时的联系方法</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription8" translate="yes" xml:space="preserve">
+          <source>When you apply at the health center for positive registration with COCOA, the management system will notify the mobile phone number or email address with a processing number.</source>
+          <target state="translated">当您在保健所提出在COCOA上进行阳性注册后，管理系统将会通过手机号码或者邮箱地址通知您「处理号码」</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription9" translate="yes" xml:space="preserve">
+          <source>After you have entered the processing number into COCOA, your mobile phone will query the management system to confirm the validity of that number</source>
+          <target state="translated">当您咋COCOA中输入处理号码后，您的手机将会通过管理系统来验证处理号码是否正确</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
+          <source>Register positive result</source>
+          <target state="translated">注册阳性信息</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録</note>
+        </trans-unit>
+        <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
+          <source>https://www.mhlw.go.jp/cocoa/privacypolicy_english.html</source>
+          <target state="translated">https://www.mhlw.go.jp/cocoa/privacypolicy_chinese.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーポリシーURL</note>
+        </trans-unit>
+        <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
+          <source>https://www.mhlw.go.jp/cocoa/kiyaku_english.html</source>
+          <target state="translated">https://www.mhlw.go.jp/cocoa/kiyaku_chinese.html</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約URL</note>
         </trans-unit>
       </group>
     </body>

@@ -84,7 +84,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             reAgreeTermsOfServicePageViewModel.OpenWebView.Execute(null);
 
             Assert.Equal(1, actualCalls);
-            Assert.Equal("https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html", actualUri);
+            Assert.Equal("https://www.mhlw.go.jp/cocoa/kiyaku_english.html", actualUri);
             Assert.Equal(BrowserLaunchMode.SystemPreferred, actualLaunchMode);
         }
 

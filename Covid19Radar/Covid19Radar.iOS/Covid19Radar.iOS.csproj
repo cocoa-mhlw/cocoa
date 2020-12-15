@@ -277,6 +277,7 @@
     <Compile Include="Services\Logs\LogFileServiceIos.cs" />
     <Compile Include="Services\Logs\LogPathServiceIos.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteServiceIos.cs" />
+    <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -478,6 +479,21 @@
     <BundleResource Include="Resources\zh.lproj\privacypolicy_img01%403x.png" />
     <BundleResource Include="Resources\zh.lproj\privacypolicy_img01%402x.png" />
     <BundleResource Include="Resources\zh.lproj\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\arrow_icon.png" />
+    <BundleResource Include="Resources\Base.lproj\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\arrow_icon.png" />
+    <BundleResource Include="Resources\en.lproj\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\en.lproj\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\en.lproj\arrow_icon.png" />
+    <BundleResource Include="Resources\ja.lproj\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\arrow_icon.png" />
+    <BundleResource Include="Resources\zh.lproj\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\zh.lproj\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\zh.lproj\arrow_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -1331,6 +1347,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\Logs\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>

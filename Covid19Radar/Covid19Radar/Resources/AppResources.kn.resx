@@ -27,10 +27,6 @@
     <value>ಪರವಾನಗಿ ಒಪ್ಪಂದ</value>
     <comment>ライセンス</comment>
   </data>
-  <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
-    <comment>Policy</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>ಸ್ಟೇಟಸ್ ಸೆಟ್ಟಿಂಗ್ಸ್</value>
     <comment>User Status Page Title</comment>
@@ -220,18 +216,6 @@
   <data name="HelpPage3Description3" xml:space="preserve">
     <value>ಒದಗಿಸಲಾದ ಪ್ರೊಸೆಸಿಂಗ್ ಸಂಖ್ಯೆಯನ್ನು ಈ ಅಪ್ಲಿಕೇಶನ್ ನಲ್ಲಿ ನಮೂದಿಸುವ ಮೂಲಕ ನೋಂದಾಯಿಸಿ</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
-  </data>
-  <data name="HelpPage3Description4" xml:space="preserve">
-    <value>ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ನಿಮ್ಮ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ನೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕ ದಲ್ಲಿರುವ ಸ್ಮಾರ್ಟ್ ಫೋನ್ ಗಳಿಗೆ ನೋಟಿಫಿಕೇಷನ್ ಗಳು ಬರುತ್ತವೆ.</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
-  </data>
-  <data name="HelpPage3Description5" xml:space="preserve">
-    <value>ಅಧಿಸೂಚನೆಗಳನ್ನು ಕಳುಹಿಸುವಾಗ ಸಾಧನದಿಂದ ಯಾದೃಚ್ಛಿಕವಾಗಿ ರಚಿಸಿದ ಕೋಡ್ ಗಳನ್ನು ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದೆ. ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಬಳಸುವುದಿಲ್ಲ.</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
-  </data>
-  <data name="HelpPage3Description6" xml:space="preserve">
-    <value>ಧನಾತ್ಮಕ ವಾಗಿ ಪರೀಕ್ಷಿಸಿದಾಗ ಇಲ್ಲಿ ನೋಂದಾಯಿಸಿ</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
     <value>ಪರವಾನಗಿ</value>
@@ -425,14 +409,6 @@
     <value>ನೋಂದಾಯಿಸಿ</value>
     <comment>登録する</comment>
   </data>
-  <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>"ಆರೋಗ್ಯ ಕೇಂದ್ರ ರಿಯಲ್ ಟೈಮ್ ಇನ್ಫರ್ಮೇಷನ್-ಶೇರಿಂಗ್ ಸಿಸ್ಟಂ ಆನ್ COVID-19 (HER-SYS) ಮೂಲಕ ನಿಮಗೆ ನೀಡಲಾದ ಒಂದು ಪ್ರಕ್ರಿಯೆ ಕೋಡ್ ಅನ್ನು ದಯವಿಟ್ಟು ನಮೂದಿಸಿ.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
-  </data>
-  <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ನಿಮ್ಮೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕ ಹೊಂದಿದ್ದ ಬಳಕೆದಾರರಿಗೆ ಸೂಚನೆ ನೀಡಲಾಗುವುದು. ನೋಂದಣಿ ಯು ಅನಾಮಧೇಯವಾಗಿದೆ. ನಿಮ್ಮ ಹೆಸರು ಅಥವಾ ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನೀವು ನಮೂದಿಸುವ ಅಗತ್ಯವಿಲ್ಲ. ಹತ್ತಿರದ ಸಂಪರ್ಕದ ಸ್ಥಳದ ಬಗ್ಗೆ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ದಾಖಲಿಸುವುದಿಲ್ಲ.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
-  </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>ಪ್ರಕ್ರಿಯೆ ಕೋಡ್ ಅನ್ನು ಹೇಗೆ ಸ್ವೀಕರಿಸುವುದು</value>
     <comment>処理番号の取得方法</comment>
@@ -497,30 +473,6 @@
     <value>8-ಅಂಕಿಯ ಕೋಡ್ ನಮೂದಿಸಿ</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
-  <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>ಹೊಸ ಕೊರೊನಾವೈರಸ್ ಸಾಂಕ್ರಾಮಿಕ ರೋಗ ಮಾಹಿತಿ ಮತ್ತು ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ನೋಂದಾಯಿತವಾದ ನಿಮ್ಮ ಮೊಬೈಲ್ ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಅಥವಾ ಇ-ಮೇಲ್ ವಿಳಾಸಕ್ಕೆ ಸಂಸ್ಕರಣಾ ಸಂಖ್ಯೆಯನ್ನು ಸೂಚಿಸಲಾಗುತ್ತದೆ (ಇನ್ನು ಮುಂದೆ "ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ").</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>ನೀವು ಟರ್ಮಿನಲ್ ನಲ್ಲಿ ಈ ಪ್ರೊಸೆಸಿಂಗ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿದಾಗ, ನಿಮಗೆ ಪ್ರೊಸೆಸಿಂಗ್ ನಂಬರ್ ನೀಡಲಾಗಿದೆಯೇ ಎಂದು ಟರ್ಮಿನಲ್ ಅಧಿಸೂಚನೆ ಸರ್ವರ್ ಮೂಲಕ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆಗೆ ವಿಚಾರಣೆ ಯನ್ನು ಮಾಡುತ್ತದೆ.</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>ನಿಮಗೆ ಉಲ್ಲೇಖಿಸಲಾದ ವ್ಯವಹಾರ ಸಂಖ್ಯೆಯನ್ನು ನಿಮಗೆ ನೀಡಲಾಗಿದೆಯೇ ಎಂದು ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆಯು ಅಧಿಸೂಚನೆ ಸರ್ವರ್ ಗೆ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತದೆ.</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>ನಿಮಗೆ ಟ್ರಾನ್ಸಾಕ್ಷನ್ ನಂಬರ್ ನೀಡಲಾಗಿದೆ ಎಂದು ನೀವು ಉತ್ತರಿಸಿದರೆ, ನಿಮ್ಮ ಟರ್ಮಿನಲ್ ನಲ್ಲಿ ದಾಖಲಿಸಲಾದ ದೈನಂದಿನ ಕೀಲಿಯೊಂದಿಗೆ ಇತರ ಬಳಕೆದಾರರ ಟರ್ಮಿನಲ್ ಗಳನ್ನು ಒದಗಿಸಲಾಗುವುದು.</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>ನೀವು 14 ದಿನಗಳ ಒಳಗೆ ನಿಮ್ಮಸಂಪರ್ಕದಲ್ಲಿದ್ದರೆ, ನಿಮ್ಮನ್ನು ವೈಯಕ್ತಿಕವಾಗಿ ಗುರುತಿಸಬಹುದಾದ ಯಾವುದೇ ಮಾಹಿತಿಇಲ್ಲದೆ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಬಹುದೆಂದು ನೀವು ತಿಳಿದಿರುತ್ತೀರಿ.</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>ಒಪ್ಪು ಮತ್ತು ನೋಂದಾಯಿಸಿ</value>
-    <comment>同意して陽性登録する</comment>
-  </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>ಸಕಾರಾತ್ಮಕ ನೋಂದಣಿಗೆ ಸಮ್ಮತಿ</value>
     <comment>陽性登録への同意</comment>
@@ -544,10 +496,6 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>COVID-19 ಧನಾತ್ಮಕ ಬಳಕೆದಾರರೊಂದಿಗೆ ನೀವು ನಿಕಟ ಸಂಪರ್ಕದಲ್ಲಿದ್ದಾಗ ದಿನಾಂಕಗಳು.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
-  </data>
-  <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
-    <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

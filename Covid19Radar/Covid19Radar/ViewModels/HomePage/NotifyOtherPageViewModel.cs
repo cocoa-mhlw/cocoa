@@ -7,7 +7,6 @@ using System;
 using Acr.UserDialogs;
 using Covid19Radar.Views;
 using System.Text.RegularExpressions;
-using System.Threading;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
@@ -18,6 +17,7 @@ namespace Covid19Radar.ViewModels
     public class NotifyOtherPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
+        private readonly ExposureNotificationService exposureNotificationService;
 
         private string _diagnosisUid;
         public string DiagnosisUid
@@ -26,7 +26,7 @@ namespace Covid19Radar.ViewModels
             set
             {
                 SetProperty(ref _diagnosisUid, value);
-                IsEnabled = DiagnosisUid.Length == AppConstants.MaxDiagnosisUidCount;   // validate
+                IsEnabled = CheckRegisterButtonEnable();
             }
         }
         private bool _isEnabled;
@@ -35,19 +35,47 @@ namespace Covid19Radar.ViewModels
             get { return _isEnabled; }
             set { SetProperty(ref _isEnabled, value); }
         }
+        private bool _isVisibleWithSymptomsLayout;
+        public bool IsVisibleWithSymptomsLayout
+        {
+            get { return _isVisibleWithSymptomsLayout; }
+            set
+            {
+                SetProperty(ref _isVisibleWithSymptomsLayout, value);
+                IsEnabled = CheckRegisterButtonEnable();
+            }
+        }
+        private bool _isVisibleNoSymptomsLayout;
+        public bool IsVisibleNoSymptomsLayout
+        {
+            get { return _isVisibleNoSymptomsLayout; }
+            set
+            {
+                SetProperty(ref _isVisibleNoSymptomsLayout, value);
+                IsEnabled = CheckRegisterButtonEnable();
+            }
+        }
+        private DateTime _diagnosisDate;
+        public DateTime DiagnosisDate
+        {
+            get { return _diagnosisDate; }
+            set { SetProperty(ref _diagnosisDate, value); }
+        }
         private int errorCount { get; set; }
 
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private UserDataModel userData;
 
-        public NotifyOtherPageViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService) : base(navigationService, userDataService)
+        public NotifyOtherPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
         {
             Title = Resources.AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
+            this.exposureNotificationService = exposureNotificationService;
             userData = this.userDataService.Get();
             errorCount = 0;
             DiagnosisUid = "";
+            DiagnosisDate = DateTime.Today;
         }
 
         public Command OnClickRegister => (new Command(async () =>
@@ -162,6 +190,7 @@ namespace Covid19Radar.ViewModels
                 loggerService.Info($"Submit the processing number.");
 
                 // Submit our diagnosis
+                exposureNotificationService.DiagnosisDate = DiagnosisDate;
                 await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(
@@ -201,5 +230,34 @@ namespace Covid19Radar.ViewModels
                 UserDialogs.Instance.HideLoading();
             }
         }));
+
+        public void OnClickRadioButtonIsTrueCommand(string text)
+        {
+            loggerService.StartMethod();
+
+            if (AppResources.NotifyOtherPageRadioButtonYes.Equals(text))
+            {
+                IsVisibleWithSymptomsLayout = true;
+                IsVisibleNoSymptomsLayout = false;
+            }
+            else if (AppResources.NotifyOtherPageRadioButtonNo.Equals(text))
+            {
+                IsVisibleWithSymptomsLayout = false;
+                IsVisibleNoSymptomsLayout = true;
+            }
+            else
+            {
+                IsVisibleWithSymptomsLayout = false;
+                IsVisibleNoSymptomsLayout = false;
+            }
+
+            loggerService.Info($"Is visible with symptoms layout: {IsVisibleWithSymptomsLayout}, Is visible no symptoms layout: {IsVisibleNoSymptomsLayout}");
+            loggerService.EndMethod();
+        }
+
+        public bool CheckRegisterButtonEnable()
+        {
+            return DiagnosisUid.Length == AppConstants.MaxDiagnosisUidCount && (IsVisibleWithSymptomsLayout || IsVisibleNoSymptomsLayout);
+        }
     }
 }

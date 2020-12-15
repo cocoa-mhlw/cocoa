@@ -27,10 +27,6 @@
     <value>Comhaontú Ceadúnais</value>
     <comment>ライセンス</comment>
   </data>
-  <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
-    <comment>Policy</comment>
-  </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>Socruithe Stádais</value>
     <comment>User Status Page Title</comment>
@@ -220,18 +216,6 @@
   <data name="HelpPage3Description3" xml:space="preserve">
     <value>Cláraigh trí uimhir phróiseála a chur ar fáil san fheidhmchlár seo</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
-  </data>
-  <data name="HelpPage3Description4" xml:space="preserve">
-    <value>Gheobhaidh fóin chliste a bhí i ndlúth-theagmháil le do ghuthán cliste laistigh de na laethanta 14 seo caite fógraí.</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
-  </data>
-  <data name="HelpPage3Description5" xml:space="preserve">
-    <value>Ní úsáidtear ach cóid a ghintear go randamach ón ngléas nuair a bhíonn fógraí á seoladh. Ní úsáidtear aon fhaisnéis phearsanta.</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
-  </data>
-  <data name="HelpPage3Description6" xml:space="preserve">
-    <value>Cláraigh anseo nuair a dhéantar tástáil dhearfach</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
     <value>Ceadúnas</value>
@@ -425,14 +409,6 @@
     <value>Cláraigh</value>
     <comment>登録する</comment>
   </data>
-  <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>Cuir isteach cód próisis a d'eisigh "Ionad Sláinte Fíor-ama Córas comhroinnte faisnéise ar COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
-  </data>
-  <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>Cuirfear in iúl d'úsáideoirí a bhí i ndlúth-theagmháil leat laistigh de na laethanta 14 seo caite. Tá clárú anaithnid. Ní gá duit d'ainm ná aon fhaisnéis phearsanta eile a iontráil. Ní thaifeadtar aon eolas maidir le suíomh dlúththeagmhála.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
-  </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>Conas cód próisis a fháil</value>
     <comment>処理番号の取得方法</comment>
@@ -497,30 +473,6 @@
     <value>Iontráil cód 8-dhigit</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
-  <data name="SubmitConsentPageDescription1" xml:space="preserve">
-    <value>Cuirfear an uimhir phróiseála in iúl do d'uimhir ghutháin phóca nó do sheoladh ríomhphoist atá cláraithe sa chóras nua faisnéise agus bainistíochta galar tógálach coronavirus (ina dhiaidh seo "córas bainistíochta").</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>Nuair a chuireann tú an uimhir phróiseála seo isteach sa chríochfort, déanfaidh an críochfort fiosrúchán tríd an bhfreastalaí fógra chuig an gcóras bainistíochta maidir le cibé ar eisíodh an uimhir phróiseála duit.</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription3" xml:space="preserve">
-    <value>Freagróidh an córas bainistíochta don fhreastalaí fógra i dtaobh ar eisíodh uimhir an idirbhirt dá dtagraítear duit.</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription4" xml:space="preserve">
-    <value>Má thugann tú freagra gur eisíodh uimhir an idirbhirt chugat, cuirfear críochfort úsáideoirí eile ar fáil leis an eochair laethúil a taifeadadh ar do chríochfort.</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription5" xml:space="preserve">
-    <value>Má bhí tú i dteagmháil leat laistigh de 14 lá, beidh a fhios agat go mb'fhéidir go ndearnadh teagmháil leat gan aon fhaisnéis a d'fhéadfadh tú a aithint go pearsanta.</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>Aontaigh agus cláraigh</value>
-    <comment>同意して陽性登録する</comment>
-  </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>Toiliú le clárú dearfach</value>
     <comment>陽性登録への同意</comment>
@@ -544,10 +496,6 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>Dátaí nuair a bhí tú i ndlúth-theagmháil le húsáideoirí dearfacha COVID-19.</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
-  </data>
-  <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html</value>
-    <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>

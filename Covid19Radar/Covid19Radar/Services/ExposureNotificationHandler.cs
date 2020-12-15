@@ -24,7 +24,10 @@ namespace Covid19Radar.Services
     {
         private readonly ILoggerService loggerService;
         private readonly IHttpDataService httpDataService;
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
+
+        private ExposureNotificationService ExposureNotificationService { get { return DependencyService.Resolve<ExposureNotificationService>(); } }
+
         private UserDataModel userData;
         private Configuration configuration;
 
@@ -32,7 +35,8 @@ namespace Covid19Radar.Services
         {
             loggerService = DependencyService.Resolve<ILoggerService>();
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<IHttpDataService>();
-            this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
+            this.userDataService = Xamarin.Forms.DependencyService.Resolve<IUserDataService>();
+
             userData = this.userDataService.Get();
             userDataService.UserDataChanged += (s, e) =>
             {
@@ -346,8 +350,11 @@ namespace Covid19Radar.Services
         {
             loggerService.StartMethod();
 
+            // Filter Temporary exposure keys
+            var filteredTemporaryExposureKeys = ExposureNotificationService.FliterTemporaryExposureKeys(temporaryExposureKeys);
+
             // Create the network keys
-            var keys = temporaryExposureKeys.Where(k => k.RollingStart > DateTimeOffset.UtcNow.Date.AddDays(AppConstants.OutOfDateDays)).Select(k => new DiagnosisSubmissionParameter.Key
+            var keys = filteredTemporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key
             {
                 KeyData = Convert.ToBase64String(k.Key),
                 RollingStartNumber = (uint)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,

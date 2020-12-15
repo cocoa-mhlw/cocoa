@@ -14,11 +14,11 @@ namespace Covid19Radar.ViewModels
     public class TutorialPage4ViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private readonly ExposureNotificationService exposureNotificationService;
         private UserDataModel userData;
 
-        public TutorialPage4ViewModel(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
+        public TutorialPage4ViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
         {
             this.loggerService = loggerService;
             this.userDataService = userDataService;

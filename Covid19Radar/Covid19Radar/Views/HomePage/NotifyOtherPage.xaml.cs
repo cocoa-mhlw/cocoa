@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Covid19Radar.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,6 +10,15 @@ namespace Covid19Radar.Views
         public NotifyOtherPage()
         {
             InitializeComponent();
+        }
+
+        void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            var button = (RadioButton)sender;
+            if (button.IsChecked)
+            {
+                (BindingContext as NotifyOtherPageViewModel).OnClickRadioButtonIsTrueCommand(button.Text);
+            }
         }
     }
 }

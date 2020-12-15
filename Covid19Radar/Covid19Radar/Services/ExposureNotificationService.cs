@@ -7,10 +7,9 @@ using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
@@ -21,36 +20,26 @@ namespace Covid19Radar.Services
     {
         private readonly IHttpDataService httpDataService;
         private readonly ILoggerService loggerService;
-        private readonly UserDataService userDataService;
+        private readonly IUserDataService userDataService;
         private readonly INavigationService navigationService;
+        private readonly IHttpClientService httpClientService;
+
         public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
-        private SecondsTimer _downloadTimer;
         private UserDataModel userData;
 
-        public ExposureNotificationService(INavigationService navigationService, ILoggerService loggerService, UserDataService userDataService, IHttpDataService httpDataService)
+        public ExposureNotificationService(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IHttpDataService httpDataService, IHttpClientService httpClientService)
         {
             this.httpDataService = httpDataService;
             this.navigationService = navigationService;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
+            this.httpClientService = httpClientService;
+
             _ = this.GetExposureNotificationConfig();
             userData = userDataService.Get();
             userDataService.UserDataChanged += OnUserDataChanged;
-            StartTimer();
-        }
-        private void StartTimer()
-        {
-            _downloadTimer = new SecondsTimer(userData.GetJumpHashTime());
-            _downloadTimer.Start();
-            _downloadTimer.TimeOutEvent += OnTimerInvoked;
-        }
-
-        private void OnTimerInvoked(EventArgs e)
-        {
-            Debug.WriteLine(DateTime.Now.ToString(new CultureInfo("en-US")));
-            //await FetchExposureKeyAsync();
         }
 
         public async Task GetExposureNotificationConfig()
@@ -59,7 +48,7 @@ namespace Covid19Radar.Services
 
             string container = AppSettings.Instance.BlobStorageContainerName;
             string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
-            HttpClient httpClient = new HttpClient();
+            HttpClient httpClient = httpClientService.Create();
             Task<HttpResponseMessage> response = httpClient.GetAsync(url);
             HttpResponseMessage result = await response;
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
@@ -219,6 +208,42 @@ namespace Covid19Radar.Services
             return message;
         }
 
+        /* Date of diagnosis or onset (Local time) */
+        public DateTime? DiagnosisDate { get; set; }
 
+        public IEnumerable<TemporaryExposureKey> FliterTemporaryExposureKeys(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
+        {
+            loggerService.StartMethod();
+
+            IEnumerable<TemporaryExposureKey> newTemporaryExposureKeys = null;
+
+            try
+            {
+                if (DiagnosisDate is DateTime diagnosisDate)
+                {
+                    var fromDateTime = diagnosisDate.AddDays(AppConstants.DaysToSendTek);
+                    var fromDateTimeOffset = new DateTimeOffset(fromDateTime);
+                    loggerService.Info($"Filter: After {fromDateTimeOffset}");
+                    newTemporaryExposureKeys = temporaryExposureKeys.Where(x => x.RollingStart >= fromDateTimeOffset);
+                    loggerService.Info($"Count: {newTemporaryExposureKeys.Count()}");
+                }
+                else
+                {
+                    throw new InvalidOperationException("No diagnosis date has been set");
+                }
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Temporary exposure keys filtering failed", ex);
+                throw ex;
+            }
+            finally
+            {
+                DiagnosisDate = null;
+                loggerService.EndMethod();
+            }
+
+            return newTemporaryExposureKeys;
+        }
     }
 }

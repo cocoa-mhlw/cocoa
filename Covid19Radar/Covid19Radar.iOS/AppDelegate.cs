@@ -29,6 +29,8 @@ namespace Covid19Radar.iOS
         {
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
+            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
+
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
 

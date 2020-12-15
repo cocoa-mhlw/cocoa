@@ -4,9 +4,9 @@
     {
         public static readonly int NumberOfGroup = 86400;
         /// <summary>
-        /// Number of days not processed or deleted
+        /// Number of days covered from the date of diagnosis or onset
         /// </summary>
-        public const int OutOfDateDays = -14;
+        public const int DaysToSendTek = -3;
         /// <summary>
         /// Cache Timeout
         /// </summary>
