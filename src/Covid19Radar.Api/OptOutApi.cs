@@ -32,7 +32,6 @@ namespace Covid19Radar.Api
             ValidationServerService = validationServerService;
         }
 
-        [FunctionName(nameof(OptOutApi))]
         public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "delete", Route = "OptOut/{userUuid}")] HttpRequest req,
             string userUuid)

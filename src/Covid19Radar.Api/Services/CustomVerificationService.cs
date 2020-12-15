@@ -62,6 +62,7 @@ namespace Covid19Radar.Api.Services
             if (!response.IsSuccessStatusCode) return 503;
 
             var responseBody = JsonConvert.DeserializeObject<ResponseCustomVerification>(await response.Content.ReadAsStringAsync());
+            Logger.LogInformation($"result code of payloadAPI is {responseBody.Result}");
             return await GetResultStatus(responseBody.Result);
         }
 

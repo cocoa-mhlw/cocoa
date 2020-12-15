@@ -52,7 +52,7 @@ namespace Covid19Radar.Api
             [HttpTrigger(AuthorizationLevel.Function, "put", Route = "diagnosis")] HttpRequest req)
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            Logger.LogInformation($"{nameof(RunAsync)} request body {requestBody}");
+            Logger.LogInformation($"{nameof(RunAsync)}");
 
             // Check Valid Route
             IValidationServerService.ValidateResult validateResult = ValidationServerService.Validate(req);
@@ -105,11 +105,6 @@ namespace Covid19Radar.Api
             var timestamp = DateTimeOffset.UtcNow;
             var keys = diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray();
 
-            await DiagnosisRepository.SubmitDiagnosisAsync(
-                diagnosis.VerificationPayload,
-                timestamp,
-                diagnosis.UserUuid,
-                keys);
 
             foreach (var k in keys)
             {
