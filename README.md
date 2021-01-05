@@ -12,7 +12,7 @@ If you have any questions about how to use COCOA, please check the MHLW [Q&A web
 ## Regarding requests for COCOA
 
 You can find the email address in the [Q&A Website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html), so please contact us from there.  
-For PullRequest and Issues, please be aware that it may take some time to respond.
+For PullRequest and Issues, please be aware that we may not be able to respond.
 
 ## License.
 
