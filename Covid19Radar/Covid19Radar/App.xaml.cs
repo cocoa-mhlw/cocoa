@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using System.IO.IsolatedStorage;
 
 /*
  * Our mission...is
@@ -42,6 +43,8 @@ namespace Covid19Radar
             LoggerService.StartMethod();
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.AddSkipBackupAttribute();
+
+            RecoverLostPropertiesFile(LoggerService);
 
 #if USE_MOCK
             // For debug mode, set the mock api provider to interact
@@ -200,6 +203,37 @@ namespace Covid19Radar
             {
                 // maybe think local only logger
             };
+        }
+
+        // Workaround for possible data loss of Application.Current.Properties .
+        // See https://github.com/xamarin/Xamarin.Forms/issues/13676
+        private void RecoverLostPropertiesFile(ILoggerService LoggerService)
+        {
+            const string PropertyStoreFile = "PropertyStore.forms";
+            const string PropertyStoreTmpFile = PropertyStoreFile + ".tmp";
+            var store = IsolatedStorageFile.GetUserStoreForApplication();
+            if (store.FileExists(PropertyStoreTmpFile))
+            {
+                if (store.FileExists(PropertyStoreFile))
+                {
+                    // Empty file could be exist because current impl of Xamarin.Forms uses System.IO.FileMode.OpenOrCreate for reading file (!).
+                    using (var stream = store.OpenFile(PropertyStoreFile, System.IO.FileMode.Open))
+                    {
+                        if (stream.Length > 0)
+                        {
+                            // tmp file exists, but the store file contains data.
+                            return;
+                        }
+                    }
+                    // delete empty file
+                    store.DeleteFile(PropertyStoreFile);
+                }
+                // tmp file exists while primary file is deleted.
+                // It means tmp file is fully written (before store.DeleteFile()).
+
+                LoggerService.Warning($"{PropertyStoreFile} is not found or empty, but tmp file {PropertyStoreTmpFile} is found. Recovering from tmp file.");
+                store.MoveFile(PropertyStoreTmpFile, PropertyStoreFile);
+            }
         }
     }
 }
