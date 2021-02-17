@@ -16,30 +16,27 @@ using System.Web.Http;
 
 namespace Covid19Radar.Api
 {
-    public class DiagnosisApi
+    public class V2DiagnosisApi
     {
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
-        private readonly IValidationUserService Validation;
-        private readonly IV1DeviceValidationService DeviceCheck;
+        private readonly IDeviceValidationService DeviceCheck;
         private readonly IVerificationService VerificationService;
-        private readonly ILogger<DiagnosisApi> Logger;
+        private readonly ILogger<V2DiagnosisApi> Logger;
         private readonly string[] SupportRegions;
         private readonly IValidationServerService ValidationServerService;
 
-        public DiagnosisApi(
+        public V2DiagnosisApi(
             IConfiguration config,
             IDiagnosisRepository diagnosisRepository,
             ITemporaryExposureKeyRepository tekRepository,
-            IValidationUserService validation,
-            IV1DeviceValidationService deviceCheck,
+            IDeviceValidationService deviceCheck,
             IVerificationService verificationService,
             IValidationServerService validationServerService,
-            ILogger<DiagnosisApi> logger)
+            ILogger<V2DiagnosisApi> logger)
         {
             DiagnosisRepository = diagnosisRepository;
             TekRepository = tekRepository;
-            Validation = validation;
             DeviceCheck = deviceCheck;
             Logger = logger;
             SupportRegions = config.SupportRegions();
@@ -47,9 +44,9 @@ namespace Covid19Radar.Api
             ValidationServerService = validationServerService;
         }
 
-        [FunctionName(nameof(DiagnosisApi))]
+        [FunctionName(nameof(V2DiagnosisApi))]
         public async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "diagnosis")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "v2/diagnosis")] HttpRequest req)
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             Logger.LogInformation($"{nameof(RunAsync)}");
@@ -61,7 +58,7 @@ namespace Covid19Radar.Api
                 return validateResult.ErrorActionResult;
             }
 
-            var diagnosis = JsonConvert.DeserializeObject<V1DiagnosisSubmissionParameter>(requestBody);
+            var diagnosis = JsonConvert.DeserializeObject<DiagnosisSubmissionParameter>(requestBody);
             var reqTime = DateTimeOffset.UtcNow;
 
             // payload valid
@@ -78,18 +75,8 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Regions not supported.");
             }
 
-            // validation
-            var validationResult = await Validation.ValidateAsync(req, diagnosis);
-            if (!validationResult.IsValid)
-            {
-                Logger.LogInformation($"validation error.");
-                return validationResult.ErrorActionResult;
-            }
-
-            // TODO: Security Consider, additional validation for user uuid.
-
             // validation device 
-            if (false == await DeviceCheck.Validation(diagnosis, reqTime)) 
+            if (false == await DeviceCheck.Validation(diagnosis, reqTime))
             {
                 Logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");

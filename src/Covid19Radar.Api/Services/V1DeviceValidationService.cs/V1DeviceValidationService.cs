@@ -9,26 +9,26 @@ using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Services
 {
-    public class DeviceValidationService : IDeviceValidationService
+
+    public class V1DeviceValidationService : IV1DeviceValidationService
     {
+
         private readonly DeviceValidationAndroidService Android;
         private readonly DeviceValidationAppleService Apple;
         private readonly IAuthorizedAppRepository AuthApp;
 
-        public DeviceValidationService(
+    public V1DeviceValidationService(
             IConfiguration config,
             IHttpClientFactory http,
             IAuthorizedAppRepository authApp,
-            ILogger<DeviceValidationService> logger)
+            ILogger<V1DeviceValidationService> logger)
         {
             Android = new DeviceValidationAndroidService(config, http);
             Apple = new DeviceValidationAppleService(config, http, logger);
             AuthApp = authApp;
         }
 
-        protected DeviceValidationService() { }
-
-        public async Task<bool> Validation(DiagnosisSubmissionParameter param, DateTimeOffset requestTime)
+        public async Task<bool> Validation(V1DiagnosisSubmissionParameter param, DateTimeOffset requestTime)
         {
             var app = await AuthApp.GetAsync(param.Platform);
             // unsupported
@@ -42,4 +42,5 @@ namespace Covid19Radar.Api.Services
             };
         }
     }
+
 }

@@ -20,12 +20,12 @@ namespace Covid19Radar.Api.Services
         //const string UrlApple = "https://api.development.devicecheck.apple.com/v1/validate_device_token";
         const string UrlApple = "https://api.devicecheck.apple.com/v1/validate_device_token";
         private readonly HttpClient ClientApple;
-        private readonly ILogger<DeviceValidationService> Logger;
+        private readonly ILogger Logger;
 
         public DeviceValidationAppleService(
             IConfiguration config,
             IHttpClientFactory client,
-            ILogger<DeviceValidationService> logger)
+            ILogger logger)
         {
             ClientApple = client.CreateClient();
             Logger = logger;
@@ -60,10 +60,21 @@ namespace Covid19Radar.Api.Services
                 Timestamp = requestTime.ToUnixTimeMilliseconds()
             };
 
-            var keysText = param.Keys
-                .OrderBy(_ => _.KeyData)
-                .Select(_ => _.KeyData)
-                .Aggregate((a, b) => a + b);
+            var keysText = string.Empty;
+            if (param is V1DiagnosisSubmissionParameter) 
+            {
+                keysText = (param as V1DiagnosisSubmissionParameter).Keys
+                    .OrderBy(_ => _.KeyData)
+                    .Select(_ => _.KeyData)
+                    .Aggregate((a, b) => a + b);
+            }
+            else
+            {
+                keysText = param.Keys
+                     .OrderBy(_ => _.KeyData)
+                     .Select(_ => _.KeyData)
+                     .Aggregate((a, b) => a + b);
+            }
 
             using (var sha = System.Security.Cryptography.SHA256.Create())
             {

@@ -32,8 +32,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="Properties\ServiceDependencies\covid19radar-jpn-dev - Zip 配置\" />
+    <Folder Include="Properties\ServiceDependencies\" />
   </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties host_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

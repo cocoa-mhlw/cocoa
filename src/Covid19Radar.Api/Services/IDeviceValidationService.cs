@@ -8,4 +8,6 @@ namespace Covid19Radar.Api.Services
     {
         Task<bool> Validation(DiagnosisSubmissionParameter param, DateTimeOffset requestTime);
     }
+
+
 }

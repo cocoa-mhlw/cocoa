@@ -16,14 +16,14 @@ namespace Covid19Radar.Api.Tests.Models
         public void CreateMethod()
         {
             // action
-            var model = new DiagnosisSubmissionParameter();
+            var model = new V1DiagnosisSubmissionParameter();
         }
 
         [TestMethod]
         public void PropertiesTest()
         {
             // preparation
-            var model = new DiagnosisSubmissionParameter();
+            var model = new V1DiagnosisSubmissionParameter();
             // model property access
             Helper.ModelTestHelper.PropetiesTest(model);
         }
@@ -37,9 +37,9 @@ namespace Covid19Radar.Api.Tests.Models
             // preparation
             var keyDataBytes = Encoding.UTF8.GetBytes(keyData);
             var keyDataBase64 = Convert.ToBase64String(keyDataBytes);
-            var model = new DiagnosisSubmissionParameter();
-            model.Keys = new DiagnosisSubmissionParameter.Key[] {
-                new DiagnosisSubmissionParameter.Key() {KeyData = keyDataBase64, RollingPeriod = (uint)period, RollingStartNumber = (uint)start, TransmissionRisk = 0  }
+            var model = new V1DiagnosisSubmissionParameter();
+            model.Keys = new V1DiagnosisSubmissionParameter.Key[] {
+                new V1DiagnosisSubmissionParameter.Key() {KeyData = keyDataBase64, RollingPeriod = (uint)period, RollingStartNumber = (uint)start, TransmissionRisk = 0  }
             };
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             // action

@@ -3,6 +3,8 @@ using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Api.Startup))]
 
@@ -28,8 +30,9 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
             builder.Services.AddSingleton<IVerificationService, CustomVerificationService>();
             builder.Services.AddSingleton<ICustomVerificationStatusRepository, CustomVerificationStatusRepository>();
-            builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
             builder.Services.AddSingleton<IInquiryLogBlobService, InquiryLogBlobService>();
+            builder.Services.AddSingleton<IV1DeviceValidationService, V1DeviceValidationService>();
+            builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
         }
     }
 }
