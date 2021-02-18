@@ -12,28 +12,22 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IUserDataService> mockUserDataService;
-        private readonly Mock<ExposureNotificationService> mockExposureNotificationService;
+        private readonly Mock<IExposureNotificationService> mockExposureNotificationService;
 
         public NotifyOtherPageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockUserDataService = mockRepository.Create<IUserDataService>();
-            mockExposureNotificationService = mockRepository.Create<ExposureNotificationService>();
+            mockExposureNotificationService = mockRepository.Create<IExposureNotificationService>();
         }
 
         private NotifyOtherPageViewModel CreateViewModel()
         {
-            var mockHttpClientService = mockRepository.Create<IHttpClientService>();
-            var exposureNotificationService = new ExposureNotificationService(null, mockLoggerService.Object, mockUserDataService.Object, null, mockHttpClientService.Object);
-
             return new NotifyOtherPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockUserDataService.Object,
-                exposureNotificationService);
+                mockExposureNotificationService.Object);
         }
 
         [Theory]

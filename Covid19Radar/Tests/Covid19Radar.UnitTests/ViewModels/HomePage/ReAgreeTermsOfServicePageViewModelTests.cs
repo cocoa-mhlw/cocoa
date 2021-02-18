@@ -103,7 +103,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             };
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
-            mockTermsUpdateService.Setup(x => x.SaveLastUpdateDateAsync(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTime));
+            mockTermsUpdateService.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTime));
             mockTermsUpdateService.Setup(x => x.IsReAgree(TermsType.PrivacyPolicy, updateInfo)).Returns(true);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
@@ -129,7 +129,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             };
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
-            mockTermsUpdateService.Setup(x => x.SaveLastUpdateDateAsync(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTime));
+            mockTermsUpdateService.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTime));
             mockTermsUpdateService.Setup(x => x.IsReAgree(TermsType.PrivacyPolicy, updateInfo)).Returns(false);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 

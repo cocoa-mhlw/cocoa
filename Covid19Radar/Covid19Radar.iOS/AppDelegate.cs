@@ -1,4 +1,6 @@
-﻿using Covid19Radar.iOS.Services.Logs;
+﻿using Covid19Radar.iOS.Services;
+using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Foundation;
 using Prism;
@@ -60,6 +62,8 @@ namespace Covid19Radar.iOS
         {
             // Services
             containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceIos>();
+            containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceIos>();
+            containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
         }
     }
 

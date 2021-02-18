@@ -90,7 +90,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             };
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
-            mockTermsUpdateService.Setup(x => x.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, updateInfo.UpdateDateTime));
+            mockTermsUpdateService.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTime));
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
             mockNavigationService.Verify(x => x.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage)), Times.Once());

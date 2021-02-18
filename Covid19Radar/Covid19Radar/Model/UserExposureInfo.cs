@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
-using System.Text;
 
 namespace Covid19Radar.Model
 {
@@ -17,17 +14,18 @@ namespace Covid19Radar.Model
         }
 
         // When the contact occurred
-        public DateTime Timestamp { get; }
+        public DateTime Timestamp { get; set; }
 
         // How long the contact lasted in 5 min increments
-        public TimeSpan Duration { get; }
+        public TimeSpan Duration { get; set; }
 
-        public int AttenuationValue { get; }
+        public int AttenuationValue { get; set; }
 
-        public int TotalRiskScore { get; }
+        public int TotalRiskScore { get; set; }
 
-        public UserRiskLevel TransmissionRiskLevel { get; }
+        public UserRiskLevel TransmissionRiskLevel { get; set; }
     }
+
     public enum UserRiskLevel
     {
         Invalid = 0,

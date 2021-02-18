@@ -9,8 +9,6 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase
     {
-        private readonly IUserDataService userDataService;
-        private UserDataModel userData;
         public ObservableCollection<ExposureSummary> _exposures;
         public ObservableCollection<ExposureSummary> Exposures
         {
@@ -18,19 +16,21 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposures, value); }
         }
 
-        public ExposuresPageViewModel(INavigationService navigationService, IUserDataService userDataService) : base(navigationService)
+        public ExposuresPageViewModel(INavigationService navigationService, IExposureNotificationService exposureNotificationService) : base(navigationService)
         {
             Title = Resources.AppResources.MainExposures;
-            this.userDataService = userDataService;
-            userData = this.userDataService.Get();
             _exposures = new ObservableCollection<ExposureSummary>();
 
-            foreach (var en in userData.ExposureInformation.GroupBy(eni => eni.Timestamp))
+            var exposureInformationList = exposureNotificationService.GetExposureInformationList();
+            if (exposureInformationList != null)
             {
-                var ens = new ExposureSummary();
-                ens.ExposureDate = en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
-                ens.ExposureCount = en.Count().ToString();
-                _exposures.Add(ens);
+                foreach (var en in exposureInformationList.GroupBy(eni => eni.Timestamp))
+                {
+                    var ens = new ExposureSummary();
+                    ens.ExposureDate = en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
+                    ens.ExposureCount = en.Count().ToString();
+                    _exposures.Add(ens);
+                }
             }
         }
     }
@@ -39,6 +39,5 @@ namespace Covid19Radar.ViewModels
     {
         public string ExposureDate { get; set; }
         public string ExposureCount { get; set; }
-
     }
 }

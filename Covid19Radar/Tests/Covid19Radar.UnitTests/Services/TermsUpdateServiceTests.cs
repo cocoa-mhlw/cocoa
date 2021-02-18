@@ -12,17 +12,19 @@ namespace Covid19Radar.UnitTests.Services
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IApplicationPropertyService> mockApplicationPropertyService;
+        private readonly Mock<IPreferencesService> mockPreferencesService;
 
         public TermsUpdateServiceTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockApplicationPropertyService = mockRepository.Create<IApplicationPropertyService>();
+            mockPreferencesService = mockRepository.Create<IPreferencesService>();
         }
 
         private TermsUpdateService CreateService()
         {
-            return new TermsUpdateService(mockLoggerService.Object, mockApplicationPropertyService.Object);
+            return new TermsUpdateService(mockLoggerService.Object, mockApplicationPropertyService.Object, mockPreferencesService.Object);
         }
 
         [Theory]
@@ -47,7 +49,7 @@ namespace Covid19Radar.UnitTests.Services
             };
 
             var termsUpdateService = CreateService();
-            mockApplicationPropertyService.Setup(x => x.ContainsKey(key)).Returns(false);
+            mockPreferencesService.Setup(x => x.ContainsKey(key)).Returns(false);
             var result = termsUpdateService.IsReAgree(termsType, info);
             Assert.True(result);
         }
@@ -64,8 +66,8 @@ namespace Covid19Radar.UnitTests.Services
             };
 
             var termsUpdateService = CreateService();
-            mockApplicationPropertyService.Setup(x => x.ContainsKey(key)).Returns(true);
-            mockApplicationPropertyService.Setup(x => x.GetProperties(key)).Returns(new DateTime(2020, 11, 1));
+            mockPreferencesService.Setup(x => x.ContainsKey(key)).Returns(true);
+            mockPreferencesService.Setup(x => x.GetValue(key, new DateTime())).Returns(new DateTime(2020, 11, 1));
             var result = termsUpdateService.IsReAgree(termsType, info);
             Assert.True(result);
         }
@@ -82,8 +84,8 @@ namespace Covid19Radar.UnitTests.Services
             };
 
             var termsUpdateService = CreateService();
-            mockApplicationPropertyService.Setup(x => x.ContainsKey(key)).Returns(true);
-            mockApplicationPropertyService.Setup(x => x.GetProperties(key)).Returns(new DateTime(2020, 11, 3));
+            mockPreferencesService.Setup(x => x.ContainsKey(key)).Returns(true);
+            mockPreferencesService.Setup(x => x.GetValue(key, new DateTime())).Returns(new DateTime(2020, 11, 3));
             var result = termsUpdateService.IsReAgree(termsType, info);
             Assert.False(result);
         }

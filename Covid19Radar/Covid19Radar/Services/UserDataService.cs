@@ -2,7 +2,7 @@
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using System;
-using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -10,14 +10,14 @@ namespace Covid19Radar.Services
 {
     public interface IUserDataService
     {
-        event EventHandler<UserDataModel> UserDataChanged;
+        Task Migrate();
 
-        bool IsExistUserData { get; }
+        Task<bool> RegisterUserAsync();
 
-        Task<UserDataModel> RegisterUserAsync();
-        UserDataModel Get();
-        Task SetAsync(UserDataModel userData);
-        Task ResetAllDataAsync();
+        DateTime GetStartDate();
+        int GetDaysOfUse();
+
+        void RemoveStartDate();
     }
 
     /// <summary>
@@ -27,42 +27,68 @@ namespace Covid19Radar.Services
     {
         private readonly ILoggerService loggerService;
         private readonly IHttpDataService httpDataService;
-        private UserDataModel current;
-        public event EventHandler<UserDataModel> UserDataChanged;
+        private readonly IPreferencesService preferencesService;
+        private readonly ITermsUpdateService termsUpdateService;
+        private readonly IExposureNotificationService exposureNotificationService;
 
-        public UserDataService(IHttpDataService httpDataService, ILoggerService loggerService)
+        public UserDataService(IHttpDataService httpDataService, ILoggerService loggerService, IPreferencesService preferencesService, ITermsUpdateService termsUpdateService, IExposureNotificationService exposureNotificationService)
         {
             this.httpDataService = httpDataService;
             this.loggerService = loggerService;
-            current = Get();
+            this.preferencesService = preferencesService;
+            this.termsUpdateService = termsUpdateService;
+            this.exposureNotificationService = exposureNotificationService;
         }
 
-        public bool IsExistUserData { get => current != null; }
+        private readonly SemaphoreSlim _semaphoreForMigrage = new SemaphoreSlim(1, 1);
 
-        public async Task<UserDataModel> RegisterUserAsync()
+        public async Task Migrate()
         {
+            await _semaphoreForMigrage.WaitAsync();
             loggerService.StartMethod();
-            var userData = await httpDataService.PostRegisterUserAsync();
-            if (userData == null)
+            try
             {
-                loggerService.Info("userData is null");
-                loggerService.EndMethod();
-                return null;
-            }
-            loggerService.Info("userData is not null");
-            userData.StartDateTime = DateTime.UtcNow;
-            userData.IsExposureNotificationEnabled = false;
-            userData.IsNotificationEnabled = false;
-            userData.IsOptined = false;
-            userData.IsPolicyAccepted = false;
-            userData.IsPositived = false;
-            await SetAsync(userData);
+                var userData = GetFromApplicationProperties();
+                if (userData == null)
+                {
+                    return;
+                }
 
-            loggerService.EndMethod();
-            return userData;
+                if (userData.StartDateTime != null && !userData.StartDateTime.Equals(new DateTime()))
+                {
+                    preferencesService.SetValue(PreferenceKey.StartDateTime, userData.StartDateTime);
+                    userData.StartDateTime = new DateTime();
+                    loggerService.Info("Migrated StartDateTime");
+                }
+
+                if (userData.IsOptined)
+                {
+                    await termsUpdateService.Migrate(TermsType.TermsOfService, userData.IsOptined);
+                    userData.IsOptined = false;
+                }
+                if (userData.IsPolicyAccepted)
+                {
+                    await termsUpdateService.Migrate(TermsType.PrivacyPolicy, userData.IsPolicyAccepted);
+                    userData.IsPolicyAccepted = false;
+                }
+
+                await exposureNotificationService.MigrateFromUserData(userData);
+
+                Application.Current.Properties.Remove("UserData");
+                await Application.Current.SavePropertiesAsync();
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed migrate", ex);
+            }
+            finally
+            {
+                _semaphoreForMigrage.Release();
+                loggerService.EndMethod();
+            }
         }
 
-        public UserDataModel Get()
+        private UserDataModel GetFromApplicationProperties()
         {
             loggerService.StartMethod();
 
@@ -78,38 +104,43 @@ namespace Covid19Radar.Services
             return null;
         }
 
-        public async Task SetAsync(UserDataModel userData)
+        public async Task<bool> RegisterUserAsync()
         {
             loggerService.StartMethod();
 
-            var newdata = Utils.SerializeToJson(userData);
-            var currentdata = Utils.SerializeToJson(current);
-            if (currentdata.Equals(newdata))
+            var registerResult = await httpDataService.PostRegisterUserAsync();
+            if (!registerResult)
             {
-                loggerService.Info("currentdata equals newdata");
+                loggerService.Info("Failed register");
                 loggerService.EndMethod();
-                return;
+                return false;
             }
-            loggerService.Info("currentdata don't equals newdata");
-            Application.Current.Properties["UserData"] = Utils.SerializeToJson(userData);
-            current = Get();
-            await Application.Current.SavePropertiesAsync();
+            loggerService.Info("Success register");
 
-            UserDataChanged?.Invoke(this, current);
+            preferencesService.SetValue(PreferenceKey.StartDateTime, DateTime.UtcNow);
 
             loggerService.EndMethod();
+            return true;
         }
 
-        public async Task ResetAllDataAsync()
+        public DateTime GetStartDate()
+        {
+            return preferencesService.GetValue(PreferenceKey.StartDateTime, DateTime.UtcNow);
+        }
+
+        public int GetDaysOfUse()
+        {
+            TimeSpan timeSpan = DateTime.UtcNow - GetStartDate();
+            return timeSpan.Days;
+        }
+
+        public void RemoveStartDate()
         {
             loggerService.StartMethod();
 
-            Application.Current.Properties.Remove("UserData");
-            current = null;
-            await Application.Current.SavePropertiesAsync();
+            preferencesService.RemoveValue(PreferenceKey.StartDateTime);
 
             loggerService.EndMethod();
         }
     }
-
 }

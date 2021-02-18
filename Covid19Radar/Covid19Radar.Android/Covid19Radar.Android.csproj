@@ -193,6 +193,8 @@
     <Compile Include="Services\Logs\LogPathServiceAndroid.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteServiceAndroid.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
+    <Compile Include="Services\PreferencesService.cs" />
+    <Compile Include="Services\SecureStorageServiceAndroid.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />

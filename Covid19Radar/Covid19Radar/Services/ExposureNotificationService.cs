@@ -2,12 +2,9 @@
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
-using ImTools;
-using Prism.Navigation;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -16,33 +13,98 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
-    public class ExposureNotificationService
+    public interface IExposureNotificationService
     {
-        private readonly IHttpDataService httpDataService;
+        Task MigrateFromUserData(UserDataModel userData);
+
+        Configuration GetConfiguration();
+        void RemoveConfiguration();
+
+        long GetLastProcessTekTimestamp(string region);
+        void SetLastProcessTekTimestamp(string region, long created);
+        void RemoveLastProcessTekTimestamp();
+
+        Task FetchExposureKeyAsync();
+
+        List<UserExposureInfo> GetExposureInformationList();
+        int GetExposureCount();
+        void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList);
+        void RemoveExposureInformation();
+
+        Task<string> UpdateStatusMessageAsync();
+        Task<bool> StartExposureNotification();
+        Task<bool> StopExposureNotification();
+
+        string PositiveDiagnosis { get; set; }
+        DateTime? DiagnosisDate { get; set; }
+        IEnumerable<TemporaryExposureKey> FliterTemporaryExposureKeys(IEnumerable<TemporaryExposureKey> temporaryExposureKeys);
+    }
+
+    public class ExposureNotificationService : IExposureNotificationService
+    {
         private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
-        private readonly INavigationService navigationService;
         private readonly IHttpClientService httpClientService;
+        private readonly ISecureStorageService secureStorageService;
+        private readonly IPreferencesService preferencesService;
+        private readonly IApplicationPropertyService applicationPropertyService;
 
         public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
-        private UserDataModel userData;
-
-        public ExposureNotificationService(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IHttpDataService httpDataService, IHttpClientService httpClientService)
+        public ExposureNotificationService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IPreferencesService preferencesService, IApplicationPropertyService applicationPropertyService)
         {
-            this.httpDataService = httpDataService;
-            this.navigationService = navigationService;
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
             this.httpClientService = httpClientService;
+            this.secureStorageService = secureStorageService;
+            this.preferencesService = preferencesService;
+            this.applicationPropertyService = applicationPropertyService;
 
-            _ = this.GetExposureNotificationConfig();
-            userData = userDataService.Get();
-            userDataService.UserDataChanged += OnUserDataChanged;
+            _ = GetExposureNotificationConfig();
         }
 
-        public async Task GetExposureNotificationConfig()
+        public async Task MigrateFromUserData(UserDataModel userData)
+        {
+            loggerService.StartMethod();
+
+            const string ConfigurationPropertyKey = "ExposureNotificationConfigration";
+
+            if (userData.LastProcessTekTimestamp != null && userData.LastProcessTekTimestamp.Count > 0)
+            {
+                var stringValue = Utils.SerializeToJson(userData.LastProcessTekTimestamp);
+                preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, stringValue);
+                userData.LastProcessTekTimestamp.Clear();
+                loggerService.Info("Migrated LastProcessTekTimestamp");
+            }
+
+            if (applicationPropertyService.ContainsKey(ConfigurationPropertyKey))
+            {
+                var configuration = applicationPropertyService.GetProperties(ConfigurationPropertyKey) as string;
+                if (!string.IsNullOrEmpty(configuration))
+                {
+                    preferencesService.SetValue(PreferenceKey.ExposureNotificationConfiguration, configuration);
+                }
+                await applicationPropertyService.Remove(ConfigurationPropertyKey);
+                loggerService.Info("Migrated ExposureNotificationConfiguration");
+            }
+
+            if (userData.ExposureInformation != null)
+            {
+                secureStorageService.SetValue(PreferenceKey.ExposureInformation, JsonConvert.SerializeObject(userData.ExposureInformation));
+                userData.ExposureInformation = null;
+                loggerService.Info("Migrated ExposureInformation");
+            }
+
+            if (userData.ExposureSummary != null)
+            {
+                secureStorageService.SetValue(PreferenceKey.ExposureSummary, JsonConvert.SerializeObject(userData.ExposureSummary));
+                userData.ExposureSummary = null;
+                loggerService.Info("Migrated ExposureSummary");
+            }
+
+            loggerService.EndMethod();
+        }
+
+        private async Task GetExposureNotificationConfig()
         {
             loggerService.StartMethod();
 
@@ -54,8 +116,8 @@ namespace Covid19Radar.Services
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 loggerService.Info("Success to download configuration");
-                Application.Current.Properties["ExposureNotificationConfigration"] = await result.Content.ReadAsStringAsync();
-                await Application.Current.SavePropertiesAsync();
+                var content = await result.Content.ReadAsStringAsync();
+                preferencesService.SetValue(PreferenceKey.ExposureNotificationConfiguration, content);
             }
             else
             {
@@ -65,73 +127,144 @@ namespace Covid19Radar.Services
             loggerService.EndMethod();
         }
 
-
-        private async void OnUserDataChanged(object sender, UserDataModel userData)
+        public Configuration GetConfiguration()
         {
-            Debug.WriteLine("User Data has Changed!!!");
-            this.userData = userDataService.Get();
-            Debug.WriteLine(Utils.SerializeToJson(userData));
-            await UpdateStatusMessageAsync();
+            loggerService.StartMethod();
+            Configuration result = null;
+            var configurationJson = preferencesService.GetValue<string>(PreferenceKey.ExposureNotificationConfiguration, null);
+            if (!string.IsNullOrEmpty(configurationJson))
+            {
+                loggerService.Info($"configuration: {configurationJson}");
+                result = JsonConvert.DeserializeObject<Configuration>(configurationJson);
+            }
+            loggerService.EndMethod();
+            return result;
+        }
+
+        public void RemoveConfiguration()
+        {
+            loggerService.StartMethod();
+            preferencesService.RemoveValue(PreferenceKey.ExposureNotificationConfiguration);
+            loggerService.EndMethod();
         }
 
         public async Task FetchExposureKeyAsync()
         {
             loggerService.StartMethod();
-
-            await Xamarin.ExposureNotifications.ExposureNotification.UpdateKeysFromServer();
-
+            await ExposureNotification.UpdateKeysFromServer();
             loggerService.EndMethod();
+        }
+
+        public long GetLastProcessTekTimestamp(string region)
+        {
+            loggerService.StartMethod();
+            var result = 0L;
+            var jsonString = preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+            if (!string.IsNullOrEmpty(jsonString))
+            {
+                var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
+                if (dict.ContainsKey(region))
+                {
+                    result = dict[region];
+                }
+            }
+            loggerService.EndMethod();
+            return result;
+        }
+
+        public void SetLastProcessTekTimestamp(string region, long created)
+        {
+            loggerService.StartMethod();
+            var jsonString = preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+            Dictionary<string, long> newDict;
+            if (!string.IsNullOrEmpty(jsonString))
+            {
+                newDict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
+            }
+            else
+            {
+                newDict = new Dictionary<string, long>();
+            }
+            newDict[region] = created;
+            preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
+            loggerService.EndMethod();
+        }
+
+        public void RemoveLastProcessTekTimestamp()
+        {
+            loggerService.StartMethod();
+            preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
+            loggerService.EndMethod();
+        }
+
+        public List<UserExposureInfo> GetExposureInformationList()
+        {
+            loggerService.StartMethod();
+            List<UserExposureInfo> result = null;
+            var exposureInformationJson = secureStorageService.GetValue<string>(PreferenceKey.ExposureInformation);
+            if (!string.IsNullOrEmpty(exposureInformationJson))
+            {
+                result = JsonConvert.DeserializeObject<List<UserExposureInfo>>(exposureInformationJson);
+            }
+            loggerService.EndMethod();
+            return result;
         }
 
         public int GetExposureCount()
         {
             loggerService.StartMethod();
+            int result = 0;
+            var exposureInformationList = GetExposureInformationList();
+            if (exposureInformationList != null)
+            {
+                result = exposureInformationList.Count;
+            }
             loggerService.EndMethod();
-            return userData.ExposureInformation.Count();
+            return result;
+        }
+
+        public void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList)
+        {
+            loggerService.StartMethod();
+            var summaryJson = JsonConvert.SerializeObject(summary);
+            var informationListJson = JsonConvert.SerializeObject(informationList);
+            secureStorageService.SetValue(PreferenceKey.ExposureSummary, summaryJson);
+            secureStorageService.SetValue(PreferenceKey.ExposureInformation, informationListJson);
+            loggerService.EndMethod();
+        }
+
+        public void RemoveExposureInformation()
+        {
+            loggerService.StartMethod();
+            secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
+            secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
+            loggerService.EndMethod();
         }
 
         public async Task<string> UpdateStatusMessageAsync()
         {
             loggerService.StartMethod();
-
-            this.ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
-
+            ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
             loggerService.EndMethod();
             return await GetStatusMessageAsync();
         }
-
-        private async Task DisabledAsync()
-        {
-            userData.IsExposureNotificationEnabled = false;
-            await userDataService.SetAsync(userData);
-        }
-
-        private async Task EnabledAsync()
-        {
-            userData.IsExposureNotificationEnabled = true;
-            await userDataService.SetAsync(userData);
-        }
-
 
         public async Task<bool> StartExposureNotification()
         {
             loggerService.StartMethod();
             try
             {
-                var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+                var enabled = await ExposureNotification.IsEnabledAsync();
                 if (!enabled)
                 {
-                    await Xamarin.ExposureNotifications.ExposureNotification.StartAsync();
+                    await ExposureNotification.StartAsync();
                 }
-                await EnabledAsync();
 
                 loggerService.EndMethod();
                 return true;
             }
             catch (Exception ex)
             {
-                await DisabledAsync();
-
                 loggerService.Exception("Error enabling notifications.", ex);
                 loggerService.EndMethod();
                 return false;
@@ -147,10 +280,10 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
             try
             {
-                var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+                var enabled = await ExposureNotification.IsEnabledAsync();
                 if (enabled)
                 {
-                    await Xamarin.ExposureNotifications.ExposureNotification.StopAsync();
+                    await ExposureNotification.StopAsync();
                 }
 
                 loggerService.EndMethod();
@@ -161,10 +294,6 @@ namespace Covid19Radar.Services
                 loggerService.Exception("Error disabling notifications.", ex);
                 loggerService.EndMethod();
                 return false;
-            }
-            finally
-            {
-                await DisabledAsync();
             }
         }
 
@@ -199,14 +328,12 @@ namespace Covid19Radar.Services
                     break;
             }
 
-            if (!userData.IsOptined)
-            {
-                message.Append(Resources.AppResources.ExposureNotificationStatusMessageIsOptined);
-            }
-
-            this.CurrentStatusMessage = message;
+            CurrentStatusMessage = message;
             return message;
         }
+
+        /* Processing number issued when positive */
+        public string PositiveDiagnosis { get; set; }
 
         /* Date of diagnosis or onset (Local time) */
         public DateTime? DiagnosisDate { get; set; }

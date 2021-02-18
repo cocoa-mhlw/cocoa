@@ -9,6 +9,7 @@ namespace Covid19Radar.Services
         bool ContainsKey(string key);
         object GetProperties(string key);
         Task SavePropertiesAsync(string key, object property);
+        Task Remove(string key);
     }
 
     public class ApplicationPropertyService : IApplicationPropertyService
@@ -26,6 +27,12 @@ namespace Covid19Radar.Services
         public async Task SavePropertiesAsync(string key, object property)
         {
             Application.Current.Properties[key] = property;
+            await Application.Current.SavePropertiesAsync();
+        }
+
+        public async Task Remove(string key)
+        {
+            Application.Current.Properties.Remove(key);
             await Application.Current.SavePropertiesAsync();
         }
     }

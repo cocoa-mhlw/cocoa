@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Covid19Radar.Model
 {
-	public class UserExposureSummary
-	{
+    public class UserExposureSummary
+    {
+        public UserExposureSummary(int daysSinceLastExposure, ulong matchedKeyCount, int highestRiskScore, TimeSpan[] attenuationDurations, int summationRiskScore)
+        {
+            DaysSinceLastExposure = daysSinceLastExposure;
+            MatchedKeyCount = matchedKeyCount;
+            HighestRiskScore = highestRiskScore;
+            AttenuationDurations = attenuationDurations;
+            SummationRiskScore = summationRiskScore;
+        }
 
-		public UserExposureSummary(int daysSinceLastExposure, ulong matchedKeyCount, int highestRiskScore, TimeSpan[] attenuationDurations, int summationRiskScore)
-		{
-			DaysSinceLastExposure = daysSinceLastExposure;
-			MatchedKeyCount = matchedKeyCount;
-			HighestRiskScore = highestRiskScore;
-			AttenuationDurations = attenuationDurations;
-			SummationRiskScore = summationRiskScore;
-		}
+        public int DaysSinceLastExposure { get; set; }
 
-		public int DaysSinceLastExposure { get; }
+        public ulong MatchedKeyCount { get; set; }
 
-		public ulong MatchedKeyCount { get; }
+        public int HighestRiskScore { get; set; }
 
-		public int HighestRiskScore { get; }
+        public TimeSpan[] AttenuationDurations { get; set; }
 
-		public TimeSpan[] AttenuationDurations { get; }
-
-		public int SummationRiskScore { get; }
-	}
-
+        public int SummationRiskScore { get; set; }
+    }
 }

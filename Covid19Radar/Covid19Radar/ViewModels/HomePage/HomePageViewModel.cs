@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Net.Http;
-using Acr.UserDialogs;
 using Covid19Radar.Common;
-using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
-using Newtonsoft.Json.Linq;
 using Prism.Navigation;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -19,8 +14,8 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService loggerService;
         private readonly IUserDataService userDataService;
-        private readonly ExposureNotificationService exposureNotificationService;
-        private UserDataModel userData;
+        private readonly IExposureNotificationService exposureNotificationService;
+
         private string _startDate;
         private string _pastDate;
 
@@ -35,23 +30,24 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _pastDate, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
+        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IExposureNotificationService exposureNotificationService) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
-
-            userData = this.userDataService.Get();
-            StartDate = userData.GetLocalDateString();
-
-            TimeSpan timeSpan = DateTime.UtcNow - userData.StartDateTime;
-            PastDate = timeSpan.Days.ToString();
         }
 
         public override async void Initialize(INavigationParameters parameters)
         {
             loggerService.StartMethod();
+
+            var startDate = userDataService.GetStartDate();
+            StartDate = startDate.ToLocalTime().ToString("D");
+
+            var daysOfUse = userDataService.GetDaysOfUse();
+            PastDate = daysOfUse.ToString();
+
 
             // Check Version
             AppUtils.CheckVersion(loggerService);

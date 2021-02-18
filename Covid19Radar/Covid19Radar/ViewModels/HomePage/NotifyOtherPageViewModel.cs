@@ -1,5 +1,4 @@
-﻿using Covid19Radar.Model;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -17,7 +16,7 @@ namespace Covid19Radar.ViewModels
     public class NotifyOtherPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly ExposureNotificationService exposureNotificationService;
+        private readonly IExposureNotificationService exposureNotificationService;
 
         private string _diagnosisUid;
         public string DiagnosisUid
@@ -63,16 +62,11 @@ namespace Covid19Radar.ViewModels
         }
         private int errorCount { get; set; }
 
-        private readonly IUserDataService userDataService;
-        private UserDataModel userData;
-
-        public NotifyOtherPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
+        public NotifyOtherPageViewModel(INavigationService navigationService, ILoggerService loggerService, IExposureNotificationService exposureNotificationService) : base(navigationService)
         {
-            Title = Resources.AppResources.TitileUserStatusSettings;
+            Title = AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
-            userData = this.userDataService.Get();
             errorCount = 0;
             DiagnosisUid = "";
             DiagnosisDate = DateTime.Today;
@@ -88,7 +82,7 @@ namespace Covid19Radar.ViewModels
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag2Message,
                     "",
-                    Resources.AppResources.ButtonOk
+                    AppResources.ButtonOk
                     );
 
                 loggerService.Info($"Canceled by user.");
@@ -96,7 +90,7 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
-            UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
+            UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
 
             // Check helthcare authority positive api check here!!
             if (errorCount >= AppConstants.MaxErrorCount)
@@ -104,7 +98,7 @@ namespace Covid19Radar.ViewModels
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiagAppClose,
                     AppResources.NotifyOtherPageDiagErrorTitle,
-                    Resources.AppResources.ButtonOk
+                    AppResources.ButtonOk
                 );
                 UserDialogs.Instance.HideLoading();
                 Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
@@ -122,7 +116,7 @@ namespace Covid19Radar.ViewModels
                 var max = AppConstants.MaxErrorCount;
                 await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
                     AppResources.NotifyOtherPageDiag3Title + $"{current}/{max}",
-                    Resources.AppResources.ButtonOk
+                    AppResources.ButtonOk
                     );
                 await Task.Delay(errorCount * 5000);
             }
@@ -134,10 +128,9 @@ namespace Covid19Radar.ViewModels
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag4Message,
                     AppResources.NotifyOtherPageDiagErrorTitle,
-                    Resources.AppResources.ButtonOk
+                    AppResources.ButtonOk
                 );
                 errorCount++;
-                await userDataService.SetAsync(userData);
                 UserDialogs.Instance.HideLoading();
 
                 loggerService.Error($"No diagnostic number entered.");
@@ -151,10 +144,9 @@ namespace Covid19Radar.ViewModels
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag5Message,
                     AppResources.NotifyOtherPageDiagErrorTitle,
-                    Resources.AppResources.ButtonOk
+                    AppResources.ButtonOk
                 );
                 errorCount++;
-                await userDataService.SetAsync(userData);
                 UserDialogs.Instance.HideLoading();
 
                 loggerService.Error($"Incorrect diagnostic number format.");
@@ -173,7 +165,7 @@ namespace Covid19Radar.ViewModels
                     await UserDialogs.Instance.AlertAsync(
                        AppResources.NotifyOtherPageDiag6Message,
                        AppResources.NotifyOtherPageDiag6Title,
-                       Resources.AppResources.ButtonOk
+                       AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
                     await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
@@ -183,20 +175,17 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                // Set the submitted UID
-                userData.AddDiagnosis(_diagnosisUid, new DateTimeOffset(DateTime.Now));
-                await userDataService.SetAsync(userData);
-
                 loggerService.Info($"Submit the processing number.");
 
                 // Submit our diagnosis
+                exposureNotificationService.PositiveDiagnosis = _diagnosisUid;
                 exposureNotificationService.DiagnosisDate = DiagnosisDate;
                 await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(
-                    Resources.AppResources.NotifyOtherPageDialogSubmittedText,
-                    Resources.AppResources.ButtonComplete,
-                    Resources.AppResources.ButtonOk
+                    AppResources.NotifyOtherPageDialogSubmittedText,
+                    AppResources.ButtonComplete,
+                    AppResources.ButtonOk
                 );
                 await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 
@@ -207,9 +196,9 @@ namespace Covid19Radar.ViewModels
             {
                 errorCount++;
                 UserDialogs.Instance.Alert(
-                    Resources.AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFound,
-                    Resources.AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle,
-                    Resources.AppResources.ButtonOk
+                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFound,
+                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle,
+                    AppResources.ButtonOk
                 );
                 loggerService.Exception("Failed to submit UID invalid data.", ex);
                 loggerService.EndMethod();
@@ -218,9 +207,9 @@ namespace Covid19Radar.ViewModels
             {
                 errorCount++;
                 UserDialogs.Instance.Alert(
-                    Resources.AppResources.NotifyOtherPageDialogExceptionText,
-                    Resources.AppResources.ButtonFailed,
-                    Resources.AppResources.ButtonOk
+                    AppResources.NotifyOtherPageDialogExceptionText,
+                    AppResources.ButtonFailed,
+                    AppResources.ButtonOk
                 );
                 loggerService.Exception("Failed to submit UID.", ex);
                 loggerService.EndMethod();

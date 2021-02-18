@@ -278,6 +278,8 @@
     <Compile Include="Services\Logs\LogPathServiceIos.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteServiceIos.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
+    <Compile Include="Services\PreferencesService.cs" />
+    <Compile Include="Services\SecureStorageServiceIos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

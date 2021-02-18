@@ -1,12 +1,7 @@
-﻿using System;
-using System.Threading;
-using Acr.UserDialogs;
-using Covid19Radar.Model;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
-using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -14,23 +9,19 @@ namespace Covid19Radar.ViewModels
     public class TutorialPage4ViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
-        private readonly ExposureNotificationService exposureNotificationService;
-        private UserDataModel userData;
+        private readonly IExposureNotificationService exposureNotificationService;
 
-        public TutorialPage4ViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
+        public TutorialPage4ViewModel(INavigationService navigationService, ILoggerService loggerService, IExposureNotificationService exposureNotificationService) : base(navigationService)
         {
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
-            userData = this.userDataService.Get();
         }
 
         public Command OnClickEnable => new Command(async () =>
         {
             loggerService.StartMethod();
 
-            await ExposureNotificationService.StartExposureNotification();
+            await exposureNotificationService.StartExposureNotification();
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
 
             loggerService.EndMethod();
@@ -38,11 +29,7 @@ namespace Covid19Radar.ViewModels
         public Command OnClickDisable => new Command(async () =>
         {
             loggerService.StartMethod();
-
-            userData.IsExposureNotificationEnabled = false;
-            await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
-
             loggerService.EndMethod();
         });
     }

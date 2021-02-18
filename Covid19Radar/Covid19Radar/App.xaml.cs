@@ -54,33 +54,7 @@ namespace Covid19Radar
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
-            INavigationResult result;
-            // Check user data and skip tutorial
-            IUserDataService userDataService = Container.Resolve<IUserDataService>();
-
-            if (userDataService.IsExistUserData)
-            {
-                LoggerService.Info("User data exists");
-                var userData = userDataService.Get();
-                LoggerService.Info($"userData.IsOptined: {userData.IsOptined}");
-                LoggerService.Info($"userData.IsPolicyAccepted: {userData.IsPolicyAccepted}");
-                if (userData.IsOptined && userData.IsPolicyAccepted)
-                {
-                    LoggerService.Info($"Transition to SplashPage");
-                    result = await NavigationService.NavigateAsync("/" + nameof(SplashPage));
-                }
-                else
-                {
-                    LoggerService.Info($"Transition to TutorialPage1");
-                    result = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
-                }
-            }
-            else
-            {
-                LoggerService.Info("No user data exists");
-                LoggerService.Info($"Transition to TutorialPage1");
-                result = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
-            }
+            INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage));
 
             if (!result.Success)
             {
@@ -115,7 +89,6 @@ namespace Covid19Radar
             // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
-            containerRegistry.RegisterForNavigation<DebugPage>();
 
             // tutorial
             containerRegistry.RegisterForNavigation<TutorialPage1>();
@@ -136,7 +109,6 @@ namespace Covid19Radar
 
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
             containerRegistry.RegisterForNavigation<InqueryPage>();
-            containerRegistry.RegisterForNavigation<ChatbotPage>();
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
             containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
@@ -156,7 +128,7 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<ILogUploadService, LogUploadService>();
             containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
             containerRegistry.RegisterSingleton<IUserDataService, UserDataService>();
-            containerRegistry.RegisterSingleton<ExposureNotificationService>();
+            containerRegistry.RegisterSingleton<IExposureNotificationService, ExposureNotificationService>();
             containerRegistry.RegisterSingleton<ITermsUpdateService, TermsUpdateService>();
             containerRegistry.RegisterSingleton<IApplicationPropertyService, ApplicationPropertyService>();
             containerRegistry.RegisterSingleton<IHttpClientService, HttpClientService>();
@@ -167,6 +139,7 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<IHttpDataService, HttpDataService>();
             containerRegistry.RegisterSingleton<IStorageService, StorageService>();
 #endif
+            containerRegistry.RegisterSingleton<ISecureStorageService, SecureStorageService>();
         }
 
         protected override void OnStart()

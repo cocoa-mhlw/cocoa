@@ -6,7 +6,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
@@ -18,46 +17,38 @@ namespace Covid19Radar.Services
     public class HttpDataService : IHttpDataService
     {
         private readonly ILoggerService loggerService;
+        private readonly ISecureStorageService secureStorageService;
+        private readonly IApplicationPropertyService applicationPropertyService;
+
         private readonly HttpClient apiClient; // API key based client.
-        private readonly HttpClient httpClient; // Secret based client.
+        private readonly HttpClient httpClient;
         private readonly HttpClient downloadClient;
-        private string secret;
-        public HttpDataService(ILoggerService loggerService)
+
+        public HttpDataService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IApplicationPropertyService applicationPropertyService)
         {
             this.loggerService = loggerService;
+            this.secureStorageService = secureStorageService;
+            this.applicationPropertyService = applicationPropertyService;
 
             // Create API key based client.
-            apiClient = new HttpClient();
+            apiClient = httpClientService.Create();
             apiClient.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
             apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             apiClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
             apiClient.DefaultRequestHeaders.Add("x-api-key", AppSettings.Instance.ApiKey);
 
-            // Create Secret based client.
-            httpClient = new HttpClient();
+            // Create client.
+            httpClient = httpClientService.Create();
             httpClient.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
-            SetSecret();
 
             // Create download client.
-            downloadClient = new HttpClient();
+            downloadClient = httpClientService.Create();
         }
-
-        private void SetSecret()
-        {
-            if (Application.Current.Properties.ContainsKey("Secret"))
-            {
-                secret = Application.Current.Properties["Secret"] as string;
-            }
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", secret);
-        }
-
-        //public bool HasSecret() => secret != null;
-
 
         // POST /api/Register - Register User
-        public async Task<UserDataModel> PostRegisterUserAsync()
+        public async Task<bool> PostRegisterUserAsync()
         {
             loggerService.StartMethod();
             try
@@ -67,34 +58,26 @@ namespace Covid19Radar.Services
                 var result = await PostAsync(url, content);
                 if (result != null)
                 {
-                    var registerResult = Utils.DeserializeFromJson<RegisterResultModel>(result);
-
-                    UserDataModel userData = new UserDataModel();
-                    userData.Secret = registerResult.Secret;
-                    userData.UserUuid = registerResult.UserUuid;
-                    userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
-                    userData.IsOptined = true;
-                    Application.Current.Properties["Secret"] = registerResult.Secret;
-                    await Application.Current.SavePropertiesAsync();
-                    SetSecret();
-
                     loggerService.EndMethod();
-                    return userData;
+                    return true;
                 }
             }
-            catch (HttpRequestException ex) {
+            catch (HttpRequestException ex)
+            {
                 loggerService.Exception("Failed to register user.", ex);
             }
 
             loggerService.EndMethod();
-            return null;
+            return false;
         }
 
         public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
-            var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/diagnosis";
+            loggerService.StartMethod();
+            var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/v2/diagnosis";
             var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
             HttpStatusCode status = await PutAsync(url, content);
+            loggerService.EndMethod();
             return status;
         }
 
@@ -244,8 +227,7 @@ namespace Covid19Radar.Services
         private async Task<string> PostAsync(string url, HttpContent body)
         {
             HttpResponseMessage result = await httpClient.PostAsync(url, body);
-            await result.Content.ReadAsStringAsync();
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            if (result.StatusCode == HttpStatusCode.OK)
             {
                 return await result.Content.ReadAsStringAsync();
             }

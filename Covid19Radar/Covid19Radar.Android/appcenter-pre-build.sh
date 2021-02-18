@@ -26,3 +26,9 @@ sed -i '' "s/LOG_STORAGE_ACCOUNT_NAME/$LOG_STORAGE_ACCOUNT_NAME/g" $APP_CONSTANT
 cat $APP_CONSTANT_FILE
 
 echo "Updated id!"
+
+# To avoid the following
+# https://github.com/xamarin/xamarin-android/issues/5499
+${ANDROID_HOME}/tools/bin/sdkmanager --uninstall "ndk-bundle"
+${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;21.3.6528147"
+ln -s ${ANDROID_HOME}/ndk/21.3.6528147 ${ANDROID_HOME}/ndk-bundle

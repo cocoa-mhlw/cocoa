@@ -5,17 +5,11 @@ using Prism;
 using Prism.Ioc;
 using Android.Runtime;
 using Android.Content;
-using Covid19Radar.Model;
-using System.Collections.Generic;
-using System.Linq;
-using System;
-using Covid19Radar.Common;
 using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services.Logs;
-using System.Threading.Tasks;
-using Xamarin.Forms;
 using Acr.UserDialogs;
-using Covid19Radar.Renderers;
+using Covid19Radar.Services;
+using Covid19Radar.Droid.Services;
 //using Plugin.LocalNotification;
 
 namespace Covid19Radar.Droid
@@ -62,6 +56,8 @@ namespace Covid19Radar.Droid
             {
                 // Services
                 containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
+                containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceAndroid>();
+                containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
             }
         }
 

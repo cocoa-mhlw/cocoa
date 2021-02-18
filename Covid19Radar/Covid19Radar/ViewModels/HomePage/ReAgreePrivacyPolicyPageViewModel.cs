@@ -45,7 +45,7 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            await _termsUpdateService.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, UpdateDateTime);
+            _termsUpdateService.SaveLastUpdateDate(TermsType.PrivacyPolicy, UpdateDateTime);
             _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 
             loggerService.EndMethod();

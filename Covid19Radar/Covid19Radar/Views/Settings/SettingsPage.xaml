@@ -2,8 +2,7 @@
 <ContentPage
     x:Class="Covid19Radar.Views.SettingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:Behavior="clr-namespace:Covid19Radar.Behaviors"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
     xmlns:System="clr-namespace:System;assembly=netstandard"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -19,87 +18,6 @@
             BackgroundColor="{StaticResource Background}"
             Spacing="0">
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <!--<Frame Padding="15" HasShadow="False">
-                <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="0.5*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span
-                                    FontFamily="NotoSansRegularFontFamily"
-                                    FontSize="Small"
-                                    Text="{x:Static resources:AppResources.SettingsPageLabel1}"
-                                    TextColor="{StaticResource PrimaryText}" />
-                                <Span Text="{x:Static System:Environment.NewLine}" />
-                                <Span
-                                    FontFamily="NotoSansRegularFontFamily"
-                                    FontSize="Caption"
-                                    Text="{x:Static resources:AppResources.SettingsPageDescription1}"
-                                    TextColor="{StaticResource SecondaryText}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Switch
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        IsToggled="{Binding UserData.IsExposureNotificationEnabled, Mode=TwoWay}">
-                        <Switch.Behaviors>
-                            <Behavior:SwitchBehavior Command="{Binding OnChangeExposureNotificationState}" />
-                        </Switch.Behaviors>
-                    </Switch>
-                </Grid>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="15" HasShadow="False">
-                <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="0.5*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        VerticalTextAlignment="Center">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span
-                                    FontFamily="NotoSansRegularFontFamily"
-                                    FontSize="Small"
-                                    Text="{x:Static resources:AppResources.SettingsPageLabel2}"
-                                    TextColor="{StaticResource PrimaryText}" />
-                                <Span Text="{x:Static System:Environment.NewLine}" />
-                                <Span
-                                    FontFamily="NotoSansRegularFontFamily"
-                                    FontSize="Caption"
-                                    Text="{x:Static resources:AppResources.SettingsPageDescription2}"
-                                    TextColor="{StaticResource SecondaryText}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Switch
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        IsToggled="{Binding UserData.IsNotificationEnabled, Mode=TwoWay}">
-                        <Switch.Behaviors>
-                            <Behavior:SwitchBehavior Command="{Binding OnChangeNotificationState}" />
-                        </Switch.Behaviors>
-
-                    </Switch>
-                </Grid>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />-->
             <Frame Padding="15" HasShadow="False">
                 <Grid HorizontalOptions="FillAndExpand" RowSpacing="10">
                     <Grid.ColumnDefinitions>

@@ -1,17 +1,9 @@
-﻿using Covid19Radar.Common;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Xamarin.ExposureNotifications;
+﻿using Newtonsoft.Json;
 
 namespace Covid19Radar.Model
 {
     public class DiagnosisSubmissionParameter
     {
-        [JsonProperty("userUuid")]
-        public string UserUuid { get; set; }
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
         [JsonProperty("regions")]
@@ -37,22 +29,6 @@ namespace Covid19Radar.Model
             public uint RollingStartNumber { get; set; }
             [JsonProperty("rollingPeriod")]
             public uint RollingPeriod { get; set; }
-            [JsonProperty("transmissionRisk")]
-            public int TransmissionRisk { get; set; }
-
-            /// <summary>
-            /// Validation
-            /// </summary>
-            /// <returns>true if valid</returns>
-            /*
-            public bool IsValid()
-            {
-                if (string.IsNullOrWhiteSpace(KeyData)) return false;
-                if (RollingPeriod != 0 && RollingPeriod != AppConstants.ActiveRollingPeriod) return false;
-                if (RollingStartNumber != 0 && RollingStartNumber < (DateTimeOffset.UtcNow.AddDays(AppConstants.OutOfDateDays).ToUnixTimeSeconds() / 600)) return false;
-                return true;
-            }
-            */
         }
     }
 }

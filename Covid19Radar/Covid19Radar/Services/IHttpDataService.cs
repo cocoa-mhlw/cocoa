@@ -11,7 +11,7 @@ namespace Covid19Radar.Services
 {
     public interface IHttpDataService
     {
-        Task<UserDataModel> PostRegisterUserAsync();
+        Task<bool> PostRegisterUserAsync();
 
         Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request);
 

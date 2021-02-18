@@ -16,23 +16,58 @@ namespace Covid19Radar.Services
 
     public interface ITermsUpdateService
     {
+        Task Migrate(TermsType termsType, bool isAgree);
         Task<TermsUpdateInfoModel> GetTermsUpdateInfo();
-        bool IsReAgree(TermsType privacyType, TermsUpdateInfoModel privacyUpdateInfo);
-        Task SaveLastUpdateDateAsync(TermsType privacyType, DateTime updateDate);
+        bool IsReAgree(TermsType termsType, TermsUpdateInfoModel privacyUpdateInfo);
+        void SaveLastUpdateDate(TermsType termsType, DateTime updateDate);
+        bool IsAllAgreed();
+        void RemoveAllUpdateDate();
     }
 
     public class TermsUpdateService : ITermsUpdateService
     {
         private readonly ILoggerService loggerService;
         private readonly IApplicationPropertyService applicationPropertyService;
+        private readonly IPreferencesService preferencesService;
 
         private static readonly string TermsOfServiceLastUpdateDateKey = "TermsOfServiceLastUpdateDateTime";
         private static readonly string PrivacyPolicyLastUpdateDateKey = "PrivacyPolicyLastUpdateDateTime";
 
-        public TermsUpdateService(ILoggerService loggerService, IApplicationPropertyService applicationPropertyService)
+        public TermsUpdateService(ILoggerService loggerService, IApplicationPropertyService applicationPropertyService, IPreferencesService preferencesService)
         {
             this.loggerService = loggerService;
             this.applicationPropertyService = applicationPropertyService;
+            this.preferencesService = preferencesService;
+        }
+
+        public async Task Migrate(TermsType termsType, bool isAgree)
+        {
+            loggerService.StartMethod();
+
+            var applicationPropertyKey = termsType == TermsType.TermsOfService ? TermsOfServiceLastUpdateDateKey : PrivacyPolicyLastUpdateDateKey;
+            var preferenceKey = termsType == TermsType.TermsOfService ? PreferenceKey.TermsOfServiceLastUpdateDateTime : PreferenceKey.PrivacyPolicyLastUpdateDateTime;
+
+            if (preferencesService.ContainsKey(applicationPropertyKey))
+            {
+                return;
+            }
+
+            if (isAgree)
+            {
+                if (applicationPropertyService.ContainsKey(applicationPropertyKey))
+                {
+                    var lastUpdateDate = (DateTime)applicationPropertyService.GetProperties(applicationPropertyKey);
+                    preferencesService.SetValue(preferenceKey, lastUpdateDate);
+                }
+                else
+                {
+                    preferencesService.SetValue(preferenceKey, new DateTime());
+                }
+            }
+
+            await applicationPropertyService.Remove(applicationPropertyKey);
+
+            loggerService.EndMethod();
         }
 
         public async Task<TermsUpdateInfoModel> GetTermsUpdateInfo()
@@ -64,22 +99,22 @@ namespace Covid19Radar.Services
             }
         }
 
-        public bool IsReAgree(TermsType privacyType, TermsUpdateInfoModel termsUpdateInfo)
+        public bool IsReAgree(TermsType termsType, TermsUpdateInfoModel termsUpdateInfo)
         {
             loggerService.StartMethod();
 
             TermsUpdateInfoModel.Detail info = null;
             string key = null;
 
-            switch (privacyType)
+            switch (termsType)
             {
                 case TermsType.TermsOfService:
                     info = termsUpdateInfo.TermsOfService;
-                    key = TermsOfServiceLastUpdateDateKey;
+                    key = PreferenceKey.TermsOfServiceLastUpdateDateTime;
                     break;
                 case TermsType.PrivacyPolicy:
                     info = termsUpdateInfo.PrivacyPolicy;
-                    key = PrivacyPolicyLastUpdateDateKey;
+                    key = PreferenceKey.PrivacyPolicyLastUpdateDateTime;
                     break;
             }
 
@@ -90,24 +125,37 @@ namespace Covid19Radar.Services
             }
 
             var lastUpdateDate = new DateTime();
-            if (applicationPropertyService.ContainsKey(key))
+            if (preferencesService.ContainsKey(key))
             {
-                lastUpdateDate = (DateTime)applicationPropertyService.GetProperties(key);
+                lastUpdateDate = preferencesService.GetValue(key, lastUpdateDate);
             }
 
-            loggerService.Info($"privacyType: {privacyType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
+            loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
             loggerService.EndMethod();
 
             return lastUpdateDate < info.UpdateDateTime;
         }
 
-        public async Task SaveLastUpdateDateAsync(TermsType termsType, DateTime updateDate)
+        public void SaveLastUpdateDate(TermsType termsType, DateTime updateDate)
         {
             loggerService.StartMethod();
 
-            var key = termsType == TermsType.TermsOfService ? TermsOfServiceLastUpdateDateKey : PrivacyPolicyLastUpdateDateKey;
-            await applicationPropertyService.SavePropertiesAsync(key, updateDate);
+            var key = termsType == TermsType.TermsOfService ? PreferenceKey.TermsOfServiceLastUpdateDateTime : PreferenceKey.PrivacyPolicyLastUpdateDateTime;
+            preferencesService.SetValue(key, updateDate);
 
+            loggerService.EndMethod();
+        }
+
+        public bool IsAllAgreed()
+        {
+            return preferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTime) && preferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
+        }
+
+        public void RemoveAllUpdateDate()
+        {
+            loggerService.StartMethod();
+            preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTime);
+            preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
             loggerService.EndMethod();
         }
     }

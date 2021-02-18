@@ -67,141 +67,7 @@ namespace Covid19Radar.ViewModels
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });
-            /*
-#if DEBUG
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf70e",
-                PageName = nameof(LicenseAgreementPage),
-                Title = Resources.AppResources.TitleLicenseAgreement
-            });
 
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(ThankYouNotifyOtherPage),
-                Title = nameof(ThankYouNotifyOtherPage)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(NotContactPage),
-                Title = nameof(NotContactPage)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(ContactedNotifyPage),
-                Title = nameof(ContactedNotifyPage)
-            });
-
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(DebugPage),
-                Title = nameof(DebugPage)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf70e",
-                PageName = nameof(PrivacyPolicyPage),
-                Title = nameof(PrivacyPolicyPage)
-            });
-
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf70e",
-                PageName = nameof(PrivacyPolicyPage2),
-                Title = nameof(PrivacyPolicyPage2)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(TutorialPage1),
-                Title = nameof(TutorialPage1)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(TutorialPage2),
-                Title = nameof(TutorialPage2)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(TutorialPage3),
-                Title = nameof(TutorialPage3)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(TutorialPage4),
-                Title = nameof(TutorialPage4)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(TutorialPage5),
-                Title = nameof(TutorialPage5)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(TutorialPage6),
-                Title = nameof(TutorialPage6)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(HelpMenuPage),
-                Title = nameof(HelpMenuPage)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(HelpPage1),
-                Title = nameof(HelpPage1)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(HelpPage2),
-                Title = nameof(HelpPage2)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(HelpPage3),
-                Title = nameof(HelpPage3)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(HelpPage4),
-                Title = nameof(HelpPage4)
-            });
-
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(ChatbotPage),
-                Title = nameof(ChatbotPage)
-            });
-
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(NotifyOtherPage),
-                Title = nameof(NotifyOtherPage)
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(SubmitConsentPage),
-                Title = nameof(SubmitConsentPage)
-            });
-#endif
-            */
             NavigateCommand = new DelegateCommand(Navigate);
         }
 
@@ -217,7 +83,7 @@ namespace Covid19Radar.ViewModels
         private void ClearSelectedItem()
         {
             MenuItems.ForEach(item =>
-            {                
+            {
                 item.IconColor = "#019AE8";
                 item.TextColor = "#000";
             });
