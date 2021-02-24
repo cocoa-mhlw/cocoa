@@ -3,11 +3,11 @@
     x:Class="Covid19Radar.Views.NotifyOtherPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:common="clr-namespace:Covid19Radar.Common"
+    xmlns:controls="clr-namespace:Covid19Radar.Controls"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
-    xmlns:common="clr-namespace:Covid19Radar.Common"
-    xmlns:controls="clr-namespace:Covid19Radar.Controls"
     Title="{x:Static resources:AppResources.NotifyOtherPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -20,79 +20,85 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0">
-                <Label Margin="0, 0, 0, 10"
-                       Style="{StaticResource DefaultLabel}"
-                       Text="{x:Static resources:AppResources.NotifyOtherPageDescription1}" />
-                <Label Margin="0, 0, 0, 10"
-                       Style="{StaticResource DefaultLabelSmall}"
-                       Text="{x:Static resources:AppResources.NotifyOtherPageDescription2}" />
+                <Label
+                    Margin="0,0,0,10"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.NotifyOtherPageDescription1}" />
+                <Label
+                    Margin="0,0,0,10"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="{x:Static resources:AppResources.NotifyOtherPageDescription2}" />
                 <StackLayout Orientation="Horizontal" Spacing="30">
-                    <RadioButton TextColor="Black"
-                                 FontSize="Medium"
-                                 CheckedChanged="OnRadioButtonCheckedChanged"
-                                 Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
-                                 GroupName="CheckSymptoms" />
-                    <RadioButton TextColor="Black"
-                                 FontSize="Medium"
-                                 CheckedChanged="OnRadioButtonCheckedChanged"
-                                 Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
-                                 GroupName="CheckSymptoms" />
+                    <RadioButton
+                        CheckedChanged="OnRadioButtonCheckedChanged"
+                        Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
+                        FontSize="Medium"
+                        GroupName="CheckSymptoms"
+                        TextColor="Black" />
+                    <RadioButton
+                        CheckedChanged="OnRadioButtonCheckedChanged"
+                        Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
+                        FontSize="Medium"
+                        GroupName="CheckSymptoms"
+                        TextColor="Black" />
                 </StackLayout>
-                <StackLayout Margin="0, 15, 0, 0"
-                             IsVisible="{Binding IsVisibleWithSymptomsLayout}">
-                    <Label Style="{StaticResource DefaultLabel}"
-                           Text="{x:Static resources:AppResources.NotifyOtherPageWithSymptomsDescription1}" />
-                    <StackLayout Spacing="0"
-                                 Margin="0, 5, 0, 10">
-                        <Frame Padding="0"
-                               BackgroundColor="#CECECE"
-                               CornerRadius="7"
-                               HasShadow="False"
-                               HorizontalOptions="FillAndExpand">
-                            <Frame Margin="3"
-                                   Padding="0"
-                                   BackgroundColor="White"
-                                   CornerRadius="5"
-                                   HasShadow="False">
-                                <controls:CustomDatePicker MaximumDate="{x:Static x:DateTime.Now}"
-                                                           BackgroundColor="White"
-                                                           Format="d"
-                                                           Date="{Binding DiagnosisDate}"/>
+                <StackLayout Margin="0,15,0,0" IsVisible="{Binding IsVisibleWithSymptomsLayout}">
+                    <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageWithSymptomsDescription1}" />
+                    <StackLayout Margin="0,5,0,10" Spacing="0">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="#CECECE"
+                            CornerRadius="7"
+                            HasShadow="False"
+                            HorizontalOptions="FillAndExpand">
+                            <Frame
+                                Margin="3"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="5"
+                                HasShadow="False">
+                                <controls:CustomDatePicker
+                                    BackgroundColor="White"
+                                    Date="{Binding DiagnosisDate}"
+                                    Format="d"
+                                    MaximumDate="{x:Static x:DateTime.Now}" />
                             </Frame>
                         </Frame>
                     </StackLayout>
                 </StackLayout>
-                <StackLayout Margin="0, 15, 0, 0"
-                             IsVisible="{Binding IsVisibleNoSymptomsLayout}">
-                    <Label Style="{StaticResource DefaultLabel}"
-                           Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
-                    <StackLayout Spacing="0"
-                                 Margin="0, 5, 0, 10">
-                        <Frame Padding="0"
-                               BackgroundColor="#CECECE"
-                               CornerRadius="7"
-                               HasShadow="False"
-                               HorizontalOptions="FillAndExpand">
-                            <Frame Margin="3"
-                                   Padding="0"
-                                   BackgroundColor="White"
-                                   CornerRadius="5"
-                                   HasShadow="False">
-                                <controls:CustomDatePicker MaximumDate="{x:Static x:DateTime.Now}"
-                                                           BackgroundColor="White"
-                                                           Format="d"
-                                                           Date="{Binding DiagnosisDate}"/>
+                <StackLayout Margin="0,15,0,0" IsVisible="{Binding IsVisibleNoSymptomsLayout}">
+                    <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
+                    <StackLayout Margin="0,5,0,10" Spacing="0">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="#CECECE"
+                            CornerRadius="7"
+                            HasShadow="False"
+                            HorizontalOptions="FillAndExpand">
+                            <Frame
+                                Margin="3"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="5"
+                                HasShadow="False">
+                                <controls:CustomDatePicker
+                                    BackgroundColor="White"
+                                    Date="{Binding DiagnosisDate}"
+                                    Format="d"
+                                    MaximumDate="{x:Static x:DateTime.Now}" />
                             </Frame>
                         </Frame>
                     </StackLayout>
                 </StackLayout>
-                <Label Margin="0, 15, 0, 0"
-                       Style="{StaticResource DefaultLabel}"
-                       Text="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
-                <Label Margin="0, 0, 0, 5"
-                       HorizontalOptions="Start"
-                       Style="{StaticResource DefaultLabelColor}"
-                       Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
+                <Label
+                    Margin="0,15,0,0"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
+                <Label
+                    Margin="0,0,0,5"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource DefaultLabelColor}"
+                    Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{prism:NavigateTo 'HelpPage3'}" />
                     </Label.GestureRecognizers>
@@ -126,13 +132,13 @@
                         BackgroundColor="#FFF3DD"
                         CornerRadius="10">
                         <StackLayout Spacing="10">
-                            <Label FontSize="Medium"
-                                   FontAttributes="Bold"
-                                   TextColor="Black"
-                                   Text="{x:Static resources:AppResources.NotifyOtherPageDescription4}"/>
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="Medium"
+                                Text="{x:Static resources:AppResources.NotifyOtherPageDescription4}"
+                                TextColor="Black" />
                             <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.NotifyOtherPageDescription5}" />
-                            <Label Style="{StaticResource DefaultLabelSmall}"
-                                   Text="{x:Static resources:AppResources.NotifyOtherPageDescription6}" />
+                            <Label Style="{StaticResource DefaultLabelSmall}" Text="{x:Static resources:AppResources.NotifyOtherPageDescription6}" />
                         </StackLayout>
                     </Frame>
                 </StackLayout>

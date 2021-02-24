@@ -104,19 +104,20 @@
     <EmbeddedResource Include="Resources\Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.442" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.475" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
-    <PackageReference Include="Prism.Forms" Version="7.2.0.1422" />
-    <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
+    <PackageReference Include="Prism.Forms" Version="8.0.0.1909" />
+    <PackageReference Include="Prism.Plugin.Logging.Abstractions" Version="8.0.11-beta" />
+    <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="8.0.11-beta" />
+    <PackageReference Include="Prism.Plugin.Logging.Common" Version="8.0.11-beta" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
     <PackageReference Include="Xamarin.ExposureNotification" Version="0.15.0-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.967" />
-    <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.967" />
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2012" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CustomDatePicker.cs" />

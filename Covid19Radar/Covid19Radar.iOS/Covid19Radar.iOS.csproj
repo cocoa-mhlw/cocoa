@@ -506,25 +506,22 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
-      <Version>7.1.0.442</Version>
+      <Version>7.1.0.475</Version>
     </PackageReference>
     <PackageReference Include="Google.Protobuf">
-      <Version>3.12.3</Version>
-    </PackageReference>
-    <PackageReference Include="Prism.Autofac.Forms">
-      <Version>7.1.0.431</Version>
+      <Version>3.15.2</Version>
     </PackageReference>
     <PackageReference Include="Prism.Core">
-      <Version>7.2.0.1422</Version>
+      <Version>8.0.0.1909</Version>
     </PackageReference>
     <PackageReference Include="Prism.DryIoc.Forms">
-      <Version>7.2.0.1422</Version>
+      <Version>8.0.0.1909</Version>
     </PackageReference>
     <PackageReference Include="Prism.Forms">
-      <Version>7.2.0.1422</Version>
+      <Version>8.0.0.1909</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>1.5.3.2</Version>
+      <Version>1.6.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
@@ -532,9 +529,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.967" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.967</Version>
+      <Version>5.0.0.2012</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
       <Version>1.2.2-preview1</Version>

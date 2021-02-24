@@ -52,21 +52,21 @@
       <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="Shouldly">
-      <Version>3.0.2</Version>
+      <Version>4.0.3</Version>
     </PackageReference>
     <PackageReference Include="SpecFlow.NUnit">
-      <Version>3.1.97</Version>
+      <Version>3.7.13</Version>
     </PackageReference>
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
-      <Version>3.1.97</Version>
+      <Version>3.7.13</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+    <PackageReference Include="Xamarin.UITest" Version="3.0.14" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xamariners.EndToEnd.Xamarin">
-      <Version>0.0.8</Version>
+      <Version>0.0.9</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

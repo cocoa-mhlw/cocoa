@@ -17,7 +17,8 @@ namespace Covid19Radar.Views
             var button = (RadioButton)sender;
             if (button.IsChecked)
             {
-                (BindingContext as NotifyOtherPageViewModel).OnClickRadioButtonIsTrueCommand(button.Text);
+                // Xamarin Forms 5 change Text to Content Prop
+                (BindingContext as NotifyOtherPageViewModel).OnClickRadioButtonIsTrueCommand(button.Content.ToString());
             }
         }
     }
