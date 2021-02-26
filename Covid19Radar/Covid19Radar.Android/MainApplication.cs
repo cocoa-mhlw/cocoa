@@ -24,5 +24,17 @@ namespace Covid19Radar.Droid
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
+
+            Xamarin.ExposureNotifications.ExposureNotification.ConfigureBackgroundWorkRequest(TimeSpan.FromHours(6), b =>
+                b.SetConstraints(new AndroidX.Work.Constraints.Builder()
+                    .SetRequiresBatteryNotLow(true)
+                    .SetRequiredNetworkType(AndroidX.Work.NetworkType.Connected)
+                    .Build())
+                );
+        }
     }
 }
