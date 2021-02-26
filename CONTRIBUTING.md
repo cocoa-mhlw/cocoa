@@ -1,4 +1,4 @@
-# COCOA への貢献について
+# 新型コロナウイルス接触確認アプリ（COCOA) への貢献についてのガイドライン
 
 :raised_hands::tada: コントリビューターの皆様、ありがとうございます！ :tada::raised_hands:
 
