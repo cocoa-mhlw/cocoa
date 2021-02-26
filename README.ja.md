@@ -12,8 +12,10 @@ COCOAの利用方法で不明な点につきましては、厚生労働省の[Q&
 
 ## COCOAへのご要望等につきまして
 
-大変お手数ですが、 [Q&Aページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html)に記載がありますお問い合わせメールアドレスにご連絡いただきますようお願い致します。  
-PullRequest、Issuesについては、ご回答できかねる場合がありますことをご了承下さい。
+本リポジトリへの PullRequest や Issues を歓迎いたします。事前に[CONTRIBUTING.md]をご確認の上、投稿いただければと思います。
+また、当方のリソース面や意思決定プロセスに起因して、お返事が遅くなる場合があります。ご了承いただけましたら幸いです。
+
+技術的な点以外のご要望については、大変お手数ですが、 [Q&Aページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html)に記載がありますお問い合わせメールアドレスにご連絡いただきますようお願い致します。  
 
 ## ライセンス
 
