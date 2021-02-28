@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using System;
+using CommonServiceLocator;
+using System.Collections.Generic;
 
 /*
  * Our mission...is
@@ -78,6 +81,12 @@ namespace Covid19Radar
         //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
         //}
 
+        protected override IContainerExtension CreateContainerExtension()
+        {
+            var container = (ServiceLocator.Current as ContainerServiceLocator).container;
+            return new DryIocContainerExtension(container);
+        }
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Base and Navigation
@@ -142,6 +151,29 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<ISecureStorageService, SecureStorageService>();
         }
 
+        public static void RegisterCommonTypes(Container container)
+        {
+            container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
+            container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
+            container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
+            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
+            container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
+            container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
+            container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
+            container.Register<IExposureNotificationService, ExposureNotificationService>(Reuse.Singleton);
+            container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
+            container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
+            container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
+#if USE_MOCK
+            container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
+            container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
+#else
+            container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
+            container.Register<IStorageService, StorageService>(Reuse.Singleton);
+#endif
+            container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
+        }
+
         protected override void OnStart()
         {
             // Initialize periodic log delete service
@@ -173,6 +205,28 @@ namespace Covid19Radar
             {
                 // maybe think local only logger
             };
+        }
+    }
+
+    public class ContainerServiceLocator : ServiceLocatorImplBase
+    {
+        public readonly Container container;
+
+        public ContainerServiceLocator(Container container)
+        {
+            this.container = container;
+        }
+
+        protected override object DoGetInstance(Type serviceType, string key)
+        {
+            if (container == null) throw new ObjectDisposedException("container");
+            return container.Resolve(serviceType, key);
+        }
+
+        protected override IEnumerable<object> DoGetAllInstances(Type serviceType)
+        {
+            if (container == null) throw new ObjectDisposedException("container");
+            return container.ResolveMany(serviceType);
         }
     }
 }

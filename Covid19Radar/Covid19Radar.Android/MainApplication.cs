@@ -51,13 +51,21 @@ namespace Covid19Radar.Droid
          */
         private void InitializeServiceLocator()
         {
-            var container = new Container();
+            var container = new Container(CreateContainerRules());
 
             RegisterPlatformTypes(container);
-            RegisterTypes(container);
+            App.RegisterCommonTypes(container);
 
             var serviceLocator = new ContainerServiceLocator(container);
             ServiceLocator.SetLocatorProvider(() => serviceLocator);
+        }
+
+        private Rules CreateContainerRules()
+        {
+            return Rules.Default.WithAutoConcreteTypeResolution()
+                    .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
+                    .WithoutFastExpressionCompiler()
+                    .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Replace);
         }
 
         private void RegisterPlatformTypes(Container container)
@@ -65,51 +73,6 @@ namespace Covid19Radar.Droid
             container.Register<ILogPathDependencyService, LogPathServiceAndroid>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
-        }
-
-        private void RegisterTypes(Container container)
-        {
-            container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
-            container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
-            container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
-            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
-            container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
-            container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
-            container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
-            container.Register<IExposureNotificationService, ExposureNotificationService>(Reuse.Singleton);
-            container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
-            container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
-            container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
-#if USE_MOCK
-            container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
-            container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
-#else
-            container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
-            container.Register<IStorageService, StorageService>(Reuse.Singleton);
-#endif
-            container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
-        }
-    }
-
-    public class ContainerServiceLocator : ServiceLocatorImplBase
-    {
-        private readonly Container _container;
-
-        public ContainerServiceLocator(Container container)
-        {
-            _container = container;
-        }
-
-        protected override object DoGetInstance(Type serviceType, string key)
-        {
-            if (_container == null) throw new ObjectDisposedException("container");
-            return _container.Resolve(serviceType, key);
-        }
-
-        protected override IEnumerable<object> DoGetAllInstances(Type serviceType)
-        {
-            if (_container == null) throw new ObjectDisposedException("container");
-            return _container.ResolveMany(serviceType);
         }
     }
 }
