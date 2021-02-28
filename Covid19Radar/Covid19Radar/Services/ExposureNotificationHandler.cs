@@ -142,11 +142,6 @@ namespace Covid19Radar.Services
 
             try
             {
-                // Migrate from UserData.
-                // Since it may be executed during the migration when the application starts, execute it here as well.
-                var userDataService = ServiceLocator.Current.GetInstance<IUserDataService>();
-                await userDataService.Migrate();
-
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
                     cancellationToken.ThrowIfCancellationRequested();
