@@ -9,6 +9,7 @@ using Android.Bluetooth;
 using Android.Gms.Common.Apis;
 using Android.Gms.Nearby.ExposureNotification;
 using Android.Runtime;
+using Android.Util;
 using AndroidX.Work;
 using Java.Nio.FileNio;
 
@@ -126,11 +127,10 @@ namespace Xamarin.ExposureNotifications
 		static Action<PeriodicWorkRequest.Builder> bgRequestBuilder = b =>
 			b.SetConstraints(new Constraints.Builder()
 				.SetRequiresBatteryNotLow(true)
-				.SetRequiresDeviceIdle(true)
 				.SetRequiredNetworkType(NetworkType.Connected)
 				.Build());
 
-		static TimeSpan bgRepeatInterval = TimeSpan.FromHours(6);
+		static TimeSpan bgRepeatInterval = TimeSpan.FromMinutes(16);
 
 		static Task PlatformScheduleFetch()
 		{
@@ -226,10 +226,13 @@ namespace Xamarin.ExposureNotifications
 			try
 			{
 				Task.Run(() => DoAsyncWork()).GetAwaiter().GetResult();
+				Log.Debug("Covid19Radar", "success");
+
 				return Result.InvokeSuccess();
 			}
 			catch (Exception ex)
 			{
+				Log.Debug("Covid19Radar", "failed: " + ex.Message, ex);
 				System.Diagnostics.Debug.WriteLine(ex);
 				return Result.InvokeRetry();
 			}
@@ -237,7 +240,10 @@ namespace Xamarin.ExposureNotifications
 
 		async Task DoAsyncWork()
 		{
-			if (await ExposureNotification.IsEnabledAsync())
+			var IsEnabledAsync = await ExposureNotification.IsEnabledAsync();
+			Log.Debug("Covid19Radar", "IsEnabledAsync = " + IsEnabledAsync);
+
+			if (IsEnabledAsync)
 				await ExposureNotification.UpdateKeysFromServer();
 		}
 	}
