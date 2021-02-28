@@ -7,6 +7,7 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
@@ -20,9 +21,9 @@ namespace Covid19Radar.Services
     [Xamarin.Forms.Internals.Preserve] // Ensure this isn't linked out
     public class ExposureNotificationHandler : IExposureNotificationHandler
     {
-        private ILoggerService LoggerService => DependencyService.Resolve<ILoggerService>();
-        private IHttpDataService HttpDataService => DependencyService.Resolve<IHttpDataService>();
-        private IExposureNotificationService ExposureNotificationService => DependencyService.Resolve<IExposureNotificationService>();
+        private ILoggerService LoggerService => ServiceLocator.Current.GetInstance<ILoggerService>();
+        private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
+        private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
 
         public ExposureNotificationHandler()
         {
@@ -143,7 +144,7 @@ namespace Covid19Radar.Services
             {
                 // Migrate from UserData.
                 // Since it may be executed during the migration when the application starts, execute it here as well.
-                var userDataService = DependencyService.Resolve<IUserDataService>();
+                var userDataService = ServiceLocator.Current.GetInstance<IUserDataService>();
                 await userDataService.Migrate();
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
