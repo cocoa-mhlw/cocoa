@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
 {
-    public class HttpDataServiceMock : IHttpDataService
+    class HttpDataServiceMock : IHttpDataService
     {
         public Task MigrateFromUserData(UserDataModel userData)
         {

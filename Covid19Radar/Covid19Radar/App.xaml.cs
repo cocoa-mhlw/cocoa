@@ -46,12 +46,7 @@ namespace Covid19Radar
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.AddSkipBackupAttribute();
 
-#if USE_MOCK
-            // For debug mode, set the mock api provider to interact
-            // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
-#endif
-            Xamarin.ExposureNotifications.ExposureNotification.Init();
+            InitializeExposureNotification();
 
             // Local Notification tap event listener
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
@@ -74,6 +69,38 @@ namespace Covid19Radar
             }
 
             LoggerService.EndMethod();
+        }
+
+        public static void InitializeExposureNotification()
+        {
+#if USE_MOCK
+            // For debug mode, set the mock api provider to interact
+            // with some fake data
+            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new TestNativeImplementation());
+#endif
+            Xamarin.ExposureNotifications.ExposureNotification.Init();
+        }
+
+        /**
+         * Initialize IOC container what used by background worker.
+         */
+        public static void InitializeServiceLocator(Action<Container> registerPlatformTypes)
+        {
+            var container = new Container(GetContainerRules());
+
+            registerPlatformTypes(container);
+            RegisterCommonTypes(container);
+
+            var serviceLocator = new ContainerServiceLocator(container);
+            ServiceLocator.SetLocatorProvider(() => serviceLocator);
+        }
+
+        private static Rules GetContainerRules()
+        {
+            return Rules.Default.WithAutoConcreteTypeResolution()
+                    .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
+                    .WithoutFastExpressionCompiler()
+                    .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Replace);
         }
 
         //protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -208,7 +235,7 @@ namespace Covid19Radar
         }
     }
 
-    public class ContainerServiceLocator : ServiceLocatorImplBase
+    class ContainerServiceLocator : ServiceLocatorImplBase
     {
         public readonly Container container;
 

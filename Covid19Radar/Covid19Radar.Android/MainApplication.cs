@@ -14,7 +14,6 @@ using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Droid.Services.Logs;
 using DryIoc;
-using CommonServiceLocator;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
 
@@ -36,36 +35,9 @@ namespace Covid19Radar.Droid
         {
             base.OnCreate();
 
-            InitializeServiceLocator();
+            App.InitializeServiceLocator(RegisterPlatformTypes);
 
-#if USE_MOCK
-            // For debug mode, set the mock api provider to interact
-            // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new TestNativeImplementation());
-#endif
-            Xamarin.ExposureNotifications.ExposureNotification.Init();
-        }
-
-        /**
-         * Initialize IOC container what used by background worker.
-         */
-        private void InitializeServiceLocator()
-        {
-            var container = new Container(CreateContainerRules());
-
-            RegisterPlatformTypes(container);
-            App.RegisterCommonTypes(container);
-
-            var serviceLocator = new ContainerServiceLocator(container);
-            ServiceLocator.SetLocatorProvider(() => serviceLocator);
-        }
-
-        private Rules CreateContainerRules()
-        {
-            return Rules.Default.WithAutoConcreteTypeResolution()
-                    .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
-                    .WithoutFastExpressionCompiler()
-                    .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Replace);
+            App.InitializeExposureNotification();
         }
 
         private void RegisterPlatformTypes(Container container)
