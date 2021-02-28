@@ -37,6 +37,13 @@ namespace Covid19Radar.Droid
             base.OnCreate();
 
             InitializeServiceLocator();
+
+#if USE_MOCK
+            // For debug mode, set the mock api provider to interact
+            // with some fake data
+            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new TestNativeImplementation());
+#endif
+            Xamarin.ExposureNotifications.ExposureNotification.Init();
         }
 
         /**
