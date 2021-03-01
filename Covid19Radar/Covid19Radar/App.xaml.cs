@@ -98,7 +98,7 @@ namespace Covid19Radar
             return Rules.Default.WithAutoConcreteTypeResolution()
                     .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
                     .WithoutFastExpressionCompiler()
-                    .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Replace);
+                    .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Keep);
         }
 
         //protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -109,7 +109,7 @@ namespace Covid19Radar
         protected override IContainerExtension CreateContainerExtension()
         {
             var container = (ServiceLocator.Current as ContainerServiceLocator).container;
-            return new DryIocContainerExtension(container);
+            return new DryIocContainerExtension(container.WithRegistrationsCopy());
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
