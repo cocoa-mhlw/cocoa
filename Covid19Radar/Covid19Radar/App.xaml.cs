@@ -108,8 +108,8 @@ namespace Covid19Radar
 
         protected override IContainerExtension CreateContainerExtension()
         {
-            var container = (ServiceLocator.Current as ContainerServiceLocator).container;
-            return new DryIocContainerExtension(container.WithRegistrationsCopy());
+            var container = (ServiceLocator.Current as ContainerServiceLocator).CopyContainerWithRegistrations();
+            return new DryIocContainerExtension(container);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -235,23 +235,28 @@ namespace Covid19Radar
 
     class ContainerServiceLocator : ServiceLocatorImplBase
     {
-        public readonly Container container;
+        private readonly Container Container;
+
+        internal IContainer CopyContainerWithRegistrations()
+        {
+            return Container.WithRegistrationsCopy();
+        }
 
         public ContainerServiceLocator(Container container)
         {
-            this.container = container;
+            this.Container = container;
         }
 
         protected override object DoGetInstance(Type serviceType, string key)
         {
-            if (container == null) throw new ObjectDisposedException("container");
-            return container.Resolve(serviceType, key);
+            if (Container == null) throw new ObjectDisposedException("container");
+            return Container.Resolve(serviceType, key);
         }
 
         protected override IEnumerable<object> DoGetAllInstances(Type serviceType)
         {
-            if (container == null) throw new ObjectDisposedException("container");
-            return container.ResolveMany(serviceType);
+            if (Container == null) throw new ObjectDisposedException("container");
+            return Container.ResolveMany(serviceType);
         }
     }
 }
