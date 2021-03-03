@@ -37,7 +37,7 @@ namespace Covid19Radar.Droid
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
-            App.InitializeExposureNotification();
+            App.UseMockExposureNotificationImplementationIfNeeded();
         }
 
         private void RegisterPlatformTypes(Container container)

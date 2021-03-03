@@ -46,6 +46,8 @@ namespace Covid19Radar
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.AddSkipBackupAttribute();
 
+            Xamarin.ExposureNotifications.ExposureNotification.Init();
+
             // Local Notification tap event listener
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
@@ -69,14 +71,13 @@ namespace Covid19Radar
             LoggerService.EndMethod();
         }
 
-        public static void InitializeExposureNotification()
+        public static void UseMockExposureNotificationImplementationIfNeeded()
         {
 #if USE_MOCK
             // For debug mode, set the mock api provider to interact
             // with some fake data
             Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new TestNativeImplementation());
 #endif
-            Xamarin.ExposureNotifications.ExposureNotification.Init();
         }
 
         /**
