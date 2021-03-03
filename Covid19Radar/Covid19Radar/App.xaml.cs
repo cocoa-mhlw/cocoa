@@ -83,7 +83,7 @@ namespace Covid19Radar
         /**
          * Initialize IOC container what used by background worker.
          */
-        public static void InitializeServiceLocator(Action<Container> registerPlatformTypes)
+        public static void InitializeServiceLocator(Action<IContainer> registerPlatformTypes)
         {
             var container = new Container(GetContainerRules());
 
@@ -177,7 +177,7 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<ISecureStorageService, SecureStorageService>();
         }
 
-        public static void RegisterCommonTypes(Container container)
+        private static void RegisterCommonTypes(IContainer container)
         {
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);

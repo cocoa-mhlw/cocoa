@@ -21,7 +21,7 @@ namespace Covid19Radar.iOS
             UIApplication.Main(args, null, "AppDelegate");
         }
 
-        private static void RegisterPlatformTypes(Container container)
+        private static void RegisterPlatformTypes(IContainer container)
         {
             container.Register<ILogPathDependencyService, LogPathServiceIos>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, SecureStorageServiceIos>(Reuse.Singleton);

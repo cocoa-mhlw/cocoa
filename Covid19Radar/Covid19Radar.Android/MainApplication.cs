@@ -40,7 +40,7 @@ namespace Covid19Radar.Droid
             App.UseMockExposureNotificationImplementationIfNeeded();
         }
 
-        private void RegisterPlatformTypes(Container container)
+        private void RegisterPlatformTypes(IContainer container)
         {
             container.Register<ILogPathDependencyService, LogPathServiceAndroid>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
