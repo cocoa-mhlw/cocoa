@@ -22,7 +22,6 @@ namespace Covid19Radar.Services
     public class ExposureNotificationHandler : IExposureNotificationHandler
     {
         private ILoggerService LoggerService => ServiceLocator.Current.GetInstance<ILoggerService>();
-        private ILoggerService LoggerService2 => DependencyService.Resolve<ILoggerService>();
         private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
 
@@ -132,13 +131,6 @@ namespace Covid19Radar.Services
         public async Task FetchExposureKeyBatchFilesFromServerAsync(Func<IEnumerable<string>, Task> submitBatches, CancellationToken cancellationToken)
         {
             var loggerService = LoggerService;
-
-            if(LoggerService == LoggerService2)
-            {
-                loggerService.Debug("Logger Logger2 is match.");
-            }
-
-            LoggerService2.GetHashCode();
 
             if (Interlocked.Exchange(ref fetchExposureKeysIsRunning, 1) == 1)
             {
