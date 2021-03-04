@@ -1,16 +1,9 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Prism;
-using Prism.Ioc;
 using Android.Runtime;
 using Android.Content;
-using Covid19Radar.Droid.Services.Logs;
-using Covid19Radar.Services.Logs;
 using Acr.UserDialogs;
-using Covid19Radar.Services;
-using Covid19Radar.Droid.Services;
-//using Plugin.LocalNotification;
 
 namespace Covid19Radar.Droid
 {
@@ -37,7 +30,7 @@ namespace Covid19Radar.Droid
             UserDialogs.Init(this);
 
             //NotificationCenter.CreateNotificationChannel();
-            LoadApplication(new App(new AndroidInitializer()));
+            LoadApplication(new App());
             //NotificationCenter.NotifyNotificationTapped(base.Intent);
         }
 
@@ -47,18 +40,6 @@ namespace Covid19Radar.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-
-        public class AndroidInitializer : IPlatformInitializer
-        {
-            public void RegisterTypes(IContainerRegistry containerRegistry)
-            {
-                // Services
-                containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
-                containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceAndroid>();
-                containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
-            }
         }
 
         private void RequestPermission()

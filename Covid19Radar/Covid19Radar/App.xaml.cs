@@ -99,7 +99,7 @@ namespace Covid19Radar
             return Rules.Default.WithAutoConcreteTypeResolution()
                     .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
                     .WithoutFastExpressionCompiler()
-                    .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Keep);
+                    .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Throw);
         }
 
         //protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -154,27 +154,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ReAgreePrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
             containerRegistry.RegisterForNavigation<SplashPage>();
-
-            // Services
-            containerRegistry.RegisterSingleton<ILoggerService, LoggerService>();
-            containerRegistry.RegisterSingleton<ILogFileService, LogFileService>();
-            containerRegistry.RegisterSingleton<ILogPathService, LogPathService>();
-            containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteService>();
-            containerRegistry.RegisterSingleton<ILogUploadService, LogUploadService>();
-            containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
-            containerRegistry.RegisterSingleton<IUserDataService, UserDataService>();
-            containerRegistry.RegisterSingleton<IExposureNotificationService, ExposureNotificationService>();
-            containerRegistry.RegisterSingleton<ITermsUpdateService, TermsUpdateService>();
-            containerRegistry.RegisterSingleton<IApplicationPropertyService, ApplicationPropertyService>();
-            containerRegistry.RegisterSingleton<IHttpClientService, HttpClientService>();
-#if USE_MOCK
-            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
-            containerRegistry.RegisterSingleton<IStorageService, StorageServiceMock>();
-#else            
-            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataService>();
-            containerRegistry.RegisterSingleton<IStorageService, StorageService>();
-#endif
-            containerRegistry.RegisterSingleton<ISecureStorageService, SecureStorageService>();
         }
 
         private static void RegisterCommonTypes(IContainer container)

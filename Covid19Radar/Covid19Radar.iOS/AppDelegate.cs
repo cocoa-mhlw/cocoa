@@ -1,10 +1,4 @@
-﻿using Covid19Radar.iOS.Services;
-using Covid19Radar.iOS.Services.Logs;
-using Covid19Radar.Services;
-using Covid19Radar.Services.Logs;
-using Foundation;
-using Prism;
-using Prism.Ioc;
+﻿using Foundation;
 using UIKit;
 
 namespace Covid19Radar.iOS
@@ -44,7 +38,7 @@ namespace Covid19Radar.iOS
 
             //Plugin.LocalNotification.NotificationCenter.AskPermission();
 
-            LoadApplication(new App(new iOSInitializer()));
+            LoadApplication(new App());
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
@@ -55,18 +49,5 @@ namespace Covid19Radar.iOS
         //    Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
         //}
     }
-
-    public class iOSInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-            // Services
-            containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceIos>();
-            containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceIos>();
-            containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
-        }
-    }
-
-
 
 }
