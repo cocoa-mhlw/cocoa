@@ -30,7 +30,7 @@ namespace Covid19Radar.ViewModels
 		public Command OnClick_ShowWikipedia     => new Command(() => this.ShowPage(AppResources.WikipediaUrl));
 
 		public NewsPageViewModel(ILoggerService logger, INavigationService navigationService)
-			// : base(navigationService) // ViewModelBase.NavigationService は不必要なプロパティなので利用しない。
+			// : base(navigationService) // ViewModelBase.NavigationService はこのクラスでは利用しない。
 		{
 			_logger = logger            ?? throw new ArgumentNullException(nameof(logger));
 			_ns     = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
